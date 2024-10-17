@@ -1,0 +1,559 @@
+[
+  {
+    "name": "Arachnibou",
+    "power": 3,
+    "keywords": ["SNEAKY", "POISONOUS"],
+    "effects": {},
+    "unique": false
+  },
+  {
+    "name": "Rhino Tortue",
+    "power": 8,
+    "keywords": ["FRENZY", "TOUGH"],
+    "effects": {},
+    "unique": false
+  },
+  {
+    "name": "Gladiataure",
+    "power": 9,
+    "keywords": ["FRENZY"],
+    "effects": {},
+    "unique": false
+  },
+  {
+    "name": "Méduse Squelettique",
+    "power": 4,
+    "keywords": ["HUNTER", "POISONOUS"],
+    "effects": {},
+    "unique": false
+  },
+  {
+    "name": "Scorpion Venimeux",
+    "power": 2,
+    "keywords": ["TOUGH", "POISONOUS"],
+    "effects": {},
+    "unique": false
+  },
+  {
+    "name": "Gorillion",
+    "power": 10,
+    "keywords": [],
+    "effects": {},
+    "unique": true
+  },
+  {
+    "name": "Dracompost",
+    "power": 3,
+    "keywords": ["HUNTER"],
+    "effects": {
+      "PLAY": [{
+        "type": "STEAL",
+        "value": 1,
+        "selfDiscard": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Instigateur Gobelouille",
+    "power": 1,
+    "keywords": ["HUNTER"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "POWER_UP",
+        "value": 2,
+        "byEnemy": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Kangousaurus Rex",
+    "power": 7,
+    "keywords": [],
+    "effects": {
+      "PLAY": [{
+        "type": "DESTROY",
+        "value": -1,
+        "max": 4
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Tigrécureuil",
+    "power": 3,
+    "keywords": ["SNEAKY"],
+    "effects": {
+      "PLAY": [{
+        "type": "DESTROY",
+        "value": 1,
+        "min": 7
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Oursins Hurleurs",
+    "power": 5,
+    "keywords": ["HUNTER"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "POWER_UP",
+        "value": 2,
+        "allies": true,
+        "self": false,
+        "selfTurn": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "name": "Veuve Noire",
+    "power": 2,
+    "keywords": ["POISONOUS"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "DISABLE_TIMING",
+        "value": "PLAY"
+      }]
+    },
+    "unique": true
+  },
+  {
+    "name": "Huissiéléphant",
+    "power": 8,
+    "keywords": [],
+    "effects": {
+      "ATTACK": [{
+        "type": "DISCARD",
+        "value": 1
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Cafabarbare",
+    "power": 3,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "POWER_UP",
+        "value": 8,
+        "lifePoints": 1
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Aqua Vachette",
+    "power": 8,
+    "keywords": [],
+    "effects": {
+      "ATTACK": [{
+        "type": "NO_BLOCK",
+        "value": 1
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Furet Saboteur",
+    "power": 2,
+    "keywords": ["SNEAKY"],
+    "effects": {
+      "PLAY": [{
+        "type": "DISCARD",
+        "value": 2
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Lanceur d'escargots",
+    "power": 1,
+    "keywords": ["POISONOUS"],
+    "effects": {
+      "PASSIVE": [{
+        "type":"KEYWORD_UP",
+        "value": "HUNTER",
+        "max": 4
+      },{
+        "type":"KEYWORD_UP",
+        "value": "POISONOUS",
+        "max": 4
+      }]
+    },
+    "unique": true
+  },
+  {
+    "name": "Pilleur de Tombes",
+    "power": 7,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "PLAY": [{
+        "type": "STEAL",
+        "value": 1,
+        "discard": true,
+        "mustPlay": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Comte Sangsula",
+    "power": 7,
+    "keywords": [],
+    "effects": {
+      "ATTACK": [{
+        "type": "INFLICT",
+        "value": 1,
+        "self": true
+      },{
+        "type": "DESTROY",
+        "value": 1,
+        "selfAllowed": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Requin Toutou",
+    "power": 4,
+    "keywords": ["HUNTER"],
+    "effects": {
+      "ATTACK": [
+        {
+          "type": "DESTROY",
+          "value": 1,
+          "min": 6
+        }
+      ]
+    },
+    "unique": true
+  },
+  {
+    "name": "Neuromouche",
+    "power": 4,
+    "keywords": [],
+    "effects": {
+      "PLAY": [
+        {
+          "type": "STEAL",
+          "value": 1,
+          "min": 6
+        }
+      ]
+    },
+    "unique": true
+  },
+  {
+    "name": "Abeille Tueuse",
+    "power": 5,
+    "keywords": ["HUNTER"],
+    "effects": {
+      "PLAY": [{
+        "type": "INFLICT",
+        "value": 1
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Giraffodile",
+    "power": 7,
+    "keywords": [],
+    "effects": {
+      "PLAY": [{
+        "type": "DRAW",
+        "value": -1,
+        "selfDiscard": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "name": "Yéti Solitaire",
+    "power": 5,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "POWER_UP",
+        "value": 5,
+        "alone": true
+      },{
+        "type": "KEYWORD_UP",
+        "value": "FRENZY",
+        "alone": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "name": "Hamster Glouton",
+    "power": 2,
+    "keywords": ["SNEAKY"],
+    "effects": {
+      "PLAY": [{
+        "type": "STEAL",
+        "value": 1,
+        "hand": true,
+        "mayPlay": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Hamsterlion",
+    "power": 8,
+    "keywords": ["FRENZY"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "NO_ATTACK",
+        "lowest": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Furet Pacifique",
+    "power": 4,
+    "keywords": [],
+    "effects": {
+      "PASSIVE": [{
+        "type": "NO_BLOCK",
+        "highest": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Turboustique",
+    "power": 4,
+    "keywords": [],
+    "effects": {
+      "ATTACK": [{
+        "type": "INFLICT",
+        "allButOne": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "name": "Pachypoulpe",
+    "power": 7,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "NO_BLOCK",
+        "value": -1,
+        "max": 4
+      }]
+    },
+    "unique": true
+  },
+  {
+    "name": "Baril étrange",
+    "power": 6,
+    "keywords": [],
+    "effects": {
+      "DEFEATED": [{
+        "type": "STEAL",
+        "value": 2,
+        "hand": true,
+        "random": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "name": "Mamie Harpie",
+    "power": 5,
+    "keywords": [],
+    "effects": {
+      "DEFEATED": [{
+        "type": "STEAL",
+        "value": 2,
+        "max": 5
+      }]
+    },
+    "unique": true
+  },
+  {
+    "name": "Le Rôdeur",
+    "power": 4,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "ATTACK": [{
+        "type": "KEYWORD_UP",
+        "value": "SNEAKY",
+        "moreAllies": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Hydrescargot",
+    "power": 9,
+    "keywords": [],
+    "effects": {
+      "ATTACK": [{
+        "type": "DESTROY",
+        "value": 1,
+        "lessAllies": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Majesté Manticore",
+    "power": 6,
+    "keywords": ["POISONOUS"],
+    "effects": {
+      "ATTACK": [{
+        "type": "DESTROY",
+        "value": -1,
+        "lowest": true,
+        "selfAllowed": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Crapaud Bombe",
+    "power": 5,
+    "keywords": ["FRENZY"],
+    "effects": {
+      "DEFEATED": [{
+        "type": "DESTROY",
+        "value": 1,
+        "selfAllowed": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Hyénix",
+    "power": 7,
+    "keywords": ["FRENZY"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "REVIVE",
+        "loseLife": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Goblin-Garou",
+    "power": 2,
+    "keywords": ["HUNTER"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "POWER_UP",
+        "value": 6,
+        "self": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Sirène Mystérieuse",
+    "power": 7,
+    "keywords": [],
+    "effects": {
+      "PLAY": [{
+        "type": "GAIN",
+        "equal": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "name": "Requin Crabe Chien Momie Pieuvre",
+    "power": 5,
+    "keywords": [],
+    "effects": {
+      "PASSIVE": [{
+        "type": "KEYWORD_UP",
+        "value": "FRENZY",
+        "opponentHas": true
+      },{
+        "type": "KEYWORD_UP",
+        "value": "SNEAKY",
+        "opponentHas": true
+      },{
+        "type": "KEYWORD_UP",
+        "value": "POISONOUS",
+        "opponentHas": true
+      },{
+        "type": "KEYWORD_UP",
+        "value": "HUNTER",
+        "opponentHas": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "name": "Oursabeille",
+    "power": 8,
+    "keywords": [],
+    "effects": {
+      "ATTACK": [{
+        "type": "NO_BLOCK",
+        "max": 6
+      }]
+    },
+    "unique": true
+  },
+  {
+    "name": "Reptireur d'élite",
+    "power": 1,
+    "keywords": ["SNEAKY"],
+    "effects": {
+      "ATTACK": [{
+        "type": "INFLICT",
+        "value": 1
+      }]
+    },
+    "unique": true
+  },
+  {
+    "name": "Scarabouclier",
+    "power": 4,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "POWER_UP",
+        "value": 1,
+        "allies": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Gorillaigle Alpha",
+    "power": 6,
+    "keywords": ["FRENZY", "HUNTER", "TOUGH"],
+    "effects": {
+      "PLAY": [{
+        "type": "INFLICT",
+        "value": 1,
+        "self": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "name": "Dr Axolotl",
+    "power": 4,
+    "keywords": ["POISONOUS"],
+    "effects": {
+      "PLAY": [{
+        "type": "GAIN",
+        "value": 2
+      }]
+    },
+    "unique": false
+  }
+]
