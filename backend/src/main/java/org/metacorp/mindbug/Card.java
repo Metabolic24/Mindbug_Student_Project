@@ -4,7 +4,7 @@ import lombok.Data;
 
 import java.util.*;
 
-/** Describes a Mindbug card */
+/** Describes a Mindbug card (out of a game)*/
 @Data
 public class Card {
     private String name;
