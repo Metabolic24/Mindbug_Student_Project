@@ -3,6 +3,7 @@ package org.metacorp.mindbug;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.effect.PowerUpEffect;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -33,6 +34,27 @@ public class CardTest {
             assertNotNull(firstCard.getKeywords());
             assertTrue(firstCard.getKeywords().contains(Keyword.SNEAKY));
             assertTrue(firstCard.getKeywords().contains(Keyword.POISONOUS));
+
+            Card tenthCard = fileCards.get(10);
+            assertNotNull(tenthCard);
+            assertEquals("Oursins Hurleurs", tenthCard.getName());
+            assertEquals(5, tenthCard.getPower());
+            assertNotNull(tenthCard.getKeywords());
+            assertTrue(tenthCard.getKeywords().contains(Keyword.HUNTER));
+            assertEquals(1, tenthCard.getEffects().size());
+            assertTrue(tenthCard.getEffects().containsKey(EffectTiming.PASSIVE));
+            assertEquals(1, tenthCard.getEffects().get(EffectTiming.PASSIVE).size());
+
+            PowerUpEffect effect = (PowerUpEffect) tenthCard.getEffects().get(EffectTiming.PASSIVE).getFirst();
+            assertNotNull(effect);
+            assertEquals(PowerUpEffect.TYPE, effect.getType());
+            assertEquals(2, effect.getValue());
+            assertNull(effect.getLifePoints());
+            assertTrue(effect.isAllies());
+            assertFalse(effect.isAlone());
+            assertFalse(effect.isSelf());
+            assertFalse(effect.isByEnemy());
+            assertTrue(effect.isSelfTurn());
 
         } catch (IOException e) {
             throw new RuntimeException(e);
