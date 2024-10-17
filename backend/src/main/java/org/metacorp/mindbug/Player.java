@@ -7,7 +7,6 @@ import java.util.*;
 /** Class that describes a player data */
 @Data
 public class Player {
-    private static int PLAYER_COUNT = 0;
 
     private String name;
     private Team team;
@@ -20,10 +19,9 @@ public class Player {
 
     private List<EffectTiming> disabledTiming;
 
-    public Player(Team team) {
-        PLAYER_COUNT++;
-        this.name = "Player" + PLAYER_COUNT;
-        this.team = team;
+    public Player(String name) {
+        this.name = name;
+        this.team = new Team();
 
         hand = new ArrayList<>();
         board = new ArrayList<>();
