@@ -22,4 +22,45 @@ public class KeywordUpEffect extends Effect {
     public String getType() {
         return TYPE;
     }
+
+    @Override
+    public void apply(Game game, CardInstance card) {
+        Player cardOwner = card.getOwner();
+
+        if (alone && cardOwner.getBoard().size() != 1) {
+            return;
+        }
+
+        Player opponent =  cardOwner.getOpponent(game.getPlayers());
+        if (moreAllies && opponent.getBoard().size() >= cardOwner.getBoard().size()) {
+            return;
+        }
+
+        if (opponentHas) {
+            boolean checkOpponent = false;
+            for (CardInstance opponentCard : opponent.getBoard()) {
+                if (opponentCard.getKeywords().contains(value)) {
+                    checkOpponent = true;
+                    break;
+                }
+            }
+
+            if (!checkOpponent) {
+                return;
+            }
+        }
+
+        if (max != null) {
+            for (CardInstance currentCard : cardOwner.getBoard()) {
+                if (currentCard.getPower() <= max && !currentCard.equals(card)) {
+                    currentCard.getKeywords().add(value);
+                    if (value == Keyword.TOUGH) {
+                        currentCard.setStillTough(true);
+                    }
+                }
+            }
+        } else {
+            card.getKeywords().add(value);
+        }
+    }
 }

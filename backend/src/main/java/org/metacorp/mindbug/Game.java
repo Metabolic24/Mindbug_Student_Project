@@ -81,13 +81,23 @@ public class Game {
         List<CardInstance> hand = player.getHand();
         while (hand.size() != 5) {
             int cardIndex = new Random().nextInt(cards.size() - 1);
-            hand.add(cards.remove(cardIndex));
+
+            CardInstance currentCard = cards.remove(cardIndex);
+            currentCard.setOwner(player);
+            hand.add(currentCard);
         }
 
         List<CardInstance> drawPile = player.getDrawPile();
         while (drawPile.size() != 5) {
             int cardIndex = new Random().nextInt(cards.size() - 1);
-            drawPile.add(cards.remove(cardIndex));
+
+            CardInstance currentCard = cards.remove(cardIndex);
+            currentCard.setOwner(player);
+            drawPile.add(currentCard);
         }
+    }
+
+    public void lifePointLost(Player cardOwner) {
+        // TODO To be implemented
     }
 }

@@ -3,7 +3,10 @@ package org.metacorp.mindbug.effect;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.metacorp.mindbug.CardInstance;
 import org.metacorp.mindbug.Effect;
+import org.metacorp.mindbug.Game;
+import org.metacorp.mindbug.Player;
 
 /** Effect that forbids one or more cards to attack */
 @EqualsAndHashCode(callSuper = true)
@@ -17,5 +20,15 @@ public class NoAttackEffect extends Effect {
     @Override
     public String getType() {
         return TYPE;
+    }
+
+    @Override
+    public void apply(Game game, CardInstance card) {
+        if (lowest) {
+            Player opponent = card.getOwner().getOpponent(game.getPlayers());
+            for (CardInstance lowestCard : opponent.getLowestCards()) {
+                lowestCard.setCanAttack(false);
+            }
+        }
     }
 }

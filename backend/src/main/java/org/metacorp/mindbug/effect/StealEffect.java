@@ -3,7 +3,10 @@ package org.metacorp.mindbug.effect;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.metacorp.mindbug.CardInstance;
 import org.metacorp.mindbug.Effect;
+import org.metacorp.mindbug.Game;
+import org.metacorp.mindbug.Player;
 
 /** Effect that steals card from the opponent hand or board depending on several conditions */
 @EqualsAndHashCode(callSuper = true)
@@ -25,5 +28,13 @@ public class StealEffect extends Effect {
     @Override
     public String getType() {
         return TYPE;
+    }
+
+    @Override
+    public void apply(Game game, CardInstance card) {
+        Player currentPlayer = card.getOwner();
+        Player opponent = card.getOwner().getOpponent(game.getPlayers());
+
+        // TODO Implement choice
     }
 }

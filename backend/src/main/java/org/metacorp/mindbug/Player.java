@@ -31,6 +31,69 @@ public class Player {
         mindBugs = 2;
     }
 
+    public void drawX(int cardsToDraw) {
+        while (cardsToDraw != 0 && !drawPile.isEmpty()) {
+            hand.add(drawPile.removeFirst());
+            cardsToDraw--;
+        }
+    }
+
+    public void addCardToBoard(CardInstance card, boolean mindBug) {
+        if (!mindBug) {
+            hand.remove(card);
+        }
+
+        board.add(card);
+    }
+
+    public Player getOpponent(List<Player> players) {
+        Player opponent = null;
+        for (Player player : players) {
+            if (player.getTeam() != team) {
+                opponent = player;
+            }
+        }
+
+        return opponent;
+    }
+
+    public List<CardInstance> getHighestCards() {
+        List<CardInstance> highestCards = new ArrayList<>();
+        int highestPower = 1;
+
+        for (CardInstance card : board) {
+            if (card.getPower() > highestPower) {
+                highestPower = card.getPower();
+                highestCards.clear();
+                highestCards.add(card);
+            } else if (card.getPower() == highestPower) {
+                highestCards.add(card);
+            }
+        }
+
+        return highestCards;
+    }
+
+    public List<CardInstance> getLowestCards() {
+        return getLowestCards(10);
+    }
+
+    public List<CardInstance> getLowestCards(int lowestPower) {
+        List<CardInstance> lowestCards = new ArrayList<>();
+
+        for (CardInstance card : board) {
+            if (card.getPower() < lowestPower) {
+                lowestPower = card.getPower();
+                lowestCards.clear();
+                lowestCards.add(card);
+            } else if (card.getPower() == lowestPower) {
+                lowestCards.add(card);
+            }
+        }
+
+        return lowestCards;
+    }
+
     @Override
     public String toString() {
         return "Player (name : " + name + ", team : " + team + ", mindbugs : " + mindBugs + ")";

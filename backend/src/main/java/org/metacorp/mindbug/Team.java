@@ -13,4 +13,15 @@ public class Team {
     public Team() {
         lifePoints = 3;
     }
+
+    public void gainLifePoints(int amount) {
+        lifePoints += amount;
+    }
+
+    public void loseLifePoints(int amount) {
+        lifePoints -= amount;
+        if (lifePoints < 0) {
+            lifePoints = 0;
+        }
+    }
 }

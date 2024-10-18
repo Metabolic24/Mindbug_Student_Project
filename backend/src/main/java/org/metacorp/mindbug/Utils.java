@@ -43,4 +43,27 @@ public final class Utils {
             throw new RuntimeException(e);
         }
     }
+
+    // Get the cards with the lowest power on boards
+    public static List<CardInstance> getLowestCards(List<Player> players) {
+        List<CardInstance> lowestCards = new ArrayList<>();
+        int lowestPower = 10;
+
+        for (Player player : players) {
+            List<CardInstance> currentCards = player.getLowestCards(lowestPower);
+
+            if (!currentCards.isEmpty()) {
+                int currentPower = currentCards.getFirst().getPower();
+
+                if (currentPower < lowestPower) {
+                    lowestPower = currentPower;
+                    lowestCards = new ArrayList<>(currentCards);
+                } else if (currentPower == lowestPower) {
+                    lowestCards.addAll(currentCards);
+                }
+            }
+        }
+
+        return lowestCards;
+    }
 }

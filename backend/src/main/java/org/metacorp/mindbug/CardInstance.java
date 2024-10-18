@@ -40,7 +40,7 @@ public class CardInstance {
         return this.card.getEffects().containsKey(timing);
     }
 
-    public void gainPower(int amount) {
+    public void changePower(int amount) {
         power += amount;
     }
 
@@ -59,5 +59,12 @@ public class CardInstance {
     @Override
     public int hashCode() {
         return uuid.hashCode();
+    }
+
+    public void reset() {
+        power = card.getPower();
+        canAttack = true;
+        canBlock = true;
+        keywords = new HashSet<>(card.getKeywords());
     }
 }

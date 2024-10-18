@@ -18,4 +18,10 @@ public class DisableTimingEffect extends Effect {
     public String getType() {
         return TYPE;
     }
+
+    @Override
+    public void apply(Game game, CardInstance card) {
+        Player opponent = card.getOwner().getOpponent(game.getPlayers());
+        opponent.getDisabledTiming().add(value);
+    }
 }

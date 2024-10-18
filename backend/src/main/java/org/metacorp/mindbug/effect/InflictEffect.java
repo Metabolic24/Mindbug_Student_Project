@@ -20,4 +20,22 @@ public class InflictEffect extends Effect {
     public String getType() {
         return TYPE;
     }
+
+    @Override
+    public void apply(Game game, CardInstance card) {
+        Player cardOwner = card.getOwner();
+
+        Team teamToDecrease = self ? cardOwner.getTeam() :
+                cardOwner.getOpponent(game.getPlayers()).getTeam();
+
+        if (allButOne) {
+            if (teamToDecrease.getLifePoints() > 1) {
+                teamToDecrease.setLifePoints(1);
+                game.lifePointLost(cardOwner);
+            }
+        } else {
+            teamToDecrease.loseLifePoints(value);
+            game.lifePointLost(cardOwner);
+        }
+    }
 }

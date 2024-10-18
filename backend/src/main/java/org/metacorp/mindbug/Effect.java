@@ -29,4 +29,11 @@ public abstract class Effect {
      * @return the Effect type
      */
     public abstract String getType();
+
+    /**
+     * Apply the current effect
+     * @param game the current game
+     * @param card the card that contains this effect
+     */
+    public abstract void apply(Game game, CardInstance card);
 }

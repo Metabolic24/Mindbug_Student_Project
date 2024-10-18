@@ -19,4 +19,16 @@ public class DrawEffect extends Effect {
     public String getType() {
         return TYPE;
     }
+
+    @Override
+    public void apply(Game game, CardInstance card) {
+        Player cardOwner = card.getOwner();
+
+        if (selfDiscard) {
+            cardOwner.getHand().addAll(cardOwner.getDiscardPile());
+            cardOwner.getDiscardPile().clear();
+        } else {
+            cardOwner.drawX(value);
+        }
+    }
 }

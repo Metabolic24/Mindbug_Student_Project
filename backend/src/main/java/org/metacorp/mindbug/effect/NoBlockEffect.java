@@ -3,7 +3,10 @@ package org.metacorp.mindbug.effect;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.metacorp.mindbug.CardInstance;
 import org.metacorp.mindbug.Effect;
+import org.metacorp.mindbug.Game;
+import org.metacorp.mindbug.Player;
 
 /** Effect that forbids one or more cards to block */
 @EqualsAndHashCode(callSuper = true)
@@ -19,5 +22,24 @@ public class NoBlockEffect extends Effect{
     @Override
     public String getType() {
         return TYPE;
+    }
+
+    @Override
+    public void apply(Game game, CardInstance card) {
+        Player opponent = card.getOwner().getOpponent(game.getPlayers());
+
+        if (highest) {
+            for (CardInstance highestCard : opponent.getHighestCards()) {
+                highestCard.setCanBlock(false);
+            }
+        } else if (max != null) {
+            for (CardInstance opponentCard : opponent.getBoard()) {
+                if (opponentCard.getPower() <= max) {
+                    opponentCard.setCanBlock(false);
+                }
+            }
+        } else {
+            //TODO Implement choice
+        }
     }
 }

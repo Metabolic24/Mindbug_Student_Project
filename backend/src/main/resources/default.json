@@ -347,7 +347,6 @@
     "effects": {
       "PASSIVE": [{
         "type": "NO_BLOCK",
-        "value": -1,
         "max": 4
       }]
     },
@@ -528,7 +527,8 @@
       "PASSIVE": [{
         "type": "POWER_UP",
         "value": 1,
-        "allies": true
+        "allies": true,
+        "self": false
       }]
     },
     "unique": false
