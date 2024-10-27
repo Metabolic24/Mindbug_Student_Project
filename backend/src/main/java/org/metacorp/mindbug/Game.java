@@ -2,6 +2,8 @@ package org.metacorp.mindbug;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.metacorp.mindbug.effect.EffectToApply;
+import org.metacorp.mindbug.effect.InternalEffect;
 
 import java.util.*;
 
@@ -16,10 +18,13 @@ public class Game {
     private List<CardInstance> cards;
     private List<CardInstance> bannedCards;
 
+    private final Queue<EffectToApply> effectQueue;
+
     /** Empty constructor (WARNING : a game is not meant to be reused) */
     public Game(String player1, String player2) {
         bannedCards = new ArrayList<>();
         players = new ArrayList<>(2);
+        effectQueue = new LinkedList<>();
 
         players.add(new Player(player1));
         players.add(new Player(player2));
@@ -39,6 +44,116 @@ public class Game {
         }
 
         this.currentPlayer = getFirstPlayer();
+    }
+
+    // Method executed when a player plays a card, no matter how or why
+    public void playCard(CardInstance card, boolean mindBug) {
+        if (card == null) {
+            //TODO Throw an error as it is an unexpected situation
+            return;
+        }
+
+        // Update the owner if card has been mindbugged
+        if (mindBug) {
+            Player newCardOwner = card.getOwner().getOpponent(players);
+            if (!newCardOwner.hasMindbug()) {
+                // TODO Throw an error as it is an unexpected situation
+            }
+
+            card.setOwner(newCardOwner);
+        }
+
+        managePlayedCard(card, mindBug);
+        resolveEffectQueue();
+    }
+
+    protected void managePlayedCard(CardInstance card, boolean mindBug) {
+        // Add PLAY effects if player is allowed to trigger them
+        addEffectsToQueue(card, EffectTiming.PLAY);
+
+        // In any case, update player board
+        InternalEffect playCardEffect = new InternalEffect(() -> {
+            Player cardOwner = card.getOwner();
+            cardOwner.addCardToBoard(card, mindBug);
+            setCurrentPlayer(cardOwner.getOpponent(getPlayers()));
+        });
+        effectQueue.add(new EffectToApply(playCardEffect));
+    }
+
+    // Method executed when a player choose
+    public void attack(CardInstance attackCard, CardInstance defendCard, Player defender) {
+        if (attackCard == null || defender == null || !attackCard.isCanAttack() || (defendCard != null && !defendCard.isCanBlock())) {
+            // TODO Throw an error as we should not be able to play a card while choice is active (same if some inputs are null)
+            return;
+        }
+
+        manageAttack(attackCard, defendCard, defender);
+        resolveEffectQueue();
+    }
+
+    // This method has been separated from attack one to ease unit tests
+    protected void manageAttack(CardInstance attackCard, CardInstance defendCard, Player defender) {
+        // Add ATTACK effects if player is allowed to trigger them
+        addEffectsToQueue(attackCard, EffectTiming.ATTACK);
+
+        InternalEffect resolveAttackEffect = new InternalEffect(() -> {
+            resolveAttack(attackCard, defendCard, defender);
+            // TODO Gérer le cas FRENZY avec un choice (le currentPlayer ne doit pas changer sur la première attaque)
+            // TODO Trouver un moyen de compter les attaques d'un monstre FRENZY
+            setCurrentPlayer(currentPlayer.getOpponent(getPlayers()));
+        });
+        effectQueue.add(new EffectToApply(resolveAttackEffect));
+    }
+
+    protected void resolveAttack(CardInstance attackCard, CardInstance defendCard, Player defender) {
+        if (defendCard == null) {
+            defender.getTeam().loseLifePoints(1);
+            lifePointLost(defender);
+        } else {
+            if (attackCard.getPower() > defendCard.getPower()) {
+                defender.addCardToDiscardPile(defendCard);
+
+                addEffectsToQueue(defendCard, EffectTiming.DEFEATED);
+            } else {
+                attackCard.getOwner().addCardToDiscardPile(attackCard);
+
+                if (attackCard.getPower() == defendCard.getPower()) {
+                    defender.addCardToDiscardPile(defendCard);
+
+                    if (attackCard.getEffects(EffectTiming.DEFEATED).isEmpty()) {
+                        addEffectsToQueue(defendCard, EffectTiming.DEFEATED);
+                    } else {
+                        if (defendCard.getEffects(EffectTiming.DEFEATED).isEmpty()) {
+                            addEffectsToQueue(attackCard, EffectTiming.DEFEATED);
+                        } else {
+                            // TODO Implement effect order choice
+                        }
+                    }
+                } else {
+                    addEffectsToQueue(attackCard, EffectTiming.DEFEATED);
+                }
+            }
+        }
+    }
+
+    private void addEffectsToQueue(CardInstance card, EffectTiming timing) {
+        if (card.getOwner().canTrigger(timing)) {
+            effectQueue.addAll(card.getEffects(timing).stream()
+                    .map(effect -> new EffectToApply(effect, card, this))
+                    .toList());
+        }
+    }
+
+    public void resolveEffectQueue() {
+        // TODO Maybe raise an error at the start if a choice is remaining
+
+        while (!effectQueue.isEmpty()) {
+            EffectToApply currentEffect = effectQueue.peek();
+            currentEffect.getEffect().apply(this, currentEffect.getCard());
+            // TODO Faut-il envisager un système transactionnel ou similaire pour gérer le fait qu'une application d'effet puisse échouer sans pour autant dégrader l'état actuel du jeu?
+            // Only remove effect from queue after it is applied to avoid loss of data
+            effectQueue.remove(currentEffect);
+        }
     }
 
     // Return the first player of the game (should only be used once per game)
@@ -67,7 +182,7 @@ public class Game {
         return validPlayers.getFirst();
     }
 
-    // Randomly choose a card and ban it
+    // Randomly choose a card and exclude it from the current game
     private CardInstance banCard() {
         int cardIndex = new Random().nextInt(cards.size() - 1);
         CardInstance chosenCard = cards.remove(cardIndex);

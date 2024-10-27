@@ -21,7 +21,6 @@ public class DisableTimingEffect extends Effect {
 
     @Override
     public void apply(Game game, CardInstance card) {
-        Player opponent = card.getOwner().getOpponent(game.getPlayers());
-        opponent.getDisabledTiming().add(value);
+        card.getOwner().getOpponent(game.getPlayers()).disableTiming(value);
     }
 }

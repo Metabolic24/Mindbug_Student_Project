@@ -15,9 +15,9 @@ public class Player {
     private List<CardInstance> board;
     private List<CardInstance> drawPile;
     private List<CardInstance> discardPile;
-    private Integer mindBugs;
+    private int mindBugs;
 
-    private List<EffectTiming> disabledTiming;
+    private Set<EffectTiming> disabledTiming;
 
     public Player(String name) {
         this.name = name;
@@ -27,8 +27,20 @@ public class Player {
         board = new ArrayList<>();
         discardPile = new ArrayList<>();
         drawPile = new ArrayList<>();
-        disabledTiming = new ArrayList<>();
+        disabledTiming = new HashSet<>();
         mindBugs = 2;
+    }
+
+    public boolean hasMindbug() {
+        return mindBugs > 0;
+    }
+
+    public boolean canTrigger(EffectTiming timing) {
+        return !this.disabledTiming.contains(timing);
+    }
+
+    public void disableTiming(EffectTiming timing) {
+        this.disabledTiming.add(timing);
     }
 
     public void drawX(int cardsToDraw) {
@@ -39,11 +51,18 @@ public class Player {
     }
 
     public void addCardToBoard(CardInstance card, boolean mindBug) {
-        if (!mindBug) {
+        if (mindBug) {
+            mindBugs--;
+        } else {
             hand.remove(card);
         }
 
         board.add(card);
+    }
+
+    public void addCardToDiscardPile(CardInstance card) {
+        board.remove(card);
+        discardPile.add(card);
     }
 
     public Player getOpponent(List<Player> players) {
