@@ -2,6 +2,13 @@ package org.metacorp.mindbug;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.choice.Choice;
+import org.metacorp.mindbug.choice.ChoiceLocation;
+import org.metacorp.mindbug.choice.SimultaneousChoice;
+import org.metacorp.mindbug.effect.EffectToApply;
+import org.metacorp.mindbug.effect.GainEffect;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -171,5 +178,58 @@ public class GameTest {
         assertTrue(opponent.getDiscardPile().contains(defendingCard));
         assertEquals(defendingCard.getEffects(EffectTiming.DEFEATED).size(), game.getEffectQueue().size());
     }
-}
 
+    @Test
+    public void testResolveAttack_samePowerBothHaveDefeatedEffect() {
+        CardInstance attackCard = currentPlayer.getHand().getFirst();
+        attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new GainEffect()));
+        currentPlayer.addCardToBoard(attackCard, false);
+
+        CardInstance defendingCard = opponent.getHand().getFirst();
+        defendingCard.setPower(attackCard.getPower());
+        defendingCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new GainEffect()));
+        opponent.addCardToBoard(defendingCard, false);
+
+        game.resolveAttack(attackCard, defendingCard, opponent);
+
+        assertFalse(opponent.getBoard().contains(defendingCard));
+        assertFalse(currentPlayer.getBoard().contains(attackCard));
+        assertTrue(currentPlayer.getDiscardPile().contains(attackCard));
+        assertTrue(opponent.getDiscardPile().contains(defendingCard));
+
+        assertEquals(0, game.getEffectQueue().size());
+
+        assertNotNull(game.getChoice());
+        assertEquals(2, game.getChoice().size());
+        for (Choice choice : game.getChoice()) {
+            assertEquals(EffectTiming.DEFEATED, game.getChoice().getEffectTiming());
+            assertEquals(ChoiceLocation.DISCARD, choice.getLocation());
+            assertTrue(choice.getCard().equals(attackCard) || choice.getCard().equals(defendingCard));
+        }
+    }
+
+    @Test
+    public void testResolveSimultaneousChoice() {
+        CardInstance attackCard = currentPlayer.getHand().removeFirst();
+        attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new GainEffect()));
+        currentPlayer.getDiscardPile().add(attackCard);
+
+        CardInstance defendingCard = opponent.getHand().removeFirst();
+        defendingCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new GainEffect()));
+        opponent.getDiscardPile().add(defendingCard);
+
+        SimultaneousChoice choice = new SimultaneousChoice(currentPlayer, EffectTiming.DEFEATED);
+        choice.add(new Choice(attackCard, ChoiceLocation.DISCARD));
+        choice.add(new Choice(defendingCard, ChoiceLocation.DISCARD));
+        game.setChoice(choice);
+
+        game.resolveSimultaneousChoice(choice);
+
+        assertNull(game.getChoice());
+        assertEquals(2, game.getEffectQueue().size());
+
+        for (EffectToApply effect : game.getEffectQueue()) {
+            assertTrue(effect.getCard().equals(attackCard) || effect.getCard().equals(defendingCard));
+        }
+    }
+}

@@ -2,6 +2,9 @@ package org.metacorp.mindbug;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.metacorp.mindbug.choice.Choice;
+import org.metacorp.mindbug.choice.ChoiceLocation;
+import org.metacorp.mindbug.choice.SimultaneousChoice;
 import org.metacorp.mindbug.effect.EffectToApply;
 import org.metacorp.mindbug.effect.InternalEffect;
 
@@ -19,6 +22,7 @@ public class Game {
     private List<CardInstance> bannedCards;
 
     private final Queue<EffectToApply> effectQueue;
+    private SimultaneousChoice choice;
 
     /** Empty constructor (WARNING : a game is not meant to be reused) */
     public Game(String player1, String player2) {
@@ -48,7 +52,7 @@ public class Game {
 
     // Method executed when a player plays a card, no matter how or why
     public void playCard(CardInstance card, boolean mindBug) {
-        if (card == null) {
+        if (card == null || (choice != null && mindBug)) {
             //TODO Throw an error as it is an unexpected situation
             return;
         }
@@ -82,7 +86,8 @@ public class Game {
 
     // Method executed when a player choose
     public void attack(CardInstance attackCard, CardInstance defendCard, Player defender) {
-        if (attackCard == null || defender == null || !attackCard.isCanAttack() || (defendCard != null && !defendCard.isCanBlock())) {
+        if (attackCard == null || defender == null || !attackCard.isCanAttack() || (defendCard != null && !defendCard.isCanBlock())
+                || choice != null) {
             // TODO Throw an error as we should not be able to play a card while choice is active (same if some inputs are null)
             return;
         }
@@ -126,7 +131,9 @@ public class Game {
                         if (defendCard.getEffects(EffectTiming.DEFEATED).isEmpty()) {
                             addEffectsToQueue(attackCard, EffectTiming.DEFEATED);
                         } else {
-                            // TODO Implement effect order choice
+                            choice = new SimultaneousChoice(attackCard.getOwner(), EffectTiming.DEFEATED);
+                            choice.add(new Choice(attackCard, ChoiceLocation.DISCARD));
+                            choice.add(new Choice(defendCard, ChoiceLocation.DISCARD));
                         }
                     }
                 } else {
@@ -134,6 +141,36 @@ public class Game {
                 }
             }
         }
+    }
+
+    public void applyChoice(List<Choice> choices) {
+        // Retrieve the current choice and check it exists
+        if (this.choice == null || choices == null || choices.size() != this.choice.size()) {
+            //TODO Raise an error
+            return;
+        }
+
+        resolveSimultaneousChoice(choices);
+
+        resolveEffectQueue();
+    }
+
+    /**
+     * Solve a pending choice
+     * @param choices the list of ordered choices to apply
+     */
+    protected void resolveSimultaneousChoice(List<Choice> choices) {
+        // Process the incoming choice list
+        for (Choice choice : choices) {
+            if (this.choice.contains(choice)) {
+                addEffectsToQueue(choice.getCard(), this.choice.getEffectTiming());
+            } else {
+                //TODO Raise an error
+            }
+        }
+
+        // Reset the choice only if the given choice list was valid
+        this.choice = null;
     }
 
     private void addEffectsToQueue(CardInstance card, EffectTiming timing) {
@@ -147,7 +184,7 @@ public class Game {
     public void resolveEffectQueue() {
         // TODO Maybe raise an error at the start if a choice is remaining
 
-        while (!effectQueue.isEmpty()) {
+        while (choice == null && !effectQueue.isEmpty()) {
             EffectToApply currentEffect = effectQueue.peek();
             currentEffect.getEffect().apply(this, currentEffect.getCard());
             // TODO Faut-il envisager un système transactionnel ou similaire pour gérer le fait qu'une application d'effet puisse échouer sans pour autant dégrader l'état actuel du jeu?
