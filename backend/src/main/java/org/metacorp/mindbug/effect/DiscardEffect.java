@@ -7,12 +7,18 @@ import org.metacorp.mindbug.CardInstance;
 import org.metacorp.mindbug.Effect;
 import org.metacorp.mindbug.Game;
 import org.metacorp.mindbug.Player;
+import org.metacorp.mindbug.choice.Choice;
+import org.metacorp.mindbug.choice.ChoiceList;
+import org.metacorp.mindbug.choice.ChoiceLocation;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 /** Effect that may discard one or more cards from opponent hand */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class DiscardEffect extends Effect {
+public class DiscardEffect extends Effect implements ResolvableEffect {
     public final static String TYPE = "DISCARD";
 
     private int value; // The number of cards to be discarded
@@ -30,7 +36,27 @@ public class DiscardEffect extends Effect {
             opponent.getDiscardPile().addAll(opponent.getHand());
             opponent.getHand().clear();
         } else {
-            // TODO Implement choices
+            List<Choice> choices = opponent.getHand().stream()
+                    .map(opponentCard -> new Choice(opponentCard, ChoiceLocation.HAND))
+                    .collect(Collectors.toList());
+
+            game.setChoiceList(new ChoiceList(opponent, value, choices, this, card));
+        }
+    }
+
+    @Override
+    public void resolve(ChoiceList choiceList) {
+        if (choiceList != null && !choiceList.getChoices().isEmpty()) {
+            List<Choice> choices = choiceList.getChoices();
+            if (choices.size() == value) {
+                for (Choice choice : choices) {
+                    CardInstance cardToDiscard = choice.getCard();
+                    cardToDiscard.getOwner().getHand().remove(cardToDiscard);
+                    cardToDiscard.getOwner().getDiscardPile().add(cardToDiscard);
+                }
+            } else {
+                //TODO Raise an error
+            }
         }
     }
 }

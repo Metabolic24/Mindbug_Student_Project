@@ -3,14 +3,18 @@ package org.metacorp.mindbug;
 import lombok.Getter;
 import lombok.Setter;
 import org.metacorp.mindbug.choice.Choice;
+import org.metacorp.mindbug.choice.ChoiceList;
 import org.metacorp.mindbug.choice.ChoiceLocation;
 import org.metacorp.mindbug.choice.SimultaneousChoice;
 import org.metacorp.mindbug.effect.EffectToApply;
 import org.metacorp.mindbug.effect.InternalEffect;
+import org.metacorp.mindbug.effect.ReviveEffect;
 
 import java.util.*;
 
-/** Main class that manages game workflow */
+/**
+ * Main class that manages game workflow
+ */
 @Getter
 @Setter
 public class Game {
@@ -23,8 +27,11 @@ public class Game {
 
     private final Queue<EffectToApply> effectQueue;
     private SimultaneousChoice choice;
+    private ChoiceList choiceList;
 
-    /** Empty constructor (WARNING : a game is not meant to be reused) */
+    /**
+     * Empty constructor (WARNING : a game is not meant to be reused)
+     */
     public Game(String player1, String player2) {
         bannedCards = new ArrayList<>();
         players = new ArrayList<>(2);
@@ -52,7 +59,7 @@ public class Game {
 
     // Method executed when a player plays a card, no matter how or why
     public void playCard(CardInstance card, boolean mindBug) {
-        if (card == null || (choice != null && mindBug)) {
+        if (card == null || choice != null || choiceList != null) {
             //TODO Throw an error as it is an unexpected situation
             return;
         }
@@ -87,7 +94,7 @@ public class Game {
     // Method executed when a player choose
     public void attack(CardInstance attackCard, CardInstance defendCard, Player defender) {
         if (attackCard == null || defender == null || !attackCard.isCanAttack() || (defendCard != null && !defendCard.isCanBlock())
-                || choice != null) {
+                || choice != null || choiceList != null) {
             // TODO Throw an error as we should not be able to play a card while choice is active (same if some inputs are null)
             return;
         }
@@ -143,6 +150,30 @@ public class Game {
         }
     }
 
+    public void resolveChoiceList(List<Choice> chosenCards) {
+        if (choiceList == null) {
+            //TODO Raise an error or log message
+            return;
+        }
+
+        List<Choice> expectedChoices = choiceList.getChoices();
+
+        for (Choice choice : chosenCards) {
+            if (!expectedChoices.contains(choice)) {
+                // TODO Raise an error
+            }
+        }
+
+        // Update choiceList then call resolve method of the source effect
+        choiceList.setChoices(chosenCards);
+        choiceList.getSourceEffect().resolve(choiceList);
+
+        // Reset choiceList value
+        choiceList = null;
+
+        resolveEffectQueue();
+    }
+
     public void applyChoice(List<Choice> choices) {
         // Retrieve the current choice and check it exists
         if (this.choice == null || choices == null || choices.size() != this.choice.size()) {
@@ -157,6 +188,7 @@ public class Game {
 
     /**
      * Solve a pending choice
+     *
      * @param choices the list of ordered choices to apply
      */
     protected void resolveSimultaneousChoice(List<Choice> choices) {
@@ -173,7 +205,7 @@ public class Game {
         this.choice = null;
     }
 
-    private void addEffectsToQueue(CardInstance card, EffectTiming timing) {
+    public void addEffectsToQueue(CardInstance card, EffectTiming timing) {
         if (card.getOwner().canTrigger(timing)) {
             effectQueue.addAll(card.getEffects(timing).stream()
                     .map(effect -> new EffectToApply(effect, card, this))
@@ -184,13 +216,34 @@ public class Game {
     public void resolveEffectQueue() {
         // TODO Maybe raise an error at the start if a choice is remaining
 
-        while (choice == null && !effectQueue.isEmpty()) {
+        while (choice == null && choiceList == null && !effectQueue.isEmpty()) {
             EffectToApply currentEffect = effectQueue.peek();
             currentEffect.getEffect().apply(this, currentEffect.getCard());
             // TODO Faut-il envisager un système transactionnel ou similaire pour gérer le fait qu'une application d'effet puisse échouer sans pour autant dégrader l'état actuel du jeu?
             // Only remove effect from queue after it is applied to avoid loss of data
             effectQueue.remove(currentEffect);
         }
+    }
+
+    public void lifePointLost(Player player) {
+        if (player.getTeam().getLifePoints() <= 0) {
+            endGame(player);
+            return;
+        }
+
+        for (CardInstance card : player.getDiscardPile()) {
+            List<Effect> effects = card.getEffects(EffectTiming.PASSIVE).stream().filter(effect -> effect instanceof ReviveEffect).toList();
+            if (!effects.isEmpty()) {
+                // We consider that, for the moment, it is not necessary to create a simultaneous choice here even if there are multiple cards to revive
+                effectQueue.add(new EffectToApply(effects.getFirst(), card, this));
+            }
+        }
+    }
+
+    private void endGame(Player loser) {
+        Player winner = loser.getOpponent(players);
+
+        System.out.printf("%s wins ; %s loses", winner.getName(), loser.getName());
     }
 
     // Return the first player of the game (should only be used once per game)
@@ -247,9 +300,5 @@ public class Game {
             currentCard.setOwner(player);
             drawPile.add(currentCard);
         }
-    }
-
-    public void lifePointLost(Player cardOwner) {
-        // TODO To be implemented
     }
 }

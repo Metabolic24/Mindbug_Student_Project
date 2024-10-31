@@ -7,12 +7,19 @@ import org.metacorp.mindbug.CardInstance;
 import org.metacorp.mindbug.Effect;
 import org.metacorp.mindbug.Game;
 import org.metacorp.mindbug.Player;
+import org.metacorp.mindbug.choice.Choice;
+import org.metacorp.mindbug.choice.ChoiceList;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
 
 /** Effect that steals card from the opponent hand or board depending on several conditions */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class StealEffect extends Effect {
+public class StealEffect extends Effect implements ResolvableEffect {
     public final static String TYPE = "STEAL";
 
     private int value;              // The number of cards to steal
@@ -35,6 +42,49 @@ public class StealEffect extends Effect {
         Player currentPlayer = card.getOwner();
         Player opponent = card.getOwner().getOpponent(game.getPlayers());
 
-        // TODO Implement choice
+        List<CardInstance> availableCards = switch (source) {
+            case DISCARD -> opponent.getDiscardPile();
+            case HAND -> opponent.getHand();
+            case SELF_DISCARD -> currentPlayer.getDiscardPile();
+            default -> opponent.getBoard();
+        };
+
+        if (min != null) {
+            availableCards = availableCards.stream().filter(currentCard -> currentCard.getPower() >= min).collect(Collectors.toList());
+        }
+
+        if (max != null) {
+            availableCards = availableCards.stream().filter(currentCard -> currentCard.getPower() <= max).collect(Collectors.toList());
+        }
+
+        int cardsCount = availableCards.size();
+        if (cardsCount > 0) {
+            if (cardsCount <= value){
+                stealCards(availableCards);
+            } else if (random) {
+                List<CardInstance> stolenCards = new ArrayList<>();
+                Random random = new Random();
+                for (int i=1;i<= value;i++) {
+                    int index = random.nextInt(cardsCount-i);
+                    stolenCards.add(availableCards.remove(index));
+
+                }
+                stealCards(stolenCards);
+            } else {
+                List<Choice> choices = availableCards.stream()
+                        .map(availableCard -> new Choice(availableCard, source.toChoiceLocation()))
+                        .collect(Collectors.toList());
+                game.setChoiceList(new ChoiceList(opponent, value, choices, this, card));
+            }
+        }
+    }
+
+    private void stealCards(List<CardInstance> stolenCards) {
+        // TODO To be implemented
+    }
+
+    @Override
+    public void resolve(ChoiceList choices) {
+        //TODO To be implemented
     }
 }

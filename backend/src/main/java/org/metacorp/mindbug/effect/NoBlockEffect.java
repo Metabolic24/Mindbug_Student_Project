@@ -7,17 +7,29 @@ import org.metacorp.mindbug.CardInstance;
 import org.metacorp.mindbug.Effect;
 import org.metacorp.mindbug.Game;
 import org.metacorp.mindbug.Player;
+import org.metacorp.mindbug.choice.Choice;
+import org.metacorp.mindbug.choice.ChoiceList;
+import org.metacorp.mindbug.choice.ChoiceLocation;
 
 /** Effect that forbids one or more cards to block */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class NoBlockEffect extends Effect{
+public class NoBlockEffect extends Effect implements ResolvableEffect {
     public final static String TYPE = "NO_BLOCK";
 
-    private int value;          // The number of cards that will be unable to block, -1 for all
-    private Integer max;        // The maximum power for cards that will be unable to block
-    private boolean highest;    // Should the highest creatures be unable to block
+    /**
+     * The number of cards that will be unable to block, -1 for all
+     */
+    private int value;
+    /**
+     * The maximum power for cards that will be unable to block
+     */
+    private Integer max;
+    /**
+     * Should the highest creatures be unable to block
+     */
+    private boolean highest;
 
     @Override
     public String getType() {
@@ -38,8 +50,17 @@ public class NoBlockEffect extends Effect{
                     opponentCard.setCanBlock(false);
                 }
             }
+        } else if (opponent.getBoard().size() <= value){
+            for (CardInstance opponentCard : opponent.getBoard()) {
+                opponentCard.setCanBlock(false);
+            }
         } else {
-            //TODO Implement choice
+            game.setChoiceList(new ChoiceList(card.getOwner(), value, Choice.getChoicesFromCards(opponent.getBoard(), ChoiceLocation.BOARD), this, card));
         }
+    }
+
+    @Override
+    public void resolve(ChoiceList choices) {
+        //TODO To be implemented
     }
 }

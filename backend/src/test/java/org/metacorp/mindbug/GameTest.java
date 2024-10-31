@@ -198,6 +198,7 @@ public class GameTest {
         assertTrue(opponent.getDiscardPile().contains(defendingCard));
 
         assertEquals(0, game.getEffectQueue().size());
+        assertNull(game.getChoiceList());
 
         assertNotNull(game.getChoice());
         assertEquals(2, game.getChoice().size());

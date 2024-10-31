@@ -6,6 +6,12 @@ import lombok.NoArgsConstructor;
 import org.metacorp.mindbug.CardInstance;
 import org.metacorp.mindbug.Effect;
 import org.metacorp.mindbug.Game;
+import org.metacorp.mindbug.Player;
+import org.metacorp.mindbug.choice.Choice;
+import org.metacorp.mindbug.choice.ChoiceList;
+import org.metacorp.mindbug.choice.ChoiceLocation;
+
+import java.util.List;
 
 /**
  * Effect that revives the current card on some specific conditions
@@ -13,7 +19,7 @@ import org.metacorp.mindbug.Game;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class ReviveEffect extends Effect {
+public class ReviveEffect extends Effect implements ResolvableEffect {
     public final static String TYPE = "REVIVE";
 
     private boolean loseLife; // Should card revive when losing life points
@@ -26,7 +32,24 @@ public class ReviveEffect extends Effect {
     @Override
     public void apply(Game game, CardInstance card) {
         if (loseLife) {
-            // TODO Implement choice
+            game.setChoiceList(new ChoiceList(card.getOwner(), 0, List.of(new Choice(card, ChoiceLocation.DISCARD)), this, card));
+        }
+    }
+
+    @Override
+    public void resolve(ChoiceList choiceList) {
+        if (choiceList != null && !choiceList.getChoices().isEmpty()) {
+            if (choiceList.getChoices().size() == 1) {
+                // We consider that there can be only one choice available
+                CardInstance revivedCard = choiceList.getChoices().getFirst().getCard();
+                Player currentPlayer = choiceList.getPlayerToChoose();
+
+                revivedCard.setOwner(currentPlayer);
+                currentPlayer.getDiscardPile().remove(revivedCard);
+                currentPlayer.getBoard().add(revivedCard);
+            } else {
+                // TODO Raise an error
+            }
         }
     }
 }

@@ -5,9 +5,10 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.CardInstance;
 import org.metacorp.mindbug.Game;
 import org.metacorp.mindbug.Player;
+import org.metacorp.mindbug.choice.ChoiceList;
+import org.metacorp.mindbug.choice.ChoiceLocation;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DiscardEffectTest {
 
@@ -42,5 +43,31 @@ public class DiscardEffectTest {
         effect.apply(game, randomCard);
         assertTrue(opponentPlayer.getHand().isEmpty());
         assertEquals(5, opponentPlayer.getDiscardPile().size());
+    }
+
+    @Test
+    public void testWithChoice() {
+        DiscardEffect effect = new DiscardEffect();
+        effect.setValue(3);
+
+        // Check that effect applies if opponent hand size is 5
+        effect.apply(game, randomCard);
+        assertEquals(5, opponentPlayer.getHand().size());
+        assertTrue(opponentPlayer.getDiscardPile().isEmpty());
+
+        assertNull(game.getChoice());
+        ChoiceList choiceList = game.getChoiceList();
+        assertNotNull(choiceList);
+        assertEquals(3, choiceList.getChoicesCount());
+        assertEquals(effect, choiceList.getSourceEffect());
+        assertEquals(randomCard, choiceList.getSourceCard());
+        assertEquals(opponentPlayer, choiceList.getPlayerToChoose());
+        assertEquals(5, choiceList.getChoices().size());
+
+        for (CardInstance card : opponentPlayer.getHand()) {
+            assertEquals(1, choiceList.getChoices().stream()
+                    .filter(choice -> choice.getCard().equals(card) && choice.getLocation() == ChoiceLocation.HAND)
+                    .count());
+        }
     }
 }

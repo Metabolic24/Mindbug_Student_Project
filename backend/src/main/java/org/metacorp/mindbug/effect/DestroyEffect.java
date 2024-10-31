@@ -4,6 +4,10 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.metacorp.mindbug.*;
+import org.metacorp.mindbug.choice.Choice;
+import org.metacorp.mindbug.choice.ChoiceList;
+import org.metacorp.mindbug.choice.ChoiceLocation;
+import org.metacorp.mindbug.choice.SimultaneousChoice;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +16,7 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class DestroyEffect extends Effect {
+public class DestroyEffect extends Effect implements ResolvableEffect {
     public final static String TYPE = "DESTROY";
 
     private Integer value;          // The number of cards to destroy, -1 if all cards should be destroyed
@@ -39,7 +43,7 @@ public class DestroyEffect extends Effect {
         if (lowest) {
             List<CardInstance> lowestCards = selfAllowed ? Utils.getLowestCards(game.getPlayers()) :
                     opponent.getLowestCards();
-            destroyCards(lowestCards, game);
+            destroyCards(lowestCards, game, currentPlayer);
         } else {
             List<CardInstance> availableCards = new ArrayList<>();
             for (CardInstance currentCard : opponent.getBoard()) {
@@ -62,17 +66,18 @@ public class DestroyEffect extends Effect {
                 }
             }
 
-            if (availableCards.size() <= value) {
-                destroyCards(availableCards, game);
-            } else {
-                // TODO Implement choice
+            if (!availableCards.isEmpty()) {
+                if (availableCards.size() <= value) {
+                    destroyCards(availableCards, game, currentPlayer);
+                } else {
+                    game.setChoiceList(new ChoiceList(currentPlayer, value, Choice.getChoicesFromCards(availableCards, ChoiceLocation.BOARD), this, card));
+                }
             }
         }
     }
 
-    private void destroyCards(List<CardInstance> cards, Game game) {
+    private void destroyCards(List<CardInstance> cards, Game game, Player currentPlayer) {
         List<CardInstance> cardsWithEffect = new ArrayList<>();
-
         for (CardInstance card : cards) {
             card.getOwner().getBoard().remove(card);
             card.getOwner().getDiscardPile().add(card);
@@ -84,13 +89,17 @@ public class DestroyEffect extends Effect {
 
         if (!cardsWithEffect.isEmpty()) {
             if (cardsWithEffect.size() > 1) {
-                // TODO Implement choice
+                SimultaneousChoice choice = new SimultaneousChoice(currentPlayer, EffectTiming.DEFEATED);
+                choice.addAll(Choice.getChoicesFromCards(cardsWithEffect, ChoiceLocation.DISCARD));
+                game.setChoice(choice);
             } else {
-                CardInstance currentCard = cardsWithEffect.getFirst();
-                for (Effect effect : currentCard.getEffects(EffectTiming.DEFEATED)) {
-                    effect.apply(game, currentCard);
-                }
+                game.addEffectsToQueue(cardsWithEffect.getFirst(), EffectTiming.DEFEATED);
             }
         }
+    }
+
+    @Override
+    public void resolve(ChoiceList choices) {
+        //TODO To be implemented
     }
 }
