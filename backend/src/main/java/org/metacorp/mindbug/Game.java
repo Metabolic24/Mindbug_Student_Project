@@ -225,6 +225,8 @@ public class Game {
         }
     }
 
+    //TODO Implémenter la pioche auto quand moins de cinq cartes
+
     public void lifePointLost(Player player) {
         if (player.getTeam().getLifePoints() <= 0) {
             endGame(player);
