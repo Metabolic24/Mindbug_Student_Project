@@ -15,20 +15,20 @@ public class DiscardEffectTest {
     private Game game;
     private CardInstance randomCard;
     private Player opponentPlayer;
+    private DiscardEffect effect;
 
     @BeforeEach
     public void prepareGame() {
         game = new Game("Player1", "Player2");
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
+
+        effect = new DiscardEffect();
+        effect.setValue(3);
     }
 
     @Test
-    public void testBasic() {
-        DiscardEffect effect = new DiscardEffect();
-        effect.setValue(3);
-
-        // Check that effect applies if opponent hand size is 2
+    public void testBasic_opponentHandIs2() {
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
@@ -36,26 +36,27 @@ public class DiscardEffectTest {
         effect.apply(game, randomCard);
         assertTrue(opponentPlayer.getHand().isEmpty());
         assertEquals(2, opponentPlayer.getDiscardPile().size());
-
-        // Check that effect applies if opponent hand size is 3
-        opponentPlayer.drawX(3);
-
-        effect.apply(game, randomCard);
-        assertTrue(opponentPlayer.getHand().isEmpty());
-        assertEquals(5, opponentPlayer.getDiscardPile().size());
     }
 
     @Test
-    public void testWithChoice() {
-        DiscardEffect effect = new DiscardEffect();
-        effect.setValue(3);
+    public void testBasic_opponentHandIs3() {
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
 
-        // Check that effect applies if opponent hand size is 5
         effect.apply(game, randomCard);
+        assertTrue(opponentPlayer.getHand().isEmpty());
+        assertEquals(3, opponentPlayer.getDiscardPile().size());
+    }
+
+    @Test
+    public void testBasic_opponentHandIs5() {
+        effect.apply(game, randomCard);
+
         assertEquals(5, opponentPlayer.getHand().size());
         assertTrue(opponentPlayer.getDiscardPile().isEmpty());
 
         assertNull(game.getChoice());
+
         ChoiceList choiceList = game.getChoiceList();
         assertNotNull(choiceList);
         assertEquals(3, choiceList.getChoicesCount());

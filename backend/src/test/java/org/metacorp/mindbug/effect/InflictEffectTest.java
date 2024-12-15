@@ -15,46 +15,51 @@ public class InflictEffectTest {
     private Player currentPlayer;
     private Player opponentPlayer;
 
+    private InflictEffect effect;
+
     @BeforeEach
     public void prepareGame() {
         game = new Game("Player1", "Player2");
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+
+        effect = new InflictEffect();
     }
 
     @Test
     public void testBasic() {
-        InflictEffect inflictEffect = new InflictEffect();
-        inflictEffect.setValue(2);
+        effect.setValue(2);
+        effect.apply(game, randomCard);
 
-        inflictEffect.apply(game, randomCard);
         assertEquals(1, opponentPlayer.getTeam().getLifePoints());
     }
 
     @Test
     public void testWithSelfParameter() {
-        InflictEffect inflictEffect = new InflictEffect();
-        inflictEffect.setValue(4);
-        inflictEffect.setSelf(true);
+        effect.setValue(4);
+        effect.setSelf(true);
+        effect.apply(game, randomCard);
 
-        inflictEffect.apply(game, randomCard);
         assertEquals(0, currentPlayer.getTeam().getLifePoints());
         assertEquals(3, opponentPlayer.getTeam().getLifePoints());
     }
 
     @Test
-    public void testWithAllButOneParameter() {
-        InflictEffect inflictEffect = new InflictEffect();
-        inflictEffect.setAllButOne(true);
+    public void testWithAllButOneParameter_nominal() {
+        effect.setAllButOne(true);
+        effect.apply(game, randomCard);
 
-        // It should have no effect as both players have 3 life points
-        inflictEffect.apply(game, randomCard);
         assertEquals(1, opponentPlayer.getTeam().getLifePoints());
+    }
 
-        // Apply it again as it should have no effect
-        inflictEffect.apply(game, randomCard);
+    @Test
+    public void testWithAllButOneParameter_noEffect() {
+        opponentPlayer.getTeam().setLifePoints(1);
+
+        effect.setAllButOne(true);
+        effect.apply(game, randomCard);
+
         assertEquals(1, opponentPlayer.getTeam().getLifePoints());
     }
 }
-

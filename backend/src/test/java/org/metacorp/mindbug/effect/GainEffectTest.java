@@ -15,40 +15,51 @@ public class GainEffectTest {
     private Player currentPlayer;
     private Player opponentPlayer;
 
+    private GainEffect effect;
+
     @BeforeEach
     public void prepareGame() {
         game = new Game("Player1", "Player2");
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+
+        effect = new GainEffect();
     }
 
     @Test
     public void testBasic() {
-        GainEffect gainEffect = new GainEffect();
-        gainEffect.setValue(2);
+        effect.setValue(2);
+        effect.apply(game, randomCard);
 
-        gainEffect.apply(game, randomCard);
         assertEquals(5, currentPlayer.getTeam().getLifePoints());
     }
 
     @Test
-    public void testWithEqualParameter() {
-        GainEffect gainEffect = new GainEffect();
-        gainEffect.setEqual(true);
+    public void testWithEqualParameter_noEffect() {
+        effect.setEqual(true);
+        effect.apply(game, randomCard);
 
-        // It should have no effect as both players have 3 life points
-        gainEffect.apply(game, randomCard);
         assertEquals(opponentPlayer.getTeam().getLifePoints(), currentPlayer.getTeam().getLifePoints());
+    }
 
-        // Check that it works if opponent has more life points
+    @Test
+    public void testWithEqualParameter_moreLifePoints() {
         opponentPlayer.getTeam().setLifePoints(5);
-        gainEffect.apply(game, randomCard);
-        assertEquals(opponentPlayer.getTeam().getLifePoints(), currentPlayer.getTeam().getLifePoints());
 
-        // Check that it works if opponent has more life points
+        effect.setEqual(true);
+        effect.apply(game, randomCard);
+
+        assertEquals(opponentPlayer.getTeam().getLifePoints(), currentPlayer.getTeam().getLifePoints());
+    }
+
+    @Test
+    public void testWithEqualParameter_lessLifePoints() {
         opponentPlayer.getTeam().setLifePoints(1);
-        gainEffect.apply(game, randomCard);
+
+        effect.setEqual(true);
+        effect.apply(game, randomCard);
+
         assertEquals(opponentPlayer.getTeam().getLifePoints(), currentPlayer.getTeam().getLifePoints());
     }
 }

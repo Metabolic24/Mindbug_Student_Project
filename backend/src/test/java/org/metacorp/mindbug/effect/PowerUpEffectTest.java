@@ -15,121 +15,180 @@ public class PowerUpEffectTest {
     private Player currentPlayer;
     private Player opponentPlayer;
 
+    private PowerUpEffect effect;
+
     @BeforeEach
     public void prepareGame() {
         game = new Game("Player1", "Player2");
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+
+        effect = new PowerUpEffect();
     }
 
     @Test
-    public void testWithLifePointsCondition() {
-        PowerUpEffect powerUpEffect = new PowerUpEffect();
-        powerUpEffect.setLifePoints(1);
-        powerUpEffect.setValue(8);
+    public void testWithLifePointsCondition_moreLifePoints() {
+        effect.setLifePoints(1);
+        effect.setValue(8);
+        effect.apply(game, randomCard);
 
-        // Should have no effect as life points are currently 3
-        powerUpEffect.apply(game, randomCard);
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
-
-        // Change life points to the expected value and check that card power has been changed
-        currentPlayer.getTeam().setLifePoints(powerUpEffect.getLifePoints());
-        powerUpEffect.apply(game, randomCard);
-        assertEquals(randomCard.getCard().getPower() + powerUpEffect.getValue(), randomCard.getPower());
     }
 
     @Test
-    public void testWithAloneCondition() {
-        PowerUpEffect powerUpEffect = new PowerUpEffect();
-        powerUpEffect.setAlone(true);
-        powerUpEffect.setValue(4);
+    public void testWithLifePointsCondition_sameLifePoints() {
+        effect.setLifePoints(3);
+        effect.setValue(8);
+        effect.apply(game, randomCard);
 
-        // Should have no effect as there are no card on player board
-        powerUpEffect.apply(game, randomCard);
+        assertEquals(randomCard.getCard().getPower() + effect.getValue(), randomCard.getPower());
+    }
+
+    @Test
+    public void testWithLifePointsCondition_lessLifePoints() {
+        effect.setLifePoints(4);
+        effect.setValue(8);
+        effect.apply(game, randomCard);
+
+        assertEquals(randomCard.getCard().getPower() + effect.getValue(), randomCard.getPower());
+    }
+
+    @Test
+    public void testWithAloneCondition_noEffect() {
+        effect.setAlone(true);
+        effect.setValue(4);
+        effect.apply(game, randomCard);
+
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
+    }
 
-        // Add the card to the board and check that card power has been changed
+    @Test
+    public void testWithAloneCondition_singleCard() {
         currentPlayer.addCardToBoard(randomCard, false);
-        powerUpEffect.apply(game, randomCard);
-        assertEquals(randomCard.getCard().getPower() + powerUpEffect.getValue(), randomCard.getPower());
 
-        // Add an other card to the board and check that card power is back to its initial value
-        randomCard.reset();
+        effect.setAlone(true);
+        effect.setValue(4);
+        effect.apply(game, randomCard);
+
+        assertEquals(randomCard.getCard().getPower() + effect.getValue(), randomCard.getPower());
+    }
+
+    @Test
+    public void testWithAloneCondition_multipleCards() {
+        currentPlayer.addCardToBoard(randomCard, false);
         currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst(), false);
-        powerUpEffect.apply(game, randomCard);
+
+        effect.setAlone(true);
+        effect.setValue(4);
+        effect.apply(game, randomCard);
+
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }
 
     @Test
-    public void testWithAlliesCondition() {
-        PowerUpEffect powerUpEffect = new PowerUpEffect();
-        powerUpEffect.setAllies(true);
-        powerUpEffect.setSelf(false);
-        powerUpEffect.setValue(3);
-
-        // Should have no effect as there are only one card on player board
+    public void testWithAlliesCondition_noEffect() {
         currentPlayer.addCardToBoard(randomCard, false);
-        powerUpEffect.apply(game, randomCard);
-        assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
 
-        // Add an other card on the board and check that its power is up by the effect
+        effect.setAllies(true);
+        effect.setSelf(false);
+        effect.setValue(3);
+        effect.apply(game, randomCard);
+
+        assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
+    }
+
+    @Test
+    public void testWithAlliesCondition_twoCards() {
+        currentPlayer.addCardToBoard(randomCard, false);
+
         CardInstance otherCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(otherCard, false);
-        powerUpEffect.apply(game, randomCard);
-        assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
-        assertEquals(otherCard.getCard().getPower() + powerUpEffect.getValue(), otherCard.getPower());
 
-        // Add 3 other cards on the board and check that their power is up by the effect
-        otherCard.reset();
+        effect.setAllies(true);
+        effect.setSelf(false);
+        effect.setValue(3);
+        effect.apply(game, randomCard);
+
+        assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
+        assertEquals(otherCard.getCard().getPower() + effect.getValue(), otherCard.getPower());
+    }
+
+    @Test
+    public void testWithAlliesCondition_fiveCards() {
+        currentPlayer.addCardToBoard(randomCard, false);
+
+        CardInstance otherCard = currentPlayer.getHand().getFirst();
+        currentPlayer.addCardToBoard(otherCard, false);
+
         CardInstance otherCard2 = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(otherCard2, false);
+
         CardInstance otherCard3 = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(otherCard3, false);
+
         CardInstance otherCard4 = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(otherCard4, false);
-        powerUpEffect.apply(game, randomCard);
+
+        effect.setAllies(true);
+        effect.setSelf(false);
+        effect.setValue(3);
+        effect.apply(game, randomCard);
+
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
-        assertEquals(otherCard.getCard().getPower() + powerUpEffect.getValue(), otherCard.getPower());
-        assertEquals(otherCard2.getCard().getPower() + powerUpEffect.getValue(), otherCard2.getPower());
-        assertEquals(otherCard3.getCard().getPower() + powerUpEffect.getValue(), otherCard3.getPower());
-        assertEquals(otherCard4.getCard().getPower() + powerUpEffect.getValue(), otherCard4.getPower());
+        assertEquals(otherCard.getCard().getPower() + effect.getValue(), otherCard.getPower());
+        assertEquals(otherCard2.getCard().getPower() + effect.getValue(), otherCard2.getPower());
+        assertEquals(otherCard3.getCard().getPower() + effect.getValue(), otherCard3.getPower());
+        assertEquals(otherCard4.getCard().getPower() + effect.getValue(), otherCard4.getPower());
     }
 
     @Test
-    public void testWithSelfTurnCondition() {
-        PowerUpEffect powerUpEffect = new PowerUpEffect();
-        powerUpEffect.setSelfTurn(true);
-        powerUpEffect.setValue(5);
-
-        // Check that power up effect is correctly applied to the random card
+    public void testWithSelfTurnCondition_selfTurn() {
         currentPlayer.addCardToBoard(randomCard, false);
-        powerUpEffect.apply(game, randomCard);
-        assertEquals(randomCard.getCard().getPower() + powerUpEffect.getValue(), randomCard.getPower());
 
-        // Update current player value then check that the random card is no more powered up
-        randomCard.reset();
+        effect.setSelfTurn(true);
+        effect.setValue(5);
+        effect.apply(game, randomCard);
+
+        assertEquals(randomCard.getCard().getPower() + effect.getValue(), randomCard.getPower());
+    }
+
+    @Test
+    public void testWithSelfTurnCondition_opponentTurn() {
+        currentPlayer.addCardToBoard(randomCard, false);
+
         game.setCurrentPlayer(opponentPlayer);
-        powerUpEffect.apply(game, randomCard);
+
+        effect.setSelfTurn(true);
+        effect.setValue(5);
+        effect.apply(game, randomCard);
+
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }
 
     @Test
-    public void testWithByEnemyCondition() {
-        PowerUpEffect powerUpEffect = new PowerUpEffect();
-        powerUpEffect.setByEnemy(true);
-        powerUpEffect.setValue(2);
-
-        // Should have no effect as there are no enemy creature for the moment
+    public void testWithByEnemyCondition_noEffect() {
         currentPlayer.addCardToBoard(randomCard, false);
-        powerUpEffect.apply(game, randomCard);
-        assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
 
-        // Add 3 enemy creatures on board and check that current player card is correctly powered up
+        effect.setByEnemy(true);
+        effect.setValue(2);
+        effect.apply(game, randomCard);
+
+        assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
+    }
+
+    @Test
+    public void testWithByEnemyCondition_threeEnemies() {
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        powerUpEffect.apply(game, randomCard);
-        assertEquals(randomCard.getCard().getPower() + 3 * powerUpEffect.getValue(), randomCard.getPower());
+
+        currentPlayer.addCardToBoard(randomCard, false);
+
+        effect.setByEnemy(true);
+        effect.setValue(2);
+        effect.apply(game, randomCard);
+
+        assertEquals(randomCard.getCard().getPower() + (3 * effect.getValue()), randomCard.getPower());
     }
 }

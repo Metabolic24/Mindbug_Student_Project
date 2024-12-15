@@ -17,23 +17,27 @@ public class ReviveEffectTest {
     private CardInstance randomCard;
     private Player opponentPlayer;
 
+    private ReviveEffect effect;
+
     @BeforeEach
     public void prepareGame() {
         game = new Game("Player1", "Player2");
         opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
         randomCard = opponentPlayer.getHand().removeFirst();
         opponentPlayer.getDiscardPile().add(randomCard);
+
+        effect = new ReviveEffect();
     }
 
     @Test
     public void testBasic() {
-        ReviveEffect effect = new ReviveEffect();
         effect.setLoseLife(true);
-
         effect.apply(game, randomCard);
+
         assertTrue(opponentPlayer.getDiscardPile().contains(randomCard));
 
         assertNull(game.getChoice());
+
         ChoiceList choiceList = game.getChoiceList();
         assertNotNull(choiceList);
         assertEquals(0, choiceList.getChoicesCount());

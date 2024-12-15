@@ -32,7 +32,7 @@ public class DestroyEffectTest {
     }
 
     @Test
-    public void testLowestAndSelfAllowed() {
+    public void testLowestAndSelfAllowed_singleCard() {
         DestroyEffect effect = new DestroyEffect();
         effect.setLowest(true);
         effect.setSelfAllowed(true);
@@ -41,45 +41,75 @@ public class DestroyEffectTest {
         effect.apply(game, randomCard);
         assertEquals(1, currentPlayer.getDiscardPile().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
+    }
 
-        currentPlayer.getDiscardPile().clear();
+    @Test
+    public void testLowestAndSelfAllowed_noCards() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setLowest(true);
+        effect.setSelfAllowed(true);
+
+        currentPlayer.getBoard().clear();
 
         // Nothing should happen as there are no cards on board
         effect.apply(game, randomCard);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
+    }
 
+    @Test
+    public void testLowestAndSelfAllowed_singleOpponentCard() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setLowest(true);
+        effect.setSelfAllowed(true);
+
+        currentPlayer.getBoard().clear();
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
 
         // Opponent card should be destroyed as it is the only one
         effect.apply(game, randomCard);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
+    }
 
-        opponentPlayer.getDiscardPile().clear();
-        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst(), false);
+    @Test
+    public void testLowestAndSelfAllowed_opponentCardLower() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setLowest(true);
+        effect.setSelfAllowed(true);
+
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        opponentPlayer.getBoard().getFirst().setPower(currentPlayer.getBoard().getFirst().getPower() - 1);
+        opponentPlayer.getBoard().getFirst().setPower(randomCard.getPower() - 1);
 
         // Opponent player card should be destroyed as it is the lowest one
         effect.apply(game, randomCard);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
+    }
 
-        opponentPlayer.getDiscardPile().clear();
+    @Test
+    public void testLowestAndSelfAllowed_samePower() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setLowest(true);
+        effect.setSelfAllowed(true);
+
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        opponentPlayer.getBoard().getFirst().setPower(currentPlayer.getBoard().getFirst().getPower());
+        opponentPlayer.getBoard().getFirst().setPower(randomCard.getPower());
 
         // Both cards should be destroyed as they have same power
         effect.apply(game, randomCard);
         assertEquals(1, currentPlayer.getDiscardPile().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
+    }
 
-        currentPlayer.getDiscardPile().clear();
-        opponentPlayer.getDiscardPile().clear();
-        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst(), false);
+    @Test
+    public void testLowestAndSelfAllowed_higherPower() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setLowest(true);
+        effect.setSelfAllowed(true);
+
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        opponentPlayer.getBoard().getFirst().setPower(currentPlayer.getBoard().getFirst().getPower()+1);
+        opponentPlayer.getBoard().getFirst().setPower(randomCard.getPower()+1);
 
         // Current player card should be destroyed as it is the lowest one
         effect.apply(game, randomCard);
@@ -88,7 +118,43 @@ public class DestroyEffectTest {
     }
 
     @Test
-    public void testLowestButNotSelfAllowed() {
+    public void testLowestAndSelfAllowed_multipleCards() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setLowest(true);
+        effect.setSelfAllowed(true);
+
+        CardInstance currentPlayerCard1 = currentPlayer.getHand().getFirst();
+        currentPlayerCard1.setPower(randomCard.getPower() + 4);
+        currentPlayer.addCardToBoard(currentPlayerCard1, false);
+
+        CardInstance currentPlayerCard2 = currentPlayer.getHand().getFirst();
+        currentPlayerCard2.setPower(randomCard.getPower() - 1);
+        currentPlayer.addCardToBoard(currentPlayerCard2, false);
+
+        CardInstance currentPlayerCard3 = currentPlayer.getHand().getFirst();
+        currentPlayerCard3.setPower(randomCard.getPower() - 2);
+        currentPlayer.addCardToBoard(currentPlayerCard3, false);
+
+        CardInstance opponentPlayerCard1 = opponentPlayer.getHand().getFirst();
+        opponentPlayerCard1.setPower(randomCard.getPower() - 2);
+        opponentPlayer.addCardToBoard(opponentPlayerCard1, false);
+
+        CardInstance opponentPlayerCard2 = opponentPlayer.getHand().getFirst();
+        opponentPlayerCard2.setPower(randomCard.getPower() + 1);
+        opponentPlayer.addCardToBoard(opponentPlayerCard2, false);
+
+        CardInstance opponentPlayerCard3= opponentPlayer.getHand().getFirst();
+        opponentPlayerCard3.setPower(randomCard.getPower() - 2);
+        opponentPlayer.addCardToBoard(opponentPlayerCard3, false);
+
+        // Both cards should be destroyed as they have same power
+        effect.apply(game, randomCard);
+        assertEquals(1, currentPlayer.getDiscardPile().size());
+        assertEquals(2, opponentPlayer.getDiscardPile().size());
+    }
+
+    @Test
+    public void testLowestButNotSelfAllowed_singleCard() {
         DestroyEffect effect = new DestroyEffect();
         effect.setLowest(true);
         effect.setSelfAllowed(false);
@@ -97,72 +163,120 @@ public class DestroyEffectTest {
         effect.apply(game, randomCard);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
+    }
 
-        currentPlayer.getDiscardPile().clear();
+    @Test
+    public void testLowestButNotSelfAllowed_noCards() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setLowest(true);
+        effect.setSelfAllowed(false);
+
+        currentPlayer.getBoard().clear();
+
+        // Nothing should happen as there are no cards on board
+        effect.apply(game, randomCard);
+        assertEquals(0, currentPlayer.getDiscardPile().size());
+        assertEquals(0, opponentPlayer.getDiscardPile().size());
+    }
+
+    @Test
+    public void testLowestButNotSelfAllowed_singleOpponentCard() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setLowest(true);
+        effect.setSelfAllowed(false);
+
+        currentPlayer.getBoard().clear();
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+
+        // Opponent card should be destroyed as it is the only one
+        effect.apply(game, randomCard);
+        assertEquals(0, currentPlayer.getDiscardPile().size());
+        assertEquals(1, opponentPlayer.getDiscardPile().size());
+    }
+
+    @Test
+    public void testLowestButNotSelfAllowed_opponentCardLower() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setLowest(true);
+        effect.setSelfAllowed(false);
 
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        opponentPlayer.getBoard().getFirst().setPower(currentPlayer.getBoard().getFirst().getPower() - 1);
+        opponentPlayer.getBoard().getFirst().setPower(randomCard.getPower() - 1);
 
         // Opponent player card should be destroyed as it is the lowest one
         effect.apply(game, randomCard);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
-
-        opponentPlayer.getDiscardPile().clear();
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        opponentPlayer.getBoard().getFirst().setPower(currentPlayer.getBoard().getFirst().getPower());
-
-        // Still opponent card should be destroyed
-        effect.apply(game, randomCard);
-        assertEquals(0, currentPlayer.getDiscardPile().size());
-        assertEquals(1, opponentPlayer.getDiscardPile().size());
-
-        opponentPlayer.getDiscardPile().clear();
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        opponentPlayer.getBoard().getFirst().setPower(currentPlayer.getBoard().getFirst().getPower()+1);
-
-        // Still opponent card should be destroyed
-        effect.apply(game, randomCard);
-        assertEquals(0, currentPlayer.getDiscardPile().size());
-        assertEquals(1, opponentPlayer.getDiscardPile().size());
-
-        opponentPlayer.getDiscardPile().clear();
-        CardInstance opponentCard = opponentPlayer.getHand().getFirst();
-        opponentPlayer.addCardToBoard(opponentCard, false);
-        CardInstance otherOpponentCard = opponentPlayer.getHand().getFirst();
-        opponentPlayer.addCardToBoard(otherOpponentCard, false);
-        otherOpponentCard.setPower(opponentCard.getPower() - 1);
-
-        // One opponent card should be destroyed
-        effect.apply(game, randomCard);
-        assertEquals(0, currentPlayer.getDiscardPile().size());
-        assertEquals(1, opponentPlayer.getDiscardPile().size());
-        assertEquals(otherOpponentCard, opponentPlayer.getDiscardPile().getFirst());
-
-        opponentPlayer.getDiscardPile().clear();
-        opponentPlayer.getBoard().add(otherOpponentCard);
-        otherOpponentCard.setPower(opponentCard.getPower() + 1);
-
-        // One opponent card should be destroyed
-        effect.apply(game, randomCard);
-        assertEquals(0, currentPlayer.getDiscardPile().size());
-        assertEquals(1, opponentPlayer.getDiscardPile().size());
-        assertEquals(opponentCard, opponentPlayer.getDiscardPile().getFirst());
-
-        opponentPlayer.getDiscardPile().clear();
-        opponentPlayer.getBoard().add(opponentCard);
-        otherOpponentCard.setPower(opponentCard.getPower());
-
-        // One opponent card should be destroyed
-        effect.apply(game, randomCard);
-        assertEquals(0, currentPlayer.getDiscardPile().size());
-        assertEquals(2, opponentPlayer.getDiscardPile().size());
-        assertTrue(opponentPlayer.getDiscardPile().contains(opponentCard));
-        assertTrue(opponentPlayer.getDiscardPile().contains(otherOpponentCard));
     }
 
     @Test
-    public void testWithLessAllies() {
+    public void testLowestButNotSelfAllowed_samePower() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setLowest(true);
+        effect.setSelfAllowed(false);
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+        opponentPlayer.getBoard().getFirst().setPower(randomCard.getPower());
+
+        // Both cards should be destroyed as they have same power
+        effect.apply(game, randomCard);
+        assertEquals(0, currentPlayer.getDiscardPile().size());
+        assertEquals(1, opponentPlayer.getDiscardPile().size());
+    }
+
+    @Test
+    public void testLowestButNotSelfAllowed_higherPower() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setLowest(true);
+        effect.setSelfAllowed(false);
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+        opponentPlayer.getBoard().getFirst().setPower(randomCard.getPower()+1);
+
+        // Current player card should be destroyed as it is the lowest one
+        effect.apply(game, randomCard);
+        assertEquals(0, currentPlayer.getDiscardPile().size());
+        assertEquals(1, opponentPlayer.getDiscardPile().size());
+    }
+
+    @Test
+    public void testLowestButNotSelfAllowed_multipleCards() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setLowest(true);
+        effect.setSelfAllowed(false);
+
+        CardInstance currentPlayerCard1 = currentPlayer.getHand().getFirst();
+        currentPlayerCard1.setPower(randomCard.getPower() + 4);
+        currentPlayer.addCardToBoard(currentPlayerCard1, false);
+
+        CardInstance currentPlayerCard2 = currentPlayer.getHand().getFirst();
+        currentPlayerCard2.setPower(randomCard.getPower() - 1);
+        currentPlayer.addCardToBoard(currentPlayerCard2, false);
+
+        CardInstance currentPlayerCard3 = currentPlayer.getHand().getFirst();
+        currentPlayerCard3.setPower(randomCard.getPower() - 2);
+        currentPlayer.addCardToBoard(currentPlayerCard3, false);
+
+        CardInstance opponentPlayerCard1 = opponentPlayer.getHand().getFirst();
+        opponentPlayerCard1.setPower(randomCard.getPower() - 2);
+        opponentPlayer.addCardToBoard(opponentPlayerCard1, false);
+
+        CardInstance opponentPlayerCard2 = opponentPlayer.getHand().getFirst();
+        opponentPlayerCard2.setPower(randomCard.getPower() + 1);
+        opponentPlayer.addCardToBoard(opponentPlayerCard2, false);
+
+        CardInstance opponentPlayerCard3= opponentPlayer.getHand().getFirst();
+        opponentPlayerCard3.setPower(randomCard.getPower() - 2);
+        opponentPlayer.addCardToBoard(opponentPlayerCard3, false);
+
+        // Both cards should be destroyed as they have same power
+        effect.apply(game, randomCard);
+        assertEquals(0, currentPlayer.getDiscardPile().size());
+        assertEquals(2, opponentPlayer.getDiscardPile().size());
+    }
+
+    @Test
+    public void testLessAllies_moreAllies() {
         DestroyEffect effect = new DestroyEffect();
         effect.setValue(1);
         effect.setLessAllies(true);
@@ -172,15 +286,30 @@ public class DestroyEffectTest {
         assertNull(game.getChoiceList());
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getBoard().size());
+    }
+
+    @Test
+    public void testLessAllies_sameAlliesCount() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setValue(1);
+        effect.setLessAllies(true);
 
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
 
-        // Nothing should happen as current player has as much allies than the opponent
+        // Nothing should happen as current player has as much allies as the opponent
         effect.apply(game, randomCard);
         assertNull(game.getChoiceList());
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getBoard().size());
+    }
 
+    @Test
+    public void testLessAllies_lessAlliesAndValueLower() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setValue(1);
+        effect.setLessAllies(true);
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
 
         // Effect should trigger as current player has less allies than the opponent
@@ -201,10 +330,16 @@ public class DestroyEffectTest {
                     .filter(choice -> choice.getCard().equals(card) && choice.getLocation() == ChoiceLocation.BOARD)
                     .count());
         }
+    }
 
-        // Effect should trigger as current player has less allies than the opponent
-        game.setChoiceList(null);
+    @Test
+    public void testLessAllies_lessAlliesAndValueSame() {
+        DestroyEffect effect = new DestroyEffect();
         effect.setValue(2);
+        effect.setLessAllies(true);
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
 
         effect.apply(game, randomCard);
         assertNull(game.getChoiceList());
@@ -214,7 +349,26 @@ public class DestroyEffectTest {
     }
 
     @Test
-    public void testWithMinAndMaxWithoutChoice() {
+    public void testLessAllies_lessAlliesAndValueHigher() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setValue(4);
+        effect.setLessAllies(true);
+
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst(), false);
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+
+        effect.apply(game, randomCard);
+        assertNull(game.getChoiceList());
+        assertEquals(2, currentPlayer.getBoard().size());
+        assertEquals(0, opponentPlayer.getBoard().size());
+        assertEquals(3, opponentPlayer.getDiscardPile().size());
+    }
+
+    @Test
+    public void testMinAndMax_lowerPower() {
         DestroyEffect effect = new DestroyEffect();
         effect.setValue(1);
         effect.setMin(3);
@@ -228,14 +382,34 @@ public class DestroyEffectTest {
         effect.apply(game, randomCard);
         assertEquals(1, opponentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
+    }
 
+    @Test
+    public void testMinAndMax_higherPower() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setValue(1);
+        effect.setMin(3);
+        effect.setMax(5);
+
+        CardInstance card = opponentPlayer.getHand().getFirst();
+        opponentPlayer.addCardToBoard(card, false);
         card.setPower(8);
 
         // Card should not be destroyed
         effect.apply(game, randomCard);
         assertEquals(1, opponentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
+    }
 
+    @Test
+    public void testMinAndMax_samePowerThanMin() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setValue(1);
+        effect.setMin(3);
+        effect.setMax(5);
+
+        CardInstance card = opponentPlayer.getHand().getFirst();
+        opponentPlayer.addCardToBoard(card, false);
         card.setPower(3);
 
         // Card should be destroyed
@@ -243,9 +417,17 @@ public class DestroyEffectTest {
         assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
         assertTrue(opponentPlayer.getDiscardPile().contains(card));
+    }
 
-        opponentPlayer.getBoard().add(opponentPlayer.getDiscardPile().removeFirst());
+    @Test
+    public void testMinAndMax_powerInInterval() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setValue(1);
+        effect.setMin(3);
+        effect.setMax(5);
 
+        CardInstance card = opponentPlayer.getHand().getFirst();
+        opponentPlayer.addCardToBoard(card, false);
         card.setPower(4);
 
         // Card should be destroyed
@@ -253,9 +435,17 @@ public class DestroyEffectTest {
         assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
         assertTrue(opponentPlayer.getDiscardPile().contains(card));
+    }
 
-        opponentPlayer.getBoard().add(opponentPlayer.getDiscardPile().removeFirst());
+    @Test
+    public void testMinAndMax_samePowerThanMax() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setValue(1);
+        effect.setMin(3);
+        effect.setMax(5);
 
+        CardInstance card = opponentPlayer.getHand().getFirst();
+        opponentPlayer.addCardToBoard(card, false);
         card.setPower(5);
 
         // Card should be destroyed
@@ -263,9 +453,16 @@ public class DestroyEffectTest {
         assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
         assertTrue(opponentPlayer.getDiscardPile().contains(card));
+    }
 
-        opponentPlayer.getDiscardPile().clear();
+    @Test
+    public void testMinAndMax_selfAllowed() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setValue(1);
+        effect.setMin(3);
+        effect.setMax(5);
         effect.setSelfAllowed(true);
+
         randomCard.setPower(5);
 
         // Card should be destroyed
@@ -278,36 +475,19 @@ public class DestroyEffectTest {
     }
 
     @Test
-    public void testWithMinAndMaxWithChoice() {
+    public void testMinAndMax_choice() {
         DestroyEffect effect = new DestroyEffect();
         effect.setValue(1);
         effect.setMin(3);
         effect.setMax(5);
 
         CardInstance card = opponentPlayer.getHand().getFirst();
-        opponentPlayer.addCardToBoard(card, false);
-        CardInstance otherCard = opponentPlayer.getHand().getFirst();
-        opponentPlayer.addCardToBoard(otherCard, false);
-        card.setPower(2);
-        otherCard.setPower(2);
-
-        // Cards should not be destroyed
-        effect.apply(game, randomCard);
-        assertNull(game.getChoiceList());
-        assertEquals(2, opponentPlayer.getBoard().size());
-        assertEquals(0, opponentPlayer.getDiscardPile().size());
-
-        card.setPower(8);
-        otherCard.setPower(8);
-
-        // Cards should not be destroyed
-        effect.apply(game, randomCard);
-        assertNull(game.getChoiceList());
-        assertEquals(2, opponentPlayer.getBoard().size());
-        assertEquals(0, opponentPlayer.getDiscardPile().size());
-
         card.setPower(3);
-        otherCard.setPower(3);
+        opponentPlayer.addCardToBoard(card, false);
+
+        CardInstance otherCard = opponentPlayer.getHand().getFirst();
+        otherCard.setPower(4);
+        opponentPlayer.addCardToBoard(otherCard, false);
 
         // Cards should not be destroyed but a choice should be created
         effect.apply(game, randomCard);
@@ -327,54 +507,23 @@ public class DestroyEffectTest {
                     .filter(choice -> choice.getCard().equals(opponentCard) && choice.getLocation() == ChoiceLocation.BOARD)
                     .count());
         }
+    }
 
-        game.setChoiceList(null);
-        card.setPower(4);
+    @Test
+    public void testMinAndMax_choiceAndSelfAllowed() {
+        DestroyEffect effect = new DestroyEffect();
+        effect.setValue(1);
+        effect.setMin(3);
+        effect.setMax(5);
+
+        CardInstance card = opponentPlayer.getHand().getFirst();
+        card.setPower(3);
+        opponentPlayer.addCardToBoard(card, false);
+
+        CardInstance otherCard = opponentPlayer.getHand().getFirst();
         otherCard.setPower(4);
+        opponentPlayer.addCardToBoard(otherCard, false);
 
-        // Card should be destroyed but a choice should be created
-        effect.apply(game, randomCard);
-        assertEquals(2, opponentPlayer.getBoard().size());
-        assertEquals(0, opponentPlayer.getDiscardPile().size());
-
-        choiceList = game.getChoiceList();
-        assertNotNull(choiceList);
-        assertEquals(currentPlayer, choiceList.getPlayerToChoose());
-        assertEquals(effect, choiceList.getSourceEffect());
-        assertEquals(randomCard, choiceList.getSourceCard());
-        assertEquals(1, choiceList.getChoicesCount());
-        assertEquals(2, choiceList.getChoices().size());
-
-        for (CardInstance opponentCard : opponentPlayer.getBoard()) {
-            assertEquals(1, choiceList.getChoices().stream()
-                    .filter(choice -> choice.getCard().equals(opponentCard) && choice.getLocation() == ChoiceLocation.BOARD)
-                    .count());
-        }
-
-        game.setChoiceList(null);
-        card.setPower(5);
-        otherCard.setPower(5);
-
-        // Card should be destroyed but a choice should be created
-        effect.apply(game, randomCard);
-        assertEquals(2, opponentPlayer.getBoard().size());
-        assertEquals(0, opponentPlayer.getDiscardPile().size());
-
-        choiceList = game.getChoiceList();
-        assertNotNull(choiceList);
-        assertEquals(currentPlayer, choiceList.getPlayerToChoose());
-        assertEquals(effect, choiceList.getSourceEffect());
-        assertEquals(randomCard, choiceList.getSourceCard());
-        assertEquals(1, choiceList.getChoicesCount());
-        assertEquals(2, choiceList.getChoices().size());
-
-        for (CardInstance opponentCard : opponentPlayer.getBoard()) {
-            assertEquals(1, choiceList.getChoices().stream()
-                    .filter(choice -> choice.getCard().equals(opponentCard) && choice.getLocation() == ChoiceLocation.BOARD)
-                    .count());
-        }
-
-        game.setChoiceList(null);
         randomCard.setPower(4);
         effect.setSelfAllowed(true);
 
@@ -384,7 +533,7 @@ public class DestroyEffectTest {
         assertEquals(2, opponentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
 
-        choiceList = game.getChoiceList();
+        ChoiceList choiceList = game.getChoiceList();
         assertNotNull(choiceList);
         assertEquals(currentPlayer, choiceList.getPlayerToChoose());
         assertEquals(effect, choiceList.getSourceEffect());
@@ -404,7 +553,7 @@ public class DestroyEffectTest {
     }
 
     @Test
-    public void testDestroyCards() {
+    public void testDestroyCards_basic() {
         DestroyEffect effect = new DestroyEffect();
         effect.setValue(1);
 
@@ -413,15 +562,17 @@ public class DestroyEffectTest {
         // Check that card is destroyed and that its DEFEATED effects (if any) are added to the effect queue
         effect.apply(game, randomCard);
         assertNull(game.getChoice());
-        assertEquals(0,  opponentPlayer.getBoard().size());
+        assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
 
         if (!randomCard.getEffects(EffectTiming.DEFEATED).isEmpty()) {
             assertEquals(randomCard.getEffects(EffectTiming.DEFEATED).size(), game.getEffectQueue().size());
         }
+    }
 
-        opponentPlayer.getDiscardPile().clear();
-        game.getEffectQueue().clear();
+    @Test
+    public void testDestroyCards_multiple() {
+        DestroyEffect effect = new DestroyEffect();
         effect.setValue(2);
 
         CardInstance card = opponentPlayer.getHand().getFirst();
