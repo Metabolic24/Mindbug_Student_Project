@@ -57,6 +57,11 @@ public class Game {
         this.currentPlayer = getFirstPlayer();
     }
 
+    // Method executed when a player choose a card that he would like to play
+    public void pickCard(CardInstance card) {
+        card.getOwner().refillHand();
+    }
+
     // Method executed when a player plays a card, no matter how or why
     public void playCard(CardInstance card, boolean mindBug) {
         if (card == null || choice != null || choiceList != null) {

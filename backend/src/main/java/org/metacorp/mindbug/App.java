@@ -37,6 +37,7 @@ public class App {
         switch (tokens[0]) {
             case "p":
                 System.out.printf("%s joue la carte '%s'\n", currentPlayer.getName(), currentPlayer.getHand().getFirst().getCard().getName());
+                game.pickCard(currentPlayer.getHand().getFirst());
                 game.playCard(currentPlayer.getHand().getFirst(), false);
                 break;
             case "a":

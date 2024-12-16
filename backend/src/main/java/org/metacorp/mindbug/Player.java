@@ -8,6 +8,8 @@ import java.util.*;
 @Data
 public class Player {
 
+    private static final int MAX_HAND_SIZE = 5;
+
     private String name;
     private Team team;
 
@@ -94,7 +96,7 @@ public class Player {
     }
 
     public List<CardInstance> getLowestCards() {
-        return getLowestCards(10);
+        return getLowestCards(100);
     }
 
     public List<CardInstance> getLowestCards(int lowestPower) {
@@ -111,6 +113,14 @@ public class Player {
         }
 
         return lowestCards;
+    }
+
+    // TODO Ajouter un appel à cette méthode dans le refresh qui reste à implémenter?
+    /** Draw cards if possible and necessary (hand size < MAX_HAND_SIZE and some cards are still in the draw pile) */
+    public void refillHand() {
+        while (hand.size() < 5 && !drawPile.isEmpty()) {
+            hand.add(drawPile.removeFirst());
+        }
     }
 
     @Override
