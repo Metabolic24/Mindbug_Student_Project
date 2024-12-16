@@ -130,27 +130,36 @@ public class Game {
             if (attackCard.getPower() > defendCard.getPower()) {
                 defender.addCardToDiscardPile(defendCard);
 
-                addEffectsToQueue(defendCard, EffectTiming.DEFEATED);
+                if (defendCard.hasKeyword(Keyword.POISONOUS)) {
+                    attackCard.getOwner().addCardToDiscardPile(attackCard);
+                    manageSimultaneousDeath(attackCard, defendCard);
+                } else {
+                    addEffectsToQueue(defendCard, EffectTiming.DEFEATED);
+                }
             } else {
                 attackCard.getOwner().addCardToDiscardPile(attackCard);
 
                 if (attackCard.getPower() == defendCard.getPower()) {
                     defender.addCardToDiscardPile(defendCard);
+                    manageSimultaneousDeath(attackCard, defendCard);
 
-                    if (attackCard.getEffects(EffectTiming.DEFEATED).isEmpty()) {
-                        addEffectsToQueue(defendCard, EffectTiming.DEFEATED);
-                    } else {
-                        if (defendCard.getEffects(EffectTiming.DEFEATED).isEmpty()) {
-                            addEffectsToQueue(attackCard, EffectTiming.DEFEATED);
-                        } else {
-                            choice = new SimultaneousChoice(attackCard.getOwner(), EffectTiming.DEFEATED);
-                            choice.add(new Choice(attackCard, ChoiceLocation.DISCARD));
-                            choice.add(new Choice(defendCard, ChoiceLocation.DISCARD));
-                        }
-                    }
                 } else {
                     addEffectsToQueue(attackCard, EffectTiming.DEFEATED);
                 }
+            }
+        }
+    }
+
+    private void manageSimultaneousDeath(CardInstance attackCard, CardInstance defendCard) {
+        if (attackCard.getEffects(EffectTiming.DEFEATED).isEmpty()) {
+            addEffectsToQueue(defendCard, EffectTiming.DEFEATED);
+        } else {
+            if (defendCard.getEffects(EffectTiming.DEFEATED).isEmpty()) {
+                addEffectsToQueue(attackCard, EffectTiming.DEFEATED);
+            } else {
+                choice = new SimultaneousChoice(attackCard.getOwner(), EffectTiming.DEFEATED);
+                choice.add(new Choice(attackCard, ChoiceLocation.DISCARD));
+                choice.add(new Choice(defendCard, ChoiceLocation.DISCARD));
             }
         }
     }

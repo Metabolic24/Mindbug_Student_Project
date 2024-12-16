@@ -36,6 +36,12 @@ public class CardInstance {
         return effects == null ? new ArrayList<>() : effects;
     }
 
+    /** Checks whether this card has the given keyword */
+    public boolean hasKeyword(Keyword keyword) {
+        return this.keywords.contains(keyword);
+    }
+
+    /**Checks whether this card has any effect that triggers at the given timing */
     public boolean hasEffects(EffectTiming timing) {
         return this.card.getEffects().containsKey(timing);
     }
