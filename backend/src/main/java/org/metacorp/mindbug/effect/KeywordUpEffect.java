@@ -54,7 +54,9 @@ public class KeywordUpEffect extends Effect {
             for (CardInstance currentCard : cardOwner.getBoard()) {
                 if (currentCard.getPower() <= max && !currentCard.equals(card)) {
                     currentCard.getKeywords().add(value);
-                    if (value == Keyword.TOUGH) {
+                    if (value == Keyword.FRENZY) {
+                        currentCard.setCanAttackTwice(true);
+                    } else if (value == Keyword.TOUGH) {
                         currentCard.setStillTough(true);
                     }
                 }

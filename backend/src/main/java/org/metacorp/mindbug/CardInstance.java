@@ -18,6 +18,7 @@ public class CardInstance {
     private int power;
     private Set<Keyword> keywords;
     private boolean stillTough;
+    private boolean canAttackTwice;
     private boolean canAttack;
     private boolean canBlock;
 
@@ -26,6 +27,7 @@ public class CardInstance {
         this.card = card;
         this.power = card.getPower();
         this.keywords = new HashSet<>(card.getKeywords());
+        this.canAttackTwice = this.keywords.contains(Keyword.FRENZY);
         this.stillTough = this.keywords.contains(Keyword.TOUGH);
         this.canAttack = true;
         this.canBlock = true;
@@ -46,12 +48,9 @@ public class CardInstance {
         return this.card.getEffects().containsKey(timing);
     }
 
+    /** Change the power of the current card by the given amount (positive or negative) */
     public void changePower(int amount) {
         power += amount;
-    }
-
-    public void losePower(int amount) {
-        power -= amount;
     }
 
     @Override

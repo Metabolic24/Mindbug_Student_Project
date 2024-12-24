@@ -96,7 +96,12 @@ public class Game {
         effectQueue.add(new EffectToApply(playCardEffect));
     }
 
-    // Method executed when a player choose
+    /** Method executed when a player attacks
+     * We consider that if attacking creature has HUNTER, the hunting choice has already been resolved through the GUI
+     * We consider that if attacking creature has not HUNTER, the opponent has already chosen if he wants to block (and with which creature) or not
+     * We consider that if attacking creature has SNEAKY, the GUI correctly restricted the creatures allowed to block.
+     * If creature has FRENZY, then it will be allowed to attack again if it was its first attack.
+     */
     public void attack(CardInstance attackCard, CardInstance defendCard, Player defender) {
         if (attackCard == null || defender == null || !attackCard.isCanAttack() || (defendCard != null && !defendCard.isCanBlock())
                 || choice != null || choiceList != null) {
@@ -115,9 +120,13 @@ public class Game {
 
         InternalEffect resolveAttackEffect = new InternalEffect(() -> {
             resolveAttack(attackCard, defendCard, defender);
-            // TODO Gérer le cas FRENZY avec un choice (le currentPlayer ne doit pas changer sur la première attaque)
-            // TODO Trouver un moyen de compter les attaques d'un monstre FRENZY
-            setCurrentPlayer(currentPlayer.getOpponent(getPlayers()));
+
+            if (attackCard.isCanAttackTwice()) {
+               choiceList = new ChoiceList(attackCard.getOwner(), 1, null, null, attackCard);
+               //TODO Créer différents types de choix
+            } else {
+                setCurrentPlayer(currentPlayer.getOpponent(getPlayers()));
+            }
         });
         effectQueue.add(new EffectToApply(resolveAttackEffect));
     }
@@ -238,8 +247,6 @@ public class Game {
             effectQueue.remove(currentEffect);
         }
     }
-
-    //TODO Implémenter la pioche auto quand moins de cinq cartes
 
     public void lifePointLost(Player player) {
         if (player.getTeam().getLifePoints() <= 0) {
