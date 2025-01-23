@@ -2,7 +2,7 @@ package org.metacorp.mindbug.choice;
 
 import lombok.Data;
 import lombok.NonNull;
-import org.metacorp.mindbug.CardInstance;
+import org.metacorp.mindbug.card.CardInstance;
 
 import java.util.List;
 import java.util.stream.Collectors;

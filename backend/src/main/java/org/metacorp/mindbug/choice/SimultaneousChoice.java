@@ -3,8 +3,8 @@ package org.metacorp.mindbug.choice;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NonNull;
-import org.metacorp.mindbug.EffectTiming;
-import org.metacorp.mindbug.Player;
+import org.metacorp.mindbug.card.effect.EffectTiming;
+import org.metacorp.mindbug.player.Player;
 
 import java.util.ArrayList;
 

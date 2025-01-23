@@ -2,6 +2,9 @@ package org.metacorp.mindbug;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
+import org.metacorp.mindbug.card.Card;
+import org.metacorp.mindbug.card.CardInstance;
+import org.metacorp.mindbug.player.Player;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

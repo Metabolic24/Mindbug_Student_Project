@@ -2,13 +2,18 @@ package org.metacorp.mindbug;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.metacorp.mindbug.card.CardInstance;
+import org.metacorp.mindbug.card.effect.AbstractEffect;
+import org.metacorp.mindbug.card.effect.EffectTiming;
+import org.metacorp.mindbug.card.Keyword;
 import org.metacorp.mindbug.choice.Choice;
 import org.metacorp.mindbug.choice.ChoiceList;
 import org.metacorp.mindbug.choice.ChoiceLocation;
 import org.metacorp.mindbug.choice.SimultaneousChoice;
-import org.metacorp.mindbug.effect.EffectToApply;
-import org.metacorp.mindbug.effect.InternalEffect;
-import org.metacorp.mindbug.effect.ReviveEffect;
+import org.metacorp.mindbug.card.effect.EffectToApply;
+import org.metacorp.mindbug.card.effect.InternalEffect;
+import org.metacorp.mindbug.card.effect.revive.ReviveEffect;
+import org.metacorp.mindbug.player.Player;
 
 import java.util.*;
 
@@ -255,7 +260,7 @@ public class Game {
         }
 
         for (CardInstance card : player.getDiscardPile()) {
-            List<Effect> effects = card.getEffects(EffectTiming.PASSIVE).stream().filter(effect -> effect instanceof ReviveEffect).toList();
+            List<AbstractEffect> effects = card.getEffects(EffectTiming.PASSIVE).stream().filter(effect -> effect instanceof ReviveEffect).toList();
             if (!effects.isEmpty()) {
                 // We consider that, for the moment, it is not necessary to create a simultaneous choice here even if there are multiple cards to revive
                 effectQueue.add(new EffectToApply(effects.getFirst(), card, this));

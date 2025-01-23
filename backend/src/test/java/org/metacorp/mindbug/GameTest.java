@@ -2,11 +2,14 @@ package org.metacorp.mindbug;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.card.CardInstance;
+import org.metacorp.mindbug.card.effect.EffectTiming;
 import org.metacorp.mindbug.choice.Choice;
 import org.metacorp.mindbug.choice.ChoiceLocation;
 import org.metacorp.mindbug.choice.SimultaneousChoice;
-import org.metacorp.mindbug.effect.EffectToApply;
-import org.metacorp.mindbug.effect.GainEffect;
+import org.metacorp.mindbug.card.effect.EffectToApply;
+import org.metacorp.mindbug.card.effect.gainLp.GainEffect;
+import org.metacorp.mindbug.player.Player;
 
 import java.util.List;
 

@@ -1,6 +1,8 @@
 package org.metacorp.mindbug;
 
+import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.choice.Choice;
+import org.metacorp.mindbug.player.Player;
 
 import java.util.List;
 import java.util.Scanner;

@@ -1,9 +1,9 @@
 package org.metacorp.mindbug.choice;
 
 import lombok.*;
-import org.metacorp.mindbug.CardInstance;
-import org.metacorp.mindbug.Player;
-import org.metacorp.mindbug.effect.ResolvableEffect;
+import org.metacorp.mindbug.card.CardInstance;
+import org.metacorp.mindbug.player.Player;
+import org.metacorp.mindbug.card.effect.ResolvableEffect;
 
 import java.util.List;
 
