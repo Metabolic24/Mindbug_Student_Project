@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.Game;
 import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.Keyword;
-import org.metacorp.mindbug.card.effect.keywordUp.KeywordUpEffect;
 import org.metacorp.mindbug.player.Player;
 
 import java.util.Arrays;
@@ -29,7 +28,7 @@ public class KeywordUpEffectTest {
 
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         randomCard.getKeywords().clear();
-        currentPlayer.addCardToBoard(randomCard, false);
+        currentPlayer.addCardToBoard(randomCard);
     }
 
     @Test
@@ -50,7 +49,7 @@ public class KeywordUpEffectTest {
         effect.setValue(Keyword.SNEAKY);
         effect.setAlone(true);
 
-        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst(), false);
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
         effect.apply(game, randomCard);
 
         assertTrue(randomCard.getKeywords().isEmpty());
@@ -75,7 +74,7 @@ public class KeywordUpEffectTest {
         effect.setMoreAllies(true);
 
         // Add a card to opponent board and check effect is no more applied
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         effect.apply(game, randomCard);
 
         assertTrue(randomCard.getKeywords().isEmpty());
@@ -87,9 +86,9 @@ public class KeywordUpEffectTest {
         effect.setValue(Keyword.HUNTER);
         effect.setMoreAllies(true);
 
-        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst(), false);
-        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst(), false);
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         effect.apply(game, randomCard);
 
         assertEquals(1, randomCard.getKeywords().size());
@@ -102,10 +101,10 @@ public class KeywordUpEffectTest {
         effect.setValue(Keyword.HUNTER);
         effect.setMoreAllies(true);
 
-        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst(), false);
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         effect.apply(game, randomCard);
 
         assertTrue(randomCard.getKeywords().isEmpty());
@@ -131,7 +130,7 @@ public class KeywordUpEffectTest {
         // Add a card with no keywords to opponent board and check effect is not applied
         CardInstance opponentCard = opponentPlayer.getHand().getFirst();
         opponentCard.getKeywords().clear();
-        opponentPlayer.addCardToBoard(opponentCard, false);
+        opponentPlayer.addCardToBoard(opponentCard);
         effect.apply(game, randomCard);
 
         assertTrue(randomCard.getKeywords().isEmpty());
@@ -146,7 +145,7 @@ public class KeywordUpEffectTest {
         // Add SNEAKY and POISONOUS keywords to opponent card
         CardInstance opponentCard = opponentPlayer.getHand().getFirst();
         opponentCard.setKeywords(new HashSet<>(Arrays.asList(Keyword.SNEAKY, Keyword.POISONOUS)));
-        opponentPlayer.addCardToBoard(opponentCard, false);
+        opponentPlayer.addCardToBoard(opponentCard);
         effect.apply(game, randomCard);
 
         assertEquals(1, randomCard.getKeywords().size());
@@ -162,7 +161,7 @@ public class KeywordUpEffectTest {
         // Add SNEAKY and POISONOUS keywords to opponent card
         CardInstance opponentCard = opponentPlayer.getHand().getFirst();
         opponentCard.setKeywords(new HashSet<>(Arrays.asList(Keyword.SNEAKY, Keyword.HUNTER)));
-        opponentPlayer.addCardToBoard(opponentCard, false);
+        opponentPlayer.addCardToBoard(opponentCard);
         effect.apply(game, randomCard);
 
         assertTrue(randomCard.getKeywords().isEmpty());
@@ -177,11 +176,11 @@ public class KeywordUpEffectTest {
         // Add SNEAKY and POISONOUS keywords to opponent card
         CardInstance opponentCard = opponentPlayer.getHand().getFirst();
         opponentCard.setKeywords(new HashSet<>(Arrays.asList(Keyword.SNEAKY, Keyword.HUNTER)));
-        opponentPlayer.addCardToBoard(opponentCard, false);
+        opponentPlayer.addCardToBoard(opponentCard);
 
         CardInstance otherCard = opponentPlayer.getHand().getFirst();
         otherCard.setKeywords(new HashSet<>(Arrays.asList(Keyword.POISONOUS, Keyword.FRENZY)));
-        opponentPlayer.addCardToBoard(otherCard, false);
+        opponentPlayer.addCardToBoard(otherCard);
         effect.apply(game, randomCard);
 
         assertEquals(1, randomCard.getKeywords().size());
@@ -208,22 +207,22 @@ public class KeywordUpEffectTest {
         CardInstance otherCard = currentPlayer.getHand().getFirst();
         otherCard.setPower(4);
         otherCard.setKeywords(new HashSet<>(Arrays.asList(Keyword.SNEAKY, Keyword.HUNTER)));
-        currentPlayer.addCardToBoard(otherCard, false);
+        currentPlayer.addCardToBoard(otherCard);
 
         CardInstance otherCard2 = currentPlayer.getHand().getFirst();
         otherCard2.setPower(7);
         otherCard2.setKeywords(new HashSet<>(Arrays.asList(Keyword.POISONOUS, Keyword.FRENZY)));
-        currentPlayer.addCardToBoard(otherCard2, false);
+        currentPlayer.addCardToBoard(otherCard2);
 
         CardInstance otherCard3 = currentPlayer.getHand().getFirst();
         otherCard3.setPower(6);
         otherCard3.getKeywords().clear();
-        currentPlayer.addCardToBoard(otherCard3, false);
+        currentPlayer.addCardToBoard(otherCard3);
 
         CardInstance otherCard4 = currentPlayer.getHand().getFirst();
         otherCard4.setPower(9);
         otherCard4.getKeywords().clear();
-        currentPlayer.addCardToBoard(otherCard4, false);
+        currentPlayer.addCardToBoard(otherCard4);
 
         effect.apply(game, randomCard);
 

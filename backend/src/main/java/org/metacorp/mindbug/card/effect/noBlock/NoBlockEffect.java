@@ -3,20 +3,23 @@ package org.metacorp.mindbug.card.effect.noBlock;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.Game;
+import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.effect.AbstractEffect;
 import org.metacorp.mindbug.card.effect.ResolvableEffect;
+import org.metacorp.mindbug.choice.target.TargetChoice;
 import org.metacorp.mindbug.player.Player;
-import org.metacorp.mindbug.choice.Choice;
-import org.metacorp.mindbug.choice.ChoiceList;
-import org.metacorp.mindbug.choice.ChoiceLocation;
 
-/** Effect that forbids one or more cards to block */
+import java.util.HashSet;
+import java.util.List;
+
+/**
+ * Effect that forbids one or more cards to block
+ */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class NoBlockEffect extends AbstractEffect implements ResolvableEffect {
+public class NoBlockEffect extends AbstractEffect implements ResolvableEffect<List<CardInstance>> {
     public final static String TYPE = "NO_BLOCK";
 
     /**
@@ -51,17 +54,19 @@ public class NoBlockEffect extends AbstractEffect implements ResolvableEffect {
                     opponentCard.setCanBlock(false);
                 }
             }
-        } else if (opponent.getBoard().size() <= value){
+        } else if (opponent.getBoard().size() <= value) {
             for (CardInstance opponentCard : opponent.getBoard()) {
                 opponentCard.setCanBlock(false);
             }
         } else {
-            game.setChoiceList(new ChoiceList(card.getOwner(), value, Choice.getChoicesFromCards(opponent.getBoard(), ChoiceLocation.BOARD), this, card));
+            game.setCurrentChoice(new TargetChoice(card.getOwner(), card, this, value, new HashSet<>(opponent.getBoard())));
         }
     }
 
     @Override
-    public void resolve(ChoiceList choices) {
-        //TODO To be implemented
+    public void resolve(List<CardInstance> chosenTargets) {
+        for (CardInstance card : chosenTargets) {
+            card.setCanBlock(false);
+        }
     }
 }

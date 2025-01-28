@@ -4,9 +4,14 @@ import lombok.Data;
 import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.effect.EffectTiming;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
-/** Class that describes a player data */
+/**
+ * Class that describes a player data
+ */
 @Data
 public class Player {
 
@@ -39,6 +44,10 @@ public class Player {
         return mindBugs > 0;
     }
 
+    public void useMindbug() {
+        mindBugs--;
+    }
+
     public boolean canTrigger(EffectTiming timing) {
         return !this.disabledTiming.contains(timing);
     }
@@ -54,13 +63,8 @@ public class Player {
         }
     }
 
-    public void addCardToBoard(CardInstance card, boolean mindBug) {
-        if (mindBug) {
-            mindBugs--;
-        } else {
-            hand.remove(card);
-        }
-
+    public void addCardToBoard(CardInstance card) {
+        hand.remove(card);
         board.add(card);
     }
 
@@ -118,7 +122,10 @@ public class Player {
     }
 
     // TODO Ajouter un appel à cette méthode dans le refresh qui reste à implémenter?
-    /** Draw cards if possible and necessary (hand size < MAX_HAND_SIZE and some cards are still in the draw pile) */
+
+    /**
+     * Draw cards if possible and necessary (hand size < MAX_HAND_SIZE and some cards are still in the draw pile)
+     */
     public void refillHand() {
         while (hand.size() < 5 && !drawPile.isEmpty()) {
             hand.add(drawPile.removeFirst());

@@ -6,13 +6,11 @@ import lombok.NoArgsConstructor;
 import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.Game;
 import org.metacorp.mindbug.card.effect.AbstractEffect;
+import org.metacorp.mindbug.card.effect.EffectTiming;
 import org.metacorp.mindbug.card.effect.ResolvableEffect;
+import org.metacorp.mindbug.choice.bool.BooleanChoice;
+import org.metacorp.mindbug.choice.bool.BooleanChoiceResolver;
 import org.metacorp.mindbug.player.Player;
-import org.metacorp.mindbug.choice.Choice;
-import org.metacorp.mindbug.choice.ChoiceList;
-import org.metacorp.mindbug.choice.ChoiceLocation;
-
-import java.util.List;
 
 /**
  * Effect that revives the current card on some specific conditions
@@ -20,10 +18,12 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class ReviveEffect extends AbstractEffect implements ResolvableEffect {
+public class ReviveEffect extends AbstractEffect implements ResolvableEffect<BooleanChoiceResolver> {
     public final static String TYPE = "REVIVE";
 
     private boolean loseLife; // Should card revive when losing life points
+
+    private Game game;
 
     @Override
     public String getType() {
@@ -33,24 +33,22 @@ public class ReviveEffect extends AbstractEffect implements ResolvableEffect {
     @Override
     public void apply(Game game, CardInstance card) {
         if (loseLife) {
-            game.setChoiceList(new ChoiceList(card.getOwner(), 0, List.of(new Choice(card, ChoiceLocation.DISCARD)), this, card));
+            game.setCurrentChoice(new BooleanChoice(card.getOwner(), card, this));
+            this.game = game;
         }
     }
 
     @Override
-    public void resolve(ChoiceList choiceList) {
-        if (choiceList != null && !choiceList.getChoices().isEmpty()) {
-            if (choiceList.getChoices().size() == 1) {
-                // We consider that there can be only one choice available
-                CardInstance revivedCard = choiceList.getChoices().getFirst().getCard();
-                Player currentPlayer = choiceList.getPlayerToChoose();
+    public void resolve(BooleanChoiceResolver choiceResolver) {
+        if (choiceResolver.getChoice()) {
+            CardInstance card = choiceResolver.getCard();
+            Player player = choiceResolver.getPlayerToChoose();
 
-                revivedCard.setOwner(currentPlayer);
-                currentPlayer.getDiscardPile().remove(revivedCard);
-                currentPlayer.getBoard().add(revivedCard);
-            } else {
-                // TODO Raise an error
-            }
+            card.getOwner().getDiscardPile().remove(card);
+            player.getBoard().add(card);
+            card.setOwner(player);
+
+            game.addEffectsToQueue(card, EffectTiming.PLAY);
         }
     }
 }

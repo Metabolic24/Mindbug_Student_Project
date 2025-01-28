@@ -65,7 +65,7 @@ public class PowerUpEffectTest {
 
     @Test
     public void testWithAloneCondition_singleCard() {
-        currentPlayer.addCardToBoard(randomCard, false);
+        currentPlayer.addCardToBoard(randomCard);
 
         effect.setAlone(true);
         effect.setValue(4);
@@ -76,8 +76,8 @@ public class PowerUpEffectTest {
 
     @Test
     public void testWithAloneCondition_multipleCards() {
-        currentPlayer.addCardToBoard(randomCard, false);
-        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst(), false);
+        currentPlayer.addCardToBoard(randomCard);
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
 
         effect.setAlone(true);
         effect.setValue(4);
@@ -88,7 +88,7 @@ public class PowerUpEffectTest {
 
     @Test
     public void testWithAlliesCondition_noEffect() {
-        currentPlayer.addCardToBoard(randomCard, false);
+        currentPlayer.addCardToBoard(randomCard);
 
         effect.setAllies(true);
         effect.setSelf(false);
@@ -100,10 +100,10 @@ public class PowerUpEffectTest {
 
     @Test
     public void testWithAlliesCondition_twoCards() {
-        currentPlayer.addCardToBoard(randomCard, false);
+        currentPlayer.addCardToBoard(randomCard);
 
         CardInstance otherCard = currentPlayer.getHand().getFirst();
-        currentPlayer.addCardToBoard(otherCard, false);
+        currentPlayer.addCardToBoard(otherCard);
 
         effect.setAllies(true);
         effect.setSelf(false);
@@ -116,19 +116,19 @@ public class PowerUpEffectTest {
 
     @Test
     public void testWithAlliesCondition_fiveCards() {
-        currentPlayer.addCardToBoard(randomCard, false);
+        currentPlayer.addCardToBoard(randomCard);
 
         CardInstance otherCard = currentPlayer.getHand().getFirst();
-        currentPlayer.addCardToBoard(otherCard, false);
+        currentPlayer.addCardToBoard(otherCard);
 
         CardInstance otherCard2 = currentPlayer.getHand().getFirst();
-        currentPlayer.addCardToBoard(otherCard2, false);
+        currentPlayer.addCardToBoard(otherCard2);
 
         CardInstance otherCard3 = currentPlayer.getHand().getFirst();
-        currentPlayer.addCardToBoard(otherCard3, false);
+        currentPlayer.addCardToBoard(otherCard3);
 
         CardInstance otherCard4 = currentPlayer.getHand().getFirst();
-        currentPlayer.addCardToBoard(otherCard4, false);
+        currentPlayer.addCardToBoard(otherCard4);
 
         effect.setAllies(true);
         effect.setSelf(false);
@@ -144,7 +144,7 @@ public class PowerUpEffectTest {
 
     @Test
     public void testWithSelfTurnCondition_selfTurn() {
-        currentPlayer.addCardToBoard(randomCard, false);
+        currentPlayer.addCardToBoard(randomCard);
 
         effect.setSelfTurn(true);
         effect.setValue(5);
@@ -155,7 +155,7 @@ public class PowerUpEffectTest {
 
     @Test
     public void testWithSelfTurnCondition_opponentTurn() {
-        currentPlayer.addCardToBoard(randomCard, false);
+        currentPlayer.addCardToBoard(randomCard);
 
         game.setCurrentPlayer(opponentPlayer);
 
@@ -168,7 +168,7 @@ public class PowerUpEffectTest {
 
     @Test
     public void testWithByEnemyCondition_noEffect() {
-        currentPlayer.addCardToBoard(randomCard, false);
+        currentPlayer.addCardToBoard(randomCard);
 
         effect.setByEnemy(true);
         effect.setValue(2);
@@ -179,11 +179,11 @@ public class PowerUpEffectTest {
 
     @Test
     public void testWithByEnemyCondition_threeEnemies() {
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
 
-        currentPlayer.addCardToBoard(randomCard, false);
+        currentPlayer.addCardToBoard(randomCard);
 
         effect.setByEnemy(true);
         effect.setValue(2);

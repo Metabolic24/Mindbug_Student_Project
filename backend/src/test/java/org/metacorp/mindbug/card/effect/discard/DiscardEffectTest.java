@@ -2,12 +2,11 @@ package org.metacorp.mindbug.card.effect.discard;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.Game;
-import org.metacorp.mindbug.card.effect.discard.DiscardEffect;
+import org.metacorp.mindbug.card.CardInstance;
+import org.metacorp.mindbug.choice.ChoiceType;
+import org.metacorp.mindbug.choice.target.TargetChoice;
 import org.metacorp.mindbug.player.Player;
-import org.metacorp.mindbug.choice.ChoiceList;
-import org.metacorp.mindbug.choice.ChoiceLocation;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,11 +27,13 @@ public class DiscardEffectTest {
         effect.setValue(3);
     }
 
+    //TODO Tester la résolution des choix
+
     @Test
     public void testBasic_opponentHandIs2() {
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
 
         effect.apply(game, randomCard);
         assertTrue(opponentPlayer.getHand().isEmpty());
@@ -41,8 +42,8 @@ public class DiscardEffectTest {
 
     @Test
     public void testBasic_opponentHandIs3() {
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst(), false);
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
 
         effect.apply(game, randomCard);
         assertTrue(opponentPlayer.getHand().isEmpty());
@@ -56,20 +57,19 @@ public class DiscardEffectTest {
         assertEquals(5, opponentPlayer.getHand().size());
         assertTrue(opponentPlayer.getDiscardPile().isEmpty());
 
-        assertNull(game.getChoice());
+        assertNotNull(game.getCurrentChoice());
+        assertEquals(ChoiceType.TARGET, game.getCurrentChoice().getType());
+        TargetChoice targetChoice = (TargetChoice) game.getCurrentChoice();
 
-        ChoiceList choiceList = game.getChoiceList();
-        assertNotNull(choiceList);
-        assertEquals(3, choiceList.getChoicesCount());
-        assertEquals(effect, choiceList.getSourceEffect());
-        assertEquals(randomCard, choiceList.getSourceCard());
-        assertEquals(opponentPlayer, choiceList.getPlayerToChoose());
-        assertEquals(5, choiceList.getChoices().size());
+        assertEquals(3, targetChoice.getTargetsCount());
+        assertEquals(effect, targetChoice.getEffect());
+        assertEquals(randomCard, targetChoice.getEffectSource());
+        assertEquals(opponentPlayer, targetChoice.getPlayerToChoose());
+        assertEquals(5, targetChoice.getAvailableTargets().size());
 
         for (CardInstance card : opponentPlayer.getHand()) {
-            assertEquals(1, choiceList.getChoices().stream()
-                    .filter(choice -> choice.getCard().equals(card) && choice.getLocation() == ChoiceLocation.HAND)
-                    .count());
+            assertEquals(1, targetChoice.getAvailableTargets().stream()
+                    .filter(card::equals).count());
         }
     }
 }

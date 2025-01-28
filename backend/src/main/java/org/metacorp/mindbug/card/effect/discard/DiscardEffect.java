@@ -3,23 +3,23 @@ package org.metacorp.mindbug.card.effect.discard;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.Game;
+import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.effect.AbstractEffect;
 import org.metacorp.mindbug.card.effect.ResolvableEffect;
+import org.metacorp.mindbug.choice.target.TargetChoice;
 import org.metacorp.mindbug.player.Player;
-import org.metacorp.mindbug.choice.Choice;
-import org.metacorp.mindbug.choice.ChoiceList;
-import org.metacorp.mindbug.choice.ChoiceLocation;
 
+import java.util.HashSet;
 import java.util.List;
-import java.util.stream.Collectors;
 
-/** Effect that may discard one or more cards from opponent hand */
+/**
+ * Effect that may discard one or more cards from opponent hand
+ */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class DiscardEffect extends AbstractEffect implements ResolvableEffect {
+public class DiscardEffect extends AbstractEffect implements ResolvableEffect<List<CardInstance>> {
     public final static String TYPE = "DISCARD";
 
     private int value; // The number of cards to be discarded
@@ -37,27 +37,16 @@ public class DiscardEffect extends AbstractEffect implements ResolvableEffect {
             opponent.getDiscardPile().addAll(opponent.getHand());
             opponent.getHand().clear();
         } else {
-            List<Choice> choices = opponent.getHand().stream()
-                    .map(opponentCard -> new Choice(opponentCard, ChoiceLocation.HAND))
-                    .collect(Collectors.toList());
-
-            game.setChoiceList(new ChoiceList(opponent, value, choices, this, card));
+            game.setCurrentChoice(new TargetChoice(opponent, card, this, value, new HashSet<>(opponent.getHand())));
         }
     }
 
     @Override
-    public void resolve(ChoiceList choiceList) {
-        if (choiceList != null && !choiceList.getChoices().isEmpty()) {
-            List<Choice> choices = choiceList.getChoices();
-            if (choices.size() == value) {
-                for (Choice choice : choices) {
-                    CardInstance cardToDiscard = choice.getCard();
-                    cardToDiscard.getOwner().getHand().remove(cardToDiscard);
-                    cardToDiscard.getOwner().getDiscardPile().add(cardToDiscard);
-                }
-            } else {
-                //TODO Raise an error
-            }
+    public void resolve(List<CardInstance> chosenTargets) {
+        for (CardInstance card : chosenTargets) {
+            Player cardOwner = card.getOwner();
+            cardOwner.getHand().remove(card);
+            cardOwner.getDiscardPile().add(card);
         }
     }
 }

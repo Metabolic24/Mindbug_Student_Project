@@ -1,7 +1,7 @@
 package org.metacorp.mindbug.card.effect;
 
-import org.metacorp.mindbug.choice.ChoiceList;
+import org.metacorp.mindbug.Game;
 
-public interface ResolvableEffect {
-    void resolve(ChoiceList choices);
+public interface ResolvableEffect<T> {
+    void resolve(T choiceResolver);
 }

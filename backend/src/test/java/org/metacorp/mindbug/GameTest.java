@@ -3,14 +3,16 @@ package org.metacorp.mindbug;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.card.CardInstance;
+import org.metacorp.mindbug.card.Keyword;
 import org.metacorp.mindbug.card.effect.EffectTiming;
-import org.metacorp.mindbug.choice.Choice;
-import org.metacorp.mindbug.choice.ChoiceLocation;
-import org.metacorp.mindbug.choice.SimultaneousChoice;
 import org.metacorp.mindbug.card.effect.EffectToApply;
 import org.metacorp.mindbug.card.effect.gainLp.GainEffect;
+import org.metacorp.mindbug.choice.ChoiceType;
+import org.metacorp.mindbug.choice.simultaneous.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.player.Player;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -45,7 +47,7 @@ public class GameTest {
             assertEquals(2, player.getMindBugs());
         }
 
-        assertTrue(game.getBannedCards().size() >= 2 && game.getBannedCards().size() %2 ==0);
+        assertTrue(game.getBannedCards().size() >= 2 && game.getBannedCards().size() % 2 == 0);
         assertTrue(!game.getCards().isEmpty() && game.getCards().size() <= 50);
         assertEquals(52, game.getCards().size() + game.getBannedCards().size());
     }
@@ -56,7 +58,8 @@ public class GameTest {
 
         game.managePlayedCard(card, false);
 
-        assertEquals(card.getEffects(EffectTiming.PLAY).size() + 1, game.getEffectQueue().size());
+        assertEquals(card.getEffects(EffectTiming.PLAY).size(), game.getEffectQueue().size());
+        assertNotNull(game.getAfterEffect());
     }
 
     @Test
@@ -65,7 +68,8 @@ public class GameTest {
 
         game.managePlayedCard(card, true);
 
-        assertEquals(card.getEffects(EffectTiming.PLAY).size() + 1, game.getEffectQueue().size());
+        assertEquals(card.getEffects(EffectTiming.PLAY).size(), game.getEffectQueue().size());
+        assertNotNull(game.getAfterEffect());
     }
 
     @Test
@@ -76,7 +80,8 @@ public class GameTest {
 
         game.managePlayedCard(card, false);
 
-        assertEquals(1, game.getEffectQueue().size());
+        assertEquals(0, game.getEffectQueue().size());
+        assertNotNull(game.getAfterEffect());
     }
 
     @Test
@@ -86,7 +91,7 @@ public class GameTest {
 
         game.manageAttack(attackCard, defenseCard, opponent);
 
-        assertEquals(attackCard.getEffects(EffectTiming.ATTACK).size() + 1, game.getEffectQueue().size());
+        assertEquals(attackCard.getEffects(EffectTiming.ATTACK).size(), game.getEffectQueue().size());
     }
 
     @Test
@@ -98,13 +103,13 @@ public class GameTest {
 
         game.manageAttack(attackCard, defenseCard, opponent);
 
-        assertEquals(1, game.getEffectQueue().size());
+        assertTrue(game.getEffectQueue().isEmpty());
     }
 
     @Test
     public void testResolveAttack_noBlock() {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
-        currentPlayer.addCardToBoard(attackCard, false);
+        currentPlayer.addCardToBoard(attackCard);
 
         game.resolveAttack(attackCard, null, opponent);
         assertEquals(2, opponent.getTeam().getLifePoints());
@@ -113,11 +118,13 @@ public class GameTest {
     @Test
     public void testResolveAttack_lowerBlocker() {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
-        currentPlayer.addCardToBoard(attackCard, false);
+        currentPlayer.addCardToBoard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower() - 1);
-        opponent.addCardToBoard(defendingCard, false);
+        defendingCard.setStillTough(false);
+        defendingCard.getKeywords().remove(Keyword.POISONOUS);
+        opponent.addCardToBoard(defendingCard);
 
         game.resolveAttack(attackCard, defendingCard, opponent);
 
@@ -130,11 +137,13 @@ public class GameTest {
     @Test
     public void testResolveAttack_higherBlocker() {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
-        currentPlayer.addCardToBoard(attackCard, false);
+        attackCard.setStillTough(false);
+        attackCard.getKeywords().remove(Keyword.POISONOUS);
+        currentPlayer.addCardToBoard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower() + 1);
-        opponent.addCardToBoard(defendingCard, false);
+        opponent.addCardToBoard(defendingCard);
 
         game.resolveAttack(attackCard, defendingCard, opponent);
 
@@ -147,12 +156,14 @@ public class GameTest {
     @Test
     public void testResolveAttack_samePowerBlockHasNoDefeatedEffect() {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
-        currentPlayer.addCardToBoard(attackCard, false);
+        attackCard.setStillTough(false);
+        currentPlayer.addCardToBoard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower());
         defendingCard.getCard().getEffects().remove(EffectTiming.DEFEATED);
-        opponent.addCardToBoard(defendingCard, false);
+        defendingCard.setStillTough(false);
+        opponent.addCardToBoard(defendingCard);
 
         game.resolveAttack(attackCard, defendingCard, opponent);
 
@@ -167,11 +178,13 @@ public class GameTest {
     public void testResolveAttack_samePowerAttackHasNoDefeatedEffect() {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.getCard().getEffects().remove(EffectTiming.DEFEATED);
-        currentPlayer.addCardToBoard(attackCard, false);
+        attackCard.setStillTough(false);
+        currentPlayer.addCardToBoard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower());
-        opponent.addCardToBoard(defendingCard, false);
+        defendingCard.setStillTough(false);
+        opponent.addCardToBoard(defendingCard);
 
         game.resolveAttack(attackCard, defendingCard, opponent);
 
@@ -186,12 +199,14 @@ public class GameTest {
     public void testResolveAttack_samePowerBothHaveDefeatedEffect() {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new GainEffect()));
-        currentPlayer.addCardToBoard(attackCard, false);
+        attackCard.setStillTough(false);
+        currentPlayer.addCardToBoard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower());
         defendingCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new GainEffect()));
-        opponent.addCardToBoard(defendingCard, false);
+        defendingCard.setStillTough(false);
+        opponent.addCardToBoard(defendingCard);
 
         game.resolveAttack(attackCard, defendingCard, opponent);
 
@@ -200,36 +215,30 @@ public class GameTest {
         assertTrue(currentPlayer.getDiscardPile().contains(attackCard));
         assertTrue(opponent.getDiscardPile().contains(defendingCard));
 
-        assertEquals(0, game.getEffectQueue().size());
-        assertNull(game.getChoiceList());
-
-        assertNotNull(game.getChoice());
-        assertEquals(2, game.getChoice().size());
-        for (Choice choice : game.getChoice()) {
-            assertEquals(EffectTiming.DEFEATED, game.getChoice().getEffectTiming());
-            assertEquals(ChoiceLocation.DISCARD, choice.getLocation());
-            assertTrue(choice.getCard().equals(attackCard) || choice.getCard().equals(defendingCard));
-        }
+        assertEquals(2, game.getEffectQueue().size());
     }
 
     @Test
     public void testResolveSimultaneousChoice() {
+        GainEffect attackEffect = new GainEffect();
         CardInstance attackCard = currentPlayer.getHand().removeFirst();
-        attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new GainEffect()));
+        attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(attackEffect));
         currentPlayer.getDiscardPile().add(attackCard);
 
+        GainEffect defendEffect = new GainEffect();
         CardInstance defendingCard = opponent.getHand().removeFirst();
-        defendingCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new GainEffect()));
+        defendingCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(defendEffect));
         opponent.getDiscardPile().add(defendingCard);
 
-        SimultaneousChoice choice = new SimultaneousChoice(currentPlayer, EffectTiming.DEFEATED);
-        choice.add(new Choice(attackCard, ChoiceLocation.DISCARD));
-        choice.add(new Choice(defendingCard, ChoiceLocation.DISCARD));
-        game.setChoice(choice);
+        SimultaneousEffectsChoice choice = new SimultaneousEffectsChoice(currentPlayer, new HashSet<>(Arrays.asList(
+                new EffectToApply(attackEffect, attackCard, game),
+                new EffectToApply(defendEffect, defendingCard, game)
+        )));
+        game.setCurrentChoice(choice);
 
-        game.resolveSimultaneousChoice(choice);
+        choice.resolve(game, choice.getEffectsToSort().stream().map(EffectToApply::getUuid).toList());
 
-        assertNull(game.getChoice());
+        assertNull(game.getCurrentChoice());
         assertEquals(2, game.getEffectQueue().size());
 
         for (EffectToApply effect : game.getEffectQueue()) {

@@ -4,8 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.Game;
 import org.metacorp.mindbug.card.CardInstance;
-import org.metacorp.mindbug.choice.ChoiceList;
-import org.metacorp.mindbug.choice.ChoiceLocation;
+import org.metacorp.mindbug.choice.ChoiceType;
+import org.metacorp.mindbug.choice.bool.BooleanChoice;
 import org.metacorp.mindbug.player.Player;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -28,6 +28,8 @@ public class ReviveEffectTest {
         effect = new ReviveEffect();
     }
 
+    //TODO Tester la résolution des choix
+
     @Test
     public void testBasic() {
         effect.setLoseLife(true);
@@ -35,17 +37,13 @@ public class ReviveEffectTest {
 
         assertTrue(opponentPlayer.getDiscardPile().contains(randomCard));
 
-        assertNull(game.getChoice());
+        assertNotNull(game.getCurrentChoice());
+        assertEquals(ChoiceType.BOOLEAN, game.getCurrentChoice().getType());
 
-        ChoiceList choiceList = game.getChoiceList();
-        assertNotNull(choiceList);
-        assertEquals(0, choiceList.getChoicesCount());
-        assertEquals(effect, choiceList.getSourceEffect());
-        assertEquals(randomCard, choiceList.getSourceCard());
-        assertEquals(randomCard.getOwner(), choiceList.getPlayerToChoose());
-        assertEquals(1, choiceList.getChoices().size());
-        assertEquals(1, choiceList.getChoices().stream()
-                .filter(choice -> choice.getCard().equals(randomCard) && choice.getLocation() == ChoiceLocation.DISCARD)
-                .count());
+        BooleanChoice booleanChoice = (BooleanChoice) game.getCurrentChoice();
+
+        assertEquals(effect, booleanChoice.getEffect());
+        assertEquals(randomCard, booleanChoice.getCard());
+        assertEquals(opponentPlayer, booleanChoice.getPlayerToChoose());
     }
 }

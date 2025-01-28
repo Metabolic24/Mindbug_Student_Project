@@ -35,7 +35,7 @@ public class NoAttackEffectTest {
     @Test
     public void testWithLowestParameter_singleCard() {
         CardInstance otherCard = opponentPlayer.getHand().getFirst();
-        opponentPlayer.addCardToBoard(otherCard, false);
+        opponentPlayer.addCardToBoard(otherCard);
 
         effect.setLowest(true);
         effect.apply(game, randomCard);
@@ -46,15 +46,15 @@ public class NoAttackEffectTest {
     @Test
     public void testWithLowestParameter_twoCardsSamePowerAndAnotherHigher() {
         CardInstance otherCard = opponentPlayer.getHand().getFirst();
-        opponentPlayer.addCardToBoard(otherCard, false);
+        opponentPlayer.addCardToBoard(otherCard);
 
         CardInstance otherCard2 = opponentPlayer.getHand().getFirst();
         otherCard2.setPower(otherCard.getPower());
-        opponentPlayer.addCardToBoard(otherCard2, false);
+        opponentPlayer.addCardToBoard(otherCard2);
 
         CardInstance otherCard3 = opponentPlayer.getHand().getFirst();
         otherCard3.setPower(otherCard.getPower() + 1);
-        opponentPlayer.addCardToBoard(otherCard3, false);
+        opponentPlayer.addCardToBoard(otherCard3);
 
         effect.setLowest(true);
         effect.apply(game, randomCard);
@@ -67,19 +67,19 @@ public class NoAttackEffectTest {
     @Test
     public void testWithLowestParameter_fourCards() {
         CardInstance otherCard = opponentPlayer.getHand().getFirst();
-        opponentPlayer.addCardToBoard(otherCard, false);
+        opponentPlayer.addCardToBoard(otherCard);
 
         CardInstance otherCard2 = opponentPlayer.getHand().getFirst();
         otherCard2.setPower(otherCard.getPower());
-        opponentPlayer.addCardToBoard(otherCard2, false);
+        opponentPlayer.addCardToBoard(otherCard2);
 
         CardInstance otherCard3 = opponentPlayer.getHand().getFirst();
         otherCard3.setPower(otherCard.getPower() + 1);
-        opponentPlayer.addCardToBoard(otherCard3, false);
+        opponentPlayer.addCardToBoard(otherCard3);
 
         CardInstance otherCard4 = opponentPlayer.getHand().getFirst();
         otherCard4.setPower(otherCard.getPower() - 1);
-        opponentPlayer.addCardToBoard(otherCard4, false);
+        opponentPlayer.addCardToBoard(otherCard4);
 
         effect.setLowest(true);
         effect.apply(game, randomCard);

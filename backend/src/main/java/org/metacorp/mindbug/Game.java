@@ -3,16 +3,15 @@ package org.metacorp.mindbug;
 import lombok.Getter;
 import lombok.Setter;
 import org.metacorp.mindbug.card.CardInstance;
+import org.metacorp.mindbug.card.Keyword;
 import org.metacorp.mindbug.card.effect.AbstractEffect;
 import org.metacorp.mindbug.card.effect.EffectTiming;
-import org.metacorp.mindbug.card.Keyword;
-import org.metacorp.mindbug.choice.Choice;
-import org.metacorp.mindbug.choice.ChoiceList;
-import org.metacorp.mindbug.choice.ChoiceLocation;
-import org.metacorp.mindbug.choice.SimultaneousChoice;
 import org.metacorp.mindbug.card.effect.EffectToApply;
-import org.metacorp.mindbug.card.effect.InternalEffect;
 import org.metacorp.mindbug.card.effect.revive.ReviveEffect;
+import org.metacorp.mindbug.choice.ChoiceType;
+import org.metacorp.mindbug.choice.IChoice;
+import org.metacorp.mindbug.choice.frenzy.FrenzyAttackChoice;
+import org.metacorp.mindbug.choice.simultaneous.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.player.Player;
 
 import java.util.*;
@@ -31,8 +30,10 @@ public class Game {
     private List<CardInstance> bannedCards;
 
     private final Queue<EffectToApply> effectQueue;
-    private SimultaneousChoice choice;
-    private ChoiceList choiceList;
+
+    private IChoice<?> currentChoice;
+
+    private Runnable afterEffect;
 
     /**
      * Empty constructor (WARNING : a game is not meant to be reused)
@@ -62,6 +63,10 @@ public class Game {
         this.currentPlayer = getFirstPlayer();
     }
 
+    public void nextTurn() {
+        this.currentPlayer = this.currentPlayer.getOpponent(this.players);
+    }
+
     // Method executed when a player choose a card that he would like to play
     public void pickCard(CardInstance card) {
         card.getOwner().refillHand();
@@ -69,7 +74,7 @@ public class Game {
 
     // Method executed when a player plays a card, no matter how or why
     public void playCard(CardInstance card, boolean mindBug) {
-        if (card == null || choice != null || choiceList != null) {
+        if (card == null || currentChoice != null) {
             //TODO Throw an error as it is an unexpected situation
             return;
         }
@@ -82,58 +87,58 @@ public class Game {
             }
 
             card.setOwner(newCardOwner);
+            newCardOwner.useMindbug();
         }
 
         managePlayedCard(card, mindBug);
-        resolveEffectQueue();
+        resolveEffectQueue(false);
     }
 
     protected void managePlayedCard(CardInstance card, boolean mindBug) {
+        Player cardOwner = card.getOwner();
+        cardOwner.addCardToBoard(card);
+
         // Add PLAY effects if player is allowed to trigger them
         addEffectsToQueue(card, EffectTiming.PLAY);
 
-        // In any case, update player board
-        InternalEffect playCardEffect = new InternalEffect(() -> {
-            Player cardOwner = card.getOwner();
-            cardOwner.addCardToBoard(card, mindBug);
-            setCurrentPlayer(cardOwner.getOpponent(getPlayers()));
-        });
-        effectQueue.add(new EffectToApply(playCardEffect));
+        afterEffect = () -> setCurrentPlayer(cardOwner.getOpponent(players));
     }
 
-    /** Method executed when a player attacks
+    /**
+     * Method executed when a player attacks
      * We consider that if attacking creature has HUNTER, the hunting choice has already been resolved through the GUI
      * We consider that if attacking creature has not HUNTER, the opponent has already chosen if he wants to block (and with which creature) or not
      * We consider that if attacking creature has SNEAKY, the GUI correctly restricted the creatures allowed to block.
      * If creature has FRENZY, then it will be allowed to attack again if it was its first attack.
      */
-    public void attack(CardInstance attackCard, CardInstance defendCard, Player defender) {
-        if (attackCard == null || defender == null || !attackCard.isCanAttack() || (defendCard != null && !defendCard.isCanBlock())
-                || choice != null || choiceList != null) {
+    public void attack(AttackHolder attackHolder) {
+        if (attackHolder.getAttackCard() == null || attackHolder.getDefender() == null ||
+                !attackHolder.getAttackCard().isCanAttack() || (attackHolder.getDefendCard() != null && !attackHolder.getDefendCard().isCanBlock())
+                || (attackHolder.getAttackCard().hasKeyword(Keyword.SNEAKY) && attackHolder.getDefendCard() != null && !attackHolder.getDefendCard().hasKeyword(Keyword.SNEAKY))
+                || currentChoice != null) {
             // TODO Throw an error as we should not be able to play a card while choice is active (same if some inputs are null)
             return;
         }
 
-        manageAttack(attackCard, defendCard, defender);
-        resolveEffectQueue();
+        manageAttack(attackHolder.getAttackCard(), attackHolder.getDefendCard(), attackHolder.getDefender());
+        resolveEffectQueue(false);
     }
 
     // This method has been separated from attack one to ease unit tests
     protected void manageAttack(CardInstance attackCard, CardInstance defendCard, Player defender) {
-        // Add ATTACK effects if player is allowed to trigger them
-        addEffectsToQueue(attackCard, EffectTiming.ATTACK);
-
-        InternalEffect resolveAttackEffect = new InternalEffect(() -> {
+        afterEffect = () -> {
             resolveAttack(attackCard, defendCard, defender);
 
             if (attackCard.isCanAttackTwice()) {
-               choiceList = new ChoiceList(attackCard.getOwner(), 1, null, null, attackCard);
-               //TODO Créer différents types de choix
+                currentChoice = new FrenzyAttackChoice(attackCard);
             } else {
+                attackCard.setCanAttackTwice(attackCard.hasKeyword(Keyword.FRENZY));
                 setCurrentPlayer(currentPlayer.getOpponent(getPlayers()));
             }
-        });
-        effectQueue.add(new EffectToApply(resolveAttackEffect));
+        };
+
+        // Add ATTACK effects if player is allowed to trigger them
+        addEffectsToQueue(attackCard, EffectTiming.ATTACK);
     }
 
     protected void resolveAttack(CardInstance attackCard, CardInstance defendCard, Player defender) {
@@ -142,95 +147,32 @@ public class Game {
             lifePointLost(defender);
         } else {
             if (attackCard.getPower() > defendCard.getPower()) {
-                defender.addCardToDiscardPile(defendCard);
+                defeatCard(defendCard);
 
                 if (defendCard.hasKeyword(Keyword.POISONOUS)) {
-                    attackCard.getOwner().addCardToDiscardPile(attackCard);
-                    manageSimultaneousDeath(attackCard, defendCard);
-                } else {
-                    addEffectsToQueue(defendCard, EffectTiming.DEFEATED);
+                    defeatCard(attackCard);
                 }
             } else {
-                attackCard.getOwner().addCardToDiscardPile(attackCard);
+                defeatCard(attackCard);
 
-                if (attackCard.getPower() == defendCard.getPower()) {
-                    defender.addCardToDiscardPile(defendCard);
-                    manageSimultaneousDeath(attackCard, defendCard);
-
-                } else {
-                    addEffectsToQueue(attackCard, EffectTiming.DEFEATED);
+                if (attackCard.hasKeyword(Keyword.POISONOUS) || attackCard.getPower() == defendCard.getPower()) {
+                    defeatCard(defendCard);
                 }
             }
         }
     }
 
-    private void manageSimultaneousDeath(CardInstance attackCard, CardInstance defendCard) {
-        if (attackCard.getEffects(EffectTiming.DEFEATED).isEmpty()) {
-            addEffectsToQueue(defendCard, EffectTiming.DEFEATED);
-        } else {
-            if (defendCard.getEffects(EffectTiming.DEFEATED).isEmpty()) {
-                addEffectsToQueue(attackCard, EffectTiming.DEFEATED);
-            } else {
-                choice = new SimultaneousChoice(attackCard.getOwner(), EffectTiming.DEFEATED);
-                choice.add(new Choice(attackCard, ChoiceLocation.DISCARD));
-                choice.add(new Choice(defendCard, ChoiceLocation.DISCARD));
-            }
-        }
-    }
-
-    public void resolveChoiceList(List<Choice> chosenCards) {
-        if (choiceList == null) {
-            //TODO Raise an error or log message
-            return;
-        }
-
-        List<Choice> expectedChoices = choiceList.getChoices();
-
-        for (Choice choice : chosenCards) {
-            if (!expectedChoices.contains(choice)) {
-                // TODO Raise an error
-            }
-        }
-
-        // Update choiceList then call resolve method of the source effect
-        choiceList.setChoices(chosenCards);
-        choiceList.getSourceEffect().resolve(choiceList);
-
-        // Reset choiceList value
-        choiceList = null;
-
-        resolveEffectQueue();
-    }
-
-    public void applyChoice(List<Choice> choices) {
+    public void applyChoice(List<UUID> sortedChoiceIDs) {
         // Retrieve the current choice and check it exists
-        if (this.choice == null || choices == null || choices.size() != this.choice.size()) {
+        if (this.currentChoice == null || sortedChoiceIDs == null || this.currentChoice.getType() != ChoiceType.SIMULTANEOUS) {
             //TODO Raise an error
             return;
         }
 
-        resolveSimultaneousChoice(choices);
+        SimultaneousEffectsChoice simultaneousEffectsChoice = (SimultaneousEffectsChoice) currentChoice;
+        simultaneousEffectsChoice.resolve(this, sortedChoiceIDs);
 
-        resolveEffectQueue();
-    }
-
-    /**
-     * Solve a pending choice
-     *
-     * @param choices the list of ordered choices to apply
-     */
-    protected void resolveSimultaneousChoice(List<Choice> choices) {
-        // Process the incoming choice list
-        for (Choice choice : choices) {
-            if (this.choice.contains(choice)) {
-                addEffectsToQueue(choice.getCard(), this.choice.getEffectTiming());
-            } else {
-                //TODO Raise an error
-            }
-        }
-
-        // Reset the choice only if the given choice list was valid
-        this.choice = null;
+        resolveEffectQueue(true);
     }
 
     public void addEffectsToQueue(CardInstance card, EffectTiming timing) {
@@ -238,19 +180,40 @@ public class Game {
             effectQueue.addAll(card.getEffects(timing).stream()
                     .map(effect -> new EffectToApply(effect, card, this))
                     .toList());
+        } else {
+            //TODO Voir s'il faut faire quelque chose à ce moment-là
         }
     }
 
-    public void resolveEffectQueue() {
-        // TODO Maybe raise an error at the start if a choice is remaining
+    public void resolveEffectQueue(boolean fromSimultaneousChoice) {
+        if (currentChoice != null) {
+            // TODO Maybe raise an error at the start if a choice is remaining
+        }
 
-        while (choice == null && choiceList == null && !effectQueue.isEmpty()) {
+        if (!fromSimultaneousChoice && effectQueue.size() >= 2) {
+            currentChoice = new SimultaneousEffectsChoice(currentPlayer, new HashSet<>(effectQueue));
+            effectQueue.clear();
+            return;
+        }
+
+        while (!effectQueue.isEmpty()) {
             EffectToApply currentEffect = effectQueue.peek();
             currentEffect.getEffect().apply(this, currentEffect.getCard());
+
             // TODO Faut-il envisager un système transactionnel ou similaire pour gérer le fait qu'une application d'effet puisse échouer sans pour autant dégrader l'état actuel du jeu?
             // Only remove effect from queue after it is applied to avoid loss of data
             effectQueue.remove(currentEffect);
+
+            // If there is many remaining effects, then create a simultaneous choice
+            if (currentChoice == null && effectQueue.size() >= 2) {
+                currentChoice = new SimultaneousEffectsChoice(currentPlayer, new HashSet<>(effectQueue));
+                effectQueue.clear();
+                return;
+            }
         }
+
+        // Execute the after effect when queue is empty
+        afterEffect.run();
     }
 
     public void lifePointLost(Player player) {
@@ -268,27 +231,45 @@ public class Game {
         }
     }
 
+    public void resetChoice() {
+        this.currentChoice = null;
+    }
+
     private void endGame(Player loser) {
         Player winner = loser.getOpponent(players);
 
         System.out.printf("%s wins ; %s loses", winner.getName(), loser.getName());
     }
 
+    public void defeatCard(CardInstance card) {
+        if (card.isStillTough()) {
+            card.setStillTough(false);
+        } else {
+            card.getOwner().addCardToDiscardPile(card);
+            addEffectsToQueue(card, EffectTiming.DEFEATED);
+        }
+    }
+
     // Return the first player of the game (should only be used once per game)
     private Player getFirstPlayer() {
         List<Player> validPlayers = new ArrayList<>(players);
         while (validPlayers.size() != 1) {
-            int power = 0;
+            int higherPower = 0;
             List<Player> nextPlayers = new ArrayList<>();
 
             for (Player player : validPlayers) {
+                // Get a random card from the remaining cards
                 CardInstance firstPlayerCard = banCard();
 
-                if (firstPlayerCard.getPower() < power) {
+                if (firstPlayerCard.getPower() < higherPower) {
+                    // Current player will not be the first one
                     continue;
-                } else if (firstPlayerCard.getPower() > power) {
-                    power = firstPlayerCard.getPower();
+                } else if (firstPlayerCard.getPower() > higherPower) {
+                    // Update higherPower value and clean the next players set
+                    higherPower = firstPlayerCard.getPower();
                     nextPlayers.clear();
+                } else {
+                    // Nothing to do, we will just add the player to the nextPlayers set
                 }
 
                 nextPlayers.add(player);
