@@ -1,25 +1,23 @@
-app.vue:
 <template>
   <div id="app">
-    <h1>Mindbug's Cards</h1>
-    <CardsList />
+    <router-view/>
   </div>
 </template>
 
 <script>
-import CardsList from './components/CardsList.vue';
 
 export default {
   name: 'App',
-  components: {
-    CardsList
-  }
 }
 </script>
 
 <style>
 #app {
-  text-align: center;
-  margin-top: 20px;
+  min-height: 100vh;
+  background-color: #f4f7fb; 
+  font-family: 'Avenir', 'Helvetica', 'Arial', sans-serif; 
+  color: #2c3e50; 
+  padding: 20px; 
+  box-sizing: border-box;
 }
 </style>
