@@ -2,7 +2,6 @@
   <div id="home">
     <h1>Welcome to Mindbug's Cards</h1>
     <div class="button-group">
-      <button @click="goToGame" class="styled-button">Game</button>
       <button @click="goToSets" class="styled-button">Set of Cards</button>
     </div>
   </div>
@@ -13,9 +12,6 @@ export default {
   methods: {
     goToSets() {
       this.$router.push('/setsofcards');
-    },
-    goToGame() {
-      this.$router.push('/gamepage');
     }
   }
 }
