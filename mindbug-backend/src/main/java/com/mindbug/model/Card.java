@@ -5,7 +5,6 @@ public class Card {
     private int copies;
     private String set;
 
-    // Getters et Setters
     public String getName() {
         return name;
     }

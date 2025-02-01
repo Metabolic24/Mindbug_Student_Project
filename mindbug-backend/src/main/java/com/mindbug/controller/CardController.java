@@ -20,20 +20,18 @@ public class CardController {
     private List<Card> cards;
 
     public CardController() throws IOException {
-        // Charger les cartes depuis le fichier JSON
         ObjectMapper mapper = new ObjectMapper();
         InputStream is = getClass().getResourceAsStream("/cards.json");
         if (is == null) {
-        System.out.println("Fichier cards.json non trouvé !");
+        System.out.println("cards.json file not found!");
         } else {
-            System.out.println("Chargement du fichier cards.json réussi.");
+            System.out.println("Successfully loaded cards.json file.");
         }
         cards = mapper.readValue(is, new TypeReference<List<Card>>() {});
     }
 
     @GetMapping("/{set}")
     public List<Card> getCardsBySet(@PathVariable String set) {
-        // Filtrer les cartes par set
         return cards.stream()
                 .filter(card -> card.getSet().equalsIgnoreCase(set))
                 .collect(Collectors.toList());
@@ -41,7 +39,6 @@ public class CardController {
 
     @GetMapping
     public List<Card> getAllCards() {
-        // Retourne toutes les cartes
         return cards;
     }
 }
