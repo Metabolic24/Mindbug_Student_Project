@@ -1,5 +1,7 @@
 package com.mindbug.models;
 
+import java.io.Serializable;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +11,7 @@ import lombok.ToString;
 
 @Entity
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString
-public class Player {
+public class Player implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,5 +25,12 @@ public class Player {
 
     @Column
     private int mindbug;
+
+    public Player(String nickname) {
+        this.nickname = nickname;
+        // TODO: get lifepoints and mindbug from game configs
+        this.lifepoints = 4;
+        this.mindbug = 2;
+    }
 
 }

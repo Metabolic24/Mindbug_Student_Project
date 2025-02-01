@@ -1,5 +1,7 @@
 package com.mindbug.models;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,6 +30,6 @@ public class Game {
     private Player player1;
 
     @OneToOne
-    @JoinColumn(name = "player1_id", referencedColumnName = "id")
+    @JoinColumn(name = "player2_id", referencedColumnName = "id")
     private Player player2;
 }
