@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 
-import com.mindbug.services.GameService;
+import com.mindbug.services.GameServer;
 
 import com.mindbug.models.Game;
 @RestController
@@ -14,11 +14,11 @@ import com.mindbug.models.Game;
 public class GameController {
     
     @Autowired
-    private GameService gameService;
+    private GameServer gameService;
 
     @GetMapping("/join_game")
     public ResponseEntity<Game> joinGame() {
-        Game game = this.gameService.newGame();
+        Game game = this.gameService.createGameSession();
         return ResponseEntity.ok(game);
     }
 }

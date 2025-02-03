@@ -10,7 +10,7 @@ import com.mindbug.models.Player;
 import com.mindbug.repositories.GameRepository;
 
 @Service
-public class GameService {
+public class GameServer {
 
     // temp. we use it until we implement multiplayer
     private Game waitingNewGame;
@@ -23,7 +23,7 @@ public class GameService {
     private PlayerService playerservice;
 
     // TODO must return void. Resutl are sent thru websockets
-    public Game newGame() {
+    public Game createGameSession() {
         if(call == 0) {
             // First call of the service. Create player 1
             Player player1 = this.playerservice.createPlayer(new Player("Player 1"));
@@ -36,7 +36,7 @@ public class GameService {
             return this.waitingNewGame;
         } else {
             // Second call. Create Player 2 and return game state
-            Player player2 = this.playerservice.createPlayer(new Player("Player 2"));;
+            Player player2 = this.playerservice.createPlayer(new Player("Player 2"));
             this.waitingNewGame.setPlayer2(player2);
 
             Game res = this.gameRepository.save(this.waitingNewGame); // save update in db
@@ -44,6 +44,8 @@ public class GameService {
             // Reset
             this.waitingNewGame = null;
             this.call = 0;
+
+            // Create game session 
 
             // Return game state
             return res;
