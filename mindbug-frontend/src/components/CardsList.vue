@@ -1,7 +1,7 @@
 <template>
     <div class="cards-container">
       <div v-for="card in cards" :key="card.name" class="card">
-        <img :src="`img/First_contact/${card.name}.jpg`" :alt="`Card ${card.name}`" class="card-image" />
+        <img :src="getImage(card.name)" :alt="`Card ${card.name}`" class="card-image" />
       </div>
     </div>
   </template>
@@ -18,6 +18,9 @@
       };
     },
     methods: {
+      getImage(name) {
+        return require(`@/assets/Sets/First_contact/${name}.jpg`);
+    }
     }
   }
   </script>
