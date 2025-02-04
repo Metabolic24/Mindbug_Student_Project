@@ -7,7 +7,6 @@ import org.metacorp.mindbug.card.Keyword;
 import org.metacorp.mindbug.card.effect.EffectTiming;
 import org.metacorp.mindbug.card.effect.EffectToApply;
 import org.metacorp.mindbug.card.effect.gainLp.GainEffect;
-import org.metacorp.mindbug.choice.ChoiceType;
 import org.metacorp.mindbug.choice.simultaneous.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.player.Player;
 
@@ -85,40 +84,43 @@ public class GameTest {
     }
 
     @Test
-    public void testManageAttack_nominal() {
+    public void testProcessAttackDeclaration_nominal() {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
-        CardInstance defenseCard = opponent.getHand().getFirst();
+        currentPlayer.addCardToBoard(attackCard);
 
-        game.manageAttack(attackCard, defenseCard, opponent);
+        game.processAttackDeclaration(attackCard);
 
         assertEquals(attackCard.getEffects(EffectTiming.ATTACK).size(), game.getEffectQueue().size());
     }
 
     @Test
-    public void testManageAttack_attackRestricted() {
+    public void testProcessAttackDeclaration_attackRestricted() {
+        CardInstance attackCard = currentPlayer.getHand().getFirst();
+        currentPlayer.addCardToBoard(attackCard);
+
         currentPlayer.disableTiming(EffectTiming.ATTACK);
 
-        CardInstance attackCard = currentPlayer.getHand().getFirst();
-        CardInstance defenseCard = opponent.getHand().getFirst();
-
-        game.manageAttack(attackCard, defenseCard, opponent);
+        game.processAttackDeclaration(attackCard);
 
         assertTrue(game.getEffectQueue().isEmpty());
     }
 
     @Test
-    public void testResolveAttack_noBlock() {
+    public void testProcessAttackResolution_noBlock() {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(attackCard);
+        game.setAttackingCard(attackCard);
 
-        game.resolveAttack(attackCard, null, opponent);
+        game.processAttackResolution(attackCard, null);
         assertEquals(2, opponent.getTeam().getLifePoints());
+        assertNotNull(game.getAfterEffect());
     }
 
     @Test
-    public void testResolveAttack_lowerBlocker() {
+    public void testProcessAttackResolution_lowerBlocker() {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(attackCard);
+        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower() - 1);
@@ -126,38 +128,42 @@ public class GameTest {
         defendingCard.getKeywords().remove(Keyword.POISONOUS);
         opponent.addCardToBoard(defendingCard);
 
-        game.resolveAttack(attackCard, defendingCard, opponent);
+        game.processAttackResolution(attackCard, defendingCard);
 
         assertFalse(opponent.getBoard().contains(defendingCard));
         assertTrue(currentPlayer.getBoard().contains(attackCard));
         assertTrue(opponent.getDiscardPile().contains(defendingCard));
         assertEquals(defendingCard.getEffects(EffectTiming.DEFEATED).size(), game.getEffectQueue().size());
+        assertNotNull(game.getAfterEffect());
     }
 
     @Test
-    public void testResolveAttack_higherBlocker() {
+    public void testProcessAttackResolution_higherBlocker() {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.setStillTough(false);
         attackCard.getKeywords().remove(Keyword.POISONOUS);
         currentPlayer.addCardToBoard(attackCard);
+        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower() + 1);
         opponent.addCardToBoard(defendingCard);
 
-        game.resolveAttack(attackCard, defendingCard, opponent);
+        game.processAttackResolution(attackCard, defendingCard);
 
         assertTrue(opponent.getBoard().contains(defendingCard));
         assertFalse(currentPlayer.getBoard().contains(attackCard));
         assertTrue(currentPlayer.getDiscardPile().contains(attackCard));
         assertEquals(attackCard.getEffects(EffectTiming.DEFEATED).size(), game.getEffectQueue().size());
+        assertNotNull(game.getAfterEffect());
     }
 
     @Test
-    public void testResolveAttack_samePowerBlockHasNoDefeatedEffect() {
+    public void testProcessAttackResolution_samePowerBlockHasNoDefeatedEffect() {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.setStillTough(false);
         currentPlayer.addCardToBoard(attackCard);
+        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower());
@@ -165,42 +171,46 @@ public class GameTest {
         defendingCard.setStillTough(false);
         opponent.addCardToBoard(defendingCard);
 
-        game.resolveAttack(attackCard, defendingCard, opponent);
+        game.processAttackResolution(attackCard, defendingCard);
 
         assertFalse(opponent.getBoard().contains(defendingCard));
         assertFalse(currentPlayer.getBoard().contains(attackCard));
         assertTrue(currentPlayer.getDiscardPile().contains(attackCard));
         assertTrue(opponent.getDiscardPile().contains(defendingCard));
         assertEquals(attackCard.getEffects(EffectTiming.DEFEATED).size(), game.getEffectQueue().size());
+        assertNotNull(game.getAfterEffect());
     }
 
     @Test
-    public void testResolveAttack_samePowerAttackHasNoDefeatedEffect() {
+    public void testProcessAttack_samePowerAttackHasNoDefeatedEffect() {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.getCard().getEffects().remove(EffectTiming.DEFEATED);
         attackCard.setStillTough(false);
         currentPlayer.addCardToBoard(attackCard);
+        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower());
         defendingCard.setStillTough(false);
         opponent.addCardToBoard(defendingCard);
 
-        game.resolveAttack(attackCard, defendingCard, opponent);
+        game.processAttackResolution(attackCard, defendingCard);
 
         assertFalse(opponent.getBoard().contains(defendingCard));
         assertFalse(currentPlayer.getBoard().contains(attackCard));
         assertTrue(currentPlayer.getDiscardPile().contains(attackCard));
         assertTrue(opponent.getDiscardPile().contains(defendingCard));
         assertEquals(defendingCard.getEffects(EffectTiming.DEFEATED).size(), game.getEffectQueue().size());
+        assertNotNull(game.getAfterEffect());
     }
 
     @Test
-    public void testResolveAttack_samePowerBothHaveDefeatedEffect() {
+    public void testProcessAttackResolution_samePowerBothHaveDefeatedEffect() {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new GainEffect()));
         attackCard.setStillTough(false);
         currentPlayer.addCardToBoard(attackCard);
+        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower());
@@ -208,7 +218,7 @@ public class GameTest {
         defendingCard.setStillTough(false);
         opponent.addCardToBoard(defendingCard);
 
-        game.resolveAttack(attackCard, defendingCard, opponent);
+        game.processAttackResolution(attackCard, defendingCard);
 
         assertFalse(opponent.getBoard().contains(defendingCard));
         assertFalse(currentPlayer.getBoard().contains(attackCard));
@@ -216,6 +226,7 @@ public class GameTest {
         assertTrue(opponent.getDiscardPile().contains(defendingCard));
 
         assertEquals(2, game.getEffectQueue().size());
+        assertNotNull(game.getAfterEffect());
     }
 
     @Test

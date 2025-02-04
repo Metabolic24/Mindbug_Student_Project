@@ -32,6 +32,7 @@ public class Game {
     private final Queue<EffectToApply> effectQueue;
 
     private IChoice<?> currentChoice;
+    private CardInstance attackingCard;
 
     private Runnable afterEffect;
 
@@ -74,7 +75,7 @@ public class Game {
 
     // Method executed when a player plays a card, no matter how or why
     public void playCard(CardInstance card, boolean mindBug) {
-        if (card == null || currentChoice != null) {
+        if (card == null || currentChoice != null || attackingCard != null) {
             //TODO Throw an error as it is an unexpected situation
             return;
         }
@@ -105,43 +106,50 @@ public class Game {
     }
 
     /**
-     * Method executed when a player attacks
-     * We consider that if attacking creature has HUNTER, the hunting choice has already been resolved through the GUI
-     * We consider that if attacking creature has not HUNTER, the opponent has already chosen if he wants to block (and with which creature) or not
-     * We consider that if attacking creature has SNEAKY, the GUI correctly restricted the creatures allowed to block.
-     * If creature has FRENZY, then it will be allowed to attack again if it was its first attack.
+     * Process attack declaration by triggering the "Attack" effect(s) of the card
+     * @param attackCard the attacking card
      */
-    public void attack(AttackHolder attackHolder) {
-        if (attackHolder.getAttackCard() == null || attackHolder.getDefender() == null ||
-                !attackHolder.getAttackCard().isCanAttack() || (attackHolder.getDefendCard() != null && !attackHolder.getDefendCard().isCanBlock())
-                || (attackHolder.getAttackCard().hasKeyword(Keyword.SNEAKY) && attackHolder.getDefendCard() != null && !attackHolder.getDefendCard().hasKeyword(Keyword.SNEAKY))
-                || currentChoice != null) {
-            // TODO Throw an error as we should not be able to play a card while choice is active (same if some inputs are null)
+    public void declareAttack(CardInstance attackCard) {
+        if (attackCard == null || !attackCard.isCanAttack() || currentChoice != null || attackingCard != null) {
+            //TODO Throw an error
             return;
         }
 
-        manageAttack(attackHolder.getAttackCard(), attackHolder.getDefendCard(), attackHolder.getDefender());
+        processAttackDeclaration(attackCard);
+
         resolveEffectQueue(false);
     }
 
-    // This method has been separated from attack one to ease unit tests
-    protected void manageAttack(CardInstance attackCard, CardInstance defendCard, Player defender) {
-        afterEffect = () -> {
-            resolveAttack(attackCard, defendCard, defender);
-
-            if (attackCard.isCanAttackTwice()) {
-                currentChoice = new FrenzyAttackChoice(attackCard);
-            } else {
-                attackCard.setCanAttackTwice(attackCard.hasKeyword(Keyword.FRENZY));
-                setCurrentPlayer(currentPlayer.getOpponent(getPlayers()));
-            }
-        };
+    //TODO A voir si on peut utiliser des mocks côté test plutôt que de séparer ce code de declareAttack
+    protected void processAttackDeclaration(CardInstance attackCard) {
+        attackingCard = attackCard;
 
         // Add ATTACK effects if player is allowed to trigger them
         addEffectsToQueue(attackCard, EffectTiming.ATTACK);
     }
 
-    protected void resolveAttack(CardInstance attackCard, CardInstance defendCard, Player defender) {
+    /**
+     * Method executed when a player attacks
+     * We consider that if attacking creature has HUNTER, the hunting choice has already been resolved through the GUI
+     * We consider that if attacking creature has not HUNTER, the opponent has already chosen if he wants to block (and with which creature) or not
+     * If creature has FRENZY, then it will be allowed to attack again if it was its first attack.
+     */
+    public void resolveAttack(CardInstance defendingCard) {
+        if (attackingCard == null || (defendingCard != null &&
+                (!defendingCard.isCanBlock() || (attackingCard.hasKeyword(Keyword.SNEAKY) && !defendingCard.hasKeyword(Keyword.SNEAKY))))
+                        || currentChoice != null) {
+            // TODO Throw an error as we should not be able to play a card while choice is active (same if some inputs are null)
+            return;
+        }
+
+        processAttackResolution(attackingCard, defendingCard);
+
+        resolveEffectQueue(false);
+    }
+
+    protected void processAttackResolution(CardInstance attackCard, CardInstance defendCard) {
+        Player defender = this.getCurrentPlayer().getOpponent(players);
+
         if (defendCard == null) {
             defender.getTeam().loseLifePoints(1);
             lifePointLost(defender);
@@ -160,6 +168,17 @@ public class Game {
                 }
             }
         }
+
+        afterEffect = () -> {
+            if (attackingCard.isCanAttackTwice()) {
+                currentChoice = new FrenzyAttackChoice(attackingCard);
+            } else {
+                attackingCard.setCanAttackTwice(attackingCard.hasKeyword(Keyword.FRENZY));
+                setCurrentPlayer(currentPlayer.getOpponent(getPlayers()));
+            }
+
+            attackingCard = null;
+        };
     }
 
     public void applyChoice(List<UUID> sortedChoiceIDs) {
@@ -213,7 +232,9 @@ public class Game {
         }
 
         // Execute the after effect when queue is empty
-        afterEffect.run();
+        if (afterEffect != null) {
+            afterEffect.run();
+        }
     }
 
     public void lifePointLost(Player player) {

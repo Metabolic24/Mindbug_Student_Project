@@ -4,6 +4,7 @@ import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.effect.EffectToApply;
 import org.metacorp.mindbug.choice.IChoice;
 import org.metacorp.mindbug.choice.bool.BooleanChoice;
+import org.metacorp.mindbug.choice.frenzy.FrenzyAttackChoice;
 import org.metacorp.mindbug.choice.simultaneous.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.choice.target.TargetChoice;
 import org.metacorp.mindbug.player.Player;
@@ -50,13 +51,16 @@ public class App {
             case "a":
                 System.out.printf("%s attaque avec la carte '%s'\n", currentPlayer.getName(), currentPlayer.getBoard().getFirst().getCard().getName());
 
+                game.declareAttack(currentPlayer.getBoard().getFirst());
+                break;
+            case "ra":
                 Player opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
                 if (opponentPlayer.getBoard().isEmpty()) {
                     System.out.printf("%s ne peut pas défendre\n", opponentPlayer.getName());
-                    game.attack(new AttackHolder(currentPlayer.getBoard().getFirst(), opponentPlayer, null));
+                    game.resolveAttack(null);
                 } else {
                     System.out.printf("%s défend avec la carte '%s'\n", opponentPlayer.getName(), opponentPlayer.getBoard().getFirst().getCard().getName());
-                    game.attack(new AttackHolder(currentPlayer.getBoard().getFirst(), opponentPlayer, opponentPlayer.getBoard().getFirst()));
+                    game.resolveAttack(opponentPlayer.getBoard().getFirst());
                 }
 
                 break;
@@ -76,7 +80,8 @@ public class App {
                             game.applyChoice(simultaneousEffectsChoice.getEffectsToSort().stream().map(EffectToApply::getUuid).toList());
                         }
                         case FRENZY -> {
-                            //TODO To be implemented
+                            System.out.println("Résolution d'un choix d'attaque multiple lié au mot-clé FRENZY");
+                            ((FrenzyAttackChoice) choice).resolve(game, Boolean.TRUE);
                         }
                         case TARGET -> {
                             System.out.println("Résolution d'un choix de cibles");
