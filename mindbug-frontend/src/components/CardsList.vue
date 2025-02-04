@@ -2,12 +2,12 @@
   <div id="cards-list">
     <h1>Cards from set: {{ formatSetName(set) }}</h1>
     <div class="cards-container">
-      <div v-for="card in filteredCards" :key="card.name" class="card">
-        <img :src="`/img/${set}/${card.name}.jpg`" :alt="`Card ${set} ${this.set} ${card.name}`" class="card-image" />
-        <div class="card-copies">X{{ card.copies }}</div>
+      <div v-for="card in cards" :key="card.name" class="card">
+        <img :src="getImage(card.name)" :alt="`Card ${card.name}`" class="card-image" />
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -30,6 +30,9 @@ export default {
     }
   },
   methods: {
+    getImage(name) {
+        return require(`@/assets/Sets/First_contact/${name}.jpg`);
+    },
     formatSetName(setName) {
       return setName.replace(/_/g, ' ');
     },
