@@ -41,3 +41,17 @@ JDBC URL: jdbc:h2:mem:testdb
 Username: sa
 Password:  
 ```
+
+### Api and websocket
+Api url:
+```bash
+http://<server:port>/api
+```
+Websocket URL:
+```bash
+ws://<server:port>/mindbug-ws
+```
+Subscribe to game websocket:
+```bash
+/topic/game
+```

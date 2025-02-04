@@ -14,7 +14,7 @@ public class GameSession {
     public GameSession(Game game) {
         this.game = game;
 
-        this.wsChannel = "/topic/game/" + Long.toString(game.getId());
+        this.wsChannel = "/topic/game/" + Long.toString(this.game.getId());
         this.gameWsMessageManager = new WSMessageManager(wsChannel);
 
         // Send newGame ws Message
@@ -25,6 +25,11 @@ public class GameSession {
     public void sendWebSocketMessage(String message, Object data) {
         WebsocketMessage wsMessage = new WebsocketMessage(message, data);
         this.gameWsMessageManager.sendMessage(wsMessage);
+    }
+
+    // TODO: save players and game state and everything need to be saved. 
+    public void save() {
+
     }
 
     
