@@ -1,0 +1,416 @@
+[
+    {
+      "name": "Axolotl_Healer",
+      "copies": 2,
+      "power": 4,
+      "keywords": ["POISONOUS"],
+      "trigger_condition": "Play",
+      "effect_type": [
+        {
+          "type": "Life Points",
+          "target": "self",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "Bee_Bear",
+      "copies": 1,
+      "power": 8,
+      "trigger_condition": "Passive",
+      "effect_type": [
+        {
+          "type": "Prevent Action",
+          "action": "Block",
+          "target": "opponent_creature",
+          "condition": { "power_min": 6 }
+        }
+      ]
+    },
+    {
+      "name": "Brain_Fly",
+      "copies": 1,
+      "power": 4,
+      "trigger_condition": "Play",
+      "effect_type": [
+        {
+          "type": "Control Creature",
+          "condition": { "power_min": 6 },
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Chameleon_Sniper",
+      "copies": 1,
+      "power": 1,
+      "keywords": ["SNEAKY"],
+      "trigger_condition": "Attack",
+      "effect_type": [
+        {
+          "type": "Life Points",
+          "target": "opponent",
+          "value": -1
+        }
+      ]
+    },
+    {
+      "name": "Compost_Dragon",
+      "copies": 2,
+      "power": 3,
+      "keywords": ["HUNTER"],
+      "trigger_condition": "Play",
+      "effect_type": [
+        {
+          "type": "Play From Discard",
+          "source": "discard",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Deathweaver",
+      "copies": 1,
+      "power": 2,
+      "keywords": ["POISONOUS"],
+      "trigger_condition": "Passive",
+      "effect_type": [
+        {
+          "type": "Prevent Action",
+          "action": "Play_Effect",
+          "target": "opponent"
+        }
+      ]
+    },
+    {
+      "name": "Elephantopus",
+      "copies": 1,
+      "power": 7,
+      "keywords": ["TOUGH"],
+      "trigger_condition": "Passive",
+      "effect_type": [
+        {
+          "type": "Prevent Action",
+          "action": "Block",
+          "target": "opponent_creature",
+          "condition": { "power_max": 4 }
+        }
+      ]
+    },
+    {
+      "name": "Explosive_Toad",
+      "copies": 2,
+      "power": 5,
+      "keywords": ["FRENZY"],
+      "trigger_condition": "Defeated",
+      "effect_type": [
+        {
+          "type": "Destroy Creature",
+          "target": "all",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Ferret_Bomber",
+      "copies": 2,
+      "power": 2,
+      "keywords": ["SNEAKY"],
+      "trigger_condition": "Play",
+      "effect_type": [
+        {
+          "type": "Discard",
+          "target": "opponent",
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "name": "Giraffodile",
+      "copies": 1,
+      "power": 7,
+      "trigger_condition": "Play",
+      "effect_type": [
+        {
+          "type": "Draw Cards",
+          "source": "discard",
+          "amount": 9999
+        }
+      ]
+    },
+    {
+      "name": "Goblin_Werewolf",
+      "copies": 2,
+      "power": 2,
+      "keywords": ["HUNTER"],
+      "trigger_condition": "Passive",
+      "effect_type": [
+        {
+          "type": "Power Modification",
+          "target": "self",
+          "value": 6,
+          "duration": "your_turn"
+        }
+      ]
+    },
+    {
+      "name": "Gorillion",
+      "copies": 1,
+      "power": 10
+    },
+    {
+      "name": "Grave_Robber",
+      "copies": 2,
+      "power": 7,
+      "keywords": ["TOUGH"],
+      "trigger_condition": "Play",
+      "effect_type": [
+        {
+          "type": "Play From Discard",
+          "source": "opponent_discard",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Harpy_Mother",
+      "copies": 1,
+      "power": 5,
+      "trigger_condition": "Defeated",
+      "effect_type": [
+        {
+          "type": "Control Creature",
+          "max_creatures": 2,
+          "condition": { "power_max": 5 },
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "name": "Kangasaurus_Rex",
+      "copies": 2,
+      "power": 7,
+      "trigger_condition": "Play",
+      "effect_type": [
+        {
+          "type": "Destroy Creature",
+          "target": "opponent_creature",
+          "condition": { "power_max": 4 },
+          "amount": 9999
+        }
+      ]
+    },
+    {
+      "name": "Killer_Bee",
+      "copies": 2,
+      "power": 5,
+      "keywords": ["HUNTER"],
+      "trigger_condition": "Play",
+      "effect_type": [
+        {
+          "type": "Life Points",
+          "target": "opponent",
+          "value": -1
+        }
+      ]
+    },
+    {
+      "name": "Lone_Yeti",
+      "copies": 1,
+      "power": 5,
+      "keywords": ["TOUGH"],
+      "trigger_condition": "Passive",
+      "effect_type": [
+        {
+          "type": "Power Modification",
+          "target": "self",
+          "value": 5,
+          "condition": { "only_ally": true }
+        },
+        {
+          "type": "Keyword Gain",
+          "keywords": ["FRENZY"],
+          "condition": { "only_ally": true }
+        }
+      ]
+    },
+    {
+      "name": "Luchataur",
+      "copies": 2,
+      "power": 9,
+      "keywords": ["FRENZY"]
+    },
+    {
+      "name": "Mysterious_Mermaid",
+      "copies": 1,
+      "power": 7,
+      "trigger_condition": "Play",
+      "effect_type": [
+        {
+          "type": "Life Points",
+          "operation": "equalize"
+        }
+      ]
+    },
+    {
+      "name": "Plated_Scorpion",
+      "copies": 2,
+      "power": 2,
+      "keywords": ["TOUGH", "POISONOUS"]
+    },
+    {
+      "name": "Rhino_Turtle",
+      "copies": 2,
+      "power": 8,
+      "keywords": ["FRENZY", "TOUGH"]
+    },
+    {
+      "name": "Shark_Dog",
+      "copies": 1,
+      "power": 4,
+      "keywords": ["HUNTER"],
+      "trigger_condition": "Attack",
+      "effect_type": [
+        {
+          "type": "Destroy Creature",
+          "target": "opponent_creature",
+          "condition": { "power_min": 6 },
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Sharky_Crab-Dog-Mummypus",
+      "copies": 1,
+      "power": 5,
+      "trigger_condition": "Passive",
+      "effect_type": [
+        {
+          "type": "Keyword Mirror",
+          "keywords": ["HUNTER", "SNEAKY", "FRENZY", "POISONOUS"],
+          "amount": 9999
+        }
+      ]
+    },
+    {
+      "name": "Shield_Bugs",
+      "copies": 2,
+      "power": 4,
+      "keywords": ["TOUGH"],
+      "trigger_condition": "Passive",
+      "effect_type": [
+        {
+          "type": "Power Modification",
+          "target": "ally_creature",
+          "value": 1,
+          "exclude_self": true,
+          "amount": 9999
+        }
+      ]
+    },
+    {
+      "name": "Snail_Hydra",
+      "copies": 2,
+      "power": 9,
+      "trigger_condition": "Attack",
+      "effect_type": [
+        {
+          "type": "Destroy Creature",
+          "condition": { "ally_count": "fewer" },
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Snail_Thrower",
+      "copies": 1,
+      "power": 1,
+      "keywords": ["POISONOUS"],
+      "trigger_condition": "Passive",
+      "effect_type": [
+        {
+          "type": "Keyword Gain",
+          "target": "ally_creature",
+          "keywords": ["HUNTER", "POISONOUS"],
+          "condition": { "power_max": 4 },
+          "amount": 9999
+        }
+      ]
+    },
+    {
+      "name": "Spider_Owl",
+      "copies": 2,
+      "power": 3,
+      "keywords": ["SNEAKY", "POISONOUS"]
+    },
+    {
+      "name": "Strange_Barrel",
+      "copies": 1,
+      "power": 6,
+      "trigger_condition": "Defeated",
+      "effect_type": [
+        {
+          "type": "Steal Cards",
+          "source": "opponent_hand",
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "name": "Tiger_Squirrel",
+      "copies": 2,
+      "power": 3,
+      "keywords": ["SNEAKY"],
+      "trigger_condition": "Play",
+      "effect_type": [
+        {
+          "type": "Destroy Creature",
+          "condition": { "power_min": 7 },
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Turbo_Bug",
+      "copies": 1,
+      "power": 4,
+      "trigger_condition": "Attack",
+      "effect_type": [
+        {
+          "type": "Life Points",
+          "target": "opponent",
+          "operation": "set",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "Tusked_Extorter",
+      "copies": 2,
+      "power": 8,
+      "trigger_condition": "Attack",
+      "effect_type": [
+        {
+          "type": "Discard",
+          "target": "opponent",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Urchin_Hurler",
+      "copies": 1,
+      "power": 5,
+      "keywords": ["HUNTER"],
+      "trigger_condition": "Passive",
+      "effect_type": [
+        {
+          "type": "Power Modification",
+          "target": "ally_creature",
+          "value": 2,
+          "duration": "your_turn",
+          "amount": 9999
+        }
+      ]
+    }
+  ]
