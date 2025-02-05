@@ -17,7 +17,8 @@ public class WebsocketConfig implements WebSocketMessageBrokerConfigurer   {
 
   @Override
   public void registerStompEndpoints(StompEndpointRegistry registry) {
-    registry.addEndpoint("/mindbug-ws");
+    // TODO: retirer en prod
+    registry.addEndpoint("/mindbug-ws").setAllowedOrigins("*"); 
   }
     
 }
