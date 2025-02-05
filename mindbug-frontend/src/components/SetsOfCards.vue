@@ -3,9 +3,9 @@
     <h1>Select a set of cards</h1>
     <div class="sets-container">
       <div v-for="set in sets" :key="set.name" class="set-item">
-        <router-link :to="`/cardlist/${set.name}`">
+        <router-link :to="`/cardlist/${set}`">
           <div class="set-card">
-            <img :src="`/img/sets/${set.name}.png`" :alt="set.name" />
+            <img :src="`/img/sets/${set}.png`" :alt="set" />
           </div>
         </router-link>
       </div>
@@ -14,13 +14,26 @@
   </template>
   
   <script>
+  import axios from 'axios';
+  
   export default {
     data() {
       return {
-        sets: [
-          { name: 'First_Contact' }
-        ]
+        sets: [] 
       };
+    },
+    methods: {
+      async fetchSets() {
+        try {
+          const response = await axios.get('/api/cards/sets'); 
+          this.sets = response.data;
+        } catch (error) {
+          console.error("Erreur lors de la récupération des sets :", error);
+        }
+      }
+    },
+    mounted() {
+      this.fetchSets(); 
     }
   }
   </script>
