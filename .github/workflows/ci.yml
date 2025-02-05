@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - feature/US-06_CI
   pull_request:
     branches:
       - main
+      - feature/US-06_CI
 
 jobs:
   frontend:
