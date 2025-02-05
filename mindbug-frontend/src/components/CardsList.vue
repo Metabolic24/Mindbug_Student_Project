@@ -1,6 +1,6 @@
 <template>
   <div id="cards-list">
-    <h1>Cards from set: {{ formatSetName(set) }}</h1>
+    <h1>Cards from set: {{ formatSetName(this.set) }}</h1>
     <div class="cards-container">
       <div v-for="card in cards" :key="card.name" class="card">
         <img :src="getImage(card.name)" :alt="`Card ${card.name}`" class="card-image" />
@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     getImage(name) {
-        return require(`@/assets/Sets/First_contact/${name}.jpg`);
+        return `../assets/Sets/${this.set}/${name}.jpg`;
     },
     formatSetName(setName) {
       return setName.replace(/_/g, ' ');
