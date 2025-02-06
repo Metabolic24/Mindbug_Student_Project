@@ -1,0 +1,63 @@
+name: Mindbug CI Workflow 
+
+on:
+  push:
+    branches:
+      - main
+      - feature/US-06_CI
+  pull_request:
+    branches:
+      - main
+      - feature/US-06_CI
+
+jobs:
+  frontend:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 23.5.0
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./mindbug-frontend
+
+      - name: Build frontend
+        run: npm run build
+        working-directory: ./mindbug-frontend
+
+      - name: Run frontend tests
+        run: npm run test
+        working-directory: ./mindbug-frontend
+
+  backend:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 17
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: windows-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            windows-maven
+
+      - name: Build backend
+        run: mvn clean package
+        working-directory: ./mindbug-backend
+
+      - name: Run backend tests
+        run: mvn test
+        working-directory: ./mindbug-backend
