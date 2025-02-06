@@ -1,7 +1,7 @@
 <template>
     <div class="game-board">
       <div class="top-hand">
-        <div v-for="(_, index) in 5" :key="index" class="card">Mindbug</div>
+        <img v-for="(_, index) in 5" :key="index" :src="getCardBackImage()" class="card-image" />
       </div>
       
       <div class="side-left">
@@ -16,34 +16,59 @@
       </div>
       
       <div class="battlefield">
-        <div class="card center first-card"></div>
+        <img :src="getCardImage(battlefieldCards[0])" class="card-image center first-card" />
         <div class="row">
-          <div v-for="(_, index) in 3" :key="index" class="card"></div>
+          <img v-for="(card, index) in battlefieldCards.slice(1)" :key="index" :src="getCardImage(card)" class="card-image" />
         </div>
       </div>
       
       <div class="side-right">
-        <div class="card mindbug">Mindbug <span class="count bottom-right">4</span></div>
-        <div class="card mindbug">Mindbug <span class="count bottom-right">4</span></div>
+        <img v-for="(_, index) in 2" :key="index" :src="getCardBackImage()" class="card-image" />
       </div>
       
       <div class="hand-area">
-        <div class="card">Dragon Infernal</div>
-        <div class="card">Golem de Pierre</div>
-        <div class="card">Fée Magique</div>
-        <div class="card">Fée Magique</div>
-        <div class="card">Fée Magique</div>
+        <img v-for="(card, index) in handCards" :key="index" :src="getCardImage(card)" class="card-image" />
       </div>
     </div>
   </template>
   
   <script>
   export default {
-    name: "GameBoard",
-    created() {
-      console.log("GameBoard Component Loaded");
+  name: "GameBoard",
+  data() {
+    return {
+      handCards: [
+        "Bee_Bear.jpg",
+        "Killer_Bee.jpg",
+        "Gorillion.jpg",
+        "Lone_Yeti.jpg",
+        "Shark_Dog.jpg"
+      ],
+      battlefieldCards: [
+        "Deathweaver.jpg",
+        "Elephantopus.jpg",
+        "Ferret_Bomber.jpg",
+        "Giraffodile.jpg"
+      ],
+      cardBackImage: "card_Back.png" 
+    };
+  },
+  methods: {
+    getCardImage(card) {
+      return `/assets/${card}`;
+    },
+    getCardBackImage() {
+      return `/assets/${this.cardBackImage}`;
     }
-  };
+  },
+  created() {
+    console.log("GameBoard Component Loaded");
+    this.handCards.forEach(card => {
+      console.log(`Image path for ${card}:`, this.getCardImage(card));
+    });
+  }
+
+};
   </script>
   
   <style scoped>
@@ -176,5 +201,15 @@
     bottom: 5px;
     right: 5px;
   }
+
+  .card-image {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
   </style>
+
   

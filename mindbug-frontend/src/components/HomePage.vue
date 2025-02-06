@@ -16,7 +16,7 @@ export default {
     },
 
     goToGame(){
-      this.$router.push('/gameTerrain');
+      this.$router.push('/gameboard');
     }
   }
 }
