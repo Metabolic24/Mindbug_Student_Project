@@ -51,7 +51,19 @@ Websocket URL:
 ```bash
 ws://<server:port>/mindbug-ws
 ```
+
+Subscribe to queue websocket:
+```bash
+/topic/game-queue
+```
+
+```
 Subscribe to game websocket:
 ```bash
-/topic/game
+/topic/game/{id}
+```
+
+Swagger api doc:
+```bash
+http://<server:port>/swagger-ui/index.html
 ```

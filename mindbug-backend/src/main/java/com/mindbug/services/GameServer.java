@@ -1,22 +1,25 @@
 package com.mindbug.services;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.Queue;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.mindbug.configs.Config;
+import com.mindbug.dtos.ConfirmJoinDto;
 import com.mindbug.models.Game;
 import com.mindbug.models.Player;
-import org.springframework.context.ApplicationContext;
+import com.mindbug.websocket.WSMessageManager;
+
+import org.json.JSONObject;
 
 @Service
 public class GameServer {
-
-    // temp. we use it until we implement multiplayer
-    private Game waitingNewGame;
-    private int call = 0;
     private HashMap <Long, GameSession> gameSessions = new HashMap<>();
+    private Queue<Player> playerQueue = new LinkedList<>();
 
     @Autowired
     private PlayerService playerservice;
@@ -27,44 +30,59 @@ public class GameServer {
     @Autowired
     private GameSessionFactory gameSessionFactory;
 
-    public Object createGameSession() {
-        Map<String, Object> res = new HashMap<String,Object>();
+    private WSMessageManager gameQueueWsMessageManager;
 
-        if(call == 0) {
-            // First call of the service. Create player 1 and the game
-            Player player1 = this.playerservice.createPlayer(new Player("Player 1"));
-            this.waitingNewGame = this.gameService.createGame(new Game());
-            this.waitingNewGame.setPlayer1(player1);
-            call++;
+    public GameServer(WSMessageManager gameQueueWsMessageManager) {
+        this.gameQueueWsMessageManager = gameQueueWsMessageManager;
+        // Set the channel for game queue WebSocket messages
+        this.gameQueueWsMessageManager.setChannel(Config.GAME_QUEUE_WEBSOCKET);
+    }
 
-            res.put("player", player1);
-            res.put("gameState", this.waitingNewGame);
-            res.put("websocketChannel", "topic/game/"+ this.waitingNewGame.getId());
-            
-        } else {
-            // Second call. Create Player 2 and return game state
-            Player player2 = this.playerservice.createPlayer(new Player("Player 2"));
-            this.waitingNewGame.setPlayer2(player2);
+    public Player handleJoinGame() {
+        // Create the player and add to queue
+        Player player =  this.playerservice.createPlayer(new Player("Player"));
+        this.playerQueue.add(player);
 
-            // Create game session
-            GameSession gameSession = gameSessionFactory.createGameSession(waitingNewGame);
-            gameSessions.put(waitingNewGame.getId(), gameSession);
-
-            res.put("player", player2);
-            res.put("gameState", this.waitingNewGame);
-            res.put("websocketChannel", "topic/game/"+ this.waitingNewGame.getId());
-
-            // Reset
-            this.resetMacthmaking();
-
-            
+        // Create game session if two player in queue
+        if(this.playerQueue.size() >= 2) {
+            this.createGameSession(this.playerQueue.poll(), this.playerQueue.poll());
         }
 
-        return res;
+        return player;
     }
 
-    public void resetMacthmaking() {
-        this.waitingNewGame = null;
-        this.call = 0;
+    public boolean handleConfirmJoin(ConfirmJoinDto confirmData) {
+        GameSession gameSession = this.getGameSession(confirmData.getGameId());
+        return gameSession.confirmJoin(confirmData.getPlayerId());
     }
+
+    private void createGameSession(Player player1, Player player2) {
+        Game newGame = this.gameService.createGame(new Game());
+        newGame.setPlayer1(player1);
+        newGame.setPlayer2(player2);
+
+        // Create game session
+        GameSession gameSession = gameSessionFactory.createGameSession(newGame);
+        gameSessions.put(newGame.getId(), gameSession);
+
+        // Send newGame websocket messages to each player
+        HashMap <String, Object> data = new HashMap<>();
+        data.put("gameId", newGame.getId());
+        
+        // First player message
+        data.put("playerId", newGame.getPlayer1().getId());
+
+
+        this.gameQueueWsMessageManager.sendMessage("MATCH_FOUND", data);
+
+        // Second player message
+        data.put("playerId", newGame.getPlayer2().getId());
+        this.gameQueueWsMessageManager.sendMessage("MATCH_FOUND", data);
+
+    }
+
+    private GameSession getGameSession(Long id) {
+        return this.gameSessions.get(id);
+    }
+
 }
