@@ -63,7 +63,7 @@
       "effect_type": [
         {
           "type": "Play From Discard",
-          "source": "discard",
+          "target": "discard",
           "amount": 1
         }
       ]
@@ -133,8 +133,8 @@
       "effect_type": [
         {
           "type": "Draw Cards",
-          "source": "discard",
-          "amount": 9999
+          "target": "discard",
+          "amount": -1
         }
       ]
     },
@@ -167,7 +167,7 @@
       "effect_type": [
         {
           "type": "Play From Discard",
-          "source": "opponent_discard",
+          "target": "opponent_discard",
           "amount": 1
         }
       ]
@@ -196,7 +196,7 @@
           "type": "Destroy Creature",
           "target": "opponent_creature",
           "condition": { "power_max": 4 },
-          "amount": 9999
+          "amount": -1
         }
       ]
     },
@@ -288,7 +288,6 @@
         {
           "type": "Keyword Mirror",
           "keywords": ["HUNTER", "SNEAKY", "FRENZY", "POISONOUS"],
-          "amount": 9999
         }
       ]
     },
@@ -304,7 +303,7 @@
           "target": "ally_creature",
           "value": 1,
           "exclude_self": true,
-          "amount": 9999
+          "amount": -1
         }
       ]
     },
@@ -333,7 +332,7 @@
           "target": "ally_creature",
           "keywords": ["HUNTER", "POISONOUS"],
           "condition": { "power_max": 4 },
-          "amount": 9999
+          "amount": -1
         }
       ]
     },
@@ -351,7 +350,7 @@
       "effect_type": [
         {
           "type": "Steal Cards",
-          "source": "opponent_hand",
+          "target": "opponent_hand",
           "amount": 2
         }
       ]
@@ -409,7 +408,7 @@
           "target": "ally_creature",
           "value": 2,
           "duration": "your_turn",
-          "amount": 9999
+          "amount": -1
         }
       ]
     }
