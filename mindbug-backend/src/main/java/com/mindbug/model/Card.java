@@ -67,7 +67,6 @@ class EffectType {
     private String action;
     private Map<String, Object> condition;
     private int amount;
-    private String source;
     private String duration;
     private String operation; 
     private Integer max_creatures; 
@@ -120,13 +119,6 @@ class EffectType {
 
     public void setAmount(int amount) {
         this.amount = amount;
-    }
-    public String getSource() {
-        return source;
-    }
-
-    public void setSource(String source) {
-        this.source = source;
     }
 
     public String getDuration(){
