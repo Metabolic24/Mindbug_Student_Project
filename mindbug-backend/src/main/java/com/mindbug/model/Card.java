@@ -68,26 +68,7 @@ class EffectType {
     private Map<String, Object> condition;
     private int amount;
     private String operation; 
-    private boolean exclude_self; 
     private List<String> keywords;
-    private boolean your_turn;
-    private boolean mirror;
-
-    public boolean isMirror() {
-        return this.mirror;
-    }
-
-    public void setMirror(boolean mirror) {
-        this.mirror = mirror;
-    }
-
-    public boolean isYour_turn() {
-        return this.your_turn;
-    }
-
-    public void setYour_turn(boolean your_turn) {
-        this.your_turn = your_turn;
-    }
 
     public String getType() {
         return type;
@@ -143,14 +124,6 @@ class EffectType {
 
     public void setOperation(String operation) {
         this.operation = operation;
-    }
-
-    public boolean isExclude_self() {
-        return exclude_self;
-    }
-
-    public void setExclude_self(boolean exclude_self) {
-        this.exclude_self = exclude_self;
     }
 
     public List<String> getKeywords() {

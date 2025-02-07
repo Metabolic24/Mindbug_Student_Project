@@ -146,7 +146,7 @@
           "type": "Power Modification",
           "target": "self",
           "value": 6,
-          "your_turn": true
+          "condition": { "your_turn": true }
         }
       ]
     },
@@ -284,7 +284,7 @@
       "effect_type": [
         {
           "type": "Keyword Gain",
-          "mirror": true,
+          "condition": { "mirror": true },
           "keywords": ["HUNTER", "SNEAKY", "FRENZY", "POISONOUS"]
         }
       ]
@@ -404,7 +404,7 @@
           "type": "Power Modification",
           "target": "allies",
           "value": 2,
-          "your_turn": true
+          "condition": { "your_turn": true }
         }
       ]
     }
