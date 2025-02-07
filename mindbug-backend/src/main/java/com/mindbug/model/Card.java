@@ -67,11 +67,27 @@ class EffectType {
     private String action;
     private Map<String, Object> condition;
     private int amount;
-    private String duration;
     private String operation; 
-    private Integer max_creatures; 
     private boolean exclude_self; 
     private List<String> keywords;
+    private boolean your_turn;
+    private boolean mirror;
+
+    public boolean isMirror() {
+        return this.mirror;
+    }
+
+    public void setMirror(boolean mirror) {
+        this.mirror = mirror;
+    }
+
+    public boolean isYour_turn() {
+        return this.your_turn;
+    }
+
+    public void setYour_turn(boolean your_turn) {
+        this.your_turn = your_turn;
+    }
 
     public String getType() {
         return type;
@@ -121,27 +137,12 @@ class EffectType {
         this.amount = amount;
     }
 
-    public String getDuration(){
-        return duration;
-    }
-
-    public void setDuration(String duration) {
-        this.duration = duration;
-    }
     public String getOperation() {
         return operation;
     }
 
     public void setOperation(String operation) {
         this.operation = operation;
-    }
-
-    public Integer getMax_creatures() {
-        return max_creatures;
-    }
-
-    public void setMax_creatures(Integer max_creatures) {
-        this.max_creatures = max_creatures;
     }
 
     public boolean isExclude_self() {
