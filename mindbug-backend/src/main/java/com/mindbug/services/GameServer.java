@@ -14,6 +14,8 @@ import com.mindbug.models.Game;
 import com.mindbug.models.Player;
 import com.mindbug.websocket.WSMessageManager;
 
+import jakarta.persistence.EntityNotFoundException;
+
 import org.json.JSONObject;
 
 @Service
@@ -51,9 +53,11 @@ public class GameServer {
         return player;
     }
 
-    public boolean handleConfirmJoin(ConfirmJoinDto confirmData) {
-        GameSession gameSession = this.getGameSession(confirmData.getGameId());
-        return gameSession.confirmJoin(confirmData.getPlayerId());
+    public void handleConfirmJoin(Long gameId, Long playerId) {
+        GameSession gameSession = this.getGameSession(gameId);
+        if(gameSession == null)
+            throw new EntityNotFoundException("Game not found");
+        gameSession.confirmJoin(playerId);
     }
 
     private void createGameSession(Player player1, Player player2) {

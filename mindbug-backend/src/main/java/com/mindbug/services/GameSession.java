@@ -37,9 +37,8 @@ public class GameSession {
         this.gameWsMessageManager.setChannel(wsChannel);
     }
 
-    public boolean confirmJoin(Long playerId) {
-        if(!canConfirmJoin(playerId))
-            return false;
+    public void confirmJoin(Long playerId) {
+        this.canConfirmJoin(playerId);
 
         if(this.lastPlayerConfirmedJoin == null) {
             // No player confirmed yet
@@ -50,29 +49,22 @@ public class GameSession {
                 this.status = GameStatus.STARTED;
                 this.gameWsMessageManager.sendMessage(GameWSMessage.NEW_GAME, this.game);
             } else {
-                return false;
+                throw new IllegalArgumentException("Join already confirmed.");
             }
         }
 
-        return true;
     }
 
-    public boolean canConfirmJoin(Long playerId) {
+    public void canConfirmJoin(Long playerId) {
         if(this.status != GameStatus.NOT_STARTED) {
-            // Cannot confrim join. Game already started
-            return false;
+            // Cannot confrim join. Game already started.
+            throw new IllegalStateException("Cannot confrim join. Game already started.");
         } 
 
-        if(playerId != this.game.getPlayer1().getId() || playerId != this.game.getPlayer2().getId()) {
-            // Cannot confrim join. Invalid player
-            return false;
+        if(playerId != this.game.getPlayer1().getId() && playerId != this.game.getPlayer2().getId()) {
+            // Cannot confrim join. Invalid player.
+            throw new IllegalArgumentException("Cannot confrim join. Invalid player.");
         }
-
-        return true;
     }
-
-
     
-
-
 }

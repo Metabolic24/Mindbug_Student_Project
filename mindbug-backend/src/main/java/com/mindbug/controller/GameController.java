@@ -32,11 +32,8 @@ public class GameController {
 
     @PostMapping("/confirm_join")
     public ResponseEntity<String> confirmJoin(@RequestBody ConfirmJoinDto data) {
-        if(this.gameServer.handleConfirmJoin(data))
-            return ResponseEntity.ok().build();
-        else
-            return ResponseEntity.badRequest().build();
-            
+        this.gameServer.handleConfirmJoin(data.getGameId(), data.getPlayerId());
+        return ResponseEntity.ok().build();
     }
 
 }
