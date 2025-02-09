@@ -11,6 +11,18 @@ public class Card {
     private String trigger_condition;
     private List<EffectType> effect_type;
 
+    public Card() {
+    }
+
+    public Card(Card card) {
+        this.name = card.name;
+        this.copies = card.copies;
+        this.power = card.power;
+        this.keywords = card.keywords;
+        this.trigger_condition = card.trigger_condition;
+        this.effect_type = card.effect_type;
+    }
+
     public String getName() {
         return name;
     }
