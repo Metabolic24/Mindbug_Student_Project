@@ -46,7 +46,7 @@ public class App {
             case "j":
                 System.out.printf("%s joue la carte '%s'\n", currentPlayer.getName(), currentPlayer.getHand().getFirst().getCard().getName());
                 game.pickCard(currentPlayer.getHand().getFirst());
-                game.playCard(currentPlayer.getHand().getFirst(), false);
+                game.playCard(false);
                 break;
             case "a":
                 System.out.printf("%s attaque avec la carte '%s'\n", currentPlayer.getName(), currentPlayer.getBoard().getFirst().getCard().getName());

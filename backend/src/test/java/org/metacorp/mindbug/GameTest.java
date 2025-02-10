@@ -55,7 +55,11 @@ public class GameTest {
     public void testManagePlayedCard_nominal() {
         CardInstance card = currentPlayer.getHand().getFirst();
 
-        game.managePlayedCard(card, false);
+        game.managePlayedCard(card, null);
+
+        assertEquals(1, currentPlayer.getBoard().size());
+        assertEquals(card, currentPlayer.getBoard().getFirst());
+        assertTrue(opponent.getBoard().isEmpty());
 
         assertEquals(card.getEffects(EffectTiming.PLAY).size(), game.getEffectQueue().size());
         assertNotNull(game.getAfterEffect());
@@ -65,7 +69,14 @@ public class GameTest {
     public void testManagePlayedCard_mindbug() {
         CardInstance card = currentPlayer.getHand().getFirst();
 
-        game.managePlayedCard(card, true);
+        game.managePlayedCard(card, opponent);
+
+        assertTrue(currentPlayer.getBoard().isEmpty());
+        assertEquals(1, opponent.getBoard().size());
+        assertEquals(card, opponent.getBoard().getFirst());
+
+        assertEquals(opponent, card.getOwner());
+        assertEquals(1, opponent.getMindBugs());
 
         assertEquals(card.getEffects(EffectTiming.PLAY).size(), game.getEffectQueue().size());
         assertNotNull(game.getAfterEffect());
@@ -77,7 +88,11 @@ public class GameTest {
 
         CardInstance card = currentPlayer.getHand().getFirst();
 
-        game.managePlayedCard(card, false);
+        game.managePlayedCard(card, null);
+
+        assertEquals(1, currentPlayer.getBoard().size());
+        assertEquals(card, currentPlayer.getBoard().getFirst());
+        assertTrue(opponent.getBoard().isEmpty());
 
         assertEquals(0, game.getEffectQueue().size());
         assertNotNull(game.getAfterEffect());

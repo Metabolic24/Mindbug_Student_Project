@@ -32,6 +32,8 @@ public class Game {
     private final Queue<EffectToApply> effectQueue;
 
     private IChoice<?> currentChoice;
+
+    private CardInstance playedCard;
     private CardInstance attackingCard;
 
     private Runnable afterEffect;
@@ -70,39 +72,55 @@ public class Game {
 
     // Method executed when a player choose a card that he would like to play
     public void pickCard(CardInstance card) {
-        card.getOwner().refillHand();
+        if (playedCard != null || currentChoice != null || attackingCard != null) {
+            //TODO Throw an error as it is an unexpected situation
+            return;
+        }
+
+        currentPlayer.getHand().remove(card);
+        currentPlayer.refillHand();
+
+        this.playedCard = card;
     }
 
     // Method executed when a player plays a card, no matter how or why
-    public void playCard(CardInstance card, boolean mindBug) {
-        if (card == null || currentChoice != null || attackingCard != null) {
+    public void playCard(boolean mindBug) {
+        if (playedCard == null || currentChoice != null || attackingCard != null) {
             //TODO Throw an error as it is an unexpected situation
             return;
         }
 
         // Update the owner if card has been mindbugged
         if (mindBug) {
-            Player newCardOwner = card.getOwner().getOpponent(players);
+            Player newCardOwner = currentPlayer.getOpponent(players);
             if (!newCardOwner.hasMindbug()) {
                 // TODO Throw an error as it is an unexpected situation
             }
-
-            card.setOwner(newCardOwner);
-            newCardOwner.useMindbug();
         }
 
-        managePlayedCard(card, mindBug);
+        managePlayedCard(playedCard);
         resolveEffectQueue(false);
+
+        playedCard = null;
     }
 
-    protected void managePlayedCard(CardInstance card, boolean mindBug) {
-        Player cardOwner = card.getOwner();
-        cardOwner.addCardToBoard(card);
+    private void managePlayedCard(CardInstance card) {
+        managePlayedCard(card, null);
+    }
+
+    protected void managePlayedCard(CardInstance card, Player mindbugger) {
+        // Specific behavior if opponent has chosen to mindbug the card
+        if (mindbugger != null) {
+            card.setOwner(mindbugger);
+            mindbugger.useMindbug();
+        }
+
+        card.getOwner().getBoard().add(card);
 
         // Add PLAY effects if player is allowed to trigger them
         addEffectsToQueue(card, EffectTiming.PLAY);
 
-        afterEffect = () -> setCurrentPlayer(cardOwner.getOpponent(players));
+        afterEffect = () -> setCurrentPlayer(card.getOwner().getOpponent(players));
     }
 
     /**
@@ -110,7 +128,7 @@ public class Game {
      * @param attackCard the attacking card
      */
     public void declareAttack(CardInstance attackCard) {
-        if (attackCard == null || !attackCard.isCanAttack() || currentChoice != null || attackingCard != null) {
+        if (attackCard == null || !attackCard.isCanAttack() || playedCard != null || currentChoice != null || attackingCard != null) {
             //TODO Throw an error
             return;
         }
@@ -137,7 +155,7 @@ public class Game {
     public void resolveAttack(CardInstance defendingCard) {
         if (attackingCard == null || (defendingCard != null &&
                 (!defendingCard.isCanBlock() || (attackingCard.hasKeyword(Keyword.SNEAKY) && !defendingCard.hasKeyword(Keyword.SNEAKY))))
-                        || currentChoice != null) {
+                        || currentChoice != null || playedCard != null ) {
             // TODO Throw an error as we should not be able to play a card while choice is active (same if some inputs are null)
             return;
         }
