@@ -2,7 +2,7 @@ package org.metacorp.mindbug.choice.target;
 
 import lombok.Data;
 import lombok.NonNull;
-import org.metacorp.mindbug.Game;
+import org.metacorp.mindbug.game.Game;
 import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.effect.ResolvableEffect;
 import org.metacorp.mindbug.choice.ChoiceType;

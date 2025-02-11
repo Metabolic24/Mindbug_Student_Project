@@ -3,8 +3,8 @@ package org.metacorp.mindbug.card.effect.destroy;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.Game;
-import org.metacorp.mindbug.Utils;
+import org.metacorp.mindbug.game.Game;
+import org.metacorp.mindbug.utils.CardUtils;
 import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.effect.AbstractEffect;
 import org.metacorp.mindbug.card.effect.ResolvableEffect;
@@ -48,7 +48,7 @@ public class DestroyEffect extends AbstractEffect implements ResolvableEffect<Li
         }
 
         if (lowest) {
-            List<CardInstance> lowestCards = selfAllowed ? Utils.getLowestCards(game.getPlayers()) :
+            List<CardInstance> lowestCards = selfAllowed ? CardUtils.getLowestCards(game.getPlayers()) :
                     opponent.getLowestCards();
             destroyCards(lowestCards, game);
         } else {

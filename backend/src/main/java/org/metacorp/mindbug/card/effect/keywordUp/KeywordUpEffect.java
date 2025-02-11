@@ -3,10 +3,10 @@ package org.metacorp.mindbug.card.effect.keywordUp;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.*;
 import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.effect.AbstractEffect;
 import org.metacorp.mindbug.card.Keyword;
+import org.metacorp.mindbug.game.Game;
 import org.metacorp.mindbug.player.Player;
 
 /** Effect that adds a keyword to one or more cards */

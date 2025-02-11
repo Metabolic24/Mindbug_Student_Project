@@ -2,7 +2,7 @@ package org.metacorp.mindbug.card.effect.keywordUp;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.metacorp.mindbug.Game;
+import org.metacorp.mindbug.game.Game;
 import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.Keyword;
 import org.metacorp.mindbug.player.Player;

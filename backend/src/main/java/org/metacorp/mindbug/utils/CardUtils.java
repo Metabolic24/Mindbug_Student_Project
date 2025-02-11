@@ -1,7 +1,8 @@
-package org.metacorp.mindbug;
+package org.metacorp.mindbug.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
+import org.metacorp.mindbug.game.Game;
 import org.metacorp.mindbug.card.Card;
 import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.player.Player;
@@ -13,9 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Utility class
-public final class Utils {
+public final class CardUtils {
 
-    private Utils() {
+    private CardUtils() {
         // Not to be used
     }
 

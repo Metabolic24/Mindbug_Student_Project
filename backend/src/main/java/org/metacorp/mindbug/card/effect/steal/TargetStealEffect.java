@@ -2,8 +2,7 @@ package org.metacorp.mindbug.card.effect.steal;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.Game;
+import org.metacorp.mindbug.game.Game;
 import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.effect.ResolvableEffect;
 

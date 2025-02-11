@@ -3,10 +3,10 @@ package org.metacorp.mindbug.card.effect.disableTiming;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.*;
 import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.effect.AbstractEffect;
 import org.metacorp.mindbug.card.effect.EffectTiming;
+import org.metacorp.mindbug.game.Game;
 import org.metacorp.mindbug.player.Player;
 
 /** Effect that may disable a specific timing type of effects */

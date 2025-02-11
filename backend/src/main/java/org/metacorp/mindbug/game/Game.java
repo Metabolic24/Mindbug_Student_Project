@@ -1,4 +1,4 @@
-package org.metacorp.mindbug;
+package org.metacorp.mindbug.game;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +13,7 @@ import org.metacorp.mindbug.choice.IChoice;
 import org.metacorp.mindbug.choice.frenzy.FrenzyAttackChoice;
 import org.metacorp.mindbug.choice.simultaneous.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.player.Player;
+import org.metacorp.mindbug.utils.CardUtils;
 
 import java.util.*;
 
@@ -25,6 +26,7 @@ public class Game {
 
     private List<Player> players;
     private Player currentPlayer;
+    private boolean finished;
 
     private List<CardInstance> cards;
     private List<CardInstance> bannedCards;
@@ -42,6 +44,7 @@ public class Game {
      * Empty constructor (WARNING : a game is not meant to be reused)
      */
     public Game(String player1, String player2) {
+        finished = false;
         bannedCards = new ArrayList<>();
         players = new ArrayList<>(2);
         effectQueue = new LinkedList<>();
@@ -54,7 +57,7 @@ public class Game {
 
     // Start a new game
     private void start() {
-        cards = Utils.getCardsFromConfig("default.json");
+        cards = CardUtils.getCardsFromConfig("default.json");
 
         Collections.shuffle(cards);
 
@@ -274,10 +277,11 @@ public class Game {
         this.currentChoice = null;
     }
 
-    private void endGame(Player loser) {
+    public void endGame(Player loser) {
         Player winner = loser.getOpponent(players);
-
         System.out.printf("%s wins ; %s loses", winner.getName(), loser.getName());
+
+        finished = true;
     }
 
     public void defeatCard(CardInstance card) {
@@ -292,20 +296,24 @@ public class Game {
     // Return the first player of the game (should only be used once per game)
     private Player getFirstPlayer() {
         List<Player> validPlayers = new ArrayList<>(players);
+
+        System.out.println("Calcul du premier joueur :");
+
         while (validPlayers.size() != 1) {
             int higherPower = 0;
             List<Player> nextPlayers = new ArrayList<>();
 
             for (Player player : validPlayers) {
                 // Get a random card from the remaining cards
-                CardInstance firstPlayerCard = banCard();
+                CardInstance bannedCard = banCard();
+                System.out.printf("\t%s %s %d\n", player.getName(), bannedCard.getCard().getName(), bannedCard.getPower());
 
-                if (firstPlayerCard.getPower() < higherPower) {
+                if (bannedCard.getPower() < higherPower) {
                     // Current player will not be the first one
                     continue;
-                } else if (firstPlayerCard.getPower() > higherPower) {
+                } else if (bannedCard.getPower() > higherPower) {
                     // Update higherPower value and clean the next players set
-                    higherPower = firstPlayerCard.getPower();
+                    higherPower = bannedCard.getPower();
                     nextPlayers.clear();
                 } else {
                     // Nothing to do, we will just add the player to the nextPlayers set
@@ -316,6 +324,8 @@ public class Game {
 
             validPlayers = nextPlayers;
         }
+
+        System.out.printf(" -> %s sera le premier joueur\n", validPlayers.getFirst().getName());
 
         return validPlayers.getFirst();
     }

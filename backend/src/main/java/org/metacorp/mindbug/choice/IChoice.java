@@ -1,6 +1,6 @@
 package org.metacorp.mindbug.choice;
 
-import org.metacorp.mindbug.Game;
+import org.metacorp.mindbug.game.Game;
 
 public interface IChoice<T> {
 

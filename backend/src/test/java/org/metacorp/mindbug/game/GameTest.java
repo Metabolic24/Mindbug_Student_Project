@@ -1,4 +1,4 @@
-package org.metacorp.mindbug;
+package org.metacorp.mindbug.game;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -2,7 +2,7 @@ package org.metacorp.mindbug.choice.simultaneous;
 
 import lombok.Data;
 import lombok.NonNull;
-import org.metacorp.mindbug.Game;
+import org.metacorp.mindbug.game.Game;
 import org.metacorp.mindbug.card.effect.EffectToApply;
 import org.metacorp.mindbug.choice.ChoiceType;
 import org.metacorp.mindbug.choice.IChoice;

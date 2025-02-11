@@ -3,7 +3,7 @@ package org.metacorp.mindbug.card.effect;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
-import org.metacorp.mindbug.Game;
+import org.metacorp.mindbug.game.Game;
 import org.metacorp.mindbug.card.CardInstance;
 
 import java.util.UUID;
