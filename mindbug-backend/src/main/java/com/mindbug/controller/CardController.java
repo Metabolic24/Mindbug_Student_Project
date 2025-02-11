@@ -27,7 +27,7 @@ public class CardController {
         } else {
             System.out.println("Successfully loaded cards.json file.");
         }
-        cards = mapper.readValue(is, new TypeReference<List<Card>>() {});
+        cards = mapper.readValue(is, new TypeReference<List<Card>>() { });
     }
 
     @GetMapping("/{set}")
