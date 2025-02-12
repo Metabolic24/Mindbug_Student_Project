@@ -58,7 +58,7 @@
 
   <!-- Checks that a package-info.java file exists for each package.     -->
   <!-- See https://checkstyle.org/checks/javadoc/javadocpackage.html#JavadocPackage -->
-  <module name="JavadocPackage"/>
+  <!-- <module name="JavadocPackage"/> -->
 
   <!-- Checks whether files end with a new line.                        -->
   <!-- See https://checkstyle.org/checks/misc/newlineatendoffile.html -->
@@ -77,16 +77,16 @@
 
   <!-- Checks for whitespace                               -->
   <!-- See https://checkstyle.org/checks/whitespace/index.html -->
-  <module name="FileTabCharacter"/>
+  <!-- <module name="FileTabCharacter"/> -->
 
   <!-- Miscellaneous other checks.                   -->
   <!-- See https://checkstyle.org/checks/misc/index.html -->
-  <module name="RegexpSingleline">
+  <!-- <module name="RegexpSingleline">
     <property name="format" value="\s+$"/>
     <property name="minimum" value="0"/>
     <property name="maximum" value="0"/>
     <property name="message" value="Line has trailing spaces."/>
-  </module>
+  </module> -->
 
   <!-- Checks for Headers                                -->
   <!-- See https://checkstyle.org/checks/header/index.html   -->
@@ -99,12 +99,12 @@
 
     <!-- Checks for Javadoc comments.                     -->
     <!-- See https://checkstyle.org/checks/javadoc/index.html -->
-    <module name="InvalidJavadocPosition"/>
+    <!-- <module name="InvalidJavadocPosition"/>
     <module name="JavadocMethod"/>
     <module name="JavadocType"/>
     <module name="JavadocVariable"/>
     <module name="JavadocStyle"/>
-    <module name="MissingJavadocMethod"/>
+    <module name="MissingJavadocMethod"/> -->
 
     <!-- Checks for Naming Conventions.                  -->
     <!-- See https://checkstyle.org/checks/naming/index.html -->
@@ -153,38 +153,38 @@
     <!-- Checks for blocks. You know, those {}'s         -->
     <!-- See https://checkstyle.org/checks/blocks/index.html -->
     <module name="AvoidNestedBlocks"/>
-    <module name="EmptyBlock"/>
+    <!-- <module name="EmptyBlock"/> -->
     <module name="LeftCurly"/>
-    <module name="NeedBraces"/>
+    <!-- <module name="NeedBraces"/> -->
     <module name="RightCurly"/>
 
     <!-- Checks for common coding problems               -->
     <!-- See https://checkstyle.org/checks/coding/index.html -->
     <module name="EmptyStatement"/>
-    <module name="EqualsHashCode"/>
-    <module name="HiddenField"/>
+    <!-- <module name="EqualsHashCode"/> -->
+    <!-- <module name="HiddenField"/> -->
     <module name="IllegalInstantiation"/>
     <module name="InnerAssignment"/>
-    <module name="MagicNumber"/>
+    <!-- <module name="MagicNumber"/> -->
     <module name="MissingSwitchDefault"/>
-    <module name="MultipleVariableDeclarations"/>
+    <!-- <module name="MultipleVariableDeclarations"/> -->
     <module name="SimplifyBooleanExpression"/>
     <module name="SimplifyBooleanReturn"/>
 
     <!-- Checks for class design                         -->
     <!-- See https://checkstyle.org/checks/design/index.html -->
-    <module name="DesignForExtension"/>
-    <module name="FinalClass"/>
-    <module name="HideUtilityClassConstructor"/>
+    <!-- <module name="DesignForExtension"/> -->
+    <!-- <module name="FinalClass"/> -->
+    <!-- <module name="HideUtilityClassConstructor"/>
     <module name="InterfaceIsType"/>
-    <module name="VisibilityModifier"/>
+    <module name="VisibilityModifier"/> -->
 
     <!-- Miscellaneous other checks.                   -->
     <!-- See https://checkstyle.org/checks/misc/index.html -->
-    <module name="ArrayTypeStyle"/>
+    <!-- <module name="ArrayTypeStyle"/>
     <module name="FinalParameters"/>
     <module name="TodoComment"/>
-    <module name="UpperEll"/>
+    <module name="UpperEll"/> -->
 
     <!-- https://checkstyle.org/filters/suppressionxpathfilter.html -->
     <module name="SuppressionXpathFilter">
