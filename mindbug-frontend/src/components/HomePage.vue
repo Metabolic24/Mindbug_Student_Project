@@ -3,23 +3,61 @@
       <h1>Welcome to Mindbug's Cards</h1>
       <div class="button-group">
         <button @click="goToSets" class="styled-button">Set of Cards</button>
-        <button @click="goToGame" class="styled-button">StartGame</button>
+        <button @click="startGame" class="styled-button">Start Game</button>
       </div>
+      <p v-if="message">📢 {{ message }}</p>
     </div>
 </template>
   
 <script>
-  export default {
-    methods: {
-      goToSets() {
-        this.$router.push('/setsofcards');
-      },
-  
-      goToGame(){
-        this.$router.push('/gameterrain');
-      }
+import WebSocketService from "@/services/websocket.js";
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      message: "",
+      playerId: "player-" + Math.random().toString(36).substr(2, 9),
+    };
+  },
+  methods: {
+    goToSets() {
+      this.$router.push('/setsofcards');
+    },
+
+    async startGame() {
+        try {
+            WebSocketService.connectToQueue(this.playerId, (data) => {
+                console.log("🎮 Match found:", data);
+                this.message = `🎮 Match found! Game ID: ${data.gameId}`;
+
+                axios.post("/api/game/confirm_join", {
+                    gameId: data.gameId,
+                    playerId: this.playerId
+                });
+
+                WebSocketService.subscribeToGame(data.gameId, (gameState) => {
+                    console.log("🚀 Game started:", gameState);
+                    this.message = "🚀 Game has started!";
+                    this.$router.push(`/gameterrain/${data.gameId}`);
+                });
+            });
+            console.log("🔍 Sending join_game request...");
+            const response = await axios.post("/api/game/join_game", null, {
+                params: { playerId: this.playerId }
+            });
+            console.log("✅ Joined match queue:", response.data);
+            this.message = "🔍 Waiting for an opponent...";
+
+            
+        } catch (error) {
+            console.error("❌ Error occurred while searching for a game:", error.response ? error.response.data : error.message);
+            this.message = "❌ Matchmaking error.";
+        }
     }
-  }
+
+  },
+};
 </script>
   
 <style scoped>
@@ -61,6 +99,4 @@
     background-color: #1e6f93;
     transform: scale(0.98); 
   }
-  
 </style>
-  
