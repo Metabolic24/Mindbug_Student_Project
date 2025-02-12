@@ -65,7 +65,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: checkstyle-report
-          path: mindbug-backend/target/checkstyle-report.xml
+          path: mindbug-backend/target/checkstyle-result.xml
 
       - name: Run backend tests
         run: mvn test
