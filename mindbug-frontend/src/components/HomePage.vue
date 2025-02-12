@@ -27,27 +27,36 @@ export default {
 
     async startGame() {
         try {
+            // Tu te connectes d'abord à cette websocket
             WebSocketService.connectToQueue(this.playerId, (data) => {
                 console.log("🎮 Match found:", data);
                 this.message = `🎮 Match found! Game ID: ${data.gameId}`;
 
-                axios.post("/api/game/confirm_join", {
-                    gameId: data.gameId,
-                    playerId: this.playerId
-                });
-
-                WebSocketService.subscribeToGame(data.gameId, (gameState) => {
-                    console.log("🚀 Game started:", gameState);
-                    this.message = "🚀 Game has started!";
-                    this.$router.push(`/gameterrain/${data.gameId}`);
-                });
             });
+
+            // ensuite tu appelles join game. y'a pas de params
             console.log("🔍 Sending join_game request...");
-            const response = await axios.post("/api/game/join_game", null, {
+            await axios.post("/api/game/join_game", null, {
                 params: { playerId: this.playerId }
             });
-            console.log("✅ Joined match queue:", response.data);
-            this.message = "🔍 Waiting for an opponent...";
+
+            // après faut gérer les erreurs de ce join_game
+
+            // Maintenant le confirm join tu le fais seulement quand tu recois un message websocket match found
+
+            // console.log("✅ Joined match queue:", response.data);
+            // this.message = "🔍 Waiting for an opponent...";
+
+            // axios.post("/api/game/confirm_join", {
+                //     gameId: data.gameId,
+                //     playerId: this.playerId
+                // });
+
+                // WebSocketService.subscribeToGame(data.gameId, (gameState) => {
+                //     console.log("🚀 Game started:", gameState);
+                //     this.message = "🚀 Game has started!";
+                //     this.$router.push(`/gameterrain/${data.gameId}`);
+                // });
 
             
         } catch (error) {
