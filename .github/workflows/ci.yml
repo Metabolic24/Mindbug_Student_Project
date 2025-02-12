@@ -80,7 +80,7 @@ jobs:
           path: mindbug-backend/target/site/jacoco/index.html
 
       - name: Upload Jacoco Exec files
-        uses: mindbug-backend/actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: jacoco-exec
-          path: target/*.exec  
+          path: mindbug-backend/target/*.exec  
