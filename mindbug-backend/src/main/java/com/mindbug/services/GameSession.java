@@ -53,34 +53,54 @@ public class GameSession {
         this.wsChannel = "/topic/game/" + game.getId();
         this.gameWsMessageManager.setChannel(wsChannel);
         distributionCard();
+        initializeCardCopiesMap();
     }
 
+    private void initializeCardCopiesMap() {
+        cards = new ArrayList<>(Objects.requireNonNull(ReadCard()));
+        for (Card card : cards) {
+            cardCopiesMap.put(card.getName(), card.getCopies());
+        }
+        //System.out.println("Card copies map: " + cardCopiesMap);
+    }
+
+    private Set<String> selectedCards = new HashSet<>();
 
     private boolean checkCardCopies(Card card) {
         String cardName = card.getName();
         if (cardCopiesMap.containsKey(cardName)) {
             int copies = cardCopiesMap.get(cardName);
-            if (copies > 0) {
-                cardCopiesMap.put(cardName, copies - 1);
-                return false;
+            return copies > 0;
+        }
+        return false;
+    }
+
+    private void updateCardCopies(Card card) {
+        String cardName = card.getName();
+        if (cardCopiesMap.containsKey(cardName)) {
+            int copies = cardCopiesMap.get(cardName);
+            if (copies == 2) {
+                cardCopiesMap.put(cardName, 1);
+                selectedCards.add(cardName);
+            } else if (copies == 1) {
+                cardCopiesMap.remove(cardName);
+                selectedCards.add(cardName);
+                cards.remove(card);
             }
         }
-        return true;
     }
 
     public void distributionCard() {
         if (game == null) {
             throw new IllegalStateException("Game is not initialized");
         }
-
-        cards = new ArrayList<>(Objects.requireNonNull(ReadCard()));
+        initializeCardCopiesMap();
+        selectedCards.clear();
 
         if (cards.isEmpty()) {
             throw new IllegalStateException("No cards available for distribution");
         }
         System.out.println("Initial cards size: " + cards.size());
-        //System.out.println("Initial cards: " + cards);
-
 
         Collections.shuffle(cards);
 
@@ -93,37 +113,37 @@ public class GameSession {
         distributeCardsToPlayer(game.getPlayer2());
     }
 
-//
-private void distributeCardsToPlayer(Player player) {
-    Random random = new Random();
-    int handSize = 5;
-    int drawPileSize = 5;
+    private void distributeCardsToPlayer(Player player) {
+        Random random = new Random();
+        int handSize = 5;
+        int drawPileSize = 5;
 
-    while (player.getHand().size() < handSize) {
-        if (cards.isEmpty()) {
-            throw new IllegalStateException("Not enough cards to distribute to player's hand");
+        while (player.getHand().size() < handSize) {
+            if (cards.isEmpty()) {
+                throw new IllegalStateException("Not enough cards to distribute to player's hand");
+            }
+            Card card = cards.get(random.nextInt(cards.size()));
+            if (checkCardCopies(card) && !selectedCards.contains(card.getName())) {
+                player.getHand().add(card.getGameSessionCardId());
+                updateCardCopies(card);
+            }
         }
-        Card card = cards.get(random.nextInt(cards.size()));
-        if (checkCardCopies(card)) {
-            player.getHand().add(card.getGameSessionCardId());
-            cards.remove(card);
-        }
-    }
 
-    while (player.getDrawPile().size() < drawPileSize) {
-        if (cards.isEmpty()) {
-            throw new IllegalStateException("Not enough cards to distribute to player's draw pile");
+        while (player.getDrawPile().size() < drawPileSize) {
+            if (cards.isEmpty()) {
+                throw new IllegalStateException("Not enough cards to distribute to player's draw pile");
+            }
+            Card card = cards.get(random.nextInt(cards.size()));
+            if (checkCardCopies(card) && !selectedCards.contains(card.getName())) {
+                player.getDrawPile().add(card.getGameSessionCardId());
+                updateCardCopies(card);
+            }
         }
-        Card card = cards.get(random.nextInt(cards.size()));
-        if (checkCardCopies(card)) {
-            player.getDrawPile().add(card.getGameSessionCardId());
-            cards.remove(card);
-        }
-    }
-    System.out.println("Cards size after player " + player.getNickname() + " initialization: " + cards.size());
-    System.out.println("Player's hand: " + player.getHand());
-    System.out.println("Player's draw pile: " + player.getDrawPile());
-    System.out.println("-----------------------------------------------");
+
+        System.out.println("Cards after distribution for player: " + player.getNickname() + " - Remaining: " + cards.size());
+        System.out.println("Player's hand: " + player.getHand());
+        System.out.println("Player's draw pile: " + player.getDrawPile());
+        System.out.println("-----------------------------------------------");
     }
 
     private List<Card> ReadCard() {

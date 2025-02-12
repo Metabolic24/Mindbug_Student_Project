@@ -60,7 +60,7 @@ public class GameController {
             game.setPlayer1(new Player("Player 1"));
             game.setPlayer2(new Player("Player 2"));
             gameSession.initialize(game);
-            gameSession.distributionCard();
+            //gameSession.distributionCard();
             return ResponseEntity.ok("Card distribution test successful");
         } catch (Exception e) {
             return ResponseEntity.status(500).body("Card distribution test failed: " + e.getMessage());
