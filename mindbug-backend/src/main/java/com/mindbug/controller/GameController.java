@@ -1,10 +1,9 @@
 package com.mindbug.controller;
 
-import org.springframework.web.bind.annotation.RestController;
+import com.mindbug.models.Game;
+import com.mindbug.services.GameSession;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.HtmlUtils;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Map;
 
@@ -36,4 +35,30 @@ public class GameController {
         return ResponseEntity.ok().build();
     }
 
+    @Autowired
+    private GameSession gameSession;
+
+    @PostMapping("/distribute-cards")
+    public ResponseEntity<String> distributeCards(@RequestBody Game game) {
+        if (game == null) {
+            return ResponseEntity.badRequest().body("Game object is missing");
+        }
+        gameSession.initialize(game);
+        return ResponseEntity.ok("Cards distributed successfully");
+    }
+
+    @GetMapping("/test-distribution")
+    public ResponseEntity<String> testDistribution() {
+        try {
+            Game game = new Game();
+            // Initialize the game object with necessary data
+            game.setPlayer1(new Player("Player 1"));
+            game.setPlayer2(new Player("Player 2"));
+            gameSession.initialize(game);
+            gameSession.distributionCard();
+            return ResponseEntity.ok("Card distribution test successful");
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body("Card distribution test failed: " + e.getMessage());
+        }
+    }
 }
