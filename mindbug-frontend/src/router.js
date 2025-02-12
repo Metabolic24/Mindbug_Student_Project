@@ -5,12 +5,12 @@ const routes = [
     {
         path: "/",
         name: "HomePage",
-        component: HomePage, 
+        component: HomePage,
     },
     {
-        path: "/setsofcards", 
+        path: "/setsofcards",
         name: "SetsOfCards",
-        component: () => import('@/components/SetsOfCards.vue') 
+        component: () => import('@/components/SetsOfCards.vue')
     },
     {
         path: "/gameboard",
@@ -21,9 +21,8 @@ const routes = [
         path: "/cardlist/:set",
         name: "CardList",
         component: () => import('@/components/CardsList.vue') ,
-        props: true 
-      }
-
+        props: true
+    }
 ];
 
 const router = createRouter({
