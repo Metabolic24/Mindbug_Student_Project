@@ -1,9 +1,13 @@
 package com.mindbug.model;
 
+import java.util.Set;
+
 public class Card {
     private String name;
     private int copies;
-    private String set;
+    private int power;
+    private Set<Keyword> keywords;
+    private Set<Effect> effect;
 
     public String getName() {
         return name;
@@ -21,11 +25,28 @@ public class Card {
         this.copies = copies;
     }
 
-    public String getSet() {
-        return set;
+    public int getPower() {
+        return power;
     }
 
-    public void setSet(String set) {
-        this.set = set;
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public Set<Keyword> getKeywords() {
+        return keywords;
+    }
+
+    public void setKeywords(Set<Keyword> keywords) {
+        this.keywords = keywords;
+    }
+
+    public Set<Effect> getEffect() {
+        return effect;
+    }
+
+    public void setEffect(Set<Effect> effect) {
+        this.effect = effect;
     }
 }
+
