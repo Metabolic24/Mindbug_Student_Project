@@ -121,7 +121,12 @@ public class Player {
         return lowestCards;
     }
 
-    // TODO Ajouter un appel à cette méthode dans le refresh qui reste à implémenter?
+    public void refresh() {
+        refillHand();
+        for (CardInstance card : board) {
+            card.reset();
+        }
+    }
 
     /**
      * Draw cards if possible and necessary (hand size < MAX_HAND_SIZE and some cards are still in the draw pile)

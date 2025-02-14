@@ -93,37 +93,40 @@ public class Game {
             return;
         }
 
+        Player newCardOwner;
+
         // Update the owner if card has been mindbugged
         if (mindBug) {
-            Player newCardOwner = currentPlayer.getOpponent(players);
+            newCardOwner = currentPlayer.getOpponent(players);
             if (!newCardOwner.hasMindbug()) {
                 // TODO Throw an error as it is an unexpected situation
             }
+        } else {
+            newCardOwner = currentPlayer;
         }
 
-        managePlayedCard(playedCard);
+        managePlayedCard(newCardOwner);
         resolveEffectQueue(false);
-
-        playedCard = null;
     }
 
-    private void managePlayedCard(CardInstance card) {
-        managePlayedCard(card, null);
-    }
-
-    protected void managePlayedCard(CardInstance card, Player mindbugger) {
+    protected void managePlayedCard(Player newCardOwner) {
         // Specific behavior if opponent has chosen to mindbug the card
-        if (mindbugger != null) {
-            card.setOwner(mindbugger);
-            mindbugger.useMindbug();
+        if (!playedCard.getOwner().equals(newCardOwner)) {
+            playedCard.setOwner(newCardOwner);
+            newCardOwner.useMindbug();
         }
 
-        card.getOwner().getBoard().add(card);
+        newCardOwner.getBoard().add(playedCard);
+
+        refreshBoard();
 
         // Add PLAY effects if player is allowed to trigger them
-        addEffectsToQueue(card, EffectTiming.PLAY);
+        addEffectsToQueue(playedCard, EffectTiming.PLAY);
 
-        afterEffect = () -> setCurrentPlayer(card.getOwner().getOpponent(players));
+        afterEffect = () -> {
+            setCurrentPlayer(newCardOwner.getOpponent(players));
+            playedCard = null; //TODO A vérifier si c'est bien là qu'il faut mettre ça (ou alors à la fin de playCard)
+        };
     }
 
     /**
@@ -190,6 +193,8 @@ public class Game {
             }
         }
 
+        refreshBoard();
+
         afterEffect = () -> {
             if (attackingCard.isCanAttackTwice()) {
                 currentChoice = new FrenzyAttackChoice(attackingCard);
@@ -211,6 +216,8 @@ public class Game {
 
         SimultaneousEffectsChoice simultaneousEffectsChoice = (SimultaneousEffectsChoice) currentChoice;
         simultaneousEffectsChoice.resolve(this, sortedChoiceIDs);
+
+        refreshBoard();
 
         resolveEffectQueue(true);
     }
@@ -236,6 +243,8 @@ public class Game {
             return;
         }
 
+        //TODO Ajouter l'appel à refreshBoard directement dans la résolution de chaque effet (afin d'éviter de l'appeler inutilement avant un choix)
+
         while (!effectQueue.isEmpty()) {
             EffectToApply currentEffect = effectQueue.peek();
             currentEffect.getEffect().apply(this, currentEffect.getCard());
@@ -249,6 +258,8 @@ public class Game {
                 currentChoice = new SimultaneousEffectsChoice(currentPlayer, new HashSet<>(effectQueue));
                 effectQueue.clear();
                 return;
+            } else {
+                refreshBoard();
             }
         }
 
@@ -298,6 +309,47 @@ public class Game {
         } else {
             card.getOwner().addCardToDiscardPile(card);
             addEffectsToQueue(card, EffectTiming.DEFEATED);
+        }
+    }
+
+    public void refreshBoard() {
+        List<EffectToApply> powerUpEffects = new ArrayList<>();
+        List<EffectToApply> otherEffects = new ArrayList<>();
+
+        for (Player player: players) {
+            player.refresh();
+
+            for (CardInstance cardInstance : player.getBoard()) {
+                List<AbstractEffect> cardEffects = cardInstance.getEffects(EffectTiming.PASSIVE);
+                for (AbstractEffect cardEffect : cardEffects) {
+                    EffectToApply effectToApply = new EffectToApply(cardEffect, cardInstance, this);
+                    if (cardEffect.getType() == EffectType.POWER_UP) {
+                        powerUpEffects.add(effectToApply);
+                    } else {
+                        otherEffects.add(effectToApply);
+                    }
+                }
+            }
+
+            for (CardInstance cardInstance : player.getDiscardPile()) {
+                List<AbstractEffect> cardEffects = cardInstance.getEffects(EffectTiming.DISCARD);
+                for (AbstractEffect cardEffect : cardEffects) {
+                    EffectToApply effectToApply = new EffectToApply(cardEffect, cardInstance, this);
+                    if (cardEffect.getType() == EffectType.POWER_UP) {
+                        powerUpEffects.add(effectToApply);
+                    } else {
+                        otherEffects.add(effectToApply);
+                    }
+                }
+            }
+        }
+
+        for (EffectToApply effect : powerUpEffects) {
+            effect.getEffect().apply(this, effect.getCard());
+        }
+
+        for (EffectToApply effect : otherEffects) {
+            effect.getEffect().apply(this, effect.getCard());
         }
     }
 

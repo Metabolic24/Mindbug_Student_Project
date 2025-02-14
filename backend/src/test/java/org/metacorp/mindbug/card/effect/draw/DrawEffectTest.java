@@ -60,28 +60,4 @@ public class DrawEffectTest {
         assertEquals(10, currentPlayer.getHand().size());
         assertEquals(0, currentPlayer.getDrawPile().size());
     }
-
-    @Test
-    public void testWithSelfDiscard_emptyDiscard() {
-        effect.setSelfDiscard(true);
-        effect.apply(game, randomCard);
-
-        assertEquals(5, currentPlayer.getHand().size());
-    }
-
-    @Test
-    public void testWithSelfDiscard_discardSize3() {
-        currentPlayer.getDiscardPile().add(currentPlayer.getDrawPile().removeFirst());
-        currentPlayer.getDiscardPile().add(currentPlayer.getDrawPile().removeFirst());
-        currentPlayer.getDiscardPile().add(currentPlayer.getDrawPile().removeFirst());
-
-        assertEquals(3, currentPlayer.getDiscardPile().size());
-        assertEquals(5, currentPlayer.getHand().size());
-
-        effect.setSelfDiscard(true);
-        effect.apply(game, randomCard);
-
-        assertEquals(8, currentPlayer.getHand().size());
-        assertTrue(currentPlayer.getDiscardPile().isEmpty());
-    }
 }

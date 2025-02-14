@@ -63,6 +63,13 @@ public class CardInstance {
         power += amount;
     }
 
+    public void reset() {
+        power = card.getPower();
+        canAttack = true;
+        canBlock = true;
+        keywords = new HashSet<>(card.getKeywords());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -74,12 +81,5 @@ public class CardInstance {
     @Override
     public int hashCode() {
         return uuid.hashCode();
-    }
-
-    public void reset() {
-        power = card.getPower();
-        canAttack = true;
-        canBlock = true;
-        keywords = new HashSet<>(card.getKeywords());
     }
 }
