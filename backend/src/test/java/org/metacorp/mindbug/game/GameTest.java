@@ -54,8 +54,9 @@ public class GameTest {
     @Test
     public void testManagePlayedCard_nominal() {
         CardInstance card = currentPlayer.getHand().getFirst();
+        game.setPlayedCard(card);
 
-        game.managePlayedCard(card, null);
+        game.managePlayedCard(currentPlayer);
 
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(card, currentPlayer.getBoard().getFirst());
@@ -68,8 +69,9 @@ public class GameTest {
     @Test
     public void testManagePlayedCard_mindbug() {
         CardInstance card = currentPlayer.getHand().getFirst();
+        game.setPlayedCard(card);
 
-        game.managePlayedCard(card, opponent);
+        game.managePlayedCard(opponent);
 
         assertTrue(currentPlayer.getBoard().isEmpty());
         assertEquals(1, opponent.getBoard().size());
@@ -87,8 +89,9 @@ public class GameTest {
         currentPlayer.disableTiming(EffectTiming.PLAY);
 
         CardInstance card = currentPlayer.getHand().getFirst();
+        game.setPlayedCard(card);
 
-        game.managePlayedCard(card, null);
+        game.managePlayedCard(currentPlayer);
 
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(card, currentPlayer.getBoard().getFirst());

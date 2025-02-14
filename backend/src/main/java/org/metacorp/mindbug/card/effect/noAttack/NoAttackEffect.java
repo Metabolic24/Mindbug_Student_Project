@@ -18,11 +18,6 @@ public class NoAttackEffect extends AbstractEffect {
     private boolean lowest; // Should the lowest power creatures be unable to attack
 
     @Override
-    public String getType() {
-        return TYPE;
-    }
-
-    @Override
     public void apply(Game game, CardInstance card) {
         if (lowest) {
             Player opponent = card.getOwner().getOpponent(game.getPlayers());

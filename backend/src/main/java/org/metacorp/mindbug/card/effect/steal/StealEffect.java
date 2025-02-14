@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 public class StealEffect extends AbstractEffect {
     public final static String TYPE = "STEAL";
 
-    private int value;              // The number of cards to steal
+    private int value;              // The number of cards to steal (-1 <=> all cards)
     private Integer min;            // The minimum power for card(s) to be stolen
     private Integer max;            // The maximum power for card(s) to be stolen
     private boolean random;         // Should stolen card(s) be chosen randomly
@@ -33,11 +33,6 @@ public class StealEffect extends AbstractEffect {
 
     private boolean mustPlay;       // Should stolen card(s) be played in this effect resolution
     private boolean mayPlay;        // May the stolen card(s) be played in this effect resolution
-
-    @Override
-    public String getType() {
-        return TYPE;
-    }
 
     @Override
     public void apply(Game game, CardInstance card) {
@@ -61,7 +56,7 @@ public class StealEffect extends AbstractEffect {
 
         int cardsCount = availableCards.size();
         if (cardsCount > 0) {
-            if (cardsCount <= value) {
+            if (cardsCount <= value || value < 0) {
                 stealCards(new ArrayList<>(availableCards), game);
             } else if (random) {
                 List<CardInstance> stolenCards = new ArrayList<>();

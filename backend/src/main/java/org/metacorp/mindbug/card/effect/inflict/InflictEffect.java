@@ -21,25 +21,18 @@ public class InflictEffect extends AbstractEffect {
     private boolean allButOne;  // Should all life points be lost but one
 
     @Override
-    public String getType() {
-        return TYPE;
-    }
-
-    @Override
     public void apply(Game game, CardInstance card) {
-        Player cardOwner = card.getOwner();
-
-        Team teamToDecrease = self ? cardOwner.getTeam() :
-                cardOwner.getOpponent(game.getPlayers()).getTeam();
+        Player affectedPlayer = self ? card.getOwner() : card.getOwner().getOpponent(game.getPlayers());
+        Team affectedTeam = affectedPlayer.getTeam();
 
         if (allButOne) {
-            if (teamToDecrease.getLifePoints() > 1) {
-                teamToDecrease.setLifePoints(1);
-                game.lifePointLost(cardOwner);
+            if (affectedTeam.getLifePoints() > 1) {
+                affectedTeam.setLifePoints(1);
+                game.lifePointLost(affectedPlayer);
             }
         } else {
-            teamToDecrease.loseLifePoints(value);
-            game.lifePointLost(cardOwner);
+            affectedTeam.loseLifePoints(value);
+            game.lifePointLost(affectedPlayer);
         }
     }
 }

@@ -47,7 +47,7 @@ public class TargetChoice implements IChoice<List<UUID>> {
             //TODO Raise an error or log message
         }
 
-        effect.resolve(chosenTargets);
+        effect.resolve(game, chosenTargets);
 
         // Reset the choice only if the given choice list was valid
         game.resetChoice();

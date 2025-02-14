@@ -36,11 +36,6 @@ public class NoBlockEffect extends AbstractEffect implements ResolvableEffect<Li
     private boolean highest;
 
     @Override
-    public String getType() {
-        return TYPE;
-    }
-
-    @Override
     public void apply(Game game, CardInstance card) {
         Player opponent = card.getOwner().getOpponent(game.getPlayers());
 
@@ -64,7 +59,7 @@ public class NoBlockEffect extends AbstractEffect implements ResolvableEffect<Li
     }
 
     @Override
-    public void resolve(List<CardInstance> chosenTargets) {
+    public void resolve(Game game, List<CardInstance> chosenTargets) {
         for (CardInstance card : chosenTargets) {
             card.setCanBlock(false);
         }

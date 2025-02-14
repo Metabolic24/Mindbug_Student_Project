@@ -25,18 +25,13 @@ public class DestroyEffect extends AbstractEffect implements ResolvableEffect<Li
     public final static String TYPE = "DESTROY";
 
     private Integer value;          // The number of cards to destroy, -1 if all cards should be destroyed
-    private boolean lessAllies;     // Effect is active if player has less allies than the opponent
-    private boolean lowest;         // Destroy the card(s) with lowest power
-    private boolean selfAllowed;    // Can this effect affect current player cards
+
     private Integer min;            // The minimum power of card(s) to be destroyed
     private Integer max;            // The maximum power of card(s) to be destroyed
 
-    private Game game;
-
-    @Override
-    public String getType() {
-        return TYPE;
-    }
+    private boolean lessAllies;     // Effect is active if player has less allies than the opponent
+    private boolean lowest;         // Destroy the card(s) with lowest power
+    private boolean selfAllowed;    // Can this effect affect current player cards
 
     @Override
     public void apply(Game game, CardInstance card) {
@@ -50,7 +45,7 @@ public class DestroyEffect extends AbstractEffect implements ResolvableEffect<Li
         if (lowest) {
             List<CardInstance> lowestCards = selfAllowed ? CardUtils.getLowestCards(game.getPlayers()) :
                     opponent.getLowestCards();
-            destroyCards(lowestCards, game);
+            destroyCards(game, lowestCards);
         } else {
             List<CardInstance> availableCards = new ArrayList<>();
             for (CardInstance currentCard : opponent.getBoard()) {
@@ -75,23 +70,22 @@ public class DestroyEffect extends AbstractEffect implements ResolvableEffect<Li
 
             if (!availableCards.isEmpty()) {
                 if (availableCards.size() <= value) {
-                    destroyCards(availableCards, game);
+                    destroyCards(game, availableCards);
                 } else {
                     game.setCurrentChoice(new TargetChoice(currentPlayer, card, this, value, new HashSet<>(availableCards)));
-                    this.setGame(game);
                 }
             }
         }
     }
 
-    private void destroyCards(List<CardInstance> cards, Game game) {
+    private void destroyCards(Game game, List<CardInstance> cards) {
         for (CardInstance card : cards) {
             game.defeatCard(card);
         }
     }
 
     @Override
-    public void resolve(List<CardInstance> chosenTargets) {
-        destroyCards(chosenTargets, this.game);
+    public void resolve(Game game, List<CardInstance> chosenTargets) {
+        destroyCards(game, chosenTargets);
     }
 }

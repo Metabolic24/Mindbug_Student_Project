@@ -47,11 +47,6 @@ public class PowerUpEffect extends AbstractEffect {
     private boolean selfTurn;
 
     @Override
-    public String getType() {
-        return TYPE;
-    }
-
-    @Override
     public void apply(Game game, CardInstance card) {
         Player currentPlayer = card.getOwner();
         int powerToAdd = value;

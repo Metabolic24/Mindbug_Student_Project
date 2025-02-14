@@ -1,10 +1,8 @@
 package org.metacorp.mindbug.card.effect.steal;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 import org.metacorp.mindbug.card.effect.ResolvableEffect;
 import org.metacorp.mindbug.choice.bool.BooleanChoiceResolver;
+import org.metacorp.mindbug.game.Game;
 
 /**
  * Effect that steals card from the opponent hand or board depending on several conditions
@@ -22,7 +20,7 @@ public class BooleanStealEffect extends StealEffect implements ResolvableEffect<
     }
 
     @Override
-    public void resolve(BooleanChoiceResolver choiceResolver) {
+    public void resolve(Game game, BooleanChoiceResolver choiceResolver) {
         if (choiceResolver != null && choiceResolver.getChoice() != null) {
             if (choiceResolver.getChoice()) {
                 choiceResolver.getPlayerToChoose().getBoard().add(choiceResolver.getCard());

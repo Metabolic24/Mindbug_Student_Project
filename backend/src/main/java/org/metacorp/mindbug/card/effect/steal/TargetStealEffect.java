@@ -2,9 +2,9 @@ package org.metacorp.mindbug.card.effect.steal;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.metacorp.mindbug.game.Game;
 import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.effect.ResolvableEffect;
+import org.metacorp.mindbug.game.Game;
 
 import java.util.List;
 
@@ -29,7 +29,7 @@ public class TargetStealEffect extends StealEffect implements ResolvableEffect<L
     }
 
     @Override
-    public void resolve(List<CardInstance> chosenTargets) {
+    public void resolve(Game game, List<CardInstance> chosenTargets) {
         if (chosenTargets != null) {
             stealCards(chosenTargets, game);
         } else {

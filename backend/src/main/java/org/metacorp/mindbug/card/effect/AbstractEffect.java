@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.Getter;
 import lombok.Setter;
-import org.metacorp.mindbug.game.Game;
 import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.effect.destroy.DestroyEffect;
 import org.metacorp.mindbug.card.effect.disableTiming.DisableTimingEffect;
@@ -18,11 +17,12 @@ import org.metacorp.mindbug.card.effect.noBlock.NoBlockEffect;
 import org.metacorp.mindbug.card.effect.powerUp.PowerUpEffect;
 import org.metacorp.mindbug.card.effect.revive.ReviveEffect;
 import org.metacorp.mindbug.card.effect.steal.StealEffect;
+import org.metacorp.mindbug.game.Game;
 
 /** Abstract class for card effect */
 @Getter
 @Setter
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", include = JsonTypeInfo.As.EXISTING_PROPERTY)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", include = JsonTypeInfo.As.EXISTING_PROPERTY, visible = true)
 @JsonSubTypes({
         @JsonSubTypes.Type(value = GainEffect.class, name = GainEffect.TYPE),
         @JsonSubTypes.Type(value = InflictEffect.class, name = InflictEffect.TYPE),
@@ -38,10 +38,8 @@ import org.metacorp.mindbug.card.effect.steal.StealEffect;
         @JsonSubTypes.Type(value = StealEffect.class, name = StealEffect.TYPE)}
 )
 public abstract class AbstractEffect {
-    /**
-     * @return the Effect type
-     */
-    public abstract String getType();
+
+    private EffectType type;
 
     /**
      * Apply the current effect

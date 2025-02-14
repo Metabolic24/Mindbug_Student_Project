@@ -23,11 +23,6 @@ public class KeywordUpEffect extends AbstractEffect {
     private boolean opponentHas;    // Should this effect be applied only if the opponent has a card that contains this keyword
 
     @Override
-    public String getType() {
-        return TYPE;
-    }
-
-    @Override
     public void apply(Game game, CardInstance card) {
         Player cardOwner = card.getOwner();
 

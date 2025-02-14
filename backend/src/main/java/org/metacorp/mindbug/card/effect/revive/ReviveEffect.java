@@ -21,21 +21,13 @@ import org.metacorp.mindbug.player.Player;
 public class ReviveEffect extends AbstractEffect implements ResolvableEffect<BooleanChoiceResolver> {
     public final static String TYPE = "REVIVE";
 
-    private Game game;
-
-    @Override
-    public String getType() {
-        return TYPE;
-    }
-
     @Override
     public void apply(Game game, CardInstance card) {
         game.setCurrentChoice(new BooleanChoice(card.getOwner(), card, this));
-        this.game = game;
     }
 
     @Override
-    public void resolve(BooleanChoiceResolver choiceResolver) {
+    public void resolve(Game game, BooleanChoiceResolver choiceResolver) {
         if (choiceResolver.getChoice()) {
             CardInstance card = choiceResolver.getCard();
             Player player = choiceResolver.getPlayerToChoose();

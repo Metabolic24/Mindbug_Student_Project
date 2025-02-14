@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.card.effect.EffectTiming;
+import org.metacorp.mindbug.card.effect.EffectType;
 import org.metacorp.mindbug.card.effect.powerUp.PowerUpEffect;
 
 import java.io.FileNotFoundException;
@@ -48,7 +49,7 @@ public class CardTest {
 
             PowerUpEffect effect = (PowerUpEffect) tenthCard.getEffects().get(EffectTiming.PASSIVE).getFirst();
             assertNotNull(effect);
-            assertEquals(PowerUpEffect.TYPE, effect.getType());
+            assertEquals(EffectType.POWER_UP, effect.getType());
             assertEquals(2, effect.getValue());
             assertNull(effect.getLifePoints());
             assertTrue(effect.isAllies());

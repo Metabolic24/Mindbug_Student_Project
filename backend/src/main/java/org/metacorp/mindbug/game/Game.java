@@ -7,7 +7,7 @@ import org.metacorp.mindbug.card.Keyword;
 import org.metacorp.mindbug.card.effect.AbstractEffect;
 import org.metacorp.mindbug.card.effect.EffectTiming;
 import org.metacorp.mindbug.card.effect.EffectToApply;
-import org.metacorp.mindbug.card.effect.revive.ReviveEffect;
+import org.metacorp.mindbug.card.effect.EffectType;
 import org.metacorp.mindbug.choice.ChoiceType;
 import org.metacorp.mindbug.choice.IChoice;
 import org.metacorp.mindbug.choice.frenzy.FrenzyAttackChoice;

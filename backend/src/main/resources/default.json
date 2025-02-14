@@ -268,9 +268,9 @@
     "keywords": [],
     "effects": {
       "PLAY": [{
-        "type": "DRAW",
+        "type": "STEAL",
         "value": -1,
-        "selfDiscard": true
+        "source": "SELF_DISCARD"
       }]
     },
     "unique": true

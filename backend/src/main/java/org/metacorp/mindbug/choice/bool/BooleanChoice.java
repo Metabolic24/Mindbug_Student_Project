@@ -24,7 +24,7 @@ public class BooleanChoice implements IChoice<Boolean> {
     @Override
     public void resolve(Game game, Boolean choiceResolver) {
         if (choiceResolver != null) {
-            effect.resolve(new BooleanChoiceResolver(playerToChoose, card, choiceResolver));
+            effect.resolve(game, new BooleanChoiceResolver(playerToChoose, card, choiceResolver));
         } else {
             //TODO Manage error
         }

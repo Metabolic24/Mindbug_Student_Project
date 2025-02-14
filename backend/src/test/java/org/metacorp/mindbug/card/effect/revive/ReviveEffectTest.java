@@ -32,7 +32,6 @@ public class ReviveEffectTest {
 
     @Test
     public void testBasic() {
-        effect.setLoseLife(true);
         effect.apply(game, randomCard);
 
         assertTrue(opponentPlayer.getDiscardPile().contains(randomCard));

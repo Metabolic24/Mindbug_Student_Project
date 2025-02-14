@@ -57,13 +57,6 @@ public class CardInstance {
     }
 
     /**
-     * Checks whether this card has any effect that triggers at the given timing
-     */
-    public boolean hasEffects(EffectTiming timing) {
-        return this.card.getEffects().containsKey(timing);
-    }
-
-    /**
      * Change the power of the current card by the given amount (positive or negative)
      */
     public void changePower(int amount) {

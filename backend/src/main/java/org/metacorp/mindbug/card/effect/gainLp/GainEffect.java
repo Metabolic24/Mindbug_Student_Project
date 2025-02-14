@@ -7,6 +7,7 @@ import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.game.Game;
 import org.metacorp.mindbug.card.effect.AbstractEffect;
 import org.metacorp.mindbug.player.Player;
+import org.metacorp.mindbug.player.Team;
 
 /** Effect that increase or modify current player life points */
 @EqualsAndHashCode(callSuper = true)
@@ -19,19 +20,21 @@ public class GainEffect extends AbstractEffect {
     private boolean equal;  // Should life points be set to the opponent ones value
 
     @Override
-    public String getType() {
-        return TYPE;
-    }
-
-    @Override
     public void apply(Game game, CardInstance card) {
         Player cardOwner = card.getOwner();
+        Team team = cardOwner.getTeam();
 
         if (equal) {
+            int oldLifePoints = team.getLifePoints();
+
             Player opponent = cardOwner.getOpponent(game.getPlayers());
-            cardOwner.getTeam().setLifePoints(opponent.getTeam().getLifePoints());
+            team.setLifePoints(opponent.getTeam().getLifePoints());
+
+            if (oldLifePoints > team.getLifePoints()) {
+               game.lifePointLost(cardOwner);
+            }
         } else {
-            cardOwner.getTeam().gainLifePoints(value);
+            team.gainLifePoints(value);
         }
     }
 }
