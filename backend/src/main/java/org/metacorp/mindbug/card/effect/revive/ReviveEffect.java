@@ -21,8 +21,6 @@ import org.metacorp.mindbug.player.Player;
 public class ReviveEffect extends AbstractEffect implements ResolvableEffect<BooleanChoiceResolver> {
     public final static String TYPE = "REVIVE";
 
-    private boolean loseLife; // Should card revive when losing life points
-
     private Game game;
 
     @Override
@@ -32,10 +30,8 @@ public class ReviveEffect extends AbstractEffect implements ResolvableEffect<Boo
 
     @Override
     public void apply(Game game, CardInstance card) {
-        if (loseLife) {
-            game.setCurrentChoice(new BooleanChoice(card.getOwner(), card, this));
-            this.game = game;
-        }
+        game.setCurrentChoice(new BooleanChoice(card.getOwner(), card, this));
+        this.game = game;
     }
 
     @Override

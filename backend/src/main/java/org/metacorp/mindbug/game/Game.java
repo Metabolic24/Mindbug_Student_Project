@@ -264,8 +264,16 @@ public class Game {
             return;
         }
 
+        for (CardInstance card : player.getBoard()) {
+            List<AbstractEffect> effects = card.getEffects(EffectTiming.LIFE_LOST);
+            if (!effects.isEmpty()) {
+                // We consider that, for the moment, it is not necessary to create a simultaneous choice here even if there are multiple cards to revive
+                effectQueue.add(new EffectToApply(effects.getFirst(), card, this));
+            }
+        }
+
         for (CardInstance card : player.getDiscardPile()) {
-            List<AbstractEffect> effects = card.getEffects(EffectTiming.PASSIVE).stream().filter(effect -> effect instanceof ReviveEffect).toList();
+            List<AbstractEffect> effects = card.getEffects(EffectTiming.LIFE_LOST);
             if (!effects.isEmpty()) {
                 // We consider that, for the moment, it is not necessary to create a simultaneous choice here even if there are multiple cards to revive
                 effectQueue.add(new EffectToApply(effects.getFirst(), card, this));
