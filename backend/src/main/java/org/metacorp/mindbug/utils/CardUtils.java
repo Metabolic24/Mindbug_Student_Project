@@ -2,10 +2,10 @@ package org.metacorp.mindbug.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
-import org.metacorp.mindbug.game.Game;
-import org.metacorp.mindbug.card.Card;
-import org.metacorp.mindbug.card.CardInstance;
-import org.metacorp.mindbug.player.Player;
+import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.card.Card;
+import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.player.Player;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -15,6 +15,9 @@ import java.util.List;
 
 // Utility class
 public final class CardUtils {
+
+    public static final String FIRST_CONTACT = "FIRST_CONTACT";
+
 
     private CardUtils() {
         // Not to be used

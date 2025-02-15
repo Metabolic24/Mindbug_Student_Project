@@ -1,14 +1,17 @@
 package org.metacorp.mindbug.utils;
 
 import lombok.Setter;
-import org.metacorp.mindbug.card.CardInstance;
-import org.metacorp.mindbug.card.Keyword;
-import org.metacorp.mindbug.card.effect.EffectToApply;
+import org.metacorp.mindbug.app.GameEngine;
+import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardKeyword;
+import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.choice.IChoice;
-import org.metacorp.mindbug.choice.simultaneous.SimultaneousEffectsChoice;
-import org.metacorp.mindbug.choice.target.TargetChoice;
-import org.metacorp.mindbug.game.Game;
-import org.metacorp.mindbug.player.Player;
+import org.metacorp.mindbug.choice.SimultaneousEffectsChoice;
+import org.metacorp.mindbug.choice.TargetChoice;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.service.*;
+import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.player.Player;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,7 +26,7 @@ public class AppUtils {
     private static boolean verbose = false;
 
     public static Game startGame() {
-        Game game = new Game("Player1", "Player2");
+        Game game = StartService.newGame("Player1", "Player2");
         random = new Random();
 
         System.out.println("\nDEBUT DU JEU !!!\n");
@@ -32,7 +35,7 @@ public class AppUtils {
         return game;
     }
 
-    public static void play(Game game) {
+    public static void play(Game game) throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
 
         if (currentPlayer.getHand().isEmpty()) {
@@ -44,18 +47,18 @@ public class AppUtils {
         CardInstance card = currentPlayer.getHand().get(index);
 
         System.out.printf("%s joue la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
-        game.pickCard(card);
-        game.playCard(false);
+        PlayCardService.pickCard(card, game);
+        PlayCardService.playCard(game);
 
         if (game.getChoice() == null && !game.isFinished()) {
             nextTurn(game);
         }
     }
 
-    public static void attack(Game game) {
+    public static void attack(Game game) throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
 
-        List<CardInstance> availableCards = currentPlayer.getBoard().stream().filter(CardInstance::isCanAttack).toList();
+        List<CardInstance> availableCards = currentPlayer.getBoard().stream().filter(CardInstance::isAbleToAttack).toList();
         if (availableCards.isEmpty()) {
             System.out.println("Illegal move : cannot attack while no card on the board");
             return;
@@ -65,7 +68,7 @@ public class AppUtils {
         CardInstance attackCard = availableCards.get(index);
 
         System.out.printf("%s attaque avec la carte '%s'\n", currentPlayer.getName(), attackCard.getCard().getName());
-        game.declareAttack(attackCard);
+        AttackService.declareAttack(attackCard, game);
 
         if (game.isFinished()) {
             return;
@@ -82,7 +85,7 @@ public class AppUtils {
         resolveAttack(game);
     }
 
-    public static void frenzyAttack(Game game) {
+    public static void frenzyAttack(Game game) throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
         CardInstance attackCard = game.getAttackingCard();
 
@@ -91,24 +94,24 @@ public class AppUtils {
         resolveAttack(game);
     }
 
-    private static void resolveAttack(Game game) {
-        Player opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
+    private static void resolveAttack(Game game) throws GameStateException {
+        Player opponentPlayer = game.getOpponent();
 
-        Stream<CardInstance> blockersStream = opponentPlayer.getBoard().stream().filter(CardInstance::isCanBlock);
-        if (game.getAttackingCard().hasKeyword(Keyword.SNEAKY)) {
-            blockersStream = blockersStream.filter((card) -> card.hasKeyword(Keyword.SNEAKY));
+        Stream<CardInstance> blockersStream = opponentPlayer.getBoard().stream().filter(CardInstance::isAbleToBlock);
+        if (game.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)) {
+            blockersStream = blockersStream.filter((card) -> card.hasKeyword(CardKeyword.SNEAKY));
         }
 
         List<CardInstance> blockers = blockersStream.toList();
         if (blockers.isEmpty()) {
             System.out.printf("%s ne peut pas défendre\n", opponentPlayer.getName());
-            game.resolveAttack(null);
+            AttackService.resolveAttack(null, game);
         } else {
             int index = random.nextInt(blockers.size());
             CardInstance defendCard = blockers.get(index);
 
             System.out.printf("%s défend avec la carte '%s'\n", opponentPlayer.getName(), defendCard.getCard().getName());
-            game.resolveAttack(defendCard);
+            AttackService.resolveAttack(defendCard, game);
         }
 
         if (game.getChoice() == null && !game.isFinished()) {
@@ -116,7 +119,7 @@ public class AppUtils {
         }
     }
 
-    public static void resolveChoice(Game game) {
+    public static void resolveChoice(Game game) throws GameStateException {
         IChoice<?> choice = game.getChoice();
         if (choice == null) {
             System.err.println("Action invalide");
@@ -126,12 +129,12 @@ public class AppUtils {
                     System.out.println("Résolution d'un choix d'ordonnancement d'effets simultanés");
 
                     SimultaneousEffectsChoice simultaneousEffectsChoice = (SimultaneousEffectsChoice) choice;
-                    List<EffectToApply> shuffledEffects = new ArrayList<>(simultaneousEffectsChoice.getEffectsToSort());
+                    List<EffectsToApply> shuffledEffects = new ArrayList<>(simultaneousEffectsChoice.getEffectsToSort());
                     Collections.shuffle(shuffledEffects);
 
                     System.out.printf("Ordre choisi : %s\n", shuffledEffects.stream().map(effectToApply -> effectToApply.getCard().getCard().getName()).toList());
 
-                    game.resolveChoice(shuffledEffects.stream().map(EffectToApply::getUuid).toList());
+                    GameService.resolveChoice(shuffledEffects.stream().map(EffectsToApply::getUuid).toList(), game);
                 }
                 case TARGET -> {
                     System.out.println("Résolution d'un choix de cible(s)");
@@ -143,7 +146,7 @@ public class AppUtils {
                     shuffledCards = shuffledCards.subList(0, targetChoice.getTargetsCount());
                     System.out.printf("Cible(s) choisie(s) : %s\n", shuffledCards.stream().map(cardInstance -> cardInstance.getCard().getName()).toList());
 
-                    game.resolveChoice(shuffledCards.stream().map(CardInstance::getUuid).toList());
+                    GameService.resolveChoice(shuffledCards.stream().map(CardInstance::getUuid).toList(), game);
                 }
                 case FRENZY, BOOLEAN -> {
                     System.out.printf("Résolution d'un choix booléen de type %s\n", choice.getType());
@@ -151,7 +154,7 @@ public class AppUtils {
                     boolean randomBoolean = random.nextBoolean();
                     System.out.printf("Valeur choisie : %s\n", randomBoolean);
 
-                    game.resolveChoice(randomBoolean);
+                    GameService.resolveChoice(randomBoolean, game);
                 }
             }
         }
@@ -189,9 +192,11 @@ public class AppUtils {
         System.out.printf("Au tour de %s\n", game.getCurrentPlayer().getName());
     }
 
-    public static void runAndCheckErrors(Game game, Runnable runnable) {
+    public static void runAndCheckErrors(Game game, GameEngine engine) {
         try {
-            runnable.run();
+            engine.run();
+        } catch (GameStateException gst) {
+            System.err.println(gst.getMessage());
         } catch (Throwable t) {
             t.printStackTrace();
 

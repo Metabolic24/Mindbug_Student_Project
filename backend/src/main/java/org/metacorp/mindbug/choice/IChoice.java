@@ -1,6 +1,8 @@
 package org.metacorp.mindbug.choice;
 
-import org.metacorp.mindbug.game.Game;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.choice.ChoiceType;
 
 public interface IChoice<T> {
 
@@ -11,8 +13,8 @@ public interface IChoice<T> {
 
     /**
      * Resolve the current choice
-     * @param game the related game
      * @param choiceResolver the data required to resolve the choice
+     * @param game the related game
      */
-    void resolve(Game game, T choiceResolver);
+    void resolve(T choiceResolver, Game game) throws GameStateException;
 }
