@@ -32,7 +32,7 @@ public class DiscardEffect extends AbstractEffect implements ResolvableEffect<Li
         if (opponent.getHand().size() <= value) {
             resolve(game, new ArrayList<>(opponent.getHand()));
         } else {
-            game.setCurrentChoice(new TargetChoice(opponent, card, this, value, new HashSet<>(opponent.getHand())));
+            game.setChoice(new TargetChoice(opponent, card, this, value, new HashSet<>(opponent.getHand())));
         }
     }
 

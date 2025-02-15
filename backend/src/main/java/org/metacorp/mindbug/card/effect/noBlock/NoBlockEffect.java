@@ -54,7 +54,7 @@ public class NoBlockEffect extends AbstractEffect implements ResolvableEffect<Li
                 opponentCard.setCanBlock(false);
             }
         } else {
-            game.setCurrentChoice(new TargetChoice(card.getOwner(), card, this, value, new HashSet<>(opponent.getBoard())));
+            game.setChoice(new TargetChoice(card.getOwner(), card, this, value, new HashSet<>(opponent.getBoard())));
         }
     }
 

@@ -72,7 +72,7 @@ public class DestroyEffect extends AbstractEffect implements ResolvableEffect<Li
                 if (availableCards.size() <= value) {
                     destroyCards(game, availableCards);
                 } else {
-                    game.setCurrentChoice(new TargetChoice(currentPlayer, card, this, value, new HashSet<>(availableCards)));
+                    game.setChoice(new TargetChoice(currentPlayer, card, this, value, new HashSet<>(availableCards)));
                 }
             }
         }

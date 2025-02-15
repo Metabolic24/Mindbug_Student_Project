@@ -263,11 +263,11 @@ public class GameTest {
                 new EffectToApply(attackEffect, attackCard, game),
                 new EffectToApply(defendEffect, defendingCard, game)
         )));
-        game.setCurrentChoice(choice);
+        game.setChoice(choice);
 
         choice.resolve(game, choice.getEffectsToSort().stream().map(EffectToApply::getUuid).toList());
 
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
         assertEquals(2, game.getEffectQueue().size());
 
         for (EffectToApply effect : game.getEffectQueue()) {

@@ -68,7 +68,7 @@ public class StealEffect extends AbstractEffect {
                 }
                 stealCards(stolenCards, game);
             } else {
-                game.setCurrentChoice(new TargetChoice(opponent, card, new TargetStealEffect(this, game), value, new HashSet<>(availableCards)));
+                game.setChoice(new TargetChoice(opponent, card, new TargetStealEffect(this, game), value, new HashSet<>(availableCards)));
             }
         }
     }
@@ -89,7 +89,7 @@ public class StealEffect extends AbstractEffect {
             if (mustPlay) {
                 currentPlayer.getBoard().add(stolenCard);
             } else if (mayPlay) {
-                game.setCurrentChoice(new BooleanChoice(currentPlayer, stolenCard, new BooleanStealEffect(this)));
+                game.setChoice(new BooleanChoice(currentPlayer, stolenCard, new BooleanStealEffect(this)));
             } else {
                 currentPlayer.getHand().add(stolenCard);
             }

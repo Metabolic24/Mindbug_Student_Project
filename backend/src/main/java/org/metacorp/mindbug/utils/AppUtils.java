@@ -46,7 +46,7 @@ public class AppUtils {
         game.pickCard(card);
         game.playCard(false);
 
-        if (game.getCurrentChoice() == null) {
+        if (game.getChoice() == null) {
             nextTurn(game);
         }
     }
@@ -82,13 +82,13 @@ public class AppUtils {
             game.resolveAttack(defendCard);
         }
 
-        if (game.getCurrentChoice() == null) {
+        if (game.getChoice() == null) {
             nextTurn(game);
         }
     }
 
     public static void resolveChoice(Game game) {
-        IChoice<?> choice = game.getCurrentChoice();
+        IChoice<?> choice = game.getChoice();
         if (choice == null) {
             System.err.println("Action invalide");
         } else {
@@ -102,7 +102,7 @@ public class AppUtils {
 
                     System.out.printf("Ordre choisi : %s\n", shuffledEffects);
 
-                    game.applyChoice(shuffledEffects.stream().map(EffectToApply::getUuid).toList());
+                    game.resolveChoice(shuffledEffects.stream().map(EffectToApply::getUuid).toList());
                 }
                 case TARGET -> {
                     System.out.println("Résolution d'un choix de cibles");
@@ -114,17 +114,17 @@ public class AppUtils {
                     shuffledCards = shuffledCards.subList(0, targetChoice.getTargetsCount());
                     System.out.printf("Cibles choisies : %s\n", shuffledCards);
 
-                    targetChoice.resolve(game, shuffledCards.stream().map(CardInstance::getUuid).toList());
+                    game.resolveChoice(shuffledCards.stream().map(CardInstance::getUuid).toList());
                 }
                 case FRENZY, BOOLEAN -> {
                     System.out.println("Résolution d'un choix booléen");
 
-                    ((IChoice<Boolean>)choice).resolve(game, random.nextBoolean());
+                    game.resolveChoice(random.nextBoolean());
                 }
             }
         }
 
-        if (game.getCurrentChoice() == null) {
+        if (game.getChoice() == null) {
             nextTurn(game);
         }
     }

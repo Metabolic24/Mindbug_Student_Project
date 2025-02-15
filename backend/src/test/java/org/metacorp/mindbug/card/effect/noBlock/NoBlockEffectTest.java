@@ -41,9 +41,9 @@ public class NoBlockEffectTest {
         assertTrue(firstCard.isCanBlock());
         assertTrue(secondCard.isCanBlock());
 
-        assertNotNull(game.getCurrentChoice());
+        assertNotNull(game.getChoice());
 
-        TargetChoice targetChoice = (TargetChoice) game.getCurrentChoice();
+        TargetChoice targetChoice = (TargetChoice) game.getChoice();
         assertEquals(1, targetChoice.getTargetsCount());
         assertEquals(effect, targetChoice.getEffect());
         assertEquals(randomCard, targetChoice.getEffectSource());
@@ -69,7 +69,7 @@ public class NoBlockEffectTest {
         assertFalse(firstCard.isCanBlock());
         assertFalse(secondCard.isCanBlock());
 
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
     }
 
     @Test
@@ -81,7 +81,7 @@ public class NoBlockEffectTest {
         effect.apply(game, randomCard);
 
         assertFalse(firstCard.isCanBlock());
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
     }
 
     @Test

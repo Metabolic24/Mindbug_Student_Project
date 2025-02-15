@@ -27,13 +27,13 @@ public class ManualApp {
             case "play", "p":
                 AppUtils.play(game);
 
-                while(game.getCurrentChoice() != null) {
+                while(game.getChoice() != null) {
                     AppUtils.resolveChoice(game);
                 }
                 break;
             case "attack", "a":
                 AppUtils.attack(game);
-                while(game.getCurrentChoice() != null) {
+                while(game.getChoice() != null) {
                     AppUtils.resolveChoice(game);
                 }
                 break;

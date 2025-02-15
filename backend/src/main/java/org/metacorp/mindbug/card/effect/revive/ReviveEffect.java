@@ -23,7 +23,7 @@ public class ReviveEffect extends AbstractEffect implements ResolvableEffect<Boo
 
     @Override
     public void apply(Game game, CardInstance card) {
-        game.setCurrentChoice(new BooleanChoice(card.getOwner(), card, this));
+        game.setChoice(new BooleanChoice(card.getOwner(), card, this));
     }
 
     @Override

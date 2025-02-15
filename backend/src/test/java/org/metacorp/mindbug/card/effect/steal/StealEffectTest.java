@@ -42,7 +42,7 @@ public class StealEffectTest {
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(4, currentPlayer.getHand().size());
         assertEquals(0, opponentPlayer.getBoard().size());
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
     }
 
     @Test
@@ -66,7 +66,7 @@ public class StealEffectTest {
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(4, currentPlayer.getHand().size());
         assertEquals(2, opponentPlayer.getBoard().size());
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
     }
 
     @Test
@@ -92,7 +92,7 @@ public class StealEffectTest {
         assertTrue(currentPlayer.getHand().contains(otherCard2));
         assertEquals(1, opponentPlayer.getBoard().size());
         assertFalse(opponentPlayer.getBoard().contains(otherCard2));
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
     }
 
     @Test
@@ -116,7 +116,7 @@ public class StealEffectTest {
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(4, currentPlayer.getHand().size());
         assertEquals(2, opponentPlayer.getBoard().size());
-        assertNotNull(game.getCurrentChoice());
+        assertNotNull(game.getChoice());
     }
 
     @Test
@@ -132,7 +132,7 @@ public class StealEffectTest {
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(4, currentPlayer.getHand().size());
         assertEquals(0, opponentPlayer.getBoard().size());
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
     }
 
     @Test
@@ -156,7 +156,7 @@ public class StealEffectTest {
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(4, currentPlayer.getHand().size());
         assertEquals(2, opponentPlayer.getBoard().size());
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
     }
 
     @Test
@@ -182,7 +182,7 @@ public class StealEffectTest {
         assertTrue(currentPlayer.getHand().contains(otherCard2));
         assertEquals(1, opponentPlayer.getBoard().size());
         assertFalse(opponentPlayer.getBoard().contains(otherCard2));
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
     }
 
     @Test
@@ -206,7 +206,7 @@ public class StealEffectTest {
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(4, currentPlayer.getHand().size());
         assertEquals(2, opponentPlayer.getBoard().size());
-        assertNotNull(game.getCurrentChoice());
+        assertNotNull(game.getChoice());
     }
 
     @Test
@@ -231,7 +231,7 @@ public class StealEffectTest {
         assertEquals(6, currentPlayer.getHand().size());
         assertEquals(2, opponentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getHand().size());
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
     }
 
     @Test
@@ -257,7 +257,7 @@ public class StealEffectTest {
         assertEquals(4, currentPlayer.getHand().size());
         assertEquals(1, opponentPlayer.getBoard().size());
         assertFalse(opponentPlayer.getBoard().contains(otherCard2));
-        assertNotNull(game.getCurrentChoice());
+        assertNotNull(game.getChoice());
     }
 
     @Test
@@ -284,7 +284,7 @@ public class StealEffectTest {
         assertTrue(currentPlayer.getBoard().contains(otherCard2));
         assertEquals(1, opponentPlayer.getBoard().size());
         assertFalse(opponentPlayer.getBoard().contains(otherCard2));
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
     }
 
     @Test
@@ -311,6 +311,6 @@ public class StealEffectTest {
         assertEquals(4, currentPlayer.getHand().size());
         assertEquals(1, opponentPlayer.getBoard().size());
         assertTrue(opponentPlayer.getDiscardPile().isEmpty());
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
     }
 }

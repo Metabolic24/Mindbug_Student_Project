@@ -36,10 +36,10 @@ public class ReviveEffectTest {
 
         assertTrue(opponentPlayer.getDiscardPile().contains(randomCard));
 
-        assertNotNull(game.getCurrentChoice());
-        assertEquals(ChoiceType.BOOLEAN, game.getCurrentChoice().getType());
+        assertNotNull(game.getChoice());
+        assertEquals(ChoiceType.BOOLEAN, game.getChoice().getType());
 
-        BooleanChoice booleanChoice = (BooleanChoice) game.getCurrentChoice();
+        BooleanChoice booleanChoice = (BooleanChoice) game.getChoice();
 
         assertEquals(effect, booleanChoice.getEffect());
         assertEquals(randomCard, booleanChoice.getCard());

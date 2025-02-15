@@ -317,7 +317,7 @@ public class DestroyEffectTest {
 
         // Nothing should happen as current player has more allies than the opponent
         effect.apply(game, randomCard);
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getBoard().size());
     }
@@ -334,7 +334,7 @@ public class DestroyEffectTest {
 
         // Nothing should happen as current player has as much allies as the opponent
         effect.apply(game, randomCard);
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getBoard().size());
     }
@@ -358,9 +358,9 @@ public class DestroyEffectTest {
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(2, opponentPlayer.getBoard().size());
 
-        assertNotNull(game.getCurrentChoice());
-        assertEquals(ChoiceType.TARGET, game.getCurrentChoice().getType());
-        TargetChoice targetChoice = (TargetChoice) game.getCurrentChoice();
+        assertNotNull(game.getChoice());
+        assertEquals(ChoiceType.TARGET, game.getChoice().getType());
+        TargetChoice targetChoice = (TargetChoice) game.getChoice();
 
         assertEquals(currentPlayer, targetChoice.getPlayerToChoose());
         assertEquals(effect, targetChoice.getEffect());
@@ -390,7 +390,7 @@ public class DestroyEffectTest {
         opponentPlayer.addCardToBoard(otherCard2);
 
         effect.apply(game, randomCard);
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(2, opponentPlayer.getDiscardPile().size());
@@ -419,7 +419,7 @@ public class DestroyEffectTest {
         currentPlayer.addCardToBoard(otherCard4);
 
         effect.apply(game, randomCard);
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
         assertEquals(2, currentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(3, opponentPlayer.getDiscardPile().size());
@@ -559,9 +559,9 @@ public class DestroyEffectTest {
         assertEquals(2, opponentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
 
-        assertNotNull(game.getCurrentChoice());
-        assertEquals(ChoiceType.TARGET, game.getCurrentChoice().getType());
-        TargetChoice targetChoice = (TargetChoice) game.getCurrentChoice();
+        assertNotNull(game.getChoice());
+        assertEquals(ChoiceType.TARGET, game.getChoice().getType());
+        TargetChoice targetChoice = (TargetChoice) game.getChoice();
 
         assertEquals(currentPlayer, targetChoice.getPlayerToChoose());
         assertEquals(effect, targetChoice.getEffect());
@@ -601,9 +601,9 @@ public class DestroyEffectTest {
         assertEquals(2, opponentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
 
-        assertNotNull(game.getCurrentChoice());
-        assertEquals(ChoiceType.TARGET, game.getCurrentChoice().getType());
-        TargetChoice targetChoice = (TargetChoice) game.getCurrentChoice();
+        assertNotNull(game.getChoice());
+        assertEquals(ChoiceType.TARGET, game.getChoice().getType());
+        TargetChoice targetChoice = (TargetChoice) game.getChoice();
 
         assertEquals(currentPlayer, targetChoice.getPlayerToChoose());
         assertEquals(effect, targetChoice.getEffect());
@@ -631,7 +631,7 @@ public class DestroyEffectTest {
 
         // Check that card is destroyed and that its DEFEATED effects (if any) are added to the effect queue
         effect.apply(game, randomCard);
-        assertNull(game.getCurrentChoice());
+        assertNull(game.getChoice());
         assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
 

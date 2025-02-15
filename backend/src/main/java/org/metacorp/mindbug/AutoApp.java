@@ -23,7 +23,7 @@ public class AutoApp {
     public static void resolveTurn(Game game) {
         Player currentPlayer = game.getCurrentPlayer();
 
-        if (game.getCurrentChoice() != null) {
+        if (game.getChoice() != null) {
             AppUtils.resolveChoice(game);
         } else if (currentPlayer.getBoard().isEmpty()) {
             if (currentPlayer.getHand().isEmpty()) {
@@ -39,7 +39,7 @@ public class AutoApp {
             }
         }
 
-        while (game.getCurrentChoice() != null) {
+        while (game.getChoice() != null) {
             AppUtils.resolveChoice(game);
         }
     }

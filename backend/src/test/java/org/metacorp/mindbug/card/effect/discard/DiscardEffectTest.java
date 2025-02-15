@@ -57,9 +57,9 @@ public class DiscardEffectTest {
         assertEquals(5, opponentPlayer.getHand().size());
         assertTrue(opponentPlayer.getDiscardPile().isEmpty());
 
-        assertNotNull(game.getCurrentChoice());
-        assertEquals(ChoiceType.TARGET, game.getCurrentChoice().getType());
-        TargetChoice targetChoice = (TargetChoice) game.getCurrentChoice();
+        assertNotNull(game.getChoice());
+        assertEquals(ChoiceType.TARGET, game.getChoice().getType());
+        TargetChoice targetChoice = (TargetChoice) game.getChoice();
 
         assertEquals(3, targetChoice.getTargetsCount());
         assertEquals(effect, targetChoice.getEffect());

@@ -4,11 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.metacorp.mindbug.card.CardInstance;
 import org.metacorp.mindbug.card.Keyword;
-import org.metacorp.mindbug.card.effect.AbstractEffect;
-import org.metacorp.mindbug.card.effect.EffectTiming;
-import org.metacorp.mindbug.card.effect.EffectToApply;
-import org.metacorp.mindbug.card.effect.EffectType;
-import org.metacorp.mindbug.choice.ChoiceType;
+import org.metacorp.mindbug.card.effect.*;
 import org.metacorp.mindbug.choice.IChoice;
 import org.metacorp.mindbug.choice.frenzy.FrenzyAttackChoice;
 import org.metacorp.mindbug.choice.simultaneous.SimultaneousEffectsChoice;
@@ -31,13 +27,11 @@ public class Game {
     private List<CardInstance> cards;
     private List<CardInstance> bannedCards;
 
-    private final Queue<EffectToApply> effectQueue;
-
-    private IChoice<?> currentChoice;
-
     private CardInstance playedCard;
     private CardInstance attackingCard;
 
+    private final Queue<EffectToApply> effectQueue;
+    private IChoice<?> choice;
     private Runnable afterEffect;
 
     /**
@@ -75,7 +69,7 @@ public class Game {
 
     // Method executed when a player choose a card that he would like to play
     public void pickCard(CardInstance card) {
-        if (playedCard != null || currentChoice != null || attackingCard != null) {
+        if (playedCard != null || choice != null || attackingCard != null) {
             //TODO Throw an error as it is an unexpected situation
             return;
         }
@@ -88,7 +82,7 @@ public class Game {
 
     // Method executed when a player plays a card, no matter how or why
     public void playCard(boolean mindBug) {
-        if (playedCard == null || currentChoice != null || attackingCard != null) {
+        if (playedCard == null || choice != null || attackingCard != null) {
             //TODO Throw an error as it is an unexpected situation
             return;
         }
@@ -134,7 +128,7 @@ public class Game {
      * @param attackCard the attacking card
      */
     public void declareAttack(CardInstance attackCard) {
-        if (attackCard == null || !attackCard.isCanAttack() || playedCard != null || currentChoice != null || attackingCard != null) {
+        if (attackCard == null || !attackCard.isCanAttack() || playedCard != null || choice != null || attackingCard != null) {
             //TODO Throw an error
             return;
         }
@@ -161,7 +155,7 @@ public class Game {
     public void resolveAttack(CardInstance defendingCard) {
         if (attackingCard == null || (defendingCard != null &&
                 (!defendingCard.isCanBlock() || (attackingCard.hasKeyword(Keyword.SNEAKY) && !defendingCard.hasKeyword(Keyword.SNEAKY))))
-                        || currentChoice != null || playedCard != null ) {
+                        || choice != null || playedCard != null ) {
             // TODO Throw an error as we should not be able to play a card while choice is active (same if some inputs are null)
             return;
         }
@@ -197,7 +191,7 @@ public class Game {
 
         afterEffect = () -> {
             if (attackingCard.isCanAttackTwice()) {
-                currentChoice = new FrenzyAttackChoice(attackingCard);
+                choice = new FrenzyAttackChoice(attackingCard);
             } else {
                 attackingCard.setCanAttackTwice(attackingCard.hasKeyword(Keyword.FRENZY));
                 setCurrentPlayer(currentPlayer.getOpponent(getPlayers()));
@@ -207,19 +201,21 @@ public class Game {
         };
     }
 
-    public void applyChoice(List<UUID> sortedChoiceIDs) {
-        // Retrieve the current choice and check it exists
-        if (this.currentChoice == null || sortedChoiceIDs == null || this.currentChoice.getType() != ChoiceType.SIMULTANEOUS) {
+    public <T> void  resolveChoice(T data) {
+        if (this.choice == null || data == null) {
             //TODO Raise an error
             return;
         }
 
-        SimultaneousEffectsChoice simultaneousEffectsChoice = (SimultaneousEffectsChoice) currentChoice;
-        simultaneousEffectsChoice.resolve(this, sortedChoiceIDs);
+        try {
+            IChoice<T> choice = (IChoice<T>)this.choice;
+            choice.resolve(this, data);
 
-        refreshBoard();
-
-        resolveEffectQueue(true);
+            refreshBoard();
+            resolveEffectQueue(true);
+        } catch (ClassCastException e) {
+            //TODO Raise an error
+        }
     }
 
     public void addEffectsToQueue(CardInstance card, EffectTiming timing) {
@@ -233,12 +229,12 @@ public class Game {
     }
 
     public void resolveEffectQueue(boolean fromSimultaneousChoice) {
-        if (currentChoice != null) {
+        if (choice != null) {
             // TODO Maybe raise an error at the start if a choice is remaining
         }
 
         if (!fromSimultaneousChoice && effectQueue.size() >= 2) {
-            currentChoice = new SimultaneousEffectsChoice(currentPlayer, new HashSet<>(effectQueue));
+            choice = new SimultaneousEffectsChoice(currentPlayer, new HashSet<>(effectQueue));
             effectQueue.clear();
             return;
         }
@@ -254,8 +250,8 @@ public class Game {
             effectQueue.remove(currentEffect);
 
             // If there is many remaining effects, then create a simultaneous choice
-            if (currentChoice == null && effectQueue.size() >= 2) {
-                currentChoice = new SimultaneousEffectsChoice(currentPlayer, new HashSet<>(effectQueue));
+            if (choice == null && effectQueue.size() >= 2) {
+                choice = new SimultaneousEffectsChoice(currentPlayer, new HashSet<>(effectQueue));
                 effectQueue.clear();
                 return;
             } else {
@@ -293,7 +289,7 @@ public class Game {
     }
 
     public void resetChoice() {
-        this.currentChoice = null;
+        this.choice = null;
     }
 
     public void endGame(Player loser) {
