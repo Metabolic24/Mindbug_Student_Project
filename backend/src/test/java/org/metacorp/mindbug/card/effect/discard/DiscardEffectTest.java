@@ -27,7 +27,7 @@ public class DiscardEffectTest {
         effect.setValue(3);
     }
 
-    //TODO Tester la résolution des choix
+    //TODO Test choice resolution
 
     @Test
     public void testBasic_opponentHandIs2() {

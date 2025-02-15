@@ -26,7 +26,7 @@ public class NoBlockEffectTest {
         effect = new NoBlockEffect();
     }
 
-    //TODO Tester la résolution des choix
+    //TODO Test choice resolution
 
     @Test
     public void testBasic_lessThanBoardSize() {

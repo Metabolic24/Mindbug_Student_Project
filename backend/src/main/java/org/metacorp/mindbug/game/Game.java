@@ -70,6 +70,7 @@ public class Game {
     // Method executed when a player choose a card that he would like to play
     public void pickCard(CardInstance card) {
         if (playedCard != null || choice != null || attackingCard != null) {
+            System.err.println("Erreur : pickCard");
             //TODO Throw an error as it is an unexpected situation
             return;
         }
@@ -83,6 +84,7 @@ public class Game {
     // Method executed when a player plays a card, no matter how or why
     public void playCard(boolean mindBug) {
         if (playedCard == null || choice != null || attackingCard != null) {
+            System.err.println("Erreur : playCard");
             //TODO Throw an error as it is an unexpected situation
             return;
         }
@@ -93,6 +95,7 @@ public class Game {
         if (mindBug) {
             newCardOwner = currentPlayer.getOpponent(players);
             if (!newCardOwner.hasMindbug()) {
+                System.err.println("Erreur : playCard Mindbug");
                 // TODO Throw an error as it is an unexpected situation
             }
         } else {
@@ -118,8 +121,8 @@ public class Game {
         addEffectsToQueue(playedCard, EffectTiming.PLAY);
 
         afterEffect = () -> {
-            setCurrentPlayer(newCardOwner.getOpponent(players));
-            playedCard = null; //TODO A vérifier si c'est bien là qu'il faut mettre ça (ou alors à la fin de playCard)
+            playedCard = null;
+            nextTurn();
         };
     }
 
@@ -129,6 +132,7 @@ public class Game {
      */
     public void declareAttack(CardInstance attackCard) {
         if (attackCard == null || !attackCard.isCanAttack() || playedCard != null || choice != null || attackingCard != null) {
+            System.err.println("Erreur : declareAttack");
             //TODO Throw an error
             return;
         }
@@ -156,7 +160,16 @@ public class Game {
         if (attackingCard == null || (defendingCard != null &&
                 (!defendingCard.isCanBlock() || (attackingCard.hasKeyword(Keyword.SNEAKY) && !defendingCard.hasKeyword(Keyword.SNEAKY))))
                         || choice != null || playedCard != null ) {
+            System.err.println("Erreur : resolveAttack");
             // TODO Throw an error as we should not be able to play a card while choice is active (same if some inputs are null)
+            return;
+        }
+
+        if (!attackingCard.getOwner().getBoard().contains(attackingCard)) {
+            System.out.println("*********************************************************");
+            System.out.println("Attacking card has been destroyed and is no more on board");
+            System.out.println("*********************************************************");
+            attackingCard = null;
             return;
         }
 
@@ -190,11 +203,11 @@ public class Game {
         refreshBoard();
 
         afterEffect = () -> {
-            if (attackingCard.isCanAttackTwice()) {
+            if (attackingCard.getOwner().getBoard().contains(attackingCard) && attackingCard.isCanAttackTwice() && attackingCard.isCanAttack()) {
                 choice = new FrenzyAttackChoice(attackingCard);
             } else {
                 attackingCard.setCanAttackTwice(attackingCard.hasKeyword(Keyword.FRENZY));
-                setCurrentPlayer(currentPlayer.getOpponent(getPlayers()));
+                nextTurn();
             }
 
             attackingCard = null;
@@ -203,6 +216,7 @@ public class Game {
 
     public <T> void  resolveChoice(T data) {
         if (this.choice == null || data == null) {
+            System.err.println("Erreur : resolveChoice");
             //TODO Raise an error
             return;
         }
@@ -214,22 +228,26 @@ public class Game {
             refreshBoard();
             resolveEffectQueue(true);
         } catch (ClassCastException e) {
+            e.printStackTrace();
             //TODO Raise an error
         }
     }
 
     public void addEffectsToQueue(CardInstance card, EffectTiming timing) {
-        if (card.getOwner().canTrigger(timing)) {
-            effectQueue.addAll(card.getEffects(timing).stream()
-                    .map(effect -> new EffectToApply(effect, card, this))
-                    .toList());
-        } else {
-            //TODO Voir s'il faut faire quelque chose à ce moment-là
+        List<AbstractEffect> effects = card.getEffects(timing);
+        if (!effects.isEmpty()) {
+            if (card.getOwner().canTrigger(timing)) {
+                effectQueue.add(new EffectToApply(effects, card, this));
+            } else {
+                System.out.printf("Effets %s annulés\n", timing);
+                //TODO Voir s'il faut faire quelque chose à ce moment-là
+            }
         }
     }
 
     public void resolveEffectQueue(boolean fromSimultaneousChoice) {
         if (choice != null) {
+            System.err.println("Erreur : resolveEffectQueue choice");
             // TODO Maybe raise an error at the start if a choice is remaining
         }
 
@@ -239,11 +257,13 @@ public class Game {
             return;
         }
 
-        //TODO Ajouter l'appel à refreshBoard directement dans la résolution de chaque effet (afin d'éviter de l'appeler inutilement avant un choix)
-
         while (!effectQueue.isEmpty()) {
             EffectToApply currentEffect = effectQueue.peek();
-            currentEffect.getEffect().apply(this, currentEffect.getCard());
+            currentEffect.getEffects().forEach(effect -> effect.apply(this, currentEffect.getCard())); //TODO Il n'y a pas de refresh entre les effets d'une même carte ni de vérification de fin de partie
+
+            if (finished) {
+                return;
+            }
 
             // TODO Faut-il envisager un système transactionnel ou similaire pour gérer le fait qu'une application d'effet puisse échouer sans pour autant dégrader l'état actuel du jeu?
             // Only remove effect from queue after it is applied to avoid loss of data
@@ -262,6 +282,7 @@ public class Game {
         // Execute the after effect when queue is empty
         if (afterEffect != null) {
             afterEffect.run();
+            afterEffect = null;
         }
     }
 
@@ -272,19 +293,11 @@ public class Game {
         }
 
         for (CardInstance card : player.getBoard()) {
-            List<AbstractEffect> effects = card.getEffects(EffectTiming.LIFE_LOST);
-            if (!effects.isEmpty()) {
-                // We consider that, for the moment, it is not necessary to create a simultaneous choice here even if there are multiple cards to revive
-                effectQueue.add(new EffectToApply(effects.getFirst(), card, this));
-            }
+            addEffectsToQueue(card, EffectTiming.LIFE_LOST);
         }
 
         for (CardInstance card : player.getDiscardPile()) {
-            List<AbstractEffect> effects = card.getEffects(EffectTiming.LIFE_LOST);
-            if (!effects.isEmpty()) {
-                // We consider that, for the moment, it is not necessary to create a simultaneous choice here even if there are multiple cards to revive
-                effectQueue.add(new EffectToApply(effects.getFirst(), card, this));
-            }
+            addEffectsToQueue(card, EffectTiming.LIFE_LOST);
         }
     }
 
@@ -294,7 +307,7 @@ public class Game {
 
     public void endGame(Player loser) {
         Player winner = loser.getOpponent(players);
-        System.out.printf("%s wins ; %s loses", winner.getName(), loser.getName());
+        System.out.printf("%s wins ; %s loses\n", winner.getName(), loser.getName());
 
         finished = true;
     }
@@ -318,7 +331,7 @@ public class Game {
             for (CardInstance cardInstance : player.getBoard()) {
                 List<AbstractEffect> cardEffects = cardInstance.getEffects(EffectTiming.PASSIVE);
                 for (AbstractEffect cardEffect : cardEffects) {
-                    EffectToApply effectToApply = new EffectToApply(cardEffect, cardInstance, this);
+                    EffectToApply effectToApply = new EffectToApply(Collections.singletonList(cardEffect), cardInstance, this);
                     if (cardEffect.getType() == EffectType.POWER_UP) {
                         powerUpEffects.add(effectToApply);
                     } else {
@@ -330,7 +343,7 @@ public class Game {
             for (CardInstance cardInstance : player.getDiscardPile()) {
                 List<AbstractEffect> cardEffects = cardInstance.getEffects(EffectTiming.DISCARD);
                 for (AbstractEffect cardEffect : cardEffects) {
-                    EffectToApply effectToApply = new EffectToApply(cardEffect, cardInstance, this);
+                    EffectToApply effectToApply = new EffectToApply(Collections.singletonList(cardEffect), cardInstance, this);
                     if (cardEffect.getType() == EffectType.POWER_UP) {
                         powerUpEffects.add(effectToApply);
                     } else {
@@ -341,11 +354,11 @@ public class Game {
         }
 
         for (EffectToApply effect : powerUpEffects) {
-            effect.getEffect().apply(this, effect.getCard());
+            effect.getEffects().forEach(effectToApply -> effectToApply.apply(this, effect.getCard()));
         }
 
         for (EffectToApply effect : otherEffects) {
-            effect.getEffect().apply(this, effect.getCard());
+            effect.getEffects().forEach(effectToApply -> effectToApply.apply(this, effect.getCard()));
         }
     }
 
@@ -414,5 +427,19 @@ public class Game {
             currentCard.setOwner(player);
             drawPile.add(currentCard);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Game{" +
+                "currentPlayer=" + currentPlayer.getName() +
+                ", finished=" + finished +
+                ", bannedCards=" + bannedCards +
+                ", playedCard=" + playedCard +
+                ", attackingCard=" + attackingCard +
+                ", effectQueue=" + effectQueue +
+                ", choice=" + choice +
+                ", afterEffect=" + afterEffect +
+                '}';
     }
 }

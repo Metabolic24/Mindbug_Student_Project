@@ -14,6 +14,9 @@ public class FrenzyAttackChoice implements IChoice<Boolean> {
 
     @Override
     public void resolve(Game game, Boolean attackAgain) {
+        // First reset the choice in any case (so it does not block the next steps)
+        game.resetChoice();
+
         if (attackAgain != null && attackAgain) {
             attackingCard.setCanAttackTwice(false);
             game.declareAttack(attackingCard);
@@ -21,9 +24,6 @@ public class FrenzyAttackChoice implements IChoice<Boolean> {
         else {
             game.nextTurn();
         }
-
-        // Reset the choice only in any case
-        game.resetChoice();
     }
 
     @Override

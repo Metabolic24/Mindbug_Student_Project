@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Stream;
 
 public class AppUtils {
 
@@ -46,7 +47,7 @@ public class AppUtils {
         game.pickCard(card);
         game.playCard(false);
 
-        if (game.getChoice() == null) {
+        if (game.getChoice() == null && !game.isFinished()) {
             nextTurn(game);
         }
     }
@@ -54,35 +55,63 @@ public class AppUtils {
     public static void attack(Game game) {
         Player currentPlayer = game.getCurrentPlayer();
 
-        if (currentPlayer.getBoard().isEmpty()) {
+        List<CardInstance> availableCards = currentPlayer.getBoard().stream().filter(CardInstance::isCanAttack).toList();
+        if (availableCards.isEmpty()) {
             System.out.println("Illegal move : cannot attack while no card on the board");
             return;
         }
 
-        int index = random.nextInt(currentPlayer.getBoard().size());
-        CardInstance attackCard = currentPlayer.getBoard().get(index);
+        int index = random.nextInt(availableCards.size());
+        CardInstance attackCard = availableCards.get(index);
 
         System.out.printf("%s attaque avec la carte '%s'\n", currentPlayer.getName(), attackCard.getCard().getName());
-        game.declareAttack(currentPlayer.getBoard().getFirst());
+        game.declareAttack(attackCard);
 
-        Player opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
-        List<CardInstance> blockers = new ArrayList<>(opponentPlayer.getBoard());
-        if (attackCard.hasKeyword(Keyword.SNEAKY)) {
-            blockers = blockers.stream().filter((card) -> card.hasKeyword(Keyword.SNEAKY)).toList();
+        if (game.isFinished()) {
+            return;
         }
 
+        while (game.getChoice() != null && !game.isFinished()) {
+            AppUtils.resolveChoice(game);
+        }
+
+        if (game.isFinished()) { //TODO Maybe raise an exception to manage finished games
+            return;
+        }
+
+        resolveAttack(game);
+    }
+
+    public static void frenzyAttack(Game game) {
+        Player currentPlayer = game.getCurrentPlayer();
+        CardInstance attackCard = game.getAttackingCard();
+
+        System.out.printf("%s attaque avec la carte '%s'\n", currentPlayer.getName(), attackCard.getCard().getName());
+
+        resolveAttack(game);
+    }
+
+    private static void resolveAttack(Game game) {
+        Player opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
+
+        Stream<CardInstance> blockersStream = opponentPlayer.getBoard().stream().filter(CardInstance::isCanBlock);
+        if (game.getAttackingCard().hasKeyword(Keyword.SNEAKY)) {
+            blockersStream = blockersStream.filter((card) -> card.hasKeyword(Keyword.SNEAKY));
+        }
+
+        List<CardInstance> blockers = blockersStream.toList();
         if (blockers.isEmpty()) {
             System.out.printf("%s ne peut pas défendre\n", opponentPlayer.getName());
             game.resolveAttack(null);
         } else {
-            index = random.nextInt(blockers.size());
+            int index = random.nextInt(blockers.size());
             CardInstance defendCard = blockers.get(index);
 
             System.out.printf("%s défend avec la carte '%s'\n", opponentPlayer.getName(), defendCard.getCard().getName());
             game.resolveAttack(defendCard);
         }
 
-        if (game.getChoice() == null) {
+        if (game.getChoice() == null && !game.isFinished()) {
             nextTurn(game);
         }
     }
@@ -100,26 +129,29 @@ public class AppUtils {
                     List<EffectToApply> shuffledEffects = new ArrayList<>(simultaneousEffectsChoice.getEffectsToSort());
                     Collections.shuffle(shuffledEffects);
 
-                    System.out.printf("Ordre choisi : %s\n", shuffledEffects);
+                    System.out.printf("Ordre choisi : %s\n", shuffledEffects.stream().map(effectToApply -> effectToApply.getCard().getCard().getName()).toList());
 
                     game.resolveChoice(shuffledEffects.stream().map(EffectToApply::getUuid).toList());
                 }
                 case TARGET -> {
-                    System.out.println("Résolution d'un choix de cibles");
+                    System.out.println("Résolution d'un choix de cible(s)");
                     TargetChoice targetChoice = (TargetChoice) choice;
 
                     List<CardInstance> shuffledCards = new ArrayList<>(targetChoice.getAvailableTargets());
                     Collections.shuffle(shuffledCards);
 
                     shuffledCards = shuffledCards.subList(0, targetChoice.getTargetsCount());
-                    System.out.printf("Cibles choisies : %s\n", shuffledCards);
+                    System.out.printf("Cible(s) choisie(s) : %s\n", shuffledCards.stream().map(cardInstance -> cardInstance.getCard().getName()).toList());
 
                     game.resolveChoice(shuffledCards.stream().map(CardInstance::getUuid).toList());
                 }
                 case FRENZY, BOOLEAN -> {
-                    System.out.println("Résolution d'un choix booléen");
+                    System.out.printf("Résolution d'un choix booléen de type %s\n", choice.getType());
 
-                    game.resolveChoice(random.nextBoolean());
+                    boolean randomBoolean = random.nextBoolean();
+                    System.out.printf("Valeur choisie : %s\n", randomBoolean);
+
+                    game.resolveChoice(randomBoolean);
                 }
             }
         }
@@ -165,7 +197,10 @@ public class AppUtils {
 
             for (Player player: game.getPlayers()) {
                 AppUtils.detailedSumUpPlayer(player);
+                System.out.println("=================================");
             }
+
+            System.out.println(game);
         }
     }
 }

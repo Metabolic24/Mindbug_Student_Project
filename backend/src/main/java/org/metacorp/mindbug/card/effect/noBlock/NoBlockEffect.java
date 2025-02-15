@@ -49,7 +49,7 @@ public class NoBlockEffect extends AbstractEffect implements ResolvableEffect<Li
                     opponentCard.setCanBlock(false);
                 }
             }
-        } else if (opponent.getBoard().size() <= value) {
+        } else if (opponent.getBoard().size() <= value || value < 0) {
             for (CardInstance opponentCard : opponent.getBoard()) {
                 opponentCard.setCanBlock(false);
             }

@@ -33,7 +33,7 @@ public class DestroyEffectTest {
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
     }
 
-    //TODO Tester la résolution des choix
+    //TODO Test choice resolution
 
     @Test
     public void testLowestAndSelfAllowed_singleCard() {

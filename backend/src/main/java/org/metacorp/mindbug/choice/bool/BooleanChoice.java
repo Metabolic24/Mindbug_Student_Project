@@ -23,6 +23,9 @@ public class BooleanChoice implements IChoice<Boolean> {
 
     @Override
     public void resolve(Game game, Boolean choiceResolver) {
+        // First reset choice so it doesn't block next steps
+        game.resetChoice();
+
         if (choiceResolver != null) {
             effect.resolve(game, new BooleanChoiceResolver(playerToChoose, card, choiceResolver));
         } else {

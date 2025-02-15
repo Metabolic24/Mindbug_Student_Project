@@ -28,7 +28,7 @@ public class ReviveEffectTest {
         effect = new ReviveEffect();
     }
 
-    //TODO Tester la résolution des choix
+    //TODO Test choice resolution
 
     @Test
     public void testBasic() {

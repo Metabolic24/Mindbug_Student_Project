@@ -11,6 +11,7 @@ import org.metacorp.mindbug.choice.simultaneous.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.player.Player;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
@@ -260,8 +261,8 @@ public class GameTest {
         opponent.getDiscardPile().add(defendingCard);
 
         SimultaneousEffectsChoice choice = new SimultaneousEffectsChoice(currentPlayer, new HashSet<>(Arrays.asList(
-                new EffectToApply(attackEffect, attackCard, game),
-                new EffectToApply(defendEffect, defendingCard, game)
+                new EffectToApply(Collections.singletonList(attackEffect), attackCard, game),
+                new EffectToApply(Collections.singletonList(defendEffect), defendingCard, game)
         )));
         game.setChoice(choice);
 
