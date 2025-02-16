@@ -1,0 +1,43 @@
+name: Mindbug CI Workflow
+
+on:
+  push:
+    tags:
+      - '*'
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup Java 21 environment
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 21
+          cache: 'maven'
+
+      - name: Build
+        run: mvn clean package -DskipTests
+        working-directory: backend
+
+      - name: Run unit tests
+        run: mvn test
+        working-directory: backend
+
+      - name: Generate Maven site
+        run: mvn site
+        working-directory: backend
+
+      - name: Upload Maven site
+        uses: actions/upload-artifact@v4
+        with:
+          name: mindbug-site
+          path: backend/target/site
