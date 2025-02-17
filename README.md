@@ -57,7 +57,6 @@ Subscribe to queue websocket:
 /topic/game-queue
 ```
 
-```
 Subscribe to game websocket:
 ```bash
 /topic/game/{id}
