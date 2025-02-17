@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.mindbug.configs.Config;
 import com.mindbug.dtos.ConfirmJoinDto;
+import com.mindbug.dtos.PlayerBasicInfoDto;
 import com.mindbug.models.Game;
 import com.mindbug.models.Player;
 import com.mindbug.websocket.WSMessageManager;
@@ -40,7 +41,7 @@ public class GameServer {
         this.gameQueueWsMessageManager.setChannel(Config.GAME_QUEUE_WEBSOCKET);
     }
 
-    public Player handleJoinGame() {
+    public PlayerBasicInfoDto handleJoinGame() {
         // Create the player and add to queue
         Player player =  this.playerservice.createPlayer(new Player("Player"));
         this.playerQueue.add(player);
@@ -50,7 +51,7 @@ public class GameServer {
             this.createGameSession(this.playerQueue.poll(), this.playerQueue.poll());
         }
 
-        return player;
+        return (new PlayerBasicInfoDto(player));
     }
 
     public void handleConfirmJoin(Long gameId, Long playerId) {
