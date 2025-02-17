@@ -1,7 +1,7 @@
 <template>
     <div class="game-board">
       <div class="top-hand">
-        <img v-for="(_, index) in 5" :key="index" :src="getCardBackImage()" class="card-image" />
+        <img v-for="(_, index) in cardCount" :key="index" :src="getCardBackImage()" class="card-image" />
       </div>
       
       <div class="side-left">
@@ -16,14 +16,10 @@
       </div>
       
       <div class="battlefield">
-        <img :src="getCardImage(battlefieldCards[0])" class="card-image center first-card" />
+        <img v-for="(card,index) in enemyBattlefieldCards.slice(0)" :key="index" :src="getCardImage(card)" class="card-image center first-card">
         <div class="row">
-          <img v-for="(card, index) in battlefieldCards.slice(1)" :key="index" :src="getCardImage(card)" class="card-image" />
+          <img v-for="(card, index) in myBattlefieldCards.slice(0)" :key="index" :src="getCardImage(card)" class="card-image" />
         </div>
-      </div>
-      
-      <div class="side-right">
-        <img v-for="(_, index) in 2" :key="index" :src="getCardBackImage()" class="card-image" />
       </div>
       
       <div class="hand-area">
@@ -37,6 +33,7 @@
   name: "GameBoard",
   data() {
     return {
+      cardCount: 5,
       handCards: [
         "Bee_Bear.jpg",
         "Killer_Bee.jpg",
@@ -44,11 +41,13 @@
         "Lone_Yeti.jpg",
         "Shark_Dog.jpg"
       ],
-      battlefieldCards: [
-        "Deathweaver.jpg",
+      myBattlefieldCards: [
         "Elephantopus.jpg",
         "Ferret_Bomber.jpg",
         "Giraffodile.jpg"
+      ],
+      enemyBattlefieldCards:[
+        "Deathweaver.jpg"
       ],
       cardBackImage: "card_Back.png" 
     };
@@ -60,14 +59,7 @@
     getCardBackImage() {
       return `/assets/${this.cardBackImage}`;
     }
-  },
-  created() {
-    console.log("GameBoard Component Loaded");
-    this.handCards.forEach(card => {
-      console.log(`Image path for ${card}:`, this.getCardImage(card));
-    });
   }
-
 };
   </script>
   
@@ -123,10 +115,6 @@
   
   .side-left {
     left: 15px;
-  }
-  
-  .side-right {
-    right: 40px;
   }
   
   .battlefield {

@@ -14,8 +14,8 @@ const routes = [
     },
     {
         path: "/gameboard",
-        name: "GameTerrain",
-        component: () => import('@/components/GameTerrain.vue')
+        name: "GameBoard",
+        component: () => import('@/components/GameBoard.vue')
     },
     {
         path: "/cardlist/:set",
