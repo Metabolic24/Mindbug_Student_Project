@@ -9,5 +9,13 @@ mvn checkstyle:check
 Result: target/checkstyle-result.xml
 
 ### Jacoco
-Run during build.
-Result: target/site/jacoco
+#### Run test with jacoco
+```bash
+mvn clean test
+```
+#### Generate jacoco report
+```bash
+mvn jacoco:report
+```
+
+Jacoco result: target/site/jacoco/index.html
