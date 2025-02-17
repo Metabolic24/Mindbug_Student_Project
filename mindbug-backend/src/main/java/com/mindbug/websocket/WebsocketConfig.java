@@ -18,8 +18,8 @@ public class WebsocketConfig implements WebSocketMessageBrokerConfigurer   {
   @Override
   public void registerStompEndpoints(StompEndpointRegistry registry) {
     // TODO: retirer en prod
-    registry.addEndpoint("/mindbug-ws").setAllowedOriginPatterns("http://localhost:[*]")
-    .withSockJS();
+    registry.addEndpoint("/mindbug-ws").setAllowedOriginPatterns("*").withSockJS();
   }
+
     
 }
