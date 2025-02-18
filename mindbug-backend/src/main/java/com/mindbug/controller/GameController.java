@@ -23,6 +23,9 @@ public class GameController {
     @Autowired
     private GameServer gameServer;
 
+    @Autowired
+    private GameSession gameSession;
+
     @PostMapping("/join_game")
     public ResponseEntity<Player> joinGame() {
         Player data = this.gameServer.handleJoinGame();
@@ -34,9 +37,6 @@ public class GameController {
         this.gameServer.handleConfirmJoin(data.getGameId(), data.getPlayerId());
         return ResponseEntity.ok().build();
     }
-
-    @Autowired
-    private GameSession gameSession;
 
     @PostMapping("/distribute-cards")
     public ResponseEntity<String> distributeCards(@RequestBody Game game) {
