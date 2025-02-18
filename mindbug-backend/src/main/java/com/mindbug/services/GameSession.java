@@ -7,7 +7,6 @@ import com.mindbug.models.Game;
 import com.mindbug.models.Player;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.websocket.WSMessageManager;
-import com.mindbug.websocket.WebsocketMessage;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,8 +14,6 @@ import java.util.*;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Component
@@ -100,7 +97,6 @@ public class GameSession {
         if (cards.isEmpty()) {
             throw new IllegalStateException("No cards available for distribution");
         }
-        System.out.println("Initial cards size: " + cards.size());
 
         Collections.shuffle(cards);
 
@@ -139,17 +135,12 @@ public class GameSession {
                 updateCardCopies(card);
             }
         }
-
-        System.out.println("Cards after distribution for player: " + player.getNickname() + " - Remaining: " + cards.size());
-        System.out.println("Player's hand: " + player.getHand());
-        System.out.println("Player's draw pile: " + player.getDrawPile());
-        System.out.println("-----------------------------------------------");
     }
 
     private List<Card> ReadCard() {
         List<Card> originalCards = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
-        InputStream is = getClass().getResourceAsStream("/First_Contact.json");
+        InputStream is = getClass().getResourceAsStream("/sets/First_Contact.json");
         if (is == null) {
             System.out.println("First_Contact.json file not found!");
             return Collections.emptyList();

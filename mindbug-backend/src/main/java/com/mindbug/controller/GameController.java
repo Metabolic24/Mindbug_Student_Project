@@ -1,6 +1,7 @@
 package com.mindbug.controller;
 
 import com.mindbug.models.Game;
+import com.mindbug.models.Player;
 import com.mindbug.services.GameSession;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.HtmlUtils;
@@ -28,6 +29,9 @@ public class GameController {
     @Autowired
     private GameServer gameServer;
 
+    @Autowired
+    private GameSession gameSession;
+
     @PostMapping("/join_game")
     public ResponseEntity<Player> joinGame() {
         Player data = this.gameServer.handleJoinGame();
@@ -39,9 +43,6 @@ public class GameController {
         this.gameServer.handleConfirmJoin(data.getGameId(), data.getPlayerId());
         return ResponseEntity.ok().build();
     }
-
-    @Autowired
-    private GameSession gameSession;
 
     @PostMapping("/distribute-cards")
     public ResponseEntity<String> distributeCards(@RequestBody Game game) {

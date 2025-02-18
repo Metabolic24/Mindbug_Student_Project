@@ -206,7 +206,7 @@
         "type": "Life Points",
         "target": "opponent",
         "value": -1,
-        "trigger_condition": "Play"
+        "triggerCondition": "Play"
       }
     ]
   },
