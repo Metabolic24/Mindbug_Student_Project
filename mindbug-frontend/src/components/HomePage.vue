@@ -1,73 +1,90 @@
 <template>
-    <div id="home">
+  <div id="home">
       <h1>Welcome to Mindbug's Cards</h1>
       <div class="button-group">
-        <button @click="goToSets" class="styled-button">Set of Cards</button>
-        <button @click="startGame" class="styled-button">Start Game</button>
+          <button @click="goToSets" class="styled-button">Set of Cards</button>
+          <button @click="startGame" class="styled-button">Start Game</button>
       </div>
       <p v-if="message">📢 {{ message }}</p>
-    </div>
+  </div>
 </template>
-  
+
 <script>
 import WebSocketService from "@/services/websocket.js";
 import axios from "axios";
 
 export default {
   data() {
-    return {
-      message: "",
-      playerId: "player-" + Math.random().toString(36).substr(2, 9),
-    };
+      return {
+          message: "",
+          playerId: null, 
+          hasConfirmed: false,
+      };
   },
   methods: {
-    goToSets() {
-      this.$router.push('/setsofcards');
-    },
+      goToSets() {
+          this.$router.push('/setsofcards');
+      },
 
-    async startGame() {
-        try {
-            // Tu te connectes d'abord à cette websocket
-            WebSocketService.connectToQueue(this.playerId, (data) => {
-                console.log("🎮 Match found:", data);
-                this.message = `🎮 Match found! Game ID: ${data.gameId}`;
+      async startGame() {
+          try {
+              console.log("Websocket connecting...");
+              alert("Matching...");
+              const response = await axios.post("http://localhost:8080/api/game/join_game");
+              this.playerId = response.data.playerId; //get the playerId from backend generated
+              console.log("Verify the Id got from back:", this.playerId);
+              // const webSocketInstance = new WebSocketService();
+              WebSocketService.connectToQueue(this.playerId, async (data) => {
+                  console.log("Match found:", data);
 
-            });
+                  if (String(data.playerId) === String(this.playerId)) {
+                      console.log("playerId matched");
+                      this.message = `Match found! Game ID: ${data.gameId}`;
 
-            // ensuite tu appelles join game. y'a pas de params
-            console.log("🔍 Sending join_game request...");
-            await axios.post("/api/game/join_game", null, {
-                params: { playerId: this.playerId }
-            });
+                      if (!this.hasConfirmed) {
+                          this.hasConfirmed = true;
+                          await this.confirmJoinGame(data.gameId);
+                          alert("Match found! Game gonna start!");
+                          this.$router.push('/gameterrain');
 
-            // après faut gérer les erreurs de ce join_game
+                      }
+                  } else {
+                      console.warn("⚠️ playerId unmatch:", data.playerId, "front", this.playerId);
+                  }
+              });
+          } catch (error) {
+              console.error("❌ Error occurred while searching for a game:", error.response ? error.response.data : error.message);
+              this.message = "❌ Matchmaking error.";
+          }
+      },
 
-            // Maintenant le confirm join tu le fais seulement quand tu recois un message websocket match found
+      async confirmJoinGame(gameId) {
+          try {
+              const url = "http://localhost:8080/api/game/confirm_join";
+              const requestData = { gameId: gameId, playerId: this.playerId };
 
-            // console.log("✅ Joined match queue:", response.data);
-            // this.message = "🔍 Waiting for an opponent...";
+              console.log("📢 sending request:", requestData);
 
-            // axios.post("/api/game/confirm_join", {
-                //     gameId: data.gameId,
-                //     playerId: this.playerId
-                // });
+              await axios.post(url, requestData, {
+                  headers: { "Content-Type": "application/json" }
+              });
 
-                // WebSocketService.subscribeToGame(data.gameId, (gameState) => {
-                //     console.log("🚀 Game started:", gameState);
-                //     this.message = "🚀 Game has started!";
-                //     this.$router.push(`/gameterrain/${data.gameId}`);
-                // });
+              console.log(`✅ Player ${this.playerId} confirmed game ${gameId}`);
 
-            
-        } catch (error) {
-            console.error("❌ Error occurred while searching for a game:", error.response ? error.response.data : error.message);
-            this.message = "❌ Matchmaking error.";
-        }
-    }
+              WebSocketService.subscribeToGame(gameId, (gameState) => {
+                  console.log("🎮 Game state updated:", gameState);
+                  this.message = `🃏 Game Started! Current state: ${JSON.stringify(gameState)}`;
+              });
 
-  },
+          } catch (error) {
+              console.error("❌ Failed to confirm game join:", error.response ? error.response.data : error.message);
+          }
+      }
+  }
 };
 </script>
+
+
   
 <style scoped>
   #home {
