@@ -1,8 +1,5 @@
 [
   {
-    "gameSessionCardId":  {
-      "number": 1
-    },
     "name": "Axolotl_Healer",
     "copies": 2,
     "power": 4,
@@ -11,15 +8,12 @@
       {
         "type": "Life Points",
         "target": "self",
-        "effectValue": 2,
+        "value": 2,
         "trigger_condition": "Play"
       }
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 2
-    },
     "name": "Bee_Bear",
     "copies": 1,
     "power": 8,
@@ -33,9 +27,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 3
-    },
     "name": "Brain_Fly",
     "copies": 1,
     "power": 4,
@@ -49,9 +40,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 4
-    },
     "name": "Chameleon_Sniper",
     "copies": 1,
     "power": 1,
@@ -60,15 +48,12 @@
       {
         "type": "Life Points",
         "target": "opponent",
-        "effectValue": -1,
+        "value": -1,
         "trigger_condition": "Attack"
       }
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 5
-    },
     "name": "Compost_Dragon",
     "copies": 2,
     "power": 3,
@@ -83,9 +68,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 6
-    },
     "name": "Deathweaver",
     "copies": 1,
     "power": 2,
@@ -100,9 +82,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 7
-    },
     "name": "Elephantopus",
     "copies": 1,
     "power": 7,
@@ -117,9 +96,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 8
-    },
     "name": "Explosive_Toad",
     "copies": 2,
     "power": 5,
@@ -134,9 +110,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 9
-    },
     "name": "Ferret_Bomber",
     "copies": 2,
     "power": 2,
@@ -150,9 +123,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 10
-    },
     "name": "Giraffodile",
     "copies": 1,
     "power": 7,
@@ -166,9 +136,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 11
-    },
     "name": "Goblin_Werewolf",
     "copies": 2,
     "power": 2,
@@ -177,24 +144,18 @@
       {
         "type": "Power Modification",
         "target": "self",
-        "effectValue": 6,
+        "value": 6,
         "condition": { "your_turn": true },
         "trigger_condition": "Passive"
       }
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 12
-    },
     "name": "Gorillion",
     "copies": 1,
     "power": 10
   },
   {
-    "gameSessionCardId":  {
-      "number": 13
-    },
     "name": "Grave_Robber",
     "copies": 2,
     "power": 7,
@@ -209,9 +170,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 14
-    },
     "name": "Harpy_Mother",
     "copies": 1,
     "power": 5,
@@ -225,9 +183,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 15
-    },
     "name": "Kangasaurus_Rex",
     "copies": 2,
     "power": 7,
@@ -242,9 +197,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 16
-    },
     "name": "Killer_Bee",
     "copies": 2,
     "power": 5,
@@ -253,15 +205,12 @@
       {
         "type": "Life Points",
         "target": "opponent",
-        "effectValue": -1,
+        "value": -1,
         "trigger_condition": "Play"
       }
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 17
-    },
     "name": "Lone_Yeti",
     "copies": 1,
     "power": 5,
@@ -270,7 +219,7 @@
       {
         "type": "Power Modification",
         "target": "self",
-        "effectValue": 5,
+        "value": 5,
         "condition": { "only_ally": true },
         "trigger_condition": "Passive"
       },
@@ -284,18 +233,12 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 18
-    },
     "name": "Luchataur",
     "copies": 2,
     "power": 9,
     "keywords": ["FRENZY"]
   },
   {
-    "gameSessionCardId":  {
-      "number": 19
-    },
     "name": "Mysterious_Mermaid",
     "copies": 1,
     "power": 7,
@@ -309,27 +252,18 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 20
-    },
     "name": "Plated_Scorpion",
     "copies": 2,
     "power": 2,
     "keywords": ["TOUGH", "POISONOUS"]
   },
   {
-    "gameSessionCardId":  {
-      "number": 21
-    },
     "name": "Rhino_Turtle",
     "copies": 2,
     "power": 8,
     "keywords": ["FRENZY", "TOUGH"]
   },
   {
-    "gameSessionCardId":  {
-      "number": 22
-    },
     "name": "Shark_Dog",
     "copies": 1,
     "power": 4,
@@ -345,9 +279,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 23
-    },
     "name": "Sharky_Crab-Dog-Mummypus",
     "copies": 1,
     "power": 5,
@@ -362,9 +293,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 24
-    },
     "name": "Shield_Bugs",
     "copies": 2,
     "power": 4,
@@ -373,15 +301,12 @@
       {
         "type": "Power Modification",
         "target": "allies",
-        "effectValue": 1,
+        "value": 1,
         "trigger_condition": "Passive"
       }
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 25
-    },
     "name": "Snail_Hydra",
     "copies": 2,
     "power": 9,
@@ -396,9 +321,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 26
-    },
     "name": "Snail_Thrower",
     "copies": 1,
     "power": 1,
@@ -414,18 +336,12 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 27
-    },
     "name": "Spider_Owl",
     "copies": 2,
     "power": 3,
     "keywords": ["SNEAKY", "POISONOUS"]
   },
   {
-    "gameSessionCardId":  {
-      "number": 28
-    },
     "name": "Strange_Barrel",
     "copies": 1,
     "power": 6,
@@ -439,9 +355,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 29
-    },
     "name": "Tiger_Squirrel",
     "copies": 2,
     "power": 3,
@@ -457,9 +370,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 30
-    },
     "name": "Turbo_Bug",
     "copies": 1,
     "power": 4,
@@ -468,15 +378,12 @@
         "type": "Life Points",
         "target": "opponent",
         "operation": "set",
-        "effectValue": 1,
+        "value": 1,
         "trigger_condition": "Attack"
       }
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 31
-    },
     "name": "Tusked_Extorter",
     "copies": 2,
     "power": 8,
@@ -490,9 +397,6 @@
     ]
   },
   {
-    "gameSessionCardId":  {
-      "number": 32
-    },
     "name": "Urchin_Hurler",
     "copies": 1,
     "power": 5,
@@ -501,7 +405,7 @@
       {
         "type": "Power Modification",
         "target": "allies",
-        "effectValue": 2,
+        "value": 2,
         "condition": { "your_turn": true },
         "trigger_condition": "Passive"
       }
