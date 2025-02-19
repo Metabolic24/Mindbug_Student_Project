@@ -28,6 +28,7 @@ public class CardController {
         if (cards.isEmpty()) {
             System.out.println("Failed to load default cards.");
         }
+
     }
 
     @GetMapping("/{set}")
@@ -63,6 +64,6 @@ public class CardController {
         if (is == null) {
             throw new IOException(setName + ".json file not found!");
         }
-        return mapper.readValue(is, new TypeReference<List<Card>>() {});
+        return mapper.readValue(is, new TypeReference<List<Card>>() { });
     }
 }

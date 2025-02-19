@@ -1,6 +1,7 @@
 name: Mindbug CI Workflow 
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -55,9 +56,31 @@ jobs:
             windows-maven
 
       - name: Build backend
-        run: mvn clean package
+        run: mvn clean verify
         working-directory: ./mindbug-backend
+
+      # Download checkstyle reports
+
+      - name: Upload Checkstyle XML Report 
+        uses: actions/upload-artifact@v4
+        with:
+          name: checkstyle-report
+          path: mindbug-backend/target/checkstyle-result.xml
 
       - name: Run backend tests
         run: mvn test
         working-directory: ./mindbug-backend
+
+        # Download jacoco reports
+      
+      - name: Upload Jacoco Report and Exec files as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report
+          path: mindbug-backend/target/site/jacoco/index.html
+
+      - name: Upload Jacoco Exec files
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-exec
+          path: mindbug-backend/target/*.exec  

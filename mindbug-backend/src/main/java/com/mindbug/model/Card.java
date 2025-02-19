@@ -41,6 +41,7 @@ public class Card {
         this.keywords = keywords;
     }
 
+
     public Set<Effect> getEffect() {
         return effect;
     }
