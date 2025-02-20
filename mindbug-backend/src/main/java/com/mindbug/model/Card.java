@@ -2,6 +2,7 @@ package com.mindbug.model;
 
 import java.util.Set;
 
+
 public class Card {
     private String name;
     private int copies;

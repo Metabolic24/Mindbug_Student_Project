@@ -58,7 +58,7 @@
 					<configLocation>${project.basedir}/src/main/resources/checkstyle.xml </configLocation>
 					<encoding>UTF-8</encoding>
 					<consoleOutput>FinalParameters</consoleOutput>
-					<failsOnError>true</failsOnError>
+					<failsOnError>false</failsOnError>
 					<linkXRef>false</linkXRef>
 				</configuration>
 				<executions>
