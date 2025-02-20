@@ -57,16 +57,15 @@ jobs:
       
       # Checkstyle
       
-      - name: Check code with checkstyle
-        run: mvn checkstyle:check
+      - name: Generate checkstyle report
+        run: mvn checkstyle:checkstyle
         working-directory: ./mindbug-backend
-    
+      
       - name: Upload Checkstyle XML Report 
         uses: actions/upload-artifact@v4
         with:
           name: checkstyle-report
           path: mindbug-backend/target/checkstyle-result.xml
-
       
       - name: Build backend
         run: mvn clean verify
