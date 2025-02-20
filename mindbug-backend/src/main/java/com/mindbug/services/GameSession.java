@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mindbug.models.Card;
 import com.mindbug.models.Game;
+import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.websocket.WSMessageManager;
@@ -13,6 +14,7 @@ import java.io.InputStream;
 import java.util.*;
 
 import org.springframework.context.annotation.Scope;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
@@ -33,6 +35,7 @@ public class GameSession {
     private Map<String, Integer> cardCopiesMap = new HashMap<>();
 
 
+
     public GameSession(WSMessageManager gameWsMessageManager) {
         this.gameWsMessageManager = gameWsMessageManager;
     }
@@ -50,7 +53,7 @@ public class GameSession {
         this.wsChannel = "/topic/game/" + game.getId();
         this.gameWsMessageManager.setChannel(wsChannel);
         distributionCard();
-        initializeCardCopiesMap();
+        //initializeCardCopiesMap();
     }
 
     private void initializeCardCopiesMap() {
@@ -120,7 +123,9 @@ public class GameSession {
             }
             Card card = cards.get(random.nextInt(cards.size()));
             if (checkCardCopies(card) && !selectedCards.contains(card.getName())) {
-                player.getHand().add(card.getGameSessionCardId());
+                GameSessionCard gameSessionCard = new GameSessionCard(card);
+                gameSessionCard.setNumber(card.getGameSessionCardId().getNumber()); // Set the number field
+                player.getHand().add(gameSessionCard);
                 updateCardCopies(card);
             }
         }
@@ -131,10 +136,15 @@ public class GameSession {
             }
             Card card = cards.get(random.nextInt(cards.size()));
             if (checkCardCopies(card) && !selectedCards.contains(card.getName())) {
-                player.getDrawPile().add(card.getGameSessionCardId());
+                GameSessionCard gameSessionCard = new GameSessionCard(card);
+                gameSessionCard.setNumber(card.getGameSessionCardId().getNumber());// Set the number field
+                player.getDrawPile().add(gameSessionCard);
                 updateCardCopies(card);
             }
         }
+        System.out.println("Player " + player.getNickname() + " hand: " + player.getHand());
+        System.out.println("Player " + player.getNickname() + " draw pile: " + player.getDrawPile());
+        System.out.println("Card con lai " + cards.size());
     }
 
     private List<Card> ReadCard() {
@@ -157,6 +167,70 @@ public class GameSession {
         }
         return new ArrayList<>(originalCards);
     }
+
+    public void selectCard(String playerNickname, int cardNumber) {
+        Player player = getPlayerByNickname(playerNickname);
+        if (player == null) {
+            throw new IllegalArgumentException("Invalid player nickname");
+        }
+        GameSessionCard card = getCardByNumber(cardNumber, player.getHand());
+        if (card == null) {
+            throw new IllegalArgumentException("Card not in player's hand");
+        }
+        player.setSelectedCard(cardNumber);
+    }
+
+    private GameSessionCard getCardByNumber(int number, List<GameSessionCard> hand) {
+        for (GameSessionCard card : hand) {
+            if (card.getNumber() == number) {
+                return card;
+            }
+        }
+        return null;
+    }
+
+    public void unselectCard(String playerNickname) {
+        Player player = getPlayerByNickname(playerNickname);
+        if (player == null) {
+            throw new IllegalArgumentException("Invalid player nickname");
+        }
+        player.setSelectedCard(null);
+    }
+
+    public Player getPlayerByNickname(String playerNickname) {
+
+        if (playerNickname.equals(game.getPlayer1().getNickname())) {
+            return game.getPlayer1();
+
+        } else if (playerNickname.equals(game.getPlayer2().getNickname())) {
+            return game.getPlayer2();
+        }
+        return null;
+    }
+
+    public void playCard(String playerNickname) {
+        Player player = getPlayerByNickname(playerNickname);
+        if (player == null) {
+            throw new IllegalArgumentException("Invalid player nickname");
+        }
+        Integer selectedCardNumber = player.getSelectedCard();
+        if (selectedCardNumber == null) {
+            throw new IllegalStateException("No card selected");
+        }
+        GameSessionCard selectedCard = getCardByNumber(selectedCardNumber, player.getHand());
+        if (selectedCard == null) {
+            throw new IllegalStateException("Selected card not found in hand");
+        }
+        player.getHand().remove(selectedCard);
+        player.getBoard().add(selectedCard);
+        player.setSelectedCard(null);
+
+        if (player.getHand().size() < 5 && !player.getDrawPile().isEmpty()) {
+            GameSessionCard newCard = player.getDrawPile().remove(0);
+            player.getHand().add(newCard);
+        }
+    }
+
     public void confirmJoin(Long playerId) {
         this.canConfirmJoin(playerId);
 
@@ -186,5 +260,23 @@ public class GameSession {
             throw new IllegalArgumentException("Cannot confrim join. Invalid player.");
         }
     }
-    
+
+
+    public String getPlayerHandCard(String playerNickname) {
+        Player player = getPlayerByNickname(playerNickname);
+        if (player == null) {
+            throw new IllegalArgumentException("Invalid player nickname");
+        }
+        List<GameSessionCard> hand = player.getHand();
+        StringBuilder handWithNames = new StringBuilder();
+        for (GameSessionCard gameSessionCard : hand) {
+            Card card = gameSessionCard.getCard();
+            if (card != null) {
+                handWithNames.append("Card ID: ").append(gameSessionCard.getNumber())
+                             .append(", Card Name: ").append(card.getName())
+                             .append("\n");
+            }
+        }
+        return handWithNames.toString();
+    }
 }

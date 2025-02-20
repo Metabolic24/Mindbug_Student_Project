@@ -39,6 +39,12 @@ public class Card {
         this.trigger_condition = card.trigger_condition;
         this.effect = card.effect;
     }
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public GameSessionCard getGameSessionCardId() {
         return gameSessionCardId;

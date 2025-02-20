@@ -37,13 +37,23 @@ public class GameSessionCard implements Serializable {
     public GameSessionCard(Card card) {
         this.card = card;
     }
-
+    public Card getCard() {
+        return card;
+    }
+    public void setCard(Card card) {
+        this.card = card;
+    }
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
+    }
+    public int getNumber() {
+        return number;
+    }
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     @Override

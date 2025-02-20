@@ -67,4 +67,35 @@ public class GameController {
             return ResponseEntity.status(500).body("Card distribution test failed: " + e.getMessage());
         }
     }
+
+    @PostMapping("/select-card")
+    public ResponseEntity<String> selectCard(@RequestBody Map<String, String> data) {
+        Integer cardIndex = Integer.parseInt(data.get("cardIndex"));
+        String playerNickname = data.get("playerNickname");
+        try {
+            gameSession.selectCard(playerNickname, cardIndex);
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body("Card selection failed: " + e.getMessage());
+        }
+        return ResponseEntity.ok("Card selected successfully");
+    }
+
+    @PostMapping("/play-card")
+    public ResponseEntity<String> playCard(@RequestBody Map<String, String> data) {
+        String playerNickname = data.get("playerNickname");
+        try {
+            gameSession.playCard(playerNickname);
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body("Card play failed: " + e.getMessage());
+        }
+        return ResponseEntity.ok("Card played successfully");
+    }
+    @GetMapping("player-hand-card")
+    public ResponseEntity<String> getPlayerHandCard(@RequestParam String playerNickname) {
+        try {
+            return ResponseEntity.ok(gameSession.getPlayerHandCard(playerNickname));
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body("Failed to get player hand card: " + e.getMessage());
+        }
+    }
 }

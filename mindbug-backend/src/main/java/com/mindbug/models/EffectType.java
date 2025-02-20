@@ -2,6 +2,8 @@ package com.mindbug.models;
 
 <<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.mindbug.models.Converter.ConditionConverter;
+import com.mindbug.models.Converter.ListToJsonConverter;
 import jakarta.persistence.*;
 import java.util.List;
 import java.util.Map;

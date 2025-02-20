@@ -1,4 +1,4 @@
-package com.mindbug.models;
+package com.mindbug.models.Converter;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

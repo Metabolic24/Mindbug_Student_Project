@@ -45,6 +45,11 @@ public class Player implements Serializable {
     @Column
     private int mindbug;
 
+    @Column
+    private Integer selectedCard;
+
+
+
     public Player(String nickname) {
         this.nickname = nickname;
         // TODO: get lifepoints and mindbug from game configs
@@ -107,5 +112,13 @@ public class Player implements Serializable {
 
     public void setDrawPile(List<GameSessionCard> drawPile) {
         this.drawPile = drawPile;
+    }
+
+    public Integer getSelectedCard() {
+        return selectedCard;
+    }
+
+    public void setSelectedCard(Integer selectedCard) {
+        this.selectedCard = selectedCard;
     }
 }
