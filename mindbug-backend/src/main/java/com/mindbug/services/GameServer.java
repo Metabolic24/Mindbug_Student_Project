@@ -2,14 +2,12 @@ package com.mindbug.services;
 
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Map;
 import java.util.Queue;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mindbug.configs.Config;
-import com.mindbug.dtos.ConfirmJoinDto;
 import com.mindbug.dtos.PlayerBasicInfoDto;
 import com.mindbug.models.Game;
 import com.mindbug.models.Player;
@@ -17,11 +15,9 @@ import com.mindbug.websocket.WSMessageManager;
 
 import jakarta.persistence.EntityNotFoundException;
 
-import org.json.JSONObject;
-
 @Service
 public class GameServer {
-    private HashMap <Long, GameSession> gameSessions = new HashMap<>();
+    private HashMap<Long, GameSession> gameSessions = new HashMap<>();
     private Queue<Player> playerQueue = new LinkedList<>();
 
     @Autowired
@@ -47,7 +43,7 @@ public class GameServer {
         this.playerQueue.add(player);
 
         // Create game session if two player in queue
-        if(this.playerQueue.size() >= 2) {
+        if (this.playerQueue.size() >= 2) {
             this.createGameSession(this.playerQueue.poll(), this.playerQueue.poll());
         }
 
@@ -56,7 +52,7 @@ public class GameServer {
 
     public void handleConfirmJoin(Long gameId, Long playerId) {
         GameSession gameSession = this.getGameSession(gameId);
-        if(gameSession == null)
+        if (gameSession == null)
             throw new EntityNotFoundException("Game not found");
         gameSession.confirmJoin(playerId);
     }
@@ -71,7 +67,7 @@ public class GameServer {
         gameSessions.put(newGame.getId(), gameSession);
 
         // Send newGame websocket messages to each player
-        HashMap <String, Object> data = new HashMap<>();
+        HashMap<String, Object> data = new HashMap<>();
         data.put("gameId", newGame.getId());
         
         // First player message
