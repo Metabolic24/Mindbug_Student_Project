@@ -1,4 +1,4 @@
-package com.mindbug.model;
+package com.mindbug.models;
 
 public enum Keyword {
     POISONOUS,

@@ -1,9 +1,9 @@
-package com.mindbug.model;
+package com.mindbug.models;
 
+import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
-public class Effect {
+public class EffectType {
     private String type;
     private String target;
     private int value;
@@ -11,8 +11,7 @@ public class Effect {
     private Map<String, Object> condition;
     private int amount;
     private String operation; 
-    private Set<Keyword> keywords;
-    private String triggerCondition;
+    private List<String> keywords;
 
     // Getters and Setters
     public String getType() {
@@ -71,19 +70,11 @@ public class Effect {
         this.operation = operation;
     }
 
-    public Set<Keyword> getKeywords() {
+    public List<String> getKeywords() {
         return keywords;
     }
 
-    public void setKeywords(Set<Keyword> keyword) {
+    public void setKeywords(List<String> keyword) {
         this.keywords = keyword;
-    }
-
-    public String getTriggerCondition() {
-        return triggerCondition;
-    }
-
-    public void setTriggerCondition(String triggerCondition) {
-        this.triggerCondition = triggerCondition;
     }
 }

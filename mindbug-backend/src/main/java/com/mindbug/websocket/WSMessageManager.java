@@ -25,4 +25,8 @@ public class WSMessageManager {
         WebsocketMessage wsMessage = new WebsocketMessage(message, data);
         this.template.convertAndSend(channel, wsMessage);
     }
+
+    public void sendMessage(WebsocketMessage wsMessage) {
+        this.template.convertAndSend(channel, wsMessage);
+    }
 }

@@ -1,4 +1,4 @@
-package com.mindbug.utils;
+package com.mindbug.services;
 
 public enum GameStatus {
     NOT_STARTED,
