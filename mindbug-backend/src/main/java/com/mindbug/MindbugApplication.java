@@ -15,7 +15,9 @@ public class MindbugApplication {
 
 	@RequestMapping("/")
 	String home() {
-		return "Hello World!";
+		return "Hello World now!";
 	}
+
+	
 	
 }
