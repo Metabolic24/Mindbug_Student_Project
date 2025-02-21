@@ -1,5 +1,6 @@
 package com.mindbug.models;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -48,6 +49,17 @@ public class Card {
     public void setGameSessionCardId(GameSessionCard gameSessionCardId) {
         this.gameSessionCardId = gameSessionCardId;
     }
+=======
+import java.util.Set;
+
+
+public class Card {
+    private String name;
+    private int copies;
+    private int power;
+    private Set<Keyword> keywords;
+    private Set<Effect> effect;
+>>>>>>> 71294da (#43 implement generic websocket message)
 
     public String getName() {
         return name;
@@ -73,6 +85,7 @@ public class Card {
         this.power = power;
     }
 
+<<<<<<< HEAD
     public List<String> getKeywords() {
         return keywords;
     }
@@ -205,4 +218,23 @@ public class Card {
 //                '}';
 //    }
 
+=======
+    public Set<Keyword> getKeywords() {
+        return keywords;
+    }
+
+    public void setKeywords(Set<Keyword> keywords) {
+        this.keywords = keywords;
+    }
+
+
+    public Set<Effect> getEffect() {
+        return effect;
+    }
+
+    public void setEffect(Set<Effect> effect) {
+        this.effect = effect;
+    }
+}
+>>>>>>> 71294da (#43 implement generic websocket message)
 

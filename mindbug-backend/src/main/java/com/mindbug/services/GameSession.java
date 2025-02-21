@@ -4,9 +4,13 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mindbug.models.Card;
 import com.mindbug.models.Game;
+<<<<<<< HEAD
 import com.mindbug.models.Player;
 import com.mindbug.utils.GameStatus;
 import com.mindbug.utils.GameWSMessage;
+=======
+import com.mindbug.services.wsmessages.WSMessageNewGame;
+>>>>>>> 71294da (#43 implement generic websocket message)
 import com.mindbug.websocket.WSMessageManager;
 
 import java.io.IOException;
@@ -159,7 +163,7 @@ public class GameSession {
             if(playerId != this.lastPlayerConfirmedJoin) {
                 // The two players have confirmed. Send ws message newGame and update game status
                 this.status = GameStatus.STARTED;
-                this.gameWsMessageManager.sendMessage(GameWSMessage.NEW_GAME, this.game);
+                this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
             } else {
                 throw new IllegalArgumentException("Join already confirmed.");
             }
