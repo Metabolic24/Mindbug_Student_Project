@@ -1,4 +1,4 @@
-package com.mindbug.model;
+package com.mindbug.models;
 
 import java.util.Set;
 
