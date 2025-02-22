@@ -1,12 +1,9 @@
-package com.mindbug.controller;
+package com.mindbug.services;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mindbug.model.Card;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.mindbug.models.Card;
+import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,32 +14,27 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RestController
-@RequestMapping("/api/cards")
-public class CardController {
+@Service
+public class CardService {
 
     private List<Card> cards;
 
-    public CardController() throws IOException {
+    public CardService() throws IOException {
         cards = loadCardsFromSet("First_Contact");
         if (cards.isEmpty()) {
             System.out.println("Failed to load default cards.");
         }
-
     }
 
-    @GetMapping("/{set}")
-    public List<Card> getCardsBySet(@PathVariable String set) throws IOException {
+    public List<Card> getCardsBySet(String set) throws IOException {
         return loadCardsFromSet(set);
     }
 
-    @GetMapping
     public List<Card> getAllCards() {
         return cards;
     }
 
-    @GetMapping("/sets")
-    public List<String> getAvailableSets() {
+    public List<String> getAvailableSets() { 
         URL resourceUrl = getClass().getResource("/sets");
         if (resourceUrl == null) {
             throw new RuntimeException("Sets folder not found!");
@@ -55,15 +47,15 @@ public class CardController {
         return Arrays.stream(files)
             .filter(file -> file.getName().endsWith(".json"))
             .map(file -> file.getName().replace(".json", ""))
-            .collect(Collectors.toList());
-        }
+            .collect(Collectors.toList()); 
+    }
 
-    private List<Card> loadCardsFromSet(String setName) throws IOException {
+    private List<Card> loadCardsFromSet(String setName) throws IOException { 
         ObjectMapper mapper = new ObjectMapper();
         InputStream is = getClass().getResourceAsStream("/sets/" + setName + ".json");
         if (is == null) {
             throw new IOException(setName + ".json file not found!");
         }
-        return mapper.readValue(is, new TypeReference<List<Card>>() { });
+        return mapper.readValue(is, new TypeReference<List<Card>>() { }); 
     }
 }

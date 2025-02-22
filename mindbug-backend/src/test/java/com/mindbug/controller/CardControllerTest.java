@@ -1,10 +1,8 @@
 package com.mindbug.controller;
 
+import com.mindbug.model.Card;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import com.mindbug.models.Card;
-
 import java.io.IOException;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
