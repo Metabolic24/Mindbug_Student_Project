@@ -1,8 +1,7 @@
 package com.mindbug.services;
 
 import com.mindbug.models.Game;
-import com.mindbug.utils.GameStatus;
-import com.mindbug.utils.GameWSMessage;
+import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.websocket.WSMessageManager;
 import org.springframework.stereotype.Component;
 
@@ -40,7 +39,7 @@ public class GameSession {
             if (playerId != this.lastPlayerConfirmedJoin) {
                 // The two players have confirmed. Send ws message newGame and update game status
                 this.status = GameStatus.STARTED;
-                this.gameWsMessageManager.sendMessage(GameWSMessage.NEW_GAME, this.game);
+                this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
             } else {
                 throw new IllegalArgumentException("Join already confirmed.");
             }

@@ -12,6 +12,11 @@ public class WebsocketMessage {
     }
 
 
+    public WebsocketMessage(String messageID) {
+        this.messageID = messageID;
+    }
+
+
     public String getMessageID() {
         return messageID;
     }
