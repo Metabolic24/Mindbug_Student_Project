@@ -3,10 +3,13 @@ package com.mindbug.services;
 import com.mindbug.models.Game;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.websocket.WSMessageManager;
+
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 
 @Component
+@Scope("prototype")
 public class GameSession {
     private Game game;
 
@@ -19,12 +22,10 @@ public class GameSession {
     private GameStatus status = GameStatus.NOT_STARTED;
 
     
-    public GameSession(WSMessageManager gameWsMessageManager) {
-        this.gameWsMessageManager = gameWsMessageManager;
-    }
-
-    public void initialize(Game game) {
+    public GameSession(Game game, WSMessageManager gameWsMessageManager) {
         this.game = game;
+        
+        this.gameWsMessageManager = gameWsMessageManager;
         this.wsChannel = "/topic/game/" + game.getId();
         this.gameWsMessageManager.setChannel(wsChannel);
     }
