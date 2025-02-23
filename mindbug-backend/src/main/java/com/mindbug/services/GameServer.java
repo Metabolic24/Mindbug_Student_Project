@@ -38,26 +38,6 @@ public class GameServer {
         this.gameQueueWsMessageManager.setChannel(Config.GAME_QUEUE_WEBSOCKET);
     }
 
-    public PlayerBasicInfoDto handleJoinGame() {
-        // Create the player and add to queue
-        Player player =  this.playerservice.createPlayer(new Player("Player"));
-        this.playerQueue.add(player);
-
-        // Create game session if two player in queue
-        if (this.playerQueue.size() >= 2) {
-            this.createGameSession(this.playerQueue.poll(), this.playerQueue.poll());
-        }
-
-        return (new PlayerBasicInfoDto(player));
-    }
-
-    public void handleConfirmJoin(Long gameId, Long playerId) {
-        GameSession gameSession = this.getGameSession(gameId);
-        if (gameSession == null)
-            throw new EntityNotFoundException("Game not found");
-        gameSession.confirmJoin(playerId);
-    }
-
     private void createGameSession(Player player1, Player player2) {
         Game newGame = this.gameService.createGame(new Game());
         newGame.setPlayer1(player1);
@@ -78,7 +58,35 @@ public class GameServer {
     }
 
     private GameSession getGameSession(Long id) {
-        return this.gameSessions.get(id);
+        GameSession gameSession = this.gameSessions.get(id);
+
+        if (gameSession == null)
+            throw new EntityNotFoundException("Game not found");
+
+        return gameSession;
+    }
+
+    public PlayerBasicInfoDto handleJoinGame() {
+        // Create the player and add to queue
+        Player player =  this.playerservice.createPlayer(new Player("Player"));
+        this.playerQueue.add(player);
+
+        // Create game session if two player in queue
+        if (this.playerQueue.size() >= 2) {
+            this.createGameSession(this.playerQueue.poll(), this.playerQueue.poll());
+        }
+
+        return (new PlayerBasicInfoDto(player));
+    }
+
+    public void handleConfirmJoin(Long gameId, Long playerId) {
+        GameSession gameSession = this.getGameSession(gameId);
+        gameSession.confirmJoin(playerId);
+    }
+
+    public void handleAttack(Long playerId, Long gameId, Long cardId) {
+        GameSession gameSession = this.getGameSession(gameId);
+        gameSession.attack(playerId, gameId, cardId);
     }
 
 }

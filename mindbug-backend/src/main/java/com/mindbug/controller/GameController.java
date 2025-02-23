@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import com.mindbug.services.GameServer;
 import com.mindbug.dtos.ConfirmJoinDto;
 import com.mindbug.dtos.PlayerBasicInfoDto;
+import com.mindbug.dtos.PlayerCardDto;
 
 @RestController
 @RequestMapping("/api/game")
@@ -31,5 +32,12 @@ public class GameController {
         this.gameServer.handleConfirmJoin(data.getGameId(), data.getPlayerId());
         return ResponseEntity.ok().build();
     }
+
+    @PostMapping("/attack")
+    public ResponseEntity<String>  attack(@RequestBody PlayerCardDto data) {
+       this.gameServer.handleAttack(data.getPlayerId(), data.getGameId(), data.getCardId());
+       return ResponseEntity.ok().build();
+    }
+    
 
 }

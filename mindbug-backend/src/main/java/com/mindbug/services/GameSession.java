@@ -5,11 +5,15 @@ import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.websocket.WSMessageManager;
 
 import org.springframework.context.annotation.Scope;
+import lombok.Getter;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
 @Component
 @Scope("prototype")
+@Getter
 public class GameSession {
     private Game game;
 
@@ -30,8 +34,10 @@ public class GameSession {
         this.gameWsMessageManager.setChannel(wsChannel);
     }
 
+
+
     public void confirmJoin(Long playerId) {
-        this.canConfirmJoin(playerId);
+        this.gameSessionValidation.canConfirmJoin(this, playerId);
 
         if (this.lastPlayerConfirmedJoin == null) {
             // No player confirmed yet
@@ -48,16 +54,13 @@ public class GameSession {
 
     }
 
-    public void canConfirmJoin(Long playerId) {
-        if (this.status != GameStatus.NOT_STARTED) {
-            // Cannot confrim join. Game already started.
-            throw new IllegalStateException("Cannot confrim join. Game already started.");
-        } 
 
-        if (playerId != this.game.getPlayer1().getId() && playerId != this.game.getPlayer2().getId()) {
-            // Cannot confrim join. Invalid player.
-            throw new IllegalArgumentException("Cannot confrim join. Invalid player.");
-        }
+    public void attack(Long playerId, Long gameId, Long CardId) {
+
     }
+
+    // public void canAttack() {
+        
+    // }
     
 }
