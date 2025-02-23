@@ -11,6 +11,7 @@ import com.mindbug.configs.Config;
 import com.mindbug.dtos.PlayerBasicInfoDto;
 import com.mindbug.models.Game;
 import com.mindbug.models.Player;
+import com.mindbug.services.wsmessages.WSMessageMatchFound;
 import com.mindbug.websocket.WSMessageManager;
 
 import jakarta.persistence.EntityNotFoundException;
@@ -67,18 +68,12 @@ public class GameServer {
         gameSessions.put(newGame.getId(), gameSession);
 
         // Send newGame websocket messages to each player
-        HashMap<String, Object> data = new HashMap<>();
-        data.put("gameId", newGame.getId());
-        
-        // First player message
-        data.put("playerId", newGame.getPlayer1().getId());
+        this.gameQueueWsMessageManager.sendMessage(new WSMessageMatchFound(newGame.getId(), newGame.getPlayer1().getId()));
 
-
-        this.gameQueueWsMessageManager.sendMessage("MATCH_FOUND", data);
 
         // Second player message
-        data.put("playerId", newGame.getPlayer2().getId());
-        this.gameQueueWsMessageManager.sendMessage("MATCH_FOUND", data);
+        this.gameQueueWsMessageManager.sendMessage(new WSMessageMatchFound(newGame.getId(), newGame.getPlayer2().getId()));
+
 
     }
 
