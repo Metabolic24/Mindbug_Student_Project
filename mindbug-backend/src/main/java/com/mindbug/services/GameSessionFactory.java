@@ -15,7 +15,8 @@ public class GameSessionFactory {
     
     public GameSession createGameSession(Game game) {
         GameSession gameSession = this.applicationContext.getBean(GameSession.class, game, 
-        this.applicationContext.getBean(WSMessageManager.class));
+        this.applicationContext.getBean(WSMessageManager.class),
+        this.applicationContext.getBean(GameSessionValidation.class));
         return gameSession;
     }
 }

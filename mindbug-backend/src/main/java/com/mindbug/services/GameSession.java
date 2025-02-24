@@ -7,7 +7,6 @@ import com.mindbug.websocket.WSMessageManager;
 import org.springframework.context.annotation.Scope;
 import lombok.Getter;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
@@ -25,13 +24,17 @@ public class GameSession {
 
     private GameStatus status = GameStatus.NOT_STARTED;
 
+    private GameSessionValidation gameSessionValidation;
+
     
-    public GameSession(Game game, WSMessageManager gameWsMessageManager) {
+    public GameSession(Game game, WSMessageManager gameWsMessageManager, GameSessionValidation gameSessionValidation) {
         this.game = game;
         
         this.gameWsMessageManager = gameWsMessageManager;
         this.wsChannel = "/topic/game/" + game.getId();
         this.gameWsMessageManager.setChannel(wsChannel);
+
+        this.gameSessionValidation = gameSessionValidation;
     }
 
 
@@ -55,12 +58,8 @@ public class GameSession {
     }
 
 
-    public void attack(Long playerId, Long gameId, Long CardId) {
+    public void attack(Long playerId, Long gameId, Long cardId) {
 
     }
-
-    // public void canAttack() {
-        
-    // }
     
 }
