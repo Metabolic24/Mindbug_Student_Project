@@ -69,6 +69,7 @@ public class GameServer {
 
         // Send newGame websocket messages to each player
         this.gameQueueWsMessageManager.sendMessage(new WSMessageMatchFound(newGame.getId(), newGame.getPlayer1().getId()));
+        System.out.println("ws message sent============");
 
 
         // Second player message
