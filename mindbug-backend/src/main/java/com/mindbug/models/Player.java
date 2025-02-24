@@ -1,6 +1,8 @@
 package com.mindbug.models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -29,6 +31,8 @@ public class Player implements Serializable {
 
     @Column
     private int mindbug;
+
+    private List<GameSessionCard> hand = new ArrayList<>();
 
     public Player(String nickname) {
         this.nickname = nickname;

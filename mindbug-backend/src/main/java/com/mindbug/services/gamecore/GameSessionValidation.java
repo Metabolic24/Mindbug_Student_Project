@@ -1,8 +1,9 @@
-package com.mindbug.services;
+package com.mindbug.services.gamecore;
 
 import org.springframework.stereotype.Service;
 
 import com.mindbug.models.Game;
+import com.mindbug.models.Player;
 
 @Service
 public class GameSessionValidation {
@@ -22,5 +23,22 @@ public class GameSessionValidation {
         } 
 
         validPLayer(gameSession, playerId);
+    }
+
+    public void canAttack(GameSession gameSession, Long playerId, Long cardId) {
+        // Check valid player
+        validPLayer(gameSession, playerId);
+
+        // Check game status
+        if (gameSession.getStatus() != GameStatus.PLAY_OR_ATTACK) {
+            throw new IllegalStateException("Cannot attck. Game not in play or attack phase.");
+        }
+
+        // Check if player have a card
+        Player player = gameSession.getPlayer(playerId);
+        boolean haveCard = player.getHand().stream().anyMatch(sessionCard -> sessionCard.getId() == cardId);
+        if (!haveCard) {
+            throw new IllegalStateException("Player " + playerId + " does not have card " + cardId + ".");
+        }
     }
 }

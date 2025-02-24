@@ -35,7 +35,7 @@ public class GameController {
 
     @PostMapping("/attack")
     public ResponseEntity<String>  attack(@RequestBody PlayerCardDto data) {
-       this.gameServer.handleAttack(data.getPlayerId(), data.getGameId(), data.getCardId());
+       this.gameServer.handleAttack(data.getPlayerId(), data.getGameId(), data.getSessioncardId());
        return ResponseEntity.ok().build();
     }
     

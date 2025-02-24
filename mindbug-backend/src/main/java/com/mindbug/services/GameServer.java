@@ -11,6 +11,7 @@ import com.mindbug.configs.Config;
 import com.mindbug.dtos.PlayerBasicInfoDto;
 import com.mindbug.models.Game;
 import com.mindbug.models.Player;
+import com.mindbug.services.gamecore.GameSession;
 import com.mindbug.services.wsmessages.WSMessageMatchFound;
 import com.mindbug.websocket.WSMessageManager;
 
@@ -84,9 +85,9 @@ public class GameServer {
         gameSession.confirmJoin(playerId);
     }
 
-    public void handleAttack(Long playerId, Long gameId, Long cardId) {
+    public void handleAttack(Long playerId, Long gameId, Long sessionCardId) {
         GameSession gameSession = this.getGameSession(gameId);
-        gameSession.attack(playerId, gameId, cardId);
+        gameSession.attack(playerId, gameId, sessionCardId);
     }
 
 }

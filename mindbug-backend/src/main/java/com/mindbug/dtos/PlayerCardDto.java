@@ -14,11 +14,11 @@ public class PlayerCardDto {
     private Long gameId;
 
     @NotEmpty
-    private Long cardId;
+    private Long sessioncardId;
 
     public PlayerCardDto(@NotEmpty Long playerId, @NotEmpty Long gameId, @NotEmpty Long cardId) {
         this.playerId = playerId;
         this.gameId = gameId;
-        this.cardId = cardId;
+        this.sessioncardId = cardId;
     }
 }
