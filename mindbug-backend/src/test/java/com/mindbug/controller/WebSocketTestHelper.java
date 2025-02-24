@@ -28,7 +28,6 @@ public class WebSocketTestHelper {
 
     public WebSocketTestHelper(int port) {
         this.serverUrl = "ws://localhost:" + port + "/mindbug-ws";
-        System.out.println(serverUrl);
         this.messages = new LinkedBlockingQueue<>();
 
         // Configuration du client STOMP

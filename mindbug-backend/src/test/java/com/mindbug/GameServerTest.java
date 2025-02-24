@@ -69,7 +69,7 @@ public class GameServerTest {
         assertNotNull(player1Info.get("nickname"),
                 "1st call of join game: nickname should not be null");
         
-        System.out.println("*** Testing 1st player calling join game: OK***");
+        System.out.println("*** Testing 1st player calling join game: OK *** \n");
 
         // 1st player call join game
         System.out.println("*** Testing 2nd player calling join game: ***");
@@ -85,7 +85,7 @@ public class GameServerTest {
         assertNotNull(player2Info.get("nickname"),
                 "1st call of join game: nickname should not be null");
 
-        System.out.println("*** Testing 2nd player calling join game: OK***");
+        System.out.println("*** Testing 2nd player calling join game: OK***\n");
 
         // Check match found message recevied twice
         System.out.println("*** Testing match found messages: ***");
@@ -93,13 +93,16 @@ public class GameServerTest {
         JsonNode message1 = wsHelper.getNextMessage(5, TimeUnit.SECONDS);
         JsonNode message2 = wsHelper.getNextMessage(5, TimeUnit.SECONDS);
 
-        assertNotNull(message1, "Websocket message should not be null");
-        assertNotNull(message2, "Websocket message should not be null");
+        assertNotNull(message1, "Websocket match found first message should not be null");
+        assertNotNull(message2, "Websocket match found second  message should not be null");
 
+        System.out.println("Testing 1st match found message");
         testWSMachtFoundMsg(message1, player1Info, player2Info);
+
+        System.out.println("Testing 2nd match found message");
         testWSMachtFoundMsg(message2, player1Info, player2Info);
 
-        System.out.println("*** Testing match found messages: OK ***");
+        System.out.println("*** Testing match found messages: OK ***\n");
 
         // Subscirbe to game websocket
         wsHelper.subscribe("/topic/game/" + message1.get("data").get("gameId"));
@@ -108,38 +111,47 @@ public class GameServerTest {
         // Testing confirm join
         System.out.println("*** Testing 1st player confirm join: ***");
         testConfirmJoin(player1Info, message1.get("data").get("gameId").asInt());
-        testConfirmJoin(player2Info, message1.get("data").get("gameId").asInt());
+        System.out.println("*** Testing 1st player confirm join: OK \n***");
+
         System.out.println("*** Testing 1st player confirm join: ***");
+        testConfirmJoin(player2Info, message1.get("data").get("gameId").asInt());
+        System.out.println("*** Testing 1st player confirm join: OK \n***");
 
         // Testing new game ws message
         System.out.println("*** Testing new game websocket messages: ***");
         Thread.sleep(500);
         JsonNode wsMsgNewGame = wsHelper.getNextMessage(5, TimeUnit.SECONDS);
         
-        assertNotNull(wsMsgNewGame);
-        assertTrue(wsMsgNewGame.has("messageID"));
-        assertEquals("newGame", wsMsgNewGame.get("messageID").asText());
+        assertNotNull(wsMsgNewGame, "New game websocket message should not be null");
+        assertTrue(wsMsgNewGame.has("messageID"), "New game websoket message should have field messageID");
+        assertEquals("newGame", wsMsgNewGame.get("messageID").asText(), "New game websoket message field messageID should be equals to newGame");
 
-        assertTrue(wsMsgNewGame.has("data"));
-        assertTrue(wsMsgNewGame.get("data").has("id"));
-        assertEquals(message1.get("data").get("gameId").asInt(), wsMsgNewGame.get("data").get("id").asInt());
+        assertTrue(wsMsgNewGame.has("data"), "New game websoket message  should have field data");
+        assertTrue(wsMsgNewGame.get("data").has("id"), "New game websoket message should have field data.id");
+        assertEquals(message1.get("data").get("gameId").asInt(),
+        wsMsgNewGame.get("data").get("id").asInt(),
+        "New game websoket message data.id should be equals to match found websocket match found msg gameId");
+        System.out.println("*** Testing new game websocket messages: OK ***\n");
 
 
     }
 
     private void testWSMachtFoundMsg(JsonNode message, Map<String, Object>  player1Info, Map<String, Object>  player2Info) {
-        assertTrue(message.has("messageID"));
-        assertEquals("MATCH_FOUND", message.get("messageID").asText());
+        assertTrue(message.has("messageID"), "Match found websocket message should have field messsageID");
+        assertEquals("MATCH_FOUND", message.get("messageID").asText(),
+        "Match found websocket message field messageID should be equals to MATCH_FOUND");
 
-        assertTrue(message.has("data"));
-        assertNotNull(message.get("data"));
+        assertTrue(message.has("data"), "Match found websocket message should have field data");
+        assertNotNull(message.get("data"), "Match found websocket message field data should not be null");
 
-        assertTrue(message.get("data").has("playerId"));
+        assertTrue(message.get("data").has("playerId"), "Match found websocket message shoudl have field data.playerId");
         assertTrue(message.get("data").get("playerId").intValue() == ((Integer)player1Info.get("playerId")) ||
-        message.get("data").get("playerId").intValue() == ((Integer)player2Info.get("playerId")));
+        message.get("data").get("playerId").intValue() == ((Integer)player2Info.get("playerId")),
+        "Match found websocket message field data.playerId shoulb equals to either player1 id or player 2 id");
 
-        assertTrue(message.get("data").has("gameId"));
-        assertNotNull(message.get("data").get("gameId"));
+        assertTrue(message.get("data").has("gameId"), "Match found websocket message should have field data.gameId");
+        assertNotNull(message.get("data").get("gameId")
+        , "Match found websocket message field gameId should not be null");
     }
 
     private void testConfirmJoin(Map<String, Object>  playerInfo, int gameId) throws Exception {
