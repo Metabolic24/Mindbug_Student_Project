@@ -4,20 +4,7 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.Getter;
 import lombok.Setter;
-import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.effect.DestroyEffect;
-import org.metacorp.mindbug.effect.DisableTimingEffect;
-import org.metacorp.mindbug.effect.DiscardEffect;
-import org.metacorp.mindbug.effect.DrawEffect;
-import org.metacorp.mindbug.effect.GainEffect;
-import org.metacorp.mindbug.effect.InflictEffect;
-import org.metacorp.mindbug.effect.KeywordUpEffect;
-import org.metacorp.mindbug.effect.NoAttackEffect;
-import org.metacorp.mindbug.effect.NoBlockEffect;
-import org.metacorp.mindbug.effect.PowerUpEffect;
-import org.metacorp.mindbug.effect.ReviveEffect;
-import org.metacorp.mindbug.effect.steal.StealEffect;
-import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.effect.impl.*;
 
 /** Abstract class for card effect */
 @Getter
@@ -38,13 +25,5 @@ import org.metacorp.mindbug.model.Game;
         @JsonSubTypes.Type(value = StealEffect.class, name = StealEffect.TYPE)}
 )
 public abstract class AbstractEffect {
-
     private EffectType type;
-
-    /**
-     * Apply the current effect
-     * @param game the current game
-     * @param card the card that contains this effect
-     */
-    public abstract void apply(Game game, CardInstance card);
 }

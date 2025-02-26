@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
-import org.metacorp.mindbug.effect.GainEffect;
+import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.Player;
 

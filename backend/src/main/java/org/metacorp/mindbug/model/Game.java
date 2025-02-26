@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
-import org.metacorp.mindbug.choice.IChoice;
+import org.metacorp.mindbug.model.choice.IChoice;
 import org.metacorp.mindbug.model.player.Player;
 
 import java.util.*;

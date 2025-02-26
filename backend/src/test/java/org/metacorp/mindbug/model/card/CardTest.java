@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectType;
-import org.metacorp.mindbug.effect.PowerUpEffect;
+import org.metacorp.mindbug.model.effect.impl.PowerUpEffect;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

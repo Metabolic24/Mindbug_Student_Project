@@ -5,10 +5,11 @@ import org.metacorp.mindbug.model.effect.AbstractEffect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
-import org.metacorp.mindbug.choice.IChoice;
+import org.metacorp.mindbug.model.choice.IChoice;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.effect.AbstractEffectResolver;
 
 import java.util.*;
 
@@ -97,11 +98,11 @@ public class GameService {
         }
 
         for (EffectsToApply effect : powerUpEffects) {
-            effect.getEffects().forEach(effectToApply -> effectToApply.apply(game, effect.getCard()));
+            effect.getEffects().forEach(effectToApply -> AbstractEffectResolver.getResolver(effectToApply).apply(game, effect.getCard()));
         }
 
         for (EffectsToApply effect : otherEffects) {
-            effect.getEffects().forEach(effectToApply -> effectToApply.apply(game, effect.getCard()));
+            effect.getEffects().forEach(effectToApply -> AbstractEffectResolver.getResolver(effectToApply).apply(game, effect.getCard()));
         }
     }
 }

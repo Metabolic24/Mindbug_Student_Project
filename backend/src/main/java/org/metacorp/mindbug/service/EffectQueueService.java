@@ -4,9 +4,10 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.AbstractEffect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
-import org.metacorp.mindbug.choice.SimultaneousEffectsChoice;
+import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.service.effect.AbstractEffectResolver;
 
 import java.util.*;
 
@@ -51,7 +52,7 @@ public class EffectQueueService {
             while (iterator.hasNext()) {
                 // Get the next effect, apply it then remove it from the list
                 AbstractEffect effect = iterator.next();
-                effect.apply(game, currentEffect.getCard());
+                AbstractEffectResolver.getResolver(effect).apply(game, currentEffect.getCard());
                 iterator.remove();
 
                 GameService.refreshGameState(game);

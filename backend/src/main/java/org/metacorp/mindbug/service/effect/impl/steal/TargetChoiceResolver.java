@@ -1,0 +1,34 @@
+package org.metacorp.mindbug.service.effect.impl.steal;
+
+import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.impl.StealEffect;
+import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.service.effect.impl.StealEffectResolver;
+
+import java.util.List;
+
+public class TargetChoiceResolver extends StealEffectResolver implements ResolvableEffect<List<CardInstance>>  {
+
+    private final Player newOwner;
+
+    /**
+     * Constructor
+     *
+     * @param effect the effect to be resolved
+     */
+    public TargetChoiceResolver(StealEffect effect, Player newOwner) {
+        super(effect);
+        this.newOwner = newOwner;
+    }
+
+    @Override
+    public void resolve(Game game, List<CardInstance> chosenTargets) {
+        if (chosenTargets != null) {
+            stealCards(chosenTargets, game, newOwner);
+        } else {
+            // TODO Unexpected resolver value (raise error?)
+        }
+    }
+}

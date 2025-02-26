@@ -301,6 +301,7 @@
         "type": "STEAL",
         "value": 1,
         "source": "HAND",
+        "selection": "OPPONENT",
         "mayPlay": true
       }]
     },
@@ -363,7 +364,7 @@
         "type": "STEAL",
         "value": 2,
         "source": "HAND",
-        "random": true
+        "selection": "RANDOM"
       }]
     },
     "unique": true

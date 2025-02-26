@@ -2,7 +2,8 @@ package org.metacorp.mindbug.choice;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.metacorp.mindbug.effect.GainEffect;
+import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
+import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
