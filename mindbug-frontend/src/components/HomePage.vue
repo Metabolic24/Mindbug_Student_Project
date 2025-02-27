@@ -3,6 +3,7 @@
     <h1>Welcome to Mindbug's Cards</h1>
     <div class="button-group">
       <button @click="goToSets" class="styled-button">Set of Cards</button>
+      <button @click="goToGame" class="styled-button">Start Game</button>
     </div>
   </div>
 </template>
@@ -12,6 +13,10 @@ export default {
   methods: {
     goToSets() {
       this.$router.push('/setsofcards');
+    },
+
+    goToGame(){
+      this.$router.push('/gameboard');
     }
   }
 }
