@@ -3,6 +3,7 @@ package org.metacorp.mindbug.model;
 import lombok.Getter;
 import lombok.Setter;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.choice.IChoice;
 import org.metacorp.mindbug.model.player.Player;
@@ -26,7 +27,7 @@ public class Game {
     private CardInstance playedCard;
     private CardInstance attackingCard;
 
-    private final Queue<EffectsToApply> effectQueue;
+    private final EffectQueue effectQueue;
     private IChoice<?> choice;
     private Runnable afterEffect;
 
@@ -36,7 +37,7 @@ public class Game {
     public Game(String player1, String player2) {
         finished = false;
         bannedCards = new ArrayList<>();
-        effectQueue = new LinkedList<>();
+        effectQueue = new EffectQueue();
         players = Arrays.asList(new Player(player1), new Player(player2));
     }
 

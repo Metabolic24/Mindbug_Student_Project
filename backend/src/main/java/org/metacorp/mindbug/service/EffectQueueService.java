@@ -1,15 +1,14 @@
 package org.metacorp.mindbug.service;
 
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.effect.GenericEffect;
-import org.metacorp.mindbug.model.effect.EffectTiming;
-import org.metacorp.mindbug.model.effect.EffectsToApply;
+import org.metacorp.mindbug.model.effect.*;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class EffectQueueService {
 
@@ -18,8 +17,37 @@ public class EffectQueueService {
         // Nothing to do
     }
 
-    public static void addEffectsToQueue(CardInstance card, EffectTiming timing, Queue<EffectsToApply> effectQueue) {
-        List<GenericEffect> effects = card.getEffects(timing);
+    /**
+     * Add card effect(s) to the effect queue if allowed
+     * @param card the card containing the effects to be added
+     * @param timing the effect timing to use to add effects
+     * @param effectQueue the effect queue
+     */
+    public static void addBoardEffectsToQueue(CardInstance card, EffectTiming timing, EffectQueue effectQueue) {
+        addEffectsToQueue(card, timing, effectQueue, EffectLocation.BOARD);
+    }
+
+    /**
+     * Add card effect(s) to the effect queue if allowed
+     * @param card the card containing the effects to be added
+     * @param timing the effect timing to use to add effects
+     * @param effectQueue the effect queue
+     */
+    public static void addDiscardEffectsToQueue(CardInstance card, EffectTiming timing, EffectQueue effectQueue) {
+        addEffectsToQueue(card, timing, effectQueue, EffectLocation.DISCARD);
+    }
+
+    /**
+     * Add card effect(s) to the effect queue if allowed
+     *
+     * @param card        the card containing the effects to be added
+     * @param timing      the effect timing to use to add effects
+     * @param effectQueue the effect queue
+     * @param location    the effect location
+     */
+    private static void addEffectsToQueue(CardInstance card, EffectTiming timing, EffectQueue effectQueue, EffectLocation location) {
+        List<GenericEffect> effects = card.getEffects(timing).stream()
+                .filter(genericEffect -> genericEffect.getLocation() == location).collect(Collectors.toList());
         if (!effects.isEmpty()) {
             if (card.getOwner().canTrigger(timing)) {
                 effectQueue.add(new EffectsToApply(effects, card));
@@ -30,19 +58,28 @@ public class EffectQueueService {
         }
     }
 
+    /**
+     * Resolve effect queue<br>
+     * @param fromSimultaneousChoice is this method called after a simultaneous choice resolution
+     * @param game the current game state
+     * @throws GameStateException if a game state error is detected during effect queue resolution
+     */
     public static void resolveEffectQueue(boolean fromSimultaneousChoice, Game game) throws GameStateException {
         if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before resolving effect queue", Map.of("choice", game.getChoice()));
         }
 
-        Queue<EffectsToApply> effectQueue = game.getEffectQueue();
+        EffectQueue effectQueue = game.getEffectQueue();
 
         // Specific behavior if there are more than one effect to apply in the queue
-        if (!fromSimultaneousChoice && effectQueue.size() >= 2) {
+        if (!fromSimultaneousChoice && !effectQueue.isResolvingEffect() && effectQueue.size() >= 2) {
             game.setChoice(new SimultaneousEffectsChoice(new HashSet<>(effectQueue)));
             effectQueue.clear();
             return;
         }
+
+        // Reset this value as it is no more needed
+        effectQueue.setResolvingEffect(false);
 
         // Loop over each effect
         while (!effectQueue.isEmpty()) {
@@ -65,6 +102,10 @@ public class EffectQueueService {
                 if (game.getChoice() != null) {
                     if (!iterator.hasNext()) {
                         effectQueue.remove(currentEffect);
+
+                    } else {
+                        // Update this boolean attribute so next effect resolution won't trigger a simultaneous choice first
+                        effectQueue.setResolvingEffect(true);
                     }
                     return;
                 }

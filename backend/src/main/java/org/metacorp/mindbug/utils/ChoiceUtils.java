@@ -20,7 +20,7 @@ public final class ChoiceUtils {
 
     }
 
-    public static void resolveBooleanChoice(Boolean choiceData, BooleanChoice choice, Game game) {
+    public static void  resolveBooleanChoice(Boolean choiceData, BooleanChoice choice, Game game) {
         // First reset choice so it doesn't block next steps
         game.setChoice(null);
 
@@ -45,20 +45,23 @@ public final class ChoiceUtils {
         }
     }
 
-    public static void resolveSimultaneousChoice(List<UUID> sortedEffectIds, SimultaneousEffectsChoice choice, Game game) {
-        Set<EffectsToApply> effectsToSort = choice.getEffectsToSort();
-        if (sortedEffectIds == null || sortedEffectIds.size() != effectsToSort.size()) {
+    public static void resolveSimultaneousChoice(UUID cardId, SimultaneousEffectsChoice choice, Game game) {
+        if (cardId == null) {
             //TODO Raise an error
             return;
         }
 
-        for (UUID effectId : sortedEffectIds) {
-            EffectsToApply foundEffect = effectsToSort.stream()
-                    .filter(effectToApply -> effectToApply.getUuid().equals(effectId))
-                    .findFirst().orElseThrow();
+        Set<EffectsToApply> effectsToSort = choice.getEffectsToSort();
 
-            game.getEffectQueue().add(foundEffect);
-        }
+        // First add the corresponding effect in the queue
+        EffectsToApply foundEffect = effectsToSort.stream()
+                .filter(effectToApply -> effectToApply.getCard().getUuid().equals(cardId))
+                .findFirst().orElseThrow();
+        game.getEffectQueue().add(foundEffect);
+
+        // Then add the other effects
+        effectsToSort.remove(foundEffect);
+        game.getEffectQueue().addAll(effectsToSort);
 
         // Reset the choice only if the given choice list was valid
         game.setChoice(null);

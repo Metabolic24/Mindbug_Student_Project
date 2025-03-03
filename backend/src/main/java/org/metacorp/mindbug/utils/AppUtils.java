@@ -19,15 +19,15 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Stream;
 
-public class AppUtils {
+public final class AppUtils {
 
-    private static Random random;
+    private static final Random RND = new Random();
+
     @Setter
     private static boolean verbose = false;
 
     public static Game startGame() {
         Game game = StartService.newGame("Player1", "Player2");
-        random = new Random();
 
         System.out.println("\nDEBUT DU JEU !!!\n");
         nextTurn(game);
@@ -43,7 +43,7 @@ public class AppUtils {
             return;
         }
 
-        int index = random.nextInt(currentPlayer.getHand().size());
+        int index = RND.nextInt(currentPlayer.getHand().size());
         CardInstance card = currentPlayer.getHand().get(index);
 
         System.out.printf("%s joue la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
@@ -64,7 +64,7 @@ public class AppUtils {
             return;
         }
 
-        int index = random.nextInt(availableCards.size());
+        int index = RND.nextInt(availableCards.size());
         CardInstance attackCard = availableCards.get(index);
 
         System.out.printf("%s attaque avec la carte '%s'\n", currentPlayer.getName(), attackCard.getCard().getName());
@@ -107,7 +107,7 @@ public class AppUtils {
             System.out.printf("%s ne peut pas défendre\n", opponentPlayer.getName());
             AttackService.resolveAttack(null, game);
         } else {
-            int index = random.nextInt(blockers.size());
+            int index = RND.nextInt(blockers.size());
             CardInstance defendCard = blockers.get(index);
 
             System.out.printf("%s défend avec la carte '%s'\n", opponentPlayer.getName(), defendCard.getCard().getName());
@@ -134,7 +134,7 @@ public class AppUtils {
 
                     System.out.printf("Ordre choisi : %s\n", shuffledEffects.stream().map(effectToApply -> effectToApply.getCard().getCard().getName()).toList());
 
-                    GameService.resolveChoice(shuffledEffects.stream().map(EffectsToApply::getUuid).toList(), game);
+                    GameService.resolveChoice(shuffledEffects.getFirst().getCard().getUuid(), game);
                 }
                 case TARGET -> {
                     System.out.println("Résolution d'un choix de cible(s)");
@@ -151,7 +151,7 @@ public class AppUtils {
                 case FRENZY, BOOLEAN -> {
                     System.out.printf("Résolution d'un choix booléen de type %s\n", choice.getType());
 
-                    boolean randomBoolean = random.nextBoolean();
+                    boolean randomBoolean = RND.nextBoolean();
                     System.out.printf("Valeur choisie : %s\n", randomBoolean);
 
                     GameService.resolveChoice(randomBoolean, game);

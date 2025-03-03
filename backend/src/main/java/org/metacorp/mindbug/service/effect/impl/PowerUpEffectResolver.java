@@ -27,7 +27,7 @@ public class PowerUpEffectResolver extends GenericEffectResolver<PowerUpEffect> 
         boolean self = effect.isSelf();
         boolean selfTurn = effect.isSelfTurn();
         boolean allies = effect.isAllies();
-        boolean byEnemy = effect.isByEnemy();
+        boolean forEachAlly = effect.isForEachAlly();
         Integer lifePoints = effect.getLifePoints();
 
         Player currentPlayer = card.getOwner();
@@ -39,9 +39,9 @@ public class PowerUpEffectResolver extends GenericEffectResolver<PowerUpEffect> 
             return;
         }
 
-        if (byEnemy) {
-            int opponentBoardSize = currentPlayer.getOpponent(game.getPlayers()).getBoard().size();
-            powerToAdd *= opponentBoardSize;
+        if (forEachAlly) {
+            int boardSize = currentPlayer.getBoard().size();
+            powerToAdd *= boardSize - 1;
         }
 
         if (self) {

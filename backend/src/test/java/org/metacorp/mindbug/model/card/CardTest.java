@@ -55,7 +55,7 @@ public class CardTest {
             assertTrue(effect.isAllies());
             assertFalse(effect.isAlone());
             assertFalse(effect.isSelf());
-            assertFalse(effect.isByEnemy());
+            assertFalse(effect.isForEachAlly());
             assertTrue(effect.isSelfTurn());
 
         } catch (IOException e) {

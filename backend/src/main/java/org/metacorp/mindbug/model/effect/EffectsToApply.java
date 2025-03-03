@@ -11,7 +11,6 @@ import java.util.UUID;
 @Getter
 @Setter
 public class EffectsToApply {
-    private UUID uuid;
     @NonNull
     private List<GenericEffect> effects;
     private CardInstance card;
@@ -21,7 +20,6 @@ public class EffectsToApply {
      * @param card the card related to the effect
      */
     public EffectsToApply(List<GenericEffect> effects, CardInstance card) {
-        uuid = card.getUuid();
         this.effects = effects;
         this.card = card;
     }

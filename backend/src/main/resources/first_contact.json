@@ -63,7 +63,7 @@
       "PASSIVE": [{
         "type": "POWER_UP",
         "value": 2,
-        "byEnemy": true
+        "forEachAlly": true
       }]
     },
     "unique": false
@@ -443,7 +443,8 @@
     "keywords": ["FRENZY"],
     "effects": {
       "LIFE_LOST": [{
-        "type": "REVIVE"
+        "type": "REVIVE",
+        "location": "DISCARD"
       }]
     },
     "unique": false

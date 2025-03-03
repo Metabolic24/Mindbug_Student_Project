@@ -171,10 +171,10 @@ public class PowerUpEffectResolverTest {
     }
 
     @Test
-    public void testWithByEnemyCondition_noEffect() {
+    public void testWithForEachAllyCondition_noEffect() {
         currentPlayer.addCardToBoard(randomCard);
 
-        effect.setByEnemy(true);
+        effect.setForEachAlly(true);
         effect.setValue(2);
         effectResolver.apply(game, randomCard);
 
@@ -182,14 +182,14 @@ public class PowerUpEffectResolverTest {
     }
 
     @Test
-    public void testWithByEnemyCondition_threeEnemies() {
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
-        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+    public void testWithhForEachAllyCondition_threeEnemies() {
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
 
         currentPlayer.addCardToBoard(randomCard);
 
-        effect.setByEnemy(true);
+        effect.setForEachAlly(true);
         effect.setValue(2);
         effectResolver.apply(game, randomCard);
 

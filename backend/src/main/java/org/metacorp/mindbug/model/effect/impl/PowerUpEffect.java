@@ -35,9 +35,9 @@ public class PowerUpEffect extends GenericEffect {
      */
     private boolean alone;
     /**
-     * Should power be gained for each opponent card
+     * Should power be gained for each ally card
      */
-    private boolean byEnemy;
+    private boolean forEachAlly;
     /**
      * Should the power gain be only available on the owner turn
      */

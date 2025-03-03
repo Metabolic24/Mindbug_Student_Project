@@ -52,7 +52,7 @@ public class AttackService {
         game.setAttackingCard(attackCard);
 
         // Add ATTACK effects if the player is allowed to trigger them
-        EffectQueueService.addEffectsToQueue(attackCard, EffectTiming.ATTACK, game.getEffectQueue());
+        EffectQueueService.addBoardEffectsToQueue(attackCard, EffectTiming.ATTACK, game.getEffectQueue());
 
         game.setAfterEffect(() -> {
             Player cardOwner = attackCard.getOwner();

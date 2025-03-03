@@ -3,6 +3,7 @@ package org.metacorp.mindbug.service.effect.impl;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
 import org.metacorp.mindbug.model.player.Player;
@@ -82,7 +83,7 @@ public class DestroyEffectResolver extends GenericEffectResolver<DestroyEffect> 
     }
 
     private void destroyCards(Game game, List<CardInstance> cards) {
-        Queue<EffectsToApply> effectQueue = game.getEffectQueue();
+        EffectQueue effectQueue = game.getEffectQueue();
         for (CardInstance card : cards) {
             GameService.defeatCard(card, effectQueue);
         }

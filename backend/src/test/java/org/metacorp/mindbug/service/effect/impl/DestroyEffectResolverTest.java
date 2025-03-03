@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.choice.ChoiceType;
@@ -615,8 +616,15 @@ public class DestroyEffectResolverTest {
         assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
 
-        if (!randomCard.getEffects(EffectTiming.DEFEATED).isEmpty()) {
-            assertEquals(randomCard.getEffects(EffectTiming.DEFEATED).size(), game.getEffectQueue().size());
+
+        if (card.getEffects(EffectTiming.DEFEATED).isEmpty()) {
+            assertTrue(game.getEffectQueue().isEmpty());
+        } else {
+            assertEquals(1, game.getEffectQueue().size());
+
+            EffectsToApply effectsToApply = game.getEffectQueue().peek();
+            assertNotNull(effectsToApply);
+            assertEquals(card.getEffects(EffectTiming.DEFEATED).size(), effectsToApply.getEffects().size());
         }
     }
 

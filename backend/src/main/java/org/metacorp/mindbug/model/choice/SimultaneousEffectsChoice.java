@@ -6,18 +6,17 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.utils.ChoiceUtils;
 
-import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
 @Data
-public class SimultaneousEffectsChoice implements IChoice<List<UUID>> {
+public class SimultaneousEffectsChoice implements IChoice<UUID> {
     @NonNull
     private Set<EffectsToApply> effectsToSort;
 
     @Override
-    public void resolve(List<UUID> sortedEffectIds, Game game) {
-        ChoiceUtils.resolveSimultaneousChoice(sortedEffectIds, this, game);
+    public void resolve(UUID cardId, Game game) {
+        ChoiceUtils.resolveSimultaneousChoice(cardId, this, game);
     }
 
     @Override

@@ -1,8 +1,7 @@
-package org.metacorp.mindbug.choice;
+package org.metacorp.mindbug.model.choice;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -10,6 +9,7 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.StartService;
+import org.metacorp.mindbug.utils.ChoiceUtils;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -31,7 +31,7 @@ public class SimultaneousChoiceTest {
     }
 
     @Test
-    public void testResolveSimultaneousChoice() {
+    public void testResolve() {
         GainEffect attackEffect = new GainEffect();
         CardInstance attackCard = currentPlayer.getHand().removeFirst();
         attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(attackEffect));
@@ -48,13 +48,12 @@ public class SimultaneousChoiceTest {
         )));
         game.setChoice(choice);
 
-        choice.resolve(choice.getEffectsToSort().stream().map(EffectsToApply::getUuid).toList(), game);
+        choice.resolve(attackCard.getUuid(), game);
 
         assertNull(game.getChoice());
         assertEquals(2, game.getEffectQueue().size());
 
-        for (EffectsToApply effect : game.getEffectQueue()) {
-            assertTrue(effect.getCard().equals(attackCard) || effect.getCard().equals(defendingCard));
-        }
+        assertEquals(attackCard, game.getEffectQueue().get(0).getCard());
+        assertEquals(defendingCard, game.getEffectQueue().get(1).getCard());
     }
 }

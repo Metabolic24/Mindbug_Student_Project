@@ -2,7 +2,10 @@ package org.metacorp.mindbug.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
+import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.Player;
@@ -70,5 +73,63 @@ public class PlayCardServiceTest {
 
         assertEquals(0, game.getEffectQueue().size());
         assertNotNull(game.getAfterEffect());
+    }
+
+    @Test
+    public void testPickCard_nominal() throws GameStateException {
+        CardInstance card = currentPlayer.getHand().getFirst();
+
+        PlayCardService.pickCard(card, game);
+        assertEquals(5, currentPlayer.getHand().size());
+        assertFalse(currentPlayer.getHand().contains(card));
+        assertEquals(4, currentPlayer.getDrawPile().size());
+        assertTrue(currentPlayer.getBoard().isEmpty());
+
+        assertEquals(card, game.getPlayedCard());
+    }
+
+    @Test
+    public void testPickCard_playedCard() {
+        CardInstance card = currentPlayer.getHand().getFirst();
+        game.setPlayedCard(card);
+
+        try {
+            PlayCardService.pickCard(card, game);
+            fail("An exception should have been thrown");
+        } catch (GameStateException e) {
+            assertEquals("Inconsistent game state: a card has already been picked", e.getMessage());
+            assertEquals(e.getAdditionalData().get("playedCard"), game.getPlayedCard());
+        }
+    }
+
+    @Test
+    public void testPickCard_choice() {
+        CardInstance card = currentPlayer.getHand().getFirst();
+        game.setChoice(new FrenzyAttackChoice(card));
+
+        try {
+            PlayCardService.pickCard(card, game);
+            fail("An exception should have been thrown");
+        } catch (GameStateException e) {
+            assertEquals("Inconsistent game state: a choice needs to be resolved before picking a new card", e.getMessage());
+            assertEquals(e.getAdditionalData().get("choice"), game.getChoice());
+        }
+    }
+
+    @Test
+    public void testPickCard_attackingCard() {
+        CardInstance card = currentPlayer.getHand().getFirst();
+        currentPlayer.addCardToBoard(card);
+        game.setAttackingCard(card);
+
+        CardInstance otherCard = currentPlayer.getHand().getFirst();
+
+        try {
+            PlayCardService.pickCard(otherCard, game);
+            fail("An exception should have been thrown");
+        } catch (GameStateException e) {
+            assertEquals("Inconsistent game state: an attack needs to be resolved before picking a new card", e.getMessage());
+            assertEquals(e.getAdditionalData().get("attackingCard"), card);
+        }
     }
 }

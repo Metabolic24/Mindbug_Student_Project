@@ -102,7 +102,7 @@ public class PlayCardService {
         GameService.refreshGameState(game);
 
         // Add PLAY effects (if any) if player is allowed to trigger them
-        EffectQueueService.addEffectsToQueue(playedCard, EffectTiming.PLAY, game.getEffectQueue());
+        EffectQueueService.addBoardEffectsToQueue(playedCard, EffectTiming.PLAY, game.getEffectQueue());
 
         game.setAfterEffect(() -> {
             // Reset the played card value

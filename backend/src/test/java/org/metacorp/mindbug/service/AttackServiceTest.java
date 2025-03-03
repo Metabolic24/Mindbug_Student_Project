@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.Player;
@@ -34,7 +35,15 @@ public class AttackServiceTest {
 
         AttackService.processAttackDeclaration(attackCard, game);
 
-        assertEquals(attackCard.getEffects(EffectTiming.ATTACK).size(), game.getEffectQueue().size());
+        if (attackCard.getEffects(EffectTiming.ATTACK).isEmpty()) {
+            assertTrue(game.getEffectQueue().isEmpty());
+        } else {
+            assertEquals(1, game.getEffectQueue().size());
+
+            EffectsToApply effectsToApply = game.getEffectQueue().peek();
+            assertNotNull(effectsToApply);
+            assertEquals(attackCard.getEffects(EffectTiming.ATTACK).size(), effectsToApply.getEffects().size());
+        }
     }
 
     @Test

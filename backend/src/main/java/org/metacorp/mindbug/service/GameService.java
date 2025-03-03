@@ -3,7 +3,9 @@ package org.metacorp.mindbug.service;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.IChoice;
+import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
@@ -25,25 +27,9 @@ public class GameService {
             ((IChoice<T>)choice).resolve(data, game);
 
             GameService.refreshGameState(game);
-            EffectQueueService.resolveEffectQueue(true, game);
+            EffectQueueService.resolveEffectQueue(choice.getType() == ChoiceType.SIMULTANEOUS, game);
         } catch (ClassCastException e) {
             throw new GameStateException("invalid choice resolution", e, Map.of("choice", choice, "data", data));
-        }
-    }
-
-    public static void lifePointLost(Player player, Game game) {
-        if (player.getTeam().getLifePoints() <= 0) {
-            endGame(player, game);
-            return;
-        }
-
-        for (CardInstance card : player.getBoard()) {
-            EffectQueueService.addEffectsToQueue(card, EffectTiming.LIFE_LOST, game.getEffectQueue());
-        }
-
-        //TODO Il faudrait être capable de différencier un effet LIFE_LOST qui s'active uniquement dans la défausse d'un effet qui s'active uniquement sur le terrain
-        for (CardInstance card : player.getDiscardPile()) {
-            EffectQueueService.addEffectsToQueue(card, EffectTiming.LIFE_LOST, game.getEffectQueue());
         }
     }
 
@@ -54,12 +40,27 @@ public class GameService {
         game.setFinished(true);
     }
 
-    public static void defeatCard(CardInstance card, Queue<EffectsToApply> effectQueue) {
+    public static void lifePointLost(Player player, Game game) {
+        if (player.getTeam().getLifePoints() <= 0) {
+            endGame(player, game);
+            return;
+        }
+
+        for (CardInstance card : player.getBoard()) {
+            EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.LIFE_LOST, game.getEffectQueue());
+        }
+
+        for (CardInstance card : player.getDiscardPile()) {
+            EffectQueueService.addDiscardEffectsToQueue(card, EffectTiming.LIFE_LOST, game.getEffectQueue());
+        }
+    }
+
+    public static void defeatCard(CardInstance card, EffectQueue effectQueue) {
         if (card.isStillTough()) {
             card.setStillTough(false);
         } else {
             card.getOwner().addCardToDiscardPile(card);
-            EffectQueueService.addEffectsToQueue(card, EffectTiming.DEFEATED, effectQueue);
+            EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, effectQueue);
         }
     }
 
@@ -69,8 +70,8 @@ public class GameService {
         for (Player player: game.getPlayers()) {
             player.refresh();
 
-            passiveEffects.addAll(getPassiveEffects(player.getBoard()));
-            passiveEffects.addAll(getPassiveEffects(player.getDiscardPile()));
+            passiveEffects.addAll(getPassiveEffects(player.getBoard(), false));
+            passiveEffects.addAll(getPassiveEffects(player.getDiscardPile(), true));
         }
 
         // Sort effects by priority
@@ -83,13 +84,15 @@ public class GameService {
         }
     }
 
-    private static List<EffectsToApply> getPassiveEffects(List<CardInstance> cards) {
-        List<EffectsToApply> passiveEffects = new ArrayList<>();
+    private static List<EffectsToApply> getPassiveEffects(List<CardInstance> cards, boolean inDiscard) {
+        EffectTiming timing = inDiscard ? EffectTiming.DISCARD : EffectTiming.PASSIVE;
 
-        cards.forEach(card -> passiveEffects.addAll(card.getEffects(EffectTiming.PASSIVE)
-                .stream()
+        List<EffectsToApply> passiveEffects = new ArrayList<>();
+        cards.forEach(card -> passiveEffects.addAll(
+                card.getEffects(timing).stream()
                 .map(cardEffect -> new EffectsToApply(Collections.singletonList(cardEffect), card))
-                .toList()));
+                .toList())
+        );
 
         return passiveEffects;
     }

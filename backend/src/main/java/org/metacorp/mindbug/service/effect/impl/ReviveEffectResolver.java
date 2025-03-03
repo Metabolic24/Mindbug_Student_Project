@@ -37,7 +37,7 @@ public class ReviveEffectResolver extends GenericEffectResolver<ReviveEffect> im
             card.getOwner().getDiscardPile().remove(card);
             card.getOwner().getBoard().add(card);
 
-            EffectQueueService.addEffectsToQueue(card, EffectTiming.PLAY, game.getEffectQueue());
+            EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.PLAY, game.getEffectQueue());
         }
     }
 }

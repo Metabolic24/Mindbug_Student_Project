@@ -27,8 +27,12 @@ import org.metacorp.mindbug.model.effect.impl.*;
 public class GenericEffect {
     private EffectType type;
 
+    // Where this effect should trigger
+    private EffectLocation location;
+
     protected GenericEffect() {
-        // Nothing to do
+        // Set default location value
+        location = EffectLocation.BOARD;
     }
 
     /**
