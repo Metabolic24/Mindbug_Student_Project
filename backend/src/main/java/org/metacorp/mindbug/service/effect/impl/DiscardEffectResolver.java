@@ -5,7 +5,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.AbstractEffectResolver;
+import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Effect resolver for DisableTimingEffect
  */
-public class DiscardEffectResolver extends AbstractEffectResolver<DiscardEffect> implements ResolvableEffect<List<CardInstance>> {
+public class DiscardEffectResolver extends GenericEffectResolver<DiscardEffect> implements ResolvableEffect<List<CardInstance>> {
 
     /**
      * Constructor

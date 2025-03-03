@@ -3,7 +3,7 @@ package org.metacorp.mindbug.model.effect.impl;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.model.effect.AbstractEffect;
+import org.metacorp.mindbug.model.effect.GenericEffect;
 
 /**
  * Effect that revives the current card on some specific conditions
@@ -11,6 +11,6 @@ import org.metacorp.mindbug.model.effect.AbstractEffect;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class ReviveEffect extends AbstractEffect {
+public class ReviveEffect extends GenericEffect {
     public final static String TYPE = "REVIVE";
 }

@@ -3,13 +3,13 @@ package org.metacorp.mindbug.model.effect.impl;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.model.effect.AbstractEffect;
+import org.metacorp.mindbug.model.effect.GenericEffect;
 
 /** Effect that increase or modify current player life points */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class GainEffect extends AbstractEffect {
+public class GainEffect extends GenericEffect {
     public final static String TYPE = "GAIN";
 
     private int value;      // The number of Life Points that will be gained

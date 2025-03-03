@@ -3,12 +3,12 @@ package org.metacorp.mindbug.service.effect.impl;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.impl.DrawEffect;
-import org.metacorp.mindbug.service.effect.AbstractEffectResolver;
+import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
 /**
  * Effect resolver for DrawEffect
  */
-public class DrawEffectResolver extends AbstractEffectResolver<DrawEffect> {
+public class DrawEffectResolver extends GenericEffectResolver<DrawEffect> {
 
     /**
      * Constructor

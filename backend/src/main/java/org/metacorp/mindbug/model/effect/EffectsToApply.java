@@ -13,14 +13,14 @@ import java.util.UUID;
 public class EffectsToApply {
     private UUID uuid;
     @NonNull
-    private List<AbstractEffect> effects;
+    private List<GenericEffect> effects;
     private CardInstance card;
 
     /**
      * @param effects the effect that will later be applied
      * @param card the card related to the effect
      */
-    public EffectsToApply(List<AbstractEffect> effects, CardInstance card) {
+    public EffectsToApply(List<GenericEffect> effects, CardInstance card) {
         uuid = card.getUuid();
         this.effects = effects;
         this.card = card;

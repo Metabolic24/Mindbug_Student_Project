@@ -1,13 +1,13 @@
 package org.metacorp.mindbug.service;
 
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.effect.AbstractEffect;
+import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
-import org.metacorp.mindbug.service.effect.AbstractEffectResolver;
+import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
 import java.util.*;
 
@@ -19,7 +19,7 @@ public class EffectQueueService {
     }
 
     public static void addEffectsToQueue(CardInstance card, EffectTiming timing, Queue<EffectsToApply> effectQueue) {
-        List<AbstractEffect> effects = card.getEffects(timing);
+        List<GenericEffect> effects = card.getEffects(timing);
         if (!effects.isEmpty()) {
             if (card.getOwner().canTrigger(timing)) {
                 effectQueue.add(new EffectsToApply(effects, card));
@@ -48,11 +48,11 @@ public class EffectQueueService {
         while (!effectQueue.isEmpty()) {
             EffectsToApply currentEffect = effectQueue.peek();
 
-            Iterator<AbstractEffect> iterator = currentEffect.getEffects().iterator();
+            Iterator<GenericEffect> iterator = currentEffect.getEffects().iterator();
             while (iterator.hasNext()) {
                 // Get the next effect, apply it then remove it from the list
-                AbstractEffect effect = iterator.next();
-                AbstractEffectResolver.getResolver(effect).apply(game, currentEffect.getCard());
+                GenericEffect effect = iterator.next();
+                GenericEffectResolver.getResolver(effect).apply(game, currentEffect.getCard());
                 iterator.remove();
 
                 GameService.refreshGameState(game);

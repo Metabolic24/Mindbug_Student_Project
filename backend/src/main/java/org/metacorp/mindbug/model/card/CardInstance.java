@@ -3,8 +3,8 @@ package org.metacorp.mindbug.model.card;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.metacorp.mindbug.model.effect.AbstractEffect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.model.player.Player;
 
 import java.util.*;
@@ -44,8 +44,8 @@ public class CardInstance {
         this.ableToBlock = true;
     }
 
-    public List<AbstractEffect> getEffects(EffectTiming timing) {
-        List<AbstractEffect> effects = this.card.getEffects().get(timing);
+    public List<GenericEffect> getEffects(EffectTiming timing) {
+        List<GenericEffect> effects = this.card.getEffects().get(timing);
         return effects == null ? new ArrayList<>() : effects;
     }
 

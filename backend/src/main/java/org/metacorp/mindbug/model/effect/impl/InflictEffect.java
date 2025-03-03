@@ -3,13 +3,13 @@ package org.metacorp.mindbug.model.effect.impl;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.model.effect.AbstractEffect;
+import org.metacorp.mindbug.model.effect.GenericEffect;
 
 /** Effect that decrease or modify current player life points */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class InflictEffect extends AbstractEffect {
+public class InflictEffect extends GenericEffect {
     public final static String TYPE = "INFLICT";
 
     private int value;          // The number of life points to be lost

@@ -3,7 +3,7 @@ package org.metacorp.mindbug.model.effect.impl;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.model.effect.AbstractEffect;
+import org.metacorp.mindbug.model.effect.GenericEffect;
 
 /**
  * Effect that may destroy one or more cards
@@ -11,7 +11,7 @@ import org.metacorp.mindbug.model.effect.AbstractEffect;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class DestroyEffect extends AbstractEffect {
+public class DestroyEffect extends GenericEffect {
     public final static String TYPE = "DESTROY";
 
     private Integer value;          // The number of cards to destroy, -1 if all cards should be destroyed

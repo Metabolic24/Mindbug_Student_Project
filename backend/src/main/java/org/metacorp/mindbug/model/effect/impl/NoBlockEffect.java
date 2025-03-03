@@ -3,7 +3,7 @@ package org.metacorp.mindbug.model.effect.impl;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.model.effect.AbstractEffect;
+import org.metacorp.mindbug.model.effect.GenericEffect;
 
 /**
  * Effect that forbids one or more cards to block
@@ -11,7 +11,7 @@ import org.metacorp.mindbug.model.effect.AbstractEffect;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class NoBlockEffect extends AbstractEffect {
+public class NoBlockEffect extends GenericEffect {
     public final static String TYPE = "NO_BLOCK";
 
     /**

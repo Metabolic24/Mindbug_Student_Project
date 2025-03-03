@@ -4,20 +4,20 @@ import lombok.Getter;
 import lombok.Setter;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.effect.AbstractEffect;
+import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.model.effect.impl.*;
 import org.metacorp.mindbug.service.effect.impl.*;
 
 @Getter
 @Setter
-public abstract class AbstractEffectResolver<T extends AbstractEffect> {
+public abstract class GenericEffectResolver<T extends GenericEffect> {
     protected T effect;
 
     /**
      * Protected constructor
      * @param effect the effect that needs to be resolved
      */
-    protected AbstractEffectResolver(T effect) {
+    protected GenericEffectResolver(T effect) {
         this.effect = effect;
     }
 
@@ -28,7 +28,7 @@ public abstract class AbstractEffectResolver<T extends AbstractEffect> {
      */
     public abstract void apply(Game game, CardInstance effectSource);
 
-    public static <T extends AbstractEffect> AbstractEffectResolver<?> getResolver(T effect) {
+    public static <T extends GenericEffect> GenericEffectResolver<?> getResolver(T effect) {
         return switch (effect.getType()) {
             case DESTROY -> new DestroyEffectResolver((DestroyEffect) effect);
             case DISABLE_TIMING -> new DisableTimingEffectResolver((DisableTimingEffect) effect);

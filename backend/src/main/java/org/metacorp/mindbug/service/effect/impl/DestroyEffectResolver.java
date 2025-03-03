@@ -7,7 +7,7 @@ import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.GameService;
-import org.metacorp.mindbug.service.effect.AbstractEffectResolver;
+import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.utils.CardUtils;
 
@@ -19,7 +19,7 @@ import java.util.Queue;
 /**
  * Effect resolver for DestroyEffect
  */
-public class DestroyEffectResolver extends AbstractEffectResolver<DestroyEffect> implements ResolvableEffect<List<CardInstance>> {
+public class DestroyEffectResolver extends GenericEffectResolver<DestroyEffect> implements ResolvableEffect<List<CardInstance>> {
 
     /**
      * Constructor

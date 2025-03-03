@@ -1,7 +1,7 @@
 package org.metacorp.mindbug.model.card;
 
 import lombok.Data;
-import org.metacorp.mindbug.model.effect.AbstractEffect;
+import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 
 import java.util.*;
@@ -12,7 +12,7 @@ public class Card {
     private String name;
     private int power;
     private Set<CardKeyword> keywords;
-    private Map<EffectTiming, List<AbstractEffect>> effects;
+    private Map<EffectTiming, List<GenericEffect>> effects;
     private boolean unique; // Has this card multiple copies in the set or not
 
     /**

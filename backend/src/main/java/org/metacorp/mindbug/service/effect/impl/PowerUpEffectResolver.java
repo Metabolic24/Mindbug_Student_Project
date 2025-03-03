@@ -4,12 +4,12 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.impl.PowerUpEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.AbstractEffectResolver;
+import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
 /**
  * Effect resolver for PowerUpEffect
  */
-public class PowerUpEffectResolver extends AbstractEffectResolver<PowerUpEffect> {
+public class PowerUpEffectResolver extends GenericEffectResolver<PowerUpEffect> {
 
     /**
      * Constructor

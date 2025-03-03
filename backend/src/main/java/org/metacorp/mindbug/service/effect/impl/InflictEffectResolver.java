@@ -6,12 +6,12 @@ import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.model.player.Team;
 import org.metacorp.mindbug.service.GameService;
-import org.metacorp.mindbug.service.effect.AbstractEffectResolver;
+import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
 /**
  * Effect resolver for InflictEffect
  */
-public class InflictEffectResolver extends AbstractEffectResolver<InflictEffect> {
+public class InflictEffectResolver extends GenericEffectResolver<InflictEffect> {
 
     /**
      * Constructor

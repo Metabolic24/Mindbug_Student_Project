@@ -5,12 +5,12 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.impl.KeywordUpEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.AbstractEffectResolver;
+import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
 /**
  * Effect resolver for KeywordUpEffect
  */
-public class KeywordUpEffectResolver extends AbstractEffectResolver<KeywordUpEffect> {
+public class KeywordUpEffectResolver extends GenericEffectResolver<KeywordUpEffect> {
 
     /**
      * Constructor

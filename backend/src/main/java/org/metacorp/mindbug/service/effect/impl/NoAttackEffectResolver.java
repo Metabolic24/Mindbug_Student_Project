@@ -4,12 +4,12 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.impl.NoAttackEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.AbstractEffectResolver;
+import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
 /**
  * Effect resolver for NoAttackEffect
  */
-public class NoAttackEffectResolver extends AbstractEffectResolver<NoAttackEffect> {
+public class NoAttackEffectResolver extends GenericEffectResolver<NoAttackEffect> {
 
     /**
      * Constructor

@@ -3,12 +3,12 @@ package org.metacorp.mindbug.service.effect.impl;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.impl.DisableTimingEffect;
-import org.metacorp.mindbug.service.effect.AbstractEffectResolver;
+import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
 /**
  * Effect resolver for DisableTimingEffect
  */
-public class DisableTimingEffectResolver extends AbstractEffectResolver<DisableTimingEffect> {
+public class DisableTimingEffectResolver extends GenericEffectResolver<DisableTimingEffect> {
 
     /**
      * Constructor

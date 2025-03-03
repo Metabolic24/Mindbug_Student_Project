@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.metacorp.mindbug.model.effect.impl.*;
 
-/** Abstract class for card effect */
+/** Parent class for card effect */
 @Getter
 @Setter
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", include = JsonTypeInfo.As.EXISTING_PROPERTY, visible = true)
@@ -24,6 +24,20 @@ import org.metacorp.mindbug.model.effect.impl.*;
         @JsonSubTypes.Type(value = ReviveEffect.class, name = ReviveEffect.TYPE),
         @JsonSubTypes.Type(value = StealEffect.class, name = StealEffect.TYPE)}
 )
-public abstract class AbstractEffect {
+public class GenericEffect {
     private EffectType type;
+
+    protected GenericEffect() {
+        // Nothing to do
+    }
+
+    /**
+     * Return the priority of the effect resolution (for passive effects only)
+     * (the higher the value is, the later the effect must be resolved)
+     * @return the priority of the effect resolution (for passive effects only)
+     */
+    public int getPriority() {
+        // Default behavior (override it if necessary in the corresponding effect class)
+        return Integer.MAX_VALUE;
+    }
 }

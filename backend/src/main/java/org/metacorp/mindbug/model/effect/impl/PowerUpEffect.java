@@ -3,7 +3,7 @@ package org.metacorp.mindbug.model.effect.impl;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.model.effect.AbstractEffect;
+import org.metacorp.mindbug.model.effect.GenericEffect;
 
 /**
  * Effect that increase the power of one or more cards depending on several conditions
@@ -11,7 +11,7 @@ import org.metacorp.mindbug.model.effect.AbstractEffect;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class PowerUpEffect extends AbstractEffect {
+public class PowerUpEffect extends GenericEffect {
     public final static String TYPE = "POWER_UP";
 
     /**
@@ -42,4 +42,9 @@ public class PowerUpEffect extends AbstractEffect {
      * Should the power gain be only available on the owner turn
      */
     private boolean selfTurn;
+
+    @Override
+    public int getPriority() {
+        return 0;
+    }
 }

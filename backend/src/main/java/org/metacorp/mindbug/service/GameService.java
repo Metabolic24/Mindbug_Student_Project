@@ -1,15 +1,13 @@
 package org.metacorp.mindbug.service;
 
-import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.effect.AbstractEffect;
-import org.metacorp.mindbug.model.effect.EffectTiming;
-import org.metacorp.mindbug.model.effect.EffectType;
-import org.metacorp.mindbug.model.effect.EffectsToApply;
-import org.metacorp.mindbug.model.choice.IChoice;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.IChoice;
+import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.AbstractEffectResolver;
+import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
 import java.util.*;
 
@@ -66,43 +64,33 @@ public class GameService {
     }
 
     public static void refreshGameState(Game game) {
-        List<EffectsToApply> powerUpEffects = new ArrayList<>();
-        List<EffectsToApply> otherEffects = new ArrayList<>();
+        List<EffectsToApply> passiveEffects = new ArrayList<>();
 
         for (Player player: game.getPlayers()) {
             player.refresh();
 
-            for (CardInstance cardInstance : player.getBoard()) {
-                List<AbstractEffect> cardEffects = cardInstance.getEffects(EffectTiming.PASSIVE);
-                for (AbstractEffect cardEffect : cardEffects) {
-                    EffectsToApply effectToApply = new EffectsToApply(Collections.singletonList(cardEffect), cardInstance);
-                    if (cardEffect.getType() == EffectType.POWER_UP) {
-                        powerUpEffects.add(effectToApply);
-                    } else {
-                        otherEffects.add(effectToApply);
-                    }
-                }
-            }
-
-            for (CardInstance cardInstance : player.getDiscardPile()) {
-                List<AbstractEffect> cardEffects = cardInstance.getEffects(EffectTiming.DISCARD);
-                for (AbstractEffect cardEffect : cardEffects) {
-                    EffectsToApply effectToApply = new EffectsToApply(Collections.singletonList(cardEffect), cardInstance);
-                    if (cardEffect.getType() == EffectType.POWER_UP) {
-                        powerUpEffects.add(effectToApply);
-                    } else {
-                        otherEffects.add(effectToApply);
-                    }
-                }
-            }
+            passiveEffects.addAll(getPassiveEffects(player.getBoard()));
+            passiveEffects.addAll(getPassiveEffects(player.getDiscardPile()));
         }
 
-        for (EffectsToApply effect : powerUpEffects) {
-            effect.getEffects().forEach(effectToApply -> AbstractEffectResolver.getResolver(effectToApply).apply(game, effect.getCard()));
-        }
+        // Sort effects by priority
+        passiveEffects.sort(Comparator.comparingInt(o -> o.getEffects().getFirst().getPriority()));
 
-        for (EffectsToApply effect : otherEffects) {
-            effect.getEffects().forEach(effectToApply -> AbstractEffectResolver.getResolver(effectToApply).apply(game, effect.getCard()));
+        // Apply effects
+        for (EffectsToApply effect : passiveEffects) {
+            GenericEffectResolver<?> effectResolver = GenericEffectResolver.getResolver(effect.getEffects().getFirst());
+            effectResolver.apply(game, effect.getCard());
         }
+    }
+
+    private static List<EffectsToApply> getPassiveEffects(List<CardInstance> cards) {
+        List<EffectsToApply> passiveEffects = new ArrayList<>();
+
+        cards.forEach(card -> passiveEffects.addAll(card.getEffects(EffectTiming.PASSIVE)
+                .stream()
+                .map(cardEffect -> new EffectsToApply(Collections.singletonList(cardEffect), card))
+                .toList()));
+
+        return passiveEffects;
     }
 }

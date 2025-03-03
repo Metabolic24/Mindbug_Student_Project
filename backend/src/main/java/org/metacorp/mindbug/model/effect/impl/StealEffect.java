@@ -3,7 +3,7 @@ package org.metacorp.mindbug.model.effect.impl;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.model.effect.AbstractEffect;
+import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.model.effect.steal.StealSource;
 import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
 
@@ -13,7 +13,7 @@ import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class StealEffect extends AbstractEffect {
+public class StealEffect extends GenericEffect {
     public final static String TYPE = "STEAL";
 
     private int value;                          // The number of cards to steal (-1 <=> all cards)
