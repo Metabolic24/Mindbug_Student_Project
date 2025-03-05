@@ -31,7 +31,7 @@ public class GameSessionValidation {
 
         // Check game status
         if (gameSession.getStatus() != GameStatus.PLAY_OR_ATTACK) {
-            throw new IllegalStateException("Cannot attck. Game not in play or attack phase.");
+            throw new IllegalStateException("Cannot attack. Game not in play or attack phase.");
         }
 
         // Check if player have a card

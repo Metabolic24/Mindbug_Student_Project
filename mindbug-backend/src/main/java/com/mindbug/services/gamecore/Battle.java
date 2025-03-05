@@ -18,7 +18,6 @@ public class Battle {
 
     public void attack(Player attackingPlayer, GameSessionCard attackingSessionCard) {
         this.attacking = new PlayerCard(attackingPlayer, attackingSessionCard);
-        attackingPlayer.setLifepoints(2);
     }
     
 }
