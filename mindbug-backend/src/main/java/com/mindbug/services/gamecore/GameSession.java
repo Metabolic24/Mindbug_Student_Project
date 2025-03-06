@@ -26,8 +26,6 @@ public class GameSession {
 
     private Long lastPlayerConfirmedJoin = null;
 
-    private GameStatus status = GameStatus.NOT_STARTED;
-
     private GameSessionValidation gameSessionValidation;
 
     private Battle battle;
@@ -64,7 +62,6 @@ public class GameSession {
         } else {
             if (playerId != this.lastPlayerConfirmedJoin) {
                 // The two players have confirmed. Send ws message newGame and update game status
-                this.status = GameStatus.STARTED;
                 this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
             } else {
                 throw new IllegalArgumentException("Join already confirmed.");
@@ -87,7 +84,7 @@ public class GameSession {
     
 
     public Player getPlayer(Long playerId) {
-        this.gameSessionValidation.validPLayer(this, playerId);
+        this.gameSessionValidation.validPlayer(this, playerId);
         
         if (playerId == this.game.getPlayer1().getId())
             return this.game.getPlayer1();
