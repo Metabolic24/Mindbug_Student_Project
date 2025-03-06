@@ -10,9 +10,9 @@ public class Effect {
     private String action;
     private Map<String, Object> condition;
     private int amount;
-    private String operation;
+    private String operation; 
     private Set<Keyword> keywords;
-    private String trigger_condition;
+    private String triggerCondition;
 
     // Getters and Setters
     public String getType() {
@@ -79,11 +79,11 @@ public class Effect {
         this.keywords = keyword;
     }
 
-    public String getTrigger_condition() {
-        return trigger_condition;
+    public String getTriggerCondition() {
+        return triggerCondition;
     }
 
-    public void setTrigger_condition(String triggerCondition) {
-        this.trigger_condition = triggerCondition;
+    public void setTriggerCondition(String triggerCondition) {
+        this.triggerCondition = triggerCondition;
     }
 }

@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mindbug.services.GameSession;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,29 +25,17 @@ public class Player implements Serializable {
     @Column
     private int lifepoints;
 
-    @OneToMany
-    @JoinColumn(name = "hand_id")
-    private List<GameSessionCard> hand = new ArrayList<>();
-
-    @OneToMany
-    @JoinColumn(name = "board_id")
-    private List<GameSessionCard> board = new ArrayList<>();
-
-    @OneToMany
-    @JoinColumn(name = "discard_pile_id")
-    private List<GameSessionCard> discardPile = new ArrayList<>();
-
-    @OneToMany
-    @JoinColumn(name = "draw_pile_id")
-    private List<GameSessionCard> drawPile = new ArrayList<>();
-
     @Column
     private int mindbug;
 
-    @Column
-    private Integer selectedCard;
+    @Transient
+    private List<Card> hand;
 
+    @Transient
+    private List<Card> drawPile;
 
+    @Transient
+    private Card selectedCard;
 
     public Player(String nickname) {
         this.nickname = nickname;
@@ -57,7 +44,22 @@ public class Player implements Serializable {
         this.mindbug = 2;
     }
 
-    // Getters and setters
+    public List<Card> getHand() {
+        return hand;
+    }
+
+    public void setHand(List<Card> hand) {
+        this.hand = hand;
+    }
+
+    public List<Card> getDrawPile() {
+        return drawPile;
+    }
+
+    public void setDrawPile(List<Card> drawPile) {
+        this.drawPile = drawPile;
+    }
+
     public Long getId() {
         return id;
     }
@@ -74,51 +76,11 @@ public class Player implements Serializable {
         this.nickname = nickname;
     }
 
-    public int getLifepoints() {
-        return lifepoints;
-    }
-
-    public void setLifepoints(int lifepoints) {
-        this.lifepoints = lifepoints;
-    }
-
-    public List<GameSessionCard> getHand() {
-        return hand;
-    }
-
-    public void setHand(List<GameSessionCard> hand) {
-        this.hand = hand;
-    }
-
-    public List<GameSessionCard> getBoard() {
-        return board;
-    }
-
-    public void setBoard(List<GameSessionCard> board) {
-        this.board = board;
-    }
-
-    public List<GameSessionCard> getDiscardPile() {
-        return discardPile;
-    }
-
-    public void setDiscardPile(List<GameSessionCard> discardPile) {
-        this.discardPile = discardPile;
-    }
-
-    public List<GameSessionCard> getDrawPile() {
-        return drawPile;
-    }
-
-    public void setDrawPile(List<GameSessionCard> drawPile) {
-        this.drawPile = drawPile;
-    }
-
-    public Integer getSelectedCard() {
+    public Card getSelectedCard() {
         return selectedCard;
     }
 
-    public void setSelectedCard(Integer selectedCard) {
+    public void setSelectedCard(Card selectedCard) {
         this.selectedCard = selectedCard;
     }
 }

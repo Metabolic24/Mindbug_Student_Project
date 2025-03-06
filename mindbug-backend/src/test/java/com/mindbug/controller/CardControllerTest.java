@@ -1,20 +1,25 @@
 package com.mindbug.controller;
 
-import com.mindbug.model.Card;
+import com.mindbug.models.Card;
+import com.mindbug.services.CardService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import java.io.IOException;
 import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class CardControllerTest {
 
     private CardController cardController;
+    private CardService cardService;
 
     @BeforeEach
     public void setUp() throws IOException {
-        cardController = new CardController();
+        cardService = new CardService();
+        cardController = new CardController(cardService);
     }
 
     @Test

@@ -25,7 +25,4 @@ public class ConfirmJoinDto {
     public void setGameId(Long gameId) {
         this.gameId = gameId;
     }
-
-    
-
 }

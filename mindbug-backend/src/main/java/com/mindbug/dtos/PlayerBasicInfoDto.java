@@ -18,7 +18,19 @@ public class PlayerBasicInfoDto {
         this.playerId = player.getId();
         this.nickname = player.getNickname();
     }
+    public long getPlayerId() {
+        return playerId;
+    }
 
+    public void setPlayerId(long playerId) {
+        this.playerId = playerId;
+    }
 
+    public String getNickname() {
+        return nickname;
+    }
 
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
 }
