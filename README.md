@@ -66,3 +66,21 @@ Swagger api doc:
 ```bash
 http://<server:port>/swagger-ui/index.html
 ```
+### Code quality
+#### Checkstyle
+```bash
+mvn checkstyle:check
+```
+Result: target/checkstyle-result.xml
+
+### Jacoco
+#### Run test with jacoco
+```bash
+mvn clean test
+```
+#### Generate jacoco report
+```bash
+mvn jacoco:report
+```
+
+Jacoco result: target/site/jacoco/index.html

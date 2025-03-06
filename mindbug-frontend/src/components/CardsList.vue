@@ -6,7 +6,6 @@
         <img :src="require(`@/assets/Sets/${getImage(card.name)}`)" :alt="`Card ${card.name}`" class="card-image" />
       </div>
     </div>
-<<<<<<< HEAD
   </div>
 
 </template>
@@ -18,25 +17,6 @@ export default {
     set: {  
       type: String,
       required: true
-=======
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        cards: [
-          { name: 'Axolotl_Healer' },
-          { name: 'Bee_Bear' },
-          { name: 'Brain_Fly' }
-        ]
-      };
-    },
-    methods: {
-      getImage(name) {
-        return require(`@/assets/Sets/First_contact/${name}.jpg`);
-    }
->>>>>>> f14041b (#8 removed package-lock.json file and correction of card visualisation)
     }
   },
   data() {
