@@ -14,7 +14,7 @@ public class GameSessionFactory {
     
     @Autowired
     private  ApplicationContext applicationContext;
-    
+
     public GameSession createGameSession(Game game) {
         GameSession gameSession = this.applicationContext.getBean(GameSession.class, game, 
         this.applicationContext.getBean(WSMessageManager.class),

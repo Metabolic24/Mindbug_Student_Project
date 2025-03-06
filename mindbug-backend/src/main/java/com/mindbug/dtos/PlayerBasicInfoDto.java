@@ -14,9 +14,13 @@ public class PlayerBasicInfoDto {
     @NotNull
     private String nickname;
 
+    @NotNull
+    private Long gameId;
+
     public PlayerBasicInfoDto(Player player) {
         this.playerId = player.getId();
         this.nickname = player.getNickname();
+        this.gameId = 1L; // a changer en trouvant comment le récupérer
     }
 
 
