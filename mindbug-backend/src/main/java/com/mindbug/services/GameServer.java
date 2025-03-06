@@ -44,9 +44,17 @@ public class GameServer {
         newGame.setPlayer1(player1);
         newGame.setPlayer2(player2);
 
-        // Create game session
+        this.playerservice.fillPlayerHand(player1);
+        this.playerservice.fillPlayerHand(player2);
+
+        System.out.println((player1.getHand()));
+        // Créer la session de jeu
         GameSession gameSession = gameSessionFactory.createGameSession(newGame);
         gameSessions.put(newGame.getId(), gameSession);
+    
+        // Log pour vérifier les cartes des joueurs
+        System.out.println("Cartes du joueur 1 dans game server: " + player1.getHand().size());
+        System.out.println("Cartes du joueur 2dans game server: " + player2.getHand().size());
 
         // Send newGame websocket messages to each player
         this.gameQueueWsMessageManager.sendMessage(new WSMessageMatchFound(newGame.getId(), newGame.getPlayer1().getId()));
@@ -88,6 +96,11 @@ public class GameServer {
     public void handleAttack(Long playerId, Long gameId, Long sessionCardId) {
         GameSession gameSession = this.getGameSession(gameId);
         gameSession.attack(playerId, gameId, sessionCardId);
+    }
+
+    public void handlePlayCard(Long playerId, Long sessionCardId, Long gameId) {
+        GameSession gameSession = this.getGameSession(gameId);
+        gameSession.playCard(playerId, sessionCardId);
     }
 
 }
