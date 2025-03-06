@@ -1,5 +1,17 @@
 <template>
   <div class="game-board">
+
+    <div class="playerInfo enemySide">
+      <img class="playerAvatar" :src="getAvatar()" alt="Avatar">
+      <div class="playerDetails">
+        <div class="playerStats">
+          <span class="lifePoint">❤️ {{ enemyHealth }}</span>
+          <span class="mbPoint">🧠 {{ enemyMindbug }}</span>
+        </div>
+        <p class="playerName">Pseudo1</p>
+      </div>
+    </div>
+
     <div class="top-hand">
       <img
         v-for="(_, index) in cardCount"
@@ -45,10 +57,23 @@
         class="card-image hand-card"
       />
     </div>
+
+    
+    <div class="playerInfo mySide">
+      <img class="playerAvatar" :src="getAvatar()" alt="Avatar">
+      <div class="playerDetails">
+        <div class="playerStats">
+          <span class="lifePoint">❤️ {{ myHealth }}</span>
+          <span class="mbPoint">🧠 {{ myMindbug }}</span>
+        </div>
+        <p class="playerName">Pseudo2</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import beeBearImage from "@/assets/Sets/First_Contact/Bee_Bear.jpg";
 export default {
   name: "GameBoard",
   data() {
@@ -62,7 +87,9 @@ export default {
         "Shark_Dog.jpg"
       ],
       myBattlefieldCards: ["Elephantopus.jpg", "Ferret_Bomber.jpg", "Giraffodile.jpg"],
-      enemyBattlefieldCards: ["Deathweaver.jpg"]
+      enemyBattlefieldCards: ["Deathweaver.jpg"],
+
+      myAvatar: beeBearImage
     };
   },
   methods: {
@@ -72,32 +99,45 @@ export default {
     getCardBackImage() {
       return require(`@/assets/Sets/First_Contact/card_Back.png`);
     },
+    getAvatar(playerName) {
+      try {
+        return require(`@/assets/avatars/${playerName}.jpg`);
+      } catch (e) {
+        console.error(`Avatar not found for ${playerName}, using default.`);
+        return require("@/assets/avatars/default.jpg");
+      }
+    }
   },
 };
 </script>
 
 <style scoped>
 html, body {
+  overflow: hidden;
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
+  position: fixed;
 }
 
 .game-board {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
   font-size: 2rem;
   color: black;
   background-color: #f5f5fa;
   padding: 10px;
-  overflow-y: auto;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
+
 
 .top-hand,
 .hand-area {
@@ -113,14 +153,6 @@ html, body {
   max-height: 200px; 
 }
 
-.hand-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 8vw;
-  max-width: 120px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-}
 
 /* Applique les effets uniquement pour les cartes dans la hand-area */
 .hand-area .hand-card:hover {
@@ -206,12 +238,78 @@ html, body {
 }
 
 .card-image {
-  width: 100px;
-  height: 150px;
+  width: 10vw;
+  height: auto;
+  max-width: 150px;
   object-fit: cover;
   border: 2px solid black;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.playerInfo {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mySide {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.enemySide {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.playerAvatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-right: 10px;
+}
+
+.playerDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.playerName {
+  width: 150px;
+  height: 35px;
+  text-align: left;
+  line-height: 30px;
+  font-size: 26px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.playerStats {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: left;
+  transform: translateY(15px);
+}
+
+
+.lifePoint {
+  color: red;
+  font-weight: bold;
+}
+
+.mbPoint {
+  color: black;
+  font-weight: bold;
 }
 
 </style>
