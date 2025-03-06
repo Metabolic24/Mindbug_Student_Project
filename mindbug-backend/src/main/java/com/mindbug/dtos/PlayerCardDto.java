@@ -1,24 +1,29 @@
 package com.mindbug.dtos;
 
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
 public class PlayerCardDto {
 
-    @NotEmpty
+    @NotNull
     private Long playerId;
 
-    @NotEmpty
+    @NotNull
     private Long gameId;
 
-    @NotEmpty
+    @NotNull
     private Long sessioncardId;
 
-    public PlayerCardDto(@NotEmpty Long playerId, @NotEmpty Long gameId, @NotEmpty Long cardId) {
+    @NotEmpty 
+    private String cardName;
+
+    public PlayerCardDto(@NotEmpty Long playerId, @NotEmpty Long gameId, @NotEmpty Long cardId, @NotEmpty String cardName) {
         this.playerId = playerId;
         this.gameId = gameId;
         this.sessioncardId = cardId;
+        this.cardName = cardName;
     }
 }
