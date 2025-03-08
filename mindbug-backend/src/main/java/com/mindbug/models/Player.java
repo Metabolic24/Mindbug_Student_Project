@@ -14,6 +14,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import jakarta.persistence.Transient;
 
 @Entity
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString
@@ -32,7 +33,11 @@ public class Player implements Serializable {
     @Column
     private int mindbug;
 
+    @Transient
     private List<GameSessionCard> hand = new ArrayList<>();
+
+    @Transient
+    private List<GameSessionCard> drawPile = new ArrayList<>();
 
     public Player(String nickname) {
         this.nickname = nickname;
