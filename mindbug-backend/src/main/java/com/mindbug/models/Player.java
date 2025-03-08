@@ -39,8 +39,6 @@ public class Player implements Serializable {
     @Transient
     private List<GameSessionCard> drawPile = new ArrayList<>();
 
-    private List<GameSessionCard> hand = new ArrayList<>();
-
     public Player(String nickname) {
         this.nickname = nickname;
         // TODO: get lifepoints and mindbug from game configs
