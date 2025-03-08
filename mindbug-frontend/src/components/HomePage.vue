@@ -3,21 +3,47 @@
     <h1>Welcome to Mindbug's Cards</h1>
     <div class="button-group">
       <button @click="goToSets" class="styled-button">Set of Cards</button>
-      <button @click="goToGame" class="styled-button">Start Game</button>
+      <button @click="startGame" class="styled-button">Start Game</button>
     </div>
+    <p v-if="message">📢 {{ message }}</p>
   </div>
 </template>
 
 <script>
+import WebSocketService from "@/services/websocket.js";
+import axios from "axios";
+
 export default {
+  data() {
+    return {
+      message: "",
+      playerId: localStorage.getItem("playerId") || null,
+    };
+  },
   methods: {
     goToSets() {
       this.$router.push('/setsofcards');
     },
 
-    goToGame(){
-      this.$router.push('/gameboard');
+    async startGame() {
+      try {
+        alert("Matching...");
+        const response = await axios.post("http://localhost:8080/api/game/join_game");
+        this.playerId = response.data.playerId;
+        WebSocketService.connectToQueue(this.handleMatchFound);
+      } catch (error) {
+        console.error("❌ Error occurred while searching for a game:", error.response ? error.response.data : error.message);
+        this.message = "❌ Matchmaking error.";
+      }
+    },
+
+    handleMatchFound(data) {
+      console.log('🎉 Match Found:', data);
+      this.$router.push('/gameterrain');
     }
+  },
+  mounted() {
+    WebSocketService.connectToQueue(this.handleMatchFound);
   }
 }
 </script>
@@ -37,7 +63,7 @@ h1 {
 .button-group {
   display: flex;
   justify-content: center;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .styled-button {
@@ -54,12 +80,11 @@ h1 {
 
 .styled-button:hover {
   background-color: #2980b9;
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .styled-button:active {
   background-color: #1e6f93;
-  transform: scale(0.98); 
+  transform: scale(0.98);
 }
-
 </style>
