@@ -13,7 +13,6 @@ import lombok.Getter;
 
 import org.springframework.stereotype.Component;
 
-
 @Component
 @Scope("prototype")
 @Getter
@@ -78,17 +77,28 @@ public class GameSession {
         Player player = getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
-
         this.battle.attack(player, sessionCard);
     }
-    
+
+    public void playCard(Long playerId, Long sessionCardId) {
+
+        this.gameSessionValidation.canPlayCard(this, playerId, sessionCardId);
+
+        Player player = this.getPlayer(playerId);
+        GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
+
+        player.getHand().remove(sessionCard);
+
+        player.getBattlefield().add(sessionCard);
+    }
 
     public Player getPlayer(Long playerId) {
         this.gameSessionValidation.validPlayer(this, playerId);
-        
-        if (playerId == this.game.getPlayer1().getId())
+
+        if (playerId.equals(this.game.getPlayer1().getId())) {
             return this.game.getPlayer1();
-        else 
+        } else {
             return this.game.getPlayer2();
+        }
     }
 }

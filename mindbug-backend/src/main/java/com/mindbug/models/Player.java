@@ -9,6 +9,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.CascadeType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,7 +34,11 @@ public class Player implements Serializable {
     @Column
     private int mindbug;
 
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<GameSessionCard> hand = new ArrayList<>();
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<GameSessionCard> battlefield = new ArrayList<>();
 
     public Player(String nickname) {
         this.nickname = nickname;

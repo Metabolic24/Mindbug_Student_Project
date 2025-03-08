@@ -39,7 +39,7 @@ export default {
 
     handleMatchFound(data) {
       console.log('🎉 Match Found:', data);
-      this.$router.push('/gameterrain');
+      this.$router.push('/gameboard');
     }
   },
   mounted() {
