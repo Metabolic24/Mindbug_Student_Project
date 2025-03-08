@@ -1,11 +1,9 @@
 package com.mindbug.controller;
 
-import com.mindbug.services.GameService;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.PathVariable;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,15 +22,6 @@ public class GameController {
     @Autowired
     private GameServer gameServer;
 
-    @Autowired
-    private GameService gameService;
-
-    @Autowired
-    public GameController(GameServer gameServer, GameService gameService) {
-        this.gameServer = gameServer;
-        this.gameService = gameService;
-    }
-
     @PostMapping("/join_game")
     public ResponseEntity<PlayerBasicInfoDto> joinGame() {
         PlayerBasicInfoDto data = this.gameServer.handleJoinGame();
@@ -45,12 +34,6 @@ public class GameController {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("/{gameId}/initialize-game")
-    public ResponseEntity<Void> initializeGame(@PathVariable Long gameId) {
-        gameService.initializeGame(gameId, gameServer);
-        return ResponseEntity.ok().build();
-    }
-
     @PostMapping("/attack")
     public ResponseEntity<String>  attack(@RequestBody PlayerCardDto data) {
         this.gameServer.handleAttack(data.getPlayerId(), data.getGameId(), data.getSessioncardId());
@@ -59,10 +42,10 @@ public class GameController {
 
     @PostMapping("/dont_block")
     public ResponseEntity<String>  dontBlock(@RequestBody PlayerIdDto data) {
-       this.gameServer.handleDontBlock(data.getPlayerId(), data.getGameId());
-       return ResponseEntity.ok().build();
+        this.gameServer.handleDontBlock(data.getPlayerId(), data.getGameId());
+        return ResponseEntity.ok().build();
     }
-    
+
     @PostMapping("/game/play_card")
     public ResponseEntity<String> playCard(@RequestBody PlayerCardDto data) {
         this.gameServer.handlePlayCard(data.getPlayerId(), data.getSessioncardId(), data.getGameId());

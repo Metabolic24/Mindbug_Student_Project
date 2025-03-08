@@ -37,13 +37,13 @@ public class GameSession {
 
     private PlayerService playerService;
 
-    
+
     public GameSession(Game game, WSMessageManager gameWsMessageManager, GameSessionValidation gameSessionValidation,
-    ApplicationContext applicationContext, PlayerService playerService) {
+                       ApplicationContext applicationContext, PlayerService playerService) {
         this.game = game;
 
         this.confirmJoinPlayers = new ArrayList<>();
-        
+
         this.gameWsMessageManager = gameWsMessageManager;
         this.wsChannel = "/topic/game/" + game.getId();
         this.gameWsMessageManager.setChannel(wsChannel);
@@ -98,7 +98,7 @@ public class GameSession {
     public void dontBlock(Long playerId) {
         this.gameSessionValidation.canDoDontBlock(this, playerId);
 
-        
+
         Player player = getPlayer(playerId);
 
         this.battle.dontBlock(this, player);

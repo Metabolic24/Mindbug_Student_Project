@@ -21,5 +21,4 @@ public class PlayerBasicInfoDto {
         this.playerId = player.getId();
         this.nickname = player.getNickname();
     }
-
 }

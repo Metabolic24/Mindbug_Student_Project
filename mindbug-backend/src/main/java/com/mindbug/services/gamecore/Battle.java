@@ -22,7 +22,7 @@ public class Battle {
 
         gameSessionContext.getGameWsMessageManager().sendMessage(
             new WSMessagAskBlock(
-                gameSessionContext.getOppoennt().getId(),
+                gameSessionContext.getOpponent().getId(),
                 gameSessionContext.getGame()
             )
         );

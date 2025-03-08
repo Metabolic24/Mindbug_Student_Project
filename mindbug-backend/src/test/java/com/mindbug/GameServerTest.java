@@ -50,7 +50,7 @@ public class GameServerTest {
 
     @Test
     void testJoinGame() throws Exception {
-        // Subscirbe to general websocket
+        // Subscribe to general websocket
         wsHelper.subscribe("/topic/game-queue");
         Thread.sleep(500);
 
