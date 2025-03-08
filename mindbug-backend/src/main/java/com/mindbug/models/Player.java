@@ -1,6 +1,7 @@
 package com.mindbug.models;
 
 import java.io.Serializable;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,6 +13,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import jakarta.persistence.Transient;
 
 @Entity
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString
@@ -29,6 +31,12 @@ public class Player implements Serializable {
 
     @Column
     private int mindbug;
+
+    @Transient
+    private List<Card> hand;
+
+    @Transient
+    private List<Card> drawPile;
 
     public Player(String nickname) {
         this.nickname = nickname;

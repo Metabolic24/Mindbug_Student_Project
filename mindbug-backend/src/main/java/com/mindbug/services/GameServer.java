@@ -77,7 +77,7 @@ public class GameServer {
 
     }
 
-    private GameSession getGameSession(Long id) {
+    GameSession getGameSession(Long id) {
         return this.gameSessions.get(id);
     }
 
