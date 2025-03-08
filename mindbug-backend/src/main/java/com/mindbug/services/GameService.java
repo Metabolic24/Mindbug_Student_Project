@@ -1,11 +1,18 @@
 package com.mindbug.services;
 
-import jakarta.persistence.EntityNotFoundException;
+import com.mindbug.models.Card;
+import com.mindbug.models.GameSessionCard;
+import com.mindbug.models.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mindbug.models.Game;
 import com.mindbug.repositories.GameRepository;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @Service
 public class GameService {
@@ -13,15 +20,49 @@ public class GameService {
     @Autowired
     private GameRepository gameRepository;
 
+    @Autowired
+    private CardService cardService;
+
     public Game createGame(Game game) {
         return this.gameRepository.save(game);
     }
 
-    public void initializeGame(Long gameId, GameServer gameServer) {
-        GameSession gameSession = gameServer.getGameSession(gameId);
-        if (gameSession == null) {
-            throw new EntityNotFoundException("Game not found");
+    public void distributeCards(Game game) {
+        try {
+            List<Card> rawCards = cardService.getCardsBySet("First_Contact");
+            List<GameSessionCard> gameSessionCards = expandCardCopies(rawCards);
+            Collections.shuffle(gameSessionCards);
+
+            if (gameSessionCards.size() < 20) {
+                throw new IllegalStateException("Not enough cards to start the game!");
+            }
+
+            List<GameSessionCard> player1Cards = new ArrayList<>(gameSessionCards.subList(0, 10));
+            List<GameSessionCard> player2Cards = new ArrayList<>(gameSessionCards.subList(10, 20));
+
+            distributeCardsToPlayer(game.getPlayer1(), player1Cards);
+            distributeCardsToPlayer(game.getPlayer2(), player2Cards);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        gameSession.initializeGame();
     }
+
+    private List<GameSessionCard> expandCardCopies(List<Card> rawCards) {
+        List<GameSessionCard> expandedCards = new ArrayList<>();
+        for (Card card : rawCards) {
+            for (int i = 0; i < card.getCopies(); i++) {
+                expandedCards.add(new GameSessionCard(card));
+            }
+        }
+        return expandedCards;
+    }
+
+    private void distributeCardsToPlayer(Player player, List<GameSessionCard> availableCards) {
+        List<GameSessionCard> hand = new ArrayList<>(availableCards.subList(0, 5));
+        List<GameSessionCard> drawPile = new ArrayList<>(availableCards.subList(5, 10));
+
+        player.setHand(hand);
+        player.setDrawPile(drawPile);
+    }
+
 }

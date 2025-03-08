@@ -18,4 +18,12 @@ public class GameSessionCard implements Serializable  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private String cardName;
+
+    public GameSessionCard(Card card) {
+        this.id = id;
+        this.cardName = card.getName();
+    }
+
 }
