@@ -5,8 +5,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.PathVariable;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -44,17 +42,10 @@ public class GameController {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("/{gameId}/initialize-game")
-    public ResponseEntity<Void> initializeGame(@PathVariable Long gameId) {
-        gameService.initializeGame(gameId, gameServer);
-        return ResponseEntity.ok().build();
-    }
-
     @PostMapping("/attack")
     public ResponseEntity<String>  attack(@RequestBody PlayerCardDto data) {
        this.gameServer.handleAttack(data.getPlayerId(), data.getGameId(), data.getSessioncardId());
        return ResponseEntity.ok().build();
     }
-
 
 }

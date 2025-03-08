@@ -34,10 +34,10 @@ public class Player implements Serializable {
     private int mindbug;
 
     @Transient
-    private List<Card> hand;
+    private List<GameSessionCard> hand = new ArrayList<>();
 
     @Transient
-    private List<Card> drawPile;
+    private List<GameSessionCard> drawPile = new ArrayList<>();
 
     private List<GameSessionCard> hand = new ArrayList<>();
 
