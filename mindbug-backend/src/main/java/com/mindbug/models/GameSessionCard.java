@@ -18,5 +18,9 @@ public class GameSessionCard implements Serializable  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
+    public GameSessionCard(Card card) {
+        this.id = id;
+    }
+
 }
