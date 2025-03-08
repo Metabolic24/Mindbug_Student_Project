@@ -82,6 +82,8 @@ public class GameServer {
 
     public void handleConfirmJoin(Long gameId, Long playerId) {
         GameSession gameSession = this.getGameSession(gameId);
+        if (gameSession == null)
+            throw new EntityNotFoundException("Game not found");
         gameSession.confirmJoin(playerId);
     }
 
