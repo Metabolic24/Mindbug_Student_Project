@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.service;
 
+import org.jvnet.hk2.annotations.Service;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -13,7 +14,21 @@ import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
 import java.util.*;
 
+@Service
 public class GameService {
+
+    private final Map<UUID, Game> games = new HashMap<>();
+
+    public Game createGame() {
+        Game game = StartService.newGame("player1", "player2");
+        games.put(game.getUuid(), game);
+
+        return game;
+    }
+
+    public Game findById(UUID uuid) {
+        return games.get(uuid);
+    }
 
     public static <T> void  resolveChoice(T data, Game game) throws GameStateException {
         IChoice<?> choice = game.getChoice();

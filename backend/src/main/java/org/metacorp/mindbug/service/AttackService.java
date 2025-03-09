@@ -77,8 +77,10 @@ public class AttackService {
         CardInstance attackingCard = game.getAttackingCard();
         if (attackingCard == null) {
             throw new GameStateException("no attacking card set in game state");
-        } else if (defendingCard != null ) {
-            if (!defendingCard.isAbleToBlock()) {
+        } else if (defendingCard != null) {
+            if(defendingCard.getOwner().equals(attackingCard.getOwner())) {
+                throw new GameStateException("player cannot defend its own attack", Map.of("defendingCard", defendingCard));
+            } else if (!defendingCard.isAbleToBlock()) {
                 throw new GameStateException("defending card is not able to block", Map.of("defendingCard", defendingCard));
             } else if (attackingCard.hasKeyword(CardKeyword.SNEAKY) && !defendingCard.hasKeyword(CardKeyword.SNEAKY)) {
                 throw new GameStateException("defending card cannot defend a SNEAKY attack", Map.of("attackingCard", game.getAttackingCard(), "defendingCard", defendingCard));

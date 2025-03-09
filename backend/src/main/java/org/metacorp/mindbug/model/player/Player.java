@@ -4,10 +4,7 @@ import lombok.Data;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Class that describes a player data
@@ -16,6 +13,8 @@ import java.util.Set;
 public class Player {
 
     private static final int MAX_HAND_SIZE = 5;
+
+    private UUID uuid;
 
     private String name;
     private Team team;
@@ -29,6 +28,7 @@ public class Player {
     private Set<EffectTiming> disabledTiming;
 
     public Player(String name) {
+        this.uuid = UUID.randomUUID();
         this.name = name;
         this.team = new Team();
 

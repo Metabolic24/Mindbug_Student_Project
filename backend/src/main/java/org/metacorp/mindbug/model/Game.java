@@ -17,6 +17,8 @@ import java.util.*;
 @Setter
 public class Game {
 
+    private UUID uuid;
+
     private List<Player> players;
     private Player currentPlayer;
     private boolean finished;
@@ -35,6 +37,7 @@ public class Game {
      * Empty constructor (WARNING : a game is not meant to be reused)
      */
     public Game(String player1, String player2) {
+        uuid = UUID.randomUUID();
         finished = false;
         bannedCards = new ArrayList<>();
         effectQueue = new EffectQueue();

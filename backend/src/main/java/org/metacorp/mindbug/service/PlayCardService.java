@@ -70,12 +70,14 @@ public class PlayCardService {
             throw new GameStateException("a choice needs to be resolved before picking a new card", Map.of("choice", game.getChoice()));
         } else if (game.getAttackingCard() != null) {
             throw new GameStateException("an attack needs to be resolved before picking a new card", Map.of("attackingCard", game.getAttackingCard()));
+        } else if (mindbugger != null) {
+            if (mindbugger.equals(game.getCurrentPlayer())) {
+                throw new GameStateException(MessageFormat.format("player {0} cannot mindbug its own card",Map.of("choice", mindbugger)));
+            } else if (!mindbugger.hasMindbug()) {
+                throw new GameStateException(MessageFormat.format("player {0} has no mindbug left", Map.of("mindbugger", mindbugger)));
+            }
         }
 
-        // Update the owner if card has been mindbugged
-        if (mindbugger != null && !mindbugger.hasMindbug()) {
-            throw new GameStateException(MessageFormat.format("player {0} has no mindbug left", mindbugger.getName()));
-        }
 
         managePlayedCard(mindbugger, game);
 
