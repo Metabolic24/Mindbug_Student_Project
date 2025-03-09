@@ -80,7 +80,7 @@ public class GameSession {
 
         this.battle = this.applicationContext.getBean(Battle.class);
 
-        this.battle.attack(player, sessionCard);
+        this.battle.attack(this, player, sessionCard);
     }
 
     public void dontBlock(Long playerId) {
@@ -89,7 +89,7 @@ public class GameSession {
         
         Player player = getPlayer(playerId);
 
-        this.battle.dontBlock(player);
+        this.battle.dontBlock(this, player);
     }
     
 
@@ -100,6 +100,14 @@ public class GameSession {
             return this.game.getPlayer1();
         else 
             return this.game.getPlayer2();
+    }
+
+    public Player getOppoennt() {
+        if(isCurrentPlayer(game.getPlayer1().getId())) {
+            return game.getPlayer2();
+        } else {
+            return game.getPlayer1();
+        }
     }
 
     public boolean isCurrentPlayer(Long playerId) {
