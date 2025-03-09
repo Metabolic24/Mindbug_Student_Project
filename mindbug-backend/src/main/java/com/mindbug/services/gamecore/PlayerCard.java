@@ -13,6 +13,12 @@ public class PlayerCard {
         this.card = card;
     }
 
+    public PlayerCard(Player player) {
+        this.player = player;
+    }
+
+
+
 
     public Player getPlayer() {
         return player;

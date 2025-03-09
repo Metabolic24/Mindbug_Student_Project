@@ -19,5 +19,9 @@ public class Battle {
     public void attack(Player attackingPlayer, GameSessionCard attackingSessionCard) {
         this.attacking = new PlayerCard(attackingPlayer, attackingSessionCard);
     }
+
+    public void dontBlock(Player blockingPlayer) {
+        this.blocking = new PlayerCard(blockingPlayer);
+    }
     
 }
