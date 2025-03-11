@@ -1,8 +1,8 @@
 package org.metacorp.mindbug.service.effect.impl;
 
-import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.impl.NoBlockEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
@@ -18,6 +18,7 @@ public class NoBlockEffectResolver extends GenericEffectResolver<NoBlockEffect> 
 
     /**
      * Constructor
+     *
      * @param effect the effect to be resolved
      */
     public NoBlockEffectResolver(NoBlockEffect effect) {

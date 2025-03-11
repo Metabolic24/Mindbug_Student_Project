@@ -1,6 +1,8 @@
 package org.metacorp.mindbug.model.effect;
 
-/** Enumeration for card effect timing */
+/**
+ * Enumeration for card effect timing
+ */
 public enum EffectTiming {
     PLAY,       // Triggers when card is played
     ATTACK,     // Triggers before the card attacks

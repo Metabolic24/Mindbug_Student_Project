@@ -1,10 +1,9 @@
 package org.metacorp.mindbug.service.effect.impl;
 
-import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectQueue;
-import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.GameService;
@@ -15,7 +14,6 @@ import org.metacorp.mindbug.utils.CardUtils;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Queue;
 
 /**
  * Effect resolver for DestroyEffect
@@ -24,6 +22,7 @@ public class DestroyEffectResolver extends GenericEffectResolver<DestroyEffect> 
 
     /**
      * Constructor
+     *
      * @param effect the effect to be resolved
      */
     public DestroyEffectResolver(DestroyEffect effect) {

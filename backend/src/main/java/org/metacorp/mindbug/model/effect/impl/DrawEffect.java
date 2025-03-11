@@ -5,7 +5,9 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.metacorp.mindbug.model.effect.GenericEffect;
 
-/** Effect that allows current player to draw one or more cards from the draw or discard pile */
+/**
+ * Effect that allows current player to draw one or more cards from the draw or discard pile
+ */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor

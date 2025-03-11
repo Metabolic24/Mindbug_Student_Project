@@ -15,6 +15,7 @@ public class InflictEffectResolver extends GenericEffectResolver<InflictEffect> 
 
     /**
      * Constructor
+     *
      * @param effect the effect to be resolved
      */
     public InflictEffectResolver(InflictEffect effect) {

@@ -1,13 +1,16 @@
 package org.metacorp.mindbug.service;
 
-import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.effect.*;
-import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
+import org.metacorp.mindbug.model.effect.*;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class EffectQueueService {
@@ -19,8 +22,9 @@ public class EffectQueueService {
 
     /**
      * Add card effect(s) to the effect queue if allowed
-     * @param card the card containing the effects to be added
-     * @param timing the effect timing to use to add effects
+     *
+     * @param card        the card containing the effects to be added
+     * @param timing      the effect timing to use to add effects
      * @param effectQueue the effect queue
      */
     public static void addBoardEffectsToQueue(CardInstance card, EffectTiming timing, EffectQueue effectQueue) {
@@ -29,8 +33,9 @@ public class EffectQueueService {
 
     /**
      * Add card effect(s) to the effect queue if allowed
-     * @param card the card containing the effects to be added
-     * @param timing the effect timing to use to add effects
+     *
+     * @param card        the card containing the effects to be added
+     * @param timing      the effect timing to use to add effects
      * @param effectQueue the effect queue
      */
     public static void addDiscardEffectsToQueue(CardInstance card, EffectTiming timing, EffectQueue effectQueue) {
@@ -53,15 +58,15 @@ public class EffectQueueService {
                 effectQueue.add(new EffectsToApply(effects, card));
             } else {
                 System.out.printf("Effets %s annulés\n", timing);
-                //TODO Voir s'il faut faire quelque chose à ce moment-là
             }
         }
     }
 
     /**
      * Resolve effect queue<br>
+     *
      * @param fromSimultaneousChoice is this method called after a simultaneous choice resolution
-     * @param game the current game state
+     * @param game                   the current game state
      * @throws GameStateException if a game state error is detected during effect queue resolution
      */
     public static void resolveEffectQueue(boolean fromSimultaneousChoice, Game game) throws GameStateException {
@@ -112,7 +117,7 @@ public class EffectQueueService {
             }
 
             // Only remove effect from queue after it is applied to avoid loss of data
-            effectQueue.remove(currentEffect); // TODO Faut-il envisager un système transactionnel ou similaire pour gérer le fait qu'une application d'effet puisse échouer sans pour autant dégrader l'état actuel du jeu?
+            effectQueue.remove(currentEffect);
 
             // If there is many remaining effects, then create a simultaneous choice
             if (effectQueue.size() >= 2) {

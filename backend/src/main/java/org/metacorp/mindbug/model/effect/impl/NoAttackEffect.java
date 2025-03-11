@@ -5,7 +5,9 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.metacorp.mindbug.model.effect.GenericEffect;
 
-/** Effect that forbids one or more cards to attack */
+/**
+ * Effect that forbids one or more cards to attack
+ */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor

@@ -4,8 +4,8 @@ import lombok.Data;
 import lombok.NonNull;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.utils.ChoiceUtils;
 
 import java.util.List;

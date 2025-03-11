@@ -3,7 +3,9 @@ package org.metacorp.mindbug.model.player;
 import lombok.Getter;
 import lombok.Setter;
 
-/** Class that describes a team of players */
+/**
+ * Class that describes a team of players
+ */
 @Getter
 @Setter
 public class Team {

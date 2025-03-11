@@ -12,8 +12,9 @@ public interface IChoice<T> {
 
     /**
      * Resolve the current choice
+     *
      * @param choiceData the data required to resolve the choice
-     * @param game the related game
+     * @param game       the related game
      */
     void resolve(T choiceData, Game game) throws GameStateException;
 }

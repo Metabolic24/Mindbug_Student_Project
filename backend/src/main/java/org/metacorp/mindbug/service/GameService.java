@@ -30,7 +30,7 @@ public class GameService {
         return games.get(uuid);
     }
 
-    public static <T> void  resolveChoice(T data, Game game) throws GameStateException {
+    public static <T> void resolveChoice(T data, Game game) throws GameStateException {
         IChoice<?> choice = game.getChoice();
         if (choice == null) {
             throw new GameStateException("no choice to be resolved", Map.of("data", data));
@@ -39,7 +39,7 @@ public class GameService {
         }
 
         try {
-            ((IChoice<T>)choice).resolve(data, game);
+            ((IChoice<T>) choice).resolve(data, game);
 
             GameService.refreshGameState(game);
             EffectQueueService.resolveEffectQueue(choice.getType() == ChoiceType.SIMULTANEOUS, game);
@@ -82,7 +82,7 @@ public class GameService {
     public static void refreshGameState(Game game) {
         List<EffectsToApply> passiveEffects = new ArrayList<>();
 
-        for (Player player: game.getPlayers()) {
+        for (Player player : game.getPlayers()) {
             player.refresh();
 
             passiveEffects.addAll(getPassiveEffects(player.getBoard(), false));

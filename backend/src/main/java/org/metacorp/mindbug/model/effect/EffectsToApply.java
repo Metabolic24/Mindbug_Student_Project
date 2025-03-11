@@ -6,7 +6,6 @@ import lombok.Setter;
 import org.metacorp.mindbug.model.card.CardInstance;
 
 import java.util.List;
-import java.util.UUID;
 
 @Getter
 @Setter
@@ -17,7 +16,7 @@ public class EffectsToApply {
 
     /**
      * @param effects the effect that will later be applied
-     * @param card the card related to the effect
+     * @param card    the card related to the effect
      */
     public EffectsToApply(List<GenericEffect> effects, CardInstance card) {
         this.effects = effects;

@@ -12,6 +12,7 @@ public class DrawEffectResolver extends GenericEffectResolver<DrawEffect> {
 
     /**
      * Constructor
+     *
      * @param effect the effect to be resolved
      */
     public DrawEffectResolver(DrawEffect effect) {

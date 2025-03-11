@@ -1,11 +1,14 @@
 package org.metacorp.mindbug.service;
 
-import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.CardUtils;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Utility service that starts a new game
@@ -13,7 +16,7 @@ import java.util.*;
 public class StartService {
 
     private static final Map<String, String> cardSetsMap = Map.of(
-        CardUtils.FIRST_CONTACT, "first_contact.json"
+            CardUtils.FIRST_CONTACT, "first_contact.json"
     );
 
     // Not to be used
@@ -23,6 +26,7 @@ public class StartService {
 
     /**
      * Creates and start a new game for two players (using the default FIRST_CONTACT card set)
+     *
      * @param player1 first player name
      * @param player2 second player name
      * @return the created game
@@ -33,8 +37,9 @@ public class StartService {
 
     /**
      * Creates and start a new game for two players (using the given card set)
-     * @param player1 first player name
-     * @param player2 second player name
+     *
+     * @param player1    first player name
+     * @param player2    second player name
      * @param cardSetKey the card set key
      * @return the created game
      */

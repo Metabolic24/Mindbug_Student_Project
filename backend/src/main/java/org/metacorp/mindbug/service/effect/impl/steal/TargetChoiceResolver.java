@@ -9,7 +9,7 @@ import org.metacorp.mindbug.service.effect.impl.StealEffectResolver;
 
 import java.util.List;
 
-public class TargetChoiceResolver extends StealEffectResolver implements ResolvableEffect<List<CardInstance>>  {
+public class TargetChoiceResolver extends StealEffectResolver implements ResolvableEffect<List<CardInstance>> {
 
     private final Player newOwner;
 

@@ -3,12 +3,14 @@ package org.metacorp.mindbug.model;
 import lombok.Getter;
 import lombok.Setter;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.effect.EffectQueue;
-import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.choice.IChoice;
+import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.player.Player;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
 
 /**
  * Main class that manages game workflow

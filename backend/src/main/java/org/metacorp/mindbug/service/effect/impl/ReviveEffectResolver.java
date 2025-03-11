@@ -1,8 +1,8 @@
 package org.metacorp.mindbug.service.effect.impl;
 
-import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.ReviveEffect;
 import org.metacorp.mindbug.service.EffectQueueService;

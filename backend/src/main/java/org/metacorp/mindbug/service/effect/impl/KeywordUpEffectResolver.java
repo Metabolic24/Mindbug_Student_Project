@@ -14,6 +14,7 @@ public class KeywordUpEffectResolver extends GenericEffectResolver<KeywordUpEffe
 
     /**
      * Constructor
+     *
      * @param effect the effect to be resolved
      */
     public KeywordUpEffectResolver(KeywordUpEffect effect) {
@@ -26,7 +27,7 @@ public class KeywordUpEffectResolver extends GenericEffectResolver<KeywordUpEffe
         Integer max = effect.getMax();
         boolean moreAllies = effect.isMoreAllies();
         boolean alone = effect.isAlone();
-        boolean opponentHas = effect.isOpponentHas(); //TODO Problème si deux ont le même effet "miroir" ; risque que l'un ne copie pas l'autre suivant l'ordre d'exécution
+        boolean opponentHas = effect.isOpponentHas(); //TODO Fix an issue when there is at least one card with "opponentHas" effect on each side (one may not have all the expected keywords)
 
         Player cardOwner = card.getOwner();
 
@@ -34,7 +35,7 @@ public class KeywordUpEffectResolver extends GenericEffectResolver<KeywordUpEffe
             return;
         }
 
-        Player opponent =  cardOwner.getOpponent(game.getPlayers());
+        Player opponent = cardOwner.getOpponent(game.getPlayers());
         if (moreAllies && opponent.getBoard().size() >= cardOwner.getBoard().size()) {
             return;
         }

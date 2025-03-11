@@ -1,11 +1,11 @@
 package org.metacorp.mindbug.service;
 
-import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.card.CardKeyword;
-import org.metacorp.mindbug.model.effect.EffectTiming;
-import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardKeyword;
+import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.player.Player;
 
 import java.util.Map;
@@ -22,8 +22,9 @@ public class AttackService {
 
     /**
      * Method executed when a player declares an attack
+     *
      * @param attackCard the attacking card
-     * @param game the game state
+     * @param game       the game state
      */
     public static void declareAttack(CardInstance attackCard, Game game) throws GameStateException {
         if (attackCard == null) {
@@ -45,10 +46,11 @@ public class AttackService {
 
     /**
      * Process attack declaration by triggering the "Attack" effect(s) of the card
+     *
      * @param attackCard the attacking card
-     * @param game the game state
+     * @param game       the game state
      */
-    protected static void processAttackDeclaration(CardInstance attackCard, Game game) { //TODO A voir si on peut utiliser des mocks côté test plutôt que de séparer ce code de declareAttack
+    protected static void processAttackDeclaration(CardInstance attackCard, Game game) {
         game.setAttackingCard(attackCard);
 
         // Add ATTACK effects if the player is allowed to trigger them
@@ -60,7 +62,7 @@ public class AttackService {
                 try {
                     resolveAttack(null, game);
                 } catch (GameStateException e) {
-                    // TODO Erreurs à gérer (ce cas ne devrait théoriquement pas arriver mais...)
+                    // TODO Manage errors
                 }
             }
         });
@@ -70,8 +72,9 @@ public class AttackService {
      * Method executed when a player answer to its opponent attack<br>
      * We consider that if attacking creature has HUNTER, the hunting choice has already been resolved through the GUI<br>
      * We consider that if attacking creature has not HUNTER, the opponent has already chosen if he wants to block (and with which creature) or not<br>
+     *
      * @param defendingCard the card chosen to defend the attack
-     * @param game the game state
+     * @param game          the game state
      */
     public static void resolveAttack(CardInstance defendingCard, Game game) throws GameStateException {
         CardInstance attackingCard = game.getAttackingCard();
@@ -108,9 +111,10 @@ public class AttackService {
 
     /**
      * Process the attack resolution
+     *
      * @param attackCard the card that attacked
      * @param defendCard the card chosen to defend the attack (may be null if player chooses to not block)
-     * @param game the game state
+     * @param game       the game state
      */
     protected static void processAttackResolution(CardInstance attackCard, CardInstance defendCard, Game game) {
         if (defendCard == null) {

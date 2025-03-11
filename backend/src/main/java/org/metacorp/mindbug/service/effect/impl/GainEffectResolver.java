@@ -15,6 +15,7 @@ public class GainEffectResolver extends GenericEffectResolver<GainEffect> {
 
     /**
      * Constructor
+     *
      * @param effect the effect to be resolved
      */
     public GainEffectResolver(GainEffect effect) {

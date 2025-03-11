@@ -13,6 +13,7 @@ public class NoAttackEffectResolver extends GenericEffectResolver<NoAttackEffect
 
     /**
      * Constructor
+     *
      * @param effect the effect to be resolved
      */
     public NoAttackEffectResolver(NoAttackEffect effect) {

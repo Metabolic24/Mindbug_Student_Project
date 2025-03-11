@@ -6,7 +6,9 @@ import lombok.NoArgsConstructor;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.GenericEffect;
 
-/** Effect that adds a keyword to one or more cards */
+/**
+ * Effect that adds a keyword to one or more cards
+ */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor

@@ -5,7 +5,9 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.metacorp.mindbug.model.effect.GenericEffect;
 
-/** Effect that increase or modify current player life points */
+/**
+ * Effect that increase or modify current player life points
+ */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor

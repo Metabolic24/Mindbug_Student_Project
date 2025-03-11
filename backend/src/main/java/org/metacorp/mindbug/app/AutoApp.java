@@ -1,15 +1,18 @@
 package org.metacorp.mindbug.app;
 
-import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
-import org.metacorp.mindbug.service.GameService;
+import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Mindbug application that launches a game then uses random choices to reach the end of it
+ */
 public class AutoApp {
 
     private static final Random random = new Random();
@@ -24,12 +27,18 @@ public class AutoApp {
         });
     }
 
-    public static void resolveTurn(Game game) throws GameStateException {
+    /**
+     * Resolve a game turn
+     *
+     * @param game the current game
+     * @throws GameStateException if the game reaches an inconsistant state
+     */
+    private static void resolveTurn(Game game) throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
 
         if (game.getChoice() != null) {
             AppUtils.resolveChoice(game);
-        } else if (game.getAttackingCard() != null ) {
+        } else if (game.getAttackingCard() != null) {
             AppUtils.frenzyAttack(game);
         } else {
             List<CardInstance> availableCards = currentPlayer.getBoard().stream().filter(CardInstance::isAbleToAttack).toList();

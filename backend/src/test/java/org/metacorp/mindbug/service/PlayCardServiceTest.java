@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
-import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.Player;

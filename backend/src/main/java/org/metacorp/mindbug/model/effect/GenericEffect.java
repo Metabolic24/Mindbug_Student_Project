@@ -6,7 +6,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.metacorp.mindbug.model.effect.impl.*;
 
-/** Parent class for card effect */
+/**
+ * Parent class for card effect
+ */
 @Getter
 @Setter
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", include = JsonTypeInfo.As.EXISTING_PROPERTY, visible = true)
@@ -38,6 +40,7 @@ public class GenericEffect {
     /**
      * Return the priority of the effect resolution (for passive effects only)
      * (the higher the value is, the later the effect must be resolved)
+     *
      * @return the priority of the effect resolution (for passive effects only)
      */
     public int getPriority() {

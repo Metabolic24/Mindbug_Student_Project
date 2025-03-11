@@ -15,6 +15,7 @@ public abstract class GenericEffectResolver<T extends GenericEffect> {
 
     /**
      * Protected constructor
+     *
      * @param effect the effect that needs to be resolved
      */
     protected GenericEffectResolver(T effect) {
@@ -23,7 +24,8 @@ public abstract class GenericEffectResolver<T extends GenericEffect> {
 
     /**
      * Apply the current effect
-     * @param game the current game state
+     *
+     * @param game         the current game state
      * @param effectSource the card that triggered the effect
      */
     public abstract void apply(Game game, CardInstance effectSource);

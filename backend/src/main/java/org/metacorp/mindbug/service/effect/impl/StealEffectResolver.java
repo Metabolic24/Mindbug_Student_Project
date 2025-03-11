@@ -1,11 +1,11 @@
 package org.metacorp.mindbug.service.effect.impl;
 
-import org.metacorp.mindbug.model.choice.BooleanChoice;
-import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.effect.steal.StealSource;
+import org.metacorp.mindbug.model.choice.BooleanChoice;
+import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.impl.StealEffect;
+import org.metacorp.mindbug.model.effect.steal.StealSource;
 import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
@@ -25,6 +25,7 @@ public class StealEffectResolver extends GenericEffectResolver<StealEffect> {
 
     /**
      * Constructor
+     *
      * @param effect the effect to be resolved
      */
     public StealEffectResolver(StealEffect effect) {

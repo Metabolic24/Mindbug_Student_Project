@@ -1,6 +1,8 @@
 package org.metacorp.mindbug.model.card;
 
-/** Enumeration for card keywords*/
+/**
+ * Enumeration for card keywords
+ */
 public enum CardKeyword {
     FRENZY,     // Card may attack twice
     HUNTER,     // Card may choose its target when attacking

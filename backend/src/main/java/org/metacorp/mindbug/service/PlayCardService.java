@@ -1,9 +1,9 @@
 package org.metacorp.mindbug.service;
 
-import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.player.Player;
 
 import java.text.MessageFormat;
@@ -21,6 +21,7 @@ public class PlayCardService {
 
     /**
      * Method executed when a player choose a card that he would like to play
+     *
      * @param card the picked card
      * @param game the current game state
      * @throws GameStateException if game state appears to be inconsistent before processing
@@ -50,6 +51,7 @@ public class PlayCardService {
 
     /**
      * Method executed when a player plays a card, no matter how or why
+     *
      * @param game the current game state
      * @throws GameStateException if game state appears to be inconsistent before processing
      */
@@ -59,8 +61,9 @@ public class PlayCardService {
 
     /**
      * Method executed when a player plays a card, no matter how or why
+     *
      * @param mindbugger the player that used a mindbug for this card (may be null)
-     * @param game the current game state
+     * @param game       the current game state
      * @throws GameStateException if game state appears to be inconsistent before processing
      */
     public static void playCard(Player mindbugger, Game game) throws GameStateException {
@@ -87,8 +90,9 @@ public class PlayCardService {
 
     /**
      * Update game state after a card is played
+     *
      * @param mindbugger the player that used a mindbug for this card (may be null)
-     * @param game the current game state
+     * @param game       the current game state
      */
     protected static void managePlayedCard(Player mindbugger, Game game) {
         CardInstance playedCard = game.getPlayedCard();

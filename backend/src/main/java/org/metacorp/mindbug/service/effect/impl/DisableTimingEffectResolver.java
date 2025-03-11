@@ -12,6 +12,7 @@ public class DisableTimingEffectResolver extends GenericEffectResolver<DisableTi
 
     /**
      * Constructor
+     *
      * @param effect the effect to be resolved
      */
     public DisableTimingEffectResolver(DisableTimingEffect effect) {

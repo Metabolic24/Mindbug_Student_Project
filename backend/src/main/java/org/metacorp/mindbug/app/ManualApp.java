@@ -7,6 +7,9 @@ import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.Scanner;
 
+/**
+ * Mindbug application that expects player(s) to type command in the console to make the game progress
+ */
 public class ManualApp {
 
     public static void main(String[] args) {
@@ -22,19 +25,27 @@ public class ManualApp {
         });
     }
 
+    /**
+     * Processes the command written by the user
+     *
+     * @param input the user command
+     * @param game  the current game instance
+     * @return true if command has been successfully processed, false otherwise
+     * @throws GameStateException if the game reaches an inconsistant state
+     */
     private static boolean processInput(String input, Game game) throws GameStateException {
         String[] tokens = input.split(" ");
         switch (tokens[0].toLowerCase()) {
             case "play", "p":
                 AppUtils.play(game);
 
-                while(game.getChoice() != null) {
+                while (game.getChoice() != null) {
                     AppUtils.resolveChoice(game);
                 }
                 break;
             case "attack", "a":
                 AppUtils.attack(game);
-                while(game.getChoice() != null) {
+                while (game.getChoice() != null) {
                     AppUtils.resolveChoice(game);
                 }
                 break;
@@ -63,6 +74,11 @@ public class ManualApp {
         return !game.isFinished() && (!game.getCurrentPlayer().getHand().isEmpty() || !game.getCurrentPlayer().getBoard().isEmpty());
     }
 
+    /**
+     * Print a sum-up of the player status
+     *
+     * @param player the player related to the sum-up to produce
+     */
     private static void sumUpPlayer(Player player) {
         System.out.printf("%s (%d PV, %d Mindbug(s), Main : %d, Terrain : %d, Défausse : %d, Pioche : %d\n",
                 player.getName(), player.getTeam().getLifePoints(), player.getMindBugs(), player.getHand().size(), player.getBoard().size(),

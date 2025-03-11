@@ -3,10 +3,12 @@ package org.metacorp.mindbug.model.effect.impl;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.GenericEffect;
 
-/** Effect that may disable a specific timing type of effects */
+/**
+ * Effect that may disable a specific timing type of effects
+ */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
