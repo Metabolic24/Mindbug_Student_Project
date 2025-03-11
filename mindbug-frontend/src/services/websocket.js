@@ -68,6 +68,44 @@ class WebSocketService {
       console.error('❌ JSON parse failed:', error);
     }
   }
+
+  subscribeToGameState(gameId, onGameStateReceived) {
+    const topic = `/topic/game/${gameId}`;
+    if (!this.subscriptions.has(topic)) {
+      const sub = this.client.subscribe(
+        topic,
+        (message) => this.handleGameStateMessage(message, onGameStateReceived)
+      );
+      this.subscriptions.set(topic, sub);
+    }
+  }
+
+  handleGameStateMessage(message, onGameStateReceived) {
+    try {
+      const websocketMsg = JSON.parse(message.body);
+      let messageID = websocketMsg.messageID;
+      // Message type 
+      switch(messageID){
+        case "newGame" :
+          this.onNewGame(websocketMsg,onGameStateReceived);
+          break;
+        default:
+          break;
+        //other message type to implement
+      }
+    } catch (error) {
+      console.error('❌ Error parsing game state:', error);
+    }
+  }
+
+  onNewGame(data,onGameStateReceived){
+    if (data.gameId) {
+      if (data.player1 && data.player2) {
+        onGameStateReceived(data);
+      }
+    }
+  }
+
 }
 
 export default new WebSocketService();
