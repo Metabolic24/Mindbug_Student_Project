@@ -6,6 +6,7 @@ import com.mindbug.models.Player;
 import com.mindbug.services.GameService;
 import com.mindbug.services.PlayerService;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
+import com.mindbug.services.wsmessages.WSMessageNewTurn;
 import com.mindbug.websocket.WSMessageManager;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,11 +70,22 @@ public class GameSession {
             if (playerId != this.lastPlayerConfirmedJoin) {
                 // The two players have confirmed. Send ws message newGame and update game status
                 this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
+
+                // Start a turn
+                newTurn();
             } else {
                 throw new IllegalArgumentException("Join already confirmed.");
             }
         }
 
+    }
+
+    public void newTurn() {
+        // For now we assume 1st player is player1
+        this.game.setCurrentPlayer(game.getPlayer1());
+
+        // Send WS message of ne turn
+        this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
     }
 
 
