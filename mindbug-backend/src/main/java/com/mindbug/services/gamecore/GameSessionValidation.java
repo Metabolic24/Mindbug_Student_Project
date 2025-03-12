@@ -25,6 +25,31 @@ public class GameSessionValidation {
         validPlayer(gameSession, playerId);
 
         // Check if player have a card
+        playerHasCard(gameSession, playerId, cardId);
+
+        // Check if player is  current player
+        if (!gameSession.isCurrentPlayer(playerId)) {
+            throw new IllegalArgumentException("Player not authorized to do this action");
+        }
+    }
+
+    public void canDoDontBlock(GameSession gameSession, Long playerId) {
+        // Check valid player
+        validPlayer(gameSession, playerId);
+
+        if (gameSession.getBattle() == null) {
+            throw new IllegalStateException("Cannot block without attack");
+        }
+
+
+        // Check if player is not current player
+        if (gameSession.isCurrentPlayer(playerId)) {
+            throw new IllegalArgumentException("Player not authorized to do this action");
+        }
+    }
+
+    
+    public void playerHasCard(GameSession gameSession, Long playerId, Long cardId) {
         Player player = gameSession.getPlayer(playerId);
         boolean haveCard = player.getHand().stream().anyMatch(sessionCard -> sessionCard.getId() == cardId);
         if (!haveCard) {

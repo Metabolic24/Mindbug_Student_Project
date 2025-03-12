@@ -8,6 +8,9 @@ import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
 import com.mindbug.websocket.WSMessageManager;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
 import lombok.Getter;
@@ -25,7 +28,7 @@ public class GameSession {
 
     private String wsChannel;
 
-    private Long lastPlayerConfirmedJoin = null;
+    private List<Long> confirmJoinPlayers;
 
     private GameSessionValidation gameSessionValidation;
 
@@ -39,6 +42,8 @@ public class GameSession {
     public GameSession(Game game, WSMessageManager gameWsMessageManager, GameSessionValidation gameSessionValidation,
     ApplicationContext applicationContext, PlayerService playerService) {
         this.game = game;
+
+        this.confirmJoinPlayers = new ArrayList<>();
         
         this.gameWsMessageManager = gameWsMessageManager;
         this.wsChannel = "/topic/game/" + game.getId();
@@ -48,8 +53,6 @@ public class GameSession {
 
         this.applicationContext = applicationContext;
         this.playerService = playerService;
-
-        this.battle = this.applicationContext.getBean(Battle.class);
     }
 
 
@@ -57,21 +60,19 @@ public class GameSession {
     public void confirmJoin(Long playerId) {
         this.gameSessionValidation.canConfirmJoin(this, playerId);
 
-        if (this.lastPlayerConfirmedJoin == null) {
-            // No player confirmed yet
-            this.lastPlayerConfirmedJoin = playerId;
+        if (this.confirmJoinPlayers.contains(playerId)) {
+            throw new IllegalArgumentException("Join already confirmed.");
         } else {
-            if (playerId != this.lastPlayerConfirmedJoin) {
-                // The two players have confirmed. Send ws message newGame and update game status
-                this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
-
-                // Start a turn
-                newTurn();
-            } else {
-                throw new IllegalArgumentException("Join already confirmed.");
-            }
+            this.confirmJoinPlayers.add(playerId);
         }
 
+        if (this.confirmJoinPlayers.size() == 2) {
+            // The two players have confirmed. Send ws message newGame and update game status
+            this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
+
+            // Start a turn
+            newTurn();
+        }
     }
 
     public void newTurn() {
@@ -83,15 +84,25 @@ public class GameSession {
     }
 
 
-    public void attack(Long playerId, Long gameId, Long sessionCardId) {
-        // TODO: Set game status to play_or_attack in new tour to make it work
+    public void attack(Long playerId, Long sessionCardId) {
         this.gameSessionValidation.canAttack(this, playerId, sessionCardId);
 
         Player player = getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
 
-        this.battle.attack(player, sessionCard);
+        this.battle = this.applicationContext.getBean(Battle.class);
+
+        this.battle.attack(this, player, sessionCard);
+    }
+
+    public void dontBlock(Long playerId) {
+        this.gameSessionValidation.canDoDontBlock(this, playerId);
+
+        
+        Player player = getPlayer(playerId);
+
+        this.battle.dontBlock(this, player);
     }
     
 
@@ -102,5 +113,17 @@ public class GameSession {
             return this.game.getPlayer1();
         else 
             return this.game.getPlayer2();
+    }
+
+    public Player getOppoennt() {
+        if (isCurrentPlayer(game.getPlayer1().getId())) {
+            return game.getPlayer2();
+        } else {
+            return game.getPlayer1();
+        }
+    }
+
+    public boolean isCurrentPlayer(Long playerId) {
+        return game.getCurrentPlayer() != null && playerId == game.getCurrentPlayer().getId();
     }
 }
