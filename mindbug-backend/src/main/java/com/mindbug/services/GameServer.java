@@ -44,17 +44,14 @@ public class GameServer {
         newGame.setPlayer1(player1);
         newGame.setPlayer2(player2);
 
-        // Create game session
         GameSession gameSession = gameSessionFactory.createGameSession(newGame);
         gameSessions.put(newGame.getId(), gameSession);
 
         // Send newGame websocket messages to each player
         this.gameQueueWsMessageManager.sendMessage(new WSMessageMatchFound(newGame.getId(), newGame.getPlayer1().getId()));
 
-
         // Second player message
         this.gameQueueWsMessageManager.sendMessage(new WSMessageMatchFound(newGame.getId(), newGame.getPlayer2().getId()));
-
 
     }
 
@@ -94,6 +91,11 @@ public class GameServer {
     public void handleDontBlock(Long playerId, Long gameId) {
         GameSession gameSession = this.getGameSession(gameId);
         gameSession.dontBlock(playerId);
+    }
+
+    public void handlePlayCard(Long playerId, Long sessionCardId, Long gameId) {
+        GameSession gameSession = this.getGameSession(gameId);
+        gameSession.playCard(playerId, sessionCardId);
     }
 
 }
