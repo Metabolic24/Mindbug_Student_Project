@@ -87,7 +87,13 @@ public class GameServer {
 
     public void handleAttack(Long playerId, Long gameId, Long sessionCardId) {
         GameSession gameSession = this.getGameSession(gameId);
-        gameSession.attack(playerId, gameId, sessionCardId);
+        gameSession.attack(playerId, sessionCardId);
+    }
+
+
+    public void handleDontBlock(Long playerId, Long gameId) {
+        GameSession gameSession = this.getGameSession(gameId);
+        gameSession.dontBlock(playerId);
     }
 
 }
