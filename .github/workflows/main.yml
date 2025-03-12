@@ -11,7 +11,7 @@ on:
       - main
 
 jobs:
-  build:
+  backend:
     runs-on: windows-latest
     steps:
       - name: Checkout source code
@@ -41,3 +41,22 @@ jobs:
         with:
           name: mindbug-site
           path: backend/target/site
+
+  frontend:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 23.5.0
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./frontend
+
+      - name: Build frontend
+        run: npm run build
+        working-directory: ./frontend
