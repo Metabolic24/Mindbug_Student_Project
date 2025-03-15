@@ -1,10 +1,10 @@
 package com.mindbug.controller;
 
+import com.mindbug.services.GameService;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +21,15 @@ public class GameController {
 
     @Autowired
     private GameServer gameServer;
+
+    @Autowired
+    private GameService gameService;
+
+    @Autowired
+    public GameController(GameServer gameServer, GameService gameService) {
+        this.gameServer = gameServer;
+        this.gameService = gameService;
+    }
 
     @PostMapping("/join_game")
     public ResponseEntity<PlayerBasicInfoDto> joinGame() {
@@ -40,11 +49,11 @@ public class GameController {
        return ResponseEntity.ok().build();
     }
 
+
     @PostMapping("/dont_block")
     public ResponseEntity<String>  dontBlock(@RequestBody PlayerIdDto data) {
        this.gameServer.handleDontBlock(data.getPlayerId(), data.getGameId());
        return ResponseEntity.ok().build();
     }
     
-
 }

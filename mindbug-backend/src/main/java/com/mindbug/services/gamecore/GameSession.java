@@ -3,10 +3,13 @@ package com.mindbug.services.gamecore;
 import com.mindbug.models.Game;
 import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
+import com.mindbug.services.GameService;
 import com.mindbug.services.PlayerService;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
 import com.mindbug.websocket.WSMessageManager;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +41,9 @@ public class GameSession {
 
     private PlayerService playerService;
 
-    
+    private GameService gameService;
+
+    @Autowired
     public GameSession(Game game, WSMessageManager gameWsMessageManager, GameSessionValidation gameSessionValidation,
     ApplicationContext applicationContext, PlayerService playerService) {
         this.game = game;
@@ -55,7 +60,9 @@ public class GameSession {
         this.playerService = playerService;
     }
 
-
+    public void distributeCards() {
+        gameService.distributeCards(this.game);
+    }
 
     public void confirmJoin(Long playerId) {
         this.gameSessionValidation.canConfirmJoin(this, playerId);

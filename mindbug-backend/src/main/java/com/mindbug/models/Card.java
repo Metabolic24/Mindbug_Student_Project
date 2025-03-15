@@ -10,6 +10,17 @@ public class Card {
     private Set<Keyword> keywords;
     private Set<Effect> effect;
 
+    public Card() {
+    }
+
+    public Card(Card card) {
+        this.name = card.getName();
+        this.copies = card.getCopies();
+        this.power = card.getPower();
+        this.keywords = card.getKeywords();
+        this.effect = card.getEffect();
+    }
+
     public String getName() {
         return name;
     }
