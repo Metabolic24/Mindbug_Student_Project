@@ -20,7 +20,10 @@
       </div>
     </div>
 
-    <div class="battlefield">
+    <div class="battlefield"
+    @click="handleBattlefieldClick"
+    @dragover.prevent
+    @drop="handleDropOnBattlefield">
       <img
         v-for="(card, index) in enemyBattlefieldCards.slice(0)"
         :key="index"
@@ -39,39 +42,137 @@
 
     <div class="hand-area">
       <img
-        v-for="(card, index) in handCards"
+        v-for="(handCards, index) in handCards"
         :key="index"
-        :src="getCardImage(card)"
+        :src="getCardImage(handCards)"
         class="card-image hand-card"
+        :class="{ 'selected': selectedCard === index }"
+        @click="handleCardClick(index)"
+        draggable="true"
+        @dragstart="handleDragStart($event, index)"  
       />
     </div>
   </div>
 </template>
 
 <script>
+import WebSocketService from "@/services/websocket.js";
 export default {
   name: "GameBoard",
   data() {
     return {
       cardCount: 5,
       handCards: [
-        "Bee_Bear.jpg",
-        "Killer_Bee.jpg",
-        "Gorillion.jpg",
-        "Lone_Yeti.jpg",
-        "Shark_Dog.jpg"
+        "Bee_Bear.jpg", "Killer_Bee.jpg", "Gorillion.jpg", "Lone_Yeti.jpg", "Shark_Dog.jpg"
       ],
+      playerId: null,
+      gameId: null,
       myBattlefieldCards: ["Elephantopus.jpg", "Ferret_Bomber.jpg", "Giraffodile.jpg"],
-      enemyBattlefieldCards: ["Deathweaver.jpg"]
+      enemyBattlefieldCards: ["Deathweaver.jpg"],
+      selectedCard: null, 
+      draggingCard: null, 
     };
   },
+  mounted() {
+    this.playerId = localStorage.getItem('playerId');
+    this.gameId = this.$route.query.gameId;
+    
+    WebSocketService.subscribeToGameState(this.gameId, this.handleGameState);
+  },
   methods: {
+    handleGameState(gameState) {
+      // Determine which player is the current
+      const player = gameState.player1.id === this.playerId ? 
+        gameState.player1 : gameState.player2;
+      // Update hand card of the player
+      this.handCards = player.hand.map(card => ({
+        name: card.name,
+        id: card.id 
+      }));
+    },
+
     getCardImage(card) {
       return require(`@/assets/Sets/First_Contact/${card}`);
     },
     getCardBackImage() {
       return require(`@/assets/Sets/First_Contact/card_Back.png`);
     },
+
+    handleCardClick(index) {
+      if (this.selectedCard === index) {
+        this.selectedCard = null;
+      } else {
+        this.selectedCard = index; 
+      }
+    },
+
+    handleBattlefieldClick() {
+      if (this.selectedCard !== null) {
+
+        const cardToPlay = this.handCards[this.selectedCard];
+
+        this.playCard(cardToPlay);
+
+        this.handCards.splice(this.selectedCard, 1);
+
+        this.myBattlefieldCards.push(cardToPlay);
+
+        this.selectedCard = null; 
+      }
+    },
+
+    handleDragStart(event, index) {
+      this.draggingCard = index;
+
+      event.dataTransfer.effectAllowed = "move";  
+      
+      const cardImage = event.target;
+
+      event.dataTransfer.setDragImage(cardImage, 50, 50);  
+    },
+
+    handleDropOnBattlefield(event) {
+      event.preventDefault();
+
+      if (this.draggingCard !== null) {
+
+        const cardToPlay = this.handCards[this.draggingCard];
+
+        this.playCard(cardToPlay);
+
+        this.handCards.splice(this.draggingCard, 1);
+
+        this.myBattlefieldCards.push(cardToPlay); 
+
+        this.draggingCard = null;
+      }
+    },
+    
+    playCard(card) {      
+      fetch('/api/game/game/play_card', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          playerId: this.playerId,
+          sessioncardId: card.sessioncardId,
+          gameId: this.gameId
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          //this.updateBattlefield(card); TODO : when api will work we will update the field here after api answer
+          // for now the update logic is in handleBattlefieldClick and handleDropOnBattlefield
+        } else {
+          console.error("Erreur lors de la tentative de jouer la carte :", data.error);
+        }
+      })
+      .catch(error => {
+        console.error("Erreur réseau ou backend :", error);
+      });
+    }
   },
 };
 </script>
@@ -122,10 +223,14 @@ html, body {
   object-fit: cover;
 }
 
-/* Applique les effets uniquement pour les cartes dans la hand-area */
 .hand-area .hand-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hand-card.selected {
+  outline: 4px solid yellow; 
+  transform: translateY(-10px);
 }
 
 .side-left, .side-right {
@@ -212,6 +317,11 @@ html, body {
   border: 2px solid black;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-image:active {
+  opacity: 0.5;  
+  cursor: move;  
 }
 
 </style>

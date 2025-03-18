@@ -7,6 +7,7 @@ import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import com.mindbug.repositories.PlayerRepository;
 
+
 @Service
 public class PlayerService {
 
@@ -20,10 +21,10 @@ public class PlayerService {
     public GameSessionCard getHandCard(Player player, Long  sessionCardId) {
         for  (GameSessionCard sessionCard : player.getHand()) {
             if (sessionCard.getId().equals(sessionCardId)) {
-                return sessionCard;  // Retourne la carte si l'ID correspond
+                return sessionCard;
             }
         }
         return null;
     }
-    
+
 }
