@@ -1,65 +1,32 @@
 package com.mindbug.models;
 
+import java.io.Serializable;
 import java.util.Set;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-
-public class Card {
+@Entity
+@Getter
+@Setter
+@ToString
+public class Card implements Serializable {
+    @Id
     private String name;
     private int copies;
     private int power;
+
+    @ElementCollection
+    @Enumerated(EnumType.STRING)
     private Set<Keyword> keywords;
+
+    @OneToMany(mappedBy = "card", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Effect> effect;
-
-    public Card() {
-    }
-
-    public Card(Card card) {
-        this.name = card.getName();
-        this.copies = card.getCopies();
-        this.power = card.getPower();
-        this.keywords = card.getKeywords();
-        this.effect = card.getEffect();
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getCopies() {
-        return copies;
-    }
-
-    public void setCopies(int copies) {
-        this.copies = copies;
-    }
-
-    public int getPower() {
-        return power;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
-    }
-
-    public Set<Keyword> getKeywords() {
-        return keywords;
-    }
-
-    public void setKeywords(Set<Keyword> keywords) {
-        this.keywords = keywords;
-    }
-
-
-    public Set<Effect> getEffect() {
-        return effect;
-    }
-
-    public void setEffect(Set<Effect> effect) {
-        this.effect = effect;
-    }
 }
-

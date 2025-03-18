@@ -5,6 +5,7 @@ import java.io.Serializable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,8 +20,10 @@ public class GameSessionCard implements Serializable  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public GameSessionCard(Card card) {
-        this.id = id;
-    }
+    @ManyToOne
+    private Card card;
 
+    public GameSessionCard(Card card) {
+        this.card = card;
+    }
 }

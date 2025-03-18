@@ -38,6 +38,9 @@ public class Player implements Serializable {
     private List<GameSessionCard> hand = new ArrayList<>();
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<GameSessionCard> drawPile = new ArrayList<>();
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<GameSessionCard> battlefield = new ArrayList<>();
 
     public Player(String nickname) {
