@@ -50,7 +50,7 @@ public class GameServerTest {
 
     @Test
     void testJoinGame() throws Exception {
-        // Subscribe to general websocket
+        // Subscirbe to general websocket
         wsHelper.subscribe("/topic/game-queue");
         Thread.sleep(500);
 
@@ -121,16 +121,16 @@ public class GameServerTest {
         System.out.println("*** Testing new game websocket messages: ***");
         Thread.sleep(500);
         JsonNode wsMsgNewGame = wsHelper.getNextMessage(5, TimeUnit.SECONDS);
-        
+
         assertNotNull(wsMsgNewGame, "New game websocket message should not be null");
         assertTrue(wsMsgNewGame.has("messageID"), "New game websoket message should have field messageID");
         assertEquals("newGame", wsMsgNewGame.get("messageID").asText(), "New game websoket message field messageID should be equals to newGame");
 
-        assertTrue(wsMsgNewGame.has("data"), "New game websoket message  should have field data");
+        assertTrue(wsMsgNewGame.has("data"), "New game websoket message should have field data");
         assertTrue(wsMsgNewGame.get("data").has("id"), "New game websoket message should have field data.id");
         assertEquals(message1.get("data").get("gameId").asInt(),
-        wsMsgNewGame.get("data").get("id").asInt(),
-        "New game websoket message data.id should be equals to match found websocket match found msg gameId");
+                wsMsgNewGame.get("data").get("id").asInt(),
+                "New game websoket message data.id should be equals to match found websocket match found msg gameId");
         System.out.println("*** Testing new game websocket messages: OK ***\n");
 
 

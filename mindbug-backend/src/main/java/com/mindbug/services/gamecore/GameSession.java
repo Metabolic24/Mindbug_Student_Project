@@ -3,6 +3,7 @@ package com.mindbug.services.gamecore;
 import com.mindbug.models.Game;
 import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
+import com.mindbug.services.CardService;
 import com.mindbug.services.PlayerService;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
@@ -11,6 +12,7 @@ import com.mindbug.websocket.WSMessageManager;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
 import lombok.Getter;
@@ -37,9 +39,11 @@ public class GameSession {
 
     private PlayerService playerService;
 
+    @Autowired
+    private CardService cardService;
 
     public GameSession(Game game, WSMessageManager gameWsMessageManager, GameSessionValidation gameSessionValidation,
-                       ApplicationContext applicationContext, PlayerService playerService) {
+    ApplicationContext applicationContext, PlayerService playerService) {
         this.game = game;
 
         this.confirmJoinPlayers = new ArrayList<>();
@@ -53,8 +57,6 @@ public class GameSession {
         this.applicationContext = applicationContext;
         this.playerService = playerService;
     }
-
-
 
     public void confirmJoin(Long playerId) {
         this.gameSessionValidation.canConfirmJoin(this, playerId);
@@ -80,8 +82,9 @@ public class GameSession {
 
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
-    }
 
+        cardService.distributeCards(game);
+    }
 
     public void attack(Long playerId, Long sessionCardId) {
         this.gameSessionValidation.canAttack(this, playerId, sessionCardId);
@@ -126,7 +129,7 @@ public class GameSession {
         }
     }
 
-    public Player getOppoennt() {
+    public Player getOpponent() {
         if (isCurrentPlayer(game.getPlayer1().getId())) {
             return game.getPlayer2();
         } else {
