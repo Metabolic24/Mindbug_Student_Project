@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       message: "",
-      playerId: localStorage.getItem("playerId") || null,
+      playerId: localStorage.getItem("playerId"),
     };
   },
   methods: {
@@ -28,7 +28,7 @@ export default {
     async startGame() {
       try {
         alert("Matching...");
-        const response = await axios.post("http://localhost:8080/api/game/join_game");
+        const response = await axios.post("/api/game/join_game");
         this.playerId = response.data.playerId;
         WebSocketService.connectToQueue(this.handleMatchFound);
       } catch (error) {
@@ -39,7 +39,7 @@ export default {
 
     handleMatchFound(data) {
       console.log('🎉 Match Found:', data);
-      this.$router.push('/gameboard');
+      this.$router.push('/game');
     }
   },
   mounted() {
