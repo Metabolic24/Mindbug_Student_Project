@@ -1,7 +1,6 @@
 package com.mindbug.controller;
 
 import com.mindbug.models.Card;
-import com.mindbug.services.CardService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,12 +13,10 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class CardControllerTest {
 
     private CardController cardController;
-    private CardService cardService;
 
     @BeforeEach
     public void setUp() throws IOException {
-        cardService = new CardService();
-        cardController = new CardController(cardService);
+        cardController = new CardController();
     }
 
     @Test
