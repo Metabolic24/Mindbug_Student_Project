@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       message: "",
-      playerId: localStorage.getItem("playerId") || null,
+      playerId: localStorage.getItem("playerId"),
     };
   },
   methods: {
