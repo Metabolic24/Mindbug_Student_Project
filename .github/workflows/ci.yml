@@ -2,14 +2,7 @@ name: Mindbug CI Workflow
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-      - feature/US-06_CI
-  pull_request:
-    branches:
-      - main
-      - feature/US-06_CI
+  # once removed it became manual start
 
 jobs:
   frontend:
