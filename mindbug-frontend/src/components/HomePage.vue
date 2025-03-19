@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     goToSets() {
-      this.$router.push('/setsofcards');
+      this.$router.push('/sets');
     },
 
     async startGame() {
