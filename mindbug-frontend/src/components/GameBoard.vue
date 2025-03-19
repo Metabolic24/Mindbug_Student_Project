@@ -27,17 +27,28 @@
       <img
         v-for="(card, index) in enemyBattlefieldCards.slice(0)"
         :key="index"
-        :src="getCardImage(card)"
+        :src="getCardImage(card.image)"
         class="card-image center first-card"
+        :class="{ targetable: isSelectingTarget }"
+        @click="isSelectingTarget ? selectTarget(card) : null"
       />
       <div class="row">
         <img
           v-for="(card, index) in myBattlefieldCards.slice(0)"
           :key="index"
-          :src="getCardImage(card)"
+          :src="getCardImage(card.image)"
           class="card-image"
-          @click="handleMyCardClick(card, index)"
+          :class="{ selected: selectedAttacker && selectedAttacker.id === card.id }"
+          @click="selectAttacker(card)"
         />
+        <button 
+          v-if="selectedAttacker && isMyTurn"
+          @click="prepareAttack"
+          :disabled="attackButtonDisabled"
+        >
+          Attack
+        </button>
+
       </div>
     </div>
     <div v-if="isMyTurn" class="turn-indicator">Your turn</div>
@@ -76,12 +87,25 @@ export default {
       ],
       playerId: null,
       gameId: null,
-      myBattlefieldCards: ["Elephantopus.jpg", "Ferret_Bomber.jpg", "Giraffodile.jpg"],
-      enemyBattlefieldCards: ["Deathweaver.jpg"],
+      // myBattlefieldCards: ["Elephantopus.jpg", "Ferret_Bomber.jpg", "Giraffodile.jpg"],
+      // enemyBattlefieldCards: ["Deathweaver.jpg"],
+      myBattlefieldCards: [
+        { id: 1, image: "Elephantopus.jpg" },
+        { id: 2, image: "Ferret_Bomber.jpg" },
+        { id: 3, image: "Giraffodile.jpg" }
+      ],
+      enemyBattlefieldCards: [
+        { id: 4, image: "Deathweaver.jpg" }
+      ],
+
       selectedCard: null, 
       draggingCard: null, 
 
       isMyTurn: false,
+      selectedAttacker: null, 
+      isSelectingTarget: false,
+      attackButtonDisabled: true,
+
     };
   },
   mounted() {
@@ -126,19 +150,19 @@ export default {
       if (isPlayer1) {
         this.myHp = gameState.player1.lifepoints;
         this.myHandCards = gameState.player1.handCards || [];
-        this.myBattlefieldCards = gameState.player1.battlefield || [];
+        // this.myBattlefieldCards = gameState.player1.battlefield || [];
 
         this.enemyHp = gameState.player2.lifepoints;
         this.enemyHandCount = gameState.player2.handCardsCount || 0;
-        this.enemyBattlefieldCards = gameState.player2.battlefield || [];
+        // this.enemyBattlefieldCards = gameState.player2.battlefield || [];
       } else {
         this.myHp = gameState.player2.lifepoints;
         this.myHandCards = gameState.player2.handCards || [];
-        this.myBattlefieldCards = gameState.player2.battlefield || [];
+        // this.myBattlefieldCards = gameState.player2.battlefield || [];
 
         this.enemyHp = gameState.player1.lifepoints;
         this.enemyHandCount = gameState.player1.handCardsCount || 0;
-        this.enemyBattlefieldCards = gameState.player1.battlefield || [];
+        // this.enemyBattlefieldCards = gameState.player1.battlefield || [];
       }
 
       console.log(`🕒 Current turn: ${this.isMyTurn ? 'My turn' : 'opponent turn'}`);
@@ -182,9 +206,7 @@ export default {
       return require(`@/assets/Sets/First_Contact/card_Back.png`);
     },
 
-    handleMyCardClick(card, index){
-      console.log("Attacked", card, index);
-    },
+    
 
     handleCardClick(index) {
       if (this.selectedCard === index) {
@@ -273,6 +295,48 @@ export default {
           gameId: this.gameId
         })
       })
+    },
+    
+    selectAttacker(card) {
+      if (!this.isMyTurn) {
+        alert("Not your turn");
+        return;
+      }
+
+      this.selectedAttacker = card;
+      this.attackButtonDisabled = false;
+    },
+
+    prepareAttack() {
+      if (!this.selectedAttacker) {
+        console.warn("⚠️ Haven't selected a card to attack");
+        return;
+      }
+
+      this.isSelectingTarget = true;
+      console.log("🎯 Select your attack card");
+    },
+
+    selectTarget(targetCard) {
+      if (!this.isSelectingTarget) {
+        console.warn("⚠️ Not selecting the correct target");
+        return;
+      }
+
+      console.log(`🔥 Attack with: ${this.selectedAttacker.image}, target: ${targetCard.image}`);
+
+      //For sending attack to back
+      WebSocketService.sendAction('ATTACK', {
+        gameId: this.gameId,
+        playerId: this.playerId,
+        attackerId: this.selectedAttacker.image,
+        targetId: targetCard.image
+      });
+
+      // reset
+      this.selectedAttacker = null;
+      this.isSelectingTarget = false;
+      this.attackButtonDisabled = true;
     },
     
 
@@ -430,5 +494,15 @@ html, body {
   opacity: 0.5;  
   cursor: move;  
 }
+
+.card-image.selected {
+  transform: translateY(-20px);
+  border: 2px solid #ffcc00;
+}
+.card-image.targetable {
+  cursor: pointer;
+  border: 2px solid red;
+}
+
 
 </style>
