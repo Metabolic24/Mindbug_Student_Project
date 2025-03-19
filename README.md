@@ -28,6 +28,13 @@ Make sure the backend is running...
 npm run serve
 ```
 
+The application will start on the default port: 8081.
+
+You can access it by opening a browser and navigating to the following URL:
+```bash
+http://localhost:8081
+```
+
 ## BACKEND
 
 ---
