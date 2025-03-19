@@ -3,6 +3,9 @@ package com.mindbug.services;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mindbug.models.Card;
+import com.mindbug.models.Game;
+import com.mindbug.models.GameSessionCard;
+import com.mindbug.models.Player;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -11,6 +14,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -58,4 +62,43 @@ public class CardService {
         }
         return mapper.readValue(is, new TypeReference<List<Card>>() { }); 
     }
+
+    public void distributeCards(Game game) {
+        try {
+            List<Card> rawCards = getCardsBySet("First_Contact");
+            List<GameSessionCard> gameSessionCards = expandCardCopies(rawCards);
+            Collections.shuffle(gameSessionCards);
+
+            if (gameSessionCards.size() < 20) {
+                throw new IllegalStateException("Not enough cards to start the game!");
+            }
+
+            List<GameSessionCard> player1Cards = new ArrayList<>(gameSessionCards.subList(0, 10));
+            List<GameSessionCard> player2Cards = new ArrayList<>(gameSessionCards.subList(10, 20));
+
+            distributeCardsToPlayer(game.getPlayer1(), player1Cards);
+            distributeCardsToPlayer(game.getPlayer2(), player2Cards);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private List<GameSessionCard> expandCardCopies(List<Card> rawCards) {
+        List<GameSessionCard> expandedCards = new ArrayList<>();
+        for (Card card : rawCards) {
+            for (int i = 0; i < card.getCopies(); i++) {
+                expandedCards.add(new GameSessionCard(card));
+            }
+        }
+        return expandedCards;
+    }
+
+    private void distributeCardsToPlayer(Player player, List<GameSessionCard> availableCards) {
+        List<GameSessionCard> hand = new ArrayList<>(availableCards.subList(0, 5));
+        List<GameSessionCard> drawPile = new ArrayList<>(availableCards.subList(5, 10));
+
+        player.setHand(hand);
+        player.setDrawPile(drawPile);
+    }
+
 }

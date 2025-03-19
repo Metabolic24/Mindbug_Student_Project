@@ -7,7 +7,6 @@ public class PlayerCard {
     private Player player;
     private GameSessionCard card;
 
-
     public PlayerCard(Player player, GameSessionCard card) {
         this.player = player;
         this.card = card;
@@ -16,8 +15,6 @@ public class PlayerCard {
     public PlayerCard(Player player) {
         this.player = player;
     }
-
-
 
 
     public Player getPlayer() {
