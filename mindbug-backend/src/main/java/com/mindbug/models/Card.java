@@ -1,6 +1,5 @@
 package com.mindbug.models;
 
-import java.io.Serializable;
 import java.util.Set;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.ElementCollection;
@@ -13,12 +12,11 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Entity
 @Getter
 @Setter
-@ToString
-public class Card implements Serializable {
-    @Id
+@Entity
+public class Card {
+
     private String name;
     private int copies;
     private int power;
