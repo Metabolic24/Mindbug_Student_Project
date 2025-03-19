@@ -8,7 +8,7 @@ const routes = [
         component: HomePage,
     },
     {
-        path: "/setsofcards",
+        path: "/sets",
         name: "SetsOfCards",
         component: () => import('@/components/SetsOfCards.vue')
     },
@@ -18,7 +18,7 @@ const routes = [
         component: () => import('@/components/GameBoard.vue')
     },
     {
-        path: "/cardlist/:set",
+        path: "/sets/:set",
         name: "CardList",
         component: () => import('@/components/CardsList.vue') ,
         props: true
