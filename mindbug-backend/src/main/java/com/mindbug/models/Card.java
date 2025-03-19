@@ -1,54 +1,17 @@
 package com.mindbug.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Set;
 
-
+@Getter
+@Setter
 public class Card {
+
     private String name;
     private int copies;
     private int power;
     private Set<Keyword> keywords;
     private Set<Effect> effect;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getCopies() {
-        return copies;
-    }
-
-    public void setCopies(int copies) {
-        this.copies = copies;
-    }
-
-    public int getPower() {
-        return power;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
-    }
-
-    public Set<Keyword> getKeywords() {
-        return keywords;
-    }
-
-    public void setKeywords(Set<Keyword> keywords) {
-        this.keywords = keywords;
-    }
-
-
-    public Set<Effect> getEffect() {
-        return effect;
-    }
-
-    public void setEffect(Set<Effect> effect) {
-        this.effect = effect;
-    }
 }
-

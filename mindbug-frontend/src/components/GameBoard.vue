@@ -2,7 +2,7 @@
   <div class="game-board">
     <div class="top-hand">
       <img
-        v-for="(_, index) in cardCount"
+        v-for="(_, index) in enemyHandCard"
         :key="index"
         :src="getCardBackImage()"
         class="card-image hand-card"
@@ -25,14 +25,14 @@
     @dragover.prevent
     @drop="handleDropOnBattlefield">
       <img
-        v-for="(card, index) in enemyBattlefieldCards.slice(0)"
+        v-for="(card, index) in enemyBattlefieldCards"
         :key="index"
         :src="getCardImage(card)"
         class="card-image center first-card"
       />
       <div class="row">
         <img
-          v-for="(card, index) in myBattlefieldCards.slice(0)"
+          v-for="(card, index) in myBattlefieldCards"
           :key="index"
           :src="getCardImage(card)"
           class="card-image"
@@ -61,7 +61,7 @@ export default {
   name: "GameBoard",
   data() {
     return {
-      cardCount: 5,
+      enemyHandCard: 5,
       handCards: [
         "Bee_Bear.jpg", "Killer_Bee.jpg", "Gorillion.jpg", "Lone_Yeti.jpg", "Shark_Dog.jpg"
       ],
@@ -233,7 +233,7 @@ html, body {
   transform: translateY(-10px);
 }
 
-.side-left, .side-right {
+.side-left {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -241,11 +241,9 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-}
-
-.side-left {
   left: 15px;
 }
+
 
 .battlefield {
   display: flex;
