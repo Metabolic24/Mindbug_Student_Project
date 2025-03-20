@@ -19,6 +19,8 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -29,6 +31,8 @@ public class CardService {
 
     @Autowired
     private GameSessionCardRepository gameSessionCardRepository;
+
+    private Set<GameSessionCard> allCards;
 
     private List<Card> cards;
 
@@ -76,7 +80,9 @@ public class CardService {
     public void distributeCards(Game game) {
         try {
             List<Card> rawCards = getCardsBySet("First_Contact");
+
             List<GameSessionCard> gameSessionCards = expandCardCopies(rawCards);
+
             Collections.shuffle(gameSessionCards);
 
             if (gameSessionCards.size() < 20) {
@@ -85,6 +91,8 @@ public class CardService {
 
             List<GameSessionCard> player1Cards = new ArrayList<>(gameSessionCards.subList(0, 10));
             List<GameSessionCard> player2Cards = new ArrayList<>(gameSessionCards.subList(10, 20));
+
+            gameSessionCards.subList(0, 20).clear();
 
             distributeCardsToPlayer(game.getPlayer1(), player1Cards);
             distributeCardsToPlayer(game.getPlayer2(), player2Cards);
@@ -95,11 +103,18 @@ public class CardService {
 
     private List<GameSessionCard> expandCardCopies(List<Card> rawCards) {
         List<GameSessionCard> expandedCards = new ArrayList<>();
+        Set<String> addedCards = new HashSet<>();
+
         for (Card card : rawCards) {
-            Card savedCard = cardRepository.save(card);
-            for (int i = 0; i < savedCard.getCopies(); i++) {
-                GameSessionCard gameSessionCard = new GameSessionCard(savedCard);
-                expandedCards.add(gameSessionCardRepository.save(gameSessionCard));
+            if (!addedCards.contains(card.getName())) {
+                addedCards.add(card.getName());
+
+                Card savedCard = cardRepository.save(card);
+
+                for (int i = 0; i < savedCard.getCopies(); i++) {
+                    GameSessionCard gameSessionCard = new GameSessionCard(savedCard);
+                    expandedCards.add(gameSessionCardRepository.save(gameSessionCard));
+                }
             }
         }
         return expandedCards;
@@ -113,13 +128,4 @@ public class CardService {
         player.setDrawPile(drawPile);
     }
 
-    public GameSessionCard drawCardIfNeccesary(Game game) {
-        Player player = game.getCurrentPlayer();
-        if (player.getDrawPile().isEmpty()) {
-            return null;
-        }
-        GameSessionCard drawnCard = player.getDrawPile().remove(0);
-        player.getHand().add(drawnCard);
-        return drawnCard;
-    }
 }
