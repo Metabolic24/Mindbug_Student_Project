@@ -15,7 +15,7 @@ import lombok.ToString;
 
 @Entity
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString
-public class GameSessionCard implements Serializable  {
+public class GameSessionCard implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
