@@ -117,6 +117,9 @@ public class GameSession {
         player.getHand().remove(sessionCard);
 
         player.getBattlefield().add(sessionCard);
+        if (player.getHand().size() < 5) {
+            GameSessionCard drawnCard = cardService.drawCardIfNeccesary(this.game);
+        }
     }
 
     public Player getPlayer(Long playerId) {
@@ -139,5 +142,10 @@ public class GameSession {
 
     public boolean isCurrentPlayer(Long playerId) {
         return game.getCurrentPlayer() != null && playerId == game.getCurrentPlayer().getId();
+    }
+
+    public List<GameSessionCard> getPlayerHand(Long playerId) {
+        Player player = getPlayer(playerId);
+        return player.getHand();
     }
 }
