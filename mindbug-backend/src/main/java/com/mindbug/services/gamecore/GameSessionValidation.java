@@ -42,7 +42,6 @@ public class GameSessionValidation {
             throw new IllegalStateException("Cannot block without attack");
         }
 
-
         // Check if player is not current player
         if (gameSession.isCurrentPlayer(playerId)) {
             throw new IllegalArgumentException("Player not authorized to do this action");

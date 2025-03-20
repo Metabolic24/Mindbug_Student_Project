@@ -6,20 +6,29 @@ import com.mindbug.models.Card;
 import com.mindbug.models.Game;
 import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
+import com.mindbug.repositories.CardRepository;
+import com.mindbug.repositories.GameSessionCardRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
 public class CardService {
+
+    @Autowired
+    private CardRepository cardRepository;
+
+    @Autowired
+    private GameSessionCardRepository gameSessionCardRepository;
 
     private List<Card> cards;
 
@@ -38,7 +47,7 @@ public class CardService {
         return cards;
     }
 
-    public List<String> getAvailableSets() { 
+    public List<String> getAvailableSets() {
         URL resourceUrl = getClass().getResource("/sets");
         if (resourceUrl == null) {
             throw new RuntimeException("Sets folder not found!");
@@ -49,18 +58,19 @@ public class CardService {
             return new ArrayList<>();
         }
         return Arrays.stream(files)
-            .filter(file -> file.getName().endsWith(".json"))
-            .map(file -> file.getName().replace(".json", ""))
-            .collect(Collectors.toList()); 
+                .filter(file -> file.getName().endsWith(".json"))
+                .map(file -> file.getName().replace(".json", ""))
+                .collect(Collectors.toList());
     }
 
-    private List<Card> loadCardsFromSet(String setName) throws IOException { 
+    private List<Card> loadCardsFromSet(String setName) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         InputStream is = getClass().getResourceAsStream("/sets/" + setName + ".json");
         if (is == null) {
             throw new IOException(setName + ".json file not found!");
         }
-        return mapper.readValue(is, new TypeReference<List<Card>>() { }); 
+        return mapper.readValue(is, new TypeReference<List<Card>>() {
+        });
     }
 
     public void distributeCards(Game game) {
@@ -86,8 +96,10 @@ public class CardService {
     private List<GameSessionCard> expandCardCopies(List<Card> rawCards) {
         List<GameSessionCard> expandedCards = new ArrayList<>();
         for (Card card : rawCards) {
-            for (int i = 0; i < card.getCopies(); i++) {
-                expandedCards.add(new GameSessionCard(card));
+            Card savedCard = cardRepository.save(card);
+            for (int i = 0; i < savedCard.getCopies(); i++) {
+                GameSessionCard gameSessionCard = new GameSessionCard(savedCard);
+                expandedCards.add(gameSessionCardRepository.save(gameSessionCard));
             }
         }
         return expandedCards;
@@ -101,4 +113,13 @@ public class CardService {
         player.setDrawPile(drawPile);
     }
 
+    public GameSessionCard drawCardIfNeccesary(Game game) {
+        Player player = game.getCurrentPlayer();
+        if (player.getDrawPile().isEmpty()) {
+            return null;
+        }
+        GameSessionCard drawnCard = player.getDrawPile().remove(0);
+        player.getHand().add(drawnCard);
+        return drawnCard;
+    }
 }
