@@ -69,41 +69,54 @@ class WebSocketService {
     }
   }
 
-  subscribeToGameState(gameId, onGameStateReceived) {
+  subscribeToGameState(gameId, onGameStateReceived, onTurnChanged) {
     const topic = `/topic/game/${gameId}`;
     if (!this.subscriptions.has(topic)) {
       const sub = this.client.subscribe(
         topic,
-        (message) => this.handleGameStateMessage(message, onGameStateReceived)
+        (message) => {
+          this.handleGameStateMessage(message, onGameStateReceived, onTurnChanged);
+        }
       );
       this.subscriptions.set(topic, sub);
     }
   }
 
-  handleGameStateMessage(message, onGameStateReceived) {
-    try {
-      const websocketMsg = JSON.parse(message.body);
-      let messageID = websocketMsg.messageID;
-      // Message type 
-      switch(messageID){
-        case "newGame" :
-          this.onNewGame(websocketMsg,onGameStateReceived);
-          break;
-        default:
-          break;
-        //other message type to implement
-      }
-    } catch (error) {
-      console.error('❌ Error parsing game state:', error);
+  handleGameStateMessage(message, onGameStateReceived, onTurnChanged) {
+    const data = JSON.parse(message.body);
+    const messageID = data.messageID;
+  
+    switch (messageID) {
+      case 'newGame':
+        onGameStateReceived(data.data);
+        break;
+      case 'NEW_TURN':
+        onTurnChanged(data);
+        break;
+      case 'gameState':
+        onGameStateReceived(data.data || data);
+        break;
+      default:
+        console.warn("❗ Nothing belong:", messageID);
     }
   }
 
-  onNewGame(data,onGameStateReceived){
-    if (data.gameId) {
-      if (data.player1 && data.player2) {
-        onGameStateReceived(data);
-      }
-    }
+  sendAction(actionType, payload) {
+    const message = {
+      action: actionType,
+      data: payload
+    };
+
+    this.client.publish({
+      destination: `/app/game/${payload.gameId}/action`,
+      body: JSON.stringify(message)
+    });
+  }
+  sendConfirmJoin(payload) {
+    this.client.publish({
+      destination: `/confirm_join`,
+      body: JSON.stringify(payload)
+    });
   }
 
 }
