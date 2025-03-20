@@ -11,7 +11,6 @@ import jakarta.persistence.MapKeyColumn;
 import jakarta.persistence.Column;
 import jakarta.persistence.JoinColumn;
 
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -30,7 +29,10 @@ public class Effect implements Serializable {
 
     private String type;
     private String target;
+
+    @Column(name = "`value`")
     private int value;
+
     private String action;
     private int amount;
     private String operation;
@@ -48,5 +50,4 @@ public class Effect implements Serializable {
     @ManyToOne
     @JoinColumn(name = "card_name")
     private Card card;
-
 }
