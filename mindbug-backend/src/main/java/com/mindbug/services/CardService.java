@@ -18,10 +18,14 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 @Service
 public class CardService {
 
     private List<Card> cards;
+
+    private long idincr = 0;
+
 
     public CardService() throws IOException {
         cards = loadCardsFromSet("First_Contact");
@@ -87,7 +91,10 @@ public class CardService {
         List<GameSessionCard> expandedCards = new ArrayList<>();
         for (Card card : rawCards) {
             for (int i = 0; i < card.getCopies(); i++) {
-                expandedCards.add(new GameSessionCard(card));
+                // TODO: Remove this line. temp fix for non id card
+                GameSessionCard gsc = new GameSessionCard(idincr, card); idincr++;
+        
+                expandedCards.add(gsc);
             }
         }
         return expandedCards;

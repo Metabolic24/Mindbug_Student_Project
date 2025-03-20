@@ -45,6 +45,12 @@ public class GameController {
        this.gameServer.handleDontBlock(data.getPlayerId(), data.getGameId());
        return ResponseEntity.ok().build();
     }
+
+    @PostMapping("/block")
+    public ResponseEntity<String>  block(@RequestBody PlayerCardDto data) {
+       this.gameServer.handleBlock(data.getPlayerId(), data.getSessioncardId(), data.getGameId());
+       return ResponseEntity.ok().build();
+    }
     
     @PostMapping("/game/play_card")
     public ResponseEntity<String> playCard(@RequestBody PlayerCardDto data) {

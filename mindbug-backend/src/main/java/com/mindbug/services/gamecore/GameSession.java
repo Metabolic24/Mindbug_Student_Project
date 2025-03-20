@@ -23,6 +23,7 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 @Getter
 public class GameSession {
+
     private Game game;
 
     private WSMessageManager gameWsMessageManager;
@@ -71,6 +72,9 @@ public class GameSession {
             // The two players have confirmed. Send ws message newGame and update game status
             this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
 
+            // Distribute cards
+            cardService.distributeCards(game);
+
             // Start a turn
             newTurn();
         }
@@ -83,7 +87,7 @@ public class GameSession {
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
 
-        cardService.distributeCards(game);
+        
     }
 
     public void attack(Long playerId, Long sessionCardId) {
@@ -105,6 +109,15 @@ public class GameSession {
         Player player = getPlayer(playerId);
 
         this.battle.dontBlock(this, player);
+    }
+
+    public void block(Long playerId, Long sessionCardId) {
+        this.gameSessionValidation.canBlock(this, playerId, sessionCardId);
+
+        Player player = getPlayer(playerId);
+        GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
+
+        this.battle.block(this, player, sessionCard);
     }
 
     public void playCard(Long playerId, Long sessionCardId) {

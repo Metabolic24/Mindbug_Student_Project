@@ -19,6 +19,7 @@ import jakarta.persistence.EntityNotFoundException;
 
 @Service
 public class GameServer {
+
     private HashMap<Long, GameSession> gameSessions = new HashMap<>();
     private Queue<Player> playerQueue = new LinkedList<>();
 
@@ -35,6 +36,7 @@ public class GameServer {
 
     public GameServer(WSMessageManager gameQueueWsMessageManager) {
         this.gameQueueWsMessageManager = gameQueueWsMessageManager;
+
         // Set the channel for game queue WebSocket messages
         this.gameQueueWsMessageManager.setChannel(Config.GAME_QUEUE_WEBSOCKET);
     }
@@ -91,6 +93,11 @@ public class GameServer {
     public void handleDontBlock(Long playerId, Long gameId) {
         GameSession gameSession = this.getGameSession(gameId);
         gameSession.dontBlock(playerId);
+    }
+
+    public void handleBlock(Long playerId, Long sessionCardId, Long gameId) {
+        GameSession gameSession = this.getGameSession(gameId);
+        gameSession.block(playerId, sessionCardId);
     }
 
     public void handlePlayCard(Long playerId, Long sessionCardId, Long gameId) {

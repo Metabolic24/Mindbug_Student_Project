@@ -17,13 +17,11 @@ public class PlayerCardDto {
     @NotNull
     private Long sessioncardId;
 
-    @NotEmpty 
-    private String cardName;
 
-    public PlayerCardDto(@NotEmpty Long playerId, @NotEmpty Long gameId, @NotEmpty Long cardId, @NotEmpty String cardName) {
+
+    public PlayerCardDto(@NotEmpty Long playerId, @NotEmpty Long gameId, @NotEmpty Long cardId) {
         this.playerId = playerId;
         this.gameId = gameId;
         this.sessioncardId = cardId;
-        this.cardName = cardName;
     }
 }
