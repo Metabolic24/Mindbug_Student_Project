@@ -140,4 +140,9 @@ public class GameSession {
     public boolean isCurrentPlayer(Long playerId) {
         return game.getCurrentPlayer() != null && playerId == game.getCurrentPlayer().getId();
     }
+
+    public List<GameSessionCard> getPlayerHand(Long playerId) {
+        Player player = getPlayer(playerId);
+        return player.getHand();
+    }
 }
