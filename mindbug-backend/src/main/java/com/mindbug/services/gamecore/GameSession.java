@@ -87,7 +87,11 @@ public class GameSession {
         } else {
             this.game.setCurrentPlayer(getOpponent());
         }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> dff324b (cleanup GameSessionValidation #73)
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
 
@@ -106,7 +110,6 @@ public class GameSession {
 
     public void dontBlock(Long playerId) {
         this.gameSessionValidation.canDoDontBlock(this, playerId);
-
 
         Player player = getPlayer(playerId);
 

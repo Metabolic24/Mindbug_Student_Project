@@ -29,13 +29,7 @@ public class GameSessionValidation {
         validPlayer(gameSession, playerId);
 
         // Check if player have a card
-        Player player = gameSession.getPlayer(playerId);
-        playerHasCard(gameSession, player, cardId, player.getBattlefield());
-
-        // Check if player is  current player
-        if (!gameSession.isCurrentPlayer(playerId)) {
-            throw new IllegalArgumentException("Player not authorized to do this action");
-        }
+        playerHasCardInHisBattlefield(gameSession, playerId, cardId);
     }
 
     public void canDoDontBlock(GameSession gameSession, Long playerId) {
@@ -63,7 +57,7 @@ public class GameSessionValidation {
 
          // Check if player have a card
          Player player = gameSession.getPlayer(playerId);
-         playerHasCard(gameSession, player, sessionCardId, player.getBattlefield());
+         playerHasCardInHisBattlefield(gameSession, playerId, sessionCardId);
 
           // Check if player is  current player
 
@@ -72,11 +66,11 @@ public class GameSessionValidation {
         }
     }
 
-    
-    public void playerHasCard(GameSession gameSession, Player player, Long cardId, List<GameSessionCard> where) {
-        boolean haveCard = where.stream().anyMatch(sessionCard -> sessionCard.getId() == cardId);
+    public void playerHasCardInHisBattlefield(GameSession gameSession, Long playerId, Long cardId) {
+        Player player = gameSession.getPlayer(playerId);
+        boolean haveCard = player.getBattlefield().stream().anyMatch(sessionCard -> sessionCard.getId() == cardId);
         if (!haveCard) {
-            throw new IllegalStateException("Player " + player.getId() + " cannot use card " + cardId + " for this action.");
+            throw new IllegalStateException("Player " + playerId + " does not have card " + cardId + " in his battlefield.");
         }
     }
 
