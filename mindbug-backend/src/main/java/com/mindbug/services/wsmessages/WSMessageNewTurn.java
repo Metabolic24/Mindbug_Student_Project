@@ -17,5 +17,4 @@ public class WSMessageNewTurn extends WebsocketMessage  {
 
         this.setData(data);
     }
-    
 }

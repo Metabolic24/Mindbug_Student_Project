@@ -90,5 +90,4 @@ public class GameServer {
         GameSession gameSession = this.getGameSession(gameId);
         gameSession.playCard(playerId, sessionCardId);
     }
-
 }
