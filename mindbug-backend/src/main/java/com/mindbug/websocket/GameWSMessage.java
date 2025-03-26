@@ -1,4 +1,4 @@
-package com.mindbug.websocket.wsmessages;
+package com.mindbug.websocket;
 
 public enum GameWSMessage {
     NEW_GAME("newGame"),
@@ -17,7 +17,7 @@ public enum GameWSMessage {
 
     private final String label;
 
-    private GameWSMessage(String label) {
+    GameWSMessage(String label) {
         this.label = label;
     }
 

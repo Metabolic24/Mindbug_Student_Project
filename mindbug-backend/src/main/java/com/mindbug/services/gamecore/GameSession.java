@@ -5,7 +5,11 @@ import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import com.mindbug.services.CardService;
 import com.mindbug.services.PlayerService;
+<<<<<<< HEAD
 import com.mindbug.services.wsmessages.WSMessagAskBlock;
+=======
+<<<<<<< HEAD
+>>>>>>> 6dbcaa0 (cleanup WebsocketMessage + Fix import in some class #73)
 import com.mindbug.services.wsmessages.WSMessageCardDestroyed;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
@@ -15,6 +19,11 @@ import com.mindbug.services.wsmessages.playeractions.WSMessageDidntBlock;
 import com.mindbug.services.wsmessages.playeractions.WSMessgaeAttacked;
 import com.mindbug.services.wsmessages.playeractions.WSMessagePlayCard;
 import com.mindbug.websocket.WSMessageManager;
+=======
+import com.mindbug.services.wsmessages.WSMessageManager;
+import com.mindbug.services.wsmessages.WSMessageNewGame;
+import com.mindbug.services.wsmessages.WSMessageNewTurn;
+>>>>>>> 18aa2d4 (cleanup WebsocketMessage + Fix import in some class #73)
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -123,12 +132,15 @@ public class GameSession {
         this.gameSessionValidation.canDoDontBlock(this, playerId);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> 2279ca4 (cleanup all useless space #73)
 >>>>>>> 3c271ba (cleanup all useless space #73)
+=======
+>>>>>>> 6dbcaa0 (cleanup WebsocketMessage + Fix import in some class #73)
         Player player = getPlayer(playerId);
 
         this.battle.dontBlock(this, player);
