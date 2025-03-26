@@ -43,6 +43,9 @@ public class Player implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<GameSessionCard> battlefield = new ArrayList<>();
 
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<GameSessionCard> discardPile = new ArrayList<>();
+
     public Player(String nickname) {
         this.nickname = nickname;
         // TODO: get lifepoints and mindbug from game configs

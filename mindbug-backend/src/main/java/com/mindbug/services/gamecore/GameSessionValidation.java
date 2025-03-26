@@ -12,7 +12,7 @@ public class GameSessionValidation {
         Game game = gameSession.getGame();
         if (playerId != game.getPlayer1().getId() && playerId != game.getPlayer2().getId()) {
             // Cannot confirm join. Invalid player.
-            throw new IllegalArgumentException("Cannot confrim join. Invalid player.");
+            throw new IllegalArgumentException("Invalid player.");
         }
     }
 
