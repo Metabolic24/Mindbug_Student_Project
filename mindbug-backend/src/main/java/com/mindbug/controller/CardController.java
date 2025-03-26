@@ -20,7 +20,7 @@ public class CardController {
 
     @GetMapping("/{set}")
     public List<Card> getCardsBySet(@PathVariable String set) throws IOException {
-        return cardService.getCardsBySet(set);
+        return cardService.loadCardsFromSet(set);
     }
 
     @GetMapping("/sets")

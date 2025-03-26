@@ -2,6 +2,8 @@ package com.mindbug.services;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mindbug.exception.ResourceNotFoundException;
+import com.mindbug.exception.ResourceLoadingException;
 import com.mindbug.models.Card;
 import com.mindbug.models.Game;
 import com.mindbug.models.GameSessionCard;
@@ -33,19 +35,13 @@ public class CardService {
     @Autowired
     private GameSessionCardRepository gameSessionCardRepository;
 
-    private List<Card> cards;
-
-
+    private final List<Card> cards;
 
     public CardService() throws IOException {
         cards = loadCardsFromSet("First_Contact");
         if (cards.isEmpty()) {
-            System.out.println("Failed to load default cards.");
+            throw new IllegalStateException("Failed to load default cards.");
         }
-    }
-
-    public List<Card> getCardsBySet(String set) throws IOException {
-        return loadCardsFromSet(set);
     }
 
     public List<Card> getAllCards() {
@@ -55,12 +51,12 @@ public class CardService {
     public List<String> getAvailableSets() {
         URL resourceUrl = getClass().getResource("/sets");
         if (resourceUrl == null) {
-            throw new RuntimeException("Sets folder not found!");
+            throw new ResourceNotFoundException("Sets folder not found!");
         }
         File folder = new File(resourceUrl.getPath());
         File[] files = folder.listFiles();
         if (files == null) {
-            return new ArrayList<>();
+            throw new ResourceLoadingException("Failed to load files from sets folder.");
         }
         return Arrays.stream(files)
                 .filter(file -> file.getName().endsWith(".json"))
@@ -68,7 +64,7 @@ public class CardService {
                 .collect(Collectors.toList());
     }
 
-    private List<Card> loadCardsFromSet(String setName) throws IOException {
+    public List<Card> loadCardsFromSet(String setName) throws IOException { 
         ObjectMapper mapper = new ObjectMapper();
         InputStream is = getClass().getResourceAsStream("/sets/" + setName + ".json");
         if (is == null) {
@@ -81,7 +77,7 @@ public class CardService {
     public void distributeCards(Game game) {
         
         try {
-            List<Card> rawCards = getCardsBySet("First_Contact");
+            List<Card> rawCards = loadCardsFromSet("First_Contact");
 
             List<GameSessionCard> gameSessionCards = expandCardCopies(rawCards);
 
