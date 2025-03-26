@@ -24,7 +24,6 @@ public class GameSessionValidation {
     public void canAttack(GameSession gameSession, Long playerId, Long cardId) {
         // Check valid player
         validPlayer(gameSession, playerId);
-
         // Check if player have a card
         playerHasCardInHisBattlefield(gameSession, playerId, cardId);
     }
@@ -72,7 +71,6 @@ public class GameSessionValidation {
     }
 
     public void canPlayCard(GameSession gameSession, Long playerId, Long cardId) {
-
         validPlayer(gameSession, playerId);
 
         Player player = gameSession.getPlayer(playerId);

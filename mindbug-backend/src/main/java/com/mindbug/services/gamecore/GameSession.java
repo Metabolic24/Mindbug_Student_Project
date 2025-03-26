@@ -81,7 +81,6 @@ public class GameSession {
     public void newTurn() {
         // For now we assume 1st player is player1
         this.game.setCurrentPlayer(game.getPlayer1());
-
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
 
@@ -93,16 +92,17 @@ public class GameSession {
         Player player = getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
-
         this.battle = this.applicationContext.getBean(Battle.class);
-
         this.battle.attack(this, player, sessionCard);
     }
 
     public void dontBlock(Long playerId) {
         this.gameSessionValidation.canDoDontBlock(this, playerId);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2279ca4 (cleanup all useless space #73)
         Player player = getPlayer(playerId);
 
         this.battle.dontBlock(this, player);
@@ -118,14 +118,12 @@ public class GameSession {
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
-
         this.gameSessionValidation.canPlayCard(this, playerId, sessionCardId);
 
         Player player = this.getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
         player.getHand().remove(sessionCard);
-
         player.getBattlefield().add(sessionCard);
     }
 

@@ -23,6 +23,4 @@ public enum GameWSMessage {
     public String getLabel() {
         return label;
     }
-
-
 }

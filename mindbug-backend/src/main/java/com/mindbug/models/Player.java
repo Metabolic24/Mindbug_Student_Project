@@ -49,5 +49,4 @@ public class Player implements Serializable {
         this.lifepoints = 4;
         this.mindbug = 2;
     }
-
 }
