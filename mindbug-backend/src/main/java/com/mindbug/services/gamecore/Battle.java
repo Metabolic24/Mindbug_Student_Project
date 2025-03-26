@@ -42,7 +42,38 @@ public class Battle {
 
     public void block(GameSession gameSessionContext, Player blockingPlayer, GameSessionCard blockingSessionCard) {
         this.blocking = new PlayerCard(blockingPlayer, blockingSessionCard);
-        // TODO: resolve fight and update gamestate (ws)
+        
+
+        gameSessionContext.sendWSMsgBlocked(blockingPlayer.getId(), blockingSessionCard.getId());
+    }
+
+    public void resoleBattle(GameSession gameSessionContext) {
+        Player opponent = this.blocking.getPlayer();
+        Player attacker = this.attacking.getPlayer();
+
+        if(this.blocking.getCard() == null) {
+            // Opponent didnt blocked. Remove one life point
+            opponent.setLifepoints(opponent.getLifepoints() - 1);
+            
+        } else {
+            // Opponent blocked. Compare monster power
+            GameSessionCard oppoenentMonster = this.blocking.getCard();
+            GameSessionCard attackerMonster = this.attacking.getCard();
+
+            if (oppoenentMonster.getCard().getPower() < attackerMonster.getCard().getPower()) {
+                // opponent monster is weaker. destroy it.
+                gameSessionContext.destroyCard(oppoenentMonster.getId(), opponent.getId());
+
+            } else if (oppoenentMonster.getCard().getPower() > attackerMonster.getCard().getPower()) {
+                // attacker monster is weaker. destroy it.
+                gameSessionContext.destroyCard(attackerMonster.getId(), attacker.getId());
+            } else {
+                // Equals power. Destroy both of them
+                gameSessionContext.destroyCard(oppoenentMonster.getId(), opponent.getId());
+                gameSessionContext.destroyCard(attackerMonster.getId(), attacker.getId());
+            }
+            
+        }
     }
 
 }

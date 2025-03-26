@@ -166,6 +166,10 @@ public class GameSession {
         Player player = getPlayer(playerId);
         return player.getHand();
     }
+    
+    public void destroyCard(Long gameSessionCardId, Long playerId) {
+        // TODO: complete with card destroy ticket
+    }
 
     public void sendWSMsgAttacked(Long playerId, Long gameSessionCardId) {
         this.gameWsMessageManager.sendMessage(new WSMessgaeAttacked(this.game.getId(), playerId, gameSessionCardId));
