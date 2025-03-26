@@ -41,7 +41,6 @@ public class GameSessionValidation {
         }
     }
 
-    
     public void playerHasCardInHisBattlefield(GameSession gameSession, Long playerId, Long cardId) {
         Player player = gameSession.getPlayer(playerId);
         boolean haveCard = player.getBattlefield().stream().anyMatch(sessionCard -> sessionCard.getId() == cardId);

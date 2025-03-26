@@ -2,6 +2,7 @@ package com.mindbug.services.wsmessages;
 
 import java.util.HashMap;
 
+import com.mindbug.websocket.GameWSMessage;
 import com.mindbug.websocket.WebsocketMessage;
 
 public class WSMessageMatchFound extends WebsocketMessage {

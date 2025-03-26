@@ -12,8 +12,8 @@ import com.mindbug.dtos.PlayerBasicInfoDto;
 import com.mindbug.models.Game;
 import com.mindbug.models.Player;
 import com.mindbug.services.gamecore.GameSession;
+import com.mindbug.services.wsmessages.WSMessageManager;
 import com.mindbug.services.wsmessages.WSMessageMatchFound;
-import com.mindbug.websocket.WSMessageManager;
 
 import jakarta.persistence.EntityNotFoundException;
 
