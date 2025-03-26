@@ -32,7 +32,8 @@ export default {
         this.playerId = response.data.playerId;
         WebSocketService.connectToQueue(this.handleMatchFound);
       } catch (error) {
-        console.error("❌ Error occurred while searching for a game:", error.response ? error.response.data : error.message);
+        console.error("❌ Error occurred while searching for a game:"
+                  , error.response ? error.response.data : error.message);
         this.message = "❌ Matchmaking error.";
       }
     },
