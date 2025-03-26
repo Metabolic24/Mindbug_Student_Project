@@ -17,7 +17,4 @@ public class MindbugApplication {
 	String home() {
 		return "Hello World now!";
 	}
-
-	
-	
 }

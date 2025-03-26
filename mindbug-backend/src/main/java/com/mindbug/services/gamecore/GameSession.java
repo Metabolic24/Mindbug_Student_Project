@@ -81,6 +81,7 @@ public class GameSession {
     }
 
     public void newTurn() {
+<<<<<<< HEAD
         if (this.game.getCurrentPlayer() == null) {
             // For now we assume 1st player is player1
             this.game.setCurrentPlayer(game.getPlayer1());
@@ -91,7 +92,14 @@ public class GameSession {
         
 =======
 
+<<<<<<< HEAD
 >>>>>>> dff324b (cleanup GameSessionValidation #73)
+=======
+=======
+        // For now we assume 1st player is player1
+        this.game.setCurrentPlayer(game.getPlayer1());
+>>>>>>> 3c271ba (cleanup all useless space #73)
+>>>>>>> 814beef (cleanup all useless space #73)
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
 
@@ -101,16 +109,26 @@ public class GameSession {
         this.gameSessionValidation.canAttack(this, playerId, sessionCardId);
 
         Player player = getPlayer(playerId);
+<<<<<<< HEAD
         GameSessionCard sessionCard = playerService.getBattlefiedCard(player, sessionCardId);
+=======
+        GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
+>>>>>>> 3c271ba (cleanup all useless space #73)
 
         this.battle = this.applicationContext.getBean(Battle.class);
-
         this.battle.attack(this, player, sessionCard);
     }
 
     public void dontBlock(Long playerId) {
         this.gameSessionValidation.canDoDontBlock(this, playerId);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2279ca4 (cleanup all useless space #73)
+>>>>>>> 3c271ba (cleanup all useless space #73)
         Player player = getPlayer(playerId);
 
         this.battle.dontBlock(this, player);
@@ -145,14 +163,12 @@ public class GameSession {
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
-
         this.gameSessionValidation.canPlayCard(this, playerId, sessionCardId);
 
         Player player = this.getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
         player.getHand().remove(sessionCard);
-
         player.getBattlefield().add(sessionCard);
 
         this.gameWsMessageManager.sendMessage(new WSMessagePlayCard(this.game));

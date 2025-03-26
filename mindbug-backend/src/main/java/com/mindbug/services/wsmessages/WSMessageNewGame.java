@@ -8,5 +8,4 @@ public class WSMessageNewGame extends WebsocketMessage {
     public WSMessageNewGame(Game game) {
         super(GameWSMessage.NEW_GAME.getLabel(), game);
     }
-    
 }

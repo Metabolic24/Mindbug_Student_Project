@@ -16,5 +16,4 @@ public class WSMessagAskBlock extends WebsocketMessage {
         
         this.setData(data);
     }
-    
 }
