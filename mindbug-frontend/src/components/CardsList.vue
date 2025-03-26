@@ -25,11 +25,6 @@ export default {
       cards: []
     };
   },
-  computed: {
-    filteredCards() {
-      return this.cards.filter(card => card.set === this.set);
-    }
-  },
   methods: {
     getImage(name) {
         return `${this.set}/${name}.jpg`
