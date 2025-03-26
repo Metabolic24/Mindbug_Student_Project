@@ -26,10 +26,14 @@ public class Battle {
                 gameSessionContext.getGame()
             )
         );
+
+        gameSessionContext.sendWSMsgAttacked(attackingPlayer.getId(), attackingSessionCard.getId());
     }
 
     public void dontBlock(GameSession gameSessionContext, Player blockingPlayer) {
         this.blocking = new PlayerCard(blockingPlayer);
+
+        gameSessionContext.sendWSMsgDidntBlocked(blockingPlayer.getId());
     }
     
 }
