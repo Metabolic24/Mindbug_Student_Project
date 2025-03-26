@@ -1,15 +1,10 @@
 package com.mindbug.services.gamecore;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
 import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import lombok.Getter;
 import lombok.Setter;
 
-@Component
-@Scope("prototype")
 @Getter @Setter
 public class Battle {
 
@@ -46,7 +41,6 @@ public class Battle {
         // Next step resolve battle
         gameSessionContext.resolveBattle();
     }
-
 
     public void block(GameSession gameSessionContext, Player blockingPlayer, GameSessionCard blockingSessionCard) {
         this.blocking = new PlayerCard(blockingPlayer, blockingSessionCard);
