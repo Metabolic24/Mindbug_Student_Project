@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.mindbug.models.Game;
 import com.mindbug.services.gamecore.GameSession;
 import com.mindbug.services.gamecore.GameSessionValidation;
-import com.mindbug.websocket.WSMessageManager;
+import com.mindbug.services.wsmessages.WSMessageManager;
 
 @Service
 public class GameSessionFactory {
