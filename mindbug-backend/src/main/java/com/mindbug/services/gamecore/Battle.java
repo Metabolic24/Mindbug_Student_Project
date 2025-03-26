@@ -1,8 +1,5 @@
 package com.mindbug.services.gamecore;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
 import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import com.mindbug.services.wsmessages.WSMessagAskBlock;
@@ -10,8 +7,6 @@ import com.mindbug.services.wsmessages.WSMessagAskBlock;
 import lombok.Getter;
 import lombok.Setter;
 
-@Component
-@Scope("prototype")
 @Getter @Setter
 public class Battle {
     private PlayerCard attacking;
@@ -22,7 +17,7 @@ public class Battle {
 
         gameSessionContext.getGameWsMessageManager().sendMessage(
             new WSMessagAskBlock(
-                gameSessionContext.getOppoennt().getId(),
+                gameSessionContext.getOpponent().getId(),
                 gameSessionContext.getGame()
             )
         );
@@ -31,5 +26,4 @@ public class Battle {
     public void dontBlock(GameSession gameSessionContext, Player blockingPlayer) {
         this.blocking = new PlayerCard(blockingPlayer);
     }
-    
 }

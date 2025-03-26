@@ -126,7 +126,7 @@ public class GameSession {
         }
     }
 
-    public Player getOppoennt() {
+    public Player getOpponent() {
         if (isCurrentPlayer(game.getPlayer1().getId())) {
             return game.getPlayer2();
         } else {
