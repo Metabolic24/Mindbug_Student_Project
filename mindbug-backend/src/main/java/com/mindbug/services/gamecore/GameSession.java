@@ -5,8 +5,13 @@ import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import com.mindbug.services.CardService;
 import com.mindbug.services.PlayerService;
+import com.mindbug.services.wsmessages.WSMessageCardDestroyed;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
+import com.mindbug.services.wsmessages.WSMsgPlayerLifeUpdated;
+import com.mindbug.services.wsmessages.playeractions.WSMessageBlocked;
+import com.mindbug.services.wsmessages.playeractions.WSMessageDidntBlock;
+import com.mindbug.services.wsmessages.playeractions.WSMessgaeAttacked;
 import com.mindbug.websocket.WSMessageManager;
 
 import java.util.ArrayList;
@@ -69,6 +74,9 @@ public class GameSession {
         }
 
         if (this.confirmJoinPlayers.size() == 2) {
+
+            cardService.distributeCards(game);
+
             // The two players have confirmed. Send ws message newGame and update game status
             this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
 
@@ -157,5 +165,25 @@ public class GameSession {
     public List<GameSessionCard> getPlayerHand(Long playerId) {
         Player player = getPlayer(playerId);
         return player.getHand();
+    }
+
+    public void sendWSMsgAttacked(Long playerId, Long gameSessionCardId) {
+        this.gameWsMessageManager.sendMessage(new WSMessgaeAttacked(this.game.getId(), playerId, gameSessionCardId));
+    }
+
+    public void sendWSMsgBlocked(Long playerId, Long gameSessionCardId) {
+        this.gameWsMessageManager.sendMessage(new WSMessageBlocked(this.game.getId(), playerId, gameSessionCardId));
+    }
+
+    public void sendWSMsgDidntBlocked(Long playerId) {
+        this.gameWsMessageManager.sendMessage(new WSMessageDidntBlock(this.game.getId(), playerId));
+    }
+
+    public void sendWSMsgPlayerLifeUpdated(Long playerId) {
+        this.gameWsMessageManager.sendMessage(new WSMsgPlayerLifeUpdated(playerId, this.game));
+    }
+
+    public void sendWSMsgCardDestroyed(Long playerId, Long gameSessionCardId) {
+        this.gameWsMessageManager.sendMessage(new WSMessageCardDestroyed(playerId, gameSessionCardId, this.game));
     }
 }
