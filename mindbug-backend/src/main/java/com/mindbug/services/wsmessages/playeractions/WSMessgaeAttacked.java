@@ -8,12 +8,14 @@ import com.mindbug.websocket.WebsocketMessage;
 public class WSMessgaeAttacked extends WebsocketMessage {
 
     public WSMessgaeAttacked(Long gameId, Long playerId, Long gameSessionCardId) {
-        super(GameWSMessage.DIDNT_BLOCK.getLabel());
+        super(GameWSMessage.ATTACKED.getLabel());
 
         HashMap<String, Object> data = new HashMap<>();
         data.put("gameId", gameId);
         data.put("playerId", playerId);
-        data.put("gameSessionCardId", gameSessionCardId);
+        data.put("cardId", gameSessionCardId);
+
+        this.setData(data);
 
     }
     

@@ -15,6 +15,8 @@ public class WSMessageBlocked extends WebsocketMessage {
         data.put("playerId", playerId);
         data.put("cardId", gameSessionCardId);
 
+        this.setData(data);
+
     }
     
 }
