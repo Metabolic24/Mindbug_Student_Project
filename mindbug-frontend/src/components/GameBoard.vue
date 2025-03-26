@@ -41,9 +41,7 @@
     </div>
     <div v-if="isMyTurn" class="turn-indicator">Your turn</div>
      <div v-else class="turn-indicator">Waiting for opponent...</div>
-     <button @click="endTurn" :disabled="endTurnButtonDisabled">
-       End Turn
-     </button>
+     
 
     <div class="hand-area">
       <img
@@ -113,7 +111,6 @@ export default {
        }
        console.log(`📡gameState: /topic/game/${this.gameId}`);
  
-       WebSocketService.subscribeToGameState(this.gameId, this.onGameStateReceived);
      },
  
      onGameStateReceived(gameState) {
@@ -123,18 +120,31 @@ export default {
          this.myHp = gameState.player1.lifepoints;
          this.myHandCards = gameState.player1.handCards || [];
          this.myBattlefieldCards = gameState.player1.battlefield || [];
+         this.myName = gameState.player1.nickName;
+         this.myMindbug = gameState.player1.mindbug;
+         this.myDrawPile = gameState.player1.drawpile;
  
          this.enemyHp = gameState.player2.lifepoints;
          this.enemyHandCount = gameState.player2.handCardsCount || 0;
          this.enemyBattlefieldCards = gameState.player2.battlefield || [];
+         this.enemyName = gameState.player2.nickName;
+         this.enemyMindbug = gameState.player2.Mindbug;
+         this.enemyDrawPile = gameState.player2.drawpile;
+         
        } else {
          this.myHp = gameState.player2.lifepoints;
          this.myHandCards = gameState.player2.handCards || [];
          this.myBattlefieldCards = gameState.player2.battlefield || [];
+         this.myName = gameState.player2.nickName;
+         this.myMindbug = gameState.player2.mindbug;
+         this.myDrawPile = gameState.player2.drawpile;
  
          this.enemyHp = gameState.player1.lifepoints;
          this.enemyHandCount = gameState.player1.handCardsCount || 0;
          this.enemyBattlefieldCards = gameState.player1.battlefield || [];
+         this.enemyName = gameState.player1.nickName;
+         this.enemyMindbug = gameState.player1.mindbug;
+         this.enemyDrawPile = gameState.player1.drawpile;
        }
  
        console.log(`🕒 Current turn: ${this.isMyTurn ? 'My turn' : 'opponent turn'}`);
@@ -155,12 +165,6 @@ export default {
        }
      },
  
-     endTurn() {
-       WebSocketService.sendAction('END_TURN', {
-         gameId: this.gameId,
-         playerId: this.playerId
-       });
-     },
  
      updateActionButtons() {
        this.endTurnButtonDisabled = !this.isMyTurn;

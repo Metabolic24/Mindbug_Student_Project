@@ -71,6 +71,7 @@ class WebSocketService {
 
   subscribeToGameState(gameId, onGameStateReceived, onTurnChanged) {
     const topic = `/topic/game/${gameId}`;
+
     if (!this.subscriptions.has(topic)) {
       const sub = this.client.subscribe(
         topic,
@@ -85,6 +86,7 @@ class WebSocketService {
   handleGameStateMessage(message, onGameStateReceived, onTurnChanged) {
     const data = JSON.parse(message.body);
     const messageID = data.messageID;
+    console.log("data is : ", data);
   
     switch (messageID) {
       case 'newGame':
@@ -100,24 +102,33 @@ class WebSocketService {
         console.warn("❗ Nothing belong:", messageID);
     }
   }
-
-  sendAction(actionType, payload) {
-    const message = {
-      action: actionType,
-      data: payload
-    };
-
-    this.client.publish({
-      destination: `/app/game/${payload.gameId}/action`,
-      body: JSON.stringify(message)
+  
+  
+  async sendAction(actionType, payload) {
+    const response = await fetch(`/api/game/${payload.gameId}/action`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        action: actionType,
+        data: payload
+      })
     });
+    return await response.json();
   }
-  sendConfirmJoin(payload) {
-    this.client.publish({
-      destination: `/confirm_join`,
+  async sendConfirmJoin(payload) {
+    const response = await fetch('/api/confirm_join', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify(payload)
     });
+  
+    return await response.json();
   }
+  
 
 }
 
