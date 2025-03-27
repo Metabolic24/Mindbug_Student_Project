@@ -36,6 +36,7 @@ export default {
       try {
         const response = await axios.get(`/api/cards/${this.set}`);
         this.cards = response.data;
+        console.log(this.cards);
       } catch (error) {
         console.error("Error fetching cards:", error);
       }
