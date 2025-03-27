@@ -87,8 +87,13 @@ public class GameSession {
     }
 
     public void newTurn() {
-        // For now we assume 1st player is player1
-        this.game.setCurrentPlayer(game.getPlayer1());
+        if (this.game.getCurrentPlayer() == null) {
+            // For now we assume 1st player is player1
+            this.game.setCurrentPlayer(game.getPlayer1());
+        } else {
+            this.game.setCurrentPlayer(getOpponent());
+        }
+        
 
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
@@ -127,6 +132,7 @@ public class GameSession {
 
         this.battle.block(this, player, sessionCard);
 
+        // Next step resolve battle
         this.resolveBattle();
     }
 
@@ -135,6 +141,9 @@ public class GameSession {
 
         // Reset after battle end
         this.battle = null;
+
+        // Next step end turn (TODO: next step should be check if game is over)
+        this.newTurn();
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
