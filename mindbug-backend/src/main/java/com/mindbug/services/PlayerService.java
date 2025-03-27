@@ -26,4 +26,13 @@ public class PlayerService {
         }
         return null;
     }
+
+    public GameSessionCard getBattlefiedCard(Player player, Long  sessionCardId) {
+        for  (GameSessionCard sessionCard : player.getBattlefield()) {
+            if (sessionCard.getId().equals(sessionCardId)) {
+                return sessionCard;
+            }
+        }
+        return null;
+    }
 }
