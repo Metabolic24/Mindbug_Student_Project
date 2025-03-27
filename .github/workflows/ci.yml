@@ -2,6 +2,13 @@ name: Mindbug CI Workflow
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+  
+  pull_requests:
+    branches:
+      - main
   # once removed it became manual start
 
 jobs:

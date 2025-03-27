@@ -35,8 +35,6 @@ public class CardService {
     @Autowired
     private GameSessionCardRepository gameSessionCardRepository;
 
-    private Set<GameSessionCard> allCards;
-
     private final List<Card> cards;
 
 

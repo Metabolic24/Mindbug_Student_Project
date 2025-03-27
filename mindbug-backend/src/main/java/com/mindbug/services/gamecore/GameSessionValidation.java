@@ -52,7 +52,7 @@ public class GameSessionValidation {
          validPlayer(gameSession, playerId);
 
          // Check if player have a card
-         playerHasCard(gameSession, playerId, sessionCardId);
+         playerHasCardInHisBattlefield(gameSession, playerId, sessionCardId);
 
           // Check if player is  current player
 

@@ -19,7 +19,6 @@ public class GameSessionCard implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-<<<<<<< HEAD
 
     @ManyToOne
     private Card card;
@@ -27,6 +26,4 @@ public class GameSessionCard implements Serializable {
     public GameSessionCard(Card card) {
         this.card = card;
     }
-=======
->>>>>>> 2279ca4 (cleanup all useless space #73)
 }

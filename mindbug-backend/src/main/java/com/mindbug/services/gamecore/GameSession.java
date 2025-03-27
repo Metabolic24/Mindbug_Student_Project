@@ -5,7 +5,6 @@ import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import com.mindbug.services.CardService;
 import com.mindbug.services.PlayerService;
-<<<<<<< HEAD
 import com.mindbug.services.wsmessages.WSMessageCardDestroyed;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
@@ -13,12 +12,7 @@ import com.mindbug.services.wsmessages.WSMsgPlayerLifeUpdated;
 import com.mindbug.services.wsmessages.playeractions.WSMessageBlocked;
 import com.mindbug.services.wsmessages.playeractions.WSMessageDidntBlock;
 import com.mindbug.services.wsmessages.playeractions.WSMessgaeAttacked;
-import com.mindbug.websocket.WSMessageManager;
-=======
 import com.mindbug.services.wsmessages.WSMessageManager;
-import com.mindbug.services.wsmessages.WSMessageNewGame;
-import com.mindbug.services.wsmessages.WSMessageNewTurn;
->>>>>>> 18aa2d4 (cleanup WebsocketMessage + Fix import in some class #73)
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -28,9 +22,6 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Scope;
 import lombok.Getter;
 
 @Component
@@ -98,8 +89,8 @@ public class GameSession {
         Player player = getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
-        this.battle = this.applicationContext.getBean(Battle.class);
-        this.battle.attack(this, player, sessionCard);
+        this.battle = this.applicationContext.getBean(BattleService.class);
+        this.battle.startAttack(this, player, sessionCard);
     }
 
     public void dontBlock(Long playerId) {
@@ -107,7 +98,7 @@ public class GameSession {
 
         Player player = getPlayer(playerId);
 
-        this.battle.dontBlock(this, player);
+        this.battle.noBlock(player);
     }
 
     public void block(Long playerId, Long sessionCardId) {
@@ -116,7 +107,7 @@ public class GameSession {
         Player player = getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
-        this.battle.block(this, player, sessionCard);
+        this.battle.block(player, sessionCard);
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
