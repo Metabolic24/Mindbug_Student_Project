@@ -40,7 +40,10 @@ export default {
 
     handleMatchFound(data) {
       console.log('🎉 Match Found:', data);
-      this.$router.push('/gameterrain');
+      this.$router.push({
+         name: "GameBoard",
+         params: { gameId: data.gameId, playerId: this.playerId }
+       });
     }
   },
   mounted() {

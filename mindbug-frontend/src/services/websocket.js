@@ -68,6 +68,43 @@ class WebSocketService {
       console.error('❌ JSON parse failed:', error);
     }
   }
+
+  subscribeToGameState(gameId, onGameStateReceived, onTurnChanged) {
+    const topic = `/topic/game/${gameId}`;
+
+    if (!this.subscriptions.has(topic)) {
+      const sub = this.client.subscribe(
+        topic,
+        (message) => {
+          this.handleGameStateMessage(message, onGameStateReceived, onTurnChanged);
+        }
+      );
+      this.subscriptions.set(topic, sub);
+    }
+  }
+
+  handleGameStateMessage(message, onGameStateReceived, onTurnChanged) {
+    const data = JSON.parse(message.body);
+    const messageID = data.messageID;
+    console.log("data is : ", data);
+  
+    switch (messageID) {
+      case 'newGame':
+        onGameStateReceived(data.data);
+        break;
+      case 'NEW_TURN':
+        onTurnChanged(data);
+        break;
+      case 'gameState':
+        onGameStateReceived(data.data || data);
+        break;
+      default:
+        console.warn("❗ Nothing belong:", messageID);
+    }
+  }
+  
+  
+
 }
 
 export default new WebSocketService();

@@ -36,15 +36,20 @@ public class GameController {
 
     @PostMapping("/attack")
     public ResponseEntity<String>  attack(@RequestBody PlayerCardDto data) {
-       this.gameServer.handleAttack(data.getPlayerId(), data.getGameId(), data.getSessioncardId());
-       return ResponseEntity.ok().build();
+        this.gameServer.handleAttack(data.getPlayerId(), data.getGameId(), data.getSessioncardId());
+        return ResponseEntity.ok().build();
     }
 
     @PostMapping("/dont_block")
     public ResponseEntity<String>  dontBlock(@RequestBody PlayerIdDto data) {
-       this.gameServer.handleDontBlock(data.getPlayerId(), data.getGameId());
-       return ResponseEntity.ok().build();
+        this.gameServer.handleDontBlock(data.getPlayerId(), data.getGameId());
+        return ResponseEntity.ok().build();
     }
-    
+
+    @PostMapping("/game/play_card")
+    public ResponseEntity<String> playCard(@RequestBody PlayerCardDto data) {
+        this.gameServer.handlePlayCard(data.getPlayerId(), data.getSessioncardId(), data.getGameId());
+        return ResponseEntity.ok().build();
+    }
 
 }
