@@ -1,10 +1,8 @@
 package com.mindbug.services.gamecore;
-import java.util.List;
 
 import org.springframework.stereotype.Service;
 
 import com.mindbug.models.Game;
-import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 
 @Service
@@ -28,6 +26,11 @@ public class GameSessionValidation {
         validPlayer(gameSession, playerId);
         // Check if player have a card
         playerHasCardInHisBattlefield(gameSession, playerId, cardId);
+        
+        // Check if player is not current player
+        if (gameSession.isCurrentPlayer(playerId)) {
+            throw new IllegalArgumentException("Player not authorized to do this action");
+        }
     }
 
     public void canDoDontBlock(GameSession gameSession, Long playerId) {
@@ -37,7 +40,6 @@ public class GameSessionValidation {
 
         // Check valid player
         validPlayer(gameSession, playerId);
-
 
         // Check if player is not current player
         if (gameSession.isCurrentPlayer(playerId)) {
@@ -54,11 +56,9 @@ public class GameSessionValidation {
          validPlayer(gameSession, playerId);
 
          // Check if player have a card
-         Player player = gameSession.getPlayer(playerId);
          playerHasCardInHisBattlefield(gameSession, playerId, sessionCardId);
 
           // Check if player is  current player
-
         if (gameSession.isCurrentPlayer(playerId)) {
             throw new IllegalArgumentException("Player not authorized to do this action");
         }

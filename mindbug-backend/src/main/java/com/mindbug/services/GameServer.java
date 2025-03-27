@@ -36,7 +36,7 @@ public class GameServer {
 
     public GameServer(WSMessageManager gameQueueWsMessageManager) {
         this.gameQueueWsMessageManager = gameQueueWsMessageManager;
-
+        
         // Set the channel for game queue WebSocket messages
         this.gameQueueWsMessageManager.setChannel(Config.GAME_QUEUE_WEBSOCKET);
     }
@@ -48,6 +48,7 @@ public class GameServer {
 
         GameSession gameSession = gameSessionFactory.createGameSession(newGame);
         gameSessions.put(newGame.getId(), gameSession);
+
         // Send newGame websocket messages to each player
         this.gameQueueWsMessageManager.sendMessage(new WSMessageMatchFound(newGame.getId(), newGame.getPlayer1().getId()));
         // Second player message
@@ -56,6 +57,7 @@ public class GameServer {
 
     private GameSession getGameSession(Long id) {
         GameSession gameSession = this.gameSessions.get(id);
+
         if (gameSession == null)
             throw new EntityNotFoundException("Game not found");
         return gameSession;
@@ -65,6 +67,7 @@ public class GameServer {
         // Create the player and add to queue
         Player player =  this.playerservice.createPlayer(new Player("Player"));
         this.playerQueue.add(player);
+
         // Create game session if two player in queue
         if (this.playerQueue.size() >= 2) {
             this.createGameSession(this.playerQueue.poll(), this.playerQueue.poll());
@@ -81,7 +84,6 @@ public class GameServer {
         GameSession gameSession = this.getGameSession(gameId);
         gameSession.attack(playerId, sessionCardId);
     }
-
 
     public void handleDontBlock(Long playerId, Long gameId) {
         GameSession gameSession = this.getGameSession(gameId);

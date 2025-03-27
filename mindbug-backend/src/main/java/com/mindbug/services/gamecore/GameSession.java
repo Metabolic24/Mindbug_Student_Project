@@ -5,25 +5,16 @@ import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import com.mindbug.services.CardService;
 import com.mindbug.services.PlayerService;
-<<<<<<< HEAD
 import com.mindbug.services.wsmessages.WSMessagAskBlock;
-=======
-<<<<<<< HEAD
->>>>>>> 6dbcaa0 (cleanup WebsocketMessage + Fix import in some class #73)
 import com.mindbug.services.wsmessages.WSMessageCardDestroyed;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
 import com.mindbug.services.wsmessages.WSMsgPlayerLifeUpdated;
 import com.mindbug.services.wsmessages.playeractions.WSMessageBlocked;
 import com.mindbug.services.wsmessages.playeractions.WSMessageDidntBlock;
-import com.mindbug.services.wsmessages.playeractions.WSMessgaeAttacked;
+import com.mindbug.services.wsmessages.playeractions.WSMessageAttacked;
 import com.mindbug.services.wsmessages.playeractions.WSMessagePlayCard;
-import com.mindbug.websocket.WSMessageManager;
-=======
 import com.mindbug.services.wsmessages.WSMessageManager;
-import com.mindbug.services.wsmessages.WSMessageNewGame;
-import com.mindbug.services.wsmessages.WSMessageNewTurn;
->>>>>>> 18aa2d4 (cleanup WebsocketMessage + Fix import in some class #73)
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -33,9 +24,6 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Scope;
 import lombok.Getter;
 
 @Component
@@ -90,25 +78,13 @@ public class GameSession {
     }
 
     public void newTurn() {
-<<<<<<< HEAD
         if (this.game.getCurrentPlayer() == null) {
             // For now we assume 1st player is player1
             this.game.setCurrentPlayer(game.getPlayer1());
         } else {
             this.game.setCurrentPlayer(getOpponent());
         }
-<<<<<<< HEAD
         
-=======
-
-<<<<<<< HEAD
->>>>>>> dff324b (cleanup GameSessionValidation #73)
-=======
-=======
-        // For now we assume 1st player is player1
-        this.game.setCurrentPlayer(game.getPlayer1());
->>>>>>> 3c271ba (cleanup all useless space #73)
->>>>>>> 814beef (cleanup all useless space #73)
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
 
@@ -118,29 +94,16 @@ public class GameSession {
         this.gameSessionValidation.canAttack(this, playerId, sessionCardId);
 
         Player player = getPlayer(playerId);
-<<<<<<< HEAD
         GameSessionCard sessionCard = playerService.getBattlefiedCard(player, sessionCardId);
-=======
-        GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
->>>>>>> 3c271ba (cleanup all useless space #73)
 
-        this.battle = this.applicationContext.getBean(Battle.class);
+        this.battle = this.applicationContext.getBean(BattleService.class);
+
         this.battle.attack(this, player, sessionCard);
     }
 
     public void dontBlock(Long playerId) {
         this.gameSessionValidation.canDoDontBlock(this, playerId);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 2279ca4 (cleanup all useless space #73)
->>>>>>> 3c271ba (cleanup all useless space #73)
-=======
->>>>>>> 6dbcaa0 (cleanup WebsocketMessage + Fix import in some class #73)
         Player player = getPlayer(playerId);
 
         this.battle.dontBlock(this, player);
@@ -175,12 +138,14 @@ public class GameSession {
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
+
         this.gameSessionValidation.canPlayCard(this, playerId, sessionCardId);
 
         Player player = this.getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
         player.getHand().remove(sessionCard);
+
         player.getBattlefield().add(sessionCard);
 
         this.gameWsMessageManager.sendMessage(new WSMessagePlayCard(this.game));
@@ -229,7 +194,7 @@ public class GameSession {
     }
 
     public void sendWSMsgAttacked(Long playerId, Long gameSessionCardId) {
-        this.gameWsMessageManager.sendMessage(new WSMessgaeAttacked(this.game.getId(), playerId, gameSessionCardId));
+        this.gameWsMessageManager.sendMessage(new WSMessageAttacked(this.game.getId(), playerId, gameSessionCardId));
     }
 
     public void sendWSMsgBlocked(Long playerId, Long gameSessionCardId) {
