@@ -13,7 +13,7 @@ const routes = [
         component: () => import('@/components/SetsOfCards.vue')
     },
     {
-        path: "/gameboard",
+        path: "/gameboard/:gameId/:playerId",
         name: "GameBoard",
         component: () => import('@/components/GameBoard.vue')
     },
