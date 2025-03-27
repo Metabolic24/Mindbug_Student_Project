@@ -104,31 +104,6 @@ class WebSocketService {
   }
   
   
-  async sendAction(actionType, payload) {
-    const response = await fetch(`/api/game/${payload.gameId}/action`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        action: actionType,
-        data: payload
-      })
-    });
-    return await response.json();
-  }
-  async sendConfirmJoin(payload) {
-    const response = await fetch('/api/confirm_join', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(payload)
-    });
-  
-    return await response.json();
-  }
-  
 
 }
 
