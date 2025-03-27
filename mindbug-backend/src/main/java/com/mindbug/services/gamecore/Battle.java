@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 
 import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
-import com.mindbug.services.wsmessages.WSMessagAskBlock;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,17 +20,31 @@ public class Battle {
     }
 
     public void attack(GameSession gameSessionContext, Player attackingPlayer, GameSessionCard attackingSessionCard) {
+
         this.attacking = new PlayerCard(attackingPlayer, attackingSessionCard);
 
         gameSessionContext.sendWSMsgAttacked(attackingPlayer.getId(), attackingSessionCard.getId());
 
-        gameSessionContext.sendWSMsgAskBlock(gameSessionContext.getOpponent().getId());
+        // Check if opponent have card to block
+        if (gameSessionContext.getOpponent().getBattlefield().size() < 1) {
+            // Direct attack
+            gameSessionContext.directAttack(gameSessionContext.getOpponent());
+        } else {
+            gameSessionContext.sendWSMsgAskBlock(gameSessionContext.getOpponent().getId());
+        }
+
+        
+
+        
     }
 
     public void dontBlock(GameSession gameSessionContext, Player blockingPlayer) {
         this.blocking = new PlayerCard(blockingPlayer);
 
         gameSessionContext.sendWSMsgDidntBlocked(blockingPlayer.getId());
+
+        // Next step resolve battle
+        gameSessionContext.resolveBattle();
     }
 
 
@@ -40,13 +53,21 @@ public class Battle {
         
 
         gameSessionContext.sendWSMsgBlocked(blockingPlayer.getId(), blockingSessionCard.getId());
+
+        // Next step resolve battle
+        gameSessionContext.resolveBattle();
+    }
+
+    public void directAttack(GameSession gameSessionContext, Player opponent) {
+        opponent.setLifepoints(opponent.getLifepoints() - 1);
+        gameSessionContext.sendWSMsgPlayerLifeUpdated(opponent.getId());
     }
 
     public void resolveBattle(GameSession gameSessionContext) {
         Player opponent = this.blocking.getPlayer();
         Player attacker = this.attacking.getPlayer();
 
-        if(this.blocking.getCard() == null) {
+        if (this.blocking.getCard() == null) {
             // Opponent didnt blocked. Remove one life point
             opponent.setLifepoints(opponent.getLifepoints() - 1);
             gameSessionContext.sendWSMsgPlayerLifeUpdated(opponent.getId());

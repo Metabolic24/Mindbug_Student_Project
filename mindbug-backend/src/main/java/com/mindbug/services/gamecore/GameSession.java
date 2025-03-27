@@ -105,8 +105,7 @@ public class GameSession {
         this.gameSessionValidation.canAttack(this, playerId, sessionCardId);
 
         Player player = getPlayer(playerId);
-        GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
-
+        GameSessionCard sessionCard = playerService.getBattlefiedCard(player, sessionCardId);
 
         this.battle = this.applicationContext.getBean(Battle.class);
 
@@ -121,19 +120,26 @@ public class GameSession {
 
         this.battle.dontBlock(this, player);
 
-        this.resolveBattle();
     }
 
     public void block(Long playerId, Long sessionCardId) {
         this.gameSessionValidation.canBlock(this, playerId, sessionCardId);
 
         Player player = getPlayer(playerId);
-        GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
+        GameSessionCard sessionCard = playerService.getBattlefiedCard(player, sessionCardId);
 
         this.battle.block(this, player, sessionCard);
 
-        // Next step resolve battle
-        this.resolveBattle();
+    }
+
+    public void directAttack(Player opponent) {
+        this.battle.directAttack(this, opponent);
+
+        // Reset after battle end
+        this.battle = null;
+
+        // Next step end turn (TODO: next step should be check if game is over)
+        this.newTurn();
     }
 
     public void resolveBattle() {
@@ -156,6 +162,10 @@ public class GameSession {
         player.getHand().remove(sessionCard);
 
         player.getBattlefield().add(sessionCard);
+
+        // TODO: sent webscoket
+
+        this.newTurn();
     }
 
     public Player getPlayer(Long playerId) {
