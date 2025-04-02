@@ -30,6 +30,7 @@ export default {
         alert("Matching...");
         const response = await axios.post("http://localhost:8080/api/game/join_game");
         this.playerId = response.data.playerId;
+        localStorage.setItem("playerId", this.playerId);
         WebSocketService.connectToQueue(this.handleMatchFound);
       } catch (error) {
         console.error("❌ Error occurred while searching for a game:"
