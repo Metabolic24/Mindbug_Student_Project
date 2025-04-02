@@ -312,6 +312,10 @@ html, body {
 
 .top-hand,
 .hand-area {
+  overflow-y: auto; 
+  min-height: 150px;
+  min-width: 100px;
+  max-height: 200px; 
   display: flex;
   justify-content: center;
   gap: 1.5vw;
@@ -322,6 +326,9 @@ html, body {
 .hand-area {
   overflow-y: auto;
   max-height: 200px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 .hand-card {
@@ -358,6 +365,11 @@ html, body {
 }
 
 .battlefield {
+  min-height: 300px;
+  min-width: 600px;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
