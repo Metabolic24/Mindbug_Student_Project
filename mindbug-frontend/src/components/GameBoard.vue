@@ -291,15 +291,17 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
   font-size: 2rem;
   color: black;
   background-color: #f5f5fa;
   padding: 10px;
-  overflow-y: auto;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 .top-hand,
@@ -430,9 +432,11 @@ html, body {
   color: orange;
 }
 
+
 .card-image {
-  width: 100px;
-  height: 150px;
+  width: 10vw;
+  height: auto;
+  max-width: 150px;
   object-fit: cover;
   border: 2px solid black;
   border-radius: 10px;
