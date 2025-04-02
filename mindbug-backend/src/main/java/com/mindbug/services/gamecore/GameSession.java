@@ -5,8 +5,13 @@ import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import com.mindbug.services.CardService;
 import com.mindbug.services.PlayerService;
+import com.mindbug.services.wsmessages.WSMessageCardDestroyed;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
+import com.mindbug.services.wsmessages.WSMsgPlayerLifeUpdated;
+import com.mindbug.services.wsmessages.playeractions.WSMessageBlocked;
+import com.mindbug.services.wsmessages.playeractions.WSMessageDidntBlock;
+import com.mindbug.services.wsmessages.playeractions.WSMessgaeAttacked;
 import com.mindbug.websocket.WSMessageManager;
 
 import java.util.ArrayList;
@@ -23,6 +28,7 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 @Getter
 public class GameSession {
+
     private Game game;
 
     private WSMessageManager gameWsMessageManager;
@@ -72,6 +78,7 @@ public class GameSession {
             // The two players have confirmed. Send ws message newGame and update game status
             this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
 
+
             // Start a turn
             newTurn();
         }
@@ -105,6 +112,15 @@ public class GameSession {
         Player player = getPlayer(playerId);
 
         this.battle.dontBlock(this, player);
+    }
+
+    public void block(Long playerId, Long sessionCardId) {
+        this.gameSessionValidation.canBlock(this, playerId, sessionCardId);
+
+        Player player = getPlayer(playerId);
+        GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
+
+        this.battle.block(this, player, sessionCard);
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
@@ -145,4 +161,25 @@ public class GameSession {
         Player player = getPlayer(playerId);
         return player.getHand();
     }
+
+    public void sendWSMsgAttacked(Long playerId, Long gameSessionCardId) {
+        this.gameWsMessageManager.sendMessage(new WSMessgaeAttacked(this.game.getId(), playerId, gameSessionCardId));
+    }
+
+    public void sendWSMsgBlocked(Long playerId, Long gameSessionCardId) {
+        this.gameWsMessageManager.sendMessage(new WSMessageBlocked(this.game.getId(), playerId, gameSessionCardId));
+    }
+
+    public void sendWSMsgDidntBlocked(Long playerId) {
+        this.gameWsMessageManager.sendMessage(new WSMessageDidntBlock(this.game.getId(), playerId));
+    }
+
+    public void sendWSMsgPlayerLifeUpdated(Long playerId) {
+        this.gameWsMessageManager.sendMessage(new WSMsgPlayerLifeUpdated(playerId, this.game));
+    }
+
+    public void sendWSMsgCardDestroyed(Long playerId, Long gameSessionCardId) {
+        this.gameWsMessageManager.sendMessage(new WSMessageCardDestroyed(playerId, gameSessionCardId, this.game));
+    }
+
 }
