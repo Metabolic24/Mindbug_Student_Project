@@ -157,8 +157,6 @@ public class GameSession {
 
         player.getBattlefield().add(sessionCard);
 
-        // TODO: sent webscoket
-
         this.newTurn();
     }
 

@@ -33,8 +33,6 @@ public class CardService {
     @Autowired
     private GameSessionCardRepository gameSessionCardRepository;
 
-    private Set<GameSessionCard> allCards;
-
     private List<Card> cards;
 
 
@@ -81,6 +79,7 @@ public class CardService {
     }
 
     public void distributeCards(Game game) {
+        
         try {
             List<Card> rawCards = getCardsBySet("First_Contact");
 
