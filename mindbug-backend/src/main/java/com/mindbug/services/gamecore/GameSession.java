@@ -76,6 +76,7 @@ public class GameSession {
 
         if (this.confirmJoinPlayers.size() == 2) {
             cardService.distributeCards(game);
+
             // The two players have confirmed. Send ws message newGame and update game status
             this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
 
@@ -92,7 +93,6 @@ public class GameSession {
             this.game.setCurrentPlayer(getOpponent());
         }
         
-
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
 
