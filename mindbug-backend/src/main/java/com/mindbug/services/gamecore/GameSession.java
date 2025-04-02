@@ -74,14 +74,10 @@ public class GameSession {
         }
 
         if (this.confirmJoinPlayers.size() == 2) {
-
             cardService.distributeCards(game);
-
             // The two players have confirmed. Send ws message newGame and update game status
             this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
 
-            // Distribute cards
-            cardService.distributeCards(game);
 
             // Start a turn
             newTurn();
@@ -95,7 +91,6 @@ public class GameSession {
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
 
-        
     }
 
     public void attack(Long playerId, Long sessionCardId) {
