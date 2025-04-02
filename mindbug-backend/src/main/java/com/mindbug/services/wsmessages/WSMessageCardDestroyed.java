@@ -5,7 +5,7 @@ import java.util.HashMap;
 import com.mindbug.models.Game;
 import com.mindbug.websocket.WebsocketMessage;
 
-public class WSMessageCardDestroyed  extends WebsocketMessage{
+public class WSMessageCardDestroyed  extends WebsocketMessage {
 
     public WSMessageCardDestroyed(Long playerId, Long gameSessionCardId, Game game) {
         super(GameWSMessage.CARD_DESTROYED.getLabel());

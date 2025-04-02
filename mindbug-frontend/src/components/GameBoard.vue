@@ -39,6 +39,9 @@
         />
       </div>
     </div>
+    <div v-if="isMyTurn" class="turn-indicator">Your turn</div>
+     <div v-else class="turn-indicator">Waiting for opponent...</div>
+     
 
     <div class="hand-area">
       <img
@@ -57,6 +60,7 @@
 
 <script>
 import WebSocketService from "@/services/websocket.js";
+import axios from 'axios';
 export default {
   name: "GameBoard",
   data() {
@@ -71,25 +75,102 @@ export default {
       enemyBattlefieldCards: ["Deathweaver.jpg"],
       selectedCard: null, 
       draggingCard: null, 
+
+      isMyTurn: false,
     };
   },
   mounted() {
-    this.playerId = localStorage.getItem('playerId');
-    this.gameId = this.$route.query.gameId;
-    
-    WebSocketService.subscribeToGameState(this.gameId, this.handleGameState);
+    this.gameId = this.$route.params.gameId;
+     this.playerId = this.$route.params.playerId;
+ 
+     WebSocketService.subscribeToGameState(
+     this.gameId,
+     this.onGameStateReceived.bind(this),
+     this.onTurnChanged.bind(this)
+    );
+     this.confirmJoinGame();
   },
   methods: {
-    handleGameState(gameState) {
-      // Determine which player is the current
-      const player = gameState.player1.id === this.playerId ? 
-        gameState.player1 : gameState.player2;
-      // Update hand card of the player
-      this.handCards = player.hand.map(card => ({
-        name: card.name,
-        id: card.id 
-      }));
-    },
+    async confirmJoinGame() {
+       try {
+         const payload = {
+           gameId: this.gameId,
+           playerId: this.playerId
+         };
+ 
+         await axios.post('http://localhost:8080/api/game/confirm_join', payload);
+ 
+       } catch (error) {
+         console.error('❌ confirmJoin failed', error);
+       }
+     },
+     subscribeGameState() {
+       if (!this.gameId || !this.playerId) {
+         console.error("gameId or playerId not exist, cannot subscribe");
+         return;
+       }
+       console.log(`📡gameState: /topic/game/${this.gameId}`);
+ 
+     },
+ 
+     onGameStateReceived(gameState) {
+       const isPlayer1 = gameState.player1.id === this.playerId;
+ 
+       if (isPlayer1) {
+         this.myHp = gameState.player1.lifepoints;
+         this.myHandCards = gameState.player1.handCards || [];
+         this.myBattlefieldCards = gameState.player1.battlefield || [];
+         this.myName = gameState.player1.nickName;
+         this.myMindbug = gameState.player1.mindbug;
+         this.myDrawPile = gameState.player1.drawpile;
+ 
+         this.enemyHp = gameState.player2.lifepoints;
+         this.enemyHandCount = gameState.player2.handCardsCount || 0;
+         this.enemyBattlefieldCards = gameState.player2.battlefield || [];
+         this.enemyName = gameState.player2.nickName;
+         this.enemyMindbug = gameState.player2.Mindbug;
+         this.enemyDrawPile = gameState.player2.drawpile;
+         
+       } else {
+         this.myHp = gameState.player2.lifepoints;
+         this.myHandCards = gameState.player2.handCards || [];
+         this.myBattlefieldCards = gameState.player2.battlefield || [];
+         this.myName = gameState.player2.nickName;
+         this.myMindbug = gameState.player2.mindbug;
+         this.myDrawPile = gameState.player2.drawpile;
+ 
+         this.enemyHp = gameState.player1.lifepoints;
+         this.enemyHandCount = gameState.player1.handCardsCount || 0;
+         this.enemyBattlefieldCards = gameState.player1.battlefield || [];
+         this.enemyName = gameState.player1.nickName;
+         this.enemyMindbug = gameState.player1.mindbug;
+         this.enemyDrawPile = gameState.player1.drawpile;
+       }
+ 
+       console.log(`🕒 Current turn: ${this.isMyTurn ? 'My turn' : 'opponent turn'}`);
+      },
+    
+      onTurnChanged(message) {
+       const currentPlayerId = message.data.currentPlayer;
+       const gameState = message.data.gameState;
+       if (String(currentPlayerId) === String(this.playerId)) {
+         this.isMyTurn = true;
+       } else {
+         this.isMyTurn = false;
+       }
+ 
+       this.updateActionButtons();
+       if (gameState) {
+         this.onGameStateReceived(gameState);
+       }
+     },
+ 
+ 
+     updateActionButtons() {
+       this.endTurnButtonDisabled = !this.isMyTurn;
+       this.attackButtonDisabled = !this.isMyTurn;
+       this.playCardDisabled = !this.isMyTurn;
+     },
 
     getCardImage(card) {
       return require(`@/assets/Sets/First_Contact/${card}`);

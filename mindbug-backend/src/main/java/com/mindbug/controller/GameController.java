@@ -50,8 +50,9 @@ public class GameController {
     public ResponseEntity<String>  block(@RequestBody PlayerCardDto data) {
        this.gameServer.handleBlock(data.getPlayerId(), data.getSessioncardId(), data.getGameId());
        return ResponseEntity.ok().build();
+
     }
-    
+
     @PostMapping("/game/play_card")
     public ResponseEntity<String> playCard(@RequestBody PlayerCardDto data) {
         this.gameServer.handlePlayCard(data.getPlayerId(), data.getSessioncardId(), data.getGameId());

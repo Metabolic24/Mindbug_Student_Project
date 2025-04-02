@@ -186,4 +186,5 @@ public class GameSession {
     public void sendWSMsgCardDestroyed(Long playerId, Long gameSessionCardId) {
         this.gameWsMessageManager.sendMessage(new WSMessageCardDestroyed(playerId, gameSessionCardId, this.game));
     }
+
 }
