@@ -164,7 +164,9 @@ export default {
       this.handCards = this.myHandCards.map(handCard => {
         console.log("handCard:", handCard);
         console.log("handCard.card:", handCard.card.name);
-        return handCard.card;
+        return {
+          ...handCard.card,
+          sessioncardId: handCard.id};
       });
       console.log("My Battlefield cards", this.myBattlefieldCards);
 
@@ -217,15 +219,19 @@ export default {
     },
 
     handleBattlefieldClick() {
+      if (!this.isMyTurn) {
+        alert("Ce n'est pas votre tour !");
+        return;
+      }
       if (this.selectedCard !== null) {
 
         const cardToPlay = this.handCards[this.selectedCard];
 
         this.playCard(cardToPlay);
 
-        this.handCards.splice(this.selectedCard, 1);
+        //this.handCards.splice(this.selectedCard, 1);
 
-        this.myBattlefieldCards.push(cardToPlay);
+        //this.myBattlefieldCards.push(cardToPlay);
 
         this.selectedCard = null;
       }
@@ -244,44 +250,69 @@ export default {
     handleDropOnBattlefield(event) {
       event.preventDefault();
 
+      if (!this.isMyTurn) {
+        alert("Ce n'est pas votre tour !");
+        return;
+      }
+
       if (this.draggingCard !== null) {
 
         const cardToPlay = this.handCards[this.draggingCard];
 
         this.playCard(cardToPlay);
 
-        this.handCards.splice(this.draggingCard, 1);
+        //this.handCards.splice(this.draggingCard, 1);
 
-        this.myBattlefieldCards.push(cardToPlay);
+        //this.myBattlefieldCards.push(cardToPlay);
 
         this.draggingCard = null;
       }
     },
 
     playCard(card) {
-      fetch('/api/game/game/play_card', {
+      if (!this.isMyTurn) {
+        alert("Ce n'est pas votre tour, vous ne pouvez pas jouer de carte.");
+        return;
+      }
+      fetch('http://localhost:8080/api/game/play_card', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           playerId: this.playerId,
           sessioncardId: card.sessioncardId,
           gameId: this.gameId
         })
       })
-          .then(response => response.json())
-          .then(data => {
-            if (data.success) {
-              //this.updateBattlefield(card); TODO : when api will work we will update the field here after api answer
-              // for now the update logic is in handleBattlefieldClick and handleDropOnBattlefield
-            } else {
-              console.error("Erreur lors de la tentative de jouer la carte :", data.error);
-            }
-          })
-          .catch(error => {
-            console.error("Erreur réseau ou backend :", error);
+      .then(response => {
+        if (!response.ok) {
+          return response.text().then(text => {
+            throw new Error("Erreur: " + text);
           });
+        }
+        return response.json().catch(() => ({})); 
+      })
+      .then(data => {
+        if (data.success) {
+          this.updateBattlefield(card); //TODO : when api will work we will update the field here after api answer
+          // for now the update logic is in handleBattlefieldClick and handleDropOnBattlefield
+        } else {
+          console.error("Erreur lors de la tentative de jouer la carte :", data.error);
+        }
+      })
+      .catch(error => {
+        console.error("Erreur réseau ou backend :", error);
+        alert(error.message);
+      });
+    },
+    updateBattlefield(card) {
+      // Rechercher l'index de la carte jouée dans la main locale
+      const index = this.handCards.findIndex(c => c.sessioncardId === card.sessioncardId);
+      if (index !== -1) {
+        // Retirer la carte de la main
+        this.handCards.splice(index, 1);
+        // Ajouter la carte dans le tableau de battlefield
+        this.myBattlefieldCards.push(card);
+      }
     }
   },
 };
