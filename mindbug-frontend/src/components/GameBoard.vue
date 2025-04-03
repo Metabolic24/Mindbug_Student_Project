@@ -92,87 +92,105 @@ export default {
   },
   methods: {
     async confirmJoinGame() {
-       try {
-        this.playerId = Number(this.$route.params.playerId || localStorage.getItem("playerId"));
-        console.log
-         const payload = {
-           gameId: this.gameId,
-           playerId: this.playerId
-         };
- 
-         await axios.post('http://localhost:8080/api/game/confirm_join', payload);
- 
-       } catch (error) {
-         console.error('❌ confirmJoin failed', error);
-       }
-     },
-     subscribeGameState() {
-       if (!this.gameId || !this.playerId) {
-         console.error("gameId or playerId not exist, cannot subscribe");
-         return;
-       }
-       console.log(`📡gameState: /topic/game/${this.gameId}`);
- 
-     },
- 
-     onGameStateReceived(gameState) {
-       const isPlayer1 = gameState.player1.id === this.playerId;
-        console.log(gameState)
-       if (isPlayer1) {
-         this.myHp = gameState.player1.lifepoints;
-         this.myHandCards = gameState.player1.handCards || [];
-         this.myBattlefieldCards = gameState.player1.battlefield || [];
-         this.myName = gameState.player1.nickName;
-         this.myMindbug = gameState.player1.mindbug;
-         this.myDrawPile = gameState.player1.drawpile;
- 
-         this.enemyHp = gameState.player2.lifepoints;
-         this.enemyHandCount = gameState.player2.handCardsCount || 0;
-         this.enemyBattlefieldCards = gameState.player2.battlefield || [];
-         this.enemyName = gameState.player2.nickName;
-         this.enemyMindbug = gameState.player2.Mindbug;
-         this.enemyDrawPile = gameState.player2.drawpile;
-         
-       } else {
-         this.myHp = gameState.player2.lifepoints;
-         this.myHandCards = gameState.player2.handCards || [];
-         this.myBattlefieldCards = gameState.player2.battlefield || [];
-         this.myName = gameState.player2.nickName;
-         this.myMindbug = gameState.player2.mindbug;
-         this.myDrawPile = gameState.player2.drawpile;
- 
-         this.enemyHp = gameState.player1.lifepoints;
-         this.enemyHandCount = gameState.player1.handCardsCount || 0;
-         this.enemyBattlefieldCards = gameState.player1.battlefield || [];
-         this.enemyName = gameState.player1.nickName;
-         this.enemyMindbug = gameState.player1.mindbug;
-         this.enemyDrawPile = gameState.player1.drawpile;
-       }
- 
-       console.log(`🕒 Current turn: ${this.isMyTurn ? 'My turn' : 'opponent turn'}`);
-      },
-    
-      onTurnChanged(message) {
-       const currentPlayerId = message.data.currentPlayer;
-       const gameState = message.data.gameState;
-       if (String(currentPlayerId) === String(this.playerId)) {
-         this.isMyTurn = true;
-       } else {
-         this.isMyTurn = false;
-       }
- 
-       this.updateActionButtons();
-       if (gameState) {
-         this.onGameStateReceived(gameState);
-       }
-     },
- 
- 
-     updateActionButtons() {
-       this.endTurnButtonDisabled = !this.isMyTurn;
-       this.attackButtonDisabled = !this.isMyTurn;
-       this.playCardDisabled = !this.isMyTurn;
-     },
+      try {
+        const payload = {
+          gameId: this.gameId,
+          playerId: this.playerId
+        };
+
+        await axios.post('http://localhost:8080/api/game/confirm_join', payload);
+
+      } catch (error) {
+        console.error('❌ confirmJoin failed', error);
+      }
+    },
+    subscribeGameState() {
+      if (!this.gameId || !this.playerId) {
+        console.error("gameId or playerId not exist, cannot subscribe");
+        return;
+      }
+      console.log(`📡gameState: /topic/game/${this.gameId}`);
+
+    },
+
+    onGameStateReceived(gameState) {
+
+      console.log("Received gameState:", gameState);
+      console.log("Current player ID:", this.playerId);
+      console.log("Player 1 ID:", gameState.player1.id);
+      console.log("Player 2 ID:", gameState.player2.id);
+
+      const isPlayer1 = String(gameState.player1.id) === this.playerId;
+
+      console.log(isPlayer1);
+      //console.log("player num", this.playerId);
+
+      if (isPlayer1) {
+        this.myHp = gameState.player1.lifepoints;
+        this.myHandCards = gameState.player1.hand || [];
+        this.myBattlefieldCards = gameState.player1.battlefield || [];
+        this.myName = gameState.player1.nickName;
+        this.myMindbug = gameState.player1.mindbug;
+        this.myDrawPile = gameState.player1.drawpile;
+
+        this.enemyHp = gameState.player2.lifepoints;
+        this.enemyHandCount = gameState.player2.handCardsCount || 0;
+        this.enemyBattlefieldCards = gameState.player2.battlefield || [];
+        this.enemyName = gameState.player2.nickName;
+        this.enemyMindbug = gameState.player2.Mindbug;
+        this.enemyDrawPile = gameState.player2.drawpile;
+
+      } else {
+        this.myHp = gameState.player2.lifepoints;
+        this.myHandCards = gameState.player2.hand || [];
+        this.myBattlefieldCards = gameState.player2.battlefield || [];
+        this.myName = gameState.player2.nickName;
+        this.myMindbug = gameState.player2.mindbug;
+        this.myDrawPile = gameState.player2.drawpile;
+
+        this.enemyHp = gameState.player1.lifepoints;
+        this.enemyHandCount = gameState.player1.handCardsCount || 0;
+        this.enemyBattlefieldCards = gameState.player1.battlefield || [];
+        this.enemyName = gameState.player1.nickName;
+        this.enemyMindbug = gameState.player1.mindbug;
+        this.enemyDrawPile = gameState.player1.drawpile;
+      }
+      this.handCards = this.myHandCards.map(handCard => {
+        console.log("handCard:", handCard);
+        console.log("handCard.card:", handCard.card.name);
+        return {
+          ...handCard.card,
+          sessioncardId: handCard.id};
+      });
+      console.log("My Battlefield cards", this.myBattlefieldCards);
+
+
+      //console.log("my Hand cards", this.myHandCards);
+      console.log("Hand cards", this.handCards);
+      console.log(`🕒 Current turn: ${this.isMyTurn ? 'My turn' : 'opponent turn'}`);
+    },
+
+    onTurnChanged(message) {
+      const currentPlayerId = message.data.currentPlayer;
+      const gameState = message.data.gameState;
+      if (String(currentPlayerId) === String(this.playerId)) {
+        this.isMyTurn = true;
+      } else {
+        this.isMyTurn = false;
+      }
+
+      this.updateActionButtons();
+      if (gameState) {
+        this.onGameStateReceived(gameState);
+      }
+    },
+
+
+    updateActionButtons() {
+      this.endTurnButtonDisabled = !this.isMyTurn;
+      this.attackButtonDisabled = !this.isMyTurn;
+      this.playCardDisabled = !this.isMyTurn;
+    },
 
     getCardImage(card) {
       if (typeof card === 'object' && card.name) {
