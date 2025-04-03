@@ -126,4 +126,13 @@ public class CardService {
         player.setDrawPile(drawPile);
     }
 
+    public GameSessionCard drawCardIfNecessary(Player player) {
+        if (player.getHand().size() < 5 && !player.getDrawPile().isEmpty()) {
+            GameSessionCard drawnCard = player.drawCard();
+            player.getHand().add(drawnCard);
+            return drawnCard;
+        }
+        return null;
+    }
+
 }

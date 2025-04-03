@@ -24,25 +24,25 @@
          @click="handleBattlefieldClick"
          @dragover.prevent
          @drop="handleDropOnBattlefield">
-        <div class="row">
-          <img
-              v-for="(card, index) in enemyBattlefieldCards.slice(0)"
-              :key="index"
-              :src="getCardImage(card)"
-              class="card-image center first-card"
-          />
-        </div>
+      <div class="row">
+        <img
+            v-for="(card, index) in enemyBattlefieldCards.slice(0)"
+            :key="index"
+            :src="getCardImage(card)"
+            class="card-image center first-card"
+        />
+      </div>
 
-        <div class="divider"></div>
+      <div class="divider"></div>
 
-        <div class="row">
-          <img
-              v-for="(card, index) in myBattlefieldCards.slice(0)"
-              :key="index"
-              :src="getCardImage(card)"
-              class="card-image"
-          />
-        </div>
+      <div class="row">
+        <img
+            v-for="(card, index) in myBattlefieldCards.slice(0)"
+            :key="index"
+            :src="getCardImage(card)"
+            class="card-image"
+        />
+      </div>
     </div>
     <div v-if="isMyTurn" class="turn-indicator">Your turn</div>
     <div v-else class="turn-indicator">Waiting for opponent...</div>
@@ -75,8 +75,8 @@ export default {
       gameId: null,
       myBattlefieldCards: [],
       enemyBattlefieldCards: [],
-      selectedCard: null, 
-      draggingCard: null, 
+      selectedCard: null,
+      draggingCard: null,
 
       isMyTurn: false,
     };
@@ -84,7 +84,7 @@ export default {
   mounted() {
     this.gameId = this.$route.params.gameId;
     this.playerId = this.$route.params.playerId;
- 
+
      WebSocketService.subscribeToGameState(
      this.gameId,
      this.onGameStateReceived.bind(this),
@@ -254,24 +254,25 @@ export default {
           gameId: this.gameId
         })
       })
-      .then(response => {
-        if (!response.ok) {
-          return response.text().then(text => {
-            throw new Error("Erreur: " + text);
+          .then(response => {
+            if (!response.ok) {
+              return response.text().then(text => {
+                throw new Error("Erreur: " + text);
+              });
+            }
+          })
+          .catch(error => {
+            console.error("Erreur réseau ou backend :", error);
+            alert(error.message);
           });
-        }
-      })
-      .catch(error => {
-        console.error("Erreur réseau ou backend :", error);
-        alert(error.message);
-      });
     },
     updateBattlefield(card) {
-    
+
       const index = this.handCards.findIndex(c => c.sessioncardId == card.sessioncardId);
       if (index !== -1) {
-       
+
         this.handCards.splice(index, 1);
+
         this.myBattlefieldCards.push(card);
       }
     }
@@ -304,10 +305,10 @@ html, body {
 
 .top-hand,
 .hand-area {
-  overflow-y: auto; 
+  overflow-y: auto;
   min-height: 150px;
   min-width: 100px;
-  max-height: 200px; 
+  max-height: 200px;
   display: flex;
   justify-content: center;
   gap: 1.5vw;

@@ -7,6 +7,7 @@ import com.mindbug.services.CardService;
 import com.mindbug.services.PlayerService;
 import com.mindbug.services.wsmessages.WSMessagAskBlock;
 import com.mindbug.services.wsmessages.WSMessageCardDestroyed;
+import com.mindbug.services.wsmessages.WSMessageCardDrawed;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
 import com.mindbug.services.wsmessages.WSMsgPlayerLifeUpdated;
@@ -19,6 +20,7 @@ import com.mindbug.services.wsmessages.WSMessageManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
+
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -49,9 +51,9 @@ public class GameSession {
     private CardService cardService;
 
     private BattleService battle;
-    
+
     public GameSession(Game game, WSMessageManager gameWsMessageManager, GameSessionValidation gameSessionValidation) {
-        this.game = game;        
+        this.game = game;
         this.gameWsMessageManager = gameWsMessageManager;
         this.wsChannel = "/topic/game/" + game.getId();
         this.gameWsMessageManager.setChannel(wsChannel);
@@ -84,7 +86,7 @@ public class GameSession {
         } else {
             this.game.setCurrentPlayer(getOpponent());
         }
-        
+
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
 
@@ -148,6 +150,11 @@ public class GameSession {
 
         player.getBattlefield().add(sessionCard);
 
+        GameSessionCard drawnCard = cardService.drawCardIfNecessary(player);
+        if (drawnCard != null) {
+            this.gameWsMessageManager.sendMessage(new WSMessageCardDrawed(this.game, player, drawnCard));
+        }
+
         this.gameWsMessageManager.sendMessage(new WSMessagePlayCard(this.game));
         this.newTurn();
     }
@@ -178,7 +185,7 @@ public class GameSession {
         Player player = getPlayer(playerId);
         return player.getHand();
     }
-    
+
     public void destroyCard(GameSessionCard destroyedCard, Player player) {
         // Send card to discarPile
         player.getBattlefield().remove(destroyedCard);
