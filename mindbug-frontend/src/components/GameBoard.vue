@@ -78,8 +78,8 @@ export default {
     };
   },
   mounted() {
-    this.gameId = Number(this.$route.params.gameId);
-    this.playerId = Number(this.$route.params.playerId || localStorage.getItem("playerId"));
+    this.gameId = this.$route.params.gameId;
+    this.playerId = this.$route.params.playerId;
 
   console.log("GameBoard mounted - gameId:", this.gameId, "playerId:", this.playerId);
  
@@ -223,10 +223,6 @@ export default {
 
         this.playCard(cardToPlay);
 
-        //this.handCards.splice(this.selectedCard, 1);
-
-        //this.myBattlefieldCards.push(cardToPlay);
-
         this.selectedCard = null;
       }
     },
@@ -255,10 +251,6 @@ export default {
 
         this.playCard(cardToPlay);
 
-        //this.handCards.splice(this.draggingCard, 1);
-
-        //this.myBattlefieldCards.push(cardToPlay);
-
         this.draggingCard = null;
       }
     },
@@ -283,15 +275,7 @@ export default {
             throw new Error("Erreur: " + text);
           });
         }
-        return response.json().catch(() => ({})); 
-      })
-      .then(data => {
-        if (data.success) {
-          this.updateBattlefield(card); //TODO : when api will work we will update the field here after api answer
-          // for now the update logic is in handleBattlefieldClick and handleDropOnBattlefield
-        } else {
-          console.error("Erreur lors de la tentative de jouer la carte :", data.error);
-        }
+        this.updateBattlefield(card); 
       })
       .catch(error => {
         console.error("Erreur réseau ou backend :", error);
@@ -299,12 +283,12 @@ export default {
       });
     },
     updateBattlefield(card) {
-      // Rechercher l'index de la carte jouée dans la main locale
-      const index = this.handCards.findIndex(c => c.sessioncardId === card.sessioncardId);
+    
+      const index = this.handCards.findIndex(c => c.sessioncardId == card.sessioncardId);
       if (index !== -1) {
-        // Retirer la carte de la main
+       
         this.handCards.splice(index, 1);
-        // Ajouter la carte dans le tableau de battlefield
+       
         this.myBattlefieldCards.push(card);
       }
     }
