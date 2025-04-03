@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-  count: Number
+  cards: CardInterface[]
 }
 
 defineProps<Props>()
@@ -9,7 +9,7 @@ defineProps<Props>()
 <template>
   <div class="card">
     <div class="card-title">Défausse</div>
-    <span>{{count}}</span>
+    <span>{{cards?.length}}</span>
   </div>
 </template>
 
