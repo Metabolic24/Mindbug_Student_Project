@@ -85,7 +85,7 @@ public class GameSessionValidation {
 
         if (!hasCard) {
 
-            throw new IllegalStateException("Player " + playerId + " does not have card " + cardId + "." + " hand = " + player.getHand() + "battlefield = " + player.getBattlefield());
+            throw new IllegalStateException("Player " + playerId + " does not have card " + cardId + ".");
 
         }
     }

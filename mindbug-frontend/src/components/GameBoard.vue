@@ -24,20 +24,25 @@
          @click="handleBattlefieldClick"
          @dragover.prevent
          @drop="handleDropOnBattlefield">
-      <img
-          v-for="(card, index) in enemyBattlefieldCards.slice(0)"
-          :key="index"
-          :src="getCardImage(card)"
-          class="card-image center first-card"
-      />
-      <div class="row">
-        <img
-            v-for="(card, index) in myBattlefieldCards.slice(0)"
-            :key="index"
-            :src="getCardImage(card)"
-            class="card-image"
-        />
-      </div>
+        <div class="row">
+          <img
+              v-for="(card, index) in enemyBattlefieldCards.slice(0)"
+              :key="index"
+              :src="getCardImage(card)"
+              class="card-image center first-card"
+          />
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="row">
+          <img
+              v-for="(card, index) in myBattlefieldCards.slice(0)"
+              :key="index"
+              :src="getCardImage(card)"
+              class="card-image"
+          />
+        </div>
     </div>
     <div v-if="isMyTurn" class="turn-indicator">Your turn</div>
     <div v-else class="turn-indicator">Waiting for opponent...</div>
@@ -160,6 +165,7 @@ export default {
         console.log("handCard.card:", handCard.card.name);
         return {
           ...handCard.card,
+          name: handCard.card.name,
           sessioncardId: handCard.id};
       });
       console.log("My Battlefield cards", this.myBattlefieldCards);
@@ -193,12 +199,15 @@ export default {
     },
 
     getCardImage(card) {
-      if (typeof card === 'object' && card.name) {
-        return require(`@/assets/Sets/First_Contact/${card.name}.jpg`);
-      } else {
-        console.error('Invalid card object:', card);
-        return '';
+      // Access for the proxies
+      const cardName = card?.name || card?.card?.name;
+      
+      if (cardName) {
+        return require(`@/assets/Sets/First_Contact/${cardName}.jpg`);
       }
+      
+      console.error('Card name not found in:', card);
+      return '';
     },
     getCardBackImage() {
       return require(`@/assets/Sets/First_Contact/card_Back.png`);
@@ -275,7 +284,6 @@ export default {
             throw new Error("Erreur: " + text);
           });
         }
-        this.updateBattlefield(card); 
       })
       .catch(error => {
         console.error("Erreur réseau ou backend :", error);
@@ -384,6 +392,14 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 5px;
+  position: relative;
+}
+
+.divider {
+  width: 30%;
+  height: 1px;
+  background-color: #000;
+  margin: 10px 0;
 }
 
 .first-card {

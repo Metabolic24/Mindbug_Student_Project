@@ -12,6 +12,7 @@ import com.mindbug.services.wsmessages.WSMsgPlayerLifeUpdated;
 import com.mindbug.services.wsmessages.playeractions.WSMessageBlocked;
 import com.mindbug.services.wsmessages.playeractions.WSMessageDidntBlock;
 import com.mindbug.services.wsmessages.playeractions.WSMessgaeAttacked;
+import com.mindbug.services.wsmessages.playeractions.WSMessageGameState;
 import com.mindbug.websocket.WSMessageManager;
 
 import java.util.ArrayList;
@@ -133,6 +134,8 @@ public class GameSession {
         player.getHand().remove(sessionCard);
 
         player.getBattlefield().add(sessionCard);
+
+        this.gameWsMessageManager.sendMessage(new WSMessageGameState(this.game));
     }
 
     public Player getPlayer(Long playerId) {
