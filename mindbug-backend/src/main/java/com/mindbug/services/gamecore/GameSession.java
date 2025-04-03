@@ -6,6 +6,7 @@ import com.mindbug.models.Player;
 import com.mindbug.services.CardService;
 import com.mindbug.services.PlayerService;
 import com.mindbug.services.wsmessages.WSMessageCardDestroyed;
+import com.mindbug.services.wsmessages.WSMessageCardDrawed;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
 import com.mindbug.services.wsmessages.WSMsgPlayerLifeUpdated;
@@ -79,7 +80,6 @@ public class GameSession {
             // The two players have confirmed. Send ws message newGame and update game status
             this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
 
-
             // Start a turn
             newTurn();
         }
@@ -136,6 +136,12 @@ public class GameSession {
         player.getBattlefield().add(sessionCard);
 
         this.gameWsMessageManager.sendMessage(new WSMessageGameState(this.game));
+
+        GameSessionCard drawnCard = cardService.drawCardIfNecessary(player);
+        if (drawnCard != null) {
+            this.gameWsMessageManager.sendMessage(new WSMessageCardDrawed(this.game, player, drawnCard));
+        }
+
     }
 
     public Player getPlayer(Long playerId) {

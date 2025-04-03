@@ -106,7 +106,7 @@ class WebSocketService {
     }
   }
 
-  handleGameStateMessage(message, onGameStateReceived, onTurnChanged) {
+  handleGameStateMessage(message, onGameStateReceived, onTurnChanged, onCardDrawed) {
     const data = JSON.parse(message.body);
     const messageID = data.messageID;
     console.log("data is : ", data);
@@ -121,6 +121,7 @@ class WebSocketService {
       case 'gameState':
         onGameStateReceived(data.data || data);
         break;
+
       default:
         console.warn("❗ Nothing belong:", messageID);
     }
