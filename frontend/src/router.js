@@ -8,6 +8,17 @@ const routes = [
         component: Home,
     },
     {
+        path: "/sets",
+        name: "Available Sets",
+        component: () => import('@/components/sets/CardSets.vue'),
+    },
+    {
+        path: "/sets/:set",
+        name: "Set details",
+        component: () => import('@/components/sets/CardSetDetails.vue') ,
+        props: true
+    },
+    {
         path: '/game',
         name: 'Game',
         component: () => import('@/components/Game.vue')
