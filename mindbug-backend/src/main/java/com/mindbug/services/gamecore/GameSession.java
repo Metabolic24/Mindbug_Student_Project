@@ -12,17 +12,17 @@ import com.mindbug.services.wsmessages.WSMsgPlayerLifeUpdated;
 import com.mindbug.services.wsmessages.playeractions.WSMessageBlocked;
 import com.mindbug.services.wsmessages.playeractions.WSMessageDidntBlock;
 import com.mindbug.services.wsmessages.playeractions.WSMessgaeAttacked;
-import com.mindbug.websocket.WSMessageManager;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.mindbug.services.wsmessages.WSMessageManager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
-import lombok.Getter;
-
 import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import lombok.Getter;
 
 @Component
 @Scope("prototype")
@@ -30,38 +30,29 @@ import org.springframework.stereotype.Component;
 public class GameSession {
 
     private Game game;
-
     private WSMessageManager gameWsMessageManager;
-
     private String wsChannel;
+    private List<Long> confirmJoinPlayers = new ArrayList<>();
 
-    private List<Long> confirmJoinPlayers;
-
+    @Autowired
     private GameSessionValidation gameSessionValidation;
 
-    private Battle battle;
+    @Autowired
+    private ApplicationContext applicationContext;
 
-    private  ApplicationContext applicationContext;
-
+    @Autowired
     private PlayerService playerService;
 
     @Autowired
     private CardService cardService;
 
-    public GameSession(Game game, WSMessageManager gameWsMessageManager, GameSessionValidation gameSessionValidation,
-    ApplicationContext applicationContext, PlayerService playerService) {
-        this.game = game;
-
-        this.confirmJoinPlayers = new ArrayList<>();
-
+    private BattleService battle;
+    
+    public GameSession(Game game, WSMessageManager gameWsMessageManager, GameSessionValidation gameSessionValidation) {
+        this.game = game;        
         this.gameWsMessageManager = gameWsMessageManager;
         this.wsChannel = "/topic/game/" + game.getId();
         this.gameWsMessageManager.setChannel(wsChannel);
-
-        this.gameSessionValidation = gameSessionValidation;
-
-        this.applicationContext = applicationContext;
-        this.playerService = playerService;
     }
 
     public void confirmJoin(Long playerId) {
@@ -87,7 +78,6 @@ public class GameSession {
     public void newTurn() {
         // For now we assume 1st player is player1
         this.game.setCurrentPlayer(game.getPlayer1());
-
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
 
@@ -99,19 +89,16 @@ public class GameSession {
         Player player = getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
-
-        this.battle = this.applicationContext.getBean(Battle.class);
-
-        this.battle.attack(this, player, sessionCard);
+        this.battle = this.applicationContext.getBean(BattleService.class);
+        this.battle.startAttack(this, player, sessionCard);
     }
 
     public void dontBlock(Long playerId) {
         this.gameSessionValidation.canDoDontBlock(this, playerId);
 
-
         Player player = getPlayer(playerId);
 
-        this.battle.dontBlock(this, player);
+        this.battle.noBlock(player);
     }
 
     public void block(Long playerId, Long sessionCardId) {
@@ -120,18 +107,16 @@ public class GameSession {
         Player player = getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
-        this.battle.block(this, player, sessionCard);
+        this.battle.block(player, sessionCard);
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
-
         this.gameSessionValidation.canPlayCard(this, playerId, sessionCardId);
 
         Player player = this.getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
         player.getHand().remove(sessionCard);
-
         player.getBattlefield().add(sessionCard);
     }
 

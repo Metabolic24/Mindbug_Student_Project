@@ -8,5 +8,4 @@ import com.mindbug.models.Player;
 @Repository
 public interface PlayerRepository extends JpaRepository<Player, Long> {
 
-    
 }

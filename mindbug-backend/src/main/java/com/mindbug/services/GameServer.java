@@ -12,8 +12,8 @@ import com.mindbug.dtos.PlayerBasicInfoDto;
 import com.mindbug.models.Game;
 import com.mindbug.models.Player;
 import com.mindbug.services.gamecore.GameSession;
+import com.mindbug.services.wsmessages.WSMessageManager;
 import com.mindbug.services.wsmessages.WSMessageMatchFound;
-import com.mindbug.websocket.WSMessageManager;
 
 import jakarta.persistence.EntityNotFoundException;
 
@@ -36,7 +36,7 @@ public class GameServer {
 
     public GameServer(WSMessageManager gameQueueWsMessageManager) {
         this.gameQueueWsMessageManager = gameQueueWsMessageManager;
-
+        
         // Set the channel for game queue WebSocket messages
         this.gameQueueWsMessageManager.setChannel(Config.GAME_QUEUE_WEBSOCKET);
     }
@@ -51,10 +51,8 @@ public class GameServer {
 
         // Send newGame websocket messages to each player
         this.gameQueueWsMessageManager.sendMessage(new WSMessageMatchFound(newGame.getId(), newGame.getPlayer1().getId()));
-
         // Second player message
         this.gameQueueWsMessageManager.sendMessage(new WSMessageMatchFound(newGame.getId(), newGame.getPlayer2().getId()));
-
     }
 
     private GameSession getGameSession(Long id) {
@@ -62,7 +60,6 @@ public class GameServer {
 
         if (gameSession == null)
             throw new EntityNotFoundException("Game not found");
-
         return gameSession;
     }
 
@@ -75,7 +72,6 @@ public class GameServer {
         if (this.playerQueue.size() >= 2) {
             this.createGameSession(this.playerQueue.poll(), this.playerQueue.poll());
         }
-
         return (new PlayerBasicInfoDto(player));
     }
 
@@ -88,7 +84,6 @@ public class GameServer {
         GameSession gameSession = this.getGameSession(gameId);
         gameSession.attack(playerId, sessionCardId);
     }
-
 
     public void handleDontBlock(Long playerId, Long gameId) {
         GameSession gameSession = this.getGameSession(gameId);
@@ -104,5 +99,4 @@ public class GameServer {
         GameSession gameSession = this.getGameSession(gameId);
         gameSession.playCard(playerId, sessionCardId);
     }
-
 }

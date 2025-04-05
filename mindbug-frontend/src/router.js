@@ -8,17 +8,17 @@ const routes = [
         component: HomePage,
     },
     {
-        path: "/setsofcards",
+        path: "/sets",
         name: "SetsOfCards",
         component: () => import('@/components/SetsOfCards.vue')
     },
     {
-        path: "/gameboard/:gameId/:playerId",
+        path: "/game/:gameId/:playerId",
         name: "GameBoard",
         component: () => import('@/components/GameBoard.vue')
     },
     {
-        path: "/cardlist/:set",
+        path: "/sets/:set",
         name: "CardList",
         component: () => import('@/components/CardsList.vue') ,
         props: true

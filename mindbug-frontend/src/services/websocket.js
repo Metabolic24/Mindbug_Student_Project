@@ -1,5 +1,6 @@
 import { Client } from '@stomp/stompjs';
 import SockJS from 'sockjs-client';
+import config from '@/config/environment.js';
 
 class WebSocketService {
   constructor() {
@@ -17,7 +18,7 @@ class WebSocketService {
       return;
     }
 
-    const socket = new SockJS('http://localhost:8080/mindbug-ws');
+    const socket = new SockJS(`${config.backendUrl}${config.wsPath}`);
     this.client = new Client({
       webSocketFactory: () => socket,
       reconnectDelay: this.reconnectDelay,

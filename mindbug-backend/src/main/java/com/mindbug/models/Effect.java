@@ -27,19 +27,19 @@ public class Effect implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String type;
-    private String target;
+    private EffectType type;
+    private EffectTarget target;
 
     @Column(name = "`value`")
     private int value;
 
-    private String action;
+    private EffectAction action;
     private int amount;
-    private String operation;
+    private OperationType operation;
 
     @ElementCollection
     private Set<Keyword> keywords;
-    private String triggerCondition;
+    private TriggerCondition triggerCondition;
 
     @ElementCollection
     @CollectionTable(name = "effect_conditions", joinColumns = @JoinColumn(name = "effect_id"))
