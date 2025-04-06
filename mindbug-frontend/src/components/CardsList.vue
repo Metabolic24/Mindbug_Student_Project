@@ -3,7 +3,8 @@
     <h1>Cards from set: {{ formatSetName(this.set) }}</h1>
     <div class="cards-container">
       <div v-for="card in cards" :key="card.name" class="card">
-        <img :src="require(`@/assets/Sets/${getImage(card.name)}`)" :alt="`Card ${card.name}`" class="card-image" />
+        <img :src="require(`@/assets/Sets/${getImage(card.name)}`)" 
+             :alt="`Card ${card.name}`" class="card-image" />
       </div>
     </div>
   </div>
