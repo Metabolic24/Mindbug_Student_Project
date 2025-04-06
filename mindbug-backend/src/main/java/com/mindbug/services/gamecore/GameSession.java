@@ -85,8 +85,13 @@ public class GameSession {
     }
 
     public void newTurn() {
-        // For now we assume 1st player is player1
-        this.game.setCurrentPlayer(game.getPlayer1());
+        if (this.game.getCurrentPlayer() == null) {
+            // For now we assume 1st player is player1
+            this.game.setCurrentPlayer(game.getPlayer1());
+        } else {
+            this.game.setCurrentPlayer(getOpponent());
+        }
+        
 
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
