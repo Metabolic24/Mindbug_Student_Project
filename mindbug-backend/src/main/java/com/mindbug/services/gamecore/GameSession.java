@@ -5,6 +5,7 @@ import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import com.mindbug.services.CardService;
 import com.mindbug.services.PlayerService;
+import com.mindbug.services.wsmessages.WSMessagAskBlock;
 import com.mindbug.services.wsmessages.WSMessageCardDestroyed;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
@@ -78,7 +79,6 @@ public class GameSession {
             // The two players have confirmed. Send ws message newGame and update game status
             this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
 
-
             // Start a turn
             newTurn();
         }
@@ -117,6 +117,8 @@ public class GameSession {
         Player player = getPlayer(playerId);
 
         this.battle.dontBlock(this, player);
+
+        this.resolveBattle();
     }
 
     public void block(Long playerId, Long sessionCardId) {
@@ -126,6 +128,15 @@ public class GameSession {
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
         this.battle.block(this, player, sessionCard);
+
+        this.resolveBattle();
+    }
+
+    public void resolveBattle() {
+        this.battle.resolveBattle(this);
+
+        // Reset after battle end
+        this.battle = null;
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
@@ -165,6 +176,20 @@ public class GameSession {
     public List<GameSessionCard> getPlayerHand(Long playerId) {
         Player player = getPlayer(playerId);
         return player.getHand();
+    }
+    
+    public void destroyCard(GameSessionCard destroyedCard, Player player) {
+        // Send card to discarPile
+        player.getBattlefield().remove(destroyedCard);
+        player.getDiscardPile().add(destroyedCard);
+
+        // Send card destroyed websocket message
+        sendWSMsgCardDestroyed(player.getId(), destroyedCard.getId());
+    }
+
+
+    public void sendWSMsgAskBlock(Long playerId) {
+        this.gameWsMessageManager.sendMessage(new WSMessagAskBlock(playerId, this.game));
     }
 
     public void sendWSMsgAttacked(Long playerId, Long gameSessionCardId) {
