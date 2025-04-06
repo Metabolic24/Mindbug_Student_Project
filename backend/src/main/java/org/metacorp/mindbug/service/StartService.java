@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.service;
 
+import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
@@ -15,10 +16,6 @@ import java.util.Map;
  */
 public class StartService {
 
-    private static final Map<String, String> cardSetsMap = Map.of(
-            CardUtils.FIRST_CONTACT, "first_contact.json"
-    );
-
     // Not to be used
     private StartService() {
         // Nothing to do
@@ -32,7 +29,7 @@ public class StartService {
      * @return the created game
      */
     public static Game newGame(String player1, String player2) {
-        return newGame(player1, player2, CardUtils.FIRST_CONTACT);
+        return newGame(player1, player2, CardSetName.FIRST_CONTACT);
     }
 
     /**
@@ -40,18 +37,13 @@ public class StartService {
      *
      * @param player1    first player name
      * @param player2    second player name
-     * @param cardSetKey the card set key
+     * @param setName    the card set name as CardSetName
      * @return the created game
      */
-    public static Game newGame(String player1, String player2, String cardSetKey) {
+    public static Game newGame(String player1, String player2, CardSetName setName) {
         Game game = new Game(player1, player2);
 
-        String cardSetFile = cardSetsMap.get(cardSetKey);
-        if (cardSetFile == null) {
-            throw new IllegalArgumentException("Invalid card set key: " + cardSetKey);
-        }
-
-        List<CardInstance> cards = CardUtils.getCardsFromConfig("first_contact.json");
+        List<CardInstance> cards = CardUtils.getCardsFromConfig(setName.getKey());
         Collections.shuffle(cards);
         game.setCards(cards);
 

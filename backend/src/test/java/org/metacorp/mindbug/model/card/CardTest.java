@@ -19,7 +19,7 @@ public class CardTest {
     public void testCardUnmarshalling() {
         ObjectMapper objectMapper = new ObjectMapper();
         TypeFactory typeFactory = objectMapper.getTypeFactory();
-        try (InputStream is = Card.class.getClassLoader().getResourceAsStream("first_contact.json")) {
+        try (InputStream is = Card.class.getClassLoader().getResourceAsStream("sets/first_contact.json")) {
             if (is == null) {
                 throw new FileNotFoundException("Resource not found");
             }

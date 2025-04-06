@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -125,7 +126,7 @@ public class GameServiceTest {
         Player currentPlayer = game.getPlayers().get(0);
         Player opponent =  game.getPlayers().get(1);
         game.setCurrentPlayer(currentPlayer);
-        game.setCards(CardUtils.getCardsFromConfig(CardUtils.FIRST_CONTACT));
+        game.setCards(CardUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey()));
 
         CardInstance card1 = findCard("Instigateur Gobelouille");
         CardInstance card2 = findCard("Requin Crabe Chien Momie Pieuvre");
