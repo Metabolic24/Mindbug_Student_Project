@@ -4,9 +4,11 @@ import com.mindbug.models.Game;
 import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import com.mindbug.services.CardService;
+import com.mindbug.services.GameServer;
 import com.mindbug.services.PlayerService;
 import com.mindbug.services.wsmessages.WSMessagAskBlock;
 import com.mindbug.services.wsmessages.WSMessageCardDestroyed;
+import com.mindbug.services.wsmessages.WSMessageGameOver;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
 import com.mindbug.services.wsmessages.WSMsgPlayerLifeUpdated;
@@ -49,6 +51,9 @@ public class GameSession {
     @Autowired
     private CardService cardService;
 
+    @Autowired
+    private GameServer gameServer;
+
     public GameSession(Game game, WSMessageManager gameWsMessageManager, GameSessionValidation gameSessionValidation,
     ApplicationContext applicationContext, PlayerService playerService) {
         this.game = game;
@@ -85,6 +90,10 @@ public class GameSession {
     }
 
     public void newTurn() {
+        if(this.game.isGameOver()) {
+            return;
+        }
+
         if (this.game.getCurrentPlayer() == null) {
             // For now we assume 1st player is player1
             this.game.setCurrentPlayer(game.getPlayer1());
@@ -135,8 +144,12 @@ public class GameSession {
         // Reset after battle end
         this.battle = null;
 
-        // Next step end turn (TODO: next step should be check if game is over)
-        this.newTurn();
+        if (isGameOverPlayerLife(opponent)) {
+            this.endGame();
+        } else {
+            this.newTurn();
+        }
+
     }
 
     public void resolveBattle() {
@@ -144,6 +157,8 @@ public class GameSession {
 
         // Reset after battle end
         this.battle = null;
+        
+        this.newTurn();
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
@@ -198,6 +213,19 @@ public class GameSession {
         sendWSMsgCardDestroyed(player.getId(), destroyedCard.getId());
     }
 
+    public boolean isGameOverPlayerLife(Player player) {
+        if (player.getLifepoints() < 1) {
+            this.game.setGameOver(true);
+        }
+
+        return this.game.isGameOver();
+    }
+
+    public void endGame() {
+        this.sendWSMsgGameOver();
+        this.gameServer.removeGameSession(this.game.getId());
+    }
+
 
     public void sendWSMsgAskBlock(Long playerId) {
         this.gameWsMessageManager.sendMessage(new WSMessagAskBlock(playerId, this.game));
@@ -221,6 +249,10 @@ public class GameSession {
 
     public void sendWSMsgCardDestroyed(Long playerId, Long gameSessionCardId) {
         this.gameWsMessageManager.sendMessage(new WSMessageCardDestroyed(playerId, gameSessionCardId, this.game));
+    }
+
+    public void sendWSMsgGameOver() {
+        this.gameWsMessageManager.sendMessage(new WSMessageGameOver(this.game));
     }
 
 }

@@ -30,4 +30,7 @@ public class Game {
     @OneToOne
     @JoinColumn(name = "player2_id", referencedColumnName = "id")
     private Player player2;
+
+    @Column(name = "game_over")
+    private boolean gameOver = false;
 }
