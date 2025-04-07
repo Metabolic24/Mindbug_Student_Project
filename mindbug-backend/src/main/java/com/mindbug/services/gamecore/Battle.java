@@ -68,9 +68,8 @@ public class Battle {
         Player attacker = this.attacking.getPlayer();
 
         if (this.blocking.getCard() == null) {
-            // Opponent didnt blocked. Remove one life point
-            opponent.setLifepoints(opponent.getLifepoints() - 1);
-            gameSessionContext.sendWSMsgPlayerLifeUpdated(opponent.getId());
+            // Opponent didnt blocked. Remove one life point (direct attack)
+            gameSessionContext.directAttack(opponent);
             
         } else {
             // Opponent blocked. Compare monster power
