@@ -13,6 +13,8 @@ public class WSMessageDidntBlock extends WebsocketMessage {
         HashMap<String, Object> data = new HashMap<>();
         data.put("gameId", gameId);
         data.put("playerId", playerId);
+
+        this.setData(data);
     }
     
 }

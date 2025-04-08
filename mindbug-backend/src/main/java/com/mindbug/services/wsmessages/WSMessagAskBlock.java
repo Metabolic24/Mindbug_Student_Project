@@ -13,8 +13,7 @@ public class WSMessagAskBlock extends WebsocketMessage {
         HashMap<String, Object> data = new HashMap<>();
         data.put("playerId", playerId);
         data.put("gameId", game.getId());
-        data.put("gameState", game);
-
+        
         this.setData(data);
     }
     
