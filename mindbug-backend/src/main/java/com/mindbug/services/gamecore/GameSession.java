@@ -5,6 +5,7 @@ import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import com.mindbug.services.CardService;
 import com.mindbug.services.PlayerService;
+import com.mindbug.services.wsmessages.WSMessagAskBlock;
 import com.mindbug.services.wsmessages.WSMessageCardDestroyed;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
@@ -13,6 +14,7 @@ import com.mindbug.services.wsmessages.playeractions.WSMessageBlocked;
 import com.mindbug.services.wsmessages.playeractions.WSMessageDidntBlock;
 import com.mindbug.services.wsmessages.playeractions.WSMessgaeAttacked;
 import com.mindbug.services.wsmessages.playeractions.WSMessageGameState;
+import com.mindbug.services.wsmessages.playeractions.WSMessagePlayCard;
 import com.mindbug.websocket.WSMessageManager;
 
 import java.util.ArrayList;
@@ -76,9 +78,9 @@ public class GameSession {
 
         if (this.confirmJoinPlayers.size() == 2) {
             cardService.distributeCards(game);
+
             // The two players have confirmed. Send ws message newGame and update game status
             this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
-
 
             // Start a turn
             newTurn();
@@ -86,9 +88,13 @@ public class GameSession {
     }
 
     public void newTurn() {
-        // For now we assume 1st player is player1
-        this.game.setCurrentPlayer(game.getPlayer1());
-
+        if (this.game.getCurrentPlayer() == null) {
+            // For now we assume 1st player is player1
+            this.game.setCurrentPlayer(game.getPlayer1());
+        } else {
+            this.game.setCurrentPlayer(getOpponent());
+        }
+        
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
 
@@ -98,8 +104,7 @@ public class GameSession {
         this.gameSessionValidation.canAttack(this, playerId, sessionCardId);
 
         Player player = getPlayer(playerId);
-        GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
-
+        GameSessionCard sessionCard = playerService.getBattlefiedCard(player, sessionCardId);
 
         this.battle = this.applicationContext.getBean(Battle.class);
 
@@ -113,15 +118,34 @@ public class GameSession {
         Player player = getPlayer(playerId);
 
         this.battle.dontBlock(this, player);
+
     }
 
     public void block(Long playerId, Long sessionCardId) {
         this.gameSessionValidation.canBlock(this, playerId, sessionCardId);
 
         Player player = getPlayer(playerId);
-        GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
+        GameSessionCard sessionCard = playerService.getBattlefiedCard(player, sessionCardId);
 
         this.battle.block(this, player, sessionCard);
+
+    }
+
+    public void directAttack(Player opponent) {
+        this.battle.directAttack(this, opponent);
+
+        // Reset after battle end
+        this.battle = null;
+
+        // Next step end turn (TODO: next step should be check if game is over)
+        this.newTurn();
+    }
+
+    public void resolveBattle() {
+        this.battle.resolveBattle(this);
+
+        // Reset after battle end
+        this.battle = null;
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
@@ -135,7 +159,8 @@ public class GameSession {
 
         player.getBattlefield().add(sessionCard);
 
-        this.gameWsMessageManager.sendMessage(new WSMessageGameState(this.game));
+        this.gameWsMessageManager.sendMessage(new WSMessagePlayCard(this.game));
+        this.newTurn();
     }
 
     public Player getPlayer(Long playerId) {
@@ -163,6 +188,20 @@ public class GameSession {
     public List<GameSessionCard> getPlayerHand(Long playerId) {
         Player player = getPlayer(playerId);
         return player.getHand();
+    }
+    
+    public void destroyCard(GameSessionCard destroyedCard, Player player) {
+        // Send card to discarPile
+        player.getBattlefield().remove(destroyedCard);
+        player.getDiscardPile().add(destroyedCard);
+
+        // Send card destroyed websocket message
+        sendWSMsgCardDestroyed(player.getId(), destroyedCard.getId());
+    }
+
+
+    public void sendWSMsgAskBlock(Long playerId) {
+        this.gameWsMessageManager.sendMessage(new WSMessagAskBlock(playerId, this.game));
     }
 
     public void sendWSMsgAttacked(Long playerId, Long gameSessionCardId) {

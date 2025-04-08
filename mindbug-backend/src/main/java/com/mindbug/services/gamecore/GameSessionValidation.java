@@ -1,7 +1,10 @@
 package com.mindbug.services.gamecore;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.mindbug.models.Game;
+import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 
 @Service
@@ -12,7 +15,7 @@ public class GameSessionValidation {
         Game game = gameSession.getGame();
         if (playerId != game.getPlayer1().getId() && playerId != game.getPlayer2().getId()) {
             // Cannot confirm join. Invalid player.
-            throw new IllegalArgumentException("Cannot confrim join. Invalid player.");
+            throw new IllegalArgumentException("Invalid player.");
         }
     }
 
@@ -26,7 +29,8 @@ public class GameSessionValidation {
         validPlayer(gameSession, playerId);
 
         // Check if player have a card
-        playerHasCard(gameSession, playerId, cardId);
+        Player player = gameSession.getPlayer(playerId);
+        playerHasCard(gameSession, player, cardId, player.getBattlefield());
 
         // Check if player is  current player
         if (!gameSession.isCurrentPlayer(playerId)) {
@@ -58,7 +62,8 @@ public class GameSessionValidation {
          validPlayer(gameSession, playerId);
 
          // Check if player have a card
-         playerHasCard(gameSession, playerId, sessionCardId);
+         Player player = gameSession.getPlayer(playerId);
+         playerHasCard(gameSession, player, sessionCardId, player.getBattlefield());
 
           // Check if player is  current player
 
@@ -68,11 +73,10 @@ public class GameSessionValidation {
     }
 
     
-    public void playerHasCard(GameSession gameSession, Long playerId, Long cardId) {
-        Player player = gameSession.getPlayer(playerId);
-        boolean haveCard = player.getHand().stream().anyMatch(sessionCard -> sessionCard.getId() == cardId);
+    public void playerHasCard(GameSession gameSession, Player player, Long cardId, List<GameSessionCard> where) {
+        boolean haveCard = where.stream().anyMatch(sessionCard -> sessionCard.getId() == cardId);
         if (!haveCard) {
-            throw new IllegalStateException("Player " + playerId + " does not have card " + cardId + ".");
+            throw new IllegalStateException("Player " + player.getId() + " cannot use card " + cardId + " for this action.");
         }
     }
 
