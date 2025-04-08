@@ -13,7 +13,6 @@ import com.mindbug.services.wsmessages.WSMsgPlayerLifeUpdated;
 import com.mindbug.services.wsmessages.playeractions.WSMessageBlocked;
 import com.mindbug.services.wsmessages.playeractions.WSMessageDidntBlock;
 import com.mindbug.services.wsmessages.playeractions.WSMessgaeAttacked;
-import com.mindbug.services.wsmessages.playeractions.WSMessageGameState;
 import com.mindbug.services.wsmessages.playeractions.WSMessagePlayCard;
 import com.mindbug.websocket.WSMessageManager;
 
