@@ -15,19 +15,18 @@ import com.mindbug.services.wsmessages.playeractions.WSMessageBlocked;
 import com.mindbug.services.wsmessages.playeractions.WSMessageDidntBlock;
 import com.mindbug.services.wsmessages.playeractions.WSMessageAttacked;
 import com.mindbug.services.wsmessages.playeractions.WSMessagePlayCard;
+import com.mindbug.services.wsmessages.playeractions.WSMessageGameState;
 import com.mindbug.services.wsmessages.WSMessageManager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
+import lombok.Getter;
 
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import lombok.Getter;
-
 @Component
 @Scope("prototype")
 @Getter
@@ -140,23 +139,36 @@ public class GameSession {
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
-
+        // Validate if the player can play the card
         this.gameSessionValidation.canPlayCard(this, playerId, sessionCardId);
 
+        // Retrieve the player and the card
         Player player = this.getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
-        player.getHand().remove(sessionCard);
-
-        player.getBattlefield().add(sessionCard);
-
-        GameSessionCard drawnCard = cardService.drawCardIfNecessary(player);
-        if (drawnCard != null) {
-            this.gameWsMessageManager.sendMessage(new WSMessageCardDrawed(this.game, player, drawnCard));
+        if (sessionCard == null) {
+            throw new IllegalArgumentException("The session card with ID " + sessionCardId + " does not exist in the player's hand.");
         }
 
+        // Move the card from hand to battlefield
+        player.getHand().remove(sessionCard);
+        player.getBattlefield().add(sessionCard);
+
+        this.gameWsMessageManager.sendMessage(new WSMessageGameState(this.game));
         this.gameWsMessageManager.sendMessage(new WSMessagePlayCard(this.game));
         this.newTurn();
+
+        handleCardDraw(player);
+    }
+
+    private void handleCardDraw(Player player) {
+        if (cardService.shouldDrawCard(player)) {
+            GameSessionCard drawnCard = cardService.drawCard(player);
+
+            if (drawnCard != null && drawnCard.getCard() != null) {
+                this.gameWsMessageManager.sendMessage(new WSMessageCardDrawed(this.game, player, drawnCard));
+            }
+        }
     }
 
     public Player getPlayer(Long playerId) {

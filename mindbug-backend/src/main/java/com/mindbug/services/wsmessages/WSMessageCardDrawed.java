@@ -3,6 +3,7 @@ package com.mindbug.services.wsmessages;
 import com.mindbug.models.Game;
 import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
+import com.mindbug.websocket.GameWSMessage;
 import com.mindbug.websocket.WebsocketMessage;
 
 import java.util.HashMap;
@@ -20,4 +21,3 @@ public class WSMessageCardDrawed extends WebsocketMessage {
         this.setData(data);
     }
 }
-

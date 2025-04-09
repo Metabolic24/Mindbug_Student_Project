@@ -81,6 +81,7 @@ export default {
       isMyTurn: false,
     };
   },
+
   mounted() {
     this.gameId = this.$route.params.gameId;
     this.playerId = this.$route.params.playerId;
@@ -125,14 +126,14 @@ export default {
         this.myBattlefieldCards = gameState.player1.battlefield || [];
         this.myName = gameState.player1.nickName;
         this.myMindbug = gameState.player1.mindbug;
-        this.myDrawPile = gameState.player1.drawpile;
+        this.myDrawPile = gameState.player1.drawPile;
 
         this.enemyHp = gameState.player2.lifepoints;
         this.enemyHandCount = gameState.player2.handCardsCount || 0;
         this.enemyBattlefieldCards = gameState.player2.battlefield || [];
         this.enemyName = gameState.player2.nickName;
         this.enemyMindbug = gameState.player2.Mindbug;
-        this.enemyDrawPile = gameState.player2.drawpile;
+        this.enemyDrawPile = gameState.player2.drawPile;
 
       } else {
         this.myHp = gameState.player2.lifepoints;
@@ -140,14 +141,14 @@ export default {
         this.myBattlefieldCards = gameState.player2.battlefield || [];
         this.myName = gameState.player2.nickName;
         this.myMindbug = gameState.player2.mindbug;
-        this.myDrawPile = gameState.player2.drawpile;
+        this.myDrawPile = gameState.player2.drawPile;
 
         this.enemyHp = gameState.player1.lifepoints;
         this.enemyHandCount = gameState.player1.handCardsCount || 0;
         this.enemyBattlefieldCards = gameState.player1.battlefield || [];
         this.enemyName = gameState.player1.nickName;
         this.enemyMindbug = gameState.player1.mindbug;
-        this.enemyDrawPile = gameState.player1.drawpile;
+        this.enemyDrawPile = gameState.player1.drawPile;
       }
       this.handCards = this.myHandCards.map(handCard => {
         console.log("handCard:", handCard);
@@ -155,7 +156,8 @@ export default {
         return {
           ...handCard.card,
           name: handCard.card.name,
-          sessioncardId: handCard.id};
+          sessioncardId: handCard.id
+        };
       });
     },
 
@@ -183,11 +185,11 @@ export default {
     getCardImage(card) {
       // Access for the proxies
       const cardName = card?.name || card?.card?.name;
-      
+
       if (cardName) {
         return require(`@/assets/Sets/First_Contact/${cardName}.jpg`);
       }
-      
+
       console.error('Card name not found in:', card);
       return '';
     },
@@ -247,7 +249,7 @@ export default {
       }
       fetch('http://localhost:8080/api/game/play_card', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
           playerId: this.playerId,
           sessioncardId: card.sessioncardId,
@@ -266,6 +268,15 @@ export default {
             alert(error.message);
           });
     },
+
+    onCardDrawed(cardData) {
+      console.log("onCardDrawed called with:", cardData);
+
+      if (!this.handCards.some(card => card.sessioncardId === cardData.sessioncardId)) {
+        this.handCards.push(cardData);
+        console.log("Card added to handCards:", cardData);
+      }
+    },
     updateBattlefield(card) {
 
       const index = this.handCards.findIndex(c => c.sessioncardId == card.sessioncardId);
@@ -275,8 +286,8 @@ export default {
 
         this.myBattlefieldCards.push(card);
       }
-    }
-  },
+    },
+  }
 };
 </script>
 

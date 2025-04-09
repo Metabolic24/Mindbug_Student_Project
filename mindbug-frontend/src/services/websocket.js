@@ -122,6 +122,11 @@ class WebSocketService {
       case 'gameState':
         onGameStateReceived(data.data || data);
         break;
+      case 'CARD_DRAWED':
+        if (typeof onCardDrawed === "function") {
+          onCardDrawed(data.data|| data);
+        }
+        break;
 
       default:
         console.warn("❗ Nothing belong:", messageID);
