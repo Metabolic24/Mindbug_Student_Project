@@ -9,16 +9,35 @@
       />
     </div>
 
+
     <div class="side-left">
-      <div class="card voir-container">
-        <button class="voir-button">Voir</button>
-        <span class="count">4</span>
+      <div class="dps">
+        <div class="pile-row">
+          <div class="draw-pile">
+            <img src="../assets/Sets/First_Contact/card_Back.png" />
+            <span class="draw-count">×{{ enemyNumDP }}</span>
+          </div>
+          <div class="discard-pile">
+            <button class="voir-button">Voir</button>
+            <div class="count-label">4</div>
+          </div>
+        </div>
       </div>
-      <div class="card voir-container">
-        <button class="voir-button">Voir</button>
-        <span class="count">2</span>
+      <div class="dps">
+        <div class="pile-row">
+          <div class="draw-pile">
+            <img src="../assets/Sets/First_Contact/card_Back.png" />
+            <span class="draw-count">×{{ myNumDP }}</span>
+          </div>
+          <div class="discard-pile">
+            <button class="voir-button">Voir</button>
+            <div class="count-label">2</div>
+          </div>
+        </div>
       </div>
     </div>
+
+
 
     <div class="battlefield"
          @click="handleBattlefieldClick"
@@ -73,12 +92,27 @@ export default {
       handCards: [],
       playerId: null,
       gameId: null,
-      myBattlefieldCards: [],
-      enemyBattlefieldCards: [],
       selectedCard: null, 
       draggingCard: null, 
 
       isMyTurn: false,
+
+      myHp: 0,
+      myHandCards: [],
+      myBattlefieldCards: [],
+      myName: null,
+      myMindbug: 0,
+      myDrawPile: [],
+
+      enemyHp: 0,
+      enemyHandCount: [],
+      enemyBattlefieldCards: [],
+      enemyName: null,
+      enemyMindbug: 0,
+      enemyDrawPile: [],
+
+      myNumDP: 5,
+      enemyNumDP: 5,
     };
   },
   mounted() {
@@ -278,7 +312,7 @@ export default {
   },
 };
 </script>
-
+ 
 <style scoped>
 html, body {
   margin: 0;
@@ -291,15 +325,17 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
   font-size: 2rem;
   color: black;
   background-color: #f5f5fa;
   padding: 10px;
-  overflow-y: auto;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 .top-hand,
@@ -384,7 +420,7 @@ html, body {
   gap: 5px;
 }
 
-.card {
+.discard-pile {
   width: 100px;
   height: 150px;
   background-color: white;
@@ -425,14 +461,11 @@ html, body {
   background-color: darkgray;
 }
 
-.count {
-  font-size: 0.8rem;
-  color: orange;
-}
 
 .card-image {
-  width: 100px;
-  height: 150px;
+  width: 10vw;
+  height: auto;
+  max-width: 150px;
   object-fit: cover;
   border: 2px solid black;
   border-radius: 10px;
@@ -444,4 +477,47 @@ html, body {
   cursor: move;
 }
 
+
+.dps {
+  display: flex;
+  justify-content: center;
+}
+
+.pile-row {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  align-items: center;
+}
+
+.draw-pile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.draw-pile img {
+  width: 100px;
+  height: 150px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.draw-count {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+}
+
+.count-label {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: black;
+  color: white;
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
 </style>
