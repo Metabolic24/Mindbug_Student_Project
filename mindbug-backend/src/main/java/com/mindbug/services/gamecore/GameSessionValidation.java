@@ -28,7 +28,7 @@ public class GameSessionValidation {
         playerHasCardInHisBattlefield(gameSession, playerId, cardId);
         
         // Check if player is not current player
-        if (gameSession.isCurrentPlayer(playerId)) {
+        if (!gameSession.isCurrentPlayer(playerId)) {
             throw new IllegalArgumentException("Player not authorized to do this action");
         }
     }
@@ -66,7 +66,7 @@ public class GameSessionValidation {
 
     public void playerHasCardInHisBattlefield(GameSession gameSession, Long playerId, Long cardId) {
         Player player = gameSession.getPlayer(playerId);
-        boolean haveCard = player.getBattlefield().stream().anyMatch(sessionCard -> sessionCard.getId() == cardId);
+        boolean haveCard = player.getBattlefield().stream().anyMatch(sessionCard -> sessionCard.getId().equals(cardId));
         if (!haveCard) {
             throw new IllegalStateException("Player " + playerId + " does not have card " + cardId + " in his battlefield.");
         }
@@ -76,7 +76,7 @@ public class GameSessionValidation {
         validPlayer(gameSession, playerId);
 
         Player player = gameSession.getPlayer(playerId);
-        boolean hasCard = player.getHand().stream().anyMatch(sessionCard -> sessionCard.getId() == cardId);
+        boolean hasCard = player.getHand().stream().anyMatch(sessionCard -> sessionCard.getId().equals(cardId));
 
         if (!hasCard) {
 
