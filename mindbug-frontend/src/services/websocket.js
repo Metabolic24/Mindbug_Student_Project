@@ -1,5 +1,6 @@
 import { Client } from '@stomp/stompjs';
 import SockJS from 'sockjs-client';
+import config from '@/config/environment.js';
 
 class WebSocketService {
   constructor() {
@@ -8,53 +9,70 @@ class WebSocketService {
     this.reconnectDelay = 5000;
     this.maxRetry = 3;
     this.retryCount = 0;
+
+
+    this.onWebsocketConnected = null;
+    this.onGameQueueSubscribed = null;
+
+    this.handleMatchFoundMessage = null;
   }
 
-  connectToQueue(onMatch) {
-    if (this.client?.connected) {
-      console.log('WebSocket connected');
-      this.ensureSubscription(onMatch);
-      return;
-    }
+  connectToQueue() {
+    return new Promise((resolve) => {
+      if (!this.client?.connected) {
+        const socket = new SockJS('http://localhost:8080/mindbug-ws');
+        this.client = new Client({
+          webSocketFactory: () => socket,
+          reconnectDelay: this.reconnectDelay,
+          debug: (str) => console.log('[STOMP]', str),
+          onWebSocketClose: () => {
+            console.warn('WebSocket closed, trying to reconnect.. ');
+            if (this.retryCount < this.maxRetry) {
+              this.retryCount++;
+              setTimeout(() => this.connectToQueue(), this.reconnectDelay);
+            }
+          },
+        });
 
-    const socket = new SockJS('http://localhost:8080/mindbug-ws');
-    this.client = new Client({
-      webSocketFactory: () => socket,
-      reconnectDelay: this.reconnectDelay,
-      debug: (str) => console.log('[STOMP]', str),
-      onWebSocketClose: () => {
-        console.warn('WebSocket closed, trying to reconnect.. ');
-        if (this.retryCount < this.maxRetry) {
-          this.retryCount++;
-          setTimeout(() => this.connectToQueue(onMatch), this.reconnectDelay);
-        }
-      },
-    });
+        this.client.onConnect = () => {
+          this.retryCount = 0;
+          console.log('✅ WebSocket Connected');
 
-    this.client.onConnect = () => {
-      this.retryCount = 0;
-      console.log('✅ WebSocket Connected');
+          if (typeof this.onWebsocketConnected === "function") {
+            this.onWebsocketConnected();
+          }
+        };
 
-      this.ensureSubscription(onMatch);
-    };
+        this.client.activate();
+      }
+      resolve();
+    })
 
-    this.client.activate();
   }
 
-  ensureSubscription(onMatch) {
+  subscribeToGameQueue() {
     setTimeout(() => {
       if (!this.subscriptions.has('queue')) {
         console.log('🔄 In the queue...');
         const sub = this.client.subscribe(
           '/topic/game-queue',
-          (message) => this.handleQueueMessage(message, onMatch)
+          (message) => this.handleQueueMessage(message)
         );
         this.subscriptions.set('queue', sub);
+
+        if (typeof this.onGameQueueSubscribed === "function") {
+          console.log("subscribe handler called");
+          this.onGameQueueSubscribed();
+        } else {
+          console.log("failed")
+          console.log(typeof this.onGameQueueSubscribed)
+          console.log(this.onGameQueueSubscribed)
+        }
       }
     }, 500);
   }
 
-  handleQueueMessage(message, onMatch) {
+  handleQueueMessage(message) {
     try {
       console.log('Message body:', message.body);
       const rawData = JSON.parse(message.body);
@@ -62,7 +80,10 @@ class WebSocketService {
 
       if (gameId) {
         console.log('Game ID:', gameId);
-        onMatch({ gameId });
+        if (typeof this.handleMatchFoundMessage === "function") {
+          console.log("match handler called");
+          this.handleMatchFoundMessage({ gameId });
+        }
       }
     } catch (error) {
       console.error('❌ JSON parse failed:', error);
@@ -70,6 +91,9 @@ class WebSocketService {
   }
 
   subscribeToGameState(gameId, onGameStateReceived, onTurnChanged) {
+    // Make sure websocket is connected
+    this.connectToQueue();
+
     const topic = `/topic/game/${gameId}`;
 
     if (!this.subscriptions.has(topic)) {
@@ -83,11 +107,11 @@ class WebSocketService {
     }
   }
 
-  handleGameStateMessage(message, onGameStateReceived, onTurnChanged) {
+  handleGameStateMessage(message, onGameStateReceived, onTurnChanged, onCardDrawed) {
     const data = JSON.parse(message.body);
     const messageID = data.messageID;
     console.log("data is : ", data);
-  
+
     switch (messageID) {
       case 'newGame':
         onGameStateReceived(data.data);
@@ -98,12 +122,18 @@ class WebSocketService {
       case 'gameState':
         onGameStateReceived(data.data || data);
         break;
+      case 'CARD_DRAWED':
+        if (typeof onCardDrawed === "function") {
+          onCardDrawed(data.data|| data);
+        }
+        break;
+
       default:
         console.warn("❗ Nothing belong:", messageID);
     }
   }
-  
-  
+
+
 
 }
 

@@ -1,4 +1,4 @@
-package com.mindbug.services.wsmessages;
+package com.mindbug.websocket;
 
 public enum GameWSMessage {
     NEW_GAME("newGame"),
@@ -6,6 +6,7 @@ public enum GameWSMessage {
     NEW_TURN("NEW_TURN"),
     ASK_BLOCK("ASK_BLOCK"),
     ATTACKED("ATTACKED"),
+    CARD_DRAWED("CARD_DRAWED"),
     DIDNT_BLOCK("DIDNT_BLOCK"),
     BLOCKED("BLOCKED"),
     PLAYER_LIFE_UPDATED("PLAYER_LIFE_UPDATED"),
@@ -21,6 +22,4 @@ public enum GameWSMessage {
     public String getLabel() {
         return label;
     }
-
-
 }

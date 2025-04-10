@@ -1,35 +1,71 @@
 <template>
   <div class="game-board">
+
+    <div class="playerInfo enemySide">
+      <img class="playerAvatar" :src="getAvatar()" alt="Avatar">
+      <div class="playerDetails">
+        <div class="playerStats">
+          <span class="lifePoint">❤️ {{ enemyHp }}</span>
+          <span class="mbPoint">🧠 {{ enemyMindbug }}</span>
+        </div>
+        <p class="playerName">{{enemyName}}</p>
+      </div>
+    </div>
+
     <div class="top-hand">
       <img
-          v-for="(_, index) in cardCount"
-          :key="index"
-          :src="getCardBackImage()"
-          class="card-image hand-card"
+        v-for="(_, index) in enemyHandCard"
+        :key="index"
+        :src="getCardBackImage()"
+        class="card-image hand-card"
       />
     </div>
 
+
     <div class="side-left">
-      <div class="card voir-container">
-        <button class="voir-button">Voir</button>
-        <span class="count">4</span>
+      <div class="dps">
+        <div class="pile-row">
+          <div class="draw-pile">
+            <img src="../assets/Sets/First_Contact/card_Back.png" />
+            <span class="draw-count">×{{ enemyNumDP }}</span>
+          </div>
+          <div class="discard-pile">
+            <button class="voir-button">Voir</button>
+            <div class="count-label">{{ enemyDiscardPile }}</div>
+          </div>
+        </div>
       </div>
-      <div class="card voir-container">
-        <button class="voir-button">Voir</button>
-        <span class="count">2</span>
+      <div class="dps">
+        <div class="pile-row">
+          <div class="draw-pile">
+            <img src="../assets/Sets/First_Contact/card_Back.png" />
+            <span class="draw-count">×{{ myNumDP }}</span>
+          </div>
+          <div class="discard-pile">
+            <button class="voir-button">Voir</button>
+            <div class="count-label">{{ myDiscardPile }}</div>
+          </div>
+        </div>
       </div>
     </div>
+
+
 
     <div class="battlefield"
          @click="handleBattlefieldClick"
          @dragover.prevent
          @drop="handleDropOnBattlefield">
-      <img
-          v-for="(card, index) in enemyBattlefieldCards.slice(0)"
-          :key="index"
-          :src="getCardImage(card)"
-          class="card-image center first-card"
-      />
+      <div class="row">
+        <img
+            v-for="(card, index) in enemyBattlefieldCards.slice(0)"
+            :key="index"
+            :src="getCardImage(card)"
+            class="card-image center first-card"
+        />
+      </div>
+
+      <div class="divider"></div>
+
       <div class="row">
         <img
             v-for="(card, index) in myBattlefieldCards.slice(0)"
@@ -41,7 +77,6 @@
     </div>
     <div v-if="isMyTurn" class="turn-indicator">Your turn</div>
     <div v-else class="turn-indicator">Waiting for opponent...</div>
-
 
     <div class="hand-area">
       <img
@@ -55,6 +90,18 @@
           @dragstart="handleDragStart($event, index)"
       />
     </div>
+
+    
+    <div class="playerInfo mySide">
+      <img class="playerAvatar" :src="getAvatar()" alt="Avatar">
+      <div class="playerDetails">
+        <div class="playerStats">
+          <span class="lifePoint">❤️ {{ myHp }}</span>
+          <span class="mbPoint">🧠 {{ myMindbug }}</span>
+        </div>
+        <p class="playerName">{{myName}}</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -65,34 +112,46 @@ export default {
   name: "GameBoard",
   data() {
     return {
-      cardCount: 5,
+      enemyHandCard: 0,
       handCards: [],
       playerId: null,
       gameId: null,
-      myBattlefieldCards: [],
-      enemyBattlefieldCards: [],
-      selectedCard: null,
-      draggingCard: null,
+
+      selectedCard: null, 
+      draggingCard: null, 
 
       isMyTurn: false,
+
+      myHp: 0,
+      myHandCards: [],
+      myBattlefieldCards: [],
+      myName: null,
+      myMindbug: 0,
+      myDrawPile: [],
+
+      enemyHp: 0,
+      enemyHandCount: [],
+      enemyBattlefieldCards: [],
+      enemyName: null,
+      enemyMindbug: 0,
+      enemyDrawPile: [],
+
+      myNumDP: 0,
+      enemyNumDP: 0,
+
+      myDiscardPile: 0,
+      enemyDiscardPile: 0,
     };
   },
+
   mounted() {
     this.gameId = this.$route.params.gameId;
     this.playerId = this.$route.params.playerId;
 
-    console.log('Mounted: playerId =', this.playerId);
-    console.log('Mounted: gameId =', this.gameId);
-
-    if (!this.playerId) {
-      console.error('Missing playerId');
-      return;
-    }
-
-    WebSocketService.subscribeToGameState(
-        this.gameId,
-        this.onGameStateReceived.bind(this),
-        this.onTurnChanged.bind(this)
+     WebSocketService.subscribeToGameState(
+     this.gameId,
+     this.onGameStateReceived.bind(this),
+     this.onTurnChanged.bind(this)
     );
     this.confirmJoinGame();
   },
@@ -121,57 +180,62 @@ export default {
 
     onGameStateReceived(gameState) {
 
-      console.log("Received gameState:", gameState);
-      console.log("Current player ID:", this.playerId);
-      console.log("Player 1 ID:", gameState.player1.id);
-      console.log("Player 2 ID:", gameState.player2.id);
-
       const isPlayer1 = String(gameState.player1.id) === this.playerId;
-
-      console.log(isPlayer1);
-      //console.log("player num", this.playerId);
 
       if (isPlayer1) {
         this.myHp = gameState.player1.lifepoints;
         this.myHandCards = gameState.player1.hand || [];
         this.myBattlefieldCards = gameState.player1.battlefield || [];
-        this.myName = gameState.player1.nickName;
+        this.myName = gameState.player1.nickname;
         this.myMindbug = gameState.player1.mindbug;
-        this.myDrawPile = gameState.player1.drawpile;
+        this.myDrawPile = gameState.player1.drawPile;
 
         this.enemyHp = gameState.player2.lifepoints;
         this.enemyHandCount = gameState.player2.handCardsCount || 0;
         this.enemyBattlefieldCards = gameState.player2.battlefield || [];
-        this.enemyName = gameState.player2.nickName;
+        this.enemyName = gameState.player2.nickname;
         this.enemyMindbug = gameState.player2.Mindbug;
-        this.enemyDrawPile = gameState.player2.drawpile;
+        this.enemyDrawPile = gameState.player2.drawPile;
+
+        this.myNumDP = gameState.player1.drawPile.length;
+        this.enemyNumDP = gameState.player2.drawPile.length;
+        this.myDiscardPile = gameState.player1.discardPile.length;
+        this.enemyDiscardPile = gameState.player2.discardPile.length;
+
+        this.enemyHandCard = gameState.player2.hand.length;
 
       } else {
         this.myHp = gameState.player2.lifepoints;
         this.myHandCards = gameState.player2.hand || [];
         this.myBattlefieldCards = gameState.player2.battlefield || [];
-        this.myName = gameState.player2.nickName;
+        this.myName = gameState.player2.nickname;
         this.myMindbug = gameState.player2.mindbug;
-        this.myDrawPile = gameState.player2.drawpile;
+        this.myDrawPile = gameState.player2.drawPile;
 
         this.enemyHp = gameState.player1.lifepoints;
         this.enemyHandCount = gameState.player1.handCardsCount || 0;
         this.enemyBattlefieldCards = gameState.player1.battlefield || [];
-        this.enemyName = gameState.player1.nickName;
+        this.enemyName = gameState.player1.nickname;
         this.enemyMindbug = gameState.player1.mindbug;
-        this.enemyDrawPile = gameState.player1.drawpile;
+        this.enemyDrawPile = gameState.player1.drawPile;
+
+
+        this.myNumDP = gameState.player2.drawPile.length;
+        this.enemyNumDP = gameState.player1.drawPile.length;
+        this.myDiscardPile = gameState.player2.discardPile.length;
+        this.enemyDiscardPile = gameState.player1.discardPile.length;
+
+        this.enemyHandCard = gameState.player1.hand.length;
       }
       this.handCards = this.myHandCards.map(handCard => {
         console.log("handCard:", handCard);
         console.log("handCard.card:", handCard.card.name);
-        return handCard.card;
+        return {
+          ...handCard.card,
+          name: handCard.card.name,
+          sessioncardId: handCard.id
+        };
       });
-      console.log("My Battlefield cards", this.myBattlefieldCards);
-
-
-      //console.log("my Hand cards", this.myHandCards);
-      console.log("Hand cards", this.handCards);
-      console.log(`🕒 Current turn: ${this.isMyTurn ? 'My turn' : 'opponent turn'}`);
     },
 
     onTurnChanged(message) {
@@ -189,7 +253,6 @@ export default {
       }
     },
 
-
     updateActionButtons() {
       this.endTurnButtonDisabled = !this.isMyTurn;
       this.attackButtonDisabled = !this.isMyTurn;
@@ -197,15 +260,27 @@ export default {
     },
 
     getCardImage(card) {
-      if (typeof card === 'object' && card.name) {
-        return require(`@/assets/Sets/First_Contact/${card.name}.jpg`);
-      } else {
-        console.error('Invalid card object:', card);
-        return '';
+      // Access for the proxies
+      const cardName = card?.name || card?.card?.name;
+
+      if (cardName) {
+        return require(`@/assets/Sets/First_Contact/${cardName}.jpg`);
       }
+
+      console.error('Card name not found in:', card);
+      return '';
     },
+
     getCardBackImage() {
       return require(`@/assets/Sets/First_Contact/card_Back.png`);
+    },
+    getAvatar(playerName) {
+      try {
+        return require(`@/assets/avatars/${playerName}.jpg`);
+      } catch (e) {
+        console.error(`Avatar not found for ${playerName}, using default.`);
+        return require("@/assets/avatars/default.jpg");
+      }
     },
 
     handleCardClick(index) {
@@ -217,101 +292,124 @@ export default {
     },
 
     handleBattlefieldClick() {
+      if (!this.isMyTurn) {
+        alert("Ce n'est pas votre tour !");
+        return;
+      }
       if (this.selectedCard !== null) {
 
         const cardToPlay = this.handCards[this.selectedCard];
-
         this.playCard(cardToPlay);
-
-        this.handCards.splice(this.selectedCard, 1);
-
-        this.myBattlefieldCards.push(cardToPlay);
-
         this.selectedCard = null;
       }
     },
 
     handleDragStart(event, index) {
       this.draggingCard = index;
-
       event.dataTransfer.effectAllowed = "move";
-
       const cardImage = event.target;
-
       event.dataTransfer.setDragImage(cardImage, 50, 50);
     },
 
     handleDropOnBattlefield(event) {
       event.preventDefault();
 
+      if (!this.isMyTurn) {
+        alert("Ce n'est pas votre tour !");
+        return;
+      }
+
       if (this.draggingCard !== null) {
 
         const cardToPlay = this.handCards[this.draggingCard];
-
         this.playCard(cardToPlay);
-
-        this.handCards.splice(this.draggingCard, 1);
-
-        this.myBattlefieldCards.push(cardToPlay);
-
         this.draggingCard = null;
       }
     },
 
     playCard(card) {
-      fetch('/api/game/game/play_card', {
+      if (!this.isMyTurn) {
+        alert("Ce n'est pas votre tour, vous ne pouvez pas jouer de carte.");
+        return;
+      }
+      fetch('http://localhost:8080/api/game/play_card', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
           playerId: this.playerId,
           sessioncardId: card.sessioncardId,
           gameId: this.gameId
         })
       })
-          .then(response => response.json())
-          .then(data => {
-            if (data.success) {
-              //this.updateBattlefield(card); TODO : when api will work we will update the field here after api answer
-              // for now the update logic is in handleBattlefieldClick and handleDropOnBattlefield
-            } else {
-              console.error("Erreur lors de la tentative de jouer la carte :", data.error);
+          .then(response => {
+            if (!response.ok) {
+              return response.text().then(text => {
+                throw new Error("Erreur: " + text);
+              });
             }
           })
           .catch(error => {
             console.error("Erreur réseau ou backend :", error);
+            alert(error.message);
           });
-    }
-  },
+    },
+
+    onCardDrawed(cardData) {
+      console.log("onCardDrawed called with:", cardData);
+
+      if (!this.handCards.some(card => card.sessioncardId === cardData.sessioncardId)) {
+        this.handCards.push(cardData);
+        console.log("Card added to handCards:", cardData);
+      }
+    },
+    updateBattlefield(card) {
+
+      const index = this.handCards.findIndex(c => c.sessioncardId == card.sessioncardId);
+      if (index !== -1) {
+
+        this.handCards.splice(index, 1);
+
+        this.myBattlefieldCards.push(card);
+      }
+    },
+  }
 };
 </script>
-
+ 
 <style scoped>
 html, body {
+  overflow: hidden;
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
+  position: fixed;
 }
 
 .game-board {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
   font-size: 2rem;
   color: black;
   background-color: #f5f5fa;
   padding: 10px;
-  overflow-y: auto;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
+
 
 .top-hand,
 .hand-area {
+  overflow-y: auto;
+  min-height: 150px;
+  min-width: 100px;
+  max-height: 200px;
   display: flex;
   justify-content: center;
   gap: 1.5vw;
@@ -322,16 +420,11 @@ html, body {
 .hand-area {
   overflow-y: auto;
   max-height: 200px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
-.hand-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 8vw;
-  max-width: 120px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-}
 
 .hand-area .hand-card:hover {
   transform: translateY(-10px);
@@ -343,7 +436,7 @@ html, body {
   transform: translateY(-10px);
 }
 
-.side-left, .side-right {
+.side-left {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -351,18 +444,29 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-}
-
-.side-left {
   left: 15px;
 }
 
+
 .battlefield {
+  min-height: 300px;
+  min-width: 600px;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
+  position: relative;
+}
+
+.divider {
+  width: 30%;
+  height: 1px;
+  background-color: #000;
+  margin: 10px 0;
 }
 
 .first-card {
@@ -374,7 +478,7 @@ html, body {
   gap: 5px;
 }
 
-.card {
+.discard-pile {
   width: 100px;
   height: 150px;
   background-color: white;
@@ -415,18 +519,80 @@ html, body {
   background-color: darkgray;
 }
 
-.count {
-  font-size: 0.8rem;
-  color: orange;
-}
 
 .card-image {
-  width: 100px;
-  height: 150px;
+  width: 10vw;
+  height: auto;
+  max-width: 150px;
   object-fit: cover;
   border: 2px solid black;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.playerInfo {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mySide {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.enemySide {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.playerAvatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-right: 10px;
+}
+
+.playerDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.playerName {
+  width: 150px;
+  height: 35px;
+  text-align: left;
+  line-height: 30px;
+  font-size: 26px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.playerStats {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: left;
+  transform: translateY(15px);
+}
+
+
+.lifePoint {
+  color: red;
+  font-weight: bold;
+}
+
+.mbPoint {
+  color: black;
+  font-weight: bold;
 }
 
 .card-image:active {
@@ -434,4 +600,47 @@ html, body {
   cursor: move;
 }
 
+
+.dps {
+  display: flex;
+  justify-content: center;
+}
+
+.pile-row {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  align-items: center;
+}
+
+.draw-pile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.draw-pile img {
+  width: 100px;
+  height: 150px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.draw-count {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+}
+
+.count-label {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: black;
+  color: white;
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
 </style>

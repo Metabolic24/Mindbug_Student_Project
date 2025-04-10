@@ -17,37 +17,45 @@ export default {
   data() {
     return {
       message: "",
-      playerId: localStorage.getItem("playerId") || null,
+      playerId: localStorage.getItem("playerId"),
     };
   },
   methods: {
     goToSets() {
-      this.$router.push('/setsofcards');
+      this.$router.push('/sets');
     },
 
     async startGame() {
       try {
         alert("Matching...");
-        const response = await axios.post("http://localhost:8080/api/game/join_game");
-        this.playerId = response.data.playerId;
-        WebSocketService.connectToQueue(this.handleMatchFound);
+        WebSocketService.onGameQueueSubscribed = this.joinGame;
+        WebSocketService.handleMatchFoundMessage = this.handleMatchFound;
+        await WebSocketService.connectToQueue();
+        WebSocketService.subscribeToGameQueue();
+
+
       } catch (error) {
         console.error("❌ Error occurred while searching for a game:"
-                  , error.response ? error.response.data : error.message);
+          , error.response ? error.response.data : error.message);
         this.message = "❌ Matchmaking error.";
       }
     },
 
+    async joinGame() {
+      console.log("join game called");
+      const response = await axios.post("http://localhost:8080/api/game/join_game");
+      this.playerId = response.data.playerId;
+      localStorage.setItem("playerId", this.playerId);
+    },
+
     handleMatchFound(data) {
+      console.log("match called");
       console.log('🎉 Match Found:', data);
       this.$router.push({
-         name: "GameBoard",
-         params: { gameId: data.gameId, playerId: this.playerId }
-       });
+        name: "GameBoard",
+        params: { gameId: data.gameId, playerId: this.playerId }
+      });
     }
-  },
-  mounted() {
-    WebSocketService.connectToQueue(this.handleMatchFound);
   }
 }
 </script>

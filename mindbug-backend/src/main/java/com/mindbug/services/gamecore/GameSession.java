@@ -9,16 +9,15 @@ import com.mindbug.services.PlayerService;
 import com.mindbug.services.wsmessages.WSMessagAskBlock;
 import com.mindbug.services.wsmessages.WSMessageCardDestroyed;
 import com.mindbug.services.wsmessages.WSMessageGameOver;
+import com.mindbug.services.wsmessages.WSMessageCardDrawed;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
 import com.mindbug.services.wsmessages.WSMsgPlayerLifeUpdated;
 import com.mindbug.services.wsmessages.playeractions.WSMessageBlocked;
 import com.mindbug.services.wsmessages.playeractions.WSMessageDidntBlock;
-import com.mindbug.services.wsmessages.playeractions.WSMessgaeAttacked;
-import com.mindbug.websocket.WSMessageManager;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.mindbug.services.wsmessages.playeractions.WSMessageAttacked;
+import com.mindbug.services.wsmessages.playeractions.WSMessagePlayCard;
+import com.mindbug.services.wsmessages.WSMessageManager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -27,25 +26,25 @@ import lombok.Getter;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
 @Component
 @Scope("prototype")
 @Getter
 public class GameSession {
 
     private Game game;
-
     private WSMessageManager gameWsMessageManager;
-
     private String wsChannel;
+    private List<Long> confirmJoinPlayers = new ArrayList<>();
 
-    private List<Long> confirmJoinPlayers;
-
+    @Autowired
     private GameSessionValidation gameSessionValidation;
 
-    private Battle battle;
+    @Autowired
+    private ApplicationContext applicationContext;
 
-    private  ApplicationContext applicationContext;
-
+    @Autowired
     private PlayerService playerService;
 
     @Autowired
@@ -54,20 +53,13 @@ public class GameSession {
     @Autowired
     private GameServer gameServer;
 
-    public GameSession(Game game, WSMessageManager gameWsMessageManager, GameSessionValidation gameSessionValidation,
-    ApplicationContext applicationContext, PlayerService playerService) {
+    private BattleService battle;
+
+    public GameSession(Game game, WSMessageManager gameWsMessageManager, GameSessionValidation gameSessionValidation) {
         this.game = game;
-
-        this.confirmJoinPlayers = new ArrayList<>();
-
         this.gameWsMessageManager = gameWsMessageManager;
         this.wsChannel = "/topic/game/" + game.getId();
         this.gameWsMessageManager.setChannel(wsChannel);
-
-        this.gameSessionValidation = gameSessionValidation;
-
-        this.applicationContext = applicationContext;
-        this.playerService = playerService;
     }
 
     public void confirmJoin(Long playerId) {
@@ -81,6 +73,7 @@ public class GameSession {
 
         if (this.confirmJoinPlayers.size() == 2) {
             cardService.distributeCards(game);
+
             // The two players have confirmed. Send ws message newGame and update game status
             this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
 
@@ -90,9 +83,11 @@ public class GameSession {
     }
 
     public void newTurn() {
-        checkPlayerCanDoAction(this.game.getCurrentPlayer());
+        if (this.game.getCurrentPlayer() != null)
+            checkPlayerCanDoAction(this.game.getCurrentPlayer());
 
-        if(this.game.isGameOver()) {
+        if (this.game.isGameOver()) {
+            this.endGame();
             return;
         }
 
@@ -102,7 +97,6 @@ public class GameSession {
         } else {
             this.game.setCurrentPlayer(getOpponent());
         }
-        
 
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
@@ -115,14 +109,13 @@ public class GameSession {
         Player player = getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getBattlefiedCard(player, sessionCardId);
 
-        this.battle = this.applicationContext.getBean(Battle.class);
+        this.battle = this.applicationContext.getBean(BattleService.class);
 
         this.battle.attack(this, player, sessionCard);
     }
 
     public void dontBlock(Long playerId) {
         this.gameSessionValidation.canDoDontBlock(this, playerId);
-
 
         Player player = getPlayer(playerId);
 
@@ -164,19 +157,35 @@ public class GameSession {
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
-
+        // Validate if the player can play the card
         this.gameSessionValidation.canPlayCard(this, playerId, sessionCardId);
 
+        // Retrieve the player and the card
         Player player = this.getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
-        player.getHand().remove(sessionCard);
+        if (sessionCard == null) {
+            throw new IllegalArgumentException("The session card with ID " + sessionCardId + " does not exist in the player's hand.");
+        }
 
+        // Move the card from hand to battlefield
+        player.getHand().remove(sessionCard);
         player.getBattlefield().add(sessionCard);
 
-        // TODO: sent webscoket
-
+        this.gameWsMessageManager.sendMessage(new WSMessagePlayCard(this.game));
         this.newTurn();
+
+        handleCardDraw(player);
+    }
+
+    private void handleCardDraw(Player player) {
+        if (cardService.shouldDrawCard(player)) {
+            GameSessionCard drawnCard = cardService.drawCard(player);
+
+            if (drawnCard != null && drawnCard.getCard() != null) {
+                this.gameWsMessageManager.sendMessage(new WSMessageCardDrawed(this.game, player, drawnCard));
+            }
+        }
     }
 
     public Player getPlayer(Long playerId) {
@@ -205,7 +214,7 @@ public class GameSession {
         Player player = getPlayer(playerId);
         return player.getHand();
     }
-    
+
     public void destroyCard(GameSessionCard destroyedCard, Player player) {
         // Send card to discarPile
         player.getBattlefield().remove(destroyedCard);
@@ -225,7 +234,7 @@ public class GameSession {
 
     public boolean checkPlayerCanDoAction(Player player) {
         
-        if(player.getHand().size() < 1 || player.getBattlefield().size() < 1) {
+        if (player.getHand().size() < 1 && player.getBattlefield().size() < 1) {
             this.game.setGameOver(true);
         }
 
@@ -243,7 +252,7 @@ public class GameSession {
     }
 
     public void sendWSMsgAttacked(Long playerId, Long gameSessionCardId) {
-        this.gameWsMessageManager.sendMessage(new WSMessgaeAttacked(this.game.getId(), playerId, gameSessionCardId));
+        this.gameWsMessageManager.sendMessage(new WSMessageAttacked(this.game.getId(), playerId, gameSessionCardId));
     }
 
     public void sendWSMsgBlocked(Long playerId, Long gameSessionCardId) {

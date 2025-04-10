@@ -1,9 +1,9 @@
 package com.mindbug.controller;
 
 import com.mindbug.models.Card;
-import com.mindbug.services.CardService;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,16 +11,11 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+@SpringBootTest
 public class CardControllerTest {
 
+    @Autowired
     private CardController cardController;
-    private CardService cardService;
-
-    @BeforeEach
-    public void setUp() throws IOException {
-        cardService = new CardService();
-        cardController = new CardController(cardService);
-    }
 
     @Test
     public void testGetCardsBySet_FirstContact() throws IOException {

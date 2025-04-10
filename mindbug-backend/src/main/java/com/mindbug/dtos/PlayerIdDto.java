@@ -12,7 +12,4 @@ public class PlayerIdDto {
 
     @NotNull
     private Long gameId;
-
-    
-    
 }

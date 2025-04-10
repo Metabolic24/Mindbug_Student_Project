@@ -25,11 +25,6 @@ export default {
       cards: []
     };
   },
-  computed: {
-    filteredCards() {
-      return this.cards.filter(card => card.set === this.set);
-    }
-  },
   methods: {
     getImage(name) {
         return `${this.set}/${name}.jpg`
@@ -41,6 +36,7 @@ export default {
       try {
         const response = await axios.get(`/api/cards/${this.set}`);
         this.cards = response.data;
+        console.log(this.cards);
       } catch (error) {
         console.error("Error fetching cards:", error);
       }

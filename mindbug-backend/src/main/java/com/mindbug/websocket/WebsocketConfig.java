@@ -21,6 +21,4 @@ public class WebsocketConfig implements WebSocketMessageBrokerConfigurer   {
     registry.addEndpoint("/mindbug-ws").setAllowedOriginPatterns("*").withSockJS();
 
   }
-
-    
 }
