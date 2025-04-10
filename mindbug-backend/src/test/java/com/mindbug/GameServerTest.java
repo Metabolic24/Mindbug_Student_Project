@@ -121,11 +121,18 @@ public class GameServerTest {
         // Retrieve the MATCH_FOUND message to get the gameId
         Thread.sleep(500);
         JsonNode matchFoundMsg = wsHelper.getNextMessage(5, TimeUnit.SECONDS);
+        wsHelper.getNextMessage(5, TimeUnit.SECONDS); // because there are two match found message
         int gameId = matchFoundMsg.get("data").get("gameId").asInt();
+
+        // Subscribe to found game channel
+        wsHelper.subscribe("/topic/game/" + gameId);
+        Thread.sleep(500);
 
         // Confirm the join for both players
         testConfirmJoin(player1Info, gameId);
         testConfirmJoin(player2Info, gameId);
+
+
 
         // Verify the newGame message
         Thread.sleep(500);
