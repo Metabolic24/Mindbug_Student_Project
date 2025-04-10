@@ -3,6 +3,7 @@ package com.mindbug.services.wsmessages;
 import java.util.HashMap;
 
 import com.mindbug.models.Game;
+import com.mindbug.websocket.GameWSMessage;
 import com.mindbug.websocket.WebsocketMessage;
 
 public class WSMessageNewTurn extends WebsocketMessage  {
@@ -17,5 +18,4 @@ public class WSMessageNewTurn extends WebsocketMessage  {
 
         this.setData(data);
     }
-    
 }

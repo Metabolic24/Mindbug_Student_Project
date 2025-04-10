@@ -3,6 +3,38 @@ A student project that aims to create a digital version of Mindbug game
 
 ## FRONTEND
 
+---
+
+### Prerequisites
+
+Before you begin, make sure you have the following installed on your machine:
+- **Node.js**
+- **npm**
+
+---
+
+### Installation
+
+#### 1.  Install dependencies
+
+```bash
+npm install
+```
+
+#### 2.  Run the application
+
+Make sure the backend is running...
+```bash
+npm run serve
+```
+
+The application will start on the default port: 8081.
+
+You can access it by opening a browser and navigating to the following URL:
+```bash
+http://localhost:8081
+```
+
 ## BACKEND
 
 ---

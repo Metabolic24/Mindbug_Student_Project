@@ -2,7 +2,7 @@ package com.mindbug.controller;
 
 import com.mindbug.models.Card;
 import com.mindbug.services.CardService;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,20 +15,12 @@ import java.util.List;
 @RequestMapping("/api/cards")
 public class CardController {
 
-    private final CardService cardService;
-
-    public CardController(CardService cardService) {
-        this.cardService = cardService;
-    }
+    @Autowired
+    private CardService cardService;
 
     @GetMapping("/{set}")
     public List<Card> getCardsBySet(@PathVariable String set) throws IOException {
-        return cardService.getCardsBySet(set);
-    }
-
-    @GetMapping
-    public List<Card> getAllCards() {
-        return cardService.getAllCards();
+        return cardService.loadCardsFromSet(set);
     }
 
     @GetMapping("/sets")

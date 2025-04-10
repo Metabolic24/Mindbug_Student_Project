@@ -17,12 +17,12 @@ export default {
   data() {
     return {
       message: "",
-      playerId: localStorage.getItem("playerId") || null,
+      playerId: localStorage.getItem("playerId"),
     };
   },
   methods: {
     goToSets() {
-      this.$router.push('/setsofcards');
+      this.$router.push('/sets');
     },
 
     async startGame() {

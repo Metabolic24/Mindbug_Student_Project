@@ -1,5 +1,6 @@
 import { Client } from '@stomp/stompjs';
 import SockJS from 'sockjs-client';
+import config from '@/config/environment.js';
 
 class WebSocketService {
   constructor() {

@@ -2,12 +2,12 @@ package com.mindbug.services.wsmessages.playeractions;
 
 import java.util.HashMap;
 
-import com.mindbug.services.wsmessages.GameWSMessage;
+import com.mindbug.websocket.GameWSMessage;
 import com.mindbug.websocket.WebsocketMessage;
 
-public class WSMessgaeAttacked extends WebsocketMessage {
+public class WSMessageAttacked extends WebsocketMessage {
 
-    public WSMessgaeAttacked(Long gameId, Long playerId, Long gameSessionCardId) {
+    public WSMessageAttacked(Long gameId, Long playerId, Long gameSessionCardId) {
         super(GameWSMessage.ATTACKED.getLabel());
 
         HashMap<String, Object> data = new HashMap<>();

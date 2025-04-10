@@ -2,10 +2,10 @@
   <div class="game-board">
     <div class="top-hand">
       <img
-          v-for="(_, index) in cardCount"
-          :key="index"
-          :src="getCardBackImage()"
-          class="card-image hand-card"
+        v-for="(_, index) in enemyHandCard"
+        :key="index"
+        :src="getCardBackImage()"
+        class="card-image hand-card"
       />
     </div>
 
@@ -69,7 +69,7 @@ export default {
   name: "GameBoard",
   data() {
     return {
-      cardCount: 5,
+      enemyHandCard: 5,
       handCards: [],
       playerId: null,
       gameId: null,
@@ -342,7 +342,7 @@ html, body {
   transform: translateY(-10px);
 }
 
-.side-left, .side-right {
+.side-left {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -350,11 +350,9 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-}
-
-.side-left {
   left: 15px;
 }
+
 
 .battlefield {
   min-height: 300px;

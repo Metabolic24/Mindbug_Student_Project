@@ -1,80 +1,39 @@
 package com.mindbug.models;
 
-import java.util.List;
-import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-public class EffectType {
-    private String type;
-    private String target;
-    private int value;
-    private String action;
-    private Map<String, Object> condition;
-    private int amount;
-    private String operation; 
-    private List<String> keywords;
+import java.util.Arrays;
 
-    // Getters and Setters
-    public String getType() {
-        return type;
+public enum EffectType {
+    LIFE_POINTS("Life Points"),
+    PREVENT_ACTION("Prevent Action"),
+    CONTROL_CREATURE("Control Creature"),
+    DESTROY_CREATURE("Destroy Creature"),
+    DRAW_CARDS("Draw Cards"),
+    POWER_MODIFICATION("Power Modification"),
+    KEYWORD_GAIN("Keyword Gain"),
+    STEAL_CARDS("Steal Cards"),
+    DISCARD("Discard"),
+    PLAY_FROM_DISCARD("Play From Discard");
+
+    private final String jsonValue;
+
+    EffectType(String jsonValue) {
+        this.jsonValue = jsonValue;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    @JsonValue
+    public String getJsonValue() {
+        return jsonValue;
     }
 
-    public String getTarget() {
-        return target;
-    }
-
-    public void setTarget(String target) {
-        this.target = target;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    public String getAction() {
-        return action;
-    }
-
-    public void setAction(String action) {
-        this.action = action;
-    }
-
-    public Map<String, Object> getCondition() {
-        return condition;
-    }
-
-    public void setCondition(Map<String, Object> condition) {
-        this.condition = condition;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
-    public String getOperation() {
-        return operation;
-    }
-
-    public void setOperation(String operation) {
-        this.operation = operation;
-    }
-
-    public List<String> getKeywords() {
-        return keywords;
-    }
-
-    public void setKeywords(List<String> keyword) {
-        this.keywords = keyword;
-    }
+    @JsonCreator
+    public static EffectType fromJson(String value) {
+        return Arrays.stream(values())
+            .filter(effectType -> effectType.jsonValue.equalsIgnoreCase(value.replace("_", " ")))
+            .findFirst()
+            .orElseThrow(() -> new IllegalArgumentException("Invalid EffectType: " + value));
+ 
+        }
 }

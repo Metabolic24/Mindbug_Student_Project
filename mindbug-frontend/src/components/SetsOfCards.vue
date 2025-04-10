@@ -3,7 +3,7 @@
     <h1>Select a set of cards</h1>
     <div class="sets-container">
       <div v-for="set in sets" :key="set.name" class="set-item">
-        <router-link :to="`/cardlist/${set}`">
+        <router-link :to="`/set/${set}`">
           <div class="set-card">
             <img :src="`/img/sets/${set}.png`" :alt="set" />
           </div>
