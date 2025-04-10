@@ -5,10 +5,10 @@
       <img class="playerAvatar" :src="getAvatar()" alt="Avatar">
       <div class="playerDetails">
         <div class="playerStats">
-          <span class="lifePoint">❤️ {{ enemyHealth }}</span>
+          <span class="lifePoint">❤️ {{ enemyHp }}</span>
           <span class="mbPoint">🧠 {{ enemyMindbug }}</span>
         </div>
-        <p class="playerName">Pseudo1</p>
+        <p class="playerName">{{enemyName}}</p>
       </div>
     </div>
 
@@ -31,7 +31,7 @@
           </div>
           <div class="discard-pile">
             <button class="voir-button">Voir</button>
-            <div class="count-label">4</div>
+            <div class="count-label">{{ enemyDiscardPile }}</div>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@
           </div>
           <div class="discard-pile">
             <button class="voir-button">Voir</button>
-            <div class="count-label">2</div>
+            <div class="count-label">{{ myDiscardPile }}</div>
           </div>
         </div>
       </div>
@@ -96,10 +96,10 @@
       <img class="playerAvatar" :src="getAvatar()" alt="Avatar">
       <div class="playerDetails">
         <div class="playerStats">
-          <span class="lifePoint">❤️ {{ myHealth }}</span>
+          <span class="lifePoint">❤️ {{ myHp }}</span>
           <span class="mbPoint">🧠 {{ myMindbug }}</span>
         </div>
-        <p class="playerName">Pseudo2</p>
+        <p class="playerName">{{myName}}</p>
       </div>
     </div>
   </div>
@@ -135,8 +135,11 @@ export default {
       enemyMindbug: 0,
       enemyDrawPile: [],
 
-      myNumDP: 5,
-      enemyNumDP: 5,
+      myNumDP: 0,
+      enemyNumDP: 0,
+
+      myDiscardPile: 0,
+      enemyDiscardPile: 0,
     };
   },
   mounted() {
@@ -175,37 +178,48 @@ export default {
 
     onGameStateReceived(gameState) {
 
+      console.log("game state is :" , gameState);
       const isPlayer1 = String(gameState.player1.id) === this.playerId;
 
       if (isPlayer1) {
         this.myHp = gameState.player1.lifepoints;
         this.myHandCards = gameState.player1.hand || [];
         this.myBattlefieldCards = gameState.player1.battlefield || [];
-        this.myName = gameState.player1.nickName;
+        this.myName = gameState.player1.nickname;
         this.myMindbug = gameState.player1.mindbug;
         this.myDrawPile = gameState.player1.drawpile;
 
         this.enemyHp = gameState.player2.lifepoints;
         this.enemyHandCount = gameState.player2.handCardsCount || 0;
         this.enemyBattlefieldCards = gameState.player2.battlefield || [];
-        this.enemyName = gameState.player2.nickName;
+        this.enemyName = gameState.player2.nickname;
         this.enemyMindbug = gameState.player2.Mindbug;
         this.enemyDrawPile = gameState.player2.drawpile;
+
+        this.myNumDP = gameState.player1.drawPile.length;
+        this.enemyNumDP = gameState.player2.drawPile.length;
+        this.myDiscardPile = gameState.player1.discardPile.length;
+        this.enemyDiscardPile = gameState.player2.discardPile.length;
 
       } else {
         this.myHp = gameState.player2.lifepoints;
         this.myHandCards = gameState.player2.hand || [];
         this.myBattlefieldCards = gameState.player2.battlefield || [];
-        this.myName = gameState.player2.nickName;
+        this.myName = gameState.player2.nickname;
         this.myMindbug = gameState.player2.mindbug;
         this.myDrawPile = gameState.player2.drawpile;
 
         this.enemyHp = gameState.player1.lifepoints;
         this.enemyHandCount = gameState.player1.handCardsCount || 0;
         this.enemyBattlefieldCards = gameState.player1.battlefield || [];
-        this.enemyName = gameState.player1.nickName;
+        this.enemyName = gameState.player1.nickname;
         this.enemyMindbug = gameState.player1.mindbug;
         this.enemyDrawPile = gameState.player1.drawpile;
+
+        this.myNumDP = gameState.player2.drawPile.length;
+        this.enemyNumDP = gameState.player1.drawPile.length;
+        this.myDiscardPile = gameState.player2.discardPile.length;
+        this.enemyDiscardPile = gameState.player1.discardPile.length;
       }
       this.handCards = this.myHandCards.map(handCard => {
         console.log("handCard:", handCard);
@@ -259,6 +273,8 @@ export default {
       } catch (e) {
         console.error(`Avatar not found for ${playerName}, using default.`);
         return require("@/assets/avatars/default.jpg");
+      }
+    },
 
     handleCardClick(index) {
       if (this.selectedCard === index) {
@@ -560,6 +576,8 @@ html, body {
 .mbPoint {
   color: black;
   font-weight: bold;
+}
+
 .card-image:active {
   opacity: 0.5;
   cursor: move;
