@@ -52,4 +52,13 @@ public class Player implements Serializable {
         this.lifepoints = 4;
         this.mindbug = 2;
     }
+
+    public GameSessionCard drawCard() {
+        if (this.drawPile.isEmpty()) {
+            return null;
+        }
+        GameSessionCard card = this.drawPile.remove(0);
+        this.hand.add(card);
+        return card;
+    }
 }

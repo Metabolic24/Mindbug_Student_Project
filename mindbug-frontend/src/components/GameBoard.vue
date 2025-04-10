@@ -55,25 +55,25 @@
          @click="handleBattlefieldClick"
          @dragover.prevent
          @drop="handleDropOnBattlefield">
-        <div class="row">
-          <img
-              v-for="(card, index) in enemyBattlefieldCards.slice(0)"
-              :key="index"
-              :src="getCardImage(card)"
-              class="card-image center first-card"
-          />
-        </div>
+      <div class="row">
+        <img
+            v-for="(card, index) in enemyBattlefieldCards.slice(0)"
+            :key="index"
+            :src="getCardImage(card)"
+            class="card-image center first-card"
+        />
+      </div>
 
-        <div class="divider"></div>
+      <div class="divider"></div>
 
-        <div class="row">
-          <img
-              v-for="(card, index) in myBattlefieldCards.slice(0)"
-              :key="index"
-              :src="getCardImage(card)"
-              class="card-image"
-          />
-        </div>
+      <div class="row">
+        <img
+            v-for="(card, index) in myBattlefieldCards.slice(0)"
+            :key="index"
+            :src="getCardImage(card)"
+            class="card-image"
+        />
+      </div>
     </div>
     <div v-if="isMyTurn" class="turn-indicator">Your turn</div>
     <div v-else class="turn-indicator">Waiting for opponent...</div>
@@ -116,6 +116,7 @@ export default {
       handCards: [],
       playerId: null,
       gameId: null,
+
       selectedCard: null, 
       draggingCard: null, 
 
@@ -142,10 +143,11 @@ export default {
       enemyDiscardPile: 0,
     };
   },
+
   mounted() {
     this.gameId = this.$route.params.gameId;
     this.playerId = this.$route.params.playerId;
- 
+
      WebSocketService.subscribeToGameState(
      this.gameId,
      this.onGameStateReceived.bind(this),
@@ -186,14 +188,14 @@ export default {
         this.myBattlefieldCards = gameState.player1.battlefield || [];
         this.myName = gameState.player1.nickname;
         this.myMindbug = gameState.player1.mindbug;
-        this.myDrawPile = gameState.player1.drawpile;
+        this.myDrawPile = gameState.player1.drawPile;
 
         this.enemyHp = gameState.player2.lifepoints;
         this.enemyHandCount = gameState.player2.handCardsCount || 0;
         this.enemyBattlefieldCards = gameState.player2.battlefield || [];
         this.enemyName = gameState.player2.nickname;
         this.enemyMindbug = gameState.player2.Mindbug;
-        this.enemyDrawPile = gameState.player2.drawpile;
+        this.enemyDrawPile = gameState.player2.drawPile;
 
         this.myNumDP = gameState.player1.drawPile.length;
         this.enemyNumDP = gameState.player2.drawPile.length;
@@ -208,14 +210,15 @@ export default {
         this.myBattlefieldCards = gameState.player2.battlefield || [];
         this.myName = gameState.player2.nickname;
         this.myMindbug = gameState.player2.mindbug;
-        this.myDrawPile = gameState.player2.drawpile;
+        this.myDrawPile = gameState.player2.drawPile;
 
         this.enemyHp = gameState.player1.lifepoints;
         this.enemyHandCount = gameState.player1.handCardsCount || 0;
         this.enemyBattlefieldCards = gameState.player1.battlefield || [];
         this.enemyName = gameState.player1.nickname;
         this.enemyMindbug = gameState.player1.mindbug;
-        this.enemyDrawPile = gameState.player1.drawpile;
+        this.enemyDrawPile = gameState.player1.drawPile;
+
 
         this.myNumDP = gameState.player2.drawPile.length;
         this.enemyNumDP = gameState.player1.drawPile.length;
@@ -230,7 +233,8 @@ export default {
         return {
           ...handCard.card,
           name: handCard.card.name,
-          sessioncardId: handCard.id};
+          sessioncardId: handCard.id
+        };
       });
     },
 
@@ -258,11 +262,11 @@ export default {
     getCardImage(card) {
       // Access for the proxies
       const cardName = card?.name || card?.card?.name;
-      
+
       if (cardName) {
         return require(`@/assets/Sets/First_Contact/${cardName}.jpg`);
       }
-      
+
       console.error('Card name not found in:', card);
       return '';
     },
@@ -330,35 +334,45 @@ export default {
       }
       fetch('http://localhost:8080/api/game/play_card', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
           playerId: this.playerId,
           sessioncardId: card.sessioncardId,
           gameId: this.gameId
         })
       })
-      .then(response => {
-        if (!response.ok) {
-          return response.text().then(text => {
-            throw new Error("Erreur: " + text);
+          .then(response => {
+            if (!response.ok) {
+              return response.text().then(text => {
+                throw new Error("Erreur: " + text);
+              });
+            }
+          })
+          .catch(error => {
+            console.error("Erreur réseau ou backend :", error);
+            alert(error.message);
           });
-        }
-      })
-      .catch(error => {
-        console.error("Erreur réseau ou backend :", error);
-        alert(error.message);
-      });
+    },
+
+    onCardDrawed(cardData) {
+      console.log("onCardDrawed called with:", cardData);
+
+      if (!this.handCards.some(card => card.sessioncardId === cardData.sessioncardId)) {
+        this.handCards.push(cardData);
+        console.log("Card added to handCards:", cardData);
+      }
     },
     updateBattlefield(card) {
-    
+
       const index = this.handCards.findIndex(c => c.sessioncardId == card.sessioncardId);
       if (index !== -1) {
-       
+
         this.handCards.splice(index, 1);
+
         this.myBattlefieldCards.push(card);
       }
-    }
-  },
+    },
+  }
 };
 </script>
  
@@ -392,10 +406,10 @@ html, body {
 
 .top-hand,
 .hand-area {
-  overflow-y: auto; 
+  overflow-y: auto;
   min-height: 150px;
   min-width: 100px;
-  max-height: 200px; 
+  max-height: 200px;
   display: flex;
   justify-content: center;
   gap: 1.5vw;
