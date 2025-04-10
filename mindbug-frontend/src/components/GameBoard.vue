@@ -312,7 +312,7 @@ export default {
   },
 };
 </script>
-
+ 
 <style scoped>
 html, body {
   margin: 0;
