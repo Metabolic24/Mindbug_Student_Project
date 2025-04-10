@@ -61,6 +61,10 @@
               :key="index"
               :src="getCardImage(card)"
               class="card-image center first-card"
+              :class="{ 
+                targetable: indexTarget === index && isSelectingTarget 
+              }"
+              @click="handleEnemyCardClick(index)"
           />
         </div>
 
@@ -72,8 +76,25 @@
               :key="index"
               :src="getCardImage(card)"
               class="card-image"
+              @click="selectAttacker(index)" 
           />
+          <div class="combat-controls" v-if="isMyTurn">
+          <button 
+            v-if="canAttack && selectedAttacker"
+            @click="handleAttackCardClick(); selectedAttacker=true"
+            :disabled="!canAttack"
+            class="combat-button attack"
+            :class="{ 
+                'selected': selectedAttacker,
+                'attacker': selectedAttacker
+              }"
+          >
+            🗡️ Attack
+          </button>
         </div>
+        </div>
+
+        
     </div>
     <div v-if="isMyTurn" class="turn-indicator">Your turn</div>
     <div v-else class="turn-indicator">Waiting for opponent...</div>
@@ -140,6 +161,13 @@ export default {
 
       myDiscardPile: 0,
       enemyDiscardPile: 0,
+
+      selectedAttacker: false,
+      attackerIndex: 0,
+      isSelectingTarget: false,
+      canAttack: false,
+
+      indexTarget: 0,
     };
   },
   mounted() {
@@ -186,14 +214,14 @@ export default {
         this.myBattlefieldCards = gameState.player1.battlefield || [];
         this.myName = gameState.player1.nickname;
         this.myMindbug = gameState.player1.mindbug;
-        this.myDrawPile = gameState.player1.drawpile;
+        this.myDrawPile = gameState.player1.drawPile;
 
         this.enemyHp = gameState.player2.lifepoints;
         this.enemyHandCount = gameState.player2.handCardsCount || 0;
         this.enemyBattlefieldCards = gameState.player2.battlefield || [];
         this.enemyName = gameState.player2.nickname;
-        this.enemyMindbug = gameState.player2.Mindbug;
-        this.enemyDrawPile = gameState.player2.drawpile;
+        this.enemyMindbug = gameState.player2.mindbug;
+        this.enemyDrawPile = gameState.player2.drawPile;
 
         this.myNumDP = gameState.player1.drawPile.length;
         this.enemyNumDP = gameState.player2.drawPile.length;
@@ -208,14 +236,14 @@ export default {
         this.myBattlefieldCards = gameState.player2.battlefield || [];
         this.myName = gameState.player2.nickname;
         this.myMindbug = gameState.player2.mindbug;
-        this.myDrawPile = gameState.player2.drawpile;
+        this.myDrawPile = gameState.player2.drawPile;
 
         this.enemyHp = gameState.player1.lifepoints;
         this.enemyHandCount = gameState.player1.handCardsCount || 0;
         this.enemyBattlefieldCards = gameState.player1.battlefield || [];
         this.enemyName = gameState.player1.nickname;
         this.enemyMindbug = gameState.player1.mindbug;
-        this.enemyDrawPile = gameState.player1.drawpile;
+        this.enemyDrawPile = gameState.player1.drawPile;
 
         this.myNumDP = gameState.player2.drawPile.length;
         this.enemyNumDP = gameState.player1.drawPile.length;
@@ -232,6 +260,7 @@ export default {
           name: handCard.card.name,
           sessioncardId: handCard.id};
       });
+
     },
 
     onTurnChanged(message) {
@@ -250,7 +279,6 @@ export default {
     },
 
     updateActionButtons() {
-      this.endTurnButtonDisabled = !this.isMyTurn;
       this.attackButtonDisabled = !this.isMyTurn;
       this.playCardDisabled = !this.isMyTurn;
     },
@@ -293,9 +321,9 @@ export default {
         return;
       }
       if (this.selectedCard !== null) {
-
         const cardToPlay = this.handCards[this.selectedCard];
         this.playCard(cardToPlay);
+        this.updateBattlefield(cardToPlay);
         this.selectedCard = null;
       }
     },
@@ -319,6 +347,7 @@ export default {
 
         const cardToPlay = this.handCards[this.draggingCard];
         this.playCard(cardToPlay);
+        this.updateBattlefield(cardToPlay);
         this.draggingCard = null;
       }
     },
@@ -350,13 +379,100 @@ export default {
       });
     },
     updateBattlefield(card) {
-    
       const index = this.handCards.findIndex(c => c.sessioncardId == card.sessioncardId);
       if (index !== -1) {
-       
         this.handCards.splice(index, 1);
         this.myBattlefieldCards.push(card);
       }
+    },
+
+    selectAttacker(cardIndex) {
+      if (!this.isMyTurn) return;
+      this.attackerIndex = cardIndex;
+      console.log("CARDINDEX:", this.attackerIndex);
+      this.selectedAttacker = true;
+      this.canAttack = true;
+    },
+
+
+    attack(card) {
+      if (!this.isMyTurn) {
+        alert("Ce n'est pas votre tour, vous ne pouvez pas jouer de carte.");
+        return;
+      }
+        fetch('http://localhost:8080/api/game/attack', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            playerId: this.playerId,
+            sessioncardId: card.id,
+            gameId: this.gameId
+          })
+        });
+    },
+
+    block(card){
+      if (!this.isMyTurn) {
+        alert("Ce n'est pas votre tour, vous ne pouvez pas jouer de carte.");
+        return;
+      }
+        fetch('http://localhost:8080/api/game/block', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            playerId: this.playerId,
+            sessioncardId: card.id,
+            gameId: this.gameId
+          })
+        });
+    },
+
+    dontBlock(card){
+      if (!this.isMyTurn) {
+        alert("Ce n'est pas votre tour, vous ne pouvez pas jouer de carte.");
+        return;
+      }
+        fetch('http://localhost:8080/api/game/dont_block', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            playerId: this.playerId,
+            sessioncardId: card.id,
+            gameId: this.gameId
+          })
+        });
+    },
+
+    handleAttackCardClick() {
+      if (!this.isMyTurn) {
+        alert("Ce n'est pas votre tour !");
+        return;
+      }
+      this.selectedAttacker = true;
+      if(this.selectAttacker && this.isSelectingTarget == true){
+        const cardToAttack = this.myBattlefieldCards[this.attackerIndex];
+        this.attack(cardToAttack);
+        this.canAttack = true;
+        
+      }else{
+        alert("Select target");
+      }
+
+      this.resetCombatState();
+    },
+
+    resetCombatState() {
+      this.selectedAttacker = false;
+      this.attackerIndex = -1;
+      this.isSelectingTarget = false;
+      this.canAttack = false;
+      this.indexTarget = -1;
+    },
+
+    handleEnemyCardClick(index){
+      this.isSelectingTarget = true;
+      this.indexTarget = index;
+      console.log("INDEX TARGET:", this.indexTarget);
     }
   },
 };
@@ -628,5 +744,46 @@ html, body {
   padding: 2px 6px;
   border-radius: 4px;
   font-weight: bold;
+}
+
+.combat-controls {
+  position: absolute;
+  bottom: -60px;
+  display: flex;
+  gap: 20px;
+  z-index: 100;
+}
+
+.combat-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateX(50);
+}
+
+.attack {
+  background: #ff4444;
+  border: 2px solid #cc0000;
+  color: white;
+  transform: translateX(50px);
+}
+
+.attack:disabled {
+  background: #ff9999;
+  cursor: not-allowed;
+}
+
+.targetable {
+  border: 3px solid #ff4444 !important;
+  cursor: crosshair;
+  transform: translateY(10px);
+}
+
+.attacker {
+  border: 3px solid gold;
+  box-shadow: 0 0 15px rgba(255,215,0,0.5);
+  transform: translateY(-10px);
 }
 </style>
