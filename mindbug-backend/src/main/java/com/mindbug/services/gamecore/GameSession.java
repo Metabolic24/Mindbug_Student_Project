@@ -99,6 +99,8 @@ public class GameSession {
         this.battle = this.applicationContext.getBean(BattleService.class);
 
         this.battle.attack(this, player, sessionCard);
+
+        this.newTurn();
     }
 
     public void dontBlock(Long playerId) {
