@@ -15,5 +15,4 @@ public class GameService {
     public Game createGame(Game game) {
         return this.gameRepository.save(game);
     }
-    
 }

@@ -3,7 +3,8 @@
     <h1>Cards from set: {{ formatSetName(this.set) }}</h1>
     <div class="cards-container">
       <div v-for="card in cards" :key="card.name" class="card">
-        <img :src="require(`@/assets/Sets/${getImage(card.name)}`)" :alt="`Card ${card.name}`" class="card-image" />
+        <img :src="require(`@/assets/Sets/${getImage(card.name)}`)" 
+             :alt="`Card ${card.name}`" class="card-image" />
       </div>
     </div>
   </div>
@@ -24,11 +25,6 @@ export default {
       cards: []
     };
   },
-  computed: {
-    filteredCards() {
-      return this.cards.filter(card => card.set === this.set);
-    }
-  },
   methods: {
     getImage(name) {
         return `${this.set}/${name}.jpg`
@@ -40,6 +36,7 @@ export default {
       try {
         const response = await axios.get(`/api/cards/${this.set}`);
         this.cards = response.data;
+        console.log(this.cards);
       } catch (error) {
         console.error("Error fetching cards:", error);
       }

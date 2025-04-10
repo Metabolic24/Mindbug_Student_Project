@@ -6,22 +6,31 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "echo \"No tests available\" && exit 0"
+    "test": "echo \"No tests available\" && exit 0",
+    "test:unit": "jest --verbose"
   },
   "dependencies": {
+    "@stomp/stompjs": "^7.0.0",
     "axios": "^1.7.9",
     "core-js": "^3.8.3",
+    "sockjs-client": "^1.6.1",
     "vue": "^3.2.13",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.0",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
+    "@babel/core": "^7.26.10",
     "@babel/eslint-parser": "^7.12.16",
+    "@babel/preset-env": "^7.26.9",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "@vue/test-utils": "^2.4.0-alpha.2",
+    "babel-jest": "^26.6.3",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3"
+    "eslint-plugin-vue": "^8.0.3",
+    "jest": "^26.6.3",
+    "vue-jest": "^5.0.0-alpha.10"
   },
   "eslintConfig": {
     "root": true,
@@ -29,13 +38,20 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
+      "plugin:vue/vue3-recommended",
       "eslint:recommended"
     ],
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "max-len": [
+        "error",
+        {
+          "code": 150
+        }
+      ]
+    }
   },
   "browserslist": [
     "> 1%",

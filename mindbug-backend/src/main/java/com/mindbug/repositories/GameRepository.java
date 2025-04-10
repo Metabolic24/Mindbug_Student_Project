@@ -8,5 +8,4 @@ import com.mindbug.models.Game;
 @Repository
 public interface GameRepository extends JpaRepository<Game, Long> {
 
-    
 }
