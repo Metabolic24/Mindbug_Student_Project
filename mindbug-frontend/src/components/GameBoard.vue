@@ -112,7 +112,7 @@ export default {
   name: "GameBoard",
   data() {
     return {
-      enemyHandCard: 5,
+      enemyHandCard: 0,
       handCards: [],
       playerId: null,
       gameId: null,
@@ -178,7 +178,6 @@ export default {
 
     onGameStateReceived(gameState) {
 
-      console.log("game state is :" , gameState);
       const isPlayer1 = String(gameState.player1.id) === this.playerId;
 
       if (isPlayer1) {
@@ -201,6 +200,8 @@ export default {
         this.myDiscardPile = gameState.player1.discardPile.length;
         this.enemyDiscardPile = gameState.player2.discardPile.length;
 
+        this.enemyHandCard = gameState.player2.hand.length;
+
       } else {
         this.myHp = gameState.player2.lifepoints;
         this.myHandCards = gameState.player2.hand || [];
@@ -220,6 +221,8 @@ export default {
         this.enemyNumDP = gameState.player1.drawPile.length;
         this.myDiscardPile = gameState.player2.discardPile.length;
         this.enemyDiscardPile = gameState.player1.discardPile.length;
+
+        this.enemyHandCard = gameState.player1.hand.length;
       }
       this.handCards = this.myHandCards.map(handCard => {
         console.log("handCard:", handCard);
