@@ -1,5 +1,17 @@
 <template>
   <div class="game-board">
+
+    <div class="playerInfo enemySide">
+      <img class="playerAvatar" :src="getAvatar()" alt="Avatar">
+      <div class="playerDetails">
+        <div class="playerStats">
+          <span class="lifePoint">❤️ {{ enemyHp }}</span>
+          <span class="mbPoint">🧠 {{ enemyMindbug }}</span>
+        </div>
+        <p class="playerName">{{enemyName}}</p>
+      </div>
+    </div>
+
     <div class="top-hand">
       <img
         v-for="(_, index) in enemyHandCard"
@@ -19,7 +31,7 @@
           </div>
           <div class="discard-pile">
             <button class="voir-button">Voir</button>
-            <div class="count-label">4</div>
+            <div class="count-label">{{ enemyDiscardPile }}</div>
           </div>
         </div>
       </div>
@@ -31,7 +43,7 @@
           </div>
           <div class="discard-pile">
             <button class="voir-button">Voir</button>
-            <div class="count-label">2</div>
+            <div class="count-label">{{ myDiscardPile }}</div>
           </div>
         </div>
       </div>
@@ -78,6 +90,18 @@
           @dragstart="handleDragStart($event, index)"
       />
     </div>
+
+    
+    <div class="playerInfo mySide">
+      <img class="playerAvatar" :src="getAvatar()" alt="Avatar">
+      <div class="playerDetails">
+        <div class="playerStats">
+          <span class="lifePoint">❤️ {{ myHp }}</span>
+          <span class="mbPoint">🧠 {{ myMindbug }}</span>
+        </div>
+        <p class="playerName">{{myName}}</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -88,7 +112,7 @@ export default {
   name: "GameBoard",
   data() {
     return {
-      enemyHandCard: 5,
+      enemyHandCard: 0,
       handCards: [],
       playerId: null,
       gameId: null,
@@ -111,8 +135,11 @@ export default {
       enemyMindbug: 0,
       enemyDrawPile: [],
 
-      myNumDP: 5,
-      enemyNumDP: 5,
+      myNumDP: 0,
+      enemyNumDP: 0,
+
+      myDiscardPile: 0,
+      enemyDiscardPile: 0,
     };
   },
   mounted() {
@@ -157,31 +184,45 @@ export default {
         this.myHp = gameState.player1.lifepoints;
         this.myHandCards = gameState.player1.hand || [];
         this.myBattlefieldCards = gameState.player1.battlefield || [];
-        this.myName = gameState.player1.nickName;
+        this.myName = gameState.player1.nickname;
         this.myMindbug = gameState.player1.mindbug;
         this.myDrawPile = gameState.player1.drawpile;
 
         this.enemyHp = gameState.player2.lifepoints;
         this.enemyHandCount = gameState.player2.handCardsCount || 0;
         this.enemyBattlefieldCards = gameState.player2.battlefield || [];
-        this.enemyName = gameState.player2.nickName;
+        this.enemyName = gameState.player2.nickname;
         this.enemyMindbug = gameState.player2.Mindbug;
         this.enemyDrawPile = gameState.player2.drawpile;
+
+        this.myNumDP = gameState.player1.drawPile.length;
+        this.enemyNumDP = gameState.player2.drawPile.length;
+        this.myDiscardPile = gameState.player1.discardPile.length;
+        this.enemyDiscardPile = gameState.player2.discardPile.length;
+
+        this.enemyHandCard = gameState.player2.hand.length;
 
       } else {
         this.myHp = gameState.player2.lifepoints;
         this.myHandCards = gameState.player2.hand || [];
         this.myBattlefieldCards = gameState.player2.battlefield || [];
-        this.myName = gameState.player2.nickName;
+        this.myName = gameState.player2.nickname;
         this.myMindbug = gameState.player2.mindbug;
         this.myDrawPile = gameState.player2.drawpile;
 
         this.enemyHp = gameState.player1.lifepoints;
         this.enemyHandCount = gameState.player1.handCardsCount || 0;
         this.enemyBattlefieldCards = gameState.player1.battlefield || [];
-        this.enemyName = gameState.player1.nickName;
+        this.enemyName = gameState.player1.nickname;
         this.enemyMindbug = gameState.player1.mindbug;
         this.enemyDrawPile = gameState.player1.drawpile;
+
+        this.myNumDP = gameState.player2.drawPile.length;
+        this.enemyNumDP = gameState.player1.drawPile.length;
+        this.myDiscardPile = gameState.player2.discardPile.length;
+        this.enemyDiscardPile = gameState.player1.discardPile.length;
+
+        this.enemyHandCard = gameState.player1.hand.length;
       }
       this.handCards = this.myHandCards.map(handCard => {
         console.log("handCard:", handCard);
@@ -228,6 +269,14 @@ export default {
 
     getCardBackImage() {
       return require(`@/assets/Sets/First_Contact/card_Back.png`);
+    },
+    getAvatar(playerName) {
+      try {
+        return require(`@/assets/avatars/${playerName}.jpg`);
+      } catch (e) {
+        console.error(`Avatar not found for ${playerName}, using default.`);
+        return require("@/assets/avatars/default.jpg");
+      }
     },
 
     handleCardClick(index) {
@@ -315,10 +364,12 @@ export default {
  
 <style scoped>
 html, body {
+  overflow: hidden;
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
+  position: fixed;
 }
 
 .game-board {
@@ -337,6 +388,7 @@ html, body {
   left: 0;
   overflow: hidden;
 }
+
 
 .top-hand,
 .hand-area {
@@ -359,14 +411,6 @@ html, body {
   margin-top: 10px;
 }
 
-.hand-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 8vw;
-  max-width: 120px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-}
 
 .hand-area .hand-card:hover {
   transform: translateY(-10px);
@@ -470,6 +514,71 @@ html, body {
   border: 2px solid black;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.playerInfo {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mySide {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.enemySide {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.playerAvatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-right: 10px;
+}
+
+.playerDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.playerName {
+  width: 150px;
+  height: 35px;
+  text-align: left;
+  line-height: 30px;
+  font-size: 26px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.playerStats {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: left;
+  transform: translateY(15px);
+}
+
+
+.lifePoint {
+  color: red;
+  font-weight: bold;
+}
+
+.mbPoint {
+  color: black;
+  font-weight: bold;
 }
 
 .card-image:active {
