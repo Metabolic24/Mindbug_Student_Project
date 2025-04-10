@@ -13,6 +13,7 @@ import com.mindbug.services.wsmessages.WSMsgPlayerLifeUpdated;
 import com.mindbug.services.wsmessages.playeractions.WSMessageBlocked;
 import com.mindbug.services.wsmessages.playeractions.WSMessageDidntBlock;
 import com.mindbug.services.wsmessages.playeractions.WSMessgaeAttacked;
+import com.mindbug.services.wsmessages.playeractions.WSMessagePlayCard;
 import com.mindbug.websocket.WSMessageManager;
 
 import java.util.ArrayList;
@@ -76,6 +77,7 @@ public class GameSession {
 
         if (this.confirmJoinPlayers.size() == 2) {
             cardService.distributeCards(game);
+
             // The two players have confirmed. Send ws message newGame and update game status
             this.gameWsMessageManager.sendMessage(new WSMessageNewGame(this.game));
 
@@ -92,7 +94,6 @@ public class GameSession {
             this.game.setCurrentPlayer(getOpponent());
         }
         
-
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
 
@@ -157,8 +158,7 @@ public class GameSession {
 
         player.getBattlefield().add(sessionCard);
 
-        // TODO: sent webscoket
-
+        this.gameWsMessageManager.sendMessage(new WSMessagePlayCard(this.game));
         this.newTurn();
     }
 

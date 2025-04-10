@@ -88,7 +88,9 @@ public class GameSessionValidation {
         boolean hasCard = player.getHand().stream().anyMatch(sessionCard -> sessionCard.getId() == cardId);
 
         if (!hasCard) {
+
             throw new IllegalStateException("Player " + playerId + " does not have card " + cardId + ".");
+
         }
     }
 
