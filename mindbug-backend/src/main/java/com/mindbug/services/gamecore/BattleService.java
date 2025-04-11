@@ -15,7 +15,8 @@ public class BattleService {
         gameSessionContext.sendWSMsgAttacked(attackingPlayer.getId(), attackingSessionCard.getId());
 
         if (gameSessionContext.getOpponent().getBattlefield().isEmpty()) {
-            directAttack(gameSessionContext, gameSessionContext.getOpponent());
+            // Direct attack
+            gameSessionContext.directAttack(gameSessionContext.getOpponent());
         } else {
             gameSessionContext.sendWSMsgAskBlock(gameSessionContext.getOpponent().getId());
         }
@@ -26,7 +27,7 @@ public class BattleService {
 
         gameSessionContext.sendWSMsgDidntBlocked(blockingPlayer.getId());
 
-        resolveBattle(gameSessionContext);
+        gameSessionContext.directAttack(blockingPlayer);
     }
 
     public void block(GameSession gameSessionContext, Player blockingPlayer, GameSessionCard blockingSessionCard) {
@@ -34,7 +35,7 @@ public class BattleService {
 
         gameSessionContext.sendWSMsgBlocked(blockingPlayer.getId(), blockingSessionCard.getId());
 
-        resolveBattle(gameSessionContext);
+        gameSessionContext.resolveBattle();
     }
 
     public void directAttack(GameSession gameSessionContext, Player opponent) {
@@ -50,8 +51,8 @@ public class BattleService {
         GameSessionCard blockingCard = battle.getBlocking().getCard();
 
         if (blockingCard == null) {
-            opponent.setLifepoints(opponent.getLifepoints() - 1);
-            gameSessionContext.sendWSMsgPlayerLifeUpdated(opponent.getId());
+           // Opponent didnt blocked. Remove one life point (direct attack)
+           gameSessionContext.directAttack(opponent);
         } else {
             int attackerPower = attackerCard.getCard().getPower();
             int blockerPower = blockingCard.getCard().getPower();

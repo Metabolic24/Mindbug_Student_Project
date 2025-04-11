@@ -4,9 +4,11 @@ import com.mindbug.models.Game;
 import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import com.mindbug.services.CardService;
+import com.mindbug.services.GameServer;
 import com.mindbug.services.PlayerService;
 import com.mindbug.services.wsmessages.WSMessagAskBlock;
 import com.mindbug.services.wsmessages.WSMessageCardDestroyed;
+import com.mindbug.services.wsmessages.WSMessageGameOver;
 import com.mindbug.services.wsmessages.WSMessageCardDrawed;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
@@ -15,7 +17,6 @@ import com.mindbug.services.wsmessages.playeractions.WSMessageBlocked;
 import com.mindbug.services.wsmessages.playeractions.WSMessageDidntBlock;
 import com.mindbug.services.wsmessages.playeractions.WSMessageAttacked;
 import com.mindbug.services.wsmessages.playeractions.WSMessagePlayCard;
-import com.mindbug.services.wsmessages.playeractions.WSMessageGameState;
 import com.mindbug.services.wsmessages.WSMessageManager;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +50,9 @@ public class GameSession {
     @Autowired
     private CardService cardService;
 
+    @Autowired
+    private GameServer gameServer;
+
     private BattleService battle;
 
     public GameSession(Game game, WSMessageManager gameWsMessageManager, GameSessionValidation gameSessionValidation) {
@@ -79,6 +83,14 @@ public class GameSession {
     }
 
     public void newTurn() {
+        if (this.game.getCurrentPlayer() != null)
+            checkPlayerCanDoAction(this.game.getCurrentPlayer());
+
+        if (this.game.isGameOver()) {
+            this.endGame();
+            return;
+        }
+
         if (this.game.getCurrentPlayer() == null) {
             // For now we assume 1st player is player1
             this.game.setCurrentPlayer(game.getPlayer1());
@@ -127,8 +139,12 @@ public class GameSession {
         // Reset after battle end
         this.battle = null;
 
-        // Next step end turn (TODO: next step should be check if game is over)
-        this.newTurn();
+        if (isGameOverPlayerLife(opponent)) {
+            this.endGame();
+        } else {
+            this.newTurn();
+        }
+
     }
 
     public void resolveBattle() {
@@ -136,6 +152,8 @@ public class GameSession {
 
         // Reset after battle end
         this.battle = null;
+        
+        this.newTurn();
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
@@ -154,7 +172,6 @@ public class GameSession {
         player.getHand().remove(sessionCard);
         player.getBattlefield().add(sessionCard);
 
-        this.gameWsMessageManager.sendMessage(new WSMessageGameState(this.game));
         this.gameWsMessageManager.sendMessage(new WSMessagePlayCard(this.game));
         this.newTurn();
 
@@ -207,6 +224,28 @@ public class GameSession {
         sendWSMsgCardDestroyed(player.getId(), destroyedCard.getId());
     }
 
+    public boolean isGameOverPlayerLife(Player player) {
+        if (player.getLifepoints() < 1) {
+            this.game.setGameOver(true);
+        }
+
+        return this.game.isGameOver();
+    }
+
+    public boolean checkPlayerCanDoAction(Player player) {
+        
+        if (player.getHand().size() < 1 && player.getBattlefield().size() < 1) {
+            this.game.setGameOver(true);
+        }
+
+        return this.game.isGameOver();
+    }
+
+    public void endGame() {
+        this.sendWSMsgGameOver();
+        this.gameServer.removeGameSession(this.game.getId());
+    }
+
 
     public void sendWSMsgAskBlock(Long playerId) {
         this.gameWsMessageManager.sendMessage(new WSMessagAskBlock(playerId, this.game));
@@ -230,6 +269,10 @@ public class GameSession {
 
     public void sendWSMsgCardDestroyed(Long playerId, Long gameSessionCardId) {
         this.gameWsMessageManager.sendMessage(new WSMessageCardDestroyed(playerId, gameSessionCardId, this.game));
+    }
+
+    public void sendWSMsgGameOver() {
+        this.gameWsMessageManager.sendMessage(new WSMessageGameOver(this.game));
     }
 
 }
