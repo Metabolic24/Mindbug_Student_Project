@@ -173,9 +173,10 @@ public class GameSession {
         player.getBattlefield().add(sessionCard);
 
         this.gameWsMessageManager.sendMessage(new WSMessagePlayCard(this.game));
-        this.newTurn();
 
         handleCardDraw(player);
+        
+        this.newTurn();
     }
 
     private void handleCardDraw(Player player) {
