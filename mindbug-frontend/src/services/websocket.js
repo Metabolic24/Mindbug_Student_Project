@@ -90,7 +90,7 @@ class WebSocketService {
     }
   }
 
-  subscribeToGameState(gameId, onGameStateReceived, onTurnChanged) {
+  subscribeToGameState(gameId, onGameStateReceived, onTurnChanged, onAttacked, onAskblock) {
     // Make sure websocket is connected
     this.connectToQueue();
 
@@ -100,19 +100,31 @@ class WebSocketService {
       const sub = this.client.subscribe(
         topic,
         (message) => {
-          this.handleGameStateMessage(message, onGameStateReceived, onTurnChanged);
+          this.handleGameStateMessage(
+            message, 
+            onGameStateReceived, 
+            onTurnChanged,
+            onAttacked,
+            onAskblock
+          );
         }
       );
       this.subscriptions.set(topic, sub);
     }
   }
 
-  handleGameStateMessage(message, onGameStateReceived, onTurnChanged) {
+  handleGameStateMessage(message, onGameStateReceived, onTurnChanged, onAttacked, onAskblock) {
     const data = JSON.parse(message.body);
     const messageID = data.messageID;
     console.log("data is : ", data);
 
     switch (messageID) {
+      case 'ATTACKED':
+        onAttacked(data);
+        break;
+      case 'ASK_BLOCK':
+        onAskblock(data);
+        break;
       case 'newGame':
         onGameStateReceived(data.data);
         break;

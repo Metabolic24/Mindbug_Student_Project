@@ -61,10 +61,6 @@
               :key="index"
               :src="getCardImage(card)"
               class="card-image center first-card"
-              :class="{ 
-                targetable: indexTarget === index && isSelectingTarget 
-              }"
-              @click="handleEnemyCardClick(index)"
           />
         </div>
 
@@ -91,6 +87,13 @@
           >
             🗡️ Attack
           </button>
+          <div v-if="askBlockDialogVisible" class="ask-block-dialog">
+            <p>You are attacked! Do you want to block?</p>
+            <button v-if="canAttack && selectedAttacker" @click="handleBlockCardClick()">Block</button>
+            <button @click="dontBlock()">Don't Block</button>
+          </div>
+          
+          
         </div>
         </div>
 
@@ -162,12 +165,14 @@ export default {
       myDiscardPile: 0,
       enemyDiscardPile: 0,
 
-      selectedAttacker: false,
       attackerIndex: 0,
-      isSelectingTarget: false,
       canAttack: false,
 
       indexTarget: 0,
+
+      blockIndex: 0,
+      askBlockDialogVisible: false,
+      currentAskBlockData: null,
     };
   },
   mounted() {
@@ -177,7 +182,9 @@ export default {
      WebSocketService.subscribeToGameState(
      this.gameId,
      this.onGameStateReceived.bind(this),
-     this.onTurnChanged.bind(this)
+     this.onTurnChanged.bind(this),
+     this.onAttacked.bind(this),
+     this.onAskblock.bind(this)
     );
     this.confirmJoinGame();
   },
@@ -260,6 +267,9 @@ export default {
           name: handCard.card.name,
           sessioncardId: handCard.id};
       });
+      if (this.isBlocking) {
+        this.attackerCard = gameState.attackingCard; 
+      }
 
     },
 
@@ -394,6 +404,12 @@ export default {
       this.canAttack = true;
     },
 
+    selectBlockCard(cardIndex){
+      if (!this.isMyTurn) return;
+      this.blockIndex = cardIndex;
+      console.log("Block CARDINDEX:", this.blockIndex);
+    },
+
 
     attack(card) {
       if (!this.isMyTurn) {
@@ -405,8 +421,8 @@ export default {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             playerId: this.playerId,
-            sessioncardId: card.id,
-            gameId: this.gameId
+            gameId: this.gameId,
+            sessioncardId: card.id
           })
         });
     },
@@ -427,7 +443,18 @@ export default {
         });
     },
 
-    dontBlock(card){
+    onAttacked(data){
+      console.log("Youre attacked", data);
+      this.currentAttackInfo = data;
+      this.showAttackedPopup = true;
+    },
+
+    onAskblock(data) {
+      this.askBlockDialogVisible = true;
+      this.currentAskBlockData = data;
+    },
+
+    dontBlock(){
       if (!this.isMyTurn) {
         alert("Ce n'est pas votre tour, vous ne pouvez pas jouer de carte.");
         return;
@@ -437,7 +464,6 @@ export default {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             playerId: this.playerId,
-            sessioncardId: card.id,
             gameId: this.gameId
           })
         });
@@ -449,13 +475,31 @@ export default {
         return;
       }
       this.selectedAttacker = true;
-      if(this.selectAttacker && this.isSelectingTarget == true){
+      if(this.selectAttacker){
         const cardToAttack = this.myBattlefieldCards[this.attackerIndex];
         this.attack(cardToAttack);
         this.canAttack = true;
         
       }else{
-        alert("Select target");
+        alert("Cannot attack with this card");
+      }
+
+      this.resetCombatState();
+    },
+
+    handleBlockCardClick(){
+      if (!this.isMyTurn) {
+        alert("Ce n'est pas votre tour !");
+        return;
+      }
+      this.selectedAttacker = true;
+      if(this.selectAttacker){
+        const cardToAttack = this.myBattlefieldCards[this.attackerIndex];
+        this.block(cardToAttack);
+        this.canAttack = true;
+        
+      }else{
+        alert("Cannot block with this card");
       }
 
       this.resetCombatState();
@@ -464,15 +508,8 @@ export default {
     resetCombatState() {
       this.selectedAttacker = false;
       this.attackerIndex = -1;
-      this.isSelectingTarget = false;
       this.canAttack = false;
       this.indexTarget = -1;
-    },
-
-    handleEnemyCardClick(index){
-      this.isSelectingTarget = true;
-      this.indexTarget = index;
-      console.log("INDEX TARGET:", this.indexTarget);
     }
   },
 };
