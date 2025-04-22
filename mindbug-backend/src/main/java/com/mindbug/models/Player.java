@@ -49,7 +49,7 @@ public class Player implements Serializable {
     public Player(String nickname) {
         this.nickname = nickname;
         // TODO: get lifepoints and mindbug from game configs
-        this.lifepoints = 4;
+        this.lifepoints = 3;
         this.mindbug = 2;
     }
 }

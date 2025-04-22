@@ -22,6 +22,7 @@ public class GameServer {
 
     private HashMap<Long, GameSession> gameSessions = new HashMap<>();
     private Queue<Player> playerQueue = new LinkedList<>();
+    private int numeroJoueur = 0;
 
     @Autowired
     private PlayerService playerservice;
@@ -65,9 +66,10 @@ public class GameServer {
 
     public PlayerBasicInfoDto handleJoinGame() {
         // Create the player and add to queue
-        Player player =  this.playerservice.createPlayer(new Player("Player"));
+        Player player =  this.playerservice.createPlayer(new Player("Player " + numeroJoueur%2));
         this.playerQueue.add(player);
-
+        numeroJoueur++;
+        
         // Create game session if two player in queue
         if (this.playerQueue.size() >= 2) {
             this.createGameSession(this.playerQueue.poll(), this.playerQueue.poll());
