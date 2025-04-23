@@ -4,9 +4,12 @@ import com.mindbug.models.Game;
 import com.mindbug.models.GameSessionCard;
 import com.mindbug.models.Player;
 import com.mindbug.services.CardService;
+import com.mindbug.services.GameServer;
 import com.mindbug.services.PlayerService;
 import com.mindbug.services.wsmessages.WSMessagAskBlock;
 import com.mindbug.services.wsmessages.WSMessageCardDestroyed;
+import com.mindbug.services.wsmessages.WSMessageGameOver;
+import com.mindbug.services.wsmessages.WSMessageCardDrawed;
 import com.mindbug.services.wsmessages.WSMessageNewGame;
 import com.mindbug.services.wsmessages.WSMessageNewTurn;
 import com.mindbug.services.wsmessages.WSMsgPlayerLifeUpdated;
@@ -19,13 +22,12 @@ import com.mindbug.services.wsmessages.WSMessageManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
+import lombok.Getter;
+
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import lombok.Getter;
-
 @Component
 @Scope("prototype")
 @Getter
@@ -48,10 +50,13 @@ public class GameSession {
     @Autowired
     private CardService cardService;
 
+    @Autowired
+    private GameServer gameServer;
+
     private BattleService battle;
-    
+
     public GameSession(Game game, WSMessageManager gameWsMessageManager, GameSessionValidation gameSessionValidation) {
-        this.game = game;        
+        this.game = game;
         this.gameWsMessageManager = gameWsMessageManager;
         this.wsChannel = "/topic/game/" + game.getId();
         this.gameWsMessageManager.setChannel(wsChannel);
@@ -78,13 +83,21 @@ public class GameSession {
     }
 
     public void newTurn() {
+        if (this.game.getCurrentPlayer() != null)
+            checkPlayerCanDoAction(this.game.getCurrentPlayer());
+
+        if (this.game.isGameOver()) {
+            this.endGame();
+            return;
+        }
+
         if (this.game.getCurrentPlayer() == null) {
             // For now we assume 1st player is player1
             this.game.setCurrentPlayer(game.getPlayer1());
         } else {
             this.game.setCurrentPlayer(getOpponent());
         }
-        
+
         // Send WS message of ne turn
         this.gameWsMessageManager.sendMessage(new WSMessageNewTurn(game));
 
@@ -128,8 +141,12 @@ public class GameSession {
         // Reset after battle end
         this.battle = null;
 
-        // Next step end turn (TODO: next step should be check if game is over)
-        this.newTurn();
+        if (isGameOverPlayerLife(opponent)) {
+            this.endGame();
+        } else {
+            this.newTurn();
+        }
+
     }
 
     public void resolveBattle() {
@@ -137,21 +154,41 @@ public class GameSession {
 
         // Reset after battle end
         this.battle = null;
+        
+        this.newTurn();
     }
 
     public void playCard(Long playerId, Long sessionCardId) {
-
+        // Validate if the player can play the card
         this.gameSessionValidation.canPlayCard(this, playerId, sessionCardId);
 
+        // Retrieve the player and the card
         Player player = this.getPlayer(playerId);
         GameSessionCard sessionCard = playerService.getHandCard(player, sessionCardId);
 
-        player.getHand().remove(sessionCard);
+        if (sessionCard == null) {
+            throw new IllegalArgumentException("The session card with ID " + sessionCardId + " does not exist in the player's hand.");
+        }
 
+        // Move the card from hand to battlefield
+        player.getHand().remove(sessionCard);
         player.getBattlefield().add(sessionCard);
 
         this.gameWsMessageManager.sendMessage(new WSMessagePlayCard(this.game));
+
+        handleCardDraw(player);
+        
         this.newTurn();
+    }
+
+    private void handleCardDraw(Player player) {
+        if (cardService.shouldDrawCard(player)) {
+            GameSessionCard drawnCard = cardService.drawCard(player);
+
+            if (drawnCard != null && drawnCard.getCard() != null) {
+                this.gameWsMessageManager.sendMessage(new WSMessageCardDrawed(this.game, player, drawnCard));
+            }
+        }
     }
 
     public Player getPlayer(Long playerId) {
@@ -180,7 +217,7 @@ public class GameSession {
         Player player = getPlayer(playerId);
         return player.getHand();
     }
-    
+
     public void destroyCard(GameSessionCard destroyedCard, Player player) {
         // Send card to discarPile
         player.getBattlefield().remove(destroyedCard);
@@ -188,6 +225,28 @@ public class GameSession {
 
         // Send card destroyed websocket message
         sendWSMsgCardDestroyed(player.getId(), destroyedCard.getId());
+    }
+
+    public boolean isGameOverPlayerLife(Player player) {
+        if (player.getLifepoints() < 1) {
+            this.game.setGameOver(true);
+        }
+
+        return this.game.isGameOver();
+    }
+
+    public boolean checkPlayerCanDoAction(Player player) {
+        
+        if (player.getHand().size() < 1 && player.getBattlefield().size() < 1) {
+            this.game.setGameOver(true);
+        }
+
+        return this.game.isGameOver();
+    }
+
+    public void endGame() {
+        this.sendWSMsgGameOver();
+        this.gameServer.removeGameSession(this.game.getId());
     }
 
 
@@ -213,6 +272,10 @@ public class GameSession {
 
     public void sendWSMsgCardDestroyed(Long playerId, Long gameSessionCardId) {
         this.gameWsMessageManager.sendMessage(new WSMessageCardDestroyed(playerId, gameSessionCardId, this.game));
+    }
+
+    public void sendWSMsgGameOver() {
+        this.gameWsMessageManager.sendMessage(new WSMessageGameOver(this.game));
     }
 
 }

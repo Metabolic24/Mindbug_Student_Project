@@ -64,6 +64,13 @@ public class GameServer {
         return gameSession;
     }
 
+    public void removeGameSession(Long id) {
+        GameSession removed = this.gameSessions.remove(id);
+
+        if (removed == null)
+            throw new EntityNotFoundException("Unable to remove game from gamesession. Game not found");
+    }
+
     public PlayerBasicInfoDto handleJoinGame() {
         // Create the player and add to queue
         Player player =  this.playerservice.createPlayer(new Player("Player " + numeroJoueur%2));
