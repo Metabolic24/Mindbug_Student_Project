@@ -8,17 +8,12 @@
           <span class="lifePoint">❤️ {{ enemyHp }}</span>
           <span class="mbPoint">🧠 {{ enemyMindbug }}</span>
         </div>
-        <p class="playerName">{{enemyName}}</p>
+        <p class="playerName">{{ enemyName }}</p>
       </div>
     </div>
 
     <div class="top-hand">
-      <img
-        v-for="(_, index) in enemyHandCard"
-        :key="index"
-        :src="getCardBackImage()"
-        class="card-image hand-card"
-      />
+      <img v-for="(_, index) in enemyHandCard" :key="index" :src="getCardBackImage()" class="card-image hand-card" />
     </div>
 
 
@@ -51,47 +46,41 @@
 
 
 
-    <div class="battlefield"
-         @click="handleBattlefieldClick"
-         @dragover.prevent
-         @drop="handleDropOnBattlefield">
+    <div class="battlefield" @click="handleBattlefieldClick" @dragover.prevent @drop="handleDropOnBattlefield">
       <div class="row">
-        <img
-            v-for="(card, index) in enemyBattlefieldCards.slice(0)"
-            :key="index"
-            :src="getCardImage(card)"
-            class="card-image center first-card"
-        />
+        <img v-for="(card, index) in enemyBattlefieldCards.slice(0)" :key="index" :src="getCardImage(card)"
+          class="card-image center first-card" />
       </div>
 
       <div class="divider"></div>
 
       <div class="row">
-        <img
-            v-for="(card, index) in myBattlefieldCards.slice(0)"
-            :key="index"
-            :src="getCardImage(card)"
-            class="card-image"
-        />
+        <img v-for="(card, index) in myBattlefieldCards.slice(0)" :key="index" :src="getCardImage(card)"
+          class="card-image" :class="{ 'battlefield-selected': selectedBattleFieldCard === index }"
+          @click="selectAttacker(index)" />
+        <div class="combat-controls" v-if="isMyTurn">
+          <button v-if="canAttack && selectedAttacker" @click="handleAttackCardClick(); selectedAttacker = true"
+            :disabled="!canAttack" class="combat-button attack" :class="{
+              'selected': selectedAttacker,
+              'attacker': selectedAttacker
+            }">
+            🗡️ Attack
+          </button>
+        </div>
       </div>
+
+
     </div>
     <div v-if="isMyTurn" class="turn-indicator">Your turn</div>
     <div v-else class="turn-indicator">Waiting for opponent...</div>
 
     <div class="hand-area">
-      <img
-          v-for="(handCards, index) in handCards"
-          :key="index"
-          :src="getCardImage(handCards)"
-          class="card-image hand-card"
-          :class="{ 'selected': selectedCard === index }"
-          @click="handleCardClick(index)"
-          draggable="true"
-          @dragstart="handleDragStart($event, index)"
-      />
+      <img v-for="(handCards, index) in handCards" :key="index" :src="getCardImage(handCards)"
+        class="card-image hand-card" :class="{ 'selected': selectedCard === index }" @click="handleCardClick(index)"
+        draggable="true" @dragstart="handleDragStart($event, index)" />
     </div>
 
-    
+
     <div class="playerInfo mySide">
       <img class="playerAvatar" :src="getAvatar()" alt="Avatar">
       <div class="playerDetails">
@@ -99,9 +88,22 @@
           <span class="lifePoint">❤️ {{ myHp }}</span>
           <span class="mbPoint">🧠 {{ myMindbug }}</span>
         </div>
-        <p class="playerName">{{myName}}</p>
+        <p class="playerName">{{ myName }}</p>
       </div>
     </div>
+
+    <!-- Global modals for both players-->
+    <div v-if="showAskBlockDialog" class="ask-block-modal-overlay">
+      <div class="ask-block-modal">
+        <p class="modal-message">You are attacked! Do you want to block?</p>
+        <div class="modal-buttons">
+          <button @click="handleBlockCardClick()" class="block-button">Block</button>
+          <button @click="dontBlock()" class="dont-block-button">Don't Block</button>
+
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -117,8 +119,10 @@ export default {
       playerId: null,
       gameId: null,
 
-      selectedCard: null, 
-      draggingCard: null, 
+      selectedCard: null,
+      selectedBattleFieldCard: null,
+
+      draggingCard: null,
 
       isMyTurn: false,
 
@@ -141,18 +145,37 @@ export default {
 
       myDiscardPile: 0,
       enemyDiscardPile: 0,
+
+      canAttack: false,
+
+      indexTarget: 0,
+
+      blockIndex: 0,
+      askBlockDialogVisible: false,
+      currentAskBlockData: null,
+      askBlockToPlayer: null,
+
+      blocking: false,
     };
+  },
+
+  computed: {
+    showAskBlockDialog() {
+      return this.askBlockDialogVisible && this.playerId == this.askBlockToPlayer;
+    }
   },
 
   mounted() {
     this.gameId = this.$route.params.gameId;
     this.playerId = this.$route.params.playerId;
 
-     WebSocketService.subscribeToGameState(
-     this.gameId,
-     this.onGameStateReceived.bind(this),
-     this.onTurnChanged.bind(this)
-    );
+    // Map websocket handlers
+    WebSocketService.onGameStateReceived = this.onGameStateReceived.bind(this);
+    WebSocketService.onTurnChanged = this.onTurnChanged.bind(this);
+    WebSocketService.onAttacked = this.onAttacked.bind(this);
+    WebSocketService.onAskBlock = this.onAskblock.bind(this);
+
+    WebSocketService.subscribeToGameState(this.gameId);
     this.confirmJoinGame();
   },
   methods: {
@@ -194,7 +217,7 @@ export default {
         this.enemyHandCount = gameState.player2.handCardsCount || 0;
         this.enemyBattlefieldCards = gameState.player2.battlefield || [];
         this.enemyName = gameState.player2.nickname;
-        this.enemyMindbug = gameState.player2.Mindbug;
+        this.enemyMindbug = gameState.player2.mindbug;
         this.enemyDrawPile = gameState.player2.drawPile;
 
         this.myNumDP = gameState.player1.drawPile.length;
@@ -219,7 +242,6 @@ export default {
         this.enemyMindbug = gameState.player1.mindbug;
         this.enemyDrawPile = gameState.player1.drawPile;
 
-
         this.myNumDP = gameState.player2.drawPile.length;
         this.enemyNumDP = gameState.player1.drawPile.length;
         this.myDiscardPile = gameState.player2.discardPile.length;
@@ -236,6 +258,11 @@ export default {
           sessioncardId: handCard.id
         };
       });
+      if (this.isBlocking) {
+        this.attackerCard = gameState.attackingCard;
+      }
+
+
     },
 
     onTurnChanged(message) {
@@ -254,7 +281,6 @@ export default {
     },
 
     updateActionButtons() {
-      this.endTurnButtonDisabled = !this.isMyTurn;
       this.attackButtonDisabled = !this.isMyTurn;
       this.playCardDisabled = !this.isMyTurn;
     },
@@ -292,14 +318,10 @@ export default {
     },
 
     handleBattlefieldClick() {
-      if (!this.isMyTurn) {
-        alert("Ce n'est pas votre tour !");
-        return;
-      }
       if (this.selectedCard !== null) {
-
         const cardToPlay = this.handCards[this.selectedCard];
         this.playCard(cardToPlay);
+        this.updateBattlefield(cardToPlay);
         this.selectedCard = null;
       }
     },
@@ -323,6 +345,7 @@ export default {
 
         const cardToPlay = this.handCards[this.draggingCard];
         this.playCard(cardToPlay);
+        this.updateBattlefield(cardToPlay);
         this.draggingCard = null;
       }
     },
@@ -334,24 +357,24 @@ export default {
       }
       fetch('http://localhost:8080/api/game/play_card', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           playerId: this.playerId,
           sessioncardId: card.sessioncardId,
           gameId: this.gameId
         })
       })
-          .then(response => {
-            if (!response.ok) {
-              return response.text().then(text => {
-                throw new Error("Erreur: " + text);
-              });
-            }
-          })
-          .catch(error => {
-            console.error("Erreur réseau ou backend :", error);
-            alert(error.message);
-          });
+        .then(response => {
+          if (!response.ok) {
+            return response.text().then(text => {
+              throw new Error("Erreur: " + text);
+            });
+          }
+        })
+        .catch(error => {
+          console.error("Erreur réseau ou backend :", error);
+          alert(error.message);
+        });
     },
 
     onCardDrawed(cardData) {
@@ -372,12 +395,146 @@ export default {
         this.myBattlefieldCards.push(card);
       }
     },
-  }
+
+    selectAttacker(cardIndex) {
+
+      if (this.selectedBattleFieldCard === cardIndex) {
+        this.selectedBattleFieldCard = null;
+      } else {
+        this.selectedBattleFieldCard = cardIndex;
+      }
+
+
+      if (this.blocking) {
+        const blockingCard = this.myBattlefieldCards[this.selectedBattleFieldCard];
+        this.block(blockingCard)
+        return
+      }
+
+
+
+      console.log("CARDINDEX:", this.selectedBattleFieldCard);
+      this.selectedAttacker = true;
+      this.canAttack = true;
+    },
+
+    selectBlockCard(cardIndex) {
+      if (!this.isMyTurn) return;
+      this.blockIndex = cardIndex;
+      console.log("Block CARDINDEX:", this.blockIndex);
+    },
+
+
+    attack(card) {
+      if (!this.isMyTurn) {
+        alert("Ce n'est pas votre tour, vous ne pouvez pas jouer de carte.");
+        return;
+      }
+      fetch('http://localhost:8080/api/game/attack', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          playerId: this.playerId,
+          gameId: this.gameId,
+          sessioncardId: card.id
+        })
+      });
+    },
+
+    block(card) {
+      fetch('http://localhost:8080/api/game/block', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          playerId: this.playerId,
+          sessioncardId: card.id,
+          gameId: this.gameId
+        })
+      });
+      this.blocking = false;
+      this.resetCombatState();
+      this.resetAskBlockDialog();
+    },
+
+    onAttacked(data) {
+      console.log("Youre attacked", data);
+      this.currentAttackInfo = data;
+      this.showAttackedPopup = true;
+    },
+
+    onAskblock(data) {
+      this.askBlockDialogVisible = true
+      this.askBlockToPlayer = data.data.playerId;
+      this.currentAskBlockData = data;
+    },
+
+    dontBlock() {
+      fetch('http://localhost:8080/api/game/dont_block', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          playerId: this.playerId,
+          gameId: this.gameId
+        })
+      });
+      this.resetAskBlockDialog();
+    },
+
+    handleAttackCardClick() {
+      this.selectedAttacker = true;
+      if (this.selectAttacker) {
+        const selectedActionCard = this.myBattlefieldCards[this.selectedBattleFieldCard];
+
+
+
+        this.attack(selectedActionCard);
+        this.canAttack = true;
+
+      } else {
+        alert("Cannot attack with this card");
+      }
+
+      this.resetCombatState();
+    },
+
+    handleBlockCardClick() {
+      // this.selectedAttacker = true;
+      // if (this.selectAttacker) {
+      //   const cardToAttack = this.myBattlefieldCards[this.selectedBattleFieldCard];
+      //   this.block(cardToAttack);
+      //   this.canAttack = true;
+
+      // } else {
+      //   alert("Cannot block with this card");
+      // }
+      this.blocking = true;
+      this.askBlockDialogVisible = false;
+
+    },
+
+    resetCombatState() {
+      this.selectedAttacker = false;
+      this.selectedBattleFieldCard = -1;
+      this.canAttack = false;
+      this.indexTarget = -1;
+    },
+
+    resetAskBlockDialog() {
+      this.askBlockDialogVisible = false;
+      this.askBlockToPlayer = null;
+      this.currentAskBlockData = null
+    },
+
+    resetBatllefieldSelected() {
+      this.selectedBattleFieldCard = null;
+    }
+  },
 };
 </script>
- 
+
 <style scoped>
-html, body {
+html,
+body {
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -432,6 +589,11 @@ html, body {
 }
 
 .hand-card.selected {
+  outline: 4px solid yellow;
+  transform: translateY(-10px);
+}
+
+.battlefield-selected {
   outline: 4px solid yellow;
   transform: translateY(-10px);
 }
@@ -642,5 +804,115 @@ html, body {
   padding: 2px 6px;
   border-radius: 4px;
   font-weight: bold;
+}
+
+.combat-controls {
+  position: absolute;
+  bottom: -60px;
+  display: flex;
+  gap: 20px;
+  z-index: 100;
+}
+
+.combat-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateX(50);
+}
+
+.attack {
+  background: #ff4444;
+  border: 2px solid #cc0000;
+  color: white;
+  transform: translateX(50px);
+}
+
+.attack:disabled {
+  background: #ff9999;
+  cursor: not-allowed;
+}
+
+.targetable {
+  border: 3px solid #ff4444 !important;
+  cursor: crosshair;
+  transform: translateY(10px);
+}
+
+.attacker {
+  border: 3px solid gold;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  transform: translateY(-10px);
+}
+
+.ask-block-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.ask-block-modal {
+  background: #1e1e1e;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.modal-message {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.block-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.dont-block-button {
+  background-color: #F44336;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.selected-card {
+  border: 2px solid #00f;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
 }
 </style>

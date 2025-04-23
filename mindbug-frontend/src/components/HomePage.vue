@@ -28,8 +28,8 @@ export default {
     async startGame() {
       try {
         alert("Matching...");
-        WebSocketService.onGameQueueSubscribed = this.joinGame;
-        WebSocketService.handleMatchFoundMessage = this.handleMatchFound;
+        WebSocketService.onGameQueueSubscribed = this.joinGame.bind(this);
+        WebSocketService.handleMatchFoundMessage = this.handleMatchFound.bind(this);
         await WebSocketService.connectToQueue();
         WebSocketService.subscribeToGameQueue();
 
