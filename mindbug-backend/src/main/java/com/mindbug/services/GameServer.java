@@ -73,7 +73,7 @@ public class GameServer {
 
     public PlayerBasicInfoDto handleJoinGame() {
         // Create the player and add to queue
-        Player player =  this.playerservice.createPlayer(new Player("Player " + numeroJoueur%2));
+        Player player =  this.playerservice.createPlayer(new Player("Player " + numeroJoueur % 2));
         this.playerQueue.add(player);
         numeroJoueur++;
         
