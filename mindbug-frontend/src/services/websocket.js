@@ -15,6 +15,12 @@ class WebSocketService {
     this.onGameQueueSubscribed = null;
 
     this.handleMatchFoundMessage = null;
+
+    // Game Websocket handlers
+    this.onGameStateReceived = null;
+    this.onTurnChanged = null; 
+    this.onAttacked = null; 
+    this.onAskBlock = null; 
   }
 
   connectToQueue() {
@@ -90,7 +96,7 @@ class WebSocketService {
     }
   }
 
-  subscribeToGameState(gameId, onGameStateReceived, onTurnChanged) {
+  subscribeToGameState(gameId) {
     // Make sure websocket is connected
     this.connectToQueue();
 
@@ -99,38 +105,67 @@ class WebSocketService {
     if (!this.subscriptions.has(topic)) {
       const sub = this.client.subscribe(
         topic,
-        (message) => {
-          this.handleGameStateMessage(message, onGameStateReceived, onTurnChanged);
+        (message) => {http://localhost:8081/
+          this.handleGameStateMessage(message);
         }
       );
       this.subscriptions.set(topic, sub);
     }
   }
 
-  handleGameStateMessage(message, onGameStateReceived, onTurnChanged, onCardDrawed) {
+  handleGameStateMessage(message) {
     const data = JSON.parse(message.body);
     const messageID = data.messageID;
     console.log("data is : ", data);
 
     switch (messageID) {
+      case 'ATTACKED':
+        this.safeCall(this.onAttacked, data, "ATTACKED");
+        break;
+    
+      case 'ASK_BLOCK':
+        this.safeCall(this.onAskBlock, data, "ASK_BLOCK");
+        break;
+    
       case 'newGame':
-        onGameStateReceived(data.data);
+        this.safeCall(this.onGameStateReceived, data.data, "newGame");
         break;
+    
       case 'NEW_TURN':
-        onTurnChanged(data);
+        this.safeCall(this.onTurnChanged, data, "NEW_TURN");
         break;
+    
       case 'gameState':
-        onGameStateReceived(data.data || data);
+        this.safeCall(this.onGameStateReceived, data.data || data, "gameState");
         break;
+    
       case 'CARD_DRAWED':
-        if (typeof onCardDrawed === "function") {
-          onCardDrawed(data.data|| data);
-        }
+        this.safeCall(this.onCardDrawed, data.data || data, "CARD_DRAWED");
         break;
-
+      case 'PLAYER_LIFE_UPDATED':
+        this.safeCall(this.onGameStateReceived, data.data || data, "CARD_DRAWED");
+        break;
+      case 'PLAYER_LIFE_UPDATED':
+        this.safeCall(this.onGameStateReceived, data.data || data, "CARD_DRAWED");
+        break;
+    
       default:
-        console.warn("❗ Nothing belong:", messageID);
+        console.warn("Unhandled message ID:", messageID);
     }
+  }
+    
+
+  safeCall(handler, data, handlerName) {
+    if (typeof handler === "function") {
+      handler(data);
+    } else {
+      this.showNoWSHandlerError(handlerName);
+    }
+  }
+  
+
+  showNoWSHandlerError(websocket) {
+    console.error("No handler defined for " + websocket)
   }
 
 
