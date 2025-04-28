@@ -6,6 +6,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.choice.ChoiceType;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.ReviveEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.StartService;
@@ -18,8 +19,8 @@ public class ReviveEffectResolverTest {
     private CardInstance randomCard;
     private Player opponentPlayer;
 
-    private ReviveEffect effect;
     private ReviveEffectResolver effectResolver;
+    private EffectTiming timing;
 
     @BeforeEach
     public void prepareGame() {
@@ -28,15 +29,16 @@ public class ReviveEffectResolverTest {
         randomCard = opponentPlayer.getHand().removeFirst();
         opponentPlayer.getDiscardPile().add(randomCard);
 
-        effect = new ReviveEffect();
+        ReviveEffect effect = new ReviveEffect();
         effectResolver = new ReviveEffectResolver(effect);
+        timing = EffectTiming.PLAY;
     }
 
     //TODO Test choice resolution
 
     @Test
     public void testBasic() {
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard,  timing);
 
         assertTrue(opponentPlayer.getDiscardPile().contains(randomCard));
 

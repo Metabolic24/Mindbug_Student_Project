@@ -3,7 +3,9 @@ package org.metacorp.mindbug.service.effect.impl;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.KeywordUpEffect;
+import org.metacorp.mindbug.model.modifier.KeywordModifier;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
@@ -22,7 +24,7 @@ public class KeywordUpEffectResolver extends GenericEffectResolver<KeywordUpEffe
     }
 
     @Override
-    public void apply(Game game, CardInstance card) {
+    public void apply(Game game, CardInstance card, EffectTiming timing) {
         CardKeyword value = effect.getValue();
         Integer max = effect.getMax();
         boolean moreAllies = effect.isMoreAllies();
@@ -57,16 +59,26 @@ public class KeywordUpEffectResolver extends GenericEffectResolver<KeywordUpEffe
         if (max != null) {
             for (CardInstance currentCard : cardOwner.getBoard()) {
                 if (currentCard.getPower() <= max && !currentCard.equals(card)) {
-                    currentCard.getKeywords().add(value);
-                    if (value == CardKeyword.FRENZY) {
-                        currentCard.setAbleToAttackTwice(true);
-                    } else if (value == CardKeyword.TOUGH) {
-                        currentCard.setStillTough(true);
-                    }
+                    addKeyword(currentCard, value, timing);
                 }
             }
         } else {
-            card.getKeywords().add(value);
+            addKeyword(card, value, timing);
+        }
+    }
+
+    private void addKeyword(CardInstance card, CardKeyword keyword, EffectTiming timing) {
+        if (!card.getKeywords().contains(keyword)) {
+            card.getKeywords().add(keyword);
+            if (keyword == CardKeyword.FRENZY) {
+                card.setAbleToAttackTwice(true);
+            } else if (keyword == CardKeyword.TOUGH) {
+                card.setStillTough(true);
+            }
+
+            if (timing == EffectTiming.ATTACK) {
+                card.getModifiers().add(new KeywordModifier(keyword));
+            }
         }
     }
 }

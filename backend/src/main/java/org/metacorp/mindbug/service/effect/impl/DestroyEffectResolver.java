@@ -4,6 +4,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectQueue;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.GameService;
@@ -30,7 +31,7 @@ public class DestroyEffectResolver extends GenericEffectResolver<DestroyEffect> 
     }
 
     @Override
-    public void apply(Game game, CardInstance card) {
+    public void apply(Game game, CardInstance card, EffectTiming timing) {
         Integer value = effect.getValue();
         Integer min = effect.getMin();
         Integer max = effect.getMax();

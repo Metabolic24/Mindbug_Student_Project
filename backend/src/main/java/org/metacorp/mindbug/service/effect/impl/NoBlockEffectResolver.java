@@ -3,7 +3,9 @@ package org.metacorp.mindbug.service.effect.impl;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.TargetChoice;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.NoBlockEffect;
+import org.metacorp.mindbug.model.modifier.BlockModifier;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
@@ -16,6 +18,8 @@ import java.util.List;
  */
 public class NoBlockEffectResolver extends GenericEffectResolver<NoBlockEffect> implements ResolvableEffect<List<CardInstance>> {
 
+    private EffectTiming timing;
+
     /**
      * Constructor
      *
@@ -26,7 +30,9 @@ public class NoBlockEffectResolver extends GenericEffectResolver<NoBlockEffect> 
     }
 
     @Override
-    public void apply(Game game, CardInstance card) {
+    public void apply(Game game, CardInstance card, EffectTiming timing) {
+        this.timing = timing;
+
         int value = effect.getValue();
         Integer max = effect.getMax();
         boolean highest = effect.isHighest();
@@ -35,17 +41,17 @@ public class NoBlockEffectResolver extends GenericEffectResolver<NoBlockEffect> 
 
         if (highest) {
             for (CardInstance highestCard : opponent.getHighestCards()) {
-                highestCard.setAbleToBlock(false);
+                setAbleToBlock(highestCard);
             }
         } else if (max != null) {
             for (CardInstance opponentCard : opponent.getBoard()) {
                 if (opponentCard.getPower() <= max) {
-                    opponentCard.setAbleToBlock(false);
+                    setAbleToBlock(opponentCard);
                 }
             }
         } else if (opponent.getBoard().size() <= value || value < 0) {
             for (CardInstance opponentCard : opponent.getBoard()) {
-                opponentCard.setAbleToBlock(false);
+                setAbleToBlock(opponentCard);
             }
         } else {
             game.setChoice(new TargetChoice(card.getOwner(), card, this, value, new HashSet<>(opponent.getBoard())));
@@ -55,7 +61,14 @@ public class NoBlockEffectResolver extends GenericEffectResolver<NoBlockEffect> 
     @Override
     public void resolve(Game game, List<CardInstance> chosenTargets) {
         for (CardInstance card : chosenTargets) {
-            card.setAbleToBlock(false);
+            setAbleToBlock(card);
+        }
+    }
+
+    private void setAbleToBlock(CardInstance card) {
+        card.setAbleToBlock(false);
+        if (timing == EffectTiming.ATTACK) {
+            card.getModifiers().add(new BlockModifier());
         }
     }
 }

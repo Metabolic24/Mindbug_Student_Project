@@ -4,6 +4,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.StealEffect;
 import org.metacorp.mindbug.model.effect.steal.StealSource;
 import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
@@ -33,7 +34,7 @@ public class StealEffectResolver extends GenericEffectResolver<StealEffect> {
     }
 
     @Override
-    public void apply(Game game, CardInstance card) {
+    public void apply(Game game, CardInstance card, EffectTiming timing) {
         int value = effect.getValue();
         Integer min = effect.getMin();
         Integer max = effect.getMax();

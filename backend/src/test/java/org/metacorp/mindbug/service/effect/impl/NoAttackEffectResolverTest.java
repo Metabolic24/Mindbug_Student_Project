@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.NoAttackEffect;
 import org.metacorp.mindbug.service.StartService;
 import org.metacorp.mindbug.model.player.Player;
@@ -19,6 +20,7 @@ public class NoAttackEffectResolverTest {
 
     private NoAttackEffect effect;
     private NoAttackEffectResolver effectResolver;
+    private EffectTiming timing;
 
     @BeforeEach
     public void prepareGame() {
@@ -28,12 +30,13 @@ public class NoAttackEffectResolverTest {
 
         effect = new NoAttackEffect();
         effectResolver = new NoAttackEffectResolver(effect);
+        timing = EffectTiming.PLAY;
     }
 
     @Test
     public void testWithLowestParameter_noEffect() {
         effect.setLowest(true);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
     }
 
     @Test
@@ -42,7 +45,7 @@ public class NoAttackEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         effect.setLowest(true);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertFalse(otherCard.isAbleToAttack());
     }
@@ -61,7 +64,7 @@ public class NoAttackEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard3);
 
         effect.setLowest(true);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertFalse(otherCard.isAbleToAttack());
         assertFalse(otherCard2.isAbleToAttack());
@@ -86,7 +89,7 @@ public class NoAttackEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard4);
 
         effect.setLowest(true);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(otherCard.isAbleToAttack());
         assertTrue(otherCard2.isAbleToAttack());

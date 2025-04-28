@@ -3,6 +3,7 @@ package org.metacorp.mindbug.service.effect.impl;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.TargetChoice;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
@@ -27,7 +28,7 @@ public class DiscardEffectResolver extends GenericEffectResolver<DiscardEffect> 
     }
 
     @Override
-    public void apply(Game game, CardInstance card) {
+    public void apply(Game game, CardInstance card, EffectTiming timing) {
         int value = effect.getValue();
         Player opponent = card.getOwner().getOpponent(game.getPlayers());
 

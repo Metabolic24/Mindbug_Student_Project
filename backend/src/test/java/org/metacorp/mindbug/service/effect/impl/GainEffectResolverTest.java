@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.service.StartService;
 import org.metacorp.mindbug.model.player.Player;
@@ -19,6 +20,7 @@ public class GainEffectResolverTest {
 
     private GainEffect effect;
     private GainEffectResolver effectResolver;
+    private EffectTiming timing;
 
     @BeforeEach
     public void prepareGame() {
@@ -29,12 +31,13 @@ public class GainEffectResolverTest {
 
         effect = new GainEffect();
         effectResolver = new GainEffectResolver(effect);
+        timing = EffectTiming.PLAY;
     }
 
     @Test
     public void testBasic() {
         effect.setValue(2);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(5, currentPlayer.getTeam().getLifePoints());
     }
@@ -42,7 +45,7 @@ public class GainEffectResolverTest {
     @Test
     public void testWithEqualParameter_noEffect() {
         effect.setEqual(true);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(opponentPlayer.getTeam().getLifePoints(), currentPlayer.getTeam().getLifePoints());
     }
@@ -52,7 +55,7 @@ public class GainEffectResolverTest {
         opponentPlayer.getTeam().setLifePoints(5);
 
         effect.setEqual(true);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(opponentPlayer.getTeam().getLifePoints(), currentPlayer.getTeam().getLifePoints());
     }
@@ -62,7 +65,7 @@ public class GainEffectResolverTest {
         opponentPlayer.getTeam().setLifePoints(1);
 
         effect.setEqual(true);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(opponentPlayer.getTeam().getLifePoints(), currentPlayer.getTeam().getLifePoints());
     }

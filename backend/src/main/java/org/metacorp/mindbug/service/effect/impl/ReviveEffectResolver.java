@@ -26,7 +26,7 @@ public class ReviveEffectResolver extends GenericEffectResolver<ReviveEffect> im
     }
 
     @Override
-    public void apply(Game game, CardInstance card) {
+    public void apply(Game game, CardInstance card, EffectTiming timing) {
         this.card = card;
         game.setChoice(new BooleanChoice(card.getOwner(), card, this));
     }

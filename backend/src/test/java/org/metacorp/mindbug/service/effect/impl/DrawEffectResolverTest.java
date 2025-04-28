@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DrawEffect;
 import org.metacorp.mindbug.service.StartService;
 import org.metacorp.mindbug.model.player.Player;
@@ -19,6 +20,7 @@ public class DrawEffectResolverTest {
 
     private DrawEffect effect;
     private DrawEffectResolver effectResolver;
+    private EffectTiming timing;
 
     @BeforeEach
     public void prepareGame() {
@@ -28,12 +30,13 @@ public class DrawEffectResolverTest {
 
         effect = new DrawEffect();
         effectResolver = new DrawEffectResolver(effect);
+        timing = EffectTiming.PLAY;
     }
 
     @Test
     public void testBasic_draw2Over5() {
         effect.setValue(2);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(7, currentPlayer.getHand().size());
         assertEquals(3, currentPlayer.getDrawPile().size());
@@ -46,7 +49,7 @@ public class DrawEffectResolverTest {
         assertEquals(3, currentPlayer.getDrawPile().size());
 
         effect.setValue(4);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(10, currentPlayer.getHand().size());
         assertEquals(0, currentPlayer.getDrawPile().size());
@@ -59,7 +62,7 @@ public class DrawEffectResolverTest {
         assertEquals(0, currentPlayer.getDrawPile().size());
 
         effect.setValue(2);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(10, currentPlayer.getHand().size());
         assertEquals(0, currentPlayer.getDrawPile().size());

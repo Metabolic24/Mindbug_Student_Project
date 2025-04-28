@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.model.effect.impl.*;
 import org.metacorp.mindbug.service.effect.impl.*;
@@ -28,7 +29,7 @@ public abstract class GenericEffectResolver<T extends GenericEffect> {
      * @param game         the current game state
      * @param effectSource the card that triggered the effect
      */
-    public abstract void apply(Game game, CardInstance effectSource);
+    public abstract void apply(Game game, CardInstance effectSource, EffectTiming timing);
 
     public static <T extends GenericEffect> GenericEffectResolver<?> getResolver(T effect) {
         return switch (effect.getType()) {

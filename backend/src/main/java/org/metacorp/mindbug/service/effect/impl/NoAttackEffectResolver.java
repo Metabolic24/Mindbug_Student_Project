@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.effect.impl;
 
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.NoAttackEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
@@ -21,7 +22,7 @@ public class NoAttackEffectResolver extends GenericEffectResolver<NoAttackEffect
     }
 
     @Override
-    public void apply(Game game, CardInstance card) {
+    public void apply(Game game, CardInstance card, EffectTiming timing) {
         if (effect.isLowest()) {
             Player opponent = card.getOwner().getOpponent(game.getPlayers());
             for (CardInstance lowestCard : opponent.getLowestCards()) {

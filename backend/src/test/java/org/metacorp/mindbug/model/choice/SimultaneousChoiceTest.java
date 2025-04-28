@@ -21,12 +21,14 @@ public class SimultaneousChoiceTest {
     private Game game;
     private Player currentPlayer;
     private Player opponent;
+    private EffectTiming timing;
 
     @BeforeEach
     public void initGame() {
         game = StartService.newGame(new Player("Player1"), new Player("Player2"));
         currentPlayer = game.getCurrentPlayer();
         opponent = currentPlayer.getOpponent(game.getPlayers());
+        timing = EffectTiming.PLAY;
     }
 
     @Test
@@ -42,8 +44,8 @@ public class SimultaneousChoiceTest {
         opponent.getDiscardPile().add(defendingCard);
 
         SimultaneousEffectsChoice choice = new SimultaneousEffectsChoice(new HashSet<>(Arrays.asList(
-                new EffectsToApply(Collections.singletonList(attackEffect), attackCard),
-                new EffectsToApply(Collections.singletonList(defendEffect), defendingCard)
+                new EffectsToApply(Collections.singletonList(attackEffect), attackCard, timing),
+                new EffectsToApply(Collections.singletonList(defendEffect), defendingCard, timing)
         )));
         game.setChoice(choice);
 

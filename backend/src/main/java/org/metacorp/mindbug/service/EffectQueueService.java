@@ -56,7 +56,7 @@ public class EffectQueueService {
                 .filter(genericEffect -> genericEffect.getLocation() == location).collect(Collectors.toList());
         if (!effects.isEmpty()) {
             if (card.getOwner().canTrigger(timing)) {
-                effectQueue.add(new EffectsToApply(effects, card));
+                effectQueue.add(new EffectsToApply(effects, card, timing));
             } else {
                 System.out.printf("Effets %s annulés\n", timing);
             }
@@ -99,7 +99,7 @@ public class EffectQueueService {
             while (iterator.hasNext()) {
                 // Get the next effect, apply it, then remove it from the list
                 GenericEffect effect = iterator.next();
-                GenericEffectResolver.getResolver(effect).apply(game, currentEffect.getCard());
+                GenericEffectResolver.getResolver(effect).apply(game, currentEffect.getCard(), currentEffect.getTiming());
                 iterator.remove();
 
                 GameService.refreshGameState(game);

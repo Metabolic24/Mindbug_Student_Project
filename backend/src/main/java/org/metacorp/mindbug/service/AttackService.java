@@ -57,7 +57,7 @@ public class AttackService {
     protected static void processAttackDeclaration(CardInstance attackCard, Game game) {
         game.setAttackingCard(attackCard);
 
-        // Add ATTACK effects if the player is allowed to trigger them
+        // Add ATTACK effects if the player is allowed to trigger it
         EffectQueueService.addBoardEffectsToQueue(attackCard, EffectTiming.ATTACK, game.getEffectQueue());
 
         game.setAfterEffect(() -> {
@@ -117,7 +117,7 @@ public class AttackService {
      * Process the attack resolution
      *
      * @param attackCard the card that attacked
-     * @param defendCard the card chosen to defend the attack (may be null if player chooses to not block)
+     * @param defendCard the card chosen to defend the attack (may be null if the player chooses to not block)
      * @param game       the game state
      */
     protected static void processAttackResolution(CardInstance attackCard, CardInstance defendCard, Game game) {
@@ -148,6 +148,9 @@ public class AttackService {
             if (attackingCard.getOwner().getBoard().contains(attackingCard) && attackingCard.isAbleToAttackTwice() && attackingCard.isAbleToAttack()) {
                 game.setChoice(new FrenzyAttackChoice(attackingCard));
             } else {
+                // Refresh game state so modifiers are correctly cleared (only after the last attack)
+                GameService.refreshGameState(game, true);
+
                 attackingCard.setAbleToAttackTwice(attackingCard.hasKeyword(CardKeyword.FRENZY));
                 game.setCurrentPlayer(game.getOpponent());
             }

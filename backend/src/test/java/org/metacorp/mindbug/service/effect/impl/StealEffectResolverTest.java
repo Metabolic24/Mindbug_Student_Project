@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.StealEffect;
 import org.metacorp.mindbug.model.effect.steal.StealSource;
 import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
@@ -21,6 +22,7 @@ public class StealEffectResolverTest {
 
     private StealEffect effect;
     private StealEffectResolver effectResolver;
+    private EffectTiming timing;
 
     @BeforeEach
     public void prepareGame() {
@@ -35,6 +37,7 @@ public class StealEffectResolverTest {
 
         effect = new StealEffect();
         effectResolver = new StealEffectResolver(effect);
+        timing = EffectTiming.PLAY;
     }
 
     //TODO Test choice resolution
@@ -45,7 +48,7 @@ public class StealEffectResolverTest {
         effect.setValue(1);
         effect.setSource(StealSource.BOARD);
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertEquals(1, currentPlayer.getBoard().size());
@@ -68,7 +71,7 @@ public class StealEffectResolverTest {
         otherCard2.setPower(5);
         opponentPlayer.addCardToBoard(otherCard2);
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertEquals(1, currentPlayer.getBoard().size());
@@ -91,7 +94,7 @@ public class StealEffectResolverTest {
         otherCard2.setPower(6);
         opponentPlayer.addCardToBoard(otherCard2);
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertEquals(1, currentPlayer.getBoard().size());
@@ -116,7 +119,7 @@ public class StealEffectResolverTest {
         otherCard2.setPower(6);
         opponentPlayer.addCardToBoard(otherCard2);
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertEquals(1, currentPlayer.getBoard().size());
@@ -131,7 +134,7 @@ public class StealEffectResolverTest {
         effect.setValue(1);
         effect.setSource(StealSource.BOARD);
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertEquals(1, currentPlayer.getBoard().size());
@@ -154,7 +157,7 @@ public class StealEffectResolverTest {
         otherCard2.setPower(5);
         opponentPlayer.addCardToBoard(otherCard2);
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertEquals(1, currentPlayer.getBoard().size());
@@ -177,7 +180,7 @@ public class StealEffectResolverTest {
         otherCard2.setPower(1);
         opponentPlayer.addCardToBoard(otherCard2);
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertEquals(1, currentPlayer.getBoard().size());
@@ -202,7 +205,7 @@ public class StealEffectResolverTest {
         otherCard2.setPower(1);
         opponentPlayer.addCardToBoard(otherCard2);
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertEquals(1, currentPlayer.getBoard().size());
@@ -225,7 +228,7 @@ public class StealEffectResolverTest {
         otherCard2.setPower(1);
         opponentPlayer.addCardToBoard(otherCard2);
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertEquals(1, currentPlayer.getBoard().size());
@@ -250,7 +253,7 @@ public class StealEffectResolverTest {
         otherCard2.setPower(1);
         opponentPlayer.addCardToBoard(otherCard2);
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertEquals(1, currentPlayer.getBoard().size());
@@ -275,7 +278,7 @@ public class StealEffectResolverTest {
         otherCard2.setPower(4);
         opponentPlayer.addCardToBoard(otherCard2);
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertEquals(2, currentPlayer.getBoard().size());
@@ -301,7 +304,7 @@ public class StealEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard2);
         opponentPlayer.addCardToDiscardPile(otherCard2);
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertEquals(2, currentPlayer.getBoard().size());

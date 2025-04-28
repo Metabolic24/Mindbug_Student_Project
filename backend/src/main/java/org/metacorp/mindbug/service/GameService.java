@@ -93,10 +93,14 @@ public class GameService {
     }
 
     public static void refreshGameState(Game game) {
+        refreshGameState(game, false);
+    }
+
+    public static void refreshGameState(Game game, boolean afterAttack) {
         List<EffectsToApply> passiveEffects = new ArrayList<>();
 
         for (Player player : game.getPlayers()) {
-            player.refresh();
+            player.refresh(afterAttack);
 
             passiveEffects.addAll(getPassiveEffects(player.getBoard(), false));
             passiveEffects.addAll(getPassiveEffects(player.getDiscardPile(), true));
@@ -108,7 +112,7 @@ public class GameService {
         // Apply effects
         for (EffectsToApply effect : passiveEffects) {
             GenericEffectResolver<?> effectResolver = GenericEffectResolver.getResolver(effect.getEffects().getFirst());
-            effectResolver.apply(game, effect.getCard());
+            effectResolver.apply(game, effect.getCard(), effect.getTiming());
         }
     }
 
@@ -118,7 +122,7 @@ public class GameService {
         List<EffectsToApply> passiveEffects = new ArrayList<>();
         cards.forEach(card -> passiveEffects.addAll(
                 card.getEffects(timing).stream()
-                .map(cardEffect -> new EffectsToApply(Collections.singletonList(cardEffect), card))
+                .map(cardEffect -> new EffectsToApply(Collections.singletonList(cardEffect), card, timing))
                 .toList())
         );
 

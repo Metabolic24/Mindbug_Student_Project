@@ -2,7 +2,9 @@ package org.metacorp.mindbug.service.effect.impl;
 
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.PowerUpEffect;
+import org.metacorp.mindbug.model.modifier.PowerModifier;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
@@ -21,7 +23,7 @@ public class PowerUpEffectResolver extends GenericEffectResolver<PowerUpEffect> 
     }
 
     @Override
-    public void apply(Game game, CardInstance card) {
+    public void apply(Game game, CardInstance card, EffectTiming timing) {
         int value = effect.getValue();
         boolean alone = effect.isAlone();
         boolean self = effect.isSelf();
@@ -45,15 +47,22 @@ public class PowerUpEffectResolver extends GenericEffectResolver<PowerUpEffect> 
         }
 
         if (self) {
-            card.changePower(powerToAdd);
+            changePower(card, powerToAdd, timing);
         }
 
         if (allies) {
             for (CardInstance currentCard : currentPlayer.getBoard()) {
                 if (!(currentCard.equals(card))) {
-                    currentCard.changePower(powerToAdd);
+                    changePower(currentCard, powerToAdd, timing);
                 }
             }
+        }
+    }
+
+    private void changePower(CardInstance card, int power, EffectTiming timing) {
+        card.changePower(power);
+        if (timing == EffectTiming.ATTACK) {
+            card.getModifiers().add(new PowerModifier(power));
         }
     }
 }

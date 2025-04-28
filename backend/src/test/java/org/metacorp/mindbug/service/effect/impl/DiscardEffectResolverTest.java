@@ -6,6 +6,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.TargetChoice;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.StartService;
@@ -20,6 +21,7 @@ public class DiscardEffectResolverTest {
 
     private DiscardEffect effect;
     private DiscardEffectResolver effectResolver;
+    private EffectTiming timing;
 
     @BeforeEach
     public void prepareGame() {
@@ -30,6 +32,7 @@ public class DiscardEffectResolverTest {
         effect = new DiscardEffect();
         effect.setValue(3);
         effectResolver = new DiscardEffectResolver(effect);
+        timing = EffectTiming.PLAY;
     }
 
     //TODO Test choice resolution
@@ -40,7 +43,7 @@ public class DiscardEffectResolverTest {
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
         assertTrue(opponentPlayer.getHand().isEmpty());
         assertEquals(2, opponentPlayer.getDiscardPile().size());
     }
@@ -50,14 +53,14 @@ public class DiscardEffectResolverTest {
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
 
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
         assertTrue(opponentPlayer.getHand().isEmpty());
         assertEquals(3, opponentPlayer.getDiscardPile().size());
     }
 
     @Test
     public void testBasic_opponentHandIs5() {
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(5, opponentPlayer.getHand().size());
         assertTrue(opponentPlayer.getDiscardPile().isEmpty());

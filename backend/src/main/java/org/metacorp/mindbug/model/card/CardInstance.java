@@ -5,6 +5,9 @@ import lombok.Setter;
 import lombok.ToString;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.GenericEffect;
+import org.metacorp.mindbug.model.modifier.AbstractModifier;
+import org.metacorp.mindbug.model.modifier.KeywordModifier;
+import org.metacorp.mindbug.model.modifier.PowerModifier;
 import org.metacorp.mindbug.model.player.Player;
 
 import java.util.*;
@@ -32,6 +35,8 @@ public class CardInstance {
     private boolean ableToAttack;
     private boolean ableToBlock;
 
+    private Set<AbstractModifier<?>> modifiers;
+
     public CardInstance(Card card) {
         this.uuid = UUID.randomUUID();
         this.card = card;
@@ -42,6 +47,7 @@ public class CardInstance {
         this.ableToAttackTwice = this.keywords.contains(CardKeyword.FRENZY);
         this.ableToAttack = true;
         this.ableToBlock = true;
+        this.modifiers = new HashSet<>();
     }
 
     public List<GenericEffect> getEffects(EffectTiming timing) {
@@ -63,11 +69,26 @@ public class CardInstance {
         power += amount;
     }
 
-    public void reset() {
+    public void reset(boolean afterAttack) {
         power = card.getPower();
         ableToAttack = true;
         ableToBlock = true;
         keywords = new HashSet<>(card.getKeywords());
+
+        if (afterAttack) {
+            modifiers.clear();
+        } else {
+            // Apply attack modifiers if any
+            if (!modifiers.isEmpty()) {
+                for (AbstractModifier<?> modifier : modifiers) {
+                    switch (modifier.getType()) {
+                        case POWER -> power += ((PowerModifier) modifier).getValue();
+                        case BLOCK -> ableToBlock = false;
+                        case KEYWORD -> keywords.add(((KeywordModifier) modifier).getValue());
+                    }
+                }
+            }
+        }
     }
 
     @Override

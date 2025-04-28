@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.service.StartService;
 import org.metacorp.mindbug.model.player.Player;
@@ -19,6 +20,7 @@ public class InflictEffectResolverTest {
 
     private InflictEffect effect;
     private InflictEffectResolver effectResolver;
+    private EffectTiming timing;
 
     @BeforeEach
     public void prepareGame() {
@@ -29,12 +31,13 @@ public class InflictEffectResolverTest {
 
         effect = new InflictEffect();
         effectResolver = new InflictEffectResolver(effect);
+        timing = EffectTiming.PLAY;
     }
 
     @Test
     public void testBasic() {
         effect.setValue(2);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(1, opponentPlayer.getTeam().getLifePoints());
     }
@@ -43,7 +46,7 @@ public class InflictEffectResolverTest {
     public void testWithSelfParameter() {
         effect.setValue(4);
         effect.setSelf(true);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(0, currentPlayer.getTeam().getLifePoints());
         assertEquals(3, opponentPlayer.getTeam().getLifePoints());
@@ -52,7 +55,7 @@ public class InflictEffectResolverTest {
     @Test
     public void testWithAllButOneParameter_nominal() {
         effect.setAllButOne(true);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(1, opponentPlayer.getTeam().getLifePoints());
     }
@@ -62,7 +65,7 @@ public class InflictEffectResolverTest {
         opponentPlayer.getTeam().setLifePoints(1);
 
         effect.setAllButOne(true);
-        effectResolver.apply(game, randomCard);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(1, opponentPlayer.getTeam().getLifePoints());
     }
