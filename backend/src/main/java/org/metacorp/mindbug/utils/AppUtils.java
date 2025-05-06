@@ -30,7 +30,7 @@ public final class AppUtils {
     private static boolean verbose = false;
 
     public static Game startGame() {
-        Game game = StartService.newGame("Player1", "Player2");
+        Game game = StartService.newGame(new Player("Player1"), new Player("Player2"));
 
         System.out.println("\nDEBUT DU JEU !!!\n");
         nextTurn(game);

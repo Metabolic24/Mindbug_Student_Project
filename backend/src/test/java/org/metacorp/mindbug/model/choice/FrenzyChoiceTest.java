@@ -22,7 +22,7 @@ public class FrenzyChoiceTest {
 
     @BeforeEach
     public void initGame() {
-        game = StartService.newGame("Player1", "Player2");
+        game = StartService.newGame(new Player("Player1"), new Player("Player2"));
         currentPlayer = game.getCurrentPlayer();
         currentCard = currentPlayer.getHand().getFirst();
         currentCard.getCard().setKeywords(new HashSet<>(List.of(CardKeyword.FRENZY)));

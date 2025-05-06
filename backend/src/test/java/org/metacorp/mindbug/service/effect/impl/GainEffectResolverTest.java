@@ -22,7 +22,7 @@ public class GainEffectResolverTest {
 
     @BeforeEach
     public void prepareGame() {
-        game = StartService.newGame("Player1", "Player2");
+        game = StartService.newGame(new Player("Player1"), new Player("Player2"));
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());

@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.service;
 
+import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -40,6 +41,9 @@ public class AttackService {
         }
 
         processAttackDeclaration(attackCard, game);
+
+        // Send update through WebSocket
+        WebSocketService.sendGameEvent(WsGameEventType.ATTACK_DECLARED, game);
 
         EffectQueueService.resolveEffectQueue(false, game);
     }
@@ -149,6 +153,9 @@ public class AttackService {
             }
 
             game.setAttackingCard(null);
+
+            // Send update through WebSocket
+            WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
         });
     }
 }

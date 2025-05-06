@@ -14,6 +14,8 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <grizzly.version>4.0.2</grizzly.version>
         <jersey.version>3.1.10</jersey.version>
     </properties>
 
@@ -57,13 +59,59 @@
         <dependency>
             <groupId>org.glassfish.jersey.inject</groupId>
             <artifactId>jersey-hk2</artifactId>
-            <version>3.1.10</version>
+            <version>${jersey.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.glassfish.hk2</groupId>
             <artifactId>hk2-metadata-generator</artifactId>
             <version>3.1.1</version>
+        </dependency>
+
+        <!-- Grizzly Web Socket API -->
+        <dependency>
+            <groupId>org.glassfish.grizzly</groupId>
+            <artifactId>grizzly-framework</artifactId>
+            <version>${grizzly.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.grizzly</groupId>
+            <artifactId>grizzly-websockets</artifactId>
+            <version>${grizzly.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.grizzly</groupId>
+            <artifactId>grizzly-http-servlet</artifactId>
+            <version>${grizzly.version}</version>
+        </dependency>
+
+        <!-- Required dependency for Grizzly WS -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.1.0</version>
+        </dependency>
+
+        <!-- Grizzly Web Socket Client -->
+        <dependency>
+            <groupId>org.glassfish.grizzly</groupId>
+            <artifactId>grizzly-http-client</artifactId>
+            <version>1.16</version>
+        </dependency>
+
+        <!-- Utile pour enlever un warning sur le serveur WS-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.17</version>
         </dependency>
 
         <dependency>

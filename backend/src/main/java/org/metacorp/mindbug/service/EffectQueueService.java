@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.service;
 
+import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -80,10 +81,14 @@ public class EffectQueueService {
         if (!fromSimultaneousChoice && !effectQueue.isResolvingEffect() && effectQueue.size() >= 2) {
             game.setChoice(new SimultaneousEffectsChoice(new HashSet<>(effectQueue)));
             effectQueue.clear();
+
+            // Send update through WebSocket
+            WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+
             return;
         }
 
-        // Reset this value as it is no more needed
+        // Reset this value as it is no more necessary
         effectQueue.setResolvingEffect(false);
 
         // Loop over each effect
@@ -92,19 +97,21 @@ public class EffectQueueService {
 
             Iterator<GenericEffect> iterator = currentEffect.getEffects().iterator();
             while (iterator.hasNext()) {
-                // Get the next effect, apply it then remove it from the list
+                // Get the next effect, apply it, then remove it from the list
                 GenericEffect effect = iterator.next();
                 GenericEffectResolver.getResolver(effect).apply(game, currentEffect.getCard());
                 iterator.remove();
 
                 GameService.refreshGameState(game);
 
-                // Stop the process if game is finished
-                if (game.isFinished()) { //TODO A voir si on gère ça avec une exception
+                // Stop the process if the game is finished
+                if (game.isFinished()) {
                     return;
                 }
 
-                if (game.getChoice() != null) {
+                if (game.getChoice() == null) {
+                    WebSocketService.sendGameEvent(WsGameEventType.EFFECT_RESOLVED, game);
+                } else {
                     if (!iterator.hasNext()) {
                         effectQueue.remove(currentEffect);
 
@@ -112,6 +119,10 @@ public class EffectQueueService {
                         // Update this boolean attribute so next effect resolution won't trigger a simultaneous choice first
                         effectQueue.setResolvingEffect(true);
                     }
+
+                    // Send update through WebSocket
+                    WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+
                     return;
                 }
             }
@@ -123,6 +134,9 @@ public class EffectQueueService {
             if (effectQueue.size() >= 2) {
                 game.setChoice(new SimultaneousEffectsChoice(new HashSet<>(effectQueue)));
                 effectQueue.clear();
+
+                WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+
                 return;
             }
         }

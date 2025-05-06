@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.service;
 
+import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -46,6 +47,9 @@ public class PlayCardService {
         Player opponent = game.getOpponent();
         if (opponent.getMindBugs() == 0) {
             playCard(game);
+        } else {
+            // Send update through WebSocket
+            WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game);
         }
     }
 
@@ -81,8 +85,10 @@ public class PlayCardService {
             }
         }
 
-
         managePlayedCard(mindbugger, game);
+
+        // Send update through WebSocket
+        WebSocketService.sendGameEvent(WsGameEventType.CARD_PLAYED, game);
 
         // Resolve the effect queue so PLAY effects will be resolved then afterEffect executed
         EffectQueueService.resolveEffectQueue(false, game);
@@ -118,6 +124,8 @@ public class PlayCardService {
             if (mindbugger == null) {
                 game.setCurrentPlayer(game.getOpponent());
             }
+
+            WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
         });
     }
 }

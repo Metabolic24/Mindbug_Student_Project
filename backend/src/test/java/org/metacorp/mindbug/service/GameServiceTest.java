@@ -25,7 +25,7 @@ public class GameServiceTest {
 
     @BeforeEach
     public void initGame() {
-        game = StartService.newGame("Player1", "Player2");
+        game = StartService.newGame(new Player("Player1"), new Player("Player2"));
         currentPlayer = game.getCurrentPlayer();
     }
 
@@ -122,9 +122,9 @@ public class GameServiceTest {
     @Test
     public void refreshGameState_multiplePassiveEffects() {
         // Create a new game manually, as we need to get some specific cards
-        game = new Game("player1", "player2");
-        Player currentPlayer = game.getPlayers().get(0);
-        Player opponent =  game.getPlayers().get(1);
+        Player currentPlayer = new Player("player1");
+        Player opponent =  new Player("player2");
+        game = new Game(currentPlayer, opponent);
         game.setCurrentPlayer(currentPlayer);
         game.setCards(CardUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey()));
 

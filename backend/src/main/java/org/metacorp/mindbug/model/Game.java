@@ -35,15 +35,17 @@ public class Game {
     private IChoice<?> choice;
     private Runnable afterEffect;
 
+    private boolean webSocketUp;
+
     /**
      * Empty constructor (WARNING : a game is not meant to be reused)
      */
-    public Game(String player1, String player2) {
+    public Game(Player player1, Player player2) {
         uuid = UUID.randomUUID();
         finished = false;
         bannedCards = new ArrayList<>();
         effectQueue = new EffectQueue();
-        players = Arrays.asList(new Player(player1), new Player(player2));
+        players = Arrays.asList(player1, player2);
     }
 
     public Player getOpponent() {

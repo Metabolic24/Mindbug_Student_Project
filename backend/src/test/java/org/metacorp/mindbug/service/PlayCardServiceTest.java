@@ -19,7 +19,7 @@ public class PlayCardServiceTest {
 
     @BeforeEach
     public void initGame() {
-        game = StartService.newGame("Player1", "Player2");
+        game = StartService.newGame(new Player("Player1"), new Player("Player2"));
         currentPlayer = game.getCurrentPlayer();
         opponent = currentPlayer.getOpponent(game.getPlayers());
     }

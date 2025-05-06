@@ -1,6 +1,7 @@
 package org.metacorp.mindbug.service;
 
 import org.jvnet.hk2.annotations.Service;
+import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -20,7 +21,15 @@ public class GameService {
     private final Map<UUID, Game> games = new HashMap<>();
 
     public Game createGame() {
-        Game game = StartService.newGame("player1", "player2");
+        return createGame(new Player("player1"), new Player("player2"));
+    }
+
+    public Game createGame(UUID player1Id, String player1Name, UUID player2Id, String player2Name) {
+        return createGame(new Player(player1Id, player1Name), new Player(player2Id, player2Name));
+    }
+
+    private Game createGame(Player player1, Player player2) {
+        Game game = StartService.newGame(player1, player2);
         games.put(game.getUuid(), game);
 
         return game;
@@ -53,9 +62,13 @@ public class GameService {
         System.out.printf("%s wins ; %s loses\n", winner.getName(), loser.getName());
 
         game.setFinished(true);
+
+        WebSocketService.sendGameEvent(WsGameEventType.FINISHED, game);
     }
 
     public static void lifePointLost(Player player, Game game) {
+        WebSocketService.sendGameEvent(WsGameEventType.LP_DOWN, game);
+
         if (player.getTeam().getLifePoints() <= 0) {
             endGame(player, game);
             return;

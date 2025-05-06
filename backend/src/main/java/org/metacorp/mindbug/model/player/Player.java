@@ -28,10 +28,14 @@ public class Player {
     private Set<EffectTiming> disabledTiming;
 
     public Player(String name) {
-        this.uuid = UUID.randomUUID();
-        this.name = name;
-        this.team = new Team();
+        this(UUID.randomUUID(), name);
+    }
 
+    public Player(UUID uuid, String name) {
+        this.uuid = uuid;
+        this.name = name;
+
+        this.team = new Team();
         hand = new ArrayList<>();
         board = new ArrayList<>();
         discardPile = new ArrayList<>();

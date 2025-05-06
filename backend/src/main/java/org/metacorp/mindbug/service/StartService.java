@@ -9,7 +9,6 @@ import org.metacorp.mindbug.utils.CardUtils;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Utility service that starts a new game
@@ -24,11 +23,11 @@ public class StartService {
     /**
      * Creates and start a new game for two players (using the default FIRST_CONTACT card set)
      *
-     * @param player1 first player name
-     * @param player2 second player name
+     * @param player1 first player
+     * @param player2 second player
      * @return the created game
      */
-    public static Game newGame(String player1, String player2) {
+    public static Game newGame(Player player1, Player player2) {
         return newGame(player1, player2, CardSetName.FIRST_CONTACT);
     }
 
@@ -40,7 +39,7 @@ public class StartService {
      * @param setName    the card set name as CardSetName
      * @return the created game
      */
-    public static Game newGame(String player1, String player2, CardSetName setName) {
+    public static Game newGame(Player player1, Player player2, CardSetName setName) {
         Game game = new Game(player1, player2);
 
         List<CardInstance> cards = CardUtils.getCardsFromConfig(setName.getKey());
@@ -53,6 +52,9 @@ public class StartService {
         }
 
         game.setCurrentPlayer(getFirstPlayer(game));
+
+        // Join the WebSocket channel of the game
+        WebSocketService.initGameChannel(game);
 
         return game;
     }
