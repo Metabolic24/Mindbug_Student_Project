@@ -63,6 +63,8 @@ interface TargetChoiceInterface extends ChoiceInterface {
     optional: boolean
 }
 
+type Owner = "Player" | "Opponent"
+
 type WsMessageType =
     "CARD_PICKED"
     | "CARD_PLAYED"
