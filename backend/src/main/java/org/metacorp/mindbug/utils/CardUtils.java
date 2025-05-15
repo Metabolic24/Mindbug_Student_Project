@@ -41,10 +41,10 @@ public final class CardUtils {
                 .collect(Collectors.toList());
     }
 
-    public static List<String> getCardSetContent(String setName) {
+    public static List<Integer> getCardSetContent(String setName) {
         List<Card> fileCards = loadCardsFromConfig(setName);
 
-        return fileCards.stream().map(Card::getName).collect(Collectors.toList());
+        return fileCards.stream().map(Card::getId).collect(Collectors.toList());
     }
 
     public static List<CardInstance> getCardsFromConfig(String setName) {
@@ -53,6 +53,7 @@ public final class CardUtils {
         // Transform the List of Card into a List of CardInstance
         List<CardInstance> cards = new ArrayList<>();
         for (Card fileCard : fileCards) {
+            fileCard.setSetName(setName);
             cards.add(new CardInstance(fileCard));
 
             if (!fileCard.isUnique()) {

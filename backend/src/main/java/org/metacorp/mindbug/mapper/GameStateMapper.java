@@ -59,7 +59,10 @@ public class GameStateMapper {
 
     private static CardDTO fromCard(CardInstance card) {
         CardDTO result = new CardDTO();
+        result.setId(card.getCard().getId());
+        result.setSetName(card.getCard().getSetName());
         result.setUuid(card.getUuid());
+        result.setOwnerId(card.getOwner().getUuid());
         result.setName(card.getCard().getName());
         result.setPower(card.getPower());
         result.setKeywords(card.getKeywords());

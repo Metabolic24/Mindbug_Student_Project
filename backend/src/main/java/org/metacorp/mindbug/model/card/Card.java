@@ -11,6 +11,8 @@ import java.util.*;
  */
 @Data
 public class Card {
+    private int id;
+    private String setName;
     private String name;
     private int power;
     private Set<CardKeyword> keywords;

@@ -31,7 +31,7 @@ public class CardSetController {
      */
     @GET
     @Path("/{set}")
-    public List<String> getCardsBySet(@PathParam(value = "set") String set) {
+    public List<Integer> getCardsBySet(@PathParam(value = "set") String set) {
         return CardUtils.getCardSetContent(set);
     }
 }

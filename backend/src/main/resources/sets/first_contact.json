@@ -1,5 +1,6 @@
 [
   {
+    "id": 27,
     "name": "Arachnibou",
     "power": 3,
     "keywords": ["SNEAKY", "POISONOUS"],
@@ -7,6 +8,7 @@
     "unique": false
   },
   {
+    "id": 21,
     "name": "Rhino Tortue",
     "power": 8,
     "keywords": ["FRENZY", "TOUGH"],
@@ -14,6 +16,7 @@
     "unique": false
   },
   {
+    "id": 18,
     "name": "Gladiataure",
     "power": 9,
     "keywords": ["FRENZY"],
@@ -21,6 +24,7 @@
     "unique": false
   },
   {
+    "id": 35,
     "name": "Méduse Squelettique",
     "power": 4,
     "keywords": ["HUNTER", "POISONOUS"],
@@ -28,6 +32,7 @@
     "unique": false
   },
   {
+    "id": 20,
     "name": "Scorpion Venimeux",
     "power": 2,
     "keywords": ["TOUGH", "POISONOUS"],
@@ -35,6 +40,7 @@
     "unique": false
   },
   {
+    "id": 12,
     "name": "Gorillion",
     "power": 10,
     "keywords": [],
@@ -42,6 +48,7 @@
     "unique": true
   },
   {
+    "id": 5,
     "name": "Dracompost",
     "power": 3,
     "keywords": ["HUNTER"],
@@ -56,6 +63,7 @@
     "unique": false
   },
   {
+    "id": 37,
     "name": "Instigateur Gobelouille",
     "power": 1,
     "keywords": ["HUNTER"],
@@ -69,6 +77,7 @@
     "unique": false
   },
   {
+    "id": 15,
     "name": "Kangousaurus Rex",
     "power": 7,
     "keywords": [],
@@ -82,6 +91,7 @@
     "unique": false
   },
   {
+    "id": 29,
     "name": "Tigrécureuil",
     "power": 3,
     "keywords": ["SNEAKY"],
@@ -95,6 +105,7 @@
     "unique": false
   },
   {
+    "id": 32,
     "name": "Oursins Hurleurs",
     "power": 5,
     "keywords": ["HUNTER"],
@@ -110,6 +121,7 @@
     "unique": true
   },
   {
+    "id": 6,
     "name": "Veuve Noire",
     "power": 2,
     "keywords": ["POISONOUS"],
@@ -122,6 +134,7 @@
     "unique": true
   },
   {
+    "id": 31,
     "name": "Huissiéléphant",
     "power": 8,
     "keywords": [],
@@ -134,6 +147,7 @@
     "unique": false
   },
   {
+    "id": 33,
     "name": "Cafabarbare",
     "power": 3,
     "keywords": ["TOUGH"],
@@ -147,6 +161,7 @@
     "unique": false
   },
   {
+    "id": 44,
     "name": "Aqua Vachette",
     "power": 8,
     "keywords": [],
@@ -159,6 +174,7 @@
     "unique": false
   },
   {
+    "id": 9,
     "name": "Furet Saboteur",
     "power": 2,
     "keywords": ["SNEAKY"],
@@ -171,6 +187,7 @@
     "unique": false
   },
   {
+    "id": 26,
     "name": "Lanceur d'escargots",
     "power": 1,
     "keywords": ["POISONOUS"],
@@ -188,6 +205,7 @@
     "unique": true
   },
   {
+    "id": 13,
     "name": "Pilleur de Tombes",
     "power": 7,
     "keywords": ["TOUGH"],
@@ -202,6 +220,7 @@
     "unique": false
   },
   {
+    "id": 34,
     "name": "Comte Sangsula",
     "power": 7,
     "keywords": [],
@@ -219,6 +238,7 @@
     "unique": false
   },
   {
+    "id": 22,
     "name": "Requin Toutou",
     "power": 4,
     "keywords": ["HUNTER"],
@@ -234,6 +254,7 @@
     "unique": true
   },
   {
+    "id": 3,
     "name": "Neuromouche",
     "power": 4,
     "keywords": [],
@@ -251,6 +272,7 @@
     "unique": true
   },
   {
+    "id": 16,
     "name": "Abeille Tueuse",
     "power": 5,
     "keywords": ["HUNTER"],
@@ -263,6 +285,7 @@
     "unique": false
   },
   {
+    "id": 10,
     "name": "Giraffodile",
     "power": 7,
     "keywords": [],
@@ -276,6 +299,7 @@
     "unique": true
   },
   {
+    "id": 17,
     "name": "Yéti Solitaire",
     "power": 5,
     "keywords": ["TOUGH"],
@@ -293,6 +317,7 @@
     "unique": true
   },
   {
+    "id": 40,
     "name": "Hamster Glouton",
     "power": 2,
     "keywords": ["SNEAKY"],
@@ -308,6 +333,7 @@
     "unique": false
   },
   {
+    "id": 39,
     "name": "Hamsterlion",
     "power": 8,
     "keywords": ["FRENZY"],
@@ -320,6 +346,7 @@
     "unique": false
   },
   {
+    "id": 36,
     "name": "Furet Pacifique",
     "power": 4,
     "keywords": [],
@@ -332,6 +359,7 @@
     "unique": false
   },
   {
+    "id": 30,
     "name": "Turboustique",
     "power": 4,
     "keywords": [],
@@ -344,6 +372,7 @@
     "unique": true
   },
   {
+    "id": 7,
     "name": "Pachypoulpe",
     "power": 7,
     "keywords": ["TOUGH"],
@@ -356,6 +385,7 @@
     "unique": true
   },
   {
+    "id": 28,
     "name": "Baril étrange",
     "power": 6,
     "keywords": [],
@@ -370,6 +400,7 @@
     "unique": true
   },
   {
+    "id": 14,
     "name": "Mamie Harpie",
     "power": 5,
     "keywords": [],
@@ -385,6 +416,7 @@
     "unique": true
   },
   {
+    "id": 43,
     "name": "Le Rôdeur",
     "power": 4,
     "keywords": ["TOUGH"],
@@ -398,6 +430,7 @@
     "unique": false
   },
   {
+    "id": 25,
     "name": "Hydrescargot",
     "power": 9,
     "keywords": [],
@@ -411,6 +444,7 @@
     "unique": false
   },
   {
+    "id": 42,
     "name": "Majesté Manticore",
     "power": 6,
     "keywords": ["POISONOUS"],
@@ -425,6 +459,7 @@
     "unique": false
   },
   {
+    "id": 8,
     "name": "Crapaud Bombe",
     "power": 5,
     "keywords": ["FRENZY"],
@@ -438,6 +473,7 @@
     "unique": false
   },
   {
+    "id": 41,
     "name": "Hyénix",
     "power": 7,
     "keywords": ["FRENZY"],
@@ -450,6 +486,7 @@
     "unique": false
   },
   {
+    "id": 11,
     "name": "Goblin-Garou",
     "power": 2,
     "keywords": ["HUNTER"],
@@ -463,6 +500,7 @@
     "unique": false
   },
   {
+    "id": 19,
     "name": "Sirène Mystérieuse",
     "power": 7,
     "keywords": [],
@@ -475,6 +513,7 @@
     "unique": true
   },
   {
+    "id": 23,
     "name": "Requin Crabe Chien Momie Pieuvre",
     "power": 5,
     "keywords": [],
@@ -500,6 +539,7 @@
     "unique": true
   },
   {
+    "id": 2,
     "name": "Oursabeille",
     "power": 8,
     "keywords": [],
@@ -512,6 +552,7 @@
     "unique": true
   },
   {
+    "id": 4,
     "name": "Reptireur d'élite",
     "power": 1,
     "keywords": ["SNEAKY"],
@@ -524,6 +565,7 @@
     "unique": true
   },
   {
+    "id": 24,
     "name": "Scarabouclier",
     "power": 4,
     "keywords": ["TOUGH"],
@@ -538,6 +580,7 @@
     "unique": false
   },
   {
+    "id": 38,
     "name": "Gorillaigle Alpha",
     "power": 6,
     "keywords": ["FRENZY", "HUNTER", "TOUGH"],
@@ -551,6 +594,7 @@
     "unique": false
   },
   {
+    "id": 1,
     "name": "Dr Axolotl",
     "power": 4,
     "keywords": ["POISONOUS"],
