@@ -6,7 +6,8 @@
     <div class="row" style="background-color: red;width: 100%;height:10%">
       <div class="col-2" style="background-color: orange">
         <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
-                        :draw-pile-count="gameState?.opponent?.drawPileCount" :mindbug-count="gameState?.opponent?.mindbugCount">
+                        :draw-pile-count="gameState?.opponent?.drawPileCount"
+                        :mindbug-count="gameState?.opponent?.mindbugCount">
         </player-details>
       </div>
       <div class="col-8" style="background-color: yellow">
@@ -16,11 +17,9 @@
       <div class="col-2" style="background-color: black"></div>
     </div>
 
-    <board :player-board="gameState?.player?.board" :player-discard="gameState?.player?.discard"
-           :opponent-board="gameState?.opponent?.board" :opponent-discard="gameState?.opponent?.discard"
-           :selected-card="selectedCard" :picked-card="pickedCard" :attacking-card="attackingCard"
-           :player-turn="gameState?.playerTurn"
-           @button-clicked="onActionButtonClick($event)" @card-selected="onCardSelected($event, 'Board')">
+    <board :game-state="gameState" :selected-card="selectedCard" :picked-card="pickedCard"
+           :attacking-card="attackingCard" @button-clicked="onActionButtonClick($event)"
+           @card-selected="onCardSelected($event, 'Board')">
     </board>
 
     <div class="row" style="background-color: red;width: 100%;height:10%">
@@ -46,7 +45,15 @@ import Board from "@/components/game/Board.vue";
 import Hand from "@/components/game/Hand.vue";
 import PlayerDetails from "@/components/game/PlayerDetails.vue";
 import {onMounted, Ref, ref} from "vue";
-import {declareAttack, pickCard, playCard, resolveAttack, startGame} from "@/shared/RestService";
+import {
+  declareAttack,
+  pickCard,
+  playCard,
+  resolveAttack,
+  resolveBoolean,
+  resolveSingleTargetChoice,
+  startGame
+} from "@/shared/RestService";
 
 let gameState: Ref<GameStateInterface> = ref({
   uuid: undefined,
@@ -104,6 +111,12 @@ onMounted(async () => {
       case "CARD_PLAYED":
         pickedCard.value = undefined;
         break;
+      case "CHOICE":
+        if (message.state.choice?.type === "FRENZY") {
+          attackingCard.value = undefined;
+        } else if (message.state.choice?.type === "TARGET" || message.state.choice?.type === "SIMULTANEOUS") {
+        }
+        break;
       case "NEW_TURN":
         selectedCard.value = undefined;
         pickedCard.value = undefined;
@@ -114,14 +127,11 @@ onMounted(async () => {
         break;
         //TODO Implement remaining cases
       case "LP_DOWN":
-        break;
       case "CARD_DESTROYED":
-        break;
       case "EFFECT_RESOLVED":
+      case "WAITING_ATTACK_RESOLUTION":
         break;
-      case "CHOICE":
-        //TODO Trouver un moyen d'afficher le choix (éventuellement directement dans l'interface, sinon dans une popup)
-        break;
+
     }
 
     gameState.value = message.state;
@@ -140,7 +150,8 @@ onMounted(async () => {
 function onCardSelected(card: CardInterface, location: CardLocation): void {
   const game: GameStateInterface = gameState.value;
 
-  if (location === "Board" || (location === "Hand" && game?.playerTurn && attackingCard.value === undefined)) {
+  if (location === "Board" || // No check required as board is able to manage it by itself
+      (location === "Hand" && game?.playerTurn && !attackingCard.value && !game.choice)) { // Check that we are at the start of a turn
     if (selectedCard.value?.uuid === card.uuid) {
       selectedCard.value = undefined;
     } else {
@@ -150,6 +161,7 @@ function onCardSelected(card: CardInterface, location: CardLocation): void {
   }
 }
 
+// TODO Gérer différemment les différentes actions (c'est nul de se baser sur le label du bouton)
 function onActionButtonClick(actionLabel: string) {
   const game: GameStateInterface = gameState.value;
 
@@ -165,6 +177,16 @@ function onActionButtonClick(actionLabel: string) {
       return declareAttack(game.uuid, selectedCard.value.uuid);
     case "Block":
       return resolveAttack(game.uuid, game.player.uuid, selectedCard.value.uuid);
+    case "Lose LP":
+      return resolveAttack(game.uuid, undefined, undefined);
+    case "Hunt target":
+      return resolveSingleTargetChoice(game.uuid, selectedCard.value.uuid)
+    case "Continue":
+      return resolveSingleTargetChoice(game.uuid, "")
+    case "Yes":
+      return resolveBoolean(game.uuid, true)
+    case "No":
+      return resolveBoolean(game.uuid, false)
     default:
       // Unexpected value
   }
