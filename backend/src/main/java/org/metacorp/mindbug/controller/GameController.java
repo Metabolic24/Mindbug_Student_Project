@@ -9,8 +9,8 @@ import org.metacorp.mindbug.dto.rest.PickDTO;
 import org.metacorp.mindbug.dto.rest.PlayDTO;
 import org.metacorp.mindbug.dto.rest.ResolveAttackDTO;
 import org.metacorp.mindbug.dto.rest.choice.BooleanAnswerDTO;
-import org.metacorp.mindbug.dto.rest.choice.SimultaneousAnswerDTO;
-import org.metacorp.mindbug.dto.rest.choice.TargetAnswerDTO;
+import org.metacorp.mindbug.dto.rest.choice.SingleTargetAnswerDTO;
+import org.metacorp.mindbug.dto.rest.choice.MultipleTargetAnswerDTO;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.mapper.GameStateMapper;
 import org.metacorp.mindbug.model.Game;
@@ -216,27 +216,29 @@ public class GameController {
     }
 
     /**
-     * Endpoint triggered when a simultaneous choice is resolved
+     * Endpoint triggered when a single target choice is resolved (SIMULTANEOUS or HUNTER)
      *
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
      */
     @POST
-    @Path("/choice/simultaneous")
-    public Response resolveSimultaneousChoice(SimultaneousAnswerDTO body) throws GameStateException {
-        if (body == null || body.getGameId() == null || body.getFirstCardId() == null) {
+    @Path("/choice/single")
+    public Response resolveSingleTargetChoice(SingleTargetAnswerDTO body) throws GameStateException {
+        if (body == null || body.getGameId() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
 
         Game game = gameService.findById(body.getGameId());
         if (game == null) {
             return Response.status(404).entity("Requested game not found").build();
-        } else if (game.getChoice() == null || (game.getChoice().getType() != ChoiceType.SIMULTANEOUS)) {
-            return Response.status(404).entity("No simultaneous choice to resolve").build();
+        } else if (game.getChoice() == null || (game.getChoice().getType() != ChoiceType.SIMULTANEOUS && game.getChoice().getType() != ChoiceType.HUNTER)) {
+            return Response.status(404).entity("No single target choice (SIMULTANEOUS or HUNTER) to resolve").build();
+        } else if (game.getChoice().getType() == ChoiceType.SIMULTANEOUS && body.getCardId() == null) {
+            return Response.status(400).entity("Invalid request body : missing cardId").build();
         }
 
-        GameService.resolveChoice(body.getFirstCardId(), game);
+        GameService.resolveChoice(body.getCardId(), game);
 
         return Response.ok().build();
     }
@@ -250,7 +252,7 @@ public class GameController {
      */
     @POST
     @Path("/choice/target")
-    public Response resolveTargetChoice(TargetAnswerDTO body) throws GameStateException {
+    public Response resolveTargetChoice(MultipleTargetAnswerDTO body) throws GameStateException {
         if (body == null || body.getGameId() == null || body.getTargets() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -258,11 +260,11 @@ public class GameController {
         Game game = gameService.findById(body.getGameId());
         if (game == null) {
             return Response.status(404).entity("Requested game not found").build();
-        } else if (game.getChoice() == null || (game.getChoice().getType() != ChoiceType.TARGET)) {
-            return Response.status(404).entity("No simultaneous choice to resolve").build();
+        } else if (game.getChoice() == null || game.getChoice().getType() != ChoiceType.TARGET) {
+            return Response.status(404).entity("No target choice to resolve").build();
+        } else {
+            GameService.resolveChoice(body.getTargets(), game);
         }
-
-        GameService.resolveChoice(body.getTargets(), game);
 
         return Response.ok().build();
     }

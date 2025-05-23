@@ -6,6 +6,7 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
+import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.choice.IChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
@@ -85,7 +86,10 @@ public final class AppUtils {
             return;
         }
 
-        resolveAttack(game);
+        // Only resolve attack if there is still an attacking card
+        if (game.getAttackingCard() != null) {
+            resolveAttack(game);
+        }
     }
 
     public static void frenzyAttack(Game game) throws GameStateException {
@@ -151,6 +155,17 @@ public final class AppUtils {
 
                     GameService.resolveChoice(shuffledCards.stream().map(CardInstance::getUuid).toList(), game);
                 }
+                case HUNTER -> {
+                    System.out.println("Résolution d'un choix de cible d'attaque");
+                    HunterChoice hunterChoice = (HunterChoice) choice;
+
+                    List<CardInstance> shuffledCards = new ArrayList<>(hunterChoice.getAvailableTargets());
+                    Collections.shuffle(shuffledCards);
+
+                    System.out.printf("Cible choisie : %s\n", shuffledCards.getFirst().getCard().getName());
+
+                    GameService.resolveChoice(shuffledCards.getFirst().getUuid(), game);
+                }
                 case FRENZY, BOOLEAN -> {
                     System.out.printf("Résolution d'un choix booléen de type %s\n", choice.getType());
 
@@ -200,8 +215,10 @@ public final class AppUtils {
             engine.run();
         } catch (GameStateException gst) {
             System.err.println(gst.getMessage());
+            throw new RuntimeException(gst);
         } catch (Throwable t) {
-            t.printStackTrace();
+            System.out.println("=================================");
+            System.out.println("Une erreur s'est produite (cf contexte ci-dessous)");
 
             for (Player player : game.getPlayers()) {
                 AppUtils.detailedSumUpPlayer(player);
@@ -209,6 +226,8 @@ public final class AppUtils {
             }
 
             System.out.println(game);
+
+            throw t;
         }
     }
 }

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.metacorp.mindbug.dto.CardDTO;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 
 import java.util.UUID;
@@ -18,8 +19,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @JsonPropertyOrder({"type", "playerToChoose", "sourceCard"})
 public class ChoiceDTO extends AbstractChoiceDTO {
-    private UUID playerToChoose;
-    private UUID sourceCard;
+    private CardDTO sourceCard;
 
     /**
      * Constructor
@@ -28,9 +28,8 @@ public class ChoiceDTO extends AbstractChoiceDTO {
      * @param playerToChoose the player to choose
      * @param sourceCard     the card that caused this choice
      */
-    public ChoiceDTO(ChoiceType type, UUID playerToChoose, UUID sourceCard) {
-        super(type);
-        this.playerToChoose = playerToChoose;
+    public ChoiceDTO(ChoiceType type, UUID playerToChoose, CardDTO sourceCard) {
+        super(type, playerToChoose);
         this.sourceCard = sourceCard;
     }
 }

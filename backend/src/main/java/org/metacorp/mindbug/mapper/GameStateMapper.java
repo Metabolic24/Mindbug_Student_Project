@@ -3,10 +3,7 @@ package org.metacorp.mindbug.mapper;
 import org.metacorp.mindbug.dto.CardDTO;
 import org.metacorp.mindbug.dto.GameStateDTO;
 import org.metacorp.mindbug.dto.PlayerDTO;
-import org.metacorp.mindbug.dto.choice.AbstractChoiceDTO;
-import org.metacorp.mindbug.dto.choice.ChoiceDTO;
-import org.metacorp.mindbug.dto.choice.SimultaneousChoiceDTO;
-import org.metacorp.mindbug.dto.choice.TargetChoiceDTO;
+import org.metacorp.mindbug.dto.choice.*;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.*;
@@ -36,7 +33,7 @@ public class GameStateMapper {
 
         // Update the choice field if needed
         if (game.getChoice() != null) {
-            gameStateDTO.setChoice(fromChoice(game.getChoice()));
+            gameStateDTO.setChoice(fromChoice(game.getChoice(), game.getCurrentPlayer()));
         }
 
         return gameStateDTO;
@@ -73,24 +70,29 @@ public class GameStateMapper {
         return result;
     }
 
-    private static AbstractChoiceDTO fromChoice(IChoice<?> choice) {
+    private static AbstractChoiceDTO fromChoice(IChoice<?> choice, Player currentPlayer) {
         switch (choice.getType()) {
             case SIMULTANEOUS -> {
                 SimultaneousEffectsChoice simultaneousChoice = (SimultaneousEffectsChoice) choice;
-                return new SimultaneousChoiceDTO(simultaneousChoice.getEffectsToSort().stream().map(GameStateMapper::fromEffects).collect(Collectors.toSet()));
+                return new SimultaneousChoiceDTO(currentPlayer.getUuid(), simultaneousChoice.getEffectsToSort().stream().map(GameStateMapper::fromEffects).collect(Collectors.toSet()));
             }
             case FRENZY -> {
                 FrenzyAttackChoice frenzyChoice = (FrenzyAttackChoice) choice;
-                return new ChoiceDTO(choice.getType(), frenzyChoice.getAttackingCard().getOwner().getUuid(), frenzyChoice.getAttackingCard().getUuid());
+                return new ChoiceDTO(choice.getType(), frenzyChoice.getAttackingCard().getOwner().getUuid(), fromCard(frenzyChoice.getAttackingCard()));
             }
             case TARGET -> {
                 TargetChoice targetChoice = (TargetChoice) choice;
-                return new TargetChoiceDTO(targetChoice.getPlayerToChoose().getUuid(), targetChoice.getEffectSource().getUuid(),
+                return new TargetChoiceDTO(targetChoice.getPlayerToChoose().getUuid(), fromCard(targetChoice.getEffectSource()),
                         targetChoice.getAvailableTargets().stream().map(GameStateMapper::fromCard).collect(Collectors.toSet()), targetChoice.getTargetsCount());
             }
             case BOOLEAN -> {
                 BooleanChoice booleanChoice = (BooleanChoice) choice;
-                return new ChoiceDTO(booleanChoice.getType(), booleanChoice.getPlayerToChoose().getUuid(), booleanChoice.getCard().getUuid());
+                return new ChoiceDTO(booleanChoice.getType(), booleanChoice.getPlayerToChoose().getUuid(), fromCard(booleanChoice.getCard()));
+            }
+            case HUNTER -> {
+                HunterChoice hunterChoice = (HunterChoice) choice;
+                return new HunterChoiceDTO(hunterChoice.getPlayerToChoose().getUuid(), fromCard(hunterChoice.getAttackingCard()),
+                        hunterChoice.getAvailableTargets().stream().map(GameStateMapper::fromCard).collect(Collectors.toSet()));
             }
         }
 

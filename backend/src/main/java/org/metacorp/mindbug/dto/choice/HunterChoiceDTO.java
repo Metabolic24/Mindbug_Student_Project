@@ -12,16 +12,15 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
- * DTO for target choice data
+ * DTO for hunter choice data
  */
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 @Data
 @NoArgsConstructor
-@JsonPropertyOrder({"type", "playerToChoose", "sourceCard", "availableTargets", "targetsCount", "optional"})
-public class TargetChoiceDTO extends ChoiceDTO {
+@JsonPropertyOrder({"type", "playerToChoose", "sourceCard", "availableTargets"})
+public class HunterChoiceDTO extends ChoiceDTO {
     private Set<CardDTO> availableTargets;
-    private Integer targetsCount;
 
     /**
      * Constructor
@@ -29,11 +28,9 @@ public class TargetChoiceDTO extends ChoiceDTO {
      * @param playerToChoose   the player to choose
      * @param sourceCard       the card that caused this choice
      * @param availableTargets the set of available targets
-     * @param targetsCount     the number of targets to be chosen
      */
-    public TargetChoiceDTO(UUID playerToChoose, CardDTO sourceCard, Set<CardDTO> availableTargets, Integer targetsCount) {
-        super(ChoiceType.TARGET, playerToChoose, sourceCard);
+    public HunterChoiceDTO(UUID playerToChoose, CardDTO sourceCard, Set<CardDTO> availableTargets) {
+        super(ChoiceType.HUNTER, playerToChoose, sourceCard);
         this.availableTargets = availableTargets;
-        this.targetsCount = targetsCount;
     }
 }

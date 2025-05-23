@@ -6,6 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 
+import java.util.UUID;
+
+
 /**
  * DTO for abstract choice data
  */
@@ -15,4 +18,5 @@ import org.metacorp.mindbug.model.choice.ChoiceType;
 @JsonDeserialize(using=ChoiceDTODeserializer.class)
 public class AbstractChoiceDTO {
     private ChoiceType type;
+    private UUID playerToChoose;
 }

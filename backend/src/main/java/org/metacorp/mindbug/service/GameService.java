@@ -43,17 +43,20 @@ public class GameService {
         IChoice<?> choice = game.getChoice();
         if (choice == null) {
             throw new GameStateException("no choice to be resolved", Map.of("data", data));
-        } else if (data == null) {
+        } else if (data == null && choice.getType() != ChoiceType.HUNTER) {
             throw new GameStateException("invalid data for choice resolution", Map.of("choice", choice));
         }
 
         try {
             ((IChoice<T>) choice).resolve(data, game);
-
-            GameService.refreshGameState(game);
-            EffectQueueService.resolveEffectQueue(choice.getType() == ChoiceType.SIMULTANEOUS, game);
         } catch (ClassCastException e) {
             throw new GameStateException("invalid choice resolution", e, Map.of("choice", choice, "data", data));
+        }
+
+        GameService.refreshGameState(game);
+
+        if (game.getChoice() == null) {
+            EffectQueueService.resolveEffectQueue(choice.getType() == ChoiceType.SIMULTANEOUS, game);
         }
     }
 

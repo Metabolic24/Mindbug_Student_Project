@@ -1,17 +1,17 @@
 package org.metacorp.mindbug.utils;
 
+import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.choice.BooleanChoice;
-import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
-import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
-import org.metacorp.mindbug.model.choice.TargetChoice;
+import org.metacorp.mindbug.model.choice.*;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.service.AttackService;
 import org.metacorp.mindbug.service.EffectQueueService;
+import org.metacorp.mindbug.service.WebSocketService;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 
@@ -42,6 +42,7 @@ public final class ChoiceUtils {
             AttackService.declareAttack(attackingCard, game);
         } else {
             game.setCurrentPlayer(game.getOpponent());
+            WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
         }
     }
 
@@ -83,6 +84,23 @@ public final class ChoiceUtils {
         // Reset the choice only if the given choice list was valid and if no other choice appeared while resolving current choice
         if (game.getChoice().equals(choice)) {
             game.setChoice(null);
+        }
+    }
+
+    public static void resolveHunterChoice(UUID chosenTargetId, HunterChoice choice, Game game) throws GameStateException {
+        // First reset choice as attack resolution need to have no current choice
+        game.setChoice(null);
+
+        if (chosenTargetId != null) {
+            Optional<CardInstance> chosenTarget = choice.getAvailableTargets().stream().filter(target -> chosenTargetId.equals(target.getUuid())).findFirst();
+            if (chosenTarget.isEmpty()) {
+                //TODO Raise an error or log message
+            } else {
+                AttackService.resolveAttack(chosenTarget.get(), game);
+            }
+        } else {
+            // Only send this event when no target has been selected as game will be refreshed by attack resolution in the other case
+            WebSocketService.sendGameEvent(WsGameEventType.ATTACK_DECLARED, game);
         }
     }
 }

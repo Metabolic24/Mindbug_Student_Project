@@ -9,6 +9,7 @@ import org.metacorp.mindbug.dto.CardDTO;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 
 import java.util.Set;
+import java.util.UUID;
 
 /**
  * DTO for simultaneous choice data
@@ -24,10 +25,11 @@ public class SimultaneousChoiceDTO extends AbstractChoiceDTO {
     /**
      * Constructor
      *
+     * @param playerToChoose   the player to choose
      * @param availableEffects the set of all simultaneous effects
      */
-    public SimultaneousChoiceDTO(Set<CardDTO> availableEffects) {
-        super(ChoiceType.SIMULTANEOUS);
+    public SimultaneousChoiceDTO(UUID playerToChoose, Set<CardDTO> availableEffects) {
+        super(ChoiceType.SIMULTANEOUS, playerToChoose);
         this.availableEffects = availableEffects;
     }
 }

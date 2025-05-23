@@ -14,6 +14,6 @@ import java.util.UUID;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class TargetAnswerDTO extends GameDTO {
+public class MultipleTargetAnswerDTO extends GameDTO {
     private List<UUID> targets;
 }

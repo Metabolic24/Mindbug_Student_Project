@@ -13,6 +13,6 @@ import java.util.UUID;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class SimultaneousAnswerDTO extends GameDTO {
-    private UUID firstCardId;
+public class SingleTargetAnswerDTO extends GameDTO {
+    private UUID cardId;
 }

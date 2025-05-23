@@ -6,9 +6,11 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
+import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.player.Player;
 
+import java.util.HashSet;
 import java.util.Map;
 
 /**
@@ -61,13 +63,23 @@ public class AttackService {
         EffectQueueService.addBoardEffectsToQueue(attackCard, EffectTiming.ATTACK, game.getEffectQueue());
 
         game.setAfterEffect(() -> {
-            Player cardOwner = attackCard.getOwner();
-            if (game.getCurrentPlayer().equals(cardOwner) && cardOwner.getBoard().contains(attackCard) && !game.getOpponent().canBlock()) {
-                try {
-                    resolveAttack(null, game);
-                } catch (GameStateException e) {
-                    // TODO Manage errors
+            if (game.getCurrentPlayer().getBoard().contains(attackCard)) {
+                if (!game.getOpponent().getBoard().isEmpty() && attackCard.hasKeyword(CardKeyword.HUNTER)) {
+                    game.setChoice(new HunterChoice(game.getCurrentPlayer(), attackCard, new HashSet<>(game.getOpponent().getBoard())));
+                    WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+                } else if (game.getOpponent().getBoard().isEmpty() || !game.getOpponent().canBlock()) {
+                    try {
+                        resolveAttack(null, game);
+                    } catch (GameStateException e) {
+                        // TODO Manage errors
+                    }
                 }
+            } else {
+                game.setAttackingCard(null);
+                game.setCurrentPlayer(game.getOpponent());
+
+                // Send update through WebSocket
+                WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
             }
         });
     }
@@ -85,11 +97,11 @@ public class AttackService {
         if (attackingCard == null) {
             throw new GameStateException("no attacking card set in game state");
         } else if (defendingCard != null) {
-            if(defendingCard.getOwner().equals(attackingCard.getOwner())) {
+            if (defendingCard.getOwner().equals(attackingCard.getOwner())) {
                 throw new GameStateException("player cannot defend its own attack", Map.of("defendingCard", defendingCard));
-            } else if (!defendingCard.isAbleToBlock()) {
+            } else if (!defendingCard.isAbleToBlock() && !attackingCard.hasKeyword(CardKeyword.HUNTER)) {
                 throw new GameStateException("defending card is not able to block", Map.of("defendingCard", defendingCard));
-            } else if (attackingCard.hasKeyword(CardKeyword.SNEAKY) && !defendingCard.hasKeyword(CardKeyword.SNEAKY)) {
+            } else if (attackingCard.hasKeyword(CardKeyword.SNEAKY) && !defendingCard.hasKeyword(CardKeyword.SNEAKY) && !attackingCard.hasKeyword(CardKeyword.HUNTER)) {
                 throw new GameStateException("defending card cannot defend a SNEAKY attack", Map.of("attackingCard", game.getAttackingCard(), "defendingCard", defendingCard));
             }
         } else if (game.getChoice() != null) {
@@ -147,18 +159,19 @@ public class AttackService {
             CardInstance attackingCard = game.getAttackingCard();
             if (attackingCard.getOwner().getBoard().contains(attackingCard) && attackingCard.isAbleToAttackTwice() && attackingCard.isAbleToAttack()) {
                 game.setChoice(new FrenzyAttackChoice(attackingCard));
+
+                WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
             } else {
                 // Refresh game state so modifiers are correctly cleared (only after the last attack)
                 GameService.refreshGameState(game, true);
 
                 attackingCard.setAbleToAttackTwice(attackingCard.hasKeyword(CardKeyword.FRENZY));
                 game.setCurrentPlayer(game.getOpponent());
+
+                WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
             }
 
             game.setAttackingCard(null);
-
-            // Send update through WebSocket
-            WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
         });
     }
 }
