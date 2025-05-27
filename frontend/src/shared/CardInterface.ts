@@ -81,3 +81,10 @@ interface WsMessage {
     type: WsMessageType
     state: GameStateInterface
 }
+
+interface ChoiceModalData {
+    type: "SIMULTANEOUS" | "TARGET"
+    count: number
+    cards: CardInterface[]
+    optional: boolean
+}

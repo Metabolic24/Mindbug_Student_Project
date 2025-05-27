@@ -37,6 +37,8 @@
       <div class="col-2" style="background-color: black;height: 100%"></div>
     </div>
   </div>
+  <choice-modal v-if="isModalVisible" :choice="modalData"
+                @button-clicked="onChoiceModalButtonClick($event)"></choice-modal>
 </template>
 
 
@@ -44,16 +46,18 @@
 import Board from "@/components/game/Board.vue";
 import Hand from "@/components/game/Hand.vue";
 import PlayerDetails from "@/components/game/PlayerDetails.vue";
-import {onMounted, Ref, ref} from "vue";
+import {computed, onMounted, Ref, ref} from "vue";
 import {
   declareAttack,
   pickCard,
   playCard,
   resolveAttack,
   resolveBoolean,
+  resolveMultipleTargetChoice,
   resolveSingleTargetChoice,
   startGame
 } from "@/shared/RestService";
+import ChoiceModal from "@/components/game/ChoiceModal.vue";
 
 let gameState: Ref<GameStateInterface> = ref({
   uuid: undefined,
@@ -89,6 +93,33 @@ const currentPlayer: Ref<string> = ref(undefined);
 const selectedCard: Ref<SelectedCardInterface> = ref(undefined);
 const pickedCard: Ref<CardInterface> = ref(undefined);
 const attackingCard: Ref<CardInterface> = ref(undefined);
+
+const modalData = computed((): ChoiceModalData => {
+  const game = gameState.value
+
+  if (game?.choice && game?.choice.playerToChoose === game?.player.uuid) {
+    if (game?.choice.type === "TARGET") {
+      const targetChoice = game.choice as TargetChoiceInterface
+      return {
+        type: "TARGET",
+        count: targetChoice.targetsCount,
+        cards: targetChoice.availableTargets,
+        optional: targetChoice.optional
+      }
+    }
+  } else if (game?.choice.type === "SIMULTANEOUS") {
+    return {
+      type: "SIMULTANEOUS",
+      count: 1,
+      cards: (game.choice as SimultaneousChoiceInterface).availableEffects,
+      optional: false
+    }
+  }
+})
+
+const isModalVisible = computed(() => {
+  return gameState.value?.choice?.type === "TARGET" || gameState.value?.choice?.type === "SIMULTANEOUS"
+})
 
 onMounted(async () => {
   gameState.value = await startGame()
@@ -189,6 +220,16 @@ function onActionButtonClick(actionLabel: string) {
       return resolveBoolean(game.uuid, false)
     default:
       // Unexpected value
+  }
+}
+
+async function onChoiceModalButtonClick(cards: CardInterface[]) {
+  const game = gameState.value
+
+  if (game.choice.type === "SIMULTANEOUS") {
+    await resolveSingleTargetChoice(game.uuid, cards[0].uuid)
+  } else if (game.choice.type === "TARGET") {
+    await resolveMultipleTargetChoice(game.uuid, cards.map(card => card.uuid))
   }
 }
 </script>
