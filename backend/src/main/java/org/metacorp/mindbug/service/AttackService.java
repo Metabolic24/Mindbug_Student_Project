@@ -67,12 +67,14 @@ public class AttackService {
                 if (!game.getOpponent().getBoard().isEmpty() && attackCard.hasKeyword(CardKeyword.HUNTER)) {
                     game.setChoice(new HunterChoice(game.getCurrentPlayer(), attackCard, new HashSet<>(game.getOpponent().getBoard())));
                     WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
-                } else if (game.getOpponent().getBoard().isEmpty() || !game.getOpponent().canBlock()) {
+                } else if (game.getOpponent().getBoard().isEmpty() || !game.getOpponent().canBlock(attackCard.hasKeyword(CardKeyword.SNEAKY))) {
                     try {
                         resolveAttack(null, game);
                     } catch (GameStateException e) {
                         // TODO Manage errors
                     }
+                } else {
+                    WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);
                 }
             } else {
                 game.setAttackingCard(null);

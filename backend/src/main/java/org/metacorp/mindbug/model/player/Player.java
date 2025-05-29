@@ -2,6 +2,7 @@ package org.metacorp.mindbug.model.player;
 
 import lombok.Data;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 
 import java.util.*;
@@ -145,9 +146,9 @@ public class Player {
      * Checks whether player can block with a creature
      * @return true if he can block with a creature, false otherwise
      */
-    public boolean canBlock() {
+    public boolean canBlock(boolean sneakyAttack) {
         for (CardInstance card : board) {
-            if (card.isAbleToBlock()) {
+            if (card.isAbleToBlock() && (!sneakyAttack || card.hasKeyword(CardKeyword.SNEAKY))) {
                 return true;
             }
         }
