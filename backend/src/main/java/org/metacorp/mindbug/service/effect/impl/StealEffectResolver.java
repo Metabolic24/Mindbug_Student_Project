@@ -61,7 +61,7 @@ public class StealEffectResolver extends GenericEffectResolver<StealEffect> {
 
         int cardsCount = availableCards.size();
         if (cardsCount > 0) {
-            if (cardsCount <= value || value < 0) {
+            if (!effect.isOptional() && (cardsCount <= value || value < 0)) {
                 stealCards(new ArrayList<>(availableCards), game, cardOwner);
             } else if (selection == StealTargetSelection.RANDOM) {
                 List<CardInstance> stolenCards = new ArrayList<>();
@@ -74,7 +74,10 @@ public class StealEffectResolver extends GenericEffectResolver<StealEffect> {
                 stealCards(stolenCards, game, cardOwner);
             } else {
                 Player playerToChoose = (selection == null || selection == StealTargetSelection.SELF) ? cardOwner : opponent;
-                game.setChoice(new TargetChoice(playerToChoose, card, new TargetChoiceResolver(effect, cardOwner), value, new HashSet<>(availableCards)));
+
+                TargetChoice choice = new TargetChoice(playerToChoose, card, new TargetChoiceResolver(effect, cardOwner), value, new HashSet<>(availableCards));
+                choice.setOptional(effect.isOptional());
+                game.setChoice(choice);
             }
         }
     }

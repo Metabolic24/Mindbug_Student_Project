@@ -34,6 +34,8 @@ public class TargetChoice implements IChoice<List<UUID>> {
     @NonNull
     private Set<CardInstance> availableTargets;
 
+    private boolean optional;
+
     @Override
     public void resolve(List<UUID> chosenTargetIds, Game game) {
         ChoiceUtils.resolveTargetChoice(chosenTargetIds, this, game);

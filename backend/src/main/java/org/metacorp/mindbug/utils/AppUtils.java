@@ -150,7 +150,11 @@ public final class AppUtils {
                     List<CardInstance> shuffledCards = new ArrayList<>(targetChoice.getAvailableTargets());
                     Collections.shuffle(shuffledCards);
 
-                    shuffledCards = shuffledCards.subList(0, targetChoice.getTargetsCount());
+                    // Retrieve a sub list only if there are more available targets than the targets count (can happen due to 'optional' parameter)
+                    if (shuffledCards.size() > targetChoice.getTargetsCount()) {
+                        shuffledCards = shuffledCards.subList(0, targetChoice.getTargetsCount());
+                    }
+
                     System.out.printf("Cible(s) choisie(s) : %s\n", shuffledCards.stream().map(cardInstance -> cardInstance.getCard().getName()).toList());
 
                     GameService.resolveChoice(shuffledCards.stream().map(CardInstance::getUuid).toList(), game);

@@ -69,19 +69,22 @@ public final class ChoiceUtils {
     }
 
     public static void resolveTargetChoice(List<UUID> chosenTargetIds, TargetChoice choice, Game game) {
-        if (chosenTargetIds == null || chosenTargetIds.size() != choice.getTargetsCount()) {
+        if (!choice.isOptional() && (chosenTargetIds == null || chosenTargetIds.size() != choice.getTargetsCount())) {
             //TODO Raise an error or log message
             return;
         }
 
-        List<CardInstance> chosenTargets = choice.getAvailableTargets().stream().filter(target -> chosenTargetIds.contains(target.getUuid())).toList();
-        if (chosenTargets.size() != choice.getTargetsCount()) {
-            //TODO Raise an error or log message
+        // Check that there are chosen targets (can be null/empty if choice is optional)
+        if (chosenTargetIds != null && !chosenTargetIds.isEmpty()) {
+            List<CardInstance> chosenTargets = choice.getAvailableTargets().stream().filter(target -> chosenTargetIds.contains(target.getUuid())).toList();
+            if (chosenTargets.size() != chosenTargetIds.size()) {
+                //TODO Raise an error or log message
+            }
+
+            choice.getEffect().resolve(game, chosenTargets);
         }
 
-        choice.getEffect().resolve(game, chosenTargets);
-
-        // Reset the choice only if the given choice list was valid and if no other choice appeared while resolving current choice
+        // Reset the choice only if the given choice list was valid and if no other choice appeared while resolving the current choice
         if (game.getChoice().equals(choice)) {
             game.setChoice(null);
         }

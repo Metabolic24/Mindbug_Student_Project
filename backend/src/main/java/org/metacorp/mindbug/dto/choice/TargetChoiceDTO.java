@@ -22,6 +22,7 @@ import java.util.UUID;
 public class TargetChoiceDTO extends ChoiceDTO {
     private Set<CardDTO> availableTargets;
     private Integer targetsCount;
+    private Boolean optional;
 
     /**
      * Constructor
@@ -31,9 +32,10 @@ public class TargetChoiceDTO extends ChoiceDTO {
      * @param availableTargets the set of available targets
      * @param targetsCount     the number of targets to be chosen
      */
-    public TargetChoiceDTO(UUID playerToChoose, CardDTO sourceCard, Set<CardDTO> availableTargets, Integer targetsCount) {
+    public TargetChoiceDTO(UUID playerToChoose, CardDTO sourceCard, Set<CardDTO> availableTargets, Integer targetsCount, boolean optional) {
         super(ChoiceType.TARGET, playerToChoose, sourceCard);
         this.availableTargets = availableTargets;
         this.targetsCount = targetsCount;
+        this.optional = optional;
     }
 }

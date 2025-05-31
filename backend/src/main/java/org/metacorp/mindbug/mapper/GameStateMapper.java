@@ -83,7 +83,8 @@ public class GameStateMapper {
             case TARGET -> {
                 TargetChoice targetChoice = (TargetChoice) choice;
                 return new TargetChoiceDTO(targetChoice.getPlayerToChoose().getUuid(), fromCard(targetChoice.getEffectSource()),
-                        targetChoice.getAvailableTargets().stream().map(GameStateMapper::fromCard).collect(Collectors.toSet()), targetChoice.getTargetsCount());
+                        targetChoice.getAvailableTargets().stream().map(GameStateMapper::fromCard).collect(Collectors.toSet()),
+                        targetChoice.getTargetsCount(), targetChoice.isOptional());
             }
             case BOOLEAN -> {
                 BooleanChoice booleanChoice = (BooleanChoice) choice;

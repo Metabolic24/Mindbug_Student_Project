@@ -408,6 +408,7 @@
       "DEFEATED": [{
         "type": "STEAL",
         "value": 2,
+        "optional": true,
         "max": 5,
         "source": "BOARD",
         "mustPlay": true
