@@ -65,11 +65,60 @@ let gameState: Ref<GameStateInterface> = ref({
     board: [],
     discard: [],
   },
-  finished: true
-})
+  playerTurn: false,
+  finished: true,
+  card: undefined,
+  choice: undefined
+});
+
+const currentPlayer: Ref<string> = ref(undefined);
+const selectedCard: Ref<SelectedCardInterface> = ref(undefined);
+const pickedCard: Ref<CardInterface> = ref(undefined);
+const attackingCard: Ref<CardInterface> = ref(undefined);
 
 onMounted(async() => {
   gameState.value = await startGame()
+  currentPlayer.value = gameState.value.player.uuid
+  gameState.value.playerTurn = true
+
+  const connection = new WebSocket("ws://localhost:8080/ws/game/" + gameState.value.uuid + "?playerId=" + gameState.value.player.uuid);
+  connection.onmessage = (event: MessageEvent<string>) => {
+    const message: WsMessage = JSON.parse(event.data)
+
+    switch (message.type) {
+      case "ATTACK_DECLARED":
+        selectedCard.value = undefined;
+        attackingCard.value = message.state.card;
+        break;
+      case "CARD_PICKED":
+        selectedCard.value = undefined;
+        pickedCard.value = message.state.card;
+        break;
+      case "CARD_PLAYED":
+        pickedCard.value = undefined;
+        break;
+      case "NEW_TURN":
+        selectedCard.value = undefined;
+        pickedCard.value = undefined;
+        attackingCard.value = undefined;
+        break;
+      case "FINISHED":
+        alert("Game finished!")
+        break;
+        //TODO Implement remaining cases
+      case "LP_DOWN":
+        break;
+      case "CARD_DESTROYED":
+        break;
+      case "EFFECT_RESOLVED":
+        break;
+      case "CHOICE":
+        break;
+    }
+
+    gameState.value = message.state;
+    currentPlayer.value = gameState.value.playerTurn ? gameState.value.player.uuid : gameState.value.opponent.uuid;
+  }
 })
 </script>
 
