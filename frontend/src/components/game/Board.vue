@@ -2,7 +2,8 @@
 
 import DiscardPile from "@/components/game/DiscardPile.vue";
 import {getCardAlt, getCardImage} from "@/shared/CardUtils";
-import {computed} from "vue";
+import {computed, ref, Ref} from "vue";
+import DiscardModal from "@/components/game/DiscardModal.vue";
 
 interface Props {
   gameState: GameStateInterface
@@ -151,13 +152,28 @@ const imgAlt = computed(() => {
   }
 })
 
+const discardModalData: Ref<CardInterface[]> = ref([]);
+const isDiscardModalVisible: Ref<boolean> = ref(false);
+const isOpponentDiscard: Ref<boolean> = ref(false);
+
+function displayDiscardModal(opponent: boolean) {
+  isDiscardModalVisible.value = true;
+  isOpponentDiscard.value = opponent;
+  discardModalData.value = opponent ?
+      props.gameState?.opponent.discard :
+      props.gameState?.player.discard;
+}
+
+function closeModal() {
+  isDiscardModalVisible.value = false;
+}
 </script>
 
 <template>
   <div class="row board">
     <div class="col-2 discards" style="background-color: green">
-      <discard-pile :cards="gameState?.opponent.discard"></discard-pile>
-      <discard-pile :cards="gameState?.player.discard"></discard-pile>
+      <discard-pile :cards="gameState?.opponent.discard" @clicked="displayDiscardModal(true)"></discard-pile>
+      <discard-pile :cards="gameState?.player.discard" @clicked="displayDiscardModal(false)"></discard-pile>
     </div>
     <div class="col-8" style="background-color: yellow">
       <div class="cards">
@@ -183,6 +199,8 @@ const imgAlt = computed(() => {
       </div>
     </div>
   </div>
+  <discard-modal v-if="isDiscardModalVisible" :cards="discardModalData" :opponent="isOpponentDiscard"
+                 @closeModal="closeModal()"></discard-modal>
 </template>
 
 <style scoped>

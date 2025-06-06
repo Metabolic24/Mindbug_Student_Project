@@ -4,10 +4,13 @@ interface Props {
 }
 
 defineProps<Props>()
+const emit = defineEmits(['clicked'])
+
+
 </script>
 
 <template>
-  <div class="card">
+  <div class="card" @click="emit('clicked')">
     <div class="card-title">Défausse</div>
     <span>{{cards?.length}}</span>
   </div>
