@@ -1,0 +1,11 @@
+package org.metacorp.mindbug.dto.player;
+
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+public class RegisterDTO {
+    private String name;
+}
