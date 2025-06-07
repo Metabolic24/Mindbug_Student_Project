@@ -92,7 +92,7 @@ let gameState: Ref<GameStateInterface> = ref({
 const currentPlayer: Ref<string> = ref(undefined);
 const selectedCard: Ref<SelectedCardInterface> = ref(undefined);
 const pickedCard: Ref<CardInterface> = ref(undefined);
-const attackingCard: Ref<CardInterface> = ref(undefined)
+const attackingCard: Ref<CardInterface> = ref(undefined);
 
 const modalData = computed((): ChoiceModalData => {
   const game = gameState.value

@@ -3,6 +3,7 @@ import axios, {AxiosResponse} from "axios";
 const baseUrl = "http://localhost:5173/api";
 const cardSetBaseUrl = `${baseUrl}/sets`;
 const gameBaseUrl = `${baseUrl}/game`;
+const playerBaseUrl = `${baseUrl}/player`;
 
 // TODO Vérifier que la gestion des erreurs fonctionne comme attendu
 async function manageRestCall<T>(responsePromise: Promise<AxiosResponse<T>>): Promise<T> {
@@ -14,6 +15,12 @@ async function manageRestCall<T>(responsePromise: Promise<AxiosResponse<T>>): Pr
         alert("Erreur REST");
         console.error("HTTP error (" + response.status + ":" + response.statusText + ") : " + response.data)
     }
+}
+
+// Player data endpoints
+
+export async function getPlayerData(name: string): Promise<PlayerData> {
+    return manageRestCall(axios.post(playerBaseUrl, {name}))
 }
 
 // Sets endpoints

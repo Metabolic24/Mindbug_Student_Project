@@ -88,3 +88,8 @@ interface ChoiceModalData {
     cards: CardInterface[]
     optional: boolean
 }
+
+interface PlayerData {
+    uuid: string
+    name: string
+}

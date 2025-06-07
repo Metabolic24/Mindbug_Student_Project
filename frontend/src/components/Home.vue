@@ -6,10 +6,21 @@
       <router-link to="/sets" class="styled-button">Available Sets</router-link>
     </div>
   </div>
+  <login-modal v-if="!store.state.playerData" @button-clicked="onLogin($event)"></login-modal>
 </template>
 
-<script setup>
-  
+<script setup lang="ts">
+import LoginModal from "@/components/LoginModal.vue";
+import {getPlayerData} from "@/shared/RestService";
+import {useStore} from "vuex";
+
+const store = useStore()
+
+async function onLogin(name: string) {
+  const playerData = await getPlayerData(name);
+  store.commit('savePlayerData', playerData);
+}
+
 </script>
 
 <style scoped>
