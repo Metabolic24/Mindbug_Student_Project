@@ -2,7 +2,7 @@
   <nav>
     <router-link to="/">Home</router-link>
   </nav>
-  <div class="container" style="width: 100%;height:100%">
+  <div v-if="gameState" class="container" style="width: 100%;height:100%">
     <div class="row" style="background-color: red;width: 100%;height:10%">
       <div class="col-2" style="background-color: orange">
         <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
@@ -39,6 +39,7 @@
   </div>
   <choice-modal v-if="isModalVisible" :choice="modalData"
                 @button-clicked="onChoiceModalButtonClick($event)"></choice-modal>
+  <h2 v-if="!gameState">Loading...</h2>
 </template>
 
 
@@ -46,7 +47,7 @@
 import Board from "@/components/game/Board.vue";
 import Hand from "@/components/game/Hand.vue";
 import PlayerDetails from "@/components/game/PlayerDetails.vue";
-import {computed, onMounted, Ref, ref} from "vue";
+import {computed, onMounted, onUnmounted, Ref, ref} from "vue";
 import {
   declareAttack,
   pickCard,
@@ -54,45 +55,25 @@ import {
   resolveAttack,
   resolveBoolean,
   resolveMultipleTargetChoice,
-  resolveSingleTargetChoice,
-  startGame
+  resolveSingleTargetChoice
 } from "@/shared/RestService";
 import ChoiceModal from "@/components/game/ChoiceModal.vue";
+import {Store, useStore} from "vuex";
 
-let gameState: Ref<GameStateInterface> = ref({
-  uuid: undefined,
-  player: {
-    uuid: undefined,
-    name: undefined,
-    lifePoints: undefined,
-    mindbugCount: undefined,
+interface Props {
+  gameId: string;
+}
 
-    drawPileCount: undefined,
-    hand: [],
-    board: [],
-    discard: [],
-  },
-  opponent: {
-    uuid: undefined,
-    name: undefined,
-    lifePoints: undefined,
-    mindbugCount: undefined,
+const props = defineProps<Props>()
+const store: Store<AppState> = useStore()
 
-    drawPileCount: undefined,
-    hand: [],
-    board: [],
-    discard: [],
-  },
-  playerTurn: false,
-  finished: true,
-  card: undefined,
-  choice: undefined
-});
-
+const gameState: Ref<GameStateInterface> = ref(undefined);
 const currentPlayer: Ref<string> = ref(undefined);
 const selectedCard: Ref<SelectedCardInterface> = ref(undefined);
 const pickedCard: Ref<CardInterface> = ref(undefined);
 const attackingCard: Ref<CardInterface> = ref(undefined);
+
+let wsConnection: WebSocket;
 
 const modalData = computed((): ChoiceModalData => {
   const game = gameState.value
@@ -122,12 +103,8 @@ const isModalVisible = computed(() => {
 })
 
 onMounted(async () => {
-  gameState.value = await startGame()
-  currentPlayer.value = gameState.value.player.uuid
-  gameState.value.playerTurn = true
-
-  const connection = new WebSocket("ws://localhost:8080/ws/game/" + gameState.value.uuid + "?playerId=" + gameState.value.player.uuid);
-  connection.onmessage = (event: MessageEvent<string>) => {
+  wsConnection = new WebSocket("ws://localhost:8080/ws/game/" + props.gameId + "?playerId=" + store.state.playerData.uuid);
+  wsConnection.onmessage = (event: MessageEvent<string>) => {
     const message: WsMessage = JSON.parse(event.data)
 
     switch (message.type) {
@@ -155,27 +132,24 @@ onMounted(async () => {
         break;
       case "FINISHED":
         alert("Game finished!")
+        wsConnection.close()
         break;
         //TODO Implement remaining cases
+      case "STATE":
       case "LP_DOWN":
       case "CARD_DESTROYED":
       case "EFFECT_RESOLVED":
       case "WAITING_ATTACK_RESOLUTION":
         break;
-
     }
 
     gameState.value = message.state;
     currentPlayer.value = gameState.value.playerTurn ? gameState.value.player.uuid : gameState.value.opponent.uuid;
   }
+})
 
-  //TODO Enlever les modifications inutiles quand le back sera raccord
-
-  // Update opponent hand so hidden is true
-  gameState.value?.opponent?.hand?.forEach(card => {
-    card.id = undefined;
-    card.name = undefined;
-  });
+onUnmounted(() => {
+  wsConnection.close(1001, "client left the game")
 })
 
 function onCardSelected(card: CardInterface, location: CardLocation): void {

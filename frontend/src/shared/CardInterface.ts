@@ -66,7 +66,8 @@ interface TargetChoiceInterface extends ChoiceInterface {
 type Owner = "Player" | "Opponent"
 
 type WsMessageType =
-    "CARD_PICKED"
+    "STATE"
+    | "CARD_PICKED"
     | "CARD_PLAYED"
     | "ATTACK_DECLARED"
     | "WAITING_ATTACK_RESOLUTION"
@@ -92,4 +93,8 @@ interface ChoiceModalData {
 interface PlayerData {
     uuid: string
     name: string
+}
+
+interface AppState {
+    playerData: PlayerData
 }

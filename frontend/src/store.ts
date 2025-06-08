@@ -1,9 +1,5 @@
 import {createStore} from "vuex";
 
-interface AppState {
-    playerData: PlayerData
-}
-
 let store = createStore({
     state(): AppState {
         return {

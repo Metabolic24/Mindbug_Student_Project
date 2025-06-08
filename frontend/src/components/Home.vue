@@ -2,7 +2,7 @@
   <div id="home">
     <h1>Welcome to Mindbug App</h1>
     <div class="button-group">
-      <router-link to="/game" class="styled-button">Start</router-link>
+      <button :class="searchButtonClass" @click="searchGame()" :disabled="searchDisabled">{{searchLabel}}</button>
       <router-link to="/sets" class="styled-button">Available Sets</router-link>
     </div>
   </div>
@@ -12,13 +12,37 @@
 <script setup lang="ts">
 import LoginModal from "@/components/LoginModal.vue";
 import {getPlayerData} from "@/shared/RestService";
-import {useStore} from "vuex";
+import {Store, useStore} from "vuex";
+import {useRouter} from "vue-router";
+import {computed, Ref, ref} from "vue";
 
-const store = useStore()
+const store: Store<AppState> = useStore()
+const router = useRouter()
+
+const searchDisabled: Ref<boolean> = ref(false);
+
+const searchLabel = computed(() => {
+  return searchDisabled.value ? "Recherche en cours..." : "Rechercher une partie"
+})
+
+const searchButtonClass = computed(() => {
+  return searchDisabled.value ? "styled-button" : "styled-button"
+})
 
 async function onLogin(name: string) {
   const playerData = await getPlayerData(name);
   store.commit('savePlayerData', playerData);
+}
+
+function searchGame() {
+  // TODO Réactiver le bouton si la connexion à la WS échoue ou est perdue
+  searchDisabled.value = true;
+  const connection = new WebSocket("ws://localhost:8080/ws/join?playerId=" + store.state.playerData?.uuid + "&playerName=" + store.state.playerData?.name);
+  connection.onmessage = (event: MessageEvent<string>) => {
+    router.push({name: "Game", query: {gameId: event.data}});
+    connection.close()
+    searchDisabled.value = false;
+  }
 }
 
 </script>
@@ -51,6 +75,13 @@ h1 {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, transform 0.2s;
+}
+
+.styled-button:disabled {
+  background-color: #7b7a7a;
+
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .styled-button:hover {

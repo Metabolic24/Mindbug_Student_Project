@@ -15,13 +15,14 @@ const routes = [
     {
         path: "/sets/:set",
         name: "Set details",
-        component: () => import('@/components/sets/CardSetDetails.vue') ,
+        component: () => import('@/components/sets/CardSetDetails.vue'),
         props: true
     },
     {
         path: '/game',
         name: 'Game',
-        component: () => import('@/components/Game.vue')
+        component: () => import('@/components/Game.vue'),
+        props: route => ({gameId: route.query.gameId}),
     }
 ];
 
