@@ -34,14 +34,4 @@ public class GameWebSocket extends DefaultWebSocket {
 
         super.onConnect();
     }
-
-    @Override
-    public void onMessage(String text) {
-        super.onMessage(text);
-    }
-
-    @Override
-    public void onClose(DataFrame frame) {
-        super.onClose(frame);
-    }
 }

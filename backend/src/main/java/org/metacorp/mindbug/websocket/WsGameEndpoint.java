@@ -7,8 +7,11 @@ import org.glassfish.grizzly.http.HttpRequestPacket;
 import org.glassfish.grizzly.websockets.*;
 import org.metacorp.mindbug.dto.GameStateDTO;
 import org.metacorp.mindbug.dto.ws.WsGameEvent;
+import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.dto.ws.WsPlayerGameEvent;
 import org.metacorp.mindbug.dto.ws.WsPlayerGameState;
+import org.metacorp.mindbug.mapper.GameStateMapper;
+import org.metacorp.mindbug.service.GameService;
 
 import java.io.IOException;
 import java.util.*;
@@ -16,6 +19,16 @@ import java.util.*;
 public class WsGameEndpoint extends WebSocketApplication {
 
     private static final Map<UUID, List<GameWebSocket>> sessions = new HashMap<>();
+
+    private final GameService gameService;
+
+    /**
+     * Constructor
+     * @param gameService the Game service
+     */
+    public WsGameEndpoint(GameService gameService) {
+        this.gameService = gameService;
+    }
 
     @Override
     public WebSocket createSocket(ProtocolHandler handler, HttpRequestPacket requestPacket, WebSocketListener... listeners) {
@@ -36,6 +49,17 @@ public class WsGameEndpoint extends WebSocketApplication {
         } else if (playerId != null && sessions.containsKey(gameId)) {
             sessions.get(gameId).add(socket);
             System.out.println("Player " + playerId + " joined game " + gameId);
+
+            GameStateDTO gameStateDTO = GameStateMapper.fromGame(gameService.findById(gameId));
+            WsPlayerGameEvent playerGameEvent = new WsPlayerGameEvent(WsGameEventType.STATE);
+            playerGameEvent.setState(new WsPlayerGameState(gameStateDTO, playerId.equals(gameStateDTO.getPlayer().getUuid().toString())));
+            try {
+                String gameStateData = new ObjectMapper().writeValueAsString(playerGameEvent);
+                System.out.println("--- Message for player " + playerId + " : " + gameStateData);
+                socket.send(gameStateData);
+            } catch (JsonProcessingException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 

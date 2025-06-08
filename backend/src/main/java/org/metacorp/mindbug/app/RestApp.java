@@ -7,7 +7,9 @@ import org.glassfish.hk2.api.ServiceLocator;
 import org.glassfish.hk2.utilities.ServiceLocatorUtilities;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
+import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.websocket.WsGameEndpoint;
+import org.metacorp.mindbug.websocket.WsJoinEndpoint;
 
 import java.io.IOException;
 import java.net.URI;
@@ -35,7 +37,7 @@ public class RestApp {
         // Create and start a new instance of the Grizzly HTTP server
         HttpServer server = GrizzlyHttpServerFactory.createHttpServer(URI.create("http://localhost:" + HTTP_PORT), rc, locator, false);
 
-        registerWebSockets(server);
+        registerWebSockets(server, locator);
 
         return server;
     }
@@ -44,13 +46,15 @@ public class RestApp {
      * Register web socket endpoints in the server
      *
      * @param server  the HTTP server
+     * @param locator the HK2 service locator
      */
-    private static void registerWebSockets(HttpServer server) {
+    private static void registerWebSockets(HttpServer server, ServiceLocator locator) {
         // Register WebSocket add-on in Grizzly listener
         server.getListener("grizzly").registerAddOn(new WebSocketAddOn());
 
         // Register each WS endpoint
-        WebSocketEngine.getEngine().register("/ws", "/game/*", new WsGameEndpoint());
+        WebSocketEngine.getEngine().register("/ws", "/game/*", new WsGameEndpoint(locator.getService(GameService.class)));
+        WebSocketEngine.getEngine().register("/ws", "/join", new WsJoinEndpoint(locator.getService(GameService.class)));
     }
 
     public static void main(String[] args) throws IOException {

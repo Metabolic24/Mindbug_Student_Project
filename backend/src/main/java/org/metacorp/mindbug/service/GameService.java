@@ -25,6 +25,7 @@ public class GameService {
     }
 
     public Game createGame(UUID player1Id, String player1Name, UUID player2Id, String player2Name) {
+        //TODO Ajouter une vérification pour s'assurer que le joueur existe
         return createGame(new Player(player1Id, player1Name), new Player(player2Id, player2Name));
     }
 
