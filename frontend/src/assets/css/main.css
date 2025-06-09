@@ -1,4 +1,5 @@
-@import './base.css';
+@import 'base.css';
+@import 'buttons.css';
 
 #app {
   max-width: 1280px;

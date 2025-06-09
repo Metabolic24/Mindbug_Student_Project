@@ -16,25 +16,25 @@
 </template>
 
 <script setup lang="ts">
-
 import {onMounted, ref, Ref} from "vue";
 import {getAvailableSets} from "@/shared/RestService";
 
+// Declare a list that will contain all the names of the available sets
 let sets: Ref<string[]> = ref([])
 
+// Retrieve the image corresponding to the given set
 function getSetImage(set: string) {
   const url = new URL("@/assets/sets/", import.meta.url)
   return `${url}/${set}.png`
 }
 
 onMounted(async () => {
+  // Get the list of available sets from the server
   sets.value = await getAvailableSets()
 })
-
 </script>
 
 <style scoped>
-
 #sets {
   text-align: center;
 }
@@ -42,17 +42,21 @@ onMounted(async () => {
 .sets-container {
   display: flex;
   flex-wrap: wrap;
+
   padding: 20px;
+
   background-color: #f4f7fb;
+
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
+  text-align: center;
+  margin-bottom: 20px;
+
   font-size: 24px;
   color: #2c3e50;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
 .set-card {
@@ -62,11 +66,11 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -79,6 +83,5 @@ h2 {
   width: 100%;
   height: 100%;
 }
-
 </style>
   

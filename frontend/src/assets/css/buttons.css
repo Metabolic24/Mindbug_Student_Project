@@ -1,0 +1,27 @@
+.styled-button {
+    padding: 12px 30px;
+
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    background-color: #3498db;
+
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+.styled-button:disabled {
+    background-color: #7b7a7a;
+
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.styled-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+.styled-button:active {
+    background-color: #1e6f93;
+    transform: scale(0.98);
+}
