@@ -1,3 +1,4 @@
+// Get the image of the given card
 export function getCardImage(card: CardInterface): string {
     const url = new URL("@/assets/cards/", import.meta.url)
 
@@ -9,6 +10,7 @@ export function getCardImage(card: CardInterface): string {
     }
 }
 
+// Get the alternative description of the given card
 export function getCardAlt(card: CardInterface): string {
     return card.name ?? "back"
 }

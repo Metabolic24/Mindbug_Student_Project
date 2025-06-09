@@ -1,5 +1,6 @@
 @import 'base.css';
 @import 'buttons.css';
+@import 'modal.css';
 
 #app {
   max-width: 1280px;

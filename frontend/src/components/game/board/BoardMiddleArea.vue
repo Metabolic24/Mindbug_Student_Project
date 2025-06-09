@@ -1,0 +1,100 @@
+<script setup lang="ts">
+// Declare the interface for the data given by the parent component
+import {computed} from "vue";
+import {getCardImage} from "@/shared/CardUtils";
+
+// Declare the interface for the data given by the parent component
+interface Props {
+  gameState: GameStateInterface
+
+  pickedCard: CardInterface
+  attackingCard: CardInterface
+}
+const props = defineProps<Props>()
+
+// Computed value for the message
+const message = computed(() => {
+  if (props.gameState?.choice) {
+    if (props.gameState.choice.playerToChoose === props.gameState.player.uuid) {
+      if (props.gameState.choice.type === "FRENZY") {
+        return "Do you want to attack again ?"
+      } else if (props.gameState.choice.type === "BOOLEAN") {
+        return "Do you want to revive this card?" // TODO A modifier avec la valeur appropriée (voir comment on la récupère d'ailleurs)
+      } else if (props.gameState.choice.type === "HUNTER") {
+        return "Select a target to hunt or continue attacking"
+      }
+    }
+  } else if (props.gameState?.playerTurn) {
+    if (props.pickedCard || props.attackingCard) {
+      return "Waiting for opponent..."
+    } else {
+      return "Play OR Attack"
+    }
+  } else {
+    if (props.pickedCard) {
+      return "Do you want to use a MindBug ?"
+    } else if (props.attackingCard) {
+      return "Block OR Lose LP"
+    } else {
+      return "Waiting for opponent..."
+    }
+  }
+})
+
+// Computed value that controls image visibility
+const isImageVisible = computed(() => {
+  return props.pickedCard !== undefined || (
+      props.gameState?.choice?.type === "BOOLEAN" ||
+      props.gameState?.choice?.type === "FRENZY" ||
+      props.gameState?.choice?.type === "HUNTER")
+})
+
+// Computed value for the image source URL
+const imgSrc = computed(() => {
+  if (props.gameState?.choice) {
+    return getCardImage(props.gameState.choice.sourceCard)
+  } else if (props.pickedCard) {
+    return getCardImage(props.pickedCard)
+  }
+})
+
+// Computed value for the image alternative text
+const imgAlt = computed(() => {
+  if (props.gameState?.choice) {
+    return props.gameState.choice.sourceCard?.name
+  } else if (props.pickedCard) {
+    return props.pickedCard.name
+  }
+})
+</script>
+
+<template>
+  <div class="middle-area">
+    <img v-if="isImageVisible" :src="imgSrc" :alt="imgAlt"/>
+    <span>{{ message }}</span>
+  </div>
+</template>
+
+<style scoped>
+.middle-area {
+  width: 100%;
+  height: 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  span {
+    font-size: x-large;
+    font-weight: bolder;
+  }
+
+  img {
+    width: 6vw;
+    height: 9vw;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+</style>

@@ -21,7 +21,7 @@ const routes = [
     {
         path: '/game',
         name: 'Game',
-        component: () => import('@/components/Game.vue'),
+        component: () => import('@/components/game/Game.vue'),
         props: route => ({gameId: route.query.gameId}),
     }
 ];

@@ -1,28 +1,33 @@
 <script setup lang="ts">
-
 import {getCardAlt, getCardImage} from "@/shared/CardUtils";
 import {computed, ref, Ref} from "vue";
 
+// Declare the interface for the data given by the parent component
 interface Props {
   choice: ChoiceModalData
 }
-
 const props = defineProps<Props>()
+
+// Declare events emitted by this component
 const emit = defineEmits(['button-clicked'])
 
+// Reference for selected cards
 const selectedCards: Ref<CardInterface[]> = ref([])
 
+// Computed value for modal title
 const title = computed(() => {
   return props.choice?.type === "TARGET" ?
       `Sélectionnez ${props.choice.count} cible(s) parmi ces cartes` :
       "Sélectionnez l'effet à déclencher en premier"
 })
 
+// Computed value to disable validation button
 const isButtonDisabled = computed(() => {
   return (props.choice.type === "SIMULTANEOUS" && selectedCards.value.length !== 1) ||
       (props.choice.type === "TARGET" && !props.choice.optional && selectedCards.value.length != props.choice.count)
 })
 
+// Triggered when button is clicked
 function onButtonClick() {
   if ((props.choice.type === "SIMULTANEOUS" && selectedCards.value.length === 1) ||
       (props.choice.type === "TARGET" && (props.choice.optional || (!props.choice.optional && selectedCards.value.length == props.choice.count)))) {
@@ -30,6 +35,7 @@ function onButtonClick() {
   }
 }
 
+// Triggered when a card is selected
 function onCardSelected(card: CardInterface): void {
   if (selectedCards.value.includes(card)) {
     selectedCards.value.splice(selectedCards.value.indexOf(card), 1)
@@ -38,12 +44,12 @@ function onCardSelected(card: CardInterface): void {
   }
 }
 
+// Function for card CSS classes
 function getCardClasses(card: CardInterface): Record<string, boolean> {
   return ({
     'selected': selectedCards.value.includes(card),
   })
 }
-
 </script>
 
 <template>
@@ -71,23 +77,9 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
 </template>
 
 <style scoped>
-
-.modal-mask {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .modal-container {
   margin: 150px auto;
   padding: 20px 30px;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
 }
 
 .modal-header {
@@ -121,5 +113,4 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
 .card-image.selected {
   outline: 4px solid red;
 }
-
 </style>

@@ -1,36 +1,31 @@
 <script setup lang="ts">
 import {getCardAlt, getCardImage} from "@/shared/CardUtils";
 
+// Declare the interface for the data given by the parent component
 interface Props {
   cards: CardInterface[]
-  owner: Owner
+  opponent: boolean
   selectedCard?: CardInterface
-  playerTurn: boolean
 }
-
 const props = defineProps<Props>()
 
+// Declare events emitted by this component
 const emit = defineEmits(['card-selected'])
 
+// Get the CSS classes for the given card
 function getCardClasses(card: CardInterface): Record<string, boolean> {
   return ({
-    'top-card': props.owner === "Opponent",
-    'bottom-card': props.owner === "Player",
+    'top-card': props.opponent,
+    'bottom-card': !props.opponent,
     'selected': card.uuid === props.selectedCard?.uuid,
   })
-}
-
-function onCardSelected(card: CardInterface): void {
-  if (props.playerTurn) {
-    emit('card-selected', card)
-  }
 }
 </script>
 
 <template>
   <div class="hand">
     <img v-for="card in cards" :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image"
-         :class="getCardClasses(card)" @click="onCardSelected(card)" />
+         :class="getCardClasses(card)" @click="emit('card-selected', card)" />
   </div>
 </template>
 
@@ -42,8 +37,6 @@ function onCardSelected(card: CardInterface): void {
   display: flex;
   justify-content: center;
   gap: 5px;
-
-  background-color: green;
 }
 
 .card-image {

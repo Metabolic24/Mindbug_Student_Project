@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// Declare the interface for the data given by the parent component
 interface Props {
   name: String
   lifePoints: Number
@@ -8,7 +9,9 @@ interface Props {
 
 defineProps<Props>()
 
+// Get the avatar picture
 function getAvatar(name: string = "default") {
+  // TODO Ajouter la possibilité pour un joueur d'avoir un avatar customisé
   const url = new URL("@/assets/avatars/", import.meta.url)
   return `${url}/${name}.jpg`
 }
@@ -23,9 +26,10 @@ function getAvatar(name: string = "default") {
     <div class="playerData">
       <span class="lifePoint">❤️ {{ lifePoints }}</span>
       <span class="mbPoint">🧠 {{ mindbugCount }}</span>
-      <div class="drawPileCount"><img src="@/assets/cards/back.png" alt="back" style="width: 10px;height: 15px;"/><span>{{
-          drawPileCount
-        }}</span></div>
+      <div class="drawPileCount">
+        <img src="@/assets/cards/back.png" alt="back"/>
+        <span>{{ drawPileCount }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -34,33 +38,43 @@ function getAvatar(name: string = "default") {
 .playerDetails {
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.8);
+
   padding: 0 5px 2px 5px;
+  margin-top: 1px;
+
+  background: rgba(239, 168, 48, 0.35);
+
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  margin-top: 1px;
 }
 
 .playerAvatar {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  border: 2px solid black;
+
   margin-left: 10px;
   margin-right: 20px;
+
+  border: 2px solid black;
+  border-radius: 50%;
 }
 
 .playerName {
   height: 22px;
   width: fit-content;
-  padding: 0 8px;
+
   text-align: left;
+  padding: 0 8px;
+  margin-bottom: 0;
+
   line-height: 18px;
   font-size: 16px;
   font-weight: bold;
+
+  background-color: white;
+
   border: 2px solid black;
   border-radius: 5px;
-  background-color: white;
 }
 
 .playerData {
@@ -80,16 +94,16 @@ function getAvatar(name: string = "default") {
 }
 
 .drawPileCount > img {
+  width: 10px;
+  height: 15px;
+
   margin-left: 5px;
 }
 
 .drawPileCount > span {
+  margin-left: 8px;
+
   color: blue;
   font-weight: bold;
-  margin-left: 8px;
-}
-
-p {
-  margin-bottom: 0;
 }
 </style>

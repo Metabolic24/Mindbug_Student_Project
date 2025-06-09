@@ -1,17 +1,24 @@
 <script setup lang="ts">
+// Declare the interface for the data given by the parent component
 interface Props {
   cards: CardInterface[]
 }
+const props = defineProps<Props>()
 
-defineProps<Props>()
+// Declare events emitted by this component
 const emit = defineEmits(['clicked'])
 
-
+// Triggered when the player clicks on the component
+function onClick() {
+  if (props.cards.length > 0) {
+    emit('clicked')
+  }
+}
 </script>
 
 <template>
-  <div class="card" @click="emit('clicked')">
-    <div class="card-title">Défausse</div>
+  <div class="card" @click="onClick()">
+    <h4>Défausse</h4>
     <span>{{cards?.length}}</span>
   </div>
 </template>
