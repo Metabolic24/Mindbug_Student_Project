@@ -296,21 +296,22 @@ public class StealEffectResolverTest {
         effect.setSource(StealSource.DISCARD);
 
         CardInstance otherCard = opponentPlayer.getHand().getFirst();
-        otherCard.setPower(3);
+        otherCard.getEffects(EffectTiming.PLAY).clear();
+
         opponentPlayer.addCardToBoard(otherCard);
+        opponentPlayer.addCardToDiscardPile(otherCard);
 
         CardInstance otherCard2 = opponentPlayer.getHand().getFirst();
-        otherCard2.setPower(4);
         opponentPlayer.addCardToBoard(otherCard2);
-        opponentPlayer.addCardToDiscardPile(otherCard2);
 
         effectResolver.apply(game, randomCard, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertEquals(2, currentPlayer.getBoard().size());
-        assertTrue(currentPlayer.getBoard().contains(otherCard2));
+        assertTrue(currentPlayer.getBoard().contains(otherCard));
         assertEquals(4, currentPlayer.getHand().size());
         assertEquals(1, opponentPlayer.getBoard().size());
+        assertEquals(otherCard2, opponentPlayer.getBoard().getFirst());
         assertTrue(opponentPlayer.getDiscardPile().isEmpty());
         assertNull(game.getChoice());
     }
