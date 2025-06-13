@@ -19,6 +19,7 @@ import {Store, useStore} from "vuex";
 interface Props {
   gameId: string;
 }
+
 const props = defineProps<Props>()
 
 // VueX store to retrieve player data
@@ -64,7 +65,10 @@ const choiceModalData = computed((): ChoiceModalData => {
 
 // Computed value for choice modal visibility
 const isChoiceModalVisible = computed(() => {
-  return gameState.value?.choice?.type === "TARGET" || gameState.value?.choice?.type === "SIMULTANEOUS"
+  const game: GameStateInterface = gameState.value;
+  return game && !game.finished &&
+      (game.choice?.type === "TARGET" || game.choice?.type === "SIMULTANEOUS") &&
+      game.choice?.playerToChoose === game.player.uuid
 })
 
 onMounted(async () => {
@@ -99,10 +103,10 @@ onMounted(async () => {
       case "CHOICE": // Received when a choice needs to be solved
         if (message.state.choice?.type === "FRENZY") {
           attackingCard.value = undefined;
+          selectedCard.value = undefined;
         }
         break;
       case "FINISHED": // Received when the game is finished
-        alert("Game finished!")
         wsConnection.close()
         break;
         //TODO Implement remaining cases
@@ -120,7 +124,7 @@ onMounted(async () => {
 })
 
 onUnmounted(() => {
-  wsConnection.close(1001, "client left the game")
+  wsConnection.close(1000, "client left the game")
 })
 
 // Triggered when a card is selected on the board or in the hand
@@ -169,6 +173,7 @@ function onActionButtonClick(actionLabel: string) {
   }
 }
 
+// Triggered when choice modal raises button-click event
 async function onChoiceModalButtonClick(cards: CardInterface[]) {
   const game = gameState.value
 
@@ -181,12 +186,9 @@ async function onChoiceModalButtonClick(cards: CardInterface[]) {
 </script>
 
 <template>
-  <nav>
-    <router-link to="/">Home</router-link>
-  </nav>
-  <div v-if="gameState" class="container" style="width: 100%;height:100%">
-    <div class="row" style="width: 100%;height:10%">
-      <div class="col-2">
+  <div v-if="gameState" class="container-fluid game">
+    <div class="row top-row">
+      <div class="col-2 player-container">
         <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
                         :draw-pile-count="gameState?.opponent?.drawPileCount"
                         :mindbug-count="gameState?.opponent?.mindbugCount">
@@ -195,7 +197,14 @@ async function onChoiceModalButtonClick(cards: CardInterface[]) {
       <div class="col-8">
         <hand :cards="gameState?.opponent?.hand" :opponent=true :selected-card="selectedCard"></hand>
       </div>
-      <div class="col-2"></div>
+      <div class="col-2 top-buttons">
+        <button type="button" class="leave-button" @click="$router.push({name: 'Home'})">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+            <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"></path>
+            <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"></path>
+          </svg>
+        </button>
+      </div>
     </div>
 
     <board :game-state="gameState" :selected-card="selectedCard" :picked-card="pickedCard"
@@ -203,18 +212,18 @@ async function onChoiceModalButtonClick(cards: CardInterface[]) {
            @card-selected="onCardSelected($event, 'Board')">
     </board>
 
-    <div class="row" style="width: 100%;height:10%">
-      <div class="col-2" style="height: 100%">
+    <div class="row bottom-row">
+      <div class="col-2 player-container">
         <player-details :name="gameState?.player?.name" :life-points="gameState?.player?.lifePoints"
                         :draw-pile-count="gameState?.player?.drawPileCount"
                         :mindbug-count="gameState?.player?.mindbugCount">
         </player-details>
       </div>
-      <div class="col-8" style="height: 100%">
+      <div class="col-8">
         <hand :cards="gameState?.player?.hand" :opponent=false :selected-card="selectedCard"
               @card-selected="onCardSelected($event, 'Hand')"></hand>
       </div>
-      <div class="col-2" style="height: 100%"></div>
+      <div class="col-2"></div>
     </div>
   </div>
   <choice-modal v-if="isChoiceModalVisible" :choice="choiceModalData"
@@ -223,5 +232,72 @@ async function onChoiceModalButtonClick(cards: CardInterface[]) {
 </template>
 
 <style scoped>
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
+  background-image: url("../../assets/playmats/default.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top-row {
+  width: 100%;
+  height: 10vh;
+
+  display: flex;
+  flex-wrap: nowrap;
+
+  .player-container {
+    align-items: start;
+  }
+}
+
+.bottom-row {
+  width: 100%;
+  height: 20vh;
+
+  display: flex;
+  flex-wrap: nowrap;
+
+  .player-container {
+    align-items: end;
+  }
+}
+
+.player-container {
+  display: flex;
+}
+
+.top-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.leave-button {
+  width: 2vw;
+  height: 4vh;
+
+  background-color: rgba(255, 255, 255, 0.5);
+
+  border: none;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.2s;
+
+  svg {
+    min-width: 16px;
+    min-height: 16px;
+  }
+}
+
+.leave-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+}
+
+.leave-button:active {
+  background-color: #1e6f93;
+  transform: scale(0.98);
+}
 </style>

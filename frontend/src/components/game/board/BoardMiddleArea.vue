@@ -14,7 +14,9 @@ const props = defineProps<Props>()
 
 // Computed value for the message
 const message = computed(() => {
-  if (props.gameState?.choice) {
+  if (props.gameState.finished) {
+    return "Game Over"
+  } else if (props.gameState?.choice) {
     if (props.gameState.choice.playerToChoose === props.gameState.player.uuid) {
       if (props.gameState.choice.type === "FRENZY") {
         return "Do you want to attack again ?"
@@ -43,7 +45,8 @@ const message = computed(() => {
 
 // Computed value that controls image visibility
 const isImageVisible = computed(() => {
-  return props.pickedCard !== undefined || (
+  return !props.gameState?.finished &&
+      (props.pickedCard !== undefined ||
       props.gameState?.choice?.type === "BOOLEAN" ||
       props.gameState?.choice?.type === "FRENZY" ||
       props.gameState?.choice?.type === "HUNTER")
@@ -70,7 +73,8 @@ const imgAlt = computed(() => {
 
 <template>
   <div class="middle-area">
-    <img v-if="isImageVisible" :src="imgSrc" :alt="imgAlt"/>
+    <img v-if="isImageVisible" :src="imgSrc" :alt="imgAlt" draggable="false" @contextmenu.prevent=""/>
+
     <span>{{ message }}</span>
   </div>
 </template>
@@ -85,8 +89,16 @@ const imgAlt = computed(() => {
   justify-content: space-around;
 
   span {
-    font-size: x-large;
+    font-size: 4.5vh;
     font-weight: bolder;
+    color: mediumvioletred;
+
+    background-color: rgba(197, 192, 192, 0.8);
+    cursor: default;
+
+    padding: 5px 15px;
+
+    border-radius: 10px;
   }
 
   img {

@@ -14,6 +14,7 @@ interface Props {
   pickedCard: CardInterface
   attackingCard: CardInterface
 }
+
 const props = defineProps<Props>()
 
 // Declare events emitted by this component
@@ -21,7 +22,9 @@ const emit = defineEmits(['button-clicked', 'card-selected'])
 
 function onCardSelected(card: CardInterface): void {
   if ((props.gameState?.playerTurn && !props.attackingCard && card.ableToAttack) || // Attack case
-      (!props.gameState?.playerTurn && props.attackingCard && card.ableToBlock)) { // Block case
+      (!props.gameState?.playerTurn && props.attackingCard && card.ableToBlock && // Block case
+          (props.attackingCard.keywords.includes("SNEAKY") && card.keywords.includes("SNEAKY") ||
+              !props.attackingCard.keywords.includes("SNEAKY")))) {
     emit('card-selected', card)
   }
 }
@@ -66,12 +69,14 @@ function closeModal() {
     <div class="col-8">
       <div class="cards">
         <img v-for="card in gameState?.opponent.board" :src="getCardImage(card)" :alt="getCardAlt(card)"
-             class="card-image" :class="getCardClasses(card)" @click="onOpponentCardSelected(card)"/>
+             class="card-image" :class="getCardClasses(card)" @click="onOpponentCardSelected(card)" draggable="false"
+             @contextmenu.prevent=""/>
       </div>
       <board-middle-area :game-state="gameState" :picked-card="pickedCard" :attacking-card="attackingCard"></board-middle-area>
       <div class="cards">
         <img v-for="card in gameState?.player.board" :src="getCardImage(card)" :alt="getCardAlt(card)"
-             class="card-image" :class="getCardClasses(card)" @click="onCardSelected(card)"/>
+             class="card-image" :class="getCardClasses(card)" @click="onCardSelected(card)" draggable="false"
+             @contextmenu.prevent=""/>
       </div>
     </div>
     <div class="col-2">
@@ -86,7 +91,7 @@ function closeModal() {
 <style scoped>
 .board {
   width: 100%;
-  height: 80%;
+  height: 70vh;
 }
 
 .col-2 {
@@ -97,7 +102,7 @@ function closeModal() {
 }
 
 .discards {
-  row-gap: 5px;
+  justify-content: space-around;
 }
 
 .cards {

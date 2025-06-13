@@ -64,5 +64,7 @@ export async function resolveSingleTargetChoice(gameId: string, cardId: string):
 }
 
 export async function resolveMultipleTargetChoice(gameId: string, targets: string[]): Promise<void> {
+    CAs a traiter du Hamster glouton
+
     return manageRestCall(axios.post(gameBaseUrl + "/choice/target", {gameId, targets}))
 }

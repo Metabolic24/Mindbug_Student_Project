@@ -15,7 +15,6 @@ const emit = defineEmits(['card-selected'])
 // Get the CSS classes for the given card
 function getCardClasses(card: CardInterface): Record<string, boolean> {
   return ({
-    'top-card': props.opponent,
     'bottom-card': !props.opponent,
     'selected': card.uuid === props.selectedCard?.uuid,
   })
@@ -25,7 +24,8 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
 <template>
   <div class="hand">
     <img v-for="card in cards" :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image"
-         :class="getCardClasses(card)" @click="emit('card-selected', card)" />
+         :class="getCardClasses(card)" @click="emit('card-selected', card)" draggable="false"
+         @contextmenu.prevent=""/>
   </div>
 </template>
 
@@ -40,22 +40,12 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
 }
 
 .card-image {
-  width: 3vw;
+  width: 7vw;
   height: auto;
   object-fit: cover;
 
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.top-card:hover {
-  transform: translateY(10px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.top-card.selected {
-  outline: 4px solid red;
-  transform: translateY(10px);
 }
 
 .bottom-card:hover {

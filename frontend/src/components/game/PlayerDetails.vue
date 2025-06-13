@@ -19,15 +19,15 @@ function getAvatar(name: string = "default") {
 
 <template>
   <div class="playerDetails">
-    <div class="playerData">
-      <img class="playerAvatar" :src="getAvatar()" alt="Avatar">
-      <p class="playerName">{{ name }}</p>
+    <div class="playerProfile">
+      <img class="playerAvatar" :src="getAvatar()" alt="Avatar" draggable="false">
+      <span class="playerName">{{ name }}</span>
     </div>
     <div class="playerData">
       <span class="lifePoint">❤️ {{ lifePoints }}</span>
       <span class="mbPoint">🧠 {{ mindbugCount }}</span>
       <div class="drawPileCount">
-        <img src="@/assets/cards/back.png" alt="back"/>
+        <img src="@/assets/cards/back.png" alt="back" draggable="false"/>
         <span>{{ drawPileCount }}</span>
       </div>
     </div>
@@ -35,6 +35,10 @@ function getAvatar(name: string = "default") {
 </template>
 
 <style scoped>
+img {
+  pointer-events: none;
+}
+
 .playerDetails {
   display: flex;
   align-items: center;
@@ -42,68 +46,83 @@ function getAvatar(name: string = "default") {
   padding: 0 5px 2px 5px;
   margin-top: 1px;
 
-  background: rgba(239, 168, 48, 0.35);
+  background: rgba(239, 168, 48, 0.8);
 
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.playerAvatar {
-  width: 50px;
-  height: 50px;
+.playerProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
 
-  margin-left: 10px;
-  margin-right: 20px;
+.playerAvatar {
+  width: 5vw;
+  height: 10vh;
+
+  margin-left: 1vw;
+  margin-right: 1vw;
 
   border: 2px solid black;
   border-radius: 50%;
 }
 
 .playerName {
-  height: 22px;
-  width: fit-content;
-
-  text-align: left;
-  padding: 0 8px;
-  margin-bottom: 0;
-
-  line-height: 18px;
-  font-size: 16px;
+  line-height: 2vh;
+  font-size: 1.8vh;
   font-weight: bold;
 
-  background-color: white;
+  text-align: left;
+  padding: 0 0.5vw;
+  margin-bottom: 0;
+  overflow: hidden;
 
-  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: default;
+
+  border: 2px solid rgba(0, 0, 0, 0.8);
   border-radius: 5px;
 }
 
 .playerData {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
+  padding: 0 0.5vw;
+
+  span {
+    font-size: 2vh;
+    font-weight: bold;
+  }
 }
 
 .lifePoint {
   color: red;
-  font-weight: bold;
 }
 
 .mbPoint {
   color: black;
-  font-weight: bold;
 }
 
-.drawPileCount > img {
-  width: 10px;
-  height: 15px;
+.drawPileCount {
+  display: flex;
+  align-items: center;
 
-  margin-left: 5px;
+  img {
+    width: 1vw;
+    height: 3vh;
+
+    margin-left: 0.3vw;
+  }
+
+  span {
+    margin-left: 0.35vw;
+
+    color: blue;
+  }
 }
 
-.drawPileCount > span {
-  margin-left: 8px;
-
-  color: blue;
-  font-weight: bold;
-}
 </style>

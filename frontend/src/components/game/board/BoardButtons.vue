@@ -36,7 +36,9 @@ const buttonLabel = computed(() => {
 
 // Computed value for the first button visibility
 const isFirstButtonVisible = computed(() => {
-  if (props.gameState?.choice) {
+  if (props.gameState.finished) {
+    return false
+  } else if (props.gameState?.choice) {
     return props.gameState?.choice.playerToChoose === props.gameState?.player.uuid &&
         (props.gameState?.choice.type === "BOOLEAN" || props.gameState?.choice.type === "FRENZY" || props.gameState?.choice.type === "HUNTER");// Choice case
   } else if (props.gameState?.playerTurn) {
@@ -72,7 +74,9 @@ const secondButtonLabel = computed(() => {
 
 // Computed value for the second button visibility
 const isSecondButtonVisible = computed(() => {
-  if (props.gameState?.choice) {
+  if (props.gameState.finished) {
+    return false
+  } else if (props.gameState?.choice) {
     return props.gameState?.choice.playerToChoose === props.gameState?.player.uuid &&
         (props.gameState?.choice.type === "BOOLEAN" || props.gameState?.choice.type === "FRENZY" || props.gameState?.choice.type === "HUNTER");// Choice case
   } else {
@@ -102,9 +106,26 @@ const isSecondButtonVisible = computed(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1vh;
 
   button {
-    height: 30px;
+    width: 15vw;
+    padding: 1vw;
+
+    font-size: 5vh;
+    background-color: rgba(250, 250, 250, 0.8);
+
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.05);
+  }
+  button:active {
+    background-color: #1e6f93;
+    transform: scale(0.98);
   }
 }
 </style>

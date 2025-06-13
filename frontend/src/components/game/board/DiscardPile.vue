@@ -25,16 +25,23 @@ function onClick() {
 
 <style scoped>
 .card {
-  height: 200px;
-  min-width: 120px;
+  height: 20vh;
+  min-width: 7vw;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  gap: 3vh;
+
+  padding-top: 1vh;
 
   span {
-    font-size: xxx-large;
+    font-size: 4vh;
     font-weight: bolder;
+  }
+
+  h4, span {
+    cursor: default;
   }
 }
 </style>

@@ -23,14 +23,14 @@ const title = computed(() => {
 
 // Computed value to disable validation button
 const isButtonDisabled = computed(() => {
-  return (props.choice.type === "SIMULTANEOUS" && selectedCards.value.length !== 1) ||
-      (props.choice.type === "TARGET" && !props.choice.optional && selectedCards.value.length != props.choice.count)
+  return (props.choice?.type === "SIMULTANEOUS" && selectedCards.value.length !== 1) ||
+      (props.choice?.type === "TARGET" && !props.choice?.optional && selectedCards.value.length != props.choice?.count)
 })
 
 // Triggered when button is clicked
 function onButtonClick() {
-  if ((props.choice.type === "SIMULTANEOUS" && selectedCards.value.length === 1) ||
-      (props.choice.type === "TARGET" && (props.choice.optional || (!props.choice.optional && selectedCards.value.length == props.choice.count)))) {
+  if ((props.choice?.type === "SIMULTANEOUS" && selectedCards.value.length === 1) ||
+      (props.choice?.type === "TARGET" && (props.choice?.optional || (!props.choice?.optional && selectedCards.value.length == props.choice?.count)))) {
     emit('button-clicked', selectedCards.value)
   }
 }
@@ -64,7 +64,7 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
       <div class="modal-body">
         <div class="cards-container">
           <img v-for="card in choice?.cards" :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image"
-               :class="getCardClasses(card)" @click="onCardSelected(card)"/>
+               :class="getCardClasses(card)" @click="onCardSelected(card)" draggable="false" @contextmenu.prevent=""/>
         </div>
       </div>
       <div class="modal-footer">
