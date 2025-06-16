@@ -48,7 +48,8 @@ public class ReviveEffectResolverTest {
         BooleanChoice booleanChoice = (BooleanChoice) game.getChoice();
 
         assertEquals(effectResolver, booleanChoice.getEffectResolver());
-        assertEquals(randomCard, booleanChoice.getCard());
+        assertEquals(randomCard, booleanChoice.getSourceCard());
+        assertNull(booleanChoice.getCard());
         assertEquals(opponentPlayer, booleanChoice.getPlayerToChoose());
     }
 }

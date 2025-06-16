@@ -1,6 +1,7 @@
 package org.metacorp.mindbug.service.effect.impl.steal;
 
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.card.Card;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.impl.StealEffect;
 import org.metacorp.mindbug.model.player.Player;
@@ -13,20 +14,23 @@ public class TargetChoiceResolver extends StealEffectResolver implements Resolva
 
     private final Player newOwner;
 
+    private final CardInstance sourceCard;
+
     /**
      * Constructor
      *
      * @param effect the effect to be resolved
      */
-    public TargetChoiceResolver(StealEffect effect, Player newOwner) {
+    public TargetChoiceResolver(StealEffect effect, Player newOwner, CardInstance sourceCard) {
         super(effect);
         this.newOwner = newOwner;
+        this.sourceCard = sourceCard;
     }
 
     @Override
     public void resolve(Game game, List<CardInstance> chosenTargets) {
         if (chosenTargets != null) {
-            stealCards(chosenTargets, game, newOwner);
+            stealCards(chosenTargets, game, newOwner, sourceCard);
         } else {
             // TODO Unexpected resolver value (raise error?)
         }

@@ -58,6 +58,8 @@ public class GameService {
 
         if (game.getChoice() == null) {
             EffectQueueService.resolveEffectQueue(choice.getType() == ChoiceType.SIMULTANEOUS, game);
+        } else {
+            WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
         }
     }
 

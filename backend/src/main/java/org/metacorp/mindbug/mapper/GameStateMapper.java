@@ -88,7 +88,11 @@ public class GameStateMapper {
             }
             case BOOLEAN -> {
                 BooleanChoice booleanChoice = (BooleanChoice) choice;
-                return new ChoiceDTO(booleanChoice.getType(), booleanChoice.getPlayerToChoose().getUuid(), fromCard(booleanChoice.getCard()));
+                CardDTO sourceCardDTO = fromCard(booleanChoice.getSourceCard());
+                CardDTO targetCardDTO = booleanChoice.getCard() == null ?
+                        sourceCardDTO :  fromCard(booleanChoice.getCard());
+
+                return new BooleanChoiceDTO(booleanChoice.getPlayerToChoose().getUuid(), sourceCardDTO, targetCardDTO);
             }
             case HUNTER -> {
                 HunterChoice hunterChoice = (HunterChoice) choice;

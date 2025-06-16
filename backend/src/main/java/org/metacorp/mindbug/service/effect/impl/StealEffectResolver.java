@@ -63,7 +63,7 @@ public class StealEffectResolver extends GenericEffectResolver<StealEffect> {
         int cardsCount = availableCards.size();
         if (cardsCount > 0) {
             if (!effect.isOptional() && (cardsCount <= value || value < 0)) {
-                stealCards(new ArrayList<>(availableCards), game, cardOwner);
+                stealCards(new ArrayList<>(availableCards), game, cardOwner, card);
             } else if (selection == StealTargetSelection.RANDOM) {
                 List<CardInstance> stolenCards = new ArrayList<>();
                 Random randomGenerator = new Random();
@@ -72,18 +72,18 @@ public class StealEffectResolver extends GenericEffectResolver<StealEffect> {
                     stolenCards.add(availableCards.remove(index));
 
                 }
-                stealCards(stolenCards, game, cardOwner);
+                stealCards(stolenCards, game, cardOwner, card);
             } else {
                 Player playerToChoose = (selection == null || selection == StealTargetSelection.SELF) ? cardOwner : opponent;
 
-                TargetChoice choice = new TargetChoice(playerToChoose, card, new TargetChoiceResolver(effect, cardOwner), value, new HashSet<>(availableCards));
+                TargetChoice choice = new TargetChoice(playerToChoose, card, new TargetChoiceResolver(effect, cardOwner, card), value, new HashSet<>(availableCards));
                 choice.setOptional(effect.isOptional());
                 game.setChoice(choice);
             }
         }
     }
 
-    protected void stealCards(List<CardInstance> stolenCards, Game game, Player newOwner) {
+    protected void stealCards(List<CardInstance> stolenCards, Game game, Player newOwner, CardInstance sourceCard) {
         boolean mustPlay = effect.isMustPlay();
         boolean mayPlay = effect.isMayPlay();
 
@@ -104,7 +104,7 @@ public class StealEffectResolver extends GenericEffectResolver<StealEffect> {
                     EffectQueueService.addBoardEffectsToQueue(stolenCard, EffectTiming.PLAY, game.getEffectQueue());
                 }
             } else if (mayPlay) {
-                game.setChoice(new BooleanChoice(newOwner, stolenCard, new StealBooleanChoiceResolver(stolenCard)));
+                game.setChoice(new BooleanChoice(newOwner, sourceCard, new StealBooleanChoiceResolver(stolenCard), stolenCard));
             } else {
                 newOwner.getHand().add(stolenCard);
             }
