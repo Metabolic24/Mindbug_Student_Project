@@ -35,10 +35,6 @@ export async function getCardSetDetails(setName: String): Promise<string[]> {
 
 // Game endpoints
 
-export async function startGame(): Promise<GameStateInterface> {
-    return manageRestCall(axios.get(gameBaseUrl))
-}
-
 export async function pickCard(gameId: string, cardId: string): Promise<void> {
     return manageRestCall(axios.post(gameBaseUrl + "/pick", {gameId, cardId}))
 }
@@ -64,7 +60,5 @@ export async function resolveSingleTargetChoice(gameId: string, cardId: string):
 }
 
 export async function resolveMultipleTargetChoice(gameId: string, targets: string[]): Promise<void> {
-    CAs a traiter du Hamster glouton
-
     return manageRestCall(axios.post(gameBaseUrl + "/choice/target", {gameId, targets}))
 }

@@ -21,10 +21,12 @@ const message = computed(() => {
       if (props.gameState.choice.type === "FRENZY") {
         return "Do you want to attack again ?"
       } else if (props.gameState.choice.type === "BOOLEAN") {
-        return "Do you want to revive this card?" // TODO A modifier avec la valeur appropriée (voir comment on la récupère d'ailleurs)
+        return props.gameState.choice.message
       } else if (props.gameState.choice.type === "HUNTER") {
         return "Select a target to hunt or continue attacking"
       }
+    } else {
+      return "Waiting for opponent choice..."
     }
   } else if (props.gameState?.playerTurn) {
     if (props.pickedCard || props.attackingCard) {

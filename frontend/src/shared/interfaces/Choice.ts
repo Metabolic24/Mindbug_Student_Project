@@ -2,6 +2,7 @@ interface ChoiceInterface {
     type: ChoiceType
     playerToChoose: string
     sourceCard: CardInterface
+    message?: string
 }
 
 type ChoiceType = "SIMULTANEOUS" | "FRENZY" | "BOOLEAN" | "TARGET" | "HUNTER";
