@@ -21,17 +21,18 @@ const title = computed(() => {
 </script>
 
 <template>
-  <div class="modal-mask">
+  <div class="modal-mask" @click="emit('close-modal')">
     <div class="modal-container">
-      <div class="modal-header">
+      <div class="modal-header" @click.stop>
         <h5 class="modal-title">{{ title }}</h5>
         <button type="button" aria-label="Close" @click="emit('close-modal')">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" @click.stop>
         <div class="cards-container">
-          <img v-for="card in cards" :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image"/>
+          <img v-for="card in cards" :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image"
+               draggable="false" @contextmenu.prevent=""/>
         </div>
       </div>
     </div>
