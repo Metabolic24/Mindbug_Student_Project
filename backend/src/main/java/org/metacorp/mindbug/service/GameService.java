@@ -63,6 +63,19 @@ public class GameService {
         }
     }
 
+    public static void newTurn(Game game) {
+        newTurn(game, false);
+    }
+
+    public static void newTurn(Game game, boolean mindbug) {
+        if (!mindbug) {
+            game.setCurrentPlayer(game.getOpponent());
+        }
+
+        WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
+        refreshGameState(game, true);
+    }
+
     public static void endGame(Player loser, Game game) {
         Player winner = loser.getOpponent(game.getPlayers());
         System.out.printf("%s wins ; %s loses\n", winner.getName(), loser.getName());
@@ -102,18 +115,18 @@ public class GameService {
         refreshGameState(game, false);
     }
 
-    public static void refreshGameState(Game game, boolean afterAttack) {
+    private static void refreshGameState(Game game, boolean newTurn) {
         List<EffectsToApply> passiveEffects = new ArrayList<>();
 
         for (Player player : game.getPlayers()) {
-            player.refresh(afterAttack);
+            player.refresh(newTurn);
 
             passiveEffects.addAll(getPassiveEffects(player.getBoard(), false));
             passiveEffects.addAll(getPassiveEffects(player.getDiscardPile(), true));
         }
 
         // Sort effects by priority
-        passiveEffects.sort(Comparator.comparingInt(o -> o.getEffects().getFirst().getPriority()));
+        passiveEffects.sort(Comparator.comparingInt(effect -> effect.getEffects().getFirst().getPriority()));
 
         // Apply effects
         for (EffectsToApply effect : passiveEffects) {

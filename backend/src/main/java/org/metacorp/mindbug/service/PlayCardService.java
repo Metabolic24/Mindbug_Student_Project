@@ -120,12 +120,8 @@ public class PlayCardService {
             // Reset the played card value
             game.setPlayedCard(null);
 
-            // Only trigger next turn if no mindbug has been used
-            if (mindbugger == null) {
-                game.setCurrentPlayer(game.getOpponent());
-            }
-
-            WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
+            // Start a new turn but only changes current player if card has not been mindbugged
+            GameService.newTurn(game, mindbugger != null);
         });
     }
 }

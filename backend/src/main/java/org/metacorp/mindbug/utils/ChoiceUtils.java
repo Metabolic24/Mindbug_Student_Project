@@ -8,6 +8,7 @@ import org.metacorp.mindbug.model.choice.*;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.service.AttackService;
 import org.metacorp.mindbug.service.EffectQueueService;
+import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.WebSocketService;
 
 import java.util.List;
@@ -41,8 +42,7 @@ public final class ChoiceUtils {
             attackingCard.setAbleToAttackTwice(false);
             AttackService.declareAttack(attackingCard, game);
         } else {
-            game.setCurrentPlayer(game.getOpponent());
-            WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
+            GameService.newTurn(game);
         }
     }
 

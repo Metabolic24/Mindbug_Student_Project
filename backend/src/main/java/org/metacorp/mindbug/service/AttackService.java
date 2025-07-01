@@ -78,10 +78,8 @@ public class AttackService {
                 }
             } else {
                 game.setAttackingCard(null);
-                game.setCurrentPlayer(game.getOpponent());
 
-                // Send update through WebSocket
-                WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
+                GameService.newTurn(game);
             }
         });
     }
@@ -110,16 +108,6 @@ public class AttackService {
             throw new GameStateException("a choice needs to be resolved before attacking", Map.of("choice", game.getChoice()));
         } else if (game.getPlayedCard() != null) {
             throw new GameStateException("a played card needs to be resolved before attacking", Map.of("playedCard", game.getPlayedCard()));
-        }
-
-        // Specific case that occurs when the ATTACK effect(s) of the card caused its destruction
-        if (!attackingCard.getOwner().getBoard().contains(attackingCard)) {
-            System.out.println("*********************************************************");
-            System.out.println("Attacking card has been destroyed and is no more on board");
-            System.out.println("*********************************************************");
-
-            game.setAttackingCard(null);
-            return;
         }
 
         processAttackResolution(attackingCard, defendingCard, game);
@@ -164,13 +152,8 @@ public class AttackService {
 
                 WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
             } else {
-                // Refresh game state so modifiers are correctly cleared (only after the last attack)
-                GameService.refreshGameState(game, true);
-
                 attackingCard.setAbleToAttackTwice(attackingCard.hasKeyword(CardKeyword.FRENZY));
-                game.setCurrentPlayer(game.getOpponent());
-
-                WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
+                GameService.newTurn(game);
             }
 
             game.setAttackingCard(null);
