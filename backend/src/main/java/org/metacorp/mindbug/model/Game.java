@@ -38,7 +38,7 @@ public class Game {
     private boolean webSocketUp;
 
     /**
-     * Empty constructor (WARNING : a game is not meant to be reused)
+     * Empty constructor (WARNING: a game is not meant to be reused)
      */
     public Game(Player player1, Player player2) {
         uuid = UUID.randomUUID();
@@ -53,9 +53,14 @@ public class Game {
     }
 
     public void runAfterEffect() {
+        Runnable oldAfterEffect = afterEffect;
+
         if (afterEffect != null) {
             afterEffect.run();
-            afterEffect = null;
+
+            if (oldAfterEffect.equals(afterEffect)) {
+                afterEffect = null;
+            }
         }
     }
 

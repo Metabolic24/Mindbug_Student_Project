@@ -8,8 +8,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.AttackService;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.metacorp.mindbug.utils.TestGameUtils.*;
 
 public class SpecificCaseTest {
@@ -57,5 +56,36 @@ public class SpecificCaseTest {
 
         assertFalse(player2.getDiscardPile().contains(urchinHurler));
         assertTrue(player2.getDiscardPile().contains(ferretPacifier));
+    }
+
+    @Test
+    public void goreagleBadlyReviveHyenix() throws GameStateException {
+        CardInstance goreagleAlpha = getCardById(38);
+        CardInstance tigerSquirrel = getCardById(29);
+        CardInstance hyenix = getCardById(41);
+        CardInstance explosiveToad = getCardById(8);
+
+        // Setup
+        hand(player1, hyenix, tigerSquirrel, goreagleAlpha);
+        hand(player2, explosiveToad);
+
+        //Game start
+        play(hyenix, player2);
+
+        play(tigerSquirrel);
+
+        play(explosiveToad);
+
+        play(goreagleAlpha);
+
+        attack(explosiveToad, goreagleAlpha);
+
+        chooseTargets(tigerSquirrel);
+
+        AttackService.declareAttack(goreagleAlpha, game);
+
+        choose(true);
+
+        assertNotNull(game.getChoice());
     }
 }

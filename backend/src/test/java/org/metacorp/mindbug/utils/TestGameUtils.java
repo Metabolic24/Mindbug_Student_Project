@@ -5,10 +5,14 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.BooleanChoice;
+import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.AttackService;
+import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.PlayCardService;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
@@ -85,6 +89,14 @@ public class TestGameUtils {
             card.setOwner(player);
             player.getDrawPile().add(card);
         }
+    }
+
+    public static void chooseTargets(CardInstance... cards) throws GameStateException {
+        GameService.resolveChoice(Arrays.stream(cards).map(CardInstance::getUuid).toList(), game);
+    }
+
+    public static void choose(boolean choice) throws GameStateException {
+        GameService.resolveChoice(choice, game);
     }
 
     private TestGameUtils() {
