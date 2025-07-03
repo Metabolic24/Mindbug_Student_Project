@@ -66,7 +66,7 @@ const choiceModalData = computed((): ChoiceModalData => {
 // Computed value for choice modal visibility
 const isChoiceModalVisible = computed(() => {
   const game: GameStateInterface = gameState.value;
-  return game && !game.finished &&
+  return game && !game.winner &&
       (game.choice?.type === "TARGET" || game.choice?.type === "SIMULTANEOUS") &&
       game.choice?.playerToChoose === game.player.uuid
 })

@@ -36,7 +36,7 @@ const buttonLabel = computed(() => {
 
 // Computed value for the first button visibility
 const isFirstButtonVisible = computed(() => {
-  if (props.gameState.finished) {
+  if (props.gameState.winner) {
     return false
   } else if (props.gameState?.choice) {
     return props.gameState?.choice.playerToChoose === props.gameState?.player.uuid &&
@@ -74,7 +74,7 @@ const secondButtonLabel = computed(() => {
 
 // Computed value for the second button visibility
 const isSecondButtonVisible = computed(() => {
-  if (props.gameState.finished) {
+  if (props.gameState.winner) {
     return false
   } else if (props.gameState?.choice) {
     return props.gameState?.choice.playerToChoose === props.gameState?.player.uuid &&

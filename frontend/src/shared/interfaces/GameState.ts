@@ -21,7 +21,7 @@ interface GameStateInterface {
     player: PlayerInterface
     opponent: PlayerInterface
     playerTurn?: boolean
-    finished: boolean
+    winner: string
     card: CardInterface
     choice: ChoiceInterface | TargetChoiceInterface | SimultaneousChoiceInterface
 }

@@ -14,8 +14,13 @@ const props = defineProps<Props>()
 
 // Computed value for the message
 const message = computed(() => {
-  if (props.gameState.finished) {
-    return "Game Over"
+  if (props.gameState.winner) {
+    const gameOver = "Game Over : "
+    if (props.gameState.winner === props.gameState.player.uuid) {
+      return gameOver + "You WIN !"
+    } else {
+      return gameOver + "You LOSE !"
+    }
   } else if (props.gameState?.choice) {
     if (props.gameState.choice.playerToChoose === props.gameState.player.uuid) {
       if (props.gameState.choice.type === "FRENZY") {
@@ -47,7 +52,7 @@ const message = computed(() => {
 
 // Computed value that controls image visibility
 const isImageVisible = computed(() => {
-  return !props.gameState?.finished &&
+  return !props.gameState?.winner &&
       (props.pickedCard !== undefined ||
       props.gameState?.choice?.type === "BOOLEAN" ||
       props.gameState?.choice?.type === "FRENZY" ||
