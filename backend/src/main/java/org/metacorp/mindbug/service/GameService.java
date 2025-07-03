@@ -80,7 +80,7 @@ public class GameService {
         Player winner = loser.getOpponent(game.getPlayers());
         System.out.printf("%s wins ; %s loses\n", winner.getName(), loser.getName());
 
-        game.setFinished(true);
+        game.setWinner(winner);
 
         WebSocketService.sendGameEvent(WsGameEventType.FINISHED, game);
     }

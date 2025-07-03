@@ -23,7 +23,7 @@ public class Game {
 
     private List<Player> players;
     private Player currentPlayer;
-    private boolean finished;
+    private Player winner;
 
     private List<CardInstance> cards;
     private List<CardInstance> bannedCards;
@@ -42,7 +42,7 @@ public class Game {
      */
     public Game(Player player1, Player player2) {
         uuid = UUID.randomUUID();
-        finished = false;
+        winner = null;
         bannedCards = new ArrayList<>();
         effectQueue = new EffectQueue();
         players = Arrays.asList(player1, player2);
@@ -50,6 +50,10 @@ public class Game {
 
     public Player getOpponent() {
         return currentPlayer.getOpponent(players);
+    }
+
+    public boolean isFinished() {
+        return winner != null;
     }
 
     public void runAfterEffect() {
@@ -68,7 +72,7 @@ public class Game {
     public String toString() {
         return "Game{" +
                 "currentPlayer=" + currentPlayer.getName() +
-                ", finished=" + finished +
+                ", finished=" + isFinished() +
                 ", bannedCards=" + bannedCards +
                 ", playedCard=" + playedCard +
                 ", attackingCard=" + attackingCard +

@@ -20,7 +20,7 @@ public class WsPlayerGameState {
     private PlayerDTO player;
     private PlayerDTO opponent;
     private Boolean playerTurn;
-    private Boolean finished;
+    private UUID winner;
 
     private CardDTO card;
     private AbstractChoiceDTO choice;
@@ -36,7 +36,7 @@ public class WsPlayerGameState {
         this.player = isPlayer ? gameState.getPlayer() : gameState.getOpponent();
         this.opponent = isPlayer ? gameState.getOpponent() : gameState.getPlayer();
         this.playerTurn = isPlayer;
-        this.finished = gameState.getFinished();
+        this.winner = gameState.getWinner();
         this.card = gameState.getCard();
         this.choice = gameState.getChoice();
 

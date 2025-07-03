@@ -17,7 +17,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"uuid", "finished", "player", "opponent", "card", "choice"})
+@JsonPropertyOrder({"uuid", "winner", "player", "opponent", "card", "choice"})
 public class GameStateDTO {
     @NonNull
     private UUID uuid;
@@ -25,8 +25,8 @@ public class GameStateDTO {
     private PlayerDTO player;
     @NonNull
     private PlayerDTO opponent;
-    @NonNull
-    private Boolean finished;
+
+    private UUID winner;
 
     /**
      * The picked or attacking card if any
