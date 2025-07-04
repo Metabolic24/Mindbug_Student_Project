@@ -151,4 +151,49 @@ public class SpecificCaseTest {
 
         assertEquals(majesticManticore, game.getAttackingCard());
     }
+
+    // #26
+    @Test
+    public void opponentCanChooseBlockTargetWhileCannotBlock() throws GameStateException {
+        CardInstance gorillion = getCardById(12);
+        CardInstance ferretPacifier = getCardById(36);
+        CardInstance explosiveToad = getCardById(8);
+        CardInstance hyenix = getCardById(41);
+        CardInstance goreagleAlpha = getCardById(38);
+
+        // Setup
+        hand(player1, ferretPacifier, hyenix, gorillion);
+        hand(player2, goreagleAlpha, explosiveToad);
+
+        //Game start
+        play(hyenix, player2);
+
+        play(ferretPacifier);
+
+        play(explosiveToad, player1);
+
+        play(goreagleAlpha, player1);
+
+        attack(hyenix, goreagleAlpha);
+
+        choose(true);
+
+        AttackService.resolveAttack(null, game);
+
+        play(gorillion);
+
+        attack(hyenix, gorillion);
+
+        AttackService.declareAttack(goreagleAlpha, game);
+
+        choose(true);
+
+        choose(true);
+
+        huntTarget(null);
+
+        assertNull(game.getAttackingCard());
+        assertEquals(game.getCurrentPlayer(), player2);
+        assertEquals(1, player2.getTeam().getLifePoints());
+    }
 }

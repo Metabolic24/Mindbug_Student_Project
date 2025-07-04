@@ -4,6 +4,7 @@ import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.choice.*;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.service.AttackService;
@@ -102,8 +103,11 @@ public final class ChoiceUtils {
                 AttackService.resolveAttack(chosenTarget.get(), game);
             }
         } else {
-            // Only send this event when no target has been selected as game will be refreshed by attack resolution in the other case
-            WebSocketService.sendGameEvent(WsGameEventType.ATTACK_DECLARED, game);
+            if (game.getOpponent().getBoard().isEmpty() || !game.getOpponent().canBlock(choice.getAttackingCard().hasKeyword(CardKeyword.SNEAKY))) {
+                AttackService.resolveAttack(null, game);
+            } else {
+                WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);
+            }
         }
     }
 }

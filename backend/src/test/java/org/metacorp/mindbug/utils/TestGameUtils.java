@@ -91,6 +91,10 @@ public class TestGameUtils {
         }
     }
 
+    public static void huntTarget(CardInstance card) throws GameStateException {
+        GameService.resolveChoice(card == null ? null : card.getUuid(), game);
+    }
+
     public static void chooseTargets(CardInstance... cards) throws GameStateException {
         GameService.resolveChoice(Arrays.stream(cards).map(CardInstance::getUuid).toList(), game);
     }
