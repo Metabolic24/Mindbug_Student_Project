@@ -73,7 +73,13 @@ public class GameService {
         }
 
         refreshGameState(game, true);
-        WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
+
+        Player currentPlayer = game.getCurrentPlayer();
+        if (currentPlayer.getHand().isEmpty() && currentPlayer.getBoard().stream().noneMatch(CardInstance::isAbleToAttack)) {
+            endGame(currentPlayer, game);
+        } else {
+            WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
+        }
     }
 
     public static void endGame(Player loser, Game game) {

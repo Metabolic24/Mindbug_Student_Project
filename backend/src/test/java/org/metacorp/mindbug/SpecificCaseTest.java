@@ -196,4 +196,29 @@ public class SpecificCaseTest {
         assertEquals(game.getCurrentPlayer(), player2);
         assertEquals(1, player2.getTeam().getLifePoints());
     }
+
+    // #27
+    @Test
+    public void hamsterLionDoesNotCauseGameEndWhenNoOneCanAttack() throws GameStateException {
+        CardInstance hyenix = getCardById(41);
+        CardInstance graveRobber = getCardById(13);
+        CardInstance hamsterLion = getCardById(39);
+        CardInstance snailHydra = getCardById(25);
+
+        // Setup
+        hand(player1, hamsterLion, snailHydra);
+        hand(player2, hyenix, graveRobber);
+
+        play(hamsterLion);
+
+        play(hyenix);
+
+        play(snailHydra);
+
+        play(graveRobber);
+
+        attack(snailHydra, null);
+
+        assertTrue(game.isFinished());
+    }
 }
