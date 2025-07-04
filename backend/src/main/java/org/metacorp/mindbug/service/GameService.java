@@ -72,8 +72,8 @@ public class GameService {
             game.setCurrentPlayer(game.getOpponent());
         }
 
-        WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
         refreshGameState(game, true);
+        WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
     }
 
     public static void endGame(Player loser, Game game) {

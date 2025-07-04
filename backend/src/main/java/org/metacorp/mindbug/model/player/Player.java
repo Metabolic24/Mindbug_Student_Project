@@ -126,10 +126,10 @@ public class Player {
         return lowestCards;
     }
 
-    public void refresh(boolean afterAttack) {
+    public void refresh(boolean newTurn) {
         refillHand();
         for (CardInstance card : board) {
-            card.reset(afterAttack);
+            card.reset(newTurn);
         }
     }
 

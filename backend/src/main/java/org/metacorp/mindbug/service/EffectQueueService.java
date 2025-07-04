@@ -114,7 +114,6 @@ public class EffectQueueService {
                 } else {
                     if (!iterator.hasNext()) {
                         effectQueue.remove(currentEffect);
-
                     } else {
                         // Update this boolean attribute so next effect resolution won't trigger a simultaneous choice first
                         effectQueue.setResolvingEffect(true);

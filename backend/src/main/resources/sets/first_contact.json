@@ -495,7 +495,9 @@
       "PASSIVE": [{
         "type": "POWER_UP",
         "value": 6,
-        "self": true
+        "self": true,
+        "selfTurn": true
+
       }]
     },
     "unique": false

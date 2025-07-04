@@ -25,6 +25,7 @@ public class SpecificCaseTest {
         player2 = getPlayer2();
     }
 
+    // #20
     @Test
     public void hurlerAlwaysBoost() throws GameStateException {
         CardInstance turboBug = getCardById(30);
@@ -58,6 +59,7 @@ public class SpecificCaseTest {
         assertTrue(player2.getDiscardPile().contains(ferretPacifier));
     }
 
+    // #21
     @Test
     public void goreagleBadlyReviveHyenix() throws GameStateException {
         CardInstance goreagleAlpha = getCardById(38);
@@ -87,5 +89,66 @@ public class SpecificCaseTest {
         choose(true);
 
         assertNotNull(game.getChoice());
+    }
+
+    // #23
+    @Test
+    public void strangeBarrelDoesNotTrigger() throws GameStateException {
+        CardInstance strangeBarrel = getCardById(28);
+        CardInstance spiderOwl = getCardById(27);
+        CardInstance goreagleAlpha = getCardById(38);
+        CardInstance tigerSquirrel = getCardById(29);
+        CardInstance explosiveToad = getCardById(8);
+
+
+        // Setup
+        hand(player1, strangeBarrel, spiderOwl, goreagleAlpha, tigerSquirrel, explosiveToad);
+        hand(player2);
+
+        //Game start
+        play(strangeBarrel, player2);
+
+        play(spiderOwl);
+
+        attack(strangeBarrel, spiderOwl);
+
+        assertNull(game.getChoice());
+        assertEquals(1, player1.getHand().size());
+        assertEquals(2, player2.getHand().size());
+    }
+
+    // #26
+    @Test
+    public void goblinWerewolfNotDestroyedByMajesticManticore() throws GameStateException {
+        CardInstance goblinWerewolf = getCardById(11);
+        CardInstance hyenix = getCardById(41);
+        CardInstance hungryHungryHamster = getCardById(40);
+        CardInstance froblinInstigator = getCardById(37);
+        CardInstance explosiveToad = getCardById(8);
+        CardInstance majesticManticore = getCardById(42);
+
+        // Setup
+        hand(player1, goblinWerewolf, hyenix, hungryHungryHamster);
+        hand(player2, froblinInstigator, explosiveToad, majesticManticore);
+
+        //Game start
+        play(goblinWerewolf);
+
+        play(explosiveToad);
+
+        play(hyenix);
+
+        play(majesticManticore);
+
+        play(hungryHungryHamster);
+
+        choose(true);
+
+        AttackService.declareAttack(majesticManticore, game);
+        assertTrue(player1.getDiscardPile().contains(goblinWerewolf));
+        assertTrue(player1.getDiscardPile().contains(hungryHungryHamster));
+        assertTrue(player1.getBoard().contains(hyenix));
+
+        assertEquals(majesticManticore, game.getAttackingCard());
     }
 }
