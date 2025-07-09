@@ -4,10 +4,7 @@ import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;
 import org.metacorp.mindbug.dto.GameStateDTO;
-import org.metacorp.mindbug.dto.rest.DeclareAttackDTO;
-import org.metacorp.mindbug.dto.rest.PickDTO;
-import org.metacorp.mindbug.dto.rest.PlayDTO;
-import org.metacorp.mindbug.dto.rest.ResolveAttackDTO;
+import org.metacorp.mindbug.dto.rest.*;
 import org.metacorp.mindbug.dto.rest.choice.BooleanAnswerDTO;
 import org.metacorp.mindbug.dto.rest.choice.SingleTargetAnswerDTO;
 import org.metacorp.mindbug.dto.rest.choice.MultipleTargetAnswerDTO;
@@ -22,6 +19,7 @@ import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.PlayCardService;
 
 import java.util.NoSuchElementException;
+import java.util.Optional;
 import java.util.UUID;
 
 /**
@@ -49,6 +47,30 @@ public class GameController {
         GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
 
         return Response.ok(gameStateDTO).build();
+    }
+
+    @POST
+    @Path("/surrender")
+    public Response surrender(SurrenderDTO body) {
+        if (body.getGameId() == null || body.getPlayerId() == null) {
+            return Response.status(400).entity("Missing request data").build();
+        }
+
+        Game game = gameService.findById(body.getGameId());
+        if (game == null) {
+            return Response.status(400).entity("Requested game not found").build();
+        }
+
+        Optional<Player> playerOpt = game.getPlayers().stream()
+                .filter(player -> player.getUuid().equals(body.getPlayerId()))
+                .findFirst();
+        if (playerOpt.isPresent()) {
+            GameService.endGame(playerOpt.get(), game);
+        } else {
+            return Response.status(400).entity("Unknown player ID").build();
+        }
+
+        return Response.ok().build();
     }
 
     /**
