@@ -10,10 +10,11 @@ import {
   resolveAttack,
   resolveBoolean,
   resolveMultipleTargetChoice,
-  resolveSingleTargetChoice
+  resolveSingleTargetChoice, surrender
 } from "@/shared/RestService";
 import ChoiceModal from "@/components/game/ChoiceModal.vue";
 import {Store, useStore} from "vuex";
+import {useRouter} from "vue-router";
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -21,6 +22,8 @@ interface Props {
 }
 
 const props = defineProps<Props>()
+
+const router = useRouter()
 
 // VueX store to retrieve player data
 const store: Store<AppState> = useStore()
@@ -125,6 +128,11 @@ onMounted(async () => {
 
 onUnmounted(() => {
   wsConnection.close(1000, "client left the game")
+
+  const game: GameStateInterface = gameState.value;
+  if (!game?.winner) {
+    surrender(game?.uuid, game?.player.uuid)
+  }
 })
 
 // Triggered when a card is selected on the board or in the hand
@@ -183,6 +191,17 @@ async function onChoiceModalButtonClick(cards: CardInterface[]) {
     await resolveMultipleTargetChoice(game.uuid, cards.map(card => card.uuid))
   }
 }
+
+async function onLeaveButtonClick() {
+  const game = gameState.value
+
+  if (!game?.winner) {
+    await surrender(game?.uuid, game?.player.uuid)
+  }
+
+  await router.push({name: "Home"})
+}
+
 </script>
 
 <template>
@@ -198,7 +217,7 @@ async function onChoiceModalButtonClick(cards: CardInterface[]) {
         <hand :cards="gameState?.opponent?.hand" :opponent=true :selected-card="selectedCard"></hand>
       </div>
       <div class="col-2 top-buttons">
-        <button type="button" class="leave-button" @click="$router.push({name: 'Home'})">
+        <button type="button" class="leave-button" @click="onLeaveButtonClick()">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
             <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"></path>
             <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"></path>
