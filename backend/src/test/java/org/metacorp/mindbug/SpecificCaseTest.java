@@ -38,7 +38,7 @@ public class SpecificCaseTest {
         hand(player1, turboBug, majesticManticore, snailHydra);
         hand(player2, ferretPacifier, urchinHurler);
 
-        //Game start
+        // Start game
         play(turboBug);
 
         play(urchinHurler);
@@ -71,7 +71,7 @@ public class SpecificCaseTest {
         hand(player1, hyenix, tigerSquirrel, goreagleAlpha);
         hand(player2, explosiveToad);
 
-        //Game start
+        // Start game
         play(hyenix, player2);
 
         play(tigerSquirrel);
@@ -105,7 +105,7 @@ public class SpecificCaseTest {
         hand(player1, strangeBarrel, spiderOwl, goreagleAlpha, tigerSquirrel, explosiveToad);
         hand(player2);
 
-        //Game start
+        // Start game
         play(strangeBarrel, player2);
 
         play(spiderOwl);
@@ -131,7 +131,7 @@ public class SpecificCaseTest {
         hand(player1, goblinWerewolf, hyenix, hungryHungryHamster);
         hand(player2, froblinInstigator, explosiveToad, majesticManticore);
 
-        //Game start
+        // Start game
         play(goblinWerewolf);
 
         play(explosiveToad);
@@ -165,7 +165,7 @@ public class SpecificCaseTest {
         hand(player1, ferretPacifier, hyenix, gorillion);
         hand(player2, goreagleAlpha, explosiveToad);
 
-        //Game start
+        // Start game
         play(hyenix, player2);
 
         play(ferretPacifier);
@@ -209,6 +209,7 @@ public class SpecificCaseTest {
         hand(player1, hamsterLion, snailHydra);
         hand(player2, hyenix, graveRobber);
 
+        // Start game
         play(hamsterLion);
 
         play(hyenix);
@@ -220,5 +221,33 @@ public class SpecificCaseTest {
         attack(snailHydra, null);
 
         assertTrue(game.isFinished());
+    }
+
+    @Test
+    public void urchinHurlerCanAttackWithShieldBugsBoostWhileHamsterLion() throws GameStateException {
+        CardInstance hamsterLion = getCardById(39);
+        CardInstance shieldBugs = getCardById(24);
+        CardInstance urchinHurler = getCardById(32);
+        CardInstance hyenix = getCardById(41);
+
+        // Setup
+        hand(player1, urchinHurler, shieldBugs, hyenix);
+
+        hand(player2, hamsterLion);
+
+        // Start game
+        play(urchinHurler);
+
+        play(hamsterLion);
+
+        play(shieldBugs);
+
+        attack(hamsterLion, shieldBugs);
+
+        choose(false);
+
+        assertFalse(game.isFinished());
+        assertFalse(urchinHurler.isAbleToAttack());
+        assertFalse(shieldBugs.isAbleToAttack());
     }
 }
