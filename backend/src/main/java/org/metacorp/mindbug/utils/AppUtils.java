@@ -74,21 +74,16 @@ public final class AppUtils {
         System.out.printf("%s attaque avec la carte '%s'\n", currentPlayer.getName(), attackCard.getCard().getName());
         AttackService.declareAttack(attackCard, game);
 
-        if (game.isFinished()) {
-            return;
-        }
+        if (game.getAttackingCard() != null && !game.isFinished()) {
+            // TODO Rajouter le cas où il y a un choix à faire et on est en mode manuel (seulement faisable si on décompose l'attaque en déclaration et résolution
+            while (game.getChoice() != null && !game.isFinished()) {
+                AppUtils.resolveChoice(game);
+            }
 
-        while (game.getChoice() != null && !game.isFinished()) {
-            AppUtils.resolveChoice(game);
-        }
-
-        if (game.isFinished()) { //TODO Maybe raise an exception to manage finished games
-            return;
-        }
-
-        // Only resolve attack if there is still an attacking card
-        if (game.getAttackingCard() != null) {
-            resolveAttack(game);
+            // Only resolve attack if there is still an attacking card
+            if (game.getAttackingCard() != null) {
+                resolveAttack(game);
+            }
         }
     }
 
