@@ -13,7 +13,7 @@ public class GameWebSocket extends DefaultWebSocket {
     private static final String PLAYER_ID_KEY = "playerId";
 
     private UUID gameId;
-    private String playerId;
+    private UUID playerId;
 
     public GameWebSocket(ProtocolHandler protocolHandler, HttpRequestPacket request, WebSocketListener... listeners) {
         super(protocolHandler, request, listeners);
@@ -28,7 +28,10 @@ public class GameWebSocket extends DefaultWebSocket {
 
         this.gameId = UUID.fromString(pathInfo.substring(1));
         // Player ID is optional as game engine will send messages to this channel
-        this.playerId = WsUtils.getValueFromQueryParam(PLAYER_ID_KEY, this.servletRequest.getQueryString());
+        String playerQueryParam = WsUtils.getValueFromQueryParam(PLAYER_ID_KEY, this.servletRequest.getQueryString());
+        if (playerQueryParam != null) {
+            playerId = UUID.fromString(playerQueryParam);
+        }
 
         System.out.println ("--- Connected to Websocket " + this.servletRequest.getRequestURI());
 

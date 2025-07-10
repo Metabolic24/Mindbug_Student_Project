@@ -41,7 +41,7 @@ public class WsGameEndpoint extends WebSocketApplication {
 
         GameWebSocket socket = (GameWebSocket) rawSocket;
         UUID gameId = socket.getGameId();
-        String playerId = socket.getPlayerId();
+        UUID playerId = socket.getPlayerId();
 
         if (playerId == null && !sessions.containsKey(gameId)) {
             sessions.put(gameId, new ArrayList<>());
@@ -52,7 +52,7 @@ public class WsGameEndpoint extends WebSocketApplication {
 
             GameStateDTO gameStateDTO = GameStateMapper.fromGame(gameService.findById(gameId));
             WsPlayerGameEvent playerGameEvent = new WsPlayerGameEvent(WsGameEventType.STATE);
-            playerGameEvent.setState(new WsPlayerGameState(gameStateDTO, playerId.equals(gameStateDTO.getPlayer().getUuid().toString())));
+            playerGameEvent.setState(new WsPlayerGameState(gameStateDTO, playerId.equals(gameStateDTO.getPlayer().getUuid())));
             try {
                 String gameStateData = new ObjectMapper().writeValueAsString(playerGameEvent);
                 System.out.println("--- Message for player " + playerId + " : " + gameStateData);
@@ -82,11 +82,11 @@ public class WsGameEndpoint extends WebSocketApplication {
                     String eventData;
 
                     try {
-                        String playerId = playerSocket.getPlayerId();
-                        if (playerId.equals(gameState.getPlayer().getUuid().toString())) {
+                        UUID playerId = playerSocket.getPlayerId();
+                        if (playerId.equals(gameState.getPlayer().getUuid())) {
                             playerGameEvent.setState(new WsPlayerGameState(gameState,true));
                             eventData = mapper.writeValueAsString(playerGameEvent);
-                        } else if (playerId.equals(gameState.getOpponent().getUuid().toString())) {
+                        } else if (playerId.equals(gameState.getOpponent().getUuid())) {
                             playerGameEvent.setState(new WsPlayerGameState(gameState, false));
                             eventData = mapper.writeValueAsString(playerGameEvent);
                         } else {
@@ -110,10 +110,13 @@ public class WsGameEndpoint extends WebSocketApplication {
     public void onClose(WebSocket rawSocket, DataFrame frame) {
         GameWebSocket socket = (GameWebSocket) rawSocket;
         UUID gameId = socket.getGameId();
+        UUID playerId = socket.getPlayerId();
 
         if (sessions.containsKey(gameId) && socket.getPlayerId() != null) {
             sessions.get(gameId).remove(socket);
             System.out.println("Player " + socket.getPlayerId() + " left game " + gameId);
+
+            gameService.endGame(playerId, gameId);
         }
 
         super.onClose(socket, frame);

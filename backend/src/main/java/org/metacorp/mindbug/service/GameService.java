@@ -40,6 +40,17 @@ public class GameService {
         return games.get(uuid);
     }
 
+    public void endGame(UUID playerId, UUID gameId) {
+        Game game = findById(gameId);
+        if (game != null) {
+            game.getPlayers().stream()
+                    .filter(player ->  player.getUuid().equals(playerId))
+                    .findFirst().ifPresent(player -> {
+                endGame(player, game);
+            });
+        }
+    }
+
     public static <T> void resolveChoice(T data, Game game) throws GameStateException {
         IChoice<?> choice = game.getChoice();
         if (choice == null) {
