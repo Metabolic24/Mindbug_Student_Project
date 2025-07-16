@@ -17,6 +17,7 @@
 
         <grizzly.version>4.0.2</grizzly.version>
         <jersey.version>3.1.10</jersey.version>
+        <main.class>org.metacorp.mindbug.app.RestApp</main.class>
     </properties>
 
     <dependencies>
@@ -167,8 +168,32 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <mainClass>${main.class}</mainClass>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>auto</id>
+            <properties>
+                <main.class>org.metacorp.mindbug.app.AutoApp</main.class>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>manual</id>
+            <properties>
+                <main.class>org.metacorp.mindbug.app.ManualApp</main.class>
+            </properties>
+        </profile>
+    </profiles>
 
     <reporting>
         <plugins>
