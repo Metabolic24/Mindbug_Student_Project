@@ -20,15 +20,19 @@ import java.util.stream.Stream;
  */
 public class ManualApp {
 
+    private static final String AVAILABLE_ACTIONS = "Actions possibles : play, p, attack, a, sumup, s, details, d, stop, exit\n";
+
     public static void main(String[] args) {
         Game game = AppUtils.startGame();
+
+        System.out.println(AVAILABLE_ACTIONS);
 
         AppUtils.runAndCheckErrors(game, () -> {
             Scanner scanner = new Scanner(System.in);
             boolean ok;
 
             do {
-                ok = processInput(scanner, game);
+                ok = resolveTurn(scanner, game);
             } while (ok);
         });
     }
@@ -41,21 +45,30 @@ public class ManualApp {
      * @return true if command has been successfully processed, false otherwise
      * @throws GameStateException if the game reaches an inconsistant state
      */
-    private static boolean processInput(Scanner scanner, Game game) throws GameStateException {
+    private static boolean resolveTurn(Scanner scanner, Game game) throws GameStateException {
+        boolean turnResolved = false;
+
         String input = scanner.nextLine();
         switch (input.toLowerCase()) {
             case "play", "p":
-                AppUtils.play(game);
+                // Play a card
+                AppUtils.play(scanner, game);
+                resolveChoices(scanner, game);
 
-                while (game.getChoice() != null) {
-                    resolveChoice(scanner, game);
-                }
+                turnResolved = true;
                 break;
             case "attack", "a":
-                AppUtils.attack(game);
-                while (game.getChoice() != null) {
-                    resolveChoice(scanner, game);
+                // Declare attack
+                AppUtils.declareAttack(scanner, game);
+                resolveChoices(scanner, game);
+
+                // Resolve attack or Frenzy case
+                while (game.getAttackingCard() != null && !game.isFinished()) {
+                    AppUtils.resolveAttack(scanner, game);
+                    resolveChoices(scanner, game);
                 }
+
+                turnResolved = true;
                 break;
             case "sumup", "s":
                 System.out.println("=========================================");
@@ -80,10 +93,32 @@ public class ManualApp {
             case "stop", "exit":
                 return false;
             default:
-                System.err.println("Action invalide ; actions possibles : play, p, attack, a, sumup, s, details, d, stop, exit");
+                System.err.println("Action invalide");
         }
 
-        return !game.isFinished() && (!game.getCurrentPlayer().getHand().isEmpty() || !game.getCurrentPlayer().getBoard().isEmpty());
+        boolean finished = game.isFinished();
+        if (!finished) {
+            if (turnResolved) {
+                AppUtils.nextTurn(game);
+            }
+
+            System.out.println(AVAILABLE_ACTIONS);
+        }
+
+        return !finished;
+    }
+
+    /**
+     * Resolve zero, one or multiple choices
+     *
+     * @param scanner the input scanner
+     * @param game    the current game
+     */
+    private static void resolveChoices(Scanner scanner, Game game) {
+        while (game.getChoice() != null && !game.isFinished()) {
+            printChoice(game.getChoice());
+            resolveChoice(scanner, game);
+        }
     }
 
     /**
@@ -175,5 +210,22 @@ public class ManualApp {
         System.out.printf("%s (%d PV, %d Mindbug(s), Main : %d, Terrain : %d, Défausse : %d, Pioche : %d\n",
                 player.getName(), player.getTeam().getLifePoints(), player.getMindBugs(), player.getHand().size(), player.getBoard().size(),
                 player.getDiscardPile().size(), player.getDrawPile().size());
+    }
+
+    /**
+     * Print the choice sum-up
+     *
+     * @param choice the choice to print
+     */
+    private static void printChoice(IChoice<?> choice) {
+        switch (choice.getType()) {
+            case SIMULTANEOUS ->
+                    System.out.println("Veuillez choisir l'effet à résoudre en premier : (only type the ID)");
+            case TARGET ->
+                    System.out.println("Veuillez choisir la/les cibles : (type the card(s) ID separated by 'space' character)");
+            case HUNTER -> System.out.println("Veuillez choisir la cible à chasser (si souhaité) : (only type the ID)");
+            case FRENZY -> System.out.println("Voulez-vous attaquer à nouveau? (O/N)");
+            case BOOLEAN -> System.out.println("Voulez-vous faire revenir Hyénix? (O/N)");
+        }
     }
 }

@@ -6,23 +6,19 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
-import org.metacorp.mindbug.model.choice.HunterChoice;
-import org.metacorp.mindbug.model.choice.IChoice;
-import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
-import org.metacorp.mindbug.model.choice.TargetChoice;
-import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.AttackService;
-import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.PlayCardService;
 import org.metacorp.mindbug.service.StartService;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 import java.util.stream.Stream;
 
+/**
+ * Utility class for ManualApp and AutoApp
+ */
 public final class AppUtils {
 
     private static final Random RND = new Random();
@@ -30,36 +26,76 @@ public final class AppUtils {
     @Setter
     private static boolean verbose = false;
 
+    /**
+     * Start a new manual/auto game
+     *
+     * @return the created game
+     */
     public static Game startGame() {
         Game game = StartService.newGame(new Player("Player1"), new Player("Player2"));
 
-        System.out.println("\nDEBUT DU JEU !!!\n");
+        for (Player player : game.getPlayers()) {
+            AppUtils.detailedSumUpPlayer(player);
+        }
+
+        System.out.println("\nDEBUT DU JEU !!!");
         nextTurn(game);
 
         return game;
     }
 
+    /**
+     * Play a card in an automatic game
+     *
+     * @param game the current game
+     * @throws GameStateException if an error occurs during the game execution
+     */
     public static void play(Game game) throws GameStateException {
-        Player currentPlayer = game.getCurrentPlayer();
+        play(null, game);
+    }
 
-        if (currentPlayer.getHand().isEmpty()) {
+    /**
+     * Play a card in a manual/automatic game
+     *
+     * @param game    the current game
+     * @param scanner the scanner to be used to read standard input (only for manual mode)
+     * @throws GameStateException if an error occurs during the game execution
+     */
+    public static void play(Scanner scanner, Game game) throws GameStateException {
+        Player currentPlayer = game.getCurrentPlayer();
+        List<CardInstance> hand = currentPlayer.getHand();
+        if (hand.isEmpty()) {
             System.out.println("Illegal move : cannot play cards if none in hand");
             return;
         }
 
-        int index = RND.nextInt(currentPlayer.getHand().size());
-        CardInstance card = currentPlayer.getHand().get(index);
-
-        System.out.printf("%s joue la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
-        PlayCardService.pickCard(card, game);
-        PlayCardService.playCard(game);
-
-        if (game.getChoice() == null && !game.isFinished()) {
-            nextTurn(game);
+        // Select a card and play it
+        CardInstance card = (scanner == null) ? getRandomCard(hand) : getChosenCard(hand, scanner);
+        if (card != null) {
+            System.out.printf("%s joue la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
+            PlayCardService.pickCard(card, game);
+            PlayCardService.playCard(game);
         }
     }
 
-    public static void attack(Game game) throws GameStateException {
+    /**
+     * Declare an attack in an automatic game
+     *
+     * @param game the current game
+     * @throws GameStateException if an error occurs during the game execution
+     */
+    public static void declareAttack(Game game) throws GameStateException {
+        declareAttack(null, game);
+    }
+
+    /**
+     * Declare an attack in a manual/automatic game
+     *
+     * @param game    the current game
+     * @param scanner the scanner to be used to read standard input (only for manual mode)
+     * @throws GameStateException if an error occurs during the game execution
+     */
+    public static void declareAttack(Scanner scanner, Game game) throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
 
         List<CardInstance> availableCards = currentPlayer.getBoard().stream().filter(CardInstance::isAbleToAttack).toList();
@@ -68,35 +104,32 @@ public final class AppUtils {
             return;
         }
 
-        int index = RND.nextInt(availableCards.size());
-        CardInstance attackCard = availableCards.get(index);
-
-        System.out.printf("%s attaque avec la carte '%s'\n", currentPlayer.getName(), attackCard.getCard().getName());
-        AttackService.declareAttack(attackCard, game);
-
-        if (game.getAttackingCard() != null && !game.isFinished()) {
-            // TODO Rajouter le cas où il y a un choix à faire et on est en mode manuel (seulement faisable si on décompose l'attaque en déclaration et résolution
-            while (game.getChoice() != null && !game.isFinished()) {
-                AppUtils.resolveChoice(game);
-            }
-
-            // Only resolve attack if there is still an attacking card
-            if (game.getAttackingCard() != null) {
-                resolveAttack(game);
-            }
+        // Select a card and attack with it
+        CardInstance card = (scanner == null) ? getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
+        if (card != null) {
+            System.out.printf("%s attaque avec la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
+            AttackService.declareAttack(card, game);
         }
     }
 
-    public static void frenzyAttack(Game game) throws GameStateException {
-        Player currentPlayer = game.getCurrentPlayer();
-        CardInstance attackCard = game.getAttackingCard();
-
-        System.out.printf("%s attaque avec la carte '%s'\n", currentPlayer.getName(), attackCard.getCard().getName());
-
-        resolveAttack(game);
+    /**
+     * Resolve an attack in an automatic game
+     *
+     * @param game the current game
+     * @throws GameStateException if an error occurs during the game execution
+     */
+    public static void resolveAttack(Game game) throws GameStateException {
+        resolveAttack(null, game);
     }
 
-    private static void resolveAttack(Game game) throws GameStateException {
+    /**
+     * Resolve an attack in a manual/automatic game
+     *
+     * @param game    the current game
+     * @param scanner the scanner to be used to read standard input (only for manual mode)
+     * @throws GameStateException if an error occurs during the game execution
+     */
+    public static void resolveAttack(Scanner scanner, Game game) throws GameStateException {
         Player opponentPlayer = game.getOpponent();
 
         Stream<CardInstance> blockersStream = opponentPlayer.getBoard().stream().filter(CardInstance::isAbleToBlock);
@@ -104,91 +137,39 @@ public final class AppUtils {
             blockersStream = blockersStream.filter((card) -> card.hasKeyword(CardKeyword.SNEAKY));
         }
 
-        List<CardInstance> blockers = blockersStream.toList();
-        if (blockers.isEmpty()) {
+        List<CardInstance> availableCards = blockersStream.toList();
+        if (availableCards.isEmpty()) {
             System.out.printf("%s ne peut pas défendre\n", opponentPlayer.getName());
             AttackService.resolveAttack(null, game);
         } else {
-            int index = RND.nextInt(blockers.size());
-            CardInstance defendCard = blockers.get(index);
-
-            System.out.printf("%s défend avec la carte '%s'\n", opponentPlayer.getName(), defendCard.getCard().getName());
-            AttackService.resolveAttack(defendCard, game);
-        }
-
-        if (game.getChoice() == null && !game.isFinished()) {
-            nextTurn(game);
-        }
-    }
-
-    public static void resolveChoice(Game game) throws GameStateException {
-        IChoice<?> choice = game.getChoice();
-        if (choice == null) {
-            System.err.println("Action invalide");
-        } else {
-            switch (choice.getType()) {
-                case SIMULTANEOUS -> {
-                    System.out.println("Résolution d'un choix d'ordonnancement d'effets simultanés");
-
-                    SimultaneousEffectsChoice simultaneousEffectsChoice = (SimultaneousEffectsChoice) choice;
-                    List<EffectsToApply> shuffledEffects = new ArrayList<>(simultaneousEffectsChoice.getEffectsToSort());
-                    Collections.shuffle(shuffledEffects);
-
-                    System.out.printf("Ordre choisi : %s\n", shuffledEffects.stream().map(effectToApply -> effectToApply.getCard().getCard().getName()).toList());
-
-                    GameService.resolveChoice(shuffledEffects.getFirst().getCard().getUuid(), game);
-                }
-                case TARGET -> {
-                    System.out.println("Résolution d'un choix de cible(s)");
-                    TargetChoice targetChoice = (TargetChoice) choice;
-
-                    List<CardInstance> shuffledCards = new ArrayList<>(targetChoice.getAvailableTargets());
-                    Collections.shuffle(shuffledCards);
-
-                    // Retrieve a sub list only if there are more available targets than the targets count (can happen due to 'optional' parameter)
-                    if (shuffledCards.size() > targetChoice.getTargetsCount()) {
-                        shuffledCards = shuffledCards.subList(0, targetChoice.getTargetsCount());
-                    }
-
-                    System.out.printf("Cible(s) choisie(s) : %s\n", shuffledCards.stream().map(cardInstance -> cardInstance.getCard().getName()).toList());
-
-                    GameService.resolveChoice(shuffledCards.stream().map(CardInstance::getUuid).toList(), game);
-                }
-                case HUNTER -> {
-                    System.out.println("Résolution d'un choix de cible d'attaque");
-                    HunterChoice hunterChoice = (HunterChoice) choice;
-
-                    List<CardInstance> shuffledCards = new ArrayList<>(hunterChoice.getAvailableTargets());
-                    Collections.shuffle(shuffledCards);
-
-                    System.out.printf("Cible choisie : %s\n", shuffledCards.getFirst().getCard().getName());
-
-                    GameService.resolveChoice(shuffledCards.getFirst().getUuid(), game);
-                }
-                case FRENZY, BOOLEAN -> {
-                    System.out.printf("Résolution d'un choix booléen de type %s\n", choice.getType());
-
-                    boolean randomBoolean = RND.nextBoolean();
-                    System.out.printf("Valeur choisie : %s\n", randomBoolean);
-
-                    GameService.resolveChoice(randomBoolean, game);
-                }
+            // Select a card and attack with it
+            CardInstance card = (scanner == null) ? getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
+            if (card != null) {
+                System.out.printf("%s défend avec la carte '%s'\n", opponentPlayer.getName(), card.getCard().getName());
+                AttackService.resolveAttack(card, game);
             }
         }
-
-        if (game.getChoice() == null) {
-            nextTurn(game);
-        }
     }
 
+    /**
+     * Print a detailed sum-up for the given player
+     *
+     * @param player the player to sum-up
+     */
     public static void detailedSumUpPlayer(Player player) {
-        System.out.printf("%s : %d PV, %d Mindbug(s), %d carte(s) restante(s)\n", player.getName(), player.getTeam().getLifePoints(), player.getMindBugs(), player.getDrawPile().size());
+        System.out.printf("\n%s : %d PV, %d Mindbug(s), %d carte(s) restante(s)\n", player.getName(), player.getTeam().getLifePoints(), player.getMindBugs(), player.getDrawPile().size());
         displayCards(player.getHand(), "Main");
         displayCards(player.getBoard(), "Terrain");
         displayCards(player.getDiscardPile(), "Défausse");
     }
 
-    public static void displayCards(List<CardInstance> cards, String location) {
+    /**
+     * Print the details for the given list of cards
+     *
+     * @param cards    the card list
+     * @param location the location of the cards
+     */
+    private static void displayCards(List<CardInstance> cards, String location) {
         if (!cards.isEmpty()) {
             System.out.printf("\t%s : %d cartes\n", location, cards.size());
             for (CardInstance card : cards) {
@@ -198,6 +179,11 @@ public final class AppUtils {
         }
     }
 
+    /**
+     * Print specific data when a turn ends
+     *
+     * @param game the current game
+     */
     public static void nextTurn(Game game) {
         for (Player player : game.getPlayers()) {
             if (verbose) {
@@ -206,9 +192,15 @@ public final class AppUtils {
             }
         }
 
-        System.out.printf("Au tour de %s\n", game.getCurrentPlayer().getName());
+        System.out.printf("\n<<<<< Au tour de %s >>>>>\n", game.getCurrentPlayer().getName());
     }
 
+    /**
+     * Run a manual/automatic game in a Mindbug application
+     *
+     * @param game   the game to run
+     * @param engine the game engine to use (manual/automatic)
+     */
     public static void runAndCheckErrors(Game game, GameEngine engine) {
         try {
             engine.run();
@@ -228,5 +220,44 @@ public final class AppUtils {
 
             throw t;
         }
+    }
+
+    /**
+     * Return a random card from the given list
+     *
+     * @param cards the card list
+     * @return a random card from the list
+     */
+    private static CardInstance getRandomCard(List<CardInstance> cards) {
+        return cards.get(RND.nextInt(cards.size()));
+    }
+
+    /**
+     * Return the chosen card from the given list
+     *
+     * @param cards   the card list
+     * @param scanner the scanner to be used to read standard input (only for manual mode)
+     * @return a random card from the list
+     */
+    private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner) {
+        System.out.println("Please choose a card : (only type the number)");
+        int index = 1;
+        for (CardInstance card : cards) {
+            System.out.printf("(%d) - %s", index, card.getCard().getName());
+        }
+
+        try {
+            return cards.get(Integer.parseInt(scanner.nextLine()));
+        } catch (NumberFormatException | IndexOutOfBoundsException e) {
+            System.err.println("Choix de carte invalide");
+            return null;
+        }
+    }
+
+    /**
+     * @return a random boolean value
+     */
+    public static boolean nextBoolean() {
+        return RND.nextBoolean();
     }
 }

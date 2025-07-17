@@ -8,10 +8,11 @@ public class AutoAppTest {
     @Test
     public void testNominal() {
         for (int i = 0; i < 100; i++) {
-            System.out.println("\n===========================");
-            System.out.println("Début de la partie n°" + i + "\n");
+            System.out.println("\n========================");
+            System.out.println(" Début de la partie n°" + i);
+            System.out.println("========================\n");
+
             AutoApp.main(null);
-            System.out.println("===========================\n");
         }
     }
 }

@@ -95,6 +95,7 @@ public class GameService {
 
     public static void endGame(Player loser, Game game) {
         Player winner = loser.getOpponent(game.getPlayers());
+        System.out.println("\n<<<<< GAME OVER >>>>>");
         System.out.printf("%s wins ; %s loses\n", winner.getName(), loser.getName());
 
         game.setWinner(winner);
