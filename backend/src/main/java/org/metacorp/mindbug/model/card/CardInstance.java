@@ -75,19 +75,11 @@ public class CardInstance {
         ableToBlock = true;
         keywords = new HashSet<>(card.getKeywords());
 
+        // Apply or clear modifiers depending on the current step
         if (afterAttack) {
             modifiers.clear();
         } else {
-            // Apply attack modifiers if any
-            if (!modifiers.isEmpty()) {
-                for (AbstractModifier<?> modifier : modifiers) {
-                    switch (modifier.getType()) {
-                        case POWER -> power += ((PowerModifier) modifier).getValue();
-                        case BLOCK -> ableToBlock = false;
-                        case KEYWORD -> keywords.add(((KeywordModifier) modifier).getValue());
-                    }
-                }
-            }
+            modifiers.forEach(modifier -> modifier.apply(this));
         }
     }
 

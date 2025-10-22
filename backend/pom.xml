@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <grizzly.version>4.0.2</grizzly.version>
-        <jersey.version>3.1.10</jersey.version>
+        <jersey.version>3.1.11</jersey.version>
         <main.class>org.metacorp.mindbug.app.RestApp</main.class>
     </properties>
 
