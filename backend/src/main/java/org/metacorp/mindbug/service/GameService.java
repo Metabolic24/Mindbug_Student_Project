@@ -3,6 +3,7 @@ package org.metacorp.mindbug.service;
 import org.jvnet.hk2.annotations.Service;
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.ChoiceType;
@@ -20,16 +21,10 @@ public class GameService {
 
     private final Map<UUID, Game> games = new HashMap<>();
 
-    public Game createGame() {
-        return createGame(new Player("player1"), new Player("player2"));
-    }
+    public Game createGame(UUID player1Id, UUID player2Id) throws UnknownPlayerException {
+        Player player1 = new Player(PlayerService.getPlayer(player1Id));
+        Player player2 = new Player(PlayerService.getPlayer(player2Id));
 
-    public Game createGame(UUID player1Id, String player1Name, UUID player2Id, String player2Name) {
-        //TODO Ajouter une vérification pour s'assurer que le joueur existe
-        return createGame(new Player(player1Id, player1Name), new Player(player2Id, player2Name));
-    }
-
-    private Game createGame(Player player1, Player player2) {
         Game game = StartService.newGame(player1, player2);
         games.put(game.getUuid(), game);
 
@@ -45,9 +40,7 @@ public class GameService {
         if (game != null) {
             game.getPlayers().stream()
                     .filter(player ->  player.getUuid().equals(playerId))
-                    .findFirst().ifPresent(player -> {
-                endGame(player, game);
-            });
+                    .findFirst().ifPresent(player -> endGame(player, game));
         }
     }
 
@@ -62,7 +55,12 @@ public class GameService {
         try {
             ((IChoice<T>) choice).resolve(data, game);
         } catch (ClassCastException e) {
-            throw new GameStateException("invalid choice resolution", e, Map.of("choice", choice, "data", data));
+            Map<String, Object> errorData = new HashMap<>(Map.of("choice", choice));
+            if (data != null) {
+                errorData.put("data", data);
+            }
+
+            throw new GameStateException("invalid choice resolution", errorData);
         }
 
         GameService.refreshGameState(game);

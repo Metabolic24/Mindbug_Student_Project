@@ -9,6 +9,7 @@ import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.ReviveEffect;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.StartService;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -24,7 +25,7 @@ public class ReviveEffectResolverTest {
 
     @BeforeEach
     public void prepareGame() {
-        game = StartService.newGame(new Player("Player1"), new Player("Player2"));
+        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
         opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
         randomCard = opponentPlayer.getHand().removeFirst();
         opponentPlayer.getDiscardPile().add(randomCard);

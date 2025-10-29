@@ -1,6 +1,7 @@
 package org.metacorp.mindbug.service;
 
 import org.metacorp.mindbug.dto.player.PlayerLightDTO;
+import org.metacorp.mindbug.exception.UnknownPlayerException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,13 +18,19 @@ public class PlayerService {
         } while (players.containsKey(randomUuid));
 
         PlayerLightDTO player = new PlayerLightDTO();
-
-
         player.setName(playerName);
-        player.setUuid(UUID.randomUUID());
+        player.setUuid(randomUuid);
 
         players.put(randomUuid, player);
 
         return player;
+    }
+
+    public static PlayerLightDTO getPlayer(UUID playerId) throws UnknownPlayerException {
+        if (players.containsKey(playerId)) {
+            return players.get(playerId);
+        } else {
+            throw new UnknownPlayerException(playerId);
+        }
     }
 }

@@ -11,6 +11,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.AttackService;
 import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.PlayCardService;
+import org.metacorp.mindbug.service.PlayerService;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -27,8 +28,8 @@ public class TestGameUtils {
     private static Player player2;
 
     public static Game prepareCustomGame() {
-        player1 = new Player(UUID.randomUUID(), "player1");
-        player2 = new Player(UUID.randomUUID(), "player2");
+        player1 = new Player(PlayerService.createPlayer("player1"));
+        player2 = new Player(PlayerService.createPlayer("player2"));
 
         game = new Game(player1, player2);
 

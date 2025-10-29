@@ -2,6 +2,7 @@ package org.metacorp.mindbug.utils;
 
 import lombok.Setter;
 import org.metacorp.mindbug.app.GameEngine;
+import org.metacorp.mindbug.dto.player.PlayerLightDTO;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -9,6 +10,7 @@ import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.AttackService;
 import org.metacorp.mindbug.service.PlayCardService;
+import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.StartService;
 
 import java.util.List;
@@ -32,7 +34,10 @@ public final class AppUtils {
      * @return the created game
      */
     public static Game startGame() {
-        Game game = StartService.newGame(new Player("Player1"), new Player("Player2"));
+        PlayerLightDTO player1 = PlayerService.createPlayer("Player1");
+        PlayerLightDTO player2 = PlayerService.createPlayer("Player2");
+
+        Game game = StartService.newGame(new Player(player1), new Player(player2));
 
         for (Player player : game.getPlayers()) {
             AppUtils.detailedSumUpPlayer(player);

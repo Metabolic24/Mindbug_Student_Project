@@ -8,6 +8,7 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.StealEffect;
 import org.metacorp.mindbug.model.effect.steal.StealSource;
 import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
+import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.StartService;
 import org.metacorp.mindbug.model.player.Player;
 
@@ -26,7 +27,7 @@ public class StealEffectResolverTest {
 
     @BeforeEach
     public void prepareGame() {
-        game = StartService.newGame(new Player("Player1"), new Player("Player2"));
+        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
 
         randomCard = currentPlayer.getHand().getFirst();

@@ -2,6 +2,7 @@ package org.metacorp.mindbug.websocket;
 
 import org.glassfish.grizzly.http.HttpRequestPacket;
 import org.glassfish.grizzly.websockets.*;
+import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.service.GameService;
 
@@ -41,12 +42,13 @@ public class WsJoinEndpoint extends WebSocketApplication {
         if (otherPlayerSession != null) {
             String playerId = socket.getPlayerId();
             if (!playerId.equals(otherPlayerSession.getPlayerId())) {
-                Game game = gameService.createGame(
-                        UUID.fromString(playerId), socket.getPlayerName(),
-                        UUID.fromString(otherPlayerSession.getPlayerId()), otherPlayerSession.getPlayerName());
-
-                socket.send(game.getUuid().toString());
-                otherPlayerSession.send(game.getUuid().toString());
+                try {
+                    Game game = gameService.createGame(UUID.fromString(playerId),UUID.fromString(otherPlayerSession.getPlayerId()));
+                    socket.send(game.getUuid().toString());
+                    otherPlayerSession.send(game.getUuid().toString());
+                } catch (UnknownPlayerException e) {
+                    // TODO Manage errors
+                }
 
                 //TODO Maybe implement a timeout system
             }

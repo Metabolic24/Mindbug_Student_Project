@@ -31,13 +31,6 @@ public class GameController {
     @Inject
     private GameService gameService;
 
-    //TODO To be removed as game should not be started that way
-    @GET
-    public Response start() {
-        Game game = gameService.createGame();
-        return Response.ok(GameStateMapper.fromGame(game)).build();
-    }
-
     //TODO To be removed (for debug purpose only)
     @GET
     @Path("/{gameId}")

@@ -10,7 +10,7 @@ public class StartServiceTest {
 
     @Test
     public void testStart() {
-        Game game = StartService.newGame(new Player("Player1"), new Player("Player2"));
+        Game game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
 
         assertNotNull(game.getCurrentPlayer());
         assertEquals(2, game.getPlayers().size());

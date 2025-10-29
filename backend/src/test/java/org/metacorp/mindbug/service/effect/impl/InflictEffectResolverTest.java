@@ -6,6 +6,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.InflictEffect;
+import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.StartService;
 import org.metacorp.mindbug.model.player.Player;
 
@@ -24,7 +25,7 @@ public class InflictEffectResolverTest {
 
     @BeforeEach
     public void prepareGame() {
-        game = StartService.newGame(new Player("Player1"), new Player("Player2"));
+        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         randomCard = currentPlayer.getHand().getFirst();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());

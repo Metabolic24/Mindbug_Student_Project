@@ -1,6 +1,7 @@
 package org.metacorp.mindbug.model.player;
 
 import lombok.Data;
+import org.metacorp.mindbug.dto.player.PlayerLightDTO;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -28,13 +29,9 @@ public class Player {
 
     private Set<EffectTiming> disabledTiming;
 
-    public Player(String name) {
-        this(UUID.randomUUID(), name);
-    }
-
-    public Player(UUID uuid, String name) {
-        this.uuid = uuid;
-        this.name = name;
+    public Player(PlayerLightDTO playerData) {
+        this.uuid = playerData.getUuid();
+        this.name = playerData.getName();
 
         this.team = new Team();
         hand = new ArrayList<>();
