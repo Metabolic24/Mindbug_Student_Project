@@ -1,26 +1,35 @@
 package org.metacorp.mindbug.service;
 
 import org.jvnet.hk2.annotations.Service;
-import org.metacorp.mindbug.dto.ws.WsGameEventType;
-import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.model.Game;
-import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.choice.ChoiceType;
-import org.metacorp.mindbug.model.choice.IChoice;
-import org.metacorp.mindbug.model.effect.EffectQueue;
-import org.metacorp.mindbug.model.effect.EffectTiming;
-import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.game.GameStateService;
+import org.metacorp.mindbug.service.game.StartService;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
+/**
+ * Service to store and manage games
+ */
 @Service
 public class GameService {
 
+    /**
+     * The map used to store active games
+     */
     private final Map<UUID, Game> games = new HashMap<>();
 
+    /**
+     * Create a new game
+     *
+     * @param player1Id the first player ID
+     * @param player2Id the second player ID
+     * @return the created Game
+     * @throws UnknownPlayerException if at least one player could not be found in the database
+     */
     public Game createGame(UUID player1Id, UUID player2Id) throws UnknownPlayerException {
         Player player1 = new Player(PlayerService.getPlayer(player1Id));
         Player player2 = new Player(PlayerService.getPlayer(player2Id));
@@ -31,136 +40,28 @@ public class GameService {
         return game;
     }
 
-    public Game findById(UUID uuid) {
-        return games.get(uuid);
+    /**
+     * Get a game by ID
+     *
+     * @param gameId the game ID
+     * @return the corresponding game if any, null otherwise
+     */
+    public Game findById(UUID gameId) {
+        return games.get(gameId);
     }
 
-    public void endGame(UUID playerId, UUID gameId) {
+    /**
+     * Ends a currently active game
+     *
+     * @param losingPlayerID the losing player ID
+     * @param gameId         the current game ID
+     */
+    public void endGame(UUID losingPlayerID, UUID gameId) {
         Game game = findById(gameId);
         if (game != null) {
             game.getPlayers().stream()
-                    .filter(player ->  player.getUuid().equals(playerId))
-                    .findFirst().ifPresent(player -> endGame(player, game));
+                    .filter(player -> player.getUuid().equals(losingPlayerID))
+                    .findFirst().ifPresent(player -> GameStateService.endGame(player, game));
         }
-    }
-
-    public static <T> void resolveChoice(T data, Game game) throws GameStateException {
-        IChoice<?> choice = game.getChoice();
-        if (choice == null) {
-            throw new GameStateException("no choice to be resolved", Map.of("data", data));
-        } else if (data == null && choice.getType() != ChoiceType.HUNTER) {
-            throw new GameStateException("invalid data for choice resolution", Map.of("choice", choice));
-        }
-
-        try {
-            ((IChoice<T>) choice).resolve(data, game);
-        } catch (ClassCastException e) {
-            Map<String, Object> errorData = new HashMap<>(Map.of("choice", choice));
-            if (data != null) {
-                errorData.put("data", data);
-            }
-
-            throw new GameStateException("invalid choice resolution", errorData);
-        }
-
-        GameService.refreshGameState(game);
-
-        if (game.getChoice() == null) {
-            EffectQueueService.resolveEffectQueue(choice.getType() == ChoiceType.SIMULTANEOUS, game);
-        } else {
-            WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
-        }
-    }
-
-    public static void newTurn(Game game) {
-        newTurn(game, false);
-    }
-
-    public static void newTurn(Game game, boolean mindbug) {
-        if (!mindbug) {
-            game.setCurrentPlayer(game.getOpponent());
-        }
-
-        refreshGameState(game, true);
-
-        Player currentPlayer = game.getCurrentPlayer();
-        if (currentPlayer.getHand().isEmpty() && currentPlayer.getBoard().stream().noneMatch(CardInstance::isAbleToAttack)) {
-            endGame(currentPlayer, game);
-        } else {
-            WebSocketService.sendGameEvent(WsGameEventType.NEW_TURN, game);
-        }
-    }
-
-    public static void endGame(Player loser, Game game) {
-        Player winner = loser.getOpponent(game.getPlayers());
-        System.out.println("\n<<<<< GAME OVER >>>>>");
-        System.out.printf("%s wins ; %s loses\n", winner.getName(), loser.getName());
-
-        game.setWinner(winner);
-
-        WebSocketService.sendGameEvent(WsGameEventType.FINISHED, game);
-    }
-
-    public static void lifePointLost(Player player, Game game) {
-        WebSocketService.sendGameEvent(WsGameEventType.LP_DOWN, game);
-
-        if (player.getTeam().getLifePoints() <= 0) {
-            endGame(player, game);
-            return;
-        }
-
-        for (CardInstance card : player.getBoard()) {
-            EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.LIFE_LOST, game.getEffectQueue());
-        }
-
-        for (CardInstance card : player.getDiscardPile()) {
-            EffectQueueService.addDiscardEffectsToQueue(card, EffectTiming.LIFE_LOST, game.getEffectQueue());
-        }
-    }
-
-    public static void defeatCard(CardInstance card, EffectQueue effectQueue) {
-        if (card.isStillTough()) {
-            card.setStillTough(false);
-        } else {
-            card.getOwner().addCardToDiscardPile(card);
-            EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, effectQueue);
-        }
-    }
-
-    public static void refreshGameState(Game game) {
-        refreshGameState(game, false);
-    }
-
-    private static void refreshGameState(Game game, boolean newTurn) {
-        List<EffectsToApply> passiveEffects = new ArrayList<>();
-
-        for (Player player : game.getPlayers()) {
-            player.refresh(newTurn);
-
-            passiveEffects.addAll(getPassiveEffects(player.getBoard(), false));
-            passiveEffects.addAll(getPassiveEffects(player.getDiscardPile(), true));
-        }
-
-        // Sort effects by priority
-        passiveEffects.sort(Comparator.comparingInt(effect -> effect.getEffects().getFirst().getPriority()));
-
-        // Apply effects
-        for (EffectsToApply effect : passiveEffects) {
-            GenericEffectResolver<?> effectResolver = GenericEffectResolver.getResolver(effect.getEffects().getFirst());
-            effectResolver.apply(game, effect.getCard(), effect.getTiming());
-        }
-    }
-
-    private static List<EffectsToApply> getPassiveEffects(List<CardInstance> cards, boolean inDiscard) {
-        EffectTiming timing = inDiscard ? EffectTiming.DISCARD : EffectTiming.PASSIVE;
-
-        List<EffectsToApply> passiveEffects = new ArrayList<>();
-        cards.forEach(card -> passiveEffects.addAll(
-                card.getEffects(timing).stream()
-                .map(cardEffect -> new EffectsToApply(Collections.singletonList(cardEffect), card, timing))
-                .toList())
-        );
-
-        return passiveEffects;
     }
 }

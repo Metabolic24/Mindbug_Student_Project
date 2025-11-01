@@ -9,7 +9,7 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.StartService;
+import org.metacorp.mindbug.service.game.StartService;
 
 import java.util.Arrays;
 import java.util.Collections;

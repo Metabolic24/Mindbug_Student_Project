@@ -12,7 +12,7 @@ import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.StartService;
+import org.metacorp.mindbug.service.game.StartService;
 import org.metacorp.mindbug.model.player.Player;
 
 import java.util.List;

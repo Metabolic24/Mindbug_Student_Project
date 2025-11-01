@@ -8,6 +8,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.model.player.Team;
 import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.game.GameStateService;
 
 /**
  * Effect resolver for GainEffect
@@ -38,7 +39,7 @@ public class GainEffectResolver extends GenericEffectResolver<GainEffect> {
             team.setLifePoints(opponent.getTeam().getLifePoints());
 
             if (oldLifePoints > team.getLifePoints()) {
-                GameService.lifePointLost(cardOwner, game);
+                GameStateService.lifePointLost(cardOwner, game);
             }
         } else {
             team.gainLifePoints(value);

@@ -7,10 +7,10 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.choice.*;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
-import org.metacorp.mindbug.service.AttackService;
-import org.metacorp.mindbug.service.EffectQueueService;
+import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.WebSocketService;
+import org.metacorp.mindbug.service.game.GameStateService;
 
 import java.util.List;
 import java.util.Optional;
@@ -43,7 +43,7 @@ public final class ChoiceUtils {
             attackingCard.setAbleToAttackTwice(false);
             AttackService.declareAttack(attackingCard, game);
         } else {
-            GameService.newTurn(game);
+            GameStateService.newTurn(game);
         }
     }
 

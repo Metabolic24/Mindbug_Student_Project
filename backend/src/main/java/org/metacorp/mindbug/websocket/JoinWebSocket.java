@@ -2,14 +2,16 @@ package org.metacorp.mindbug.websocket;
 
 import lombok.Getter;
 import org.glassfish.grizzly.http.HttpRequestPacket;
-import org.glassfish.grizzly.websockets.*;
+import org.glassfish.grizzly.websockets.DefaultWebSocket;
+import org.glassfish.grizzly.websockets.ProtocolHandler;
+import org.glassfish.grizzly.websockets.WebSocketListener;
 import org.metacorp.mindbug.utils.WsUtils;
+
+import static org.metacorp.mindbug.utils.WsUtils.PLAYER_ID_KEY;
+import static org.metacorp.mindbug.utils.WsUtils.PLAYER_NAME_KEY;
 
 @Getter
 public class JoinWebSocket extends DefaultWebSocket {
-
-    private static final String PLAYER_ID_KEY = "playerId";
-    private static final String PLAYER_NAME_KEY = "playerName";
 
     private String playerId;
     private String playerName;

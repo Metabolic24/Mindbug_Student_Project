@@ -9,7 +9,7 @@ import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.GameService;
+import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.ArrayList;
@@ -98,7 +98,7 @@ public class AutoApp {
 
                     System.out.printf("Ordre choisi : %s\n", shuffledEffects.stream().map(effectToApply -> effectToApply.getCard().getCard().getName()).toList());
 
-                    GameService.resolveChoice(shuffledEffects.getFirst().getCard().getUuid(), game);
+                    ChoiceService.resolveChoice(shuffledEffects.getFirst().getCard().getUuid(), game);
                 }
                 case TARGET -> {
                     System.out.println("\nRésolution d'un choix de cible(s)");
@@ -114,7 +114,7 @@ public class AutoApp {
 
                     System.out.printf("Cible(s) choisie(s) : %s\n", shuffledCards.stream().map(cardInstance -> cardInstance.getCard().getName()).toList());
 
-                    GameService.resolveChoice(shuffledCards.stream().map(CardInstance::getUuid).toList(), game);
+                    ChoiceService.resolveChoice(shuffledCards.stream().map(CardInstance::getUuid).toList(), game);
                 }
                 case HUNTER -> {
                     System.out.println("\nRésolution d'un choix de cible d'attaque");
@@ -125,7 +125,7 @@ public class AutoApp {
 
                     System.out.printf("Cible choisie : %s\n", shuffledCards.getFirst().getCard().getName());
 
-                    GameService.resolveChoice(shuffledCards.getFirst().getUuid(), game);
+                    ChoiceService.resolveChoice(shuffledCards.getFirst().getUuid(), game);
                 }
                 case FRENZY, BOOLEAN -> {
                     System.out.printf("\nRésolution d'un choix booléen de type %s\n", choice.getType());
@@ -133,7 +133,7 @@ public class AutoApp {
                     boolean randomBoolean = AppUtils.nextBoolean();
                     System.out.printf("Valeur choisie : %s\n", randomBoolean);
 
-                    GameService.resolveChoice(randomBoolean, game);
+                    ChoiceService.resolveChoice(randomBoolean, game);
                 }
             }
         }

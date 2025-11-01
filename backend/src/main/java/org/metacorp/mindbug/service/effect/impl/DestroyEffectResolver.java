@@ -7,14 +7,15 @@ import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
-import org.metacorp.mindbug.utils.CardUtils;
+import org.metacorp.mindbug.service.game.CardService;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+
+import static org.metacorp.mindbug.service.game.CardService.defeatCard;
 
 /**
  * Effect resolver for DestroyEffect
@@ -47,7 +48,7 @@ public class DestroyEffectResolver extends GenericEffectResolver<DestroyEffect> 
         }
 
         if (lowest) {
-            List<CardInstance> lowestCards = selfAllowed ? CardUtils.getLowestCards(game.getPlayers()) :
+            List<CardInstance> lowestCards = selfAllowed ? CardService.getLowestCards(game.getPlayers()) :
                     opponent.getLowestCards();
             destroyCards(game, lowestCards);
         } else {
@@ -85,7 +86,7 @@ public class DestroyEffectResolver extends GenericEffectResolver<DestroyEffect> 
     private void destroyCards(Game game, List<CardInstance> cards) {
         EffectQueue effectQueue = game.getEffectQueue();
         for (CardInstance card : cards) {
-            GameService.defeatCard(card, effectQueue);
+            defeatCard(card, effectQueue);
         }
     }
 

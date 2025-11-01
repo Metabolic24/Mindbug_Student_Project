@@ -7,10 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * Service that manages players
+ */
 public class PlayerService {
-
+    /**
+     * The map that stores players
+     */
     private static final Map<UUID, PlayerLightDTO> players = new HashMap<>();
 
+    /**
+     * Create a new player
+     *
+     * @param playerName the player name
+     * @return the created player as a PlayerLightDTO
+     */
     public static PlayerLightDTO createPlayer(String playerName) {
         UUID randomUuid;
         do {
@@ -26,6 +37,13 @@ public class PlayerService {
         return player;
     }
 
+    /**
+     * Get player data by ID
+     *
+     * @param playerId the player ID
+     * @return the player data if any
+     * @throws UnknownPlayerException if no player has been found
+     */
     public static PlayerLightDTO getPlayer(UUID playerId) throws UnknownPlayerException {
         if (players.containsKey(playerId)) {
             return players.get(playerId);

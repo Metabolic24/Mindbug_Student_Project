@@ -2,15 +2,17 @@ package org.metacorp.mindbug.websocket;
 
 import lombok.Getter;
 import org.glassfish.grizzly.http.HttpRequestPacket;
-import org.glassfish.grizzly.websockets.*;
+import org.glassfish.grizzly.websockets.DefaultWebSocket;
+import org.glassfish.grizzly.websockets.ProtocolHandler;
+import org.glassfish.grizzly.websockets.WebSocketListener;
 import org.metacorp.mindbug.utils.WsUtils;
 
 import java.util.UUID;
 
+import static org.metacorp.mindbug.utils.WsUtils.PLAYER_ID_KEY;
+
 @Getter
 public class GameWebSocket extends DefaultWebSocket {
-
-    private static final String PLAYER_ID_KEY = "playerId";
 
     private UUID gameId;
     private UUID playerId;
@@ -22,7 +24,7 @@ public class GameWebSocket extends DefaultWebSocket {
     @Override
     public void onConnect() {
         String pathInfo = this.servletRequest.getPathInfo();
-        if (pathInfo == null ||!pathInfo.startsWith("/")) {
+        if (pathInfo == null || !pathInfo.startsWith("/")) {
             throw new IllegalArgumentException("Missing required parameter 'gameId'");
         }
 
@@ -33,7 +35,7 @@ public class GameWebSocket extends DefaultWebSocket {
             playerId = UUID.fromString(playerQueryParam);
         }
 
-        System.out.println ("--- Connected to Websocket " + this.servletRequest.getRequestURI());
+        System.out.println("--- Connected to Websocket " + this.servletRequest.getRequestURI());
 
         super.onConnect();
     }

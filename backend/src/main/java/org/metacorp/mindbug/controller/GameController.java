@@ -14,9 +14,11 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.AttackService;
+import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.GameService;
-import org.metacorp.mindbug.service.PlayCardService;
+import org.metacorp.mindbug.service.game.ChoiceService;
+import org.metacorp.mindbug.service.game.GameStateService;
+import org.metacorp.mindbug.service.game.PlayCardService;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -58,7 +60,7 @@ public class GameController {
                 .filter(player -> player.getUuid().equals(body.getPlayerId()))
                 .findFirst();
         if (playerOpt.isPresent()) {
-            GameService.endGame(playerOpt.get(), game);
+            GameStateService.endGame(playerOpt.get(), game);
         } else {
             return Response.status(400).entity("Unknown player ID").build();
         }
@@ -225,7 +227,7 @@ public class GameController {
             return Response.status(404).entity("No boolean choice to resolve").build();
         }
 
-        GameService.resolveChoice(body.getOk(), game);
+        ChoiceService.resolveChoice(body.getOk(), game);
 
         return Response.ok().build();
     }
@@ -253,7 +255,7 @@ public class GameController {
             return Response.status(400).entity("Invalid request body : missing cardId").build();
         }
 
-        GameService.resolveChoice(body.getCardId(), game);
+        ChoiceService.resolveChoice(body.getCardId(), game);
 
         return Response.ok().build();
     }
@@ -278,7 +280,7 @@ public class GameController {
         } else if (game.getChoice() == null || game.getChoice().getType() != ChoiceType.TARGET) {
             return Response.status(404).entity("No target choice to resolve").build();
         } else {
-            GameService.resolveChoice(body.getTargets(), game);
+            ChoiceService.resolveChoice(body.getTargets(), game);
         }
 
         return Response.ok().build();

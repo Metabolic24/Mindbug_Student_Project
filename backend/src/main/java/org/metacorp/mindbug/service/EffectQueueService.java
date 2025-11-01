@@ -7,6 +7,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.effect.*;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.game.GameStateService;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -14,6 +15,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * Service that fills and processes the effect queue
+ */
 public class EffectQueueService {
 
     // Not to be used
@@ -102,7 +106,7 @@ public class EffectQueueService {
                 GenericEffectResolver.getResolver(effect).apply(game, currentEffect.getCard(), currentEffect.getTiming());
                 iterator.remove();
 
-                GameService.refreshGameState(game);
+                GameStateService.refreshGameState(game);
 
                 // Stop the process if the game is finished
                 if (game.isFinished()) {

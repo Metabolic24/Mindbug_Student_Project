@@ -8,10 +8,10 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.AttackService;
-import org.metacorp.mindbug.service.PlayCardService;
+import org.metacorp.mindbug.service.game.AttackService;
+import org.metacorp.mindbug.service.game.PlayCardService;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.StartService;
+import org.metacorp.mindbug.service.game.StartService;
 
 import java.util.List;
 import java.util.Random;

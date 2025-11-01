@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.Card;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
 
 import java.io.File;
@@ -14,6 +16,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -79,28 +82,5 @@ public final class CardUtils {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    // Get the cards with the lowest power on boards
-    public static List<CardInstance> getLowestCards(List<Player> players) {
-        List<CardInstance> lowestCards = new ArrayList<>();
-        int lowestPower = 10;
-
-        for (Player player : players) {
-            List<CardInstance> currentCards = player.getLowestCards(lowestPower);
-
-            if (!currentCards.isEmpty()) {
-                int currentPower = currentCards.getFirst().getPower();
-
-                if (currentPower < lowestPower) {
-                    lowestPower = currentPower;
-                    lowestCards = new ArrayList<>(currentCards);
-                } else if (currentPower == lowestPower) {
-                    lowestCards.addAll(currentCards);
-                }
-            }
-        }
-
-        return lowestCards;
     }
 }

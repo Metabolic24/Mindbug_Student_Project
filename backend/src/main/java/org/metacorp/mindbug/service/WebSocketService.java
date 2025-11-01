@@ -13,10 +13,18 @@ import org.metacorp.mindbug.model.Game;
 
 import java.util.concurrent.ExecutionException;
 
+/**
+ * Service to initialize and send event to a GameWebSocket
+ */
 public class WebSocketService {
 
     private static final String GAME_WS_URI = "ws://localhost:8080/ws/game/";
 
+    /**
+     * Initialize the connection to the GameWebSocket
+     *
+     * @param game the current game
+     */
     public static void initGameChannel(Game game) {
         // Init WS client
         try (AsyncHttpClient c = new AsyncHttpClient(new AsyncHttpClientConfig.Builder().build())) {
@@ -28,6 +36,12 @@ public class WebSocketService {
         }
     }
 
+    /**
+     * Send an event to the GameWebSocket related to the current game
+     *
+     * @param eventType the event type
+     * @param game      the current game
+     */
     public static void sendGameEvent(WsGameEventType eventType, Game game) {
         if (game.isWebSocketUp()) {
             try (AsyncHttpClient c = new AsyncHttpClient(new AsyncHttpClientConfig.Builder().build())) {

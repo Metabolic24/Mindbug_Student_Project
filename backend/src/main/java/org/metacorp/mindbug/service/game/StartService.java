@@ -1,9 +1,10 @@
-package org.metacorp.mindbug.service;
+package org.metacorp.mindbug.service.game;
 
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.utils.CardUtils;
 
 import java.util.ArrayList;

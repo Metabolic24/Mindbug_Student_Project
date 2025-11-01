@@ -6,7 +6,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.StartService;
+import org.metacorp.mindbug.service.game.StartService;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 
 import static org.junit.jupiter.api.Assertions.*;

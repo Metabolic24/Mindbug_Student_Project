@@ -7,7 +7,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.StartService;
+import org.metacorp.mindbug.service.game.StartService;
 import org.metacorp.mindbug.model.player.Player;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

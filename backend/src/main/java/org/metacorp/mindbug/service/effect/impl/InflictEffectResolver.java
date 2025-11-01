@@ -8,6 +8,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.model.player.Team;
 import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.game.GameStateService;
 
 /**
  * Effect resolver for InflictEffect
@@ -35,11 +36,11 @@ public class InflictEffectResolver extends GenericEffectResolver<InflictEffect> 
         if (allButOne) {
             if (affectedTeam.getLifePoints() > 1) {
                 affectedTeam.setLifePoints(1);
-                GameService.lifePointLost(affectedPlayer, game);
+                GameStateService.lifePointLost(affectedPlayer, game);
             }
         } else {
             affectedTeam.loseLifePoints(value);
-            GameService.lifePointLost(affectedPlayer, game);
+            GameStateService.lifePointLost(affectedPlayer, game);
         }
     }
 }

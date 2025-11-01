@@ -1,4 +1,4 @@
-package org.metacorp.mindbug.service;
+package org.metacorp.mindbug.service.game;
 
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
@@ -6,6 +6,8 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.EffectQueueService;
+import org.metacorp.mindbug.service.WebSocketService;
 
 import java.text.MessageFormat;
 import java.util.Map;
@@ -79,7 +81,7 @@ public class PlayCardService {
             throw new GameStateException("an attack needs to be resolved before picking a new card", Map.of("attackingCard", game.getAttackingCard()));
         } else if (mindbugger != null) {
             if (mindbugger.equals(game.getCurrentPlayer())) {
-                throw new GameStateException(MessageFormat.format("player {0} cannot mindbug its own card",Map.of("choice", mindbugger)));
+                throw new GameStateException(MessageFormat.format("player {0} cannot mindbug its own card", Map.of("choice", mindbugger)));
             } else if (!mindbugger.hasMindbug()) {
                 throw new GameStateException(MessageFormat.format("player {0} has no mindbug left", Map.of("mindbugger", mindbugger)));
             }
@@ -111,7 +113,7 @@ public class PlayCardService {
 
         // Add card to its owner board then refresh game state
         playedCard.getOwner().getBoard().add(playedCard);
-        GameService.refreshGameState(game);
+        GameStateService.refreshGameState(game);
 
         // Add PLAY effects (if any) if player is allowed to trigger them
         EffectQueueService.addBoardEffectsToQueue(playedCard, EffectTiming.PLAY, game.getEffectQueue());
@@ -121,7 +123,7 @@ public class PlayCardService {
             game.setPlayedCard(null);
 
             // Start a new turn but only changes current player if card has not been mindbugged
-            GameService.newTurn(game, mindbugger != null);
+            GameStateService.newTurn(game, mindbugger != null);
         });
     }
 }

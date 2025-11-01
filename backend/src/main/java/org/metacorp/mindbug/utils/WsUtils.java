@@ -7,9 +7,8 @@ import java.util.Arrays;
 
 public final class WsUtils {
 
-    private WsUtils(){
-        // Not to be used
-    }
+    public static final String PLAYER_ID_KEY = "playerId";
+    public static final String PLAYER_NAME_KEY = "playerName";
 
     /**
      * Retrieve the param value from the WebSocket query
@@ -37,5 +36,9 @@ public final class WsUtils {
         final String key = idx > 0 ? it.substring(0, idx) : "";
         final String value = (idx > 0 && it.length() > idx + 1) || (it.indexOf('=') == it.length()-1) || (it.indexOf('=') == 0)  ? it.substring(idx + 1) : it.substring(idx);
         return new AbstractMap.SimpleImmutableEntry<>(URLDecoder.decode(key, StandardCharsets.UTF_8), URLDecoder.decode(value, StandardCharsets.UTF_8));
+    }
+
+    private WsUtils(){
+        // Not to be used
     }
 }

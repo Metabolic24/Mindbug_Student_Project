@@ -8,6 +8,7 @@ import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.GameService;
+import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.Arrays;
@@ -146,7 +147,7 @@ public class ManualApp {
 
                         System.out.printf("1er effet à résoudre : %s\n", input);
 
-                        GameService.resolveChoice(UUID.fromString(input), game);
+                        ChoiceService.resolveChoice(UUID.fromString(input), game);
                     }
                     case TARGET -> {
                         System.out.println("Résolution d'un choix de cible(s)");
@@ -162,7 +163,7 @@ public class ManualApp {
 
                         System.out.printf("Cible(s) choisie(s) : %s\n", Arrays.toString(tokens));
 
-                        GameService.resolveChoice(Stream.of(tokens).map(UUID::fromString).toList(), game);
+                        ChoiceService.resolveChoice(Stream.of(tokens).map(UUID::fromString).toList(), game);
                     }
                     case HUNTER -> {
                         System.out.println("Résolution d'un choix de cible d'attaque");
@@ -174,9 +175,9 @@ public class ManualApp {
                             }
 
                             System.out.printf("Cible sélectionnée : %s\n", input);
-                            GameService.resolveChoice(UUID.fromString(input), game);
+                            ChoiceService.resolveChoice(UUID.fromString(input), game);
                         } else {
-                            GameService.resolveChoice(null, game);
+                            ChoiceService.resolveChoice(null, game);
                         }
                     }
                     case FRENZY, BOOLEAN -> {
@@ -185,11 +186,11 @@ public class ManualApp {
                         switch ((input.toLowerCase())) {
                             case "y", "o", "yes", "oui" -> {
                                 System.out.println("Valeur choisie : OUI");
-                                GameService.resolveChoice(true, game);
+                                ChoiceService.resolveChoice(true, game);
                             }
                             case "n", "no", "non" -> {
                                 System.out.println("Valeur choisie : NON");
-                                GameService.resolveChoice(false, game);
+                                ChoiceService.resolveChoice(false, game);
                             }
                             default -> throw new GameStateException("Choix invalide");
                         }

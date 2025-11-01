@@ -1,4 +1,4 @@
-package org.metacorp.mindbug.service;
+package org.metacorp.mindbug.service.game;
 
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
@@ -9,6 +9,8 @@ import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.EffectQueueService;
+import org.metacorp.mindbug.service.WebSocketService;
 
 import java.util.HashSet;
 import java.util.Map;
@@ -17,12 +19,6 @@ import java.util.Map;
  * Utility service that updates game state when a player attacks
  */
 public class AttackService {
-
-    // Not to be used
-    private AttackService() {
-        // Nothing to do
-    }
-
     /**
      * Method executed when a player declares an attack
      *
@@ -79,7 +75,7 @@ public class AttackService {
             } else {
                 game.setAttackingCard(null);
 
-                GameService.newTurn(game);
+                GameStateService.newTurn(game);
             }
         });
     }
@@ -126,24 +122,24 @@ public class AttackService {
         if (defendCard == null) {
             Player defender = game.getOpponent();
             defender.getTeam().loseLifePoints(1);
-            GameService.lifePointLost(defender, game);
+            GameStateService.lifePointLost(defender, game);
         } else {
             if (attackCard.getPower() > defendCard.getPower()) {
-                GameService.defeatCard(defendCard, game.getEffectQueue());
+                CardService.defeatCard(defendCard, game.getEffectQueue());
 
                 if (defendCard.hasKeyword(CardKeyword.POISONOUS)) {
-                    GameService.defeatCard(attackCard, game.getEffectQueue());
+                    CardService.defeatCard(attackCard, game.getEffectQueue());
                 }
             } else {
-                GameService.defeatCard(attackCard, game.getEffectQueue());
+                CardService.defeatCard(attackCard, game.getEffectQueue());
 
                 if (attackCard.hasKeyword(CardKeyword.POISONOUS) || attackCard.getPower() == defendCard.getPower()) {
-                    GameService.defeatCard(defendCard, game.getEffectQueue());
+                    CardService.defeatCard(defendCard, game.getEffectQueue());
                 }
             }
         }
 
-        GameService.refreshGameState(game);
+        GameStateService.refreshGameState(game);
 
         game.setAfterEffect(() -> {
             CardInstance attackingCard = game.getAttackingCard();
@@ -153,10 +149,17 @@ public class AttackService {
                 WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
             } else {
                 attackingCard.setAbleToAttackTwice(attackingCard.hasKeyword(CardKeyword.FRENZY));
-                GameService.newTurn(game);
+                GameStateService.newTurn(game);
             }
 
             game.setAttackingCard(null);
         });
+    }
+
+    /**
+     * Constructor
+     */
+    private AttackService() {
+        // Not to be used
     }
 }
