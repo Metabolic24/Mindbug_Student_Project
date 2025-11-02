@@ -7,7 +7,6 @@ import org.metacorp.mindbug.model.choice.IChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.utils.AppUtils;
 

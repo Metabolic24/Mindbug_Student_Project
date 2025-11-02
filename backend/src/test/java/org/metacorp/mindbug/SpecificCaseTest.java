@@ -5,8 +5,12 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.ChoiceType;
+import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.AttackService;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.metacorp.mindbug.utils.TestGameUtils.*;
@@ -249,5 +253,62 @@ public class SpecificCaseTest {
         assertFalse(game.isFinished());
         assertFalse(urchinHurler.isAbleToAttack());
         assertFalse(shieldBugs.isAbleToAttack());
+    }
+
+    @Test
+    public void compostDragonRevivesCompostDragon() throws GameStateException {
+        List<CardInstance> compostDragons = getCardsById(5);
+        assertEquals(2, compostDragons.size());
+
+        CardInstance compostDragon1 = compostDragons.get(0);
+        CardInstance compostDragon2 = compostDragons.get(1);
+        CardInstance hyenix = getCardById(41);
+        CardInstance ferretPacifier = getCardById(36);
+        CardInstance tigerSquirrel = getCardById(29);
+        CardInstance snailHydra = getCardById(25);
+
+        hand(player1, compostDragon1, compostDragon2, ferretPacifier, snailHydra);
+        hand(player2, hyenix, tigerSquirrel);
+
+        play(snailHydra);
+
+        play(tigerSquirrel);
+
+        play(ferretPacifier);
+
+        play(hyenix);
+
+        attack(ferretPacifier, tigerSquirrel);
+
+        attack(hyenix, ferretPacifier);
+
+        choose(true);
+
+        play(compostDragon1);
+
+        chooseTargets(ferretPacifier);
+
+        attack(hyenix, compostDragon1);
+
+        choose(true);
+
+        AttackService.resolveAttack(ferretPacifier, game);
+
+        play(compostDragon2);
+
+        chooseTargets(compostDragon1);
+
+        assertNotNull(game.getChoice());
+        assertEquals(ChoiceType.TARGET, game.getChoice().getType());
+
+        TargetChoice targetChoice = (TargetChoice) game.getChoice();
+
+        assertNotNull(targetChoice.getEffect());
+        assertEquals(player1, targetChoice.getPlayerToChoose());
+        assertEquals(compostDragon1, targetChoice.getEffectSource());
+        assertEquals(1, targetChoice.getTargetsCount());
+        assertEquals(2, targetChoice.getAvailableTargets().size());
+        assertTrue(targetChoice.getAvailableTargets().contains(ferretPacifier));
+        assertTrue(targetChoice.getAvailableTargets().contains(snailHydra));
     }
 }

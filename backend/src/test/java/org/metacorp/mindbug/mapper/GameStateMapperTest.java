@@ -43,6 +43,11 @@ public class GameStateMapperTest {
         assertNull(gameStateDTO.getChoice());
     }
 
+    @Test
+    public void fromGame_playedCard() {
+
+    }
+
     private void comparePlayers(Player player, PlayerDTO playerDTO) {
         assertEquals(player.getUuid(), playerDTO.getUuid());
         assertEquals(player.getName(), playerDTO.getName());

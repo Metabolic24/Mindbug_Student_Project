@@ -14,6 +14,8 @@ import org.metacorp.mindbug.service.game.PlayCardService;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class TestGameUtils {
 
@@ -45,6 +47,10 @@ public class TestGameUtils {
 
     public static CardInstance getCardById(int id) {
         return game.getCards().stream().filter(cardInstance -> cardInstance.getCard().getId() == id).findFirst().orElse(null);
+    }
+
+    public static List<CardInstance> getCardsById(int id) {
+        return game.getCards().stream().filter(cardInstance -> cardInstance.getCard().getId() == id).collect(Collectors.toList());
     }
 
     public static void attack(CardInstance attackingCard, CardInstance defendingCard) throws GameStateException {
