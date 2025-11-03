@@ -57,7 +57,7 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
     <div class="modal-container">
       <div class="modal-header">
         <h5 class="modal-title">{{ title }}</h5>
-        <button type="button" aria-label="Close">
+        <button type="button" aria-label="Close" v-if="choice?.optional">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>

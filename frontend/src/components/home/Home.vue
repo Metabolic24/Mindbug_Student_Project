@@ -32,8 +32,6 @@ async function onLogin(name: string) {
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: #2c3e50;
   margin-bottom: 40px;
 }
 
