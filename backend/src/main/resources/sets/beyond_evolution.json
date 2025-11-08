@@ -1,0 +1,603 @@
+[
+  {
+    "id": 45,
+    "name": "Déflagardon",
+    "power": 1,
+    "keywords": ["POISONOUS"],
+    "effects": {
+      "ATTACK": [{
+        "type": "PROTECTION",
+        "self": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 46,
+    "name": "Taureau à grande vitesse",
+    "power": 9,
+    "effects": {
+      "ATTACK": [{
+        "type": "DESTROY",
+        "max": 3
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 47,
+    "name": "Toxicake",
+    "power": 6,
+    "keywords": ["POISONOUS"],
+    "effects": {
+      "ATTACK": [{
+        "type": "FORCE_ATTACK"
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 48,
+    "name": "Hippopoman",
+    "power": 7,
+    "keywords": ["FRENZY"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "FORCE_ATTACK",
+        "keyword": "HUNTER"
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 49,
+    "name": "Bono-Bot méchant",
+    "power": 5,
+    "keywords": ["HUNTER"],
+    "effects": {
+      "PLAY": [{
+        "type": "DISCARD",
+        "value": -1,
+        "each_enemy": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 50,
+    "name": "Bono-Bot éméché",
+    "power": 5,
+    "keywords": ["HUNTER"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "POWER_UP",
+        "value": 5,
+        "enemy_control": 3
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 51,
+    "name": "Bono-Bot très méchant",
+    "power": 5,
+    "keywords": ["HUNTER"],
+    "effects": {
+      "PLAY": [{
+        "type": "INFLICT",
+        "mindbugCount": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 52,
+    "name": "Dame Nuage",
+    "power": 4,
+    "effects": {
+      "ACTION": [{
+        "type": "DESTROY",
+        "max": 4
+      },
+      {
+        "type": "EVOLVE",
+        "id": 53
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 53,
+    "name": "Princesse Tempête",
+    "power": 6,
+    "effects": {
+      "ACTION": [{
+        "type": "DESTROY",
+        "max": 6
+      },
+      {
+        "type": "EVOLVE",
+        "id": 54
+      }]
+    },
+    "unique": true,
+    "evolution": true
+  },
+  {
+    "id": 54,
+    "name": "Reine Tonnerre",
+    "power": 9,
+    "effects": {
+      "ATTACK": [{
+        "type": "DESTROY",
+        "value": 1
+      }]
+    },
+    "unique": true,
+    "evolution": true
+  },
+  {
+    "id": 55,
+    "name": "Coach Panda",
+    "power": 6,
+    "effects": {
+      "PASSIVE": [{
+        "type": "POWER_UP",
+        "value": 3,
+        "self": false,
+        "allies": true,
+        "alliesCount": 2
+      },
+      {
+        "type": "KEYWORD_UP",
+        "value": "FRENZY",
+        "self": false,
+        "allies": true,
+        "alliesCount": 2
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 56,
+    "name": "Têtard curieux",
+    "power": 1,
+    "keywords": ["POISONOUS"],
+    "effects": {
+      "ACTION": [{
+        "type": "GAIN",
+        "value": 1
+      },
+      {
+        "type": "EVOLVE",
+        "id": 57
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 57,
+    "name": "Craporacle",
+    "power": 3,
+    "keywords": ["POISONOUS", "TOUGH"],
+    "effects": {
+      "ACTION": [{
+        "type": "GAIN",
+        "value": 1
+      },
+      {
+        "type": "EVOLVE",
+        "id": 58
+      }]
+    },
+    "unique": true,
+    "evolution": true
+  },
+  {
+    "id": 58,
+    "name": "Ogre-Grenouille",
+    "power": 8,
+    "keywords": ["POISONOUS", "TOUGH"],
+    "effects": {
+      "ATTACK": [{
+        "type": "INFLICT",
+        "value": 1
+      }]
+    },
+    "unique": true,
+    "evolution": true
+  },
+  {
+    "id": 59,
+    "name": "Dr Orange U. Tan",
+    "power": 6,
+    "effects": {
+      "PLAY": [{
+        "type": "INFLICT",
+        "value": 1,
+        "self": true,
+        "optional": true
+      }, {
+        "type": "BOUNCE",
+        "value": -1
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 60,
+    "name": "Dragauberge",
+    "power": 3,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "ACTION": [{
+        "type": "INFLICT",
+        "value": 1
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 61,
+    "name": "Assasin perce-oreille",
+    "power": 1,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "PLAY": [{
+        "type": "DISCARD",
+        "value": 1,
+        "self": true,
+        "optional": true
+      },{
+        "type": "DESTROY",
+        "value": 1
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 62,
+    "name": "Infernautruche",
+    "power": 6,
+    "effects": {
+      "ACTION": [{
+        "type": "DESTROY",
+        "value": 1,
+        "min": 7
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 63,
+    "name": "Kitsunsei",
+    "power": 4,
+    "effects": {
+      "ACTION": [{
+        "type": "KEYWORD_UP",
+        "value": "SNEAKY",
+        "allies": true,
+        "self": false
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 64,
+    "name": "Terminataupe",
+    "power": 5,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "NO_BLOCK",
+        "value": -1,
+        "min": 7
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 65,
+    "name": "Hélicopoulpe",
+    "power": 5,
+    "effects": {
+      "ACTION": [{
+        "type": "DESTROY",
+        "value": 1,
+        "itself": true
+      }, {
+          "type": "STEAL",
+          "value": 1,
+          "source": "BOARD",
+          "selection": "OPPONENT",
+          "mustPlay": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 66,
+    "name": "Poisson-mine",
+    "power": 2,
+    "keywords": ["POISONOUS"],
+    "effects": {
+      "DEFEATED": [{
+        "type": "DESTROY",
+        "value": -1,
+        "min": 8
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 67,
+    "name": "Lièvre radioactif",
+    "power": 3,
+    "keywords": ["FRENZY"],
+    "effects": {
+      "PLAY": [{
+        "type": "GIVE",
+        "value": 1,
+        "itself": true
+      }],
+      "DEFEATED": [{
+        "type": "DESTROY",
+        "value": -1,
+        "allies": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 68,
+    "name": "Robochiot",
+    "power": 1,
+    "keywords": ["SNEAKY", "TOUGH"],
+    "unique": false
+  },
+  {
+    "id": 69,
+    "name": "Scigne",
+    "power": 5,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "PASSIVE": [
+        {
+          "type": "CHANGE_RULES",
+          "value": "REVERSE_POWER"
+        }
+      ]
+    },
+    "unique": false
+  },
+  {
+    "id": 70,
+    "name": "Shinopik",
+    "power": 3,
+    "keywords": ["SNEAKY"],
+    "effects": {
+      "PASSIVE": [
+        {
+          "type": "POWER_UP",
+          "value": "5",
+          "nomindbug": true
+        }
+      ]
+    },
+    "unique": false
+  },
+  {
+    "id": 71,
+    "name": "Cornes d'acier",
+    "power": 7,
+    "effects": {
+      "DEFEATED": [
+        {
+          "type": "DISCARD",
+          "value": "2"
+        }
+      ]
+    },
+    "unique": true
+  },
+  {
+    "id": 72,
+    "name": "Sweet Fighter",
+    "power": 9,
+    "effects": {
+      "DEFEATED": [
+        {
+          "type": "GAIN",
+          "value": "2"
+        }
+      ]
+    },
+    "unique": false
+  },
+  {
+    "id": 73,
+    "name": "L'expérience",
+    "power": 6,
+    "effects": {
+      "PLAY": [
+        {
+          "type": "GIVE",
+          "value": "1",
+          "itself": true
+        }, {
+          "type": "STEAL",
+          "value": 1,
+          "source": "BOARD",
+          "selection": "OPPONENT",
+          "mustPlay": true
+        }
+      ]
+    },
+    "unique": true
+  },
+  {
+    "id": 74,
+    "name": "Tortue Toaster",
+    "power": 4,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "PLAY": [
+        {
+          "type": "DESTROY",
+          "value": "2",
+          "min": 4,
+          "max": 6
+        }
+      ]
+    },
+    "unique": false
+  },
+  {
+    "id": 75,
+    "name": "Scaratoufer",
+    "power": 4,
+    "keywords": ["HUNTER","TOUGH"],
+    "effects": {
+      "PLAY": [
+        {
+          "type": "COPY",
+          "value": "PLAY"
+        }
+      ]
+    },
+    "unique": false
+  },
+  {
+    "id": 76,
+    "name": "Recrue manchot",
+    "power": 3,
+    "effects": {
+      "ACTION": [
+        {
+          "type": "DISCARD",
+          "value": 1
+        },{
+          "type": "EVOLVE",
+          "id": 77
+        }
+      ]
+    },
+    "unique": true
+  },
+  {
+    "id": 77,
+    "name": "Vétéran empereur",
+    "power": 5,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "ACTION": [
+        {
+          "type": "DISCARD",
+          "value": 1
+        },{
+          "type": "EVOLVE",
+          "id": 78
+        }
+      ]
+    },
+    "unique": true,
+    "evolution": true
+  },
+  {
+    "id": 78,
+    "name": "Panzer Pingouin",
+    "power": 10,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "ATTACK": [
+        {
+          "type": "DISCARD",
+          "value": -1
+        },
+        {
+          "type": "DISCARD",
+          "value": -1,
+          "drawPile": true
+        }
+      ]
+    },
+    "unique": true,
+    "evolution": true
+  },
+  {
+    "id": 79,
+    "name": "Requin-balaise",
+    "power": 8,
+    "keywords": ["FRENZY"],
+    "effects": {
+      "PASSIVE": [
+        {
+          "type": "NO_ATTACK",
+          "keyword": "SNEAKY"
+        },
+        {
+          "type": "NO_BLOCK",
+          "value": -1,
+          "keyword": "SNEAKY"
+        }
+      ]
+    },
+    "unique": false
+  },
+  {
+    "id": 80,
+    "name": "Jeune pousse",
+    "power": 1,
+    "effects": {
+      "ACTION": [
+        {
+          "type": "STEAL",
+          "value": 1,
+          "source": "SELF_DISCARD",
+          "mustPlay": true
+        },{
+          "type": "EVOLVE",
+          "id": 81
+        }
+      ]
+    },
+    "unique": true
+  },
+  {
+    "id": 81,
+    "name": "Bigroot",
+    "power": 4,
+    "effects": {
+      "ACTION": [
+        {
+          "type": "STEAL",
+          "value": 1,
+          "source": "SELF_DISCARD",
+          "mustPlay": true
+        },{
+          "type": "EVOLVE",
+          "id": 82
+        }
+      ]
+    },
+    "unique": true,
+    "evolution": true
+  },
+  {
+    "id": 82,
+    "name": "Maître Chêne",
+    "power": 7,
+    "effects": {
+      "PASSIVE": [
+        {
+          "type": "POWER_UP",
+          "value": 5,
+          "self": false,
+          "allies": true
+        }
+      ]
+    },
+    "unique": true,
+    "evolution": true
+  }
+]
