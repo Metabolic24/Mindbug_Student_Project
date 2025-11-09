@@ -81,4 +81,21 @@ public class DiscardEffectResolverTest {
                     .filter(card::equals).count());
         }
     }
+
+    @Test
+    public void testEachEnemy_nominal() {
+        effect.setEachEnemy(true);
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+
+        opponentPlayer.drawX(1);
+
+        effectResolver.apply(game, randomCard, timing);
+
+        assertNull(game.getChoice());
+        assertTrue(opponentPlayer.getHand().isEmpty());
+        assertEquals(3, opponentPlayer.getDiscardPile().size());
+    }
 }

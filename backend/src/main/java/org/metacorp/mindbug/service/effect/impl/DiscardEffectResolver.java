@@ -29,8 +29,14 @@ public class DiscardEffectResolver extends GenericEffectResolver<DiscardEffect> 
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
-        int value = effect.getValue();
         Player opponent = card.getOwner().getOpponent(game.getPlayers());
+
+        int value;
+        if (effect.isEachEnemy()) {
+            value = opponent.getBoard().size();
+        } else {
+            value = effect.getValue();
+        }
 
         if (opponent.getHand().size() <= value) {
             resolve(game, new ArrayList<>(opponent.getHand()));
