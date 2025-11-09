@@ -21,6 +21,7 @@ import org.metacorp.mindbug.model.effect.impl.*;
         @JsonSubTypes.Type(value = DrawEffect.class, name = DrawEffect.TYPE),
         @JsonSubTypes.Type(value = KeywordUpEffect.class, name = KeywordUpEffect.TYPE),
         @JsonSubTypes.Type(value = PowerUpEffect.class, name = PowerUpEffect.TYPE),
+        @JsonSubTypes.Type(value = ProtectionEffect.class, name = ProtectionEffect.TYPE),
         @JsonSubTypes.Type(value = NoAttackEffect.class, name = NoAttackEffect.TYPE),
         @JsonSubTypes.Type(value = NoBlockEffect.class, name = NoBlockEffect.TYPE),
         @JsonSubTypes.Type(value = ReviveEffect.class, name = ReviveEffect.TYPE),

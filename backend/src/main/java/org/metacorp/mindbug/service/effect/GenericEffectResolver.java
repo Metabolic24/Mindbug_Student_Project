@@ -43,6 +43,7 @@ public abstract class GenericEffectResolver<T extends GenericEffect> {
             case NO_ATTACK -> new NoAttackEffectResolver((NoAttackEffect) effect);
             case NO_BLOCK -> new NoBlockEffectResolver((NoBlockEffect) effect);
             case POWER_UP -> new PowerUpEffectResolver((PowerUpEffect) effect);
+            case PROTECTION -> new ProtectionEffectResolver((ProtectionEffect) effect);
             case REVIVE -> new ReviveEffectResolver((ReviveEffect) effect);
             case STEAL -> new StealEffectResolver((StealEffect) effect);
         };

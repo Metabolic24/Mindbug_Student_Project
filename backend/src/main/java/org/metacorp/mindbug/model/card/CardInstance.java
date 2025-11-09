@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.model.card;
 
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -34,6 +35,9 @@ public class CardInstance {
 
     private boolean ableToAttack;
     private boolean ableToBlock;
+
+    @Getter(AccessLevel.PRIVATE)
+    private boolean protection;
 
     private Set<AbstractModifier<?>> modifiers;
 
@@ -81,6 +85,13 @@ public class CardInstance {
         } else {
             modifiers.forEach(modifier -> modifier.apply(this));
         }
+    }
+
+    /**
+     * @return true if the card has a protection, false otherwise
+     */
+    public boolean hasProtection() {
+        return protection;
     }
 
     @Override
