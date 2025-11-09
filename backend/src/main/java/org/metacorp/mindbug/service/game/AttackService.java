@@ -9,7 +9,6 @@ import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.EffectQueueService;
 import org.metacorp.mindbug.service.WebSocketService;
 
 import java.util.HashSet;

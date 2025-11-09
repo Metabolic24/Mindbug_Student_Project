@@ -27,11 +27,15 @@ import org.metacorp.mindbug.model.effect.impl.*;
         @JsonSubTypes.Type(value = StealEffect.class, name = StealEffect.TYPE)}
 )
 public class GenericEffect {
+    /** The effect type */
     private EffectType type;
 
-    // Where this effect should trigger
+    /** Where this effect should trigger (default : BOARD) */
     private EffectLocation location;
 
+    /**
+     * Constructor
+     */
     protected GenericEffect() {
         // Set default location value
         location = EffectLocation.BOARD;

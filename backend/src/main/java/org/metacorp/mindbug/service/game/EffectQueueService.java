@@ -1,4 +1,4 @@
-package org.metacorp.mindbug.service;
+package org.metacorp.mindbug.service.game;
 
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
@@ -6,8 +6,8 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.effect.*;
+import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
-import org.metacorp.mindbug.service.game.GameStateService;
 
 import java.util.HashSet;
 import java.util.Iterator;

@@ -9,7 +9,7 @@ import org.metacorp.mindbug.model.effect.impl.StealEffect;
 import org.metacorp.mindbug.model.effect.steal.StealSource;
 import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.EffectQueueService;
+import org.metacorp.mindbug.service.game.EffectQueueService;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 import org.metacorp.mindbug.service.effect.impl.steal.StealBooleanChoiceResolver;
 import org.metacorp.mindbug.service.effect.impl.steal.TargetChoiceResolver;

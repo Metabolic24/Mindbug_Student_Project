@@ -6,7 +6,6 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.EffectQueueService;
 import org.metacorp.mindbug.service.WebSocketService;
 
 import java.text.MessageFormat;
@@ -81,9 +80,9 @@ public class PlayCardService {
             throw new GameStateException("an attack needs to be resolved before picking a new card", Map.of("attackingCard", game.getAttackingCard()));
         } else if (mindbugger != null) {
             if (mindbugger.equals(game.getCurrentPlayer())) {
-                throw new GameStateException(MessageFormat.format("player {0} cannot mindbug its own card", Map.of("choice", mindbugger)));
+                throw new GameStateException(MessageFormat.format("player {0} cannot mindbug its own card", mindbugger.getName()), Map.of("mindbugger", mindbugger));
             } else if (!mindbugger.hasMindbug()) {
-                throw new GameStateException(MessageFormat.format("player {0} has no mindbug left", Map.of("mindbugger", mindbugger)));
+                throw new GameStateException(MessageFormat.format("player {0} has no mindbug left", mindbugger.getName()), Map.of("mindbugger", mindbugger));
             }
         }
 

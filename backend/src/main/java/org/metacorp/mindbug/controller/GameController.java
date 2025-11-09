@@ -1,21 +1,31 @@
 package org.metacorp.mindbug.controller;
 
 import jakarta.inject.Inject;
-import jakarta.ws.rs.*;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.POST;
+import jakarta.ws.rs.PUT;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.core.Response;
 import org.metacorp.mindbug.dto.GameStateDTO;
-import org.metacorp.mindbug.dto.rest.*;
+import org.metacorp.mindbug.dto.rest.ActionDTO;
+import org.metacorp.mindbug.dto.rest.DeclareAttackDTO;
+import org.metacorp.mindbug.dto.rest.PickDTO;
+import org.metacorp.mindbug.dto.rest.PlayDTO;
+import org.metacorp.mindbug.dto.rest.ResolveAttackDTO;
+import org.metacorp.mindbug.dto.rest.SurrenderDTO;
 import org.metacorp.mindbug.dto.rest.choice.BooleanAnswerDTO;
-import org.metacorp.mindbug.dto.rest.choice.SingleTargetAnswerDTO;
 import org.metacorp.mindbug.dto.rest.choice.MultipleTargetAnswerDTO;
+import org.metacorp.mindbug.dto.rest.choice.SingleTargetAnswerDTO;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.mapper.GameStateMapper;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.GameService;
+import org.metacorp.mindbug.service.game.ActionService;
+import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.PlayCardService;
@@ -130,6 +140,37 @@ public class GameController {
         }
 
         PlayCardService.playCard(mindbugger, game);
+
+        return Response.ok().build();
+    }
+
+    /**
+     * Endpoint triggered when a player chooses an action on his/her cards
+     *
+     * @param body the request body
+     * @return the response to the REST request
+     * @throws GameStateException if an error occurs in game state
+     */
+    @POST
+    @Path("/action")
+    public Response action(ActionDTO body) throws GameStateException {
+        if (body == null || body.getGameId() == null || body.getActionCardId() == null) {
+            return Response.status(400).entity("Invalid request body").build();
+        }
+
+        Game game = gameService.findById(body.getGameId());
+        if (game == null) {
+            return Response.status(400).entity("Requested game not found").build();
+        }
+
+        try {
+            CardInstance actionCard = game.getCurrentPlayer().getBoard().stream()
+                    .filter(cardInstance -> cardInstance.getUuid().equals(body.getActionCardId()))
+                    .findFirst().orElseThrow();
+            ActionService.resolveAction(actionCard, game);
+        } catch (NoSuchElementException e) {
+            return Response.status(400).entity("Card not found").build();
+        }
 
         return Response.ok().build();
     }
