@@ -27,7 +27,7 @@ public class PowerUpEffect extends GenericEffect {
      */
     private boolean allies;
     /**
-     * The required amount of life points so the power gain is applied
+     * The maximum amount of life points so the power gain is applied
      */
     private Integer lifePoints;
     /**
@@ -42,6 +42,10 @@ public class PowerUpEffect extends GenericEffect {
      * Should the power gain be only available on the owner turn
      */
     private boolean selfTurn;
+    /**
+     * Should power be gained only if the opponent has X or more cards on board
+     */
+    private Integer enemiesCount;
 
     @Override
     public int getPriority() {

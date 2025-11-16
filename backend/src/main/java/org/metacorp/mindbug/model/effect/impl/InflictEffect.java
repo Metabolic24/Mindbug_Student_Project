@@ -14,7 +14,20 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 public class InflictEffect extends GenericEffect {
     public final static String TYPE = "INFLICT";
 
-    private int value;          // The number of life points to be lost
-    private boolean self;       // Should the life points be lost by the current player
-    private boolean allButOne;  // Should all life points be lost but one
+    /**
+     * The number of life points to be lost
+     */
+    private int value;
+    /**
+     * Should the life points be lost by the current player
+     */
+    private boolean self;
+    /**
+     * Should all life points be lost but one
+     */
+    private boolean allButOne;
+    /**
+     * Should the amount of life points be equal to the mindbug count of the opponent
+     */
+    private boolean mindbugCount;
 }
