@@ -29,20 +29,18 @@ public class KeywordUpEffectResolver extends GenericEffectResolver<KeywordUpEffe
         Integer max = effect.getMax();
         boolean moreAllies = effect.isMoreAllies();
         boolean alone = effect.isAlone();
-        boolean opponentHas = effect.isOpponentHas(); //TODO Fix an issue when there is at least one card with "opponentHas" effect on each side (one may not have all the expected keywords)
+        Integer alliesCount = effect.getAlliesCount();
 
         Player cardOwner = card.getOwner();
-
-        if (alone && cardOwner.getBoard().size() != 1) {
-            return;
-        }
-
         Player opponent = cardOwner.getOpponent(game.getPlayers());
-        if (moreAllies && opponent.getBoard().size() >= cardOwner.getBoard().size()) {
+
+        if ((alone && cardOwner.getBoard().size() != 1) ||
+                (moreAllies && opponent.getBoard().size() >= cardOwner.getBoard().size()) ||
+                (alliesCount != null && cardOwner.getBoard().size() != alliesCount)) {
             return;
         }
 
-        if (opponentHas) {
+        if (effect.isOpponentHas()) { //TODO Fix an issue when there is at least one card with "opponentHas" effect on each side (one may not have all the expected keywords)
             boolean checkOpponent = false;
             for (CardInstance opponentCard : opponent.getBoard()) {
                 if (opponentCard.getKeywords().contains(value)) {

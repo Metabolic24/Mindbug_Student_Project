@@ -45,6 +45,10 @@ public class PowerUpEffect extends GenericEffect {
     /**
      * Should power be gained only if the opponent has X or more cards on board
      */
+    private Integer alliesCount;
+    /**
+     * Should power be gained only if the opponent has X or more cards on board
+     */
     private Integer enemiesCount;
 
     @Override
