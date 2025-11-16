@@ -33,6 +33,7 @@ public abstract class GenericEffectResolver<T extends GenericEffect> {
 
     public static <T extends GenericEffect> GenericEffectResolver<?> getResolver(T effect) {
         return switch (effect.getType()) {
+            case BOUNCE -> new BounceEffectResolver((BounceEffect)  effect);
             case DESTROY -> new DestroyEffectResolver((DestroyEffect) effect);
             case DISABLE_TIMING -> new DisableTimingEffectResolver((DisableTimingEffect) effect);
             case DISCARD -> new DiscardEffectResolver((DiscardEffect) effect);
