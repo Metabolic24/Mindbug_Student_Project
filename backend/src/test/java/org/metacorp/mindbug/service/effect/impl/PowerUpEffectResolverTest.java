@@ -230,4 +230,35 @@ public class PowerUpEffectResolverTest {
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }
+
+    @Test
+    public void testWithAlliesCount_nominal() {
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+
+        effect.setAlliesCount(2);
+        effect.setValue(4);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertEquals(randomCard.getCard().getPower() + 4, randomCard.getPower());
+    }
+
+    @Test
+    public void testWithAlliesCount_noEffect() {
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+
+        effect.setAlliesCount(3);
+        effect.setValue(4);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
+    }
 }

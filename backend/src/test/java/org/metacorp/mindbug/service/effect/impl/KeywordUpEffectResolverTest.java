@@ -15,6 +15,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class KeywordUpEffectResolverTest {
@@ -233,5 +234,41 @@ public class KeywordUpEffectResolverTest {
         assertEquals(1, otherCard3.getKeywords().size());
         assertTrue(otherCard3.getKeywords().contains(CardKeyword.FRENZY));
         assertTrue(otherCard4.getKeywords().isEmpty());
+    }
+
+    @Test
+    public void testWithAlliesCount_nominal() {
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+
+        randomCard.getKeywords().clear();
+
+        effect.setAlliesCount(2);
+        effect.setValue(CardKeyword.FRENZY);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertTrue(randomCard.getKeywords().contains(CardKeyword.FRENZY));
+        assertEquals(1, randomCard.getKeywords().size());
+    }
+
+    @Test
+    public void testWithAlliesCount_noEffect() {
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+
+        randomCard.getKeywords().clear();
+
+        effect.setAlliesCount(3);
+        effect.setValue(CardKeyword.FRENZY);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
+        assertFalse(randomCard.getKeywords().contains(CardKeyword.FRENZY));
+        assertTrue(randomCard.getKeywords().isEmpty());
     }
 }
