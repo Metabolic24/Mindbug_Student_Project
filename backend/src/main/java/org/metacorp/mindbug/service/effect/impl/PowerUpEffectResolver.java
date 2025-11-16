@@ -31,11 +31,13 @@ public class PowerUpEffectResolver extends GenericEffectResolver<PowerUpEffect> 
         boolean allies = effect.isAllies();
         boolean forEachAlly = effect.isForEachAlly();
         Integer lifePoints = effect.getLifePoints();
+        Integer enemiesCount = effect.getEnemiesCount();
 
         Player currentPlayer = card.getOwner();
         int powerToAdd = value;
 
         if ((lifePoints != null && currentPlayer.getTeam().getLifePoints() > lifePoints) ||
+                (enemiesCount != null && game.getOpponent().getBoard().size() < enemiesCount) ||
                 (alone && currentPlayer.getBoard().size() != 1) ||
                 (selfTurn && !currentPlayer.equals(game.getCurrentPlayer()))) {
             return;

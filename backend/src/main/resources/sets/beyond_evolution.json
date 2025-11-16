@@ -57,7 +57,7 @@
     "effects": {
       "PLAY": [{
         "type": "DISCARD",
-        "each_enemy": true
+        "eachEnemy": true
       }]
     },
     "unique": true
@@ -71,7 +71,7 @@
       "PASSIVE": [{
         "type": "POWER_UP",
         "value": 5,
-        "enemy_control": 3
+        "enemiesCount": 3
       }]
     },
     "unique": true

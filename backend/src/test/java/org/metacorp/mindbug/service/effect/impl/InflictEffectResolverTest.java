@@ -70,4 +70,26 @@ public class InflictEffectResolverTest {
 
         assertEquals(1, opponentPlayer.getTeam().getLifePoints());
     }
+
+    @Test
+    public void testWithMindbugCount_nominal() {
+        opponentPlayer.setMindBugs(2);
+        opponentPlayer.getTeam().setLifePoints(3);
+
+        effect.setMindbugCount(true);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertEquals(1, opponentPlayer.getTeam().getLifePoints());
+    }
+
+    @Test
+    public void testWithMindbugCount_noEffect() {
+        opponentPlayer.setMindBugs(0);
+        opponentPlayer.getTeam().setLifePoints(1);
+
+        effect.setMindbugCount(true);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertEquals(1, opponentPlayer.getTeam().getLifePoints());
+    }
 }
