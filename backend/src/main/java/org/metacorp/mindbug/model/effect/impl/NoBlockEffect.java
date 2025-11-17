@@ -19,9 +19,13 @@ public class NoBlockEffect extends GenericEffect {
      */
     private int value;
     /**
-     * The maximum power for cards that will be unable to block
+     * The minimum power for cards that will be unable to block
      */
     private Integer max;
+    /**
+     * The maximum power for cards that will be unable to block
+     */
+    private Integer min;
     /**
      * Should the highest creatures be unable to block
      */
