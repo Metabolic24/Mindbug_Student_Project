@@ -192,6 +192,8 @@ public class KeywordUpEffectResolverTest {
     @Test
     public void testWithMaxCondition_singleCardOnBoard() {
         effect.setValue(CardKeyword.FRENZY);
+        effect.setAllies(true);
+        effect.setSelf(false);
         effect.setMax(6);
 
         effectResolver.apply(game, randomCard, timing);
@@ -202,6 +204,8 @@ public class KeywordUpEffectResolverTest {
     @Test
     public void testWithMaxCondition_multipleCards() {
         effect.setValue(CardKeyword.FRENZY);
+        effect.setAllies(true);
+        effect.setSelf(false);
         effect.setMax(6);
 
         CardInstance otherCard = currentPlayer.getHand().getFirst();
@@ -270,5 +274,52 @@ public class KeywordUpEffectResolverTest {
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
         assertFalse(randomCard.getKeywords().contains(CardKeyword.FRENZY));
         assertTrue(randomCard.getKeywords().isEmpty());
+    }
+
+    @Test
+    public void testWithAllies_nominal() {
+        CardInstance ally = currentPlayer.getHand().getFirst();
+        currentPlayer.addCardToBoard(ally);
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+
+        randomCard.getKeywords().clear();
+
+        effect.setAllies(true);
+        effect.setSelf(false);
+        effect.setValue(CardKeyword.FRENZY);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertTrue(randomCard.getKeywords().isEmpty());
+        assertTrue(ally.getKeywords().contains(CardKeyword.FRENZY));
+    }
+
+    @Test
+    public void testWithAllies_withSelf() {
+        CardInstance ally = currentPlayer.getHand().getFirst();
+        ally.getKeywords().clear();
+        currentPlayer.addCardToBoard(ally);
+
+        CardInstance ally2 = currentPlayer.getHand().getFirst();
+        ally2.getKeywords().clear();
+        currentPlayer.addCardToBoard(ally2);
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+
+        randomCard.getKeywords().clear();
+
+        effect.setAllies(true);
+        effect.setSelf(true);
+        effect.setValue(CardKeyword.FRENZY);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertTrue(randomCard.getKeywords().contains(CardKeyword.FRENZY));
+        assertEquals(1, randomCard.getKeywords().size());
+        assertTrue(ally.getKeywords().contains(CardKeyword.FRENZY));
+        assertEquals(1, ally.getKeywords().size());
+        assertTrue(ally2.getKeywords().contains(CardKeyword.FRENZY));
+        assertEquals(1, ally2.getKeywords().size());
     }
 }

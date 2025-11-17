@@ -195,10 +195,14 @@
       "PASSIVE": [{
         "type":"KEYWORD_UP",
         "value": "HUNTER",
+        "allies": true,
+        "self": false,
         "max": 4
       },{
         "type":"KEYWORD_UP",
         "value": "POISONOUS",
+        "allies": true,
+        "self": false,
         "max": 4
       }]
     },
