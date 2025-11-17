@@ -104,6 +104,7 @@ public class NoBlockEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         effect.setMax(otherCard.getPower());
+        effect.setValue(-1);
         effectResolver.apply(game, randomCard, timing);
 
         assertFalse(otherCard.isAbleToBlock());
@@ -119,6 +120,7 @@ public class NoBlockEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard2);
 
         effect.setMax(otherCard.getPower());
+        effect.setValue(-1);
         effectResolver.apply(game, randomCard, timing);
 
         assertFalse(otherCard.isAbleToBlock());
@@ -135,6 +137,7 @@ public class NoBlockEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard2);
 
         effect.setMax(otherCard.getPower());
+        effect.setValue(-1);
         effectResolver.apply(game, randomCard, timing);
 
         assertFalse(otherCard.isAbleToBlock());
@@ -151,6 +154,76 @@ public class NoBlockEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard2);
 
         effect.setMax(otherCard.getPower());
+        effect.setValue(-1);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertFalse(otherCard.isAbleToBlock());
+        assertTrue(otherCard2.isAbleToBlock());
+    }
+
+    @Test
+    public void testWithMinCondition_noEffect() {
+        effect.setMax(5);
+        effectResolver.apply(game, randomCard, timing);
+    }
+
+    @Test
+    public void testWithMinCondition_singleMatchingCardSamePower() {
+        CardInstance otherCard = opponentPlayer.getHand().getFirst();
+        opponentPlayer.addCardToBoard(otherCard);
+
+        effect.setMin(otherCard.getPower());
+        effect.setValue(-1);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertFalse(otherCard.isAbleToBlock());
+    }
+
+    @Test
+    public void testWithMinCondition_twoMatchingCardSamePower() {
+        CardInstance otherCard = opponentPlayer.getHand().getFirst();
+        opponentPlayer.addCardToBoard(otherCard);
+
+        CardInstance otherCard2 = opponentPlayer.getHand().getFirst();
+        otherCard2.setPower(otherCard.getPower());
+        opponentPlayer.addCardToBoard(otherCard2);
+
+        effect.setMin(otherCard.getPower());
+        effect.setValue(-1);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertFalse(otherCard.isAbleToBlock());
+        assertFalse(otherCard2.isAbleToBlock());
+    }
+
+    @Test
+    public void testWithMinCondition_twoMatchingCardDifferentPower() {
+        CardInstance otherCard = opponentPlayer.getHand().getFirst();
+        opponentPlayer.addCardToBoard(otherCard);
+
+        CardInstance otherCard2 = opponentPlayer.getHand().getFirst();
+        otherCard2.setPower(otherCard.getPower() + 1);
+        opponentPlayer.addCardToBoard(otherCard2);
+
+        effect.setMin(otherCard.getPower());
+        effect.setValue(-1);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertFalse(otherCard.isAbleToBlock());
+        assertFalse(otherCard2.isAbleToBlock());
+    }
+
+    @Test
+    public void testWithMinCondition_twoCardsOneMatching() {
+        CardInstance otherCard = opponentPlayer.getHand().getFirst();
+        opponentPlayer.addCardToBoard(otherCard);
+
+        CardInstance otherCard2 = opponentPlayer.getHand().getFirst();
+        otherCard2.setPower(otherCard.getPower() - 1);
+        opponentPlayer.addCardToBoard(otherCard2);
+
+        effect.setMin(otherCard.getPower());
+        effect.setValue(-1);
         effectResolver.apply(game, randomCard, timing);
 
         assertFalse(otherCard.isAbleToBlock());
@@ -163,6 +236,7 @@ public class NoBlockEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         effect.setHighest(true);
+        effect.setValue(1);
         effectResolver.apply(game, randomCard, timing);
 
         assertFalse(otherCard.isAbleToBlock());
@@ -178,6 +252,7 @@ public class NoBlockEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard2);
 
         effect.setHighest(true);
+        effect.setValue(-1);
         effectResolver.apply(game, randomCard, timing);
 
         assertFalse(otherCard.isAbleToBlock());
@@ -194,6 +269,7 @@ public class NoBlockEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard2);
 
         effect.setHighest(true);
+        effect.setValue(-1);
         effectResolver.apply(game, randomCard, timing);
 
         assertFalse(otherCard.isAbleToBlock());
@@ -214,6 +290,7 @@ public class NoBlockEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard3);
 
         effect.setHighest(true);
+        effect.setValue(-1);
         effectResolver.apply(game, randomCard, timing);
 
         assertTrue(otherCard.isAbleToBlock());
