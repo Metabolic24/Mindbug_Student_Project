@@ -9,6 +9,11 @@ import org.metacorp.mindbug.model.modifier.KeywordModifier;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.GenericEffectResolver;
 
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 /**
  * Effect resolver for KeywordUpEffect
  */
@@ -26,9 +31,9 @@ public class KeywordUpEffectResolver extends GenericEffectResolver<KeywordUpEffe
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
         CardKeyword value = effect.getValue();
-        Integer max = effect.getMax();
         boolean moreAllies = effect.isMoreAllies();
         boolean alone = effect.isAlone();
+        boolean allies = effect.isAllies();
         Integer alliesCount = effect.getAlliesCount();
 
         Player cardOwner = card.getOwner();
@@ -54,11 +59,14 @@ public class KeywordUpEffectResolver extends GenericEffectResolver<KeywordUpEffe
             }
         }
 
-        if (max != null) {
-            for (CardInstance currentCard : cardOwner.getBoard()) {
-                if (currentCard.getPower() <= max && !currentCard.equals(card)) {
-                    addKeyword(currentCard, value, timing);
-                }
+        if (allies) {
+            Set<CardInstance> availableCards = cardOwner.getBoard().stream().filter(cardInstance ->
+                    (effect.isSelf() && cardInstance.getUuid().equals(card.getUuid())) ||
+                    (!cardInstance.getUuid().equals(card.getUuid()) &&
+                            (effect.getMax() == null || cardInstance.getPower() <= effect.getMax()))).collect(Collectors.toSet());
+
+            for (CardInstance availableCard : availableCards) {
+                addKeyword(availableCard, value, timing);
             }
         } else {
             addKeyword(card, value, timing);

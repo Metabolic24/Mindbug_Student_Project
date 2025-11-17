@@ -20,6 +20,14 @@ public class KeywordUpEffect extends GenericEffect {
      */
     private CardKeyword value;
     /**
+     * Should this effect apply to the card itself
+     */
+    private boolean self = true;
+    /**
+     * Should this effect apply to the card allies
+     */
+    private boolean allies;
+    /**
      * The maximum power of ally card(s) on which this effect should be applied
      */
     private Integer max;
