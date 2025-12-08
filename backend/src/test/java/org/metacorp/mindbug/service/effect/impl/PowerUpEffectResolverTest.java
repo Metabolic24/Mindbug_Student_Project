@@ -261,4 +261,26 @@ public class PowerUpEffectResolverTest {
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }
+
+    @Test
+    public void testWithNoMindbug_nominal() {
+        currentPlayer.setMindBugs(0);
+
+        effect.setNoMindbug(true);
+        effect.setValue(4);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertEquals(randomCard.getCard().getPower() + 4, randomCard.getPower());
+    }
+
+    @Test
+    public void testWithNoMindbug_noEffect() {
+        currentPlayer.setMindBugs(1);
+
+        effect.setNoMindbug(true);
+        effect.setValue(4);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
+    }
 }
