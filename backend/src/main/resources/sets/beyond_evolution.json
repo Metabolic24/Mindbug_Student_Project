@@ -379,7 +379,7 @@
         {
           "type": "POWER_UP",
           "value": "5",
-          "nomindbug": true
+          "noMindbug": true
         }
       ]
     },
@@ -443,7 +443,7 @@
       "PLAY": [
         {
           "type": "DESTROY",
-          "value": "2",
+          "value": 2,
           "min": 4,
           "max": 6
         }

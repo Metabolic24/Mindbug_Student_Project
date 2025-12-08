@@ -30,6 +30,7 @@ public class PowerUpEffectResolver extends GenericEffectResolver<PowerUpEffect> 
         boolean selfTurn = effect.isSelfTurn();
         boolean allies = effect.isAllies();
         boolean forEachAlly = effect.isForEachAlly();
+        boolean noMindbug = effect.isNoMindbug();
         Integer lifePoints = effect.getLifePoints();
         Integer enemiesCount = effect.getEnemiesCount();
         Integer alliesCount = effect.getAlliesCount();
@@ -41,6 +42,7 @@ public class PowerUpEffectResolver extends GenericEffectResolver<PowerUpEffect> 
                 (enemiesCount != null && game.getOpponent().getBoard().size() < enemiesCount) ||
                 (alliesCount != null && currentPlayer.getBoard().size() != alliesCount) ||
                 (alone && currentPlayer.getBoard().size() != 1) ||
+                (noMindbug && currentPlayer.getMindBugs() != 0) ||
                 (selfTurn && !currentPlayer.equals(game.getCurrentPlayer()))) {
             return;
         }

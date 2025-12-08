@@ -35,6 +35,10 @@ public class PowerUpEffect extends GenericEffect {
      */
     private boolean alone;
     /**
+     * Should the power gain be applied only if card owner has no mindbug left
+     */
+    private boolean noMindbug;
+    /**
      * Should power be gained for each ally card
      */
     private boolean forEachAlly;
