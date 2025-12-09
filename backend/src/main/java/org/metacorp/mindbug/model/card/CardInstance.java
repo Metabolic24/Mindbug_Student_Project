@@ -39,6 +39,8 @@ public class CardInstance {
     @Getter(AccessLevel.PRIVATE)
     private boolean protection;
 
+    private CardInstance initialCard;
+
     private Set<AbstractModifier<?>> modifiers;
 
     public CardInstance(Card card) {

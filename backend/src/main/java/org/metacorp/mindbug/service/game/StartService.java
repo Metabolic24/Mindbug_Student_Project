@@ -35,17 +35,25 @@ public class StartService {
     /**
      * Creates and start a new game for two players (using the given card set)
      *
-     * @param player1    first player name
-     * @param player2    second player name
-     * @param setName    the card set name as CardSetName
+     * @param player1 first player name
+     * @param player2 second player name
+     * @param setName the card set name as CardSetName
      * @return the created game
      */
     public static Game newGame(Player player1, Player player2, CardSetName setName) {
         Game game = new Game(player1, player2);
 
-        List<CardInstance> cards = CardUtils.getCardsFromConfig(setName.getKey());
+        // Retrieve CardInstance from JSON configuration file and separate evolution cards from the other ones
+        List<CardInstance> cards = game.getCards();
+        CardUtils.getCardsFromConfig(setName.getKey()).forEach(cardInstance -> {
+            if (cardInstance.getCard().isEvolution()) {
+                game.getEvolutionCards().add(cardInstance);
+            } else {
+                cards.add(cardInstance);
+            }
+        });
+
         Collections.shuffle(cards);
-        game.setCards(cards);
 
         for (Player player : game.getPlayers()) {
             initDrawAndHand(player, cards);

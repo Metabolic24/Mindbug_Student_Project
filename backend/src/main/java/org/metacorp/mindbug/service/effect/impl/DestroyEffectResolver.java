@@ -88,9 +88,8 @@ public class DestroyEffectResolver extends GenericEffectResolver<DestroyEffect> 
     }
 
     private void destroyCards(Game game, List<CardInstance> cards) {
-        EffectQueue effectQueue = game.getEffectQueue();
         for (CardInstance card : cards) {
-            defeatCard(card, effectQueue);
+            defeatCard(card, game);
         }
     }
 

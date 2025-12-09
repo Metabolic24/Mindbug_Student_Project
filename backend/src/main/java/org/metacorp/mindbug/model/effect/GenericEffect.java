@@ -20,6 +20,7 @@ import org.metacorp.mindbug.model.effect.impl.*;
         @JsonSubTypes.Type(value = DisableTimingEffect.class, name = DisableTimingEffect.TYPE),
         @JsonSubTypes.Type(value = DiscardEffect.class, name = DiscardEffect.TYPE),
         @JsonSubTypes.Type(value = DrawEffect.class, name = DrawEffect.TYPE),
+        @JsonSubTypes.Type(value = EvolveEffect.class, name = EvolveEffect.TYPE),
         @JsonSubTypes.Type(value = GiveEffect.class, name = GiveEffect.TYPE),
         @JsonSubTypes.Type(value = KeywordUpEffect.class, name = KeywordUpEffect.TYPE),
         @JsonSubTypes.Type(value = PowerUpEffect.class, name = PowerUpEffect.TYPE),

@@ -598,3 +598,7 @@
     "evolution": true
   }
 ]
+
+CHANGE_RULES
+COPY
+EVOLVE (il reste les tests à faire sur tout le code de l'évolution)
