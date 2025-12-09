@@ -39,6 +39,7 @@ public class DestroyEffectResolver extends GenericEffectResolver<DestroyEffect> 
         boolean lessAllies = effect.isLessAllies();
         boolean lowest = effect.isLowest();
         boolean selfAllowed = effect.isSelfAllowed();
+        boolean allies = effect.isAllies();
 
         Player currentPlayer = card.getOwner();
         Player opponent = currentPlayer.getOpponent(game.getPlayers());
@@ -53,16 +54,19 @@ public class DestroyEffectResolver extends GenericEffectResolver<DestroyEffect> 
             destroyCards(game, lowestCards);
         } else {
             List<CardInstance> availableCards = new ArrayList<>();
-            for (CardInstance currentCard : opponent.getBoard()) {
-                if (min != null && currentCard.getPower() < min ||
-                        max != null && currentCard.getPower() > max) {
-                    continue;
-                }
 
-                availableCards.add(currentCard);
+            if (!allies) {
+                for (CardInstance currentCard : opponent.getBoard()) {
+                    if (min != null && currentCard.getPower() < min ||
+                            max != null && currentCard.getPower() > max) {
+                        continue;
+                    }
+
+                    availableCards.add(currentCard);
+                }
             }
 
-            if (selfAllowed) {
+            if (allies || selfAllowed) {
                 for (CardInstance currentCard : card.getOwner().getBoard()) {
                     if (min != null && currentCard.getPower() < min ||
                             max != null && currentCard.getPower() > max) {

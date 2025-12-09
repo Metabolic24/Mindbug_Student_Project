@@ -22,4 +22,5 @@ public class DestroyEffect extends GenericEffect {
     private boolean lessAllies;     // Effect is active if player has less allies than the opponent
     private boolean lowest;         // Destroy the card(s) with lowest power
     private boolean selfAllowed;    // Can this effect affect current player cards
+    private boolean allies;         // Should this effect affect only current player cards
 }
