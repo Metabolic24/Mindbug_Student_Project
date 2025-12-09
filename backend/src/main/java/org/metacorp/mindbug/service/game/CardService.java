@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.service.game;
 
+import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -18,15 +19,26 @@ public class CardService {
     /**
      * Method triggered when a card is defeated
      *
-     * @param card        the defeated card
-     * @param effectQueue the effect queue
+     * @param card the defeated card
+     * @param game the game state
      */
-    public static void defeatCard(CardInstance card, EffectQueue effectQueue) {
+    public static void defeatCard(CardInstance card, Game game) {
         if (card.isStillTough()) {
             card.setStillTough(false);
         } else {
-            card.getOwner().addCardToDiscardPile(card);
-            EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, effectQueue);
+            Player cardOwner = card.getOwner();
+            if (card.getCard().isEvolution()) {
+                cardOwner.getBoard().remove(card);
+                cardOwner.getDiscardPile().add(card.getInitialCard());
+
+                // Add the card back to the evolution cards list, as it may come back later in the game
+                card.setOwner(null);
+                game.getEvolutionCards().add(card);
+            } else {
+                cardOwner.addCardToDiscardPile(card);
+            }
+
+            EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, game.getEffectQueue());
         }
     }
 

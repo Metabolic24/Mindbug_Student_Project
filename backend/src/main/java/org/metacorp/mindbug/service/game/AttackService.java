@@ -124,16 +124,16 @@ public class AttackService {
             GameStateService.lifePointLost(defender, game);
         } else {
             if (attackCard.getPower() > defendCard.getPower()) {
-                CardService.defeatCard(defendCard, game.getEffectQueue());
+                CardService.defeatCard(defendCard, game);
 
                 if (defendCard.hasKeyword(CardKeyword.POISONOUS)) {
-                    CardService.defeatCard(attackCard, game.getEffectQueue());
+                    CardService.defeatCard(attackCard, game);
                 }
             } else {
-                CardService.defeatCard(attackCard, game.getEffectQueue());
+                CardService.defeatCard(attackCard, game);
 
                 if (attackCard.hasKeyword(CardKeyword.POISONOUS) || attackCard.getPower() == defendCard.getPower()) {
-                    CardService.defeatCard(defendCard, game.getEffectQueue());
+                    CardService.defeatCard(defendCard, game);
                 }
             }
         }

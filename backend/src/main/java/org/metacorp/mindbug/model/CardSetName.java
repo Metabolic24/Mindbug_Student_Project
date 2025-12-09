@@ -5,7 +5,8 @@ import lombok.Getter;
 /** Enumeration for Card Set names */
 @Getter
 public enum CardSetName {
-    FIRST_CONTACT("first_contact");
+    FIRST_CONTACT("first_contact"),
+    BEYOND_EVOLUTION("beyond_evolution");;
 
     private final String key;
 

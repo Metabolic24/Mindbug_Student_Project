@@ -27,6 +27,7 @@ public class Game {
 
     private List<CardInstance> cards;
     private List<CardInstance> bannedCards;
+    private List<CardInstance> evolutionCards;
 
     private CardInstance playedCard;
     private CardInstance attackingCard;
@@ -43,7 +44,9 @@ public class Game {
     public Game(Player player1, Player player2) {
         uuid = UUID.randomUUID();
         winner = null;
+        cards = new ArrayList<>();
         bannedCards = new ArrayList<>();
+        evolutionCards = new ArrayList<>();
         effectQueue = new EffectQueue();
         players = Arrays.asList(player1, player2);
     }

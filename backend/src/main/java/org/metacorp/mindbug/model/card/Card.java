@@ -17,7 +17,8 @@ public class Card {
     private int power;
     private Set<CardKeyword> keywords;
     private Map<EffectTiming, List<GenericEffect>> effects;
-    private boolean unique; // Has this card multiple copies in the set or not
+    private boolean unique;     // Has this card multiple copies in the set or not
+    private boolean evolution;  // Is this card an evolution of another card
 
     /**
      * Empty constructor (required by Jackson)
