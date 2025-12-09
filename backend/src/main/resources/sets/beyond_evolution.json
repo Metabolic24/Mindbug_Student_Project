@@ -336,7 +336,6 @@
     "effects": {
       "PLAY": [{
         "type": "GIVE",
-        "value": 1,
         "itself": true
       }],
       "DEFEATED": [{
@@ -421,7 +420,6 @@
       "PLAY": [
         {
           "type": "GIVE",
-          "value": "1",
           "itself": true
         }, {
           "type": "STEAL",
