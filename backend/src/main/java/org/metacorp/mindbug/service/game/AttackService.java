@@ -123,7 +123,9 @@ public class AttackService {
             defender.getTeam().loseLifePoints(1);
             GameStateService.lifePointLost(defender, game);
         } else {
-            if (attackCard.getPower() > defendCard.getPower()) {
+            boolean reversedFight = attackCard.hasKeyword(CardKeyword.REVERSED) || defendCard.hasKeyword(CardKeyword.REVERSED);
+
+            if ((attackCard.getPower() > defendCard.getPower() && !reversedFight) || (attackCard.getPower() < defendCard.getPower() && reversedFight)) {
                 CardService.defeatCard(defendCard, game);
 
                 if (defendCard.hasKeyword(CardKeyword.POISONOUS)) {
