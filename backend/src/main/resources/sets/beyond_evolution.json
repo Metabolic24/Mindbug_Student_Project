@@ -357,15 +357,7 @@
     "id": 69,
     "name": "Scigne",
     "power": 5,
-    "keywords": ["TOUGH"],
-    "effects": {
-      "PASSIVE": [
-        {
-          "type": "CHANGE_RULES",
-          "value": "REVERSE_POWER"
-        }
-      ]
-    },
+    "keywords": ["TOUGH", "REVERSED"],
     "unique": false
   },
   {
@@ -598,7 +590,3 @@
     "evolution": true
   }
 ]
-
-CHANGE_RULES
-COPY
-EVOLVE (il reste les tests à faire sur tout le code de l'évolution)

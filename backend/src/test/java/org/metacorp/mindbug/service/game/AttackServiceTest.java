@@ -182,4 +182,96 @@ public class AttackServiceTest {
         assertEquals(2, game.getEffectQueue().size());
         assertNotNull(game.getAfterEffect());
     }
+
+    @Test
+    public void testProcessAttackResolution_attackReversed() {
+        CardInstance attackCard = currentPlayer.getHand().getFirst();
+        attackCard.getKeywords().add(CardKeyword.REVERSED);
+        currentPlayer.addCardToBoard(attackCard);
+        game.setAttackingCard(attackCard);
+
+        CardInstance defendingCard = opponent.getHand().getFirst();
+        defendingCard.getKeywords().remove(CardKeyword.POISONOUS);
+        defendingCard.setStillTough(false);
+        defendingCard.setPower(attackCard.getPower() + 1);
+        opponent.addCardToBoard(defendingCard);
+
+        AttackService.processAttackResolution(attackCard, defendingCard, game);
+
+        assertFalse(opponent.getBoard().contains(defendingCard));
+        assertTrue(currentPlayer.getBoard().contains(attackCard));
+        assertTrue(opponent.getDiscardPile().contains(defendingCard));
+        assertEquals(defendingCard.getEffects(EffectTiming.DEFEATED).size(), game.getEffectQueue().size());
+        assertNotNull(game.getAfterEffect());
+    }
+
+    @Test
+    public void testProcessAttackResolution_blockerReversed() {
+        CardInstance attackCard = currentPlayer.getHand().getFirst();
+        currentPlayer.addCardToBoard(attackCard);
+        game.setAttackingCard(attackCard);
+
+        CardInstance defendingCard = opponent.getHand().getFirst();
+        defendingCard.setPower(attackCard.getPower() + 1);
+        defendingCard.getKeywords().remove(CardKeyword.POISONOUS);
+        defendingCard.setStillTough(false);
+        defendingCard.getKeywords().add(CardKeyword.REVERSED);
+        opponent.addCardToBoard(defendingCard);
+
+        AttackService.processAttackResolution(attackCard, defendingCard, game);
+
+        assertFalse(opponent.getBoard().contains(defendingCard));
+        assertTrue(currentPlayer.getBoard().contains(attackCard));
+        assertTrue(opponent.getDiscardPile().contains(defendingCard));
+        assertEquals(defendingCard.getEffects(EffectTiming.DEFEATED).size(), game.getEffectQueue().size());
+        assertNotNull(game.getAfterEffect());
+    }
+
+    @Test
+    public void testProcessAttackResolution_bothReversed() {
+        CardInstance attackCard = currentPlayer.getHand().getFirst();
+        attackCard.setStillTough(false);
+        attackCard.getKeywords().remove(CardKeyword.POISONOUS);
+        attackCard.getKeywords().add(CardKeyword.REVERSED);
+        currentPlayer.addCardToBoard(attackCard);
+        game.setAttackingCard(attackCard);
+
+        CardInstance defendingCard = opponent.getHand().getFirst();
+        defendingCard.setPower(attackCard.getPower() - 1);
+        defendingCard.getKeywords().add(CardKeyword.REVERSED);
+        opponent.addCardToBoard(defendingCard);
+
+        AttackService.processAttackResolution(attackCard, defendingCard, game);
+
+        assertTrue(opponent.getBoard().contains(defendingCard));
+        assertFalse(currentPlayer.getBoard().contains(attackCard));
+        assertTrue(currentPlayer.getDiscardPile().contains(attackCard));
+        assertEquals(attackCard.getEffects(EffectTiming.DEFEATED).size(), game.getEffectQueue().size());
+        assertNotNull(game.getAfterEffect());
+    }
+
+    @Test
+    public void testProcessAttackResolution_reverseSamePower() {
+        CardInstance attackCard = currentPlayer.getHand().getFirst();
+        attackCard.setStillTough(false);
+        attackCard.getKeywords().remove(CardKeyword.POISONOUS);
+        currentPlayer.addCardToBoard(attackCard);
+        game.setAttackingCard(attackCard);
+
+        CardInstance defendingCard = opponent.getHand().getFirst();
+        defendingCard.setPower(attackCard.getPower());
+        defendingCard.setStillTough(false);
+        defendingCard.getKeywords().remove(CardKeyword.POISONOUS);
+        defendingCard.getKeywords().add(CardKeyword.REVERSED);
+        opponent.addCardToBoard(defendingCard);
+
+        AttackService.processAttackResolution(attackCard, defendingCard, game);
+
+        assertFalse(opponent.getBoard().contains(defendingCard));
+        assertFalse(currentPlayer.getBoard().contains(attackCard));
+        assertTrue(currentPlayer.getDiscardPile().contains(attackCard));
+        assertTrue(opponent.getDiscardPile().contains(defendingCard));
+        assertEquals(defendingCard.getEffects(EffectTiming.DEFEATED).size() + attackCard.getEffects(EffectTiming.DEFEATED).size(), game.getEffectQueue().size());
+        assertNotNull(game.getAfterEffect());
+    }
 }
