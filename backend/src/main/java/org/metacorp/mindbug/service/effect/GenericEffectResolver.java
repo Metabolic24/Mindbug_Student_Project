@@ -67,6 +67,7 @@ public abstract class GenericEffectResolver<T extends GenericEffect> {
             case DISCARD -> new DiscardEffectResolver((DiscardEffect) effect);
             case DRAW -> new DrawEffectResolver((DrawEffect) effect);
             case EVOLVE -> new EvolveEffectResolver((EvolveEffect) effect);
+            case FORCE_ATTACK -> new ForceAttackEffectResolver((ForceAttackEffect) effect);
             case GAIN -> new GainEffectResolver((GainEffect) effect);
             case GIVE -> new GiveEffectResolver((GiveEffect) effect);
             case INFLICT -> new InflictEffectResolver((InflictEffect) effect);

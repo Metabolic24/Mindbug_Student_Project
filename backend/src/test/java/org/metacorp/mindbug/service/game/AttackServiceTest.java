@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.game;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -69,6 +70,33 @@ public class AttackServiceTest {
         assertEquals(2, opponent.getTeam().getLifePoints());
         assertNotNull(game.getAfterEffect());
     }
+
+    @Test
+    public void testDeclareAttack_forcedTarget() throws GameStateException {
+        CardInstance attackCard = currentPlayer.getHand().getFirst();
+        attackCard.getEffects(EffectTiming.ATTACK).clear();
+        attackCard.getEffects(EffectTiming.DEFEATED).clear();
+        attackCard.getKeywords().remove(CardKeyword.POISONOUS);
+        attackCard.getKeywords().remove(CardKeyword.SNEAKY);
+        attackCard.setStillTough(false);
+        currentPlayer.addCardToBoard(attackCard);
+
+        CardInstance defendingCard = opponent.getHand().getFirst();
+        defendingCard.setPower(attackCard.getPower() + 1);
+        opponent.addCardToBoard(defendingCard);
+
+        game.setForcedTarget(defendingCard);
+        AttackService.declareAttack(attackCard, game);
+
+        assertTrue(opponent.getBoard().contains(defendingCard));
+        assertFalse(currentPlayer.getBoard().contains(attackCard));
+        assertTrue(currentPlayer.getDiscardPile().contains(attackCard));
+        assertNull(game.getAfterEffect());
+        assertFalse(game.isForcedAttack());
+        assertNull(game.getForcedTarget());
+        assertNull(game.getAttackingCard());
+    }
+
 
     @Test
     public void testProcessAttackResolution_lowerBlocker() {

@@ -20,6 +20,7 @@ public class GameStateMapper {
         GameStateDTO gameStateDTO = new GameStateDTO(game.getUuid(),
                 fromPlayer(currentPlayer),
                 fromPlayer(game.getOpponent()));
+        gameStateDTO.setForcedAttack(game.isForcedAttack());
 
         // Update the card field if needed
         CardInstance playedCard = game.getPlayedCard();

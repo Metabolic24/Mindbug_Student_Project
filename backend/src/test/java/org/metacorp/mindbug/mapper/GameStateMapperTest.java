@@ -5,13 +5,22 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.dto.CardDTO;
 import org.metacorp.mindbug.dto.GameStateDTO;
 import org.metacorp.mindbug.dto.PlayerDTO;
+import org.metacorp.mindbug.dto.choice.TargetChoiceDTO;
+import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.ChoiceType;
+import org.metacorp.mindbug.model.choice.TargetChoice;
+import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.PlayerService;
+import org.metacorp.mindbug.service.effect.impl.DiscardEffectResolver;
+import org.metacorp.mindbug.service.game.PlayCardService;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -41,11 +50,91 @@ public class GameStateMapperTest {
         assertNull(gameStateDTO.getCard());
         assertNull(gameStateDTO.getWinner());
         assertNull(gameStateDTO.getChoice());
+        assertFalse(gameStateDTO.isForcedAttack());
     }
 
     @Test
-    public void fromGame_playedCard() {
+    public void fromGame_playedCard() throws GameStateException {
+        Player currentPlayer = game.getCurrentPlayer();
+        CardInstance playedCard = currentPlayer.getHand().getFirst();
+        PlayCardService.pickCard(playedCard, game);
 
+        GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
+
+        assertNotNull(gameStateDTO);
+        assertEquals(game.getUuid(), gameStateDTO.getUuid());
+
+        comparePlayers(game.getCurrentPlayer(), gameStateDTO.getPlayer());
+        comparePlayers(game.getOpponent(), gameStateDTO.getOpponent());
+
+        assertNotNull(gameStateDTO.getCard());
+        compareCard(playedCard, gameStateDTO.getCard());
+
+        assertNull(gameStateDTO.getWinner());
+        assertNull(gameStateDTO.getChoice());
+        assertFalse(gameStateDTO.isForcedAttack());
+    }
+
+    @Test
+    public void fromGame_endedGame() {
+        gameService.endGame(game.getCurrentPlayer().getUuid(), game.getUuid());
+
+        GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
+
+        assertNotNull(gameStateDTO);
+        assertEquals(game.getUuid(), gameStateDTO.getUuid());
+
+        comparePlayers(game.getCurrentPlayer(), gameStateDTO.getPlayer());
+        comparePlayers(game.getOpponent(), gameStateDTO.getOpponent());
+
+        assertNull(gameStateDTO.getCard());
+        assertEquals(game.getOpponent().getUuid(), gameStateDTO.getWinner());
+        assertNull(gameStateDTO.getChoice());
+        assertFalse(gameStateDTO.isForcedAttack());
+    }
+
+    @Test
+    public void fromGame_forcedAttack() {
+        game.setForcedAttack(true);
+
+        GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
+
+        assertNotNull(gameStateDTO);
+        assertEquals(game.getUuid(), gameStateDTO.getUuid());
+
+        comparePlayers(game.getCurrentPlayer(), gameStateDTO.getPlayer());
+        comparePlayers(game.getOpponent(), gameStateDTO.getOpponent());
+
+        assertNull(gameStateDTO.getCard());
+        assertNull(gameStateDTO.getWinner());
+        assertNull(gameStateDTO.getChoice());
+        assertTrue(gameStateDTO.isForcedAttack());
+    }
+
+    @Test
+    public void fromGame_targetChoice() {
+        game.setChoice(new TargetChoice(game.getCurrentPlayer(), game.getCurrentPlayer().getHand().getFirst(), new DiscardEffectResolver(new DiscardEffect()), 1, new HashSet<>(game.getOpponent().getHand())));
+
+        GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
+
+        assertNotNull(gameStateDTO);
+        assertEquals(game.getUuid(), gameStateDTO.getUuid());
+
+        comparePlayers(game.getCurrentPlayer(), gameStateDTO.getPlayer());
+        comparePlayers(game.getOpponent(), gameStateDTO.getOpponent());
+
+        assertNull(gameStateDTO.getCard());
+        assertNull(gameStateDTO.getWinner());
+
+        TargetChoiceDTO choiceDTO = assertInstanceOf(TargetChoiceDTO.class, gameStateDTO.getChoice());
+        assertEquals(ChoiceType.TARGET, choiceDTO.getType());
+        compareCards(game.getOpponent().getHand(), new ArrayList<>(choiceDTO.getAvailableTargets()));
+        assertEquals(1, choiceDTO.getTargetsCount());
+        assertFalse(choiceDTO.getOptional());
+        compareCard(game.getCurrentPlayer().getHand().getFirst(), choiceDTO.getSourceCard());
+        assertEquals(game.getCurrentPlayer().getUuid(), choiceDTO.getPlayerToChoose());
+
+        assertFalse(gameStateDTO.isForcedAttack());
     }
 
     private void comparePlayers(Player player, PlayerDTO playerDTO) {
@@ -69,12 +158,7 @@ public class GameStateMapperTest {
 
             for (CardDTO playerDTOCard : playerDTOHand) {
                 if (playerCard.getUuid().equals(playerDTOCard.getUuid())) {
-                    assertEquals(playerCard.getCard().getName(), playerDTOCard.getName());
-                    assertEquals(playerCard.getPower(), playerDTOCard.getPower());
-                    assertEquals(playerCard.getCard().getId(), playerDTOCard.getId());
-                    assertEquals(playerCard.getKeywords(), playerDTOCard.getKeywords());
-                    assertEquals(playerCard.getCard().getSetName(), playerDTOCard.getSetName());
-                    assertEquals(playerCard.getOwner().getUuid(), playerDTOCard.getOwnerId());
+                    compareCard(playerCard,  playerDTOCard);
 
                     found = true;
                     break;
@@ -83,5 +167,14 @@ public class GameStateMapperTest {
 
             assertTrue(found);
         }
+    }
+
+    private void compareCard(CardInstance card, CardDTO cardDTO) {
+        assertEquals(card.getCard().getName(), cardDTO.getName());
+        assertEquals(card.getPower(), cardDTO.getPower());
+        assertEquals(card.getCard().getId(), cardDTO.getId());
+        assertEquals(card.getKeywords(), cardDTO.getKeywords());
+        assertEquals(card.getCard().getSetName(), cardDTO.getSetName());
+        assertEquals(card.getOwner().getUuid(), cardDTO.getOwnerId());
     }
 }

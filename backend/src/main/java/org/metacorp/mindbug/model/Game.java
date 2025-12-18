@@ -31,11 +31,13 @@ public class Game {
 
     private CardInstance playedCard;
     private CardInstance attackingCard;
+    private CardInstance forcedTarget;
 
     private final EffectQueue effectQueue;
     private IChoice<?> choice;
     private Runnable afterEffect;
 
+    private boolean forcedAttack;
     private boolean webSocketUp;
 
     /**

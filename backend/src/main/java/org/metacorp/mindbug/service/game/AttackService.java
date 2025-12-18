@@ -53,13 +53,20 @@ public class AttackService {
      */
     protected static void processAttackDeclaration(CardInstance attackCard, Game game) {
         game.setAttackingCard(attackCard);
+        final Player attackCardOwner = attackCard.getOwner();
 
         // Add ATTACK effects if the player is allowed to trigger it
         EffectQueueService.addBoardEffectsToQueue(attackCard, EffectTiming.ATTACK, game.getEffectQueue());
 
         game.setAfterEffect(() -> {
-            if (game.getCurrentPlayer().getBoard().contains(attackCard)) {
-                if (!game.getOpponent().getBoard().isEmpty() && attackCard.hasKeyword(CardKeyword.HUNTER)) {
+            if (attackCardOwner.getBoard().contains(attackCard)) {
+                if (game.getForcedTarget() != null) {
+                    try {
+                        resolveAttack(game.getForcedTarget(), game);
+                    } catch (GameStateException e) {
+                        // TODO Manage errors
+                    }
+                } else if (!game.getOpponent().getBoard().isEmpty() && attackCard.hasKeyword(CardKeyword.HUNTER)) {
                     game.setChoice(new HunterChoice(game.getCurrentPlayer(), attackCard, new HashSet<>(game.getOpponent().getBoard())));
                     WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
                 } else if (game.getOpponent().getBoard().isEmpty() || !game.getOpponent().canBlock(attackCard.hasKeyword(CardKeyword.SNEAKY))) {
@@ -98,6 +105,8 @@ public class AttackService {
                 throw new GameStateException("defending card is not able to block", Map.of("defendingCard", defendingCard));
             } else if (attackingCard.hasKeyword(CardKeyword.SNEAKY) && !defendingCard.hasKeyword(CardKeyword.SNEAKY) && !attackingCard.hasKeyword(CardKeyword.HUNTER)) {
                 throw new GameStateException("defending card cannot defend a SNEAKY attack", Map.of("attackingCard", game.getAttackingCard(), "defendingCard", defendingCard));
+            } else if (game.getForcedTarget() != null && !game.getForcedTarget().equals(defendingCard)) {
+                throw new GameStateException("invalid defending card : only one target allowed", Map.of("defendingCard", defendingCard, "forcedTarget", game.getForcedTarget()));
             }
         } else if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before attacking", Map.of("choice", game.getChoice()));
@@ -154,6 +163,8 @@ public class AttackService {
             }
 
             game.setAttackingCard(null);
+            game.setForcedTarget(null);
+            game.setForcedAttack(false);
         });
     }
 
