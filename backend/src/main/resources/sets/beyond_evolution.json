@@ -30,7 +30,7 @@
     "power": 6,
     "keywords": ["POISONOUS"],
     "effects": {
-      "ATTACK": [{
+      "ACTION": [{
         "type": "FORCE_ATTACK"
       }]
     },
@@ -44,7 +44,8 @@
     "effects": {
       "PASSIVE": [{
         "type": "FORCE_ATTACK",
-        "keyword": "HUNTER"
+        "keyword": "HUNTER",
+        "singleTarget": true
       }]
     },
     "unique": true
