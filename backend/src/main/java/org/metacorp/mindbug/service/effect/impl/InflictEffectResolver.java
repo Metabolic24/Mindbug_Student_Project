@@ -37,7 +37,7 @@ public class InflictEffectResolver extends GenericEffectResolver<InflictEffect> 
                 GameStateService.lifePointLost(affectedPlayer, game);
             }
         } else {
-            int value = effect.isMindbugCount() ? game.getOpponent().getMindBugs() : effect.getValue();
+            int value = effect.isMindbugCount() ? affectedPlayer.getMindBugs() : effect.getValue();
             affectedTeam.loseLifePoints(value);
             GameStateService.lifePointLost(affectedPlayer, game);
         }

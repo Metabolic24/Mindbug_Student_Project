@@ -135,7 +135,7 @@ public final class AppUtils {
      * @throws GameStateException if an error occurs during the game execution
      */
     public static void resolveAttack(Scanner scanner, Game game) throws GameStateException {
-        Player opponentPlayer = game.getOpponent();
+        Player opponentPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
 
         Stream<CardInstance> blockersStream = opponentPlayer.getBoard().stream().filter(CardInstance::isAbleToBlock);
         if (game.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)) {

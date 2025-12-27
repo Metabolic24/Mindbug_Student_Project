@@ -30,7 +30,7 @@ public class GiveEffectResolver extends GenericEffectResolver<GiveEffect> {
     }
 
     private void giveCard(Game game, CardInstance cardToGive) {
-        Player opponent = game.getOpponent();
+        Player opponent = cardToGive.getOwner().getOpponent(game.getPlayers());
 
         cardToGive.setOwner(opponent);
         game.getCurrentPlayer().getBoard().remove(cardToGive);

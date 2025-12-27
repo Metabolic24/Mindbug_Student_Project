@@ -60,16 +60,23 @@ public class AttackService {
 
         game.setAfterEffect(() -> {
             if (attackCardOwner.getBoard().contains(attackCard)) {
-                if (game.getForcedTarget() != null) {
+                Player defender = attackCardOwner.getOpponent(game.getPlayers());
+                if (defender.getBoard().isEmpty()) {
+                    try {
+                        resolveAttack(null, game);
+                    } catch (GameStateException e) {
+                        // TODO Manage errors
+                    }
+                } else if (game.getForcedTarget() != null) {
                     try {
                         resolveAttack(game.getForcedTarget(), game);
                     } catch (GameStateException e) {
                         // TODO Manage errors
                     }
-                } else if (!game.getOpponent().getBoard().isEmpty() && attackCard.hasKeyword(CardKeyword.HUNTER)) {
-                    game.setChoice(new HunterChoice(game.getCurrentPlayer(), attackCard, new HashSet<>(game.getOpponent().getBoard())));
+                } else if (attackCard.hasKeyword(CardKeyword.HUNTER)) {
+                    game.setChoice(new HunterChoice(attackCardOwner, attackCard, new HashSet<>(defender.getBoard())));
                     WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
-                } else if (game.getOpponent().getBoard().isEmpty() || !game.getOpponent().canBlock(attackCard.hasKeyword(CardKeyword.SNEAKY))) {
+                } else if (!defender.canBlock(attackCard.hasKeyword(CardKeyword.SNEAKY))) {
                     try {
                         resolveAttack(null, game);
                     } catch (GameStateException e) {
@@ -128,7 +135,7 @@ public class AttackService {
      */
     protected static void processAttackResolution(CardInstance attackCard, CardInstance defendCard, Game game) {
         if (defendCard == null) {
-            Player defender = game.getOpponent();
+            Player defender = attackCard.getOwner().getOpponent(game.getPlayers());
             defender.getTeam().loseLifePoints(1);
             GameStateService.lifePointLost(defender, game);
         } else {
