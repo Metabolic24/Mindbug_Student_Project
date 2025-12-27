@@ -1,14 +1,13 @@
 package org.metacorp.mindbug.service.effect.impl;
 
 import org.metacorp.mindbug.model.Game;
-import org.metacorp.mindbug.model.card.Card;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.NoBlockEffect;
 import org.metacorp.mindbug.model.modifier.BlockModifier;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 
 import java.util.HashSet;
@@ -20,7 +19,7 @@ import java.util.stream.Stream;
 /**
  * Effect resolver for NoBlockEffect
  */
-public class NoBlockEffectResolver extends GenericEffectResolver<NoBlockEffect> implements ResolvableEffect<List<CardInstance>> {
+public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> implements ResolvableEffect<List<CardInstance>> {
 
     private EffectTiming timing;
 

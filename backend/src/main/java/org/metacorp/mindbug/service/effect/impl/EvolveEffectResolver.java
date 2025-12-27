@@ -6,7 +6,7 @@ import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.EvolveEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.game.EffectQueueService;
 
 import java.util.Optional;
@@ -14,7 +14,7 @@ import java.util.Optional;
 /**
  * Effect resolver for EvolveEffect
  */
-public class EvolveEffectResolver extends GenericEffectResolver<EvolveEffect> {
+public class EvolveEffectResolver extends EffectResolver<EvolveEffect> {
 
     /**
      * Constructor

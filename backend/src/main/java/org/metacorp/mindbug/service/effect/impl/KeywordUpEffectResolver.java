@@ -7,17 +7,15 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.KeywordUpEffect;
 import org.metacorp.mindbug.model.modifier.KeywordModifier;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 
-import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Effect resolver for KeywordUpEffect
  */
-public class KeywordUpEffectResolver extends GenericEffectResolver<KeywordUpEffect> {
+public class KeywordUpEffectResolver extends EffectResolver<KeywordUpEffect> {
 
     /**
      * Constructor

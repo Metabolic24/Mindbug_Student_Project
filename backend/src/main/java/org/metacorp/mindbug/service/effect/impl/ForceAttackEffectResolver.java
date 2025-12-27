@@ -7,7 +7,7 @@ import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.ForceAttackEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.AttackService;
 
@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Effect resolver for ForceAttackEffect
  */
-public class ForceAttackEffectResolver extends GenericEffectResolver<ForceAttackEffect> implements ResolvableEffect<List<CardInstance>> {
+public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect> implements ResolvableEffect<List<CardInstance>> {
 
     private CardInstance effectSource;
 

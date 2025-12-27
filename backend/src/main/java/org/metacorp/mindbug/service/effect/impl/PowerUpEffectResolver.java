@@ -6,12 +6,12 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.PowerUpEffect;
 import org.metacorp.mindbug.model.modifier.PowerModifier;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 
 /**
  * Effect resolver for PowerUpEffect
  */
-public class PowerUpEffectResolver extends GenericEffectResolver<PowerUpEffect> {
+public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
 
     /**
      * Constructor
