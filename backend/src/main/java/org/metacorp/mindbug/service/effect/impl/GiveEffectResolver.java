@@ -5,12 +5,12 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.GiveEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 
 /**
  * Effect resolver for GiveEffect
  */
-public class GiveEffectResolver extends GenericEffectResolver<GiveEffect> {
+public class GiveEffectResolver extends EffectResolver<GiveEffect> {
 
     /**
      * Constructor

@@ -7,7 +7,7 @@ import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.CardService;
 
@@ -20,7 +20,7 @@ import static org.metacorp.mindbug.service.game.CardService.defeatCard;
 /**
  * Effect resolver for DestroyEffect
  */
-public class DestroyEffectResolver extends GenericEffectResolver<DestroyEffect> implements ResolvableEffect<List<CardInstance>> {
+public class DestroyEffectResolver extends EffectResolver<DestroyEffect> implements ResolvableEffect<List<CardInstance>> {
 
     /**
      * Constructor

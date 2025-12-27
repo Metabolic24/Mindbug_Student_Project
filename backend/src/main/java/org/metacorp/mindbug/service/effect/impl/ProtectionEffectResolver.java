@@ -5,12 +5,12 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.ProtectionEffect;
 import org.metacorp.mindbug.model.modifier.ProtectionModifier;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 
 /**
  * Effect resolver for ProtectionEffect
  */
-public class ProtectionEffectResolver extends GenericEffectResolver<ProtectionEffect> {
+public class ProtectionEffectResolver extends EffectResolver<ProtectionEffect> {
 
     /**
      * Constructor

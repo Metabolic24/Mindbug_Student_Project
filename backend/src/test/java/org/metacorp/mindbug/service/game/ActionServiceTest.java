@@ -6,9 +6,9 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
+import org.metacorp.mindbug.model.effect.Effect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectType;
-import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
@@ -38,7 +38,7 @@ public class ActionServiceTest {
         gainEffect.setType(EffectType.GAIN);
         gainEffect.setValue(2);
 
-        List<GenericEffect> effects = card.getEffects(EffectTiming.ACTION);
+        List<Effect> effects = card.getEffects(EffectTiming.ACTION);
         if (effects.isEmpty()) {
             card.getCard().getEffects().put(EffectTiming.ACTION, new ArrayList<>(List.of(gainEffect)));
         } else {

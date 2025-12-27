@@ -6,10 +6,8 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.utils.ChoiceUtils;
 
-import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 

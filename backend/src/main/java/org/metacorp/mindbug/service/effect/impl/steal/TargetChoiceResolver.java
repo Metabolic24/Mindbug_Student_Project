@@ -1,7 +1,6 @@
 package org.metacorp.mindbug.service.effect.impl.steal;
 
 import org.metacorp.mindbug.model.Game;
-import org.metacorp.mindbug.model.card.Card;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.impl.StealEffect;
 import org.metacorp.mindbug.model.player.Player;

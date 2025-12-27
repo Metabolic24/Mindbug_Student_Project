@@ -213,13 +213,17 @@
     "power": 6,
     "effects": {
       "PLAY": [{
-        "type": "INFLICT",
-        "value": 1,
-        "self": true,
+        "type": "COST",
+        "cost": [{
+          "type": "INFLICT",
+          "value": 1,
+          "self": true
+        }],
+        "effects": [{
+          "type": "BOUNCE",
+          "value": -1
+        }],
         "optional": true
-      }, {
-        "type": "BOUNCE",
-        "value": -1
       }]
     },
     "unique": true
@@ -244,13 +248,17 @@
     "keywords": ["TOUGH"],
     "effects": {
       "PLAY": [{
-        "type": "DISCARD",
-        "value": 1,
-        "self": true,
+        "type": "COST",
+        "cost": [{
+            "type": "DISCARD",
+            "value": 1,
+            "self": true
+        }],
+        "effects": [{
+          "type": "DESTROY",
+          "value": 1
+        }],
         "optional": true
-      },{
-        "type": "DESTROY",
-        "value": 1
       }]
     },
     "unique": false

@@ -7,7 +7,9 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class StartServiceTest {
 

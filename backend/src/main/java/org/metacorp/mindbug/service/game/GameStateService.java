@@ -5,9 +5,10 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
+import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.WebSocketService;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -32,11 +33,11 @@ public class GameStateService {
         }
 
         // Sort effects by priority
-        passiveEffects.sort(Comparator.comparingInt(effect -> effect.getEffects().getFirst().getPriority()));
+        passiveEffects.sort(Comparator.comparingInt(effect -> ((GenericEffect) effect.getEffects().getFirst()).getPriority()));
 
         // Apply effects
         for (EffectsToApply effect : passiveEffects) {
-            GenericEffectResolver<?> effectResolver = GenericEffectResolver.getResolver(effect.getEffects().getFirst());
+            EffectResolver<?> effectResolver = EffectResolver.getResolver(effect.getEffects().getFirst());
             effectResolver.apply(game, effect.getCard(), effect.getTiming());
         }
     }

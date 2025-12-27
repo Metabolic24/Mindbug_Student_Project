@@ -5,12 +5,12 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.NoAttackEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 
 /**
  * Effect resolver for NoAttackEffect
  */
-public class NoAttackEffectResolver extends GenericEffectResolver<NoAttackEffect> {
+public class NoAttackEffectResolver extends EffectResolver<NoAttackEffect> {
 
     /**
      * Constructor

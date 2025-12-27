@@ -6,14 +6,14 @@ import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.BounceEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class BounceEffectResolver extends GenericEffectResolver<BounceEffect> implements ResolvableEffect<List<CardInstance>> {
+public class BounceEffectResolver extends EffectResolver<BounceEffect> implements ResolvableEffect<List<CardInstance>> {
 
     /**
      * Constructor

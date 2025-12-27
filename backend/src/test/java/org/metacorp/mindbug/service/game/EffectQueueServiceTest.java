@@ -1,4 +1,4 @@
-package org.metacorp.mindbug.service;
+package org.metacorp.mindbug.service.game;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,15 +18,19 @@ import org.metacorp.mindbug.model.effect.impl.StealEffect;
 import org.metacorp.mindbug.model.effect.steal.StealSource;
 import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.game.EffectQueueService;
-import org.metacorp.mindbug.service.game.StartService;
+import org.metacorp.mindbug.service.PlayerService;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class EffectQueueServiceTest {
 
