@@ -34,10 +34,14 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
         int value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue();
 
         Player playerToDiscard = effect.isSelf() ? card.getOwner() : opponent;
-        if (playerToDiscard.getHand().size() <= value) {
-            resolve(game, new ArrayList<>(playerToDiscard.getHand()));
+        List<CardInstance> availableCards = effect.isDrawPile() ? playerToDiscard.getDrawPile() : playerToDiscard.getHand();
+
+        if (availableCards.size() <= value || value == -1) {
+            resolve(game, new ArrayList<>(availableCards));
+        } else if (effect.isDrawPile()) {
+            resolve(game, new ArrayList<>(availableCards.subList(0, value)));
         } else {
-            game.setChoice(new TargetChoice(playerToDiscard, card, this, value, new HashSet<>(playerToDiscard.getHand())));
+            game.setChoice(new TargetChoice(playerToDiscard, card, this, value, new HashSet<>(availableCards)));
         }
     }
 
@@ -45,7 +49,13 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
     public void resolve(Game game, List<CardInstance> chosenTargets) {
         for (CardInstance card : chosenTargets) {
             Player cardOwner = card.getOwner();
-            cardOwner.getHand().remove(card);
+
+            if (effect.isDrawPile()) {
+                cardOwner.getDrawPile().remove(card);
+            } else {
+                cardOwner.getHand().remove(card);
+            }
+
             cardOwner.getDiscardPile().add(card);
         }
     }

@@ -20,5 +20,7 @@ public class DiscardEffect extends GenericEffect {
     private boolean eachEnemy;
     /** Should the card(s) be discarded by the source card owner */
     private boolean self;
+    /** Should the cards be discarded from the draw pile */
+    private boolean drawPile;
 
 }
