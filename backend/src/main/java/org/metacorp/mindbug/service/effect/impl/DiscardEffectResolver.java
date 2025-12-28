@@ -31,17 +31,13 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
     public void apply(Game game, CardInstance card, EffectTiming timing) {
         Player opponent = card.getOwner().getOpponent(game.getPlayers());
 
-        int value;
-        if (effect.isEachEnemy()) {
-            value = opponent.getBoard().size();
-        } else {
-            value = effect.getValue();
-        }
+        int value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue();
 
-        if (opponent.getHand().size() <= value) {
-            resolve(game, new ArrayList<>(opponent.getHand()));
+        Player playerToDiscard = effect.isSelf() ? card.getOwner() : opponent;
+        if (playerToDiscard.getHand().size() <= value) {
+            resolve(game, new ArrayList<>(playerToDiscard.getHand()));
         } else {
-            game.setChoice(new TargetChoice(opponent, card, this, value, new HashSet<>(opponent.getHand())));
+            game.setChoice(new TargetChoice(playerToDiscard, card, this, value, new HashSet<>(playerToDiscard.getHand())));
         }
     }
 
