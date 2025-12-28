@@ -23,4 +23,5 @@ public class DestroyEffect extends GenericEffect {
     private boolean lowest;         // Destroy the card(s) with lowest power
     private boolean selfAllowed;    // Can this effect affect current player cards
     private boolean allies;         // Should this effect affect only current player cards
+    private boolean itself;         // Should the source card be the target
 }

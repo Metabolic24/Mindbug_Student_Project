@@ -12,6 +12,7 @@ import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.CardService;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
@@ -36,19 +37,19 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
         Integer value = effect.getValue();
         Integer min = effect.getMin();
         Integer max = effect.getMax();
-        boolean lessAllies = effect.isLessAllies();
-        boolean lowest = effect.isLowest();
         boolean selfAllowed = effect.isSelfAllowed();
         boolean allies = effect.isAllies();
 
         Player currentPlayer = card.getOwner();
         Player opponent = currentPlayer.getOpponent(game.getPlayers());
 
-        if (lessAllies && !(currentPlayer.getBoard().size() < opponent.getBoard().size())) {
+        if (effect.isLessAllies() && !(currentPlayer.getBoard().size() < opponent.getBoard().size())) {
             return;
         }
 
-        if (lowest) {
+        if (effect.isItself()) {
+            destroyCards(game, Collections.singletonList(card));
+        } else if (effect.isLowest()) {
             List<CardInstance> lowestCards = selfAllowed ? CardService.getLowestCards(game.getPlayers()) :
                     opponent.getLowestCards();
             destroyCards(game, lowestCards);

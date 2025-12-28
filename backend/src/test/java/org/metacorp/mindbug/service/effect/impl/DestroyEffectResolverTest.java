@@ -676,4 +676,14 @@ public class DestroyEffectResolverTest {
         assertTrue(currentPlayer.getDiscardPile().contains(otherCard2));
         assertTrue(opponentPlayer.getDiscardPile().isEmpty());
     }
+
+    @Test
+    public void testItself_nominal() {
+        randomCard.getEffects(EffectTiming.DEFEATED).clear();
+
+        effect.setItself(true);
+
+        effectResolver.apply(game, randomCard, timing);
+        assertTrue(currentPlayer.getBoard().isEmpty());
+    }
 }
