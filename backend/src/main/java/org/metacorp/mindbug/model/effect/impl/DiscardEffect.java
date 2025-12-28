@@ -18,4 +18,7 @@ public class DiscardEffect extends GenericEffect {
     private int value;
     /** If true, a card is discarded for each enemy card on board */
     private boolean eachEnemy;
+    /** Should the card(s) be discarded by the source card owner */
+    private boolean self;
+
 }
