@@ -99,7 +99,7 @@ public class DiscardEffectResolverTest {
 
     @Test
     public void testSelf_nominal() {
-        effect.setValue(5);
+        effect.setValue(-1);
         effect.setSelf(true);
 
         effectResolver.apply(game, randomCard, timing);
@@ -109,5 +109,26 @@ public class DiscardEffectResolverTest {
         assertTrue(opponentPlayer.getDiscardPile().isEmpty());
         assertTrue(game.getCurrentPlayer().getHand().isEmpty());
         assertEquals(5, game.getCurrentPlayer().getDiscardPile().size());
+    }
+
+    @Test
+    public void testDrawPile_nominal() {
+        effect.setValue(2);
+        effect.setDrawPile(true);
+
+        CardInstance firstCard = opponentPlayer.getDrawPile().get(0);
+        CardInstance secondCard = opponentPlayer.getDrawPile().get(1);
+        CardInstance thirdCard = opponentPlayer.getDrawPile().get(2);
+
+        effectResolver.apply(game, randomCard, timing);
+
+        assertNull(game.getChoice());
+        assertEquals(5, opponentPlayer.getHand().size());
+        assertEquals(3, opponentPlayer.getDrawPile().size());
+        assertEquals(2, opponentPlayer.getDiscardPile().size());
+
+        assertTrue(opponentPlayer.getDiscardPile().contains(firstCard));
+        assertTrue(opponentPlayer.getDiscardPile().contains(secondCard));
+        assertFalse(opponentPlayer.getDiscardPile().contains(thirdCard));
     }
 }
