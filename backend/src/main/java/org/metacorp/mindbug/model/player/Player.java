@@ -103,26 +103,6 @@ public class Player {
         return highestCards;
     }
 
-    public List<CardInstance> getLowestCards() {
-        return getLowestCards(100);
-    }
-
-    public List<CardInstance> getLowestCards(int lowestPower) {
-        List<CardInstance> lowestCards = new ArrayList<>();
-
-        for (CardInstance card : board) {
-            if (card.getPower() < lowestPower) {
-                lowestPower = card.getPower();
-                lowestCards.clear();
-                lowestCards.add(card);
-            } else if (card.getPower() == lowestPower) {
-                lowestCards.add(card);
-            }
-        }
-
-        return lowestCards;
-    }
-
     public void refresh(boolean newTurn) {
         refillHand();
         for (CardInstance card : board) {

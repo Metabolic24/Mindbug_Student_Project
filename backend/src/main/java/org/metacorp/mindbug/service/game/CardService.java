@@ -10,6 +10,7 @@ import org.metacorp.mindbug.model.player.Player;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Service that provides methods about cards during a game
@@ -42,18 +43,38 @@ public class CardService {
         }
     }
 
+    public static List<CardInstance> getLowestCards(List<CardInstance> cards) {
+        return getLowestCards(cards, Integer.MAX_VALUE);
+    }
+
+    public static List<CardInstance> getLowestCards(List<CardInstance> cards, int lowestPower) {
+        List<CardInstance> lowestCards = new ArrayList<>();
+
+        for (CardInstance card : cards) {
+            if (card.getPower() < lowestPower) {
+                lowestPower = card.getPower();
+                lowestCards.clear();
+                lowestCards.add(card);
+            } else if (card.getPower() == lowestPower) {
+                lowestCards.add(card);
+            }
+        }
+
+        return lowestCards;
+    }
+
     /**
      * Get the cards with the lowest power on boards
      *
      * @param players the players concerned by the request
      * @return the list containing the lowest cards of any player
      */
-    public static List<CardInstance> getLowestCards(List<Player> players) {
+    public static List<CardInstance> getLowestCards(Set<Player> players) {
         List<CardInstance> lowestCards = new ArrayList<>();
-        int lowestPower = 10;
+        int lowestPower = Integer.MAX_VALUE;
 
         for (Player player : players) {
-            List<CardInstance> currentCards = player.getLowestCards(lowestPower);
+            List<CardInstance> currentCards = getLowestCards(player.getBoard(), lowestPower);
 
             if (!currentCards.isEmpty()) {
                 int currentPower = currentCards.getFirst().getPower();
@@ -61,7 +82,8 @@ public class CardService {
                 if (currentPower < lowestPower) {
                     lowestPower = currentPower;
                     lowestCards = new ArrayList<>(currentCards);
-                } else if (currentPower == lowestPower) {
+                } else {
+                    // currentPower is equal to lowestPower, so we add all retrieved cards to the list
                     lowestCards.addAll(currentCards);
                 }
             }

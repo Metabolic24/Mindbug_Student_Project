@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.metacorp.mindbug.service.game.CardService.defeatCard;
 
@@ -50,9 +51,8 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
         if (effect.isItself()) {
             destroyCards(game, Collections.singletonList(card));
         } else if (effect.isLowest()) {
-            List<CardInstance> lowestCards = selfAllowed ? CardService.getLowestCards(game.getPlayers()) :
-                    opponent.getLowestCards();
-            destroyCards(game, lowestCards);
+            Set<Player> affectedPlayers = selfAllowed ? new HashSet<>(game.getPlayers()) : Collections.singleton(opponent);
+            destroyCards(game, CardService.getLowestCards(affectedPlayers));
         } else {
             List<CardInstance> availableCards = new ArrayList<>();
 

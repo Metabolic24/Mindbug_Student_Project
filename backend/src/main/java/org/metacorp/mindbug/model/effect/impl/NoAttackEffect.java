@@ -3,6 +3,7 @@ package org.metacorp.mindbug.model.effect.impl;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.GenericEffect;
 
 /**
@@ -14,5 +15,12 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 public class NoAttackEffect extends GenericEffect {
     public final static String TYPE = "NO_ATTACK";
 
-    private boolean lowest; // Should the lowest power creatures be unable to attack
+    /**
+     * Should the lowest power creatures
+     */
+    private boolean lowest;
+    /**
+     * Should only the cards having this keyword be unable to attack
+     */
+    private CardKeyword keyword;
 }
