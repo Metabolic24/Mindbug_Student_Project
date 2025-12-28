@@ -39,7 +39,6 @@ public class StartServiceTest {
         assertEquals(52, game.getCards().size() + game.getBannedCards().size());
     }
 
-    @Disabled("Currently, there are non-implemented stuff that blocks this test execution. Should be enabled when all Beyond Evolution mechanics are available.")
     @Test
     public void testStart_evolutionCards() {
         Game game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")), CardSetName.BEYOND_EVOLUTION);
@@ -63,7 +62,7 @@ public class StartServiceTest {
         }
 
         assertTrue(game.getBannedCards().size() >= 2 && game.getBannedCards().size() % 2 == 0);
-        assertEquals(52, game.getCards().size() + game.getBannedCards().size());
-        assertEquals(52, game.getEvolutionCards().size());
+        assertEquals(25, game.getCards().size() + game.getBannedCards().size());
+        assertEquals(8, game.getEvolutionCards().size());
     }
 }

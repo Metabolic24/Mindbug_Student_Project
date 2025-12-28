@@ -47,8 +47,9 @@ public abstract class EffectResolver<T extends Effect> {
         if (effect instanceof CostEffect) {
             return new CostEffectResolver((CostEffect) effect);
         } else {
-            return switch (((GenericEffect) effect).getType()) {
+            return switch (effect.getType()) {
                 case BOUNCE -> new BounceEffectResolver((BounceEffect)  effect);
+                case COPY -> new CopyEffectResolver((CopyEffect) effect);
                 case DESTROY -> new DestroyEffectResolver((DestroyEffect) effect);
                 case DISABLE_TIMING -> new DisableTimingEffectResolver((DisableTimingEffect) effect);
                 case DISCARD -> new DiscardEffectResolver((DiscardEffect) effect);

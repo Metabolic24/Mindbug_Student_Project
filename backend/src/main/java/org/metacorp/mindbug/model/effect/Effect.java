@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.Data;
 import org.metacorp.mindbug.model.effect.impl.BounceEffect;
+import org.metacorp.mindbug.model.effect.impl.CopyEffect;
 import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
 import org.metacorp.mindbug.model.effect.impl.DisableTimingEffect;
 import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
@@ -24,7 +25,8 @@ import org.metacorp.mindbug.model.effect.impl.StealEffect;
 @Data
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", include = JsonTypeInfo.As.EXISTING_PROPERTY, visible = true)
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = CostEffect.class, name = "COST"),
+        @JsonSubTypes.Type(value = CopyEffect.class, name = CopyEffect.TYPE),
+        @JsonSubTypes.Type(value = CostEffect.class, name = CostEffect.TYPE),
         @JsonSubTypes.Type(value = GainEffect.class, name = GainEffect.TYPE),
         @JsonSubTypes.Type(value = InflictEffect.class, name = InflictEffect.TYPE),
         @JsonSubTypes.Type(value = DestroyEffect.class, name = DestroyEffect.TYPE),
