@@ -13,6 +13,7 @@ import org.metacorp.mindbug.model.effect.impl.*;
 @Setter
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", include = JsonTypeInfo.As.EXISTING_PROPERTY, visible = true)
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = CopyEffect.class, name = CopyEffect.TYPE),
         @JsonSubTypes.Type(value = GainEffect.class, name = GainEffect.TYPE),
         @JsonSubTypes.Type(value = InflictEffect.class, name = InflictEffect.TYPE),
         @JsonSubTypes.Type(value = DestroyEffect.class, name = DestroyEffect.TYPE),

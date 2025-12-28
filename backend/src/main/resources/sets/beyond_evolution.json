@@ -459,7 +459,7 @@
       "PLAY": [
         {
           "type": "COPY",
-          "value": "PLAY"
+          "timing": "PLAY"
         }
       ]
     },
