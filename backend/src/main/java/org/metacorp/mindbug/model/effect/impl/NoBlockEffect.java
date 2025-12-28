@@ -3,6 +3,7 @@ package org.metacorp.mindbug.model.effect.impl;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.GenericEffect;
 
 /**
@@ -30,4 +31,8 @@ public class NoBlockEffect extends GenericEffect {
      * Should the highest creatures be unable to block
      */
     private boolean highest;
+    /**
+     * Should only the cards having this keyword be unable to block
+     */
+    private CardKeyword keyword;
 }
