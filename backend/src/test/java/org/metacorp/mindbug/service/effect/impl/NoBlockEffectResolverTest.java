@@ -4,14 +4,19 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.NoBlockEffect;
+import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.StartService;
-import org.metacorp.mindbug.model.player.Player;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class NoBlockEffectResolverTest {
 
@@ -296,5 +301,28 @@ public class NoBlockEffectResolverTest {
         assertTrue(otherCard.isAbleToBlock());
         assertTrue(otherCard2.isAbleToBlock());
         assertFalse(otherCard3.isAbleToBlock());
+    }
+
+    @Test
+    public void testWithKeyword_nominal() {
+        CardInstance otherCard = opponentPlayer.getHand().getFirst();
+        otherCard.getKeywords().add(CardKeyword.POISONOUS);
+        opponentPlayer.addCardToBoard(otherCard);
+
+        CardInstance otherCard2 = opponentPlayer.getHand().getFirst();
+        otherCard2.getKeywords().add(CardKeyword.POISONOUS);
+        opponentPlayer.addCardToBoard(otherCard2);
+
+        CardInstance otherCard3 = opponentPlayer.getHand().getFirst();
+        otherCard3.getKeywords().remove(CardKeyword.POISONOUS);
+        opponentPlayer.addCardToBoard(otherCard3);
+
+        effect.setKeyword(CardKeyword.POISONOUS);
+        effect.setValue(-1);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertFalse(otherCard.isAbleToBlock());
+        assertFalse(otherCard2.isAbleToBlock());
+        assertTrue(otherCard3.isAbleToBlock());
     }
 }

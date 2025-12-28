@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.effect.impl;
 
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.NoBlockEffect;
@@ -39,6 +40,7 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
         int value = effect.getValue();
         Integer max = effect.getMax();
         Integer min = effect.getMin();
+        CardKeyword keyword = effect.getKeyword();
         boolean highest = effect.isHighest();
 
         Player opponent = card.getOwner().getOpponent(game.getPlayers());
@@ -55,6 +57,10 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
 
             if (min != null) {
                 boardCards = boardCards.filter(cardInstance -> cardInstance.getPower() >= min);
+            }
+
+            if (keyword != null) {
+                boardCards = boardCards.filter(cardInstance -> cardInstance.hasKeyword(keyword));
             }
 
             availableCards = boardCards.collect(Collectors.toSet());
