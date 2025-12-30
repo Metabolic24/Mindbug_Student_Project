@@ -8,7 +8,6 @@
       <router-link v-for="set in sets" :key="set" :to="`/sets/${set}`">
         <div class="set-card">
           <img :src="getSetImage(set)" :alt="set"/>
-          <h2>{{ set }}</h2>
         </div>
       </router-link>
     </div>
