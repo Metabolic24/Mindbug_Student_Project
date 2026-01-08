@@ -154,7 +154,7 @@ public class GameController {
     @POST
     @Path("/action")
     public Response action(ActionDTO body) throws GameStateException {
-        if (body == null || body.getGameId() == null || body.getActionCardId() == null) {
+        if (body == null || body.getGameId() == null || body.getCardId() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
 
@@ -165,7 +165,7 @@ public class GameController {
 
         try {
             CardInstance actionCard = game.getCurrentPlayer().getBoard().stream()
-                    .filter(cardInstance -> cardInstance.getUuid().equals(body.getActionCardId()))
+                    .filter(cardInstance -> cardInstance.getUuid().equals(body.getCardId()))
                     .findFirst().orElseThrow();
             ActionService.resolveAction(actionCard, game);
         } catch (NoSuchElementException e) {

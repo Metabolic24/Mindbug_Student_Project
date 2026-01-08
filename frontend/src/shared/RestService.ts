@@ -63,6 +63,10 @@ export async function resolveMultipleTargetChoice(gameId: string, targets: strin
     return manageRestCall(axios.post(gameBaseUrl + "/choice/target", {gameId, targets}))
 }
 
+export async function resolveAction(gameId: string, cardId: string): Promise<void> {
+    return manageRestCall(axios.post(gameBaseUrl + "/action", {gameId, cardId}))
+}
+
 export async function surrender(gameId: string, playerId: string): Promise<void> {
     return manageRestCall(axios.post(gameBaseUrl + "/surrender", {gameId, playerId}))
 }

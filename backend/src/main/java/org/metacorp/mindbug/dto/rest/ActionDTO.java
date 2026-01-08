@@ -12,7 +12,7 @@ import java.util.UUID;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
-@JsonPropertyOrder({"gameId", "actionCardId"})
+@JsonPropertyOrder({"gameId", "cardId"})
 public class ActionDTO extends GameDTO {
-    private UUID actionCardId;
+    private UUID cardId;
 }

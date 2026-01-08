@@ -6,7 +6,7 @@ import {computed, onMounted, onUnmounted, Ref, ref} from "vue";
 import {
   declareAttack,
   pickCard,
-  playCard,
+  playCard, resolveAction,
   resolveAttack,
   resolveBoolean,
   resolveMultipleTargetChoice,
@@ -166,6 +166,8 @@ function onActionButtonClick(actionLabel: string) {
       return declareAttack(game.uuid, selectedCard.value.uuid);
     case "Block":
       return resolveAttack(game.uuid, game.player.uuid, selectedCard.value.uuid);
+    case "Action":
+      return resolveAction(game.uuid, selectedCard.value.uuid);
     case "Lose LP":
       return resolveAttack(game.uuid, undefined, undefined);
     case "Hunt target":

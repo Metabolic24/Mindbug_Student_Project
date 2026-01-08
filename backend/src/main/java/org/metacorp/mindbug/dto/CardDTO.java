@@ -17,7 +17,7 @@ import java.util.UUID;
 @Setter
 @ToString
 @NoArgsConstructor
-@JsonPropertyOrder({"uuid", "ownerId", "id", "setName", "name", "power", "keywords", "stillTough", "ableToBlock", "ableToAttack", "ableToAttackTwice"})
+@JsonPropertyOrder({"uuid", "ownerId", "id", "setName", "name", "power", "keywords","hasAction" , "stillTough", "ableToBlock", "ableToAttack", "ableToAttackTwice"})
 public class CardDTO {
     private UUID uuid;
     private UUID ownerId;
@@ -26,6 +26,7 @@ public class CardDTO {
     private String name;
     private int power;
     private Set<CardKeyword> keywords;
+    private boolean hasAction;
     private boolean stillTough;
     private boolean ableToBlock;
     private boolean ableToAttack;

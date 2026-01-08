@@ -12,6 +12,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.TargetChoice;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.GameService;
@@ -176,5 +177,10 @@ public class GameStateMapperTest {
         assertEquals(card.getKeywords(), cardDTO.getKeywords());
         assertEquals(card.getCard().getSetName(), cardDTO.getSetName());
         assertEquals(card.getOwner().getUuid(), cardDTO.getOwnerId());
+        assertEquals(card.isStillTough(), cardDTO.isStillTough());
+        assertEquals(card.isAbleToBlock(), cardDTO.isAbleToBlock());
+        assertEquals(card.isAbleToAttack(), cardDTO.isAbleToAttack());
+        assertEquals(card.isAbleToAttackTwice(), cardDTO.isAbleToAttackTwice());
+        assertEquals(!card.getEffects(EffectTiming.ACTION).isEmpty(), cardDTO.isHasAction());
     }
 }

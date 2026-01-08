@@ -65,9 +65,13 @@ const secondButtonLabel = computed(() => {
     } else if (props.gameState?.choice.type === "HUNTER") { // Hunter choice case
       return "Continue"
     }
-  } else if (props.pickedCard && !props.gameState?.playerTurn) { // Mindbug case
+  } else if (props.gameState?.playerTurn) {
+    if (props.selectedCard.location === "Board" && props.selectedCard.hasAction) {
+      return "Action"
+    }
+  } else if (props.pickedCard) { // Mindbug case
     return "No Mindbug"
-  } else if (props.attackingCard && !props.gameState?.playerTurn) { // Block case
+  } else if (props.attackingCard) { // Block case
     return "Lose LP"
   }
 })
@@ -79,9 +83,10 @@ const isSecondButtonVisible = computed(() => {
   } else if (props.gameState?.choice) {
     return props.gameState?.choice.playerToChoose === props.gameState?.player.uuid &&
         (props.gameState?.choice.type === "BOOLEAN" || props.gameState?.choice.type === "FRENZY" || props.gameState?.choice.type === "HUNTER");// Choice case
+  } else if (props.gameState?.playerTurn) {
+    return props.selectedCard.location === "Board" && props.selectedCard.hasAction
   } else {
-    return !props.gameState?.playerTurn && (props.pickedCard || // Mindbug case
-        props.attackingCard) // Block case
+    return (props.pickedCard || props.attackingCard) // Mindbug or Block case
   }
 })
 </script>
@@ -123,6 +128,7 @@ const isSecondButtonVisible = computed(() => {
     background-color: rgba(255, 255, 255, 0.9);
     transform: scale(1.05);
   }
+
   button:active {
     background-color: #1e6f93;
     transform: scale(0.98);
