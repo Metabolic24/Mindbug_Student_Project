@@ -44,17 +44,18 @@ const isFirstButtonVisible = computed(() => {
   } else if (props.gameState?.playerTurn) {
     return props.selectedCard && !props.attackingCard // Play/attack case
   } else {
-    return props.pickedCard || // Mindbug case
-        props.attackingCard // Block case
+    return props.pickedCard || props.attackingCard // Mindbug or Block case
   }
 })
 
 // Computed value to manage 'disable' state of the first button
 const isFirstButtonDisabled = computed(() => {
-  return !props.selectedCard && (
-      props.gameState?.choice?.type === "HUNTER" || // Hunter case
-      (!props.gameState?.choice && props.attackingCard && !props.gameState?.playerTurn && !props.selectedCard) // Block case
-  )
+  if (props.selectedCard) {
+    return !props.gameState?.choice && props.selectedCard.location === "Hand" && props.gameState?.playerTurn && props.gameState?.forcedAttack // Playing card is forbidden due to forcedAttack
+  } else {
+    return props.gameState?.choice?.type === "HUNTER" || // Hunter case
+        (!props.gameState?.choice && props.attackingCard?.ownerId !== props.gameState?.player.uuid) // Block case
+  }
 })
 
 // Computed value for the second button label
@@ -66,7 +67,7 @@ const secondButtonLabel = computed(() => {
       return "Continue"
     }
   } else if (props.gameState?.playerTurn) {
-    if (props.selectedCard.location === "Board" && props.selectedCard.hasAction) {
+    if (props.selectedCard?.location === "Board" && props.selectedCard?.hasAction) {
       return "Action"
     }
   } else if (props.pickedCard) { // Mindbug case
@@ -84,11 +85,17 @@ const isSecondButtonVisible = computed(() => {
     return props.gameState?.choice.playerToChoose === props.gameState?.player.uuid &&
         (props.gameState?.choice.type === "BOOLEAN" || props.gameState?.choice.type === "FRENZY" || props.gameState?.choice.type === "HUNTER");// Choice case
   } else if (props.gameState?.playerTurn) {
-    return props.selectedCard.location === "Board" && props.selectedCard.hasAction
+    return props.selectedCard?.location === "Board" && props.selectedCard?.hasAction
   } else {
     return (props.pickedCard || props.attackingCard) // Mindbug or Block case
   }
 })
+
+// Computed value to manage 'disable' state of the first button
+const isSecondButtonDisabled = computed(() => {
+  return props.selectedCard?.location === "Board" && props.gameState?.playerTurn && props.gameState?.forcedAttack // Using the card action is forbidden due to forcedAttack
+})
+
 </script>
 
 <template>
@@ -96,7 +103,7 @@ const isSecondButtonVisible = computed(() => {
     <button v-if="isFirstButtonVisible" :disabled="isFirstButtonDisabled" @click="emit('button-clicked', buttonLabel)">
       {{ buttonLabel }}
     </button>
-    <button v-if="isSecondButtonVisible" @click="emit('button-clicked', secondButtonLabel)">
+    <button v-if="isSecondButtonVisible" :disabled="isSecondButtonDisabled" @click="emit('button-clicked', secondButtonLabel)">
       {{ secondButtonLabel }}
     </button>
   </div>
