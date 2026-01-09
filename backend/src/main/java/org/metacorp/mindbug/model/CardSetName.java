@@ -13,4 +13,12 @@ public enum CardSetName {
     CardSetName(String key) {
         this.key = key;
     }
+
+    public static CardSetName fromKey(String key) {
+        return switch (key) {
+            case "first_contact" -> FIRST_CONTACT;
+            case "beyond_evolution" -> BEYOND_EVOLUTION;
+            default -> null;
+        };
+    }
 }

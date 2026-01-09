@@ -5,16 +5,22 @@ import org.glassfish.grizzly.http.HttpRequestPacket;
 import org.glassfish.grizzly.websockets.DefaultWebSocket;
 import org.glassfish.grizzly.websockets.ProtocolHandler;
 import org.glassfish.grizzly.websockets.WebSocketListener;
+import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.utils.WsUtils;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.metacorp.mindbug.utils.WsUtils.PLAYER_ID_KEY;
 import static org.metacorp.mindbug.utils.WsUtils.PLAYER_NAME_KEY;
+import static org.metacorp.mindbug.utils.WsUtils.SETS_KEY;
 
 @Getter
 public class JoinWebSocket extends DefaultWebSocket {
 
     private String playerId;
     private String playerName;
+    private List<CardSetName> sets;
 
     public JoinWebSocket(ProtocolHandler protocolHandler, HttpRequestPacket request, WebSocketListener... listeners) {
         super(protocolHandler, request, listeners);
@@ -32,7 +38,14 @@ public class JoinWebSocket extends DefaultWebSocket {
             throw new IllegalArgumentException("Missing required parameter 'playerName'");
         }
 
-        System.out.println("Player " + playerName + " (" + playerId + ") joined waiting queue");
+        List<String> setNames = WsUtils.getListFromQueryParam(SETS_KEY, this.servletRequest.getQueryString());
+        if (setNames.isEmpty()) {
+            throw new IllegalArgumentException("Missing required parameter 'sets'");
+        } else {
+            this.sets = setNames.stream().map(CardSetName::fromKey).collect(Collectors.toList());
+        }
+
+        System.out.println("Player " + playerName + " (" + playerId + ") joined waiting queue for sets " + sets);
 
         super.onConnect();
     }

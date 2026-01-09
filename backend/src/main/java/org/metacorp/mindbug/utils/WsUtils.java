@@ -4,11 +4,13 @@ import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.AbstractMap;
 import java.util.Arrays;
+import java.util.List;
 
 public final class WsUtils {
 
     public static final String PLAYER_ID_KEY = "playerId";
     public static final String PLAYER_NAME_KEY = "playerName";
+    public static final String SETS_KEY = "sets";
 
     /**
      * Retrieve the param value from the WebSocket query
@@ -26,6 +28,18 @@ public final class WsUtils {
                 .filter(entry -> entry.getKey().equals(param))
                 .map(AbstractMap.SimpleImmutableEntry::getValue)
                 .findFirst().orElseThrow(() -> new IllegalArgumentException("Missing playerId argument"));
+    }
+
+    /**
+     * Retrieve the param value from the WebSocket query
+     * @param param the query parameter key
+     * @param query the whole WebSocket query
+     * @return the parameter value if any, null otherwise
+     */
+    public static List<String> getListFromQueryParam(String param, String query) {
+        String queryParamValue = getValueFromQueryParam(param, query);
+
+        return Arrays.asList(queryParamValue.split(","));
     }
 
     private static AbstractMap.SimpleImmutableEntry<String, String> splitQueryParameter(String it) {
