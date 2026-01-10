@@ -66,8 +66,9 @@ public class CopyEffectResolverTest {
         effectResolver.apply(game, randomCard, timing);
 
         assertEquals(1, game.getEffectQueue().size());
-        EffectsToApply effectsToApply = game.getEffectQueue().poll();
 
+        EffectsToApply effectsToApply = game.getEffectQueue().poll();
+        assertNotNull(effectsToApply);
         assertEquals(timing, effectsToApply.getTiming());
         assertTrue(effectsToApply.getEffects().contains(gainEffect));
         assertEquals(randomCard, effectsToApply.getCard());
