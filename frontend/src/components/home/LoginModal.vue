@@ -16,14 +16,14 @@ const isButtonDisabled = computed(() => {
   <div class="modal-mask">
     <div class="modal-container">
       <div class="modal-header">
-        <h5 class="modal-title">S'authentifier</h5>
+        <h5 class="modal-title">Choose a nickname</h5>
       </div>
       <div class="modal-body">
-        <input v-model="playerName" placeholder="pseudo"/>
+        <input v-model="playerName" placeholder="nickname"/>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" @click="emit('button-clicked', playerName)" :disabled="isButtonDisabled">
-          Démarrer
+          Start
         </button>
       </div>
     </div>
