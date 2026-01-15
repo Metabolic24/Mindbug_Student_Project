@@ -10,7 +10,9 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.AttackService;
+import org.metacorp.mindbug.service.HistoryService;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
@@ -83,5 +85,7 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
         } catch (GameStateException e) {
             // TODO Manage error
         }
+
+        HistoryService.logEffect(game, effect.getType(), effectSource, Collections.singleton(attackingCard));
     }
 }

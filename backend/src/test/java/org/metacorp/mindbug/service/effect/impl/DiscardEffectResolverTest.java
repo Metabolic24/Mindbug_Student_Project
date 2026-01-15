@@ -7,6 +7,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
@@ -31,6 +32,7 @@ public class DiscardEffectResolverTest {
         opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
 
         effect = new DiscardEffect();
+        effect.setType(EffectType.DISCARD);
         effect.setValue(3);
         effectResolver = new DiscardEffectResolver(effect);
         timing = EffectTiming.PLAY;

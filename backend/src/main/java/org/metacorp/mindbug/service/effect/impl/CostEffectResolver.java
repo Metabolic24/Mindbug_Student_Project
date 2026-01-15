@@ -14,8 +14,6 @@ import org.metacorp.mindbug.service.effect.ResolvableEffect;
  */
 public class CostEffectResolver extends EffectResolver<CostEffect> implements ResolvableEffect<Boolean> {
 
-    private CardInstance sourceCard;
-
     private EffectTiming timing;
 
     /**
@@ -29,7 +27,7 @@ public class CostEffectResolver extends EffectResolver<CostEffect> implements Re
 
     @Override
     public void apply(Game game, CardInstance sourceCard, EffectTiming timing) {
-        this.sourceCard = sourceCard;
+        this.effectSource = sourceCard;
         this.timing = timing;
 
         if (effect.isOptional()) {
@@ -47,7 +45,7 @@ public class CostEffectResolver extends EffectResolver<CostEffect> implements Re
     }
 
     private void resolve(Game game) {
-        EffectsToApply costEffectToApply = new EffectsToApply(effect.getCost(), effect.getEffects(), sourceCard, timing);
+        EffectsToApply costEffectToApply = new EffectsToApply(effect.getCost(), effect.getEffects(), effectSource, timing);
         game.getEffectQueue().push(costEffectToApply);
     }
 }

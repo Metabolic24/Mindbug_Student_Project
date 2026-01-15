@@ -103,7 +103,7 @@ public class GameStateMapper {
             }
             case HUNTER -> {
                 HunterChoice hunterChoice = (HunterChoice) choice;
-                return new HunterChoiceDTO(hunterChoice.getPlayerToChoose().getUuid(), fromCard(hunterChoice.getAttackingCard()),
+                return new HunterChoiceDTO(hunterChoice.getAttackingCard().getOwner().getUuid(), fromCard(hunterChoice.getAttackingCard()),
                         hunterChoice.getAvailableTargets().stream().map(GameStateMapper::fromCard).collect(Collectors.toSet()));
             }
         }

@@ -7,6 +7,11 @@ import org.metacorp.mindbug.model.effect.impl.PowerUpEffect;
 import org.metacorp.mindbug.model.modifier.PowerModifier;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.EffectResolver;
+import org.metacorp.mindbug.service.HistoryService;
+
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Effect resolver for PowerUpEffect
@@ -24,6 +29,8 @@ public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
+        this.effectSource = card;
+
         int value = effect.getValue();
         boolean alone = effect.isAlone();
         boolean self = effect.isSelf();
@@ -53,23 +60,27 @@ public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
             powerToAdd *= boardSize - 1;
         }
 
+        Set<CardInstance> availableCards = new HashSet<>();
+
         if (self) {
-            changePower(card, powerToAdd, timing);
+            availableCards.add(card);
         }
 
         if (allies) {
-            for (CardInstance currentCard : currentPlayer.getBoard()) {
-                if (!(currentCard.equals(card))) {
-                    changePower(currentCard, powerToAdd, timing);
-                }
-            }
+            currentPlayer.getBoard().stream().filter(currentCard -> !currentCard.equals(card)).forEach(availableCards::add);
         }
+
+        changePower(game, availableCards, powerToAdd, timing);
     }
 
-    private void changePower(CardInstance card, int power, EffectTiming timing) {
-        card.changePower(power);
-        if (timing == EffectTiming.ATTACK) {
-            card.getModifiers().add(new PowerModifier(power));
+    private void changePower(Game game, Collection<CardInstance> cards, int power, EffectTiming timing) {
+        for (CardInstance card : cards) {
+            card.changePower(power);
+            if (timing == EffectTiming.ATTACK) {
+                card.getModifiers().add(new PowerModifier(power));
+            }
         }
+
+        HistoryService.logEffect(game, effect.getType(), effectSource, cards);
     }
 }

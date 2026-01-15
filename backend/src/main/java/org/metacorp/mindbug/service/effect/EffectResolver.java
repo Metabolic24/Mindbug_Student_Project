@@ -20,6 +20,8 @@ import org.metacorp.mindbug.service.effect.impl.*;
 public abstract class EffectResolver<T extends Effect> {
     protected T effect;
 
+    protected CardInstance effectSource;
+
     /**
      * Protected constructor
      *

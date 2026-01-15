@@ -8,9 +8,12 @@ import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Map;
 
@@ -41,6 +44,7 @@ public class AttackService {
 
         // Send update through WebSocket
         WebSocketService.sendGameEvent(WsGameEventType.ATTACK_DECLARED, game);
+        HistoryService.log(game, HistoryKey.ATTACK, attackCard);
 
         EffectQueueService.resolveEffectQueue(false, game);
     }
@@ -74,7 +78,7 @@ public class AttackService {
                         // TODO Manage errors
                     }
                 } else if (attackCard.hasKeyword(CardKeyword.HUNTER)) {
-                    game.setChoice(new HunterChoice(attackCardOwner, attackCard, new HashSet<>(defender.getBoard())));
+                    game.setChoice(new HunterChoice(attackCard, new HashSet<>(defender.getBoard())));
                     WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
                 } else if (!defender.canBlock(attackCard.hasKeyword(CardKeyword.SNEAKY))) {
                     try {
@@ -134,6 +138,9 @@ public class AttackService {
      * @param game       the game state
      */
     protected static void processAttackResolution(CardInstance attackCard, CardInstance defendCard, Game game) {
+        // First log the block action in the history
+        HistoryService.log(game, HistoryKey.BLOCK, attackCard, defendCard == null ? null : Collections.singleton(defendCard));
+
         if (defendCard == null) {
             Player defender = attackCard.getOwner().getOpponent(game.getPlayers());
             defender.getTeam().loseLifePoints(1);
@@ -156,23 +163,27 @@ public class AttackService {
             }
         }
 
-        GameStateService.refreshGameState(game);
+        // Check that the game is not finished as a direct may have ended it
+        if (!game.isFinished()) {
+            GameStateService.refreshGameState(game);
 
-        game.setAfterEffect(() -> {
-            CardInstance attackingCard = game.getAttackingCard();
-            if (attackingCard.getOwner().getBoard().contains(attackingCard) && attackingCard.isAbleToAttackTwice() && attackingCard.isAbleToAttack()) {
-                game.setChoice(new FrenzyAttackChoice(attackingCard));
+            game.setAfterEffect(() -> {
+                CardInstance attackingCard = game.getAttackingCard();
+                if (attackingCard.getOwner().getBoard().contains(attackingCard) && attackingCard.isAbleToAttackTwice() && attackingCard.isAbleToAttack()) {
+                    game.setChoice(new FrenzyAttackChoice(attackingCard));
 
-                WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
-            } else {
-                attackingCard.setAbleToAttackTwice(attackingCard.hasKeyword(CardKeyword.FRENZY));
-                GameStateService.newTurn(game);
-            }
+                    WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+                    HistoryService.logChoice(game);
+                } else {
+                    attackingCard.setAbleToAttackTwice(attackingCard.hasKeyword(CardKeyword.FRENZY));
+                    GameStateService.newTurn(game);
+                }
 
-            game.setAttackingCard(null);
-            game.setForcedTarget(null);
-            game.setForcedAttack(false);
-        });
+                game.setAttackingCard(null);
+                game.setForcedTarget(null);
+                game.setForcedAttack(false);
+            });
+        }
     }
 
     /**

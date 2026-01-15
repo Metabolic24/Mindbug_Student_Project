@@ -6,6 +6,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.EvolveEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
@@ -35,6 +36,7 @@ public class EvolveEffectResolverTest {
         game.getEvolutionCards().add(evolutionCard);
 
         EvolveEffect effect = new EvolveEffect();
+        effect.setType(EffectType.EVOLVE);
         effect.setId(evolutionCard.getCard().getId());
         effectResolver = new EvolveEffectResolver(effect);
         timing = EffectTiming.ACTION;

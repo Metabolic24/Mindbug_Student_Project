@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.GiveEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
@@ -34,6 +35,7 @@ public class GiveEffectResolverTest {
         currentPlayer.addCardToBoard(randomCard);
 
         effect = new GiveEffect();
+        effect.setType(EffectType.GIVE);
         effectResolver = new GiveEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }

@@ -8,6 +8,7 @@ import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.IChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.BounceEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
@@ -40,6 +41,7 @@ public class BounceEffectResolverTest {
         currentPlayer.addCardToBoard(randomCard);
 
         effect = new BounceEffect();
+        effect.setType(EffectType.BOUNCE);
         effectResolver = new BounceEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }

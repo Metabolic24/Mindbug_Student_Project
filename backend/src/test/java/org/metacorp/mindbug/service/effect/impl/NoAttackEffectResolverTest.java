@@ -6,6 +6,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.NoAttackEffect;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.StartService;
@@ -31,6 +32,7 @@ public class NoAttackEffectResolverTest {
         opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
 
         effect = new NoAttackEffect();
+        effect.setType(EffectType.NO_ATTACK);
         effectResolver = new NoAttackEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }

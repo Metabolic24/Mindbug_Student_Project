@@ -5,7 +5,9 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 
 import java.text.MessageFormat;
@@ -51,6 +53,7 @@ public class PlayCardService {
         } else {
             // Send update through WebSocket
             WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game);
+            HistoryService.log(game, HistoryKey.PICK, card);
         }
     }
 
@@ -90,6 +93,9 @@ public class PlayCardService {
 
         // Send update through WebSocket
         WebSocketService.sendGameEvent(WsGameEventType.CARD_PLAYED, game);
+
+        HistoryKey historyKey = mindbugger != null ? HistoryKey.MINDBUG : HistoryKey.PLAY;
+        HistoryService.log(game, historyKey, game.getPlayedCard());
 
         // Resolve the effect queue so PLAY effects will be resolved then afterEffect executed
         EffectQueueService.resolveEffectQueue(false, game);

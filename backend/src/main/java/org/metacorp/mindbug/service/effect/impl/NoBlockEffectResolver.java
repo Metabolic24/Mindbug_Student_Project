@@ -10,7 +10,9 @@ import org.metacorp.mindbug.model.modifier.BlockModifier;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.service.HistoryService;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -36,6 +38,7 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
         this.timing = timing;
+        this.effectSource = card;
 
         int value = effect.getValue();
         Integer max = effect.getMax();
@@ -67,9 +70,7 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
         }
 
         if (availableCards.size() <= value || value < 0) {
-            for (CardInstance opponentCard : availableCards) {
-                setAbleToBlock(opponentCard);
-            }
+            setAbleToBlock(game, availableCards);
         } else {
             game.setChoice(new TargetChoice(card.getOwner(), card, this, value, new HashSet<>(opponent.getBoard())));
         }
@@ -77,15 +78,17 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
 
     @Override
     public void resolve(Game game, List<CardInstance> chosenTargets) {
-        for (CardInstance card : chosenTargets) {
-            setAbleToBlock(card);
-        }
+        setAbleToBlock(game, chosenTargets);
     }
 
-    private void setAbleToBlock(CardInstance card) {
-        card.setAbleToBlock(false);
-        if (timing == EffectTiming.ATTACK) {
-            card.getModifiers().add(new BlockModifier());
+    private void setAbleToBlock(Game game, Collection<CardInstance> cards) {
+        for (CardInstance card : cards) {
+            card.setAbleToBlock(false);
+            if (timing == EffectTiming.ATTACK) {
+                card.getModifiers().add(new BlockModifier());
+            }
         }
+
+        HistoryService.logEffect(game, effect.getType(), effectSource, cards);
     }
 }

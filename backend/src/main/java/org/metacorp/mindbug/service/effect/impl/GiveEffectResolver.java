@@ -6,6 +6,9 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.GiveEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.EffectResolver;
+import org.metacorp.mindbug.service.HistoryService;
+
+import java.util.Collections;
 
 /**
  * Effect resolver for GiveEffect
@@ -24,6 +27,8 @@ public class GiveEffectResolver extends EffectResolver<GiveEffect> {
 
     @Override
     public void apply(Game game, CardInstance effectSource, EffectTiming timing) {
+        this.effectSource = effectSource;
+
         if (effect.isItself()) {
             giveCard(game, effectSource);
         }
@@ -35,5 +40,7 @@ public class GiveEffectResolver extends EffectResolver<GiveEffect> {
         cardToGive.setOwner(opponent);
         game.getCurrentPlayer().getBoard().remove(cardToGive);
         opponent.getBoard().add(cardToGive);
+
+        HistoryService.logEffect(game, effect.getType(), effectSource, Collections.singleton(cardToGive));
     }
 }

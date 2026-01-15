@@ -9,11 +9,26 @@ import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.AttackService;
+import org.metacorp.mindbug.utils.TestGameUtils;
 
+import java.io.IOException;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.metacorp.mindbug.utils.TestGameUtils.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.metacorp.mindbug.utils.TestGameUtils.attack;
+import static org.metacorp.mindbug.utils.TestGameUtils.choose;
+import static org.metacorp.mindbug.utils.TestGameUtils.chooseTargets;
+import static org.metacorp.mindbug.utils.TestGameUtils.getCardById;
+import static org.metacorp.mindbug.utils.TestGameUtils.getCardsById;
+import static org.metacorp.mindbug.utils.TestGameUtils.hand;
+import static org.metacorp.mindbug.utils.TestGameUtils.huntTarget;
+import static org.metacorp.mindbug.utils.TestGameUtils.play;
+import static org.metacorp.mindbug.utils.TestGameUtils.prepareCustomGame;
+import static org.metacorp.mindbug.utils.TestUtils.cleanHistoryDirectory;
 
 public class SpecificCaseTest {
 
@@ -25,8 +40,8 @@ public class SpecificCaseTest {
     @BeforeEach
     public void setup() {
         game = prepareCustomGame();
-        player1 = getPlayer1();
-        player2 = getPlayer2();
+        player1 = TestGameUtils.getPlayer1();
+        player2 = TestGameUtils.getPlayer2();
     }
 
     // #20
@@ -203,7 +218,7 @@ public class SpecificCaseTest {
 
     // #27
     @Test
-    public void hamsterLionDoesNotCauseGameEndWhenNoOneCanAttack() throws GameStateException {
+    public void hamsterLionDoesNotCauseGameEndWhenNoOneCanAttack() throws GameStateException, IOException {
         CardInstance hyenix = getCardById(41);
         CardInstance graveRobber = getCardById(13);
         CardInstance hamsterLion = getCardById(39);
@@ -225,6 +240,8 @@ public class SpecificCaseTest {
         attack(snailHydra, null);
 
         assertTrue(game.isFinished());
+
+        cleanHistoryDirectory();
     }
 
     @Test

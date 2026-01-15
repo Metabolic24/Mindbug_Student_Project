@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.DisableTimingEffect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.service.PlayerService;
@@ -29,6 +30,7 @@ public class DisableTimingEffectResolverTest {
         opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
 
         effect = new DisableTimingEffect();
+        effect.setType(EffectType.DISABLE_TIMING);
         effectResolver = new DisableTimingEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }
