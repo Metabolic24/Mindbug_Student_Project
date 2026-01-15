@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.StartService;
@@ -31,6 +32,7 @@ public class GainEffectResolverTest {
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
         effect = new GainEffect();
+        effect.setType(EffectType.GAIN);
         effectResolver = new GainEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }

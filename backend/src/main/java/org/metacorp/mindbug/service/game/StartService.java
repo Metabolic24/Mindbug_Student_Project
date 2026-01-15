@@ -4,6 +4,7 @@ import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.utils.CardUtils;
 
@@ -64,6 +65,7 @@ public class StartService {
 
         // Join the WebSocket channel of the game
         WebSocketService.initGameChannel(game);
+        HistoryService.logStart(game);
 
         return game;
     }

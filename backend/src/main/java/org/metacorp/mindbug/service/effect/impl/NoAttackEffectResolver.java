@@ -8,6 +8,7 @@ import org.metacorp.mindbug.model.effect.impl.NoAttackEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.game.CardService;
+import org.metacorp.mindbug.service.HistoryService;
 
 import java.util.List;
 
@@ -27,6 +28,8 @@ public class NoAttackEffectResolver extends EffectResolver<NoAttackEffect> {
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
+        this.effectSource = card;
+
         CardKeyword keyword = effect.getKeyword();
         Player opponent = card.getOwner().getOpponent(game.getPlayers());
         List<CardInstance> affectedCards = opponent.getBoard();
@@ -39,12 +42,14 @@ public class NoAttackEffectResolver extends EffectResolver<NoAttackEffect> {
             affectedCards = CardService.getLowestCards(affectedCards);
         }
 
-        resolve(affectedCards);
+        resolve(game, affectedCards);
     }
 
-    private void resolve(List<CardInstance> cards) {
+    private void resolve(Game game, List<CardInstance> cards) {
         for (CardInstance card : cards) {
             card.setAbleToAttack(false);
         }
+
+        HistoryService.logEffect(game, effect.getType(), effectSource, cards);
     }
 }

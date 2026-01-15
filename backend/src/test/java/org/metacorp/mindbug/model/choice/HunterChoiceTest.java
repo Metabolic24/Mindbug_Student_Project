@@ -36,6 +36,7 @@ public class HunterChoiceTest {
         currentCard.getCard().setKeywords(new HashSet<>(List.of(CardKeyword.HUNTER)));
         currentCard.setAbleToAttackTwice(false);
         currentCard.setKeywords(new HashSet<>(List.of(CardKeyword.HUNTER)));
+        currentCard.getEffects(EffectTiming.PASSIVE).clear();
         currentCard.setPower(10);
         currentPlayer.addCardToBoard(currentCard);
 
@@ -55,7 +56,7 @@ public class HunterChoiceTest {
 
     @Test
     public void testResolve_ignoreHunter() throws GameStateException {
-        HunterChoice choice = new HunterChoice(currentPlayer, currentCard, new HashSet<>(opponent.getBoard()));
+        HunterChoice choice = new HunterChoice(currentCard, new HashSet<>(opponent.getBoard()));
         game.setChoice(choice);
 
         choice.resolve(null, game);
@@ -69,7 +70,7 @@ public class HunterChoiceTest {
 
     @Test
     public void testResolve_nominal() throws GameStateException {
-        HunterChoice choice = new HunterChoice(currentPlayer, currentCard, new HashSet<>(opponent.getBoard()));
+        HunterChoice choice = new HunterChoice(currentCard, new HashSet<>(opponent.getBoard()));
         game.setChoice(choice);
 
         choice.resolve(opponentCard.getUuid(), game);

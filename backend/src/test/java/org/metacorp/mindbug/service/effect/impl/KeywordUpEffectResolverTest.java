@@ -6,6 +6,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.KeywordUpEffect;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.StartService;
@@ -40,6 +41,7 @@ public class KeywordUpEffectResolverTest {
         currentPlayer.addCardToBoard(randomCard);
 
         effect = new KeywordUpEffect();
+        effect.setType(EffectType.KEYWORD_UP);
         effectResolver = new KeywordUpEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }

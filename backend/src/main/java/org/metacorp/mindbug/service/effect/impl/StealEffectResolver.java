@@ -13,6 +13,7 @@ import org.metacorp.mindbug.service.game.EffectQueueService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.impl.steal.StealBooleanChoiceResolver;
 import org.metacorp.mindbug.service.effect.impl.steal.TargetChoiceResolver;
+import org.metacorp.mindbug.service.HistoryService;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -109,5 +110,7 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
                 newOwner.getHand().add(stolenCard);
             }
         }
+
+        HistoryService.logEffect(game, effect.getType(), effectSource, stolenCards);
     }
 }

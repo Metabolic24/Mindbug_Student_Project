@@ -13,6 +13,7 @@ import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.GenericEffect;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.service.effect.impl.CostEffectResolver;
 import org.metacorp.mindbug.service.effect.EffectResolver;
@@ -83,6 +84,12 @@ public class EffectQueueService {
      * @throws GameStateException if a game state error is detected during effect queue resolution
      */
     public static void resolveEffectQueue(boolean fromSimultaneousChoice, Game game) throws GameStateException {
+        // If the game is over, immediately stop the effect queue resolution
+        if (game.isFinished()) {
+            return;
+        }
+
+        // Check that there is no pending choice
         if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before resolving effect queue", Map.of("choice", game.getChoice()));
         }
@@ -96,6 +103,7 @@ public class EffectQueueService {
 
             // Send update through WebSocket
             WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+            HistoryService.logChoice(game);
 
             return;
         }
@@ -123,6 +131,7 @@ public class EffectQueueService {
                         effectQueue.clear();
 
                         WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+                        HistoryService.logChoice(game);
 
                         return;
                     }
@@ -178,6 +187,7 @@ public class EffectQueueService {
 
                 // Send update through WebSocket
                 WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+                HistoryService.logChoice(game);
 
                 throw new EffectQueueStopException();
             }

@@ -11,6 +11,7 @@ import org.metacorp.mindbug.model.effect.impl.CopyEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.service.HistoryService;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -20,8 +21,6 @@ import java.util.List;
  * Effect resolver for CopyEffect
  */
 public class CopyEffectResolver extends EffectResolver<CopyEffect> implements ResolvableEffect<List<CardInstance>> {
-
-    private CardInstance effectSource;
 
     /**
      * Constructor
@@ -35,6 +34,7 @@ public class CopyEffectResolver extends EffectResolver<CopyEffect> implements Re
     @Override
     public void apply(Game game, CardInstance effectSource, EffectTiming timing) {
         this.effectSource = effectSource;
+
         Player sourceOwner = effectSource.getOwner();
         Player opponent = sourceOwner.getOpponent(game.getPlayers());
 
@@ -67,5 +67,7 @@ public class CopyEffectResolver extends EffectResolver<CopyEffect> implements Re
         EffectQueue effectQueue = game.getEffectQueue();
         effectQueue.push(new EffectsToApply(effects, effectSource, effect.getTiming()));
         effectQueue.setResolvingEffect(true);
+
+        HistoryService.logEffect(game, effect.getType(), effectSource, choiceResult);
     }
 }

@@ -7,6 +7,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.Effect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.impl.CopyEffect;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
@@ -40,6 +41,7 @@ public class CopyEffectResolverTest {
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
         effect = new CopyEffect();
+        effect.setType(EffectType.COPY);
         effectResolver = new CopyEffectResolver(effect);
         timing = EffectTiming.PLAY;
 

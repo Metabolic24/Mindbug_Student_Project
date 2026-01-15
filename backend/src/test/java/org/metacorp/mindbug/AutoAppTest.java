@@ -1,9 +1,22 @@
 package org.metacorp.mindbug;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.app.AutoApp;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.stream.Stream;
+
+import static org.metacorp.mindbug.utils.TestUtils.cleanHistoryDirectory;
+
 public class AutoAppTest {
+
+    @AfterAll
+    public static void tearDown() throws IOException {
+        cleanHistoryDirectory();
+    }
 
     @Test
     public void testNominal() {

@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.PowerUpEffect;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.StartService;
@@ -31,6 +32,7 @@ public class PowerUpEffectResolverTest {
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
         effect = new PowerUpEffect();
+        effect.setType(EffectType.POWER_UP);
         effectResolver = new PowerUpEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }

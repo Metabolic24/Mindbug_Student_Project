@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -42,6 +43,7 @@ public class DestroyEffectResolverTest {
         currentPlayer.addCardToBoard(randomCard);
 
         effect = new DestroyEffect();
+        effect.setType(EffectType.DESTROY);
         effectResolver = new DestroyEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }

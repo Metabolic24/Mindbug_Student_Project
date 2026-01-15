@@ -5,6 +5,7 @@ import lombok.Setter;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.IChoice;
 import org.metacorp.mindbug.model.effect.EffectQueue;
+import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.player.Player;
 
 import java.util.ArrayList;
@@ -40,6 +41,8 @@ public class Game {
     private boolean forcedAttack;
     private boolean webSocketUp;
 
+    private List<HistoryEntry> history;
+
     /**
      * Empty constructor (WARNING: a game is not meant to be reused)
      */
@@ -51,6 +54,7 @@ public class Game {
         evolutionCards = new ArrayList<>();
         effectQueue = new EffectQueue();
         players = Arrays.asList(player1, player2);
+        history = new ArrayList<>();
     }
 
     public Player getOpponent() {

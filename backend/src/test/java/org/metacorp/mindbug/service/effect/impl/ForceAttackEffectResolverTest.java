@@ -8,6 +8,7 @@ import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.ForceAttackEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
@@ -38,9 +39,11 @@ public class ForceAttackEffectResolverTest {
 
         randomCard = currentPlayer.getHand().getFirst();
         randomCard.setStillTough(false);
+        randomCard.getEffects(EffectTiming.PASSIVE).clear();
         currentPlayer.addCardToBoard(randomCard);
 
         ForceAttackEffect effect = new ForceAttackEffect();
+        effect.setType(EffectType.FORCE_ATTACK);
         effectResolver = new ForceAttackEffectResolver(effect);
     }
 

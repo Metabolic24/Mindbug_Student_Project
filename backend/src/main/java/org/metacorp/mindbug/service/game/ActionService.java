@@ -4,6 +4,8 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.history.HistoryKey;
+import org.metacorp.mindbug.service.HistoryService;
 
 import java.util.Map;
 
@@ -36,6 +38,7 @@ public class ActionService {
 
         // Add all the ACTION effects to the queue (if any), if player is allowed to trigger them
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.ACTION, game.getEffectQueue());
+        HistoryService.log(game, HistoryKey.ACTION, card);
 
         // Set afterEffect so it starts a new turn when effect is resolved
         game.setAfterEffect(() -> GameStateService.newTurn(game));
