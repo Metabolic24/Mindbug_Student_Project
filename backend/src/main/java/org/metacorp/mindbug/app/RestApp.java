@@ -34,6 +34,7 @@ public class RestApp {
         // Create a service locator so we can inject dependencies
         ServiceLocator locator = ServiceLocatorUtilities.createAndPopulateServiceLocator();
 
+        ServiceLocatorUtilities.addClasses(locator, GameService.class);
         // Create and start a new instance of the Grizzly HTTP server
         HttpServer server = GrizzlyHttpServerFactory.createHttpServer(URI.create("http://localhost:" + HTTP_PORT), rc, locator, false);
 

@@ -39,6 +39,10 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
   gap: 5px;
 }
 
+.bottom-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
 .card-image {
   width: 7vw;
   height: auto;
@@ -49,12 +53,16 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
 }
 
 .bottom-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-70px) scale(1.50);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 5;
 }
 
 .bottom-card.selected {
   outline: 4px solid red;
-  transform: translateY(-10px);
+  transform: translateY(-100px) scale(1.70);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+  z-index: 10;
 }
 </style>
+
