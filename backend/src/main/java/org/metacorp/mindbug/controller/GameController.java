@@ -13,11 +13,13 @@ import org.metacorp.mindbug.dto.rest.DeclareAttackDTO;
 import org.metacorp.mindbug.dto.rest.PickDTO;
 import org.metacorp.mindbug.dto.rest.PlayDTO;
 import org.metacorp.mindbug.dto.rest.ResolveAttackDTO;
+import org.metacorp.mindbug.dto.rest.StartOfflineDTO;
 import org.metacorp.mindbug.dto.rest.SurrenderDTO;
 import org.metacorp.mindbug.dto.rest.choice.BooleanAnswerDTO;
 import org.metacorp.mindbug.dto.rest.choice.MultipleTargetAnswerDTO;
 import org.metacorp.mindbug.dto.rest.choice.SingleTargetAnswerDTO;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.mapper.GameStateMapper;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -42,6 +44,17 @@ public class GameController {
 
     @Inject
     private GameService gameService;
+
+    @POST
+    @Path("/startOffline")
+    public Response startOffline(StartOfflineDTO startDTO) {
+        try {
+            Game game = gameService.createGame(startDTO.getPlayerId(), null, startDTO.getCardSetName());
+            return Response.ok(game.getUuid()).build();
+        } catch (UnknownPlayerException e) {
+            return Response.status(400).entity("Invalid player ID").build();
+        }
+    }
 
     //TODO To be removed (for debug purpose only)
     @GET

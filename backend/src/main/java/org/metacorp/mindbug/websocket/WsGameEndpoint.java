@@ -85,35 +85,52 @@ public class WsGameEndpoint extends WebSocketApplication {
 
             UUID gameId = socket.getGameId();
             if (sessions.containsKey(gameId)) {
-                GameStateDTO gameState = gameEvent.getState();
+                List<GameWebSocket> iaWebSockets = new ArrayList<>();
 
                 for (GameWebSocket playerSocket : sessions.get(gameId)) {
-                    WsPlayerGameEvent playerGameEvent = new WsPlayerGameEvent(gameEvent.getType());
-                    String eventData;
-
-                    try {
-                        UUID playerId = playerSocket.getPlayerId();
-                        if (playerId.equals(gameState.getPlayer().getUuid())) {
-                            playerGameEvent.setState(new WsPlayerGameState(gameState, true));
-                            eventData = mapper.writeValueAsString(playerGameEvent);
-                        } else if (playerId.equals(gameState.getOpponent().getUuid())) {
-                            playerGameEvent.setState(new WsPlayerGameState(gameState, false));
-                            eventData = mapper.writeValueAsString(playerGameEvent);
-                        } else {
-                            // Should not happen
-                            eventData = message;
-                        }
-
-                        playerSocket.send(eventData);
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
+                    if (playerSocket.isAI()) {
+                        iaWebSockets.add(playerSocket);
+                    } else {
+                        sendMessageToRealPlayer(playerSocket, gameEvent, mapper);
                     }
+                }
+
+                for (GameWebSocket playerSocket : iaWebSockets) {
+                    processMessage(playerSocket, gameEvent);
                 }
             }
         } catch (JsonProcessingException e) {
             //TODO Manage errors
             e.printStackTrace();
         }
+    }
+
+    private void sendMessageToRealPlayer(GameWebSocket playerSocket, WsGameEvent gameEvent, ObjectMapper mapper) {
+        WsPlayerGameEvent playerGameEvent = new WsPlayerGameEvent(gameEvent.getType());
+        GameStateDTO gameState = gameEvent.getState();
+        String eventData;
+
+        try {
+            UUID playerId = playerSocket.getPlayerId();
+            if (playerId.equals(gameState.getPlayer().getUuid())) {
+                playerGameEvent.setState(new WsPlayerGameState(gameState, true));
+                eventData = mapper.writeValueAsString(playerGameEvent);
+            } else if (playerId.equals(gameState.getOpponent().getUuid())) {
+                playerGameEvent.setState(new WsPlayerGameState(gameState, false));
+                eventData = mapper.writeValueAsString(playerGameEvent);
+            } else {
+                // Should not happen
+                eventData = "Unexpected data";
+            }
+
+            playerSocket.send(eventData);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void processMessage(GameWebSocket playerSocket, WsGameEvent gameEvent) {
+        // TODO Traiter le message pour l'IA
     }
 
     @Override

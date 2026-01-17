@@ -10,6 +10,10 @@ import org.metacorp.mindbug.dto.ws.WsGameEvent;
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.mapper.GameStateMapper;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.player.AiPlayer;
+import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.utils.WsUtils;
+import org.metacorp.mindbug.websocket.GameWebSocket;
 
 import java.util.concurrent.ExecutionException;
 
@@ -27,9 +31,20 @@ public class WebSocketService {
      */
     public static void initGameChannel(Game game) {
         // Init WS client
-        try (AsyncHttpClient c = new AsyncHttpClient(new AsyncHttpClientConfig.Builder().build())) {
-            c.prepareGet(GAME_WS_URI + game.getUuid()).execute(new WebSocketUpgradeHandler.Builder().build()).get();
+        try (AsyncHttpClient wsClient = new AsyncHttpClient(new AsyncHttpClientConfig.Builder().build())) {
+            // Create a WebSocket so the game is initialized
+            wsClient.prepareGet(GAME_WS_URI + game.getUuid()).execute(new WebSocketUpgradeHandler.Builder().build()).get();
             game.setWebSocketUp(true);
+
+            // Create a WebSocket for each AI player
+            for (Player player : game.getPlayers()) {
+                if (player.isAI()) {
+                    GameWebSocket socket = (GameWebSocket) wsClient.prepareGet(GAME_WS_URI + game.getUuid() + "?"
+                                    + WsUtils.PLAYER_ID_KEY + "=" + player.getUuid() + "&" + WsUtils.IS_AI_KEY + "=true")
+                            .execute(new WebSocketUpgradeHandler.Builder().build()).get();
+                    ((AiPlayer) player).setGameWebSocket(socket);
+                }
+            }
         } catch (InterruptedException | ExecutionException e) {
             System.out.println("Unable to join WS : WS communication is disabled");
             game.setWebSocketUp(false);

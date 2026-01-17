@@ -142,4 +142,11 @@ public class Player {
     public String toString() {
         return "Player (name : " + name + ", team : " + team + ", mindbugs : " + mindBugs + ")";
     }
+
+    /**
+     * @return true if the player is a bot, false otherwise (default : false)
+     */
+    public boolean isAI() {
+        return false;
+    }
 }
