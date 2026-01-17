@@ -5,6 +5,7 @@ import org.jvnet.hk2.annotations.Service;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.StartService;
@@ -43,14 +44,14 @@ public class GameService {
      * Create a new game
      *
      * @param player1Id the first player ID
-     * @param player2Id the second player ID
+     * @param player2Id the second player ID (null in case of an offline game)
      * @param setName   the card set to be used for this game
      * @return the created Game
      * @throws UnknownPlayerException if at least one player could not be found in the database
      */
     public Game createGame(UUID player1Id, UUID player2Id, CardSetName setName) throws UnknownPlayerException {
         Player player1 = new Player(playerService.getPlayer(player1Id));
-        Player player2 = new Player(playerService.getPlayer(player2Id));
+        Player player2 = player2Id == null ? new AiPlayer() : new Player(playerService.getPlayer(player2Id));
 
         Game game = StartService.newGame(player1, player2, setName);
         games.put(game.getUuid(), game);
