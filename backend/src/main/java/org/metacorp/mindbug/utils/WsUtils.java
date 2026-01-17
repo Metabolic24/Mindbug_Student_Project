@@ -10,6 +10,7 @@ public final class WsUtils {
 
     public static final String PLAYER_ID_KEY = "playerId";
     public static final String PLAYER_NAME_KEY = "playerName";
+    public static final String IS_AI_KEY = "isAi";
     public static final String SETS_KEY = "sets";
 
     /**
@@ -28,7 +29,7 @@ public final class WsUtils {
                 .map(WsUtils::splitQueryParameter)
                 .filter(entry -> entry.getKey().equals(param))
                 .map(AbstractMap.SimpleImmutableEntry::getValue)
-                .findFirst().orElseThrow(() -> new IllegalArgumentException("Missing playerId argument"));
+                .findFirst().orElseThrow(() -> new IllegalArgumentException("Missing " + param + " argument"));
     }
 
     /**
