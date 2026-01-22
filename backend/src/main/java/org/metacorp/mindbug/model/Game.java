@@ -53,8 +53,28 @@ public class Game {
         players = Arrays.asList(player1, player2);
     }
 
-    public Player getOpponent() {
+    public List<Player> getOpponent() {
         return currentPlayer.getOpponent(players);
+    }
+
+    public Player getAllie(){
+        return currentPlayer.getAllie(players);
+    }
+
+    /**
+     * Returns the game mode of the game
+     *  - return 1 : 1v1 game mode
+     *  - return 2 : 2v2 game mode
+     *  - return 0 : Error, issue the game
+     */
+    public int typeGameMode(){
+        if (players.size() == 2){
+            return 1;
+        }
+        if (players.size() == 4){
+            return 2;
+        }
+        return 0;
     }
 
     public boolean isFinished() {
