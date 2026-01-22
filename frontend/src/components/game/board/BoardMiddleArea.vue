@@ -2,6 +2,7 @@
 // Declare the interface for the data given by the parent component
 import {computed} from "vue";
 import {getCardImage} from "@/shared/CardUtils";
+import Card from "../Card.vue";
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -62,38 +63,39 @@ const isImageVisible = computed(() => {
 // Computed value for the image source URL
 const imgSrc = computed(() => {
   if (props.gameState?.choice) {
-    return getCardImage(props.gameState.choice.sourceCard)
+    return props.gameState.choice.sourceCard
   } else if (props.pickedCard) {
-    return getCardImage(props.pickedCard)
+    return props.pickedCard
   }
 })
 
-// Computed value for the image alternative text
-const imgAlt = computed(() => {
-  if (props.gameState?.choice) {
-    return props.gameState.choice.sourceCard?.name
-  } else if (props.pickedCard) {
-    return props.pickedCard.name
-  }
-})
 </script>
 
 <template>
   <div class="middle-area">
-    <img v-if="isImageVisible" :src="imgSrc" :alt="imgAlt" draggable="false" @contextmenu.prevent=""/>
+    <Card
+      v-if="isImageVisible"
+      :card="imgSrc"
+      context="board"
+      :selected="false"
+      :attacking="false"
+      :clickable="false"
+      class="middle-card"
+    />
 
     <span>{{ message }}</span>
   </div>
 </template>
 
 <style scoped>
-.middle-area {
-  width: 100%;
-  height: 40%;
+  .middle-area {
+    width: 100%;
+    height: 40%;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 
   span {
     font-size: 4.5vh;
@@ -108,12 +110,12 @@ const imgAlt = computed(() => {
     border-radius: 10px;
   }
 
-  img {
+  .middle-card {
     width: 6vw;
     height: 9vw;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
-}
+
 </style>
