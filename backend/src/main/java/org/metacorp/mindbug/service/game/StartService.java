@@ -4,12 +4,15 @@ import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.model.player.Team;
 import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.utils.CardUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Utility service that starts a new game
@@ -43,26 +46,48 @@ public class StartService {
     public static Game newGame(Player player1, Player player2, CardSetName setName) {
         Game game = new Game(player1, player2);
 
-        // Retrieve CardInstance from JSON configuration file and separate evolution cards from the other ones
-        List<CardInstance> cards = game.getCards();
+        return createAndInitGame(game, setName);
+    }
+
+    /**
+     * Crée et démarre une nouvelle partie pour quatre joueurs (2v2)
+     * Les joueurs 1 & 3 sont ensemble contre les joueurs 2 & 4
+     */
+    public static Game newGame(Player p1, Player p2, Player p3, Player p4, CardSetName setName) {
+        Game game = new Game(p1, p2, p3, p4);
+
+        return createAndInitGame(game, setName);
+    }
+
+    /**
+     * Méthode interne pour factoriser l'initialisation commune
+     */
+    private static Game createAndInitGame(Game game, CardSetName setName) {
         CardUtils.getCardsFromConfig(setName.getKey()).forEach(cardInstance -> {
             if (cardInstance.getCard().isEvolution()) {
                 game.getEvolutionCards().add(cardInstance);
             } else {
-                cards.add(cardInstance);
+                game.getCards().add(cardInstance);
             }
         });
 
-        Collections.shuffle(cards);
+        Collections.shuffle(game.getCards());
 
+        // 2. Initialisation des joueurs et des PV
+        // On utilise un Set pour ne pas réinitialiser les PV deux fois pour la même équipe
+        Set<Team> initializedTeams = new HashSet<>();
+        
         for (Player player : game.getPlayers()) {
-            initDrawAndHand(player, cards);
-            player.getTeam().setLifePoints(3);
+            initDrawAndHand(player, game.getCards());
+            
+            // Si l'équipe n'a pas encore été initialisée, on met les PV à 3 (ou plus pour le 2v2)
+            if (!initializedTeams.contains(player.getTeam())) {
+                player.getTeam().setLifePoints(3); 
+                initializedTeams.add(player.getTeam());
+            }
         }
 
         game.setCurrentPlayer(getFirstPlayer(game));
-
-        // Join the WebSocket channel of the game
         WebSocketService.initGameChannel(game);
 
         return game;

@@ -6,6 +6,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.IChoice;
 import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.model.player.Team;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,14 +44,33 @@ public class Game {
     /**
      * Empty constructor (WARNING: a game is not meant to be reused)
      */
-    public Game(Player player1, Player player2) {
-        uuid = UUID.randomUUID();
-        winner = null;
-        cards = new ArrayList<>();
-        bannedCards = new ArrayList<>();
-        evolutionCards = new ArrayList<>();
-        effectQueue = new EffectQueue();
-        players = Arrays.asList(player1, player2);
+    public Game(Player... allPlayers) {
+        this.uuid = UUID.randomUUID();
+        this.winner = null;
+        this.cards = new ArrayList<>();
+        this.bannedCards = new ArrayList<>();
+        this.evolutionCards = new ArrayList<>();
+        this.effectQueue = new EffectQueue();
+        
+        // Convertit les arguments variables en liste
+        this.players = Arrays.asList(allPlayers);
+        
+        // Si on est 4, on initialise les équipes
+        if (allPlayers.length == 4) {
+            setupTeams(this.players);
+        }
+    }
+
+    private void setupTeams(List<Player> players) {
+        Team team1 = new Team();
+        Team team2 = new Team();
+        
+        // Joueur 0 et 2 ensemble vs Joueur 1 et 3
+        players.get(0).setTeam(team1);
+        players.get(2).setTeam(team1);
+        
+        players.get(1).setTeam(team2);
+        players.get(3).setTeam(team2);
     }
 
     public List<Player> getOpponent() {
