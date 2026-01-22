@@ -7,6 +7,7 @@ interface CardInterface {
 
     name?: string
     power: number
+    basePower: number
     keywords?: string[]
     stillTough: boolean
     ableToBlock: boolean
