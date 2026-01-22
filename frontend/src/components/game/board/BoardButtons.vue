@@ -50,11 +50,21 @@ const isFirstButtonVisible = computed(() => {
 
 // Computed value to manage 'disable' state of the first button
 const isFirstButtonDisabled = computed(() => {
-  if (props.selectedCard) {
-    return !props.gameState?.choice && props.selectedCard.location === "Hand" && props.gameState?.playerTurn && props.gameState?.forcedAttack // Playing card is forbidden due to forcedAttack
-  } else {
-    return props.gameState?.choice?.type === "HUNTER" || // Hunter case
-        (!props.gameState?.choice && props.attackingCard?.ownerId !== props.gameState?.player.uuid) // Block case
+  const label = buttonLabel.value
+  switch (label) {
+    case "Use Mindbug":  // Mindbug
+    case "Yes": // Frenzy case
+      return false
+    case "Block":  // Block case
+      return !(props.selectedCard && props.attackingCard && props.attackingCard.ownerId !== props.gameState?.player.uuid)
+    case "Hunt target":   // Hunter case
+      return !props.selectedCard
+    case "Play":    // Play case
+    case "Attack":   // Attack case
+      return props.gameState?.forcedAttack
+
+    default:
+      return false
   }
 })
 
