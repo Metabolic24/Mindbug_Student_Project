@@ -28,9 +28,9 @@ public class AutoApp {
         Game game = AppUtils.startGame();
 
         AppUtils.runAndCheckErrors(game, () -> {
-            do {
-                resolveTurn(game);
-            } while (!game.isFinished());
+            do {// do it one time
+                resolveTurn(game); 
+            } while (!game.isFinished());//repeat while
         });
     }
 
