@@ -77,6 +77,20 @@ public class Game {
         return currentPlayer.getOpponent(players);
     }
 
+    /**
+     * Alterne le tour de jeu vers le joueur suivant de manière circulaire.
+     * <p>
+     * Dans cette configuration 2v2, l'ordre de la liste {@code players} doit être 
+     * alterné (Équipe A - Joueur 1, Équipe B - Joueur 1, Équipe A - Joueur 2, Équipe B - Joueur 2)
+     * pour garantir que le tour passe d'un allié à un ennemi.
+     * </p>
+     * * @throws IndexOutOfBoundsException si la liste des joueurs est vide.
+     */
+    public void setNextPlayer() {
+        int nextPlayerIndex = (players.indexOf(currentPlayer) + 1) % players.size();
+        this.setCurrentPlayer(players.get(nextPlayerIndex));
+    }
+
     public boolean isFinished() {
         return winner != null;
     }

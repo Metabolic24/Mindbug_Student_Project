@@ -48,7 +48,7 @@ public class GameStateService {
 
     public static void newTurn(Game game, boolean mindbug) {
         if (!mindbug) {
-            game.setCurrentPlayer(game.getOpponent());
+            game.setNextPlayer();
         }
 
         refreshGameState(game, true);
