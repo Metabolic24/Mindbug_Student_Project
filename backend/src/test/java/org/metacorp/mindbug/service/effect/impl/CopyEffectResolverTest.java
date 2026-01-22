@@ -55,6 +55,12 @@ public class CopyEffectResolverTest {
     @Test
     public void testWithTiming_nominal() {
         CardInstance otherCard = opponentPlayer.getHand().getFirst();
+
+        // Avoid modifying the same base card than random card one
+        if (otherCard.getCard().equals(randomCard.getCard())) {
+            otherCard = opponentPlayer.getHand().get(1);
+        }
+
         List<Effect> playEffects = otherCard.getEffects(timing);
         playEffects.clear();
 
@@ -69,6 +75,7 @@ public class CopyEffectResolverTest {
         effect.setTiming(timing);
         effectResolver.apply(game, randomCard, timing);
 
+        // TODO Il y a un cas où c'est égal à 0 ici (peut-être un simultaneous choice)
         assertEquals(1, game.getEffectQueue().size());
 
         EffectsToApply effectsToApply = game.getEffectQueue().poll();

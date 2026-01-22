@@ -78,6 +78,7 @@ public class GameStateMapper {
         result.setOwnerId(card.getOwner().getUuid());
         result.setName(card.getCard().getName());
         result.setPower(card.getPower());
+        result.setBasePower(card.getCard().getPower());
         result.setKeywords(card.getKeywords());
         result.setHasAction(!card.getEffects(EffectTiming.ACTION).isEmpty());
         result.setStillTough(card.isStillTough());

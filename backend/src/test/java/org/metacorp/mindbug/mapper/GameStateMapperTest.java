@@ -184,6 +184,7 @@ public class GameStateMapperTest {
     private void compareCard(CardInstance card, CardDTO cardDTO) {
         assertEquals(card.getCard().getName(), cardDTO.getName());
         assertEquals(card.getPower(), cardDTO.getPower());
+        assertEquals(card.getCard().getPower(), cardDTO.getBasePower());
         assertEquals(card.getCard().getId(), cardDTO.getId());
         assertEquals(card.getKeywords(), cardDTO.getKeywords());
         assertEquals(card.getCard().getSetName(), cardDTO.getSetName());
