@@ -22,6 +22,16 @@
     return props.card.power !== props.card.basePower
   })
 
+  watch(
+    () => props.card,
+    (newCard) => {
+      console.log(`Card ${newCard.name || newCard.id} keywords:`, newCard.keywords);
+      console.log(`stillTough:`, newCard.stillTough);
+      console.log('Frenzy active?', newCard.keywords?.includes('TOUGH') && newCard.stillTough);
+    },
+    { deep: true, immediate: true }
+  );
+
   // Determine the CSS classes for the card based on its context and state
   const cardClasses = computed(() => ({
     'bottom-card': props.context === 'player-hand',
@@ -29,6 +39,8 @@
     'selected': props.selected,
     'attacking': props.attacking,
     'clickable': props.clickable,
+    'frenzy': props.context === 'board' && props.card.keywords?.includes('TOUGH') && props.card.stillTough,
+    
   }))
 
   // Determine if the power overlay should be shown on the opponent's hand
@@ -93,6 +105,12 @@
   .power-overlay.modified-power {
     color: rgb(255, 217, 0);
     text-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
+  }
+
+  .card-wrapper.frenzy {
+    border: 3px solid #0c76df; /* Bleu vif */
+    box-shadow: 0 0 10px #1E90FF;
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Transition douce quand l'effet disparait */
   }
 
   /* Power overlay */

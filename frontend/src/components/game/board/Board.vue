@@ -77,7 +77,7 @@ function closeModal() {
           :selected="card.uuid === selectedCard?.uuid"
           :attacking="card.uuid === attackingCard?.uuid"
           :clickable="true"
-          @click="onCardSelected"
+          @click="onOpponentCardSelected"
         />
       </div>
       <board-middle-area :game-state="gameState" :picked-card="pickedCard" :attacking-card="attackingCard"></board-middle-area>
