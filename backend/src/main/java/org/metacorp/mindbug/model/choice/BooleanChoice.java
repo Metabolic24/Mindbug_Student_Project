@@ -11,7 +11,6 @@ import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.utils.ChoiceUtils;
 
 @Data
-@AllArgsConstructor
 @RequiredArgsConstructor
 public class BooleanChoice implements IChoice<Boolean> {
 
@@ -27,6 +26,11 @@ public class BooleanChoice implements IChoice<Boolean> {
     private CardInstance card;
 
     private String prompt;
+
+    public BooleanChoice(Player playerToChoose, CardInstance sourceCard, ResolvableEffect<Boolean> effectResolver, CardInstance card) {
+        this(playerToChoose, sourceCard, effectResolver);
+        this.card = card;
+    }
 
     @Override
     public void resolve(Boolean choice, Game game) {
