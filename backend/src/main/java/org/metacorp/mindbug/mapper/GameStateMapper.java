@@ -39,7 +39,7 @@ public class GameStateMapper {
 
         // Update the winner field if needed
         if (game.getWinner() != null) {
-            gameStateDTO.setWinner(game.getWinner().getUuid());
+            gameStateDTO.setWinner(game.getWinner().get(0).getUuid());
         }
 
         return gameStateDTO;

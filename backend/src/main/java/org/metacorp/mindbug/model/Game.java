@@ -24,7 +24,7 @@ public class Game {
 
     private List<Player> players;
     private Player currentPlayer;
-    private Player winner;
+    private List<Player> winner;
 
     private List<CardInstance> cards;
     private List<CardInstance> bannedCards;

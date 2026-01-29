@@ -79,13 +79,27 @@ public class GameStateService {
     }
 
     public static void endGame(Player loser, Game game) {
-        Player winner = loser.getOpponent(game.getPlayers()).get(0);
-        System.out.println("\n<<<<< GAME OVER >>>>>");
-        System.out.printf("%s wins ; %s loses\n", winner.getName(), loser.getName());
+        if(game.typeGameMode() == 1){
+            Player winner = loser.getOpponent(game.getPlayers()).get(0);
+            System.out.println("\n<<<<< GAME OVER >>>>>");
+            System.out.printf("%s wins ; %s loses\n", winner.getName(), loser.getName());
 
-        game.setWinner(winner);
+            game.setWinner(List.of(winner));
 
-        WebSocketService.sendGameEvent(WsGameEventType.FINISHED, game);
+            WebSocketService.sendGameEvent(WsGameEventType.FINISHED, game);
+        } 
+        else if(game.typeGameMode() == 2){
+            List<Player> winners = loser.getOpponent(game.getPlayers());
+            Player loserAllie = loser.getAllie(game.getPlayers());
+
+            System.out.println("\n<<<<< GAME OVER >>>>>");
+            System.out.printf("%s & %s win ; %s & %s lose\n", winners.get(0).getName(), winners.get(1).getName(), loser.getName(), loserAllie.getName());
+
+            game.setWinner(winners);
+
+            // TODO
+            // Add the websocket game event
+        }
     }
 
     /**
