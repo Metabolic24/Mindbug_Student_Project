@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import {watch,ref, onMounted,computed }  from "vue";
+  import {computed }  from "vue";
   import { getCardAlt, getCardImage } from "@/shared/CardUtils";
 
   // Declare the interface for the data given by the parent component
@@ -29,6 +29,7 @@
     'selected': props.selected,
     'attacking': props.attacking,
     'clickable': props.clickable,
+    'TOUGH': props.context === 'board' && props.card.keywords?.includes('TOUGH') && props.card.stillTough
   }))
 
   // Determine if the power overlay should be shown on the opponent's hand
@@ -37,6 +38,7 @@
 
 <template>
   <div class="card-wrapper" :class="cardClasses" @click="clickable && emit('click', card)">
+    <!-- Card image -->
     <img
       :src="getCardImage(card)"
       :alt="getCardAlt(card)"
@@ -56,12 +58,14 @@
 
 
 <style scoped>
+
+  /* #############################################  General card  ############################################# */
+
   /* General card styling */
   .card-wrapper {
     position: relative;
     width: 6vw;
     height: 9vw;
-
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
 
@@ -88,6 +92,26 @@
   .card-wrapper.opponent-hand.power-overlay{
     display: none;
   }
+
+  /* Selected and attacking card styling */
+  .card-wrapper.selected {
+    outline: 4px solid red;
+  }
+
+  .card-wrapper.attacking {
+    outline: 4px solid orange;
+  }
+
+  .card-wrapper.clickable {
+    cursor: pointer;
+  }
+
+  .card-wrapper.TOUGH {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* #############################################  POWER card  ############################################# */
 
   /* Modified power styling */
   .power-overlay.modified-power {
@@ -139,17 +163,5 @@
     transform: translateY(-100%);
     opacity: 0;
   }
-
-  /* Selected and attacking card styling */
-  .card-wrapper.selected {
-    outline: 4px solid red;
-  }
-
-  .card-wrapper.attacking {
-    outline: 4px solid orange;
-  }
-
-  .card-wrapper.clickable {
-    cursor: pointer;
-  }
+  
 </style>
