@@ -31,6 +31,7 @@ public class CardInstance {
     private Player owner;
 
     private int power;
+    private int basePower;
     private Set<CardKeyword> keywords;
     private boolean stillTough;
     private boolean ableToAttackTwice;
@@ -49,6 +50,7 @@ public class CardInstance {
         this.uuid = UUID.randomUUID();
         this.card = card;
         this.power = card.getPower();
+        this.basePower = card.getPower();
         this.keywords = new HashSet<>(card.getKeywords());
 
         this.stillTough = this.keywords.contains(CardKeyword.TOUGH);
@@ -77,7 +79,7 @@ public class CardInstance {
     }
 
     public void reset(boolean afterAttack) {
-        power = card.getPower();
+        power = basePower;
         ableToAttack = true;
         ableToBlock = true;
         keywords = new HashSet<>(card.getKeywords());

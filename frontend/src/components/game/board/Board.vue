@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Card from "@/components/game/Card.vue";
 import DiscardPile from "@/components/game/board/DiscardPile.vue";
 import {getCardAlt, getCardImage} from "@/shared/CardUtils";
 import {ref, Ref} from "vue";
@@ -68,15 +69,29 @@ function closeModal() {
     </div>
     <div class="col-8">
       <div class="cards">
-        <img v-for="card in gameState?.opponent.board" :src="getCardImage(card)" :alt="getCardAlt(card)"
-             class="card-image" :class="getCardClasses(card)" @click="onOpponentCardSelected(card)" draggable="false"
-             @contextmenu.prevent=""/>
+        <Card
+          v-for="card in gameState?.opponent.board"
+          :key="card.uuid"
+          :card="card"
+          context="board"
+          :selected="card.uuid === selectedCard?.uuid"
+          :attacking="card.uuid === attackingCard?.uuid"
+          :clickable="true"
+          @click="onOpponentCardSelected"
+        />
       </div>
       <board-middle-area :game-state="gameState" :picked-card="pickedCard" :attacking-card="attackingCard"></board-middle-area>
       <div class="cards">
-        <img v-for="card in gameState?.player.board" :src="getCardImage(card)" :alt="getCardAlt(card)"
-             class="card-image" :class="getCardClasses(card)" @click="onCardSelected(card)" draggable="false"
-             @contextmenu.prevent=""/>
+        <Card
+          v-for="card in gameState?.player.board"
+          :key="card.uuid"
+          :card="card"
+          context="board"
+          :selected="card.uuid === selectedCard?.uuid"
+          :attacking="card.uuid === attackingCard?.uuid"
+          :clickable="true"
+          @click="onCardSelected"
+        />
       </div>
     </div>
     <div class="col-2">
@@ -115,19 +130,4 @@ function closeModal() {
   justify-content: center;
 }
 
-.card-image {
-  width: 6vw;
-  height: 9vw;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.card-image.selected {
-  outline: 4px solid red;
-}
-
-.card-image.attacking {
-  outline: 4px solid orange;
-}
 </style>
