@@ -45,12 +45,29 @@ public class PlayCardService {
         // Update game state
         game.setPlayedCard(card);
 
-        Player opponent = game.getOpponent();
-        if (opponent.getMindBugs() == 0) {
-            playCard(game);
-        } else {
-            // Send update through WebSocket
-            WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game);
+        // Usage of mindbug depending on the game mode
+        // 1v1 game mode
+        if(game.typeGameMode() == 1){
+            Player opponent = game.getOpponent().get(0);
+            if (opponent.getMindBugs() == 0) {
+                playCard(game);
+            } else {
+                // Send update through WebSocket
+                WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game);
+            }
+        }
+        // 2v2 game mode
+        if(game.typeGameMode() == 2){
+            Player nextOpponent = game.getOpponent().get(0);
+            Player previousOpponent = game.getOpponent().get(1);
+            Player allie = game.getAllie();
+
+            if(nextOpponent.getMindBugs() == 0 && previousOpponent.getMindBugs() == 0 && allie.getMindBugs() == 0){
+                playCard(game);
+            } else{
+                // TODO
+                // Send update through WebSocket
+            }
         }
     }
 
