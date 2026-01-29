@@ -186,7 +186,7 @@ public class PowerUpEffectResolverTest {
     }
 
     @Test
-    public void testWithhForEachAllyCondition_threeEnemies() {
+    public void testWithForEachAllyCondition_threeEnemies() {
         currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
         currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
         currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
@@ -198,5 +198,89 @@ public class PowerUpEffectResolverTest {
         effectResolver.apply(game, randomCard, timing);
 
         assertEquals(randomCard.getCard().getPower() + (3 * effect.getValue()), randomCard.getPower());
+    }
+
+    @Test
+    public void testWithEnemiesCount_nominal() {
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+
+        effect.setEnemiesCount(3);
+        effect.setValue(5);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertEquals(randomCard.getCard().getPower() + 5, randomCard.getPower());
+    }
+
+    @Test
+    public void testWithEnemiesCount_noEffect() {
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+
+        effect.setEnemiesCount(3);
+        effect.setValue(5);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
+    }
+
+    @Test
+    public void testWithAlliesCount_nominal() {
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+
+        effect.setAlliesCount(2);
+        effect.setValue(4);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertEquals(randomCard.getCard().getPower() + 4, randomCard.getPower());
+    }
+
+    @Test
+    public void testWithAlliesCount_noEffect() {
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+        currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
+
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+        opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
+
+        effect.setAlliesCount(3);
+        effect.setValue(4);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
+    }
+
+    @Test
+    public void testWithNoMindbug_nominal() {
+        currentPlayer.setMindBugs(0);
+
+        effect.setNoMindbug(true);
+        effect.setValue(4);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertEquals(randomCard.getCard().getPower() + 4, randomCard.getPower());
+    }
+
+    @Test
+    public void testWithNoMindbug_noEffect() {
+        currentPlayer.setMindBugs(1);
+
+        effect.setNoMindbug(true);
+        effect.setValue(4);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }
 }

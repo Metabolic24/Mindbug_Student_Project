@@ -9,7 +9,6 @@ import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.EffectQueueService;
 import org.metacorp.mindbug.service.WebSocketService;
 
 import java.util.HashSet;
@@ -54,16 +53,30 @@ public class AttackService {
      */
     protected static void processAttackDeclaration(CardInstance attackCard, Game game) {
         game.setAttackingCard(attackCard);
+        final Player attackCardOwner = attackCard.getOwner();
 
         // Add ATTACK effects if the player is allowed to trigger it
         EffectQueueService.addBoardEffectsToQueue(attackCard, EffectTiming.ATTACK, game.getEffectQueue());
 
         game.setAfterEffect(() -> {
-            if (game.getCurrentPlayer().getBoard().contains(attackCard)) {
-                if (!game.getOpponent().getBoard().isEmpty() && attackCard.hasKeyword(CardKeyword.HUNTER)) {
-                    game.setChoice(new HunterChoice(game.getCurrentPlayer(), attackCard, new HashSet<>(game.getOpponent().getBoard())));
+            if (attackCardOwner.getBoard().contains(attackCard)) {
+                Player defender = attackCardOwner.getOpponent(game.getPlayers()).get(0);
+                if (defender.getBoard().isEmpty()) {
+                    try {
+                        resolveAttack(null, game);
+                    } catch (GameStateException e) {
+                        // TODO Manage errors
+                    }
+                } else if (game.getForcedTarget() != null) {
+                    try {
+                        resolveAttack(game.getForcedTarget(), game);
+                    } catch (GameStateException e) {
+                        // TODO Manage errors
+                    }
+                } else if (attackCard.hasKeyword(CardKeyword.HUNTER)) {
+                    game.setChoice(new HunterChoice(attackCardOwner, attackCard, new HashSet<>(defender.getBoard())));
                     WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
-                } else if (game.getOpponent().getBoard().isEmpty() || !game.getOpponent().canBlock(attackCard.hasKeyword(CardKeyword.SNEAKY))) {
+                } else if (!defender.canBlock(attackCard.hasKeyword(CardKeyword.SNEAKY))) {
                     try {
                         resolveAttack(null, game);
                     } catch (GameStateException e) {
@@ -99,6 +112,8 @@ public class AttackService {
                 throw new GameStateException("defending card is not able to block", Map.of("defendingCard", defendingCard));
             } else if (attackingCard.hasKeyword(CardKeyword.SNEAKY) && !defendingCard.hasKeyword(CardKeyword.SNEAKY) && !attackingCard.hasKeyword(CardKeyword.HUNTER)) {
                 throw new GameStateException("defending card cannot defend a SNEAKY attack", Map.of("attackingCard", game.getAttackingCard(), "defendingCard", defendingCard));
+            } else if (game.getForcedTarget() != null && !game.getForcedTarget().equals(defendingCard)) {
+                throw new GameStateException("invalid defending card : only one target allowed", Map.of("defendingCard", defendingCard, "forcedTarget", game.getForcedTarget()));
             }
         } else if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before attacking", Map.of("choice", game.getChoice()));
@@ -120,21 +135,23 @@ public class AttackService {
      */
     protected static void processAttackResolution(CardInstance attackCard, CardInstance defendCard, Game game) {
         if (defendCard == null) {
-            Player defender = game.getOpponent();
+            Player defender = attackCard.getOwner().getOpponent(game.getPlayers()).get(0);
             defender.getTeam().loseLifePoints(1);
             GameStateService.lifePointLost(defender, game);
         } else {
-            if (attackCard.getPower() > defendCard.getPower()) {
-                CardService.defeatCard(defendCard, game.getEffectQueue());
+            boolean reversedFight = attackCard.hasKeyword(CardKeyword.REVERSED) || defendCard.hasKeyword(CardKeyword.REVERSED);
+
+            if ((attackCard.getPower() > defendCard.getPower() && !reversedFight) || (attackCard.getPower() < defendCard.getPower() && reversedFight)) {
+                CardService.defeatCard(defendCard, game);
 
                 if (defendCard.hasKeyword(CardKeyword.POISONOUS)) {
-                    CardService.defeatCard(attackCard, game.getEffectQueue());
+                    CardService.defeatCard(attackCard, game);
                 }
             } else {
-                CardService.defeatCard(attackCard, game.getEffectQueue());
+                CardService.defeatCard(attackCard, game);
 
                 if (attackCard.hasKeyword(CardKeyword.POISONOUS) || attackCard.getPower() == defendCard.getPower()) {
-                    CardService.defeatCard(defendCard, game.getEffectQueue());
+                    CardService.defeatCard(defendCard, game);
                 }
             }
         }
@@ -153,6 +170,8 @@ public class AttackService {
             }
 
             game.setAttackingCard(null);
+            game.setForcedTarget(null);
+            game.setForcedAttack(false);
         });
     }
 

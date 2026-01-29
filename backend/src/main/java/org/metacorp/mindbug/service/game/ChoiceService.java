@@ -5,7 +5,6 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.IChoice;
-import org.metacorp.mindbug.service.EffectQueueService;
 import org.metacorp.mindbug.service.WebSocketService;
 
 import java.util.HashMap;

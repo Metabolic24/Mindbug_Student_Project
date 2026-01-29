@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.NoAttackEffect;
 import org.metacorp.mindbug.service.PlayerService;
@@ -96,5 +97,51 @@ public class NoAttackEffectResolverTest {
         assertTrue(otherCard2.isAbleToAttack());
         assertTrue(otherCard3.isAbleToAttack());
         assertFalse(otherCard4.isAbleToAttack());
+    }
+
+    @Test
+    public void testWithKeyword_nominal() {
+        CardInstance otherCard = opponentPlayer.getHand().getFirst();
+        otherCard.getKeywords().add(CardKeyword.SNEAKY);
+        opponentPlayer.addCardToBoard(otherCard);
+
+        CardInstance otherCard2 = opponentPlayer.getHand().getFirst();
+        otherCard2.getKeywords().remove(CardKeyword.SNEAKY);
+        opponentPlayer.addCardToBoard(otherCard2);
+
+        CardInstance otherCard3 = opponentPlayer.getHand().getFirst();
+        otherCard3.getKeywords().add(CardKeyword.SNEAKY);
+        opponentPlayer.addCardToBoard(otherCard3);
+
+        effect.setKeyword(CardKeyword.SNEAKY);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertFalse(otherCard.isAbleToAttack());
+        assertTrue(otherCard2.isAbleToAttack());
+        assertFalse(otherCard3.isAbleToAttack());
+    }
+
+    @Test
+    public void testWithKeyword_lowest() {
+        CardInstance otherCard = opponentPlayer.getHand().getFirst();
+        otherCard.getKeywords().add(CardKeyword.SNEAKY);
+        opponentPlayer.addCardToBoard(otherCard);
+
+        CardInstance otherCard2 = opponentPlayer.getHand().getFirst();
+        otherCard2.getKeywords().remove(CardKeyword.SNEAKY);
+        opponentPlayer.addCardToBoard(otherCard2);
+
+        CardInstance otherCard3 = opponentPlayer.getHand().getFirst();
+        otherCard3.getKeywords().add(CardKeyword.SNEAKY);
+        otherCard3.setPower(otherCard.getPower() - 1);
+        opponentPlayer.addCardToBoard(otherCard3);
+
+        effect.setKeyword(CardKeyword.SNEAKY);
+        effect.setLowest(true);
+        effectResolver.apply(game, randomCard, timing);
+
+        assertTrue(otherCard.isAbleToAttack());
+        assertTrue(otherCard2.isAbleToAttack());
+        assertFalse(otherCard3.isAbleToAttack());
     }
 }

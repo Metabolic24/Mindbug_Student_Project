@@ -4,12 +4,15 @@ import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.model.player.Team;
 import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.utils.CardUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Utility service that starts a new game
@@ -33,28 +36,71 @@ public class StartService {
     }
 
     /**
+     * Creates and start a new game for four players (using the default FIRST_CONTACT card set)
+     *
+     * @param player1 first player
+     * @param player2 second player
+     * @param player3 third player
+     * @param player4 fourth player
+     * @return the created game
+     */
+    public static Game newGame(Player player1, Player player2, Player player3, Player player4) {
+        return newGame(player1, player2, player3, player4, CardSetName.FIRST_CONTACT);
+    }
+
+    /**
      * Creates and start a new game for two players (using the given card set)
      *
-     * @param player1    first player name
-     * @param player2    second player name
-     * @param setName    the card set name as CardSetName
+     * @param player1 first player name
+     * @param player2 second player name
+     * @param setName the card set name as CardSetName
      * @return the created game
      */
     public static Game newGame(Player player1, Player player2, CardSetName setName) {
         Game game = new Game(player1, player2);
 
-        List<CardInstance> cards = CardUtils.getCardsFromConfig(setName.getKey());
-        Collections.shuffle(cards);
-        game.setCards(cards);
+        return createAndInitGame(game, setName);
+    }
 
+    /**
+     * Create and start a new game for four players (2v2) (using the given card set)
+     * The players 1 & 3 are together against the players 2 & 4
+     */
+    public static Game newGame(Player p1, Player p2, Player p3, Player p4, CardSetName setName) {
+        Game game = new Game(p1, p2, p3, p4);
+
+        return createAndInitGame(game, setName);
+    }
+
+    /**
+     * Internal method for factoring the common initialization
+     */
+    private static Game createAndInitGame(Game game, CardSetName setName) {
+        CardUtils.getCardsFromConfig(setName.getKey()).forEach(cardInstance -> {
+            if (cardInstance.getCard().isEvolution()) {
+                game.getEvolutionCards().add(cardInstance);
+            } else {
+                game.getCards().add(cardInstance);
+            }
+        });
+
+        Collections.shuffle(game.getCards());
+
+        // 2. Initialization of players and PVs
+        // We use a Set to avoid resetting the HP twice for the same team
+        Set<Team> initializedTeams = new HashSet<>();
+        
         for (Player player : game.getPlayers()) {
-            initDrawAndHand(player, cards);
-            player.getTeam().setLifePoints(3);
+            initDrawAndHand(player, game.getCards());
+            
+            // If the team has not yet been initialized, we set the HP to 3 (or more for 2v2)
+            if (!initializedTeams.contains(player.getTeam())) {
+                player.getTeam().setLifePoints(3); 
+                initializedTeams.add(player.getTeam());
+            }
         }
 
         game.setCurrentPlayer(getFirstPlayer(game));
-
-        // Join the WebSocket channel of the game
         WebSocketService.initGameChannel(game);
 
         return game;

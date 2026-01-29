@@ -1,13 +1,21 @@
-package org.metacorp.mindbug.service;
+package org.metacorp.mindbug.service.game;
 
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
+import org.metacorp.mindbug.exception.EffectQueueStopException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
-import org.metacorp.mindbug.model.effect.*;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
-import org.metacorp.mindbug.service.game.GameStateService;
+import org.metacorp.mindbug.model.effect.CostEffect;
+import org.metacorp.mindbug.model.effect.Effect;
+import org.metacorp.mindbug.model.effect.EffectLocation;
+import org.metacorp.mindbug.model.effect.EffectQueue;
+import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectsToApply;
+import org.metacorp.mindbug.model.effect.GenericEffect;
+import org.metacorp.mindbug.service.WebSocketService;
+import org.metacorp.mindbug.service.effect.impl.CostEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -56,8 +64,8 @@ public class EffectQueueService {
      * @param location    the effect location
      */
     private static void addEffectsToQueue(CardInstance card, EffectTiming timing, EffectQueue effectQueue, EffectLocation location) {
-        List<GenericEffect> effects = card.getEffects(timing).stream()
-                .filter(genericEffect -> genericEffect.getLocation() == location).collect(Collectors.toList());
+        List<Effect> effects = card.getEffects(timing).stream()
+                .filter(effect -> effect.getLocation() == location).collect(Collectors.toList());
         if (!effects.isEmpty()) {
             if (card.getOwner().canTrigger(timing)) {
                 effectQueue.add(new EffectsToApply(effects, card, timing));
@@ -99,52 +107,82 @@ public class EffectQueueService {
         while (!effectQueue.isEmpty()) {
             EffectsToApply currentEffect = effectQueue.peek();
 
-            Iterator<GenericEffect> iterator = currentEffect.getEffects().iterator();
-            while (iterator.hasNext()) {
-                // Get the next effect, apply it, then remove it from the list
-                GenericEffect effect = iterator.next();
-                GenericEffectResolver.getResolver(effect).apply(game, currentEffect.getCard(), currentEffect.getTiming());
-                iterator.remove();
-
-                GameStateService.refreshGameState(game);
-
-                // Stop the process if the game is finished
-                if (game.isFinished()) {
-                    return;
+            try {
+                if (currentEffect.getCost() != null && !currentEffect.getCost().isEmpty()) {
+                    processEffects(currentEffect.getCost().iterator(), game, currentEffect);
                 }
 
-                if (game.getChoice() == null) {
-                    WebSocketService.sendGameEvent(WsGameEventType.EFFECT_RESOLVED, game);
-                } else {
-                    if (!iterator.hasNext()) {
-                        effectQueue.remove(currentEffect);
-                    } else {
-                        // Update this boolean attribute so next effect resolution won't trigger a simultaneous choice first
-                        effectQueue.setResolvingEffect(true);
+                boolean costResolved = processEffects(currentEffect.getEffects().iterator(), game, currentEffect);
+                if (!costResolved) {
+                    // Only remove effect from queue after it is applied to avoid loss of data (should not be applied if a CostEffect has just been resolved
+                    effectQueue.remove(currentEffect);
+
+                    // If there is many remaining effects, then create a simultaneous choice
+                    if (effectQueue.size() >= 2) {
+                        game.setChoice(new SimultaneousEffectsChoice(new HashSet<>(effectQueue)));
+                        effectQueue.clear();
+
+                        WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+
+                        return;
                     }
-
-                    // Send update through WebSocket
-                    WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
-
-                    return;
                 }
-            }
-
-            // Only remove effect from queue after it is applied to avoid loss of data
-            effectQueue.remove(currentEffect);
-
-            // If there is many remaining effects, then create a simultaneous choice
-            if (effectQueue.size() >= 2) {
-                game.setChoice(new SimultaneousEffectsChoice(new HashSet<>(effectQueue)));
-                effectQueue.clear();
-
-                WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
-
+            } catch (EffectQueueStopException e) {
+                // Just exit from the current method
                 return;
             }
         }
 
         // Execute the after effect when queue is empty
         game.runAfterEffect();
+    }
+
+    private static boolean processEffects(Iterator<? extends Effect> iterator, Game game, EffectsToApply currentEffect) throws EffectQueueStopException {
+        EffectQueue effectQueue = game.getEffectQueue();
+
+        boolean costResolved = false;
+
+        while (iterator.hasNext() && !costResolved) {
+            // Get the next effect, apply it, then remove it from the list
+            Effect effect = iterator.next();
+
+            if (effect.hasCost()) {
+                new CostEffectResolver((CostEffect) effect).apply(game, currentEffect.getCard(), currentEffect.getTiming());
+                costResolved = true;
+            } else {
+                EffectResolver.getResolver((GenericEffect) effect).apply(game, currentEffect.getCard(), currentEffect.getTiming());
+
+                GameStateService.refreshGameState(game);
+
+                // Stop the process if the game is finished
+                if (game.isFinished()) {
+                    throw new EffectQueueStopException();
+                }
+
+                if (game.getChoice() == null) {
+                    WebSocketService.sendGameEvent(WsGameEventType.EFFECT_RESOLVED, game);
+                }
+            }
+
+            iterator.remove();
+
+            if (game.getChoice() != null) {
+                if (!iterator.hasNext()) {
+                    effectQueue.remove(currentEffect);
+                }
+
+                if (iterator.hasNext() || effect.hasCost()) {
+                    // Update this boolean attribute so next effect resolution won't trigger a simultaneous choice first
+                    effectQueue.setResolvingEffect(true);
+                }
+
+                // Send update through WebSocket
+                WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+
+                throw new EffectQueueStopException();
+            }
+        }
+
+        return costResolved;
     }
 }

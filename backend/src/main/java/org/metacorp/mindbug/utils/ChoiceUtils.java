@@ -5,11 +5,15 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
-import org.metacorp.mindbug.model.choice.*;
+import org.metacorp.mindbug.model.choice.BooleanChoice;
+import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
+import org.metacorp.mindbug.model.choice.HunterChoice;
+import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
+import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
-import org.metacorp.mindbug.service.game.AttackService;
-import org.metacorp.mindbug.service.GameService;
+import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.WebSocketService;
+import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.GameStateService;
 
 import java.util.List;
@@ -22,7 +26,7 @@ public final class ChoiceUtils {
 
     }
 
-    public static void  resolveBooleanChoice(Boolean choiceData, BooleanChoice choice, Game game) {
+    public static void resolveBooleanChoice(Boolean choiceData, BooleanChoice choice, Game game) {
         // First reset choice so it doesn't block next steps
         game.setChoice(null);
 
@@ -103,7 +107,8 @@ public final class ChoiceUtils {
                 AttackService.resolveAttack(chosenTarget.get(), game);
             }
         } else {
-            if (game.getOpponent().getBoard().isEmpty() || !game.getOpponent().canBlock(choice.getAttackingCard().hasKeyword(CardKeyword.SNEAKY))) {
+            Player opponent = choice.getPlayerToChoose().getOpponent(game.getPlayers()).get(0);
+            if (opponent.getBoard().isEmpty() || !opponent.canBlock(choice.getAttackingCard().hasKeyword(CardKeyword.SNEAKY))) {
                 AttackService.resolveAttack(null, game);
             } else {
                 WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -650,5 +651,39 @@ public class DestroyEffectResolverTest {
         assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(2, opponentPlayer.getDiscardPile().size());
         assertEquals(2, game.getEffectQueue().size());
+    }
+
+    @Test
+    public void testAllies_allCards() {
+        CardInstance otherCard = currentPlayer.getHand().getFirst();
+        otherCard.getKeywords().add(CardKeyword.TOUGH);
+        otherCard.setStillTough(true);
+        currentPlayer.addCardToBoard(otherCard);
+
+        CardInstance otherCard2 = currentPlayer.getHand().getFirst();
+        otherCard2.setStillTough(false);
+        currentPlayer.addCardToBoard(otherCard2);
+
+        effect.setValue(-1);
+        effect.setAllies(true);
+
+        // Nothing should happen as there are no cards on board
+        effectResolver.apply(game, randomCard, timing);
+        assertEquals(1, currentPlayer.getBoard().size());
+        assertTrue(currentPlayer.getBoard().contains(otherCard));
+        assertEquals(2, currentPlayer.getDiscardPile().size());
+        assertTrue(currentPlayer.getDiscardPile().contains(randomCard));
+        assertTrue(currentPlayer.getDiscardPile().contains(otherCard2));
+        assertTrue(opponentPlayer.getDiscardPile().isEmpty());
+    }
+
+    @Test
+    public void testItself_nominal() {
+        randomCard.getEffects(EffectTiming.DEFEATED).clear();
+
+        effect.setItself(true);
+
+        effectResolver.apply(game, randomCard, timing);
+        assertTrue(currentPlayer.getBoard().isEmpty());
     }
 }

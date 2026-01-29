@@ -6,12 +6,12 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.PowerUpEffect;
 import org.metacorp.mindbug.model.modifier.PowerModifier;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 
 /**
  * Effect resolver for PowerUpEffect
  */
-public class PowerUpEffectResolver extends GenericEffectResolver<PowerUpEffect> {
+public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
 
     /**
      * Constructor
@@ -30,13 +30,20 @@ public class PowerUpEffectResolver extends GenericEffectResolver<PowerUpEffect> 
         boolean selfTurn = effect.isSelfTurn();
         boolean allies = effect.isAllies();
         boolean forEachAlly = effect.isForEachAlly();
+        boolean noMindbug = effect.isNoMindbug();
         Integer lifePoints = effect.getLifePoints();
+        Integer enemiesCount = effect.getEnemiesCount();
+        Integer alliesCount = effect.getAlliesCount();
 
         Player currentPlayer = card.getOwner();
+        Player opponentPlayer = currentPlayer.getOpponent(game.getPlayers()).get(0);
         int powerToAdd = value;
 
         if ((lifePoints != null && currentPlayer.getTeam().getLifePoints() > lifePoints) ||
+                (enemiesCount != null && opponentPlayer.getBoard().size() < enemiesCount) ||
+                (alliesCount != null && currentPlayer.getBoard().size() != alliesCount) ||
                 (alone && currentPlayer.getBoard().size() != 1) ||
+                (noMindbug && currentPlayer.getMindBugs() != 0) ||
                 (selfTurn && !currentPlayer.equals(game.getCurrentPlayer()))) {
             return;
         }

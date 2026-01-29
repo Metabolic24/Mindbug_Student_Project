@@ -1,16 +1,19 @@
 package org.metacorp.mindbug.model.card;
 
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.metacorp.mindbug.model.effect.Effect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
-import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.model.modifier.AbstractModifier;
-import org.metacorp.mindbug.model.modifier.KeywordModifier;
-import org.metacorp.mindbug.model.modifier.PowerModifier;
 import org.metacorp.mindbug.model.player.Player;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.UUID;
 
 /**
  * Class that describes an instance of a card
@@ -35,6 +38,11 @@ public class CardInstance {
     private boolean ableToAttack;
     private boolean ableToBlock;
 
+    @Getter(AccessLevel.PRIVATE)
+    private boolean protection;
+
+    private CardInstance initialCard;
+
     private Set<AbstractModifier<?>> modifiers;
 
     public CardInstance(Card card) {
@@ -50,9 +58,8 @@ public class CardInstance {
         this.modifiers = new HashSet<>();
     }
 
-    public List<GenericEffect> getEffects(EffectTiming timing) {
-        List<GenericEffect> effects = this.card.getEffects().get(timing);
-        return effects == null ? new ArrayList<>() : effects;
+    public List<Effect> getEffects(EffectTiming timing) {
+        return this.card.getEffects().getOrDefault(timing, new ArrayList<>());
     }
 
     /**
@@ -81,6 +88,13 @@ public class CardInstance {
         } else {
             modifiers.forEach(modifier -> modifier.apply(this));
         }
+    }
+
+    /**
+     * @return true if the card has a protection, false otherwise
+     */
+    public boolean hasProtection() {
+        return protection;
     }
 
     @Override

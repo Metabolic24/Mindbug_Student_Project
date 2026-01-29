@@ -12,6 +12,7 @@ interface CardInterface {
     ableToBlock: boolean
     ableToAttack: boolean
     ableToAttackTwice: boolean
+    hasAction: boolean
 }
 
 type CardLocation = "Hand" | "Board"

@@ -17,7 +17,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"uuid", "winner", "player", "opponent", "card", "choice"})
+@JsonPropertyOrder({"uuid", "winner", "player", "opponent", "card", "choice", "forcedAttack"})
 public class GameStateDTO {
     @NonNull
     private UUID uuid;
@@ -34,5 +34,7 @@ public class GameStateDTO {
     private CardDTO card; // This field may be null
 
     private AbstractChoiceDTO choice; // This field may be null
+
+    private boolean forcedAttack;
 }
 

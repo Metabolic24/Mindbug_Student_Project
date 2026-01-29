@@ -6,7 +6,6 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.EffectQueueService;
 import org.metacorp.mindbug.service.WebSocketService;
 
 import java.text.MessageFormat;
@@ -46,12 +45,29 @@ public class PlayCardService {
         // Update game state
         game.setPlayedCard(card);
 
-        Player opponent = game.getOpponent();
-        if (opponent.getMindBugs() == 0) {
-            playCard(game);
-        } else {
-            // Send update through WebSocket
-            WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game);
+        // Usage of mindbug depending on the game mode
+        // 1v1 game mode
+        if(game.typeGameMode() == 1){
+            Player opponent = game.getOpponent().get(0);
+            if (opponent.getMindBugs() == 0) {
+                playCard(game);
+            } else {
+                // Send update through WebSocket
+                WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game);
+            }
+        }
+        // 2v2 game mode
+        if(game.typeGameMode() == 2){
+            Player nextOpponent = game.getOpponent().get(0);
+            Player previousOpponent = game.getOpponent().get(1);
+            Player allie = game.getAllie();
+
+            if(nextOpponent.getMindBugs() == 0 && previousOpponent.getMindBugs() == 0 && allie.getMindBugs() == 0){
+                playCard(game);
+            } else{
+                // TODO
+                // Send update through WebSocket
+            }
         }
     }
 
@@ -81,9 +97,9 @@ public class PlayCardService {
             throw new GameStateException("an attack needs to be resolved before picking a new card", Map.of("attackingCard", game.getAttackingCard()));
         } else if (mindbugger != null) {
             if (mindbugger.equals(game.getCurrentPlayer())) {
-                throw new GameStateException(MessageFormat.format("player {0} cannot mindbug its own card", Map.of("choice", mindbugger)));
+                throw new GameStateException(MessageFormat.format("player {0} cannot mindbug its own card", mindbugger.getName()), Map.of("mindbugger", mindbugger));
             } else if (!mindbugger.hasMindbug()) {
-                throw new GameStateException(MessageFormat.format("player {0} has no mindbug left", Map.of("mindbugger", mindbugger)));
+                throw new GameStateException(MessageFormat.format("player {0} has no mindbug left", mindbugger.getName()), Map.of("mindbugger", mindbugger));
             }
         }
 

@@ -7,12 +7,15 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.KeywordUpEffect;
 import org.metacorp.mindbug.model.modifier.KeywordModifier;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
+
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * Effect resolver for KeywordUpEffect
  */
-public class KeywordUpEffectResolver extends GenericEffectResolver<KeywordUpEffect> {
+public class KeywordUpEffectResolver extends EffectResolver<KeywordUpEffect> {
 
     /**
      * Constructor
@@ -26,23 +29,21 @@ public class KeywordUpEffectResolver extends GenericEffectResolver<KeywordUpEffe
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
         CardKeyword value = effect.getValue();
-        Integer max = effect.getMax();
         boolean moreAllies = effect.isMoreAllies();
         boolean alone = effect.isAlone();
-        boolean opponentHas = effect.isOpponentHas(); //TODO Fix an issue when there is at least one card with "opponentHas" effect on each side (one may not have all the expected keywords)
+        boolean allies = effect.isAllies();
+        Integer alliesCount = effect.getAlliesCount();
 
         Player cardOwner = card.getOwner();
+        Player opponent = cardOwner.getOpponent(game.getPlayers()).get(0);
 
-        if (alone && cardOwner.getBoard().size() != 1) {
+        if ((alone && cardOwner.getBoard().size() != 1) ||
+                (moreAllies && opponent.getBoard().size() >= cardOwner.getBoard().size()) ||
+                (alliesCount != null && cardOwner.getBoard().size() != alliesCount)) {
             return;
         }
 
-        Player opponent = cardOwner.getOpponent(game.getPlayers());
-        if (moreAllies && opponent.getBoard().size() >= cardOwner.getBoard().size()) {
-            return;
-        }
-
-        if (opponentHas) {
+        if (effect.isOpponentHas()) { //TODO Fix an issue when there is at least one card with "opponentHas" effect on each side (one may not have all the expected keywords)
             boolean checkOpponent = false;
             for (CardInstance opponentCard : opponent.getBoard()) {
                 if (opponentCard.getKeywords().contains(value)) {
@@ -56,11 +57,14 @@ public class KeywordUpEffectResolver extends GenericEffectResolver<KeywordUpEffe
             }
         }
 
-        if (max != null) {
-            for (CardInstance currentCard : cardOwner.getBoard()) {
-                if (currentCard.getPower() <= max && !currentCard.equals(card)) {
-                    addKeyword(currentCard, value, timing);
-                }
+        if (allies) {
+            Set<CardInstance> availableCards = cardOwner.getBoard().stream().filter(cardInstance ->
+                    (effect.isSelf() && cardInstance.getUuid().equals(card.getUuid())) ||
+                    (!cardInstance.getUuid().equals(card.getUuid()) &&
+                            (effect.getMax() == null || cardInstance.getPower() <= effect.getMax()))).collect(Collectors.toSet());
+
+            for (CardInstance availableCard : availableCards) {
+                addKeyword(availableCard, value, timing);
             }
         } else {
             addKeyword(card, value, timing);

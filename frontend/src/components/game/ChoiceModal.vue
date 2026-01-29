@@ -17,8 +17,8 @@ const selectedCards: Ref<CardInterface[]> = ref([])
 // Computed value for modal title
 const title = computed(() => {
   return props.choice?.type === "TARGET" ?
-      `Sélectionnez ${props.choice.count} cible(s) parmi ces cartes` :
-      "Sélectionnez l'effet à déclencher en premier"
+      `Choose ${props.choice.count} target(s) from these cards` :
+      "Choose the effect to trigger first"
 })
 
 // Computed value to disable validation button

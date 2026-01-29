@@ -2,15 +2,19 @@ package org.metacorp.mindbug.service.effect.impl;
 
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.NoAttackEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
+import org.metacorp.mindbug.service.game.CardService;
+
+import java.util.List;
 
 /**
  * Effect resolver for NoAttackEffect
  */
-public class NoAttackEffectResolver extends GenericEffectResolver<NoAttackEffect> {
+public class NoAttackEffectResolver extends EffectResolver<NoAttackEffect> {
 
     /**
      * Constructor
@@ -23,11 +27,24 @@ public class NoAttackEffectResolver extends GenericEffectResolver<NoAttackEffect
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
+        CardKeyword keyword = effect.getKeyword();
+        Player opponent = card.getOwner().getOpponent(game.getPlayers()).get(0);
+        List<CardInstance> affectedCards = opponent.getBoard();
+
+        if (keyword != null) {
+            affectedCards = affectedCards.stream().filter(cardInstance -> cardInstance.hasKeyword(keyword)).toList();
+        }
+
         if (effect.isLowest()) {
-            Player opponent = card.getOwner().getOpponent(game.getPlayers());
-            for (CardInstance lowestCard : opponent.getLowestCards()) {
-                lowestCard.setAbleToAttack(false);
-            }
+            affectedCards = CardService.getLowestCards(affectedCards);
+        }
+
+        resolve(affectedCards);
+    }
+
+    private void resolve(List<CardInstance> cards) {
+        for (CardInstance card : cards) {
+            card.setAbleToAttack(false);
         }
     }
 }

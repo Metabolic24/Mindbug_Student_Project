@@ -6,14 +6,13 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.model.player.Team;
-import org.metacorp.mindbug.service.GameService;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.game.GameStateService;
 
 /**
  * Effect resolver for GainEffect
  */
-public class GainEffectResolver extends GenericEffectResolver<GainEffect> {
+public class GainEffectResolver extends EffectResolver<GainEffect> {
 
     /**
      * Constructor
@@ -35,7 +34,7 @@ public class GainEffectResolver extends GenericEffectResolver<GainEffect> {
         if (equal) {
             int oldLifePoints = team.getLifePoints();
 
-            Player opponent = cardOwner.getOpponent(game.getPlayers());
+            Player opponent = cardOwner.getOpponent(game.getPlayers()).get(0);
             team.setLifePoints(opponent.getTeam().getLifePoints());
 
             if (oldLifePoints > team.getLifePoints()) {

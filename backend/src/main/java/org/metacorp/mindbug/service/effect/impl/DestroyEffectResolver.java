@@ -7,20 +7,22 @@ import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.CardService;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.metacorp.mindbug.service.game.CardService.defeatCard;
 
 /**
  * Effect resolver for DestroyEffect
  */
-public class DestroyEffectResolver extends GenericEffectResolver<DestroyEffect> implements ResolvableEffect<List<CardInstance>> {
+public class DestroyEffectResolver extends EffectResolver<DestroyEffect> implements ResolvableEffect<List<CardInstance>> {
 
     /**
      * Constructor
@@ -36,33 +38,36 @@ public class DestroyEffectResolver extends GenericEffectResolver<DestroyEffect> 
         Integer value = effect.getValue();
         Integer min = effect.getMin();
         Integer max = effect.getMax();
-        boolean lessAllies = effect.isLessAllies();
-        boolean lowest = effect.isLowest();
         boolean selfAllowed = effect.isSelfAllowed();
+        boolean allies = effect.isAllies();
 
         Player currentPlayer = card.getOwner();
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = currentPlayer.getOpponent(game.getPlayers()).get(0);
 
-        if (lessAllies && !(currentPlayer.getBoard().size() < opponent.getBoard().size())) {
+        if (effect.isLessAllies() && !(currentPlayer.getBoard().size() < opponent.getBoard().size())) {
             return;
         }
 
-        if (lowest) {
-            List<CardInstance> lowestCards = selfAllowed ? CardService.getLowestCards(game.getPlayers()) :
-                    opponent.getLowestCards();
-            destroyCards(game, lowestCards);
+        if (effect.isItself()) {
+            destroyCards(game, Collections.singletonList(card));
+        } else if (effect.isLowest()) {
+            Set<Player> affectedPlayers = selfAllowed ? new HashSet<>(game.getPlayers()) : Collections.singleton(opponent);
+            destroyCards(game, CardService.getLowestCards(affectedPlayers));
         } else {
             List<CardInstance> availableCards = new ArrayList<>();
-            for (CardInstance currentCard : opponent.getBoard()) {
-                if (min != null && currentCard.getPower() < min ||
-                        max != null && currentCard.getPower() > max) {
-                    continue;
-                }
 
-                availableCards.add(currentCard);
+            if (!allies) {
+                for (CardInstance currentCard : opponent.getBoard()) {
+                    if (min != null && currentCard.getPower() < min ||
+                            max != null && currentCard.getPower() > max) {
+                        continue;
+                    }
+
+                    availableCards.add(currentCard);
+                }
             }
 
-            if (selfAllowed) {
+            if (allies || selfAllowed) {
                 for (CardInstance currentCard : card.getOwner().getBoard()) {
                     if (min != null && currentCard.getPower() < min ||
                             max != null && currentCard.getPower() > max) {
@@ -84,9 +89,8 @@ public class DestroyEffectResolver extends GenericEffectResolver<DestroyEffect> 
     }
 
     private void destroyCards(Game game, List<CardInstance> cards) {
-        EffectQueue effectQueue = game.getEffectQueue();
         for (CardInstance card : cards) {
-            defeatCard(card, effectQueue);
+            defeatCard(card, game);
         }
     }
 

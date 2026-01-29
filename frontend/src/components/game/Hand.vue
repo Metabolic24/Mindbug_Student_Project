@@ -43,6 +43,10 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.bottom-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
 .card-image {
   width: 7vw;
   height: auto;
@@ -53,7 +57,7 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
 }
 
 .bottom-card:hover {
-  transform: translateY(-70px) scale(2.0);
+  transform: translateY(-70px) scale(1.50);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 5;
 }

@@ -7,6 +7,7 @@ import org.metacorp.mindbug.dto.choice.*;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.*;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
 
@@ -19,7 +20,8 @@ public class GameStateMapper {
         // Build the GameStateDTO
         GameStateDTO gameStateDTO = new GameStateDTO(game.getUuid(),
                 fromPlayer(currentPlayer),
-                fromPlayer(game.getOpponent()));
+                fromPlayer(game.getOpponent().get(0)));
+        gameStateDTO.setForcedAttack(game.isForcedAttack());
 
         // Update the card field if needed
         CardInstance playedCard = game.getPlayedCard();
@@ -67,6 +69,7 @@ public class GameStateMapper {
         result.setName(card.getCard().getName());
         result.setPower(card.getPower());
         result.setKeywords(card.getKeywords());
+        result.setHasAction(!card.getEffects(EffectTiming.ACTION).isEmpty());
         result.setStillTough(card.isStillTough());
         result.setAbleToBlock(card.isAbleToBlock());
         result.setAbleToAttack(card.isAbleToAttack());

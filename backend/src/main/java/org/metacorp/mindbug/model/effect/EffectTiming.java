@@ -6,6 +6,7 @@ package org.metacorp.mindbug.model.effect;
 public enum EffectTiming {
     PLAY,       // Triggers when card is played
     ATTACK,     // Triggers before the card attacks
+    ACTION,     // Triggers when a player chooses to use the action
     DEFEATED,   // Triggers after the card is defeated
     PASSIVE,    // Always considered as triggered when on board
     DISCARD,    // Always considered as triggered when in discard pile

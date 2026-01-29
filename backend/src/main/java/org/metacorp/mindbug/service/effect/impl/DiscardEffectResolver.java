@@ -6,7 +6,7 @@ import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.GenericEffectResolver;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Effect resolver for DisableTimingEffect
  */
-public class DiscardEffectResolver extends GenericEffectResolver<DiscardEffect> implements ResolvableEffect<List<CardInstance>> {
+public class DiscardEffectResolver extends EffectResolver<DiscardEffect> implements ResolvableEffect<List<CardInstance>> {
 
     /**
      * Constructor
@@ -29,13 +29,19 @@ public class DiscardEffectResolver extends GenericEffectResolver<DiscardEffect> 
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
-        int value = effect.getValue();
-        Player opponent = card.getOwner().getOpponent(game.getPlayers());
+        Player opponent = card.getOwner().getOpponent(game.getPlayers()).get(0);
 
-        if (opponent.getHand().size() <= value) {
-            resolve(game, new ArrayList<>(opponent.getHand()));
+        int value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue();
+
+        Player playerToDiscard = effect.isSelf() ? card.getOwner() : opponent;
+        List<CardInstance> availableCards = effect.isDrawPile() ? playerToDiscard.getDrawPile() : playerToDiscard.getHand();
+
+        if (availableCards.size() <= value || value == -1) {
+            resolve(game, new ArrayList<>(availableCards));
+        } else if (effect.isDrawPile()) {
+            resolve(game, new ArrayList<>(availableCards.subList(0, value)));
         } else {
-            game.setChoice(new TargetChoice(opponent, card, this, value, new HashSet<>(opponent.getHand())));
+            game.setChoice(new TargetChoice(playerToDiscard, card, this, value, new HashSet<>(availableCards)));
         }
     }
 
@@ -43,7 +49,13 @@ public class DiscardEffectResolver extends GenericEffectResolver<DiscardEffect> 
     public void resolve(Game game, List<CardInstance> chosenTargets) {
         for (CardInstance card : chosenTargets) {
             Player cardOwner = card.getOwner();
-            cardOwner.getHand().remove(card);
+
+            if (effect.isDrawPile()) {
+                cardOwner.getDrawPile().remove(card);
+            } else {
+                cardOwner.getHand().remove(card);
+            }
+
             cardOwner.getDiscardPile().add(card);
         }
     }

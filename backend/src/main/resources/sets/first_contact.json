@@ -195,10 +195,14 @@
       "PASSIVE": [{
         "type":"KEYWORD_UP",
         "value": "HUNTER",
+        "allies": true,
+        "self": false,
         "max": 4
       },{
         "type":"KEYWORD_UP",
         "value": "POISONOUS",
+        "allies": true,
+        "self": false,
         "max": 4
       }]
     },
@@ -353,7 +357,8 @@
     "effects": {
       "PASSIVE": [{
         "type": "NO_BLOCK",
-        "highest": true
+        "highest": true,
+        "value": -1
       }]
     },
     "unique": false
@@ -379,7 +384,8 @@
     "effects": {
       "PASSIVE": [{
         "type": "NO_BLOCK",
-        "max": 4
+        "max": 4,
+        "value": -1
       }]
     },
     "unique": true
@@ -549,7 +555,8 @@
     "effects": {
       "ATTACK": [{
         "type": "NO_BLOCK",
-        "max": 6
+        "max": 6,
+        "value": -1
       }]
     },
     "unique": true
