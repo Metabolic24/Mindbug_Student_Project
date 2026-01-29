@@ -241,6 +241,11 @@ public class ManualApp2v2 {
      * @param choice the choice to print
      */
     private static void printChoice(IChoice<?> choice) {
+        if (choice.getPrompt() != null) {
+            System.out.println(choice.getPrompt());
+            return;
+        }
+
         switch (choice.getType()) {
             case SIMULTANEOUS ->
                     System.out.println("Veuillez choisir l'effet à résoudre en premier : (only type the ID)");

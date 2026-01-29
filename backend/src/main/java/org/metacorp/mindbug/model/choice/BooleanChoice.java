@@ -26,6 +26,8 @@ public class BooleanChoice implements IChoice<Boolean> {
 
     private CardInstance card;
 
+    private String prompt;
+
     @Override
     public void resolve(Boolean choice, Game game) {
         ChoiceUtils.resolveBooleanChoice(choice, this, game);
@@ -34,5 +36,10 @@ public class BooleanChoice implements IChoice<Boolean> {
     @Override
     public ChoiceType getType() {
         return ChoiceType.BOOLEAN;
+    }
+
+    @Override
+    public String getPrompt() {
+        return prompt;
     }
 }

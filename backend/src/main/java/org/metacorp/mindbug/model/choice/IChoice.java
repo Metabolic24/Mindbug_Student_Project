@@ -17,4 +17,8 @@ public interface IChoice<T> {
      * @param game       the related game
      */
     void resolve(T choiceData, Game game) throws GameStateException;
+
+    default String getPrompt() {
+        return null;
+    }
 }
