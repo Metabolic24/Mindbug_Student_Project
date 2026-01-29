@@ -43,7 +43,7 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
         StealSource source = effect.getSource();
 
         Player cardOwner = card.getOwner();
-        Player opponent = cardOwner.getOpponent(game.getPlayers());
+        Player opponent = cardOwner.getOpponent(game.getPlayers()).get(0);
 
         List<CardInstance> availableCards = switch (source) {
             case DISCARD -> opponent.getDiscardPile();

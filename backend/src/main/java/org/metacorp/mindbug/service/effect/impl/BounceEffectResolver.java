@@ -28,7 +28,7 @@ public class BounceEffectResolver extends EffectResolver<BounceEffect> implement
     public void apply(Game game, CardInstance card, EffectTiming timing) {
         int value = effect.getValue();
         Player cardOwner = card.getOwner();
-        Set<CardInstance> opponentCards = new HashSet<>(card.getOwner().getOpponent(game.getPlayers()).getBoard());
+        Set<CardInstance> opponentCards = new HashSet<>(card.getOwner().getOpponent(game.getPlayers()).get(0).getBoard());
 
         if (!opponentCards.isEmpty()) {
             if (opponentCards.size() <= value || value < 0) {

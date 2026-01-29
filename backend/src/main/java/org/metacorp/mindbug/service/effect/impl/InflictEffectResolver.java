@@ -28,7 +28,7 @@ public class InflictEffectResolver extends EffectResolver<InflictEffect> {
         boolean self = effect.isSelf();
         boolean allButOne = effect.isAllButOne();
 
-        Player affectedPlayer = self ? card.getOwner() : card.getOwner().getOpponent(game.getPlayers());
+        Player affectedPlayer = self ? card.getOwner() : card.getOwner().getOpponent(game.getPlayers()).get(0);
         Team affectedTeam = affectedPlayer.getTeam();
 
         if (allButOne) {

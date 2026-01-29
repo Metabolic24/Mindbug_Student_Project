@@ -107,7 +107,7 @@ public final class ChoiceUtils {
                 AttackService.resolveAttack(chosenTarget.get(), game);
             }
         } else {
-            Player opponent = choice.getPlayerToChoose().getOpponent(game.getPlayers());
+            Player opponent = choice.getPlayerToChoose().getOpponent(game.getPlayers()).get(0);
             if (opponent.getBoard().isEmpty() || !opponent.canBlock(choice.getAttackingCard().hasKeyword(CardKeyword.SNEAKY))) {
                 AttackService.resolveAttack(null, game);
             } else {

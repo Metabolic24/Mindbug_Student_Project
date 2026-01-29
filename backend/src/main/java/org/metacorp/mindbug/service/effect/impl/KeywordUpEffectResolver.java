@@ -35,7 +35,7 @@ public class KeywordUpEffectResolver extends EffectResolver<KeywordUpEffect> {
         Integer alliesCount = effect.getAlliesCount();
 
         Player cardOwner = card.getOwner();
-        Player opponent = cardOwner.getOpponent(game.getPlayers());
+        Player opponent = cardOwner.getOpponent(game.getPlayers()).get(0);
 
         if ((alone && cardOwner.getBoard().size() != 1) ||
                 (moreAllies && opponent.getBoard().size() >= cardOwner.getBoard().size()) ||

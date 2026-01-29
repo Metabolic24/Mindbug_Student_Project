@@ -60,7 +60,7 @@ public class AttackService {
 
         game.setAfterEffect(() -> {
             if (attackCardOwner.getBoard().contains(attackCard)) {
-                Player defender = attackCardOwner.getOpponent(game.getPlayers());
+                Player defender = attackCardOwner.getOpponent(game.getPlayers()).get(0);
                 if (defender.getBoard().isEmpty()) {
                     try {
                         resolveAttack(null, game);
@@ -135,7 +135,7 @@ public class AttackService {
      */
     protected static void processAttackResolution(CardInstance attackCard, CardInstance defendCard, Game game) {
         if (defendCard == null) {
-            Player defender = attackCard.getOwner().getOpponent(game.getPlayers());
+            Player defender = attackCard.getOwner().getOpponent(game.getPlayers()).get(0);
             defender.getTeam().loseLifePoints(1);
             GameStateService.lifePointLost(defender, game);
         } else {

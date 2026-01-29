@@ -28,7 +28,7 @@ public class NoAttackEffectResolver extends EffectResolver<NoAttackEffect> {
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
         CardKeyword keyword = effect.getKeyword();
-        Player opponent = card.getOwner().getOpponent(game.getPlayers());
+        Player opponent = card.getOwner().getOpponent(game.getPlayers()).get(0);
         List<CardInstance> affectedCards = opponent.getBoard();
 
         if (keyword != null) {

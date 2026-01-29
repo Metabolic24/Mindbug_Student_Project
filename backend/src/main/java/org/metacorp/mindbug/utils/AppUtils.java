@@ -49,6 +49,24 @@ public final class AppUtils {
         return game;
     }
 
+    public static Game start2v2Game(){
+        PlayerLightDTO player1 = PlayerService.createPlayer("Player1");
+        PlayerLightDTO player2 = PlayerService.createPlayer("Player2");
+        PlayerLightDTO player3 = PlayerService.createPlayer("Player3");
+        PlayerLightDTO player4 = PlayerService.createPlayer("Player4");
+
+        Game game = StartService.newGame(new Player(player1), new Player(player2), new Player(player3), new Player(player4));
+
+        for (Player player : game.getPlayers()) {
+            AppUtils.detailedSumUpPlayer(player);
+        }
+
+        System.out.println("\nDEBUT DU JEU !!!");
+        nextTurn(game);
+
+        return game;
+    }
+
     /**
      * Play a card in an automatic game
      *
@@ -135,7 +153,7 @@ public final class AppUtils {
      * @throws GameStateException if an error occurs during the game execution
      */
     public static void resolveAttack(Scanner scanner, Game game) throws GameStateException {
-        Player opponentPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
+        Player opponentPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers()).get(0);
 
         Stream<CardInstance> blockersStream = opponentPlayer.getBoard().stream().filter(CardInstance::isAbleToBlock);
         if (game.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)) {

@@ -43,7 +43,7 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
         CardKeyword keyword = effect.getKeyword();
         boolean highest = effect.isHighest();
 
-        Player opponent = card.getOwner().getOpponent(game.getPlayers());
+        Player opponent = card.getOwner().getOpponent(game.getPlayers()).get(0);
         Set<CardInstance> availableCards;
 
         if (highest) {

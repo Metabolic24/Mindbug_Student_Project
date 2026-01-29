@@ -29,7 +29,7 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
-        Player opponent = card.getOwner().getOpponent(game.getPlayers());
+        Player opponent = card.getOwner().getOpponent(game.getPlayers()).get(0);
 
         int value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue();
 

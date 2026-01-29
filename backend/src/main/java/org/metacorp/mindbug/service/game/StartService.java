@@ -36,6 +36,19 @@ public class StartService {
     }
 
     /**
+     * Creates and start a new game for four players (using the default FIRST_CONTACT card set)
+     *
+     * @param player1 first player
+     * @param player2 second player
+     * @param player3 third player
+     * @param player4 fourth player
+     * @return the created game
+     */
+    public static Game newGame(Player player1, Player player2, Player player3, Player player4) {
+        return newGame(player1, player2, player3, player4, CardSetName.FIRST_CONTACT);
+    }
+
+    /**
      * Creates and start a new game for two players (using the given card set)
      *
      * @param player1 first player name
@@ -50,8 +63,8 @@ public class StartService {
     }
 
     /**
-     * Crée et démarre une nouvelle partie pour quatre joueurs (2v2)
-     * Les joueurs 1 & 3 sont ensemble contre les joueurs 2 & 4
+     * Create and start a new game for four players (2v2) (using the given card set)
+     * The players 1 & 3 are together against the players 2 & 4
      */
     public static Game newGame(Player p1, Player p2, Player p3, Player p4, CardSetName setName) {
         Game game = new Game(p1, p2, p3, p4);
@@ -60,7 +73,7 @@ public class StartService {
     }
 
     /**
-     * Méthode interne pour factoriser l'initialisation commune
+     * Internal method for factoring the common initialization
      */
     private static Game createAndInitGame(Game game, CardSetName setName) {
         CardUtils.getCardsFromConfig(setName.getKey()).forEach(cardInstance -> {
@@ -73,14 +86,14 @@ public class StartService {
 
         Collections.shuffle(game.getCards());
 
-        // 2. Initialisation des joueurs et des PV
-        // On utilise un Set pour ne pas réinitialiser les PV deux fois pour la même équipe
+        // 2. Initialization of players and PVs
+        // We use a Set to avoid resetting the HP twice for the same team
         Set<Team> initializedTeams = new HashSet<>();
         
         for (Player player : game.getPlayers()) {
             initDrawAndHand(player, game.getCards());
             
-            // Si l'équipe n'a pas encore été initialisée, on met les PV à 3 (ou plus pour le 2v2)
+            // If the team has not yet been initialized, we set the HP to 3 (or more for 2v2)
             if (!initializedTeams.contains(player.getTeam())) {
                 player.getTeam().setLifePoints(3); 
                 initializedTeams.add(player.getTeam());

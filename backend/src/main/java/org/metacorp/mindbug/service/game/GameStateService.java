@@ -79,7 +79,7 @@ public class GameStateService {
     }
 
     public static void endGame(Player loser, Game game) {
-        Player winner = loser.getOpponent(game.getPlayers());
+        Player winner = loser.getOpponent(game.getPlayers()).get(0);
         System.out.println("\n<<<<< GAME OVER >>>>>");
         System.out.printf("%s wins ; %s loses\n", winner.getName(), loser.getName());
 

@@ -42,7 +42,7 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
         boolean allies = effect.isAllies();
 
         Player currentPlayer = card.getOwner();
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = currentPlayer.getOpponent(game.getPlayers()).get(0);
 
         if (effect.isLessAllies() && !(currentPlayer.getBoard().size() < opponent.getBoard().size())) {
             return;

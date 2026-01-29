@@ -34,7 +34,7 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
     public void apply(Game game, CardInstance effectSource, EffectTiming timing) {
         this.effectSource = effectSource;
 
-        Player opponent = effectSource.getOwner().getOpponent(game.getPlayers());
+        Player opponent = effectSource.getOwner().getOpponent(game.getPlayers()).get(0);
 
         if (timing == EffectTiming.PASSIVE) {
             if (effect.getKeyword() != null) {
