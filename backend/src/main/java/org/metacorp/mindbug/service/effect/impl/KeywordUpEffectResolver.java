@@ -7,8 +7,8 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.KeywordUpEffect;
 import org.metacorp.mindbug.model.modifier.KeywordModifier;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.HistoryService;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 
 import java.util.Collections;
 import java.util.Set;
@@ -41,9 +41,9 @@ public class KeywordUpEffectResolver extends EffectResolver<KeywordUpEffect> {
         Player cardOwner = card.getOwner();
         Player opponent = cardOwner.getOpponent(game.getPlayers());
 
-        if ((alone && cardOwner.getBoard().size() != 1) ||
-                (moreAllies && opponent.getBoard().size() >= cardOwner.getBoard().size()) ||
-                (alliesCount != null && cardOwner.getBoard().size() != alliesCount)) {
+        if ((alone && cardOwner.getBoard().size() != 1)
+                || (moreAllies && opponent.getBoard().size() >= cardOwner.getBoard().size())
+                || (alliesCount != null && cardOwner.getBoard().size() != alliesCount)) {
             return;
         }
 
@@ -63,9 +63,9 @@ public class KeywordUpEffectResolver extends EffectResolver<KeywordUpEffect> {
 
         if (allies) {
             Set<CardInstance> availableCards = cardOwner.getBoard().stream().filter(cardInstance ->
-                    (effect.isSelf() && cardInstance.getUuid().equals(card.getUuid())) ||
-                    (!cardInstance.getUuid().equals(card.getUuid()) &&
-                            (effect.getMax() == null || cardInstance.getPower() <= effect.getMax()))).collect(Collectors.toSet());
+                    (effect.isSelf() && cardInstance.getUuid().equals(card.getUuid()))
+                            || (!cardInstance.getUuid().equals(card.getUuid())
+                            && (effect.getMax() == null || cardInstance.getPower() <= effect.getMax()))).collect(Collectors.toSet());
 
             addKeyword(game, availableCards, value, timing);
         } else {

@@ -12,7 +12,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class InflictEffect extends GenericEffect {
-    public final static String TYPE = "INFLICT";
+    public static final String TYPE = "INFLICT";
 
     /**
      * The number of life points to be lost

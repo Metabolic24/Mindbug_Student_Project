@@ -9,7 +9,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class EvolveEffect extends GenericEffect {
-    public final static String TYPE = "EVOLVE";
+    public static final String TYPE = "EVOLVE";
 
     private int id; // the ID of the target evolution card
 }

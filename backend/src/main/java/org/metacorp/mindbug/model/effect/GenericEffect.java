@@ -4,7 +4,24 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.Getter;
 import lombok.Setter;
-import org.metacorp.mindbug.model.effect.impl.*;
+import org.metacorp.mindbug.model.effect.impl.BounceEffect;
+import org.metacorp.mindbug.model.effect.impl.CopyEffect;
+import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
+import org.metacorp.mindbug.model.effect.impl.DisableTimingEffect;
+import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
+import org.metacorp.mindbug.model.effect.impl.DrawEffect;
+import org.metacorp.mindbug.model.effect.impl.EvolveEffect;
+import org.metacorp.mindbug.model.effect.impl.ForceAttackEffect;
+import org.metacorp.mindbug.model.effect.impl.GainEffect;
+import org.metacorp.mindbug.model.effect.impl.GiveEffect;
+import org.metacorp.mindbug.model.effect.impl.InflictEffect;
+import org.metacorp.mindbug.model.effect.impl.KeywordUpEffect;
+import org.metacorp.mindbug.model.effect.impl.NoAttackEffect;
+import org.metacorp.mindbug.model.effect.impl.NoBlockEffect;
+import org.metacorp.mindbug.model.effect.impl.PowerUpEffect;
+import org.metacorp.mindbug.model.effect.impl.ProtectionEffect;
+import org.metacorp.mindbug.model.effect.impl.ReviveEffect;
+import org.metacorp.mindbug.model.effect.impl.StealEffect;
 
 /**
  * Parent class for card effect
@@ -33,7 +50,9 @@ import org.metacorp.mindbug.model.effect.impl.*;
         @JsonSubTypes.Type(value = StealEffect.class, name = StealEffect.TYPE)}
 )
 public class GenericEffect extends Effect {
-    /** The effect type */
+    /**
+     * The effect type
+     */
     private EffectType type;
 
     /**

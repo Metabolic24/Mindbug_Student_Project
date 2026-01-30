@@ -81,7 +81,9 @@ public final class ChoiceUtils {
 
         // Check that there are chosen targets (can be null/empty if choice is optional)
         if (chosenTargetIds != null && !chosenTargetIds.isEmpty()) {
-            List<CardInstance> chosenTargets = choice.getAvailableTargets().stream().filter(target -> chosenTargetIds.contains(target.getUuid())).toList();
+            List<CardInstance> chosenTargets = choice.getAvailableTargets().stream()
+                    .filter(target -> chosenTargetIds.contains(target.getUuid()))
+                    .toList();
             if (chosenTargets.size() != chosenTargetIds.size()) {
                 //TODO Raise an error or log message
             }
@@ -100,7 +102,9 @@ public final class ChoiceUtils {
         game.setChoice(null);
 
         if (chosenTargetId != null) {
-            Optional<CardInstance> chosenTarget = choice.getAvailableTargets().stream().filter(target -> chosenTargetId.equals(target.getUuid())).findFirst();
+            Optional<CardInstance> chosenTarget = choice.getAvailableTargets().stream()
+                    .filter(target -> chosenTargetId.equals(target.getUuid()))
+                    .findFirst();
             if (chosenTarget.isEmpty()) {
                 //TODO Raise an error or log message
             } else {

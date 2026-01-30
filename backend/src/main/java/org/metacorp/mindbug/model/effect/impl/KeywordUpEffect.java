@@ -13,7 +13,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class KeywordUpEffect extends GenericEffect {
-    public final static String TYPE = "KEYWORD_UP";
+    public static final String TYPE = "KEYWORD_UP";
 
     /**
      * The keyword that should be added to the card(s)

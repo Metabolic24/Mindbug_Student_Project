@@ -29,7 +29,11 @@ public class RestApp {
      */
     private static HttpServer createHttpServer() {
         // Create a resource config that scans for JAX-RS resources and providers in the package
-        final ResourceConfig rc = new ResourceConfig().packages("org.metacorp.mindbug.controller", "org.metacorp.mindbug.service", "org.metacorp.mindbug.exception", "org.metacorp.mindbug.websocket");
+        final ResourceConfig rc = new ResourceConfig().packages(
+                "org.metacorp.mindbug.controller",
+                "org.metacorp.mindbug.service",
+                "org.metacorp.mindbug.exception",
+                "org.metacorp.mindbug.websocket");
 
         // Create a service locator so we can inject dependencies
         ServiceLocator locator = ServiceLocatorUtilities.createAndPopulateServiceLocator();

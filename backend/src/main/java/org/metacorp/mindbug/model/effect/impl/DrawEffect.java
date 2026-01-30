@@ -12,7 +12,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class DrawEffect extends GenericEffect {
-    public final static String TYPE = "DRAW";
+    public static final String TYPE = "DRAW";
 
     private int value;              // The number of cards to draw
 }

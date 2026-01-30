@@ -14,7 +14,7 @@ public class PlayerService {
     /**
      * The map that stores players
      */
-    private static final Map<UUID, PlayerLightDTO> players = new HashMap<>();
+    private static final Map<UUID, PlayerLightDTO> PLAYERS = new HashMap<>();
 
     /**
      * Create a new player
@@ -26,13 +26,13 @@ public class PlayerService {
         UUID randomUuid;
         do {
             randomUuid = UUID.randomUUID();
-        } while (players.containsKey(randomUuid));
+        } while (PLAYERS.containsKey(randomUuid));
 
         PlayerLightDTO player = new PlayerLightDTO();
         player.setName(playerName);
         player.setUuid(randomUuid);
 
-        players.put(randomUuid, player);
+        PLAYERS.put(randomUuid, player);
 
         return player;
     }
@@ -45,8 +45,8 @@ public class PlayerService {
      * @throws UnknownPlayerException if no player has been found
      */
     public static PlayerLightDTO getPlayer(UUID playerId) throws UnknownPlayerException {
-        if (players.containsKey(playerId)) {
-            return players.get(playerId);
+        if (PLAYERS.containsKey(playerId)) {
+            return PLAYERS.get(playerId);
         } else {
             throw new UnknownPlayerException(playerId);
         }

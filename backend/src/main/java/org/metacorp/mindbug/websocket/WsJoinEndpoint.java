@@ -1,7 +1,11 @@
 package org.metacorp.mindbug.websocket;
 
 import org.glassfish.grizzly.http.HttpRequestPacket;
-import org.glassfish.grizzly.websockets.*;
+import org.glassfish.grizzly.websockets.DataFrame;
+import org.glassfish.grizzly.websockets.ProtocolHandler;
+import org.glassfish.grizzly.websockets.WebSocket;
+import org.glassfish.grizzly.websockets.WebSocketApplication;
+import org.glassfish.grizzly.websockets.WebSocketListener;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
@@ -17,7 +21,7 @@ import java.util.UUID;
 
 public class WsJoinEndpoint extends WebSocketApplication {
 
-    private static final Map<CardSetName, Queue<JoinWebSocket>> joinQueues = new HashMap<>();
+    private final Map<CardSetName, Queue<JoinWebSocket>> joinQueues = new HashMap<>();
 
     // TODO Create a map or a structure to store player responses and start the game when both players have confirmed
 
@@ -25,6 +29,7 @@ public class WsJoinEndpoint extends WebSocketApplication {
 
     /**
      * Constructor
+     *
      * @param gameService the Game service
      */
     public WsJoinEndpoint(GameService gameService) {
@@ -54,7 +59,7 @@ public class WsJoinEndpoint extends WebSocketApplication {
                         String playerId = socket.getPlayerId();
                         if (!playerId.equals(otherPlayerSession.getPlayerId())) {
                             try {
-                                Game game = gameService.createGame(UUID.fromString(playerId),UUID.fromString(otherPlayerSession.getPlayerId()), set);
+                                Game game = gameService.createGame(UUID.fromString(playerId), UUID.fromString(otherPlayerSession.getPlayerId()), set);
                                 socket.send(game.getUuid().toString());
                                 otherPlayerSession.send(game.getUuid().toString());
                             } catch (UnknownPlayerException e) {

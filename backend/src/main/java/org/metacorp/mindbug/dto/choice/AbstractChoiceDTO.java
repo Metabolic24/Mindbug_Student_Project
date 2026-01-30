@@ -8,14 +8,13 @@ import org.metacorp.mindbug.model.choice.ChoiceType;
 
 import java.util.UUID;
 
-
 /**
  * DTO for abstract choice data
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonDeserialize(using=ChoiceDTODeserializer.class)
+@JsonDeserialize(using = ChoiceDTODeserializer.class)
 public class AbstractChoiceDTO {
     private ChoiceType type;
     private UUID playerToChoose;

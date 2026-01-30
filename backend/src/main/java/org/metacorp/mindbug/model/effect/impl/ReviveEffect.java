@@ -12,5 +12,5 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class ReviveEffect extends GenericEffect {
-    public final static String TYPE = "REVIVE";
+    public static final String TYPE = "REVIVE";
 }

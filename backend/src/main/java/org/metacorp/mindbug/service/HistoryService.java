@@ -96,6 +96,9 @@ public class HistoryService {
                 targets = choice.getAvailableTargets();
                 data.put("playerToChoose", sourceCard.getOwner().getUuid());
             }
+            default -> {
+                // Should never happen
+            }
         }
 
         log(game, HistoryKey.CHOICE, sourceCard, targets, data);

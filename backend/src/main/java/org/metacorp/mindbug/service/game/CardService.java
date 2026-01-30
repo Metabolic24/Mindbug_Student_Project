@@ -2,10 +2,8 @@ package org.metacorp.mindbug.service.game;
 
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
-import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
 
 import java.util.ArrayList;

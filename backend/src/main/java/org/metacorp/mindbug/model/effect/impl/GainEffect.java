@@ -12,7 +12,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class GainEffect extends GenericEffect {
-    public final static String TYPE = "GAIN";
+    public static final String TYPE = "GAIN";
 
     private int value;      // The number of Life Points that will be gained
     private boolean equal;  // Should life points be set to the opponent ones value

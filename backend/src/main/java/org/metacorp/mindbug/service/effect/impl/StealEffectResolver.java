@@ -9,11 +9,11 @@ import org.metacorp.mindbug.model.effect.impl.StealEffect;
 import org.metacorp.mindbug.model.effect.steal.StealSource;
 import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.game.EffectQueueService;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.impl.steal.StealBooleanChoiceResolver;
 import org.metacorp.mindbug.service.effect.impl.steal.TargetChoiceResolver;
-import org.metacorp.mindbug.service.HistoryService;
+import org.metacorp.mindbug.service.game.EffectQueueService;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -77,7 +77,8 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
             } else {
                 Player playerToChoose = (selection == null || selection == StealTargetSelection.SELF) ? cardOwner : opponent;
 
-                TargetChoice choice = new TargetChoice(playerToChoose, card, new TargetChoiceResolver(effect, cardOwner, card), value, new HashSet<>(availableCards));
+                TargetChoice choice = new TargetChoice(playerToChoose, card, new TargetChoiceResolver(effect, cardOwner, card),
+                        value, new HashSet<>(availableCards));
                 choice.setOptional(effect.isOptional());
                 game.setChoice(choice);
             }
@@ -94,6 +95,8 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
                 case DISCARD, SELF_DISCARD -> oldOwner.getDiscardPile().remove(stolenCard);
                 case HAND -> oldOwner.getHand().remove(stolenCard);
                 case BOARD -> oldOwner.getBoard().remove(stolenCard);
+                default -> {
+                } // Nothing to do
             }
 
             stolenCard.setOwner(newOwner);

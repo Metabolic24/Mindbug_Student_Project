@@ -13,7 +13,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class NoBlockEffect extends GenericEffect {
-    public final static String TYPE = "NO_BLOCK";
+    public static final String TYPE = "NO_BLOCK";
 
     /**
      * The number of cards that will be unable to block, -1 for all

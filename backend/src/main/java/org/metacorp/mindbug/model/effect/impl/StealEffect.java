@@ -14,7 +14,7 @@ import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
 @Data
 @NoArgsConstructor
 public class StealEffect extends GenericEffect {
-    public final static String TYPE = "STEAL";
+    public static final String TYPE = "STEAL";
 
     private int value;                          // The number of cards to steal (-1 <=> all cards)
     private boolean optional;                   // Is this effect optional?

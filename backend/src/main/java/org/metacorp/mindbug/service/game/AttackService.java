@@ -31,13 +31,17 @@ public class AttackService {
         if (attackCard == null) {
             throw new GameStateException("no attacking card");
         } else if (!attackCard.isAbleToAttack()) {
-            throw new GameStateException("attacking card should not be able to attack", Map.of("attackCard", attackCard));
+            throw new GameStateException("attacking card should not be able to attack",
+                    Map.of("attackCard", attackCard));
         } else if (game.getAttackingCard() != null) {
-            throw new GameStateException("an attack needs to be resolved before attacking", Map.of("attackingCard", game.getAttackingCard()));
+            throw new GameStateException("an attack needs to be resolved before attacking",
+                    Map.of("attackingCard", game.getAttackingCard()));
         } else if (game.getChoice() != null) {
-            throw new GameStateException("a choice needs to be resolved before attacking", Map.of("choice", game.getChoice()));
+            throw new GameStateException("a choice needs to be resolved before attacking",
+                    Map.of("choice", game.getChoice()));
         } else if (game.getPlayedCard() != null) {
-            throw new GameStateException("a played card needs to be resolved before attacking", Map.of("playedCard", game.getPlayedCard()));
+            throw new GameStateException("a played card needs to be resolved before attacking",
+                    Map.of("playedCard", game.getPlayedCard()));
         }
 
         processAttackDeclaration(attackCard, game);
@@ -111,13 +115,18 @@ public class AttackService {
             throw new GameStateException("no attacking card set in game state");
         } else if (defendingCard != null) {
             if (defendingCard.getOwner().equals(attackingCard.getOwner())) {
-                throw new GameStateException("player cannot defend its own attack", Map.of("defendingCard", defendingCard));
+                throw new GameStateException("player cannot defend its own attack",
+                        Map.of("defendingCard", defendingCard));
             } else if (!defendingCard.isAbleToBlock() && !attackingCard.hasKeyword(CardKeyword.HUNTER)) {
-                throw new GameStateException("defending card is not able to block", Map.of("defendingCard", defendingCard));
-            } else if (attackingCard.hasKeyword(CardKeyword.SNEAKY) && !defendingCard.hasKeyword(CardKeyword.SNEAKY) && !attackingCard.hasKeyword(CardKeyword.HUNTER)) {
-                throw new GameStateException("defending card cannot defend a SNEAKY attack", Map.of("attackingCard", game.getAttackingCard(), "defendingCard", defendingCard));
+                throw new GameStateException("defending card is not able to block",
+                        Map.of("defendingCard", defendingCard));
+            } else if (attackingCard.hasKeyword(CardKeyword.SNEAKY) && !defendingCard.hasKeyword(CardKeyword.SNEAKY)
+                    && !attackingCard.hasKeyword(CardKeyword.HUNTER)) {
+                throw new GameStateException("defending card cannot defend a SNEAKY attack",
+                        Map.of("attackingCard", game.getAttackingCard(), "defendingCard", defendingCard));
             } else if (game.getForcedTarget() != null && !game.getForcedTarget().equals(defendingCard)) {
-                throw new GameStateException("invalid defending card : only one target allowed", Map.of("defendingCard", defendingCard, "forcedTarget", game.getForcedTarget()));
+                throw new GameStateException("invalid defending card : only one target allowed",
+                        Map.of("defendingCard", defendingCard, "forcedTarget", game.getForcedTarget()));
             }
         } else if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before attacking", Map.of("choice", game.getChoice()));
@@ -148,7 +157,8 @@ public class AttackService {
         } else {
             boolean reversedFight = attackCard.hasKeyword(CardKeyword.REVERSED) || defendCard.hasKeyword(CardKeyword.REVERSED);
 
-            if ((attackCard.getPower() > defendCard.getPower() && !reversedFight) || (attackCard.getPower() < defendCard.getPower() && reversedFight)) {
+            if ((attackCard.getPower() > defendCard.getPower() && !reversedFight)
+                    || (attackCard.getPower() < defendCard.getPower() && reversedFight)) {
                 CardService.defeatCard(defendCard, game);
 
                 if (defendCard.hasKeyword(CardKeyword.POISONOUS)) {
@@ -169,7 +179,8 @@ public class AttackService {
 
             game.setAfterEffect(() -> {
                 CardInstance attackingCard = game.getAttackingCard();
-                if (attackingCard.getOwner().getBoard().contains(attackingCard) && attackingCard.isAbleToAttackTwice() && attackingCard.isAbleToAttack()) {
+                if (attackingCard.getOwner().getBoard().contains(attackingCard) && attackingCard.isAbleToAttackTwice()
+                        && attackingCard.isAbleToAttack()) {
                     game.setChoice(new FrenzyAttackChoice(attackingCard));
 
                     WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
