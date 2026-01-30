@@ -12,7 +12,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class PowerUpEffect extends GenericEffect {
-    public final static String TYPE = "POWER_UP";
+    public static final String TYPE = "POWER_UP";
 
     /**
      * The power that should be gained by the card(s)

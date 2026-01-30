@@ -13,7 +13,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class CopyEffect extends GenericEffect {
-    public final static String TYPE = "COPY";
+    public static final String TYPE = "COPY";
 
     /**
      * The kind of effect that can be copied

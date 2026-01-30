@@ -15,8 +15,8 @@ import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
-import org.metacorp.mindbug.service.effect.impl.CostEffectResolver;
 import org.metacorp.mindbug.service.effect.EffectResolver;
+import org.metacorp.mindbug.service.effect.impl.CostEffectResolver;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -146,7 +146,8 @@ public class EffectQueueService {
         game.runAfterEffect();
     }
 
-    private static boolean processEffects(Iterator<? extends Effect> iterator, Game game, EffectsToApply currentEffect) throws EffectQueueStopException {
+    private static boolean processEffects(Iterator<? extends Effect> iterator, Game game, EffectsToApply currentEffect)
+            throws EffectQueueStopException {
         EffectQueue effectQueue = game.getEffectQueue();
 
         boolean costResolved = false;

@@ -22,7 +22,7 @@ import java.util.Random;
  */
 public class AutoApp {
 
-    private static final Random random = new Random();
+    private static final Random RND = new Random();
 
     public static void main(String[] args) {
         Game game = AppUtils.startGame();
@@ -44,7 +44,7 @@ public class AutoApp {
         Player currentPlayer = game.getCurrentPlayer();
         List<CardInstance> availableCards = currentPlayer.getBoard().stream().filter(CardInstance::isAbleToAttack).toList();
 
-        boolean attack = currentPlayer.getHand().isEmpty() || (!availableCards.isEmpty() && random.nextBoolean());
+        boolean attack = currentPlayer.getHand().isEmpty() || (!availableCards.isEmpty() && RND.nextBoolean());
         if (attack) {
             // Declare attack
             AppUtils.declareAttack(game);
@@ -96,7 +96,9 @@ public class AutoApp {
                     List<EffectsToApply> shuffledEffects = new ArrayList<>(simultaneousEffectsChoice.getEffectsToSort());
                     Collections.shuffle(shuffledEffects);
 
-                    System.out.printf("Ordre choisi : %s\n", shuffledEffects.stream().map(effectToApply -> effectToApply.getCard().getCard().getName()).toList());
+                    System.out.printf("Ordre choisi : %s\n", shuffledEffects.stream()
+                            .map(effectToApply -> effectToApply.getCard().getCard().getName())
+                            .toList());
 
                     ChoiceService.resolveChoice(shuffledEffects.getFirst().getCard().getUuid(), game);
                 }
@@ -112,7 +114,9 @@ public class AutoApp {
                         shuffledCards = shuffledCards.subList(0, targetChoice.getTargetsCount());
                     }
 
-                    System.out.printf("Cible(s) choisie(s) : %s\n", shuffledCards.stream().map(cardInstance -> cardInstance.getCard().getName()).toList());
+                    System.out.printf("Cible(s) choisie(s) : %s\n", shuffledCards.stream()
+                            .map(cardInstance -> cardInstance.getCard().getName())
+                            .toList());
 
                     ChoiceService.resolveChoice(shuffledCards.stream().map(CardInstance::getUuid).toList(), game);
                 }
@@ -134,6 +138,9 @@ public class AutoApp {
                     System.out.printf("Valeur choisie : %s\n", randomBoolean);
 
                     ChoiceService.resolveChoice(randomBoolean, game);
+                }
+                default -> {
+                    // Should not happen
                 }
             }
         }

@@ -13,7 +13,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class NoAttackEffect extends GenericEffect {
-    public final static String TYPE = "NO_ATTACK";
+    public static final String TYPE = "NO_ATTACK";
 
     /**
      * Should the lowest power creatures

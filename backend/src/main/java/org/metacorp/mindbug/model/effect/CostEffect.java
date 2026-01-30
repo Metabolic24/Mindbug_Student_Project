@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @JsonIgnoreProperties("type")
 public class CostEffect extends Effect {
-    public final static String TYPE = "COST";
+    public static final String TYPE = "COST";
     /**
      * The list of effects that must be resolved before other effects
      */

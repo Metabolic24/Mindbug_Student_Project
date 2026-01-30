@@ -4,7 +4,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.glassfish.grizzly.http.HttpRequestPacket;
-import org.glassfish.grizzly.websockets.*;
+import org.glassfish.grizzly.websockets.DataFrame;
+import org.glassfish.grizzly.websockets.ProtocolHandler;
+import org.glassfish.grizzly.websockets.WebSocket;
+import org.glassfish.grizzly.websockets.WebSocketApplication;
+import org.glassfish.grizzly.websockets.WebSocketListener;
 import org.metacorp.mindbug.dto.GameStateDTO;
 import org.metacorp.mindbug.dto.ws.WsGameEvent;
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
@@ -14,16 +18,21 @@ import org.metacorp.mindbug.mapper.GameStateMapper;
 import org.metacorp.mindbug.service.GameService;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 public class WsGameEndpoint extends WebSocketApplication {
 
-    private static final Map<UUID, List<GameWebSocket>> sessions = new HashMap<>();
+    private final Map<UUID, List<GameWebSocket>> sessions = new HashMap<>();
 
     private final GameService gameService;
 
     /**
      * Constructor
+     *
      * @param gameService the Game service
      */
     public WsGameEndpoint(GameService gameService) {
@@ -69,7 +78,8 @@ public class WsGameEndpoint extends WebSocketApplication {
 
         try {
             ObjectMapper mapper = new ObjectMapper();
-            WsGameEvent gameEvent = mapper.readValue(message, new TypeReference<>() {});
+            WsGameEvent gameEvent = mapper.readValue(message, new TypeReference<>() {
+            });
 
             System.out.println("--- Message: " + gameEvent);
 
@@ -84,7 +94,7 @@ public class WsGameEndpoint extends WebSocketApplication {
                     try {
                         UUID playerId = playerSocket.getPlayerId();
                         if (playerId.equals(gameState.getPlayer().getUuid())) {
-                            playerGameEvent.setState(new WsPlayerGameState(gameState,true));
+                            playerGameEvent.setState(new WsPlayerGameState(gameState, true));
                             eventData = mapper.writeValueAsString(playerGameEvent);
                         } else if (playerId.equals(gameState.getOpponent().getUuid())) {
                             playerGameEvent.setState(new WsPlayerGameState(gameState, false));

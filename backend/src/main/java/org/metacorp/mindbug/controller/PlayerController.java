@@ -12,7 +12,6 @@ import org.metacorp.mindbug.service.PlayerService;
 @Path("/player")
 public class PlayerController {
 
-
     /**
      * Endpoint triggered when a new player wants to register
      *

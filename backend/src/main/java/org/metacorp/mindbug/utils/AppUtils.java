@@ -162,7 +162,8 @@ public final class AppUtils {
      * @param player the player to sum-up
      */
     public static void detailedSumUpPlayer(Player player) {
-        System.out.printf("\n%s : %d PV, %d Mindbug(s), %d carte(s) restante(s)\n", player.getName(), player.getTeam().getLifePoints(), player.getMindBugs(), player.getDrawPile().size());
+        System.out.printf("\n%s : %d PV, %d Mindbug(s), %d carte(s) restante(s)\n", player.getName(),
+                player.getTeam().getLifePoints(), player.getMindBugs(), player.getDrawPile().size());
         displayCards(player.getHand(), "Main");
         displayCards(player.getBoard(), "Terrain");
         displayCards(player.getDiscardPile(), "Défausse");

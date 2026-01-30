@@ -34,9 +34,11 @@ public class PlayCardService {
         if (game.getPlayedCard() != null) {
             throw new GameStateException("a card has already been picked", Map.of("playedCard", game.getPlayedCard()));
         } else if (game.getChoice() != null) {
-            throw new GameStateException("a choice needs to be resolved before picking a new card", Map.of("choice", game.getChoice()));
+            throw new GameStateException("a choice needs to be resolved before picking a new card",
+                    Map.of("choice", game.getChoice()));
         } else if (game.getAttackingCard() != null) {
-            throw new GameStateException("an attack needs to be resolved before picking a new card", Map.of("attackingCard", game.getAttackingCard()));
+            throw new GameStateException("an attack needs to be resolved before picking a new card",
+                    Map.of("attackingCard", game.getAttackingCard()));
         }
 
         // Update current player hand
@@ -78,14 +80,18 @@ public class PlayCardService {
         if (game.getPlayedCard() == null) {
             throw new GameStateException("no card has been picked");
         } else if (game.getChoice() != null) {
-            throw new GameStateException("a choice needs to be resolved before picking a new card", Map.of("choice", game.getChoice()));
+            throw new GameStateException("a choice needs to be resolved before picking a new card",
+                    Map.of("choice", game.getChoice()));
         } else if (game.getAttackingCard() != null) {
-            throw new GameStateException("an attack needs to be resolved before picking a new card", Map.of("attackingCard", game.getAttackingCard()));
+            throw new GameStateException("an attack needs to be resolved before picking a new card",
+                    Map.of("attackingCard", game.getAttackingCard()));
         } else if (mindbugger != null) {
             if (mindbugger.equals(game.getCurrentPlayer())) {
-                throw new GameStateException(MessageFormat.format("player {0} cannot mindbug its own card", mindbugger.getName()), Map.of("mindbugger", mindbugger));
+                throw new GameStateException(MessageFormat.format("player {0} cannot mindbug its own card", mindbugger.getName()),
+                        Map.of("mindbugger", mindbugger));
             } else if (!mindbugger.hasMindbug()) {
-                throw new GameStateException(MessageFormat.format("player {0} has no mindbug left", mindbugger.getName()), Map.of("mindbugger", mindbugger));
+                throw new GameStateException(MessageFormat.format("player {0} has no mindbug left", mindbugger.getName()),
+                        Map.of("mindbugger", mindbugger));
             }
         }
 

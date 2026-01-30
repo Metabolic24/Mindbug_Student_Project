@@ -140,7 +140,8 @@ public class ManualApp {
                         System.out.println("Résolution d'un choix d'ordonnancement d'effets simultanés");
 
                         SimultaneousEffectsChoice simultaneousEffectsChoice = (SimultaneousEffectsChoice) choice;
-                        if (simultaneousEffectsChoice.getEffectsToSort().stream().noneMatch(effectsToApply -> effectsToApply.getCard().getUuid().toString().equals(input))) {
+                        if (simultaneousEffectsChoice.getEffectsToSort().stream()
+                                .noneMatch(effectsToApply -> effectsToApply.getCard().getUuid().toString().equals(input))) {
                             throw new GameStateException("Choix invalide");
                         }
 
@@ -155,7 +156,8 @@ public class ManualApp {
                         String[] tokens = input.split(" ");
 
                         for (String token : tokens) {
-                            if (targetChoice.getAvailableTargets().stream().noneMatch(target -> target.getUuid().toString().equals(token))) {
+                            if (targetChoice.getAvailableTargets().stream()
+                                    .noneMatch(target -> target.getUuid().toString().equals(token))) {
                                 throw new GameStateException("Choix invalide");
                             }
                         }
@@ -169,7 +171,8 @@ public class ManualApp {
                         HunterChoice hunterChoice = (HunterChoice) choice;
 
                         if (input != null && !input.isBlank()) {
-                            if (hunterChoice.getAvailableTargets().stream().noneMatch(target -> target.getUuid().toString().equals(input))) {
+                            if (hunterChoice.getAvailableTargets().stream()
+                                    .noneMatch(target -> target.getUuid().toString().equals(input))) {
                                 throw new GameStateException("Choix invalide");
                             }
 
@@ -193,6 +196,9 @@ public class ManualApp {
                             }
                             default -> throw new GameStateException("Choix invalide");
                         }
+                    }
+                    default -> {
+                        // Should not happen
                     }
                 }
             } catch (GameStateException e) {
@@ -226,6 +232,9 @@ public class ManualApp {
             case HUNTER -> System.out.println("Veuillez choisir la cible à chasser (si souhaité) : (only type the ID)");
             case FRENZY -> System.out.println("Voulez-vous attaquer à nouveau? (O/N)");
             case BOOLEAN -> System.out.println("Voulez-vous faire revenir Hyénix? (O/N)");
+            default -> {
+                // Should not happen
+            }
         }
     }
 }

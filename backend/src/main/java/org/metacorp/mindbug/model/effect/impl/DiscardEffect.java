@@ -12,7 +12,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class DiscardEffect extends GenericEffect {
-    public final static String TYPE = "DISCARD";
+    public static final String TYPE = "DISCARD";
 
     /** The number of cards to be discarded */
     private int value;

@@ -25,11 +25,14 @@ public class ActionService {
      */
     public static void resolveAction(CardInstance card, Game game) throws GameStateException {
         if (game.getPlayedCard() != null) {
-            throw new GameStateException("a played card needs to be resolved before attacking", Map.of("playedCard", game.getPlayedCard()));
+            throw new GameStateException("a played card needs to be resolved before attacking",
+                    Map.of("playedCard", game.getPlayedCard()));
         } else if (game.getChoice() != null) {
-            throw new GameStateException("a choice needs to be resolved before picking a new card", Map.of("choice", game.getChoice()));
+            throw new GameStateException("a choice needs to be resolved before picking a new card",
+                    Map.of("choice", game.getChoice()));
         } else if (game.getAttackingCard() != null) {
-            throw new GameStateException("an attack needs to be resolved before picking a new card", Map.of("attackingCard", game.getAttackingCard()));
+            throw new GameStateException("an attack needs to be resolved before picking a new card",
+                    Map.of("attackingCard", game.getAttackingCard()));
         }
 
         if (card.getEffects(EffectTiming.ACTION).isEmpty()) {

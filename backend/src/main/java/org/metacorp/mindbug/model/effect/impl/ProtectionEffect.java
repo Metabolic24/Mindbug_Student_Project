@@ -9,7 +9,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class ProtectionEffect extends GenericEffect {
-    public final static String TYPE = "PROTECTION";
+    public static final String TYPE = "PROTECTION";
 
     /** Should this effect affects the card itself */
     private boolean self;

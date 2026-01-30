@@ -1,6 +1,9 @@
 package org.metacorp.mindbug.dto.player;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter

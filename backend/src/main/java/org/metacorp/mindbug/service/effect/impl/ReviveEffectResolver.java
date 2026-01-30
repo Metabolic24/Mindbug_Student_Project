@@ -5,10 +5,10 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.ReviveEffect;
-import org.metacorp.mindbug.service.game.EffectQueueService;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
-import org.metacorp.mindbug.service.HistoryService;
+import org.metacorp.mindbug.service.game.EffectQueueService;
 
 /**
  * Effect resolver for ReviveEffect

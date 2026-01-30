@@ -79,15 +79,15 @@ public class Game {
 
     @Override
     public String toString() {
-        return "Game{" +
-                "currentPlayer=" + currentPlayer.getName() +
-                ", finished=" + isFinished() +
-                ", bannedCards=" + bannedCards +
-                ", playedCard=" + playedCard +
-                ", attackingCard=" + attackingCard +
-                ", effectQueue=" + effectQueue +
-                ", choice=" + choice +
-                ", afterEffect=" + afterEffect +
-                '}';
+        return "Game{"
+                + "currentPlayer=" + currentPlayer.getName()
+                + ", finished=" + isFinished()
+                + ", bannedCards=" + bannedCards
+                + ", playedCard=" + playedCard
+                + ", attackingCard=" + attackingCard
+                + ", effectQueue=" + effectQueue
+                + ", choice=" + choice
+                + ", afterEffect=" + afterEffect
+                + '}';
     }
 }
