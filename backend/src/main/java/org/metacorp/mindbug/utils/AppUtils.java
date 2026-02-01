@@ -33,9 +33,9 @@ public final class AppUtils {
      *
      * @return the created game
      */
-    public static Game startGame() {
-        PlayerLightDTO player1 = PlayerService.createPlayer("Player1");
-        PlayerLightDTO player2 = PlayerService.createPlayer("Player2");
+    public static Game startGame(PlayerService playerService) {
+        PlayerLightDTO player1 = playerService.createPlayer("Player1");
+        PlayerLightDTO player2 = playerService.createPlayer("Player2");
 
         Game game = StartService.newGame(new Player(player1), new Player(player2));
 

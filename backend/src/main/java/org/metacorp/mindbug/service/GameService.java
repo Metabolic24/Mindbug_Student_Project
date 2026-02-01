@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.service;
 
+import jakarta.inject.Inject;
 import org.jvnet.hk2.annotations.Service;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.model.CardSetName;
@@ -23,6 +24,9 @@ public class GameService {
      */
     private final Map<UUID, Game> games = new HashMap<>();
 
+    @Inject
+    private PlayerService playerService;
+
     /**
      * Create a new game using FIRST_CONTACT set
      *
@@ -45,8 +49,8 @@ public class GameService {
      * @throws UnknownPlayerException if at least one player could not be found in the database
      */
     public Game createGame(UUID player1Id, UUID player2Id, CardSetName setName) throws UnknownPlayerException {
-        Player player1 = new Player(PlayerService.getPlayer(player1Id));
-        Player player2 = new Player(PlayerService.getPlayer(player2Id));
+        Player player1 = new Player(playerService.getPlayer(player1Id));
+        Player player2 = new Player(playerService.getPlayer(player2Id));
 
         Game game = StartService.newGame(player1, player2, setName);
         games.put(game.getUuid(), game);

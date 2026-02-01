@@ -1,5 +1,7 @@
 package org.metacorp.mindbug.mapper;
 
+import org.glassfish.hk2.api.ServiceLocator;
+import org.glassfish.hk2.utilities.ServiceLocatorUtilities;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.dto.CardDTO;
@@ -28,13 +30,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class GameStateMapperTest {
 
-    private final GameService gameService = new GameService();
+    private GameService gameService;
     private Game game;
 
     @BeforeEach
     public void setUp() throws UnknownPlayerException {
-        Player player1 = new Player(PlayerService.createPlayer("player1"));
-        Player player2 = new Player(PlayerService.createPlayer("player2"));
+        ServiceLocator locator = ServiceLocatorUtilities.createAndPopulateServiceLocator();
+
+        PlayerService playerService = locator.getService(PlayerService.class);
+        gameService = locator.getService(GameService.class);
+        Player player1 = new Player(playerService.createPlayer("player1"));
+        Player player2 = new Player(playerService.createPlayer("player2"));
         game = gameService.createGame(player1.getUuid(), player2.getUuid());
     }
 

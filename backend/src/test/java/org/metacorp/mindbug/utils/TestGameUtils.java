@@ -14,7 +14,6 @@ import org.metacorp.mindbug.service.game.PlayCardService;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 public class TestGameUtils {
@@ -27,8 +26,9 @@ public class TestGameUtils {
     private static Player player2;
 
     public static Game prepareCustomGame() {
-        player1 = new Player(PlayerService.createPlayer("player1"));
-        player2 = new Player(PlayerService.createPlayer("player2"));
+        PlayerService playerService = new PlayerService();
+        player1 = new Player(playerService.createPlayer("player1"));
+        player2 = new Player(playerService.createPlayer("player2"));
 
         game = new Game(player1, player2);
 

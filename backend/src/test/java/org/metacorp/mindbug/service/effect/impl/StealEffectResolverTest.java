@@ -28,7 +28,8 @@ public class StealEffectResolverTest {
 
     @BeforeEach
     public void prepareGame() {
-        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        PlayerService playerService = new PlayerService();
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
 
         randomCard = currentPlayer.getHand().getFirst();
