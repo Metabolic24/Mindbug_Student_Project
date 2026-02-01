@@ -7,3 +7,6 @@
 ### VS Code ###
 .vscode/
 .DS_Store
+
+### Specific to the App ###
+log/

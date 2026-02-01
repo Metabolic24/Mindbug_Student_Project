@@ -39,10 +39,9 @@ public class WebSocketService {
             // Create a WebSocket for each AI player
             for (Player player : game.getPlayers()) {
                 if (player.isAI()) {
-                    GameWebSocket socket = (GameWebSocket) wsClient.prepareGet(GAME_WS_URI + game.getUuid() + "?"
+                    wsClient.prepareGet(GAME_WS_URI + game.getUuid() + "?"
                                     + WsUtils.PLAYER_ID_KEY + "=" + player.getUuid() + "&" + WsUtils.IS_AI_KEY + "=true")
                             .execute(new WebSocketUpgradeHandler.Builder().build()).get();
-                    ((AiPlayer) player).setGameWebSocket(socket);
                 }
             }
         } catch (InterruptedException | ExecutionException e) {

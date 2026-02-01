@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.service;
 
+import lombok.Getter;
 import org.jvnet.hk2.annotations.Service;
 import org.metacorp.mindbug.dto.player.PlayerLightDTO;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
@@ -17,6 +18,19 @@ public class PlayerService {
      * The map that stores players
      */
     private final Map<UUID, PlayerLightDTO> players = new HashMap<>();
+
+    /**
+     * The AI player DTO to be used in all solo mode games
+     */
+    @Getter
+    private final PlayerLightDTO aiPlayer;
+
+    /**
+     * Constructor
+     */
+    public PlayerService() {
+        aiPlayer = createPlayer("Michel");
+    }
 
     /**
      * Create a new player

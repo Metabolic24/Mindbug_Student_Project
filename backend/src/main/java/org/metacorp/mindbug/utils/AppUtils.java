@@ -6,24 +6,19 @@ import org.metacorp.mindbug.dto.player.PlayerLightDTO;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.PlayCardService;
-import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.StartService;
 
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
-import java.util.stream.Stream;
 
 /**
  * Utility class for ManualApp and AutoApp
  */
 public final class AppUtils {
-
-    private static final Random RND = new Random();
 
     @Setter
     private static boolean verbose = false;
@@ -75,7 +70,7 @@ public final class AppUtils {
         }
 
         // Select a card and play it
-        CardInstance card = (scanner == null) ? getRandomCard(hand) : getChosenCard(hand, scanner);
+        CardInstance card = (scanner == null) ? AiUtils.getRandomCard(hand) : getChosenCard(hand, scanner);
         if (card != null) {
             System.out.printf("%s joue la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
             PlayCardService.pickCard(card, game);
@@ -110,7 +105,7 @@ public final class AppUtils {
         }
 
         // Select a card and attack with it
-        CardInstance card = (scanner == null) ? getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
+        CardInstance card = (scanner == null) ? AiUtils.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
         if (card != null) {
             System.out.printf("%s attaque avec la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
             AttackService.declareAttack(card, game);
@@ -135,22 +130,17 @@ public final class AppUtils {
      * @throws GameStateException if an error occurs during the game execution
      */
     public static void resolveAttack(Scanner scanner, Game game) throws GameStateException {
-        Player opponentPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
+        Player attackedPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
 
-        Stream<CardInstance> blockersStream = opponentPlayer.getBoard().stream().filter(CardInstance::isAbleToBlock);
-        if (game.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)) {
-            blockersStream = blockersStream.filter((card) -> card.hasKeyword(CardKeyword.SNEAKY));
-        }
-
-        List<CardInstance> availableCards = blockersStream.toList();
+        List<CardInstance> availableCards = AiUtils.getBlockersList(game);
         if (availableCards.isEmpty()) {
-            System.out.printf("%s ne peut pas défendre\n", opponentPlayer.getName());
+            System.out.printf("%s ne peut pas défendre\n", attackedPlayer.getName());
             AttackService.resolveAttack(null, game);
         } else {
-            // Select a card and attack with it
-            CardInstance card = (scanner == null) ? getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
+            // Select a card and block with it
+            CardInstance card = (scanner == null) ? AiUtils.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
             if (card != null) {
-                System.out.printf("%s défend avec la carte '%s'\n", opponentPlayer.getName(), card.getCard().getName());
+                System.out.printf("%s défend avec la carte '%s'\n", attackedPlayer.getName(), card.getCard().getName());
                 AttackService.resolveAttack(card, game);
             }
         }
@@ -229,16 +219,6 @@ public final class AppUtils {
     }
 
     /**
-     * Return a random card from the given list
-     *
-     * @param cards the card list
-     * @return a random card from the list
-     */
-    private static CardInstance getRandomCard(List<CardInstance> cards) {
-        return cards.get(RND.nextInt(cards.size()));
-    }
-
-    /**
      * Return the chosen card from the given list
      *
      * @param cards   the card list
@@ -258,12 +238,5 @@ public final class AppUtils {
             System.err.println("Choix de carte invalide");
             return null;
         }
-    }
-
-    /**
-     * @return a random boolean value
-     */
-    public static boolean nextBoolean() {
-        return RND.nextBoolean();
     }
 }
