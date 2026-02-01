@@ -23,7 +23,8 @@ public class FrenzyChoiceTest {
 
     @BeforeEach
     public void initGame() {
-        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        PlayerService playerService = new PlayerService();
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         currentCard = currentPlayer.getHand().getFirst();
         currentCard.getCard().setKeywords(new HashSet<>(List.of(CardKeyword.FRENZY)));

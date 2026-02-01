@@ -1,5 +1,7 @@
 package org.metacorp.mindbug.service;
 
+import org.glassfish.hk2.api.ServiceLocator;
+import org.glassfish.hk2.utilities.ServiceLocatorUtilities;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
@@ -28,8 +30,11 @@ public class GameServiceTest {
 
     @BeforeEach
     public void initGame() {
-        gameService = new GameService();
-        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        ServiceLocator locator = ServiceLocatorUtilities.createAndPopulateServiceLocator();
+
+        PlayerService playerService = locator.getService(PlayerService.class);
+        gameService = locator.getService(GameService.class);
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
     }
 
     @Test

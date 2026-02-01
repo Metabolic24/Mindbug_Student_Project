@@ -9,6 +9,7 @@ import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.utils.AppUtils;
 
@@ -25,7 +26,8 @@ public class AutoApp {
     private static final Random RND = new Random();
 
     public static void main(String[] args) {
-        Game game = AppUtils.startGame();
+        PlayerService playerService = new PlayerService();
+        Game game = AppUtils.startGame(playerService);
 
         AppUtils.runAndCheckErrors(game, () -> {
             do {
