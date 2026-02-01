@@ -15,7 +15,9 @@ import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.dto.ws.WsPlayerGameEvent;
 import org.metacorp.mindbug.dto.ws.WsPlayerGameState;
 import org.metacorp.mindbug.mapper.GameStateMapper;
+import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.service.GameService;
+import org.metacorp.mindbug.utils.AiUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -51,6 +53,7 @@ public class WsGameEndpoint extends WebSocketApplication {
         GameWebSocket socket = (GameWebSocket) rawSocket;
         UUID gameId = socket.getGameId();
         UUID playerId = socket.getPlayerId();
+        boolean isAi = socket.isAI();
 
         if (playerId == null && !sessions.containsKey(gameId)) {
             sessions.put(gameId, new ArrayList<>());
@@ -59,15 +62,22 @@ public class WsGameEndpoint extends WebSocketApplication {
             sessions.get(gameId).add(socket);
             System.out.println("Player " + playerId + " joined game " + gameId);
 
-            GameStateDTO gameStateDTO = GameStateMapper.fromGame(gameService.findById(gameId));
-            WsPlayerGameEvent playerGameEvent = new WsPlayerGameEvent(WsGameEventType.STATE);
-            playerGameEvent.setState(new WsPlayerGameState(gameStateDTO, playerId.equals(gameStateDTO.getPlayer().getUuid())));
-            try {
-                String gameStateData = new ObjectMapper().writeValueAsString(playerGameEvent);
-                System.out.println("--- Message for player " + playerId + " : " + gameStateData);
-                socket.send(gameStateData);
-            } catch (JsonProcessingException e) {
-                throw new RuntimeException(e);
+            if (!isAi) {
+                Game game = gameService.findById(gameId);
+                GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
+                WsPlayerGameEvent playerGameEvent = new WsPlayerGameEvent(WsGameEventType.STATE);
+                playerGameEvent.setState(new WsPlayerGameState(gameStateDTO, playerId.equals(gameStateDTO.getPlayer().getUuid())));
+                try {
+                    String gameStateData = new ObjectMapper().writeValueAsString(playerGameEvent);
+                    System.out.println("--- Message for player " + playerId + " : " + gameStateData);
+                    socket.send(gameStateData);
+                } catch (JsonProcessingException e) {
+                    throw new RuntimeException(e);
+                }
+
+                if (game.getCurrentPlayer().isAI()) {
+                    AiUtils.processGameEvent(game.getCurrentPlayer().getUuid(), new WsGameEvent(WsGameEventType.STATE, gameStateDTO), gameService);
+                }
             }
         }
     }
@@ -89,20 +99,39 @@ public class WsGameEndpoint extends WebSocketApplication {
 
                 for (GameWebSocket playerSocket : sessions.get(gameId)) {
                     if (playerSocket.isAI()) {
-                        iaWebSockets.add(playerSocket);
+                        if (shouldAiPlayerShouldPlay(playerSocket, gameEvent)) {
+                            iaWebSockets.add(playerSocket);
+                        }
                     } else {
                         sendMessageToRealPlayer(playerSocket, gameEvent, mapper);
                     }
                 }
 
                 for (GameWebSocket playerSocket : iaWebSockets) {
-                    processMessage(playerSocket, gameEvent);
+                    AiUtils.processGameEvent(playerSocket.getPlayerId(), gameEvent, gameService);
                 }
             }
         } catch (JsonProcessingException e) {
             //TODO Manage errors
             e.printStackTrace();
         }
+    }
+
+    private boolean shouldAiPlayerShouldPlay(GameWebSocket playerSocket, WsGameEvent gameEvent) {
+        UUID playerId = playerSocket.getPlayerId();
+
+        return switch (gameEvent.getType()) {
+            case NEW_TURN, STATE -> gameEvent.getState().getPlayer().getUuid().equals(playerId);
+            case CARD_PICKED -> gameEvent.getState().getOpponent().getUuid().equals(playerId)
+                    && gameEvent.getState().getOpponent().getMindbugCount() > 0;
+            case CHOICE -> gameEvent.getState().getChoice().getPlayerToChoose().equals(playerId);
+            case WAITING_ATTACK_RESOLUTION -> gameEvent.getState().getOpponent().getUuid().equals(playerId);
+            case FINISHED -> {
+                playerSocket.close();
+                yield false;
+            }
+            default -> false;
+        };
     }
 
     private void sendMessageToRealPlayer(GameWebSocket playerSocket, WsGameEvent gameEvent, ObjectMapper mapper) {
@@ -129,21 +158,24 @@ public class WsGameEndpoint extends WebSocketApplication {
         }
     }
 
-    private void processMessage(GameWebSocket playerSocket, WsGameEvent gameEvent) {
-        // TODO Traiter le message pour l'IA
-    }
-
     @Override
     public void onClose(WebSocket rawSocket, DataFrame frame) {
         GameWebSocket socket = (GameWebSocket) rawSocket;
         UUID gameId = socket.getGameId();
         UUID playerId = socket.getPlayerId();
 
-        if (sessions.containsKey(gameId) && socket.getPlayerId() != null) {
-            sessions.get(gameId).remove(socket);
-            System.out.println("Player " + socket.getPlayerId() + " left game " + gameId);
+        List<GameWebSocket> sessionSockets = sessions.get(gameId);
 
-            gameService.endGame(playerId, gameId);
+        if (sessionSockets != null) {
+            if (!socket.isAI()) {
+                sessionSockets.remove(socket);
+                System.out.println("Player " + socket.getPlayerId() + " left game " + gameId);
+                gameService.endGame(playerId, gameId);
+            }
+
+            if (sessionSockets.isEmpty()) {
+                sessions.remove(gameId);
+            }
         }
 
         super.onClose(socket, frame);

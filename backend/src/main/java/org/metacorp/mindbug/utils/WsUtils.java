@@ -29,7 +29,7 @@ public final class WsUtils {
                 .map(WsUtils::splitQueryParameter)
                 .filter(entry -> entry.getKey().equals(param))
                 .map(AbstractMap.SimpleImmutableEntry::getValue)
-                .findFirst().orElseThrow(() -> new IllegalArgumentException("Missing " + param + " argument"));
+                .findFirst().orElse(null);
     }
 
     /**

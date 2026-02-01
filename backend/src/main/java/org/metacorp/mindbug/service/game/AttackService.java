@@ -74,12 +74,14 @@ public class AttackService {
                         resolveAttack(null, game);
                     } catch (GameStateException e) {
                         // TODO Manage errors
+                        e.printStackTrace();
                     }
                 } else if (game.getForcedTarget() != null) {
                     try {
                         resolveAttack(game.getForcedTarget(), game);
                     } catch (GameStateException e) {
                         // TODO Manage errors
+                        e.printStackTrace();
                     }
                 } else if (attackCard.hasKeyword(CardKeyword.HUNTER)) {
                     game.setChoice(new HunterChoice(attackCard, new HashSet<>(defender.getBoard())));
@@ -89,6 +91,7 @@ public class AttackService {
                         resolveAttack(null, game);
                     } catch (GameStateException e) {
                         // TODO Manage errors
+                        e.printStackTrace();
                     }
                 } else {
                     WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);

@@ -51,7 +51,7 @@ public class GameService {
      */
     public Game createGame(UUID player1Id, UUID player2Id, CardSetName setName) throws UnknownPlayerException {
         Player player1 = new Player(playerService.getPlayer(player1Id));
-        Player player2 = player2Id == null ? new AiPlayer() : new Player(playerService.getPlayer(player2Id));
+        Player player2 = player2Id == null ? new AiPlayer(playerService.getAiPlayer()) : new Player(playerService.getPlayer(player2Id));
 
         Game game = StartService.newGame(player1, player2, setName);
         games.put(game.getUuid(), game);
@@ -77,7 +77,7 @@ public class GameService {
      */
     public void endGame(UUID losingPlayerID, UUID gameId) {
         Game game = findById(gameId);
-        if (game != null) {
+        if (game != null && !game.isFinished()) {
             game.getPlayers().stream()
                     .filter(player -> player.getUuid().equals(losingPlayerID))
                     .findFirst().ifPresent(player -> GameStateService.endGame(player, game));

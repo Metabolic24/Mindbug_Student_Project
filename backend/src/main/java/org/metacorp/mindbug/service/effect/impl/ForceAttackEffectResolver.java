@@ -84,6 +84,7 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
             AttackService.declareAttack(attackingCard, game);
         } catch (GameStateException e) {
             // TODO Manage error
+            e.printStackTrace();
         }
 
         HistoryService.logEffect(game, effect.getType(), effectSource, Collections.singleton(attackingCard));
