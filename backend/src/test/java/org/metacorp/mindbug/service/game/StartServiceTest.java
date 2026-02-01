@@ -13,9 +13,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class StartServiceTest {
 
+    private PlayerService playerService = new PlayerService();
+
     @Test
     public void testStart_nominal() {
-        Game game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        Game game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         assertNotNull(game.getCurrentPlayer());
         assertEquals(2, game.getPlayers().size());
@@ -41,7 +43,7 @@ public class StartServiceTest {
 
     @Test
     public void testStart_evolutionCards() {
-        Game game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")), CardSetName.BEYOND_EVOLUTION);
+        Game game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")), CardSetName.BEYOND_EVOLUTION);
 
         assertNotNull(game.getCurrentPlayer());
         assertEquals(2, game.getPlayers().size());

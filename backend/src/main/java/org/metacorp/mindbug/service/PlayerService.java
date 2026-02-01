@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.service;
 
+import org.jvnet.hk2.annotations.Service;
 import org.metacorp.mindbug.dto.player.PlayerLightDTO;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 
@@ -10,11 +11,12 @@ import java.util.UUID;
 /**
  * Service that manages players
  */
+@Service
 public class PlayerService {
     /**
      * The map that stores players
      */
-    private static final Map<UUID, PlayerLightDTO> PLAYERS = new HashMap<>();
+    private final Map<UUID, PlayerLightDTO> players = new HashMap<>();
 
     /**
      * Create a new player
@@ -22,17 +24,17 @@ public class PlayerService {
      * @param playerName the player name
      * @return the created player as a PlayerLightDTO
      */
-    public static PlayerLightDTO createPlayer(String playerName) {
+    public PlayerLightDTO createPlayer(String playerName) {
         UUID randomUuid;
         do {
             randomUuid = UUID.randomUUID();
-        } while (PLAYERS.containsKey(randomUuid));
+        } while (players.containsKey(randomUuid));
 
         PlayerLightDTO player = new PlayerLightDTO();
         player.setName(playerName);
         player.setUuid(randomUuid);
 
-        PLAYERS.put(randomUuid, player);
+        players.put(randomUuid, player);
 
         return player;
     }
@@ -44,9 +46,9 @@ public class PlayerService {
      * @return the player data if any
      * @throws UnknownPlayerException if no player has been found
      */
-    public static PlayerLightDTO getPlayer(UUID playerId) throws UnknownPlayerException {
-        if (PLAYERS.containsKey(playerId)) {
-            return PLAYERS.get(playerId);
+    public PlayerLightDTO getPlayer(UUID playerId) throws UnknownPlayerException {
+        if (players.containsKey(playerId)) {
+            return players.get(playerId);
         } else {
             throw new UnknownPlayerException(playerId);
         }
