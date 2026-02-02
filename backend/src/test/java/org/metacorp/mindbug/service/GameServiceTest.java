@@ -62,7 +62,7 @@ public class GameServiceTest {
         game = gameService.createGame(loserId, winnerId);
 
         gameService.endGame(loserId, game.getUuid());
-        assertEquals(winnerId, game.getWinner().getUuid());
+        assertEquals(winnerId, game.getWinner().get(0).getUuid());
     }
 
     @Test

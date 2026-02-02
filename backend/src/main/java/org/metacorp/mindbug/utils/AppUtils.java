@@ -153,25 +153,37 @@ public final class AppUtils {
      * @throws GameStateException if an error occurs during the game execution
      */
     public static void resolveAttack(Scanner scanner, Game game) throws GameStateException {
-        Player opponentPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers()).get(0);
+        boolean nobody_already_a_blocker = true;
+        List<Player> ListopponentPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
+        for (Player opponentPlayer : ListopponentPlayer) {
+            if (nobody_already_a_blocker) {
+                Stream<CardInstance> blockersStream = opponentPlayer.getBoard().stream().filter(CardInstance::isAbleToBlock);
+                if (game.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)) {
+                    blockersStream = blockersStream.filter((card) -> card.hasKeyword(CardKeyword.SNEAKY));
+                }
 
-        Stream<CardInstance> blockersStream = opponentPlayer.getBoard().stream().filter(CardInstance::isAbleToBlock);
-        if (game.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)) {
-            blockersStream = blockersStream.filter((card) -> card.hasKeyword(CardKeyword.SNEAKY));
-        }
-
-        List<CardInstance> availableCards = blockersStream.toList();
-        if (availableCards.isEmpty()) {
-            System.out.printf("%s ne peut pas défendre\n", opponentPlayer.getName());
-            AttackService.resolveAttack(null, game);
-        } else {
-            // Select a card and attack with it
-            CardInstance card = (scanner == null) ? getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
-            if (card != null) {
-                System.out.printf("%s défend avec la carte '%s'\n", opponentPlayer.getName(), card.getCard().getName());
-                AttackService.resolveAttack(card, game);
+                List<CardInstance> availableCards = blockersStream.toList();
+                if (availableCards.isEmpty()) {
+                    System.out.printf("%s ne peut pas défendre\n", opponentPlayer.getName());
+                    
+                } else {
+                    // Select a card and attack with it
+                    CardInstance card = (scanner == null) ? getRandomCard(availableCards) : getChosenCard(availableCards, scanner,true);
+                    if (card != null) {
+                        System.out.printf("%s défend avec la carte '%s'\n", opponentPlayer.getName(), card.getCard().getName());
+                        nobody_already_a_blocker=false;
+                        AttackService.resolveAttack(card, game);
+                    }
+                    else {
+                        System.out.printf("%s chosen not block \n", opponentPlayer.getName());
+                    }
+                    
+                }
             }
         }
+        if (nobody_already_a_blocker) AttackService.resolveAttack(null, game);//nobody have block this turn
+        
+    
     }
 
     /**
@@ -260,22 +272,35 @@ public final class AppUtils {
      *
      * @param cards   the card list
      * @param scanner the scanner to be used to read standard input (only for manual mode)
+     * @param pass if  you want to pass the action
      * @return a random card from the list
      */
-    private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner) {
+    private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner, boolean pass) {
         System.out.println("Please choose a card : (only type the number)");
+        if (pass) System.out.println("       (0) - Do nothing");// if you can pass the choice
         int index = 1;
         for (CardInstance card : cards) {
-            System.out.printf("(%d) - %s", index, card.getCard().getName());
+            System.out.printf("       (%d) - %s\n", index, card.getCard().getName());
+            index++;
         }
-
+      
         try {
-            return cards.get(Integer.parseInt(scanner.nextLine()));
+            int choice_number = Integer.parseInt(scanner.nextLine());
+            if (choice_number==0 && pass) {// if you want to pass the choice
+                return null;
+            }
+            else {
+                return cards.get(choice_number-1);
+            }
+            
         } catch (NumberFormatException | IndexOutOfBoundsException e) {
             System.err.println("Choix de carte invalide");
             return null;
         }
     }
+    private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner) {
+        return getChosenCard( cards, scanner, false);
+    } 
 
     /**
      * @return a random boolean value

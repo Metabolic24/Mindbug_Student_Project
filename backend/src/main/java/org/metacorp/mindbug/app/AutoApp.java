@@ -122,7 +122,7 @@ public class AutoApp {
 
                     List<CardInstance> shuffledCards = new ArrayList<>(hunterChoice.getAvailableTargets());
                     Collections.shuffle(shuffledCards);
-
+                    System.out.println("Don't chose : 0");
                     System.out.printf("Cible choisie : %s\n", shuffledCards.getFirst().getCard().getName());
 
                     ChoiceService.resolveChoice(shuffledCards.getFirst().getUuid(), game);

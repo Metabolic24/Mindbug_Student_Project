@@ -1,3 +1,4 @@
+
 package org.metacorp.mindbug.service.effect.impl;
 
 import org.metacorp.mindbug.model.Game;
@@ -94,7 +95,7 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
         }
     }
 
-    @Override
+ 
     public void resolve(Game game, List<CardInstance> chosenTargets) {
         destroyCards(game, chosenTargets);
     }

@@ -62,12 +62,12 @@ public class ManualApp2v2 {
                 AppUtils.declareAttack(scanner, game);
                 resolveChoices(scanner, game);
 
-                // Resolve attack or Frenzy case
+                // Resolve attack or Frenzy casepla
                 while (game.getAttackingCard() != null && !game.isFinished()) {
                     AppUtils.resolveAttack(scanner, game);
                     resolveChoices(scanner, game);
                 }
-
+                
                 turnResolved = true;
                 break;
             case "sumup", "s":
@@ -178,8 +178,9 @@ public class ManualApp2v2 {
                     case HUNTER -> {
                         System.out.println("Résolution d'un choix de cible d'attaque");
                         HunterChoice hunterChoice = (HunterChoice) choice;
-
+                        
                         System.out.println("Veuillez choisir la/les cibles :");
+                        System.out.println("- Don't chose a prey (enter no number)");
                         hunterChoice.getAvailableTargets().forEach(target ->
                             System.out.println(
                                 "- " + target.getCard().getName()
