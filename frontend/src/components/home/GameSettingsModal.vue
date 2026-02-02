@@ -6,6 +6,9 @@ import {getAvailableSets} from "@/shared/RestService";
 let sets: Ref<string[]> = ref([])
 let selectedSets: Ref<string[]> = ref([])
 
+// Declare the variable that will retrieve offline checkbox value
+let offline: Ref<boolean> = ref(false)
+
 // Retrieve the image corresponding to the given set
 function getSetImage(set: string) {
   const url = new URL("@/assets/sets/", import.meta.url)
@@ -43,6 +46,13 @@ const isButtonDisabled = computed(() => {
   return selectedSets.value.length == 0
 })
 
+function onButtonClicked() {
+  emit('button-clicked', {
+    sets: selectedSets.value,
+    offline: offline.value
+  } as GameSettingsInterface)
+}
+
 </script>
 
 <template>
@@ -59,9 +69,13 @@ const isButtonDisabled = computed(() => {
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" @click="emit('button-clicked', selectedSets)" :disabled="isButtonDisabled">
+        <button type="button" class="btn btn-primary" @click="onButtonClicked()" :disabled="isButtonDisabled">
           Search
         </button>
+        <div id="offline_div">
+          <input type="checkbox" v-model="offline" id="offline_checkbox" />
+          <label id="offline_label" for="offline_checkbox">Play Offline</label>
+        </div>
       </div>
     </div>
   </div>
@@ -131,5 +145,14 @@ const isButtonDisabled = computed(() => {
 .set-card img {
   width: 100%;
   height: 100%;
+}
+
+#offline_div {
+  margin-left: 15px;
+}
+
+#offline_label {
+  margin-left: 5px;
+  font-size: 18px;
 }
 </style>
