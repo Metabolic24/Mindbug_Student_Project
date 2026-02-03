@@ -69,7 +69,8 @@ public class WsGameEndpoint extends WebSocketApplication {
                 playerGameEvent.setState(new WsPlayerGameState(gameStateDTO, playerId.equals(gameStateDTO.getPlayer().getUuid())));
                 try {
                     String gameStateData = new ObjectMapper().writeValueAsString(playerGameEvent);
-                    System.out.println("--- Message for player " + playerId + " : " + gameStateData);
+                    // TODO Message de DEBUG
+                    // System.out.println("--- Message for player " + playerId + " : " + gameStateData);
                     socket.send(gameStateData);
                 } catch (JsonProcessingException e) {
                     throw new RuntimeException(e);
@@ -91,7 +92,8 @@ public class WsGameEndpoint extends WebSocketApplication {
             WsGameEvent gameEvent = mapper.readValue(message, new TypeReference<>() {
             });
 
-            System.out.println("--- Message: " + gameEvent);
+            // TODO Message de DEBUG
+            System.out.println("--- Message: " + gameEvent.getType());
 
             UUID gameId = socket.getGameId();
             if (sessions.containsKey(gameId)) {
@@ -164,17 +166,18 @@ public class WsGameEndpoint extends WebSocketApplication {
         UUID gameId = socket.getGameId();
         UUID playerId = socket.getPlayerId();
 
-        List<GameWebSocket> sessionSockets = sessions.get(gameId);
+        if (playerId != null) {
+            List<GameWebSocket> sessionSockets = sessions.get(gameId);
+            if (sessionSockets != null) {
+                if (!socket.isAI()) {
+                    sessionSockets.remove(socket);
+                    System.out.println("Player " + socket.getPlayerId() + " left game " + gameId);
+                    gameService.endGame(playerId, gameId);
+                }
 
-        if (sessionSockets != null) {
-            if (!socket.isAI()) {
-                sessionSockets.remove(socket);
-                System.out.println("Player " + socket.getPlayerId() + " left game " + gameId);
-                gameService.endGame(playerId, gameId);
-            }
-
-            if (sessionSockets.isEmpty()) {
-                sessions.remove(gameId);
+                if (sessionSockets.isEmpty()) {
+                    sessions.remove(gameId);
+                }
             }
         }
 
