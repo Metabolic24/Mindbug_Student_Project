@@ -48,7 +48,8 @@ public class GameWebSocket extends DefaultWebSocket {
             isAI = Boolean.parseBoolean(aiQueryParam);
         }
 
-        System.out.println("--- Connected to Websocket " + this.servletRequest.getRequestURI());
+        // TODO Message de DEBUG (à améliorer)
+        // System.out.println("--- Connected to Websocket " + this.servletRequest.getRequestURI());
 
         super.onConnect();
     }
