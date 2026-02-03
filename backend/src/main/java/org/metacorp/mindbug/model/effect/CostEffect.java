@@ -1,6 +1,5 @@
 package org.metacorp.mindbug.model.effect;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -11,7 +10,6 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-@JsonIgnoreProperties("type")
 public class CostEffect extends Effect {
     public static final String TYPE = "COST";
     /**
@@ -31,8 +29,4 @@ public class CostEffect extends Effect {
      */
     private boolean optional;
 
-    @Override
-    public boolean hasCost() {
-        return true;
-    }
 }

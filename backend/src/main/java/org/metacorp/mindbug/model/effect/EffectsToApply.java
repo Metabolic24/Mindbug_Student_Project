@@ -60,4 +60,11 @@ public class EffectsToApply {
         this(new ArrayList<>(effects), card, timing);
         this.cost = cost;
     }
+
+    /**
+     * @return true if the instance has cost effect(s)
+     */
+    public boolean hasCost() {
+        return this.cost != null && !this.cost.isEmpty();
+    }
 }
