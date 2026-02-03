@@ -6,17 +6,16 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
-import org.metacorp.mindbug.model.effect.CostEffect;
 import org.metacorp.mindbug.model.effect.Effect;
 import org.metacorp.mindbug.model.effect.EffectLocation;
 import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
-import org.metacorp.mindbug.service.effect.impl.CostEffectResolver;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -77,7 +76,7 @@ public class EffectQueueService {
     }
 
     /**
-     * Resolve effect queue<br>
+     * Resolve effect queue
      *
      * @param fromSimultaneousChoice is this method called after a simultaneous choice resolution
      * @param game                   the current game state
@@ -98,17 +97,11 @@ public class EffectQueueService {
 
         // Specific behavior if there are more than one effect to apply in the queue
         if (!fromSimultaneousChoice && !effectQueue.isResolvingEffect() && effectQueue.size() >= 2) {
-            game.setChoice(new SimultaneousEffectsChoice(new HashSet<>(effectQueue)));
-            effectQueue.clear();
-
-            // Send update through WebSocket
-            WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
-            HistoryService.logChoice(game);
-
+            createSimultaneousChoice(game);
             return;
         }
 
-        // Reset this value as it is no more necessary
+        // Reset this value as it would block effect processing
         effectQueue.setResolvingEffect(false);
 
         // Loop over each effect
@@ -116,72 +109,79 @@ public class EffectQueueService {
             EffectsToApply currentEffect = effectQueue.peek();
 
             try {
-                if (currentEffect.getCost() != null && !currentEffect.getCost().isEmpty()) {
+                // Process any cost effect(s) first
+                if (currentEffect.hasCost()) {
                     processEffects(currentEffect.getCost().iterator(), game, currentEffect);
                 }
 
-                boolean costResolved = processEffects(currentEffect.getEffects().iterator(), game, currentEffect);
-                if (!costResolved) {
-                    // Only remove effect from queue after it is applied to avoid loss of data (should not be applied if a CostEffect has just been resolved
-                    effectQueue.remove(currentEffect);
+                // Process the main effects of the EffectsToApply instance
+                processEffects(currentEffect.getEffects().iterator(), game, currentEffect);
 
-                    // If there is many remaining effects, then create a simultaneous choice
-                    if (effectQueue.size() >= 2) {
-                        game.setChoice(new SimultaneousEffectsChoice(new HashSet<>(effectQueue)));
-                        effectQueue.clear();
+                // Only remove effect from queue after it is applied to avoid loss of data (should not be applied if a CostEffect has just been resolved)
+                effectQueue.remove(currentEffect);
 
-                        WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
-                        HistoryService.logChoice(game);
-
-                        return;
-                    }
+                // If there are many remaining effects, and we are not resolving (cost) effects, then create a simultaneous choice
+                if (!effectQueue.isResolvingEffect() && effectQueue.size() >= 2) {
+                    createSimultaneousChoice(game);
+                    return;
                 }
             } catch (EffectQueueStopException e) {
                 // Just exit from the current method
                 return;
             }
+
+            // Reset this value as it would block the next effect(s) processing
+            effectQueue.setResolvingEffect(false);
         }
 
         // Execute the after effect when queue is empty
         game.runAfterEffect();
     }
 
-    private static boolean processEffects(Iterator<? extends Effect> iterator, Game game, EffectsToApply currentEffect)
+    /**
+     * Process a list of effects
+     *
+     * @param iterator      the iterator on the effect list
+     * @param game          the current game state
+     * @param currentEffect the EffectsToApply that is currently processed
+     * @throws EffectQueueStopException if the game is finished or if a choice has been created while trying to resolve an effect
+     */
+    private static void processEffects(Iterator<? extends Effect> iterator, Game game, EffectsToApply currentEffect)
             throws EffectQueueStopException {
+        // Initialize a boolean value that will be true if a CostEffect is resolved so a new EffectsToApply is added to the effect queue
         EffectQueue effectQueue = game.getEffectQueue();
 
-        boolean costResolved = false;
-
-        while (iterator.hasNext() && !costResolved) {
+        // Iterate while there are remaining effects and only if a (cost) effect is being resolved
+        while (iterator.hasNext() && !effectQueue.isResolvingEffect()) {
             // Get the next effect, apply it, then remove it from the list
             Effect effect = iterator.next();
 
-            if (effect.hasCost()) {
-                new CostEffectResolver((CostEffect) effect).apply(game, currentEffect.getCard(), currentEffect.getTiming());
-                costResolved = true;
-            } else {
-                EffectResolver.getResolver((GenericEffect) effect).apply(game, currentEffect.getCard(), currentEffect.getTiming());
+            EffectResolver.getResolver((GenericEffect) effect).apply(game, currentEffect.getCard(), currentEffect.getTiming());
+            // The cost effect resolution may change isResolvingEffect value to true if no choice is created
 
+            // Stop the process if the game is finished
+            if (game.isFinished()) {
+                throw new EffectQueueStopException();
+            }
+
+            // Specific behavior for non COST effect
+            if (effect.getType() != EffectType.COST) {
                 GameStateService.refreshGameState(game);
 
-                // Stop the process if the game is finished
-                if (game.isFinished()) {
-                    throw new EffectQueueStopException();
-                }
-
+                // Send a WS event only if the effect resolution did not create a choice
                 if (game.getChoice() == null) {
                     WebSocketService.sendGameEvent(WsGameEventType.EFFECT_RESOLVED, game);
                 }
             }
 
+            // Remove the current effect from the queue in any case
             iterator.remove();
 
             if (game.getChoice() != null) {
-                if (!iterator.hasNext()) {
+                // If there are no more effects in the list and there is no effects remaining in the EffectsToApply (eq. the current list is not the cost for other effects), then remove the whole EffectsToApply
+                if (!iterator.hasNext() && currentEffect.getEffects().isEmpty()) {
                     effectQueue.remove(currentEffect);
-                }
-
-                if (iterator.hasNext() || effect.hasCost()) {
+                } else if (iterator.hasNext()) {
                     // Update this boolean attribute so next effect resolution won't trigger a simultaneous choice first
                     effectQueue.setResolvingEffect(true);
                 }
@@ -190,10 +190,24 @@ public class EffectQueueService {
                 WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
                 HistoryService.logChoice(game);
 
+                // Raise an exception as we don't want to process the effect queue while a choice is pending
                 throw new EffectQueueStopException();
             }
         }
+    }
 
-        return costResolved;
+    /**
+     * Create a simultaneous choice using the effects contained in the effect queue
+     * @param game the current game state
+     */
+    private static void createSimultaneousChoice(Game game) {
+        EffectQueue effectQueue = game.getEffectQueue();
+
+        game.setChoice(new SimultaneousEffectsChoice(new HashSet<>(effectQueue)));
+        effectQueue.clear();
+
+        // Send update through WebSocket
+        WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+        HistoryService.logChoice(game);
     }
 }

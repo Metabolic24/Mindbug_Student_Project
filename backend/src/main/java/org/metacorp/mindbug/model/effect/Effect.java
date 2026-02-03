@@ -60,10 +60,4 @@ public class Effect {
         location = EffectLocation.BOARD;
     }
 
-    /**
-     * @return true if the effect has a cost (eq. is a CostEffect), false otherwise
-     */
-    public boolean hasCost() {
-        return false;
-    }
 }

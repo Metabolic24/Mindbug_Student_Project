@@ -32,9 +32,9 @@ public class CostEffectResolver extends EffectResolver<CostEffect> implements Re
 
         if (effect.isOptional()) {
             game.setChoice(new BooleanChoice(sourceCard.getOwner(), sourceCard, this));
+        } else {
+            resolve(game);
         }
-
-        resolve(game);
     }
 
     @Override
@@ -47,5 +47,6 @@ public class CostEffectResolver extends EffectResolver<CostEffect> implements Re
     private void resolve(Game game) {
         EffectsToApply costEffectToApply = new EffectsToApply(effect.getCost(), effect.getEffects(), effectSource, timing);
         game.getEffectQueue().push(costEffectToApply);
+        game.getEffectQueue().setResolvingEffect(true);
     }
 }

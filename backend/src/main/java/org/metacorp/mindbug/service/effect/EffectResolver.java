@@ -82,29 +82,26 @@ public abstract class EffectResolver<T extends Effect> {
      * @return the appropriate effect resolver initialized with the input effect
      */
     public static <T extends Effect> EffectResolver<?> getResolver(T effect) {
-        if (effect instanceof CostEffect) {
-            return new CostEffectResolver((CostEffect) effect);
-        } else {
-            return switch (effect.getType()) {
-                case BOUNCE -> new BounceEffectResolver((BounceEffect) effect);
-                case COPY -> new CopyEffectResolver((CopyEffect) effect);
-                case DESTROY -> new DestroyEffectResolver((DestroyEffect) effect);
-                case DISABLE_TIMING -> new DisableTimingEffectResolver((DisableTimingEffect) effect);
-                case DISCARD -> new DiscardEffectResolver((DiscardEffect) effect);
-                case DRAW -> new DrawEffectResolver((DrawEffect) effect);
-                case EVOLVE -> new EvolveEffectResolver((EvolveEffect) effect);
-                case FORCE_ATTACK -> new ForceAttackEffectResolver((ForceAttackEffect) effect);
-                case GAIN -> new GainEffectResolver((GainEffect) effect);
-                case GIVE -> new GiveEffectResolver((GiveEffect) effect);
-                case INFLICT -> new InflictEffectResolver((InflictEffect) effect);
-                case KEYWORD_UP -> new KeywordUpEffectResolver((KeywordUpEffect) effect);
-                case NO_ATTACK -> new NoAttackEffectResolver((NoAttackEffect) effect);
-                case NO_BLOCK -> new NoBlockEffectResolver((NoBlockEffect) effect);
-                case POWER_UP -> new PowerUpEffectResolver((PowerUpEffect) effect);
-                case PROTECTION -> new ProtectionEffectResolver((ProtectionEffect) effect);
-                case REVIVE -> new ReviveEffectResolver((ReviveEffect) effect);
-                case STEAL -> new StealEffectResolver((StealEffect) effect);
-            };
-        }
+        return switch (effect.getType()) {
+            case BOUNCE -> new BounceEffectResolver((BounceEffect) effect);
+            case COST -> new CostEffectResolver((CostEffect) effect);
+            case COPY -> new CopyEffectResolver((CopyEffect) effect);
+            case DESTROY -> new DestroyEffectResolver((DestroyEffect) effect);
+            case DISABLE_TIMING -> new DisableTimingEffectResolver((DisableTimingEffect) effect);
+            case DISCARD -> new DiscardEffectResolver((DiscardEffect) effect);
+            case DRAW -> new DrawEffectResolver((DrawEffect) effect);
+            case EVOLVE -> new EvolveEffectResolver((EvolveEffect) effect);
+            case FORCE_ATTACK -> new ForceAttackEffectResolver((ForceAttackEffect) effect);
+            case GAIN -> new GainEffectResolver((GainEffect) effect);
+            case GIVE -> new GiveEffectResolver((GiveEffect) effect);
+            case INFLICT -> new InflictEffectResolver((InflictEffect) effect);
+            case KEYWORD_UP -> new KeywordUpEffectResolver((KeywordUpEffect) effect);
+            case NO_ATTACK -> new NoAttackEffectResolver((NoAttackEffect) effect);
+            case NO_BLOCK -> new NoBlockEffectResolver((NoBlockEffect) effect);
+            case POWER_UP -> new PowerUpEffectResolver((PowerUpEffect) effect);
+            case PROTECTION -> new ProtectionEffectResolver((ProtectionEffect) effect);
+            case REVIVE -> new ReviveEffectResolver((ReviveEffect) effect);
+            case STEAL -> new StealEffectResolver((StealEffect) effect);
+        };
     }
 }
