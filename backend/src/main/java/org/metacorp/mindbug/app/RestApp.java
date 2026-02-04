@@ -61,7 +61,7 @@ public class RestApp {
         WebSocketEngine.getEngine().register("/ws", "/join", new WsJoinEndpoint(locator.getService(GameService.class)));
     }
 
-    public static void main(String[] args) throws IOException {
+    static void main() throws IOException {
         HttpServer server = null;
 
         try {

@@ -26,7 +26,12 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GameStateMapperTest {
 
@@ -165,7 +170,7 @@ public class GameStateMapperTest {
 
             for (CardDTO playerDTOCard : playerDTOHand) {
                 if (playerCard.getUuid().equals(playerDTOCard.getUuid())) {
-                    compareCard(playerCard,  playerDTOCard);
+                    compareCard(playerCard, playerDTOCard);
 
                     found = true;
                     break;

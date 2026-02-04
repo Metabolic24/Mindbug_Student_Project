@@ -198,6 +198,7 @@ public class EffectQueueService {
 
     /**
      * Create a simultaneous choice using the effects contained in the effect queue
+     *
      * @param game the current game state
      */
     private static void createSimultaneousChoice(Game game) {

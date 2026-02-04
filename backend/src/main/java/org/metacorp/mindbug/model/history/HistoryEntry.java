@@ -19,7 +19,7 @@ public class HistoryEntry {
     private List<HistoryCard> targets;
     private Map<String, Object> data;
 
-    public HistoryEntry(@NonNull HistoryKey key, HistoryCard source,  List<HistoryCard> targets, Map<String, Object> data) {
+    public HistoryEntry(@NonNull HistoryKey key, HistoryCard source, List<HistoryCard> targets, Map<String, Object> data) {
         this.key = key;
         this.source = source;
         this.targets = targets;

@@ -19,6 +19,7 @@ import org.metacorp.mindbug.model.player.Player;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.text.SimpleDateFormat;
@@ -135,6 +136,8 @@ public class HistoryService {
                 ObjectMapper objectMapper = new ObjectMapper();
                 objectMapper.writerWithDefaultPrettyPrinter().writeValue(fileWriter, game.getHistory());
             }
+        } catch (FileAlreadyExistsException e) {
+            // Ignore this error as it may not happen or it is not that important
         } catch (IOException e) {
             e.printStackTrace();
             // TODO Manage errors

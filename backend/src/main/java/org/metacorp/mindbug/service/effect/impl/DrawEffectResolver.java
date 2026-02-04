@@ -4,8 +4,8 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DrawEffect;
-import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.HistoryService;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 
 /**
  * Effect resolver for DrawEffect

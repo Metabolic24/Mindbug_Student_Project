@@ -35,10 +35,9 @@ public class WebSocketService {
             for (Player player : game.getPlayers()) {
                 if (player.isAI()) {
                     // Create a WebSocket so the game is initialized
-                    try (GameWebSocketClient _ = new GameWebSocketClient(GAME_WS_URI + game.getUuid() + "?"
-                            + WsUtils.PLAYER_ID_KEY + "=" + player.getUuid() + "&" + WsUtils.IS_AI_KEY + "=true")) {
-                        game.setWebSocketUp(true);
-                    }
+                    GameWebSocketClient aiSocketClient = new GameWebSocketClient(GAME_WS_URI + game.getUuid() + "?"
+                            + WsUtils.PLAYER_ID_KEY + "=" + player.getUuid() + "&" + WsUtils.IS_AI_KEY + "=true");
+                    aiSocketClient.close();
                 }
             }
         } catch (IOException | URISyntaxException | DeploymentException e) {

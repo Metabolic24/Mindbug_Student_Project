@@ -13,7 +13,9 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.StartService;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ReviveEffectResolverTest {
 
@@ -42,7 +44,7 @@ public class ReviveEffectResolverTest {
 
     @Test
     public void testBasic() {
-        effectResolver.apply(game, randomCard,  timing);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(opponentPlayer.getDiscardPile().contains(randomCard));
 

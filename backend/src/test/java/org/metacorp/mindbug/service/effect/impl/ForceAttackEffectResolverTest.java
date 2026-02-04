@@ -138,7 +138,7 @@ public class ForceAttackEffectResolverTest {
 
     @Test
     public void testApply_nominalPassive() {
-        for (int i=0; i<3; i++) {
+        for (int i = 0; i < 3; i++) {
             CardInstance opponentCard = opponentPlayer.getHand().getFirst();
             opponentCard.getKeywords().remove(CardKeyword.SNEAKY);
 
@@ -166,7 +166,7 @@ public class ForceAttackEffectResolverTest {
 
     @Test
     public void testApply_nominalPassiveWithSingleTarget() {
-        for (int i=0; i<3; i++) {
+        for (int i = 0; i < 3; i++) {
             CardInstance opponentCard = opponentPlayer.getHand().getFirst();
             opponentCard.getKeywords().remove(CardKeyword.SNEAKY);
 
@@ -195,7 +195,7 @@ public class ForceAttackEffectResolverTest {
 
     @Test
     public void testApply_nominalPassiveWithoutKeyword() {
-        for (int i=0; i<3; i++) {
+        for (int i = 0; i < 3; i++) {
             CardInstance opponentCard = opponentPlayer.getHand().getFirst();
             opponentCard.getKeywords().remove(CardKeyword.SNEAKY);
 

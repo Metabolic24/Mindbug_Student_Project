@@ -14,7 +14,10 @@ import org.metacorp.mindbug.service.game.StartService;
 import java.util.HashSet;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FrenzyChoiceTest {
     private Game game;
@@ -49,8 +52,8 @@ public class FrenzyChoiceTest {
         assertTrue(currentCard.isAbleToAttackTwice());
         assertNull(game.getAttackingCard());
 
-        assertEquals(game.getCurrentPlayer(),opponent);
-        assertEquals(2,opponent.getTeam().getLifePoints());
+        assertEquals(game.getCurrentPlayer(), opponent);
+        assertEquals(2, opponent.getTeam().getLifePoints());
     }
 
     @Test

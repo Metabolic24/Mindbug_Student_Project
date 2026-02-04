@@ -48,6 +48,7 @@ public class CopyEffectResolverTest {
 
         randomCard = currentPlayer.getHand().getFirst();
         randomCard.getEffects(timing).clear();
+        randomCard.getEffects(EffectTiming.PASSIVE).clear();
         currentPlayer.addCardToBoard(randomCard);
     }
 

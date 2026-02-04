@@ -5,9 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.app.AutoApp;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.stream.Stream;
 
 import static org.metacorp.mindbug.utils.TestUtils.cleanHistoryDirectory;
 
@@ -25,7 +22,7 @@ public class AutoAppTest {
             System.out.println(" Début de la partie n°" + i);
             System.out.println("========================\n");
 
-            AutoApp.main(null);
+            AutoApp.main();
         }
     }
 }
