@@ -6,9 +6,9 @@ import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.NoAttackEffect;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.game.CardService;
-import org.metacorp.mindbug.service.HistoryService;
 
 import java.util.List;
 

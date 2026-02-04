@@ -6,9 +6,9 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.model.player.Team;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.game.GameStateService;
-import org.metacorp.mindbug.service.HistoryService;
 
 /**
  * Effect resolver for GainEffect

@@ -5,21 +5,24 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
+import org.metacorp.mindbug.model.choice.ChoiceType;
+import org.metacorp.mindbug.model.choice.TargetChoice;
+import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
-import org.metacorp.mindbug.model.effect.EffectTiming;
-import org.metacorp.mindbug.model.choice.ChoiceType;
-import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.effect.impl.InflictEffect;
+import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.StartService;
-import org.metacorp.mindbug.model.player.Player;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DestroyEffectResolverTest {
 
@@ -98,7 +101,7 @@ public class DestroyEffectResolverTest {
         effect.setSelfAllowed(true);
 
         CardInstance otherCard = opponentPlayer.getHand().getFirst();
-        otherCard.setPower(randomCard.getPower()-1);
+        otherCard.setPower(randomCard.getPower() - 1);
         otherCard.setStillTough(false);
         opponentPlayer.addCardToBoard(otherCard);
 

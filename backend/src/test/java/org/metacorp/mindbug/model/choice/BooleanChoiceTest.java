@@ -6,10 +6,11 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.game.StartService;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.service.game.StartService;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class BooleanChoiceTest {
 

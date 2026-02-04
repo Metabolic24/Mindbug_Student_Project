@@ -14,6 +14,7 @@ public class GameStateException extends Exception {
 
     /**
      * Constructor
+     *
      * @param errorMessage the error message
      */
     public GameStateException(String errorMessage) {
@@ -22,7 +23,8 @@ public class GameStateException extends Exception {
 
     /**
      * Constructor
-     * @param errorMessage the error message
+     *
+     * @param errorMessage   the error message
      * @param additionalData additional data to be included in the exception structure
      */
     public GameStateException(String errorMessage, Map<String, Object> additionalData) {
@@ -32,8 +34,9 @@ public class GameStateException extends Exception {
 
     /**
      * Constructor
-     * @param errorMessage the error
-     * @param cause the exception cause
+     *
+     * @param errorMessage   the error
+     * @param cause          the exception cause
      * @param additionalData additional data to be included in the exception structure
      */
     public GameStateException(String errorMessage, Throwable cause, Map<String, Object> additionalData) {

@@ -76,7 +76,7 @@ public class BounceEffectResolverTest {
 
         TargetChoice targetChoice = (TargetChoice) choice;
         assertNotNull(targetChoice.getEffect());
-        assertEquals(effect, ((BounceEffectResolver)targetChoice.getEffect()).getEffect());
+        assertEquals(effect, ((BounceEffectResolver) targetChoice.getEffect()).getEffect());
         assertEquals(randomCard, targetChoice.getEffectSource());
         assertEquals(randomCard.getOwner(), targetChoice.getPlayerToChoose());
         assertEquals(1, targetChoice.getTargetsCount());

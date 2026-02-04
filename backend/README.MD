@@ -2,9 +2,9 @@
 
 ## Quick start :
 
-Import this project as Maven project in your preferred IDE. 
+Import this project as Maven project in your preferred IDE.
 
-## Compile : 
+## Compile :
 
 ```mvn clean install```
 
@@ -12,7 +12,7 @@ Import this project as Maven project in your preferred IDE.
 
 ```mvn test```
 
-## Available executable applications : 
+## Available executable applications :
 
 ### org.metacorp.mindbug.app.ManualApp
 
@@ -26,4 +26,5 @@ This is useful to test a random game execution
 
 ### org.metacorp.mindbug.app.RestApp
 
-This is the main application that exposes a REST API that allows to play the game and also sends WebSocket messages to update game state.
+This is the main application that exposes a REST API that allows to play the game and also sends WebSocket messages to
+update game state.

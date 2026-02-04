@@ -5,7 +5,7 @@ import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
 
 /**
-* Exception mapper for REST APIs
+ * Exception mapper for REST APIs
  */
 @Provider
 public class GameStateExceptionMapper implements ExceptionMapper<GameStateException> {

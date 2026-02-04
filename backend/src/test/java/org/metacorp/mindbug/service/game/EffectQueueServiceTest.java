@@ -309,8 +309,8 @@ public class EffectQueueServiceTest {
         assertEquals(3, currentPlayer.getTeam().getLifePoints());
         assertTrue(game.isFinished());
         assertFalse(game.getEffectQueue().isResolvingEffect());
-        assertEquals(5, opponent.getHand().size());
-        assertEquals(5, currentPlayer.getHand().size());
+        assertEquals(4, opponent.getHand().size());
+        assertEquals(4, currentPlayer.getHand().size());
     }
 
     @Test

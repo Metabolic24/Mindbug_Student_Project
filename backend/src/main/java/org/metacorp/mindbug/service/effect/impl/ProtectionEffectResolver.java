@@ -5,8 +5,8 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.ProtectionEffect;
 import org.metacorp.mindbug.model.modifier.ProtectionModifier;
-import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.HistoryService;
+import org.metacorp.mindbug.service.effect.EffectResolver;
 
 import java.util.Collection;
 import java.util.HashSet;

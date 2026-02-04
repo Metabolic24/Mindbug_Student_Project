@@ -12,6 +12,7 @@ public class TestUtils {
 
     /**
      * Clean the directory containing log files
+     *
      * @throws IOException if an error occurs while listing or deleting files/directories
      */
     public static void cleanHistoryDirectory() throws IOException {

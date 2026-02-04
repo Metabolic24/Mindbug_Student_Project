@@ -18,7 +18,7 @@ public class AutoApp {
 
     private static final Random RND = new Random();
 
-    public static void main(String[] args) {
+    public static void main() {
         PlayerService playerService = new PlayerService();
         Game game = AppUtils.startGame(playerService);
 

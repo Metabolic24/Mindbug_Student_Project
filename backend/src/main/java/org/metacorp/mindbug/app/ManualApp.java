@@ -23,7 +23,7 @@ public class ManualApp {
 
     private static final String AVAILABLE_ACTIONS = "Actions possibles : play, p, attack, a, sumup, s, details, d, stop, exit\n";
 
-    public static void main(String[] args) {
+    static void main() {
         PlayerService playerService = new PlayerService();
         Game game = AppUtils.startGame(playerService);
 

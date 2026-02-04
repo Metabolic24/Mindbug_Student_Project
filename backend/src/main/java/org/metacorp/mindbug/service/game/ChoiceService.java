@@ -19,9 +19,10 @@ public class ChoiceService {
 
     /**
      * Resolve the current game choice using the input data
+     *
      * @param data the data to use to resolve choice
      * @param game the game to update
-     * @param <T> the input data type
+     * @param <T>  the input data type
      * @throws GameStateException if an error occured during choice resolution
      */
     public static <T> void resolveChoice(T data, Game game) throws GameStateException {

@@ -33,6 +33,7 @@ public class PlayerDTO {
 
     /**
      * Clone constructor
+     *
      * @param clone the cloned PlayerDTO
      */
     public PlayerDTO(PlayerDTO clone) {

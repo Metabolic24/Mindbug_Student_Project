@@ -11,9 +11,13 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 public class ProtectionEffect extends GenericEffect {
     public static final String TYPE = "PROTECTION";
 
-    /** Should this effect affects the card itself */
+    /**
+     * Should this effect affects the card itself
+     */
     private boolean self;
 
-    /** Should this effect affects allies */
+    /**
+     * Should this effect affects allies
+     */
     private boolean allies;
 }
