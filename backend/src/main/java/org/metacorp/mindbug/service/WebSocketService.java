@@ -1,21 +1,16 @@
 package org.metacorp.mindbug.service;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ning.http.client.AsyncHttpClient;
-import com.ning.http.client.AsyncHttpClientConfig;
-import com.ning.http.client.ws.WebSocket;
-import com.ning.http.client.ws.WebSocketUpgradeHandler;
+import jakarta.websocket.DeploymentException;
 import org.metacorp.mindbug.dto.ws.WsGameEvent;
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.mapper.GameStateMapper;
 import org.metacorp.mindbug.model.Game;
-import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.WsUtils;
-import org.metacorp.mindbug.websocket.GameWebSocket;
 
-import java.util.concurrent.ExecutionException;
+import java.io.IOException;
+import java.net.URISyntaxException;
 
 /**
  * Service to initialize and send event to a GameWebSocket
@@ -30,21 +25,23 @@ public class WebSocketService {
      * @param game the current game
      */
     public static void initGameChannel(Game game) {
-        // Init WS client
-        try (AsyncHttpClient wsClient = new AsyncHttpClient(new AsyncHttpClientConfig.Builder().build())) {
+        try {
             // Create a WebSocket so the game is initialized
-            wsClient.prepareGet(GAME_WS_URI + game.getUuid()).execute(new WebSocketUpgradeHandler.Builder().build()).get();
-            game.setWebSocketUp(true);
+            try (GameWebSocketClient _ = new GameWebSocketClient(GAME_WS_URI + game.getUuid())) {
+                game.setWebSocketUp(true);
+            }
 
             // Create a WebSocket for each AI player
             for (Player player : game.getPlayers()) {
                 if (player.isAI()) {
-                    wsClient.prepareGet(GAME_WS_URI + game.getUuid() + "?"
-                                    + WsUtils.PLAYER_ID_KEY + "=" + player.getUuid() + "&" + WsUtils.IS_AI_KEY + "=true")
-                            .execute(new WebSocketUpgradeHandler.Builder().build()).get();
+                    // Create a WebSocket so the game is initialized
+                    try (GameWebSocketClient _ = new GameWebSocketClient(GAME_WS_URI + game.getUuid() + "?"
+                            + WsUtils.PLAYER_ID_KEY + "=" + player.getUuid() + "&" + WsUtils.IS_AI_KEY + "=true")) {
+                        game.setWebSocketUp(true);
+                    }
                 }
             }
-        } catch (InterruptedException | ExecutionException e) {
+        } catch (IOException | URISyntaxException | DeploymentException e) {
             System.out.println("Unable to join WS : WS communication is disabled");
             game.setWebSocketUp(false);
         }
@@ -58,12 +55,10 @@ public class WebSocketService {
      */
     public static void sendGameEvent(WsGameEventType eventType, Game game) {
         if (game.isWebSocketUp()) {
-            try (AsyncHttpClient c = new AsyncHttpClient(new AsyncHttpClientConfig.Builder().build())) {
-                WebSocket socket = c.prepareGet(GAME_WS_URI + game.getUuid()).execute(new WebSocketUpgradeHandler.Builder().build()).get();
-
+            try (GameWebSocketClient client = new GameWebSocketClient(GAME_WS_URI + game.getUuid())) {
                 WsGameEvent event = new WsGameEvent(eventType, GameStateMapper.fromGame(game));
-                socket.sendMessage(new ObjectMapper().writeValueAsString(event));
-            } catch (ExecutionException | InterruptedException | JsonProcessingException e) {
+                client.sendMessage(new ObjectMapper().writeValueAsString(event));
+            } catch (IOException | URISyntaxException | DeploymentException e) {
                 // TODO Manage errors
                 throw new RuntimeException(e);
             }

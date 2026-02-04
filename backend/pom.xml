@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <grizzly.version>4.0.2</grizzly.version>
-        <jersey.version>4.0.0</jersey.version>
+        <jersey.version>4.0.2</jersey.version>
         <slf4j.version>2.0.17</slf4j.version>
         <main.class>org.metacorp.mindbug.app.RestApp</main.class>
     </properties>
@@ -100,11 +100,22 @@
             <version>6.1.0</version>
         </dependency>
 
-        <!-- Grizzly Web Socket Client -->
         <dependency>
-            <groupId>org.glassfish.grizzly</groupId>
-            <artifactId>grizzly-http-client</artifactId>
-            <version>1.16</version>
+            <groupId>jakarta.websocket</groupId>
+            <artifactId>jakarta.websocket-api</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.tyrus</groupId>
+            <artifactId>tyrus-client</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.tyrus</groupId>
+            <artifactId>tyrus-container-grizzly-client</artifactId>
+            <version>2.2.2</version>
         </dependency>
 
         <!-- Utile pour enlever un warning sur le serveur WS-->
