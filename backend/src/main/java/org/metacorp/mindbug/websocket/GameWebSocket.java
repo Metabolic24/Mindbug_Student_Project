@@ -1,17 +1,12 @@
 package org.metacorp.mindbug.websocket;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
 import org.glassfish.grizzly.http.HttpRequestPacket;
 import org.glassfish.grizzly.websockets.DefaultWebSocket;
 import org.glassfish.grizzly.websockets.ProtocolHandler;
 import org.glassfish.grizzly.websockets.WebSocketListener;
-import org.metacorp.mindbug.dto.ws.WsGameEvent;
 import org.metacorp.mindbug.utils.WsUtils;
 
-import java.io.IOException;
-import java.util.Arrays;
 import java.util.UUID;
 
 import static org.metacorp.mindbug.utils.WsUtils.IS_AI_KEY;
