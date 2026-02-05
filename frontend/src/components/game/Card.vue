@@ -77,6 +77,8 @@
     position: relative;
     width: 6vw;
     height: 9vw;
+    /*width: 20vw;
+    height: 23vw; */
 
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }

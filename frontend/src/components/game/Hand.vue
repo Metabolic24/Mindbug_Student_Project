@@ -40,9 +40,21 @@ const emit = defineEmits(['card-selected'])
   gap: 5px;
 }
 
+.bottom-card {
+  transform: translateY(+45%);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
 .bottom-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-70px) scale(2);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.bottom-card.selected {
+  transform: translateY(-100px) scale(2.5);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+  z-index: 10;
 }
 
 </style>
