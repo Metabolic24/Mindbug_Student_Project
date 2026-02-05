@@ -208,6 +208,13 @@
                 <main.class>org.metacorp.mindbug.app.ManualApp</main.class>
             </properties>
         </profile>
+
+        <profile>
+            <id>manual2v2</id>
+            <properties>
+                <main.class>org.metacorp.mindbug.app.ManualApp2v2</main.class>
+            </properties>
+        </profile>
     </profiles>
 
     <reporting>
