@@ -81,6 +81,8 @@ img {
   overflow: hidden;
 
   background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+
   cursor: default;
 
   border: 2px solid rgba(0, 0, 0, 0.8);
