@@ -175,7 +175,7 @@ public class PlayCardService {
     private static void askMindbugChoice(int index, List<Player> candidates, CardInstance card, Game game) {
         if (index >= candidates.size()) {
             try {
-                PlayCardService.playCard(game);
+                playCard(game);
             } catch (GameStateException e) {
                 throw new RuntimeException(e);
             }

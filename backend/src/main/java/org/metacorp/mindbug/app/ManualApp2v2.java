@@ -168,6 +168,8 @@ public class ManualApp2v2 {
                         for (String token : tokens) {
                             if (targetChoice.getAvailableTargets().stream().noneMatch(target -> target.getUuid().toString().equals(token))) {
                                 throw new GameStateException("Choix invalide");
+                            } else if (Arrays.stream(tokens).distinct().count() != tokens.length) {
+                                throw new GameStateException("Vous ne pouvez pas choisir la même carte.");
                             }
                         }
 
@@ -246,7 +248,6 @@ public class ManualApp2v2 {
             System.out.println(choice.getPrompt());
             return;
         }
-
         switch (choice.getType()) {
             case SIMULTANEOUS ->
                     System.out.println("Veuillez choisir l'effet à résoudre en premier : (only type the ID)");

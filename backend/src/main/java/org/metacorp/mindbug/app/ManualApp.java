@@ -132,12 +132,12 @@ public class ManualApp {
         if (choice == null) {
             System.err.println("Action invalide");
         } else {
-            String input = scanner.nextLine();
 
             try {
                 switch (choice.getType()) {
                     case SIMULTANEOUS -> {
                         System.out.println("Résolution d'un choix d'ordonnancement d'effets simultanés");
+                        String input = scanner.nextLine();
 
                         SimultaneousEffectsChoice simultaneousEffectsChoice = (SimultaneousEffectsChoice) choice;
                         if (simultaneousEffectsChoice.getEffectsToSort().stream().noneMatch(effectsToApply -> effectsToApply.getCard().getUuid().toString().equals(input))) {
@@ -152,6 +152,17 @@ public class ManualApp {
                         System.out.println("Résolution d'un choix de cible(s)");
 
                         TargetChoice targetChoice = (TargetChoice) choice;
+
+                        System.out.println("Veuillez choisir la/les cibles :");
+                        targetChoice.getAvailableTargets().forEach(target ->
+                            System.out.println(
+                                "- " + target.getCard().getName()
+                                + " (id: " + target.getUuid() + ")"
+                            )
+                        );
+
+                        String input = scanner.nextLine();
+
                         String[] tokens = input.split(" ");
 
                         for (String token : tokens) {
@@ -167,6 +178,17 @@ public class ManualApp {
                     case HUNTER -> {
                         System.out.println("Résolution d'un choix de cible d'attaque");
                         HunterChoice hunterChoice = (HunterChoice) choice;
+                        
+                        System.out.println("Veuillez choisir la/les cibles :");
+                        System.out.println("- Don't chose a prey (enter no number)");
+                        hunterChoice.getAvailableTargets().forEach(target ->
+                            System.out.println(
+                                "- " + target.getCard().getName()
+                                + " (id: " + target.getUuid() + ")"
+                            )
+                        );
+
+                        String input = scanner.nextLine();
 
                         if (input != null && !input.isBlank()) {
                             if (hunterChoice.getAvailableTargets().stream().noneMatch(target -> target.getUuid().toString().equals(input))) {
@@ -182,6 +204,8 @@ public class ManualApp {
                     case FRENZY, BOOLEAN -> {
                         System.out.printf("Résolution d'un choix booléen de type %s\n", choice.getType());
 
+                        String input = scanner.nextLine();
+                        
                         switch ((input.toLowerCase())) {
                             case "y", "o", "yes", "oui" -> {
                                 System.out.println("Valeur choisie : OUI");
