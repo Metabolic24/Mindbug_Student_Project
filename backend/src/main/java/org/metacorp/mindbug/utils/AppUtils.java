@@ -18,6 +18,8 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
+import javax.swing.text.html.StyleSheet.ListPainter;
+
 /**
  * Utility class for ManualApp and AutoApp
  */
@@ -303,6 +305,60 @@ public final class AppUtils {
     private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner) {
         return getChosenCard( cards, scanner, false);
     } 
+
+
+
+    /**
+     * Return the chosen card from the given list
+     *
+     * @param cards   the card list
+     * @param scanner the scanner to be used to read standard input (only for manual mode)
+     * @param pass if  you want to pass the action
+     * @return a random card from the list
+     */
+    public static Player ChosenOpponent(Game game, Player player_who_targets ) {
+      
+        
+        
+        List<Player> listOpponents = player_who_targets.getOpponent(game.getPlayers());
+        if (listOpponents.size()==1 ){
+            return listOpponents.get(0);
+        }
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        
+        while (true) {
+            int index = 1;
+            System.out.printf("\nPlease  %s choose an opponent to target : (only type the number)\n", player_who_targets.getName());
+            for (Player opponent : listOpponents) {
+                System.out.printf("       (%d) - %s\n", index, opponent.getName());
+                index++;
+            }
+            try {
+                int choice_number = Integer.parseInt(scanner.nextLine());
+
+                if  (1<=choice_number && choice_number<=listOpponents.size()) {
+                    scanner =null;
+                    return listOpponents.get(choice_number-1);
+                }
+                else {
+                    System.err.println("Invalid Number");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("You must type a number");
+                
+            }
+            
+           
+        
+        }
+        
+    }
+    
+
+
+    
 
     /**
      * @return a random boolean value

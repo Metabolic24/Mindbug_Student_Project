@@ -1,5 +1,5 @@
 package org.metacorp.mindbug.service.effect.impl;
-
+import org.metacorp.mindbug.utils.AppUtils;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -30,8 +30,8 @@ public class GiveEffectResolver extends EffectResolver<GiveEffect> {
     }
 
     private void giveCard(Game game, CardInstance cardToGive) {
-        Player opponent = cardToGive.getOwner().getOpponent(game.getPlayers()).get(0);
-
+      
+        Player opponent = AppUtils.ChosenOpponent(game,cardToGive.getOwner());
         cardToGive.setOwner(opponent);
         game.getCurrentPlayer().getBoard().remove(cardToGive);
         opponent.getBoard().add(cardToGive);

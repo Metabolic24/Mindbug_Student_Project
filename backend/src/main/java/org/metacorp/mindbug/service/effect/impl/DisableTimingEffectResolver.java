@@ -4,7 +4,9 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DisableTimingEffect;
+import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.EffectResolver;
+import org.metacorp.mindbug.utils.AppUtils;
 
 /**
  * Effect resolver for DisableTimingEffect
@@ -22,6 +24,7 @@ public class DisableTimingEffectResolver extends EffectResolver<DisableTimingEff
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
-        card.getOwner().getOpponent(game.getPlayers()).get(0).disableTiming(effect.getValue());
+        Player opponent = AppUtils.ChosenOpponent( game, card.getOwner());
+        opponent.disableTiming(effect.getValue());
     }
 }

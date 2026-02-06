@@ -10,6 +10,7 @@ import org.metacorp.mindbug.model.effect.steal.StealSource;
 import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.EffectQueueService;
+import org.metacorp.mindbug.utils.AppUtils;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.impl.steal.StealBooleanChoiceResolver;
 import org.metacorp.mindbug.service.effect.impl.steal.TargetChoiceResolver;
@@ -43,13 +44,19 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
         StealSource source = effect.getSource();
 
         Player cardOwner = card.getOwner();
-        Player opponent = cardOwner.getOpponent(game.getPlayers()).get(0);
+        Player opponent =null;
 
         List<CardInstance> availableCards = switch (source) {
-            case DISCARD -> opponent.getDiscardPile();
-            case HAND -> opponent.getHand();
+            case DISCARD -> {
+                opponent = AppUtils.ChosenOpponent(game, card.getOwner());
+                yield opponent.getDiscardPile();
+            }
+            case HAND -> {
+                 opponent = AppUtils.ChosenOpponent(game, card.getOwner());
+                yield opponent.getHand();
+            }
             case SELF_DISCARD -> cardOwner.getDiscardPile();
-            case BOARD -> opponent.getBoard();
+            case BOARD ->  { opponent =  AppUtils.ChosenOpponent(game, card.getOwner()); yield  opponent.getBoard();}
         };
 
         if (min != null) {

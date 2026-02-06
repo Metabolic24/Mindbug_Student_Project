@@ -8,7 +8,7 @@ import org.metacorp.mindbug.model.effect.impl.KeywordUpEffect;
 import org.metacorp.mindbug.model.modifier.KeywordModifier;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.EffectResolver;
-
+import org.metacorp.mindbug.utils.AppUtils;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -35,7 +35,7 @@ public class KeywordUpEffectResolver extends EffectResolver<KeywordUpEffect> {
         Integer alliesCount = effect.getAlliesCount();
 
         Player cardOwner = card.getOwner();
-        Player opponent = cardOwner.getOpponent(game.getPlayers()).get(0);
+        Player opponent = cardOwner.getOpponent(game.getPlayers()).get(0); ;
 
         if ((alone && cardOwner.getBoard().size() != 1) ||
                 (moreAllies && opponent.getBoard().size() >= cardOwner.getBoard().size()) ||

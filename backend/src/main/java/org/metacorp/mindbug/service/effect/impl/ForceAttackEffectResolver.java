@@ -10,6 +10,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.AttackService;
+import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.HashSet;
 import java.util.List;
@@ -34,7 +35,8 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
     public void apply(Game game, CardInstance effectSource, EffectTiming timing) {
         this.effectSource = effectSource;
 
-        Player opponent = effectSource.getOwner().getOpponent(game.getPlayers()).get(0);
+      
+        Player opponent = AppUtils.ChosenOpponent( game, effectSource.getOwner());
 
         if (timing == EffectTiming.PASSIVE) {
             if (effect.getKeyword() != null) {

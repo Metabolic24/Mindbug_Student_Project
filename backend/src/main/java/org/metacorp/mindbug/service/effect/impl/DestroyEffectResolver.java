@@ -11,6 +11,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.CardService;
+import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,22 +44,37 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
         boolean allies = effect.isAllies();
 
         Player currentPlayer = card.getOwner();
-        Player opponent = currentPlayer.getOpponent(game.getPlayers()).get(0);
+       
+        List<CardInstance> listopponentCard= new ArrayList<>();
+        for (Player opponents: currentPlayer.getOpponent(game.getPlayers())) {
+            listopponentCard.addAll(opponents.getBoard());
+        }
 
-        if (effect.isLessAllies() && !(currentPlayer.getBoard().size() < opponent.getBoard().size())) {
+        if (effect.isLessAllies() && !(currentPlayer.getBoard().size() <  listopponentCard.size())) {
             return;
         }
 
         if (effect.isItself()) {
             destroyCards(game, Collections.singletonList(card));
         } else if (effect.isLowest()) {
-            Set<Player> affectedPlayers = selfAllowed ? new HashSet<>(game.getPlayers()) : Collections.singleton(opponent);
-            destroyCards(game, CardService.getLowestCards(affectedPlayers));
-        } else {
+
+                Set<Player> affectedPlayers = new HashSet<>();
+
+                // Tous les ennemis
+                affectedPlayers.addAll(currentPlayer.getOpponent(game.getPlayers()));
+
+                // Optionnellement soi-même
+                if (selfAllowed) {
+                    affectedPlayers.add(currentPlayer);
+                    affectedPlayers.add(currentPlayer.getAllie(game.getPlayers()));
+                }
+
+                destroyCards(game, CardService.getLowestCards(affectedPlayers));
+            } else {
             List<CardInstance> availableCards = new ArrayList<>();
 
             if (!allies) {
-                for (CardInstance currentCard : opponent.getBoard()) {
+                for (CardInstance currentCard :  listopponentCard) {
                     if (min != null && currentCard.getPower() < min ||
                             max != null && currentCard.getPower() > max) {
                         continue;
@@ -70,6 +86,15 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
 
             if (allies || selfAllowed) {
                 for (CardInstance currentCard : card.getOwner().getBoard()) {
+                    if (min != null && currentCard.getPower() < min ||
+                            max != null && currentCard.getPower() > max) {
+                        continue;
+                    }
+
+                    availableCards.add(currentCard);
+                }
+                //if selfAllowed, target my allies
+                for (CardInstance currentCard : card.getOwner().getAllie(game.getPlayers()).getBoard()) {
                     if (min != null && currentCard.getPower() < min ||
                             max != null && currentCard.getPower() > max) {
                         continue;

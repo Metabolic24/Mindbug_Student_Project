@@ -7,7 +7,7 @@ import org.metacorp.mindbug.model.effect.impl.PowerUpEffect;
 import org.metacorp.mindbug.model.modifier.PowerModifier;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.EffectResolver;
-
+import org.metacorp.mindbug.utils.AppUtils;
 /**
  * Effect resolver for PowerUpEffect
  */
@@ -36,7 +36,7 @@ public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
         Integer alliesCount = effect.getAlliesCount();
 
         Player currentPlayer = card.getOwner();
-        Player opponentPlayer = currentPlayer.getOpponent(game.getPlayers()).get(0);
+        Player opponentPlayer =  currentPlayer.getOpponent(game.getPlayers()).get(0);//AppUtils.ChosenOpponent( game, currentPlayer);
         int powerToAdd = value;
 
         if ((lifePoints != null && currentPlayer.getTeam().getLifePoints() > lifePoints) ||

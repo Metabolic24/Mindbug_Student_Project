@@ -1,5 +1,5 @@
 package org.metacorp.mindbug.service.effect.impl;
-
+import org.metacorp.mindbug.utils.AppUtils;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -27,8 +27,9 @@ public class InflictEffectResolver extends EffectResolver<InflictEffect> {
     public void apply(Game game, CardInstance card, EffectTiming timing) {
         boolean self = effect.isSelf();
         boolean allButOne = effect.isAllButOne();
+        
 
-        Player affectedPlayer = self ? card.getOwner() : card.getOwner().getOpponent(game.getPlayers()).get(0);
+        Player affectedPlayer = self ? card.getOwner() :card.getOwner().getOpponent(game.getPlayers()).get(0);
         Team affectedTeam = affectedPlayer.getTeam();
 
         if (allButOne) {
