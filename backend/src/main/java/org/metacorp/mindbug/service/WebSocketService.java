@@ -8,6 +8,8 @@ import org.metacorp.mindbug.mapper.GameStateMapper;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.WsUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -18,6 +20,8 @@ import java.net.URISyntaxException;
 public class WebSocketService {
 
     private static final String GAME_WS_URI = "ws://localhost:8080/ws/game/";
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(WebSocketService.class);
 
     /**
      * Initialize the connection to the GameWebSocket
@@ -41,7 +45,7 @@ public class WebSocketService {
                 }
             }
         } catch (IOException | URISyntaxException | DeploymentException e) {
-            System.out.println("Unable to join WS : WS communication is disabled");
+            LOGGER.warn("Unable to join WS : WS communication is disabled", e);
             game.setWebSocketUp(false);
         }
     }

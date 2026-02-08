@@ -119,7 +119,7 @@
             <version>2.2.2</version>
         </dependency>
 
-        <!-- Utile pour enlever un warning sur le serveur WS-->
+        <!-- Logging dependencies -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -127,9 +127,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.5.27</version>
         </dependency>
 
         <dependency>
