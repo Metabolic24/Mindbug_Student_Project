@@ -15,6 +15,8 @@ import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -33,6 +35,8 @@ import java.util.Map;
  * Service to manage history
  */
 public class HistoryService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(HistoryService.class);
 
     /**
      * Add an entry to the game history
@@ -59,6 +63,10 @@ public class HistoryService {
         log(game, key, source, targets, null);
     }
 
+    /**
+     * Store history data about a game choice
+     * @param game the current game state
+     */
     public static void logChoice(Game game) {
         CardInstance sourceCard = null;
         Collection<CardInstance> targets = null;
@@ -105,14 +113,30 @@ public class HistoryService {
         log(game, HistoryKey.CHOICE, sourceCard, targets, data);
     }
 
+    /**
+     * Store history data about a triggered effect
+     * @param game the current game state
+     * @param type the effect type
+     * @param source the effect source
+     * @param targets the list of targets (if any)
+     */
     public static void logEffect(Game game, EffectType type, CardInstance source, Collection<CardInstance> targets) {
         log(game, HistoryKey.EFFECT, source, targets, Map.of("type", type.name()));
     }
 
+    /**
+     * Store history data about life points change
+     * @param game the current game state
+     * @param player the player whose life points changed
+     */
     public static void logLifeUpdate(Game game, Player player) {
         log(game, HistoryKey.LIFE, null, null, Map.of("player", player.getUuid(), "life", player.getTeam().getLifePoints()));
     }
 
+    /**
+     * Store history data about the initial state of the game
+     * @param game the current game state
+     */
     public static void logStart(Game game) {
         Map<String, Object> data = new HashMap<>();
         for (Player player : game.getPlayers()) {
@@ -122,6 +146,10 @@ public class HistoryService {
         log(game, HistoryKey.START, null, null, data);
     }
 
+    /**
+     * Save history data into a dedicated log file
+     * @param game the current game state
+     */
     public static void saveHistory(Game game) {
         log(game, HistoryKey.END, null, null, Map.of("winner", game.getWinner().getUuid()));
 
@@ -139,8 +167,7 @@ public class HistoryService {
         } catch (FileAlreadyExistsException e) {
             // Ignore this error as it may not happen or it is not that important
         } catch (IOException e) {
-            e.printStackTrace();
-            // TODO Manage errors
+            LOGGER.error("Failed to save History file", e);
         }
     }
 

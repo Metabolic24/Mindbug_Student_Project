@@ -1,6 +1,7 @@
 package org.metacorp.mindbug.app;
 
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.choice.IChoice;
@@ -47,7 +48,7 @@ public class ManualApp {
      * @return true if command has been successfully processed, false otherwise
      * @throws GameStateException if the game reaches an inconsistant state
      */
-    private static boolean resolveTurn(Scanner scanner, Game game) throws GameStateException {
+    private static boolean resolveTurn(Scanner scanner, Game game) throws GameStateException, WebSocketException {
         boolean turnResolved = false;
 
         String input = scanner.nextLine();
@@ -203,7 +204,7 @@ public class ManualApp {
                         // Should not happen
                     }
                 }
-            } catch (GameStateException e) {
+            } catch (GameStateException | WebSocketException e) {
                 System.err.println(e.getMessage());
             }
         }

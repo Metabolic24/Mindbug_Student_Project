@@ -3,6 +3,7 @@ package org.metacorp.mindbug.service.game;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
@@ -36,7 +37,7 @@ public class ActionServiceTest {
     }
 
     @Test
-    public void testResolveAction_nominal() throws GameStateException {
+    public void testResolveAction_nominal() throws GameStateException, WebSocketException {
         GainEffect gainEffect = new GainEffect();
         gainEffect.setType(EffectType.GAIN);
         gainEffect.setValue(2);

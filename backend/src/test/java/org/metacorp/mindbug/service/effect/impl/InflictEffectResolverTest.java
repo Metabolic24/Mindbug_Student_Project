@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.effect.impl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -39,7 +40,7 @@ public class InflictEffectResolverTest {
     }
 
     @Test
-    public void testBasic() {
+    public void testBasic() throws WebSocketException {
         effect.setValue(2);
         effectResolver.apply(game, randomCard, timing);
 
@@ -47,7 +48,7 @@ public class InflictEffectResolverTest {
     }
 
     @Test
-    public void testWithSelfParameter() {
+    public void testWithSelfParameter() throws WebSocketException {
         effect.setValue(4);
         effect.setSelf(true);
         effectResolver.apply(game, randomCard, timing);
@@ -57,7 +58,7 @@ public class InflictEffectResolverTest {
     }
 
     @Test
-    public void testWithAllButOneParameter_nominal() {
+    public void testWithAllButOneParameter_nominal() throws WebSocketException {
         effect.setAllButOne(true);
         effectResolver.apply(game, randomCard, timing);
 
@@ -65,7 +66,7 @@ public class InflictEffectResolverTest {
     }
 
     @Test
-    public void testWithAllButOneParameter_noEffect() {
+    public void testWithAllButOneParameter_noEffect() throws WebSocketException {
         opponentPlayer.getTeam().setLifePoints(1);
 
         effect.setAllButOne(true);
@@ -75,7 +76,7 @@ public class InflictEffectResolverTest {
     }
 
     @Test
-    public void testWithMindbugCount_nominal() {
+    public void testWithMindbugCount_nominal() throws WebSocketException {
         opponentPlayer.setMindBugs(2);
         opponentPlayer.getTeam().setLifePoints(3);
 
@@ -86,7 +87,7 @@ public class InflictEffectResolverTest {
     }
 
     @Test
-    public void testWithMindbugCount_noEffect() {
+    public void testWithMindbugCount_noEffect() throws WebSocketException {
         opponentPlayer.setMindBugs(0);
         opponentPlayer.getTeam().setLifePoints(1);
 

@@ -1,6 +1,7 @@
 package org.metacorp.mindbug.service.effect.impl;
 
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.TargetChoice;
@@ -33,7 +34,7 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
     }
 
     @Override
-    public void apply(Game game, CardInstance effectSource, EffectTiming timing) {
+    public void apply(Game game, CardInstance effectSource, EffectTiming timing) throws GameStateException, WebSocketException {
         this.effectSource = effectSource;
 
         Player opponent = effectSource.getOwner().getOpponent(game.getPlayers());
@@ -71,21 +72,16 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
     }
 
     @Override
-    public void resolve(Game game, List<CardInstance> choiceResolver) {
+    public void resolve(Game game, List<CardInstance> choiceResolver) throws GameStateException, WebSocketException {
         resolve(game, choiceResolver.getFirst());
     }
 
-    private void resolve(Game game, CardInstance attackingCard) {
+    private void resolve(Game game, CardInstance attackingCard) throws GameStateException, WebSocketException {
         if (this.effect.isSingleTarget()) {
             game.setForcedTarget(effectSource);
         }
 
-        try {
-            AttackService.declareAttack(attackingCard, game);
-        } catch (GameStateException e) {
-            // TODO Manage error
-            e.printStackTrace();
-        }
+        AttackService.declareAttack(attackingCard, game);
 
         HistoryService.logEffect(game, effect.getType(), effectSource, Collections.singleton(attackingCard));
     }

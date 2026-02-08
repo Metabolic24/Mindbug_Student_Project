@@ -3,6 +3,7 @@ package org.metacorp.mindbug.model.choice;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -40,7 +41,7 @@ public class FrenzyChoiceTest {
     }
 
     @Test
-    public void testResolve_trueWithEmptyBoard() throws GameStateException {
+    public void testResolve_trueWithEmptyBoard() throws GameStateException, WebSocketException {
         Player opponent = currentPlayer.getOpponent(game.getPlayers());
 
         FrenzyAttackChoice choice = new FrenzyAttackChoice(currentCard);
@@ -57,7 +58,7 @@ public class FrenzyChoiceTest {
     }
 
     @Test
-    public void testResolve_trueWithOpponentCreatures() throws GameStateException {
+    public void testResolve_trueWithOpponentCreatures() throws GameStateException, WebSocketException {
         Player opponent = currentPlayer.getOpponent(game.getPlayers());
         opponent.addCardToBoard(opponent.getHand().getFirst());
 
@@ -72,7 +73,7 @@ public class FrenzyChoiceTest {
     }
 
     @Test
-    public void testResolve_false() throws GameStateException {
+    public void testResolve_false() throws GameStateException, WebSocketException {
         FrenzyAttackChoice choice = new FrenzyAttackChoice(currentCard);
         game.setChoice(choice);
 

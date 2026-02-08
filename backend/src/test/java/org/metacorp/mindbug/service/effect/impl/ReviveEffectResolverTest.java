@@ -2,16 +2,23 @@ package org.metacorp.mindbug.service.effect.impl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectType;
+import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.effect.impl.ReviveEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.StartService;
+import org.metacorp.mindbug.utils.ChoiceUtils;
+
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -34,16 +41,19 @@ public class ReviveEffectResolverTest {
         randomCard = opponentPlayer.getHand().removeFirst();
         opponentPlayer.getDiscardPile().add(randomCard);
 
+        GainEffect gainEffect = new GainEffect();
+        gainEffect.setValue(2);
+        randomCard.getEffects(EffectTiming.PLAY).clear();
+        randomCard.getCard().getEffects().put(EffectTiming.PLAY, List.of(gainEffect));
+
         ReviveEffect effect = new ReviveEffect();
         effect.setType(EffectType.REVIVE);
         effectResolver = new ReviveEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }
 
-    //TODO Test choice resolution
-
     @Test
-    public void testBasic() {
+    public void testApply_nominal() {
         effectResolver.apply(game, randomCard, timing);
 
         assertTrue(opponentPlayer.getDiscardPile().contains(randomCard));
@@ -56,5 +66,26 @@ public class ReviveEffectResolverTest {
         assertEquals(effectResolver, booleanChoice.getEffectResolver());
         assertEquals(randomCard, booleanChoice.getSourceCard());
         assertEquals(opponentPlayer, booleanChoice.getPlayerToChoose());
+        assertTrue(game.getEffectQueue().isEmpty());
+    }
+
+    @Test
+    public void testResolve_true() throws GameStateException, WebSocketException {
+        effectResolver.apply(game, randomCard, timing);
+        ((BooleanChoice) game.getChoice()).resolve(true, game);
+
+        assertTrue(opponentPlayer.getDiscardPile().isEmpty());
+        assertTrue(opponentPlayer.getBoard().contains(randomCard));
+        assertEquals(1, game.getEffectQueue().size());
+    }
+
+    @Test
+    public void testResolve_false() throws GameStateException, WebSocketException {
+        effectResolver.apply(game, randomCard, timing);
+        ((BooleanChoice) game.getChoice()).resolve(false, game);
+
+        assertTrue(opponentPlayer.getBoard().isEmpty());
+        assertTrue(opponentPlayer.getDiscardPile().contains(randomCard));
+        assertTrue(game.getEffectQueue().isEmpty());
     }
 }

@@ -2,6 +2,7 @@ package org.metacorp.mindbug.model.choice;
 
 import lombok.Data;
 import lombok.NonNull;
+import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.utils.ChoiceUtils;
@@ -15,7 +16,7 @@ public class SimultaneousEffectsChoice implements IChoice<UUID> {
     private Set<EffectsToApply> effectsToSort;
 
     @Override
-    public void resolve(UUID cardId, Game game) {
+    public void resolve(UUID cardId, Game game) throws GameStateException {
         ChoiceUtils.resolveSimultaneousChoice(cardId, this, game);
     }
 

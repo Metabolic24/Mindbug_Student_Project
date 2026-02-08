@@ -2,8 +2,11 @@ package org.metacorp.mindbug.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.IChoice;
+import org.metacorp.mindbug.model.effect.AfterEffectInterface;
 import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.player.Player;
@@ -36,7 +39,7 @@ public class Game {
 
     private final EffectQueue effectQueue;
     private IChoice<?> choice;
-    private Runnable afterEffect;
+    private AfterEffectInterface afterEffect;
 
     private boolean forcedAttack;
     private boolean webSocketUp;
@@ -65,8 +68,8 @@ public class Game {
         return winner != null;
     }
 
-    public void runAfterEffect() {
-        Runnable oldAfterEffect = afterEffect;
+    public void runAfterEffect() throws GameStateException, WebSocketException {
+        AfterEffectInterface oldAfterEffect = afterEffect;
 
         if (afterEffect != null) {
             afterEffect.run();

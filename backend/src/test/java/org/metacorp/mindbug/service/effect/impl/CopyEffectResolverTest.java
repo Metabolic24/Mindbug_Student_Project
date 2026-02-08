@@ -75,7 +75,6 @@ public class CopyEffectResolverTest {
         effect.setTiming(timing);
         effectResolver.apply(game, randomCard, timing);
 
-        // TODO Il y a un cas où c'est égal à 0 ici (peut-être un simultaneous choice)
         assertEquals(1, game.getEffectQueue().size());
 
         EffectsToApply effectsToApply = game.getEffectQueue().poll();

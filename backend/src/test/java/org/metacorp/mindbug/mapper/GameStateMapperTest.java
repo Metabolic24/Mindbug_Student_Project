@@ -10,6 +10,7 @@ import org.metacorp.mindbug.dto.PlayerDTO;
 import org.metacorp.mindbug.dto.choice.TargetChoiceDTO;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.ChoiceType;
@@ -66,7 +67,7 @@ public class GameStateMapperTest {
     }
 
     @Test
-    public void fromGame_playedCard() throws GameStateException {
+    public void fromGame_playedCard() throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
         CardInstance playedCard = currentPlayer.getHand().getFirst();
         PlayCardService.pickCard(playedCard, game);
@@ -88,7 +89,7 @@ public class GameStateMapperTest {
     }
 
     @Test
-    public void fromGame_endedGame() {
+    public void fromGame_endedGame() throws WebSocketException {
         gameService.endGame(game.getCurrentPlayer().getUuid(), game.getUuid());
 
         GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);

@@ -20,6 +20,7 @@ import org.metacorp.mindbug.dto.rest.choice.MultipleTargetAnswerDTO;
 import org.metacorp.mindbug.dto.rest.choice.SingleTargetAnswerDTO;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.mapper.GameStateMapper;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -31,6 +32,8 @@ import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.PlayCardService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -41,6 +44,8 @@ import java.util.UUID;
  */
 @Path("/game")
 public class GameController {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(GameController.class);
 
     @Inject
     private GameService gameService;
@@ -83,7 +88,11 @@ public class GameController {
                 .filter(player -> player.getUuid().equals(body.getPlayerId()))
                 .findFirst();
         if (playerOpt.isPresent()) {
-            GameStateService.endGame(playerOpt.get(), game);
+            try {
+                GameStateService.endGame(playerOpt.get(), game);
+            } catch (WebSocketException e) {
+                LOGGER.warn("Failed to send WebSocket message after surrendering", e);
+            }
         } else {
             return Response.status(400).entity("Unknown player ID").build();
         }
@@ -97,10 +106,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/pick")
-    public Response pick(PickDTO body) throws GameStateException {
+    public Response pick(PickDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getCardId() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -128,10 +138,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/play")
-    public Response play(PlayDTO body) throws GameStateException {
+    public Response play(PlayDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -163,10 +174,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/action")
-    public Response action(ActionDTO body) throws GameStateException {
+    public Response action(ActionDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getCardId() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -194,10 +206,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/attack")
-    public Response declareAttack(DeclareAttackDTO body) throws GameStateException {
+    public Response declareAttack(DeclareAttackDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getAttackingCardId() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -225,10 +238,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @PUT
     @Path("/attack")
-    public Response resolveAttack(ResolveAttackDTO body) throws GameStateException {
+    public Response resolveAttack(ResolveAttackDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null
                 || (body.getDefendingPlayerId() != null && body.getDefenseCardId() == null)
                 || (body.getDefendingPlayerId() == null && body.getDefenseCardId() != null)) {
@@ -266,10 +280,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/choice/boolean")
-    public Response resolveBoolean(BooleanAnswerDTO body) throws GameStateException {
+    public Response resolveBoolean(BooleanAnswerDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getOk() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -293,10 +308,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/choice/single")
-    public Response resolveSingleTargetChoice(SingleTargetAnswerDTO body) throws GameStateException {
+    public Response resolveSingleTargetChoice(SingleTargetAnswerDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -322,10 +338,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/choice/target")
-    public Response resolveTargetChoice(MultipleTargetAnswerDTO body) throws GameStateException {
+    public Response resolveTargetChoice(MultipleTargetAnswerDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getTargets() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }

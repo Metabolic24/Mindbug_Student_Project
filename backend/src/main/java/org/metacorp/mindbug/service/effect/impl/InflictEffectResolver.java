@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.service.effect.impl;
 
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -25,7 +26,7 @@ public class InflictEffectResolver extends EffectResolver<InflictEffect> {
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
+    public void apply(Game game, CardInstance card, EffectTiming timing) throws WebSocketException {
         this.effectSource = card;
 
         boolean self = effect.isSelf();

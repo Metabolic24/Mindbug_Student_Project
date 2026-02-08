@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.effect.impl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -39,7 +40,7 @@ public class GainEffectResolverTest {
     }
 
     @Test
-    public void testBasic() {
+    public void testBasic() throws WebSocketException {
         effect.setValue(2);
         effectResolver.apply(game, randomCard, timing);
 
@@ -47,7 +48,7 @@ public class GainEffectResolverTest {
     }
 
     @Test
-    public void testWithEqualParameter_noEffect() {
+    public void testWithEqualParameter_noEffect() throws WebSocketException {
         effect.setEqual(true);
         effectResolver.apply(game, randomCard, timing);
 
@@ -55,7 +56,7 @@ public class GainEffectResolverTest {
     }
 
     @Test
-    public void testWithEqualParameter_moreLifePoints() {
+    public void testWithEqualParameter_moreLifePoints() throws WebSocketException {
         opponentPlayer.getTeam().setLifePoints(5);
 
         effect.setEqual(true);
@@ -65,7 +66,7 @@ public class GainEffectResolverTest {
     }
 
     @Test
-    public void testWithEqualParameter_lessLifePoints() {
+    public void testWithEqualParameter_lessLifePoints() throws WebSocketException {
         opponentPlayer.getTeam().setLifePoints(1);
 
         effect.setEqual(true);
