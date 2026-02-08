@@ -7,6 +7,8 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.utils.CardUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,6 +18,8 @@ import java.util.List;
  * Utility service that starts a new game
  */
 public class StartService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(StartService.class);
 
     // Not to be used
     private StartService() {
@@ -70,7 +74,11 @@ public class StartService {
         return game;
     }
 
-    // Fill the hand and draw pile of the given player
+    /**
+     * Fill the hand and draw pile of the given player
+     * @param player the player to be initialized
+     * @param cards the remaining cards of the played set
+     */
     private static void initDrawAndHand(Player player, List<CardInstance> cards) {
         List<CardInstance> hand = player.getHand();
         List<CardInstance> drawPile = player.getDrawPile();
@@ -86,9 +94,13 @@ public class StartService {
         }
     }
 
-    // Return the first player of the game (should only be used once per game)
+    /**
+     * Get the first player of the game (should only be used once per game)
+     * @param game the current game state
+     * @return the first Player
+     */
     private static Player getFirstPlayer(Game game) {
-        System.out.println("Calcul du premier joueur :");
+        LOGGER.info("Calculating first player...");
 
         List<Player> validPlayers = new ArrayList<>(game.getPlayers());
         while (validPlayers.size() != 1) {
@@ -98,7 +110,7 @@ public class StartService {
             for (Player player : validPlayers) {
                 // Get a random card from the remaining cards
                 CardInstance bannedCard = banCard(game);
-                System.out.printf("\t%s %s %d\n", player.getName(), bannedCard.getCard().getName(), bannedCard.getPower());
+                LOGGER.info("Banned card for {} : {} ({})", player.getName(), bannedCard.getCard().getName(), bannedCard.getPower());
 
                 if (bannedCard.getPower() < higherPower) {
                     // Current player will not be the first one
@@ -115,12 +127,17 @@ public class StartService {
             validPlayers = nextPlayers;
         }
 
-        System.out.printf(" -> %s sera le premier joueur\n", validPlayers.getFirst().getName());
+        Player firstPlayer = validPlayers.getFirst();
+        LOGGER.info("First player will be {} ({})", firstPlayer.getName(), firstPlayer.getUuid());
 
-        return validPlayers.getFirst();
+        return firstPlayer;
     }
 
-    // Randomly choose a card and exclude it from the current game
+    /**
+     * Randomly choose a card and exclude it from the current game
+     * @param game the current game state
+     * @return the banned card
+     */
     private static CardInstance banCard(Game game) {
         CardInstance chosenCard = game.getCards().removeFirst();
         game.getBannedCards().add(chosenCard);

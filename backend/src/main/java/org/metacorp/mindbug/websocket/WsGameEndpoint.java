@@ -18,6 +18,8 @@ import org.metacorp.mindbug.mapper.GameStateMapper;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.utils.AiUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,6 +29,8 @@ import java.util.Map;
 import java.util.UUID;
 
 public class WsGameEndpoint extends WebSocketApplication {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(WsGameEndpoint.class);
 
     private final Map<UUID, List<GameWebSocket>> sessions = new HashMap<>();
 
@@ -57,10 +61,10 @@ public class WsGameEndpoint extends WebSocketApplication {
 
         if (playerId == null && !sessions.containsKey(gameId)) {
             sessions.put(gameId, new ArrayList<>());
-            System.out.println("Websocket created for game " + gameId);
+            LOGGER.debug("Websocket created for game {}", gameId);
         } else if (playerId != null && sessions.containsKey(gameId)) {
             sessions.get(gameId).add(socket);
-            System.out.println("Player " + playerId + " joined game " + gameId);
+            LOGGER.debug("Player {} joined game {}", playerId, gameId);
 
             if (!isAi) {
                 Game game = gameService.findById(gameId);
@@ -69,10 +73,11 @@ public class WsGameEndpoint extends WebSocketApplication {
                 playerGameEvent.setState(new WsPlayerGameState(gameStateDTO, playerId.equals(gameStateDTO.getPlayer().getUuid())));
                 try {
                     String gameStateData = new ObjectMapper().writeValueAsString(playerGameEvent);
-                    // TODO Message de DEBUG
-                    // System.out.println("--- Message for player " + playerId + " : " + gameStateData);
+                    LOGGER.debug("Sending START game state to {}", playerId);
                     socket.send(gameStateData);
                 } catch (JsonProcessingException e) {
+                    // Should not happen
+                    LOGGER.error("Failed to send START game state to {}", playerId, e);
                     throw new RuntimeException(e);
                 }
 
@@ -92,8 +97,7 @@ public class WsGameEndpoint extends WebSocketApplication {
             WsGameEvent gameEvent = mapper.readValue(message, new TypeReference<>() {
             });
 
-            // TODO Message de DEBUG
-            System.out.println("--- Message: " + gameEvent.getType());
+            LOGGER.debug("Game event received : {}", gameEvent.getType());
 
             UUID gameId = socket.getGameId();
             if (sessions.containsKey(gameId)) {
@@ -114,8 +118,8 @@ public class WsGameEndpoint extends WebSocketApplication {
                 }
             }
         } catch (JsonProcessingException e) {
-            //TODO Manage errors
-            e.printStackTrace();
+            // Should not happen
+            LOGGER.warn("Unable to serialize/deserialize game event", e);
         }
     }
 
@@ -136,28 +140,24 @@ public class WsGameEndpoint extends WebSocketApplication {
         };
     }
 
-    private void sendMessageToRealPlayer(GameWebSocket playerSocket, WsGameEvent gameEvent, ObjectMapper mapper) {
+    private void sendMessageToRealPlayer(GameWebSocket playerSocket, WsGameEvent gameEvent, ObjectMapper mapper) throws JsonProcessingException {
         WsPlayerGameEvent playerGameEvent = new WsPlayerGameEvent(gameEvent.getType());
         GameStateDTO gameState = gameEvent.getState();
         String eventData;
 
-        try {
-            UUID playerId = playerSocket.getPlayerId();
-            if (playerId.equals(gameState.getPlayer().getUuid())) {
-                playerGameEvent.setState(new WsPlayerGameState(gameState, true));
-                eventData = mapper.writeValueAsString(playerGameEvent);
-            } else if (playerId.equals(gameState.getOpponent().getUuid())) {
-                playerGameEvent.setState(new WsPlayerGameState(gameState, false));
-                eventData = mapper.writeValueAsString(playerGameEvent);
-            } else {
-                // Should not happen
-                eventData = "Unexpected data";
-            }
-
-            playerSocket.send(eventData);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        UUID playerId = playerSocket.getPlayerId();
+        if (playerId.equals(gameState.getPlayer().getUuid())) {
+            playerGameEvent.setState(new WsPlayerGameState(gameState, true));
+            eventData = mapper.writeValueAsString(playerGameEvent);
+        } else if (playerId.equals(gameState.getOpponent().getUuid())) {
+            playerGameEvent.setState(new WsPlayerGameState(gameState, false));
+            eventData = mapper.writeValueAsString(playerGameEvent);
+        } else {
+            // Should not happen
+            eventData = "Unexpected data";
         }
+
+        playerSocket.send(eventData);
     }
 
     @Override
