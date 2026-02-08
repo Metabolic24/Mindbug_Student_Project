@@ -2,6 +2,7 @@ package org.metacorp.mindbug.model.choice;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -35,7 +36,7 @@ public class SimultaneousChoiceTest {
     }
 
     @Test
-    public void testResolve() {
+    public void testResolve() throws GameStateException {
         GainEffect attackEffect = new GainEffect();
         CardInstance attackCard = currentPlayer.getHand().removeFirst();
         attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(attackEffect));

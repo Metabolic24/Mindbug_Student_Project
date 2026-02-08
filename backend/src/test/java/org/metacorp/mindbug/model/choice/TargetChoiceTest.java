@@ -2,6 +2,8 @@ package org.metacorp.mindbug.model.choice;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -31,7 +33,7 @@ public class TargetChoiceTest {
         game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponent = currentPlayer.getOpponent(game.getPlayers());
-        effect = (game, choiceResolver) -> {
+        effect = (_, choiceResolver) -> {
             for (CardInstance card : choiceResolver) {
                 card.getOwner().addCardToDiscardPile(card);
             }
@@ -39,7 +41,7 @@ public class TargetChoiceTest {
     }
 
     @Test
-    public void testResolve() {
+    public void testResolve() throws GameStateException, WebSocketException {
         DestroyEffect destroyEffect = new DestroyEffect();
         CardInstance currentCard = currentPlayer.getHand().removeFirst();
         currentCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(destroyEffect));

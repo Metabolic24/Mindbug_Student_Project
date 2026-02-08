@@ -1,6 +1,7 @@
 package org.metacorp.mindbug.app;
 
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
@@ -35,7 +36,7 @@ public class AutoApp {
      * @param game the current game
      * @throws GameStateException if the game reaches an inconsistant state
      */
-    private static void resolveTurn(Game game) throws GameStateException {
+    private static void resolveTurn(Game game) throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
         List<CardInstance> availableCards = currentPlayer.getBoard().stream().filter(CardInstance::isAbleToAttack).toList();
 
@@ -66,7 +67,7 @@ public class AutoApp {
      *
      * @param game the current game
      */
-    private static void resolveChoices(Game game) throws GameStateException {
+    private static void resolveChoices(Game game) throws GameStateException, WebSocketException {
         while (game.getChoice() != null && !game.isFinished()) {
             AiUtils.resolveChoice(game);
         }

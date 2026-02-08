@@ -2,6 +2,7 @@ package org.metacorp.mindbug.utils;
 
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -26,18 +27,19 @@ public final class ChoiceUtils {
 
     }
 
-    public static void resolveBooleanChoice(Boolean choiceData, BooleanChoice choice, Game game) {
+    public static void resolveBooleanChoice(Boolean choiceData, BooleanChoice choice, Game game) throws GameStateException, WebSocketException {
         // First reset choice so it doesn't block next steps
         game.setChoice(null);
 
         if (choice != null) {
             choice.getEffectResolver().resolve(game, choiceData);
         } else {
-            //TODO Manage error
+            // Should not happen
+            throw new GameStateException("No boolean choice to resolve");
         }
     }
 
-    public static void resolveFrenzyChoice(Boolean attackAgain, FrenzyAttackChoice choice, Game game) throws GameStateException {
+    public static void resolveFrenzyChoice(Boolean attackAgain, FrenzyAttackChoice choice, Game game) throws GameStateException, WebSocketException {
         // First reset the choice in any case (so it does not block the next steps)
         game.setChoice(null);
 
@@ -51,10 +53,9 @@ public final class ChoiceUtils {
         }
     }
 
-    public static void resolveSimultaneousChoice(UUID cardId, SimultaneousEffectsChoice choice, Game game) {
+    public static void resolveSimultaneousChoice(UUID cardId, SimultaneousEffectsChoice choice, Game game) throws GameStateException {
         if (cardId == null) {
-            //TODO Raise an error
-            return;
+            throw new GameStateException("Unable to resolve simultaneous choice due to missing card ID");
         }
 
         Set<EffectsToApply> effectsToSort = choice.getEffectsToSort();
@@ -73,10 +74,9 @@ public final class ChoiceUtils {
         game.setChoice(null);
     }
 
-    public static void resolveTargetChoice(List<UUID> chosenTargetIds, TargetChoice choice, Game game) {
+    public static void resolveTargetChoice(List<UUID> chosenTargetIds, TargetChoice choice, Game game) throws GameStateException, WebSocketException {
         if (!choice.isOptional() && (chosenTargetIds == null || chosenTargetIds.size() != choice.getTargetsCount())) {
-            //TODO Raise an error or log message
-            return;
+            throw new GameStateException("Unable to resolve target choice due to missing targets");
         }
 
         // Check that there are chosen targets (can be null/empty if choice is optional)
@@ -85,7 +85,7 @@ public final class ChoiceUtils {
                     .filter(target -> chosenTargetIds.contains(target.getUuid()))
                     .toList();
             if (chosenTargets.size() != chosenTargetIds.size()) {
-                //TODO Raise an error or log message
+                throw new GameStateException("Unable to resolve target choice due to invalid targets");
             }
 
             choice.getEffect().resolve(game, chosenTargets);
@@ -97,7 +97,7 @@ public final class ChoiceUtils {
         }
     }
 
-    public static void resolveHunterChoice(UUID chosenTargetId, HunterChoice choice, Game game) throws GameStateException {
+    public static void resolveHunterChoice(UUID chosenTargetId, HunterChoice choice, Game game) throws GameStateException, WebSocketException {
         // First reset choice as attack resolution need to have no current choice
         game.setChoice(null);
 
@@ -106,7 +106,7 @@ public final class ChoiceUtils {
                     .filter(target -> chosenTargetId.equals(target.getUuid()))
                     .findFirst();
             if (chosenTarget.isEmpty()) {
-                //TODO Raise an error or log message
+                throw new GameStateException("Unable to resolve hunter choice due to invalid target");
             } else {
                 AttackService.resolveAttack(chosenTarget.get(), game);
             }

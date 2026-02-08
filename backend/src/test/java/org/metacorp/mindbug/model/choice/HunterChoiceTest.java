@@ -3,6 +3,7 @@ package org.metacorp.mindbug.model.choice;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -59,7 +60,7 @@ public class HunterChoiceTest {
     }
 
     @Test
-    public void testResolve_ignoreHunter() throws GameStateException {
+    public void testResolve_ignoreHunter() throws GameStateException, WebSocketException {
         HunterChoice choice = new HunterChoice(currentCard, new HashSet<>(opponent.getBoard()));
         game.setChoice(choice);
 
@@ -73,7 +74,7 @@ public class HunterChoiceTest {
     }
 
     @Test
-    public void testResolve_nominal() throws GameStateException {
+    public void testResolve_nominal() throws GameStateException, WebSocketException {
         HunterChoice choice = new HunterChoice(currentCard, new HashSet<>(opponent.getBoard()));
         game.setChoice(choice);
 

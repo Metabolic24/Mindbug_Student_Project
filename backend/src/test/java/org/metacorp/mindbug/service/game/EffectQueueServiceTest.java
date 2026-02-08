@@ -3,6 +3,7 @@ package org.metacorp.mindbug.service.game;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.ChoiceType;
@@ -95,7 +96,7 @@ public class EffectQueueServiceTest {
     }
 
     @Test
-    public void testResolveEffectQueue_empty() throws GameStateException {
+    public void testResolveEffectQueue_empty() throws GameStateException, WebSocketException {
         EffectQueueService.resolveEffectQueue(false, game);
 
         assertNull(game.getChoice());
@@ -105,7 +106,7 @@ public class EffectQueueServiceTest {
     }
 
     @Test
-    public void testResolveEffectQueue_emptyWithAfterEffect() throws GameStateException {
+    public void testResolveEffectQueue_emptyWithAfterEffect() throws GameStateException, WebSocketException {
         // Add an after effect that changes the current player
         Player currentPlayer = game.getCurrentPlayer();
         game.setAfterEffect(() -> game.setCurrentPlayer(game.getCurrentPlayer().getOpponent(game.getPlayers())));
@@ -120,7 +121,7 @@ public class EffectQueueServiceTest {
     }
 
     @Test
-    public void testResolveEffectQueue_choice() {
+    public void testResolveEffectQueue_choice() throws WebSocketException {
         game.setChoice(new FrenzyAttackChoice(card));
 
         try {
@@ -133,7 +134,7 @@ public class EffectQueueServiceTest {
     }
 
     @Test
-    public void testResolveEffectQueue_multiple() throws GameStateException {
+    public void testResolveEffectQueue_multiple() throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
         CardInstance otherCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(otherCard);
@@ -171,7 +172,7 @@ public class EffectQueueServiceTest {
     }
 
     @Test
-    public void testResolveEffectQueue_nominalSingle() throws GameStateException {
+    public void testResolveEffectQueue_nominalSingle() throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
 
         InflictEffect inflictEffect = new InflictEffect();
@@ -194,7 +195,7 @@ public class EffectQueueServiceTest {
     }
 
     @Test
-    public void testResolveEffectQueue_twoEffectsAfterChoice() throws GameStateException {
+    public void testResolveEffectQueue_twoEffectsAfterChoice() throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
         CardInstance otherCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(otherCard);
@@ -232,7 +233,7 @@ public class EffectQueueServiceTest {
     }
 
     @Test
-    public void testResolveEffectQueue_twoEffectsWhileResolvingEffect() throws GameStateException {
+    public void testResolveEffectQueue_twoEffectsWhileResolvingEffect() throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
         CardInstance otherCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(otherCard);
@@ -272,7 +273,7 @@ public class EffectQueueServiceTest {
     }
 
     @Test
-    public void testResolveEffectQueue_twoEffectsButFirstEndsGame() throws GameStateException {
+    public void testResolveEffectQueue_twoEffectsButFirstEndsGame() throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
         Player opponent = currentPlayer.getOpponent(game.getPlayers());
 
@@ -314,7 +315,7 @@ public class EffectQueueServiceTest {
     }
 
     @Test
-    public void testResolveEffectQueue_fourEffectsWithDoubleOne() throws GameStateException {
+    public void testResolveEffectQueue_fourEffectsWithDoubleOne() throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
         Player opponent = currentPlayer.getOpponent(game.getPlayers());
 
@@ -400,7 +401,7 @@ public class EffectQueueServiceTest {
     }
 
     @Test
-    public void testResolveEffectQueue_twoEffectsWithDoubleOneAndChoice() throws GameStateException {
+    public void testResolveEffectQueue_twoEffectsWithDoubleOneAndChoice() throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
         Player opponent = currentPlayer.getOpponent(game.getPlayers());
 
@@ -460,7 +461,7 @@ public class EffectQueueServiceTest {
     }
 
     @Test
-    public void testResolveEffectQueue_twoEffectsWithChoice() throws GameStateException {
+    public void testResolveEffectQueue_twoEffectsWithChoice() throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
         Player opponent = currentPlayer.getOpponent(game.getPlayers());
 

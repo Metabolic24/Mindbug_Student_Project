@@ -3,6 +3,7 @@ package org.metacorp.mindbug.service.game;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
@@ -31,7 +32,7 @@ public class PlayCardServiceTest {
     }
 
     @Test
-    public void testManagePlayedCard_nominal() {
+    public void testManagePlayedCard_nominal() throws WebSocketException, GameStateException {
         CardInstance card = currentPlayer.getHand().getFirst();
         game.setPlayedCard(card);
 
@@ -46,7 +47,7 @@ public class PlayCardServiceTest {
     }
 
     @Test
-    public void testManagePlayedCard_mindbug() {
+    public void testManagePlayedCard_mindbug() throws WebSocketException, GameStateException {
         CardInstance card = currentPlayer.getHand().getFirst();
         game.setPlayedCard(card);
 
@@ -64,7 +65,7 @@ public class PlayCardServiceTest {
     }
 
     @Test
-    public void testManagePlayedCard_playRestricted() {
+    public void testManagePlayedCard_playRestricted() throws WebSocketException, GameStateException {
         currentPlayer.disableTiming(EffectTiming.PLAY);
 
         CardInstance card = currentPlayer.getHand().getFirst();
@@ -81,7 +82,7 @@ public class PlayCardServiceTest {
     }
 
     @Test
-    public void testPickCard_nominal() throws GameStateException {
+    public void testPickCard_nominal() throws GameStateException, WebSocketException {
         CardInstance card = currentPlayer.getHand().getFirst();
 
         PlayCardService.pickCard(card, game);
@@ -94,7 +95,7 @@ public class PlayCardServiceTest {
     }
 
     @Test
-    public void testPickCard_playedCard() {
+    public void testPickCard_playedCard() throws WebSocketException {
         CardInstance card = currentPlayer.getHand().getFirst();
         game.setPlayedCard(card);
 
@@ -108,7 +109,7 @@ public class PlayCardServiceTest {
     }
 
     @Test
-    public void testPickCard_choice() {
+    public void testPickCard_choice() throws WebSocketException {
         CardInstance card = currentPlayer.getHand().getFirst();
         game.setChoice(new FrenzyAttackChoice(card));
 
@@ -122,7 +123,7 @@ public class PlayCardServiceTest {
     }
 
     @Test
-    public void testPickCard_attackingCard() {
+    public void testPickCard_attackingCard() throws WebSocketException {
         CardInstance card = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(card);
         game.setAttackingCard(card);

@@ -2,6 +2,7 @@ package org.metacorp.mindbug.utils;
 
 import org.metacorp.mindbug.dto.ws.WsGameEvent;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -18,6 +19,8 @@ import org.metacorp.mindbug.service.game.ActionService;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.service.game.PlayCardService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -27,6 +30,8 @@ import java.util.UUID;
 import java.util.stream.Stream;
 
 public class AiUtils {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(AiUtils.class);
 
     private static final Random RND = new Random();
 
@@ -43,9 +48,9 @@ public class AiUtils {
                     // Nothing to do
                 }
             }
-        } catch (GameStateException e) {
-            // TODO Manage errors
-            e.printStackTrace();
+        } catch (GameStateException | WebSocketException e) {
+            LOGGER.error("Unable to process AI player game event", e);
+            // TODO Probably a blocking issue
         }
     }
 
@@ -55,7 +60,7 @@ public class AiUtils {
      * @param game the current game
      * @throws GameStateException if the game reaches an inconsistant state
      */
-    private static void resolveTurn(Game game) throws GameStateException {
+    private static void resolveTurn(Game game) throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
         List<HistoryKey> availableGameActions = new ArrayList<>();
 
@@ -92,7 +97,7 @@ public class AiUtils {
         }
     }
 
-    private static void resolveMindbug(Game game, UUID playerId) throws GameStateException {
+    private static void resolveMindbug(Game game, UUID playerId) throws GameStateException, WebSocketException {
         Player mindbugger = RND.nextBoolean() ? null : game.getPlayers().stream()
                 .filter(player -> player.getUuid().equals(playerId)).findFirst().orElse(null);
         PlayCardService.playCard(mindbugger, game);
@@ -104,7 +109,7 @@ public class AiUtils {
      * @param game the current game
      * @throws GameStateException if an error occurs during the game execution
      */
-    private static void resolveAttack(Game game) throws GameStateException {
+    private static void resolveAttack(Game game) throws GameStateException, WebSocketException {
         List<CardInstance> availableCards = getBlockersList(game);
         if (availableCards.isEmpty()) {
             AttackService.resolveAttack(null, game);
@@ -136,7 +141,7 @@ public class AiUtils {
      * @param game the current game
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void resolveChoice(Game game) throws GameStateException {
+    public static void resolveChoice(Game game) throws GameStateException, WebSocketException {
         IChoice<?> choice = game.getChoice();
         if (choice == null) {
             System.err.println("Action invalide");

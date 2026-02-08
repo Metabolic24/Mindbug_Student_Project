@@ -2,6 +2,8 @@ package org.metacorp.mindbug.service.game;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -31,7 +33,7 @@ public class GameStateServiceTest {
     }
 
     @Test
-    public void testLifePointsLost_endGame() {
+    public void testLifePointsLost_endGame() throws WebSocketException {
         currentPlayer.getTeam().setLifePoints(0);
         org.metacorp.mindbug.service.game.GameStateService.lifePointLost(currentPlayer, game);
 
@@ -39,7 +41,7 @@ public class GameStateServiceTest {
     }
 
     @Test
-    public void testLifePointsLost_effect() {
+    public void testLifePointsLost_effect() throws WebSocketException {
         CardInstance boardCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(boardCard);
         boardCard.getCard().getEffects().put(EffectTiming.LIFE_LOST, new ArrayList<>(List.of(new InflictEffect())));
@@ -54,7 +56,7 @@ public class GameStateServiceTest {
     }
 
     @Test
-    public void refreshGameState_noPassiveEffects() {
+    public void refreshGameState_noPassiveEffects() throws WebSocketException, GameStateException {
         CardInstance boardCard = currentPlayer.getHand().getFirst();
         boardCard.setPower(boardCard.getPower() + 1);
         boardCard.setAbleToAttack(false);
@@ -88,7 +90,7 @@ public class GameStateServiceTest {
     }
 
     @Test
-    public void refreshGameState_multiplePassiveEffects() {
+    public void refreshGameState_multiplePassiveEffects() throws WebSocketException, GameStateException {
         // Create a new game manually, as we need to get some specific cards
         Player currentPlayer = new Player(playerService.createPlayer("player1"));
         Player opponent = new Player(playerService.createPlayer("player2"));

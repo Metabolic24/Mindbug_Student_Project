@@ -2,6 +2,8 @@ package org.metacorp.mindbug.service.effect;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.CostEffect;
@@ -72,7 +74,7 @@ public abstract class EffectResolver<T extends Effect> {
      * @param game         the current game state
      * @param effectSource the card that triggered the effect
      */
-    public abstract void apply(Game game, CardInstance effectSource, EffectTiming timing);
+    public abstract void apply(Game game, CardInstance effectSource, EffectTiming timing) throws GameStateException, WebSocketException;
 
     /**
      * Build the effect resolver corresponding to the input

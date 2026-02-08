@@ -14,6 +14,7 @@ import org.metacorp.mindbug.dto.ws.WsGameEvent;
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.dto.ws.WsPlayerGameEvent;
 import org.metacorp.mindbug.dto.ws.WsPlayerGameState;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.mapper.GameStateMapper;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.service.GameService;
@@ -21,7 +22,7 @@ import org.metacorp.mindbug.utils.AiUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -171,8 +172,13 @@ public class WsGameEndpoint extends WebSocketApplication {
             if (sessionSockets != null) {
                 if (!socket.isAI()) {
                     sessionSockets.remove(socket);
-                    System.out.println("Player " + socket.getPlayerId() + " left game " + gameId);
-                    gameService.endGame(playerId, gameId);
+                    LOGGER.debug("Player {} left game {}", playerId, gameId);
+                    try {
+                        gameService.endGame(playerId, gameId);
+                    } catch (WebSocketException e) {
+                        String errorMessage = MessageFormat.format("An error occurred while trying to end game {0}", gameId);
+                        LOGGER.warn(errorMessage, e);
+                    }
                 }
 
                 if (sessionSockets.isEmpty()) {

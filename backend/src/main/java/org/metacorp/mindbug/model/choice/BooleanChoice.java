@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
@@ -27,7 +29,7 @@ public class BooleanChoice implements IChoice<Boolean> {
     private CardInstance card;
 
     @Override
-    public void resolve(Boolean choice, Game game) {
+    public void resolve(Boolean choice, Game game) throws GameStateException, WebSocketException  {
         ChoiceUtils.resolveBooleanChoice(choice, this, game);
     }
 
