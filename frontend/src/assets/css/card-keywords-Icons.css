@@ -1,0 +1,72 @@
+/* #############################################  Keywords Icons card  ############################################# */
+
+.keywords-row {
+  position: absolute;
+  top: 15%;
+  left: 6%;
+  width: auto;
+  height: auto;
+  padding-left: 15%;
+  
+
+  display: flex;
+  align-items: center;
+  gap: 4%;
+}
+
+.keyword-badge {
+  position: relative;
+
+  width: 12%;
+  aspect-ratio: 1;
+
+  background: #2c2f3a;
+  border: 1px solid #f0a23a;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+
+  cursor: default;
+}
+
+/* ICON perfectly centered */
+.keyword-icon {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+
+  display: block;
+}
+
+
+.keyword-tooltip {
+  position: absolute;
+  top: 120%;              /* au lieu de bottom */
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+
+  background: #1a1f2a;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.45em;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.15s ease;
+
+  border: 1px solid #f0a23a;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.keyword-badge:hover .keyword-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}

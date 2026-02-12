@@ -34,6 +34,7 @@ public class CardInstance {
     private Set<CardKeyword> keywords;
     private boolean stillTough;
     private boolean ableToAttackTwice;
+    private String description;
 
     private boolean ableToAttack;
     private boolean ableToBlock;
@@ -50,7 +51,6 @@ public class CardInstance {
         this.card = card;
         this.power = card.getPower();
         this.keywords = new HashSet<>(card.getKeywords());
-
         this.stillTough = this.keywords.contains(CardKeyword.TOUGH);
         this.ableToAttackTwice = this.keywords.contains(CardKeyword.FRENZY);
         this.ableToAttack = true;

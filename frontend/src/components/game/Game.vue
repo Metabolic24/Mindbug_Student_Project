@@ -249,7 +249,7 @@ async function onLeaveButtonClick() {
 </script>
 
 <template>
-  <div v-if="gameState" class="container-fluid game">
+  <div v-if="gameState" class="game">
     <div class="row top-row">
       <div class="col-2 player-container">
         <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
@@ -290,6 +290,7 @@ async function onLeaveButtonClick() {
       <div class="col-2"></div>
     </div>
   </div>
+  
   <div v-else-if="error" class="error-page">
     <div class="error-container">
       <h1>Oops !</h1>
@@ -316,11 +317,13 @@ async function onLeaveButtonClick() {
 </template>
 
 <style scoped>
+
 .game {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  overflow: hidden;
+  
   background-image: url("../../assets/playmats/default.png");
   background-repeat: no-repeat;
   background-size: cover;

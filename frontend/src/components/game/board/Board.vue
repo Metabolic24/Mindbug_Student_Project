@@ -121,9 +121,6 @@ function closeModal() {
 }
 
 .cards {
-  width: 100%;
-  height: 30%;
-
   display: flex;
   column-gap: 5px;
   align-items: center;

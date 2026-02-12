@@ -80,6 +80,7 @@ public class GameStateMapper {
         result.setPower(card.getPower());
         result.setBasePower(card.getCard().getPower());
         result.setKeywords(card.getKeywords());
+        result.setDescription(card.getCard().getDescription());
         result.setHasAction(!card.getEffects(EffectTiming.ACTION).isEmpty());
         result.setStillTough(card.isStillTough());
         result.setAbleToBlock(card.isAbleToBlock());

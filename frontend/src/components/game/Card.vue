@@ -17,6 +17,31 @@
   const props = defineProps<Props>()
   const emit = defineEmits(['click'])
 
+  
+  // to get the keyword Icons
+  const keywordIcons: Record<string, string> = {
+    FRENZY: new URL('@/assets/cards/KeywordIcons/FRENZY.png', import.meta.url).href,
+    HUNTER: new URL('@/assets/cards/KeywordIcons/HUNTER.png', import.meta.url).href,
+    POISONOUS: new URL('@/assets/cards/KeywordIcons/POISONOUS.png', import.meta.url).href,
+    SNEAKY: new URL('@/assets/cards/KeywordIcons/SNEAKY.png', import.meta.url).href,
+    REVERSED: new URL('@/assets/cards/KeywordIcons/REVERSED.png', import.meta.url).href,
+    TOUGH: new URL('@/assets/cards/KeywordIcons/TOUGHT.png', import.meta.url).href,
+  }
+
+  const displayKeywords = computed(() => {
+    if (!props.card.keywords) return []
+    return props.card.keywords.map(k => ({
+      key: k,
+      icon: keywordIcons[k]
+    }))
+})
+
+  const formattedKeywords = computed(() => {
+    if (!props.card.keywords || props.card.keywords.length === 0) return ''
+    else return props.card.keywords.join(' * ')
+  })
+
+
   // To know if the power is modified
   const isPowerModified = computed(() => {
     return props.card.power !== props.card.basePower
@@ -37,7 +62,7 @@
 </script>
 
 <template>
-  <div class="card-wrapper" :class="cardClasses" @click="clickable && emit('click', card)">
+  <div class="card-wrapper" :class="cardClasses" @click="clickable && emit('click', props.card)">
     <!-- Card image -->
     <img
       :src="getCardImage(card)"
@@ -47,10 +72,45 @@
       @contextmenu.prevent=""
     />
 
+    <div v-if="showOverlay" class="title-banner">
+      <div class="title-text">{{ props.card.name }}</div>
+    </div>
+    <div 
+      v-if="showOverlay && displayKeywords.length"
+      class="keywords-row"
+    >
+      <div
+        v-for="kw in displayKeywords"
+        :key="kw.key"
+        class="keyword-badge"
+      >
+        <img 
+          :src="kw.icon"
+          :alt="kw.key"
+          class="keyword-icon"
+        />
+        <div class="keyword-tooltip">
+          {{ kw.key }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Box -->
+    <div v-if="showOverlay" class="description-box">
+      <div class="description-text" v-html="props.card.description"></div>
+        <!-- Keywords -->
+        <div 
+          v-if="formattedKeywords"
+          class="keywords-text"
+        >
+          {{ formattedKeywords }}
+      </div>
+    </div>
+
     <!-- Overlay power -->
     <div v-if="showOverlay" class="power-overlay" :class="{ 'modified-power': isPowerModified }">
       <Transition name="power-slide" mode="out-in">
-        <span :key="card.power">{{ card.power }}</span>
+        <span :key="props.card.power">{{ props.card.power }}</span>
       </Transition>
     </div>
   </div>
@@ -64,8 +124,9 @@
   /* General card styling */
   .card-wrapper {
     position: relative;
-    width: 6vw;
-    height: 9vw;
+    width: 7vw;
+    height: 10vw;
+
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
 
@@ -122,15 +183,15 @@
   /* Power overlay */
   .power-overlay {
     position: absolute;
-    top: 5%;
-    left: 5%;
+    top: 4%;
+    left: 6%;
 
-    min-width: 19%;
-    height: 12%;
+    width: 19%;
+    height: 13%;
 
     background: #512134;
     color: #fefcfe;
-    font-size: 100%;
+    font-size: clamp(0.5rem, 1vw, 1rem);
 
     display: flex;
     align-items: center;
@@ -163,5 +224,88 @@
     transform: translateY(-100%);
     opacity: 0;
   }
-  
+
+  /* Selected and attacking card styling */
+  .card-wrapper.selected {
+    outline: 4px solid red;
+  }
+
+  .card-wrapper.attacking {
+    outline: 4px solid orange;
+  }
+
+  .card-wrapper.clickable {
+    cursor: pointer;
+  }
+
+  /* #############################################  Title/description card  ############################################# */
+
+  .title-banner {
+  position: absolute;
+  top: 4.5%;
+  left: 7%;
+  width: 88%;
+  height: 11%;
+
+  background: #2c2f3a;
+  border: 1px solid #f0a23a;
+  border-radius: 2vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15%;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+
+.title-text {
+  font-family: "ZalamanderCaps";
+  font-weight: bold;
+  font-size: 0.7em;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: white;
+  line-height: 0.8;
+}
+
+/* Area of card description */
+.description-box {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 90%;
+  height: 28%;
+
+  background: rgba(25, 30, 40, 0.95);
+  border: 1px solid #f0a23a;
+  border-radius: 20px;
+
+  padding: 5%;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
+  color: white;
+}
+
+.description-text {
+  font-size: 0.50em;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.keywords-text {
+  font-size: 0.55em;
+  font-weight: bold;
+  color: #f0a23a;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+
 </style>

@@ -8,6 +8,7 @@ interface CardInterface {
     name?: string
     power: number
     basePower: number
+    description: String 
     keywords?: string[]
     stillTough: boolean
     ableToBlock: boolean

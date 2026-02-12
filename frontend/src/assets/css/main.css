@@ -2,6 +2,7 @@
 @import 'buttons.css';
 @import 'modal.css';
 @import 'card-keywords-TOUGH.css';
+@import 'card-keywords-Icons.css';
 
 #app {
   display: inline-block;
@@ -10,4 +11,11 @@
 
 * {
   user-select: none;
+}
+
+@font-face {
+  font-family: "ZalamanderCaps";
+  src: url("@/assets/fonts/ZalamanderCaps-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
 }
