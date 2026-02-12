@@ -221,6 +221,13 @@
         </profile>
 
         <profile>
+            <id>auto2v2</id>
+            <properties>
+                <main.class>org.metacorp.mindbug.app.AutoApp2v2</main.class>
+            </properties>
+        </profile>
+
+        <profile>
             <id>manual</id>
             <properties>
                 <main.class>org.metacorp.mindbug.app.ManualApp</main.class>
