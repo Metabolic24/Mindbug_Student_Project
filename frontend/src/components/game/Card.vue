@@ -17,6 +17,12 @@
   const props = defineProps<Props>()
   const emit = defineEmits(['click'])
 
+  onMounted(() => {
+    console.log("Card reçue :", props.card);
+    console.log("Description :", props.card.description);
+  });
+
+
   // To know if the power is modified
   const isPowerModified = computed(() => {
     return props.card.power !== props.card.basePower
@@ -46,14 +52,12 @@
     />
 
     <div class="title-banner">
-      <div class="title-text">THE LURKER</div>
+      <div class="title-text">{{ props.card.name }}</div>
     </div>
 
     <!-- Description Box -->
     <div class="description-box">
-      <div class="description-text">
-        <b>Attack:</b> If you control more creatures than the opponent,
-        this has <b>SNEAKY</b> this turn.
+      <div class="description-text" v-html="props.card.description">
       </div>
     </div>
 

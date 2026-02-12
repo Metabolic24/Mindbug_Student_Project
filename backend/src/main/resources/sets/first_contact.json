@@ -1,55 +1,61 @@
 [
   {
     "id": 27,
-    "name": "Arachnibou",
+    "name": "SPIDER OWL",
     "power": 3,
     "keywords": ["SNEAKY", "POISONOUS"],
     "effects": {},
-    "unique": false
+    "unique": false,
+    "description" : "“Hanging in there.”"
   },
   {
     "id": 21,
-    "name": "Rhino Tortue",
+    "name": "RHINO TURTLE",
     "power": 8,
     "keywords": ["FRENZY", "TOUGH"],
     "effects": {},
-    "unique": false
+    "unique": false,
+    "description" : "“There are not enough shields to stop me!”"
   },
   {
     "id": 18,
-    "name": "Gladiataure",
+    "name": "LUCHATAUR",
     "power": 9,
     "keywords": ["FRENZY"],
     "effects": {},
-    "unique": false
+    "unique": false,
+    "description" : "“Want an encore?”"
   },
   {
     "id": 35,
-    "name": "Méduse Squelettique",
+    "name": "CREEP FROM THE DEEP",
     "power": 4,
     "keywords": ["HUNTER", "POISONOUS"],
     "effects": {},
-    "unique": false
+    "unique": false,
+    "description" : ""
   },
   {
     "id": 20,
-    "name": "Scorpion Venimeux",
+    "name": "PLATED SCORPION",
     "power": 2,
     "keywords": ["TOUGH", "POISONOUS"],
     "effects": {},
-    "unique": false
+    "unique": false,
+    "description" : "“The sting is only half the problem.”"
   },
   {
     "id": 12,
-    "name": "Gorillion",
+    "name": "GORILLON",
     "power": 10,
     "keywords": [],
     "effects": {},
-    "unique": true
+    "unique": true,
+    "description" : "“Where did you put the bananas?”"
   },
   {
     "id": 5,
-    "name": "Dracompost",
+    "name": "COMPOST DRAGON",
     "power": 3,
     "keywords": ["HUNTER"],
     "effects": {
@@ -60,11 +66,12 @@
         "mustPlay": true
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Play</b>: Play a card from your discard pile."
   },
   {
     "id": 37,
-    "name": "Instigateur Gobelouille",
+    "name": "FROBLIN INSTIGATOR",
     "power": 1,
     "keywords": ["HUNTER"],
     "effects": {
@@ -74,11 +81,12 @@
         "forEachAlly": true
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "Has <b>+2</b> power for each other allied creature."
   },
   {
     "id": 15,
-    "name": "Kangousaurus Rex",
+    "name": "KANGASAURUS REX",
     "power": 7,
     "keywords": [],
     "effects": {
@@ -88,11 +96,12 @@
         "max": 4
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Play</b>: Defeat all enemy creatures with power 4 or less."
   },
   {
     "id": 29,
-    "name": "Tigrécureuil",
+    "name": "TIGER SQUIRREL",
     "power": 3,
     "keywords": ["SNEAKY"],
     "effects": {
@@ -102,11 +111,12 @@
         "min": 7
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Play</b>: Defeat an enemy creature with power 7 or more."
   },
   {
     "id": 32,
-    "name": "Oursins Hurleurs",
+    "name": "URCHIN HURLER",
     "power": 5,
     "keywords": ["HUNTER"],
     "effects": {
@@ -118,11 +128,12 @@
         "selfTurn": true
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "Other allied creatures have <b>+2</b> power while it is your turn."
   },
   {
     "id": 6,
-    "name": "Veuve Noire",
+    "name": "DEATHWEAVER",
     "power": 2,
     "keywords": ["POISONOUS"],
     "effects": {
@@ -131,11 +142,12 @@
         "value": "PLAY"
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "The opponent cannot activate play effects."
   },
   {
     "id": 31,
-    "name": "Huissiéléphant",
+    "name": "TUSKED EXTORTER",
     "power": 8,
     "keywords": [],
     "effects": {
@@ -144,11 +156,12 @@
         "value": 1
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Attack</b>: The opponent discards a card."
   },
   {
     "id": 33,
-    "name": "Cafabarbare",
+    "name": "BUGSERKER",
     "power": 3,
     "keywords": ["TOUGH"],
     "effects": {
@@ -158,11 +171,12 @@
         "lifePoints": 1
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "Has <b>+8</b> power while you have 1 life remaining."
   },
   {
     "id": 44,
-    "name": "Aqua Vachette",
+    "name": "TURF THE SURFER",
     "power": 8,
     "keywords": [],
     "effects": {
@@ -171,11 +185,12 @@
         "value": 1
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Attack</b>: Choose a creature. It cannot block this turn."
   },
   {
     "id": 9,
-    "name": "Furet Saboteur",
+    "name": "FERRET BOMBER",
     "power": 2,
     "keywords": ["SNEAKY"],
     "effects": {
@@ -184,11 +199,12 @@
         "value": 2
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Play</b>: The opponent discards 2 cards."
   },
   {
     "id": 26,
-    "name": "Lanceur d'escargots",
+    "name": "SNAIL THROWER",
     "power": 1,
     "keywords": ["POISONOUS"],
     "effects": {
@@ -206,11 +222,12 @@
         "max": 4
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>."
   },
   {
     "id": 13,
-    "name": "Pilleur de Tombes",
+    "name": "GRAVE ROBBER",
     "power": 7,
     "keywords": ["TOUGH"],
     "effects": {
@@ -221,11 +238,12 @@
         "mustPlay": true
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Play</b>: Play a card from the opponent's discard pile."
   },
   {
     "id": 34,
-    "name": "Comte Sangsula",
+    "name": "COUNT DRACULEECH",
     "power": 7,
     "keywords": [],
     "effects": {
@@ -239,11 +257,12 @@
         "selfAllowed": true
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Attack</b>: Lose 1 life. Defeat a creature."
   },
   {
     "id": 22,
-    "name": "Requin Toutou",
+    "name": "SHARK DOG",
     "power": 4,
     "keywords": ["HUNTER"],
     "effects": {
@@ -255,11 +274,12 @@
         }
       ]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Attack</b>: Defeat an enemy creature with power 6 or more."
   },
   {
     "id": 3,
-    "name": "Neuromouche",
+    "name": "BRAIN FLY",
     "power": 4,
     "keywords": [],
     "effects": {
@@ -273,11 +293,12 @@
         }
       ]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Play</b>: Take control of a creature with power 6 or more."
   },
   {
     "id": 16,
-    "name": "Abeille Tueuse",
+    "name": "KILLER BEE",
     "power": 5,
     "keywords": ["HUNTER"],
     "effects": {
@@ -286,11 +307,12 @@
         "value": 1
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Play</b>: The opponent loses 1 life."
   },
   {
     "id": 10,
-    "name": "Giraffodile",
+    "name": " GIRAFFODILE",
     "power": 7,
     "keywords": [],
     "effects": {
@@ -300,11 +322,12 @@
         "source": "SELF_DISCARD"
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Play</b>: Draw your entire discard pile."
   },
   {
     "id": 17,
-    "name": "Yéti Solitaire",
+    "name": "LONE YETI",
     "power": 5,
     "keywords": ["TOUGH"],
     "effects": {
@@ -318,11 +341,12 @@
         "alone": true
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "While this is your only allied creature, it has <b>+5</b> power and <b>FRENZY</b>."
   },
   {
     "id": 40,
-    "name": "Hamster Glouton",
+    "name": "HUNGRY HUNGRY HAMSTER",
     "power": 2,
     "keywords": ["SNEAKY"],
     "effects": {
@@ -334,11 +358,12 @@
         "mayPlay": true
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand."
   },
   {
     "id": 39,
-    "name": "Hamsterlion",
+    "name": "HAMSTER LION",
     "power": 8,
     "keywords": ["FRENZY"],
     "effects": {
@@ -347,11 +372,12 @@
         "lowest": true
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "The enemy creature(s) with the lowest power cannot attack."
   },
   {
     "id": 36,
-    "name": "Furet Pacifique",
+    "name": "FERRET PACIFIER",
     "power": 4,
     "keywords": [],
     "effects": {
@@ -361,11 +387,12 @@
         "value": -1
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "The enemy creature(s) with the highest power cannot block."
   },
   {
     "id": 30,
-    "name": "Turboustique",
+    "name": "TURBO BUG",
     "power": 4,
     "keywords": [],
     "effects": {
@@ -374,11 +401,12 @@
         "allButOne": true
       }]
     },
-    "unique": true
+    "unique": true,
+    "description": "<b>Attack</b>: The opponent loses all life except 1."
   },
   {
     "id": 7,
-    "name": "Pachypoulpe",
+    "name": "ELEPHANTOPUS",
     "power": 7,
     "keywords": ["TOUGH"],
     "effects": {
@@ -388,11 +416,12 @@
         "value": -1
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "The opponent cannot block with creatures with power 4 or less."
   },
   {
     "id": 28,
-    "name": "Baril étrange",
+    "name": "STRANGE BARREL",
     "power": 6,
     "keywords": [],
     "effects": {
@@ -403,11 +432,12 @@
         "selection": "RANDOM"
       }]
     },
-    "unique": true
+    "unique": true,
+    "description": "<b>Defeated</b>: Steal 2 random cards from the opponent's hand."
   },
   {
     "id": 14,
-    "name": "Mamie Harpie",
+    "name": "HARPY MOTHER",
     "power": 5,
     "keywords": [],
     "effects": {
@@ -420,11 +450,12 @@
         "mustPlay": true
       }]
     },
-    "unique": true
+    "unique": true,
+    "description": "<b>Defeated</b>: Take control of up to 2 creatures with power 5 or less."
   },
   {
     "id": 43,
-    "name": "Le Rôdeur",
+    "name": "THE LURKER",
     "power": 4,
     "keywords": ["TOUGH"],
     "effects": {
@@ -434,11 +465,12 @@
         "moreAllies": true
       }]
     },
-    "unique": false
+    "unique": false,
+    "description": "<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn."
   },
   {
     "id": 25,
-    "name": "Hydrescargot",
+    "name": "SNAIL HYDRA",
     "power": 9,
     "keywords": [],
     "effects": {
@@ -448,11 +480,12 @@
         "lessAllies": true
       }]
     },
-    "unique": false
+    "unique": false,
+    "description": "<b>Attack</b>: If you control fewer creatures than the opponent, defeat a creature."
   },
   {
     "id": 42,
-    "name": "Majesté Manticore",
+    "name": "MAJESTIC MANTICORE",
     "power": 6,
     "keywords": ["POISONOUS"],
     "effects": {
@@ -463,11 +496,12 @@
         "selfAllowed": true
       }]
     },
-    "unique": false
+    "unique": false,
+    "description": "<b>Attack</b>: Defeat the creature(s) with the lowest power."
   },
   {
     "id": 8,
-    "name": "Crapaud Bombe",
+    "name": "EXPLOSIVE TOAD",
     "power": 5,
     "keywords": ["FRENZY"],
     "effects": {
@@ -477,11 +511,12 @@
         "selfAllowed": true
       }]
     },
-    "unique": false
+    "unique": false,
+    "description": "<b>Defeated</b>: Defeat a creature."
   },
   {
     "id": 41,
-    "name": "Hyénix",
+    "name": "HYENIX",
     "power": 7,
     "keywords": ["FRENZY"],
     "effects": {
@@ -490,11 +525,12 @@
         "location": "DISCARD"
       }]
     },
-    "unique": false
+    "unique": false,
+    "description": "When you lose life while this is in your discard pile, you may play this."
   },
   {
     "id": 11,
-    "name": "Goblin-Garou",
+    "name": "GOBLIN WEREWOLF",
     "power": 2,
     "keywords": ["HUNTER"],
     "effects": {
@@ -506,11 +542,12 @@
 
       }]
     },
-    "unique": false
+    "unique": false,
+    "description": "Has <b>+6</b> power while it is your turn."
   },
   {
     "id": 19,
-    "name": "Sirène Mystérieuse",
+    "name": "MYSTERIOUS MERMAID",
     "power": 7,
     "keywords": [],
     "effects": {
@@ -519,11 +556,12 @@
         "equal": true
       }]
     },
-    "unique": true
+    "unique": true,
+    "description": "<b>Play</b>: Stay your life equal to the opponent's."
   },
   {
     "id": 23,
-    "name": "Requin Crabe Chien Momie Pieuvre",
+    "name": "SHARKY GRAB-DOG-MUMMYPUS",
     "power": 5,
     "keywords": [],
     "effects": {
@@ -545,11 +583,12 @@
         "opponentHas": true
       }]
     },
-    "unique": true
+    "unique": true,
+    "description": "Has <b>HUNTER</b> while an enemy creature does. Repeat for <b>SNEAKY</b>,<b>FRENZY</b>, and <b>POISONOUS</b>."
   },
   {
     "id": 2,
-    "name": "Oursabeille",
+    "name": "BEE BEAR",
     "power": 8,
     "keywords": [],
     "effects": {
@@ -559,11 +598,12 @@
         "value": -1
       }]
     },
-    "unique": true
+    "unique": true,
+    "description": "Cannot be blocked by creatures with power 6 or less."
   },
   {
     "id": 4,
-    "name": "Reptireur d'élite",
+    "name": "CHAMELEON SNIPER",
     "power": 1,
     "keywords": ["SNEAKY"],
     "effects": {
@@ -572,11 +612,12 @@
         "value": 1
       }]
     },
-    "unique": true
+    "unique": true,
+    "description": "<b>Attack</b>: The opponent loses 1 life."
   },
   {
     "id": 24,
-    "name": "Scarabouclier",
+    "name": "SHIELD BUGS",
     "power": 4,
     "keywords": ["TOUGH"],
     "effects": {
@@ -587,11 +628,12 @@
         "self": false
       }]
     },
-    "unique": false
+    "unique": false,
+    "description": "Other allied creatures have <b>+1</b> power."
   },
   {
     "id": 38,
-    "name": "Gorillaigle Alpha",
+    "name": "GOREAGLE ALPHA",
     "power": 6,
     "keywords": ["FRENZY", "HUNTER", "TOUGH"],
     "effects": {
@@ -601,11 +643,12 @@
         "self": true
       }]
     },
-    "unique": false
+    "unique": false,
+    "description": "<b>Play</b>: Lose 1 life."
   },
   {
     "id": 1,
-    "name": "Dr Axolotl",
+    "name": "AXOLOTL HEALER",
     "power": 4,
     "keywords": ["POISONOUS"],
     "effects": {
@@ -614,6 +657,7 @@
         "value": 2
       }]
     },
-    "unique": false
+    "unique": false,
+    "description": "<b>Play</b>: Gain 2 life."
   }
 ]
