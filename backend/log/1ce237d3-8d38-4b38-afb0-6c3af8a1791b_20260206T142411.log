@@ -1,0 +1,376 @@
+[ {
+  "key" : "START",
+  "data" : {
+    "1dea13df-2cfb-4243-94bb-1a96ac0c08a1" : [ {
+      "uuid" : "79b5031e-e83c-42fa-903b-8bd810290e49",
+      "name" : "Furet Pacifique",
+      "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+    }, {
+      "uuid" : "0cf200ce-a022-4e1e-8e70-a0cca0e4ae4c",
+      "name" : "Pachypoulpe",
+      "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+    }, {
+      "uuid" : "fb4ea80d-e780-44df-b3bb-77952c3198dc",
+      "name" : "Huissiéléphant",
+      "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+    }, {
+      "uuid" : "d5071ac4-f3c4-47fa-8c8a-fc1b23bc260b",
+      "name" : "Hydrescargot",
+      "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+    }, {
+      "uuid" : "ae11147e-80eb-4170-ba0a-2d2525373039",
+      "name" : "Majesté Manticore",
+      "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+    } ],
+    "bbef0227-4e85-45b3-8d1b-4ae651ea60ee" : [ {
+      "uuid" : "1bc19f55-e0aa-4301-b276-6dfd86510d1e",
+      "name" : "Turboustique",
+      "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+    }, {
+      "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+      "name" : "Scarabouclier",
+      "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+    }, {
+      "uuid" : "caf08695-5be6-4146-9def-24a1cdda6e4d",
+      "name" : "Hydrescargot",
+      "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+    }, {
+      "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+      "name" : "Furet Pacifique",
+      "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+    }, {
+      "uuid" : "44e5330c-3648-49e1-9099-b78380426d2f",
+      "name" : "Gladiataure",
+      "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+    } ]
+  }
+}, {
+  "key" : "PICK",
+  "source" : {
+    "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+    "name" : "Scarabouclier",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+    "name" : "Scarabouclier",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "data" : {
+    "type" : "POWER_UP"
+  }
+}, {
+  "key" : "PLAY",
+  "source" : {
+    "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+    "name" : "Scarabouclier",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+    "name" : "Scarabouclier",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "data" : {
+    "type" : "POWER_UP"
+  }
+}, {
+  "key" : "PICK",
+  "source" : {
+    "uuid" : "fb4ea80d-e780-44df-b3bb-77952c3198dc",
+    "name" : "Huissiéléphant",
+    "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+    "name" : "Scarabouclier",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "data" : {
+    "type" : "POWER_UP"
+  }
+}, {
+  "key" : "PLAY",
+  "source" : {
+    "uuid" : "fb4ea80d-e780-44df-b3bb-77952c3198dc",
+    "name" : "Huissiéléphant",
+    "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+    "name" : "Scarabouclier",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "data" : {
+    "type" : "POWER_UP"
+  }
+}, {
+  "key" : "PICK",
+  "source" : {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+    "name" : "Scarabouclier",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "targets" : [ {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  } ],
+  "data" : {
+    "type" : "POWER_UP"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "targets" : [ {
+    "uuid" : "fb4ea80d-e780-44df-b3bb-77952c3198dc",
+    "name" : "Huissiéléphant",
+    "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+  } ],
+  "data" : {
+    "type" : "NO_BLOCK"
+  }
+}, {
+  "key" : "PLAY",
+  "source" : {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+    "name" : "Scarabouclier",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "targets" : [ {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  } ],
+  "data" : {
+    "type" : "POWER_UP"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "targets" : [ {
+    "uuid" : "fb4ea80d-e780-44df-b3bb-77952c3198dc",
+    "name" : "Huissiéléphant",
+    "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+  } ],
+  "data" : {
+    "type" : "NO_BLOCK"
+  }
+}, {
+  "key" : "ATTACK",
+  "source" : {
+    "uuid" : "fb4ea80d-e780-44df-b3bb-77952c3198dc",
+    "name" : "Huissiéléphant",
+    "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+    "name" : "Scarabouclier",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "targets" : [ {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  } ],
+  "data" : {
+    "type" : "POWER_UP"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "targets" : [ {
+    "uuid" : "fb4ea80d-e780-44df-b3bb-77952c3198dc",
+    "name" : "Huissiéléphant",
+    "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+  } ],
+  "data" : {
+    "type" : "NO_BLOCK"
+  }
+}, {
+  "key" : "CHOICE",
+  "source" : {
+    "uuid" : "fb4ea80d-e780-44df-b3bb-77952c3198dc",
+    "name" : "Huissiéléphant",
+    "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+  },
+  "targets" : [ {
+    "uuid" : "44e5330c-3648-49e1-9099-b78380426d2f",
+    "name" : "Gladiataure",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  }, {
+    "uuid" : "752c0015-8512-4399-a69b-a905fb5e13a8",
+    "name" : "Arachnibou",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  }, {
+    "uuid" : "1bc19f55-e0aa-4301-b276-6dfd86510d1e",
+    "name" : "Turboustique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  }, {
+    "uuid" : "caf08695-5be6-4146-9def-24a1cdda6e4d",
+    "name" : "Hydrescargot",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  }, {
+    "uuid" : "4f400c3b-4e1f-47ba-8979-45b9d14efefd",
+    "name" : "Cafabarbare",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  } ],
+  "data" : {
+    "playerToChoose" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee",
+    "targetsCount" : 1,
+    "type" : "TARGET"
+  }
+}, {
+  "key" : "EFFECT",
+  "targets" : [ {
+    "uuid" : "752c0015-8512-4399-a69b-a905fb5e13a8",
+    "name" : "Arachnibou",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  } ],
+  "data" : {
+    "type" : "DISCARD"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+    "name" : "Scarabouclier",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "targets" : [ {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  } ],
+  "data" : {
+    "type" : "POWER_UP"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "targets" : [ {
+    "uuid" : "fb4ea80d-e780-44df-b3bb-77952c3198dc",
+    "name" : "Huissiéléphant",
+    "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+  } ],
+  "data" : {
+    "type" : "NO_BLOCK"
+  }
+}, {
+  "key" : "BLOCK",
+  "source" : {
+    "uuid" : "fb4ea80d-e780-44df-b3bb-77952c3198dc",
+    "name" : "Huissiéléphant",
+    "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+  },
+  "targets" : [ {
+    "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+    "name" : "Scarabouclier",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  } ]
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+    "name" : "Scarabouclier",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "targets" : [ {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  } ],
+  "data" : {
+    "type" : "POWER_UP"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "targets" : [ {
+    "uuid" : "fb4ea80d-e780-44df-b3bb-77952c3198dc",
+    "name" : "Huissiéléphant",
+    "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+  } ],
+  "data" : {
+    "type" : "NO_BLOCK"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "7797b358-d50b-4aa9-a46f-8cc5aefaa465",
+    "name" : "Scarabouclier",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "targets" : [ {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  } ],
+  "data" : {
+    "type" : "POWER_UP"
+  }
+}, {
+  "key" : "EFFECT",
+  "source" : {
+    "uuid" : "3c92076a-2b15-4464-a32f-7293f2b44128",
+    "name" : "Furet Pacifique",
+    "owner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  },
+  "targets" : [ {
+    "uuid" : "fb4ea80d-e780-44df-b3bb-77952c3198dc",
+    "name" : "Huissiéléphant",
+    "owner" : "1dea13df-2cfb-4243-94bb-1a96ac0c08a1"
+  } ],
+  "data" : {
+    "type" : "NO_BLOCK"
+  }
+}, {
+  "key" : "END",
+  "data" : {
+    "winner" : "bbef0227-4e85-45b3-8d1b-4ae651ea60ee"
+  }
+} ]

@@ -45,6 +45,18 @@
       @contextmenu.prevent=""
     />
 
+    <div class="title-banner">
+      <div class="title-text">THE LURKER</div>
+    </div>
+
+    <!-- Description Box -->
+    <div class="description-box">
+      <div class="description-text">
+        <b>Attack:</b> If you control more creatures than the opponent,
+        this has <b>SNEAKY</b> this turn.
+      </div>
+    </div>
+
     <!-- Overlay power -->
     <div v-if="showOverlay" class="power-overlay" :class="{ 'modified-power': isPowerModified }">
       <Transition name="power-slide" mode="out-in">
@@ -152,4 +164,68 @@
   .card-wrapper.clickable {
     cursor: pointer;
   }
+
+
+  .title-banner {
+  position: absolute;
+  top: 4.5%;
+  left: 5%;
+  width: 90%;
+  height: 12%;
+
+  background: #2c2f3a;
+  border: 1px solid #f0a23a;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  padding-left: 18%;
+  box-sizing: border-box;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+
+.title-text {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.65em;
+  letter-spacing: 1px;
+  color: white;
+  word-break: break-word;
+}
+
+
+/* ========================= */
+/* ===== DESCRIPTION BOX === */
+/* ========================= */
+
+.description-box {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 90%;
+  height: 28%;
+
+  background: rgba(25, 30, 40, 0.95);
+  border: 1px solid #f0a23a;
+  border-radius: 20px;
+
+  padding: 6%;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
+  color: white;
+}
+
+.description-text {
+  font-size: 0.50em;
+  line-height: 1.2;
+  text-align: center;
+}
 </style>

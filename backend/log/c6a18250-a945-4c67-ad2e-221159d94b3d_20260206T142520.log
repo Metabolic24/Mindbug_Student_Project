@@ -1,0 +1,59 @@
+[ {
+  "key" : "START",
+  "data" : {
+    "3d251229-d666-484e-a8db-2ee1208f4533" : [ {
+      "uuid" : "db103a1d-881a-4c2e-b51c-88292b485404",
+      "name" : "Abeille Tueuse",
+      "owner" : "3d251229-d666-484e-a8db-2ee1208f4533"
+    }, {
+      "uuid" : "82f576e2-798c-4be7-b40a-727870a6ce46",
+      "name" : "Hamster Glouton",
+      "owner" : "3d251229-d666-484e-a8db-2ee1208f4533"
+    }, {
+      "uuid" : "a86b7c6f-70f7-4cdd-90d0-32eae886152c",
+      "name" : "Tigrécureuil",
+      "owner" : "3d251229-d666-484e-a8db-2ee1208f4533"
+    }, {
+      "uuid" : "152ab85b-899f-4b67-ba88-2c8cf81a8bac",
+      "name" : "Pilleur de Tombes",
+      "owner" : "3d251229-d666-484e-a8db-2ee1208f4533"
+    }, {
+      "uuid" : "6380eaa6-657e-4795-bf91-0a3691b67b0c",
+      "name" : "Rhino Tortue",
+      "owner" : "3d251229-d666-484e-a8db-2ee1208f4533"
+    } ],
+    "9d0878c4-7bdd-47aa-beb3-f32e4ba701ad" : [ {
+      "uuid" : "f7d56892-f411-4d97-a826-9155367cfb99",
+      "name" : "Méduse Squelettique",
+      "owner" : "9d0878c4-7bdd-47aa-beb3-f32e4ba701ad"
+    }, {
+      "uuid" : "64b60801-d46f-4708-8511-c55d7f85a38d",
+      "name" : "Le Rôdeur",
+      "owner" : "9d0878c4-7bdd-47aa-beb3-f32e4ba701ad"
+    }, {
+      "uuid" : "02eb79b9-3fa6-4fd2-8876-8dd8cd132e50",
+      "name" : "Le Rôdeur",
+      "owner" : "9d0878c4-7bdd-47aa-beb3-f32e4ba701ad"
+    }, {
+      "uuid" : "5193b055-747b-456b-83ff-b959194e9462",
+      "name" : "Hamsterlion",
+      "owner" : "9d0878c4-7bdd-47aa-beb3-f32e4ba701ad"
+    }, {
+      "uuid" : "7b73ac3a-5f22-4dbb-86a5-a447bc7f50a7",
+      "name" : "Aqua Vachette",
+      "owner" : "9d0878c4-7bdd-47aa-beb3-f32e4ba701ad"
+    } ]
+  }
+}, {
+  "key" : "PICK",
+  "source" : {
+    "uuid" : "5193b055-747b-456b-83ff-b959194e9462",
+    "name" : "Hamsterlion",
+    "owner" : "9d0878c4-7bdd-47aa-beb3-f32e4ba701ad"
+  }
+}, {
+  "key" : "END",
+  "data" : {
+    "winner" : "9d0878c4-7bdd-47aa-beb3-f32e4ba701ad"
+  }
+} ]
