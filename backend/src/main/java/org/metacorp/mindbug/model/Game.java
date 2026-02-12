@@ -5,6 +5,7 @@ import lombok.Setter;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.IChoice;
 import org.metacorp.mindbug.model.effect.EffectQueue;
+import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.model.player.Team;
 
@@ -41,6 +42,8 @@ public class Game {
     private boolean forcedAttack;
     private boolean webSocketUp;
 
+    private List<HistoryEntry> history;
+
     /**
      * Empty constructor (WARNING: a game is not meant to be reused)
      */
@@ -59,6 +62,7 @@ public class Game {
         if (allPlayers.length == 4) {
             setupTeams(this.players);
         }
+        history = new ArrayList<>();
     }
 
     private void setupTeams(List<Player> players) {
@@ -129,15 +133,15 @@ public class Game {
 
     @Override
     public String toString() {
-        return "Game{" +
-                "currentPlayer=" + currentPlayer.getName() +
-                ", finished=" + isFinished() +
-                ", bannedCards=" + bannedCards +
-                ", playedCard=" + playedCard +
-                ", attackingCard=" + attackingCard +
-                ", effectQueue=" + effectQueue +
-                ", choice=" + choice +
-                ", afterEffect=" + afterEffect +
-                '}';
+        return "Game{"
+                + "currentPlayer=" + currentPlayer.getName()
+                + ", finished=" + isFinished()
+                + ", bannedCards=" + bannedCards
+                + ", playedCard=" + playedCard
+                + ", attackingCard=" + attackingCard
+                + ", effectQueue=" + effectQueue
+                + ", choice=" + choice
+                + ", afterEffect=" + afterEffect
+                + '}';
     }
 }

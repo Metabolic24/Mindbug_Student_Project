@@ -6,10 +6,11 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.game.StartService;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.service.game.StartService;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class BooleanChoiceTest {
 
@@ -20,7 +21,8 @@ public class BooleanChoiceTest {
 
     @BeforeEach
     public void initGame() {
-        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        PlayerService playerService = new PlayerService();
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         currentCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(currentCard);

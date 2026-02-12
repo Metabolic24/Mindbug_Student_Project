@@ -1,5 +1,7 @@
 package org.metacorp.mindbug.service;
 
+import lombok.Getter;
+import org.jvnet.hk2.annotations.Service;
 import org.metacorp.mindbug.dto.player.PlayerLightDTO;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 
@@ -10,11 +12,25 @@ import java.util.UUID;
 /**
  * Service that manages players
  */
+@Service
 public class PlayerService {
     /**
      * The map that stores players
      */
-    private static final Map<UUID, PlayerLightDTO> players = new HashMap<>();
+    private final Map<UUID, PlayerLightDTO> players = new HashMap<>();
+
+    /**
+     * The AI player DTO to be used in all solo mode games
+     */
+    @Getter
+    private final PlayerLightDTO aiPlayer;
+
+    /**
+     * Constructor
+     */
+    public PlayerService() {
+        aiPlayer = createPlayer("Michel");
+    }
 
     /**
      * Create a new player
@@ -22,7 +38,7 @@ public class PlayerService {
      * @param playerName the player name
      * @return the created player as a PlayerLightDTO
      */
-    public static PlayerLightDTO createPlayer(String playerName) {
+    public PlayerLightDTO createPlayer(String playerName) {
         UUID randomUuid;
         do {
             randomUuid = UUID.randomUUID();
@@ -44,7 +60,7 @@ public class PlayerService {
      * @return the player data if any
      * @throws UnknownPlayerException if no player has been found
      */
-    public static PlayerLightDTO getPlayer(UUID playerId) throws UnknownPlayerException {
+    public PlayerLightDTO getPlayer(UUID playerId) throws UnknownPlayerException {
         if (players.containsKey(playerId)) {
             return players.get(playerId);
         } else {

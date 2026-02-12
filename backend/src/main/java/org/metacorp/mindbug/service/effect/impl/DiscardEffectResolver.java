@@ -6,6 +6,7 @@ import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.utils.AppUtils;
@@ -67,5 +68,7 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
 
             cardOwner.getDiscardPile().add(card);
         }
+
+        HistoryService.logEffect(game, effect.getType(), effectSource, chosenTargets);
     }
 }

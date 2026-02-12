@@ -4,6 +4,8 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.history.HistoryKey;
+import org.metacorp.mindbug.service.HistoryService;
 
 import java.util.Map;
 
@@ -23,11 +25,14 @@ public class ActionService {
      */
     public static void resolveAction(CardInstance card, Game game) throws GameStateException {
         if (game.getPlayedCard() != null) {
-            throw new GameStateException("a played card needs to be resolved before attacking", Map.of("playedCard", game.getPlayedCard()));
+            throw new GameStateException("a played card needs to be resolved before attacking",
+                    Map.of("playedCard", game.getPlayedCard()));
         } else if (game.getChoice() != null) {
-            throw new GameStateException("a choice needs to be resolved before picking a new card", Map.of("choice", game.getChoice()));
+            throw new GameStateException("a choice needs to be resolved before picking a new card",
+                    Map.of("choice", game.getChoice()));
         } else if (game.getAttackingCard() != null) {
-            throw new GameStateException("an attack needs to be resolved before picking a new card", Map.of("attackingCard", game.getAttackingCard()));
+            throw new GameStateException("an attack needs to be resolved before picking a new card",
+                    Map.of("attackingCard", game.getAttackingCard()));
         }
 
         if (card.getEffects(EffectTiming.ACTION).isEmpty()) {
@@ -36,6 +41,7 @@ public class ActionService {
 
         // Add all the ACTION effects to the queue (if any), if player is allowed to trigger them
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.ACTION, game.getEffectQueue());
+        HistoryService.log(game, HistoryKey.ACTION, card);
 
         // Set afterEffect so it starts a new turn when effect is resolved
         game.setAfterEffect(() -> GameStateService.newTurn(game));

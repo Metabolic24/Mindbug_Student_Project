@@ -7,8 +7,10 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.KeywordUpEffect;
 import org.metacorp.mindbug.model.modifier.KeywordModifier;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
-import org.metacorp.mindbug.utils.AppUtils;
+
+import java.util.Collections;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -28,6 +30,8 @@ public class KeywordUpEffectResolver extends EffectResolver<KeywordUpEffect> {
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
+        this.effectSource = card;
+
         CardKeyword value = effect.getValue();
         boolean moreAllies = effect.isMoreAllies();
         boolean alone = effect.isAlone();
@@ -37,9 +41,9 @@ public class KeywordUpEffectResolver extends EffectResolver<KeywordUpEffect> {
         Player cardOwner = card.getOwner();
         Player opponent = cardOwner.getOpponent(game.getPlayers()).get(0); ;
 
-        if ((alone && cardOwner.getBoard().size() != 1) ||
-                (moreAllies && opponent.getBoard().size() >= cardOwner.getBoard().size()) ||
-                (alliesCount != null && cardOwner.getBoard().size() != alliesCount)) {
+        if ((alone && cardOwner.getBoard().size() != 1)
+                || (moreAllies && opponent.getBoard().size() >= cardOwner.getBoard().size())
+                || (alliesCount != null && cardOwner.getBoard().size() != alliesCount)) {
             return;
         }
 
@@ -59,30 +63,32 @@ public class KeywordUpEffectResolver extends EffectResolver<KeywordUpEffect> {
 
         if (allies) {
             Set<CardInstance> availableCards = cardOwner.getBoard().stream().filter(cardInstance ->
-                    (effect.isSelf() && cardInstance.getUuid().equals(card.getUuid())) ||
-                    (!cardInstance.getUuid().equals(card.getUuid()) &&
-                            (effect.getMax() == null || cardInstance.getPower() <= effect.getMax()))).collect(Collectors.toSet());
+                    (effect.isSelf() && cardInstance.getUuid().equals(card.getUuid()))
+                            || (!cardInstance.getUuid().equals(card.getUuid())
+                            && (effect.getMax() == null || cardInstance.getPower() <= effect.getMax()))).collect(Collectors.toSet());
 
-            for (CardInstance availableCard : availableCards) {
-                addKeyword(availableCard, value, timing);
-            }
+            addKeyword(game, availableCards, value, timing);
         } else {
-            addKeyword(card, value, timing);
+            addKeyword(game, Collections.singleton(card), value, timing);
         }
     }
 
-    private void addKeyword(CardInstance card, CardKeyword keyword, EffectTiming timing) {
-        if (!card.getKeywords().contains(keyword)) {
-            card.getKeywords().add(keyword);
-            if (keyword == CardKeyword.FRENZY) {
-                card.setAbleToAttackTwice(true);
-            } else if (keyword == CardKeyword.TOUGH) {
-                card.setStillTough(true);
-            }
+    private void addKeyword(Game game, Set<CardInstance> cards, CardKeyword keyword, EffectTiming timing) {
+        for (CardInstance card : cards) {
+            if (!card.getKeywords().contains(keyword)) {
+                card.getKeywords().add(keyword);
+                if (keyword == CardKeyword.FRENZY) {
+                    card.setAbleToAttackTwice(true);
+                } else if (keyword == CardKeyword.TOUGH) {
+                    card.setStillTough(true);
+                }
 
-            if (timing == EffectTiming.ATTACK) {
-                card.getModifiers().add(new KeywordModifier(keyword));
+                if (timing == EffectTiming.ATTACK) {
+                    card.getModifiers().add(new KeywordModifier(keyword));
+                }
             }
         }
+
+        HistoryService.logEffect(game, effect.getType(), effectSource, cards);
     }
 }

@@ -13,11 +13,13 @@ import org.metacorp.mindbug.dto.rest.DeclareAttackDTO;
 import org.metacorp.mindbug.dto.rest.PickDTO;
 import org.metacorp.mindbug.dto.rest.PlayDTO;
 import org.metacorp.mindbug.dto.rest.ResolveAttackDTO;
+import org.metacorp.mindbug.dto.rest.StartOfflineDTO;
 import org.metacorp.mindbug.dto.rest.SurrenderDTO;
 import org.metacorp.mindbug.dto.rest.choice.BooleanAnswerDTO;
 import org.metacorp.mindbug.dto.rest.choice.MultipleTargetAnswerDTO;
 import org.metacorp.mindbug.dto.rest.choice.SingleTargetAnswerDTO;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.mapper.GameStateMapper;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -42,6 +44,17 @@ public class GameController {
 
     @Inject
     private GameService gameService;
+
+    @POST
+    @Path("/startOffline")
+    public Response startOffline(StartOfflineDTO startDTO) {
+        try {
+            Game game = gameService.createGame(startDTO.getPlayerId(), null, startDTO.getCardSetName());
+            return Response.ok(game.getUuid()).build();
+        } catch (UnknownPlayerException e) {
+            return Response.status(400).entity("Invalid player ID").build();
+        }
+    }
 
     //TODO To be removed (for debug purpose only)
     @GET
@@ -216,9 +229,9 @@ public class GameController {
     @PUT
     @Path("/attack")
     public Response resolveAttack(ResolveAttackDTO body) throws GameStateException {
-        if (body == null || body.getGameId() == null ||
-                (body.getDefendingPlayerId() != null && body.getDefenseCardId() == null) ||
-                (body.getDefendingPlayerId() == null && body.getDefenseCardId() != null)) {
+        if (body == null || body.getGameId() == null
+                || (body.getDefendingPlayerId() != null && body.getDefenseCardId() == null)
+                || (body.getDefendingPlayerId() == null && body.getDefenseCardId() != null)) {
             return Response.status(400).entity("Invalid request body").build();
         }
 
@@ -264,7 +277,8 @@ public class GameController {
         Game game = gameService.findById(body.getGameId());
         if (game == null) {
             return Response.status(404).entity("Requested game not found").build();
-        } else if (game.getChoice() == null || (game.getChoice().getType() != ChoiceType.BOOLEAN && game.getChoice().getType() != ChoiceType.FRENZY)) {
+        } else if (game.getChoice() == null || (game.getChoice().getType() != ChoiceType.BOOLEAN
+                && game.getChoice().getType() != ChoiceType.FRENZY)) {
             return Response.status(404).entity("No boolean choice to resolve").build();
         }
 
@@ -290,7 +304,8 @@ public class GameController {
         Game game = gameService.findById(body.getGameId());
         if (game == null) {
             return Response.status(404).entity("Requested game not found").build();
-        } else if (game.getChoice() == null || (game.getChoice().getType() != ChoiceType.SIMULTANEOUS && game.getChoice().getType() != ChoiceType.HUNTER)) {
+        } else if (game.getChoice() == null || (game.getChoice().getType() != ChoiceType.SIMULTANEOUS
+                && game.getChoice().getType() != ChoiceType.HUNTER)) {
             return Response.status(404).entity("No single target choice (SIMULTANEOUS or HUNTER) to resolve").build();
         } else if (game.getChoice().getType() == ChoiceType.SIMULTANEOUS && body.getCardId() == null) {
             return Response.status(400).entity("Invalid request body : missing cardId").build();

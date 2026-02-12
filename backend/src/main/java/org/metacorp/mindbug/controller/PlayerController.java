@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.controller;
 
+import jakarta.inject.Inject;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Response;
@@ -12,6 +13,8 @@ import org.metacorp.mindbug.service.PlayerService;
 @Path("/player")
 public class PlayerController {
 
+    @Inject
+    private PlayerService playerService;
 
     /**
      * Endpoint triggered when a new player wants to register
@@ -27,6 +30,6 @@ public class PlayerController {
 
         //TODO Ajouter éventuellement des contraintes/vérifications sur le nom du joueur
 
-        return Response.ok(PlayerService.createPlayer(body.getName())).build();
+        return Response.ok(playerService.createPlayer(body.getName())).build();
     }
 }

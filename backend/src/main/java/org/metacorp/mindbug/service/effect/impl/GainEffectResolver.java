@@ -6,6 +6,7 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.model.player.Team;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.game.GameStateService;
 import java.util.*;
@@ -25,6 +26,8 @@ public class GainEffectResolver extends EffectResolver<GainEffect> {
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
+        this.effectSource = card;
+
         int value = effect.getValue();
         boolean equal = effect.isEqual();
 
@@ -46,5 +49,7 @@ public class GainEffectResolver extends EffectResolver<GainEffect> {
         } else {
             team.gainLifePoints(value);
         }
+
+        HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }
 }

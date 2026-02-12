@@ -12,7 +12,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class GiveEffect extends GenericEffect {
-    public final static String TYPE = "GIVE";
+    public static final String TYPE = "GIVE";
 
     private boolean itself = true;
 }

@@ -12,7 +12,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class BounceEffect extends GenericEffect {
-    public final static String TYPE = "BOUNCE";
+    public static final String TYPE = "BOUNCE";
 
     /**
      * The number of cards to bounce, -1 if all cards should be bounced

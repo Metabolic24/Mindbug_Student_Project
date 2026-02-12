@@ -16,10 +16,23 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <grizzly.version>4.0.2</grizzly.version>
-        <jersey.version>4.0.0</jersey.version>
+        <jersey.version>4.0.2</jersey.version>
         <slf4j.version>2.0.17</slf4j.version>
         <main.class>org.metacorp.mindbug.app.RestApp</main.class>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Source: https://mvnrepository.com/artifact/org.glassfish.jersey/jersey-bom -->
+            <dependency>
+                <groupId>org.glassfish.jersey</groupId>
+                <artifactId>jersey-bom</artifactId>
+                <version>${jersey.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <!-- Jakarta RESTful Web Services API -->
@@ -40,7 +53,6 @@
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-grizzly2-http</artifactId>
-            <version>${jersey.version}</version>
         </dependency>
 
         <!-- Required for WADL generation -->
@@ -54,20 +66,12 @@
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-jackson</artifactId>
-            <version>${jersey.version}</version>
         </dependency>
 
         <!-- Dependency injection kernel -->
         <dependency>
             <groupId>org.glassfish.jersey.inject</groupId>
             <artifactId>jersey-hk2</artifactId>
-            <version>${jersey.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.glassfish.hk2</groupId>
-            <artifactId>hk2-metadata-generator</artifactId>
-            <version>3.1.1</version>
         </dependency>
 
         <!-- Grizzly Web Socket API -->
@@ -96,11 +100,23 @@
             <version>6.1.0</version>
         </dependency>
 
-        <!-- Grizzly Web Socket Client -->
+        <!-- WebSocket client -->
         <dependency>
-            <groupId>org.glassfish.grizzly</groupId>
-            <artifactId>grizzly-http-client</artifactId>
-            <version>1.16</version>
+            <groupId>jakarta.websocket</groupId>
+            <artifactId>jakarta.websocket-api</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.tyrus</groupId>
+            <artifactId>tyrus-client</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.tyrus</groupId>
+            <artifactId>tyrus-container-grizzly-client</artifactId>
+            <version>2.2.2</version>
         </dependency>
 
         <!-- Utile pour enlever un warning sur le serveur WS-->
@@ -121,12 +137,6 @@
             <artifactId>lombok</artifactId>
             <version>1.18.40</version>
             <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.17.0</version>
         </dependency>
 
         <dependency>
@@ -164,6 +174,14 @@
                 <version>3.14.1</version>
                 <configuration>
                     <annotationProcessorPaths>
+                        <!-- Required for dependency injection using @Service -->
+                        <path>
+                            <groupId>org.glassfish.hk2</groupId>
+                            <artifactId>hk2-metadata-generator</artifactId>
+                            <version>4.0.0-M3</version>
+                        </path>
+
+                        <!-- Required for automatic method generation on model classes -->
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>

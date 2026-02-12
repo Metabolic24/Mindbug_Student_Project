@@ -7,6 +7,7 @@ import org.metacorp.mindbug.model.choice.IChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.utils.AppUtils;
 
@@ -22,8 +23,9 @@ public class ManualApp {
 
     private static final String AVAILABLE_ACTIONS = "Actions possibles : play, p, attack, a, sumup, s, details, d, stop, exit\n";
 
-    public static void main(String[] args) {
-        Game game = AppUtils.startGame();
+    static void main() {
+        PlayerService playerService = new PlayerService();
+        Game game = AppUtils.startGame(playerService);
 
         System.out.println(AVAILABLE_ACTIONS);
 
@@ -140,7 +142,8 @@ public class ManualApp {
                         String input = scanner.nextLine();
 
                         SimultaneousEffectsChoice simultaneousEffectsChoice = (SimultaneousEffectsChoice) choice;
-                        if (simultaneousEffectsChoice.getEffectsToSort().stream().noneMatch(effectsToApply -> effectsToApply.getCard().getUuid().toString().equals(input))) {
+                        if (simultaneousEffectsChoice.getEffectsToSort().stream()
+                                .noneMatch(effectsToApply -> effectsToApply.getCard().getUuid().toString().equals(input))) {
                             throw new GameStateException("Choix invalide");
                         }
 
@@ -166,7 +169,8 @@ public class ManualApp {
                         String[] tokens = input.split(" ");
 
                         for (String token : tokens) {
-                            if (targetChoice.getAvailableTargets().stream().noneMatch(target -> target.getUuid().toString().equals(token))) {
+                            if (targetChoice.getAvailableTargets().stream()
+                                    .noneMatch(target -> target.getUuid().toString().equals(token))) {
                                 throw new GameStateException("Choix invalide");
                             }
                         }
@@ -191,7 +195,8 @@ public class ManualApp {
                         String input = scanner.nextLine();
 
                         if (input != null && !input.isBlank()) {
-                            if (hunterChoice.getAvailableTargets().stream().noneMatch(target -> target.getUuid().toString().equals(input))) {
+                            if (hunterChoice.getAvailableTargets().stream()
+                                    .noneMatch(target -> target.getUuid().toString().equals(input))) {
                                 throw new GameStateException("Choix invalide");
                             }
 
@@ -217,6 +222,9 @@ public class ManualApp {
                             }
                             default -> throw new GameStateException("Choix invalide");
                         }
+                    }
+                    default -> {
+                        // Should not happen
                     }
                 }
             } catch (GameStateException e) {
@@ -255,6 +263,9 @@ public class ManualApp {
             case HUNTER -> System.out.println("Veuillez choisir la cible à chasser (si souhaité) : (only type the ID)");
             case FRENZY -> System.out.println("Voulez-vous attaquer à nouveau? (O/N)");
             case BOOLEAN -> System.out.println("Voulez-vous faire revenir Hyénix? (O/N)");
+            default -> {
+                // Should not happen
+            }
         }
     }
 }

@@ -30,13 +30,15 @@ public class BooleanChoiceDTO extends ChoiceDTO {
      */
     public BooleanChoiceDTO(UUID playerToChoose, CardDTO sourceCard, CardDTO targetCard) {
         super(ChoiceType.BOOLEAN, playerToChoose, targetCard);
-        switch (sourceCard.getId()) {// TODO C'est pas propre
+        switch (sourceCard.getId()) { // TODO C'est pas propre
             case 40:
                 message = "Do you want to play the stolen card?";
                 break;
             case 41:
                 message = "Do you want to revive this card?";
                 break;
+            default:
+                // Should not happen
         }
     }
 

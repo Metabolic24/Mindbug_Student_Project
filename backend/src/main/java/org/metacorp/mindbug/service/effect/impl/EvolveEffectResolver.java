@@ -6,9 +6,11 @@ import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.EvolveEffect;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.game.EffectQueueService;
 
+import java.util.Collections;
 import java.util.Optional;
 
 /**
@@ -27,7 +29,11 @@ public class EvolveEffectResolver extends EffectResolver<EvolveEffect> {
 
     @Override
     public void apply(Game game, CardInstance effectSource, EffectTiming timing) {
-        Optional<CardInstance> relatedEvolutionCard = game.getEvolutionCards().stream().filter(cardInstance -> cardInstance.getCard().getId() == effect.getId()).findFirst();
+        this.effectSource = effectSource;
+
+        Optional<CardInstance> relatedEvolutionCard = game.getEvolutionCards().stream().
+                filter(cardInstance -> cardInstance.getCard().getId() == effect.getId()).
+                findFirst();
         relatedEvolutionCard.ifPresent(evolutionCard -> {
             Player currentPlayer = game.getCurrentPlayer();
             evolutionCard.setOwner(currentPlayer);
@@ -49,6 +55,8 @@ public class EvolveEffectResolver extends EffectResolver<EvolveEffect> {
 
             // Add PLAY effects (if any) if player is allowed to trigger them
             EffectQueueService.addBoardEffectsToQueue(evolutionCard, EffectTiming.PLAY, game.getEffectQueue());
+
+            HistoryService.logEffect(game, effect.getType(), effectSource, Collections.singleton(evolutionCard));
         });
     }
 }

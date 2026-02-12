@@ -39,7 +39,8 @@ public class EffectQueueServiceTest {
 
     @BeforeEach
     public void setUp() {
-        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        PlayerService playerService = new PlayerService();
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         Player currentPlayer = game.getCurrentPlayer();
         card = currentPlayer.getHand().getFirst();
@@ -308,8 +309,8 @@ public class EffectQueueServiceTest {
         assertEquals(3, currentPlayer.getTeam().getLifePoints());
         assertTrue(game.isFinished());
         assertFalse(game.getEffectQueue().isResolvingEffect());
-        assertEquals(5, opponent.getHand().size());
-        assertEquals(5, currentPlayer.getHand().size());
+        assertEquals(4, opponent.getHand().size());
+        assertEquals(4, currentPlayer.getHand().size());
     }
 
     @Test

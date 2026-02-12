@@ -4,6 +4,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DrawEffect;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 
 /**
@@ -22,6 +23,9 @@ public class DrawEffectResolver extends EffectResolver<DrawEffect> {
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
+        this.effectSource = card;
+
         card.getOwner().drawX(effect.getValue());
+        HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }
 }

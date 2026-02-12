@@ -15,7 +15,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HunterChoiceTest {
 
@@ -28,7 +31,8 @@ public class HunterChoiceTest {
 
     @BeforeEach
     public void initGame() {
-        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        PlayerService playerService = new PlayerService();
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponent = game.getOpponent();
 
@@ -36,6 +40,7 @@ public class HunterChoiceTest {
         currentCard.getCard().setKeywords(new HashSet<>(List.of(CardKeyword.HUNTER)));
         currentCard.setAbleToAttackTwice(false);
         currentCard.setKeywords(new HashSet<>(List.of(CardKeyword.HUNTER)));
+        currentCard.getEffects(EffectTiming.PASSIVE).clear();
         currentCard.setPower(10);
         currentPlayer.addCardToBoard(currentCard);
 
@@ -55,7 +60,7 @@ public class HunterChoiceTest {
 
     @Test
     public void testResolve_ignoreHunter() throws GameStateException {
-        HunterChoice choice = new HunterChoice(currentPlayer, currentCard, new HashSet<>(opponent.getBoard()));
+        HunterChoice choice = new HunterChoice(currentCard, new HashSet<>(opponent.getBoard()));
         game.setChoice(choice);
 
         choice.resolve(null, game);
@@ -69,7 +74,7 @@ public class HunterChoiceTest {
 
     @Test
     public void testResolve_nominal() throws GameStateException {
-        HunterChoice choice = new HunterChoice(currentPlayer, currentCard, new HashSet<>(opponent.getBoard()));
+        HunterChoice choice = new HunterChoice(currentCard, new HashSet<>(opponent.getBoard()));
         game.setChoice(choice);
 
         choice.resolve(opponentCard.getUuid(), game);

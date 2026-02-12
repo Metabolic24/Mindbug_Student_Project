@@ -29,8 +29,16 @@ const router = useRouter()
 // VueX store to retrieve player data
 const store: Store<AppState> = useStore()
 
+// Reference for game error
+const error = ref(false);
+// References for the loading page
+let loadingTimer: number; 
+// After 10s of waiting, the user can go back to the main menu
+const showRetry = ref(false); 
+
 // Reference for game state
 const gameState: Ref<GameStateInterface> = ref(undefined);
+
 // Reference that holds the current player ID
 const currentPlayer: Ref<string> = ref(undefined);
 // Reference for the currently selected card
@@ -77,57 +85,90 @@ const isChoiceModalVisible = computed(() => {
 
 onMounted(async () => {
   // Initializes the game WebSocket to update game state
-  wsConnection = new WebSocket("ws://localhost:8080/ws/game/" + props.gameId + "?playerId=" + store.state.playerData.uuid);
-  wsConnection.onmessage = (event: MessageEvent<string>) => {
-    // Parse incoming data into a WsMessage
-    const message: WsMessage = JSON.parse(event.data)
+  try {
+    wsConnection = new WebSocket("ws://localhost:8080/ws/game/" + props.gameId + "?playerId=" + store.state.playerData.uuid);
+  } catch (e) {
+    error.value = true;
 
-    // Apply a specific process depending on the event type
-    switch (message.type) {
-      case "NEW_TURN": // Received when a new turn starts
-        selectedCard.value = undefined;
-        pickedCard.value = undefined;
-        attackingCard.value = undefined;
-        break;
-      case "CARD_PICKED": // Received when a player has picked a card
-        selectedCard.value = undefined;
-        pickedCard.value = message.state.card;
-        attackingCard.value = undefined;
-        break;
-      case "CARD_PLAYED": // Received when a player has played a card
-        selectedCard.value = undefined;
-        pickedCard.value = undefined;
-        attackingCard.value = undefined;
-        break;
-      case "ATTACK_DECLARED": // Received when a player declared an attack
-        selectedCard.value = undefined;
-        pickedCard.value = undefined;
-        attackingCard.value = message.state.card;
-        break;
-      case "CHOICE": // Received when a choice needs to be solved
-        if (message.state.choice?.type === "FRENZY") {
-          attackingCard.value = undefined;
-          selectedCard.value = undefined;
-        }
-        break;
-      case "FINISHED": // Received when the game is finished
-        wsConnection.close()
-        break;
-        //TODO Implement remaining cases
-      case "STATE": // Received after joining the WebSocket
-      case "LP_DOWN": // Received when a player has lost Life Points
-      case "CARD_DESTROYED": // Received when a card is destroyed
-      case "EFFECT_RESOLVED": // Received when an effect is successfully resolved
-      case "WAITING_ATTACK_RESOLUTION": // Received when waiting for attack resolution
-        break;
-    }
-
-    gameState.value = message.state;
-    currentPlayer.value = gameState.value.playerTurn ? gameState.value.player.uuid : gameState.value.opponent.uuid;
+    // if error, do not continue to avoid wsConnection errors
+    return;
   }
+
+  // Launch the countdown if the server is taking too long to respond
+  loadingTimer = window.setTimeout(() => {
+    console.log(loadingTimer)
+    if (!gameState.value) {
+      showRetry.value = true;
+    }
+  }, 10000);
+
+  wsConnection.onmessage = (event: MessageEvent<string>) => {
+    try {
+      // if a game is found, cancel the timer to avoid any bug
+      if (gameState.value) {
+        clearTimeout(loadingTimer);
+        showRetry.value = false;
+      }
+
+      // Parse incoming data into a WsMessage
+      const message: WsMessage = JSON.parse(event.data)
+
+      // Apply a specific process depending on the event type
+      switch (message.type) {
+        case "NEW_TURN": // Received when a new turn starts
+          selectedCard.value = undefined;
+          pickedCard.value = undefined;
+          attackingCard.value = undefined;
+          break;
+        case "CARD_PICKED": // Received when a player has picked a card
+          selectedCard.value = undefined;
+          pickedCard.value = message.state.card;
+          attackingCard.value = undefined;
+          break;
+        case "CARD_PLAYED": // Received when a player has played a card
+          selectedCard.value = undefined;
+          pickedCard.value = undefined;
+          attackingCard.value = undefined;
+          break;
+        case "ATTACK_DECLARED": // Received when a player declared an attack
+          selectedCard.value = undefined;
+          pickedCard.value = undefined;
+          attackingCard.value = message.state.card;
+          break;
+        case "CHOICE": // Received when a choice needs to be solved
+          if (message.state.choice?.type === "FRENZY") {
+            attackingCard.value = undefined;
+            selectedCard.value = undefined;
+          }
+          break;
+        case "FINISHED": // Received when the game is finished
+          wsConnection.close()
+          break;
+          //TODO Implement remaining cases
+        case "STATE": // Received after joining the WebSocket
+        case "LP_DOWN": // Received when a player has lost Life Points
+        case "CARD_DESTROYED": // Received when a card is destroyed
+        case "EFFECT_RESOLVED": // Received when an effect is successfully resolved
+        case "WAITING_ATTACK_RESOLUTION": // Received when waiting for attack resolution
+          break;
+      }
+
+      gameState.value = message.state;
+      currentPlayer.value = gameState.value.playerTurn ? gameState.value.player.uuid : gameState.value.opponent.uuid;
+    } catch (e) {
+      console.error("Failed to parse game state", e);
+      error.value = true;
+    }
+  }
+
+  wsConnection.onerror = () => {
+    error.value = true;
+  };
+
 })
 
 onUnmounted(() => {
+  clearTimeout(loadingTimer);
   wsConnection.close(1000, "client left the game")
 
   const game: GameStateInterface = gameState.value;
@@ -249,9 +290,29 @@ async function onLeaveButtonClick() {
       <div class="col-2"></div>
     </div>
   </div>
+  <div v-else-if="error" class="error-page">
+    <div class="error-container">
+      <h1>Oops !</h1>
+      <p>The game cannot be found or joined.</p>
+      <button class="btn-back" @click="router.push({name: 'Home'})">
+        Go back to the main menu
+      </button>
+    </div>
+  </div>
+
+  <div v-else class="loading-page">
+    <div class="loader"></div>
+    <p>Preparing the battlefield...</p>
+
+    <div v-if="showRetry" class="retry-section">
+        <p class="small">But it’s taking longer than expected....</p>
+        <button class="btn-back" @click="router.push({name: 'Home'})">
+          Cancel the game and go back to the main menu
+        </button>
+      </div>
+  </div>
   <choice-modal v-if="isChoiceModalVisible" :choice="choiceModalData"
                 @button-clicked="onChoiceModalButtonClick($event)"></choice-modal>
-  <h2 v-if="!gameState">Loading...</h2>
 </template>
 
 <style scoped>
@@ -322,5 +383,53 @@ async function onLeaveButtonClick() {
 .leave-button:active {
   background-color: #1e6f93;
   transform: scale(0.98);
+}
+
+/* Page d'erreur et de chargement plein écran */
+.error-page, .loading-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a; /* Couleur sombre pour rester dans le thème */
+  color: white;
+  text-align: center;
+}
+
+.error-container h1 {
+  font-size: 4rem;
+  color: #ff4757;
+  margin-bottom: 1rem;
+}
+
+.btn-back {
+  margin-top: 2rem;
+  padding: 10px 25px;
+  background-color: #1e6f93;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-back:hover {
+  background-color: #2980b9;
+}
+
+/* Petit spinner pour le chargement */
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: #1e6f93;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 </style>

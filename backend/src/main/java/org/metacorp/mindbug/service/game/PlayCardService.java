@@ -6,7 +6,9 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 
@@ -36,9 +38,11 @@ public class PlayCardService {
         if (game.getPlayedCard() != null) {
             throw new GameStateException("a card has already been picked", Map.of("playedCard", game.getPlayedCard()));
         } else if (game.getChoice() != null) {
-            throw new GameStateException("a choice needs to be resolved before picking a new card", Map.of("choice", game.getChoice()));
+            throw new GameStateException("a choice needs to be resolved before picking a new card",
+                    Map.of("choice", game.getChoice()));
         } else if (game.getAttackingCard() != null) {
-            throw new GameStateException("an attack needs to be resolved before picking a new card", Map.of("attackingCard", game.getAttackingCard()));
+            throw new GameStateException("an attack needs to be resolved before picking a new card",
+                    Map.of("attackingCard", game.getAttackingCard()));
         }
 
         // Update current player hand
@@ -62,6 +66,7 @@ public class PlayCardService {
 
                 // Send update through WebSocket
                 WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game);
+                HistoryService.log(game, HistoryKey.PICK, card);
             }
         }
         // 2v2 game mode
@@ -113,14 +118,18 @@ public class PlayCardService {
         if (game.getPlayedCard() == null) {
             throw new GameStateException("no card has been picked");
         } else if (game.getChoice() != null) {
-            throw new GameStateException("a choice needs to be resolved before picking a new card", Map.of("choice", game.getChoice()));
+            throw new GameStateException("a choice needs to be resolved before picking a new card",
+                    Map.of("choice", game.getChoice()));
         } else if (game.getAttackingCard() != null) {
-            throw new GameStateException("an attack needs to be resolved before picking a new card", Map.of("attackingCard", game.getAttackingCard()));
+            throw new GameStateException("an attack needs to be resolved before picking a new card",
+                    Map.of("attackingCard", game.getAttackingCard()));
         } else if (mindbugger != null) {
             if (mindbugger.equals(game.getCurrentPlayer())) {
-                throw new GameStateException(MessageFormat.format("player {0} cannot mindbug its own card", mindbugger.getName()), Map.of("mindbugger", mindbugger));
+                throw new GameStateException(MessageFormat.format("player {0} cannot mindbug its own card", mindbugger.getName()),
+                        Map.of("mindbugger", mindbugger));
             } else if (!mindbugger.hasMindbug()) {
-                throw new GameStateException(MessageFormat.format("player {0} has no mindbug left", mindbugger.getName()), Map.of("mindbugger", mindbugger));
+                throw new GameStateException(MessageFormat.format("player {0} has no mindbug left", mindbugger.getName()),
+                        Map.of("mindbugger", mindbugger));
             }
         }
 
@@ -128,6 +137,9 @@ public class PlayCardService {
 
         // Send update through WebSocket
         WebSocketService.sendGameEvent(WsGameEventType.CARD_PLAYED, game);
+
+        HistoryKey historyKey = mindbugger != null ? HistoryKey.MINDBUG : HistoryKey.PLAY;
+        HistoryService.log(game, historyKey, game.getPlayedCard());
 
         // Resolve the effect queue so PLAY effects will be resolved then afterEffect executed
         EffectQueueService.resolveEffectQueue(false, game);

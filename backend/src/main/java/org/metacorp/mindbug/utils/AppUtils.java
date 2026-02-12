@@ -8,15 +8,13 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.PlayCardService;
-import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.StartService;
 
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
-import java.util.stream.Stream;
 
 import javax.swing.text.html.StyleSheet.ListPainter;
 
@@ -24,8 +22,6 @@ import javax.swing.text.html.StyleSheet.ListPainter;
  * Utility class for ManualApp and AutoApp
  */
 public final class AppUtils {
-
-    private static final Random RND = new Random();
 
     @Setter
     private static boolean verbose = false;
@@ -35,9 +31,9 @@ public final class AppUtils {
      *
      * @return the created game
      */
-    public static Game startGame() {
-        PlayerLightDTO player1 = PlayerService.createPlayer("Player1");
-        PlayerLightDTO player2 = PlayerService.createPlayer("Player2");
+    public static Game startGame(PlayerService playerService) {
+        PlayerLightDTO player1 = playerService.createPlayer("Player1");
+        PlayerLightDTO player2 = playerService.createPlayer("Player2");
 
         Game game = StartService.newGame(new Player(player1), new Player(player2));
 
@@ -51,11 +47,11 @@ public final class AppUtils {
         return game;
     }
 
-    public static Game start2v2Game(){
-        PlayerLightDTO player1 = PlayerService.createPlayer("Player1");
-        PlayerLightDTO player2 = PlayerService.createPlayer("Player2");
-        PlayerLightDTO player3 = PlayerService.createPlayer("Player3");
-        PlayerLightDTO player4 = PlayerService.createPlayer("Player4");
+    public static Game start2v2Game(PlayerService playerService){
+        PlayerLightDTO player1 = playerService.createPlayer("Player1");
+        PlayerLightDTO player2 = playerService.createPlayer("Player2");
+        PlayerLightDTO player3 = playerService.createPlayer("Player3");
+        PlayerLightDTO player4 = playerService.createPlayer("Player4");
 
         Game game = StartService.newGame(new Player(player1), new Player(player2), new Player(player3), new Player(player4));
 
@@ -95,7 +91,7 @@ public final class AppUtils {
         }
 
         // Select a card and play it
-        CardInstance card = (scanner == null) ? getRandomCard(hand) : getChosenCard(hand, scanner);
+        CardInstance card = (scanner == null) ? AiUtils.getRandomCard(hand) : getChosenCard(hand, scanner);
         if (card != null) {
             System.out.printf("%s joue la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
             PlayCardService.pickCard(card, game);
@@ -129,7 +125,7 @@ public final class AppUtils {
         }
 
         // Select a card and attack with it
-        CardInstance card = (scanner == null) ? getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
+        CardInstance card = (scanner == null) ? AiUtils.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
         if (card != null) {
             System.out.printf("%s attaque avec la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
             AttackService.declareAttack(card, game);
@@ -158,18 +154,14 @@ public final class AppUtils {
         List<Player> ListopponentPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
         for (Player opponentPlayer : ListopponentPlayer) {
             if (nobody_already_a_blocker) {
-                Stream<CardInstance> blockersStream = opponentPlayer.getBoard().stream().filter(CardInstance::isAbleToBlock);
-                if (game.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)) {
-                    blockersStream = blockersStream.filter((card) -> card.hasKeyword(CardKeyword.SNEAKY));
-                }
 
-                List<CardInstance> availableCards = blockersStream.toList();
+                List<CardInstance> availableCards = AiUtils.getBlockersList(game);
                 if (availableCards.isEmpty()) {
                     System.out.printf("%s ne peut pas défendre\n", opponentPlayer.getName());
                     
                 } else {
                     // Select a card and attack with it
-                    CardInstance card = (scanner == null) ? getRandomCard(availableCards) : getChosenCard(availableCards, scanner,true);
+                    CardInstance card = (scanner == null) ? AiUtils.getRandomCard(availableCards) : getChosenCard(availableCards, scanner,true);
                     if (card != null) {
                         System.out.printf("%s défend avec la carte '%s'\n", opponentPlayer.getName(), card.getCard().getName());
                         nobody_already_a_blocker=false;
@@ -193,7 +185,8 @@ public final class AppUtils {
      * @param player the player to sum-up
      */
     public static void detailedSumUpPlayer(Player player) {
-        System.out.printf("\n%s : %d PV, %d Mindbug(s), %d carte(s) restante(s)\n", player.getName(), player.getTeam().getLifePoints(), player.getMindBugs(), player.getDrawPile().size());
+        System.out.printf("\n%s : %d PV, %d Mindbug(s), %d carte(s) restante(s)\n", player.getName(),
+                player.getTeam().getLifePoints(), player.getMindBugs(), player.getDrawPile().size());
         displayCards(player.getHand(), "Main");
         displayCards(player.getBoard(), "Terrain");
         displayCards(player.getDiscardPile(), "Défausse");
@@ -259,16 +252,6 @@ public final class AppUtils {
     }
 
     /**
-     * Return a random card from the given list
-     *
-     * @param cards the card list
-     * @return a random card from the list
-     */
-    private static CardInstance getRandomCard(List<CardInstance> cards) {
-        return cards.get(RND.nextInt(cards.size()));
-    }
-
-    /**
      * Return the chosen card from the given list
      *
      * @param cards   the card list
@@ -299,6 +282,7 @@ public final class AppUtils {
             return null;
         }
     }
+
     private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner) {
         return getChosenCard( cards, scanner, false);
     } 
@@ -351,16 +335,5 @@ public final class AppUtils {
         
         }
         
-    }
-    
-
-
-    
-
-    /**
-     * @return a random boolean value
-     */
-    public static boolean nextBoolean() {
-        return RND.nextBoolean();
     }
 }

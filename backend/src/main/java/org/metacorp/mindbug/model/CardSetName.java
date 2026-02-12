@@ -1,9 +1,10 @@
 package org.metacorp.mindbug.model;
 
-import lombok.Getter;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-/** Enumeration for Card Set names */
-@Getter
+/**
+ * Enumeration for Card Set names
+ */
 public enum CardSetName {
     FIRST_CONTACT("first_contact"),
     BEYOND_EVOLUTION("beyond_evolution");;
@@ -20,5 +21,10 @@ public enum CardSetName {
             case "beyond_evolution" -> BEYOND_EVOLUTION;
             default -> null;
         };
+    }
+
+    @JsonValue
+    public String getKey() {
+        return key;
     }
 }

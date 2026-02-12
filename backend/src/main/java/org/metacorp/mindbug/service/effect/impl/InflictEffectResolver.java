@@ -6,6 +6,7 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.model.player.Team;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.game.GameStateService;
 
@@ -25,6 +26,8 @@ public class InflictEffectResolver extends EffectResolver<InflictEffect> {
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
+        this.effectSource = card;
+
         boolean self = effect.isSelf();
         boolean allButOne = effect.isAllButOne();
         
@@ -42,5 +45,7 @@ public class InflictEffectResolver extends EffectResolver<InflictEffect> {
             affectedTeam.loseLifePoints(value);
             GameStateService.lifePointLost(affectedPlayer, game);
         }
+
+        HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }
 }

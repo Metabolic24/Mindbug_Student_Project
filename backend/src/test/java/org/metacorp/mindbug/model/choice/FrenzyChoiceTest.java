@@ -14,7 +14,10 @@ import org.metacorp.mindbug.service.game.StartService;
 import java.util.HashSet;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FrenzyChoiceTest {
     private Game game;
@@ -23,7 +26,8 @@ public class FrenzyChoiceTest {
 
     @BeforeEach
     public void initGame() {
-        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        PlayerService playerService = new PlayerService();
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         currentCard = currentPlayer.getHand().getFirst();
         currentCard.getCard().setKeywords(new HashSet<>(List.of(CardKeyword.FRENZY)));
@@ -48,8 +52,8 @@ public class FrenzyChoiceTest {
         assertTrue(currentCard.isAbleToAttackTwice());
         assertNull(game.getAttackingCard());
 
-        assertEquals(game.getCurrentPlayer(),opponent);
-        assertEquals(2,opponent.getTeam().getLifePoints());
+        assertEquals(game.getCurrentPlayer(), opponent);
+        assertEquals(2, opponent.getTeam().getLifePoints());
     }
 
     @Test

@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.ProtectionEffect;
 import org.metacorp.mindbug.model.modifier.ProtectionModifier;
 import org.metacorp.mindbug.model.player.Player;
@@ -28,7 +29,8 @@ public class ProtectionEffectResolverTest {
 
     @BeforeEach
     public void prepareGame() {
-        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        PlayerService playerService = new PlayerService();
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         effectSource = currentPlayer.getHand().getFirst();
 
@@ -36,8 +38,8 @@ public class ProtectionEffectResolverTest {
         currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
         currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
 
-
         effect = new ProtectionEffect();
+        effect.setType(EffectType.PROTECTION);
         effectResolver = new ProtectionEffectResolver(effect);
         timing = EffectTiming.ATTACK;
     }

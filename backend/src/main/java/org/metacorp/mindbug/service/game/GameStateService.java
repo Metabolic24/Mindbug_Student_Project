@@ -7,6 +7,7 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 
@@ -63,6 +64,7 @@ public class GameStateService {
 
     public static void lifePointLost(Player player, Game game) {
         WebSocketService.sendGameEvent(WsGameEventType.LP_DOWN, game);
+        HistoryService.logLifeUpdate(game, player);
 
         if (player.getTeam().getLifePoints() <= 0) {
             endGame(player, game);
@@ -87,6 +89,7 @@ public class GameStateService {
             game.setWinner(List.of(winner));
 
             WebSocketService.sendGameEvent(WsGameEventType.FINISHED, game);
+            HistoryService.saveHistory(game);
         } 
         else if(game.typeGameMode() == 2){
             List<Player> winners = loser.getOpponent(game.getPlayers());

@@ -3,6 +3,7 @@ import {Store, useStore} from "vuex";
 import {useRouter} from "vue-router";
 import {computed, onUnmounted, Ref, ref} from "vue";
 import GameSettingsModal from "@/components/home/GameSettingsModal.vue";
+import {startOfflineGame} from "@/shared/RestService";
 
 // Retrieve VueX store to get player data
 const store: Store<AppState> = useStore()
@@ -21,25 +22,33 @@ let wsConnection: WebSocket;
 let isModalVisible: Ref<boolean> = ref(false);
 
 // Triggered when search button is clicked
-function searchGame(selectedSets: string[]) {
+async function searchGame(settings: GameSettingsInterface) {
+  console.log("searching game...");
   isModalVisible.value = false;
   searchDisabled.value = true;
 
-  try {
-    // Connect to 'join' WebSocket so the server can detect that the player is looking for a game
-    wsConnection = new WebSocket("ws://localhost:8080/ws/join?playerId=" + store.state.playerData?.uuid + "&playerName=" + store.state.playerData?.name + "&sets=" + selectedSets.join(","));
-    wsConnection.onmessage = (event: MessageEvent<string>) => {
-      // Change route to 'Game' one as the server found a game
-      router.push({name: "Game", query: {gameId: event.data}});
+  if (settings.offline) {
+    const gameId = await startOfflineGame(store.state.playerData?.uuid, settings.sets[0])
+    // Change route to 'Game' one as the server created an offline game
+    await router.push({name: "Game", query: {gameId}});
+    searchDisabled.value = false;
+  } else {
+    try {
+      // Connect to 'join' WebSocket so the server can detect that the player is looking for a game
+      wsConnection = new WebSocket("ws://localhost:8080/ws/join?playerId=" + store.state.playerData?.uuid + "&playerName=" + store.state.playerData?.name + "&sets=" + settings.sets.join(","));
+      wsConnection.onmessage = (event: MessageEvent<string>) => {
+        // Change route to 'Game' one as the server found a game
+        router.push({name: "Game", query: {gameId: event.data}});
 
-      // Close the WS connection and enable the search button (even if we are no more in the 'Home' route)
-      wsConnection.close()
+        // Close the WS connection and enable the search button (even if we are no more in the 'Home' route)
+        wsConnection.close()
+        searchDisabled.value = false;
+      }
+    } catch (error) {
+      // TODO Améliorer l'affichage des erreurs
+      alert("Connexion perdue avec le serveur")
       searchDisabled.value = false;
     }
-  } catch (error) {
-    // TODO Améliorer l'affichage des erreurs
-    alert("Connexion perdue avec le serveur")
-    searchDisabled.value = false;
   }
 }
 

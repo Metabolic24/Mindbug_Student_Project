@@ -7,6 +7,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.Effect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.impl.CopyEffect;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
@@ -35,22 +36,31 @@ public class CopyEffectResolverTest {
 
     @BeforeEach
     public void prepareGame() {
-        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        PlayerService playerService = new PlayerService();
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
         effect = new CopyEffect();
+        effect.setType(EffectType.COPY);
         effectResolver = new CopyEffectResolver(effect);
         timing = EffectTiming.PLAY;
 
         randomCard = currentPlayer.getHand().getFirst();
         randomCard.getEffects(timing).clear();
+        randomCard.getEffects(EffectTiming.PASSIVE).clear();
         currentPlayer.addCardToBoard(randomCard);
     }
 
     @Test
     public void testWithTiming_nominal() {
         CardInstance otherCard = opponentPlayer.getHand().getFirst();
+
+        // Avoid modifying the same base card than random card one
+        if (otherCard.getCard().equals(randomCard.getCard())) {
+            otherCard = opponentPlayer.getHand().get(1);
+        }
+
         List<Effect> playEffects = otherCard.getEffects(timing);
         playEffects.clear();
 
@@ -65,6 +75,7 @@ public class CopyEffectResolverTest {
         effect.setTiming(timing);
         effectResolver.apply(game, randomCard, timing);
 
+        // TODO Il y a un cas où c'est égal à 0 ici (peut-être un simultaneous choice)
         assertEquals(1, game.getEffectQueue().size());
 
         EffectsToApply effectsToApply = game.getEffectQueue().poll();

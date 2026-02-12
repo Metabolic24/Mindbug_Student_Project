@@ -1,7 +1,6 @@
 package org.metacorp.mindbug.model.modifier;
 
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.effect.EffectTiming;
 
 /**
  * Modifier that adds a protection

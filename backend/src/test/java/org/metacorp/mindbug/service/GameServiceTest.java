@@ -1,25 +1,20 @@
 package org.metacorp.mindbug.service;
 
+import org.glassfish.hk2.api.ServiceLocator;
+import org.glassfish.hk2.utilities.ServiceLocatorUtilities;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
-import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
-import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.card.CardKeyword;
-import org.metacorp.mindbug.model.effect.EffectTiming;
-import org.metacorp.mindbug.model.effect.impl.GainEffect;
-import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.StartService;
-import org.metacorp.mindbug.utils.CardUtils;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class GameServiceTest {
 
@@ -28,8 +23,11 @@ public class GameServiceTest {
 
     @BeforeEach
     public void initGame() {
-        gameService = new GameService();
-        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        ServiceLocator locator = ServiceLocatorUtilities.createAndPopulateServiceLocator();
+
+        PlayerService playerService = locator.getService(PlayerService.class);
+        gameService = locator.getService(GameService.class);
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
     }
 
     @Test

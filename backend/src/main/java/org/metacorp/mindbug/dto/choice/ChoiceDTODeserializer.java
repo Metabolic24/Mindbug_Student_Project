@@ -36,26 +36,36 @@ public class ChoiceDTODeserializer extends StdDeserializer<AbstractChoiceDTO> {
 
         switch (choiceType) {
             case FRENZY -> {
-                CardDTO sourceCard = mapper.treeToValue(node.get("sourceCard"),  new TypeReference<>() {});
-                return new ChoiceDTO(choiceType, playerToChoose,  sourceCard);
+                CardDTO sourceCard = mapper.treeToValue(node.get("sourceCard"), new TypeReference<>() {
+                });
+                return new ChoiceDTO(choiceType, playerToChoose, sourceCard);
             }
             case BOOLEAN -> {
-                CardDTO sourceCard = mapper.treeToValue(node.get("sourceCard"),  new TypeReference<>() {});
-                return new BooleanChoiceDTO(playerToChoose,  sourceCard, node.get("message").asText());
+                CardDTO sourceCard = mapper.treeToValue(node.get("sourceCard"), new TypeReference<>() {
+                });
+                return new BooleanChoiceDTO(playerToChoose, sourceCard, node.get("message").asText());
             }
             case SIMULTANEOUS -> {
-                Set<CardDTO> cards = mapper.treeToValue(node.get("availableEffects"),  new TypeReference<>() {});
+                Set<CardDTO> cards = mapper.treeToValue(node.get("availableEffects"), new TypeReference<>() {
+                });
                 return new SimultaneousChoiceDTO(playerToChoose, cards);
             }
             case HUNTER -> {
-                CardDTO sourceCard = mapper.treeToValue(node.get("sourceCard"),  new TypeReference<>() {});
-                Set<CardDTO> cards = mapper.treeToValue(node.get("availableTargets"),  new TypeReference<>() {});
-                return new HunterChoiceDTO(playerToChoose,  sourceCard, cards);
+                CardDTO sourceCard = mapper.treeToValue(node.get("sourceCard"), new TypeReference<>() {
+                });
+                Set<CardDTO> cards = mapper.treeToValue(node.get("availableTargets"), new TypeReference<>() {
+                });
+                return new HunterChoiceDTO(playerToChoose, sourceCard, cards);
             }
             case TARGET -> {
-                CardDTO sourceCard = mapper.treeToValue(node.get("sourceCard"),  new TypeReference<>() {});
-                Set<CardDTO> cards = mapper.treeToValue(node.get("availableTargets"),  new TypeReference<>() {});
+                CardDTO sourceCard = mapper.treeToValue(node.get("sourceCard"), new TypeReference<>() {
+                });
+                Set<CardDTO> cards = mapper.treeToValue(node.get("availableTargets"), new TypeReference<>() {
+                });
                 return new TargetChoiceDTO(playerToChoose, sourceCard, cards, node.get("targetsCount").asInt(), node.get("optional").asBoolean());
+            }
+            default -> {
+                // Should not happen
             }
         }
 

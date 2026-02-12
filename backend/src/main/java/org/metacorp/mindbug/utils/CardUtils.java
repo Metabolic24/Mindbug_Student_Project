@@ -5,9 +5,6 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.Card;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.effect.EffectTiming;
-import org.metacorp.mindbug.model.effect.EffectsToApply;
-import org.metacorp.mindbug.model.player.Player;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,7 +13,6 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 

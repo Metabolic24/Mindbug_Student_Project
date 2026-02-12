@@ -6,10 +6,11 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.KeywordUpEffect;
+import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.StartService;
-import org.metacorp.mindbug.model.player.Player;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -31,7 +32,8 @@ public class KeywordUpEffectResolverTest {
 
     @BeforeEach
     public void prepareGame() {
-        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        PlayerService playerService = new PlayerService();
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
@@ -40,6 +42,7 @@ public class KeywordUpEffectResolverTest {
         currentPlayer.addCardToBoard(randomCard);
 
         effect = new KeywordUpEffect();
+        effect.setType(EffectType.KEYWORD_UP);
         effectResolver = new KeywordUpEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }

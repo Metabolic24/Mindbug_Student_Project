@@ -5,6 +5,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DisableTimingEffect;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.utils.AppUtils;
 
@@ -26,5 +27,7 @@ public class DisableTimingEffectResolver extends EffectResolver<DisableTimingEff
     public void apply(Game game, CardInstance card, EffectTiming timing) {
         Player opponent = AppUtils.ChosenOpponent( game, card.getOwner());
         opponent.disableTiming(effect.getValue());
+
+        HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }
 }

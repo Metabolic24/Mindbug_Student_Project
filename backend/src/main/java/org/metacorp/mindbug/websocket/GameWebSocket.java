@@ -9,6 +9,7 @@ import org.metacorp.mindbug.utils.WsUtils;
 
 import java.util.UUID;
 
+import static org.metacorp.mindbug.utils.WsUtils.IS_AI_KEY;
 import static org.metacorp.mindbug.utils.WsUtils.PLAYER_ID_KEY;
 
 @Getter
@@ -16,6 +17,7 @@ public class GameWebSocket extends DefaultWebSocket {
 
     private UUID gameId;
     private UUID playerId;
+    private boolean isAI;
 
     public GameWebSocket(ProtocolHandler protocolHandler, HttpRequestPacket request, WebSocketListener... listeners) {
         super(protocolHandler, request, listeners);
@@ -35,7 +37,14 @@ public class GameWebSocket extends DefaultWebSocket {
             playerId = UUID.fromString(playerQueryParam);
         }
 
-        System.out.println("--- Connected to Websocket " + this.servletRequest.getRequestURI());
+        // AI field is optional and only filled if this WS is linked to an AI player
+        String aiQueryParam = WsUtils.getValueFromQueryParam(IS_AI_KEY, this.servletRequest.getQueryString());
+        if (aiQueryParam != null) {
+            isAI = Boolean.parseBoolean(aiQueryParam);
+        }
+
+        // TODO Message de DEBUG (à améliorer)
+        // System.out.println("--- Connected to Websocket " + this.servletRequest.getRequestURI());
 
         super.onConnect();
     }

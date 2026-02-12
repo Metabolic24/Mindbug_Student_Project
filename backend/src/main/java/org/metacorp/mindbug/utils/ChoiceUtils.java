@@ -81,7 +81,9 @@ public final class ChoiceUtils {
 
         // Check that there are chosen targets (can be null/empty if choice is optional)
         if (chosenTargetIds != null && !chosenTargetIds.isEmpty()) {
-            List<CardInstance> chosenTargets = choice.getAvailableTargets().stream().filter(target -> chosenTargetIds.contains(target.getUuid())).toList();
+            List<CardInstance> chosenTargets = choice.getAvailableTargets().stream()
+                    .filter(target -> chosenTargetIds.contains(target.getUuid()))
+                    .toList();
             if (chosenTargets.size() != chosenTargetIds.size()) {
                 //TODO Raise an error or log message
             }
@@ -100,15 +102,26 @@ public final class ChoiceUtils {
         game.setChoice(null);
 
         if (chosenTargetId != null) {
-            Optional<CardInstance> chosenTarget = choice.getAvailableTargets().stream().filter(target -> chosenTargetId.equals(target.getUuid())).findFirst();
+            Optional<CardInstance> chosenTarget = choice.getAvailableTargets().stream()
+                    .filter(target -> chosenTargetId.equals(target.getUuid()))
+                    .findFirst();
             if (chosenTarget.isEmpty()) {
                 //TODO Raise an error or log message
             } else {
                 AttackService.resolveAttack(chosenTarget.get(), game);
             }
         } else {
-            Player opponent = choice.getPlayerToChoose().getOpponent(game.getPlayers()).get(0);
-            if (opponent.getBoard().isEmpty() || !opponent.canBlock(choice.getAttackingCard().hasKeyword(CardKeyword.SNEAKY))) {
+            List<Player> opponents = choice.getAttackingCard()
+                    .getOwner()
+                    .getOpponent(game.getPlayers());
+
+            boolean someoneCanBlock = opponents.stream()
+                    .anyMatch(opponent ->
+                            !opponent.getBoard().isEmpty() &&
+                            opponent.canBlock(choice.getAttackingCard().hasKeyword(CardKeyword.SNEAKY))
+                    );
+
+            if (!someoneCanBlock) {
                 AttackService.resolveAttack(null, game);
             } else {
                 WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);

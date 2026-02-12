@@ -12,7 +12,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class DestroyEffect extends GenericEffect {
-    public final static String TYPE = "DESTROY";
+    public static final String TYPE = "DESTROY";
 
     private Integer value;          // The number of cards to destroy, -1 if all cards should be destroyed
 

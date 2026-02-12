@@ -3,7 +3,6 @@ package org.metacorp.mindbug.service;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.dto.player.PlayerLightDTO;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
-import org.metacorp.mindbug.model.player.Player;
 
 import java.util.UUID;
 
@@ -11,17 +10,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class PlayerServiceTest {
 
+    private final PlayerService playerService = new PlayerService();
+
     @Test
     public void createPlayer_nominal() {
         String name = "player1";
-        PlayerLightDTO player = PlayerService.createPlayer(name);
+        PlayerLightDTO player = playerService.createPlayer(name);
 
         assertNotNull(player);
         assertEquals(name, player.getName());
         assertNotNull(player.getUuid());
 
         name = "player2";
-        PlayerLightDTO player2 = PlayerService.createPlayer(name);
+        PlayerLightDTO player2 = playerService.createPlayer(name);
 
         assertNotNull(player2);
         assertEquals(name, player2.getName());
@@ -32,13 +33,13 @@ public class PlayerServiceTest {
     @Test
     public void getPlayer_nominal() throws UnknownPlayerException {
         String name = "player1";
-        PlayerLightDTO player = PlayerService.createPlayer(name);
+        PlayerLightDTO player = playerService.createPlayer(name);
 
-        assertEquals(player, PlayerService.getPlayer(player.getUuid()));
+        assertEquals(player, playerService.getPlayer(player.getUuid()));
     }
 
     @Test
     public void getPlayer_unknownPlayer() {
-        assertThrows(UnknownPlayerException.class, ()-> PlayerService.getPlayer(UUID.randomUUID()));
+        assertThrows(UnknownPlayerException.class, () -> playerService.getPlayer(UUID.randomUUID()));
     }
 }

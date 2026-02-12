@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
-import org.metacorp.mindbug.model.effect.EffectLocation;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.EvolveEffect;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
@@ -15,7 +14,10 @@ import org.metacorp.mindbug.service.PlayerService;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CardServiceTest {
 
@@ -24,7 +26,8 @@ public class CardServiceTest {
 
     @BeforeEach
     public void initGame() {
-        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        PlayerService playerService = new PlayerService();
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
     }
 
@@ -72,7 +75,7 @@ public class CardServiceTest {
         EvolveEffect evolveEffect = new EvolveEffect();
         evolveEffect.setId(45);
 
-        boardCard.getCard().getEffects().put(EffectTiming.ACTION,  new ArrayList<>(List.of(evolveEffect)));
+        boardCard.getCard().getEffects().put(EffectTiming.ACTION, new ArrayList<>(List.of(evolveEffect)));
 
         CardService.defeatCard(boardCard, game);
         assertFalse(boardCard.isStillTough());

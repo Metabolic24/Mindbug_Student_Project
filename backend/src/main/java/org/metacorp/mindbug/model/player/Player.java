@@ -6,7 +6,11 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.UUID;
 
 /**
  * Class that describes a player data
@@ -137,6 +141,7 @@ public class Player {
 
     /**
      * Checks whether player can block with a creature
+     *
      * @return true if he can block with a creature, false otherwise
      */
     public boolean canBlock(boolean sneakyAttack) {
@@ -152,5 +157,12 @@ public class Player {
     @Override
     public String toString() {
         return "Player (name : " + name + ", team : " + team + ", mindbugs : " + mindBugs + ")";
+    }
+
+    /**
+     * @return true if the player is a bot, false otherwise (default : false)
+     */
+    public boolean isAI() {
+        return false;
     }
 }

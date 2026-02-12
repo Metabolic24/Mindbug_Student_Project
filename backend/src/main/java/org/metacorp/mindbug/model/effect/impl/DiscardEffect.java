@@ -12,15 +12,23 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class DiscardEffect extends GenericEffect {
-    public final static String TYPE = "DISCARD";
+    public static final String TYPE = "DISCARD";
 
-    /** The number of cards to be discarded */
+    /**
+     * The number of cards to be discarded
+     */
     private int value;
-    /** If true, a card is discarded for each enemy card on board */
+    /**
+     * If true, a card is discarded for each enemy card on board
+     */
     private boolean eachEnemy;
-    /** Should the card(s) be discarded by the source card owner */
+    /**
+     * Should the card(s) be discarded by the source card owner
+     */
     private boolean self;
-    /** Should the cards be discarded from the draw pile */
+    /**
+     * Should the cards be discarded from the draw pile
+     */
     private boolean drawPile;
 
 }

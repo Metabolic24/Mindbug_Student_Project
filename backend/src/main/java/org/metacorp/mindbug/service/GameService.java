@@ -1,9 +1,11 @@
 package org.metacorp.mindbug.service;
 
+import jakarta.inject.Inject;
 import org.jvnet.hk2.annotations.Service;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.StartService;
@@ -23,6 +25,9 @@ public class GameService {
      */
     private final Map<UUID, Game> games = new HashMap<>();
 
+    @Inject
+    private PlayerService playerService;
+
     /**
      * Create a new game using FIRST_CONTACT set
      *
@@ -39,14 +44,14 @@ public class GameService {
      * Create a new game
      *
      * @param player1Id the first player ID
-     * @param player2Id the second player ID
+     * @param player2Id the second player ID (null in case of an offline game)
      * @param setName   the card set to be used for this game
      * @return the created Game
      * @throws UnknownPlayerException if at least one player could not be found in the database
      */
     public Game createGame(UUID player1Id, UUID player2Id, CardSetName setName) throws UnknownPlayerException {
-        Player player1 = new Player(PlayerService.getPlayer(player1Id));
-        Player player2 = new Player(PlayerService.getPlayer(player2Id));
+        Player player1 = new Player(playerService.getPlayer(player1Id));
+        Player player2 = player2Id == null ? new AiPlayer(playerService.getAiPlayer()) : new Player(playerService.getPlayer(player2Id));
 
         Game game = StartService.newGame(player1, player2, setName);
         games.put(game.getUuid(), game);
@@ -66,10 +71,10 @@ public class GameService {
      */
     public Game createGame(UUID p1Id, UUID p2Id, UUID p3Id, UUID p4Id, CardSetName setName) throws UnknownPlayerException {
         // 1. Récupération des 4 joueurs depuis la base de données via le PlayerService
-        Player p1 = new Player(PlayerService.getPlayer(p1Id));
-        Player p2 = new Player(PlayerService.getPlayer(p2Id));
-        Player p3 = new Player(PlayerService.getPlayer(p3Id));
-        Player p4 = new Player(PlayerService.getPlayer(p4Id));
+        Player p1 = new Player(playerService.getPlayer(p1Id));
+        Player p2 = new Player(playerService.getPlayer(p2Id));
+        Player p3 = new Player(playerService.getPlayer(p3Id));
+        Player p4 = new Player(playerService.getPlayer(p4Id));
 
         // 2. Appel de la méthode StartService.newGame (version 4 joueurs)
         // C'est ici que l'User Story est remplie : StartService va lier les Team instances.
@@ -99,7 +104,7 @@ public class GameService {
      */
     public void endGame(UUID losingPlayerID, UUID gameId) {
         Game game = findById(gameId);
-        if (game != null) {
+        if (game != null && !game.isFinished()) {
             game.getPlayers().stream()
                     .filter(player -> player.getUuid().equals(losingPlayerID))
                     .findFirst().ifPresent(player -> GameStateService.endGame(player, game));

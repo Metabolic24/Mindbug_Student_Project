@@ -46,10 +46,14 @@ import org.metacorp.mindbug.model.effect.impl.StealEffect;
         @JsonSubTypes.Type(value = StealEffect.class, name = StealEffect.TYPE)}
 )
 public class Effect {
-    /** The effect type */
+    /**
+     * The effect type
+     */
     private EffectType type;
 
-    /** Where this effect should trigger (default : BOARD) */
+    /**
+     * Where this effect should trigger (default : BOARD)
+     */
     private EffectLocation location;
 
     /**
@@ -60,10 +64,4 @@ public class Effect {
         location = EffectLocation.BOARD;
     }
 
-    /**
-     * @return true if the effect has a cost (eq. is a CostEffect), false otherwise
-     */
-    public boolean hasCost() {
-        return false;
-    }
 }

@@ -13,7 +13,7 @@ import org.metacorp.mindbug.model.effect.GenericEffect;
 @Data
 @NoArgsConstructor
 public class DisableTimingEffect extends GenericEffect {
-    public final static String TYPE = "DISABLE_TIMING";
+    public static final String TYPE = "DISABLE_TIMING";
 
     private EffectTiming value; // The timing of effects that should be disabled
 }

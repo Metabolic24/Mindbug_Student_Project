@@ -8,6 +8,7 @@ import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.IChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.BounceEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
@@ -31,7 +32,8 @@ public class BounceEffectResolverTest {
 
     @BeforeEach
     public void prepareGame() {
-        game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
+        PlayerService playerService = new PlayerService();
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         Player currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
@@ -40,6 +42,7 @@ public class BounceEffectResolverTest {
         currentPlayer.addCardToBoard(randomCard);
 
         effect = new BounceEffect();
+        effect.setType(EffectType.BOUNCE);
         effectResolver = new BounceEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }
@@ -73,7 +76,7 @@ public class BounceEffectResolverTest {
 
         TargetChoice targetChoice = (TargetChoice) choice;
         assertNotNull(targetChoice.getEffect());
-        assertEquals(effect, ((BounceEffectResolver)targetChoice.getEffect()).getEffect());
+        assertEquals(effect, ((BounceEffectResolver) targetChoice.getEffect()).getEffect());
         assertEquals(randomCard, targetChoice.getEffectSource());
         assertEquals(randomCard.getOwner(), targetChoice.getPlayerToChoose());
         assertEquals(1, targetChoice.getTargetsCount());

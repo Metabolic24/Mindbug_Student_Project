@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Card from "@/components/game/Card.vue";
 import {getCardAlt, getCardImage} from "@/shared/CardUtils";
 
 // Declare the interface for the data given by the parent component
@@ -12,20 +13,20 @@ const props = defineProps<Props>()
 // Declare events emitted by this component
 const emit = defineEmits(['card-selected'])
 
-// Get the CSS classes for the given card
-function getCardClasses(card: CardInterface): Record<string, boolean> {
-  return ({
-    'bottom-card': !props.opponent,
-    'selected': card.uuid === props.selectedCard?.uuid,
-  })
-}
 </script>
 
 <template>
   <div class="hand">
-    <img v-for="card in cards" :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image"
-         :class="getCardClasses(card)" @click="emit('card-selected', card)" draggable="false"
-         @contextmenu.prevent=""/>
+    <Card
+      v-for="card in cards"
+      :key="card.uuid"
+      :card="card"
+      :context="opponent ? 'opponent-hand' : 'player-hand'"
+      :selected="card.uuid === selectedCard?.uuid"
+      :clickable="!opponent"
+      @click="emit('card-selected', card)"
+    />
+
   </div>
 </template>
 

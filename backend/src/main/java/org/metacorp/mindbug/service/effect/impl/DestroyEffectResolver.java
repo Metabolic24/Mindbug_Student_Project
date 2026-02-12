@@ -4,10 +4,10 @@ package org.metacorp.mindbug.service.effect.impl;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.TargetChoice;
-import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.CardService;
@@ -86,8 +86,8 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
 
             if (allies || selfAllowed) {
                 for (CardInstance currentCard : card.getOwner().getBoard()) {
-                    if (min != null && currentCard.getPower() < min ||
-                            max != null && currentCard.getPower() > max) {
+                    if (min != null && currentCard.getPower() < min
+                            || max != null && currentCard.getPower() > max) {
                         continue;
                     }
 
@@ -118,6 +118,8 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
         for (CardInstance card : cards) {
             defeatCard(card, game);
         }
+
+        HistoryService.logEffect(game, effect.getType(), effectSource, cards);
     }
 
  

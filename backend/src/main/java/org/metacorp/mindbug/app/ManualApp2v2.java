@@ -7,6 +7,7 @@ import org.metacorp.mindbug.model.choice.IChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.utils.AppUtils;
 
@@ -23,7 +24,8 @@ public class ManualApp2v2 {
     private static final String AVAILABLE_ACTIONS = "Actions possibles : play, p, attack, a, sumup, s, details, d, stop, exit\n";
 
     public static void main(String[] args) {
-        Game game = AppUtils.start2v2Game();
+        PlayerService playerService = new PlayerService();
+        Game game = AppUtils.start2v2Game(playerService);
 
         System.out.println(AVAILABLE_ACTIONS);
 

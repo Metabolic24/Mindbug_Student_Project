@@ -1,5 +1,7 @@
 package org.metacorp.mindbug.mapper;
 
+import org.glassfish.hk2.api.ServiceLocator;
+import org.glassfish.hk2.utilities.ServiceLocatorUtilities;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.dto.CardDTO;
@@ -24,17 +26,26 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GameStateMapperTest {
 
-    private final GameService gameService = new GameService();
+    private GameService gameService;
     private Game game;
 
     @BeforeEach
     public void setUp() throws UnknownPlayerException {
-        Player player1 = new Player(PlayerService.createPlayer("player1"));
-        Player player2 = new Player(PlayerService.createPlayer("player2"));
+        ServiceLocator locator = ServiceLocatorUtilities.createAndPopulateServiceLocator();
+
+        PlayerService playerService = locator.getService(PlayerService.class);
+        gameService = locator.getService(GameService.class);
+        Player player1 = new Player(playerService.createPlayer("player1"));
+        Player player2 = new Player(playerService.createPlayer("player2"));
         game = gameService.createGame(player1.getUuid(), player2.getUuid());
     }
 
@@ -159,7 +170,7 @@ public class GameStateMapperTest {
 
             for (CardDTO playerDTOCard : playerDTOHand) {
                 if (playerCard.getUuid().equals(playerDTOCard.getUuid())) {
-                    compareCard(playerCard,  playerDTOCard);
+                    compareCard(playerCard, playerDTOCard);
 
                     found = true;
                     break;
@@ -173,6 +184,7 @@ public class GameStateMapperTest {
     private void compareCard(CardInstance card, CardDTO cardDTO) {
         assertEquals(card.getCard().getName(), cardDTO.getName());
         assertEquals(card.getPower(), cardDTO.getPower());
+        assertEquals(card.getCard().getPower(), cardDTO.getBasePower());
         assertEquals(card.getCard().getId(), cardDTO.getId());
         assertEquals(card.getKeywords(), cardDTO.getKeywords());
         assertEquals(card.getCard().getSetName(), cardDTO.getSetName());

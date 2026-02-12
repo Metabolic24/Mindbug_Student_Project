@@ -9,6 +9,7 @@ public class UnknownPlayerException extends Exception {
 
     /**
      * Constructor
+     *
      * @param playerId the player ID that has not been found in the database
      */
     public UnknownPlayerException(UUID playerId) {

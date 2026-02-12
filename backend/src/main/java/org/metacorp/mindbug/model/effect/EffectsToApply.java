@@ -55,8 +55,16 @@ public class EffectsToApply {
      * @param card    the card related to the effect
      * @param timing  the effect timing
      */
-    public EffectsToApply(@NonNull List<GenericEffect> cost, @NonNull List<GenericEffect> effects, @NonNull CardInstance card, @NonNull EffectTiming timing) {
+    public EffectsToApply(@NonNull List<GenericEffect> cost, @NonNull List<GenericEffect> effects, @NonNull CardInstance card,
+                          @NonNull EffectTiming timing) {
         this(new ArrayList<>(effects), card, timing);
         this.cost = cost;
+    }
+
+    /**
+     * @return true if the instance has cost effect(s)
+     */
+    public boolean hasCost() {
+        return this.cost != null && !this.cost.isEmpty();
     }
 }

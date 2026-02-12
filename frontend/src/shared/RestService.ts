@@ -35,6 +35,10 @@ export async function getCardSetDetails(setName: String): Promise<string[]> {
 
 // Game endpoints
 
+export async function startOfflineGame(playerId: string, cardSetName: string): Promise<string> {
+    return manageRestCall(axios.post(gameBaseUrl + "/startOffline", {playerId, cardSetName}))
+}
+
 export async function pickCard(gameId: string, cardId: string): Promise<void> {
     return manageRestCall(axios.post(gameBaseUrl + "/pick", {gameId, cardId}))
 }
