@@ -22,6 +22,7 @@ public class Card {
     private Set<CardKeyword> keywords;
     private Map<EffectTiming, List<Effect>> effects;
     private boolean unique;     // Has this card multiple copies in the set or not
+    private String description;
     private boolean evolution;  // Is this card an evolution of another card
 
     /**

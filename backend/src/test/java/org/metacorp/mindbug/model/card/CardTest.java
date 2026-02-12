@@ -34,7 +34,7 @@ public class CardTest {
 
             Card firstCard = fileCards.getFirst();
             assertNotNull(firstCard);
-            assertEquals("Arachnibou", firstCard.getName());
+            assertEquals("SPIDER OWL", firstCard.getName());
             assertEquals(3, firstCard.getPower());
             assertTrue(firstCard.getEffects().isEmpty());
             assertNotNull(firstCard.getKeywords());
@@ -43,7 +43,7 @@ public class CardTest {
 
             Card tenthCard = fileCards.get(10);
             assertNotNull(tenthCard);
-            assertEquals("Oursins Hurleurs", tenthCard.getName());
+            assertEquals("URCHIN HURLER", tenthCard.getName());
             assertEquals(5, tenthCard.getPower());
             assertNotNull(tenthCard.getKeywords());
             assertTrue(tenthCard.getKeywords().contains(CardKeyword.HUNTER));
