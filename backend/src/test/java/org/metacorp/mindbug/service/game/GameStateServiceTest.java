@@ -102,14 +102,14 @@ public class GameStateServiceTest extends MindbugGameTest {
         game.setCurrentPlayer(currentPlayer);
         game.setCards(SetUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey()));
 
-        CardInstance card1 = findCard("Instigateur Gobelouille");
-        CardInstance card2 = findCard("Requin Crabe Chien Momie Pieuvre");
-        CardInstance card3 = findCard("Dr Axolotl");
-        CardInstance card4 = findCard("Crapaud Bombe");
-        CardInstance card5 = findCard("Pachypoulpe");
-        CardInstance card6 = findCard("Scarabouclier");
-        CardInstance card7 = findCard("Oursins Hurleurs");
-        CardInstance card8 = findCard("Lanceur d'escargots");
+        CardInstance card1 = findCard("FROBLIN INSTIGATOR");
+        CardInstance card2 = findCard("SHARKY GRAB-DOG-MUMMYPUS");
+        CardInstance card3 = findCard("AXOLOTL HEALER");
+        CardInstance card4 = findCard("EXPLOSIVE TOAD");
+        CardInstance card5 = findCard("ELEPHANTOPUS");
+        CardInstance card6 = findCard("SHIELD BUGS");
+        CardInstance card7 = findCard("URCHIN HURLER");
+        CardInstance card8 = findCard("SNAIL THROWER");
 
         // Put cards into players' board
         card2.setOwner(currentPlayer);

@@ -50,7 +50,6 @@ public class CardInstance {
         this.card = card;
         this.power = card.getPower();
         this.keywords = new HashSet<>(card.getKeywords());
-
         this.stillTough = this.keywords.contains(CardKeyword.TOUGH);
         this.ableToAttackTwice = this.keywords.contains(CardKeyword.FRENZY);
         this.ableToAttack = true;

@@ -290,6 +290,7 @@ async function onLeaveButtonClick() {
       <div class="col-2"></div>
     </div>
   </div>
+  
   <div v-else-if="error" class="error-page">
     <div class="error-container">
       <h1>Oops !</h1>
@@ -320,7 +321,8 @@ async function onLeaveButtonClick() {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  overflow: hidden;
+  
   background-image: url("../../assets/playmats/default.png");
   background-repeat: no-repeat;
   background-size: cover;

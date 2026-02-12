@@ -1,7 +1,7 @@
 [
   {
     "id": 45,
-    "name": "Déflagardon",
+    "name": "BLASTFISH",
     "power": 1,
     "keywords": ["POISONOUS"],
     "effects": {
@@ -10,11 +10,12 @@
         "self": true
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Attack</b>: This cannot be defeated this turn."
   },
   {
     "id": 46,
-    "name": "Taureau à grande vitesse",
+    "name": "BULLET TRAIN",
     "power": 9,
     "effects": {
       "ATTACK": [{
@@ -22,11 +23,12 @@
         "max": 3
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Attack</b>: Defeat an enemy creature with power 3 or less."
   },
   {
     "id": 47,
-    "name": "Toxicake",
+    "name": "CAKE TRICKSTER",
     "power": 6,
     "keywords": ["POISONOUS"],
     "effects": {
@@ -34,11 +36,12 @@
         "type": "FORCE_ATTACK"
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Action</b>: Choose an enemy creature. The opponent attacks with it if able."
   },
   {
     "id": 48,
-    "name": "Hippopoman",
+    "name": "CAPTAIN HIPPO",
     "power": 7,
     "keywords": ["FRENZY"],
     "effects": {
@@ -48,11 +51,12 @@
         "singleTarget": true
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "During the opponent's turn, they must always attack this with a creature with <b>HUNTER</b> if able."
   },
   {
     "id": 49,
-    "name": "Bono-Bot méchant",
+    "name": "CHEEKY CHIMPBORG",
     "power": 5,
     "keywords": ["HUNTER"],
     "effects": {
@@ -61,11 +65,12 @@
         "eachEnemy": true
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Play</b>: The opponent discards a card for each creature they control."
   },
   {
     "id": 50,
-    "name": "Bono-Bot éméché",
+    "name": "CHEEKY CHIMPBORG",
     "power": 5,
     "keywords": ["HUNTER"],
     "effects": {
@@ -75,11 +80,12 @@
         "enemiesCount": 3
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "While there are 3 or more enemy creatures, this has <b>+5</b> power."
   },
   {
     "id": 51,
-    "name": "Bono-Bot très méchant",
+    "name": "CHUCKLING CHIMPBORG",
     "power": 5,
     "keywords": ["HUNTER"],
     "effects": {
@@ -88,11 +94,12 @@
         "mindbugCount": true
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Play</b>: The opponent loses 1 life for each Mindbug they have."
   },
   {
     "id": 52,
-    "name": "Dame Nuage",
+    "name": "CLOUD LADY",
     "power": 4,
     "effects": {
       "ACTION": [{
@@ -104,11 +111,12 @@
         "id": 53
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Action</b>: Defeat an enemy creature with power 4 or less. Evolve to Typhoon Princess."
   },
   {
     "id": 53,
-    "name": "Princesse Tempête",
+    "name": "TYPHOON PRINCESS",
     "power": 6,
     "effects": {
       "ACTION": [{
@@ -121,11 +129,12 @@
       }]
     },
     "unique": true,
-    "evolution": true
+    "evolution": true,
+    "description" : "<b>Action</b>: Defeat an enemy creature with power 6 or less. Evolve to Thunder Queen."
   },
   {
     "id": 54,
-    "name": "Reine Tonnerre",
+    "name": "THUNDER QUEEEN",
     "power": 9,
     "effects": {
       "ATTACK": [{
@@ -134,11 +143,12 @@
       }]
     },
     "unique": true,
-    "evolution": true
+    "evolution": true,
+    "description" : "<b>Action</b>: Defeat an enemy creature."
   },
   {
     "id": 55,
-    "name": "Coach Panda",
+    "name": "COACH PANDA",
     "power": 6,
     "effects": {
       "PASSIVE": [{
@@ -156,11 +166,12 @@
         "alliesCount": 2
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "While there is exactly 1 other allied creature, that creature has <b>+3</b> power and <b>FRENZY</b>."
   },
   {
     "id": 56,
-    "name": "Têtard curieux",
+    "name": "CURIOUS TADPOLE",
     "power": 1,
     "keywords": ["POISONOUS"],
     "effects": {
@@ -173,11 +184,12 @@
         "id": 57
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Action</b>: Gain 1 life. Evolve to Frog Prophet."
   },
   {
     "id": 57,
-    "name": "Craporacle",
+    "name": "FROG PROPHET",
     "power": 3,
     "keywords": ["POISONOUS", "TOUGH"],
     "effects": {
@@ -191,11 +203,12 @@
       }]
     },
     "unique": true,
-    "evolution": true
+    "evolution": true,
+    "description" : "<b>Action</b>: Gain 1 life. Evolve to World Eater."
   },
   {
     "id": 58,
-    "name": "Ogre-Grenouille",
+    "name": "WORLD EATER",
     "power": 8,
     "keywords": ["POISONOUS", "TOUGH"],
     "effects": {
@@ -205,11 +218,12 @@
       }]
     },
     "unique": true,
-    "evolution": true
+    "evolution": true,
+    "description" : "<b>Attack</b>: The opponent loses 1 life."
   },
   {
     "id": 59,
-    "name": "Dr Orange U. Tan",
+    "name": "DR. ORANGE U. TAN",
     "power": 6,
     "effects": {
       "PLAY": [{
@@ -226,11 +240,12 @@
         "optional": true
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Play</b>: You may loses 1 life. if you do, return all enemy creatures to the opponent's hand."
   },
   {
     "id": 60,
-    "name": "Dragauberge",
+    "name": "DRAGON INN",
     "power": 3,
     "keywords": ["TOUGH"],
     "effects": {
@@ -239,11 +254,12 @@
         "value": 1
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Action</b>: If you control fewer creatures than the opponent, they lose 1 life."
   },
   {
     "id": 61,
-    "name": "Assasin perce-oreille",
+    "name": "EARWIG ASSASSIN",
     "power": 1,
     "keywords": ["TOUGH"],
     "effects": {
@@ -261,11 +277,12 @@
         "optional": true
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Play</b>: You may discard a card. If you do, defeat a creature."
   },
   {
     "id": 62,
-    "name": "Infernautruche",
+    "name": "INFERNOSTRICH",
     "power": 6,
     "effects": {
       "ACTION": [{
@@ -274,11 +291,12 @@
         "min": 7
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Action</b>: Defeat an enemy creature with power 7 or more."
   },
   {
     "id": 63,
-    "name": "Kitsunsei",
+    "name": "KITSUNSEI",
     "power": 4,
     "effects": {
       "ACTION": [{
@@ -288,11 +306,12 @@
         "self": false
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "Other allied creatures have <b>SNEAKY</b>."
   },
   {
     "id": 64,
-    "name": "Terminataupe",
+    "name": "MOLE MACHINE",
     "power": 5,
     "keywords": ["TOUGH"],
     "effects": {
@@ -302,11 +321,12 @@
         "min": 7
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "The opponent cannot block with creatures with power 7 or more."
   },
   {
     "id": 65,
-    "name": "Hélicopoulpe",
+    "name": "OCTOCOPTER",
     "power": 5,
     "effects": {
       "ACTION": [{
@@ -321,11 +341,12 @@
           "mustPlay": true
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Action</b>: Defeat this. Take control of an enemy creature."
   },
   {
     "id": 66,
-    "name": "Poisson-mine",
+    "name": "PUFFERMECH",
     "power": 2,
     "keywords": ["POISONOUS"],
     "effects": {
@@ -335,11 +356,12 @@
         "min": 8
       }]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Defeated</b>: Defeat all enemy creatures with power 8 or more."
   },
   {
     "id": 67,
-    "name": "Lièvre radioactif",
+    "name": "RADIOACTIVE RABBIT",
     "power": 3,
     "keywords": ["FRENZY"],
     "effects": {
@@ -353,25 +375,28 @@
         "allies": true
       }]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Defeated</b>: The opponent takes control of this. <b>Defeated</b>: Defeat all other allied creatures."
   },
   {
     "id": 68,
-    "name": "Robochiot",
+    "name": "ROBOPUP",
     "power": 1,
     "keywords": ["SNEAKY", "TOUGH"],
-    "unique": false
+    "unique": false,
+    "description" : "“Ouaf ! Ouaf !”"
   },
   {
     "id": 69,
-    "name": "Scigne",
+    "name": "SAWN",
     "power": 5,
     "keywords": ["TOUGH", "REVERSED"],
-    "unique": false
+    "unique": false,
+    "description" : "When this fights, the creature with the highest power id defeated instead of the lowest."
   },
   {
     "id": 70,
-    "name": "Shinopik",
+    "name": "SPIKY SHINOBI",
     "power": 3,
     "keywords": ["SNEAKY"],
     "effects": {
@@ -383,11 +408,12 @@
         }
       ]
     },
-    "unique": false
+    "unique": false,
+    "description" : "While you have no Mindbugs, this has <b>+5</b> power."
   },
   {
     "id": 71,
-    "name": "Cornes d'acier",
+    "name": "STEELHORN",
     "power": 7,
     "effects": {
       "DEFEATED": [
@@ -397,11 +423,12 @@
         }
       ]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Defeated</b>: The opponent discards 3 cards."
   },
   {
     "id": 72,
-    "name": "Sweet Fighter",
+    "name": "SWEET FIGHTER",
     "power": 9,
     "effects": {
       "DEFEATED": [
@@ -411,11 +438,12 @@
         }
       ]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Defeated</b>: Gain 2 life."
   },
   {
     "id": 73,
-    "name": "L'expérience",
+    "name": "THE EXPERIMENT",
     "power": 6,
     "effects": {
       "PLAY": [
@@ -431,11 +459,12 @@
         }
       ]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Play</b>: The opponent takes control of this. Take control of an enemy creature."
   },
   {
     "id": 74,
-    "name": "Tortue Toaster",
+    "name": "TURTLE TOASTER",
     "power": 4,
     "keywords": ["TOUGH"],
     "effects": {
@@ -448,11 +477,12 @@
         }
       ]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Pay</b>: Defeat up to 2 enemy creatures with power 4-6."
   },
   {
     "id": 75,
-    "name": "Scaratoufer",
+    "name": "UTILITY BUG",
     "power": 4,
     "keywords": ["HUNTER","TOUGH"],
     "effects": {
@@ -463,11 +493,12 @@
         }
       ]
     },
-    "unique": false
+    "unique": false,
+    "description" : "<b>Play</b>: You may copy the <b>PLAY</b> effect of another creature."
   },
   {
     "id": 76,
-    "name": "Recrue manchot",
+    "name": "WADDLING RECRUIT",
     "power": 3,
     "effects": {
       "ACTION": [
@@ -480,11 +511,12 @@
         }
       ]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Action</b>: The opponent discards a card. Evolve to Veteran Penguin."
   },
   {
     "id": 77,
-    "name": "Vétéran empereur",
+    "name": "VETERAN PENGUIN",
     "power": 5,
     "keywords": ["TOUGH"],
     "effects": {
@@ -499,11 +531,12 @@
       ]
     },
     "unique": true,
-    "evolution": true
+    "evolution": true,
+    "description" : "<b>Action</b>: The opponent discards a card. Evolve to Frosty Fortress."
   },
   {
     "id": 78,
-    "name": "Panzer Pingouin",
+    "name": "WAR MACHINE",
     "power": 10,
     "keywords": ["TOUGH"],
     "effects": {
@@ -520,11 +553,12 @@
       ]
     },
     "unique": true,
-    "evolution": true
+    "evolution": true,
+    "description" : "<b>Attack</b>: The opponent discards their hand and draw pile."
   },
   {
     "id": 79,
-    "name": "Requin-balaise",
+    "name": "WESTSIDE MONSTER",
     "power": 8,
     "keywords": ["FRENZY"],
     "effects": {
@@ -540,11 +574,12 @@
         }
       ]
     },
-    "unique": false
+    "unique": false,
+    "description" : "Enemy creatures with <b>SNEAKY</b> cannot attack and/or block."
   },
   {
     "id": 80,
-    "name": "Jeune pousse",
+    "name": "WILDSPROUT",
     "power": 1,
     "effects": {
       "ACTION": [
@@ -559,11 +594,12 @@
         }
       ]
     },
-    "unique": true
+    "unique": true,
+    "description" : "<b>Action</b>: Play a card from your discrad pile. Evolve to Bigroot."
   },
   {
     "id": 81,
-    "name": "Bigroot",
+    "name": "BIGROOT",
     "power": 4,
     "effects": {
       "ACTION": [
@@ -579,11 +615,12 @@
       ]
     },
     "unique": true,
-    "evolution": true
+    "evolution": true,
+    "description" : "<b>Action</b>: Play a card from your discrad pile. Evolve to Oakenmaster."
   },
   {
     "id": 82,
-    "name": "Maître Chêne",
+    "name": "OAKENMASTER",
     "power": 7,
     "effects": {
       "PASSIVE": [
@@ -596,6 +633,7 @@
       ]
     },
     "unique": true,
-    "evolution": true
+    "evolution": true,
+    "description": "Other allied creatures have <b>+5</b> power."
   }
 ]
