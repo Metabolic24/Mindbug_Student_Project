@@ -40,7 +40,7 @@ public class DestroyEffectResolverTest {
         PlayerService playerService = new PlayerService();
         game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponent().get(0);
 
         randomCard = currentPlayer.getHand().getFirst();
         randomCard.setStillTough(false);

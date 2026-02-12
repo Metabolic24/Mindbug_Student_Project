@@ -40,7 +40,7 @@ public class StealEffectResolverTest {
         randomCard.setStillTough(false);
         currentPlayer.addCardToBoard(randomCard);
 
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponent().get(0);
 
         effect = new StealEffect();
         effect.setType(EffectType.STEAL);

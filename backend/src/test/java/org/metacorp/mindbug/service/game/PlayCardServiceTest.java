@@ -27,7 +27,7 @@ public class PlayCardServiceTest {
         PlayerService playerService = new PlayerService();
         game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
-        opponent = currentPlayer.getOpponent(game.getPlayers());
+        opponent = game.getOpponent().get(0);
     }
 
     @Test

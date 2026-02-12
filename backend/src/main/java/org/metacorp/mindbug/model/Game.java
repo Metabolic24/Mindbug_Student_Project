@@ -41,6 +41,7 @@ public class Game {
 
     private boolean forcedAttack;
     private boolean webSocketUp;
+    private boolean isAuto ;
 
     private List<HistoryEntry> history;
 

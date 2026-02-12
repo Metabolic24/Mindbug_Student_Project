@@ -30,7 +30,7 @@ public class InflictEffectResolverTest {
         game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         randomCard = currentPlayer.getHand().getFirst();
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponent().get(0);
 
         effect = new InflictEffect();
         effect.setType(EffectType.INFLICT);
