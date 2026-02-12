@@ -34,7 +34,7 @@ public class ForceAttackEffectResolverTest {
     public void prepareGame() {
         game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponent().get(0);
 
         randomCard = currentPlayer.getHand().getFirst();
         randomCard.setStillTough(false);

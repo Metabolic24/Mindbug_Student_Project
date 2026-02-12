@@ -29,7 +29,7 @@ public class GiveEffectResolverTest {
         game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         currentPlayer = game.getCurrentPlayer();
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponent().get(0);
 
         currentPlayer.addCardToBoard(randomCard);
 

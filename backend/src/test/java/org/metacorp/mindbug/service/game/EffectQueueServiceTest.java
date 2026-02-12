@@ -107,7 +107,7 @@ public class EffectQueueServiceTest {
     public void testResolveEffectQueue_emptyWithAfterEffect() throws GameStateException {
         // Add an after effect that changes the current player
         Player currentPlayer = game.getCurrentPlayer();
-        game.setAfterEffect(() -> game.setCurrentPlayer(game.getCurrentPlayer().getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().get(0)));
 
         EffectQueueService.resolveEffectQueue(false, game);
 
@@ -146,7 +146,7 @@ public class EffectQueueServiceTest {
         otherCard.getCard().getEffects().put(EffectTiming.PLAY, Collections.singletonList(new GainEffect()));
         card.getCard().getEffects().put(EffectTiming.PLAY, Collections.singletonList(new InflictEffect()));
 
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().get(0)));
 
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.PLAY, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.PLAY, game.getEffectQueue());
@@ -179,7 +179,7 @@ public class EffectQueueServiceTest {
         card.getCard().getEffects().put(EffectTiming.ATTACK, new ArrayList<>(Collections.singletonList(inflictEffect)));
 
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.ATTACK, game.getEffectQueue());
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().get(0)));
 
         EffectQueueService.resolveEffectQueue(false, game);
 
@@ -216,7 +216,7 @@ public class EffectQueueServiceTest {
 
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.DEFEATED, game.getEffectQueue());
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().get(0)));
 
         EffectQueueService.resolveEffectQueue(true, game);
 
@@ -255,7 +255,7 @@ public class EffectQueueServiceTest {
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.DEFEATED, game.getEffectQueue());
         game.getEffectQueue().setResolvingEffect(true);
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().get(0)));
 
         EffectQueueService.resolveEffectQueue(false, game);
 
@@ -273,7 +273,7 @@ public class EffectQueueServiceTest {
     @Test
     public void testResolveEffectQueue_twoEffectsButFirstEndsGame() throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = game.getOpponent().get(0);
 
         CardInstance otherCard = opponent.getHand().getFirst();
         opponent.addCardToBoard(otherCard);
@@ -296,7 +296,7 @@ public class EffectQueueServiceTest {
 
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.DEFEATED, game.getEffectQueue());
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().get(0)));
 
         EffectQueueService.resolveEffectQueue(true, game);
 
@@ -315,7 +315,7 @@ public class EffectQueueServiceTest {
     @Test
     public void testResolveEffectQueue_fourEffectsWithDoubleOne() throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = game.getOpponent().get(0);
 
         CardInstance otherCard = opponent.getHand().getFirst();
         opponent.addCardToBoard(otherCard);
@@ -374,7 +374,7 @@ public class EffectQueueServiceTest {
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard2, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard3, EffectTiming.DEFEATED, game.getEffectQueue());
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().get(0)));
 
         EffectQueueService.resolveEffectQueue(true, game);
 
@@ -401,7 +401,7 @@ public class EffectQueueServiceTest {
     @Test
     public void testResolveEffectQueue_twoEffectsWithDoubleOneAndChoice() throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = game.getOpponent().get(0);
 
         CardInstance otherCard = opponent.getHand().getFirst();
         opponent.addCardToBoard(otherCard);
@@ -432,7 +432,7 @@ public class EffectQueueServiceTest {
 
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.DEFEATED, game.getEffectQueue());
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().get(0)));
 
         int handSize = opponent.getHand().size();
 
@@ -461,7 +461,7 @@ public class EffectQueueServiceTest {
     @Test
     public void testResolveEffectQueue_twoEffectsWithChoice() throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = game.getOpponent().get(0);
 
         CardInstance otherCard = opponent.getHand().getFirst();
         opponent.addCardToBoard(otherCard);
@@ -488,7 +488,7 @@ public class EffectQueueServiceTest {
 
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.DEFEATED, game.getEffectQueue());
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().get(0)));
 
         int handSize = opponent.getHand().size();
 

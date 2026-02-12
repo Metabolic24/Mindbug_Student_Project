@@ -30,7 +30,7 @@ public class HunterChoiceTest {
     public void initGame() {
         game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
-        opponent = game.getOpponent();
+        opponent = game.getOpponent().get(0);
 
         currentCard = currentPlayer.getHand().getFirst();
         currentCard.getCard().setKeywords(new HashSet<>(List.of(CardKeyword.HUNTER)));

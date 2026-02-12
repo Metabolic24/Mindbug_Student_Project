@@ -26,6 +26,7 @@ public class ChoiceService {
      */
     public static <T> void resolveChoice(T data, Game game) throws GameStateException {
         IChoice<?> choice = game.getChoice();
+
         if (choice == null) {
             throw new GameStateException("no choice to be resolved", Map.of("data", data));
         } else if (data == null && choice.getType() != ChoiceType.HUNTER) {

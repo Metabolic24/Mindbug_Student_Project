@@ -321,41 +321,44 @@ public final class AppUtils {
         if (listOpponents.size()==1 ){
             return listOpponents.get(0);
         }
-        
+
+
         Scanner scanner = new Scanner(System.in);
-        
-        
+        Player target = null;
         while (true) {
             int index = 1;
-            System.out.printf("\nPlease  %s choose an opponent to target : (only type the number)\n", player_who_targets.getName());
+            System.out.printf("\nPlease %s, choose an opponent to target : (only type the associated number)\n", player_who_targets.getName());
             for (Player opponent : listOpponents) {
                 System.out.printf("       (%d) - %s\n", index, opponent.getName());
                 index++;
+            }
+            if (game.isAuto()) {
+                target = listOpponents.get(RND.nextInt(listOpponents.size()));
+                break;
             }
             try {
                 int choice_number = Integer.parseInt(scanner.nextLine());
 
                 if  (1<=choice_number && choice_number<=listOpponents.size()) {
                     scanner =null;
-                    return listOpponents.get(choice_number-1);
+                    target = listOpponents.get(choice_number-1);
+                    break;
                 }
                 else {
-                    System.err.println("Invalid Number");
+                    System.err.println("Invalid number");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("You must type a number");
+                System.out.println("You must type a valid number");
                 
             }
-            
-           
-        
         }
-        
+        System.out.printf("\n%s chose to target %s\n", player_who_targets.getName(), target.getName());
+        return target;
     }
-    
 
 
-    
+
+
 
     /**
      * @return a random boolean value
@@ -363,4 +366,7 @@ public final class AppUtils {
     public static boolean nextBoolean() {
         return RND.nextBoolean();
     }
+
+
+
 }

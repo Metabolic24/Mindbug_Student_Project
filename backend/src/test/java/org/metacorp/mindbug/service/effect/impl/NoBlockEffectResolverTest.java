@@ -32,7 +32,7 @@ public class NoBlockEffectResolverTest {
     public void prepareGame() {
         game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
         randomCard = game.getCurrentPlayer().getHand().getFirst();
-        opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponent().get(0);
 
         effect = new NoBlockEffect();
         effectResolver = new NoBlockEffectResolver(effect);

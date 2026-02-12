@@ -27,7 +27,7 @@ public class AttackServiceTest {
     public void initGame() {
         game = StartService.newGame(new Player(PlayerService.createPlayer("Player1")), new Player(PlayerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
-        opponent = currentPlayer.getOpponent(game.getPlayers());
+        opponent = game.getOpponent().get(0);
     }
 
     @Test

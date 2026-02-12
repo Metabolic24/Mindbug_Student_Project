@@ -40,6 +40,7 @@ public class Game {
 
     private boolean forcedAttack;
     private boolean webSocketUp;
+    private boolean isAuto ;
 
     /**
      * Empty constructor (WARNING: a game is not meant to be reused)
