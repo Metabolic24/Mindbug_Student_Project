@@ -195,8 +195,11 @@
 .title-text {
   width: 100%;
   text-align: center;
+
+  font-family: "ZalamanderCaps";
   font-weight: bold;
   font-size: 0.65em;
+  
   letter-spacing: 1px;
   color: white;
   word-break: break-word;

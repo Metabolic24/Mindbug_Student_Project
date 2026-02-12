@@ -10,3 +10,10 @@
 * {
   user-select: none;
 }
+
+@font-face {
+  font-family: "ZalamanderCaps";
+  src: url("@/assets/fonts/ZalamanderCaps-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
