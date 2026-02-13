@@ -51,12 +51,12 @@
       @contextmenu.prevent=""
     />
 
-    <div class="title-banner">
+    <div v-if="showOverlay" class="title-banner">
       <div class="title-text">{{ props.card.name }}</div>
     </div>
 
     <!-- Description Box -->
-    <div class="description-box">
+    <div v-if="showOverlay" class="description-box">
       <div class="description-text" v-html="props.card.description">
       </div>
     </div>
