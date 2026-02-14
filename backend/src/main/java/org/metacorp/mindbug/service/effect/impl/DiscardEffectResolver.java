@@ -22,19 +22,20 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public DiscardEffectResolver(DiscardEffect effect) {
-        super(effect);
+    public DiscardEffectResolver(DiscardEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
-        Player opponent = card.getOwner().getOpponent(game.getPlayers());
+    public void apply(Game game, EffectTiming timing) {
+        Player opponent = effectSource.getOwner().getOpponent(game.getPlayers());
 
         int value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue();
 
-        Player playerToDiscard = effect.isSelf() ? card.getOwner() : opponent;
+        Player playerToDiscard = effect.isSelf() ? effectSource.getOwner() : opponent;
         List<CardInstance> availableCards = effect.isDrawPile() ? playerToDiscard.getDrawPile() : playerToDiscard.getHand();
 
         if (availableCards.size() <= value || value == -1) {
@@ -42,7 +43,7 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
         } else if (effect.isDrawPile()) {
             resolve(game, new ArrayList<>(availableCards.subList(0, value)));
         } else {
-            game.setChoice(new TargetChoice(playerToDiscard, card, this, value, new HashSet<>(availableCards)));
+            game.setChoice(new TargetChoice(playerToDiscard, effectSource, this, value, new HashSet<>(availableCards)));
         }
     }
 

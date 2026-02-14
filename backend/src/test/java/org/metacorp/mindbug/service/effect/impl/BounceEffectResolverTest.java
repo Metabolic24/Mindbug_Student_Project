@@ -33,7 +33,7 @@ public class BounceEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         Player currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
@@ -43,7 +43,7 @@ public class BounceEffectResolverTest {
 
         effect = new BounceEffect();
         effect.setType(EffectType.BOUNCE);
-        effectResolver = new BounceEffectResolver(effect);
+        effectResolver = new BounceEffectResolver(effect, randomCard);
         timing = EffectTiming.PLAY;
     }
 
@@ -53,7 +53,7 @@ public class BounceEffectResolverTest {
 
         effect.setValue(1);
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertTrue(opponentPlayer.getBoard().isEmpty());
         assertEquals(5, opponentPlayer.getHand().size());
         assertNull(game.getChoice());
@@ -66,7 +66,7 @@ public class BounceEffectResolverTest {
 
         effect.setValue(1);
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(2, opponentPlayer.getBoard().size());
         assertEquals(3, opponentPlayer.getHand().size());
 

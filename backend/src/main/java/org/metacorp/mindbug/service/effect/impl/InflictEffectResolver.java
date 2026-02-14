@@ -19,20 +19,19 @@ public class InflictEffectResolver extends EffectResolver<InflictEffect> {
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public InflictEffectResolver(InflictEffect effect) {
-        super(effect);
+    public InflictEffectResolver(InflictEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) throws WebSocketException {
-        this.effectSource = card;
-
+    public void apply(Game game,  EffectTiming timing) throws WebSocketException {
         boolean self = effect.isSelf();
         boolean allButOne = effect.isAllButOne();
 
-        Player affectedPlayer = self ? card.getOwner() : card.getOwner().getOpponent(game.getPlayers());
+        Player affectedPlayer = self ? effectSource.getOwner() : effectSource.getOwner().getOpponent(game.getPlayers());
         Team affectedTeam = affectedPlayer.getTeam();
 
         if (allButOne) {

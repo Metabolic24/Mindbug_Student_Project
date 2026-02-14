@@ -29,16 +29,16 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public NoBlockEffectResolver(NoBlockEffect effect) {
-        super(effect);
+    public NoBlockEffectResolver(NoBlockEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
+    public void apply(Game game, EffectTiming timing) {
         this.timing = timing;
-        this.effectSource = card;
 
         int value = effect.getValue();
         Integer max = effect.getMax();
@@ -46,7 +46,7 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
         CardKeyword keyword = effect.getKeyword();
         boolean highest = effect.isHighest();
 
-        Player opponent = card.getOwner().getOpponent(game.getPlayers());
+        Player opponent = effectSource.getOwner().getOpponent(game.getPlayers());
         Set<CardInstance> availableCards;
 
         if (highest) {
@@ -72,7 +72,7 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
         if (availableCards.size() <= value || value < 0) {
             setAbleToBlock(game, availableCards);
         } else {
-            game.setChoice(new TargetChoice(card.getOwner(), card, this, value, new HashSet<>(opponent.getBoard())));
+            game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, value, new HashSet<>(opponent.getBoard())));
         }
     }
 

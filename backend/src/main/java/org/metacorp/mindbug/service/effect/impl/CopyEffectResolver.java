@@ -25,16 +25,15 @@ public class CopyEffectResolver extends EffectResolver<CopyEffect> implements Re
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public CopyEffectResolver(CopyEffect effect) {
-        super(effect);
+    public CopyEffectResolver(CopyEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance effectSource, EffectTiming timing) {
-        this.effectSource = effectSource;
-
+    public void apply(Game game, EffectTiming timing) {
         Player sourceOwner = effectSource.getOwner();
         Player opponent = sourceOwner.getOpponent(game.getPlayers());
 

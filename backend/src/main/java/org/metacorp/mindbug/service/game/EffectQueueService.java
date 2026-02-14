@@ -159,7 +159,7 @@ public class EffectQueueService {
             // Get the next effect, apply it, then remove it from the list
             Effect effect = iterator.next();
 
-            EffectResolver.getResolver((GenericEffect) effect).apply(game, currentEffect.getCard(), currentEffect.getTiming());
+            EffectResolver.getResolver((GenericEffect) effect, currentEffect.getCard()).apply(game, currentEffect.getTiming());
             // The cost effect resolution may change isResolvingEffect value to true if no choice is created
 
             // Stop the process if the game is finished

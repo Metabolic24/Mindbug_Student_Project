@@ -33,7 +33,7 @@ public class KeywordUpEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
@@ -43,7 +43,7 @@ public class KeywordUpEffectResolverTest {
 
         effect = new KeywordUpEffect();
         effect.setType(EffectType.KEYWORD_UP);
-        effectResolver = new KeywordUpEffectResolver(effect);
+        effectResolver = new KeywordUpEffectResolver(effect, randomCard);
         timing = EffectTiming.PLAY;
     }
 
@@ -52,7 +52,7 @@ public class KeywordUpEffectResolverTest {
         effect.setValue(CardKeyword.SNEAKY);
         effect.setAlone(true);
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, randomCard.getKeywords().size());
         assertTrue(randomCard.getKeywords().contains(CardKeyword.SNEAKY));
@@ -64,7 +64,7 @@ public class KeywordUpEffectResolverTest {
         effect.setAlone(true);
 
         currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(randomCard.getKeywords().isEmpty());
     }
@@ -74,7 +74,7 @@ public class KeywordUpEffectResolverTest {
         effect.setValue(CardKeyword.HUNTER);
         effect.setMoreAllies(true);
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, randomCard.getKeywords().size());
         assertTrue(randomCard.getKeywords().contains(CardKeyword.HUNTER));
@@ -87,7 +87,7 @@ public class KeywordUpEffectResolverTest {
 
         // Add a card to opponent board and check effect is no more applied
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(randomCard.getKeywords().isEmpty());
     }
@@ -100,7 +100,7 @@ public class KeywordUpEffectResolverTest {
         currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
         currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, randomCard.getKeywords().size());
         assertTrue(randomCard.getKeywords().contains(CardKeyword.HUNTER));
@@ -115,7 +115,7 @@ public class KeywordUpEffectResolverTest {
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(randomCard.getKeywords().isEmpty());
     }
@@ -125,7 +125,7 @@ public class KeywordUpEffectResolverTest {
         effect.setValue(CardKeyword.POISONOUS);
         effect.setOpponentHas(true);
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(randomCard.getKeywords().isEmpty());
     }
@@ -139,7 +139,7 @@ public class KeywordUpEffectResolverTest {
         CardInstance opponentCard = opponentPlayer.getHand().getFirst();
         opponentCard.getKeywords().clear();
         opponentPlayer.addCardToBoard(opponentCard);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(randomCard.getKeywords().isEmpty());
     }
@@ -153,7 +153,7 @@ public class KeywordUpEffectResolverTest {
         CardInstance opponentCard = opponentPlayer.getHand().getFirst();
         opponentCard.setKeywords(new HashSet<>(Arrays.asList(CardKeyword.SNEAKY, CardKeyword.POISONOUS)));
         opponentPlayer.addCardToBoard(opponentCard);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, randomCard.getKeywords().size());
         assertTrue(randomCard.getKeywords().contains(CardKeyword.POISONOUS));
@@ -168,7 +168,7 @@ public class KeywordUpEffectResolverTest {
         CardInstance opponentCard = opponentPlayer.getHand().getFirst();
         opponentCard.setKeywords(new HashSet<>(Arrays.asList(CardKeyword.SNEAKY, CardKeyword.HUNTER)));
         opponentPlayer.addCardToBoard(opponentCard);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(randomCard.getKeywords().isEmpty());
     }
@@ -186,7 +186,7 @@ public class KeywordUpEffectResolverTest {
         CardInstance otherCard = opponentPlayer.getHand().getFirst();
         otherCard.setKeywords(new HashSet<>(Arrays.asList(CardKeyword.POISONOUS, CardKeyword.FRENZY)));
         opponentPlayer.addCardToBoard(otherCard);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, randomCard.getKeywords().size());
         assertTrue(randomCard.getKeywords().contains(CardKeyword.POISONOUS));
@@ -199,7 +199,7 @@ public class KeywordUpEffectResolverTest {
         effect.setSelf(false);
         effect.setMax(6);
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(randomCard.getKeywords().isEmpty());
     }
@@ -231,7 +231,7 @@ public class KeywordUpEffectResolverTest {
         otherCard4.getKeywords().clear();
         currentPlayer.addCardToBoard(otherCard4);
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(randomCard.getKeywords().isEmpty());
         assertEquals(3, otherCard.getKeywords().size());
@@ -255,7 +255,7 @@ public class KeywordUpEffectResolverTest {
 
         effect.setAlliesCount(2);
         effect.setValue(CardKeyword.FRENZY);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(randomCard.getKeywords().contains(CardKeyword.FRENZY));
         assertEquals(1, randomCard.getKeywords().size());
@@ -272,7 +272,7 @@ public class KeywordUpEffectResolverTest {
 
         effect.setAlliesCount(3);
         effect.setValue(CardKeyword.FRENZY);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
         assertFalse(randomCard.getKeywords().contains(CardKeyword.FRENZY));
@@ -292,7 +292,7 @@ public class KeywordUpEffectResolverTest {
         effect.setAllies(true);
         effect.setSelf(false);
         effect.setValue(CardKeyword.FRENZY);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(randomCard.getKeywords().isEmpty());
         assertTrue(ally.getKeywords().contains(CardKeyword.FRENZY));
@@ -316,7 +316,7 @@ public class KeywordUpEffectResolverTest {
         effect.setAllies(true);
         effect.setSelf(true);
         effect.setValue(CardKeyword.FRENZY);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(randomCard.getKeywords().contains(CardKeyword.FRENZY));
         assertEquals(1, randomCard.getKeywords().size());

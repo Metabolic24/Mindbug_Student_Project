@@ -56,8 +56,7 @@ public class GameStateService {
 
         // Apply effects
         for (EffectsToApply effect : passiveEffects) {
-            EffectResolver<?> effectResolver = EffectResolver.getResolver(effect.getEffects().getFirst());
-            effectResolver.apply(game, effect.getCard(), effect.getTiming());
+            EffectResolver.getResolver(effect.getEffects().getFirst(), effect.getCard()).apply(game, effect.getTiming());
         }
     }
 

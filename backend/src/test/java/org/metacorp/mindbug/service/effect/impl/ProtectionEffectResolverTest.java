@@ -30,7 +30,7 @@ public class ProtectionEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         effectSource = currentPlayer.getHand().getFirst();
 
@@ -40,7 +40,7 @@ public class ProtectionEffectResolverTest {
 
         effect = new ProtectionEffect();
         effect.setType(EffectType.PROTECTION);
-        effectResolver = new ProtectionEffectResolver(effect);
+        effectResolver = new ProtectionEffectResolver(effect, effectSource);
         timing = EffectTiming.ATTACK;
     }
 
@@ -49,7 +49,7 @@ public class ProtectionEffectResolverTest {
         effect.setSelf(true);
         effect.setAllies(false);
 
-        effectResolver.apply(game, effectSource, timing);
+        effectResolver.apply(game, timing);
 
         for (CardInstance card : currentPlayer.getBoard()) {
             if (card.equals(effectSource)) {
@@ -69,7 +69,7 @@ public class ProtectionEffectResolverTest {
         effect.setAllies(true);
         timing = EffectTiming.PASSIVE;
 
-        effectResolver.apply(game, effectSource, timing);
+        effectResolver.apply(game, timing);
 
         for (CardInstance card : currentPlayer.getBoard()) {
             if (!card.equals(effectSource)) {

@@ -18,7 +18,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class NoAttackEffectResolverTest {
 
     private Game game;
-    private CardInstance randomCard;
     private Player opponentPlayer;
 
     private NoAttackEffect effect;
@@ -28,20 +27,20 @@ public class NoAttackEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
-        randomCard = game.getCurrentPlayer().getHand().getFirst();
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        CardInstance randomCard = game.getCurrentPlayer().getHand().getFirst();
         opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
 
         effect = new NoAttackEffect();
         effect.setType(EffectType.NO_ATTACK);
-        effectResolver = new NoAttackEffectResolver(effect);
+        effectResolver = new NoAttackEffectResolver(effect, randomCard);
         timing = EffectTiming.PLAY;
     }
 
     @Test
     public void testWithLowestParameter_noEffect() {
         effect.setLowest(true);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
     }
 
     @Test
@@ -50,7 +49,7 @@ public class NoAttackEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         effect.setLowest(true);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertFalse(otherCard.isAbleToAttack());
     }
@@ -69,7 +68,7 @@ public class NoAttackEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard3);
 
         effect.setLowest(true);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertFalse(otherCard.isAbleToAttack());
         assertFalse(otherCard2.isAbleToAttack());
@@ -94,7 +93,7 @@ public class NoAttackEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard4);
 
         effect.setLowest(true);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(otherCard.isAbleToAttack());
         assertTrue(otherCard2.isAbleToAttack());
@@ -117,7 +116,7 @@ public class NoAttackEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard3);
 
         effect.setKeyword(CardKeyword.SNEAKY);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertFalse(otherCard.isAbleToAttack());
         assertTrue(otherCard2.isAbleToAttack());
@@ -141,7 +140,7 @@ public class NoAttackEffectResolverTest {
 
         effect.setKeyword(CardKeyword.SNEAKY);
         effect.setLowest(true);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(otherCard.isAbleToAttack());
         assertTrue(otherCard2.isAbleToAttack());

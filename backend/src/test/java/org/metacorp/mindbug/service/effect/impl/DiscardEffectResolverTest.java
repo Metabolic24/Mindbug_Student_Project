@@ -32,14 +32,14 @@ public class DiscardEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
 
         effect = new DiscardEffect();
         effect.setType(EffectType.DISCARD);
         effect.setValue(3);
-        effectResolver = new DiscardEffectResolver(effect);
+        effectResolver = new DiscardEffectResolver(effect, randomCard);
         timing = EffectTiming.PLAY;
     }
 
@@ -51,7 +51,7 @@ public class DiscardEffectResolverTest {
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertTrue(opponentPlayer.getHand().isEmpty());
         assertEquals(2, opponentPlayer.getDiscardPile().size());
     }
@@ -61,14 +61,14 @@ public class DiscardEffectResolverTest {
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertTrue(opponentPlayer.getHand().isEmpty());
         assertEquals(3, opponentPlayer.getDiscardPile().size());
     }
 
     @Test
     public void testBasic_opponentHandIs5() {
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(5, opponentPlayer.getHand().size());
         assertTrue(opponentPlayer.getDiscardPile().isEmpty());
@@ -97,7 +97,7 @@ public class DiscardEffectResolverTest {
 
         opponentPlayer.drawX(1);
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertNull(game.getChoice());
         assertTrue(opponentPlayer.getHand().isEmpty());
@@ -109,7 +109,7 @@ public class DiscardEffectResolverTest {
         effect.setValue(-1);
         effect.setSelf(true);
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertNull(game.getChoice());
         assertEquals(5, opponentPlayer.getHand().size());
@@ -127,7 +127,7 @@ public class DiscardEffectResolverTest {
         CardInstance secondCard = opponentPlayer.getDrawPile().get(1);
         CardInstance thirdCard = opponentPlayer.getDrawPile().get(2);
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertNull(game.getChoice());
         assertEquals(5, opponentPlayer.getHand().size());

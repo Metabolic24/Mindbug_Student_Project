@@ -36,7 +36,7 @@ public class ForceAttackEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
@@ -47,7 +47,7 @@ public class ForceAttackEffectResolverTest {
 
         ForceAttackEffect effect = new ForceAttackEffect();
         effect.setType(EffectType.FORCE_ATTACK);
-        effectResolver = new ForceAttackEffectResolver(effect);
+        effectResolver = new ForceAttackEffectResolver(effect, randomCard);
     }
 
     @Test
@@ -56,7 +56,7 @@ public class ForceAttackEffectResolverTest {
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
 
-        effectResolver.apply(game, randomCard, EffectTiming.ACTION);
+        effectResolver.apply(game, EffectTiming.ACTION);
 
         assertFalse(game.isForcedAttack());
 
@@ -79,7 +79,7 @@ public class ForceAttackEffectResolverTest {
         selectedCard.getEffects(EffectTiming.ATTACK).clear();
         opponentPlayer.addCardToBoard(selectedCard);
 
-        effectResolver.apply(game, randomCard, EffectTiming.ACTION);
+        effectResolver.apply(game, EffectTiming.ACTION);
 
         assertNull(game.getForcedTarget());
         assertFalse(game.isForcedAttack());
@@ -91,7 +91,7 @@ public class ForceAttackEffectResolverTest {
     public void testApply_noEffect() throws WebSocketException, GameStateException {
         currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
 
-        effectResolver.apply(game, randomCard, EffectTiming.ACTION);
+        effectResolver.apply(game, EffectTiming.ACTION);
 
         assertNull(game.getForcedTarget());
         assertFalse(game.isForcedAttack());
@@ -126,7 +126,7 @@ public class ForceAttackEffectResolverTest {
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
 
-        effectResolver.apply(game, randomCard, EffectTiming.PASSIVE);
+        effectResolver.apply(game, EffectTiming.PASSIVE);
 
         assertNull(game.getForcedTarget());
         assertFalse(game.isForcedAttack());
@@ -154,7 +154,7 @@ public class ForceAttackEffectResolverTest {
         }
 
         effectResolver.getEffect().setKeyword(CardKeyword.HUNTER);
-        effectResolver.apply(game, randomCard, EffectTiming.PASSIVE);
+        effectResolver.apply(game, EffectTiming.PASSIVE);
 
         assertNull(game.getForcedTarget());
         assertTrue(game.isForcedAttack());
@@ -183,7 +183,7 @@ public class ForceAttackEffectResolverTest {
 
         effectResolver.getEffect().setKeyword(CardKeyword.HUNTER);
         effectResolver.getEffect().setSingleTarget(true);
-        effectResolver.apply(game, randomCard, EffectTiming.PASSIVE);
+        effectResolver.apply(game, EffectTiming.PASSIVE);
 
         assertEquals(randomCard, game.getForcedTarget());
         assertTrue(game.isForcedAttack());
@@ -211,7 +211,7 @@ public class ForceAttackEffectResolverTest {
         }
 
         effectResolver.getEffect().setSingleTarget(true);
-        effectResolver.apply(game, randomCard, EffectTiming.PASSIVE);
+        effectResolver.apply(game, EffectTiming.PASSIVE);
 
         assertNull(game.getForcedTarget());
         assertFalse(game.isForcedAttack());

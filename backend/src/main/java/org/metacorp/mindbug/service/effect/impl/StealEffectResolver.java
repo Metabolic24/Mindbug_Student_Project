@@ -29,21 +29,22 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public StealEffectResolver(StealEffect effect) {
-        super(effect);
+    public StealEffectResolver(StealEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
+    public void apply(Game game, EffectTiming timing) {
         int value = effect.getValue();
         Integer min = effect.getMin();
         Integer max = effect.getMax();
         StealTargetSelection selection = effect.getSelection();
         StealSource source = effect.getSource();
 
-        Player cardOwner = card.getOwner();
+        Player cardOwner = effectSource.getOwner();
         Player opponent = cardOwner.getOpponent(game.getPlayers());
 
         List<CardInstance> availableCards = switch (source) {
@@ -64,7 +65,7 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
         int cardsCount = availableCards.size();
         if (cardsCount > 0) {
             if (!effect.isOptional() && (cardsCount <= value || value < 0)) {
-                stealCards(new ArrayList<>(availableCards), game, cardOwner, card);
+                stealCards(new ArrayList<>(availableCards), game, cardOwner, effectSource);
             } else if (selection == StealTargetSelection.RANDOM) {
                 List<CardInstance> stolenCards = new ArrayList<>();
                 Random randomGenerator = new Random();
@@ -73,11 +74,11 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
                     stolenCards.add(availableCards.remove(index));
 
                 }
-                stealCards(stolenCards, game, cardOwner, card);
+                stealCards(stolenCards, game, cardOwner, effectSource);
             } else {
                 Player playerToChoose = (selection == null || selection == StealTargetSelection.SELF) ? cardOwner : opponent;
 
-                TargetChoice choice = new TargetChoice(playerToChoose, card, new TargetChoiceResolver(effect, cardOwner, card),
+                TargetChoice choice = new TargetChoice(playerToChoose, effectSource, new TargetChoiceResolver(effect, cardOwner, effectSource),
                         value, new HashSet<>(availableCards));
                 choice.setOptional(effect.isOptional());
                 game.setChoice(choice);

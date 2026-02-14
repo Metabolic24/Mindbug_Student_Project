@@ -15,16 +15,16 @@ public class DisableTimingEffectResolver extends EffectResolver<DisableTimingEff
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public DisableTimingEffectResolver(DisableTimingEffect effect) {
-        super(effect);
+    public DisableTimingEffectResolver(DisableTimingEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
-        card.getOwner().getOpponent(game.getPlayers()).disableTiming(effect.getValue());
-
+    public void apply(Game game, EffectTiming timing) {
+        effectSource.getOwner().getOpponent(game.getPlayers()).disableTiming(effect.getValue());
         HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }
 }

@@ -22,29 +22,26 @@ import java.util.List;
  */
 public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect> implements ResolvableEffect<List<CardInstance>> {
 
-    private CardInstance effectSource;
-
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public ForceAttackEffectResolver(ForceAttackEffect effect) {
-        super(effect);
+    public ForceAttackEffectResolver(ForceAttackEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance effectSource, EffectTiming timing) throws GameStateException, WebSocketException {
-        this.effectSource = effectSource;
-
+    public void apply(Game game, EffectTiming timing) throws GameStateException, WebSocketException {
         Player opponent = effectSource.getOwner().getOpponent(game.getPlayers());
 
         if (timing == EffectTiming.PASSIVE) {
             if (effect.getKeyword() != null) {
                 boolean forcedAttack = false;
-                for (CardInstance card : opponent.getBoard()) {
-                    if (!card.hasKeyword(effect.getKeyword())) {
-                        card.setAbleToAttack(false);
+                for (CardInstance opponentCard : opponent.getBoard()) {
+                    if (!opponentCard.hasKeyword(effect.getKeyword())) {
+                        opponentCard.setAbleToAttack(false);
                     } else {
                         forcedAttack = true;
                     }

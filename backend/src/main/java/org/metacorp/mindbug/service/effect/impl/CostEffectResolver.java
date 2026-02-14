@@ -19,19 +19,19 @@ public class CostEffectResolver extends EffectResolver<CostEffect> implements Re
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public CostEffectResolver(CostEffect effect) {
-        super(effect);
+    public CostEffectResolver(CostEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance sourceCard, EffectTiming timing) {
-        this.effectSource = sourceCard;
+    public void apply(Game game, EffectTiming timing) {
         this.timing = timing;
 
         if (effect.isOptional()) {
-            game.setChoice(new BooleanChoice(sourceCard.getOwner(), sourceCard, this));
+            game.setChoice(new BooleanChoice(effectSource.getOwner(), effectSource, this));
         } else {
             resolve(game);
         }

@@ -18,16 +18,16 @@ public class ReviveEffectResolver extends EffectResolver<ReviveEffect> implement
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public ReviveEffectResolver(ReviveEffect effect) {
-        super(effect);
+    public ReviveEffectResolver(ReviveEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
-        this.effectSource = card;
-        game.setChoice(new BooleanChoice(card.getOwner(), card, this));
+    public void apply(Game game, EffectTiming timing) {
+        game.setChoice(new BooleanChoice(effectSource.getOwner(), effectSource, this));
     }
 
     @Override

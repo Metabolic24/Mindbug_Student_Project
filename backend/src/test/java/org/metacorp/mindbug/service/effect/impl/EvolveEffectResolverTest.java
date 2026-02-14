@@ -28,7 +28,7 @@ public class EvolveEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         evolvingCard = currentPlayer.getHand().getFirst();
 
@@ -39,7 +39,7 @@ public class EvolveEffectResolverTest {
         EvolveEffect effect = new EvolveEffect();
         effect.setType(EffectType.EVOLVE);
         effect.setId(evolutionCard.getCard().getId());
-        effectResolver = new EvolveEffectResolver(effect);
+        effectResolver = new EvolveEffectResolver(effect, evolvingCard);
         timing = EffectTiming.ACTION;
     }
 
@@ -47,7 +47,7 @@ public class EvolveEffectResolverTest {
     public void testBasic_firstEvolution() {
         currentPlayer.addCardToBoard(evolvingCard);
 
-        effectResolver.apply(game, evolvingCard, timing);
+        effectResolver.apply(game, timing);
 
         assertFalse(currentPlayer.getBoard().contains(evolvingCard));
         assertFalse(currentPlayer.getDiscardPile().contains(evolvingCard));
@@ -63,7 +63,7 @@ public class EvolveEffectResolverTest {
         evolutionCard.getKeywords().add(CardKeyword.TOUGH);
         evolutionCard.setStillTough(true);
 
-        effectResolver.apply(game, evolvingCard, timing);
+        effectResolver.apply(game, timing);
 
         assertFalse(currentPlayer.getBoard().contains(evolvingCard));
         assertFalse(currentPlayer.getDiscardPile().contains(evolvingCard));

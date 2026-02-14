@@ -19,25 +19,24 @@ public class BounceEffectResolver extends EffectResolver<BounceEffect> implement
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public BounceEffectResolver(BounceEffect effect) {
-        super(effect);
+    public BounceEffectResolver(BounceEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
-        this.effectSource = card;
-
+    public void apply(Game game, EffectTiming timing) {
         int value = effect.getValue();
-        Player cardOwner = card.getOwner();
-        Set<CardInstance> opponentCards = new HashSet<>(card.getOwner().getOpponent(game.getPlayers()).getBoard());
+        Player cardOwner = effectSource.getOwner();
+        Set<CardInstance> opponentCards = new HashSet<>(effectSource.getOwner().getOpponent(game.getPlayers()).getBoard());
 
         if (!opponentCards.isEmpty()) {
             if (opponentCards.size() <= value || value < 0) {
                 bounceCards(game, opponentCards);
             } else {
-                game.setChoice(new TargetChoice(cardOwner, card, this, value, opponentCards));
+                game.setChoice(new TargetChoice(cardOwner, effectSource, this, value, opponentCards));
             }
         }
     }

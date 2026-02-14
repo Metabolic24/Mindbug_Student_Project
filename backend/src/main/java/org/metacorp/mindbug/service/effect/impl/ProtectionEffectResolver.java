@@ -20,17 +20,16 @@ public class ProtectionEffectResolver extends EffectResolver<ProtectionEffect> {
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public ProtectionEffectResolver(ProtectionEffect effect) {
-        super(effect);
+    public ProtectionEffectResolver(ProtectionEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
 
     @Override
-    public void apply(Game game, CardInstance effectSource, EffectTiming timing) {
-        this.effectSource = effectSource;
-
+    public void apply(Game game, EffectTiming timing) {
         Set<CardInstance> availableCards = new HashSet<>();
 
         if (effect.isSelf()) {

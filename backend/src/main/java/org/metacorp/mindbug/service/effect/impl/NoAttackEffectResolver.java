@@ -20,18 +20,17 @@ public class NoAttackEffectResolver extends EffectResolver<NoAttackEffect> {
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public NoAttackEffectResolver(NoAttackEffect effect) {
-        super(effect);
+    public NoAttackEffectResolver(NoAttackEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
-        this.effectSource = card;
-
+    public void apply(Game game, EffectTiming timing) {
         CardKeyword keyword = effect.getKeyword();
-        Player opponent = card.getOwner().getOpponent(game.getPlayers());
+        Player opponent = effectSource.getOwner().getOpponent(game.getPlayers());
         List<CardInstance> affectedCards = opponent.getBoard();
 
         if (keyword != null) {
