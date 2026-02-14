@@ -22,23 +22,22 @@ public class KeywordUpEffectResolver extends EffectResolver<KeywordUpEffect> {
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public KeywordUpEffectResolver(KeywordUpEffect effect) {
-        super(effect);
+    public KeywordUpEffectResolver(KeywordUpEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
-        this.effectSource = card;
-
+    public void apply(Game game, EffectTiming timing) {
         CardKeyword value = effect.getValue();
         boolean moreAllies = effect.isMoreAllies();
         boolean alone = effect.isAlone();
         boolean allies = effect.isAllies();
         Integer alliesCount = effect.getAlliesCount();
 
-        Player cardOwner = card.getOwner();
+        Player cardOwner = effectSource.getOwner();
         Player opponent = cardOwner.getOpponent(game.getPlayers());
 
         if ((alone && cardOwner.getBoard().size() != 1)
@@ -63,13 +62,13 @@ public class KeywordUpEffectResolver extends EffectResolver<KeywordUpEffect> {
 
         if (allies) {
             Set<CardInstance> availableCards = cardOwner.getBoard().stream().filter(cardInstance ->
-                    (effect.isSelf() && cardInstance.getUuid().equals(card.getUuid()))
-                            || (!cardInstance.getUuid().equals(card.getUuid())
+                    (effect.isSelf() && cardInstance.getUuid().equals(effectSource.getUuid()))
+                            || (!cardInstance.getUuid().equals(effectSource.getUuid())
                             && (effect.getMax() == null || cardInstance.getPower() <= effect.getMax()))).collect(Collectors.toSet());
 
             addKeyword(game, availableCards, value, timing);
         } else {
-            addKeyword(game, Collections.singleton(card), value, timing);
+            addKeyword(game, Collections.singleton(effectSource), value, timing);
         }
     }
 

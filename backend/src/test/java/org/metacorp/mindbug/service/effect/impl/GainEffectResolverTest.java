@@ -17,7 +17,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class GainEffectResolverTest {
 
     private Game game;
-    private CardInstance randomCard;
     private Player currentPlayer;
     private Player opponentPlayer;
 
@@ -28,21 +27,21 @@ public class GainEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
-        randomCard = game.getCurrentPlayer().getHand().getFirst();
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        CardInstance randomCard = game.getCurrentPlayer().getHand().getFirst();
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
         effect = new GainEffect();
         effect.setType(EffectType.GAIN);
-        effectResolver = new GainEffectResolver(effect);
+        effectResolver = new GainEffectResolver(effect, randomCard);
         timing = EffectTiming.PLAY;
     }
 
     @Test
     public void testBasic() throws WebSocketException {
         effect.setValue(2);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(5, currentPlayer.getTeam().getLifePoints());
     }
@@ -50,7 +49,7 @@ public class GainEffectResolverTest {
     @Test
     public void testWithEqualParameter_noEffect() throws WebSocketException {
         effect.setEqual(true);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(opponentPlayer.getTeam().getLifePoints(), currentPlayer.getTeam().getLifePoints());
     }
@@ -60,7 +59,7 @@ public class GainEffectResolverTest {
         opponentPlayer.getTeam().setLifePoints(5);
 
         effect.setEqual(true);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(opponentPlayer.getTeam().getLifePoints(), currentPlayer.getTeam().getLifePoints());
     }
@@ -70,7 +69,7 @@ public class GainEffectResolverTest {
         opponentPlayer.getTeam().setLifePoints(1);
 
         effect.setEqual(true);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(opponentPlayer.getTeam().getLifePoints(), currentPlayer.getTeam().getLifePoints());
     }

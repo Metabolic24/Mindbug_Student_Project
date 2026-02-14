@@ -21,16 +21,15 @@ public class EvolveEffectResolver extends EffectResolver<EvolveEffect> {
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public EvolveEffectResolver(EvolveEffect effect) {
-        super(effect);
+    public EvolveEffectResolver(EvolveEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance effectSource, EffectTiming timing) {
-        this.effectSource = effectSource;
-
+    public void apply(Game game, EffectTiming timing) {
         Optional<CardInstance> relatedEvolutionCard = game.getEvolutionCards().stream().
                 filter(cardInstance -> cardInstance.getCard().getId() == effect.getId()).
                 findFirst();

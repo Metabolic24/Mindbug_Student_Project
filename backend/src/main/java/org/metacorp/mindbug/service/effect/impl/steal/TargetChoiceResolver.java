@@ -22,7 +22,7 @@ public class TargetChoiceResolver extends StealEffectResolver implements Resolva
      * @param effect the effect to be resolved
      */
     public TargetChoiceResolver(StealEffect effect, Player newOwner, CardInstance sourceCard) {
-        super(effect);
+        super(effect, sourceCard);
         this.newOwner = newOwner;
         this.sourceCard = sourceCard;
     }

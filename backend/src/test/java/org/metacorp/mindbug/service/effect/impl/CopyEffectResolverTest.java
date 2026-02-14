@@ -37,19 +37,20 @@ public class CopyEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
-        effect = new CopyEffect();
-        effect.setType(EffectType.COPY);
-        effectResolver = new CopyEffectResolver(effect);
         timing = EffectTiming.PLAY;
 
         randomCard = currentPlayer.getHand().getFirst();
         randomCard.getEffects(timing).clear();
         randomCard.getEffects(EffectTiming.PASSIVE).clear();
         currentPlayer.addCardToBoard(randomCard);
+
+        effect = new CopyEffect();
+        effect.setType(EffectType.COPY);
+        effectResolver = new CopyEffectResolver(effect, randomCard);
     }
 
     @Test
@@ -73,7 +74,7 @@ public class CopyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         effect.setTiming(timing);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, game.getEffectQueue().size());
 
@@ -92,7 +93,7 @@ public class CopyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         effect.setTiming(timing);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertNull(game.getChoice());
@@ -123,7 +124,7 @@ public class CopyEffectResolverTest {
         currentPlayer.addCardToBoard(otherCard2);
 
         effect.setTiming(timing);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertNotNull(game.getChoice());

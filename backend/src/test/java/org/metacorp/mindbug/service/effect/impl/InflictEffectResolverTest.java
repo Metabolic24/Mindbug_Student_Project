@@ -17,7 +17,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class InflictEffectResolverTest {
 
     private Game game;
-    private CardInstance randomCard;
     private Player currentPlayer;
     private Player opponentPlayer;
 
@@ -28,21 +27,21 @@ public class InflictEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
-        randomCard = currentPlayer.getHand().getFirst();
+        CardInstance randomCard = currentPlayer.getHand().getFirst();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
         effect = new InflictEffect();
         effect.setType(EffectType.INFLICT);
-        effectResolver = new InflictEffectResolver(effect);
+        effectResolver = new InflictEffectResolver(effect, randomCard);
         timing = EffectTiming.PLAY;
     }
 
     @Test
     public void testBasic() throws WebSocketException {
         effect.setValue(2);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, opponentPlayer.getTeam().getLifePoints());
     }
@@ -51,7 +50,7 @@ public class InflictEffectResolverTest {
     public void testWithSelfParameter() throws WebSocketException {
         effect.setValue(4);
         effect.setSelf(true);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(0, currentPlayer.getTeam().getLifePoints());
         assertEquals(3, opponentPlayer.getTeam().getLifePoints());
@@ -60,7 +59,7 @@ public class InflictEffectResolverTest {
     @Test
     public void testWithAllButOneParameter_nominal() throws WebSocketException {
         effect.setAllButOne(true);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, opponentPlayer.getTeam().getLifePoints());
     }
@@ -70,7 +69,7 @@ public class InflictEffectResolverTest {
         opponentPlayer.getTeam().setLifePoints(1);
 
         effect.setAllButOne(true);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, opponentPlayer.getTeam().getLifePoints());
     }
@@ -81,7 +80,7 @@ public class InflictEffectResolverTest {
         opponentPlayer.getTeam().setLifePoints(3);
 
         effect.setMindbugCount(true);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, opponentPlayer.getTeam().getLifePoints());
     }
@@ -92,7 +91,7 @@ public class InflictEffectResolverTest {
         opponentPlayer.getTeam().setLifePoints(1);
 
         effect.setMindbugCount(true);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, opponentPlayer.getTeam().getLifePoints());
     }

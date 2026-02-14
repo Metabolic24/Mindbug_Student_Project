@@ -19,20 +19,19 @@ public class GainEffectResolver extends EffectResolver<GainEffect> {
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public GainEffectResolver(GainEffect effect) {
-        super(effect);
+    public GainEffectResolver(GainEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) throws WebSocketException {
-        this.effectSource = card;
-
+    public void apply(Game game, EffectTiming timing) throws WebSocketException {
         int value = effect.getValue();
         boolean equal = effect.isEqual();
 
-        Player cardOwner = card.getOwner();
+        Player cardOwner = effectSource.getOwner();
         Team team = cardOwner.getTeam();
 
         if (equal) {

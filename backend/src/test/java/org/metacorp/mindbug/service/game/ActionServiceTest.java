@@ -66,7 +66,7 @@ public class ActionServiceTest {
 
     @Test
     public void testResolveAction_choicePending() {
-        game.setChoice(new BooleanChoice(currentPlayer, card, new ReviveEffectResolver(null)));
+        game.setChoice(new BooleanChoice(currentPlayer, card, new ReviveEffectResolver(null, card)));
         assertThrows(GameStateException.class, () -> ActionService.resolveAction(card, game));
 
         assertEquals(currentPlayer, game.getCurrentPlayer());

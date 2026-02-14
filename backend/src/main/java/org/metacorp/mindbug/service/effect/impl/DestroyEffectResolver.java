@@ -27,21 +27,22 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public DestroyEffectResolver(DestroyEffect effect) {
-        super(effect);
+    public DestroyEffectResolver(DestroyEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
+    public void apply(Game game, EffectTiming timing) {
         Integer value = effect.getValue();
         Integer min = effect.getMin();
         Integer max = effect.getMax();
         boolean selfAllowed = effect.isSelfAllowed();
         boolean allies = effect.isAllies();
 
-        Player currentPlayer = card.getOwner();
+        Player currentPlayer = effectSource.getOwner();
         Player opponent = currentPlayer.getOpponent(game.getPlayers());
 
         if (effect.isLessAllies() && !(currentPlayer.getBoard().size() < opponent.getBoard().size())) {
@@ -49,7 +50,7 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
         }
 
         if (effect.isItself()) {
-            destroyCards(game, Collections.singletonList(card));
+            destroyCards(game, Collections.singletonList(effectSource));
         } else if (effect.isLowest()) {
             Set<Player> affectedPlayers = selfAllowed ? new HashSet<>(game.getPlayers()) : Collections.singleton(opponent);
             destroyCards(game, CardService.getLowestCards(affectedPlayers));
@@ -68,7 +69,7 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
             }
 
             if (allies || selfAllowed) {
-                for (CardInstance currentCard : card.getOwner().getBoard()) {
+                for (CardInstance currentCard : effectSource.getOwner().getBoard()) {
                     if (min != null && currentCard.getPower() < min
                             || max != null && currentCard.getPower() > max) {
                         continue;
@@ -82,7 +83,7 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
                 if (availableCards.size() <= value || value < 0) {
                     destroyCards(game, availableCards);
                 } else {
-                    game.setChoice(new TargetChoice(currentPlayer, card, this, value, new HashSet<>(availableCards)));
+                    game.setChoice(new TargetChoice(currentPlayer, effectSource, this, value, new HashSet<>(availableCards)));
                 }
             }
         }

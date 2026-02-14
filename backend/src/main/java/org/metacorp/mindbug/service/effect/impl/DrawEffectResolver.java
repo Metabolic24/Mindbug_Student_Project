@@ -15,17 +15,16 @@ public class DrawEffectResolver extends EffectResolver<DrawEffect> {
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public DrawEffectResolver(DrawEffect effect) {
-        super(effect);
+    public DrawEffectResolver(DrawEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
-        this.effectSource = card;
-
-        card.getOwner().drawX(effect.getValue());
+    public void apply(Game game, EffectTiming timing) {
+        effectSource.getOwner().drawX(effect.getValue());
         HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }
 }

@@ -21,16 +21,15 @@ public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public PowerUpEffectResolver(PowerUpEffect effect) {
-        super(effect);
+    public PowerUpEffectResolver(PowerUpEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
-        this.effectSource = card;
-
+    public void apply(Game game, EffectTiming timing) {
         int value = effect.getValue();
         boolean alone = effect.isAlone();
         boolean self = effect.isSelf();
@@ -42,7 +41,7 @@ public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
         Integer enemiesCount = effect.getEnemiesCount();
         Integer alliesCount = effect.getAlliesCount();
 
-        Player currentPlayer = card.getOwner();
+        Player currentPlayer = effectSource.getOwner();
         Player opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
         int powerToAdd = value;
 
@@ -63,11 +62,11 @@ public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
         Set<CardInstance> availableCards = new HashSet<>();
 
         if (self) {
-            availableCards.add(card);
+            availableCards.add(effectSource);
         }
 
         if (allies) {
-            currentPlayer.getBoard().stream().filter(currentCard -> !currentCard.equals(card)).forEach(availableCards::add);
+            currentPlayer.getBoard().stream().filter(currentCard -> !currentCard.equals(effectSource)).forEach(availableCards::add);
         }
 
         changePower(game, availableCards, powerToAdd, timing);

@@ -18,17 +18,16 @@ public class GiveEffectResolver extends EffectResolver<GiveEffect> {
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public GiveEffectResolver(GiveEffect effect) {
-        super(effect);
+    public GiveEffectResolver(GiveEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
 
     @Override
-    public void apply(Game game, CardInstance effectSource, EffectTiming timing) {
-        this.effectSource = effectSource;
-
+    public void apply(Game game, EffectTiming timing) {
         if (effect.isItself()) {
             giveCard(game, effectSource);
         }

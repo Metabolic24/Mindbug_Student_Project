@@ -126,7 +126,8 @@ public class GameStateMapperTest {
 
     @Test
     public void fromGame_targetChoice() {
-        game.setChoice(new TargetChoice(game.getCurrentPlayer(), game.getCurrentPlayer().getHand().getFirst(), new DiscardEffectResolver(new DiscardEffect()), 1, new HashSet<>(game.getOpponent().getHand())));
+        CardInstance playerCard = game.getCurrentPlayer().getHand().getFirst();
+        game.setChoice(new TargetChoice(game.getCurrentPlayer(), playerCard, new DiscardEffectResolver(new DiscardEffect(), playerCard), 1, new HashSet<>(game.getOpponent().getHand())));
 
         GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
 

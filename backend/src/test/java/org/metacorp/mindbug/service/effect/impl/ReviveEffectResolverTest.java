@@ -15,9 +15,7 @@ import org.metacorp.mindbug.model.effect.impl.ReviveEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.StartService;
-import org.metacorp.mindbug.utils.ChoiceUtils;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,7 +34,7 @@ public class ReviveEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
         randomCard = opponentPlayer.getHand().removeFirst();
         opponentPlayer.getDiscardPile().add(randomCard);
@@ -48,13 +46,13 @@ public class ReviveEffectResolverTest {
 
         ReviveEffect effect = new ReviveEffect();
         effect.setType(EffectType.REVIVE);
-        effectResolver = new ReviveEffectResolver(effect);
+        effectResolver = new ReviveEffectResolver(effect, randomCard);
         timing = EffectTiming.PLAY;
     }
 
     @Test
     public void testApply_nominal() {
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(opponentPlayer.getDiscardPile().contains(randomCard));
 
@@ -71,7 +69,7 @@ public class ReviveEffectResolverTest {
 
     @Test
     public void testResolve_true() throws GameStateException, WebSocketException {
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         ((BooleanChoice) game.getChoice()).resolve(true, game);
 
         assertTrue(opponentPlayer.getDiscardPile().isEmpty());
@@ -81,7 +79,7 @@ public class ReviveEffectResolverTest {
 
     @Test
     public void testResolve_false() throws GameStateException, WebSocketException {
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         ((BooleanChoice) game.getChoice()).resolve(false, game);
 
         assertTrue(opponentPlayer.getBoard().isEmpty());

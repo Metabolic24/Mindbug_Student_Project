@@ -18,7 +18,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class DisableTimingEffectResolverTest {
 
     private Game game;
-    private CardInstance randomCard;
     private Player opponentPlayer;
 
     private DisableTimingEffect effect;
@@ -28,20 +27,20 @@ public class DisableTimingEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
-        randomCard = game.getCurrentPlayer().getHand().getFirst();
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        CardInstance randomCard = game.getCurrentPlayer().getHand().getFirst();
         opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
 
         effect = new DisableTimingEffect();
         effect.setType(EffectType.DISABLE_TIMING);
-        effectResolver = new DisableTimingEffectResolver(effect);
+        effectResolver = new DisableTimingEffectResolver(effect, randomCard);
         timing = EffectTiming.PLAY;
     }
 
     @Test
     public void testBasic_PLAY() {
         effect.setValue(EffectTiming.PLAY);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, opponentPlayer.getDisabledTiming().size());
         assertTrue(opponentPlayer.getDisabledTiming().contains(EffectTiming.PLAY));
@@ -53,7 +52,7 @@ public class DisableTimingEffectResolverTest {
     @Test
     public void testBasic_ATTACK() {
         effect.setValue(EffectTiming.ATTACK);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, opponentPlayer.getDisabledTiming().size());
         assertFalse(opponentPlayer.getDisabledTiming().contains(EffectTiming.PLAY));
@@ -64,7 +63,7 @@ public class DisableTimingEffectResolverTest {
     @Test
     public void testBasic_DEFEATED() {
         effect.setValue(EffectTiming.DEFEATED);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, opponentPlayer.getDisabledTiming().size());
         assertFalse(opponentPlayer.getDisabledTiming().contains(EffectTiming.PLAY));
@@ -75,10 +74,10 @@ public class DisableTimingEffectResolverTest {
     @Test
     public void testBasic_multiple() {
         effect.setValue(EffectTiming.DEFEATED);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         effect.setValue(EffectTiming.PLAY);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(2, opponentPlayer.getDisabledTiming().size());
         assertTrue(opponentPlayer.getDisabledTiming().contains(EffectTiming.PLAY));
@@ -89,10 +88,10 @@ public class DisableTimingEffectResolverTest {
     @Test
     public void testBasic_sameTwice() {
         effect.setValue(EffectTiming.ATTACK);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         effect.setValue(EffectTiming.ATTACK);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(1, opponentPlayer.getDisabledTiming().size());
         assertFalse(opponentPlayer.getDisabledTiming().contains(EffectTiming.PLAY));
