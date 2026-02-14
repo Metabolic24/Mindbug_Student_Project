@@ -8,7 +8,6 @@ import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.utils.CardUtils;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,21 +33,18 @@ public class StartService {
      * @param player2 second player
      * @return the created game
      */
-    public static Game newGame(Player player1, Player player2) {
-        return newGame(player1, player2, CardSetName.FIRST_CONTACT);
+    public static Game startGame(Player player1, Player player2) {
+        return startGame(new Game(player1, player2), CardSetName.FIRST_CONTACT);
     }
 
     /**
      * Creates and start a new game for two players (using the given card set)
      *
-     * @param player1 first player name
-     * @param player2 second player name
+     * @param game the game to initialize
      * @param setName the card set name as CardSetName
      * @return the created game
      */
-    public static Game newGame(Player player1, Player player2, CardSetName setName) {
-        Game game = new Game(player1, player2);
-
+    public static Game startGame(Game game, CardSetName setName) {
         // Retrieve CardInstance from JSON configuration file and separate evolution cards from the other ones
         List<CardInstance> cards = game.getCards();
         CardUtils.getCardsFromConfig(setName.getKey()).forEach(cardInstance -> {

@@ -41,7 +41,7 @@ public class EffectQueueServiceTest {
     @BeforeEach
     public void setUp() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         Player currentPlayer = game.getCurrentPlayer();
         card = currentPlayer.getHand().getFirst();

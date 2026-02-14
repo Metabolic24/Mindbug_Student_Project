@@ -28,7 +28,7 @@ public class GameServiceTest {
 
         PlayerService playerService = locator.getService(PlayerService.class);
         gameService = locator.getService(GameService.class);
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
     }
 
     @Test
