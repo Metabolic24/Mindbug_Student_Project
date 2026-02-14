@@ -28,7 +28,7 @@ public class GameStateServiceTest {
 
     @BeforeEach
     public void initGame() {
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
     }
 

@@ -33,7 +33,7 @@ public final class AppUtils {
         PlayerLightDTO player1 = playerService.createPlayer("Player1");
         PlayerLightDTO player2 = playerService.createPlayer("Player2");
 
-        Game game = StartService.newGame(new Player(player1), new Player(player2));
+        Game game = StartService.startGame(new Player(player1), new Player(player2));
 
         for (Player player : game.getPlayers()) {
             AppUtils.detailedSumUpPlayer(player);

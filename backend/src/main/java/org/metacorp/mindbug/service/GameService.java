@@ -55,8 +55,10 @@ public class GameService {
         Player player1 = new Player(playerService.getPlayer(player1Id));
         Player player2 = player2Id == null ? new AiPlayer(playerService.getAiPlayer()) : new Player(playerService.getPlayer(player2Id));
 
-        Game game = StartService.newGame(player1, player2, setName);
+        Game game = new Game(player1, player2);
         games.put(game.getUuid(), game);
+
+        StartService.startGame(game, setName);
 
         return game;
     }

@@ -61,6 +61,7 @@ public class WsGameEndpoint extends WebSocketApplication {
 
         if (playerId == null && !sessions.containsKey(gameId)) {
             sessions.put(gameId, new ArrayList<>());
+            // We cannot log into the game logger as it is probably not already available
             logger.info("Websocket initialized");
         } else if (playerId != null && sessions.containsKey(gameId)) {
             sessions.get(gameId).add(socket);
