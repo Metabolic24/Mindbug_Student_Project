@@ -329,4 +329,18 @@ public class SpecificCaseTest {
         assertTrue(targetChoice.getAvailableTargets().contains(ferretPacifier));
         assertTrue(targetChoice.getAvailableTargets().contains(snailHydra));
     }
+
+    @Test
+    public void hyenixUnexpectedRevive() throws GameStateException, WebSocketException {
+        CardInstance hyenix = getCardById(41);
+        CardInstance hungryHamster = getCardById(40);
+
+        hand(player1, hyenix);
+        hand(player2, hungryHamster);
+
+        play(hyenix);
+        play(hungryHamster);
+
+        assertNull(game.getChoice());
+    }
 }
