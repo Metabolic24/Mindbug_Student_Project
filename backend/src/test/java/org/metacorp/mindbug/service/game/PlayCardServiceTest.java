@@ -7,8 +7,13 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
+import org.metacorp.mindbug.model.effect.impl.DisableTimingEffect;
+import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -65,19 +70,34 @@ public class PlayCardServiceTest {
 
     @Test
     public void testManagePlayedCard_playRestricted() {
+        DisableTimingEffect effect = new DisableTimingEffect();
+        effect.setValue(EffectTiming.PLAY);
+        effect.setType(EffectType.DISABLE_TIMING);
+
+        CardInstance opponentCard = opponent.getHand().getFirst();
+        opponentCard.getCard().getEffects().put(EffectTiming.PASSIVE, List.of(effect));
+        opponent.addCardToBoard(opponentCard);
+
         currentPlayer.disableTiming(EffectTiming.PLAY);
 
+        GainEffect gainEffect = new GainEffect();
+        gainEffect.setValue(3);
+        gainEffect.setType(EffectType.GAIN);
+
         CardInstance card = currentPlayer.getHand().getFirst();
+        card.getCard().getEffects().put(EffectTiming.PLAY, List.of(gainEffect));
         game.setPlayedCard(card);
 
         PlayCardService.managePlayedCard(currentPlayer, game);
 
         assertEquals(1, currentPlayer.getBoard().size());
-        assertEquals(card, currentPlayer.getBoard().getFirst());
-        assertTrue(opponent.getBoard().isEmpty());
+        assertTrue(currentPlayer.getBoard().contains(card));
+        assertEquals(1, opponent.getBoard().size());
 
         assertEquals(0, game.getEffectQueue().size());
         assertNotNull(game.getAfterEffect());
+
+        assertFalse(currentPlayer.canTrigger(EffectTiming.PLAY));
     }
 
     @Test

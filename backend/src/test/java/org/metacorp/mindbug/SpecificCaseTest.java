@@ -328,4 +328,52 @@ public class SpecificCaseTest {
         assertTrue(targetChoice.getAvailableTargets().contains(ferretPacifier));
         assertTrue(targetChoice.getAvailableTargets().contains(snailHydra));
     }
+
+    // #142
+    @Test
+    public void deathWeaverStillActiveInGrave() throws GameStateException {
+        CardInstance hyenix = getCardById(41);
+        CardInstance goreagleAlpha = getCardById(38);
+        CardInstance luchataure =  getCardById(18);
+
+        CardInstance snailThrower = getCardById(26);
+        CardInstance mermaid =  getCardById(19);
+        CardInstance deathweaver = getCardById(6);
+        CardInstance drAxolotl = getCardById(1);
+
+        hand(player1, snailThrower, mermaid, deathweaver, drAxolotl);
+        hand(player2, hyenix, goreagleAlpha, luchataure);
+
+        play(snailThrower);
+        play(hyenix);
+        play(deathweaver);
+        attack(hyenix, snailThrower);
+        attack(deathweaver, null);
+
+        choose(true); //To revive hyenix
+
+        assertTrue(player2.getBoard().contains(hyenix));
+        assertEquals(2, player2.getTeam().getLifePoints());
+
+        attack(hyenix, null);
+        choose(true);
+        AttackService.resolveAttack(null, game);
+
+        play(mermaid);
+
+        assertEquals(2, player1.getTeam().getLifePoints());
+
+        attack(hyenix, mermaid);
+        attack(deathweaver, null);
+
+        choose(true); //To revive hyenix
+
+        assertEquals(1, player2.getTeam().getLifePoints());
+
+        play(luchataure);
+        attack(deathweaver, luchataure);
+
+        play(goreagleAlpha);
+        assertTrue(game.isFinished());
+    }
 }

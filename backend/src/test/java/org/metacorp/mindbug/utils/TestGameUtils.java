@@ -55,7 +55,9 @@ public class TestGameUtils {
 
     public static void attack(CardInstance attackingCard, CardInstance defendingCard) throws GameStateException {
         AttackService.declareAttack(attackingCard, game);
-        AttackService.resolveAttack(defendingCard, game);
+        if (game.getAttackingCard() != null && game.getChoice() == null) {
+            AttackService.resolveAttack(defendingCard, game);
+        }
     }
 
     public static void play(CardInstance pickedCard) throws GameStateException {
