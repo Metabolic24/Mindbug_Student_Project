@@ -12,7 +12,7 @@ import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
-import org.metacorp.mindbug.service.game.StartService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.HashSet;
 import java.util.List;
@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TargetChoiceTest {
+public class TargetChoiceTest extends MindbugGameTest {
     private Game game;
     private Player currentPlayer;
     private Player opponent;
@@ -30,7 +30,7 @@ public class TargetChoiceTest {
     @BeforeEach
     public void initGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponent = currentPlayer.getOpponent(game.getPlayers());
         effect = (_, choiceResolver) -> {

@@ -3,7 +3,6 @@ package org.metacorp.mindbug.model.player;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.metacorp.mindbug.dto.player.PlayerLightDTO;
-import org.metacorp.mindbug.service.PlayerService;
 
 @EqualsAndHashCode(callSuper = true)
 @Data

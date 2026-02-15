@@ -22,6 +22,7 @@ import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.effect.impl.DiscardEffectResolver;
 import org.metacorp.mindbug.service.game.PlayCardService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -34,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class GameStateMapperTest {
+public class GameStateMapperTest extends MindbugGameTest {
 
     private GameService gameService;
     private Game game;
@@ -47,7 +48,7 @@ public class GameStateMapperTest {
         gameService = locator.getService(GameService.class);
         Player player1 = new Player(playerService.createPlayer("player1"));
         Player player2 = new Player(playerService.createPlayer("player2"));
-        game = gameService.createGame(player1.getUuid(), player2.getUuid());
+        game = createGame(gameService, player1.getUuid(), player2.getUuid());
     }
 
     @Test

@@ -48,7 +48,8 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
             resolve(game, new ArrayList<>(availableCards.subList(0, value)));
         } else {
             game.setChoice(new TargetChoice(playerToDiscard, effectSource, this, value, new HashSet<>(availableCards)));
-            game.getLogger().debug("Player {} must choose {} card(s) to discard (available targets : {})", getLoggablePlayer(playerToDiscard), value, getLoggableCards(availableCards));
+            game.getLogger().debug("Player {} must choose {} card(s) to discard (available targets : {})",
+                    getLoggablePlayer(playerToDiscard), value, getLoggableCards(availableCards));
         }
     }
 

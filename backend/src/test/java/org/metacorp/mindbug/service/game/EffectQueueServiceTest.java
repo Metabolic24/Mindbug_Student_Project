@@ -20,6 +20,7 @@ import org.metacorp.mindbug.model.effect.steal.StealSource;
 import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class EffectQueueServiceTest {
+public class EffectQueueServiceTest extends MindbugGameTest {
 
     private CardInstance card;
     private Game game;
@@ -41,7 +42,7 @@ public class EffectQueueServiceTest {
     @BeforeEach
     public void setUp() {
         PlayerService playerService = new PlayerService();
-        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         Player currentPlayer = game.getCurrentPlayer();
         card = currentPlayer.getHand().getFirst();

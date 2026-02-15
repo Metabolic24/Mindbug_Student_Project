@@ -28,7 +28,8 @@ public class DrawEffectResolver extends EffectResolver<DrawEffect> {
     @Override
     public void apply(Game game, EffectTiming timing) {
         effectSource.getOwner().drawX(effect.getValue());
-        game.getLogger().debug("Player {} draws {} cards due to {} effect", getLoggablePlayer(effectSource.getOwner()), effect.getValue(), getLoggableCard(effectSource));
+        game.getLogger().debug("Player {} draws {} cards due to {} effect",
+                getLoggablePlayer(effectSource.getOwner()), effect.getValue(), getLoggableCard(effectSource));
 
         HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }

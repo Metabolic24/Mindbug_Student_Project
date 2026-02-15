@@ -9,12 +9,12 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.GiveEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.game.StartService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class GiveEffectResolverTest {
+public class GiveEffectResolverTest extends MindbugGameTest {
 
     private Game game;
     private CardInstance randomCard;
@@ -28,7 +28,7 @@ public class GiveEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());

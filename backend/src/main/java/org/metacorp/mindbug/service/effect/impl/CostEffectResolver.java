@@ -35,7 +35,8 @@ public class CostEffectResolver extends EffectResolver<CostEffect> implements Re
 
         if (effect.isOptional()) {
             game.setChoice(new BooleanChoice(effectSource.getOwner(), effectSource, this));
-            game.getLogger().debug("Player {} must decide to resolve or not {} COST effect", getLoggablePlayer(effectSource.getOwner()), getLoggableCard(effectSource));
+            game.getLogger().debug("Player {} must decide to resolve or not {} COST effect",
+                    getLoggablePlayer(effectSource.getOwner()), getLoggableCard(effectSource));
         } else {
             resolve(game);
         }

@@ -10,6 +10,7 @@ import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.AttackService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 import org.metacorp.mindbug.utils.TestGameUtils;
 
 import java.io.IOException;
@@ -28,10 +29,8 @@ import static org.metacorp.mindbug.utils.TestGameUtils.getCardsById;
 import static org.metacorp.mindbug.utils.TestGameUtils.hand;
 import static org.metacorp.mindbug.utils.TestGameUtils.huntTarget;
 import static org.metacorp.mindbug.utils.TestGameUtils.play;
-import static org.metacorp.mindbug.utils.TestGameUtils.prepareCustomGame;
-import static org.metacorp.mindbug.utils.TestUtils.cleanHistoryDirectory;
 
-public class SpecificCaseTest {
+public class SpecificCaseTest extends MindbugGameTest {
 
     private Game game;
 
@@ -241,8 +240,6 @@ public class SpecificCaseTest {
         attack(snailHydra, null);
 
         assertTrue(game.isFinished());
-
-        cleanHistoryDirectory();
     }
 
     @Test

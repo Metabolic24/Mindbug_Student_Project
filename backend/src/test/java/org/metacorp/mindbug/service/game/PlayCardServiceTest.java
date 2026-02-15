@@ -10,6 +10,7 @@ import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -17,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class PlayCardServiceTest {
+public class PlayCardServiceTest extends MindbugGameTest {
 
     private Game game;
     private Player currentPlayer;
@@ -26,7 +27,7 @@ public class PlayCardServiceTest {
     @BeforeEach
     public void initGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponent = currentPlayer.getOpponent(game.getPlayers());
     }

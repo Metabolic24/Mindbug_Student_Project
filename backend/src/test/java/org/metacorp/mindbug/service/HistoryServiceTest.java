@@ -18,7 +18,7 @@ import org.metacorp.mindbug.model.history.HistoryCard;
 import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.game.StartService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -30,7 +30,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class HistoryServiceTest {
+public class HistoryServiceTest extends MindbugGameTest {
 
     private Game game;
     private CardInstance sourceCard;
@@ -39,7 +39,7 @@ public class HistoryServiceTest {
     @BeforeEach
     public void initGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         sourceCard = game.getCurrentPlayer().getHand().getFirst();
         targets = Collections.singletonList(game.getOpponent().getHand().getFirst());

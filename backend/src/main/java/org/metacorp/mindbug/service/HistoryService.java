@@ -74,14 +74,16 @@ public class HistoryService {
                 targets = choice.getEffectsToSort().stream().map(EffectsToApply::getCard).toList();
                 data.put("playerToChoose", game.getCurrentPlayer().getUuid());
 
-                game.getLogger().info("New {} choice to be resolved by {} (sourceCards : {})", choiceType.name(), getLoggablePlayer(game.getCurrentPlayer()), getLoggableCards(targets));
+                game.getLogger().info("New {} choice to be resolved by {} (sourceCards : {})", choiceType.name(),
+                        getLoggablePlayer(game.getCurrentPlayer()), getLoggableCards(targets));
             }
             case FRENZY -> {
                 FrenzyAttackChoice choice = (FrenzyAttackChoice) game.getChoice();
                 sourceCard = choice.getAttackingCard();
                 data.put("playerToChoose", sourceCard.getOwner().getUuid());
 
-                game.getLogger().info("New {} choice to be resolved by {} (attackingCard : {})", choiceType.name(), getLoggablePlayer(sourceCard.getOwner()), getLoggableCard(sourceCard));
+                game.getLogger().info("New {} choice to be resolved by {} (attackingCard : {})", choiceType.name(),
+                        getLoggablePlayer(sourceCard.getOwner()), getLoggableCard(sourceCard));
             }
             case TARGET -> {
                 TargetChoice choice = (TargetChoice) game.getChoice();
@@ -90,7 +92,8 @@ public class HistoryService {
                 data.put("playerToChoose", choice.getPlayerToChoose().getUuid());
                 data.put("targetsCount", choice.getTargetsCount());
 
-                game.getLogger().info("New {} choice to be resolved by {} (targets : {})", choiceType.name(), getLoggablePlayer(choice.getPlayerToChoose()), getLoggableCards(targets));
+                game.getLogger().info("New {} choice to be resolved by {} (targets : {})", choiceType.name(),
+                        getLoggablePlayer(choice.getPlayerToChoose()), getLoggableCards(targets));
             }
             case BOOLEAN -> {
                 BooleanChoice choice = (BooleanChoice) game.getChoice();
@@ -104,7 +107,8 @@ public class HistoryService {
 
                 data.put("playerToChoose", choice.getPlayerToChoose().getUuid());
 
-                game.getLogger().info("New {} choice to be resolved by {} (target : {})", choiceType.name(), getLoggablePlayer(choice.getPlayerToChoose()), targetAsString);
+                game.getLogger().info("New {} choice to be resolved by {} (target : {})", choiceType.name(),
+                        getLoggablePlayer(choice.getPlayerToChoose()), targetAsString);
             }
             case HUNTER -> {
                 HunterChoice choice = (HunterChoice) game.getChoice();
@@ -112,7 +116,8 @@ public class HistoryService {
                 targets = choice.getAvailableTargets();
                 data.put("playerToChoose", sourceCard.getOwner().getUuid());
 
-                game.getLogger().info("New {} choice to be resolved by {} (attackingCard : {}, targets : {})", choiceType.name(), getLoggablePlayer(sourceCard.getOwner()), getLoggableCard(sourceCard), getLoggableCards(targets));
+                game.getLogger().info("New {} choice to be resolved by {} (attackingCard : {}, targets : {})", choiceType.name(),
+                        getLoggablePlayer(sourceCard.getOwner()), getLoggableCard(sourceCard), getLoggableCards(targets));
             }
             default -> {
                 // Should never happen

@@ -68,7 +68,8 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
                     break;
                 default:
                     game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, 1, new HashSet<>(opponentBoard)));
-                    game.getLogger().debug("Player {} must choose a card that will be forced to attack (available targets : {})", getLoggablePlayer(effectSource.getOwner()), getLoggableCards(opponentBoard));
+                    game.getLogger().debug("Player {} must choose a card that will be forced to attack (available targets : {})",
+                            getLoggablePlayer(effectSource.getOwner()), getLoggableCards(opponentBoard));
             }
         }
     }

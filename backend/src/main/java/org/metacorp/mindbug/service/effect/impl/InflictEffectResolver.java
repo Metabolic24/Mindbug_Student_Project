@@ -30,7 +30,7 @@ public class InflictEffectResolver extends EffectResolver<InflictEffect> {
     }
 
     @Override
-    public void apply(Game game,  EffectTiming timing) throws WebSocketException {
+    public void apply(Game game, EffectTiming timing) throws WebSocketException {
         boolean self = effect.isSelf();
         boolean allButOne = effect.isAllButOne();
 
@@ -49,7 +49,8 @@ public class InflictEffectResolver extends EffectResolver<InflictEffect> {
             GameStateService.lifePointLost(affectedPlayer, game);
         }
 
-        game.getLogger().debug("{} LP changed ({} -> {}) due to {} effect", getLoggablePlayer(affectedPlayer), oldLifePoints, affectedTeam.getLifePoints(), getLoggableCard(effectSource));
+        game.getLogger().debug("{} LP changed ({} -> {}) due to {} effect",
+                getLoggablePlayer(affectedPlayer), oldLifePoints, affectedTeam.getLifePoints(), getLoggableCard(effectSource));
 
         HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }

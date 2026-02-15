@@ -87,7 +87,8 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
                     destroyCards(game, availableCards);
                 } else {
                     game.setChoice(new TargetChoice(sourceOwner, effectSource, this, value, new HashSet<>(availableCards)));
-                    game.getLogger().debug("Player {} must choose {} card(s) to destroy (available targets : {})", getLoggablePlayer(sourceOwner), value, getLoggableCards(availableCards));
+                    game.getLogger().debug("Player {} must choose {} card(s) to destroy (available targets : {})",
+                            getLoggablePlayer(sourceOwner), value, getLoggableCards(availableCards));
                 }
             }
         }

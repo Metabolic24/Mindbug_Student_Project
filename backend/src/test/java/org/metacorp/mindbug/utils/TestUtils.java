@@ -22,7 +22,7 @@ public class TestUtils {
      * @throws IOException if an error occurs while listing or deleting files/directories
      */
     public static void cleanHistoryDirectory() throws IOException {
-        Path logDir = Path.of("./log");
+        Path logDir = Path.of(System.getProperty("user.dir"), "test-log");
 
         try (Stream<Path> stream = Files.list(logDir)) {
             stream.forEach(path -> {

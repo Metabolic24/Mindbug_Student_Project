@@ -278,7 +278,8 @@ public class GameController {
                         .filter(cardInstance -> cardInstance.getUuid().equals(body.getDefenseCardId()))
                         .findFirst().orElseThrow();
 
-                game.getLogger().debug("Player {} blocks {} with {}", getLoggablePlayer(opponentPlayer), getLoggableCard(game.getAttackingCard()), getLoggableCard(defendingCard));
+                game.getLogger().debug("Player {} blocks {} with {}", getLoggablePlayer(opponentPlayer),
+                        getLoggableCard(game.getAttackingCard()), getLoggableCard(defendingCard));
             } catch (NoSuchElementException e) {
                 return Response.status(400).entity("Card not found").build();
             }

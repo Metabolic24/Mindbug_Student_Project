@@ -6,7 +6,6 @@ import org.glassfish.grizzly.websockets.DefaultWebSocket;
 import org.glassfish.grizzly.websockets.ProtocolHandler;
 import org.glassfish.grizzly.websockets.WebSocketListener;
 import org.metacorp.mindbug.model.CardSetName;
-import org.metacorp.mindbug.service.game.StartService;
 import org.metacorp.mindbug.utils.WsUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
