@@ -14,12 +14,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
+
 /**
  * Utility service that starts a new game
  */
 public class StartService {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(StartService.class);
 
     // Not to be used
     private StartService() {
@@ -100,7 +101,8 @@ public class StartService {
      * @return the first Player
      */
     private static Player getFirstPlayer(Game game) {
-        LOGGER.info("Calculating first player...");
+        Logger logger = game.getLogger();
+        logger.info("Calculating first player...");
 
         List<Player> validPlayers = new ArrayList<>(game.getPlayers());
         while (validPlayers.size() != 1) {
@@ -110,7 +112,7 @@ public class StartService {
             for (Player player : validPlayers) {
                 // Get a random card from the remaining cards
                 CardInstance bannedCard = banCard(game);
-                LOGGER.info("Banned card for {} : {} ({})", player.getName(), bannedCard.getCard().getName(), bannedCard.getPower());
+                logger.info("Banned card for {} : {} ({})", getLoggablePlayer(player), getLoggableCard(bannedCard), bannedCard.getPower());
 
                 if (bannedCard.getPower() < higherPower) {
                     // Current player will not be the first one
@@ -128,7 +130,7 @@ public class StartService {
         }
 
         Player firstPlayer = validPlayers.getFirst();
-        LOGGER.info("First player will be {} ({})", firstPlayer.getName(), firstPlayer.getUuid());
+        logger.info("First player will be {}", getLoggablePlayer(firstPlayer));
 
         return firstPlayer;
     }

@@ -20,9 +20,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.utils.AiUtils;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,8 +28,6 @@ import java.util.Map;
 import java.util.UUID;
 
 public class WsGameEndpoint extends WebSocketApplication {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(WsGameEndpoint.class);
 
     private final Map<UUID, List<GameWebSocket>> sessions = new HashMap<>();
 
@@ -60,25 +56,27 @@ public class WsGameEndpoint extends WebSocketApplication {
         UUID playerId = socket.getPlayerId();
         boolean isAi = socket.isAI();
 
+        Game game = gameService.findById(gameId);
+        Logger logger = game.getLogger();
+
         if (playerId == null && !sessions.containsKey(gameId)) {
             sessions.put(gameId, new ArrayList<>());
-            LOGGER.debug("Websocket created for game {}", gameId);
+            logger.info("Websocket initialized");
         } else if (playerId != null && sessions.containsKey(gameId)) {
             sessions.get(gameId).add(socket);
-            LOGGER.debug("Player {} joined game {}", playerId, gameId);
+            logger.info("Player {} joined the game", playerId);
 
             if (!isAi) {
-                Game game = gameService.findById(gameId);
                 GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
                 WsPlayerGameEvent playerGameEvent = new WsPlayerGameEvent(WsGameEventType.STATE);
                 playerGameEvent.setState(new WsPlayerGameState(gameStateDTO, playerId.equals(gameStateDTO.getPlayer().getUuid())));
                 try {
                     String gameStateData = new ObjectMapper().writeValueAsString(playerGameEvent);
-                    LOGGER.debug("Sending START game state to {}", playerId);
+                    logger.debug("Sending START game state to player {}", playerId);
                     socket.send(gameStateData);
                 } catch (JsonProcessingException e) {
                     // Should not happen
-                    LOGGER.error("Failed to send START game state to {}", playerId, e);
+                    logger.error("Failed to send START game state to player {}", playerId, e);
                     throw new RuntimeException(e);
                 }
 
@@ -92,15 +90,18 @@ public class WsGameEndpoint extends WebSocketApplication {
     @Override
     public void onMessage(WebSocket rawSocket, String message) {
         GameWebSocket socket = (GameWebSocket) rawSocket;
+        UUID gameId = socket.getGameId();
+
+        Game game = gameService.findById(gameId);
+        Logger logger = game.getLogger();
 
         try {
             ObjectMapper mapper = new ObjectMapper();
             WsGameEvent gameEvent = mapper.readValue(message, new TypeReference<>() {
             });
 
-            LOGGER.debug("Game event received : {}", gameEvent.getType());
+            logger.debug("Game event received : {}", gameEvent.getType());
 
-            UUID gameId = socket.getGameId();
             if (sessions.containsKey(gameId)) {
                 List<GameWebSocket> iaWebSockets = new ArrayList<>();
 
@@ -120,7 +121,7 @@ public class WsGameEndpoint extends WebSocketApplication {
             }
         } catch (JsonProcessingException e) {
             // Should not happen
-            LOGGER.warn("Unable to serialize/deserialize game event", e);
+            logger.warn("Unable to serialize/deserialize game event", e);
         }
     }
 
@@ -167,17 +168,19 @@ public class WsGameEndpoint extends WebSocketApplication {
         UUID gameId = socket.getGameId();
         UUID playerId = socket.getPlayerId();
 
+        Game game = gameService.findById(gameId);
+        Logger logger = game.getLogger();
+
         if (playerId != null) {
             List<GameWebSocket> sessionSockets = sessions.get(gameId);
             if (sessionSockets != null) {
                 if (!socket.isAI()) {
                     sessionSockets.remove(socket);
-                    LOGGER.debug("Player {} left game {}", playerId, gameId);
+                    logger.info("Player {} left the game", playerId);
                     try {
                         gameService.endGame(playerId, gameId);
                     } catch (WebSocketException e) {
-                        String errorMessage = MessageFormat.format("An error occurred while trying to end game {0}", gameId);
-                        LOGGER.warn(errorMessage, e);
+                        logger.warn("An error occurred while trying to end game", e);
                     }
                 }
 

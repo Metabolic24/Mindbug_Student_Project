@@ -19,8 +19,6 @@ import org.metacorp.mindbug.service.game.ActionService;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.service.game.PlayCardService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,8 +28,6 @@ import java.util.UUID;
 import java.util.stream.Stream;
 
 public class AiUtils {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(AiUtils.class);
 
     private static final Random RND = new Random();
 
@@ -49,7 +45,7 @@ public class AiUtils {
                 }
             }
         } catch (GameStateException | WebSocketException e) {
-            LOGGER.error("Unable to process AI player game event", e);
+            game.getLogger().error("Unable to process AI player game event", e);
             // TODO Probably a blocking issue
         }
     }

@@ -10,6 +10,8 @@ import org.metacorp.mindbug.model.effect.AfterEffectInterface;
 import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.player.Player;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,6 +26,7 @@ import java.util.UUID;
 public class Game {
 
     private UUID uuid;
+    private Logger logger;
 
     private List<Player> players;
     private Player currentPlayer;
@@ -51,6 +54,8 @@ public class Game {
      */
     public Game(Player player1, Player player2) {
         uuid = UUID.randomUUID();
+        logger = LoggerFactory.getLogger(uuid.toString());
+
         winner = null;
         cards = new ArrayList<>();
         bannedCards = new ArrayList<>();
