@@ -50,7 +50,8 @@ public class GainEffectResolver extends EffectResolver<GainEffect> {
             team.gainLifePoints(value);
         }
 
-        game.getLogger().debug("{} LP changed ({} -> {}) due to {} effect", getLoggablePlayer(cardOwner), oldLifePoints, team.getLifePoints(), getLoggableCard(effectSource));
+        game.getLogger().debug("{} LP changed ({} -> {}) due to {} effect",
+                getLoggablePlayer(cardOwner), oldLifePoints, team.getLifePoints(), getLoggableCard(effectSource));
 
         HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }

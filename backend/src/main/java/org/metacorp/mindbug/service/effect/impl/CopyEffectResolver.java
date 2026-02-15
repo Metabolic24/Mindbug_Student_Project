@@ -59,7 +59,8 @@ public class CopyEffectResolver extends EffectResolver<CopyEffect> implements Re
                 resolve(game, availableCards);
             } else {
                 game.setChoice(new TargetChoice(sourceOwner, effectSource, this, 1, new HashSet<>(availableCards)));
-                game.getLogger().debug("Player {} must choose an effect to copy (available targets : {})", getLoggablePlayer(sourceOwner), getLoggableCards(availableCards));
+                game.getLogger().debug("Player {} must choose an effect to copy (available targets : {})",
+                        getLoggablePlayer(sourceOwner), getLoggableCards(availableCards));
             }
         }
     }

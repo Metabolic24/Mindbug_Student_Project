@@ -42,7 +42,8 @@ public class BounceEffectResolver extends EffectResolver<BounceEffect> implement
                 bounceCards(game, opponentCards);
             } else {
                 game.setChoice(new TargetChoice(cardOwner, effectSource, this, value, opponentCards));
-                game.getLogger().debug("Player {} must choose {} card(s) to bounce (available targets : {})", getLoggablePlayer(cardOwner), value, getLoggableCards(opponentCards));
+                game.getLogger().debug("Player {} must choose {} card(s) to bounce (available targets : {})",
+                        getLoggablePlayer(cardOwner), value, getLoggableCards(opponentCards));
             }
         }
     }
@@ -56,7 +57,8 @@ public class BounceEffectResolver extends EffectResolver<BounceEffect> implement
             cardOwner.getBoard().remove(card);
             cardOwner.getHand().add(card);
 
-            logger.debug("Card {} bounced from the board to {} hand due to {} effect", getLoggableCard(card), getLoggablePlayer(cardOwner), loggableEffectSource);
+            logger.debug("Card {} bounced from the board to {} hand due to {} effect",
+                    getLoggableCard(card), getLoggablePlayer(cardOwner), loggableEffectSource);
         }
 
         HistoryService.logEffect(game, effect.getType(), effectSource, cards);

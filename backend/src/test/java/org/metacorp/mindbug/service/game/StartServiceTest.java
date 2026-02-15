@@ -5,18 +5,19 @@ import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StartServiceTest {
+public class StartServiceTest extends MindbugGameTest {
 
-    private PlayerService playerService = new PlayerService();
+    private final PlayerService playerService = new PlayerService();
 
     @Test
     public void testStart_nominal() {
-        Game game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        Game game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         assertNotNull(game.getCurrentPlayer());
         assertEquals(2, game.getPlayers().size());
@@ -42,7 +43,7 @@ public class StartServiceTest {
 
     @Test
     public void testStart_evolutionCards() {
-        Game game = StartService.startGame(new Game(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2"))), CardSetName.BEYOND_EVOLUTION);
+        Game game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")), CardSetName.BEYOND_EVOLUTION);
 
         assertNotNull(game.getCurrentPlayer());
         assertEquals(2, game.getPlayers().size());

@@ -40,7 +40,9 @@ public class ProtectionEffectResolver extends EffectResolver<ProtectionEffect> {
         }
 
         if (effect.isAllies()) {
-            effectSource.getOwner().getBoard().stream().filter(currentCard -> !currentCard.equals(effectSource)).forEach(availableCards::add);
+            effectSource.getOwner().getBoard().stream().
+                    filter(currentCard -> !currentCard.equals(effectSource)).
+                    forEach(availableCards::add);
         }
 
         addProtection(game, availableCards, timing);

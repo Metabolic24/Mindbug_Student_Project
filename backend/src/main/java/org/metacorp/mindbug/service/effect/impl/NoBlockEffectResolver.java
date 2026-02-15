@@ -76,7 +76,8 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
             setAbleToBlock(game, availableCards);
         } else {
             game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, value, new HashSet<>(opponent.getBoard())));
-            game.getLogger().debug("Player {} must choose {} card(s) that will be unable to block (targets : {})", getLoggablePlayer(effectSource.getOwner()), value, getLoggableCards(opponent.getBoard()));
+            game.getLogger().debug("Player {} must choose {} card(s) that will be unable to block (targets : {})",
+                    getLoggablePlayer(effectSource.getOwner()), value, getLoggableCards(opponent.getBoard()));
         }
     }
 

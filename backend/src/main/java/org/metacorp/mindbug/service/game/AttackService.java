@@ -147,7 +147,8 @@ public class AttackService {
      * @throws GameStateException if an error occurred while resolving the attack
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
-    protected static void processAttackResolution(CardInstance attackCard, CardInstance defendCard, Game game) throws GameStateException, WebSocketException {
+    protected static void processAttackResolution(CardInstance attackCard, CardInstance defendCard, Game game)
+            throws GameStateException, WebSocketException {
         // First log the block action in the history
         HistoryService.log(game, HistoryKey.BLOCK, attackCard, defendCard == null ? null : Collections.singleton(defendCard));
 

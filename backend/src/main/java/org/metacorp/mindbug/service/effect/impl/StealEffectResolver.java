@@ -87,7 +87,8 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
                         value, new HashSet<>(availableCards));
                 choice.setOptional(effect.isOptional());
                 game.setChoice(choice);
-                game.getLogger().debug("Player {} must choose {} cards to steal (targets : {})", getLoggablePlayer(playerToChoose), value, getLoggableCards(availableCards));
+                game.getLogger().debug("Player {} must choose {} cards to steal (targets : {})",
+                        getLoggablePlayer(playerToChoose), value, getLoggableCards(availableCards));
             }
         }
     }
@@ -118,13 +119,16 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
                     EffectQueueService.addBoardEffectsToQueue(stolenCard, EffectTiming.PLAY, game.getEffectQueue());
                 }
 
-                logger.debug("{} stolen and played by {} due to {} effect", getLoggableCard(stolenCard), getLoggablePlayer(newOwner), loggableEffectSource);
+                logger.debug("{} stolen and played by {} due to {} effect", getLoggableCard(stolenCard),
+                        getLoggablePlayer(newOwner), loggableEffectSource);
             } else if (mayPlay) {
                 game.setChoice(new BooleanChoice(newOwner, sourceCard, new StealBooleanChoiceResolver(stolenCard, effectSource), stolenCard));
-                logger.debug("{} must decide if stolen card {} will be added to hand or board", getLoggablePlayer(newOwner), getLoggableCard(stolenCard));
+                logger.debug("{} must decide if stolen card {} will be added to hand or board",
+                        getLoggablePlayer(newOwner), getLoggableCard(stolenCard));
             } else {
                 newOwner.getHand().add(stolenCard);
-                logger.debug("{} stolen and drawn by {} due to {} effect", getLoggableCard(stolenCard), getLoggablePlayer(newOwner), loggableEffectSource);
+                logger.debug("{} stolen and drawn by {} due to {} effect", getLoggableCard(stolenCard),
+                        getLoggablePlayer(newOwner), loggableEffectSource);
             }
         }
 
