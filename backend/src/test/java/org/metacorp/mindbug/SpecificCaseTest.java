@@ -13,7 +13,6 @@ import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 import org.metacorp.mindbug.utils.TestGameUtils;
 
-import java.io.IOException;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -218,7 +217,7 @@ public class SpecificCaseTest extends MindbugGameTest {
 
     // #27
     @Test
-    public void hamsterLionDoesNotCauseGameEndWhenNoOneCanAttack() throws GameStateException, IOException, WebSocketException {
+    public void hamsterLionDoesNotCauseGameEndWhenNoOneCanAttack() throws GameStateException, WebSocketException {
         CardInstance hyenix = getCardById(41);
         CardInstance graveRobber = getCardById(13);
         CardInstance hamsterLion = getCardById(39);
@@ -325,5 +324,53 @@ public class SpecificCaseTest extends MindbugGameTest {
         assertEquals(2, targetChoice.getAvailableTargets().size());
         assertTrue(targetChoice.getAvailableTargets().contains(ferretPacifier));
         assertTrue(targetChoice.getAvailableTargets().contains(snailHydra));
+    }
+
+    // #142
+    @Test
+    public void deathWeaverStillActiveInGrave() throws GameStateException, WebSocketException {
+        CardInstance hyenix = getCardById(41);
+        CardInstance goreagleAlpha = getCardById(38);
+        CardInstance luchataure = getCardById(18);
+
+        CardInstance snailThrower = getCardById(26);
+        CardInstance mermaid = getCardById(19);
+        CardInstance deathweaver = getCardById(6);
+        CardInstance drAxolotl = getCardById(1);
+
+        hand(player1, snailThrower, mermaid, deathweaver, drAxolotl);
+        hand(player2, hyenix, goreagleAlpha, luchataure);
+
+        play(snailThrower);
+        play(hyenix);
+        play(deathweaver);
+        attack(hyenix, snailThrower);
+        attack(deathweaver, null);
+
+        choose(true); //To revive hyenix
+
+        assertTrue(player2.getBoard().contains(hyenix));
+        assertEquals(2, player2.getTeam().getLifePoints());
+
+        attack(hyenix, null);
+        choose(true);
+        AttackService.resolveAttack(null, game);
+
+        play(mermaid);
+
+        assertEquals(2, player1.getTeam().getLifePoints());
+
+        attack(hyenix, mermaid);
+        attack(deathweaver, null);
+
+        choose(true); //To revive hyenix
+
+        assertEquals(1, player2.getTeam().getLifePoints());
+
+        play(luchataure);
+        attack(deathweaver, luchataure);
+
+        play(goreagleAlpha);
+        assertTrue(game.isFinished());
     }
 }
