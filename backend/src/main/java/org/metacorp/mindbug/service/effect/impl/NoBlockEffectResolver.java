@@ -19,6 +19,9 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
+
 /**
  * Effect resolver for NoBlockEffect
  */
@@ -73,6 +76,7 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
             setAbleToBlock(game, availableCards);
         } else {
             game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, value, new HashSet<>(opponent.getBoard())));
+            game.getLogger().debug("Player {} must choose {} card(s) that will be unable to block (targets : {})", getLoggablePlayer(effectSource.getOwner()), value, getLoggableCards(opponent.getBoard()));
         }
     }
 

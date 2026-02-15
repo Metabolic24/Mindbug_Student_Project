@@ -13,6 +13,8 @@ import org.metacorp.mindbug.service.game.EffectQueueService;
 import java.util.Collections;
 import java.util.Optional;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+
 /**
  * Effect resolver for EvolveEffect
  */
@@ -51,6 +53,8 @@ public class EvolveEffectResolver extends EffectResolver<EvolveEffect> {
 
             currentPlayer.getBoard().remove(effectSource);
             currentPlayer.addCardToBoard(evolutionCard);
+
+            game.getLogger().debug("{} evolved into {}", getLoggableCard(effectSource), getLoggableCard(evolutionCard));
 
             // Add PLAY effects (if any) if player is allowed to trigger them
             EffectQueueService.addBoardEffectsToQueue(evolutionCard, EffectTiming.PLAY, game.getEffectQueue());

@@ -14,12 +14,17 @@ import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.impl.steal.StealBooleanChoiceResolver;
 import org.metacorp.mindbug.service.effect.impl.steal.TargetChoiceResolver;
 import org.metacorp.mindbug.service.game.EffectQueueService;
+import org.slf4j.Logger;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
+
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 /**
  * Effect resolver for StealEffect
@@ -82,6 +87,7 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
                         value, new HashSet<>(availableCards));
                 choice.setOptional(effect.isOptional());
                 game.setChoice(choice);
+                game.getLogger().debug("Player {} must choose {} cards to steal (targets : {})", getLoggablePlayer(playerToChoose), value, getLoggableCards(availableCards));
             }
         }
     }
@@ -89,6 +95,9 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
     protected void stealCards(List<CardInstance> stolenCards, Game game, Player newOwner, CardInstance sourceCard) {
         boolean mustPlay = effect.isMustPlay();
         boolean mayPlay = effect.isMayPlay();
+
+        Logger logger = game.getLogger();
+        String loggableEffectSource = getLoggableCard(effectSource);
 
         for (CardInstance stolenCard : stolenCards) {
             Player oldOwner = stolenCard.getOwner();
@@ -108,10 +117,14 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
                     // Add PLAY effects (if any) if player is allowed to trigger them
                     EffectQueueService.addBoardEffectsToQueue(stolenCard, EffectTiming.PLAY, game.getEffectQueue());
                 }
+
+                logger.debug("{} stolen and played by {} due to {} effect", getLoggableCard(stolenCard), getLoggablePlayer(newOwner), loggableEffectSource);
             } else if (mayPlay) {
-                game.setChoice(new BooleanChoice(newOwner, sourceCard, new StealBooleanChoiceResolver(stolenCard), stolenCard));
+                game.setChoice(new BooleanChoice(newOwner, sourceCard, new StealBooleanChoiceResolver(stolenCard, effectSource), stolenCard));
+                logger.debug("{} must decide if stolen card {} will be added to hand or board", getLoggablePlayer(newOwner), getLoggableCard(stolenCard));
             } else {
                 newOwner.getHand().add(stolenCard);
+                logger.debug("{} stolen and drawn by {} due to {} effect", getLoggableCard(stolenCard), getLoggablePlayer(newOwner), loggableEffectSource);
             }
         }
 

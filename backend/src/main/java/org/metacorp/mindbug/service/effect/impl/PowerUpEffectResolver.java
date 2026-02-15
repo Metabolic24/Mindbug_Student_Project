@@ -8,10 +8,13 @@ import org.metacorp.mindbug.model.modifier.PowerModifier;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
+import org.slf4j.Logger;
 
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
 
 /**
  * Effect resolver for PowerUpEffect
@@ -73,11 +76,17 @@ public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
     }
 
     private void changePower(Game game, Collection<CardInstance> cards, int power, EffectTiming timing) {
+        Logger logger = game.getLogger();
+        String loggableEffectSource = getLoggableCard(effectSource);
+
         for (CardInstance card : cards) {
+            int oldPower = card.getPower();
             card.changePower(power);
             if (timing == EffectTiming.ATTACK) {
                 card.getModifiers().add(new PowerModifier(power));
             }
+
+            logger.debug("{} power changed ({} -> {}) due to {} effect", getLoggableCard(card), oldPower, card.getPower(), loggableEffectSource);
         }
 
         HistoryService.logEffect(game, effect.getType(), effectSource, cards);

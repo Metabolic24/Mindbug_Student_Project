@@ -9,6 +9,9 @@ import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
+
 /**
  * Effect resolver for CostEffect
  */
@@ -32,6 +35,7 @@ public class CostEffectResolver extends EffectResolver<CostEffect> implements Re
 
         if (effect.isOptional()) {
             game.setChoice(new BooleanChoice(effectSource.getOwner(), effectSource, this));
+            game.getLogger().debug("Player {} must decide to resolve or not {} COST effect", getLoggablePlayer(effectSource.getOwner()), getLoggableCard(effectSource));
         } else {
             resolve(game);
         }
@@ -48,5 +52,7 @@ public class CostEffectResolver extends EffectResolver<CostEffect> implements Re
         EffectsToApply costEffectToApply = new EffectsToApply(effect.getCost(), effect.getEffects(), effectSource, timing);
         game.getEffectQueue().push(costEffectToApply);
         game.getEffectQueue().setResolvingEffect(true);
+
+        game.getLogger().debug("COST effect of {} is about to be resolved", getLoggableCard(effectSource));
     }
 }

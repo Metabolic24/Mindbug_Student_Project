@@ -10,6 +10,9 @@ import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.EffectQueueService;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
+
 /**
  * Effect resolver for ReviveEffect
  */
@@ -28,6 +31,7 @@ public class ReviveEffectResolver extends EffectResolver<ReviveEffect> implement
     @Override
     public void apply(Game game, EffectTiming timing) {
         game.setChoice(new BooleanChoice(effectSource.getOwner(), effectSource, this));
+        game.getLogger().debug("{} must decide if {} will revive", getLoggablePlayer(effectSource.getOwner()), getLoggableCard(effectSource));
     }
 
     @Override
@@ -35,6 +39,8 @@ public class ReviveEffectResolver extends EffectResolver<ReviveEffect> implement
         if (choice != null && choice) {
             effectSource.getOwner().getDiscardPile().remove(effectSource);
             effectSource.getOwner().getBoard().add(effectSource);
+
+            game.getLogger().debug("{} revived using its own effect", getLoggableCard(effectSource));
 
             EffectQueueService.addBoardEffectsToQueue(effectSource, EffectTiming.PLAY, game.getEffectQueue());
 

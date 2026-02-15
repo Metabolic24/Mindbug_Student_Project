@@ -11,6 +11,9 @@ import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.game.GameStateService;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
+
 /**
  * Effect resolver for InflictEffect
  */
@@ -33,6 +36,7 @@ public class InflictEffectResolver extends EffectResolver<InflictEffect> {
 
         Player affectedPlayer = self ? effectSource.getOwner() : effectSource.getOwner().getOpponent(game.getPlayers());
         Team affectedTeam = affectedPlayer.getTeam();
+        int oldLifePoints = affectedTeam.getLifePoints();
 
         if (allButOne) {
             if (affectedTeam.getLifePoints() > 1) {
@@ -44,6 +48,8 @@ public class InflictEffectResolver extends EffectResolver<InflictEffect> {
             affectedTeam.loseLifePoints(value);
             GameStateService.lifePointLost(affectedPlayer, game);
         }
+
+        game.getLogger().debug("{} LP changed ({} -> {}) due to {} effect", getLoggablePlayer(affectedPlayer), oldLifePoints, affectedTeam.getLifePoints(), getLoggableCard(effectSource));
 
         HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }

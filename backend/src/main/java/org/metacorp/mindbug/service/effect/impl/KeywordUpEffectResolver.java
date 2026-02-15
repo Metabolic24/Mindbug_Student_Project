@@ -14,6 +14,8 @@ import java.util.Collections;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+
 /**
  * Effect resolver for KeywordUpEffect
  */
@@ -75,6 +77,8 @@ public class KeywordUpEffectResolver extends EffectResolver<KeywordUpEffect> {
     private void addKeyword(Game game, Set<CardInstance> cards, CardKeyword keyword, EffectTiming timing) {
         for (CardInstance card : cards) {
             if (!card.getKeywords().contains(keyword)) {
+                game.getLogger().debug("{} gains {} keyword", getLoggableCard(card), keyword.name());
+
                 card.getKeywords().add(keyword);
                 if (keyword == CardKeyword.FRENZY) {
                     card.setAbleToAttackTwice(true);

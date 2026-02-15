@@ -9,6 +9,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.game.CardService;
+import org.slf4j.Logger;
 
 import java.util.List;
 
@@ -45,8 +46,12 @@ public class NoAttackEffectResolver extends EffectResolver<NoAttackEffect> {
     }
 
     private void resolve(Game game, List<CardInstance> cards) {
+        Logger logger = game.getLogger();
+
         for (CardInstance card : cards) {
             card.setAbleToAttack(false);
+
+            logger.debug("{} no more able to attack", card);
         }
 
         HistoryService.logEffect(game, effect.getType(), effectSource, cards);

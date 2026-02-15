@@ -18,6 +18,9 @@ import java.util.List;
 import java.util.Set;
 
 import static org.metacorp.mindbug.service.game.CardService.defeatCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 /**
  * Effect resolver for DestroyEffect
@@ -42,10 +45,10 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
         boolean selfAllowed = effect.isSelfAllowed();
         boolean allies = effect.isAllies();
 
-        Player currentPlayer = effectSource.getOwner();
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player sourceOwner = effectSource.getOwner();
+        Player opponent = sourceOwner.getOpponent(game.getPlayers());
 
-        if (effect.isLessAllies() && !(currentPlayer.getBoard().size() < opponent.getBoard().size())) {
+        if (effect.isLessAllies() && !(sourceOwner.getBoard().size() < opponent.getBoard().size())) {
             return;
         }
 
@@ -83,14 +86,17 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
                 if (availableCards.size() <= value || value < 0) {
                     destroyCards(game, availableCards);
                 } else {
-                    game.setChoice(new TargetChoice(currentPlayer, effectSource, this, value, new HashSet<>(availableCards)));
+                    game.setChoice(new TargetChoice(sourceOwner, effectSource, this, value, new HashSet<>(availableCards)));
+                    game.getLogger().debug("Player {} must choose {} card(s) to destroy (available targets : {})", getLoggablePlayer(sourceOwner), value, getLoggableCards(availableCards));
                 }
             }
         }
     }
 
     private void destroyCards(Game game, List<CardInstance> cards) {
+        String loggableEffectSource = getLoggableCard(effectSource);
         for (CardInstance card : cards) {
+            game.getLogger().debug("{} effect destroys {}", loggableEffectSource, getLoggableCard(card));
             defeatCard(card, game);
         }
 
