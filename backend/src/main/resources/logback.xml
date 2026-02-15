@@ -5,16 +5,21 @@
         </encoder>
     </appender>
 
-    <appender name="LOGFILE" class="ch.qos.logback.core.FileAppender">
-        <file>log/mindbug.log</file>
-        <append>true</append>
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
+    <appender name="SIFT" class="ch.qos.logback.classic.sift.SiftingAppender">
+        <discriminator class="org.metacorp.mindbug.configuration.LoggerDiscriminator"/>
+        <sift>
+            <appender name="FILE-${loggerName}" class="ch.qos.logback.core.FileAppender">
+                <file>${log.folder}\${loggerName}.log</file>
+                <append>true</append>
+                <encoder>
+                    <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level - %msg%n</pattern>
+                </encoder>
+            </appender>
+        </sift>
     </appender>
 
     <root level="debug">
-        <appender-ref ref="STDOUT" />
-        <appender-ref ref="LOGFILE" />
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="SIFT"/>
     </root>
 </configuration>

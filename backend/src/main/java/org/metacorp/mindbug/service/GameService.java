@@ -10,8 +10,6 @@ import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.StartService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,8 +21,6 @@ import java.util.UUID;
  */
 @Service
 public class GameService {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(GameService.class);
 
     /**
      * The map used to store active games
@@ -91,7 +87,7 @@ public class GameService {
             if (losingPlayer.isPresent()) {
                 GameStateService.endGame(losingPlayer.get(), game);
             } else {
-                LOGGER.warn("Unable to find losing player {} in game {}...", losingPlayerID, gameId);
+                game.getLogger().warn("Unable to find losing player {} in game {}...", losingPlayerID, gameId);
             }
         }
     }

@@ -13,8 +13,6 @@ import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -24,8 +22,6 @@ import java.util.Map;
  * Utility service that updates game state when a player attacks
  */
 public class AttackService {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(AttackService.class);
 
     /**
      * Method executed when a player declares an attack
@@ -96,7 +92,7 @@ public class AttackService {
                     GameStateService.newTurn(game);
                 }
             } catch (GameStateException | WebSocketException e) {
-                LOGGER.error("An error occurred while resolving attack declaration");
+                game.getLogger().error("An error occurred while resolving attack declaration");
                 throw e;
             }
         });

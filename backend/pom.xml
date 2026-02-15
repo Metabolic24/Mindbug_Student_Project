@@ -18,7 +18,9 @@
         <grizzly.version>4.0.2</grizzly.version>
         <jersey.version>4.0.2</jersey.version>
         <slf4j.version>2.0.17</slf4j.version>
+
         <main.class>org.metacorp.mindbug.app.RestApp</main.class>
+        <log.folder>${project.basedir}/log</log.folder>
     </properties>
 
     <dependencyManagement>
@@ -148,6 +150,15 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
         <pluginManagement>
             <plugins>
                 <plugin>

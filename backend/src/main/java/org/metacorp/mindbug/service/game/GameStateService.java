@@ -12,18 +12,15 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
 import static org.metacorp.mindbug.service.game.CardService.getPassiveEffects;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 public class GameStateService {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(GameStateService.class);
 
     /**
      * Refresh the game state
@@ -132,7 +129,7 @@ public class GameStateService {
      */
     public static void endGame(Player loser, Game game) throws WebSocketException {
         Player winner = loser.getOpponent(game.getPlayers());
-        LOGGER.info("Game over : {} wins ; {} loses.", winner.getName(), loser.getName());
+        game.getLogger().info("Game over : {} wins ; {} loses.", getLoggablePlayer(winner), getLoggablePlayer(loser));
 
         game.setWinner(winner);
 
