@@ -14,7 +14,7 @@ import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.game.StartService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CopyEffectResolverTest {
+public class CopyEffectResolverTest extends MindbugGameTest {
     private Game game;
     private CardInstance randomCard;
     private Player currentPlayer;
@@ -37,19 +37,20 @@ public class CopyEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
-        effect = new CopyEffect();
-        effect.setType(EffectType.COPY);
-        effectResolver = new CopyEffectResolver(effect);
         timing = EffectTiming.PLAY;
 
         randomCard = currentPlayer.getHand().getFirst();
         randomCard.getEffects(timing).clear();
         randomCard.getEffects(EffectTiming.PASSIVE).clear();
         currentPlayer.addCardToBoard(randomCard);
+
+        effect = new CopyEffect();
+        effect.setType(EffectType.COPY);
+        effectResolver = new CopyEffectResolver(effect, randomCard);
     }
 
     @Test
@@ -73,9 +74,8 @@ public class CopyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         effect.setTiming(timing);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
-        // TODO Il y a un cas où c'est égal à 0 ici (peut-être un simultaneous choice)
         assertEquals(1, game.getEffectQueue().size());
 
         EffectsToApply effectsToApply = game.getEffectQueue().poll();
@@ -93,7 +93,7 @@ public class CopyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         effect.setTiming(timing);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertNull(game.getChoice());
@@ -124,7 +124,7 @@ public class CopyEffectResolverTest {
         currentPlayer.addCardToBoard(otherCard2);
 
         effect.setTiming(timing);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertNotNull(game.getChoice());

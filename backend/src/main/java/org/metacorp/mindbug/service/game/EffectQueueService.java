@@ -3,6 +3,7 @@ package org.metacorp.mindbug.service.game;
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.EffectQueueStopException;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
@@ -81,8 +82,9 @@ public class EffectQueueService {
      * @param fromSimultaneousChoice is this method called after a simultaneous choice resolution
      * @param game                   the current game state
      * @throws GameStateException if a game state error is detected during effect queue resolution
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
-    public static void resolveEffectQueue(boolean fromSimultaneousChoice, Game game) throws GameStateException {
+    public static void resolveEffectQueue(boolean fromSimultaneousChoice, Game game) throws GameStateException, WebSocketException {
         // If the game is over, immediately stop the effect queue resolution
         if (game.isFinished()) {
             return;
@@ -145,9 +147,10 @@ public class EffectQueueService {
      * @param game          the current game state
      * @param currentEffect the EffectsToApply that is currently processed
      * @throws EffectQueueStopException if the game is finished or if a choice has been created while trying to resolve an effect
+     * @throws WebSocketException       if an error occurred while sending game event through WebSocket
      */
     private static void processEffects(Iterator<? extends Effect> iterator, Game game, EffectsToApply currentEffect)
-            throws EffectQueueStopException {
+            throws GameStateException, EffectQueueStopException, WebSocketException {
         // Initialize a boolean value that will be true if a CostEffect is resolved so a new EffectsToApply is added to the effect queue
         EffectQueue effectQueue = game.getEffectQueue();
 
@@ -156,7 +159,7 @@ public class EffectQueueService {
             // Get the next effect, apply it, then remove it from the list
             Effect effect = iterator.next();
 
-            EffectResolver.getResolver((GenericEffect) effect).apply(game, currentEffect.getCard(), currentEffect.getTiming());
+            EffectResolver.getResolver((GenericEffect) effect, currentEffect.getCard()).apply(game, currentEffect.getTiming());
             // The cost effect resolution may change isResolvingEffect value to true if no choice is created
 
             // Stop the process if the game is finished
@@ -200,8 +203,9 @@ public class EffectQueueService {
      * Create a simultaneous choice using the effects contained in the effect queue
      *
      * @param game the current game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
-    private static void createSimultaneousChoice(Game game) {
+    private static void createSimultaneousChoice(Game game) throws WebSocketException {
         EffectQueue effectQueue = game.getEffectQueue();
 
         game.setChoice(new SimultaneousEffectsChoice(new HashSet<>(effectQueue)));

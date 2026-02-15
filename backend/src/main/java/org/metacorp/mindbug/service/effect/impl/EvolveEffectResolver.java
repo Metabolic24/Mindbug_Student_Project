@@ -13,6 +13,8 @@ import org.metacorp.mindbug.service.game.EffectQueueService;
 import java.util.Collections;
 import java.util.Optional;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+
 /**
  * Effect resolver for EvolveEffect
  */
@@ -21,16 +23,15 @@ public class EvolveEffectResolver extends EffectResolver<EvolveEffect> {
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public EvolveEffectResolver(EvolveEffect effect) {
-        super(effect);
+    public EvolveEffectResolver(EvolveEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance effectSource, EffectTiming timing) {
-        this.effectSource = effectSource;
-
+    public void apply(Game game, EffectTiming timing) {
         Optional<CardInstance> relatedEvolutionCard = game.getEvolutionCards().stream().
                 filter(cardInstance -> cardInstance.getCard().getId() == effect.getId()).
                 findFirst();
@@ -52,6 +53,8 @@ public class EvolveEffectResolver extends EffectResolver<EvolveEffect> {
 
             currentPlayer.getBoard().remove(effectSource);
             currentPlayer.addCardToBoard(evolutionCard);
+
+            game.getLogger().debug("{} evolved into {}", getLoggableCard(effectSource), getLoggableCard(evolutionCard));
 
             // Add PLAY effects (if any) if player is allowed to trigger them
             EffectQueueService.addBoardEffectsToQueue(evolutionCard, EffectTiming.PLAY, game.getEffectQueue());

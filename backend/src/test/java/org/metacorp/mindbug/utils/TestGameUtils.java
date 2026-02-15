@@ -2,6 +2,7 @@ package org.metacorp.mindbug.utils;
 
 import lombok.Getter;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -53,16 +54,16 @@ public class TestGameUtils {
         return game.getCards().stream().filter(cardInstance -> cardInstance.getCard().getId() == id).collect(Collectors.toList());
     }
 
-    public static void attack(CardInstance attackingCard, CardInstance defendingCard) throws GameStateException {
+    public static void attack(CardInstance attackingCard, CardInstance defendingCard) throws GameStateException, WebSocketException {
         AttackService.declareAttack(attackingCard, game);
         AttackService.resolveAttack(defendingCard, game);
     }
 
-    public static void play(CardInstance pickedCard) throws GameStateException {
+    public static void play(CardInstance pickedCard) throws GameStateException, WebSocketException {
         play(pickedCard, null);
     }
 
-    public static void play(CardInstance pickedCard, Player mindbugger) throws GameStateException {
+    public static void play(CardInstance pickedCard, Player mindbugger) throws GameStateException, WebSocketException {
         PlayCardService.pickCard(pickedCard, game);
         PlayCardService.playCard(mindbugger, game);
     }
@@ -95,15 +96,15 @@ public class TestGameUtils {
         }
     }
 
-    public static void huntTarget(CardInstance card) throws GameStateException {
+    public static void huntTarget(CardInstance card) throws GameStateException, WebSocketException {
         ChoiceService.resolveChoice(card == null ? null : card.getUuid(), game);
     }
 
-    public static void chooseTargets(CardInstance... cards) throws GameStateException {
+    public static void chooseTargets(CardInstance... cards) throws GameStateException, WebSocketException {
         ChoiceService.resolveChoice(Arrays.stream(cards).map(CardInstance::getUuid).toList(), game);
     }
 
-    public static void choose(boolean choice) throws GameStateException {
+    public static void choose(boolean choice) throws GameStateException, WebSocketException {
         ChoiceService.resolveChoice(choice, game);
     }
 

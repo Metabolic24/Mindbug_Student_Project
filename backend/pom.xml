@@ -18,7 +18,9 @@
         <grizzly.version>4.0.2</grizzly.version>
         <jersey.version>4.0.2</jersey.version>
         <slf4j.version>2.0.17</slf4j.version>
+
         <main.class>org.metacorp.mindbug.app.RestApp</main.class>
+        <log.folder>${project.basedir}/log</log.folder>
     </properties>
 
     <dependencyManagement>
@@ -119,7 +121,7 @@
             <version>2.2.2</version>
         </dependency>
 
-        <!-- Utile pour enlever un warning sur le serveur WS-->
+        <!-- Logging dependencies -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -127,9 +129,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.5.27</version>
         </dependency>
 
         <dependency>
@@ -148,6 +150,15 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
         <pluginManagement>
             <plugins>
                 <plugin>

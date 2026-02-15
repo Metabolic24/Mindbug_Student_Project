@@ -4,6 +4,7 @@ import lombok.Setter;
 import org.metacorp.mindbug.app.GameEngine;
 import org.metacorp.mindbug.dto.player.PlayerLightDTO;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
@@ -32,7 +33,7 @@ public final class AppUtils {
         PlayerLightDTO player1 = playerService.createPlayer("Player1");
         PlayerLightDTO player2 = playerService.createPlayer("Player2");
 
-        Game game = StartService.newGame(new Player(player1), new Player(player2));
+        Game game = StartService.startGame(new Player(player1), new Player(player2));
 
         for (Player player : game.getPlayers()) {
             AppUtils.detailedSumUpPlayer(player);
@@ -50,7 +51,7 @@ public final class AppUtils {
      * @param game the current game
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void play(Game game) throws GameStateException {
+    public static void play(Game game) throws GameStateException, WebSocketException {
         play(null, game);
     }
 
@@ -61,7 +62,7 @@ public final class AppUtils {
      * @param scanner the scanner to be used to read standard input (only for manual mode)
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void play(Scanner scanner, Game game) throws GameStateException {
+    public static void play(Scanner scanner, Game game) throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
         List<CardInstance> hand = currentPlayer.getHand();
         if (hand.isEmpty()) {
@@ -84,7 +85,7 @@ public final class AppUtils {
      * @param game the current game
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void declareAttack(Game game) throws GameStateException {
+    public static void declareAttack(Game game) throws GameStateException, WebSocketException {
         declareAttack(null, game);
     }
 
@@ -95,7 +96,7 @@ public final class AppUtils {
      * @param scanner the scanner to be used to read standard input (only for manual mode)
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void declareAttack(Scanner scanner, Game game) throws GameStateException {
+    public static void declareAttack(Scanner scanner, Game game) throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
 
         List<CardInstance> availableCards = currentPlayer.getBoard().stream().filter(CardInstance::isAbleToAttack).toList();
@@ -118,7 +119,7 @@ public final class AppUtils {
      * @param game the current game
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void resolveAttack(Game game) throws GameStateException {
+    public static void resolveAttack(Game game) throws GameStateException, WebSocketException {
         resolveAttack(null, game);
     }
 
@@ -129,7 +130,7 @@ public final class AppUtils {
      * @param scanner the scanner to be used to read standard input (only for manual mode)
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void resolveAttack(Scanner scanner, Game game) throws GameStateException {
+    public static void resolveAttack(Scanner scanner, Game game) throws GameStateException, WebSocketException {
         Player attackedPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
 
         List<CardInstance> availableCards = AiUtils.getBlockersList(game);
@@ -200,9 +201,9 @@ public final class AppUtils {
     public static void runAndCheckErrors(Game game, GameEngine engine) {
         try {
             engine.run();
-        } catch (GameStateException gst) {
-            System.err.println(gst.getMessage());
-            throw new RuntimeException(gst);
+        } catch (GameStateException | WebSocketException e) {
+            System.err.println(e.getMessage());
+            throw new RuntimeException(e);
         } catch (Throwable t) {
             System.out.println("=================================");
             System.out.println("Une erreur s'est produite (cf contexte ci-dessous)");

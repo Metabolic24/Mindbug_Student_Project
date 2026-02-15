@@ -5,9 +5,10 @@ import org.glassfish.hk2.utilities.ServiceLocatorUtilities;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.game.StartService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.List;
 import java.util.UUID;
@@ -16,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-public class GameServiceTest {
+public class GameServiceTest extends MindbugGameTest {
 
     private Game game;
     private GameService gameService;
@@ -27,7 +28,7 @@ public class GameServiceTest {
 
         PlayerService playerService = locator.getService(PlayerService.class);
         gameService = locator.getService(GameService.class);
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
     }
 
     @Test
@@ -53,7 +54,7 @@ public class GameServiceTest {
     }
 
     @Test
-    public void endGame_nominal() throws UnknownPlayerException {
+    public void endGame_nominal() throws UnknownPlayerException, WebSocketException {
         List<Player> players = game.getPlayers();
         UUID loserId = players.get(0).getUuid();
         UUID winnerId = players.get(1).getUuid();
@@ -64,13 +65,13 @@ public class GameServiceTest {
     }
 
     @Test
-    public void endGame_badGame() {
+    public void endGame_badGame() throws WebSocketException {
         gameService.endGame(UUID.randomUUID(), UUID.randomUUID());
         assertNull(game.getWinner());
     }
 
     @Test
-    public void endGame_badPlayer() throws UnknownPlayerException {
+    public void endGame_badPlayer() throws UnknownPlayerException, WebSocketException {
         List<Player> players = game.getPlayers();
         UUID loserId = players.get(0).getUuid();
         game = gameService.createGame(loserId, players.get(1).getUuid());

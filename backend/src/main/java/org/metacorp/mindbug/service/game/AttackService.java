@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.game;
 
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -21,13 +22,16 @@ import java.util.Map;
  * Utility service that updates game state when a player attacks
  */
 public class AttackService {
+
     /**
      * Method executed when a player declares an attack
      *
      * @param attackCard the attacking card
      * @param game       the game state
+     * @throws GameStateException if an error occurred while resolving attack declaration
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
-    public static void declareAttack(CardInstance attackCard, Game game) throws GameStateException {
+    public static void declareAttack(CardInstance attackCard, Game game) throws GameStateException, WebSocketException {
         if (attackCard == null) {
             throw new GameStateException("no attacking card");
         } else if (!attackCard.isAbleToAttack()) {
@@ -67,39 +71,29 @@ public class AttackService {
         EffectQueueService.addBoardEffectsToQueue(attackCard, EffectTiming.ATTACK, game.getEffectQueue());
 
         game.setAfterEffect(() -> {
-            if (attackCardOwner.getBoard().contains(attackCard)) {
-                Player defender = attackCardOwner.getOpponent(game.getPlayers());
-                if (defender.getBoard().isEmpty()) {
-                    try {
+            try {
+                if (attackCardOwner.getBoard().contains(attackCard)) {
+                    Player defender = attackCardOwner.getOpponent(game.getPlayers());
+                    if (defender.getBoard().isEmpty()) {
                         resolveAttack(null, game);
-                    } catch (GameStateException e) {
-                        // TODO Manage errors
-                        e.printStackTrace();
-                    }
-                } else if (game.getForcedTarget() != null) {
-                    try {
+                    } else if (game.getForcedTarget() != null) {
                         resolveAttack(game.getForcedTarget(), game);
-                    } catch (GameStateException e) {
-                        // TODO Manage errors
-                        e.printStackTrace();
-                    }
-                } else if (attackCard.hasKeyword(CardKeyword.HUNTER)) {
-                    game.setChoice(new HunterChoice(attackCard, new HashSet<>(defender.getBoard())));
-                    WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
-                } else if (!defender.canBlock(attackCard.hasKeyword(CardKeyword.SNEAKY))) {
-                    try {
+                    } else if (attackCard.hasKeyword(CardKeyword.HUNTER)) {
+                        game.setChoice(new HunterChoice(attackCard, new HashSet<>(defender.getBoard())));
+                        WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+                    } else if (!defender.canBlock(attackCard.hasKeyword(CardKeyword.SNEAKY))) {
                         resolveAttack(null, game);
-                    } catch (GameStateException e) {
-                        // TODO Manage errors
-                        e.printStackTrace();
+                    } else {
+                        WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);
                     }
                 } else {
-                    WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);
-                }
-            } else {
-                game.setAttackingCard(null);
+                    game.setAttackingCard(null);
 
-                GameStateService.newTurn(game);
+                    GameStateService.newTurn(game);
+                }
+            } catch (GameStateException | WebSocketException e) {
+                game.getLogger().error("An error occurred while resolving attack declaration");
+                throw e;
             }
         });
     }
@@ -111,8 +105,10 @@ public class AttackService {
      *
      * @param defendingCard the card chosen to defend the attack
      * @param game          the game state
+     * @throws GameStateException if an error occurred while resolving the attack
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
-    public static void resolveAttack(CardInstance defendingCard, Game game) throws GameStateException {
+    public static void resolveAttack(CardInstance defendingCard, Game game) throws GameStateException, WebSocketException {
         CardInstance attackingCard = game.getAttackingCard();
         if (attackingCard == null) {
             throw new GameStateException("no attacking card set in game state");
@@ -148,8 +144,10 @@ public class AttackService {
      * @param attackCard the card that attacked
      * @param defendCard the card chosen to defend the attack (may be null if the player chooses to not block)
      * @param game       the game state
+     * @throws GameStateException if an error occurred while resolving the attack
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
-    protected static void processAttackResolution(CardInstance attackCard, CardInstance defendCard, Game game) {
+    protected static void processAttackResolution(CardInstance attackCard, CardInstance defendCard, Game game) throws GameStateException, WebSocketException {
         // First log the block action in the history
         HistoryService.log(game, HistoryKey.BLOCK, attackCard, defendCard == null ? null : Collections.singleton(defendCard));
 

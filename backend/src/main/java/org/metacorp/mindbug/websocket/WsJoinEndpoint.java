@@ -10,6 +10,8 @@ import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.service.GameService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -20,6 +22,8 @@ import java.util.Queue;
 import java.util.UUID;
 
 public class WsJoinEndpoint extends WebSocketApplication {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(WsJoinEndpoint.class);
 
     private final Map<CardSetName, Queue<JoinWebSocket>> joinQueues = new HashMap<>();
 
@@ -63,7 +67,7 @@ public class WsJoinEndpoint extends WebSocketApplication {
                                 socket.send(game.getUuid().toString());
                                 otherPlayerSession.send(game.getUuid().toString());
                             } catch (UnknownPlayerException e) {
-                                // TODO Manage errors
+                                LOGGER.warn("Unable to start a new game", e);
                             }
 
                             //TODO Maybe implement a timeout system
@@ -78,10 +82,7 @@ public class WsJoinEndpoint extends WebSocketApplication {
 
     @Override
     public void onMessage(WebSocket socket, String text) {
-        if (text.equals("OK")) {
-
-        }
-        //TODO Manage players response
+        // Nothing to do for the moment
     }
 
     @Override
@@ -95,7 +96,7 @@ public class WsJoinEndpoint extends WebSocketApplication {
             joinQueue.removeAll(matchingSessions);
         }
 
-        System.out.println("Player " + socket.getPlayerName() + " (" + socket.getPlayerId() + ") left waiting queue");
+        LOGGER.debug("Player {} ({}) left waiting queue", socket.getPlayerName(), socket.getPlayerId());
 
         super.onClose(socket, frame);
     }

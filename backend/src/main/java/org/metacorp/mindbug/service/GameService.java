@@ -3,15 +3,19 @@ package org.metacorp.mindbug.service;
 import jakarta.inject.Inject;
 import org.jvnet.hk2.annotations.Service;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.StartService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 
 /**
@@ -19,6 +23,8 @@ import java.util.UUID;
  */
 @Service
 public class GameService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(GameService.class);
 
     /**
      * The map used to store active games
@@ -53,8 +59,12 @@ public class GameService {
         Player player1 = new Player(playerService.getPlayer(player1Id));
         Player player2 = player2Id == null ? new AiPlayer(playerService.getAiPlayer()) : new Player(playerService.getPlayer(player2Id));
 
-        Game game = StartService.newGame(player1, player2, setName);
+        Game game = new Game(player1, player2);
         games.put(game.getUuid(), game);
+
+        LOGGER.debug("Game created : {}", game.getUuid());
+
+        StartService.startGame(game, setName);
 
         return game;
     }
@@ -74,13 +84,19 @@ public class GameService {
      *
      * @param losingPlayerID the losing player ID
      * @param gameId         the current game ID
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
-    public void endGame(UUID losingPlayerID, UUID gameId) {
+    public void endGame(UUID losingPlayerID, UUID gameId) throws WebSocketException {
         Game game = findById(gameId);
         if (game != null && !game.isFinished()) {
-            game.getPlayers().stream()
+            Optional<Player> losingPlayer = game.getPlayers().stream()
                     .filter(player -> player.getUuid().equals(losingPlayerID))
-                    .findFirst().ifPresent(player -> GameStateService.endGame(player, game));
+                    .findFirst();
+            if (losingPlayer.isPresent()) {
+                GameStateService.endGame(losingPlayer.get(), game);
+            } else {
+                game.getLogger().warn("Unable to find losing player {} in game {}...", losingPlayerID, gameId);
+            }
         }
     }
 }

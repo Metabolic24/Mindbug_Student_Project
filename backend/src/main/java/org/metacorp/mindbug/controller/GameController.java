@@ -7,7 +7,6 @@ import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.core.Response;
-import org.metacorp.mindbug.dto.GameStateDTO;
 import org.metacorp.mindbug.dto.rest.ActionDTO;
 import org.metacorp.mindbug.dto.rest.DeclareAttackDTO;
 import org.metacorp.mindbug.dto.rest.PickDTO;
@@ -20,6 +19,7 @@ import org.metacorp.mindbug.dto.rest.choice.MultipleTargetAnswerDTO;
 import org.metacorp.mindbug.dto.rest.choice.SingleTargetAnswerDTO;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.mapper.GameStateMapper;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -31,10 +31,15 @@ import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.PlayCardService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.UUID;
+
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 /**
  * Controller for game REST API
@@ -42,12 +47,16 @@ import java.util.UUID;
 @Path("/game")
 public class GameController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(GameController.class);
+
     @Inject
     private GameService gameService;
 
     @POST
     @Path("/startOffline")
     public Response startOffline(StartOfflineDTO startDTO) {
+        LOGGER.debug("Starting an offline game for player {}", startDTO.getPlayerId());
+
         try {
             Game game = gameService.createGame(startDTO.getPlayerId(), null, startDTO.getCardSetName());
             return Response.ok(game.getUuid()).build();
@@ -61,10 +70,7 @@ public class GameController {
     @Path("/{gameId}")
     public Response status(@PathParam(value = "gameId") UUID gameId) {
         Game game = gameService.findById(gameId);
-
-        GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
-
-        return Response.ok(gameStateDTO).build();
+        return Response.ok(GameStateMapper.fromGame(game)).build();
     }
 
     @POST
@@ -83,7 +89,11 @@ public class GameController {
                 .filter(player -> player.getUuid().equals(body.getPlayerId()))
                 .findFirst();
         if (playerOpt.isPresent()) {
-            GameStateService.endGame(playerOpt.get(), game);
+            try {
+                GameStateService.endGame(playerOpt.get(), game);
+            } catch (WebSocketException e) {
+                game.getLogger().warn("Failed to send WebSocket message after surrendering", e);
+            }
         } else {
             return Response.status(400).entity("Unknown player ID").build();
         }
@@ -97,10 +107,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/pick")
-    public Response pick(PickDTO body) throws GameStateException {
+    public Response pick(PickDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getCardId() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -114,6 +125,8 @@ public class GameController {
             CardInstance pickedCard = game.getCurrentPlayer().getHand().stream()
                     .filter(cardInstance -> cardInstance.getUuid().equals(body.getCardId()))
                     .findFirst().orElseThrow();
+
+            game.getLogger().debug("Player {} picked card {}", getLoggablePlayer(game.getCurrentPlayer()), getLoggableCard(pickedCard));
             PlayCardService.pickCard(pickedCard, game);
         } catch (NoSuchElementException e) {
             return Response.status(400).entity("Card not found").build();
@@ -128,10 +141,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/play")
-    public Response play(PlayDTO body) throws GameStateException {
+    public Response play(PlayDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -150,6 +164,10 @@ public class GameController {
             } catch (NoSuchElementException e) {
                 return Response.status(400).entity("Player not found").build();
             }
+
+            game.getLogger().debug("Card {} mindbugged by {}", getLoggableCard(game.getPlayedCard()), getLoggablePlayer(mindbugger));
+        } else {
+            game.getLogger().debug("Card {} added to {} board", getLoggableCard(game.getPlayedCard()), getLoggablePlayer(game.getCurrentPlayer()));
         }
 
         PlayCardService.playCard(mindbugger, game);
@@ -163,10 +181,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/action")
-    public Response action(ActionDTO body) throws GameStateException {
+    public Response action(ActionDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getCardId() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -180,6 +199,9 @@ public class GameController {
             CardInstance actionCard = game.getCurrentPlayer().getBoard().stream()
                     .filter(cardInstance -> cardInstance.getUuid().equals(body.getCardId()))
                     .findFirst().orElseThrow();
+
+            game.getLogger().debug("Player {} used {} action", getLoggablePlayer(game.getCurrentPlayer()), getLoggableCard(actionCard));
+
             ActionService.resolveAction(actionCard, game);
         } catch (NoSuchElementException e) {
             return Response.status(400).entity("Card not found").build();
@@ -194,10 +216,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/attack")
-    public Response declareAttack(DeclareAttackDTO body) throws GameStateException {
+    public Response declareAttack(DeclareAttackDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getAttackingCardId() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -211,6 +234,9 @@ public class GameController {
             CardInstance attackingCard = game.getCurrentPlayer().getBoard().stream()
                     .filter(cardInstance -> cardInstance.getUuid().equals(body.getAttackingCardId()))
                     .findFirst().orElseThrow();
+
+            game.getLogger().debug("Player {} attacks with {}", getLoggablePlayer(game.getCurrentPlayer()), getLoggableCard(attackingCard));
+
             AttackService.declareAttack(attackingCard, game);
         } catch (NoSuchElementException e) {
             return Response.status(400).entity("Card not found").build();
@@ -225,10 +251,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @PUT
     @Path("/attack")
-    public Response resolveAttack(ResolveAttackDTO body) throws GameStateException {
+    public Response resolveAttack(ResolveAttackDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null
                 || (body.getDefendingPlayerId() != null && body.getDefenseCardId() == null)
                 || (body.getDefendingPlayerId() == null && body.getDefenseCardId() != null)) {
@@ -250,6 +277,8 @@ public class GameController {
                 defendingCard = opponentPlayer.getBoard().stream()
                         .filter(cardInstance -> cardInstance.getUuid().equals(body.getDefenseCardId()))
                         .findFirst().orElseThrow();
+
+                game.getLogger().debug("Player {} blocks {} with {}", getLoggablePlayer(opponentPlayer), getLoggableCard(game.getAttackingCard()), getLoggableCard(defendingCard));
             } catch (NoSuchElementException e) {
                 return Response.status(400).entity("Card not found").build();
             }
@@ -266,10 +295,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/choice/boolean")
-    public Response resolveBoolean(BooleanAnswerDTO body) throws GameStateException {
+    public Response resolveBoolean(BooleanAnswerDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getOk() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -282,6 +312,8 @@ public class GameController {
             return Response.status(404).entity("No boolean choice to resolve").build();
         }
 
+        game.getLogger().debug("Resolving boolean choice with value {}", body.getOk());
+
         ChoiceService.resolveChoice(body.getOk(), game);
 
         return Response.ok().build();
@@ -293,10 +325,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/choice/single")
-    public Response resolveSingleTargetChoice(SingleTargetAnswerDTO body) throws GameStateException {
+    public Response resolveSingleTargetChoice(SingleTargetAnswerDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -311,6 +344,8 @@ public class GameController {
             return Response.status(400).entity("Invalid request body : missing cardId").build();
         }
 
+        game.getLogger().debug("Resolving single target choice with card {}", body.getCardId());
+
         ChoiceService.resolveChoice(body.getCardId(), game);
 
         return Response.ok().build();
@@ -322,10 +357,11 @@ public class GameController {
      * @param body the request body
      * @return the response to the REST request
      * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     @POST
     @Path("/choice/target")
-    public Response resolveTargetChoice(MultipleTargetAnswerDTO body) throws GameStateException {
+    public Response resolveTargetChoice(MultipleTargetAnswerDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getTargets() == null) {
             return Response.status(400).entity("Invalid request body").build();
         }
@@ -336,6 +372,8 @@ public class GameController {
         } else if (game.getChoice() == null || game.getChoice().getType() != ChoiceType.TARGET) {
             return Response.status(404).entity("No target choice to resolve").build();
         } else {
+            game.getLogger().debug("Resolving target choice with cards {}", body.getTargets());
+
             ChoiceService.resolveChoice(body.getTargets(), game);
         }
 

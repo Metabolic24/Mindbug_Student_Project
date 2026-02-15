@@ -3,6 +3,7 @@ package org.metacorp.mindbug.model.choice;
 import lombok.Data;
 import lombok.NonNull;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.utils.ChoiceUtils;
@@ -21,7 +22,7 @@ public class HunterChoice implements IChoice<UUID> {
     private Set<CardInstance> availableTargets;
 
     @Override
-    public void resolve(UUID chosenTargetId, Game game) throws GameStateException {
+    public void resolve(UUID chosenTargetId, Game game) throws GameStateException, WebSocketException {
         ChoiceUtils.resolveHunterChoice(chosenTargetId, this, game);
     }
 

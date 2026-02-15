@@ -3,6 +3,7 @@ package org.metacorp.mindbug.service.game;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -11,6 +12,7 @@ import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.List;
 
@@ -20,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class AttackServiceTest {
+public class AttackServiceTest extends MindbugGameTest {
 
     private Game game;
     private Player currentPlayer;
@@ -29,7 +31,7 @@ public class AttackServiceTest {
     @BeforeEach
     public void initGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponent = currentPlayer.getOpponent(game.getPlayers());
     }
@@ -65,7 +67,7 @@ public class AttackServiceTest {
     }
 
     @Test
-    public void testProcessAttackResolution_noBlock() {
+    public void testProcessAttackResolution_noBlock() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(attackCard);
         game.setAttackingCard(attackCard);
@@ -76,7 +78,7 @@ public class AttackServiceTest {
     }
 
     @Test
-    public void testDeclareAttack_forcedTarget() throws GameStateException {
+    public void testDeclareAttack_forcedTarget() throws GameStateException, WebSocketException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.getEffects(EffectTiming.ATTACK).clear();
         attackCard.getEffects(EffectTiming.DEFEATED).clear();
@@ -103,7 +105,7 @@ public class AttackServiceTest {
 
 
     @Test
-    public void testProcessAttackResolution_lowerBlocker() {
+    public void testProcessAttackResolution_lowerBlocker() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(attackCard);
         game.setAttackingCard(attackCard);
@@ -124,7 +126,7 @@ public class AttackServiceTest {
     }
 
     @Test
-    public void testProcessAttackResolution_higherBlocker() {
+    public void testProcessAttackResolution_higherBlocker() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.setStillTough(false);
         attackCard.getKeywords().remove(CardKeyword.POISONOUS);
@@ -145,7 +147,7 @@ public class AttackServiceTest {
     }
 
     @Test
-    public void testProcessAttackResolution_samePowerBlockHasNoDefeatedEffect() {
+    public void testProcessAttackResolution_samePowerBlockHasNoDefeatedEffect() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.setStillTough(false);
         currentPlayer.addCardToBoard(attackCard);
@@ -168,7 +170,7 @@ public class AttackServiceTest {
     }
 
     @Test
-    public void testProcessAttack_samePowerAttackHasNoDefeatedEffect() {
+    public void testProcessAttack_samePowerAttackHasNoDefeatedEffect() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.getCard().getEffects().remove(EffectTiming.DEFEATED);
         attackCard.setStillTough(false);
@@ -191,7 +193,7 @@ public class AttackServiceTest {
     }
 
     @Test
-    public void testProcessAttackResolution_samePowerBothHaveDefeatedEffect() {
+    public void testProcessAttackResolution_samePowerBothHaveDefeatedEffect() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new GainEffect()));
         attackCard.setStillTough(false);
@@ -216,7 +218,7 @@ public class AttackServiceTest {
     }
 
     @Test
-    public void testProcessAttackResolution_attackReversed() {
+    public void testProcessAttackResolution_attackReversed() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.getKeywords().add(CardKeyword.REVERSED);
         currentPlayer.addCardToBoard(attackCard);
@@ -238,7 +240,7 @@ public class AttackServiceTest {
     }
 
     @Test
-    public void testProcessAttackResolution_blockerReversed() {
+    public void testProcessAttackResolution_blockerReversed() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(attackCard);
         game.setAttackingCard(attackCard);
@@ -260,7 +262,7 @@ public class AttackServiceTest {
     }
 
     @Test
-    public void testProcessAttackResolution_bothReversed() {
+    public void testProcessAttackResolution_bothReversed() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.setStillTough(false);
         attackCard.getKeywords().remove(CardKeyword.POISONOUS);
@@ -283,7 +285,7 @@ public class AttackServiceTest {
     }
 
     @Test
-    public void testProcessAttackResolution_reverseSamePower() {
+    public void testProcessAttackResolution_reverseSamePower() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.setStillTough(false);
         attackCard.getKeywords().remove(CardKeyword.POISONOUS);

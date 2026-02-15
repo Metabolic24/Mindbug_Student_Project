@@ -9,11 +9,11 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.PowerUpEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.game.StartService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PowerUpEffectResolverTest {
+public class PowerUpEffectResolverTest extends MindbugGameTest {
 
     private Game game;
     private CardInstance randomCard;
@@ -27,14 +27,14 @@ public class PowerUpEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
         effect = new PowerUpEffect();
         effect.setType(EffectType.POWER_UP);
-        effectResolver = new PowerUpEffectResolver(effect);
+        effectResolver = new PowerUpEffectResolver(effect, randomCard);
         timing = EffectTiming.PLAY;
     }
 
@@ -42,7 +42,7 @@ public class PowerUpEffectResolverTest {
     public void testWithLifePointsCondition_moreLifePoints() {
         effect.setLifePoints(1);
         effect.setValue(8);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }
@@ -51,7 +51,7 @@ public class PowerUpEffectResolverTest {
     public void testWithLifePointsCondition_sameLifePoints() {
         effect.setLifePoints(3);
         effect.setValue(8);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower() + effect.getValue(), randomCard.getPower());
     }
@@ -60,7 +60,7 @@ public class PowerUpEffectResolverTest {
     public void testWithLifePointsCondition_lessLifePoints() {
         effect.setLifePoints(4);
         effect.setValue(8);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower() + effect.getValue(), randomCard.getPower());
     }
@@ -69,7 +69,7 @@ public class PowerUpEffectResolverTest {
     public void testWithAloneCondition_noEffect() {
         effect.setAlone(true);
         effect.setValue(4);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }
@@ -80,7 +80,7 @@ public class PowerUpEffectResolverTest {
 
         effect.setAlone(true);
         effect.setValue(4);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower() + effect.getValue(), randomCard.getPower());
     }
@@ -92,7 +92,7 @@ public class PowerUpEffectResolverTest {
 
         effect.setAlone(true);
         effect.setValue(4);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }
@@ -104,7 +104,7 @@ public class PowerUpEffectResolverTest {
         effect.setAllies(true);
         effect.setSelf(false);
         effect.setValue(3);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }
@@ -119,7 +119,7 @@ public class PowerUpEffectResolverTest {
         effect.setAllies(true);
         effect.setSelf(false);
         effect.setValue(3);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
         assertEquals(otherCard.getCard().getPower() + effect.getValue(), otherCard.getPower());
@@ -144,7 +144,7 @@ public class PowerUpEffectResolverTest {
         effect.setAllies(true);
         effect.setSelf(false);
         effect.setValue(3);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
         assertEquals(otherCard.getCard().getPower() + effect.getValue(), otherCard.getPower());
@@ -159,7 +159,7 @@ public class PowerUpEffectResolverTest {
 
         effect.setSelfTurn(true);
         effect.setValue(5);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower() + effect.getValue(), randomCard.getPower());
     }
@@ -172,7 +172,7 @@ public class PowerUpEffectResolverTest {
 
         effect.setSelfTurn(true);
         effect.setValue(5);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }
@@ -183,7 +183,7 @@ public class PowerUpEffectResolverTest {
 
         effect.setForEachAlly(true);
         effect.setValue(2);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }
@@ -198,7 +198,7 @@ public class PowerUpEffectResolverTest {
 
         effect.setForEachAlly(true);
         effect.setValue(2);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower() + (3 * effect.getValue()), randomCard.getPower());
     }
@@ -214,7 +214,7 @@ public class PowerUpEffectResolverTest {
 
         effect.setEnemiesCount(3);
         effect.setValue(5);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower() + 5, randomCard.getPower());
     }
@@ -229,7 +229,7 @@ public class PowerUpEffectResolverTest {
 
         effect.setEnemiesCount(3);
         effect.setValue(5);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }
@@ -245,7 +245,7 @@ public class PowerUpEffectResolverTest {
 
         effect.setAlliesCount(2);
         effect.setValue(4);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower() + 4, randomCard.getPower());
     }
@@ -260,7 +260,7 @@ public class PowerUpEffectResolverTest {
 
         effect.setAlliesCount(3);
         effect.setValue(4);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }
@@ -271,7 +271,7 @@ public class PowerUpEffectResolverTest {
 
         effect.setNoMindbug(true);
         effect.setValue(4);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower() + 4, randomCard.getPower());
     }
@@ -282,7 +282,7 @@ public class PowerUpEffectResolverTest {
 
         effect.setNoMindbug(true);
         effect.setValue(4);
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
 
         assertEquals(randomCard.getCard().getPower(), randomCard.getPower());
     }

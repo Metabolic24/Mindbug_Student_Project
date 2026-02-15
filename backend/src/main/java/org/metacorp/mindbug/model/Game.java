@@ -2,11 +2,16 @@ package org.metacorp.mindbug.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.IChoice;
+import org.metacorp.mindbug.model.effect.AfterEffectInterface;
 import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.player.Player;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,6 +26,7 @@ import java.util.UUID;
 public class Game {
 
     private UUID uuid;
+    private Logger logger;
 
     private List<Player> players;
     private Player currentPlayer;
@@ -36,7 +42,7 @@ public class Game {
 
     private final EffectQueue effectQueue;
     private IChoice<?> choice;
-    private Runnable afterEffect;
+    private AfterEffectInterface afterEffect;
 
     private boolean forcedAttack;
     private boolean webSocketUp;
@@ -48,6 +54,8 @@ public class Game {
      */
     public Game(Player player1, Player player2) {
         uuid = UUID.randomUUID();
+        logger = LoggerFactory.getLogger(uuid.toString());
+
         winner = null;
         cards = new ArrayList<>();
         bannedCards = new ArrayList<>();
@@ -65,8 +73,8 @@ public class Game {
         return winner != null;
     }
 
-    public void runAfterEffect() {
-        Runnable oldAfterEffect = afterEffect;
+    public void runAfterEffect() throws GameStateException, WebSocketException {
+        AfterEffectInterface oldAfterEffect = afterEffect;
 
         if (afterEffect != null) {
             afterEffect.run();
