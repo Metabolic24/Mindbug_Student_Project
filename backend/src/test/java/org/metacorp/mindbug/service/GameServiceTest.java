@@ -8,7 +8,7 @@ import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.game.StartService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.List;
 import java.util.UUID;
@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-public class GameServiceTest {
+public class GameServiceTest extends MindbugGameTest {
 
     private Game game;
     private GameService gameService;
@@ -28,7 +28,7 @@ public class GameServiceTest {
 
         PlayerService playerService = locator.getService(PlayerService.class);
         gameService = locator.getService(GameService.class);
-        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
     }
 
     @Test
