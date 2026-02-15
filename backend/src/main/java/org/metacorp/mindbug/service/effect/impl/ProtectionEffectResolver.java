@@ -7,10 +7,13 @@ import org.metacorp.mindbug.model.effect.impl.ProtectionEffect;
 import org.metacorp.mindbug.model.modifier.ProtectionModifier;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
+import org.slf4j.Logger;
 
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
 
 /**
  * Effect resolver for ProtectionEffect
@@ -44,11 +47,16 @@ public class ProtectionEffectResolver extends EffectResolver<ProtectionEffect> {
     }
 
     private void addProtection(Game game, Collection<CardInstance> cards, EffectTiming timing) {
+        Logger logger = game.getLogger();
+        String loggableEffectSource = getLoggableCard(effectSource);
+
         for (CardInstance card : cards) {
             card.setProtection(true);
             if (timing == EffectTiming.ATTACK) {
                 card.getModifiers().add(new ProtectionModifier());
             }
+
+            logger.debug("{} cannot be defeated now due to {} effect", getLoggableCard(card), loggableEffectSource);
         }
 
         HistoryService.logEffect(game, effect.getType(), effectSource, cards);

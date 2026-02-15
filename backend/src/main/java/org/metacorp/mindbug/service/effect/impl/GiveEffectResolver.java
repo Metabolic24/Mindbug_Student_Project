@@ -10,6 +10,9 @@ import org.metacorp.mindbug.service.effect.EffectResolver;
 
 import java.util.Collections;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
+
 /**
  * Effect resolver for GiveEffect
  */
@@ -39,6 +42,8 @@ public class GiveEffectResolver extends EffectResolver<GiveEffect> {
         cardToGive.setOwner(opponent);
         game.getCurrentPlayer().getBoard().remove(cardToGive);
         opponent.getBoard().add(cardToGive);
+
+        game.getLogger().debug("{} card has been given to {} due to its effect", getLoggableCard(cardToGive), getLoggablePlayer(opponent));
 
         HistoryService.logEffect(game, effect.getType(), effectSource, Collections.singleton(cardToGive));
     }

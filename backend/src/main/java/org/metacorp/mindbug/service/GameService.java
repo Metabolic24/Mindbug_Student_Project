@@ -10,6 +10,8 @@ import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.StartService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,6 +23,8 @@ import java.util.UUID;
  */
 @Service
 public class GameService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(GameService.class);
 
     /**
      * The map used to store active games
@@ -57,6 +61,8 @@ public class GameService {
 
         Game game = new Game(player1, player2);
         games.put(game.getUuid(), game);
+
+        LOGGER.debug("Game created : {}", game.getUuid());
 
         StartService.startGame(game, setName);
 

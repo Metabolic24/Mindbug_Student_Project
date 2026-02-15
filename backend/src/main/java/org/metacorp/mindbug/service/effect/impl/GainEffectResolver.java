@@ -11,6 +11,9 @@ import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.game.GameStateService;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
+
 /**
  * Effect resolver for GainEffect
  */
@@ -34,9 +37,9 @@ public class GainEffectResolver extends EffectResolver<GainEffect> {
         Player cardOwner = effectSource.getOwner();
         Team team = cardOwner.getTeam();
 
-        if (equal) {
-            int oldLifePoints = team.getLifePoints();
+        int oldLifePoints = team.getLifePoints();
 
+        if (equal) {
             Player opponent = cardOwner.getOpponent(game.getPlayers());
             team.setLifePoints(opponent.getTeam().getLifePoints());
 
@@ -46,6 +49,8 @@ public class GainEffectResolver extends EffectResolver<GainEffect> {
         } else {
             team.gainLifePoints(value);
         }
+
+        game.getLogger().debug("{} LP changed ({} -> {}) due to {} effect", getLoggablePlayer(cardOwner), oldLifePoints, team.getLifePoints(), getLoggableCard(effectSource));
 
         HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }

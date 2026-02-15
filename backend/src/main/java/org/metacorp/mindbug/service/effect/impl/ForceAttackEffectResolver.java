@@ -17,6 +17,10 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
+
 /**
  * Effect resolver for ForceAttackEffect
  */
@@ -64,6 +68,7 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
                     break;
                 default:
                     game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, 1, new HashSet<>(opponentBoard)));
+                    game.getLogger().debug("Player {} must choose a card that will be forced to attack (available targets : {})", getLoggablePlayer(effectSource.getOwner()), getLoggableCards(opponentBoard));
             }
         }
     }
@@ -77,6 +82,8 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
         if (this.effect.isSingleTarget()) {
             game.setForcedTarget(effectSource);
         }
+
+        game.getLogger().debug("{} forced to attack", getLoggableCard(attackingCard));
 
         AttackService.declareAttack(attackingCard, game);
 
