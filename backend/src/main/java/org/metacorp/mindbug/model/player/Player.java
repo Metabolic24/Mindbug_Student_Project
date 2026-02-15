@@ -112,6 +112,8 @@ public class Player {
         for (CardInstance card : board) {
             card.reset(newTurn);
         }
+
+        this.disabledTiming.clear();
     }
 
     /**
