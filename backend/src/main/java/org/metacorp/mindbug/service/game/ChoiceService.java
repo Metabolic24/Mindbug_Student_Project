@@ -5,7 +5,7 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.choice.ChoiceType;
-import org.metacorp.mindbug.model.choice.IChoice;
+import org.metacorp.mindbug.model.choice.AbstractChoice;
 import org.metacorp.mindbug.service.WebSocketService;
 
 import java.util.HashMap;
@@ -28,7 +28,7 @@ public class ChoiceService {
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     public static <T> void resolveChoice(T data, Game game) throws GameStateException, WebSocketException {
-        IChoice<?> choice = game.getChoice();
+        AbstractChoice<?> choice = game.getChoice();
         if (choice == null) {
             throw new GameStateException("no choice to be resolved", Map.of("data", data));
         } else if (data == null && choice.getType() != ChoiceType.HUNTER) {
@@ -36,7 +36,7 @@ public class ChoiceService {
         }
 
         try {
-            ((IChoice<T>) choice).resolve(data, game);
+            ((AbstractChoice<T>) choice).resolve(data, game);
         } catch (ClassCastException e) {
             Map<String, Object> errorData = new HashMap<>(Map.of("choice", choice));
             if (data != null) {

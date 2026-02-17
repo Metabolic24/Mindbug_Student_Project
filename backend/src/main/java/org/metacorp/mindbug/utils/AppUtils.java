@@ -7,6 +7,7 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.AttackService;
@@ -33,7 +34,7 @@ public final class AppUtils {
         PlayerLightDTO player1 = playerService.createPlayer("Player1");
         PlayerLightDTO player2 = playerService.createPlayer("Player2");
 
-        Game game = StartService.startGame(new Player(player1), new Player(player2));
+        Game game = StartService.startGame(new AiPlayer(player1), new AiPlayer(player2));
 
         for (Player player : game.getPlayers()) {
             AppUtils.detailedSumUpPlayer(player);

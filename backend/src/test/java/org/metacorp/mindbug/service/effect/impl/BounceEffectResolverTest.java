@@ -5,14 +5,13 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.ChoiceType;
-import org.metacorp.mindbug.model.choice.IChoice;
+import org.metacorp.mindbug.model.choice.AbstractChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.BounceEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.game.StartService;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -71,7 +70,7 @@ public class BounceEffectResolverTest extends MindbugGameTest {
         assertEquals(2, opponentPlayer.getBoard().size());
         assertEquals(3, opponentPlayer.getHand().size());
 
-        IChoice<?> choice = game.getChoice();
+        AbstractChoice<?> choice = game.getChoice();
         assertNotNull(choice);
         assertEquals(ChoiceType.TARGET, choice.getType());
 

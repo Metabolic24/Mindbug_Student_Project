@@ -5,7 +5,7 @@ import lombok.Setter;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.choice.IChoice;
+import org.metacorp.mindbug.model.choice.AbstractChoice;
 import org.metacorp.mindbug.model.effect.AfterEffectInterface;
 import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.history.HistoryEntry;
@@ -41,7 +41,7 @@ public class Game {
     private CardInstance forcedTarget;
 
     private final EffectQueue effectQueue;
-    private IChoice<?> choice;
+    private AbstractChoice<?> choice;
     private AfterEffectInterface afterEffect;
 
     private boolean forcedAttack;

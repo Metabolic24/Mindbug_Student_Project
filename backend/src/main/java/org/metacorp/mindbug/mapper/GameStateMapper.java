@@ -14,7 +14,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
-import org.metacorp.mindbug.model.choice.IChoice;
+import org.metacorp.mindbug.model.choice.AbstractChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -88,7 +88,7 @@ public class GameStateMapper {
         return result;
     }
 
-    private static AbstractChoiceDTO fromChoice(IChoice<?> choice, Player currentPlayer) {
+    private static AbstractChoiceDTO fromChoice(AbstractChoice<?> choice, Player currentPlayer) {
         AbstractChoiceDTO result = null;
 
         switch (choice.getType()) {

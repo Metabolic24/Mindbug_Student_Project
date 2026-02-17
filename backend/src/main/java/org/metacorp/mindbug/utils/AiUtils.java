@@ -4,24 +4,21 @@ import org.metacorp.mindbug.dto.ws.WsGameEvent;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.ai.AiPlayerTurnAction;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
-import org.metacorp.mindbug.model.choice.HunterChoice;
-import org.metacorp.mindbug.model.choice.IChoice;
-import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
-import org.metacorp.mindbug.model.choice.TargetChoice;
+import org.metacorp.mindbug.model.choice.AbstractChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
-import org.metacorp.mindbug.model.history.HistoryKey;
+import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.game.ActionService;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.service.game.PlayCardService;
+import org.slf4j.Logger;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.UUID;
@@ -33,13 +30,14 @@ public class AiUtils {
 
     public static void processGameEvent(UUID playerId, WsGameEvent gameEvent, GameService gameService) {
         Game game = gameService.findById(gameEvent.getState().getUuid());
+        AiPlayer player = (AiPlayer) gameService.findPlayerById(playerId, game);
 
         try {
             switch (gameEvent.getType()) {
-                case NEW_TURN, STATE -> resolveTurn(game);
-                case CARD_PICKED -> resolveMindbug(game, playerId);
-                case WAITING_ATTACK_RESOLUTION -> resolveAttack(game);
-                case CHOICE -> resolveChoice(game);
+                case NEW_TURN, STATE -> resolveTurn(game, player);
+                case CARD_PICKED -> resolveMindbug(game, player);
+                case WAITING_ATTACK_RESOLUTION -> resolveAttack(game, player);
+                case CHOICE -> resolveChoice(game, player);
                 default -> {
                     // Nothing to do
                 }
@@ -56,47 +54,24 @@ public class AiUtils {
      * @param game the current game
      * @throws GameStateException if the game reaches an inconsistant state
      */
-    private static void resolveTurn(Game game) throws GameStateException, WebSocketException {
-        Player currentPlayer = game.getCurrentPlayer();
-        List<HistoryKey> availableGameActions = new ArrayList<>();
-
-        if (!currentPlayer.getHand().isEmpty()) {
-            availableGameActions.add(HistoryKey.PLAY);
-        }
-
+    private static void resolveTurn(Game game, AiPlayer currentPlayer) throws GameStateException, WebSocketException {
         List<CardInstance> attackCards = currentPlayer.getBoard().stream().filter(CardInstance::isAbleToAttack).toList();
-        if (!attackCards.isEmpty()) {
-            availableGameActions.add(HistoryKey.ATTACK);
-        }
-
         List<CardInstance> actionCards = currentPlayer.getBoard().stream().filter(card -> !card.getEffects(EffectTiming.ACTION).isEmpty()).toList();
-        if (!actionCards.isEmpty()) {
-            availableGameActions.add(HistoryKey.ATTACK);
-        }
 
-        switch (availableGameActions.get(RND.nextInt(availableGameActions.size()))) {
-            case PLAY -> {
-                CardInstance card = getRandomCard(currentPlayer.getHand());
-                PlayCardService.pickCard(card, game);
-            }
-            case ACTION -> {
-                CardInstance card = getRandomCard(actionCards);
-                ActionService.resolveAction(card, game);
-            }
-            case ATTACK -> {
-                CardInstance card = getRandomCard(attackCards);
-                AttackService.declareAttack(card, game);
-            }
+        AiPlayerTurnAction action = currentPlayer.getResolver().getTurnAction(attackCards, actionCards, game);
+        switch (action.getType()) {
+            case PLAY -> PlayCardService.pickCard(action.getTarget(), game);
+            case ACTION -> ActionService.resolveAction(action.getTarget(), game);
+            case ATTACK -> AttackService.declareAttack(action.getTarget(), game);
             default -> {
                 // Should not happen
             }
         }
     }
 
-    private static void resolveMindbug(Game game, UUID playerId) throws GameStateException, WebSocketException {
-        Player mindbugger = RND.nextBoolean() ? null : game.getPlayers().stream()
-                .filter(player -> player.getUuid().equals(playerId)).findFirst().orElse(null);
-        PlayCardService.playCard(mindbugger, game);
+    private static void resolveMindbug(Game game, AiPlayer aiPlayer) throws GameStateException, WebSocketException {
+        boolean shouldMindbug = aiPlayer.getResolver().shouldMindbug();
+        PlayCardService.playCard(shouldMindbug ? aiPlayer : null, game);
     }
 
     /**
@@ -105,18 +80,13 @@ public class AiUtils {
      * @param game the current game
      * @throws GameStateException if an error occurs during the game execution
      */
-    private static void resolveAttack(Game game) throws GameStateException, WebSocketException {
+    private static void resolveAttack(Game game, AiPlayer aiPlayer) throws GameStateException, WebSocketException {
         List<CardInstance> availableCards = getBlockersList(game);
         if (availableCards.isEmpty()) {
             AttackService.resolveAttack(null, game);
         } else {
-            int randomValue = RND.nextInt(availableCards.size() + 1);
-
-            if (randomValue == availableCards.size()) {
-                AttackService.resolveAttack(null, game);
-            } else {
-                AttackService.resolveAttack(availableCards.get(randomValue), game);
-            }
+            CardInstance blockingCard = aiPlayer.getResolver().chooseBlocker(availableCards, game);
+            AttackService.resolveAttack(blockingCard, game);
         }
     }
 
@@ -137,62 +107,30 @@ public class AiUtils {
      * @param game the current game
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void resolveChoice(Game game) throws GameStateException, WebSocketException {
-        IChoice<?> choice = game.getChoice();
+    public static void resolveChoice(Game game, AiPlayer aiPlayer) throws GameStateException, WebSocketException {
+        Logger logger = game.getLogger();
+
+        AbstractChoice<?> choice = game.getChoice();
         if (choice == null) {
-            System.err.println("Action invalide");
+            throw new GameStateException("No choice to be resolved by AI player");
         } else {
+            logger.debug("Resolving {} choice...", choice.getType().name());
+
             switch (choice.getType()) {
                 case SIMULTANEOUS -> {
-                    System.out.println("\nRésolution d'un choix d'ordonnancement d'effets simultanés");
-
-                    SimultaneousEffectsChoice simultaneousEffectsChoice = (SimultaneousEffectsChoice) choice;
-                    List<EffectsToApply> shuffledEffects = new ArrayList<>(simultaneousEffectsChoice.getEffectsToSort());
-                    Collections.shuffle(shuffledEffects);
-
-                    System.out.printf("Ordre choisi : %s\n", shuffledEffects.stream()
-                            .map(effectToApply -> effectToApply.getCard().getCard().getName())
-                            .toList());
-
-                    ChoiceService.resolveChoice(shuffledEffects.getFirst().getCard().getUuid(), game);
+                    EffectsToApply chosenEffect = aiPlayer.getResolver().chooseSimultaneousEffect(game);
+                    ChoiceService.resolveChoice(chosenEffect.getCard().getUuid(), game);
                 }
                 case TARGET -> {
-                    System.out.println("\nRésolution d'un choix de cible(s)");
-                    TargetChoice targetChoice = (TargetChoice) choice;
-
-                    List<CardInstance> shuffledCards = new ArrayList<>(targetChoice.getAvailableTargets());
-                    Collections.shuffle(shuffledCards);
-
-                    // Retrieve a sub list only if there are more available targets than the targets count (can happen due to 'optional' parameter)
-                    if (shuffledCards.size() > targetChoice.getTargetsCount()) {
-                        shuffledCards = shuffledCards.subList(0, targetChoice.getTargetsCount());
-                    }
-
-                    System.out.printf("Cible(s) choisie(s) : %s\n", shuffledCards.stream()
-                            .map(cardInstance -> cardInstance.getCard().getName())
-                            .toList());
-
-                    ChoiceService.resolveChoice(shuffledCards.stream().map(CardInstance::getUuid).toList(), game);
+                    List<CardInstance> chosenTargets = aiPlayer.getResolver().chooseTargets(game);
+                    ChoiceService.resolveChoice(chosenTargets.stream().map(CardInstance::getUuid).toList(), game);
                 }
                 case HUNTER -> {
-                    System.out.println("\nRésolution d'un choix de cible d'attaque");
-                    HunterChoice hunterChoice = (HunterChoice) choice;
-
-                    List<CardInstance> shuffledCards = new ArrayList<>(hunterChoice.getAvailableTargets());
-                    Collections.shuffle(shuffledCards);
-
-                    System.out.printf("Cible choisie : %s\n", shuffledCards.getFirst().getCard().getName());
-
-                    ChoiceService.resolveChoice(shuffledCards.getFirst().getUuid(), game);
+                    CardInstance chosenTarget = aiPlayer.getResolver().chooseHunterTarget(game);
+                    ChoiceService.resolveChoice(chosenTarget == null ? null : chosenTarget.getUuid(), game);
                 }
-                case FRENZY, BOOLEAN -> {
-                    System.out.printf("\nRésolution d'un choix booléen de type %s\n", choice.getType());
-
-                    boolean randomBoolean = RND.nextBoolean();
-                    System.out.printf("Valeur choisie : %s\n", randomBoolean);
-
-                    ChoiceService.resolveChoice(randomBoolean, game);
-                }
+                case FRENZY -> ChoiceService.resolveChoice(aiPlayer.getResolver().shouldAttackAgain(game), game);
+                case BOOLEAN -> ChoiceService.resolveChoice(aiPlayer.getResolver().resolveBooleanChoice(game), game);
                 default -> {
                     // Should not happen
                 }

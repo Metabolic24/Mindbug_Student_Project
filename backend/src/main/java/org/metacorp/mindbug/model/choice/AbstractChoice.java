@@ -1,15 +1,24 @@
 package org.metacorp.mindbug.model.choice;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.player.Player;
 
-public interface IChoice<T> {
+@Data
+@NoArgsConstructor
+public abstract class AbstractChoice<T> {
+
+    @NonNull
+    protected Player playerToChoose;
 
     /**
      * @return the choice type
      */
-    ChoiceType getType();
+     public abstract ChoiceType getType();
 
     /**
      * Resolve the current choice
@@ -17,5 +26,5 @@ public interface IChoice<T> {
      * @param choiceData the data required to resolve the choice
      * @param game       the related game
      */
-    void resolve(T choiceData, Game game) throws GameStateException, WebSocketException;
+    public abstract void resolve(T choiceData, Game game) throws GameStateException, WebSocketException;
 }
