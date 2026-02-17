@@ -116,7 +116,7 @@ public class HistoryServiceTest extends MindbugGameTest {
         effectsToApply.add(new EffectsToApply(Collections.singletonList(new GainEffect()), sourceCard, EffectTiming.DEFEATED));
         effectsToApply.add(new EffectsToApply(Collections.singletonList(new GainEffect()), targets.getFirst(), EffectTiming.DEFEATED));
 
-        game.setChoice(new SimultaneousEffectsChoice(effectsToApply));
+        game.setChoice(new SimultaneousEffectsChoice(effectsToApply, game.getCurrentPlayer()));
 
         HistoryService.logChoice(game);
         assertEquals(2, game.getHistory().size());

@@ -4,7 +4,7 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.choice.HunterChoice;
-import org.metacorp.mindbug.model.choice.IChoice;
+import org.metacorp.mindbug.model.choice.AbstractChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
@@ -131,7 +131,7 @@ public class ManualApp {
      * @param game    the current game
      */
     private static void resolveChoice(Scanner scanner, Game game) {
-        IChoice<?> choice = game.getChoice();
+        AbstractChoice<?> choice = game.getChoice();
         if (choice == null) {
             System.err.println("Action invalide");
         } else {
@@ -226,7 +226,7 @@ public class ManualApp {
      *
      * @param choice the choice to print
      */
-    private static void printChoice(IChoice<?> choice) {
+    private static void printChoice(AbstractChoice<?> choice) {
         switch (choice.getType()) {
             case SIMULTANEOUS ->
                     System.out.println("Veuillez choisir l'effet à résoudre en premier : (only type the ID)");
