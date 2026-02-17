@@ -50,7 +50,7 @@ public class SimultaneousChoiceTest extends MindbugGameTest {
         SimultaneousEffectsChoice choice = new SimultaneousEffectsChoice(new HashSet<>(Arrays.asList(
                 new EffectsToApply(Collections.singletonList(attackEffect), attackCard, timing),
                 new EffectsToApply(Collections.singletonList(defendEffect), defendingCard, timing)
-        )));
+        )), game.getCurrentPlayer());
         game.setChoice(choice);
 
         choice.resolve(attackCard.getUuid(), game);

@@ -4,6 +4,7 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.utils.AiUtils;
@@ -77,7 +78,7 @@ public class AutoApp {
      */
     private static void resolveChoices(Game game) throws GameStateException, WebSocketException {
         while (game.getChoice() != null && !game.isFinished()) {
-            AiUtils.resolveChoice(game);
+            AiUtils.resolveChoice(game, (AiPlayer) game.getChoice().getPlayerToChoose());
         }
     }
 }

@@ -80,6 +80,17 @@ public class GameService {
     }
 
     /**
+     * Get a player by ID
+     *
+     * @param playerId the player ID
+     * @param game     the game where the player should be found
+     * @return the corresponding player in the given game if any, null otherwise
+     */
+    public Player findPlayerById(UUID playerId, Game game) {
+        return game.getPlayers().stream().filter(player -> player.getUuid().equals(playerId)).findFirst().orElseThrow();
+    }
+
+    /**
      * Ends a currently active game
      *
      * @param losingPlayerID the losing player ID

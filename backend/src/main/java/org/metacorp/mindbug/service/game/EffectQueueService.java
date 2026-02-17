@@ -208,7 +208,7 @@ public class EffectQueueService {
     private static void createSimultaneousChoice(Game game) throws WebSocketException {
         EffectQueue effectQueue = game.getEffectQueue();
 
-        game.setChoice(new SimultaneousEffectsChoice(new HashSet<>(effectQueue)));
+        game.setChoice(new SimultaneousEffectsChoice(new HashSet<>(effectQueue), game.getCurrentPlayer()));
         effectQueue.clear();
 
         // Send update through WebSocket
