@@ -70,7 +70,7 @@ public class AiUtils {
     }
 
     private static void resolveMindbug(Game game, AiPlayer aiPlayer) throws GameStateException, WebSocketException {
-        boolean shouldMindbug = aiPlayer.getResolver().shouldMindbug();
+        boolean shouldMindbug = aiPlayer.getResolver().shouldMindbug(game, aiPlayer);
         PlayCardService.playCard(shouldMindbug ? aiPlayer : null, game);
     }
 

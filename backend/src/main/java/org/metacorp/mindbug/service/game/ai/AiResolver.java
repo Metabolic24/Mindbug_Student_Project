@@ -4,12 +4,13 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.ai.AiPlayerTurnAction;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
+import org.metacorp.mindbug.model.player.AiPlayer;
 
 import java.util.List;
 
 public interface AiResolver {
 
-    boolean shouldMindbug();
+    boolean shouldMindbug(Game game, AiPlayer aiPlayer);
 
     CardInstance chooseBlocker(List<CardInstance> availableBlockers, Game game);
 

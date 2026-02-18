@@ -8,6 +8,7 @@ import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
+import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.AiUtils;
 
@@ -18,10 +19,10 @@ import java.util.Random;
 
 public class RandomAiResolver implements AiResolver {
 
-    private static final Random RND = new Random();
+    protected static final Random RND = new Random();
 
     @Override
-    public boolean shouldMindbug() {
+    public boolean shouldMindbug(Game game, AiPlayer player) {
         return RND.nextBoolean();
     }
 
@@ -94,15 +95,9 @@ public class RandomAiResolver implements AiResolver {
         turnAction.setType(availableGameActions.get(RND.nextInt(availableGameActions.size())));
 
         switch (turnAction.getType()) {
-            case PLAY -> {
-                turnAction.setTarget(AiUtils.getRandomCard(currentPlayer.getHand()));
-            }
-            case ACTION -> {
-                turnAction.setTarget(AiUtils.getRandomCard(availableActionCards));
-            }
-            case ATTACK -> {
-                turnAction.setTarget(AiUtils.getRandomCard(availableAttackers));
-            }
+            case PLAY -> turnAction.setTarget(AiUtils.getRandomCard(currentPlayer.getHand()));
+            case ACTION -> turnAction.setTarget(AiUtils.getRandomCard(availableActionCards));
+            case ATTACK -> turnAction.setTarget(AiUtils.getRandomCard(availableAttackers));
         }
 
         return turnAction;

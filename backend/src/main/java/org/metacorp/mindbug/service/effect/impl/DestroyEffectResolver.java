@@ -9,7 +9,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
-import org.metacorp.mindbug.service.game.CardService;
+import org.metacorp.mindbug.utils.CardUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -56,7 +56,7 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
             destroyCards(game, Collections.singletonList(effectSource));
         } else if (effect.isLowest()) {
             Set<Player> affectedPlayers = selfAllowed ? new HashSet<>(game.getPlayers()) : Collections.singleton(opponent);
-            destroyCards(game, CardService.getLowestCards(affectedPlayers));
+            destroyCards(game, CardUtils.getLowestCards(affectedPlayers));
         } else {
             List<CardInstance> availableCards = new ArrayList<>();
 

@@ -12,7 +12,7 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.utils.CardUtils;
+import org.metacorp.mindbug.utils.SetUtils;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.ArrayList;
@@ -100,7 +100,7 @@ public class GameStateServiceTest extends MindbugGameTest {
         Player opponent = new Player(playerService.createPlayer("player2"));
         game = new Game(currentPlayer, opponent);
         game.setCurrentPlayer(currentPlayer);
-        game.setCards(CardUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey()));
+        game.setCards(SetUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey()));
 
         CardInstance card1 = findCard("Instigateur Gobelouille");
         CardInstance card2 = findCard("Requin Crabe Chien Momie Pieuvre");
