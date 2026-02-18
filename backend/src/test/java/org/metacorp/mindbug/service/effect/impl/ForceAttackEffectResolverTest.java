@@ -2,6 +2,8 @@ package org.metacorp.mindbug.service.effect.impl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -12,7 +14,7 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.ForceAttackEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.game.StartService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.Collections;
 
@@ -22,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ForceAttackEffectResolverTest {
+public class ForceAttackEffectResolverTest extends MindbugGameTest {
 
     private Game game;
     private CardInstance randomCard;
@@ -34,7 +36,7 @@ public class ForceAttackEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
@@ -45,16 +47,16 @@ public class ForceAttackEffectResolverTest {
 
         ForceAttackEffect effect = new ForceAttackEffect();
         effect.setType(EffectType.FORCE_ATTACK);
-        effectResolver = new ForceAttackEffectResolver(effect);
+        effectResolver = new ForceAttackEffectResolver(effect, randomCard);
     }
 
     @Test
-    public void testApply_nominalAction() {
+    public void testApply_nominalAction() throws WebSocketException, GameStateException {
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
 
-        effectResolver.apply(game, randomCard, EffectTiming.ACTION);
+        effectResolver.apply(game, EffectTiming.ACTION);
 
         assertFalse(game.isForcedAttack());
 
@@ -68,7 +70,7 @@ public class ForceAttackEffectResolverTest {
     }
 
     @Test
-    public void testApply_noChoice() {
+    public void testApply_noChoice() throws WebSocketException, GameStateException {
         currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
 
         CardInstance selectedCard = opponentPlayer.getHand().getFirst();
@@ -77,7 +79,7 @@ public class ForceAttackEffectResolverTest {
         selectedCard.getEffects(EffectTiming.ATTACK).clear();
         opponentPlayer.addCardToBoard(selectedCard);
 
-        effectResolver.apply(game, randomCard, EffectTiming.ACTION);
+        effectResolver.apply(game, EffectTiming.ACTION);
 
         assertNull(game.getForcedTarget());
         assertFalse(game.isForcedAttack());
@@ -86,10 +88,10 @@ public class ForceAttackEffectResolverTest {
     }
 
     @Test
-    public void testApply_noEffect() {
+    public void testApply_noEffect() throws WebSocketException, GameStateException {
         currentPlayer.addCardToBoard(currentPlayer.getHand().getFirst());
 
-        effectResolver.apply(game, randomCard, EffectTiming.ACTION);
+        effectResolver.apply(game, EffectTiming.ACTION);
 
         assertNull(game.getForcedTarget());
         assertFalse(game.isForcedAttack());
@@ -98,7 +100,7 @@ public class ForceAttackEffectResolverTest {
     }
 
     @Test
-    public void testResolve_nominalActionSneaky() {
+    public void testResolve_nominalActionSneaky() throws WebSocketException, GameStateException {
         randomCard.getKeywords().remove(CardKeyword.SNEAKY);
 
         CardInstance selectedCard = opponentPlayer.getHand().getFirst();
@@ -119,12 +121,12 @@ public class ForceAttackEffectResolverTest {
     }
 
     @Test
-    public void testApply_passiveButNoKeyword() {
+    public void testApply_passiveButNoKeyword() throws WebSocketException, GameStateException {
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
         opponentPlayer.addCardToBoard(opponentPlayer.getHand().getFirst());
 
-        effectResolver.apply(game, randomCard, EffectTiming.PASSIVE);
+        effectResolver.apply(game, EffectTiming.PASSIVE);
 
         assertNull(game.getForcedTarget());
         assertFalse(game.isForcedAttack());
@@ -137,7 +139,7 @@ public class ForceAttackEffectResolverTest {
     }
 
     @Test
-    public void testApply_nominalPassive() {
+    public void testApply_nominalPassive() throws WebSocketException, GameStateException {
         for (int i = 0; i < 3; i++) {
             CardInstance opponentCard = opponentPlayer.getHand().getFirst();
             opponentCard.getKeywords().remove(CardKeyword.SNEAKY);
@@ -152,7 +154,7 @@ public class ForceAttackEffectResolverTest {
         }
 
         effectResolver.getEffect().setKeyword(CardKeyword.HUNTER);
-        effectResolver.apply(game, randomCard, EffectTiming.PASSIVE);
+        effectResolver.apply(game, EffectTiming.PASSIVE);
 
         assertNull(game.getForcedTarget());
         assertTrue(game.isForcedAttack());
@@ -165,7 +167,7 @@ public class ForceAttackEffectResolverTest {
     }
 
     @Test
-    public void testApply_nominalPassiveWithSingleTarget() {
+    public void testApply_nominalPassiveWithSingleTarget() throws WebSocketException, GameStateException {
         for (int i = 0; i < 3; i++) {
             CardInstance opponentCard = opponentPlayer.getHand().getFirst();
             opponentCard.getKeywords().remove(CardKeyword.SNEAKY);
@@ -181,7 +183,7 @@ public class ForceAttackEffectResolverTest {
 
         effectResolver.getEffect().setKeyword(CardKeyword.HUNTER);
         effectResolver.getEffect().setSingleTarget(true);
-        effectResolver.apply(game, randomCard, EffectTiming.PASSIVE);
+        effectResolver.apply(game, EffectTiming.PASSIVE);
 
         assertEquals(randomCard, game.getForcedTarget());
         assertTrue(game.isForcedAttack());
@@ -194,7 +196,7 @@ public class ForceAttackEffectResolverTest {
     }
 
     @Test
-    public void testApply_nominalPassiveWithoutKeyword() {
+    public void testApply_nominalPassiveWithoutKeyword() throws WebSocketException, GameStateException {
         for (int i = 0; i < 3; i++) {
             CardInstance opponentCard = opponentPlayer.getHand().getFirst();
             opponentCard.getKeywords().remove(CardKeyword.SNEAKY);
@@ -209,7 +211,7 @@ public class ForceAttackEffectResolverTest {
         }
 
         effectResolver.getEffect().setSingleTarget(true);
-        effectResolver.apply(game, randomCard, EffectTiming.PASSIVE);
+        effectResolver.apply(game, EffectTiming.PASSIVE);
 
         assertNull(game.getForcedTarget());
         assertFalse(game.isForcedAttack());

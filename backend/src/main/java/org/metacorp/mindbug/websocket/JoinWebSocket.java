@@ -6,7 +6,10 @@ import org.glassfish.grizzly.websockets.DefaultWebSocket;
 import org.glassfish.grizzly.websockets.ProtocolHandler;
 import org.glassfish.grizzly.websockets.WebSocketListener;
 import org.metacorp.mindbug.model.CardSetName;
+import org.metacorp.mindbug.service.game.StartService;
 import org.metacorp.mindbug.utils.WsUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,6 +20,8 @@ import static org.metacorp.mindbug.utils.WsUtils.SETS_KEY;
 
 @Getter
 public class JoinWebSocket extends DefaultWebSocket {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(JoinWebSocket.class);
 
     private String playerId;
     private String playerName;
@@ -45,7 +50,7 @@ public class JoinWebSocket extends DefaultWebSocket {
             this.sets = setNames.stream().map(CardSetName::fromKey).collect(Collectors.toList());
         }
 
-        System.out.println("Player " + playerName + " (" + playerId + ") joined waiting queue for sets " + sets);
+        LOGGER.info("Player {} ({}) joined waiting queue for sets {}", playerName, playerId, sets);
 
         super.onConnect();
     }

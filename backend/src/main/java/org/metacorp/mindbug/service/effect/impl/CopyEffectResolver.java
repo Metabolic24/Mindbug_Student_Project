@@ -17,6 +17,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
+
 /**
  * Effect resolver for CopyEffect
  */
@@ -25,16 +29,15 @@ public class CopyEffectResolver extends EffectResolver<CopyEffect> implements Re
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public CopyEffectResolver(CopyEffect effect) {
-        super(effect);
+    public CopyEffectResolver(CopyEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance effectSource, EffectTiming timing) {
-        this.effectSource = effectSource;
-
+    public void apply(Game game, EffectTiming timing) {
         Player sourceOwner = effectSource.getOwner();
         Player opponent = sourceOwner.getOpponent(game.getPlayers());
 
@@ -56,13 +59,17 @@ public class CopyEffectResolver extends EffectResolver<CopyEffect> implements Re
                 resolve(game, availableCards);
             } else {
                 game.setChoice(new TargetChoice(sourceOwner, effectSource, this, 1, new HashSet<>(availableCards)));
+                game.getLogger().debug("Player {} must choose an effect to copy (available targets : {})", getLoggablePlayer(sourceOwner), getLoggableCards(availableCards));
             }
         }
     }
 
     @Override
     public void resolve(Game game, List<CardInstance> choiceResult) {
-        List<Effect> effects = choiceResult.getFirst().getEffects(effect.getTiming());
+        CardInstance chosenCard = choiceResult.getFirst();
+        game.getLogger().debug("{} copies the {} effect of {}", getLoggableCard(effectSource), effect.getTiming(), getLoggableCard(chosenCard));
+
+        List<Effect> effects = chosenCard.getEffects(effect.getTiming());
 
         EffectQueue effectQueue = game.getEffectQueue();
         effectQueue.push(new EffectsToApply(effects, effectSource, effect.getTiming()));

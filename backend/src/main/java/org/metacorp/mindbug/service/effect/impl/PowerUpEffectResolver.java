@@ -8,10 +8,13 @@ import org.metacorp.mindbug.model.modifier.PowerModifier;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
+import org.slf4j.Logger;
 
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
 
 /**
  * Effect resolver for PowerUpEffect
@@ -21,16 +24,15 @@ public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public PowerUpEffectResolver(PowerUpEffect effect) {
-        super(effect);
+    public PowerUpEffectResolver(PowerUpEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
-        this.effectSource = card;
-
+    public void apply(Game game, EffectTiming timing) {
         int value = effect.getValue();
         boolean alone = effect.isAlone();
         boolean self = effect.isSelf();
@@ -42,7 +44,7 @@ public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
         Integer enemiesCount = effect.getEnemiesCount();
         Integer alliesCount = effect.getAlliesCount();
 
-        Player currentPlayer = card.getOwner();
+        Player currentPlayer = effectSource.getOwner();
         Player opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
         int powerToAdd = value;
 
@@ -63,22 +65,28 @@ public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
         Set<CardInstance> availableCards = new HashSet<>();
 
         if (self) {
-            availableCards.add(card);
+            availableCards.add(effectSource);
         }
 
         if (allies) {
-            currentPlayer.getBoard().stream().filter(currentCard -> !currentCard.equals(card)).forEach(availableCards::add);
+            currentPlayer.getBoard().stream().filter(currentCard -> !currentCard.equals(effectSource)).forEach(availableCards::add);
         }
 
         changePower(game, availableCards, powerToAdd, timing);
     }
 
     private void changePower(Game game, Collection<CardInstance> cards, int power, EffectTiming timing) {
+        Logger logger = game.getLogger();
+        String loggableEffectSource = getLoggableCard(effectSource);
+
         for (CardInstance card : cards) {
+            int oldPower = card.getPower();
             card.changePower(power);
             if (timing == EffectTiming.ATTACK) {
                 card.getModifiers().add(new PowerModifier(power));
             }
+
+            logger.debug("{} power changed ({} -> {}) due to {} effect", getLoggableCard(card), oldPower, card.getPower(), loggableEffectSource);
         }
 
         HistoryService.logEffect(game, effect.getType(), effectSource, cards);

@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.service.effect.impl.steal;
 
+import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.impl.StealEffect;
@@ -21,17 +22,17 @@ public class TargetChoiceResolver extends StealEffectResolver implements Resolva
      * @param effect the effect to be resolved
      */
     public TargetChoiceResolver(StealEffect effect, Player newOwner, CardInstance sourceCard) {
-        super(effect);
+        super(effect, sourceCard);
         this.newOwner = newOwner;
         this.sourceCard = sourceCard;
     }
 
     @Override
-    public void resolve(Game game, List<CardInstance> chosenTargets) {
+    public void resolve(Game game, List<CardInstance> chosenTargets) throws GameStateException {
         if (chosenTargets != null) {
             stealCards(chosenTargets, game, newOwner, sourceCard);
         } else {
-            // TODO Unexpected resolver value (raise error?)
+            throw new GameStateException("Unable to resolve target choice due to missing targets");
         }
     }
 }

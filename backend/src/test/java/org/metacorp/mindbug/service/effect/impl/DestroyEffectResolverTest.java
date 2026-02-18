@@ -15,7 +15,7 @@ import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.game.StartService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class DestroyEffectResolverTest {
+public class DestroyEffectResolverTest extends MindbugGameTest {
 
     private Game game;
     private CardInstance randomCard;
@@ -38,7 +38,7 @@ public class DestroyEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
@@ -48,7 +48,7 @@ public class DestroyEffectResolverTest {
 
         effect = new DestroyEffect();
         effect.setType(EffectType.DESTROY);
-        effectResolver = new DestroyEffectResolver(effect);
+        effectResolver = new DestroyEffectResolver(effect, randomCard);
         timing = EffectTiming.PLAY;
     }
 
@@ -60,7 +60,7 @@ public class DestroyEffectResolverTest {
         effect.setSelfAllowed(true);
 
         // Current player card should be destroyed as it is the only one
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(1, currentPlayer.getDiscardPile().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
     }
@@ -73,7 +73,7 @@ public class DestroyEffectResolverTest {
         currentPlayer.getBoard().clear();
 
         // Nothing should happen as there are no cards on board
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
     }
@@ -90,7 +90,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         // Opponent card should be destroyed as it is the only one
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
     }
@@ -106,7 +106,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         // Opponent player card should be destroyed as it is the lowest one
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
     }
@@ -122,7 +122,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         // Both cards should be destroyed as they have same power
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(1, currentPlayer.getDiscardPile().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
     }
@@ -138,7 +138,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         // Current player card should be destroyed as it is the lowest one
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(1, currentPlayer.getDiscardPile().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
     }
@@ -179,7 +179,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(opponentPlayerCard3);
 
         // Both cards should be destroyed as they have same power
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(1, currentPlayer.getDiscardPile().size());
         assertEquals(2, opponentPlayer.getDiscardPile().size());
     }
@@ -190,7 +190,7 @@ public class DestroyEffectResolverTest {
         effect.setSelfAllowed(false);
 
         // Current player card should be destroyed as it is the only one
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
     }
@@ -203,7 +203,7 @@ public class DestroyEffectResolverTest {
         currentPlayer.getBoard().clear();
 
         // Nothing should happen as there are no cards on board
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
     }
@@ -220,7 +220,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         // Opponent card should be destroyed as it is the only one
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
     }
@@ -236,7 +236,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         // Opponent player card should be destroyed as it is the lowest one
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
     }
@@ -252,7 +252,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         // Both cards should be destroyed as they have same power
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
     }
@@ -268,7 +268,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         // Current player card should be destroyed as it is the lowest one
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
     }
@@ -309,7 +309,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(opponentPlayerCard3);
 
         // Both cards should be destroyed as they have same power
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, currentPlayer.getDiscardPile().size());
         assertEquals(2, opponentPlayer.getDiscardPile().size());
     }
@@ -320,7 +320,7 @@ public class DestroyEffectResolverTest {
         effect.setLessAllies(true);
 
         // Nothing should happen as current player has more allies than the opponent
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertNull(game.getChoice());
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getBoard().size());
@@ -336,7 +336,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         // Nothing should happen as current player has as much allies as the opponent
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertNull(game.getChoice());
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getBoard().size());
@@ -356,7 +356,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard2);
 
         // Effect should trigger as current player has less allies than the opponent
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(2, opponentPlayer.getBoard().size());
 
@@ -390,7 +390,7 @@ public class DestroyEffectResolverTest {
         otherCard2.setStillTough(false);
         opponentPlayer.addCardToBoard(otherCard2);
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertNull(game.getChoice());
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getBoard().size());
@@ -418,7 +418,7 @@ public class DestroyEffectResolverTest {
         otherCard4.setStillTough(false);
         currentPlayer.addCardToBoard(otherCard4);
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertNull(game.getChoice());
         assertEquals(2, currentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getBoard().size());
@@ -437,7 +437,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(card);
 
         // Card should not be destroyed
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(1, opponentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
     }
@@ -454,7 +454,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(card);
 
         // Card should not be destroyed
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(1, opponentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
     }
@@ -471,7 +471,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(card);
 
         // Card should be destroyed
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
         assertTrue(opponentPlayer.getDiscardPile().contains(card));
@@ -489,7 +489,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(card);
 
         // Card should be destroyed
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
         assertTrue(opponentPlayer.getDiscardPile().contains(card));
@@ -507,7 +507,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(card);
 
         // Card should be destroyed
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
         assertTrue(opponentPlayer.getDiscardPile().contains(card));
@@ -523,7 +523,7 @@ public class DestroyEffectResolverTest {
         randomCard.setPower(5);
 
         // Card should be destroyed
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, currentPlayer.getBoard().size());
         assertEquals(1, currentPlayer.getDiscardPile().size());
         assertEquals(0, opponentPlayer.getBoard().size());
@@ -548,7 +548,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         // Cards should not be destroyed but a choice should be created
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(2, opponentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
 
@@ -588,7 +588,7 @@ public class DestroyEffectResolverTest {
         effect.setSelfAllowed(true);
 
         // Card should be destroyed but a choice should be created
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(1, currentPlayer.getBoard().size());
         assertEquals(2, opponentPlayer.getBoard().size());
         assertEquals(0, opponentPlayer.getDiscardPile().size());
@@ -621,7 +621,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(card);
 
         // Check that card is destroyed and that its DEFEATED effects (if any) are added to the effect queue
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertNull(game.getChoice());
         assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(1, opponentPlayer.getDiscardPile().size());
@@ -653,7 +653,7 @@ public class DestroyEffectResolverTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         // Check that cards are destroyed and that a simultaneous choice is created for the cards effects
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(0, opponentPlayer.getBoard().size());
         assertEquals(2, opponentPlayer.getDiscardPile().size());
         assertEquals(2, game.getEffectQueue().size());
@@ -674,7 +674,7 @@ public class DestroyEffectResolverTest {
         effect.setAllies(true);
 
         // Nothing should happen as there are no cards on board
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertEquals(1, currentPlayer.getBoard().size());
         assertTrue(currentPlayer.getBoard().contains(otherCard));
         assertEquals(2, currentPlayer.getDiscardPile().size());
@@ -689,7 +689,7 @@ public class DestroyEffectResolverTest {
 
         effect.setItself(true);
 
-        effectResolver.apply(game, randomCard, timing);
+        effectResolver.apply(game, timing);
         assertTrue(currentPlayer.getBoard().isEmpty());
     }
 }

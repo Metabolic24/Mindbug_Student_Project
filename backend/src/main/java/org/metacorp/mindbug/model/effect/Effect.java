@@ -22,6 +22,9 @@ import org.metacorp.mindbug.model.effect.impl.ProtectionEffect;
 import org.metacorp.mindbug.model.effect.impl.ReviveEffect;
 import org.metacorp.mindbug.model.effect.impl.StealEffect;
 
+/**
+ * Generic model class for effects (parent class of all available ones)
+ */
 @Data
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", include = JsonTypeInfo.As.EXISTING_PROPERTY, visible = true)
 @JsonSubTypes({
@@ -63,5 +66,4 @@ public class Effect {
         // Set default location value
         location = EffectLocation.BOARD;
     }
-
 }

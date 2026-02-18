@@ -6,11 +6,15 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
-import org.metacorp.mindbug.utils.CardUtils;
+import org.metacorp.mindbug.utils.SetUtils;
+import org.slf4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 /**
  * Utility service that starts a new game
@@ -29,24 +33,21 @@ public class StartService {
      * @param player2 second player
      * @return the created game
      */
-    public static Game newGame(Player player1, Player player2) {
-        return newGame(player1, player2, CardSetName.FIRST_CONTACT);
+    public static Game startGame(Player player1, Player player2) {
+        return startGame(new Game(player1, player2), CardSetName.FIRST_CONTACT);
     }
 
     /**
      * Creates and start a new game for two players (using the given card set)
      *
-     * @param player1 first player name
-     * @param player2 second player name
+     * @param game the game to initialize
      * @param setName the card set name as CardSetName
      * @return the created game
      */
-    public static Game newGame(Player player1, Player player2, CardSetName setName) {
-        Game game = new Game(player1, player2);
-
+    public static Game startGame(Game game, CardSetName setName) {
         // Retrieve CardInstance from JSON configuration file and separate evolution cards from the other ones
         List<CardInstance> cards = game.getCards();
-        CardUtils.getCardsFromConfig(setName.getKey()).forEach(cardInstance -> {
+        SetUtils.getCardsFromConfig(setName.getKey()).forEach(cardInstance -> {
             if (cardInstance.getCard().isEvolution()) {
                 game.getEvolutionCards().add(cardInstance);
             } else {
@@ -70,7 +71,11 @@ public class StartService {
         return game;
     }
 
-    // Fill the hand and draw pile of the given player
+    /**
+     * Fill the hand and draw pile of the given player
+     * @param player the player to be initialized
+     * @param cards the remaining cards of the played set
+     */
     private static void initDrawAndHand(Player player, List<CardInstance> cards) {
         List<CardInstance> hand = player.getHand();
         List<CardInstance> drawPile = player.getDrawPile();
@@ -86,9 +91,14 @@ public class StartService {
         }
     }
 
-    // Return the first player of the game (should only be used once per game)
+    /**
+     * Get the first player of the game (should only be used once per game)
+     * @param game the current game state
+     * @return the first Player
+     */
     private static Player getFirstPlayer(Game game) {
-        System.out.println("Calcul du premier joueur :");
+        Logger logger = game.getLogger();
+        logger.info("Calculating first player...");
 
         List<Player> validPlayers = new ArrayList<>(game.getPlayers());
         while (validPlayers.size() != 1) {
@@ -98,7 +108,7 @@ public class StartService {
             for (Player player : validPlayers) {
                 // Get a random card from the remaining cards
                 CardInstance bannedCard = banCard(game);
-                System.out.printf("\t%s %s %d\n", player.getName(), bannedCard.getCard().getName(), bannedCard.getPower());
+                logger.info("Banned card for {} : {} ({})", getLoggablePlayer(player), getLoggableCard(bannedCard), bannedCard.getPower());
 
                 if (bannedCard.getPower() < higherPower) {
                     // Current player will not be the first one
@@ -115,12 +125,17 @@ public class StartService {
             validPlayers = nextPlayers;
         }
 
-        System.out.printf(" -> %s sera le premier joueur\n", validPlayers.getFirst().getName());
+        Player firstPlayer = validPlayers.getFirst();
+        logger.info("First player will be {}", getLoggablePlayer(firstPlayer));
 
-        return validPlayers.getFirst();
+        return firstPlayer;
     }
 
-    // Randomly choose a card and exclude it from the current game
+    /**
+     * Randomly choose a card and exclude it from the current game
+     * @param game the current game state
+     * @return the banned card
+     */
     private static CardInstance banCard(Game game) {
         CardInstance chosenCard = game.getCards().removeFirst();
         game.getBannedCards().add(chosenCard);

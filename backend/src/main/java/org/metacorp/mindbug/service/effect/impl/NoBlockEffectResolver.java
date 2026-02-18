@@ -11,6 +11,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.utils.CardUtils;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -18,6 +19,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 /**
  * Effect resolver for NoBlockEffect
@@ -29,16 +33,16 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public NoBlockEffectResolver(NoBlockEffect effect) {
-        super(effect);
+    public NoBlockEffectResolver(NoBlockEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
+    public void apply(Game game, EffectTiming timing) {
         this.timing = timing;
-        this.effectSource = card;
 
         int value = effect.getValue();
         Integer max = effect.getMax();
@@ -46,11 +50,11 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
         CardKeyword keyword = effect.getKeyword();
         boolean highest = effect.isHighest();
 
-        Player opponent = card.getOwner().getOpponent(game.getPlayers());
+        Player opponent = effectSource.getOwner().getOpponent(game.getPlayers());
         Set<CardInstance> availableCards;
 
         if (highest) {
-            availableCards = new HashSet<>(opponent.getHighestCards());
+            availableCards = new HashSet<>(CardUtils.getHighestCards(opponent.getBoard()));
         } else {
             Stream<CardInstance> boardCards = opponent.getBoard().stream();
 
@@ -72,7 +76,8 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
         if (availableCards.size() <= value || value < 0) {
             setAbleToBlock(game, availableCards);
         } else {
-            game.setChoice(new TargetChoice(card.getOwner(), card, this, value, new HashSet<>(opponent.getBoard())));
+            game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, value, new HashSet<>(opponent.getBoard())));
+            game.getLogger().debug("Player {} must choose {} card(s) that will be unable to block (targets : {})", getLoggablePlayer(effectSource.getOwner()), value, getLoggableCards(opponent.getBoard()));
         }
     }
 
