@@ -6,7 +6,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
-import org.metacorp.mindbug.utils.CardUtils;
+import org.metacorp.mindbug.utils.SetUtils;
 import org.slf4j.Logger;
 
 import java.util.ArrayList;
@@ -47,7 +47,7 @@ public class StartService {
     public static Game startGame(Game game, CardSetName setName) {
         // Retrieve CardInstance from JSON configuration file and separate evolution cards from the other ones
         List<CardInstance> cards = game.getCards();
-        CardUtils.getCardsFromConfig(setName.getKey()).forEach(cardInstance -> {
+        SetUtils.getCardsFromConfig(setName.getKey()).forEach(cardInstance -> {
             if (cardInstance.getCard().isEvolution()) {
                 game.getEvolutionCards().add(cardInstance);
             } else {

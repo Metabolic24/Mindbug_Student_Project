@@ -3,12 +3,10 @@ package org.metacorp.mindbug.model.choice;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.ChoiceUtils;
 
 @EqualsAndHashCode(callSuper = true)
@@ -19,6 +17,7 @@ public class FrenzyAttackChoice extends AbstractChoice<Boolean> {
 
     /**
      * Constructor
+     *
      * @param attackingCard the attacking card
      */
     public FrenzyAttackChoice(@NonNull CardInstance attackingCard) {

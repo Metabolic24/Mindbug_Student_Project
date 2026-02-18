@@ -90,23 +90,6 @@ public class Player {
         return opponent;
     }
 
-    public List<CardInstance> getHighestCards() {
-        List<CardInstance> highestCards = new ArrayList<>();
-        int highestPower = 1;
-
-        for (CardInstance card : board) {
-            if (card.getPower() > highestPower) {
-                highestPower = card.getPower();
-                highestCards.clear();
-                highestCards.add(card);
-            } else if (card.getPower() == highestPower) {
-                highestCards.add(card);
-            }
-        }
-
-        return highestCards;
-    }
-
     public void refresh(boolean newTurn) {
         refillHand();
         for (CardInstance card : board) {

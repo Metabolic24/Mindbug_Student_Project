@@ -42,7 +42,8 @@ public class BooleanChoice extends AbstractChoice<Boolean> {
      * @param effectResolver the effect resolver to be triggered when choice is resolved
      * @param card           the target card of the effect resolution
      */
-    public BooleanChoice(@NonNull Player playerToChoose, @NonNull CardInstance sourceCard, @NonNull ResolvableEffect<Boolean> effectResolver, CardInstance card) {
+    public BooleanChoice(@NonNull Player playerToChoose, @NonNull CardInstance sourceCard, @NonNull ResolvableEffect<Boolean> effectResolver,
+                         CardInstance card) {
         this.playerToChoose = playerToChoose;
         this.sourceCard = sourceCard;
         this.effectResolver = effectResolver;

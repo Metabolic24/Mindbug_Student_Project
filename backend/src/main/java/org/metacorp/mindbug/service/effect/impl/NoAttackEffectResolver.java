@@ -8,7 +8,7 @@ import org.metacorp.mindbug.model.effect.impl.NoAttackEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
-import org.metacorp.mindbug.service.game.CardService;
+import org.metacorp.mindbug.utils.CardUtils;
 import org.slf4j.Logger;
 
 import java.util.List;
@@ -39,7 +39,7 @@ public class NoAttackEffectResolver extends EffectResolver<NoAttackEffect> {
         }
 
         if (effect.isLowest()) {
-            affectedCards = CardService.getLowestCards(affectedCards);
+            affectedCards = CardUtils.getLowestCards(affectedCards);
         }
 
         resolve(game, affectedCards);
