@@ -37,7 +37,8 @@ public class TargetChoice extends AbstractChoice<List<UUID>> {
 
     private boolean optional;
 
-    public TargetChoice(@NonNull Player playerToChoose, @NonNull CardInstance effectSource, @NonNull ResolvableEffect<List<CardInstance>> effect, @NonNull Integer targetsCount, @NonNull Set<CardInstance> availableTargets) {
+    public TargetChoice(@NonNull Player playerToChoose, @NonNull CardInstance effectSource, @NonNull ResolvableEffect<List<CardInstance>> effect,
+                        @NonNull Integer targetsCount, @NonNull Set<CardInstance> availableTargets) {
         this.playerToChoose = playerToChoose;
         this.effectSource = effectSource;
         this.effect = effect;

@@ -33,7 +33,7 @@ public class TestGameUtils {
 
         game = new Game(player1, player2);
 
-        List<CardInstance> cards = CardUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey());
+        List<CardInstance> cards = SetUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey());
         Collections.shuffle(cards);
         game.setCards(cards);
 

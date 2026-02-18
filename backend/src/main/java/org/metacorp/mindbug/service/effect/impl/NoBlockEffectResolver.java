@@ -11,6 +11,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.utils.CardUtils;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -53,7 +54,7 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
         Set<CardInstance> availableCards;
 
         if (highest) {
-            availableCards = new HashSet<>(opponent.getHighestCards());
+            availableCards = new HashSet<>(CardUtils.getHighestCards(opponent.getBoard()));
         } else {
             Stream<CardInstance> boardCards = opponent.getBoard().stream();
 
