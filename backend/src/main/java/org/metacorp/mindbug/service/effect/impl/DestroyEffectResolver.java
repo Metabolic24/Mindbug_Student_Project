@@ -41,7 +41,7 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
         Integer min = effect.getMin();
         Integer max = effect.getMax();
         boolean selfAllowed = effect.isSelfAllowed();
-        boolean allies = effect.isAllies();
+        boolean allies_touched = effect.isAllies();
 
         Player currentPlayer = card.getOwner();
        
@@ -50,7 +50,7 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
             listopponentCard.addAll(opponents.getBoard());
         }
 
-        if (effect.isLessAllies() && !(currentPlayer.getBoard().size() <  listopponentCard.size())) {
+        if (allies_touched && !(currentPlayer.getBoard().size() <  listopponentCard.size())) {
             return;
         }
 
@@ -66,14 +66,18 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
                 // Optionnellement soi-même
                 if (selfAllowed) {
                     affectedPlayers.add(currentPlayer);
-                    affectedPlayers.add(currentPlayer.getAllie(game.getPlayers()));
+                    Player my_allie = currentPlayer.getAllie(game.getPlayers()) ;
+                    if (my_allie!=null) {
+                        affectedPlayers.add(my_allie);
+                    }
+                    
                 }
 
                 destroyCards(game, CardService.getLowestCards(affectedPlayers));
             } else {
             List<CardInstance> availableCards = new ArrayList<>();
 
-            if (!allies) {
+            if (!allies_touched) {
                 for (CardInstance currentCard :  listopponentCard) {
                     if (min != null && currentCard.getPower() < min ||
                             max != null && currentCard.getPower() > max) {
@@ -84,7 +88,7 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
                 }
             }
 
-            if (allies || selfAllowed) {
+            if (allies_touched|| selfAllowed) {
                 for (CardInstance currentCard : card.getOwner().getBoard()) {
                     if (min != null && currentCard.getPower() < min
                             || max != null && currentCard.getPower() > max) {
@@ -94,14 +98,18 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
                     availableCards.add(currentCard);
                 }
                 //if selfAllowed, target my allies
-                for (CardInstance currentCard : card.getOwner().getAllie(game.getPlayers()).getBoard()) {
-                    if (min != null && currentCard.getPower() < min ||
-                            max != null && currentCard.getPower() > max) {
-                        continue;
-                    }
+                Player my_allie = currentPlayer.getAllie(game.getPlayers()) ;
+                    if (my_allie!=null) {
+                        for (CardInstance currentCard : my_allie.getBoard()) {
+                            if (min != null && currentCard.getPower() < min ||
+                                    max != null && currentCard.getPower() > max) {
+                                continue;
+                            }
 
-                    availableCards.add(currentCard);
-                }
+                            availableCards.add(currentCard);
+                        }
+                    }
+                
             }
 
             if (!availableCards.isEmpty()) {
