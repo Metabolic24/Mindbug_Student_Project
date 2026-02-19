@@ -156,7 +156,14 @@
 
   /* Selected and attacking card styling */
   .card-wrapper.selected {
-    outline: 4px solid red;
+    border-radius: 13px;
+    border: 4px solid #4ade80;
+    box-shadow: 0 0 20px #4ade8088, 0 0 40px #4ade8044;
+    animation: pulse-green 1.5s ease-in-out infinite;
+  }
+  @keyframes pulse-green {
+    0%, 100% { box-shadow: 0 0 20px #4ade8088, 0 0 40px #4ade8044; }
+    50% { box-shadow: 0 0 30px #4ade80bb, 0 0 60px #4ade8066; }
   }
 
   .card-wrapper.attacking {
@@ -225,18 +232,6 @@
     opacity: 0;
   }
 
-  /* Selected and attacking card styling */
-  .card-wrapper.selected {
-    outline: 4px solid red;
-  }
-
-  .card-wrapper.attacking {
-    outline: 4px solid orange;
-  }
-
-  .card-wrapper.clickable {
-    cursor: pointer;
-  }
 
   /* #############################################  Title/description card  ############################################# */
 

@@ -323,7 +323,7 @@ async function onLeaveButtonClick() {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  
+
   background-image: url("../../assets/playmats/default.png");
   background-repeat: no-repeat;
   background-size: cover;
