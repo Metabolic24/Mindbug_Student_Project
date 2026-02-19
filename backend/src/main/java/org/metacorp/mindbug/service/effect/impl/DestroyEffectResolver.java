@@ -50,7 +50,7 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
             listopponentCard.addAll(opponents.getBoard());
         }
 
-        if (effect.isLessAllies() && !(currentPlayer.getBoard().size() <  listopponentCard.size())) {
+        if (allies_touched && !(currentPlayer.getBoard().size() <  listopponentCard.size())) {
             return;
         }
 
