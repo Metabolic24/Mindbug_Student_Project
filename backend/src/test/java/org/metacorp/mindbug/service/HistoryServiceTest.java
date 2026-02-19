@@ -155,7 +155,7 @@ public class HistoryServiceTest {
         compareCard(sourceCard, historyEntry.getSource());
         compareCard(targets.getFirst(), historyEntry.getTargets().getFirst());
         assertNotNull(historyEntry.getData());
-        assertEquals(game.getOpponent().getUuid(), historyEntry.getData().get("playerToChoose"));
+        assertEquals(game.getOpponent().getFirst().getUuid(), historyEntry.getData().get("playerToChoose"));
         assertEquals(ChoiceType.HUNTER.name(), historyEntry.getData().get("type"));
     }
 
