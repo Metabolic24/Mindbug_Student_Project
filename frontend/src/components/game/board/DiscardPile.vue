@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import {computed} from "vue";
+import Card from "@/components/game/Card.vue";
+
 // Declare the interface for the data given by the parent component
 interface Props {
   cards: CardInterface[]
 }
+
 const props = defineProps<Props>()
 
 // Declare events emitted by this component
@@ -14,34 +18,78 @@ function onClick() {
     emit('clicked')
   }
 }
+
+const lastCard = computed(() => {
+  return props.cards.length > 0
+      ? props.cards[props.cards.length - 1]
+      : undefined
+})
 </script>
 
 <template>
-  <div class="card" @click="onClick()">
-    <h4>Défausse</h4>
-    <span>{{cards?.length}}</span>
+  <div class="discard-wrapper">
+    <!-- Title above pile -->
+    <div class="discard-title">Discard Pile</div>
+
+    <div class="discard-container" :class="{ empty: !lastCard }" @click="onClick">
+      <!-- Last card displayed -->
+      <Card v-if="lastCard" :card="lastCard" context="discard-pile" :clickable="false"/>
+      <!-- Counter badge -->
+      <div v-if="props.cards.length > 0" class="counter-badge">
+        {{ props.cards.length }}
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.card {
-  height: 20vh;
-  min-width: 7vw;
+.discard-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+/* Title above the pile */
+.discard-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1d1c1c;
+}
+
+/* Pile container */
+.discard-container {
+  position: relative;
+  width: 8vw;
+  height: 11vw;
+  min-width: 60px;
+  min-height: 90px;
   display: flex;
   align-items: center;
-  justify-content: start;
-  gap: 3vh;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.247);
+}
 
-  padding-top: 1vh;
+/* Empty state style */
+.discard-container.empty {
+  border: 2px dashed rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.247);
+}
 
-  span {
-    font-size: 4vh;
-    font-weight: bolder;
-  }
-
-  h4, span {
-    cursor: default;
-  }
+/* Counter badge */
+.counter-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 </style>
