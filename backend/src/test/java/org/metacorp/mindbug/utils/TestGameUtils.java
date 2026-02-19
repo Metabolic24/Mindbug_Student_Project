@@ -18,14 +18,14 @@ import java.util.stream.Collectors;
 
 public class TestGameUtils {
 
-    private static Game game;
+    private Game game;
 
     @Getter
-    private static Player player1;
+    private  Player player1;
     @Getter
-    private static Player player2;
+    private  Player player2;
 
-    public static Game prepareCustomGame() {
+    public  Game prepareCustomGame() {
         PlayerService playerService = new PlayerService();
         player1 = new Player(playerService.createPlayer("player1"));
         player2 = new Player(playerService.createPlayer("player2"));
@@ -45,69 +45,69 @@ public class TestGameUtils {
         return game;
     }
 
-    public static CardInstance getCardById(int id) {
+    public  CardInstance getCardById(int id) {
         return game.getCards().stream().filter(cardInstance -> cardInstance.getCard().getId() == id).findFirst().orElse(null);
     }
 
-    public static List<CardInstance> getCardsById(int id) {
+    public  List<CardInstance> getCardsById(int id) {
         return game.getCards().stream().filter(cardInstance -> cardInstance.getCard().getId() == id).collect(Collectors.toList());
     }
 
-    public static void attack(CardInstance attackingCard, CardInstance defendingCard) throws GameStateException {
+    public  void attack(CardInstance attackingCard, CardInstance defendingCard) throws GameStateException {
         AttackService.declareAttack(attackingCard, game);
         AttackService.resolveAttack(defendingCard, game);
     }
 
-    public static void play(CardInstance pickedCard) throws GameStateException {
+    public  void play(CardInstance pickedCard) throws GameStateException {
         play(pickedCard, null);
     }
 
-    public static void play(CardInstance pickedCard, Player mindbugger) throws GameStateException {
+    public  void play(CardInstance pickedCard, Player mindbugger) throws GameStateException {
         PlayCardService.pickCard(pickedCard, game);
         PlayCardService.playCard(mindbugger, game);
     }
-
-    public static void hand(Player player, CardInstance... cards) {
+   
+    public void hand(Player player, CardInstance... cards) {
         for (CardInstance card : cards) {
             card.setOwner(player);
             player.getHand().add(card);
         }
     }
 
-    public static void board(Player player, CardInstance... cards) {
+    public void board(Player player, CardInstance... cards) {
         for (CardInstance card : cards) {
             card.setOwner(player);
             player.getBoard().add(card);
         }
     }
 
-    public static void discard(Player player, CardInstance... cards) {
+    public  void discard(Player player, CardInstance... cards) {
         for (CardInstance card : cards) {
             card.setOwner(player);
             player.getDiscardPile().add(card);
         }
     }
 
-    public static void draw(Player player, CardInstance... cards) {
+    public void draw(Player player, CardInstance... cards) {
         for (CardInstance card : cards) {
             card.setOwner(player);
             player.getDrawPile().add(card);
         }
     }
 
-    public static void huntTarget(CardInstance card) throws GameStateException {
+    public void huntTarget(CardInstance card) throws GameStateException {
         ChoiceService.resolveChoice(card == null ? null : card.getUuid(), game);
     }
 
-    public static void chooseTargets(CardInstance... cards) throws GameStateException {
+    public  void chooseTargets(CardInstance... cards) throws GameStateException {
         ChoiceService.resolveChoice(Arrays.stream(cards).map(CardInstance::getUuid).toList(), game);
     }
 
-    public static void choose(boolean choice) throws GameStateException {
+    public  void choose(boolean choice) throws GameStateException {
         ChoiceService.resolveChoice(choice, game);
     }
 
-    private TestGameUtils() {
+    public TestGameUtils() {
         // Not to be used
     }
 }

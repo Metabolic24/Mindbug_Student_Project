@@ -9,6 +9,7 @@ import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.AttackService;
+import org.metacorp.mindbug.service.game.PlayCardService;
 import org.metacorp.mindbug.utils.TestGameUtils;
 
 import java.io.IOException;
@@ -19,56 +20,48 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.metacorp.mindbug.utils.TestGameUtils.attack;
-import static org.metacorp.mindbug.utils.TestGameUtils.choose;
-import static org.metacorp.mindbug.utils.TestGameUtils.chooseTargets;
-import static org.metacorp.mindbug.utils.TestGameUtils.getCardById;
-import static org.metacorp.mindbug.utils.TestGameUtils.getCardsById;
-import static org.metacorp.mindbug.utils.TestGameUtils.hand;
-import static org.metacorp.mindbug.utils.TestGameUtils.huntTarget;
-import static org.metacorp.mindbug.utils.TestGameUtils.play;
-import static org.metacorp.mindbug.utils.TestGameUtils.prepareCustomGame;
+
 import static org.metacorp.mindbug.utils.TestUtils.cleanHistoryDirectory;
 
 public class SpecificCaseTest {
 
     private Game game;
-
+    private TestGameUtils utils;
     private Player player1;
     private Player player2;
 
     @BeforeEach
-    public void setup() {
-        game = prepareCustomGame();
-        player1 = TestGameUtils.getPlayer1();
-        player2 = TestGameUtils.getPlayer2();
+    void setup() {
+        utils = new TestGameUtils();
+        game = utils.prepareCustomGame();
+        player1 = utils.getPlayer1();
+        player2 = utils.getPlayer2();
     }
 
     // #20
     @Test
     public void hurlerAlwaysBoost() throws GameStateException {
-        CardInstance turboBug = getCardById(30);
-        CardInstance majesticManticore = getCardById(42);
-        CardInstance snailHydra = getCardById(25);
-        CardInstance ferretPacifier = getCardById(36);
-        CardInstance urchinHurler = getCardById(32);
+        CardInstance turboBug =  utils.getCardById(30);
+        CardInstance majesticManticore = utils.getCardById(42);
+        CardInstance snailHydra = utils.getCardById(25);
+        CardInstance ferretPacifier = utils.getCardById(36);
+        CardInstance urchinHurler = utils.getCardById(32);
 
         // Setup
-        hand(player1, turboBug, majesticManticore, snailHydra);
-        hand(player2, ferretPacifier, urchinHurler);
+        utils.hand(player1, turboBug, majesticManticore, snailHydra);
+        utils.hand(player2, ferretPacifier, urchinHurler);
 
         // Start game
-        play(turboBug);
+        utils.play(turboBug);
+        utils.play(urchinHurler);
+       
+        utils.attack(turboBug, urchinHurler);
 
-        play(urchinHurler);
+        utils.play(ferretPacifier);
 
-        attack(turboBug, urchinHurler);
+        utils.play(snailHydra, player2);
 
-        play(ferretPacifier);
-
-        play(snailHydra, player2);
-
-        play(majesticManticore);
+        utils.play(majesticManticore);
 
         AttackService.declareAttack(snailHydra, game); //Cannot be blocked
 
@@ -81,31 +74,31 @@ public class SpecificCaseTest {
     // #21
     @Test
     public void goreagleBadlyReviveHyenix() throws GameStateException {
-        CardInstance goreagleAlpha = getCardById(38);
-        CardInstance tigerSquirrel = getCardById(29);
-        CardInstance hyenix = getCardById(41);
-        CardInstance explosiveToad = getCardById(8);
+        CardInstance goreagleAlpha = utils.getCardById(38);
+        CardInstance tigerSquirrel = utils.getCardById(29);
+        CardInstance hyenix = utils.getCardById(41);
+        CardInstance explosiveToad = utils.getCardById(8);
 
         // Setup
-        hand(player1, hyenix, tigerSquirrel, goreagleAlpha);
-        hand(player2, explosiveToad);
+        utils.hand(player1, hyenix, tigerSquirrel, goreagleAlpha);
+        utils.hand(player2, explosiveToad);
 
         // Start game
-        play(hyenix, player2);
+        utils.play(hyenix, player2);
 
-        play(tigerSquirrel);
+        utils.play(tigerSquirrel);
 
-        play(explosiveToad);
+        utils.play(explosiveToad);
 
-        play(goreagleAlpha);
+        utils.play(goreagleAlpha);
 
-        attack(explosiveToad, goreagleAlpha);
+        utils.attack(explosiveToad, goreagleAlpha);
 
-        chooseTargets(tigerSquirrel);
+        utils.chooseTargets(tigerSquirrel);
 
         AttackService.declareAttack(goreagleAlpha, game);
 
-        choose(true);
+        utils.choose(true);
 
         assertNotNull(game.getChoice());
     }
@@ -113,23 +106,23 @@ public class SpecificCaseTest {
     // #23
     @Test
     public void strangeBarrelDoesNotTrigger() throws GameStateException {
-        CardInstance strangeBarrel = getCardById(28);
-        CardInstance spiderOwl = getCardById(27);
-        CardInstance goreagleAlpha = getCardById(38);
-        CardInstance tigerSquirrel = getCardById(29);
-        CardInstance explosiveToad = getCardById(8);
+        CardInstance strangeBarrel = utils.getCardById(28);
+        CardInstance spiderOwl = utils.getCardById(27);
+        CardInstance goreagleAlpha = utils.getCardById(38);
+        CardInstance tigerSquirrel = utils.getCardById(29);
+        CardInstance explosiveToad = utils.getCardById(8);
 
 
         // Setup
-        hand(player1, strangeBarrel, spiderOwl, goreagleAlpha, tigerSquirrel, explosiveToad);
-        hand(player2);
+        utils.hand(player1, strangeBarrel, spiderOwl, goreagleAlpha, tigerSquirrel, explosiveToad);
+        utils.hand(player2);
 
         // Start game
-        play(strangeBarrel, player2);
+        utils.play(strangeBarrel, player2);
 
-        play(spiderOwl);
+        utils.play(spiderOwl);
 
-        attack(strangeBarrel, spiderOwl);
+        utils.attack(strangeBarrel, spiderOwl);
 
         assertNull(game.getChoice());
         assertEquals(1, player1.getHand().size());
@@ -139,29 +132,30 @@ public class SpecificCaseTest {
     // #26
     @Test
     public void goblinWerewolfNotDestroyedByMajesticManticore() throws GameStateException {
-        CardInstance goblinWerewolf = getCardById(11);
-        CardInstance hyenix = getCardById(41);
-        CardInstance hungryHungryHamster = getCardById(40);
-        CardInstance froblinInstigator = getCardById(37);
-        CardInstance explosiveToad = getCardById(8);
-        CardInstance majesticManticore = getCardById(42);
+        CardInstance goblinWerewolf = utils.getCardById(11);
+        CardInstance hyenix = utils.getCardById(41);
+        CardInstance hungryHungryHamster = utils.getCardById(40);
+        CardInstance froblinInstigator = utils.getCardById(37);
+        CardInstance explosiveToad = utils.getCardById(8);
+        CardInstance majesticManticore = utils.getCardById(42);
 
         // Setup
-        hand(player1, goblinWerewolf, hyenix, hungryHungryHamster);
-        hand(player2, froblinInstigator, explosiveToad, majesticManticore);
-
+        utils.hand(player1, goblinWerewolf, hyenix, hungryHungryHamster);
+        utils.hand(player2, froblinInstigator, explosiveToad, majesticManticore);
+        
         // Start game
-        play(goblinWerewolf);
+        utils.play(goblinWerewolf);
 
-        play(explosiveToad);
+        utils.play(explosiveToad);
 
-        play(hyenix);
+        utils.play(hyenix);
 
-        play(majesticManticore);
+        utils.play(majesticManticore);
+        utils.choose(true);
 
-        play(hungryHungryHamster);
+        utils.play(hungryHungryHamster);
 
-        choose(true);
+        utils.choose(true);
 
         AttackService.declareAttack(majesticManticore, game);
         assertTrue(player1.getDiscardPile().contains(goblinWerewolf));
@@ -174,42 +168,42 @@ public class SpecificCaseTest {
     // #26
     @Test
     public void opponentCanChooseBlockTargetWhileCannotBlock() throws GameStateException {
-        CardInstance gorillion = getCardById(12);
-        CardInstance ferretPacifier = getCardById(36);
-        CardInstance explosiveToad = getCardById(8);
-        CardInstance hyenix = getCardById(41);
-        CardInstance goreagleAlpha = getCardById(38);
+        CardInstance gorillion = utils.getCardById(12);
+        CardInstance ferretPacifier = utils.getCardById(36);
+        CardInstance explosiveToad = utils.getCardById(8);
+        CardInstance hyenix = utils.getCardById(41);
+        CardInstance goreagleAlpha = utils.getCardById(38);
 
         // Setup
-        hand(player1, ferretPacifier, hyenix, gorillion);
-        hand(player2, goreagleAlpha, explosiveToad);
+        utils.hand(player1, ferretPacifier, hyenix, gorillion);
+        utils.hand(player2, goreagleAlpha, explosiveToad);
 
         // Start game
-        play(hyenix, player2);
+        utils.play(hyenix);
 
-        play(ferretPacifier);
+        utils.play(ferretPacifier);
 
-        play(explosiveToad, player1);
+        utils.play(explosiveToad, player1);
 
-        play(goreagleAlpha, player1);
+        utils.play(goreagleAlpha, player1);
 
-        attack(hyenix, goreagleAlpha);
+        utils.attack(hyenix, goreagleAlpha);
 
-        choose(true);
+        utils.choose(true);
 
         AttackService.resolveAttack(null, game);
 
-        play(gorillion);
+        utils.play(gorillion);
 
-        attack(hyenix, gorillion);
+        utils.attack(hyenix, gorillion);
 
         AttackService.declareAttack(goreagleAlpha, game);
 
-        choose(true);
+        utils.choose(true);
 
-        choose(true);
+        utils.choose(true);
 
-        huntTarget(null);
+        utils.huntTarget(null);
 
         assertNull(game.getAttackingCard());
         assertEquals(game.getCurrentPlayer(), player2);
@@ -219,25 +213,25 @@ public class SpecificCaseTest {
     // #27
     @Test
     public void hamsterLionDoesNotCauseGameEndWhenNoOneCanAttack() throws GameStateException, IOException {
-        CardInstance hyenix = getCardById(41);
-        CardInstance graveRobber = getCardById(13);
-        CardInstance hamsterLion = getCardById(39);
-        CardInstance snailHydra = getCardById(25);
+        CardInstance hyenix = utils.getCardById(41);
+        CardInstance graveRobber = utils.getCardById(13);
+        CardInstance hamsterLion = utils.getCardById(39);
+        CardInstance snailHydra = utils.getCardById(25);
 
         // Setup
-        hand(player1, hamsterLion, snailHydra);
-        hand(player2, hyenix, graveRobber);
+        utils.hand(player1, hamsterLion, snailHydra);
+        utils.hand(player2, hyenix, graveRobber);
 
         // Start game
-        play(hamsterLion);
+        utils.play(hamsterLion);
 
-        play(hyenix);
+        utils.play(hyenix);
 
-        play(snailHydra);
+        utils.play(snailHydra);
 
-        play(graveRobber);
+        utils.play(graveRobber);
 
-        attack(snailHydra, null);
+        utils.attack(snailHydra, null);
 
         assertTrue(game.isFinished());
 
@@ -246,26 +240,26 @@ public class SpecificCaseTest {
 
     @Test
     public void urchinHurlerCanAttackWithShieldBugsBoostWhileHamsterLion() throws GameStateException {
-        CardInstance hamsterLion = getCardById(39);
-        CardInstance shieldBugs = getCardById(24);
-        CardInstance urchinHurler = getCardById(32);
-        CardInstance hyenix = getCardById(41);
+        CardInstance hamsterLion = utils.getCardById(39);
+        CardInstance shieldBugs = utils.getCardById(24);
+        CardInstance urchinHurler = utils.getCardById(32);
+        CardInstance hyenix = utils.getCardById(41);
 
         // Setup
-        hand(player1, urchinHurler, shieldBugs, hyenix);
+        utils.hand(player1, urchinHurler, shieldBugs, hyenix);
 
-        hand(player2, hamsterLion);
+        utils.hand(player2, hamsterLion);
 
         // Start game
-        play(urchinHurler);
+        utils.play(urchinHurler);
 
-        play(hamsterLion);
+        utils.play(hamsterLion);
 
-        play(shieldBugs);
+        utils.play(shieldBugs);
 
-        attack(hamsterLion, shieldBugs);
+        utils.attack(hamsterLion, shieldBugs);
 
-        choose(false);
+        utils.choose(false);
 
         assertFalse(game.isFinished());
         assertFalse(urchinHurler.isAbleToAttack());
@@ -274,46 +268,46 @@ public class SpecificCaseTest {
 
     @Test
     public void compostDragonRevivesCompostDragon() throws GameStateException {
-        List<CardInstance> compostDragons = getCardsById(5);
+        List<CardInstance> compostDragons = utils.getCardsById(5);
         assertEquals(2, compostDragons.size());
 
         CardInstance compostDragon1 = compostDragons.get(0);
         CardInstance compostDragon2 = compostDragons.get(1);
-        CardInstance hyenix = getCardById(41);
-        CardInstance ferretPacifier = getCardById(36);
-        CardInstance tigerSquirrel = getCardById(29);
-        CardInstance snailHydra = getCardById(25);
+        CardInstance hyenix = utils.getCardById(41);
+        CardInstance ferretPacifier = utils.getCardById(36);
+        CardInstance tigerSquirrel = utils.getCardById(29);
+        CardInstance snailHydra = utils.getCardById(25);
 
-        hand(player1, compostDragon1, compostDragon2, ferretPacifier, snailHydra);
-        hand(player2, hyenix, tigerSquirrel);
+        utils.hand(player1, compostDragon1, compostDragon2, ferretPacifier, snailHydra);
+        utils.hand(player2, hyenix, tigerSquirrel);
 
-        play(snailHydra);
+        utils.play(snailHydra);
 
-        play(tigerSquirrel);
+        utils.play(tigerSquirrel);
 
-        play(ferretPacifier);
+        utils.play(ferretPacifier);
 
-        play(hyenix);
+        utils.play(hyenix);
 
-        attack(ferretPacifier, tigerSquirrel);
+        utils.attack(ferretPacifier, tigerSquirrel);
 
-        attack(hyenix, ferretPacifier);
+        utils.attack(hyenix, ferretPacifier);
 
-        choose(true);
+        utils.choose(true);
 
-        play(compostDragon1);
+        utils.play(compostDragon1);
 
-        chooseTargets(ferretPacifier);
+        utils.chooseTargets(ferretPacifier);
 
-        attack(hyenix, compostDragon1);
+        utils.attack(hyenix, compostDragon1);
 
-        choose(true);
+        utils.choose(true);
 
         AttackService.resolveAttack(ferretPacifier, game);
 
-        play(compostDragon2);
+        utils.play(compostDragon2);
 
-        chooseTargets(compostDragon1);
+        utils.chooseTargets(compostDragon1);
 
         assertNotNull(game.getChoice());
         assertEquals(ChoiceType.TARGET, game.getChoice().getType());
