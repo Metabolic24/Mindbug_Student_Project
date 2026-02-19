@@ -64,7 +64,7 @@ public class GameStateServiceTest {
 
         currentPlayer.addCardToBoard(boardCard);
 
-        Player opponent = game.getOpponent().get(0);
+        Player opponent = game.getOpponent().getFirst();
         opponent.getDiscardPile().add(opponent.getHand().removeFirst());
         opponent.getDiscardPile().add(opponent.getHand().removeFirst());
         opponent.getDiscardPile().add(opponent.getDrawPile().removeFirst());

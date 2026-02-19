@@ -30,7 +30,7 @@ public class GameStateMapper {
         // Build the GameStateDTO
         GameStateDTO gameStateDTO = new GameStateDTO(game.getUuid(),
                 fromPlayer(currentPlayer),
-                fromPlayer(game.getOpponent().get(0)));
+                fromPlayer(game.getOpponent().getFirst()));
         gameStateDTO.setForcedAttack(game.isForcedAttack());
 
         // Update the card field if needed
@@ -49,7 +49,7 @@ public class GameStateMapper {
 
         // Update the winner field if needed
         if (game.getWinner() != null) {
-            gameStateDTO.setWinner(game.getWinner().get(0).getUuid());
+            gameStateDTO.setWinner(game.getWinner().getFirst().getUuid());
         }
 
         return gameStateDTO;

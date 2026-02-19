@@ -104,7 +104,6 @@ public class AttackService {
                         e.printStackTrace();
                     }
                 } else {
-                    System.out.println("choix");
                     WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);
                 }
             } else {
@@ -164,7 +163,7 @@ public class AttackService {
         HistoryService.log(game, HistoryKey.BLOCK, attackCard, defendCard == null ? null : Collections.singleton(defendCard));
 
         if (defendCard == null) {
-            Player defender = attackCard.getOwner().getOpponent(game.getPlayers()).get(0);
+            Player defender = attackCard.getOwner().getOpponent(game.getPlayers()).getFirst();
             defender.getTeam().loseLifePoints(1);
             GameStateService.lifePointLost(defender, game);
         } else {

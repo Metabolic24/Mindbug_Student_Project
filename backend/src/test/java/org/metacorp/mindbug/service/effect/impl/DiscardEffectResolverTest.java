@@ -34,7 +34,7 @@ public class DiscardEffectResolverTest {
         PlayerService playerService = new PlayerService();
         game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         randomCard = game.getCurrentPlayer().getHand().getFirst();
-        opponentPlayer = game.getOpponent().get(0);
+        opponentPlayer = game.getOpponent().getFirst();
 
         effect = new DiscardEffect();
         effect.setType(EffectType.DISCARD);
@@ -123,7 +123,7 @@ public class DiscardEffectResolverTest {
         effect.setValue(2);
         effect.setDrawPile(true);
 
-        CardInstance firstCard = opponentPlayer.getDrawPile().get(0);
+        CardInstance firstCard = opponentPlayer.getDrawPile().getFirst();
         CardInstance secondCard = opponentPlayer.getDrawPile().get(1);
         CardInstance thirdCard = opponentPlayer.getDrawPile().get(2);
 

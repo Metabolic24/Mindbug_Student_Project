@@ -33,7 +33,7 @@ public class GameServiceTest {
     @Test
     public void createGame_nominal() throws UnknownPlayerException {
         List<Player> players = game.getPlayers();
-        game = gameService.createGame(players.get(0).getUuid(), players.get(1).getUuid());
+        game = gameService.createGame(players.getFirst().getUuid(), players.get(1).getUuid());
 
         assertNotNull(game);
         assertNotNull(game.getUuid());
@@ -42,7 +42,7 @@ public class GameServiceTest {
     @Test
     public void findById_nominal() throws UnknownPlayerException {
         List<Player> players = game.getPlayers();
-        game = gameService.createGame(players.get(0).getUuid(), players.get(1).getUuid());
+        game = gameService.createGame(players.getFirst().getUuid(), players.get(1).getUuid());
 
         assertEquals(game, gameService.findById(game.getUuid()));
     }
@@ -55,12 +55,12 @@ public class GameServiceTest {
     @Test
     public void endGame_nominal() throws UnknownPlayerException {
         List<Player> players = game.getPlayers();
-        UUID loserId = players.get(0).getUuid();
+        UUID loserId = players.getFirst().getUuid();
         UUID winnerId = players.get(1).getUuid();
         game = gameService.createGame(loserId, winnerId);
 
         gameService.endGame(loserId, game.getUuid());
-        assertEquals(winnerId, game.getWinner().get(0).getUuid());
+        assertEquals(winnerId, game.getWinner().getFirst().getUuid());
     }
 
     @Test
@@ -72,7 +72,7 @@ public class GameServiceTest {
     @Test
     public void endGame_badPlayer() throws UnknownPlayerException {
         List<Player> players = game.getPlayers();
-        UUID loserId = players.get(0).getUuid();
+        UUID loserId = players.getFirst().getUuid();
         game = gameService.createGame(loserId, players.get(1).getUuid());
 
         gameService.endGame(UUID.randomUUID(), game.getUuid());

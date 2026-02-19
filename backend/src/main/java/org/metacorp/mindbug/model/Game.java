@@ -71,7 +71,7 @@ public class Game {
         Team team2 = new Team();
         
         // Joueur 0 et 2 ensemble vs Joueur 1 et 3
-        players.get(0).setTeam(team1);
+        players.getFirst().setTeam(team1);
         players.get(2).setTeam(team1);
         
         players.get(1).setTeam(team2);

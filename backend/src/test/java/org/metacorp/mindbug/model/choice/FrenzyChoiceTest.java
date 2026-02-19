@@ -41,7 +41,7 @@ public class FrenzyChoiceTest {
 
     @Test
     public void testResolve_trueWithEmptyBoard() throws GameStateException {
-        Player opponent = game.getOpponent().get(0);
+        Player opponent = game.getOpponent().getFirst();
 
         FrenzyAttackChoice choice = new FrenzyAttackChoice(currentCard);
         game.setChoice(choice);
@@ -58,7 +58,7 @@ public class FrenzyChoiceTest {
 
     @Test
     public void testResolve_trueWithOpponentCreatures() throws GameStateException {
-        Player opponent = game.getOpponent().get(0);;
+        Player opponent = game.getOpponent().getFirst();;
         opponent.addCardToBoard(opponent.getHand().getFirst());
 
         FrenzyAttackChoice choice = new FrenzyAttackChoice(currentCard);

@@ -32,7 +32,7 @@ public class InflictEffectResolver extends EffectResolver<InflictEffect> {
         boolean allButOne = effect.isAllButOne();
         
 
-        Player affectedPlayer = self ? card.getOwner() :card.getOwner().getOpponent(game.getPlayers()).get(0);
+        Player affectedPlayer = self ? card.getOwner() :card.getOwner().getOpponent(game.getPlayers()).getFirst();
         Team affectedTeam = affectedPlayer.getTeam();
 
         if (allButOne) {

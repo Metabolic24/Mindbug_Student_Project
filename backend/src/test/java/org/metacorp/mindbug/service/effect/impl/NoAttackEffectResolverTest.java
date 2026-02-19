@@ -30,7 +30,7 @@ public class NoAttackEffectResolverTest {
         PlayerService playerService = new PlayerService();
         game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         randomCard = game.getCurrentPlayer().getHand().getFirst();
-        opponentPlayer = game.getOpponent().get(0);
+        opponentPlayer = game.getOpponent().getFirst();
 
         effect = new NoAttackEffect();
         effect.setType(EffectType.NO_ATTACK);

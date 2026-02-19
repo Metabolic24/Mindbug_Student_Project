@@ -271,7 +271,7 @@ public class SpecificCaseTest {
         List<CardInstance> compostDragons = utils.getCardsById(5);
         assertEquals(2, compostDragons.size());
 
-        CardInstance compostDragon1 = compostDragons.get(0);
+        CardInstance compostDragon1 = compostDragons.getFirst();
         CardInstance compostDragon2 = compostDragons.get(1);
         CardInstance hyenix = utils.getCardById(41);
         CardInstance ferretPacifier = utils.getCardById(36);

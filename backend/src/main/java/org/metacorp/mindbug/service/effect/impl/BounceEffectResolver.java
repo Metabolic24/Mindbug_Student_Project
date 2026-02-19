@@ -32,7 +32,7 @@ public class BounceEffectResolver extends EffectResolver<BounceEffect> implement
 
         int value = effect.getValue();
         Player cardOwner = card.getOwner();
-        Player opponent = cardOwner.getOpponent(game.getPlayers()).get(0);
+        Player opponent = cardOwner.getOpponent(game.getPlayers()).getFirst();
         Set<CardInstance> opponentCards = new HashSet<>(opponent.getBoard());
 
         if (!opponentCards.isEmpty()) {

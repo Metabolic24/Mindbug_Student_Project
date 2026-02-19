@@ -310,7 +310,7 @@ public final class AppUtils {
     public static Player ChosenOpponent(Game game, Player player_who_targets) {
         List<Player> listOpponents = player_who_targets.getOpponent(game.getPlayers());
         if (listOpponents.size()==1) {
-            return listOpponents.get(0);
+            return listOpponents.getFirst();
         }
 
         int index = 1;

@@ -30,7 +30,7 @@ public class ReviveEffectResolverTest {
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
         game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
-        opponentPlayer = game.getOpponent().get(0);
+        opponentPlayer = game.getOpponent().getFirst();
         randomCard = opponentPlayer.getHand().removeFirst();
         opponentPlayer.getDiscardPile().add(randomCard);
 

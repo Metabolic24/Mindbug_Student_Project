@@ -30,7 +30,7 @@ public class SimultaneousChoiceTest {
         PlayerService playerService = new PlayerService();
         game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
-        opponent = game.getOpponent().get(0);
+        opponent = game.getOpponent().getFirst();
         timing = EffectTiming.PLAY;
     }
 
@@ -57,7 +57,7 @@ public class SimultaneousChoiceTest {
         assertNull(game.getChoice());
         assertEquals(2, game.getEffectQueue().size());
 
-        assertEquals(attackCard, game.getEffectQueue().get(0).getCard());
+        assertEquals(attackCard, game.getEffectQueue().getFirst().getCard());
         assertEquals(defendingCard, game.getEffectQueue().get(1).getCard());
     }
 }

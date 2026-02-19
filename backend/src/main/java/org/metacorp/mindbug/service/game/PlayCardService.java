@@ -56,7 +56,7 @@ public class PlayCardService {
         // Usage of mindbug depending on the game mode
         // 1v1 game mode
         if(game.typeGameMode() == 1){
-            Player opponent = game.getOpponent().get(0);
+            Player opponent = game.getOpponent().getFirst();
             if (opponent.getMindBugs() == 0) {
                 playCard(game);
                 System.out.println("L'opposant n'a plus de Mindbug pour voler la carte");
@@ -71,7 +71,7 @@ public class PlayCardService {
         }
         // 2v2 game mode
         if(game.typeGameMode() == 2){
-            Player nextOpponent = game.getOpponent().get(0);
+            Player nextOpponent = game.getOpponent().getFirst();
             Player previousOpponent = game.getOpponent().get(1);
             Player allie = game.getAllie();
             List<Player> mindbugQueue = new ArrayList<>();

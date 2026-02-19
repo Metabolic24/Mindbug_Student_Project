@@ -82,7 +82,7 @@ public class GameStateService {
 
     public static void endGame(Player loser, Game game) {
         if(game.typeGameMode() == 1){
-            Player winner = loser.getOpponent(game.getPlayers()).get(0);
+            Player winner = loser.getOpponent(game.getPlayers()).getFirst();
             System.out.println("\n<<<<< GAME OVER >>>>>");
             System.out.printf("%s wins ; %s loses\n", winner.getName(), loser.getName());
 
@@ -96,7 +96,7 @@ public class GameStateService {
             Player loserAllie = loser.getAllie(game.getPlayers());
 
             System.out.println("\n<<<<< GAME OVER >>>>>");
-            System.out.printf("%s & %s win ; %s & %s lose\n", winners.get(0).getName(), winners.get(1).getName(), loser.getName(), loserAllie.getName());
+            System.out.printf("%s & %s win ; %s & %s lose\n", winners.getFirst().getName(), winners.get(1).getName(), loser.getName(), loserAllie.getName());
 
             game.setWinner(winners);
 

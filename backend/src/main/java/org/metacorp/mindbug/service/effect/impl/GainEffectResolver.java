@@ -41,7 +41,7 @@ public class GainEffectResolver extends EffectResolver<GainEffect> {
             List<Player> opponents = cardOwner.getOpponent(game.getPlayers());
             
             // get the life oppenents
-            team.setLifePoints(opponents.get(0).getTeam().getLifePoints());
+            team.setLifePoints(opponents.getFirst().getTeam().getLifePoints());
 
             if (oldLifePoints > team.getLifePoints()) {
                 GameStateService.lifePointLost(cardOwner, game);

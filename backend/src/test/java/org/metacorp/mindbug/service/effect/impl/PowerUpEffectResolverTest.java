@@ -30,7 +30,7 @@ public class PowerUpEffectResolverTest {
         game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         currentPlayer = game.getCurrentPlayer();
-        opponentPlayer = game.getOpponent().get(0);
+        opponentPlayer = game.getOpponent().getFirst();
 
         effect = new PowerUpEffect();
         effect.setType(EffectType.POWER_UP);

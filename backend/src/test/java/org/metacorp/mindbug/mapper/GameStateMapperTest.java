@@ -57,7 +57,7 @@ public class GameStateMapperTest {
         assertEquals(game.getUuid(), gameStateDTO.getUuid());
 
         comparePlayers(game.getCurrentPlayer(), gameStateDTO.getPlayer());
-        comparePlayers(game.getOpponent().get(0), gameStateDTO.getOpponent());
+        comparePlayers(game.getOpponent().getFirst(), gameStateDTO.getOpponent());
 
         assertNull(gameStateDTO.getCard());
         assertNull(gameStateDTO.getWinner());
@@ -77,7 +77,7 @@ public class GameStateMapperTest {
         assertEquals(game.getUuid(), gameStateDTO.getUuid());
 
         comparePlayers(game.getCurrentPlayer(), gameStateDTO.getPlayer());
-        comparePlayers(game.getOpponent().get(0), gameStateDTO.getOpponent());
+        comparePlayers(game.getOpponent().getFirst(), gameStateDTO.getOpponent());
 
         assertNotNull(gameStateDTO.getCard());
         compareCard(playedCard, gameStateDTO.getCard());
@@ -97,10 +97,10 @@ public class GameStateMapperTest {
         assertEquals(game.getUuid(), gameStateDTO.getUuid());
 
         comparePlayers(game.getCurrentPlayer(), gameStateDTO.getPlayer());
-        comparePlayers(game.getOpponent().get(0), gameStateDTO.getOpponent());
+        comparePlayers(game.getOpponent().getFirst(), gameStateDTO.getOpponent());
 
         assertNull(gameStateDTO.getCard());
-        assertEquals(game.getOpponent().get(0).getUuid(), gameStateDTO.getWinner());
+        assertEquals(game.getOpponent().getFirst().getUuid(), gameStateDTO.getWinner());
         assertNull(gameStateDTO.getChoice());
         assertFalse(gameStateDTO.isForcedAttack());
     }
@@ -115,7 +115,7 @@ public class GameStateMapperTest {
         assertEquals(game.getUuid(), gameStateDTO.getUuid());
 
         comparePlayers(game.getCurrentPlayer(), gameStateDTO.getPlayer());
-        comparePlayers(game.getOpponent().get(0), gameStateDTO.getOpponent());
+        comparePlayers(game.getOpponent().getFirst(), gameStateDTO.getOpponent());
 
         assertNull(gameStateDTO.getCard());
         assertNull(gameStateDTO.getWinner());
@@ -125,7 +125,7 @@ public class GameStateMapperTest {
 
     @Test
     public void fromGame_targetChoice() {
-        game.setChoice(new TargetChoice(game.getCurrentPlayer(), game.getCurrentPlayer().getHand().getFirst(), new DiscardEffectResolver(new DiscardEffect()), 1, new HashSet<>(game.getOpponent().get(0).getHand())));
+        game.setChoice(new TargetChoice(game.getCurrentPlayer(), game.getCurrentPlayer().getHand().getFirst(), new DiscardEffectResolver(new DiscardEffect()), 1, new HashSet<>(game.getOpponent().getFirst().getHand())));
 
         GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
 
@@ -133,14 +133,14 @@ public class GameStateMapperTest {
         assertEquals(game.getUuid(), gameStateDTO.getUuid());
 
         comparePlayers(game.getCurrentPlayer(), gameStateDTO.getPlayer());
-        comparePlayers(game.getOpponent().get(0), gameStateDTO.getOpponent());
+        comparePlayers(game.getOpponent().getFirst(), gameStateDTO.getOpponent());
 
         assertNull(gameStateDTO.getCard());
         assertNull(gameStateDTO.getWinner());
 
         TargetChoiceDTO choiceDTO = assertInstanceOf(TargetChoiceDTO.class, gameStateDTO.getChoice());
         assertEquals(ChoiceType.TARGET, choiceDTO.getType());
-        compareCards(game.getOpponent().get(0).getHand(), new ArrayList<>(choiceDTO.getAvailableTargets()));
+        compareCards(game.getOpponent().getFirst().getHand(), new ArrayList<>(choiceDTO.getAvailableTargets()));
         assertEquals(1, choiceDTO.getTargetsCount());
         assertFalse(choiceDTO.getOptional());
         compareCard(game.getCurrentPlayer().getHand().getFirst(), choiceDTO.getSourceCard());
