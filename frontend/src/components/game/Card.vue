@@ -1,96 +1,85 @@
 <script setup lang="ts">
-  import {computed }  from "vue";
-  import { getCardAlt, getCardImage } from "@/shared/CardUtils";
+import {computed} from "vue";
+import {getCardAlt, getCardImage} from "@/shared/CardUtils";
 
-  // Declare the interface for the data given by the parent component
-  interface Props {
-    card: CardInterface
+// Declare the interface for the data given by the parent component
+interface Props {
+  card: CardInterface
 
-    context: 'player-hand' | 'opponent-hand' | 'player-board' | 'opponent-board' | 'board'
+  context: 'player-hand' | 'opponent-hand' | 'player-board' | 'opponent-board' | 'board' | 'discard-modal' | 'discard-pile'
 
-    selected?: boolean
-    attacking?: boolean
-    clickable?: boolean
-  }
+  selected?: boolean
+  attacking?: boolean
+  clickable?: boolean
+}
 
-  // Define props and emits
-  const props = defineProps<Props>()
-  const emit = defineEmits(['click'])
+// Define props and emits
+const props = defineProps<Props>()
+const emit = defineEmits(['click'])
 
-  
-  // to get the keyword Icons
-  const keywordIcons: Record<string, string> = {
-    FRENZY: new URL('@/assets/cards/KeywordIcons/FRENZY.png', import.meta.url).href,
-    HUNTER: new URL('@/assets/cards/KeywordIcons/HUNTER.png', import.meta.url).href,
-    POISONOUS: new URL('@/assets/cards/KeywordIcons/POISONOUS.png', import.meta.url).href,
-    SNEAKY: new URL('@/assets/cards/KeywordIcons/SNEAKY.png', import.meta.url).href,
-    TOUGH: new URL('@/assets/cards/KeywordIcons/TOUGH.png', import.meta.url).href,
-  }
 
-  const displayKeywords = computed(() => {
-    if (!props.card.keywords) return []
-    return props.card.keywords
-      .filter(k => keywordIcons[k])
-      .map(k => ({
-        key: k,
-        icon: keywordIcons[k]
+// to get the keyword Icons
+const keywordIcons: Record<string, string> = {
+  FRENZY: new URL('@/assets/cards/KeywordIcons/FRENZY.png', import.meta.url).href,
+  HUNTER: new URL('@/assets/cards/KeywordIcons/HUNTER.png', import.meta.url).href,
+  POISONOUS: new URL('@/assets/cards/KeywordIcons/POISONOUS.png', import.meta.url).href,
+  SNEAKY: new URL('@/assets/cards/KeywordIcons/SNEAKY.png', import.meta.url).href,
+  TOUGH: new URL('@/assets/cards/KeywordIcons/TOUGH.png', import.meta.url).href,
+}
+
+const displayKeywords = computed(() => {
+  if (!props.card.keywords) return []
+  return props.card.keywords
+      .filter(keyword => keywordIcons[keyword])
+      .map(keyword => ({
+        key: keyword,
+        icon: keywordIcons[keyword]
       }))
-  })
+})
 
 
-  // To know if the power is modified
-  const isPowerModified = computed(() => {
-    return props.card.power !== props.card.basePower
-  })
+// To know if the power is modified
+const isPowerModified = computed(() => {
+  return props.card.power !== props.card.basePower
+})
 
-  // Determine the CSS classes for the card based on its context and state
-  const cardClasses = computed(() => ({
-    'bottom-card': props.context === 'player-hand',
-    'opponent-hand': props.context === 'opponent-hand',
-    'board-card': props.context === 'board',
-    'player-board': props.context === 'player-board',
-    'opponent-board': props.context === 'opponent-board',
-    'selected': props.selected,
-    'attacking': props.attacking,
-    'clickable': props.clickable,
-    'TOUGH': props.context === 'board' && props.card.keywords?.includes('TOUGH') && props.card.stillTough
-  }))
+const displayPower = computed(() => {
+  return ['discard-modal', 'discard-pile'].includes(props.context)
+      ? props.card.basePower
+      : props.card.power
+})
 
-  // Determine if the power overlay should be shown on the opponent's hand
-  const showOverlay = computed(() => props.context !== 'opponent-hand');
+// Determine the CSS classes for the card based on its context and state
+const cardClasses = computed(() => ({
+  'bottom-card': props.context === 'player-hand',
+  'opponent-hand': props.context === 'opponent-hand',
+  'board-card': props.context === 'board',
+  'player-board': props.context === 'player-board',
+  'opponent-board': props.context === 'opponent-board',
+  'discard-modal': props.context === 'discard-modal',
+  'discard-pile': props.context === 'discard-pile',
+  'selected': props.selected,
+  'attacking': props.attacking,
+  'clickable': props.clickable,
+  'TOUGH': props.context === 'board' && props.card.keywords?.includes('TOUGH') && props.card.stillTough
+}))
+
+// Determine if the power overlay should be shown on the opponent's hand
+const showOverlay = computed(() => props.context !== 'opponent-hand');
 </script>
 
 <template>
   <div class="card-wrapper" :class="cardClasses" @click="clickable && emit('click', props.card)">
     <!-- Card image -->
-    <img
-      :src="getCardImage(card)"
-      :alt="getCardAlt(card)"
-      class="card-image"
-      draggable="false"
-      @contextmenu.prevent=""
-    />
+    <img :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image" draggable="false" @contextmenu.prevent/>
 
     <div v-if="showOverlay" class="title-banner">
       <div class="title-text">{{ props.card.name }}</div>
     </div>
-    <div 
-      v-if="showOverlay && displayKeywords.length"
-      class="keywords-row"
-    >
-      <div
-        v-for="keyword in displayKeywords"
-        :key="keyword.key"
-        class="keyword-badge"
-      >
-        <img 
-          :src="keyword.icon"
-          :alt="keyword.key"
-          class="keyword-icon"
-        />
-        <div class="keyword-tooltip">
-          {{ keyword.key }}
-        </div>
+    <div v-if="showOverlay && displayKeywords.length" class="keywords-row">
+      <div v-for="keyword in displayKeywords" :key="keyword.key" class="keyword-badge">
+        <img :src="keyword.icon" :alt="keyword.key" class="keyword-icon"/>
+        <div class="keyword-tooltip">{{ keyword.key }}</div>
       </div>
     </div>
 
@@ -100,9 +89,10 @@
     </div>
 
     <!-- Overlay power -->
-    <div v-if="showOverlay" class="power-overlay" :class="{ 'modified-power': isPowerModified }">
+    <div v-if="showOverlay" class="power-overlay"
+         :class="{ 'modified-power': isPowerModified && context !== 'discard-modal' && context !== 'discard-pile' }">
       <Transition name="power-slide" mode="out-in">
-        <span :key="props.card.power">{{ props.card.power }}</span>
+        <span :key="displayPower">{{ displayPower }}</span>
       </Transition>
     </div>
   </div>
@@ -111,154 +101,178 @@
 
 <style scoped>
 
-  /* #############################################  General card  ############################################# */
+/* #############################################  General card  ############################################# */
 
-  /* General card styling */
-  .card-wrapper {
-    position: relative;
-    width: 8vw;
-    height: 12vw;
+/* General card styling */
+.card-wrapper {
+  position: relative;
+  width: 8vw;
+  height: 12vw;
 
-    transition: transform 0.25s cubic-bezier(.2,.8,.2,1), 
-              box-shadow 0.25s ease, 
-              border 0.2s ease;
-  }
-
-  .card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  .card-wrapper.opponent-board,
-  .card-wrapper.player-board {
-    transform: scale(1.1);
-    transform-origin: center top;
-  }
-  .card-wrapper.opponent-board:hover,
-  .card-wrapper.player-board:hover {
-    transform: scale(1.11);
-  }
-
-  /* Opponent hand styling */
-  .card-wrapper.opponent-hand {
-    transform: translateY(-50%);
-    opacity: 0.95;
-  }
-
-  .card-wrapper.opponent-hand:hover {
-    transform: translateY(-50%) scale(1.1);
-    z-index: 5;
-  }
-
-  /* Hide power overlay for opponent's hand */
-  .card-wrapper.opponent-hand.power-overlay{
-    display: none;
-  }
-
-  /* Selected and attacking card styling */
-  .card-wrapper.selected {
-    border-radius: 13px;
-    border: 4px solid #4ade80;
-    box-shadow: 0 0 20px #4ade8088, 0 0 40px #4ade8044;
-    animation: pulse-green 1.5s ease-in-out infinite;
-  }
-  @keyframes pulse-green {
-    0%, 100% { box-shadow: 0 0 20px #4ade8088, 0 0 40px #4ade8044; }
-    50% { box-shadow: 0 0 30px #4ade80bb, 0 0 60px #4ade8066; }
-  }
-
-  .card-wrapper.attacking {
-    border-radius: 14px;
-    border: 4px solid #ff1e1e;
-
-    animation: pulse-red 1.5s ease-in-out infinite;
-    z-index: 15;
-  }
-  @keyframes pulse-red {
-    0%, 100% {box-shadow: 0 0 10px #ff0000, 0 0 20px #ff000088, 0 0 40px #ff000044;}
-    50% {box-shadow: 0 0 25px #ff0000, 0 0 50px #ff0000cc, 0 0 80px #ff000088;}
+  transition: transform 0.25s cubic-bezier(.2, .8, .2, 1),
+  box-shadow 0.25s ease,
+  border 0.2s ease;
 }
 
-  /* Card attacking direction */
-  .card-wrapper.player-board.attacking {
-    transform: scale(1.11) translateY(-15px);
-    z-index: 10;
+.card-wrapper.discard-pile {
+  width: 7vw;
+  height: 10vw;
+}
+
+.card-wrapper.discard-modal {
+  width: 10vw;
+  height: 14vw;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-wrapper.opponent-board,
+.card-wrapper.player-board {
+  transform: scale(1.1);
+  transform-origin: center top;
+}
+
+.card-wrapper.opponent-board:hover,
+.card-wrapper.player-board:hover {
+  transform: scale(1.11);
+}
+
+/* Opponent hand styling */
+.card-wrapper.opponent-hand {
+  transform: translateY(-50%);
+  opacity: 0.95;
+}
+
+.card-wrapper.opponent-hand:hover {
+  transform: translateY(-50%) scale(1.1);
+  z-index: 5;
+}
+
+/* Hide power overlay for opponent's hand */
+.card-wrapper.opponent-hand.power-overlay {
+  display: none;
+}
+
+/* Selected and attacking card styling */
+.card-wrapper.selected {
+  border-radius: 13px;
+  border: 4px solid #4ade80;
+  box-shadow: 0 0 20px #4ade8088, 0 0 40px #4ade8044;
+  animation: pulse-green 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% {
+    box-shadow: 0 0 20px #4ade8088, 0 0 40px #4ade8044;
   }
-
-  .card-wrapper.opponent-board.attacking {
-    transform: scale(1.11) translateY(15px);
-    z-index: 10;
+  50% {
+    box-shadow: 0 0 30px #4ade80bb, 0 0 60px #4ade8066;
   }
+}
 
-  .card-wrapper.clickable {
-    cursor: pointer;
+.card-wrapper.attacking {
+  border-radius: 14px;
+  border: 4px solid #ff1e1e;
+
+  animation: pulse-red 1.5s ease-in-out infinite;
+  z-index: 15;
+}
+
+@keyframes pulse-red {
+  0%, 100% {
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff000088, 0 0 40px #ff000044;
   }
-
-  .card-wrapper.TOUGH {
-    position: relative;
-    overflow: hidden;
+  50% {
+    box-shadow: 0 0 25px #ff0000, 0 0 50px #ff0000cc, 0 0 80px #ff000088;
   }
+}
 
-  /* #############################################  POWER card  ############################################# */
+/* Card attacking direction */
+.card-wrapper.player-board.attacking {
+  transform: scale(1.11) translateY(-15px);
+  z-index: 10;
+}
 
-  /* Modified power styling */
-  .power-overlay.modified-power {
-    color: rgb(255, 217, 0);
-    text-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
-  }
+.card-wrapper.opponent-board.attacking {
+  transform: scale(1.11) translateY(15px);
+  z-index: 10;
+}
 
-  /* Power overlay */
-  .power-overlay {
-    position: absolute;
-    top: 4%;
-    left: 6%;
+.card-wrapper.clickable {
+  cursor: pointer;
+}
 
-    width: 19%;
-    height: 13%;
+.card-wrapper.TOUGH {
+  position: relative;
+  overflow: hidden;
+}
 
-    background: #512134;
-    color: #fefcfe;
-    font-size: clamp(0.5rem, 1vw, 1rem);
+/* #############################################  POWER card  ############################################# */
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Modified power styling */
+.power-overlay.modified-power {
+  color: rgb(255, 217, 0);
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
+}
 
-    border-radius: 50%;
-    border: 2px solid #ac3f69;
-    overflow: hidden;
-  }
-  .power-overlay span {
-    font-weight: bold;
-  }
+/* Power overlay */
+.power-overlay {
+  position: absolute;
+  top: 4%;
+  left: 6%;
 
-  /* Power change animation */
-  .power-number {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-  }
+  width: 19%;
+  height: 13%;
 
-  .power-slide-leave-active,
-  .power-slide-enter-active {
-    transition: all 0.25s ease-out;
-  }
-  .power-slide-leave-to {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  .power-slide-enter-from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
+  background: #512134;
+  color: #fefcfe;
+  font-size: clamp(0.5rem, 1vw, 1rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 2px solid #ac3f69;
+  overflow: hidden;
+}
+
+.power-overlay span {
+  font-weight: bold;
+}
+
+/* Power change animation */
+.power-number {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.power-slide-leave-active,
+.power-slide-enter-active {
+  transition: all 0.25s ease-out;
+}
+
+.power-slide-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.power-slide-enter-from {
+  transform: translateY(-100%);
+  opacity: 0;
+}
 
 
-  /* #############################################  Title/description card  ############################################# */
+/* #############################################  Title/description card  ############################################# */
 
-  .title-banner {
+.title-banner {
   position: absolute;
   top: 4.5%;
   left: 7%;
@@ -274,7 +288,7 @@
   justify-content: center;
   padding-left: 15%;
 
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .title-text {
