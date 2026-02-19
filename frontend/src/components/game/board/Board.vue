@@ -73,7 +73,7 @@ function closeModal() {
           v-for="card in gameState?.opponent.board"
           :key="card.uuid"
           :card="card"
-          context="board"
+          context="opponent-board"
           :selected="card.uuid === selectedCard?.uuid"
           :attacking="card.uuid === attackingCard?.uuid"
           :clickable="true"
@@ -86,7 +86,7 @@ function closeModal() {
           v-for="card in gameState?.player.board"
           :key="card.uuid"
           :card="card"
-          context="board"
+          context="player-board"
           :selected="card.uuid === selectedCard?.uuid"
           :attacking="card.uuid === attackingCard?.uuid"
           :clickable="true"
@@ -125,7 +125,7 @@ function closeModal() {
   height: 40%;
 
   display: flex;
-  column-gap: 5px;
+  column-gap: 20px;
   align-items: center;
   justify-content: center;
 }
