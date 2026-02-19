@@ -5,6 +5,7 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.AttackService;
@@ -64,7 +65,13 @@ public class TestGameUtils {
 
     public  void play(CardInstance pickedCard, Player mindbugger) throws GameStateException {
         PlayCardService.pickCard(pickedCard, game);
-        PlayCardService.playCard(mindbugger, game);
+        if (game.getChoice() != null && game.getChoice().getType() == ChoiceType.BOOLEAN) {
+            // Auto-resolve mindbug choice in tests: use mindbug only if explicitly provided.
+            ChoiceService.resolveChoice(mindbugger != null, game);
+        }
+        if (game.getChoice() == null && game.getPlayedCard() != null) {
+            PlayCardService.playCard(mindbugger, game);
+        }
     }
    
     public void hand(Player player, CardInstance... cards) {

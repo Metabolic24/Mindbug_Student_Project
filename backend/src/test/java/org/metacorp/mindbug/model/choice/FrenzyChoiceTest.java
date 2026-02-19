@@ -79,7 +79,7 @@ public class FrenzyChoiceTest {
         choice.resolve(false, game);
 
         assertNull(game.getChoice());
-        assertEquals(currentPlayer.getOpponent(game.getPlayers()), game.getCurrentPlayer());
+        assertEquals(currentPlayer.getOpponent(game.getPlayers()).getFirst(), game.getCurrentPlayer());
         assertTrue(currentCard.isAbleToAttackTwice());
     }
 }

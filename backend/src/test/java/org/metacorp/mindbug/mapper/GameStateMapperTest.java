@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.dto.CardDTO;
 import org.metacorp.mindbug.dto.GameStateDTO;
 import org.metacorp.mindbug.dto.PlayerDTO;
+import org.metacorp.mindbug.dto.choice.BooleanChoiceDTO;
 import org.metacorp.mindbug.dto.choice.TargetChoiceDTO;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import static java.lang.System.exit;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
@@ -70,7 +72,6 @@ public class GameStateMapperTest {
         Player currentPlayer = game.getCurrentPlayer();
         CardInstance playedCard = currentPlayer.getHand().getFirst();
         PlayCardService.pickCard(playedCard, game);
-
         GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
 
         assertNotNull(gameStateDTO);
@@ -83,7 +84,7 @@ public class GameStateMapperTest {
         compareCard(playedCard, gameStateDTO.getCard());
 
         assertNull(gameStateDTO.getWinner());
-        assertNull(gameStateDTO.getChoice());
+        assertInstanceOf(BooleanChoiceDTO.class, gameStateDTO.getChoice());
         assertFalse(gameStateDTO.isForcedAttack());
     }
 
