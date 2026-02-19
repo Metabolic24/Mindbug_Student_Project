@@ -6,7 +6,7 @@
   interface Props {
     card: CardInterface
 
-    context: 'player-hand' | 'opponent-hand' | 'board'
+    context: 'player-hand' | 'opponent-hand' | 'player-board' | 'opponent-board' | 'board'
 
     selected?: boolean
     attacking?: boolean
@@ -48,6 +48,8 @@
     'bottom-card': props.context === 'player-hand',
     'opponent-hand': props.context === 'opponent-hand',
     'board-card': props.context === 'board',
+    'player-board': props.context === 'player-board',
+    'opponent-board': props.context === 'opponent-board',
     'selected': props.selected,
     'attacking': props.attacking,
     'clickable': props.clickable,
@@ -117,7 +119,9 @@
     width: 8vw;
     height: 12vw;
 
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s cubic-bezier(.2,.8,.2,1), 
+              box-shadow 0.25s ease, 
+              border 0.2s ease;
   }
 
   .card-image {
@@ -128,11 +132,13 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
 
-  .card-wrapper.board-card {
+  .card-wrapper.opponent-board,
+  .card-wrapper.player-board {
     transform: scale(1.1);
     transform-origin: center top;
   }
-  .card-wrapper.board-card:hover {
+  .card-wrapper.opponent-board:hover,
+  .card-wrapper.player-board:hover {
     transform: scale(1.11);
   }
 
@@ -154,11 +160,37 @@
 
   /* Selected and attacking card styling */
   .card-wrapper.selected {
-    outline: 4px solid red;
+    border-radius: 13px;
+    border: 4px solid #4ade80;
+    box-shadow: 0 0 20px #4ade8088, 0 0 40px #4ade8044;
+    animation: pulse-green 1.5s ease-in-out infinite;
+  }
+  @keyframes pulse-green {
+    0%, 100% { box-shadow: 0 0 20px #4ade8088, 0 0 40px #4ade8044; }
+    50% { box-shadow: 0 0 30px #4ade80bb, 0 0 60px #4ade8066; }
   }
 
   .card-wrapper.attacking {
-    outline: 4px solid orange;
+    border-radius: 14px;
+    border: 4px solid #ff1e1e;
+
+    animation: pulse-red 1.5s ease-in-out infinite;
+    z-index: 15;
+  }
+  @keyframes pulse-red {
+    0%, 100% {box-shadow: 0 0 10px #ff0000, 0 0 20px #ff000088, 0 0 40px #ff000044;}
+    50% {box-shadow: 0 0 25px #ff0000, 0 0 50px #ff0000cc, 0 0 80px #ff000088;}
+}
+
+  /* Card attacking direction */
+  .card-wrapper.player-board.attacking {
+    transform: scale(1.11) translateY(-15px);
+    z-index: 10;
+  }
+
+  .card-wrapper.opponent-board.attacking {
+    transform: scale(1.11) translateY(15px);
+    z-index: 10;
   }
 
   .card-wrapper.clickable {
@@ -223,18 +255,6 @@
     opacity: 0;
   }
 
-  /* Selected and attacking card styling */
-  .card-wrapper.selected {
-    outline: 4px solid red;
-  }
-
-  .card-wrapper.attacking {
-    outline: 4px solid orange;
-  }
-
-  .card-wrapper.clickable {
-    cursor: pointer;
-  }
 
   /* #############################################  Title/description card  ############################################# */
 
