@@ -20,7 +20,7 @@ public class AutoApp {
 
     public static void main() {
         PlayerService playerService = new PlayerService();
-        Game game = AppUtils.startGame(playerService);
+        Game game = AppUtils.startGame(playerService, true);
 
         AppUtils.runAndCheckErrors(game, () -> {
             do {// do it one time

@@ -36,7 +36,7 @@ public class GiveEffectResolver extends EffectResolver<GiveEffect> {
 
     private void giveCard(Game game, CardInstance cardToGive) {
       
-        Player opponent = AppUtils.ChosenOpponent(game,cardToGive.getOwner());
+        Player opponent = AppUtils.ChosenOpponent(game, cardToGive.getOwner());
         cardToGive.setOwner(opponent);
         game.getCurrentPlayer().getBoard().remove(cardToGive);
         opponent.getBoard().add(cardToGive);

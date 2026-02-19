@@ -54,7 +54,7 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
                 yield opponent.getDiscardPile();
             }
             case HAND -> {
-                 opponent = AppUtils.ChosenOpponent(game, card.getOwner());
+                opponent = AppUtils.ChosenOpponent(game, card.getOwner());
                 yield opponent.getHand();
             }
             case SELF_DISCARD -> cardOwner.getDiscardPile();

@@ -25,7 +25,7 @@ public class ManualApp {
 
     static void main() {
         PlayerService playerService = new PlayerService();
-        Game game = AppUtils.startGame(playerService);
+        Game game = AppUtils.startGame(playerService, false);
 
         System.out.println(AVAILABLE_ACTIONS);
 

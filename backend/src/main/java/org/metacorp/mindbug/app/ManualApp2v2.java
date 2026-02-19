@@ -25,7 +25,7 @@ public class ManualApp2v2 {
 
     public static void main(String[] args) {
         PlayerService playerService = new PlayerService();
-        Game game = AppUtils.start2v2Game(playerService);
+        Game game = AppUtils.start2v2Game(playerService, false);
 
         System.out.println(AVAILABLE_ACTIONS);
 

@@ -35,7 +35,7 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
         int value = effect.getValue();
     
         if (!effect.isSelf()) {
-            Player opponent = AppUtils.ChosenOpponent( game, card.getOwner());
+            Player opponent = AppUtils.ChosenOpponent(game, card.getOwner());
             playerToDiscard =  opponent;
             value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue(); 
         }

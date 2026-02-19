@@ -25,7 +25,7 @@ public class DisableTimingEffectResolver extends EffectResolver<DisableTimingEff
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
-        Player opponent = AppUtils.ChosenOpponent( game, card.getOwner());
+        Player opponent = AppUtils.ChosenOpponent(game, card.getOwner());
         opponent.disableTiming(effect.getValue());
 
         HistoryService.logEffect(game, effect.getType(), effectSource, null);

@@ -20,7 +20,8 @@ public class AutoApp2v2 {
 
     public static void main() {
         PlayerService playerService = new PlayerService();
-        Game game = AppUtils.start2v2Game(playerService);
+        Game game = AppUtils.start2v2Game(playerService, true);
+        game.setAuto(true);
 
         AppUtils.runAndCheckErrors(game, () -> {
             do {// do it one time

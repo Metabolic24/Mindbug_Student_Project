@@ -38,7 +38,7 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
         this.effectSource = effectSource;
 
       
-        Player opponent = AppUtils.ChosenOpponent( game, effectSource.getOwner());
+        Player opponent = AppUtils.ChosenOpponent(game, effectSource.getOwner());
 
         if (timing == EffectTiming.PASSIVE) {
             if (effect.getKeyword() != null) {

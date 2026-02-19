@@ -29,12 +29,15 @@ public final class AppUtils {
     @Setter
     private static boolean verbose = false;
 
+    private static boolean isAuto = false;
+
     /**
      * Start a new manual/auto game
      *
      * @return the created game
      */
-    public static Game startGame(PlayerService playerService) {
+    public static Game startGame(PlayerService playerService, boolean isAuto) {
+        AppUtils.isAuto = isAuto;
         PlayerLightDTO player1 = playerService.createPlayer("Player1");
         PlayerLightDTO player2 = playerService.createPlayer("Player2");
 
@@ -50,7 +53,8 @@ public final class AppUtils {
         return game;
     }
 
-    public static Game start2v2Game(PlayerService playerService){
+    public static Game start2v2Game(PlayerService playerService, boolean isAuto){
+        AppUtils.isAuto = isAuto;
         PlayerLightDTO player1 = playerService.createPlayer("Player1");
         PlayerLightDTO player2 = playerService.createPlayer("Player2");
         PlayerLightDTO player3 = playerService.createPlayer("Player3");
@@ -153,6 +157,9 @@ public final class AppUtils {
      * @throws GameStateException if an error occurs during the game execution
      */
     public static void resolveAttack(Scanner scanner, Game game) throws GameStateException {
+        if (scanner == null && !isAuto) {
+            scanner = new Scanner(System.in);
+        }
         boolean nobody_already_a_blocker = true;
         List<Player> ListopponentPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
         for (Player opponentPlayer : ListopponentPlayer) {
@@ -300,43 +307,39 @@ public final class AppUtils {
      * @param pass if  you want to pass the action
      * @return a random card from the list
      */
-    public static Player ChosenOpponent(Game game, Player player_who_targets ) {
-      
-        
-        
+    public static Player ChosenOpponent(Game game, Player player_who_targets) {
         List<Player> listOpponents = player_who_targets.getOpponent(game.getPlayers());
-        if (listOpponents.size()==1 ){
+        if (listOpponents.size()==1) {
             return listOpponents.get(0);
         }
 
+        int index = 1;
+        System.out.printf("\nPlease %s, choose an opponent to target : (only type the associated number)\n",
+                player_who_targets.getName());
+        for (Player opponent : listOpponents) {
+            System.out.printf("       (%d) - %s\n", index, opponent.getName());
+            index++;
+        }
 
-        Scanner scanner = new Scanner(System.in);
         Player target = null;
-        while (true) {
-            int index = 1;
-            System.out.printf("\nPlease %s, choose an opponent to target : (only type the associated number)\n", player_who_targets.getName());
-            for (Player opponent : listOpponents) {
-                System.out.printf("       (%d) - %s\n", index, opponent.getName());
-                index++;
-            }
-            if (game.isAuto()) {
-                target = listOpponents.get(RND.nextInt(listOpponents.size()));
-                break;
-            }
-            try {
-                int choice_number = Integer.parseInt(scanner.nextLine());
+        if (isAuto) {
+            target = listOpponents.get(RND.nextInt(listOpponents.size()));
+        } else {
+            Scanner scanner = new Scanner(System.in);
+            while (true) {
+                try {
+                    int choice_number = Integer.parseInt(scanner.nextLine());
 
-                if  (1<=choice_number && choice_number<=listOpponents.size()) {
-                    scanner =null;
-                    target = listOpponents.get(choice_number-1);
-                    break;
+                    if  (1<=choice_number && choice_number<=listOpponents.size()) {
+                        target = listOpponents.get(choice_number-1);
+                        break;
+                    }
+                    else {
+                        System.err.println("Invalid number");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("You must type a valid number");
                 }
-                else {
-                    System.err.println("Invalid number");
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("You must type a valid number");
-                
             }
         }
         System.out.printf("\n%s chose to target %s\n", player_who_targets.getName(), target.getName());
