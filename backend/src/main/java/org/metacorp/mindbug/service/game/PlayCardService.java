@@ -4,13 +4,17 @@ import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
+import org.metacorp.mindbug.service.effect.ResolvableEffect;
 
 import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -49,13 +53,47 @@ public class PlayCardService {
         // Update game state
         game.setPlayedCard(card);
 
-        Player opponent = game.getOpponent();
-        if (opponent.getMindBugs() == 0) {
-            playCard(game);
-        } else {
-            // Send update through WebSocket
-            WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game);
-            HistoryService.log(game, HistoryKey.PICK, card);
+        // Usage of mindbug depending on the game mode
+        // 1v1 game mode
+        if(game.typeGameMode() == 1){
+            Player opponent = game.getOpponent().getFirst();
+            if (opponent.getMindBugs() == 0) {
+                playCard(game);
+                System.out.println("L'opposant n'a plus de Mindbug pour voler la carte");
+            } else {
+
+                askMindbugChoice(0, List.of(opponent), card, game);
+
+                // Send update through WebSocket
+                WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game);
+                HistoryService.log(game, HistoryKey.PICK, card);
+            }
+        }
+        // 2v2 game mode
+        if(game.typeGameMode() == 2){
+            Player nextOpponent = game.getOpponent().getFirst();
+            Player previousOpponent = game.getOpponent().get(1);
+            Player allie = game.getAllie();
+            List<Player> mindbugQueue = new ArrayList<>();
+
+            if (nextOpponent.hasMindbug()) {
+                mindbugQueue.add(nextOpponent);
+            }
+            if (allie.hasMindbug()) {
+                mindbugQueue.add(allie);
+            }
+            if (previousOpponent.hasMindbug()) {
+                mindbugQueue.add(previousOpponent);
+            }
+    
+            if(mindbugQueue.isEmpty()){
+                playCard(game);
+            } else{
+                askMindbugChoice(0, mindbugQueue, card, game);
+
+                // TODO
+                // Send update through WebSocket
+            }
         }
     }
 
@@ -137,4 +175,51 @@ public class PlayCardService {
             GameStateService.newTurn(game, mindbugger != null);
         });
     }
+
+    /**
+     * Asks at players who have Mindbug(s) if they want to use Mindbug
+     * 
+     * @param index the index of the first player at ask
+     * @param candidates list of the players who can use Mindbug
+     * @param card the card who can be Mindbug
+     * @param game the current game state
+     */
+    private static void askMindbugChoice(int index, List<Player> candidates, CardInstance card, Game game) {
+        if (index >= candidates.size()) {
+            try {
+                playCard(game);
+            } catch (GameStateException e) {
+                throw new RuntimeException(e);
+            }
+            return;
+        }
+
+        Player current = candidates.get(index);
+
+        ResolvableEffect<Boolean> effect = (g, useMindbug) -> {
+            try {
+                if (useMindbug) {
+                    PlayCardService.playCard(current, g);
+                } else {
+                    askMindbugChoice(index + 1, candidates, card, g);
+                }
+            } catch (GameStateException e) {
+                throw new RuntimeException(e);
+            }
+        };
+
+        BooleanChoice mindbugChoice = new BooleanChoice(
+            current,
+            card,
+            effect
+        );
+
+        mindbugChoice.setPrompt(
+            current.getName() +
+            " : voulez-vous utiliser un Mindbug pour voler cette carte ? (O/N)"
+        );
+
+        game.setChoice(mindbugChoice);
+    }
+
 }

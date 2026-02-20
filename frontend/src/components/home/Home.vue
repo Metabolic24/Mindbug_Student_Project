@@ -21,8 +21,8 @@ async function onLogin(name: string) {
       <search-button></search-button>
       <router-link to="/sets" class="styled-button">Available Sets</router-link>
     </div>
-  </div>
-  <login-modal v-if="!store.state.playerData" @button-clicked="onLogin($event)"></login-modal>
+  </div> 
+   <login-modal v-if="!store.state.playerData" @button-clicked="onLogin($event)"></login-modal>
 </template>
 
 <style scoped>

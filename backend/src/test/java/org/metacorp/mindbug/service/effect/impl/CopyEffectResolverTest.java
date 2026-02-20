@@ -39,7 +39,7 @@ public class CopyEffectResolverTest {
         PlayerService playerService = new PlayerService();
         game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponent().getFirst();
 
         effect = new CopyEffect();
         effect.setType(EffectType.COPY);

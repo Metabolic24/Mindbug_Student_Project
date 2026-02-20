@@ -55,6 +55,11 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
 <template>
   <div class="modal-mask">
     <div class="modal-container">
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" @click="onButtonClick()" :disabled="isButtonDisabled">
+          Save choice
+        </button>
+      </div>
       <div class="modal-header">
         <h5 class="modal-title">{{ title }}</h5>
         <button type="button" aria-label="Close" v-if="choice?.optional">
@@ -67,11 +72,7 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
                :class="getCardClasses(card)" @click="onCardSelected(card)" draggable="false" @contextmenu.prevent=""/>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" @click="onButtonClick()" :disabled="isButtonDisabled">
-          Save choice
-        </button>
-      </div>
+      
     </div>
   </div>
 </template>

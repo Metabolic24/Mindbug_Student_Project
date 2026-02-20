@@ -123,7 +123,7 @@ public class HistoryService {
     }
 
     public static void saveHistory(Game game) {
-        log(game, HistoryKey.END, null, null, Map.of("winner", game.getWinner().getUuid()));
+        log(game, HistoryKey.END, null, null, Map.of("winner", game.getWinner().getFirst().getUuid()));
 
         String now = new SimpleDateFormat("yyyyMMdd'T'HHmmss").format(new Date());
 

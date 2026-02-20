@@ -60,6 +60,33 @@ public class GameService {
     }
 
     /**
+     * Crée une nouvelle partie en mode 2v2
+     * * @param p1Id ID du premier joueur (Équipe A)
+     * @param p2Id ID du deuxième joueur (Équipe B)
+     * @param p3Id ID du troisième joueur (Équipe A - coéquipier de p1)
+     * @param p4Id ID du quatrième joueur (Équipe B - coéquipier de p2)
+     * @param setName le set de cartes à utiliser
+     * @return la Game créée avec les PV partagés par équipe
+     * @throws UnknownPlayerException si l'un des joueurs est introuvable
+     */
+    public Game createGame(UUID p1Id, UUID p2Id, UUID p3Id, UUID p4Id, CardSetName setName) throws UnknownPlayerException {
+        // 1. Récupération des 4 joueurs depuis la base de données via le PlayerService
+        Player p1 = new Player(playerService.getPlayer(p1Id));
+        Player p2 = new Player(playerService.getPlayer(p2Id));
+        Player p3 = new Player(playerService.getPlayer(p3Id));
+        Player p4 = new Player(playerService.getPlayer(p4Id));
+
+        // 2. Appel de la méthode StartService.newGame (version 4 joueurs)
+        // C'est ici que l'User Story est remplie : StartService va lier les Team instances.
+        Game game = StartService.newGame(p1, p2, p3, p4, setName);
+        
+        // 3. Stockage de la partie en mémoire
+        games.put(game.getUuid(), game);
+
+        return game;
+    }
+
+    /**
      * Get a game by ID
      *
      * @param gameId the game ID

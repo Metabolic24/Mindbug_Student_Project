@@ -13,9 +13,12 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 
+import java.lang.reflect.Array;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Utility service that updates game state when a player attacks
@@ -59,7 +62,8 @@ public class AttackService {
      * @param attackCard the attacking card
      * @param game       the game state
      */
-    protected static void processAttackDeclaration(CardInstance attackCard, Game game) {
+   protected static void processAttackDeclaration(CardInstance attackCard, Game game) {
+        System.out.println("Phase defencer");
         game.setAttackingCard(attackCard);
         final Player attackCardOwner = attackCard.getOwner();
 
@@ -68,8 +72,14 @@ public class AttackService {
 
         game.setAfterEffect(() -> {
             if (attackCardOwner.getBoard().contains(attackCard)) {
-                Player defender = attackCardOwner.getOpponent(game.getPlayers());
-                if (defender.getBoard().isEmpty()) {
+                List<CardInstance> enemy_card= new ArrayList<CardInstance>() ;
+                boolean defender_can_block_sneaky= false;
+                for ( Player defender : attackCardOwner.getOpponent(game.getPlayers())) {
+                        enemy_card.addAll(defender.getBoard());
+                        defender_can_block_sneaky= defender_can_block_sneaky || defender.canBlock(attackCard.hasKeyword(CardKeyword.SNEAKY));
+                }
+              
+                if (enemy_card.isEmpty()) {
                     try {
                         resolveAttack(null, game);
                     } catch (GameStateException e) {
@@ -84,9 +94,9 @@ public class AttackService {
                         e.printStackTrace();
                     }
                 } else if (attackCard.hasKeyword(CardKeyword.HUNTER)) {
-                    game.setChoice(new HunterChoice(attackCard, new HashSet<>(defender.getBoard())));
+                    game.setChoice(new HunterChoice(attackCard, new HashSet<>(enemy_card)));
                     WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
-                } else if (!defender.canBlock(attackCard.hasKeyword(CardKeyword.SNEAKY))) {
+                } else if (!defender_can_block_sneaky) {
                     try {
                         resolveAttack(null, game);
                     } catch (GameStateException e) {
@@ -103,7 +113,6 @@ public class AttackService {
             }
         });
     }
-
     /**
      * Method executed when a player answer to its opponent attack<br>
      * We consider that if attacking creature has HUNTER, the hunting choice has already been resolved through the GUI<br>
@@ -154,7 +163,7 @@ public class AttackService {
         HistoryService.log(game, HistoryKey.BLOCK, attackCard, defendCard == null ? null : Collections.singleton(defendCard));
 
         if (defendCard == null) {
-            Player defender = attackCard.getOwner().getOpponent(game.getPlayers());
+            Player defender = attackCard.getOwner().getOpponent(game.getPlayers()).getFirst();
             defender.getTeam().loseLifePoints(1);
             GameStateService.lifePointLost(defender, game);
         } else {

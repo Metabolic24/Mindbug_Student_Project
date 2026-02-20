@@ -108,14 +108,14 @@ public class EffectQueueServiceTest {
     public void testResolveEffectQueue_emptyWithAfterEffect() throws GameStateException {
         // Add an after effect that changes the current player
         Player currentPlayer = game.getCurrentPlayer();
-        game.setAfterEffect(() -> game.setCurrentPlayer(game.getCurrentPlayer().getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().getFirst()));
 
         EffectQueueService.resolveEffectQueue(false, game);
 
         assertNull(game.getChoice());
         assertNull(game.getAfterEffect());
         assertTrue(game.getEffectQueue().isEmpty());
-        assertEquals(currentPlayer.getOpponent(game.getPlayers()), game.getCurrentPlayer());
+        assertEquals(currentPlayer.getOpponent(game.getPlayers()).getFirst(), game.getCurrentPlayer());
         assertFalse(game.getEffectQueue().isResolvingEffect());
     }
 
@@ -135,19 +135,13 @@ public class EffectQueueServiceTest {
     @Test
     public void testResolveEffectQueue_multiple() throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
-        CardInstance otherCard = currentPlayer.getHand().getFirst();
+        CardInstance otherCard = pickDifferentCard(currentPlayer, card);
         currentPlayer.addCardToBoard(otherCard);
-
-        // In case the card are similar, there would be a problem as we modify the card effects
-        if (otherCard.getCard().equals(card.getCard())) {
-            otherCard = currentPlayer.getHand().getFirst();
-            currentPlayer.addCardToBoard(otherCard);
-        }
 
         otherCard.getCard().getEffects().put(EffectTiming.PLAY, Collections.singletonList(new GainEffect()));
         card.getCard().getEffects().put(EffectTiming.PLAY, Collections.singletonList(new InflictEffect()));
 
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().getFirst()));
 
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.PLAY, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.PLAY, game.getEffectQueue());
@@ -180,14 +174,14 @@ public class EffectQueueServiceTest {
         card.getCard().getEffects().put(EffectTiming.ATTACK, new ArrayList<>(Collections.singletonList(inflictEffect)));
 
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.ATTACK, game.getEffectQueue());
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().getFirst()));
 
         EffectQueueService.resolveEffectQueue(false, game);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertNull(game.getAfterEffect());
         assertNull(game.getChoice());
-        assertEquals(currentPlayer.getOpponent(game.getPlayers()), game.getCurrentPlayer());
+        assertEquals(currentPlayer.getOpponent(game.getPlayers()).getFirst(), game.getCurrentPlayer());
         assertEquals(2, game.getCurrentPlayer().getTeam().getLifePoints());
         assertFalse(game.getEffectQueue().isResolvingEffect());
         assertEquals(5, currentPlayer.getHand().size());
@@ -196,14 +190,8 @@ public class EffectQueueServiceTest {
     @Test
     public void testResolveEffectQueue_twoEffectsAfterChoice() throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
-        CardInstance otherCard = currentPlayer.getHand().getFirst();
+        CardInstance otherCard = pickDifferentCard(currentPlayer, card);
         currentPlayer.addCardToBoard(otherCard);
-
-        // In case the card are similar, there would be a problem as we modify the card effects
-        if (otherCard.getCard().equals(card.getCard())) {
-            otherCard = currentPlayer.getHand().getFirst();
-            currentPlayer.addCardToBoard(otherCard);
-        }
 
         GainEffect gainEffect = new GainEffect();
         gainEffect.setValue(1);
@@ -217,14 +205,14 @@ public class EffectQueueServiceTest {
 
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.DEFEATED, game.getEffectQueue());
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().getFirst()));
 
         EffectQueueService.resolveEffectQueue(true, game);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertNull(game.getAfterEffect());
         assertNull(game.getChoice());
-        assertEquals(currentPlayer.getOpponent(game.getPlayers()), game.getCurrentPlayer());
+        assertEquals(currentPlayer.getOpponent(game.getPlayers()).getFirst(), game.getCurrentPlayer());
         assertEquals(2, game.getCurrentPlayer().getTeam().getLifePoints());
         assertEquals(4, currentPlayer.getTeam().getLifePoints());
         assertFalse(game.getEffectQueue().isResolvingEffect());
@@ -234,14 +222,8 @@ public class EffectQueueServiceTest {
     @Test
     public void testResolveEffectQueue_twoEffectsWhileResolvingEffect() throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
-        CardInstance otherCard = currentPlayer.getHand().getFirst();
+        CardInstance otherCard = pickDifferentCard(currentPlayer, card);
         currentPlayer.addCardToBoard(otherCard);
-
-        // In case the card are similar, there would be a problem as we modify the card effects
-        if (otherCard.getCard().equals(card.getCard())) {
-            otherCard = currentPlayer.getHand().getFirst();
-            currentPlayer.addCardToBoard(otherCard);
-        }
 
         GainEffect gainEffect = new GainEffect();
         gainEffect.setValue(1);
@@ -256,14 +238,14 @@ public class EffectQueueServiceTest {
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.DEFEATED, game.getEffectQueue());
         game.getEffectQueue().setResolvingEffect(true);
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().getFirst()));
 
         EffectQueueService.resolveEffectQueue(false, game);
 
         assertTrue(game.getEffectQueue().isEmpty());
         assertNull(game.getAfterEffect());
         assertNull(game.getChoice());
-        assertEquals(currentPlayer.getOpponent(game.getPlayers()), game.getCurrentPlayer());
+        assertEquals(currentPlayer.getOpponent(game.getPlayers()).getFirst(), game.getCurrentPlayer());
         assertEquals(2, game.getCurrentPlayer().getTeam().getLifePoints());
         assertEquals(4, currentPlayer.getTeam().getLifePoints());
 
@@ -274,16 +256,10 @@ public class EffectQueueServiceTest {
     @Test
     public void testResolveEffectQueue_twoEffectsButFirstEndsGame() throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = game.getOpponent().getFirst();
 
-        CardInstance otherCard = opponent.getHand().getFirst();
+        CardInstance otherCard = pickDifferentCard(opponent, card);
         opponent.addCardToBoard(otherCard);
-
-        // In case the card are similar, there would be a problem as we modify the card effects
-        if (otherCard.getCard().equals(card.getCard())) {
-            otherCard = opponent.getHand().getFirst();
-            opponent.addCardToBoard(otherCard);
-        }
 
         GainEffect gainEffect = new GainEffect();
         gainEffect.setValue(1);
@@ -297,7 +273,7 @@ public class EffectQueueServiceTest {
 
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.DEFEATED, game.getEffectQueue());
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().getFirst()));
 
         EffectQueueService.resolveEffectQueue(true, game);
 
@@ -316,16 +292,10 @@ public class EffectQueueServiceTest {
     @Test
     public void testResolveEffectQueue_fourEffectsWithDoubleOne() throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = game.getOpponent().getFirst();
 
-        CardInstance otherCard = opponent.getHand().getFirst();
+        CardInstance otherCard = pickDifferentCard(opponent, card);
         opponent.addCardToBoard(otherCard);
-
-        // In case the card are similar, there would be a problem as we modify the card effects
-        if (otherCard.getCard().equals(card.getCard())) {
-            otherCard = opponent.getHand().getFirst();
-            opponent.addCardToBoard(otherCard);
-        }
 
         GainEffect gainEffect = new GainEffect();
         gainEffect.setValue(3);
@@ -333,28 +303,16 @@ public class EffectQueueServiceTest {
         otherCard.getCard().getEffects().put(EffectTiming.DEFEATED, new ArrayList<>(Collections.singletonList(gainEffect)));
 
 
-        CardInstance otherCard2 = currentPlayer.getHand().getFirst();
+        CardInstance otherCard2 = pickDifferentCard(currentPlayer, card, otherCard);
         currentPlayer.addCardToBoard(otherCard2);
-
-        // In case the card are similar, there would be a problem as we modify the card effects
-        while (otherCard2.getCard().equals(card.getCard()) || otherCard2.getCard().equals(otherCard.getCard())) {
-            otherCard2 = currentPlayer.getHand().getFirst();
-            currentPlayer.addCardToBoard(otherCard2);
-        }
 
         gainEffect = new GainEffect();
         gainEffect.setValue(1);
         gainEffect.setType(EffectType.GAIN);
         otherCard2.getCard().getEffects().put(EffectTiming.DEFEATED, new ArrayList<>(Collections.singletonList(gainEffect)));
 
-        CardInstance otherCard3 = opponent.getHand().getFirst();
+        CardInstance otherCard3 = pickDifferentCard(opponent, card, otherCard, otherCard2);
         opponent.addCardToBoard(otherCard3);
-
-        // In case the card are similar, there would be a problem as we modify the card effects
-        while (otherCard3.getCard().equals(card.getCard()) || otherCard3.getCard().equals(otherCard.getCard()) || otherCard3.getCard().equals(otherCard2.getCard())) {
-            otherCard3 = opponent.getHand().getFirst();
-            opponent.addCardToBoard(otherCard3);
-        }
 
         InflictEffect inflictEffect = new InflictEffect();
         inflictEffect.setValue(2);
@@ -375,7 +333,7 @@ public class EffectQueueServiceTest {
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard2, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard3, EffectTiming.DEFEATED, game.getEffectQueue());
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().getFirst()));
 
         EffectQueueService.resolveEffectQueue(true, game);
 
@@ -402,16 +360,10 @@ public class EffectQueueServiceTest {
     @Test
     public void testResolveEffectQueue_twoEffectsWithDoubleOneAndChoice() throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = game.getOpponent().getFirst();
 
-        CardInstance otherCard = opponent.getHand().getFirst();
+        CardInstance otherCard = pickDifferentCard(opponent, card);
         opponent.addCardToBoard(otherCard);
-
-        // In case the card are similar, there would be a problem as we modify the card effects
-        if (otherCard.getCard().equals(card.getCard())) {
-            otherCard = opponent.getHand().getFirst();
-            opponent.addCardToBoard(otherCard);
-        }
 
         GainEffect gainEffect = new GainEffect();
         gainEffect.setValue(3);
@@ -433,7 +385,7 @@ public class EffectQueueServiceTest {
 
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.DEFEATED, game.getEffectQueue());
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().getFirst()));
 
         int handSize = opponent.getHand().size();
 
@@ -462,16 +414,10 @@ public class EffectQueueServiceTest {
     @Test
     public void testResolveEffectQueue_twoEffectsWithChoice() throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = game.getOpponent().getFirst();
 
-        CardInstance otherCard = opponent.getHand().getFirst();
+        CardInstance otherCard = pickDifferentCard(opponent, card);
         opponent.addCardToBoard(otherCard);
-
-        // In case the card are similar, there would be a problem as we modify the card effects
-        if (otherCard.getCard().equals(card.getCard())) {
-            otherCard = opponent.getHand().getFirst();
-            opponent.addCardToBoard(otherCard);
-        }
 
         GainEffect gainEffect = new GainEffect();
         gainEffect.setValue(3);
@@ -489,7 +435,7 @@ public class EffectQueueServiceTest {
 
         EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.DEFEATED, game.getEffectQueue());
         EffectQueueService.addBoardEffectsToQueue(otherCard, EffectTiming.DEFEATED, game.getEffectQueue());
-        game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
+        game.setAfterEffect(() -> game.setCurrentPlayer(game.getOpponent().getFirst()));
 
         int handSize = opponent.getHand().size();
 
@@ -509,5 +455,21 @@ public class EffectQueueServiceTest {
         TargetChoice choice = (TargetChoice) game.getChoice();
         assertEquals(ChoiceType.TARGET, choice.getType());
         assertEquals(handSize, choice.getAvailableTargets().size());
+    }
+
+    private static CardInstance pickDifferentCard(Player player, CardInstance... avoid) {
+        for (CardInstance candidate : player.getHand()) {
+            boolean same = false;
+            for (CardInstance blocked : avoid) {
+                if (blocked != null && candidate.getCard().equals(blocked.getCard())) {
+                    same = true;
+                    break;
+                }
+            }
+            if (!same) {
+                return candidate;
+            }
+        }
+        return player.getHand().getFirst();
     }
 }

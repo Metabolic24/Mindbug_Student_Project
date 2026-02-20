@@ -11,6 +11,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -46,34 +47,38 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
         CardKeyword keyword = effect.getKeyword();
         boolean highest = effect.isHighest();
 
-        Player opponent = card.getOwner().getOpponent(game.getPlayers());
+     
+        //Player opponent = AppUtils.ChosenOpponent( game, card.getOwner());
         Set<CardInstance> availableCards;
-
-        if (highest) {
+        for (Player opponent: card.getOwner().getOpponent(game.getPlayers()) ) {
+            if (highest) {
             availableCards = new HashSet<>(opponent.getHighestCards());
-        } else {
-            Stream<CardInstance> boardCards = opponent.getBoard().stream();
+            } else {
+                Stream<CardInstance> boardCards = opponent.getBoard().stream();
 
-            if (max != null) {
-                boardCards = boardCards.filter(cardInstance -> cardInstance.getPower() <= max);
+                if (max != null) {
+                    boardCards = boardCards.filter(cardInstance -> cardInstance.getPower() <= max);
+                }
+
+                if (min != null) {
+                    boardCards = boardCards.filter(cardInstance -> cardInstance.getPower() >= min);
+                }
+
+                if (keyword != null) {
+                    boardCards = boardCards.filter(cardInstance -> cardInstance.hasKeyword(keyword));
+                }
+
+                availableCards = boardCards.collect(Collectors.toSet());
             }
-
-            if (min != null) {
-                boardCards = boardCards.filter(cardInstance -> cardInstance.getPower() >= min);
-            }
-
-            if (keyword != null) {
-                boardCards = boardCards.filter(cardInstance -> cardInstance.hasKeyword(keyword));
-            }
-
-            availableCards = boardCards.collect(Collectors.toSet());
-        }
 
         if (availableCards.size() <= value || value < 0) {
             setAbleToBlock(game, availableCards);
         } else {
             game.setChoice(new TargetChoice(card.getOwner(), card, this, value, new HashSet<>(opponent.getBoard())));
         }
+
+        }
+        
     }
 
     @Override

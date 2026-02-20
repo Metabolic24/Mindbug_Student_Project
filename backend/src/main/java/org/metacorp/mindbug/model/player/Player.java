@@ -79,15 +79,31 @@ public class Player {
         discardPile.add(card);
     }
 
-    public Player getOpponent(List<Player> players) {
-        Player opponent = null;
-        for (Player player : players) {
-            if (player.getTeam() != team) {
-                opponent = player;
+    public List<Player> getOpponent(List<Player> players) {
+        List<Player> opponents = new ArrayList<Player>();
+        int indexPlayer = players.indexOf(this);
+        int size = players.size();
+
+        for (int i = 1; i < size; i++) {
+            Player p = players.get((indexPlayer + i) % size);
+
+            if (p.getTeam() != team) {
+                opponents.add(p);
             }
         }
 
-        return opponent;
+        return opponents;
+    }
+
+    public Player getAllie(List<Player> players) {
+        Player allie = null;
+        for (Player player : players) {
+            if (player.getTeam() == team && !player.equals(this)) {
+                allie = player;
+            }
+        }
+
+        return allie;
     }
 
     public List<CardInstance> getHighestCards() {

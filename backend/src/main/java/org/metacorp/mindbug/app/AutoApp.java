@@ -20,12 +20,12 @@ public class AutoApp {
 
     public static void main() {
         PlayerService playerService = new PlayerService();
-        Game game = AppUtils.startGame(playerService);
+        Game game = AppUtils.startGame(playerService, true);
 
         AppUtils.runAndCheckErrors(game, () -> {
-            do {
-                resolveTurn(game);
-            } while (!game.isFinished());
+            do {// do it one time
+                resolveTurn(game); 
+            } while (!game.isFinished());//repeat while
         });
     }
 

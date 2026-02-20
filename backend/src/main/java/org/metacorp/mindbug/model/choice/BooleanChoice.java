@@ -1,6 +1,5 @@
 package org.metacorp.mindbug.model.choice;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +10,6 @@ import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.utils.ChoiceUtils;
 
 @Data
-@AllArgsConstructor
 @RequiredArgsConstructor
 public class BooleanChoice implements IChoice<Boolean> {
 
@@ -26,6 +24,13 @@ public class BooleanChoice implements IChoice<Boolean> {
 
     private CardInstance card;
 
+    private String prompt;
+
+    public BooleanChoice(Player playerToChoose, CardInstance sourceCard, ResolvableEffect<Boolean> effectResolver, CardInstance card) {
+        this(playerToChoose, sourceCard, effectResolver);
+        this.card = card;
+    }
+
     @Override
     public void resolve(Boolean choice, Game game) {
         ChoiceUtils.resolveBooleanChoice(choice, this, game);
@@ -34,5 +39,10 @@ public class BooleanChoice implements IChoice<Boolean> {
     @Override
     public ChoiceType getType() {
         return ChoiceType.BOOLEAN;
+    }
+
+    @Override
+    public String getPrompt() {
+        return prompt;
     }
 }

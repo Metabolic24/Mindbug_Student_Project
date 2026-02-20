@@ -6,6 +6,7 @@ import org.metacorp.mindbug.dto.player.PlayerLightDTO;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.AttackService;
@@ -13,26 +14,53 @@ import org.metacorp.mindbug.service.game.PlayCardService;
 import org.metacorp.mindbug.service.game.StartService;
 
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
+
+import javax.swing.text.html.StyleSheet.ListPainter;
 
 /**
  * Utility class for ManualApp and AutoApp
  */
 public final class AppUtils {
 
+    private static final Random RND = new Random();
+
     @Setter
     private static boolean verbose = false;
+
+    private static boolean isAuto = false;
 
     /**
      * Start a new manual/auto game
      *
      * @return the created game
      */
-    public static Game startGame(PlayerService playerService) {
+    public static Game startGame(PlayerService playerService, boolean isAuto) {
+        AppUtils.isAuto = isAuto;
         PlayerLightDTO player1 = playerService.createPlayer("Player1");
         PlayerLightDTO player2 = playerService.createPlayer("Player2");
 
         Game game = StartService.newGame(new Player(player1), new Player(player2));
+
+        for (Player player : game.getPlayers()) {
+            AppUtils.detailedSumUpPlayer(player);
+        }
+
+        System.out.println("\nDEBUT DU JEU !!!");
+        nextTurn(game);
+
+        return game;
+    }
+
+    public static Game start2v2Game(PlayerService playerService, boolean isAuto){
+        AppUtils.isAuto = isAuto;
+        PlayerLightDTO player1 = playerService.createPlayer("Player1");
+        PlayerLightDTO player2 = playerService.createPlayer("Player2");
+        PlayerLightDTO player3 = playerService.createPlayer("Player3");
+        PlayerLightDTO player4 = playerService.createPlayer("Player4");
+
+        Game game = StartService.newGame(new Player(player1), new Player(player2), new Player(player3), new Player(player4));
 
         for (Player player : game.getPlayers()) {
             AppUtils.detailedSumUpPlayer(player);
@@ -74,7 +102,6 @@ public final class AppUtils {
         if (card != null) {
             System.out.printf("%s joue la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
             PlayCardService.pickCard(card, game);
-            PlayCardService.playCard(game);
         }
     }
 
@@ -130,20 +157,36 @@ public final class AppUtils {
      * @throws GameStateException if an error occurs during the game execution
      */
     public static void resolveAttack(Scanner scanner, Game game) throws GameStateException {
-        Player attackedPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
+        if (scanner == null && !isAuto) {
+            scanner = new Scanner(System.in);
+        }
+        boolean nobody_already_a_blocker = true;
+        List<Player> ListopponentPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
+        for (Player opponentPlayer : ListopponentPlayer) {
+            if (nobody_already_a_blocker) {
 
-        List<CardInstance> availableCards = AiUtils.getBlockersList(game);
-        if (availableCards.isEmpty()) {
-            System.out.printf("%s ne peut pas défendre\n", attackedPlayer.getName());
-            AttackService.resolveAttack(null, game);
-        } else {
-            // Select a card and block with it
-            CardInstance card = (scanner == null) ? AiUtils.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
-            if (card != null) {
-                System.out.printf("%s défend avec la carte '%s'\n", attackedPlayer.getName(), card.getCard().getName());
-                AttackService.resolveAttack(card, game);
+                List<CardInstance> availableCards = AiUtils.getBlockersList(game);
+                if (availableCards.isEmpty()) {
+                    System.out.printf("%s ne peut pas défendre\n", opponentPlayer.getName());
+                    
+                } else {
+                    // Select a card and attack with it
+                    CardInstance card = (scanner == null) ? AiUtils.getRandomCard(availableCards) : getChosenCard(availableCards, scanner,true);
+                    if (card != null) {
+                        System.out.printf("%s défend avec la carte '%s'\n", opponentPlayer.getName(), card.getCard().getName());
+                        nobody_already_a_blocker=false;
+                        AttackService.resolveAttack(card, game);
+                    }
+                    else {
+                        System.out.printf("%s chosen not block \n", opponentPlayer.getName());
+                    }
+                    
+                }
             }
         }
+        if (nobody_already_a_blocker) AttackService.resolveAttack(null, game);//nobody have block this turn
+        
+    
     }
 
     /**
@@ -223,20 +266,94 @@ public final class AppUtils {
      *
      * @param cards   the card list
      * @param scanner the scanner to be used to read standard input (only for manual mode)
+     * @param pass if  you want to pass the action
      * @return a random card from the list
      */
-    private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner) {
+    private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner, boolean pass) {
         System.out.println("Please choose a card : (only type the number)");
+        if (pass) System.out.println("       (0) - Do nothing");// if you can pass the choice
         int index = 1;
         for (CardInstance card : cards) {
-            System.out.printf("(%d) - %s", index, card.getCard().getName());
+            System.out.printf("       (%d) - %s\n", index, card.getCard().getName());
+            index++;
         }
-
+      
         try {
-            return cards.get(Integer.parseInt(scanner.nextLine()));
+            int choice_number = Integer.parseInt(scanner.nextLine());
+            if (choice_number==0 && pass) {// if you want to pass the choice
+                return null;
+            }
+            else {
+                return cards.get(choice_number-1);
+            }
+            
         } catch (NumberFormatException | IndexOutOfBoundsException e) {
             System.err.println("Choix de carte invalide");
             return null;
         }
+    }
+
+    private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner) {
+        return getChosenCard( cards, scanner, false);
+    } 
+
+
+
+    /**
+     * Return the chosen card from the given list
+     *
+     * @param cards   the card list
+     * @param scanner the scanner to be used to read standard input (only for manual mode)
+     * @param pass if  you want to pass the action
+     * @return a random card from the list
+     */
+    public static Player ChosenOpponent(Game game, Player player_who_targets) {
+        List<Player> listOpponents = player_who_targets.getOpponent(game.getPlayers());
+        if (listOpponents.size()==1) {
+            return listOpponents.getFirst();
+        }
+
+        int index = 1;
+        System.out.printf("\nPlease %s, choose an opponent to target : (only type the associated number)\n",
+                player_who_targets.getName());
+        for (Player opponent : listOpponents) {
+            System.out.printf("       (%d) - %s\n", index, opponent.getName());
+            index++;
+        }
+
+        Player target = null;
+        if (isAuto) {
+            target = listOpponents.get(RND.nextInt(listOpponents.size()));
+        } else {
+            Scanner scanner = new Scanner(System.in);
+            while (true) {
+                try {
+                    int choice_number = Integer.parseInt(scanner.nextLine());
+
+                    if  (1<=choice_number && choice_number<=listOpponents.size()) {
+                        target = listOpponents.get(choice_number-1);
+                        break;
+                    }
+                    else {
+                        System.err.println("Invalid number");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("You must type a valid number");
+                }
+            }
+        }
+        System.out.printf("\n%s chose to target %s\n", player_who_targets.getName(), target.getName());
+        return target;
+    }
+
+
+
+
+
+    /**
+     * @return a random boolean value
+     */
+    public static boolean nextBoolean() {
+        return RND.nextBoolean();
     }
 }

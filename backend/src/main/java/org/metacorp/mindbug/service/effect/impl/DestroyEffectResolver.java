@@ -1,3 +1,4 @@
+
 package org.metacorp.mindbug.service.effect.impl;
 
 import org.metacorp.mindbug.model.Game;
@@ -10,6 +11,7 @@ import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.CardService;
+import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -39,27 +41,46 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
         Integer min = effect.getMin();
         Integer max = effect.getMax();
         boolean selfAllowed = effect.isSelfAllowed();
-        boolean allies = effect.isAllies();
+        boolean allies_touched = effect.isAllies();
 
         Player currentPlayer = card.getOwner();
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+       
+        List<CardInstance> listopponentCard= new ArrayList<>();
+        for (Player opponents: currentPlayer.getOpponent(game.getPlayers())) {
+            listopponentCard.addAll(opponents.getBoard());
+        }
 
-        if (effect.isLessAllies() && !(currentPlayer.getBoard().size() < opponent.getBoard().size())) {
+        if (effect.isLessAllies() && !(currentPlayer.getBoard().size() <  listopponentCard.size())) {
             return;
         }
 
         if (effect.isItself()) {
             destroyCards(game, Collections.singletonList(card));
         } else if (effect.isLowest()) {
-            Set<Player> affectedPlayers = selfAllowed ? new HashSet<>(game.getPlayers()) : Collections.singleton(opponent);
-            destroyCards(game, CardService.getLowestCards(affectedPlayers));
-        } else {
+
+                Set<Player> affectedPlayers = new HashSet<>();
+
+                // Tous les ennemis
+                affectedPlayers.addAll(currentPlayer.getOpponent(game.getPlayers()));
+
+                // Optionnellement soi-même
+                if (selfAllowed) {
+                    affectedPlayers.add(currentPlayer);
+                    Player my_allie = currentPlayer.getAllie(game.getPlayers()) ;
+                    if (my_allie!=null) {
+                        affectedPlayers.add(my_allie);
+                    }
+                    
+                }
+
+                destroyCards(game, CardService.getLowestCards(affectedPlayers));
+            } else {
             List<CardInstance> availableCards = new ArrayList<>();
 
-            if (!allies) {
-                for (CardInstance currentCard : opponent.getBoard()) {
-                    if (min != null && currentCard.getPower() < min
-                            || max != null && currentCard.getPower() > max) {
+            if (!allies_touched) {
+                for (CardInstance currentCard :  listopponentCard) {
+                    if (min != null && currentCard.getPower() < min ||
+                            max != null && currentCard.getPower() > max) {
                         continue;
                     }
 
@@ -67,7 +88,7 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
                 }
             }
 
-            if (allies || selfAllowed) {
+            if (allies_touched|| selfAllowed) {
                 for (CardInstance currentCard : card.getOwner().getBoard()) {
                     if (min != null && currentCard.getPower() < min
                             || max != null && currentCard.getPower() > max) {
@@ -76,6 +97,19 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
 
                     availableCards.add(currentCard);
                 }
+                //if selfAllowed, target my allies
+                Player my_allie = currentPlayer.getAllie(game.getPlayers()) ;
+                    if (my_allie!=null) {
+                        for (CardInstance currentCard : my_allie.getBoard()) {
+                            if (min != null && currentCard.getPower() < min ||
+                                    max != null && currentCard.getPower() > max) {
+                                continue;
+                            }
+
+                            availableCards.add(currentCard);
+                        }
+                    }
+                
             }
 
             if (!availableCards.isEmpty()) {
@@ -96,7 +130,7 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
         HistoryService.logEffect(game, effect.getType(), effectSource, cards);
     }
 
-    @Override
+ 
     public void resolve(Game game, List<CardInstance> chosenTargets) {
         destroyCards(game, chosenTargets);
     }

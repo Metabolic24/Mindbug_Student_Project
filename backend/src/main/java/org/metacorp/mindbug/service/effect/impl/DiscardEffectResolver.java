@@ -9,6 +9,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -30,11 +31,19 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
-        Player opponent = card.getOwner().getOpponent(game.getPlayers());
+        Player playerToDiscard = card.getOwner();
+        int value = effect.getValue();
+    
+        if (!effect.isSelf()) {
+            Player opponent = AppUtils.ChosenOpponent(game, card.getOwner());
+            playerToDiscard =  opponent;
+            value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue(); 
+        }
+        
 
-        int value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue();
+        
 
-        Player playerToDiscard = effect.isSelf() ? card.getOwner() : opponent;
+        
         List<CardInstance> availableCards = effect.isDrawPile() ? playerToDiscard.getDrawPile() : playerToDiscard.getHand();
 
         if (availableCards.size() <= value || value == -1) {

@@ -9,6 +9,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.ChoiceService;
+import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.PlayCardService;
 
 import java.util.Arrays;
@@ -24,6 +25,10 @@ public class TestGameUtils {
     private static Player player1;
     @Getter
     private static Player player2;
+    @Getter
+    private static Player player3;
+    @Getter
+    private static Player player4;
 
     public static Game prepareCustomGame() {
         PlayerService playerService = new PlayerService();
@@ -31,6 +36,28 @@ public class TestGameUtils {
         player2 = new Player(playerService.createPlayer("player2"));
 
         game = new Game(player1, player2);
+
+        List<CardInstance> cards = CardUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey());
+        Collections.shuffle(cards);
+        game.setCards(cards);
+
+        for (Player player : game.getPlayers()) {
+            player.getTeam().setLifePoints(3);
+        }
+
+        game.setCurrentPlayer(player1);
+
+        return game;
+    }
+
+    public static Game prepareCustomGame2v2() {
+        PlayerService playerService = new PlayerService();
+        player1 = new Player(playerService.createPlayer("player1"));
+        player2 = new Player(playerService.createPlayer("player2"));
+        player3 = new Player(playerService.createPlayer("player3"));
+        player4 = new Player(playerService.createPlayer("player4"));
+
+        game = new Game(player1, player2, player3, player4);
 
         List<CardInstance> cards = CardUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey());
         Collections.shuffle(cards);
@@ -59,7 +86,11 @@ public class TestGameUtils {
     }
 
     public static void play(CardInstance pickedCard) throws GameStateException {
-        play(pickedCard, null);
+        PlayCardService.pickCard(pickedCard, game);
+        while (game.getChoice() != null && !game.isFinished()) {
+            AiUtils.resolveChoice(game);
+        }
+        GameStateService.newTurn(game);
     }
 
     public static void play(CardInstance pickedCard, Player mindbugger) throws GameStateException {

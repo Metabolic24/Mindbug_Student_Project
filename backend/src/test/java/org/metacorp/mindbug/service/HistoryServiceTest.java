@@ -42,7 +42,7 @@ public class HistoryServiceTest {
         game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         sourceCard = game.getCurrentPlayer().getHand().getFirst();
-        targets = Collections.singletonList(game.getOpponent().getHand().getFirst());
+        targets = Collections.singletonList(game.getOpponent().getFirst().getHand().getFirst());
     }
 
     @Test
@@ -143,7 +143,7 @@ public class HistoryServiceTest {
 
     @Test
     public void logChoice_hunter() {
-        sourceCard.setOwner(game.getOpponent());
+        sourceCard.setOwner(game.getOpponent().getFirst());
         game.setChoice(new HunterChoice(sourceCard, new HashSet<>(targets)));
 
         HistoryService.logChoice(game);
@@ -155,13 +155,13 @@ public class HistoryServiceTest {
         compareCard(sourceCard, historyEntry.getSource());
         compareCard(targets.getFirst(), historyEntry.getTargets().getFirst());
         assertNotNull(historyEntry.getData());
-        assertEquals(game.getOpponent().getUuid(), historyEntry.getData().get("playerToChoose"));
+        assertEquals(game.getOpponent().getFirst().getUuid(), historyEntry.getData().get("playerToChoose"));
         assertEquals(ChoiceType.HUNTER.name(), historyEntry.getData().get("type"));
     }
 
     @Test
     public void logChoice_frenzy() {
-        sourceCard.setOwner(game.getOpponent());
+        sourceCard.setOwner(game.getOpponent().getFirst());
         game.setChoice(new FrenzyAttackChoice(sourceCard));
 
         HistoryService.logChoice(game);
@@ -173,13 +173,13 @@ public class HistoryServiceTest {
         compareCard(sourceCard, historyEntry.getSource());
         assertTrue(historyEntry.getTargets().isEmpty());
         assertNotNull(historyEntry.getData());
-        assertEquals(game.getOpponent().getUuid(), historyEntry.getData().get("playerToChoose"));
+        assertEquals(game.getOpponent().getFirst().getUuid(), historyEntry.getData().get("playerToChoose"));
         assertEquals(ChoiceType.FRENZY.name(), historyEntry.getData().get("type"));
     }
 
     @Test
     public void logChoice_boolean() {
-        game.setChoice(new BooleanChoice(game.getOpponent(), sourceCard, (_, _) -> {
+        game.setChoice(new BooleanChoice(game.getOpponent().getFirst(), sourceCard, (_, _) -> {
         }, targets.getFirst()));
 
         HistoryService.logChoice(game);
@@ -191,13 +191,13 @@ public class HistoryServiceTest {
         compareCard(sourceCard, historyEntry.getSource());
         compareCard(targets.getFirst(), historyEntry.getTargets().getFirst());
         assertNotNull(historyEntry.getData());
-        assertEquals(game.getOpponent().getUuid(), historyEntry.getData().get("playerToChoose"));
+        assertEquals(game.getOpponent().getFirst().getUuid(), historyEntry.getData().get("playerToChoose"));
         assertEquals(ChoiceType.BOOLEAN.name(), historyEntry.getData().get("type"));
     }
 
     @Test
     public void logChoice_target() {
-        game.setChoice(new TargetChoice(game.getOpponent(), sourceCard, (_, _) -> {
+        game.setChoice(new TargetChoice(game.getOpponent().getFirst(), sourceCard, (_, _) -> {
         }, 1, new HashSet<>(targets)));
 
         HistoryService.logChoice(game);
@@ -209,7 +209,7 @@ public class HistoryServiceTest {
         compareCard(sourceCard, historyEntry.getSource());
         compareCard(targets.getFirst(), historyEntry.getTargets().getFirst());
         assertNotNull(historyEntry.getData());
-        assertEquals(game.getOpponent().getUuid(), historyEntry.getData().get("playerToChoose"));
+        assertEquals(game.getOpponent().getFirst().getUuid(), historyEntry.getData().get("playerToChoose"));
         assertEquals(1, historyEntry.getData().get("targetsCount"));
         assertEquals(ChoiceType.TARGET.name(), historyEntry.getData().get("type"));
     }

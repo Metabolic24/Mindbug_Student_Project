@@ -9,6 +9,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.HashSet;
 import java.util.List;
@@ -31,7 +32,8 @@ public class BounceEffectResolver extends EffectResolver<BounceEffect> implement
 
         int value = effect.getValue();
         Player cardOwner = card.getOwner();
-        Set<CardInstance> opponentCards = new HashSet<>(card.getOwner().getOpponent(game.getPlayers()).getBoard());
+        Player opponent = cardOwner.getOpponent(game.getPlayers()).getFirst();
+        Set<CardInstance> opponentCards = new HashSet<>(opponent.getBoard());
 
         if (!opponentCards.isEmpty()) {
             if (opponentCards.size() <= value || value < 0) {

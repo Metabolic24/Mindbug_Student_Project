@@ -25,7 +25,7 @@ public class ManualApp {
 
     static void main() {
         PlayerService playerService = new PlayerService();
-        Game game = AppUtils.startGame(playerService);
+        Game game = AppUtils.startGame(playerService, false);
 
         System.out.println(AVAILABLE_ACTIONS);
 
@@ -134,12 +134,12 @@ public class ManualApp {
         if (choice == null) {
             System.err.println("Action invalide");
         } else {
-            String input = scanner.nextLine();
 
             try {
                 switch (choice.getType()) {
                     case SIMULTANEOUS -> {
                         System.out.println("Résolution d'un choix d'ordonnancement d'effets simultanés");
+                        String input = scanner.nextLine();
 
                         SimultaneousEffectsChoice simultaneousEffectsChoice = (SimultaneousEffectsChoice) choice;
                         if (simultaneousEffectsChoice.getEffectsToSort().stream()
@@ -155,6 +155,17 @@ public class ManualApp {
                         System.out.println("Résolution d'un choix de cible(s)");
 
                         TargetChoice targetChoice = (TargetChoice) choice;
+
+                        System.out.println("Veuillez choisir la/les cibles :");
+                        targetChoice.getAvailableTargets().forEach(target ->
+                            System.out.println(
+                                "- " + target.getCard().getName()
+                                + " (id: " + target.getUuid() + ")"
+                            )
+                        );
+
+                        String input = scanner.nextLine();
+
                         String[] tokens = input.split(" ");
 
                         for (String token : tokens) {
@@ -171,6 +182,17 @@ public class ManualApp {
                     case HUNTER -> {
                         System.out.println("Résolution d'un choix de cible d'attaque");
                         HunterChoice hunterChoice = (HunterChoice) choice;
+                        
+                        System.out.println("Veuillez choisir la/les cibles :");
+                        System.out.println("- Don't chose a prey (enter no number)");
+                        hunterChoice.getAvailableTargets().forEach(target ->
+                            System.out.println(
+                                "- " + target.getCard().getName()
+                                + " (id: " + target.getUuid() + ")"
+                            )
+                        );
+
+                        String input = scanner.nextLine();
 
                         if (input != null && !input.isBlank()) {
                             if (hunterChoice.getAvailableTargets().stream()
@@ -187,6 +209,8 @@ public class ManualApp {
                     case FRENZY, BOOLEAN -> {
                         System.out.printf("Résolution d'un choix booléen de type %s\n", choice.getType());
 
+                        String input = scanner.nextLine();
+                        
                         switch ((input.toLowerCase())) {
                             case "y", "o", "yes", "oui" -> {
                                 System.out.println("Valeur choisie : OUI");
@@ -226,6 +250,11 @@ public class ManualApp {
      * @param choice the choice to print
      */
     private static void printChoice(IChoice<?> choice) {
+        if (choice.getPrompt() != null) {
+            System.out.println(choice.getPrompt());
+            return;
+        }
+        
         switch (choice.getType()) {
             case SIMULTANEOUS ->
                     System.out.println("Veuillez choisir l'effet à résoudre en premier : (only type the ID)");

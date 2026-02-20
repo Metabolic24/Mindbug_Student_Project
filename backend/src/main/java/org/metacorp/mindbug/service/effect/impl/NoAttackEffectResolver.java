@@ -1,5 +1,5 @@
 package org.metacorp.mindbug.service.effect.impl;
-
+import org.metacorp.mindbug.utils.AppUtils;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -10,6 +10,7 @@ import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.game.CardService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,9 +32,12 @@ public class NoAttackEffectResolver extends EffectResolver<NoAttackEffect> {
         this.effectSource = card;
 
         CardKeyword keyword = effect.getKeyword();
-        Player opponent = card.getOwner().getOpponent(game.getPlayers());
-        List<CardInstance> affectedCards = opponent.getBoard();
+        List<CardInstance> affectedCards  = new ArrayList<>();
+        for (Player opponent: card.getOwner().getOpponent(game.getPlayers())) {
+                affectedCards.addAll(opponent.getBoard());
 
+        }
+      
         if (keyword != null) {
             affectedCards = affectedCards.stream().filter(cardInstance -> cardInstance.hasKeyword(keyword)).toList();
         }
