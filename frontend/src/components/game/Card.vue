@@ -51,6 +51,7 @@
   const cardClasses = computed(() => ({
     'bottom-card': props.context === 'player-hand',
     'opponent-hand': props.context === 'opponent-hand',
+    'board-card': props.context === 'board',
     'selected': props.selected,
     'attacking': props.attacking,
     'clickable': props.clickable,
@@ -124,8 +125,8 @@
   /* General card styling */
   .card-wrapper {
     position: relative;
-    width: 7vw;
-    height: 10vw;
+    width: 8vw;
+    height: 12vw;
 
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
@@ -138,14 +139,22 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
 
+  .card-wrapper.board-card {
+    transform: scale(1.1);
+    transform-origin: center top;
+  }
+  .card-wrapper.board-card:hover {
+    transform: scale(1.11);
+  }
+
   /* Opponent hand styling */
   .card-wrapper.opponent-hand {
-    transform: translateY(-45%);
+    transform: translateY(-50%);
     opacity: 0.95;
   }
 
   .card-wrapper.opponent-hand:hover {
-    transform: translateY(-45%) scale(1.1);
+    transform: translateY(-50%) scale(1.1);
     z-index: 5;
   }
 
@@ -258,7 +267,7 @@
 .title-text {
   font-family: "ZalamanderCaps";
   font-weight: bold;
-  font-size: 0.7em;
+  font-size: 0.90em;
   text-align: center;
   letter-spacing: 0.5px;
   color: white;
@@ -289,7 +298,7 @@
 }
 
 .description-text {
-  font-size: 0.50em;
+  font-size: 0.65em;
   line-height: 1.1;
   text-align: center;
 }

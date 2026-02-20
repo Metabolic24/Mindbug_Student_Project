@@ -249,7 +249,7 @@ async function onLeaveButtonClick() {
 </script>
 
 <template>
-  <div v-if="gameState" class="game">
+  <div v-if="gameState" class="container-fluid game">
     <div class="row top-row">
       <div class="col-2 player-container">
         <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
@@ -317,7 +317,6 @@ async function onLeaveButtonClick() {
 </template>
 
 <style scoped>
-
 .game {
   display: flex;
   flex-direction: column;

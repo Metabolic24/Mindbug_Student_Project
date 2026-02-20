@@ -34,7 +34,6 @@
   cursor: default;
 }
 
-/* ICON perfectly centered */
 .keyword-icon {
   width: 60%;
   height: 60%;
@@ -43,10 +42,10 @@
   display: block;
 }
 
-
+/* ICON text on hover */
 .keyword-tooltip {
   position: absolute;
-  top: 120%;              /* au lieu de bottom */
+  top: 120%;             
   left: 50%;
   transform: translateX(-50%) scale(0.9);
 

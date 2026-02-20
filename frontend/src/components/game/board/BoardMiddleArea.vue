@@ -90,7 +90,7 @@ const imgSrc = computed(() => {
 <style scoped>
   .middle-area {
     width: 100%;
-    height: 40%;
+    height: 30%;
 
     display: flex;
     align-items: center;

@@ -46,15 +46,14 @@ const emit = defineEmits(['card-selected'])
 }
 
 .bottom-card:hover {
-  transform: translateY(-120px) scale(2);
+  transform: translateY(-110px) scale(1.7);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 5;
 }
 
 .bottom-card.selected {
-  transform: translateY(-140px) scale(2.1);
+  transform: translateY(-130px) scale(1.8);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
   z-index: 10;
 }
-
 </style>
