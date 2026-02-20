@@ -1,10 +1,10 @@
 <script setup lang="ts">
 // Declare the interface for the data given by the parent component
 interface Props {
-  name: String
-  lifePoints: Number
-  mindbugCount: Number
-  drawPileCount: Number
+  name: string
+  lifePoints: number
+  mindbugCount: number
+  drawPileCount: number
 }
 
 defineProps<Props>()
@@ -18,19 +18,51 @@ function getAvatar(name: string = "default") {
 </script>
 
 <template>
-  <div class="playerDetails">
-    <div class="playerProfile">
-      <img class="playerAvatar" :src="getAvatar()" alt="Avatar" draggable="false">
-      <span class="playerName">{{ name }}</span>
-    </div>
-    <div class="playerData">
-      <span class="lifePoint">❤️ {{ lifePoints }}</span>
-      <span class="mbPoint">🧠 {{ mindbugCount }}</span>
-      <div class="drawPileCount">
-        <img src="@/assets/cards/back.png" alt="back" draggable="false"/>
-        <span>{{ drawPileCount }}</span>
+  <div class="playerContainer">
+    <div class="playerDetails">
+      <div class="playerProfile">
+        <img class="playerAvatar" :src="getAvatar()" alt="Avatar" draggable="false">
+        <span class="playerName">{{ name }}</span>
+      </div>
+      <div class="playerData">
+        
+        <!-- Mindbug tokens -->
+        <div class="mindbugContainer">
+          <img
+            v-for="n in mindbugCount"
+            :key="n"
+                        src="@/assets/profil-in-game/mindbug.png"
+            class="mindbugToken"
+            alt="Mindbug"
+            draggable="false"
+          />
+        </div>
+
+        <!-- Draw pile -->
+        <div class="drawPileContainer">
+          <img
+            src="@/assets/profil-in-game/cardback-pile.png"
+            class="pileImage"
+            alt="Draw pile"
+            draggable="false"
+          />
+          <span class="pileCount">{{ drawPileCount }}</span>
+        </div>
+
       </div>
     </div>
+    
+    <!-- Life points -->
+    <div class="lifeContainer">
+      <img 
+        src="@/assets/profil-in-game/hearts-game.svg" 
+        class="heartImage"
+        alt="Life"
+        draggable="false"
+      />
+      <span class="lifeText">{{ lifePoints }}</span>
+    </div>
+
   </div>
 </template>
 
@@ -39,11 +71,18 @@ img {
   pointer-events: none;
 }
 
+/* Global container */
+.playerContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .playerDetails {
   display: flex;
   align-items: center;
 
-  padding: 0 5px 2px 5px;
+  padding: 5px;
   margin-top: 1px;
 
   background: rgba(239, 168, 48, 0.8);
@@ -80,6 +119,7 @@ img {
   margin-bottom: 0;
   overflow: hidden;
 
+  color: #000;
   background-color: rgba(255, 255, 255, 0.8);
   cursor: default;
 
@@ -88,8 +128,8 @@ img {
 }
 
 .playerData {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 30px auto;
   gap: 4px;
   padding: 0 0.5vw;
 
@@ -99,8 +139,82 @@ img {
   }
 }
 
-.lifePoint {
-  color: red;
+/* Container for mindbug tokens */
+.mindbugContainer {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+
+  height: 30px;
+
+  min-width: 70px;
+}
+
+.mindbugToken {
+  width: 1.5vw;
+  max-width: 30px;
+  height: auto;
+}
+
+/* Container for the draw pile */
+.drawPileContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pileImage {
+  width: 3vw;
+  max-width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+.pileCount {
+  position: absolute;
+
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+
+  width: 3vh;
+  height: 3vh;
+
+  font-size: 1.6vh;
+
+  color: white;
+
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Heart container */
+.lifeContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+.heartImage {
+  height: 100%;
+  max-height: 75px;
+  object-fit: contain;
+}
+
+.lifeText {
+  position: absolute;
+  font-weight: bold;
+  color: white;
+  font-size: 4vh;
+  pointer-events: none;
 }
 
 .mbPoint {
