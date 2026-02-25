@@ -2,6 +2,7 @@ package org.metacorp.mindbug.model.choice;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -9,9 +10,9 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
@@ -27,9 +28,9 @@ public class SimultaneousChoiceTest extends MindbugGameTest {
     private EffectTiming timing;
 
     @BeforeEach
-    public void initGame() {
-        PlayerService playerService = new PlayerService();
+    public void initGame() throws CardSetException {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+
         currentPlayer = game.getCurrentPlayer();
         opponent = currentPlayer.getOpponent(game.getPlayers());
         timing = EffectTiming.PLAY;
@@ -39,12 +40,12 @@ public class SimultaneousChoiceTest extends MindbugGameTest {
     public void testResolve() throws GameStateException {
         GainEffect attackEffect = new GainEffect();
         CardInstance attackCard = currentPlayer.getHand().removeFirst();
-        attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(attackEffect));
+        attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, new ArrayList<>(List.of(attackEffect)));
         currentPlayer.getDiscardPile().add(attackCard);
 
         GainEffect defendEffect = new GainEffect();
         CardInstance defendingCard = opponent.getHand().removeFirst();
-        defendingCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(defendEffect));
+        defendingCard.getCard().getEffects().put(EffectTiming.DEFEATED, new ArrayList<>(List.of(defendEffect)));
         opponent.getDiscardPile().add(defendingCard);
 
         SimultaneousEffectsChoice choice = new SimultaneousEffectsChoice(new HashSet<>(Arrays.asList(

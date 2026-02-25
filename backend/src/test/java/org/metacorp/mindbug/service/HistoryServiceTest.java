@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
@@ -37,8 +38,7 @@ public class HistoryServiceTest extends MindbugGameTest {
     private List<CardInstance> targets;
 
     @BeforeEach
-    public void initGame() {
-        PlayerService playerService = new PlayerService();
+    public void initGame() throws CardSetException {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         sourceCard = game.getCurrentPlayer().getHand().getFirst();

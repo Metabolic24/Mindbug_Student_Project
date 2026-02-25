@@ -17,6 +17,7 @@ import org.metacorp.mindbug.dto.rest.SurrenderDTO;
 import org.metacorp.mindbug.dto.rest.choice.BooleanAnswerDTO;
 import org.metacorp.mindbug.dto.rest.choice.MultipleTargetAnswerDTO;
 import org.metacorp.mindbug.dto.rest.choice.SingleTargetAnswerDTO;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.exception.WebSocketException;
@@ -61,7 +62,9 @@ public class GameController {
             Game game = gameService.createGame(startDTO.getPlayerId(), null, startDTO.getCardSetName());
             return Response.ok(game.getUuid()).build();
         } catch (UnknownPlayerException e) {
-            return Response.status(400).entity("Invalid player ID").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid player ID").build();
+        } catch (CardSetException e) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
         }
     }
 
@@ -77,12 +80,12 @@ public class GameController {
     @Path("/surrender")
     public Response surrender(SurrenderDTO body) {
         if (body.getGameId() == null || body.getPlayerId() == null) {
-            return Response.status(400).entity("Missing request data").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Missing request data").build();
         }
 
         Game game = gameService.findById(body.getGameId());
         if (game == null) {
-            return Response.status(400).entity("Requested game not found").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Requested game not found").build();
         }
 
         Optional<Player> playerOpt = game.getPlayers().stream()
@@ -95,7 +98,7 @@ public class GameController {
                 game.getLogger().warn("Failed to send WebSocket message after surrendering", e);
             }
         } else {
-            return Response.status(400).entity("Unknown player ID").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Unknown player ID").build();
         }
 
         return Response.ok().build();
@@ -113,12 +116,12 @@ public class GameController {
     @Path("/pick")
     public Response pick(PickDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getCardId() == null) {
-            return Response.status(400).entity("Invalid request body").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid request body").build();
         }
 
         Game game = gameService.findById(body.getGameId());
         if (game == null) {
-            return Response.status(400).entity("Requested game not found").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Requested game not found").build();
         }
 
         try {
@@ -129,7 +132,7 @@ public class GameController {
             game.getLogger().debug("Player {} picked card {}", getLoggablePlayer(game.getCurrentPlayer()), getLoggableCard(pickedCard));
             PlayCardService.pickCard(pickedCard, game);
         } catch (NoSuchElementException e) {
-            return Response.status(400).entity("Card not found").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Card not found").build();
         }
 
         return Response.ok().build();
@@ -147,12 +150,12 @@ public class GameController {
     @Path("/play")
     public Response play(PlayDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null) {
-            return Response.status(400).entity("Invalid request body").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid request body").build();
         }
 
         Game game = gameService.findById(body.getGameId());
         if (game == null) {
-            return Response.status(400).entity("Requested game not found").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Requested game not found").build();
         }
 
         Player mindbugger = null;
@@ -162,7 +165,7 @@ public class GameController {
                         .filter(player -> player.getUuid().equals(body.getMindbuggerId()))
                         .findFirst().orElseThrow();
             } catch (NoSuchElementException e) {
-                return Response.status(400).entity("Player not found").build();
+                return Response.status(Response.Status.BAD_REQUEST).entity("Player not found").build();
             }
 
             game.getLogger().debug("Card {} mindbugged by {}", getLoggableCard(game.getPlayedCard()), getLoggablePlayer(mindbugger));
@@ -187,12 +190,12 @@ public class GameController {
     @Path("/action")
     public Response action(ActionDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getCardId() == null) {
-            return Response.status(400).entity("Invalid request body").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid request body").build();
         }
 
         Game game = gameService.findById(body.getGameId());
         if (game == null) {
-            return Response.status(400).entity("Requested game not found").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Requested game not found").build();
         }
 
         try {
@@ -204,7 +207,7 @@ public class GameController {
 
             ActionService.resolveAction(actionCard, game);
         } catch (NoSuchElementException e) {
-            return Response.status(400).entity("Card not found").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Card not found").build();
         }
 
         return Response.ok().build();
@@ -222,12 +225,12 @@ public class GameController {
     @Path("/attack")
     public Response declareAttack(DeclareAttackDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getAttackingCardId() == null) {
-            return Response.status(400).entity("Invalid request body").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid request body").build();
         }
 
         Game game = gameService.findById(body.getGameId());
         if (game == null) {
-            return Response.status(404).entity("Requested game not found").build();
+            return Response.status(Response.Status.NOT_FOUND).entity("Requested game not found").build();
         }
 
         try {
@@ -239,7 +242,7 @@ public class GameController {
 
             AttackService.declareAttack(attackingCard, game);
         } catch (NoSuchElementException e) {
-            return Response.status(400).entity("Card not found").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Card not found").build();
         }
 
         return Response.ok().build();
@@ -259,12 +262,12 @@ public class GameController {
         if (body == null || body.getGameId() == null
                 || (body.getDefendingPlayerId() != null && body.getDefenseCardId() == null)
                 || (body.getDefendingPlayerId() == null && body.getDefenseCardId() != null)) {
-            return Response.status(400).entity("Invalid request body").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid request body").build();
         }
 
         Game game = gameService.findById(body.getGameId());
         if (game == null) {
-            return Response.status(404).entity("Requested game not found").build();
+            return Response.status(Response.Status.NOT_FOUND).entity("Requested game not found").build();
         }
 
         CardInstance defendingCard = null;
@@ -281,7 +284,7 @@ public class GameController {
                 game.getLogger().debug("Player {} blocks {} with {}", getLoggablePlayer(opponentPlayer),
                         getLoggableCard(game.getAttackingCard()), getLoggableCard(defendingCard));
             } catch (NoSuchElementException e) {
-                return Response.status(400).entity("Card not found").build();
+                return Response.status(Response.Status.BAD_REQUEST).entity("Card not found").build();
             }
         }
 
@@ -302,15 +305,15 @@ public class GameController {
     @Path("/choice/boolean")
     public Response resolveBoolean(BooleanAnswerDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getOk() == null) {
-            return Response.status(400).entity("Invalid request body").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid request body").build();
         }
 
         Game game = gameService.findById(body.getGameId());
         if (game == null) {
-            return Response.status(404).entity("Requested game not found").build();
+            return Response.status(Response.Status.NOT_FOUND).entity("Requested game not found").build();
         } else if (game.getChoice() == null || (game.getChoice().getType() != ChoiceType.BOOLEAN
                 && game.getChoice().getType() != ChoiceType.FRENZY)) {
-            return Response.status(404).entity("No boolean choice to resolve").build();
+            return Response.status(Response.Status.NOT_FOUND).entity("No boolean choice to resolve").build();
         }
 
         game.getLogger().debug("Resolving boolean choice with value {}", body.getOk());
@@ -332,17 +335,17 @@ public class GameController {
     @Path("/choice/single")
     public Response resolveSingleTargetChoice(SingleTargetAnswerDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null) {
-            return Response.status(400).entity("Invalid request body").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid request body").build();
         }
 
         Game game = gameService.findById(body.getGameId());
         if (game == null) {
-            return Response.status(404).entity("Requested game not found").build();
+            return Response.status(Response.Status.NOT_FOUND).entity("Requested game not found").build();
         } else if (game.getChoice() == null || (game.getChoice().getType() != ChoiceType.SIMULTANEOUS
                 && game.getChoice().getType() != ChoiceType.HUNTER)) {
-            return Response.status(404).entity("No single target choice (SIMULTANEOUS or HUNTER) to resolve").build();
+            return Response.status(Response.Status.NOT_FOUND).entity("No single target choice (SIMULTANEOUS or HUNTER) to resolve").build();
         } else if (game.getChoice().getType() == ChoiceType.SIMULTANEOUS && body.getCardId() == null) {
-            return Response.status(400).entity("Invalid request body : missing cardId").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid request body : missing cardId").build();
         }
 
         game.getLogger().debug("Resolving single target choice with card {}", body.getCardId());
@@ -364,14 +367,14 @@ public class GameController {
     @Path("/choice/target")
     public Response resolveTargetChoice(MultipleTargetAnswerDTO body) throws GameStateException, WebSocketException {
         if (body == null || body.getGameId() == null || body.getTargets() == null) {
-            return Response.status(400).entity("Invalid request body").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid request body").build();
         }
 
         Game game = gameService.findById(body.getGameId());
         if (game == null) {
-            return Response.status(404).entity("Requested game not found").build();
+            return Response.status(Response.Status.NOT_FOUND).entity("Requested game not found").build();
         } else if (game.getChoice() == null || game.getChoice().getType() != ChoiceType.TARGET) {
-            return Response.status(404).entity("No target choice to resolve").build();
+            return Response.status(Response.Status.NOT_FOUND).entity("No target choice to resolve").build();
         } else {
             game.getLogger().debug("Resolving target choice with cards {}", body.getTargets());
 

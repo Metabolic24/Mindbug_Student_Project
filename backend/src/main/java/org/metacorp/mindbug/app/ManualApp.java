@@ -1,15 +1,17 @@
 package org.metacorp.mindbug.app;
 
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
-import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.choice.AbstractChoice;
+import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.ChoiceService;
+import org.metacorp.mindbug.service.game.StartService;
 import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.Arrays;
@@ -24,9 +26,10 @@ public class ManualApp {
 
     private static final String AVAILABLE_ACTIONS = "Actions possibles : play, p, attack, a, sumup, s, details, d, stop, exit\n";
 
-    static void main() {
+    static void main() throws CardSetException {
         PlayerService playerService = new PlayerService();
-        Game game = AppUtils.startGame(playerService);
+        StartService startService = new StartService();
+        Game game = AppUtils.startGame(playerService, startService);
 
         System.out.println(AVAILABLE_ACTIONS);
 

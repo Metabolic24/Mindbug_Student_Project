@@ -129,8 +129,8 @@
       }]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Action</b>: Defeat an enemy creature with power 6 or less. Evolve to Thunder Queen."
+    "description" : "<b>Action</b>: Defeat an enemy creature with power 6 or less. Evolve to Thunder Queen.",
+    "initialCardId": 52
   },
   {
     "id": 54,
@@ -143,8 +143,8 @@
       }]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Action</b>: Defeat an enemy creature."
+    "description" : "<b>Action</b>: Defeat an enemy creature.",
+    "initialCardId": 52
   },
   {
     "id": 55,
@@ -203,8 +203,8 @@
       }]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Action</b>: Gain 1 life. Evolve to World Eater."
+    "description" : "<b>Action</b>: Gain 1 life. Evolve to World Eater.",
+    "initialCardId": 56
   },
   {
     "id": 58,
@@ -218,8 +218,8 @@
       }]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Attack</b>: The opponent loses 1 life."
+    "description" : "<b>Attack</b>: The opponent loses 1 life.",
+    "initialCardId": 56
   },
   {
     "id": 59,
@@ -531,8 +531,8 @@
       ]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Action</b>: The opponent discards a card. Evolve to Frosty Fortress."
+    "description" : "<b>Action</b>: The opponent discards a card. Evolve to Frosty Fortress.",
+    "initialCardId": 76
   },
   {
     "id": 78,
@@ -553,8 +553,8 @@
       ]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Attack</b>: The opponent discards their hand and draw pile."
+    "description" : "<b>Attack</b>: The opponent discards their hand and draw pile.",
+    "initialCardId": 76
   },
   {
     "id": 79,
@@ -615,8 +615,8 @@
       ]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Action</b>: Play a card from your discrad pile. Evolve to Oakenmaster."
+    "description" : "<b>Action</b>: Play a card from your discrad pile. Evolve to Oakenmaster.",
+    "initialCardId": 80
   },
   {
     "id": 82,
@@ -633,7 +633,7 @@
       ]
     },
     "unique": true,
-    "evolution": true,
-    "description": "Other allied creatures have <b>+5</b> power."
+    "description": "Other allied creatures have <b>+5</b> power.",
+    "initialCardId": 80
   }
 ]

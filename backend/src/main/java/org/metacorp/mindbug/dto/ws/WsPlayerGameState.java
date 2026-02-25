@@ -1,9 +1,9 @@
 package org.metacorp.mindbug.dto.ws;
 
 import lombok.Data;
-import org.metacorp.mindbug.dto.CardDTO;
 import org.metacorp.mindbug.dto.GameStateDTO;
 import org.metacorp.mindbug.dto.PlayerDTO;
+import org.metacorp.mindbug.dto.card.CardDTO;
 import org.metacorp.mindbug.dto.choice.AbstractChoiceDTO;
 
 import java.util.ArrayList;

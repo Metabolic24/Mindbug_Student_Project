@@ -1,8 +1,8 @@
 package org.metacorp.mindbug.mapper;
 
-import org.metacorp.mindbug.dto.CardDTO;
 import org.metacorp.mindbug.dto.GameStateDTO;
 import org.metacorp.mindbug.dto.PlayerDTO;
+import org.metacorp.mindbug.dto.card.CardDTO;
 import org.metacorp.mindbug.dto.choice.AbstractChoiceDTO;
 import org.metacorp.mindbug.dto.choice.BooleanChoiceDTO;
 import org.metacorp.mindbug.dto.choice.ChoiceDTO;
@@ -11,10 +11,10 @@ import org.metacorp.mindbug.dto.choice.SimultaneousChoiceDTO;
 import org.metacorp.mindbug.dto.choice.TargetChoiceDTO;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.AbstractChoice;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
-import org.metacorp.mindbug.model.choice.AbstractChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -73,7 +73,6 @@ public class GameStateMapper {
     private static CardDTO fromCard(CardInstance card) {
         CardDTO result = new CardDTO();
         result.setId(card.getCard().getId());
-        result.setSetName(card.getCard().getSetName());
         result.setUuid(card.getUuid());
         result.setOwnerId(card.getOwner().getUuid());
         result.setName(card.getCard().getName());

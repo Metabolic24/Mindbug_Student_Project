@@ -3,6 +3,7 @@ package org.metacorp.mindbug.utils;
 import lombok.Setter;
 import org.metacorp.mindbug.app.GameEngine;
 import org.metacorp.mindbug.dto.player.PlayerLightDTO;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
@@ -30,11 +31,11 @@ public final class AppUtils {
      *
      * @return the created game
      */
-    public static Game startGame(PlayerService playerService) {
+    public static Game startGame(PlayerService playerService, StartService startService) throws CardSetException {
         PlayerLightDTO player1 = playerService.createPlayer("Player1");
         PlayerLightDTO player2 = playerService.createPlayer("Player2");
 
-        Game game = StartService.startGame(new AiPlayer(player1), new AiPlayer(player2));
+        Game game = startService.startGame(new AiPlayer(player1), new AiPlayer(player2));
 
         for (Player player : game.getPlayers()) {
             AppUtils.detailedSumUpPlayer(player);

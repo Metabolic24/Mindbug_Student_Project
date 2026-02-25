@@ -2,10 +2,11 @@ package org.metacorp.mindbug.service;
 
 import jakarta.inject.Inject;
 import org.jvnet.hk2.annotations.Service;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.exception.WebSocketException;
-import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.GameStateService;
@@ -34,6 +35,9 @@ public class GameService {
     @Inject
     private PlayerService playerService;
 
+    @Inject
+    private StartService startService;
+
     /**
      * Create a new game using FIRST_CONTACT set
      *
@@ -42,7 +46,7 @@ public class GameService {
      * @return the created Game
      * @throws UnknownPlayerException if at least one player could not be found in the database
      */
-    public Game createGame(UUID player1Id, UUID player2Id) throws UnknownPlayerException {
+    public Game createGame(UUID player1Id, UUID player2Id) throws UnknownPlayerException, CardSetException {
         return createGame(player1Id, player2Id, CardSetName.FIRST_CONTACT);
     }
 
@@ -55,7 +59,7 @@ public class GameService {
      * @return the created Game
      * @throws UnknownPlayerException if at least one player could not be found in the database
      */
-    public Game createGame(UUID player1Id, UUID player2Id, CardSetName setName) throws UnknownPlayerException {
+    public Game createGame(UUID player1Id, UUID player2Id, CardSetName setName) throws UnknownPlayerException, CardSetException {
         Player player1 = new Player(playerService.getPlayer(player1Id));
         Player player2 = player2Id == null ? new AiPlayer(playerService.getAiPlayer()) : new Player(playerService.getPlayer(player2Id));
 
@@ -64,7 +68,7 @@ public class GameService {
 
         LOGGER.debug("Game created : {}", game.getUuid());
 
-        StartService.startGame(game, setName);
+        startService.startGame(game, setName);
 
         return game;
     }

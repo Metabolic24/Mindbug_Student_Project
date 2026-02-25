@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.effect.impl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -9,7 +10,6 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.ProtectionEffect;
 import org.metacorp.mindbug.model.modifier.ProtectionModifier;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,9 +28,9 @@ public class ProtectionEffectResolverTest extends MindbugGameTest {
     private EffectTiming timing;
 
     @BeforeEach
-    public void prepareGame() {
-        PlayerService playerService = new PlayerService();
+    public void prepareGame() throws CardSetException {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+
         currentPlayer = game.getCurrentPlayer();
         effectSource = currentPlayer.getHand().getFirst();
 

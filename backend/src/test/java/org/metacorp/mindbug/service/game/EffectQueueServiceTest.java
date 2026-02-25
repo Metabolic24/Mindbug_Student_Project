@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.game;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
@@ -19,7 +20,6 @@ import org.metacorp.mindbug.model.effect.impl.StealEffect;
 import org.metacorp.mindbug.model.effect.steal.StealSource;
 import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.ArrayList;
@@ -40,8 +40,7 @@ public class EffectQueueServiceTest extends MindbugGameTest {
     private Game game;
 
     @BeforeEach
-    public void setUp() {
-        PlayerService playerService = new PlayerService();
+    public void setUp() throws CardSetException {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         Player currentPlayer = game.getCurrentPlayer();

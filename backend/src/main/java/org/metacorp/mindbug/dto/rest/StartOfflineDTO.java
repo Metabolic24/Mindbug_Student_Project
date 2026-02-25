@@ -1,7 +1,7 @@
 package org.metacorp.mindbug.dto.rest;
 
 import lombok.Data;
-import org.metacorp.mindbug.model.CardSetName;
+import org.metacorp.mindbug.model.card.CardSetName;
 
 import java.util.UUID;
 

@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
-import org.metacorp.mindbug.dto.CardDTO;
+import org.metacorp.mindbug.dto.card.CardDTO;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 
 import java.io.IOException;
