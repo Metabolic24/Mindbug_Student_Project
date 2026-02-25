@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.game;
 
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
@@ -9,11 +10,15 @@ import org.metacorp.mindbug.model.player.Player;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
+import java.util.stream.Stream;
 
 /**
  * Service that provides methods about cards during a game
  */
 public class CardService {
+
+    private static final Random RND = new Random();
 
     /**
      * Method triggered when a card is defeated
@@ -26,7 +31,7 @@ public class CardService {
             card.setStillTough(false);
         } else {
             Player cardOwner = card.getOwner();
-            if (card.getCard().isEvolution()) {
+            if (card.getCard().getInitialCardId() != null) {
                 cardOwner.getBoard().remove(card);
                 cardOwner.getDiscardPile().add(card.getInitialCard());
 
@@ -59,5 +64,30 @@ public class CardService {
         );
 
         return passiveEffects;
+    }
+
+    /**
+     * @param game the current game state
+     * @return the list of cards that are able to block (may be empty)
+     */
+    public static List<CardInstance> getBlockersList(Game game) {
+        Player attackedPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
+
+        Stream<CardInstance> blockersStream = attackedPlayer.getBoard().stream().filter(CardInstance::isAbleToBlock);
+        if (game.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)) {
+            blockersStream = blockersStream.filter((card) -> card.hasKeyword(CardKeyword.SNEAKY));
+        }
+
+        return blockersStream.toList();
+    }
+
+    /**
+     * Return a random card from the given list
+     *
+     * @param cards the card list
+     * @return a random card from the list
+     */
+    public static CardInstance getRandomCard(List<CardInstance> cards) {
+        return cards.get(RND.nextInt(cards.size()));
     }
 }

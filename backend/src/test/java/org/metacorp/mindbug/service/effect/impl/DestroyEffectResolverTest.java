@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.effect.impl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -14,9 +15,9 @@ import org.metacorp.mindbug.model.effect.impl.DestroyEffect;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,9 +37,9 @@ public class DestroyEffectResolverTest extends MindbugGameTest {
     private EffectTiming timing;
 
     @BeforeEach
-    public void prepareGame() {
-        PlayerService playerService = new PlayerService();
+    public void prepareGame() throws CardSetException {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+
         currentPlayer = game.getCurrentPlayer();
         opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
 
@@ -644,12 +645,12 @@ public class DestroyEffectResolverTest extends MindbugGameTest {
 
         CardInstance card = opponentPlayer.getHand().getFirst();
         card.setStillTough(false);
-        card.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new GainEffect()));
+        card.getCard().getEffects().put(EffectTiming.DEFEATED, new ArrayList<>(List.of(new GainEffect())));
         opponentPlayer.addCardToBoard(card);
 
         CardInstance otherCard = opponentPlayer.getHand().getFirst();
         otherCard.setStillTough(false);
-        otherCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new InflictEffect()));
+        otherCard.getCard().getEffects().put(EffectTiming.DEFEATED, new ArrayList<>(List.of(new InflictEffect())));
         opponentPlayer.addCardToBoard(otherCard);
 
         // Check that cards are destroyed and that a simultaneous choice is created for the cards effects

@@ -6,9 +6,10 @@ import org.glassfish.grizzly.websockets.ProtocolHandler;
 import org.glassfish.grizzly.websockets.WebSocket;
 import org.glassfish.grizzly.websockets.WebSocketApplication;
 import org.glassfish.grizzly.websockets.WebSocketListener;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
-import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.service.GameService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -66,7 +67,7 @@ public class WsJoinEndpoint extends WebSocketApplication {
                                 Game game = gameService.createGame(UUID.fromString(playerId), UUID.fromString(otherPlayerSession.getPlayerId()), set);
                                 socket.send(game.getUuid().toString());
                                 otherPlayerSession.send(game.getUuid().toString());
-                            } catch (UnknownPlayerException e) {
+                            } catch (UnknownPlayerException | CardSetException e) {
                                 LOGGER.warn("Unable to start a new game", e);
                             }
 

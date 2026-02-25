@@ -1,9 +1,8 @@
 package org.metacorp.mindbug.service;
 
-import org.glassfish.hk2.api.ServiceLocator;
-import org.glassfish.hk2.utilities.ServiceLocatorUtilities;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
@@ -20,19 +19,14 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 public class GameServiceTest extends MindbugGameTest {
 
     private Game game;
-    private GameService gameService;
 
     @BeforeEach
-    public void initGame() {
-        ServiceLocator locator = ServiceLocatorUtilities.createAndPopulateServiceLocator();
-
-        PlayerService playerService = locator.getService(PlayerService.class);
-        gameService = locator.getService(GameService.class);
+    public void initGame() throws CardSetException {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
     }
 
     @Test
-    public void createGame_nominal() throws UnknownPlayerException {
+    public void createGame_nominal() throws UnknownPlayerException, CardSetException {
         List<Player> players = game.getPlayers();
         game = gameService.createGame(players.get(0).getUuid(), players.get(1).getUuid());
 
@@ -41,7 +35,7 @@ public class GameServiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void findById_nominal() throws UnknownPlayerException {
+    public void findById_nominal() throws UnknownPlayerException, CardSetException {
         List<Player> players = game.getPlayers();
         game = gameService.createGame(players.get(0).getUuid(), players.get(1).getUuid());
 
@@ -54,7 +48,7 @@ public class GameServiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void endGame_nominal() throws UnknownPlayerException, WebSocketException {
+    public void endGame_nominal() throws UnknownPlayerException, WebSocketException, CardSetException {
         List<Player> players = game.getPlayers();
         UUID loserId = players.get(0).getUuid();
         UUID winnerId = players.get(1).getUuid();
@@ -71,7 +65,7 @@ public class GameServiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void endGame_badPlayer() throws UnknownPlayerException, WebSocketException {
+    public void endGame_badPlayer() throws UnknownPlayerException, WebSocketException, CardSetException {
         List<Player> players = game.getPlayers();
         UUID loserId = players.get(0).getUuid();
         game = gameService.createGame(loserId, players.get(1).getUuid());

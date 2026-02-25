@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.app;
 
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
@@ -7,6 +8,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
+import org.metacorp.mindbug.service.game.StartService;
 import org.metacorp.mindbug.utils.AiUtils;
 import org.metacorp.mindbug.utils.AppUtils;
 
@@ -20,15 +22,17 @@ public class AutoApp {
 
     private static final Random RND = new Random();
 
-    static void main() {
+    static void main() throws CardSetException {
         PlayerService playerService = new PlayerService();
-        Game game = AppUtils.startGame(playerService);
+        StartService startService = new StartService();
+        Game game = AppUtils.startGame(playerService, startService);
         start(game);
     }
 
     /**
      * Start the given game <br>
      * Separated method to ease unit testing
+     *
      * @param game the game to start
      */
     public static void start(Game game) {

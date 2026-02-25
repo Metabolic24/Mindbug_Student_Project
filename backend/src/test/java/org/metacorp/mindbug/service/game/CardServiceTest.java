@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.game;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -9,7 +10,6 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.EvolveEffect;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.ArrayList;
@@ -18,6 +18,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CardServiceTest extends MindbugGameTest {
@@ -26,9 +27,9 @@ public class CardServiceTest extends MindbugGameTest {
     private Player currentPlayer;
 
     @BeforeEach
-    public void initGame() {
-        PlayerService playerService = new PlayerService();
+    public void initGame() throws CardSetException {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+
         currentPlayer = game.getCurrentPlayer();
     }
 
@@ -91,11 +92,11 @@ public class CardServiceTest extends MindbugGameTest {
         currentPlayer.addCardToBoard(boardCard);
         boardCard.getKeywords().remove(CardKeyword.TOUGH);
         boardCard.setStillTough(false);
-        boardCard.getCard().setEvolution(true);
         boardCard.getEffects(EffectTiming.DEFEATED).clear();
 
         CardInstance otherCard = currentPlayer.getHand().getFirst();
         boardCard.setInitialCard(otherCard);
+        boardCard.getCard().setInitialCardId(otherCard.getCard().getId());
 
         CardService.defeatCard(boardCard, game);
         assertFalse(boardCard.isStillTough());
@@ -104,5 +105,12 @@ public class CardServiceTest extends MindbugGameTest {
         assertTrue(currentPlayer.getDiscardPile().contains(otherCard));
         assertTrue(game.getEvolutionCards().contains(boardCard));
         assertTrue(game.getEffectQueue().isEmpty());
+    }
+
+    @Test
+    public void getRandomCard_nominal() {
+        CardInstance randomCard = CardService.getRandomCard(game.getCurrentPlayer().getHand());
+        assertNotNull(randomCard);
+        assertTrue(game.getCurrentPlayer().getHand().contains(randomCard));
     }
 }
