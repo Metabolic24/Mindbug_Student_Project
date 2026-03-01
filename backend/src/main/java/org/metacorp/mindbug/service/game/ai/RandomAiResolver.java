@@ -10,7 +10,7 @@ import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.utils.AiUtils;
+import org.metacorp.mindbug.service.game.CardService;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -95,9 +95,9 @@ public class RandomAiResolver implements AiResolver {
         turnAction.setType(availableGameActions.get(RND.nextInt(availableGameActions.size())));
 
         switch (turnAction.getType()) {
-            case PLAY -> turnAction.setTarget(AiUtils.getRandomCard(currentPlayer.getHand()));
-            case ACTION -> turnAction.setTarget(AiUtils.getRandomCard(availableActionCards));
-            case ATTACK -> turnAction.setTarget(AiUtils.getRandomCard(availableAttackers));
+            case PLAY -> turnAction.setTarget(CardService.getRandomCard(currentPlayer.getHand()));
+            case ACTION -> turnAction.setTarget(CardService.getRandomCard(availableActionCards));
+            case ATTACK -> turnAction.setTarget(CardService.getRandomCard(availableAttackers));
             default -> {
                 // Should not happen
             }
