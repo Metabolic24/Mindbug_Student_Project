@@ -16,6 +16,7 @@ import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -62,14 +63,9 @@ public class CopyEffectResolverTest extends MindbugGameTest {
             otherCard = opponentPlayer.getHand().get(1);
         }
 
-        List<Effect> playEffects = otherCard.getEffects(timing);
-        playEffects.clear();
-
         GainEffect gainEffect = new GainEffect();
         gainEffect.setValue(2);
-        playEffects.add(gainEffect);
-
-        otherCard.getCard().getEffects().put(timing, playEffects);
+        otherCard.getCard().getEffects().put(timing, new ArrayList<>(List.of(gainEffect)));
 
         opponentPlayer.addCardToBoard(otherCard);
 
@@ -102,26 +98,18 @@ public class CopyEffectResolverTest extends MindbugGameTest {
     @Test
     public void testWithTiming_choice() {
         CardInstance otherCard = opponentPlayer.getHand().getFirst();
-        List<Effect> playEffects = otherCard.getEffects(timing);
-        playEffects.clear();
+        opponentPlayer.addCardToBoard(otherCard);
 
         GainEffect gainEffect = new GainEffect();
         gainEffect.setValue(2);
-        playEffects.add(gainEffect);
-
-        otherCard.getCard().getEffects().put(timing, playEffects);
-        opponentPlayer.addCardToBoard(otherCard);
+        otherCard.getCard().getEffects().put(timing, new ArrayList<>(List.of(gainEffect)));
 
         CardInstance otherCard2 = currentPlayer.getHand().getFirst();
-        playEffects = otherCard2.getEffects(timing);
-        playEffects.clear();
+        currentPlayer.addCardToBoard(otherCard2);
 
         InflictEffect inflictEffect = new InflictEffect();
         inflictEffect.setValue(1);
-        playEffects.add(inflictEffect);
-
-        otherCard2.getCard().getEffects().put(timing, playEffects);
-        currentPlayer.addCardToBoard(otherCard2);
+        otherCard2.getCard().getEffects().put(timing, new ArrayList<>(List.of(inflictEffect)));
 
         effect.setTiming(timing);
         effectResolver.apply(game, timing);

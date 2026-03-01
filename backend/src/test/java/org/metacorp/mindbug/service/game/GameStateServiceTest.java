@@ -65,7 +65,7 @@ public class GameStateServiceTest extends MindbugGameTest {
         boardCard.setAbleToAttack(false);
         boardCard.setAbleToBlock(false);
         boardCard.setKeywords(new HashSet<>());
-        boardCard.getCard().getEffects().put(EffectTiming.PASSIVE, new ArrayList<>());
+        boardCard.getCard().getEffects().remove(EffectTiming.PASSIVE);
 
         currentPlayer.addCardToBoard(boardCard);
 

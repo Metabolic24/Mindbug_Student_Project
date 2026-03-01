@@ -53,7 +53,7 @@ public class EffectQueueServiceTest extends MindbugGameTest {
     public void testAddEffectsToQueue_nominal() {
         // Remove ATTACK effects from the card
         if (card.getEffects(EffectTiming.ATTACK).isEmpty()) {
-            card.getCard().getEffects().put(EffectTiming.ATTACK, Collections.singletonList(new GainEffect()));
+            card.getCard().getEffects().put(EffectTiming.ATTACK, new ArrayList<>(List.of(new GainEffect())));
         }
 
         card.getOwner().disableTiming(EffectTiming.DEFEATED); // Just to check that it has no impact
@@ -85,7 +85,7 @@ public class EffectQueueServiceTest extends MindbugGameTest {
     public void testAddEffectsToQueue_disabled() {
         // Remove DEFEATED effects from the card
         if (card.getEffects(EffectTiming.DEFEATED).isEmpty()) {
-            card.getCard().getEffects().put(EffectTiming.DEFEATED, Collections.singletonList(new GainEffect()));
+            card.getCard().getEffects().put(EffectTiming.DEFEATED, new ArrayList<>(List.of(new GainEffect())));
         }
 
         card.getOwner().disableTiming(EffectTiming.DEFEATED);
@@ -145,8 +145,8 @@ public class EffectQueueServiceTest extends MindbugGameTest {
             currentPlayer.addCardToBoard(otherCard);
         }
 
-        otherCard.getCard().getEffects().put(EffectTiming.PLAY, Collections.singletonList(new GainEffect()));
-        card.getCard().getEffects().put(EffectTiming.PLAY, Collections.singletonList(new InflictEffect()));
+        otherCard.getCard().getEffects().put(EffectTiming.PLAY, new ArrayList<>(List.of(new GainEffect())));
+        card.getCard().getEffects().put(EffectTiming.PLAY, new ArrayList<>(List.of(new InflictEffect())));
 
         game.setAfterEffect(() -> game.setCurrentPlayer(currentPlayer.getOpponent(game.getPlayers())));
 
