@@ -34,10 +34,12 @@ public class StealBooleanChoiceResolver implements ResolvableEffect<Boolean> {
             card.getOwner().getBoard().add(card);
             // Add PLAY effects (if any) if player is allowed to trigger them
             EffectQueueService.addBoardEffectsToQueue(card, EffectTiming.PLAY, game.getEffectQueue());
-            logger.debug("{} stolen and played by {} due to {} effect", getLoggableCard(card), getLoggablePlayer(card.getOwner()), loggableEffectSource);
+            logger.debug("{} stolen and played by {} due to {} effect", getLoggableCard(card),
+                    getLoggablePlayer(card.getOwner()), loggableEffectSource);
         } else {
             card.getOwner().getHand().add(card);
-            logger.debug("{} stolen and drawn by {} due to {} effect", getLoggableCard(card), getLoggablePlayer(card.getOwner()), loggableEffectSource);
+            logger.debug("{} stolen and drawn by {} due to {} effect", getLoggableCard(card),
+                    getLoggablePlayer(card.getOwner()), loggableEffectSource);
         }
     }
 }

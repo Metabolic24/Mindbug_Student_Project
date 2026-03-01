@@ -100,8 +100,8 @@ public class AttackService {
 
     /**
      * Method executed when a player answer to its opponent attack<br>
-     * We consider that if attacking creature has HUNTER, the hunting choice has already been resolved through the GUI<br>
-     * We consider that if attacking creature has not HUNTER, the opponent has already chosen if he wants to block (and with which creature) or not<br>
+     * We consider that if the attacking creature has HUNTER, the hunting choice has already been resolved through the GUI<br>
+     * Otherwise, the opponent has already chosen if he wants to block (and with which creature) or not<br>
      *
      * @param defendingCard the card chosen to defend the attack
      * @param game          the game state
