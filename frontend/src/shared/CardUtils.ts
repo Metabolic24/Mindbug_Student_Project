@@ -8,3 +8,13 @@ export function getCardImage(cardId: number): string {
 export function getCardAlt(card: CardInterface): string {
     return card.name ?? "back"
 }
+
+// Retrieve the image corresponding to the given set
+export function getSetImage(set: string) {
+    const url = new URL("@/assets/sets/", import.meta.url)
+    if (set) {
+        return `${url}/${set}.png`
+    } else {
+        return `${url}/create_new_set.png`
+    }
+}

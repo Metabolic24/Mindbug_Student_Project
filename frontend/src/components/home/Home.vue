@@ -15,9 +15,9 @@ async function onLogin(name: string) {
 </script>
 
 <template>
-  <div id="home">
+  <div id="home" @contextmenu.prevent>
     <h1>Welcome to Mindbug App</h1>
-    <div class="button-group">
+    <div id="home-buttons">
       <search-button></search-button>
       <router-link to="/sets" class="styled-button">Available Sets</router-link>
     </div>
@@ -28,14 +28,15 @@ async function onLogin(name: string) {
 <style scoped>
 #home {
   text-align: center;
-  margin-top: 50px;
+  padding-top: 3%;
+  height: 100%;
+
+  h1 {
+    margin-bottom: 40px;
+  }
 }
 
-h1 {
-  margin-bottom: 40px;
-}
-
-.button-group {
+#home-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;

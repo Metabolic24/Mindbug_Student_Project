@@ -16,7 +16,7 @@ const routes = [
         path: "/sets/:set",
         name: "Set details",
         component: () => import('@/components/sets/CardSetDetails.vue'),
-        props: true
+        props: route => ({set: route.params.set, custom: (route.query.custom === "true")}),
     },
     {
         path: "/createSet",
