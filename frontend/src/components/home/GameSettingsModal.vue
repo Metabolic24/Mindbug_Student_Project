@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {computed, onMounted, ref, Ref} from "vue";
 import {getAvailableSets} from "@/shared/RestService";
+import {getSetImage} from "@/shared/CardUtils";
 
 // Declare a list that will contain all the names of the available sets
 let sets: Ref<string[]> = ref([])
@@ -8,12 +9,6 @@ let selectedSets: Ref<string[]> = ref([])
 
 // Declare the variable that will retrieve offline checkbox value
 let offline: Ref<boolean> = ref(false)
-
-// Retrieve the image corresponding to the given set
-function getSetImage(set: string) {
-  const url = new URL("@/assets/sets/", import.meta.url)
-  return `${url}/${set}.png`
-}
 
 // Retrieve the image corresponding to the given set
 function updateSelection(set: string) {
@@ -63,8 +58,9 @@ function onButtonClicked() {
       </div>
       <div class="modal-body">
         <div class="sets-container">
-          <div :class="getSetClasses(set)" v-for="set in sets" :key="set">
-            <img :src="getSetImage(set)" :alt="set" @click="updateSelection(set)"/>
+          <div :class="getSetClasses(set)" v-for="(set, index) in sets" :key="set" @click="updateSelection(set)">
+            <img v-if="index < 2" :src="getSetImage(set)" :alt="set"/>
+            <h2 v-if="index >= 2">{{ set }}</h2>
           </div>
         </div>
       </div>
@@ -73,7 +69,7 @@ function onButtonClicked() {
           Search
         </button>
         <div id="offline_div">
-          <input type="checkbox" v-model="offline" id="offline_checkbox" />
+          <input type="checkbox" v-model="offline" id="offline_checkbox"/>
           <label id="offline_label" for="offline_checkbox">Play Offline</label>
         </div>
       </div>
@@ -87,22 +83,22 @@ function onButtonClicked() {
 
   margin: 150px auto;
   padding: 20px 30px;
-}
 
-.modal-header {
-  justify-content: center;
-}
+  .modal-header {
+    justify-content: center;
+  }
 
-.modal-body {
-  display: flex;
-  justify-content: center;
+  .modal-body {
+    display: flex;
+    justify-content: center;
 
-  padding: 10px 0;
-}
+    padding: 10px 0;
+  }
 
-.modal-footer {
-  display: flex;
-  justify-content: center;
+  .modal-footer {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .sets-container {
@@ -116,35 +112,42 @@ function onButtonClicked() {
 
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.set-card {
-  width: 180px;
-  height: 225px;
+  .set-card {
+    width: 180px;
+    height: 225px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-.set-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
+    img {
+      width: 100%;
+      height: 100%;
+    }
 
-.set-card.selected {
-  border: 4px solid red;
-}
+    h2 {
+      width: 100%;
+      overflow-wrap: break-word;
+      color: hsla(160, 100%, 37%, 1);
+    }
+  }
 
-.set-card img {
-  width: 100%;
-  height: 100%;
+  .set-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .set-card.selected {
+    border: 4px solid red;
+  }
 }
 
 #offline_div {
