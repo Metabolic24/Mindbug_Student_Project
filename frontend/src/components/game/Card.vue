@@ -71,7 +71,7 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 <template>
   <div class="card-wrapper" :class="cardClasses" @click="clickable && emit('click', props.card)">
     <!-- Card image -->
-    <img :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image" draggable="false" @contextmenu.prevent/>
+    <img :src="getCardImage(card.id)" :alt="getCardAlt(card)" class="card-image" draggable="false" @contextmenu.prevent/>
 
     <div v-if="showOverlay" class="title-banner">
       <div class="title-text">{{ props.card.name }}</div>
