@@ -5,8 +5,13 @@
   <div id="sets">
     <h1>Select a set of cards</h1>
     <div class="sets-container">
+      <router-link :to="`/createSet`">
+        <div class="cards-set">
+          <img :src="getSetImage('')" alt="Create a new set"/>
+        </div>
+      </router-link>
       <router-link v-for="set in sets" :key="set" :to="`/sets/${set}`">
-        <div class="set-card">
+        <div class="cards-set">
           <img :src="getSetImage(set)" :alt="set"/>
         </div>
       </router-link>
@@ -24,7 +29,11 @@ let sets: Ref<string[]> = ref([])
 // Retrieve the image corresponding to the given set
 function getSetImage(set: string) {
   const url = new URL("@/assets/sets/", import.meta.url)
-  return `${url}/${set}.png`
+  if (set) {
+    return `${url}/${set}.png`
+  } else {
+    return `${url}/create_new_set.png`
+  }
 }
 
 onMounted(async () => {

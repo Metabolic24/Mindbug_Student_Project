@@ -19,6 +19,11 @@ const routes = [
         props: true
     },
     {
+        path: "/createSet",
+        name: "Create a new card set",
+        component: () => import('@/components/sets/CreateCardSet.vue')
+    },
+    {
         path: '/game',
         name: 'Game',
         component: () => import('@/components/game/Game.vue'),
