@@ -26,7 +26,6 @@ interface CardInterface extends CommonCardInterface {
     hasAction: boolean
 }
 
-
 type CardLocation = "Hand" | "Board"
 
 interface SelectedCardInterface extends CardInterface {

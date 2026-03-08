@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import {computed} from "vue";
 import Card from "@/components/game/Card.vue";
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -29,11 +32,11 @@ const lastCard = computed(() => {
 <template>
   <div class="discard-wrapper">
     <!-- Title above pile -->
-    <div class="discard-title">Discard Pile</div>
+    <div class="discard-title">{{ t('game.discard_pile') }}</div>
 
     <div class="discard-container" :class="{ empty: !lastCard }" @click="onClick">
       <!-- Last card displayed -->
-      <Card v-if="lastCard" :card="lastCard" context="discard-pile" :clickable="false"/>
+      <card v-if="lastCard" :card="lastCard" context="discard-pile" :clickable="false"/>
       <!-- Counter badge -->
       <div v-if="props.cards.length > 0" class="counter-badge">
         {{ props.cards.length }}

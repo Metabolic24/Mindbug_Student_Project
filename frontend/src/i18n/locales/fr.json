@@ -1,0 +1,449 @@
+{
+  "home": {
+    "title": "Bienvenue sur Mindbug App",
+    "search_button": {
+      "searching": "Recherche d'adversaire en cours...",
+      "play": "Jouer"
+    }
+  },
+  "game": {
+    "loading": "Préparation du champ de bataille...",
+    "error": {
+      "not_found": {
+        "label": "<h1>Oops !</h1><p>La partie n'a pu être trouvée ou rejointe</p>",
+        "button": "Menu principal"
+      },
+      "loading_failure": {
+        "label": "Mais cela prend plus de temps que prévu...",
+        "button": "Annuler la partie et revenir au menu principal"
+      }
+    },
+    "settings_tooltip": "Paramètres",
+    "player": {
+      "avatar_placeholder": "Avatar",
+      "mindbug_placeholder": "Mindbug",
+      "drawPile_placeholder": "Pioche",
+      "life_placeholder": "PV"
+    },
+    "discard_pile": "Défausse",
+    "buttons": {
+      "play": "Jouer",
+      "attack": "Attaquer",
+      "hunt": "Chasser une cible",
+      "use_mindbug": "Utiliser un Mindbug",
+      "block": "Bloquer",
+      "continue": "Continuer",
+      "action": "Action",
+      "no_mindbug": "Laisser",
+      "lose_lp": "Encaisser l'attaque"
+    },
+    "middle_area": {
+      "win": "Victoire !",
+      "lose": "Défaite...",
+      "player_turn": "Jouer OU Attaquer OU Action",
+      "waiting": "En attente de l'adversaire...",
+      "choice": {
+        "FRENZY": "Voulez-vous attaquer à nouveau ?",
+        "BOOLEAN": "TODO",
+        "HUNTER": "Sélectionnez une cible à chasser ou continuez à attaquer",
+        "waiting": "En attente d'un choix de l'adversaire...",
+        "mindbug": "Voulez-vous utiliser un Mindbug ?",
+        "attacked": "Bloquer OU Encaisser l'attaque"
+      }
+    }
+  },
+  "available_sets": {
+    "title": "Cartes du set"
+  },
+  "card_sets": {
+    "title": "Sélectionnez un set de cartes",
+    "first_contact": "Premier Contact",
+    "beyond_evolution": "Evolution Suprême"
+  },
+  "create_set": {
+    "title": "Nom du set : ",
+    "name_placeholder": "Choisissez un nom",
+    "button": "Créer"
+  },
+  "modal": {
+    "game_settings": {
+      "title": "Choisissez un ou plusieurs sets",
+      "button": "Chercher un adversaire",
+      "play_offline": "Mode Solo"
+    },
+    "login": {
+      "title": "Choississez un pseudo",
+      "name_placeholder": "pseudo",
+      "button": "Commencer"
+    },
+    "game": {
+      "leave_tooltip": "Fermer",
+      "choice": {
+        "target_title": "Choisissez ${targets_count} cible(s) parmi ces cartes",
+        "simultaneous_title": "Choisissez l'effet à résoudre en premier",
+        "save": "Valider le choix"
+      },
+      "discard": {
+        "carousel": "Carrousel",
+        "grid": "Grille",
+        "self_title": "Votre défausse",
+        "opponent_title": "Défausse adverse"
+      },
+      "settings": {
+        "title": "Paramètres",
+        "continue": "Continuer à jouer",
+        "leave": "Quitter la partie"
+      }
+    }
+  },
+  "cards": {
+    "back_placeholder": "dos de carte",
+    "keywords": {
+      "FRENZY": "FURIE",
+      "HUNTER": "CHASSEUR",
+      "TOUGH": "CORIACE",
+      "SNEAKY": "FURTIF",
+      "POISONOUS": "VENIMEUX"
+    },
+    "1": {
+      "name": "Dr Axolotl",
+      "description": "<b>Jouer</b> : Gagnez 2 PV"
+    },
+    "2": {
+      "name": "Oursabeille",
+      "description": "Ne peut pas être bloquée par des créatures de puissance 6 ou moins"
+    },
+    "3": {
+      "name": "Neuromouche",
+      "description": "<b>Jouer</b> : Prenez le contrôle d'une créature de puissance 6 ou plus"
+    },
+    "4": {
+      "name": "Reptireur d'élite",
+      "description": "<b>Attaque</b> : Votre adversaire perd 1 PV"
+    },
+    "5": {
+      "name": "Dracompost",
+      "description": "<b>Jouer</b> : Jouez une carte de votre défausse"
+    },
+    "6": {
+      "name": "Veuve Noire",
+      "description": "Votre adversaire ne peut pas résoudre d'effets <b>Jouer</b>"
+    },
+    "7": {
+      "name": "Pachypoulpe",
+      "description": "Votre adversaire ne peut pas bloquer avec des créatures de puissance 4 ou moins"
+    },
+    "8": {
+      "name": "Crapaud Bombe",
+      "description": "<b>Détruit</b> : Détruisez une créature"
+    },
+    "9": {
+      "name": "Furet Saboteur",
+      "description": "<b>Jouer</b> : Votre adversaire se défausse de 2 cartes"
+    },
+    "10": {
+      "name": "Giraffodile",
+      "description": "<b>Jouer</b> : Piochez toute votre défausse"
+    },
+    "11": {
+      "name": "Goblin-Garou",
+      "description": "Gagne <b>+6</b> de puissance tant que c'est votre tour"
+    },
+    "12": {
+      "name": "Gorillion",
+      "description": "<q>Pas touche à mes bananes !</q>"
+    },
+    "13": {
+      "name": "Pilleur de tombes",
+      "description": "<b>Jouer</b> : Jouez une carte de la défausse de votre adversaire"
+    },
+    "14": {
+      "name": "Mamie Harpie",
+      "description": "<b>Détruit</b> : Prenez le contrôle de jusqu'à 2 créature de puissance 5 ou moins"
+    },
+    "15": {
+      "name": "Kangousaurus Rex",
+      "description": "<b>Jouer</b> : Détruisez toutes les créatures ennemies de puissance 4 ou moins"
+    },
+    "16": {
+      "name": "Abeille tueuse",
+      "description": "<b>Jouer</b> : Votre adversaire perd 1 PV"
+    },
+    "17": {
+      "name": "Yéti Solitaire",
+      "description": "Gagne <b>+5</b> de puissance et <b>FURIE</b> tant que c'est votre seule carte alliée"
+    },
+    "18": {
+      "name": "Gladiataure",
+      "description": "<q>T'en veux encore ?</q>"
+    },
+    "19": {
+      "name": "Sirène mystérieuse",
+      "description": "<b>Jouer</b> : Mettez vos PV à égalité avec ceux de votre adversaire"
+    },
+    "20": {
+      "name": "Scorpion blindé",
+      "description": "<q>Qui s'y frotte s'y pique !</q>"
+    },
+    "21": {
+      "name": "Rhino Tortue",
+      "description": "<q>C'est pas vos boucliers ridicules qui vont m'arrêter !</q>"
+    },
+    "22": {
+      "name": "Requin Toutou",
+      "description": "<b>Attaque</b> : Détruisez une créature ennemie de puissance 6 ou plus"
+    },
+    "23": {
+      "name": "Requin Crabe Chien Momie Pieuvre",
+      "description": "Gagne CHASSEUR tant qu'une créature ennemie a <b>CHASSEUR</b>. Idem pour <b>FURTIF</b>, <b>VENIMEUX</b> et <b>FURIE</b>"
+    },
+    "24": {
+      "name": "Scarabouclier",
+      "description": "Les autres créatures alliées gagnent <b>+1</b> de puissance"
+    },
+    "25": {
+      "name": "Hydrescargot",
+      "description": "<b>Attaque</b> : Si vous contrôlez moins de créatures que votre adversaire, détruisez une créature"
+    },
+    "26": {
+      "name": "Lanceur d'escargots",
+      "description": "Les autres créatures alliés de puissance 4 ou moins gagnent <b>CHASSEUR</b> et <b>VENIMEUX</b>"
+    },
+    "27": {
+      "name": "Arachnibou",
+      "description": "<q>Tapi dans l'ombre...</q>"
+    },
+    "28": {
+      "name": "Baril étrange",
+      "description": "<b>Détruit</b> : Volez 2 cartes au hasard de la main de votre adversaire"
+    },
+    "29": {
+      "name": "Tigrécureuil",
+      "description": "<b>Jouer</b> : Détruisez une créature de puissance 7 ou plus"
+    },
+    "30": {
+      "name": "Turboustique",
+      "description": "<b>Attaque</b> : Votre adversaire perd tous ses PV sauf 1"
+    },
+    "31": {
+      "name": "Huissiéléphant",
+      "description": "<b>Attaque</b> : Votre adversaire se défausse d'une carte"
+    },
+    "32": {
+      "name": "Oursins hurleurs",
+      "description": "Les créatures alliées gagnent <b>+2</b> de puissance tant que c'est votre tour"
+    },
+    "33": {
+      "name": "Cafarbarbare",
+      "description": "Gagne <b>+8</b> de puissance tant qu'il ne vous reste que 1 PV"
+    },
+    "34": {
+      "name": "Comte Sangsula",
+      "description": "<b>Attack</b> : Perdez 1 PV. Détruisez une créature"
+    },
+    "35": {
+      "name": "Méduse squelettique",
+      "description": ""
+    },
+    "36": {
+      "name": "Furet pacifique",
+      "description": "Les créatures ennemies avec la puissance la plus élevée ne peuvent pas bloquer"
+    },
+    "37": {
+      "name": "Instigateur Gobelouille",
+      "description": "Gagne <b>+2</b> de puissance pour chaque autre créature alliée"
+    },
+    "38": {
+      "name": "Gorillaigle Alpha",
+      "description": "<b>Jouer</b> : Perdez 1 PV"
+    },
+    "39": {
+      "name": "Hamsterlion",
+      "description": "Les créatures ennemies avec la puissance la plus faible ne peuvent pas attaquer"
+    },
+    "40": {
+      "name": "Hamster glouton",
+      "description": "<b>Jouer</b> : Votre adversaire vous donne une carte de sa main. Jouez-la ou placez la dans votre main"
+    },
+    "41": {
+      "name": "Hyénix",
+      "description": "Lorsque vous perdez 1 PV ou plus et que cette créature est dans votre défausse, vous pouvez jouer cette carte"
+    },
+    "42": {
+      "name": "Majesté Manticore",
+      "description": "<b>Attaque</b> : Détruisez la ou les créatures avec la puissance la plus faible"
+    },
+    "43": {
+      "name": "Le rôdeur",
+      "description": "<b>Attaque</b> : Si vous contrôlez plus de créatures que votre adversaire, gagne <b>FURTIF</b> lors de ce tour"
+    },
+    "44": {
+      "name": "Aqua Vachette",
+      "description": "<b>Attaque</b> : Choisissez une créature. Elle ne peut pas bloquer lors de ce tour"
+    },
+    "45": {
+      "name": "Déflagardon",
+      "description": "<b>Attaque</b> : Cette créature ne peut pas être détruite lors de ce tour"
+    },
+    "46": {
+      "name": "Taureau à grande vitesse",
+      "description": "<b>Attaque</b> : Détruisez une créature ennemie de puissance 3 ou moins"
+    },
+    "47": {
+      "name": "Toxicake",
+      "description": "<b>Action</b> : Choisissez une créature ennemie. Votre adversaire attaque avec elle, si possible"
+    },
+    "48": {
+      "name": "Hippopoman",
+      "description": "Pendant son tour, votre adversaire doit toujours attaquer cette créature avec une créature ayant <b>CHASSEUR</b>, si possible"
+    },
+    "49": {
+      "name": "Bono-Bot méchant",
+      "description": "<b>Jouer</b> : Votre adversaire se défausse d'une carte pour chaque créature qu'il contrôle"
+    },
+    "50": {
+      "name": "Bono-Bot éméché",
+      "description": "Tant qu'il y a 3 créatures ennemies ou plus, cette créature gagne <b>+5</b> de puissance"
+    },
+    "51": {
+      "name": "Bono-Bot très méchant",
+      "description": "<b>Jouer</b> : Votre adversaire perd 1 PV pour chaque Mindbug qu'il possède"
+    },
+    "52": {
+      "name": "Dame Nuage",
+      "description": "<b>Action</b> : Détruisez une créature ennemie de puissance 4 ou moins. Évoluez en Princesse Tempête"
+    },
+    "53": {
+      "name": "Princesse Tempête",
+      "description": "<b>Action</b> : Détruisez une créature ennemie de puissance 6 ou moins. Évoluez en Reine Tonnerre"
+    },
+    "54": {
+      "name": "Reine Tonnerre",
+      "description": "<b>Attaque</b> : Détruisez une créature ennemie"
+    },
+    "55": {
+      "name": "Coach Panda",
+      "description": "Tant qu'il y a exactement 1 autre créature alliée, cette créature gagne <b>+3</b> de puissance et <b>FURIE</b>"
+    },
+    "56": {
+      "name": "Têtard curieux",
+      "description": "<b>Action</b> : Gagnez 1 PV. Évoluez en Craporacle"
+    },
+    "57": {
+      "name": "Craporacle",
+      "description": "<b>Action</b> : Gagnez 1 PV. Évoluez en Ogre-Grenouille"
+    },
+    "58": {
+      "name": "Ogre-Grenouille",
+      "description": "<b>Attaque</b> : Votre adversaire perd 1 PV"
+    },
+    "59": {
+      "name": "Dr Orange U. Tan",
+      "description": "<b>Jouer</b> : Vous pouvez perdre 1 PV. Si vous le faites, renvoyez toutes les créatures ennemies dans la main de votre adversaire"
+    },
+    "60": {
+      "name": "Dragauberge",
+      "description": "<b>Action</b> : Si vous contrôlez moins de créatures que votre adversaire, il perd 1 PV"
+    },
+    "61": {
+      "name": "Assassin perce-oreille",
+      "description": "<b>Jouer</b> : Vous pouvez vous défausser d'une carte. Si vous le faites, détruisez une créature"
+    },
+    "62": {
+      "name": "Infernautruche",
+      "description": "<b>Action</b> : Détruisez une créature ennemie de puissance 7 ou plus"
+    },
+    "63": {
+      "name": "Kitsunsei",
+      "description": "Les autres créatures alliées gagnent <b>FURTIF</b>"
+    },
+    "64": {
+      "name": "Terminataupe",
+      "description": "Votre adversaire ne peut pas bloquer avec des créatures de puissance 7 ou plus"
+    },
+    "65": {
+      "name": "Hélicopoulpe",
+      "description": "<b>Action</b> : Détruisez cette créature. Prenez le contrôle d'une créature ennemie"
+    },
+    "66": {
+      "name": "Poisson-mine",
+      "description": "<b>Détruit</b> : Détruisez toutes les créatures ennemies de puissance 8 ou plus"
+    },
+    "67": {
+      "name": "Lièvre radioactif",
+      "description": "<b>Jouer</b> : Votre adversaire prend le contrôle de cette créature. <b>Détruit</b> : Détruisez toutes les autres créatures alliées"
+    },
+    "68": {
+      "name": "Robochiot",
+      "description": ""
+    },
+    "69": {
+      "name": "Scigne",
+      "description": "Lorsque cette créature combat, la créature avec la puissance la plus élevée est détruite à la place de la plus faible"
+    },
+    "70": {
+      "name": "Shinopik",
+      "description": "Tant que vous ne possédez aucun Mindbug, cette créature gagne <b>+5</b> de puissance"
+    },
+    "71": {
+      "name": "Cornes d'acier",
+      "description": "<b>Détruit</b> : Votre adversaire se défausse de 3 cartes"
+    },
+    "72": {
+      "name": "Sweet Fighter",
+      "description": "<b>Détruit</b> : Gagnez 2 PV"
+    },
+    "73": {
+      "name": "L'expérience",
+      "description": "<b>Jouer</b> : Votre adversaire prend le contrôle de cette créature. Prenez le contrôle d'une créature ennemie"
+    },
+    "74": {
+      "name": "Tortue Toaster",
+      "description": "<b>Jouer</b> : Détruisez jusqu'à 2 créatures ennemies de puissance 4 à 6"
+    },
+    "75": {
+      "name": "Scaratoufer",
+      "description": "<b>Jouer</b> : Vous pouvez copier l'effet <b>Jouer</b> d'une autre créature"
+    },
+    "76": {
+      "name": "Recrue manchot",
+      "description": "<b>Action</b> : Votre adversaire se défausse d'une carte. Évoluez en Vétéran Empereur"
+    },
+    "77": {
+      "name": "Vétéran Empereur",
+      "description": "<b>Action</b> : Votre adversaire se défausse d'une carte. Évoluez en Panzer Pingouin"
+    },
+    "78": {
+      "name": "Panzer Pingouin",
+      "description": "<b>Attaque</b> : Votre adversaire se défausse de sa main et de sa pioche"
+    },
+    "79": {
+      "name": "Requin-balaise",
+      "description": "Les créatures ennemies ayant Furtif ne peuvent ni attaquer ni bloquer"
+    },
+    "80": {
+      "name": "Jeune pousse",
+      "description": "<b>Action</b> : Jouez une carte de votre défausse. Évoluez en Bigroot"
+    },
+    "81": {
+      "name": "Bigroot",
+      "description": "<b>Action</b> : Jouez une carte de votre défausse. Évoluez en Maître Chêne"
+    },
+    "82": {
+      "name": "Maître Chêne",
+      "description": "Les autres créatures alliées gagnent <b>+5</b> en puissance"
+    }
+  },
+  "router": {
+    "home": "Accueil",
+    "available_sets": "Sets",
+    "set_details": "Détail du set",
+    "create_set": "Créer un nouveau set",
+    "game": "Game"
+  },
+  "misc": {
+    "card_not_found": "Card not found",
+    "yes": "Yes",
+    "no": "No"
+  }
+}

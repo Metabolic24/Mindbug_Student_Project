@@ -2,6 +2,9 @@
 import {onMounted, ref, Ref} from "vue";
 import {getAvailableSets} from "@/shared/RestService";
 import {getSetImage} from "@/shared/CardUtils";
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 // Declare a list that will contain all the names of the available sets
 let sets: Ref<string[]> = ref([])
@@ -14,19 +17,19 @@ onMounted(async () => {
 
 <template>
   <nav @contextmenu.prevent>
-    <router-link to="/">Home</router-link>
+    <router-link to="/">{{ t('router.home') }}</router-link>
   </nav>
   <div id="cards-sets" @contextmenu.prevent>
-    <h1>Select a set of cards</h1>
+    <h1>{{ t('card_sets.title') }}</h1>
     <div id="cards-sets-container">
       <router-link :to="`/createSet`">
         <div class="cards-set">
-          <img :src="getSetImage('')" alt="Create a new set"/>
+          <img :src="getSetImage('')" :alt="t('router.create_set')"/>
         </div>
       </router-link>
       <router-link v-for="(set, index) in sets" :key="set" :to="`/sets/${set}?custom=${index >= 2}`">
         <div class="cards-set">
-          <img v-if="index < 2" :src="getSetImage(set)" :alt="set"/>
+          <img v-if="index < 2" :src="getSetImage(set)" :alt="t('card_sets.' + set)"/>
           <h2 v-if="index >= 2">{{set}}</h2>
         </div>
       </router-link>

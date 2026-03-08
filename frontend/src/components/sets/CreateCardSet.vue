@@ -2,6 +2,9 @@
 import {onMounted, ref, Ref} from "vue";
 import {createCardSet, getAllCards} from "@/shared/RestService";
 import {getCardImage} from "@/shared/CardUtils";
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 // Array that will contain all the IDs of the available cards from any default card set
 let availableCards: LightCardInterface[]
@@ -61,28 +64,28 @@ function isCreateButtonDisabled() {
 
 <template>
   <nav @contextmenu.prevent>
-    <router-link to="/">Home</router-link>
-    <router-link to="/sets">Sets</router-link>
+    <router-link to="/">{{ t('router.home') }}</router-link>
+    <router-link to="/sets">{{ t('router.available_sets') }}</router-link>
   </nav>
   <div id="card-set-creator" @contextmenu.prevent>
     <div id="card-set-form">
-      <h1>Card set name : </h1>
-      <input id="card-set-name" type="text" v-model="cardSetName"/>
+      <h1>{{ t('create_set.title') }}</h1>
+      <input id="card-set-name" type="text" v-model="cardSetName" :placeholder="t('create_set.name_placeholder')"/>
       <input id="card-set-create-button" type="button" :disabled="isCreateButtonDisabled()"
-             @click="createCardSet(cardSetName, rightSideCards.map(card => card.id))" value="Create">
+             @click="createCardSet(cardSetName, rightSideCards.map(card => card.id))" :value="t('create_set.button')">
     </div>
     <div id="card-selector">
       <div class="cards-container" @drop="cardDrop($event, rightSideCards, leftSideCards)"
            @dragover.prevent @dragenter.prevent>
         <img v-for="availableCard in leftSideCards" :key="availableCard.id" :src="getCardImage(availableCard.id)"
-             alt="Card not found"
+             :alt="t('misc.card_not_found')"
              @contextmenu="onCardClick($event, availableCard, leftSideCards)"
              draggable="true" @dragstart="cardDragged($event, availableCard)"/>
       </div>
       <div class="cards-container" @drop="cardDrop($event, leftSideCards, rightSideCards)"
            @dragover.prevent @dragenter.prevent>
         <img v-for="chosenCard in rightSideCards" :key="chosenCard.id" :src="getCardImage(chosenCard.id)"
-             alt="Card not found"
+             :alt="t('misc.card_not_found')"
              @contextmenu="onCardClick($event, chosenCard, rightSideCards)"
              draggable="true" @dragstart="cardDragged($event, chosenCard)"/>
       </div>
