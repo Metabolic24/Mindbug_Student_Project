@@ -2,6 +2,9 @@
 import {computed, onMounted, ref, Ref} from "vue";
 import {getAvailableSets} from "@/shared/RestService";
 import {getSetImage} from "@/shared/CardUtils";
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 // Declare a list that will contain all the names of the available sets
 let sets: Ref<string[]> = ref([])
@@ -54,23 +57,23 @@ function onButtonClicked() {
   <div class="modal-mask">
     <div class="modal-container">
       <div class="modal-header">
-        <h5 class="modal-title">Choose one or more sets you want to play</h5>
+        <h5 class="modal-title">{{ t("modal.game_settings.title")}}</h5>
       </div>
       <div class="modal-body">
         <div class="sets-container">
           <div :class="getSetClasses(set)" v-for="(set, index) in sets" :key="set" @click="updateSelection(set)">
-            <img v-if="index < 2" :src="getSetImage(set)" :alt="set"/>
+            <img v-if="index < 2" :src="getSetImage(set)" :alt="t('card_sets.' + set)"/>
             <h2 v-if="index >= 2">{{ set }}</h2>
           </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" @click="onButtonClicked()" :disabled="isButtonDisabled">
-          Search
+          {{ t("modal.game_settings.button") }}
         </button>
         <div id="offline_div">
-          <input type="checkbox" v-model="offline" id="offline_checkbox"/>
-          <label id="offline_label" for="offline_checkbox">Play Offline</label>
+          <input type="checkbox" v-model="offline" id="offline_checkbox" />
+          <label id="offline_label" for="offline_checkbox"> {{ t("modal.game_settings.play_offline") }}</label>
         </div>
       </div>
     </div>

@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import {computed, ref, Ref} from "vue";
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 // Declare events emitted by this component
 const emit = defineEmits(['button-clicked'])
@@ -16,14 +19,14 @@ const isButtonDisabled = computed(() => {
   <div class="modal-mask">
     <div class="modal-container">
       <div class="modal-header">
-        <h5 class="modal-title">Choose a nickname</h5>
+        <h5 class="modal-title">{{ t('modal.login.title') }}</h5>
       </div>
       <div class="modal-body">
-        <input v-model="playerName" placeholder="nickname"/>
+        <input v-model="playerName" :placeholder="t('modal.login.name_placeholder')"/>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" @click="emit('button-clicked', playerName)" :disabled="isButtonDisabled">
-          Start
+          {{ t('modal.login.button') }}
         </button>
       </div>
     </div>
@@ -32,10 +35,9 @@ const isButtonDisabled = computed(() => {
 
 <style scoped>
 .modal-container {
-  width: 250px;
-
-  margin: 150px auto;
-  padding: 20px 30px;
+  width: 15%;
+  margin: 15% auto;
+  padding: 1%;
 }
 
 .modal-header {
@@ -45,12 +47,10 @@ const isButtonDisabled = computed(() => {
 .modal-body {
   display: flex;
   justify-content: center;
-
   padding: 10px 0;
 }
 
 .modal-footer {
-  display: flex;
   justify-content: center;
 }
 </style>

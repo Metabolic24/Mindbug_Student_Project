@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
+
 // Declare the interface for the data given by the parent component
 interface Props {
   name: string
@@ -21,18 +25,18 @@ function getAvatar(name: string = "default") {
   <div class="playerContainer">
     <div class="playerDetails">
       <div class="playerProfile">
-        <img class="playerAvatar" :src="getAvatar()" alt="Avatar" draggable="false">
+        <img class="playerAvatar" :src="getAvatar()" :alt="t('game.player.avatar_placeholder')" draggable="false">
         <span class="playerName">{{ name }}</span>
       </div>
+
       <div class="playerData">
-        
         <!-- Mindbug tokens -->
         <div class="mindbugContainer">
           <img
             v-for="n in mindbugCount" :key="n"
             src="@/assets/profil-in-game/mindbug.png"
             class="mindbugToken"
-            alt="Mindbug"
+            :alt="t('game.player.mindbug_placeholder')"
             draggable="false"
           />
         </div>
@@ -42,12 +46,11 @@ function getAvatar(name: string = "default") {
           <img
             src="@/assets/profil-in-game/cardback-pile.png"
             class="pileImage"
-            alt="Draw pile"
+            :alt="t('game.player.drawPile_placeholder')"
             draggable="false"
           />
           <span class="pileCount">{{ drawPileCount }}</span>
         </div>
-
       </div>
     </div>
     
@@ -56,12 +59,11 @@ function getAvatar(name: string = "default") {
       <img 
         src="@/assets/profil-in-game/hearts-game.svg" 
         class="heartImage"
-        alt="Life"
+        :alt="t('game.player.life_placeholder')"
         draggable="false"
       />
       <span class="lifeText">{{ lifePoints }}</span>
     </div>
-
   </div>
 </template>
 

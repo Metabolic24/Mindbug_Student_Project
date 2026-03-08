@@ -17,6 +17,9 @@ import {
 import ChoiceModal from "@/components/game/ChoiceModal.vue";
 import {Store, useStore} from "vuex";
 import {useRouter} from "vue-router";
+import {useI18n} from "vue-i18n";
+
+const {t} = useI18n();
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -101,7 +104,6 @@ onMounted(async () => {
 
   // Launch the countdown if the server is taking too long to respond
   loadingTimer = window.setTimeout(() => {
-    console.log(loadingTimer)
     if (!gameState.value) {
       showRetry.value = true;
     }
@@ -174,7 +176,9 @@ onMounted(async () => {
 
 onUnmounted(() => {
   clearTimeout(loadingTimer);
-  wsConnection.close(1000, "client left the game")
+  if (wsConnection) {
+    wsConnection.close(1000, "client left the game");
+  }
 
   const game: GameStateInterface = gameState.value;
   if (!game?.winner) {
@@ -256,7 +260,7 @@ async function leaveGame() {
   }
 
   displaySettingsMenu.value = false;
-  await router.push({name: "Home"})
+  await router.push({name: t("router.home")})
 }
 </script>
 
@@ -273,7 +277,8 @@ async function leaveGame() {
         <hand :cards="gameState?.opponent?.hand" :opponent=true :selected-card="selectedCard"></hand>
       </div>
       <div class="col-2 top-buttons">
-        <button type="button" class="settings-button" @click="onSettingsButtonClick()">
+        <button type="button" class="settings-button" @click="onSettingsButtonClick()"
+                :title="t('game.settings_tooltip')">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 122.88 122.878" xml:space="preserve"
                fill="currentColor">
             <g>
@@ -290,9 +295,9 @@ async function leaveGame() {
 
     <div v-if="displaySettingsMenu" class="settings-menu-backdrop" @click="continueGame()">
       <div class="settings-menu" @click.stop>
-        <h2>Settings</h2>
-        <button @click="continueGame()">Continue</button>
-        <button class="leave" @click="leaveGame()">Leave</button>
+        <h2>{{ t('modal.game.settings.title') }}Settings</h2>
+        <button @click="continueGame()">{{ t('modal.game.settings.continue') }}</button>
+        <button class="leave" @click="leaveGame()">{{ t('modal.game.settings.leave') }}</button>
       </div>
     </div>
 
@@ -318,22 +323,21 @@ async function leaveGame() {
 
   <div v-else-if="error" class="error-page">
     <div class="error-container">
-      <h1>Oops !</h1>
-      <p>The game cannot be found or joined.</p>
-      <button class="btn-back" @click="router.push({name: 'Home'})">
-        Go back to the main menu
+      {{ t('game.error.not_found.label') }}
+      <button class="btn-back" @click="router.push({name: t('router.home')})">
+        {{ t('game.error.not_found.button') }}
       </button>
     </div>
   </div>
 
   <div v-else class="loading-page">
     <div class="loader"></div>
-    <p>Preparing the battlefield...</p>
+    <p>{{ t('game.loading') }}</p>
 
     <div v-if="showRetry" class="retry-section">
-      <p class="small">But it’s taking longer than expected....</p>
-      <button class="btn-back" @click="router.push({name: 'Home'})">
-        Cancel the game and go back to the main menu
+      <p class="small">{{ t('game.error.loading_failure.label') }}</p>
+      <button class="btn-back" @click="router.push({name: t('router.home')})">
+        {{ t('game.error.loading_failure.button') }}
       </button>
     </div>
   </div>

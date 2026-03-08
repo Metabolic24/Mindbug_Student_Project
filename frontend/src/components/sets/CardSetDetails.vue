@@ -2,6 +2,9 @@
 import {onMounted, ref, Ref} from "vue";
 import {getCardSetDetails} from "@/shared/RestService";
 import {getCardImage} from "@/shared/CardUtils";
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -19,20 +22,20 @@ onMounted(async () => {
 })
 
 // Format correctly the set name
-function formatSetName(setName: String) {
-  return setName.replace(/_/g, ' ');
+function getSetName() {
+  return props.custom ? props.set : t("card_sets." + props.set)
 }
 </script>
 
 <template>
   <nav @contextmenu.prevent>
-    <router-link to="/">Home</router-link>
-    <router-link to="/sets">Sets</router-link>
+    <router-link to="/">{{ t("router.home") }}</router-link>
+    <router-link to="/sets">{{ t("router.available_sets") }}</router-link>
   </nav>
   <div id="cards-set" @contextmenu.prevent>
-    <h1>Cards from set: {{ formatSetName(set) }}</h1>
+    <h1>{{ t("available_sets.title")}} <b>{{ getSetName() }}</b></h1>
     <div id="cards-container">
-      <img v-for="cardId in cards" :key="cardId" :src="getCardImage(+cardId)" alt="Card not found" class="card-image" draggable="false">/>
+      <img v-for="cardId in cards" :key="cardId" :src="getCardImage(+cardId)" :alt="t('misc.card_not_found')" class="card-image" draggable="false">/>
     </div>
   </div>
 </template>

@@ -3,6 +3,9 @@ import Card from "@/components/game/Card.vue";
 import {ref, computed} from "vue";
 import {Carousel, Slide, Pagination, Navigation} from "vue3-carousel"
 import "vue3-carousel/carousel.css"
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -28,9 +31,8 @@ const carouselConfig = {
 
 // Computed value for the modal title
 const title = computed(() => {
-  return props.opponent ?
-      "Défausse de l'adversaire" :
-      "Votre défausse";
+  const suffix = props.opponent ? 'opponent_title' : 'self_title'
+  return 'modal.game.discard.' + suffix
 })
 </script>
 
@@ -40,8 +42,8 @@ const title = computed(() => {
 
       <!-- HEADER -->
       <div class="modal-header" @click.stop>
-        <h5 class="modal-title">{{ title }}</h5>
-        <button class="close-btn" type="button" @click="emit('close-modal')">
+        <h5 class="modal-title">{{ t(title) }}</h5>
+        <button class="close-btn" type="button" @click="emit('close-modal')" :title="t('modal.game.leave_tooltip')">
           &times;
         </button>
       </div>
@@ -50,29 +52,29 @@ const title = computed(() => {
       <div class="modal-body" @click.stop>
         <!-- Switch GRID/CAROUSEL -->
         <div class="view-toggle">
-          <button :class="{ active: viewMode === 'carousel'}" @click="viewMode = 'carousel'">Carousel</button>
-          <button :class="{ active: viewMode === 'grid' }" @click="viewMode = 'grid'">Grid</button>
+          <button :class="{ active: viewMode === 'carousel'}" @click="viewMode = 'carousel'">{{ t('modal.game.discard.carousel') }}</button>
+          <button :class="{ active: viewMode === 'grid' }" @click="viewMode = 'grid'">{{ t('modal.game.discard.grid') }}</button>
         </div>
 
         <!-- GRID -->
         <div v-if="viewMode === 'grid'" class="cards-container">
-          <Card v-for="card in props.cards" :key="card.uuid" :card="card" context="discard-modal" :clickable="false"/>
+          <card v-for="card in props.cards" :key="card.uuid" :card="card" context="discard-modal" :clickable="false"/>
         </div>
 
         <!-- CAROUSEL -->
         <div v-else class="carousel-wrapper">
-          <Carousel v-bind="carouselConfig">
-            <Slide v-for="card in props.cards" :key="card.uuid">
+          <carousel v-bind="carouselConfig">
+            <slide v-for="card in props.cards" :key="card.uuid">
               <div class="carousel-card">
-                <Card :card="card" context="discard-modal" :clickable="false"/>
+                <card :card="card" context="discard-modal" :clickable="false"/>
               </div>
-            </Slide>
+            </slide>
 
             <template #addons>
               <Navigation/>
               <Pagination/>
             </template>
-          </Carousel>
+          </carousel>
         </div>
       </div>
     </div>
