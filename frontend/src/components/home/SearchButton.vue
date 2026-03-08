@@ -4,6 +4,9 @@ import {useRouter} from "vue-router";
 import {computed, onUnmounted, Ref, ref} from "vue";
 import GameSettingsModal from "@/components/home/GameSettingsModal.vue";
 import {startOfflineGame} from "@/shared/RestService";
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 // Retrieve VueX store to get player data
 const store: Store<AppState> = useStore()
@@ -15,7 +18,8 @@ const searchDisabled: Ref<boolean> = ref(false);
 
 // Computed value for search button label
 const searchLabel = computed(() => {
-  return searchDisabled.value ? "Searching players..." : "Play"
+  let suffix = searchDisabled.value ? "searching" : "play"
+  return "home.search_button." + suffix
 })
 
 let wsConnection: WebSocket;
@@ -30,7 +34,7 @@ async function searchGame(settings: GameSettingsInterface) {
   if (settings.offline) {
     const gameId = await startOfflineGame(store.state.playerData?.uuid, settings.sets[0])
     // Change route to 'Game' one as the server created an offline game
-    await router.push({name: "Game", query: {gameId}});
+    await router.push({name: t('router.game'), query: {gameId}});
     searchDisabled.value = false;
   } else {
     try {
@@ -38,7 +42,7 @@ async function searchGame(settings: GameSettingsInterface) {
       wsConnection = new WebSocket("ws://localhost:8080/ws/join?playerId=" + store.state.playerData?.uuid + "&playerName=" + store.state.playerData?.name + "&sets=" + settings.sets.join(","));
       wsConnection.onmessage = (event: MessageEvent<string>) => {
         // Change route to 'Game' one as the server found a game
-        router.push({name: "Game", query: {gameId: event.data}});
+        router.push({name: t('router.game'), query: {gameId: event.data}});
 
         // Close the WS connection and enable the search button (even if we are no more in the 'Home' route)
         wsConnection.close()
@@ -64,7 +68,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <button class="styled-button" @click="displayModal()" :disabled="searchDisabled">{{searchLabel}}</button>
+  <button class="styled-button" @click="displayModal()" :disabled="searchDisabled">{{ t(searchLabel)}}</button>
   <game-settings-modal v-if="isModalVisible" @button-clicked="searchGame($event)"></game-settings-modal>
 </template>
 

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Card from "@/components/game/Card.vue";
-import {getCardAlt, getCardImage} from "@/shared/CardUtils";
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -8,7 +7,7 @@ interface Props {
   opponent: boolean
   selectedCard?: CardInterface
 }
-const props = defineProps<Props>()
+defineProps<Props>()
 
 // Declare events emitted by this component
 const emit = defineEmits(['card-selected'])
@@ -17,7 +16,7 @@ const emit = defineEmits(['card-selected'])
 
 <template>
   <div class="hand">
-    <Card
+    <card
       v-for="card in cards"
       :key="card.uuid"
       :card="card"
@@ -26,7 +25,6 @@ const emit = defineEmits(['card-selected'])
       :clickable="!opponent"
       @click="emit('card-selected', card)"
     />
-
   </div>
 </template>
 

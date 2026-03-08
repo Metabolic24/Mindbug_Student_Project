@@ -3,6 +3,9 @@ import LoginModal from "@/components/home/LoginModal.vue";
 import {getPlayerData} from "@/shared/RestService";
 import {Store, useStore} from "vuex";
 import SearchButton from "@/components/home/SearchButton.vue";
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 // Retrieve VueX store to save player data
 const store: Store<AppState> = useStore()
@@ -16,10 +19,10 @@ async function onLogin(name: string) {
 
 <template>
   <div id="home" @contextmenu.prevent>
-    <h1>Welcome to Mindbug App</h1>
+    <h1>{{ t("home.title")}}</h1>
     <div id="home-buttons">
       <search-button></search-button>
-      <router-link to="/sets" class="styled-button">Available Sets</router-link>
+      <router-link to="/sets" class="styled-button">{{t("router.available_sets")}}</router-link>
     </div>
   </div>
   <login-modal v-if="!store.state.playerData" @button-clicked="onLogin($event)"></login-modal>

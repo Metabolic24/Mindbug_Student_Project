@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import {computed} from "vue";
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -19,17 +22,17 @@ const emit = defineEmits(['button-clicked'])
 const buttonLabel = computed(() => {
   if (props.gameState?.choice) {
     if (props.gameState?.choice.type === "BOOLEAN" || props.gameState?.choice.type === "FRENZY") { // Boolean/Frenzy case
-      return "Yes"
+      return 'misc.yes'
     } else if (props.gameState?.choice.type === "HUNTER") { // Hunter case
-      return "Hunt target"
+      return 'game.buttons.hunt'
     }
   } else if (props.gameState?.playerTurn) {
-    return props.selectedCard?.location === "Hand" ? "Play" : "Attack" // Play/attack case
+    return props.selectedCard?.location === "Hand" ? 'game.buttons.play' : 'game.buttons.attack' // Play/attack case
   } else {
     if (props.pickedCard) { // Mindbug case
-      return "Use Mindbug"
+      return 'game.buttons.use_mindbug'
     } else { // Block case
-      return "Block"
+      return 'game.buttons.block'
     }
   }
 })
@@ -52,15 +55,15 @@ const isFirstButtonVisible = computed(() => {
 const isFirstButtonDisabled = computed(() => {
   const label = buttonLabel.value
   switch (label) {
-    case "Use Mindbug":  // Mindbug
-    case "Yes": // Frenzy case
+    case "game.buttons.use_mindbug":  // Mindbug
+    case "misc.yes": // Frenzy case
       return false
-    case "Block":  // Block case
+    case "game.buttons.block":  // Block case
       return !(props.selectedCard && props.attackingCard && props.attackingCard.ownerId !== props.gameState?.player.uuid)
-    case "Hunt target":   // Hunter case
+    case "game.buttons.hunt":   // Hunter case
       return !props.selectedCard
-    case "Play":    // Play case
-    case "Attack":   // Attack case
+    case "game.buttons.play":    // Play case
+    case "game.buttons.attack":   // Attack case
       return props.gameState?.forcedAttack
 
     default:
@@ -72,18 +75,18 @@ const isFirstButtonDisabled = computed(() => {
 const secondButtonLabel = computed(() => {
   if (props.gameState?.choice && props.gameState?.choice.playerToChoose === props.gameState?.player.uuid) {
     if (props.gameState?.choice.type === "BOOLEAN" || props.gameState?.choice.type === "FRENZY") { // Boolean/Frenzy choice case
-      return "No"
+      return "misc.no"
     } else if (props.gameState?.choice.type === "HUNTER") { // Hunter choice case
-      return "Continue"
+      return "game.buttons.continue"
     }
   } else if (props.gameState?.playerTurn) {
     if (props.selectedCard?.location === "Board" && props.selectedCard?.hasAction) {
-      return "Action"
+      return "game.buttons.action"
     }
   } else if (props.pickedCard) { // Mindbug case
-    return "No Mindbug"
+    return "game.buttons.no_mindbug"
   } else if (props.attackingCard) { // Block case
-    return "Lose LP"
+    return "game.buttons.lose_lp"
   }
 })
 
@@ -111,10 +114,10 @@ const isSecondButtonDisabled = computed(() => {
 <template>
   <div class="buttons">
     <button v-if="isFirstButtonVisible" :disabled="isFirstButtonDisabled" @click="emit('button-clicked', buttonLabel)">
-      {{ buttonLabel }}
+      {{ t(buttonLabel) }}
     </button>
     <button v-if="isSecondButtonVisible" :disabled="isSecondButtonDisabled" @click="emit('button-clicked', secondButtonLabel)">
-      {{ secondButtonLabel }}
+      {{ t(secondButtonLabel) }}
     </button>
   </div>
 </template>
