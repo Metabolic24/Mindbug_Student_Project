@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import {computed} from "vue";
+import {computed, ComputedRef} from "vue";
 import {useI18n} from "vue-i18n";
 
-const { t } = useI18n();
+const {t} = useI18n();
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -18,106 +18,109 @@ const props = defineProps<Props>()
 // Declare events emitted by this component
 const emit = defineEmits(['button-clicked'])
 
-// Computed value for the first button label
-const buttonLabel = computed(() => {
+const mainButtonData: ComputedRef<ButtonData> = computed(() => {
+  const result: ButtonData = {
+    label: "",
+    visible: !props.gameState?.winner, // should not be visible if game is already finished
+    disabled: false,
+    event: undefined
+  }
+
   if (props.gameState?.choice) {
-    if (props.gameState?.choice.type === "BOOLEAN" || props.gameState?.choice.type === "FRENZY") { // Boolean/Frenzy case
-      return 'misc.yes'
-    } else if (props.gameState?.choice.type === "HUNTER") { // Hunter case
-      return 'game.buttons.hunt'
+    if (props.gameState.choice.type === "BOOLEAN" || props.gameState.choice.type === "FRENZY") { // Boolean/Frenzy case
+      result.label = 'misc.yes'
+      result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
+      result.event = "YES"
+    } else if (props.gameState.choice.type === "HUNTER") { // Hunter case
+      result.label = 'game.buttons.hunt'
+      result.disabled = !props.selectedCard
+      result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
+      result.event = "HUNT"
+    } else {
+      result.visible = false
     }
   } else if (props.gameState?.playerTurn) {
-    return props.selectedCard?.location === "Hand" ? 'game.buttons.play' : 'game.buttons.attack' // Play/attack case
+    if (props.selectedCard) {
+      if (props.selectedCard?.location === "Hand") {
+        result.label = 'game.buttons.play'
+        result.disabled = props.gameState?.forcedAttack
+        result.event = "PLAY"
+      } else {
+        result.label = 'game.buttons.attack'
+        result.disabled = !props.selectedCard.ableToAttack
+        result.event = "ATTACK"
+      }
+
+      result.visible = !props.attackingCard
+    } else {
+      result.visible = false
+    }
   } else {
     if (props.pickedCard) { // Mindbug case
-      return 'game.buttons.use_mindbug'
-    } else { // Block case
-      return 'game.buttons.block'
+      result.label = 'game.buttons.use_mindbug'
+      result.event = "MINDBUG"
+    } else if (props.attackingCard) { // Block case
+      result.label = 'game.buttons.block'
+      result.disabled = !(props.selectedCard && props.attackingCard.ownerId !== props.gameState?.player.uuid)
+      result.visible = props.attackingCard.ownerId !== props.gameState?.player.uuid;
+      result.event = "BLOCK"
+    } else {
+      result.visible = false
     }
   }
+
+  return result
 })
 
-// Computed value for the first button visibility
-const isFirstButtonVisible = computed(() => {
-  if (props.gameState.winner) {
-    return false
-  } else if (props.gameState?.choice) {
-    return props.gameState?.choice.playerToChoose === props.gameState?.player.uuid &&
-        (props.gameState?.choice.type === "BOOLEAN" || props.gameState?.choice.type === "FRENZY" || props.gameState?.choice.type === "HUNTER");// Choice case
-  } else if (props.gameState?.playerTurn) {
-    return props.selectedCard && !props.attackingCard // Play/attack case
-  } else {
-    return props.pickedCard || props.attackingCard // Mindbug or Block case
+const secondButtonData: ComputedRef<ButtonData> = computed(() => {
+  const result: ButtonData = {
+    label: "",
+    visible: !props.gameState.winner, // should not be visible if game is already finished
+    disabled: false,
+    event: undefined
   }
-})
 
-// Computed value to manage 'disable' state of the first button
-const isFirstButtonDisabled = computed(() => {
-  const label = buttonLabel.value
-  switch (label) {
-    case "game.buttons.use_mindbug":  // Mindbug
-    case "misc.yes": // Frenzy case
-      return false
-    case "game.buttons.block":  // Block case
-      return !(props.selectedCard && props.attackingCard && props.attackingCard.ownerId !== props.gameState?.player.uuid)
-    case "game.buttons.hunt":   // Hunter case
-      return !props.selectedCard
-    case "game.buttons.play":    // Play case
-    case "game.buttons.attack":   // Attack case
-      return props.gameState?.forcedAttack
-
-    default:
-      return false
-  }
-})
-
-// Computed value for the second button label
-const secondButtonLabel = computed(() => {
-  if (props.gameState?.choice && props.gameState?.choice.playerToChoose === props.gameState?.player.uuid) {
-    if (props.gameState?.choice.type === "BOOLEAN" || props.gameState?.choice.type === "FRENZY") { // Boolean/Frenzy choice case
-      return "misc.no"
-    } else if (props.gameState?.choice.type === "HUNTER") { // Hunter choice case
-      return "game.buttons.continue"
+  if (props.gameState?.choice) {
+    if (props.gameState.choice.type === "BOOLEAN" || props.gameState.choice.type === "FRENZY") { // Boolean/Frenzy case
+      result.label = 'misc.no'
+      result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
+      result.event = "NO"
+    } else if (props.gameState.choice.type === "HUNTER") { // Hunter case
+      result.label = 'game.buttons.continue'
+      result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
+      result.event = "CONTINUE"
+    } else {
+      result.visible = false
     }
   } else if (props.gameState?.playerTurn) {
     if (props.selectedCard?.location === "Board" && props.selectedCard?.hasAction) {
-      return "game.buttons.action"
+      result.label = "game.buttons.action"
+      result.disabled = props.gameState.forcedAttack
+      result.event = "ACTION"
+    } else {
+      result.visible = false
     }
   } else if (props.pickedCard) { // Mindbug case
-    return "game.buttons.no_mindbug"
+    result.label = "game.buttons.no_mindbug"
+    result.event = "NO_MINDBUG"
   } else if (props.attackingCard) { // Block case
-    return "game.buttons.lose_lp"
-  }
-})
-
-// Computed value for the second button visibility
-const isSecondButtonVisible = computed(() => {
-  if (props.gameState.winner) {
-    return false
-  } else if (props.gameState?.choice) {
-    return props.gameState?.choice.playerToChoose === props.gameState?.player.uuid &&
-        (props.gameState?.choice.type === "BOOLEAN" || props.gameState?.choice.type === "FRENZY" || props.gameState?.choice.type === "HUNTER");// Choice case
-  } else if (props.gameState?.playerTurn) {
-    return props.selectedCard?.location === "Board" && props.selectedCard?.hasAction
+    result.label = "game.buttons.lose_lp"
+    result.event = "LOSE_LP"
   } else {
-    return (props.pickedCard || props.attackingCard) // Mindbug or Block case
+    result.visible = false
   }
-})
 
-// Computed value to manage 'disable' state of the first button
-const isSecondButtonDisabled = computed(() => {
-  return !props.gameState?.choice && props.selectedCard?.location === "Board" && props.gameState?.playerTurn && props.gameState?.forcedAttack // Using the card action is forbidden due to forcedAttack
+  return result
 })
-
 </script>
 
 <template>
   <div class="buttons">
-    <button v-if="isFirstButtonVisible" :disabled="isFirstButtonDisabled" @click="emit('button-clicked', buttonLabel)">
-      {{ t(buttonLabel) }}
+    <button v-if="mainButtonData.visible" :disabled="mainButtonData.disabled" @click="emit('button-clicked', mainButtonData.event)">
+      {{ t(mainButtonData.label) }}
     </button>
-    <button v-if="isSecondButtonVisible" :disabled="isSecondButtonDisabled" @click="emit('button-clicked', secondButtonLabel)">
-      {{ t(secondButtonLabel) }}
+    <button v-if="secondButtonData.visible" :disabled="secondButtonData.disabled" @click="emit('button-clicked', secondButtonData.event)">
+      {{ t(secondButtonData.label) }}
     </button>
   </div>
 </template>
