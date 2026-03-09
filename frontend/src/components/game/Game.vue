@@ -171,7 +171,6 @@ onMounted(async () => {
   wsConnection.onerror = () => {
     error.value = true;
   };
-
 })
 
 onUnmounted(() => {
@@ -201,33 +200,31 @@ function onCardSelected(card: CardInterface, location: CardLocation): void {
   }
 }
 
-// TODO Gérer différemment les différentes actions (c'est nul de se baser sur le label du bouton)
-function onActionButtonClick(actionLabel: string) {
+function onActionButtonClick(buttonEvent: BoardButtonsEvent) {
   const game: GameStateInterface = gameState.value;
 
-  //TODO Gérer les cas d'erreur
-  switch (actionLabel) {
-    case "Play":
+  switch (buttonEvent) {
+    case "PLAY":
       return pickCard(game.uuid, selectedCard.value.uuid);
-    case "Use Mindbug":
+    case "MINDBUG":
       return playCard(game.uuid, game.player.uuid);
-    case "No Mindbug":
+    case "NO_MINDBUG":
       return playCard(game.uuid, undefined);
-    case "Attack":
+    case "ATTACK":
       return declareAttack(game.uuid, selectedCard.value.uuid);
-    case "Block":
+    case "BLOCK":
       return resolveAttack(game.uuid, game.player.uuid, selectedCard.value.uuid);
-    case "Action":
+    case "ACTION":
       return resolveAction(game.uuid, selectedCard.value.uuid);
-    case "Lose LP":
+    case "LOSE_LP":
       return resolveAttack(game.uuid, undefined, undefined);
-    case "Hunt target":
+    case "HUNT":
       return resolveSingleTargetChoice(game.uuid, selectedCard.value.uuid)
-    case "Continue":
+    case "CONTINUE":
       return resolveSingleTargetChoice(game.uuid, "")
-    case "Yes":
+    case "YES":
       return resolveBoolean(game.uuid, true)
-    case "No":
+    case "NO":
       return resolveBoolean(game.uuid, false)
     default:
       // Unexpected value
