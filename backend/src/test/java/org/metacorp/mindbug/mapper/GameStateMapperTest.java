@@ -328,8 +328,9 @@ public class GameStateMapperTest extends MindbugGameTest {
     @Test
     public void fromGame_booleanChoicev2() {
         CardInstance firstCard = currentPlayer.getHand().getFirst();
+        CardInstance sourceCard = game.getOpponent().getHand().getFirst();
 
-        game.setChoice(new BooleanChoice(currentPlayer, game.getOpponent().getHand().getFirst(), (_, _) -> {}, firstCard));
+        game.setChoice(new BooleanChoice(currentPlayer, sourceCard, (_, _) -> {}, firstCard));
 
         GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
 
@@ -344,7 +345,8 @@ public class GameStateMapperTest extends MindbugGameTest {
 
         BooleanChoiceDTO choiceDTO = assertInstanceOf(BooleanChoiceDTO.class, gameStateDTO.getChoice());
         assertEquals(ChoiceType.BOOLEAN, choiceDTO.getType());
-        compareCard(firstCard, choiceDTO.getSourceCard());
+        compareCard(sourceCard, choiceDTO.getSourceCard());
+        compareCard(firstCard, choiceDTO.getTargetCard());
         assertEquals(currentPlayer.getUuid(), choiceDTO.getPlayerToChoose());
     }
 
@@ -381,7 +383,6 @@ public class GameStateMapperTest extends MindbugGameTest {
     }
 
     private void compareCard(CardInstance card, CardDTO cardDTO) {
-        assertEquals(card.getCard().getName(), cardDTO.getName());
         assertEquals(card.getPower(), cardDTO.getPower());
         assertEquals(card.getCard().getPower(), cardDTO.getBasePower());
         assertEquals(card.getCard().getId(), cardDTO.getId());

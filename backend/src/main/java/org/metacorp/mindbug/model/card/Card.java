@@ -26,7 +26,6 @@ public class Card {
     private Set<CardKeyword> keywords;
     private Map<EffectTiming, List<Effect>> effects;
     private boolean unique;     // Has this card multiple copies in the set or not
-    private String description;
     private Integer initialCardId;  // Filled if this card is an evolution of another card
 
     /**
@@ -46,7 +45,6 @@ public class Card {
         this.id = otherCard.id;
         this.name = otherCard.name;
         this.power = otherCard.power;
-        this.description = otherCard.description;
         this.keywords = new HashSet<>(otherCard.keywords);
         this.effects = new HashMap<>(otherCard.effects);
         this.initialCardId = otherCard.initialCardId;

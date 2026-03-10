@@ -2,7 +2,6 @@ interface CommonCardInterface {
     id: number
     power: number
     keywords?: string[]
-    description: String
 }
 
 interface LightCardInterface extends CommonCardInterface {
