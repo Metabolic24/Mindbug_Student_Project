@@ -48,7 +48,9 @@
         "HUNTER": "Sélectionnez une cible à chasser ou continuez à attaquer",
         "waiting": "En attente d'un choix de l'adversaire...",
         "mindbug": "Voulez-vous utiliser un Mindbug ?",
-        "attacked": "Bloquer OU Encaisser l'attaque"
+        "attacked": "Bloquer OU Encaisser l'attaque",
+        "40": "Voulez-vous jouer cette carte immédiatement ?",
+        "41": "Voulez-vous réanimer cette carte ?"
       }
     }
   },

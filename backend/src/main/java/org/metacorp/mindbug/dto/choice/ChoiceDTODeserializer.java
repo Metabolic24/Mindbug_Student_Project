@@ -43,7 +43,10 @@ public class ChoiceDTODeserializer extends StdDeserializer<AbstractChoiceDTO> {
             case BOOLEAN -> {
                 CardDTO sourceCard = mapper.treeToValue(node.get("sourceCard"), new TypeReference<>() {
                 });
-                return new BooleanChoiceDTO(playerToChoose, sourceCard, node.get("message").asText());
+                CardDTO targetCard = mapper.treeToValue(node.get("targetCard"), new TypeReference<>() {
+                });
+
+                return new BooleanChoiceDTO(playerToChoose, sourceCard, targetCard);
             }
             case SIMULTANEOUS -> {
                 Set<CardDTO> cards = mapper.treeToValue(node.get("availableEffects"), new TypeReference<>() {
