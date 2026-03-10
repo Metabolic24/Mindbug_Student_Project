@@ -48,7 +48,9 @@
         "HUNTER": "Select a target to hunt or continue attacking",
         "waiting": "Waiting for opponent choice...",
         "mindbug": "Do you want to use a MindBug?",
-        "attacked": "Block OR Lose LP"
+        "attacked": "Block OR Lose LP",
+        "40": "Do you want to play the stolen card?",
+        "41": "Do you want to revive this card?"
       }
     }
   },

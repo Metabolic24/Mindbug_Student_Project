@@ -35,7 +35,7 @@ const displayKeywords = computed(() => {
   return props.card.keywords
       .filter(keyword => keywordIcons[keyword])
       .map(keyword => ({
-        key: keyword,
+        key: t('cards.keywords.' + keyword),
         icon: keywordIcons[keyword]
       }))
 })
@@ -88,7 +88,7 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 
     <!-- Description Box -->
     <div v-if="showOverlay" class="description-box">
-      <div class="description-text" v-html="props.card.description"></div>
+      <div class="description-text" v-html="t('cards.'+ props.card.id + '.description')"></div>
     </div>
 
     <!-- Overlay power -->

@@ -1,57 +1,59 @@
 [
   {
-    "id": 27,
-    "name": "SPIDER OWL",
-    "power": 3,
-    "keywords": ["SNEAKY", "POISONOUS"],
-    "effects": {},
-    "unique": false,
-    "description" : "“Hanging in there.”"
-  },
-  {
-    "id": 21,
-    "name": "RHINO TURTLE",
-    "power": 8,
-    "keywords": ["FRENZY", "TOUGH"],
-    "effects": {},
-    "unique": false,
-    "description" : "“There are not enough shields to stop me!”"
-  },
-  {
-    "id": 18,
-    "name": "LUCHATAUR",
-    "power": 9,
-    "keywords": ["FRENZY"],
-    "effects": {},
-    "unique": false,
-    "description" : "“Want an encore?”"
-  },
-  {
-    "id": 35,
-    "name": "CREEP FROM THE DEEP",
+    "id": 1,
+    "name": "AXOLOTL HEALER",
     "power": 4,
-    "keywords": ["HUNTER", "POISONOUS"],
-    "effects": {},
-    "unique": false,
-    "description" : "“shining !”"
+    "keywords": ["POISONOUS"],
+    "effects": {
+      "PLAY": [{
+        "type": "GAIN",
+        "value": 2
+      }]
+    },
+    "unique": false
   },
   {
-    "id": 20,
-    "name": "PLATED SCORPION",
-    "power": 2,
-    "keywords": ["TOUGH", "POISONOUS"],
-    "effects": {},
-    "unique": false,
-    "description" : "“The sting is only half the problem.”"
+    "id": 2,
+    "name": "BEE BEAR",
+    "power": 8,
+    "effects": {
+      "ATTACK": [{
+        "type": "NO_BLOCK",
+        "max": 6,
+        "value": -1
+      }]
+    },
+    "unique": true
   },
   {
-    "id": 12,
-    "name": "GORILLON",
-    "power": 10,
-    "keywords": [],
-    "effects": {},
-    "unique": true,
-    "description" : "“Where did you put the bananas?”"
+    "id": 3,
+    "name": "BRAIN FLY",
+    "power": 4,
+    "effects": {
+      "PLAY": [
+        {
+          "type": "STEAL",
+          "value": 1,
+          "min": 6,
+          "source": "BOARD",
+          "mustPlay": true
+        }
+      ]
+    },
+    "unique": true
+  },
+  {
+    "id": 4,
+    "name": "CHAMELEON SNIPER",
+    "power": 1,
+    "keywords": ["SNEAKY"],
+    "effects": {
+      "ATTACK": [{
+        "type": "INFLICT",
+        "value": 1
+      }]
+    },
+    "unique": true
   },
   {
     "id": 5,
@@ -66,70 +68,7 @@
         "mustPlay": true
       }]
     },
-    "unique": false,
-    "description" : "<b>Play</b>: Play a card from your discard pile."
-  },
-  {
-    "id": 37,
-    "name": "FROBLIN INSTIGATOR",
-    "power": 1,
-    "keywords": ["HUNTER"],
-    "effects": {
-      "PASSIVE": [{
-        "type": "POWER_UP",
-        "value": 2,
-        "forEachAlly": true
-      }]
-    },
-    "unique": false,
-    "description" : "Has <b>+2</b> power for each other allied creature."
-  },
-  {
-    "id": 15,
-    "name": "KANGASAURUS REX",
-    "power": 7,
-    "keywords": [],
-    "effects": {
-      "PLAY": [{
-        "type": "DESTROY",
-        "value": -1,
-        "max": 4
-      }]
-    },
-    "unique": false,
-    "description" : "<b>Play</b>: Defeat all enemy creatures with power 4 or less."
-  },
-  {
-    "id": 29,
-    "name": "TIGER SQUIRREL",
-    "power": 3,
-    "keywords": ["SNEAKY"],
-    "effects": {
-      "PLAY": [{
-        "type": "DESTROY",
-        "value": 1,
-        "min": 7
-      }]
-    },
-    "unique": false,
-    "description" : "<b>Play</b>: Defeat an enemy creature with power 7 or more."
-  },
-  {
-    "id": 32,
-    "name": "URCHIN HURLER",
-    "power": 5,
-    "keywords": ["HUNTER"],
-    "effects": {
-      "PASSIVE": [{
-        "type": "POWER_UP",
-        "value": 2,
-        "allies": true,
-        "self": false,
-        "selfTurn": true
-      }]
-    },
-    "unique": true,
-    "description" : "Other allied creatures have <b>+2</b> power while it is your turn."
+    "unique": false
   },
   {
     "id": 6,
@@ -142,51 +81,35 @@
         "value": "PLAY"
       }]
     },
-    "unique": true,
-    "description" : "The opponent cannot activate play effects."
+    "unique": true
   },
   {
-    "id": 31,
-    "name": "TUSKED EXTORTER",
-    "power": 8,
-    "keywords": [],
-    "effects": {
-      "ATTACK": [{
-        "type": "DISCARD",
-        "value": 1
-      }]
-    },
-    "unique": false,
-    "description" : "<b>Attack</b>: The opponent discards a card."
-  },
-  {
-    "id": 33,
-    "name": "BUGSERKER",
-    "power": 3,
+    "id": 7,
+    "name": "ELEPHANTOPUS",
+    "power": 7,
     "keywords": ["TOUGH"],
     "effects": {
       "PASSIVE": [{
-        "type": "POWER_UP",
-        "value": 8,
-        "lifePoints": 1
+        "type": "NO_BLOCK",
+        "max": 4,
+        "value": -1
       }]
     },
-    "unique": false,
-    "description" : "Has <b>+8</b> power while you have 1 life remaining."
+    "unique": true
   },
   {
-    "id": 44,
-    "name": "TURF THE SURFER",
-    "power": 8,
-    "keywords": [],
+    "id": 8,
+    "name": "EXPLOSIVE TOAD",
+    "power": 5,
+    "keywords": ["FRENZY"],
     "effects": {
-      "ATTACK": [{
-        "type": "NO_BLOCK",
-        "value": 1
+      "DEFEATED": [{
+        "type": "DESTROY",
+        "value": 1,
+        "selfAllowed": true
       }]
     },
-    "unique": false,
-    "description" : "<b>Attack</b>: Choose a creature. It cannot block this turn."
+    "unique": false
   },
   {
     "id": 9,
@@ -199,8 +122,219 @@
         "value": 2
       }]
     },
-    "unique": false,
-    "description" : "<b>Play</b>: The opponent discards 2 cards."
+    "unique": false
+  },
+  {
+    "id": 10,
+    "name": " GIRAFFODILE",
+    "power": 7,
+    "effects": {
+      "PLAY": [{
+        "type": "STEAL",
+        "value": -1,
+        "source": "SELF_DISCARD"
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 11,
+    "name": "GOBLIN WEREWOLF",
+    "power": 2,
+    "keywords": ["HUNTER"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "POWER_UP",
+        "value": 6,
+        "self": true,
+        "selfTurn": true
+
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 12,
+    "name": "GORILLON",
+    "power": 10,
+    "unique": true
+  },
+  {
+    "id": 13,
+    "name": "GRAVE ROBBER",
+    "power": 7,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "PLAY": [{
+        "type": "STEAL",
+        "value": 1,
+        "source": "DISCARD",
+        "mustPlay": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 14,
+    "name": "HARPY MOTHER",
+    "power": 5,
+    "effects": {
+      "DEFEATED": [{
+        "type": "STEAL",
+        "value": 2,
+        "optional": true,
+        "max": 5,
+        "source": "BOARD",
+        "mustPlay": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 15,
+    "name": "KANGASAURUS REX",
+    "power": 7,
+    "effects": {
+      "PLAY": [{
+        "type": "DESTROY",
+        "value": -1,
+        "max": 4
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 16,
+    "name": "KILLER BEE",
+    "power": 5,
+    "keywords": ["HUNTER"],
+    "effects": {
+      "PLAY": [{
+        "type": "INFLICT",
+        "value": 1
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 17,
+    "name": "LONE YETI",
+    "power": 5,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "POWER_UP",
+        "value": 5,
+        "alone": true
+      },{
+        "type": "KEYWORD_UP",
+        "value": "FRENZY",
+        "alone": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 18,
+    "name": "LUCHATAUR",
+    "power": 9,
+    "keywords": ["FRENZY"],
+    "unique": false
+  },
+  {
+    "id": 19,
+    "name": "MYSTERIOUS MERMAID",
+    "power": 7,
+    "effects": {
+      "PLAY": [{
+        "type": "GAIN",
+        "equal": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 20,
+    "name": "PLATED SCORPION",
+    "power": 2,
+    "keywords": ["TOUGH", "POISONOUS"],
+    "unique": false
+  },
+  {
+    "id": 21,
+    "name": "RHINO TURTLE",
+    "power": 8,
+    "keywords": ["FRENZY", "TOUGH"],
+    "unique": false
+  },
+  {
+    "id": 22,
+    "name": "SHARK DOG",
+    "power": 4,
+    "keywords": ["HUNTER"],
+    "effects": {
+      "ATTACK": [
+        {
+          "type": "DESTROY",
+          "value": 1,
+          "min": 6
+        }
+      ]
+    },
+    "unique": true
+  },
+  {
+    "id": 23,
+    "name": "SHARKY GRAB-DOG-MUMMYPUS",
+    "power": 5,
+    "effects": {
+      "PASSIVE": [{
+        "type": "KEYWORD_UP",
+        "value": "FRENZY",
+        "opponentHas": true
+      },{
+        "type": "KEYWORD_UP",
+        "value": "SNEAKY",
+        "opponentHas": true
+      },{
+        "type": "KEYWORD_UP",
+        "value": "POISONOUS",
+        "opponentHas": true
+      },{
+        "type": "KEYWORD_UP",
+        "value": "HUNTER",
+        "opponentHas": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 24,
+    "name": "SHIELD BUGS",
+    "power": 4,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "POWER_UP",
+        "value": 1,
+        "allies": true,
+        "self": false
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 25,
+    "name": "SNAIL HYDRA",
+    "power": 9,
+    "effects": {
+      "ATTACK": [{
+        "type": "DESTROY",
+        "value": 1,
+        "lessAllies": true
+      }]
+    },
+    "unique": false
   },
   {
     "id": 26,
@@ -222,30 +356,101 @@
         "max": 4
       }]
     },
-    "unique": true,
-    "description" : "Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>."
+    "unique": true
   },
   {
-    "id": 13,
-    "name": "GRAVE ROBBER",
-    "power": 7,
-    "keywords": ["TOUGH"],
+    "id": 27,
+    "name": "SPIDER OWL",
+    "power": 3,
+    "keywords": ["SNEAKY", "POISONOUS"],
+    "unique": false
+  },
+  {
+    "id": 28,
+    "name": "STRANGE BARREL",
+    "power": 6,
     "effects": {
-      "PLAY": [{
+      "DEFEATED": [{
         "type": "STEAL",
-        "value": 1,
-        "source": "DISCARD",
-        "mustPlay": true
+        "value": 2,
+        "source": "HAND",
+        "selection": "RANDOM"
       }]
     },
-    "unique": false,
-    "description" : "<b>Play</b>: Play a card from the opponent's discard pile."
+    "unique": true
+  },
+  {
+    "id": 29,
+    "name": "TIGER SQUIRREL",
+    "power": 3,
+    "keywords": ["SNEAKY"],
+    "effects": {
+      "PLAY": [{
+        "type": "DESTROY",
+        "value": 1,
+        "min": 7
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 30,
+    "name": "TURBO BUG",
+    "power": 4,
+    "effects": {
+      "ATTACK": [{
+        "type": "INFLICT",
+        "allButOne": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 31,
+    "name": "TUSKED EXTORTER",
+    "power": 8,
+    "effects": {
+      "ATTACK": [{
+        "type": "DISCARD",
+        "value": 1
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 32,
+    "name": "URCHIN HURLER",
+    "power": 5,
+    "keywords": ["HUNTER"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "POWER_UP",
+        "value": 2,
+        "allies": true,
+        "self": false,
+        "selfTurn": true
+      }]
+    },
+    "unique": true
+  },
+  {
+    "id": 33,
+    "name": "BUGSERKER",
+    "power": 3,
+    "keywords": ["TOUGH"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "POWER_UP",
+        "value": 8,
+        "lifePoints": 1
+      }]
+    },
+    "unique": false
   },
   {
     "id": 34,
     "name": "COUNT DRACULEECH",
     "power": 7,
-    "keywords": [],
     "effects": {
       "ATTACK": [{
         "type": "INFLICT",
@@ -257,92 +462,68 @@
         "selfAllowed": true
       }]
     },
-    "unique": false,
-    "description" : "<b>Attack</b>: Lose 1 life. Defeat a creature."
+    "unique": false
   },
   {
-    "id": 22,
-    "name": "SHARK DOG",
+    "id": 35,
+    "name": "CREEP FROM THE DEEP",
     "power": 4,
-    "keywords": ["HUNTER"],
-    "effects": {
-      "ATTACK": [
-        {
-          "type": "DESTROY",
-          "value": 1,
-          "min": 6
-        }
-      ]
-    },
-    "unique": true,
-    "description" : "<b>Attack</b>: Defeat an enemy creature with power 6 or more."
+    "keywords": ["HUNTER", "POISONOUS"],
+    "unique": false
   },
   {
-    "id": 3,
-    "name": "BRAIN FLY",
+    "id": 36,
+    "name": "FERRET PACIFIER",
     "power": 4,
-    "keywords": [],
     "effects": {
-      "PLAY": [
-        {
-          "type": "STEAL",
-          "value": 1,
-          "min": 6,
-          "source": "BOARD",
-          "mustPlay": true
-        }
-      ]
-    },
-    "unique": true,
-    "description" : "<b>Play</b>: Take control of a creature with power 6 or more."
-  },
-  {
-    "id": 16,
-    "name": "KILLER BEE",
-    "power": 5,
-    "keywords": ["HUNTER"],
-    "effects": {
-      "PLAY": [{
-        "type": "INFLICT",
-        "value": 1
+      "PASSIVE": [{
+        "type": "NO_BLOCK",
+        "highest": true,
+        "value": -1
       }]
     },
-    "unique": false,
-    "description" : "<b>Play</b>: The opponent loses 1 life."
+    "unique": false
   },
   {
-    "id": 10,
-    "name": " GIRAFFODILE",
-    "power": 7,
-    "keywords": [],
-    "effects": {
-      "PLAY": [{
-        "type": "STEAL",
-        "value": -1,
-        "source": "SELF_DISCARD"
-      }]
-    },
-    "unique": true,
-    "description" : "<b>Play</b>: Draw your entire discard pile."
-  },
-  {
-    "id": 17,
-    "name": "LONE YETI",
-    "power": 5,
-    "keywords": ["TOUGH"],
+    "id": 37,
+    "name": "FROBLIN INSTIGATOR",
+    "power": 1,
+    "keywords": ["HUNTER"],
     "effects": {
       "PASSIVE": [{
         "type": "POWER_UP",
-        "value": 5,
-        "alone": true
-      },{
-        "type": "KEYWORD_UP",
-        "value": "FRENZY",
-        "alone": true
+        "value": 2,
+        "forEachAlly": true
       }]
     },
-    "unique": true,
-    "description" : "While this is your only allied creature, it has <b>+5</b> power and <b>FRENZY</b>."
+    "unique": false
+  },
+  {
+    "id": 38,
+    "name": "GOREAGLE ALPHA",
+    "power": 6,
+    "keywords": ["FRENZY", "HUNTER", "TOUGH"],
+    "effects": {
+      "PLAY": [{
+        "type": "INFLICT",
+        "value": 1,
+        "self": true
+      }]
+    },
+    "unique": false
+  },
+  {
+    "id": 39,
+    "name": "HAMSTER LION",
+    "power": 8,
+    "keywords": ["FRENZY"],
+    "effects": {
+      "PASSIVE": [{
+        "type": "NO_ATTACK",
+        "lowest": true
+      }]
+    },
+    "unique": false
   },
   {
     "id": 40,
@@ -358,130 +539,20 @@
         "mayPlay": true
       }]
     },
-    "unique": false,
-    "description" : "<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand."
+    "unique": false
   },
   {
-    "id": 39,
-    "name": "HAMSTER LION",
-    "power": 8,
+    "id": 41,
+    "name": "HYENIX",
+    "power": 7,
     "keywords": ["FRENZY"],
     "effects": {
-      "PASSIVE": [{
-        "type": "NO_ATTACK",
-        "lowest": true
+      "LIFE_LOST": [{
+        "type": "REVIVE",
+        "location": "DISCARD"
       }]
     },
-    "unique": false,
-    "description" : "The enemy creature(s) with the lowest power cannot attack."
-  },
-  {
-    "id": 36,
-    "name": "FERRET PACIFIER",
-    "power": 4,
-    "keywords": [],
-    "effects": {
-      "PASSIVE": [{
-        "type": "NO_BLOCK",
-        "highest": true,
-        "value": -1
-      }]
-    },
-    "unique": false,
-    "description" : "The enemy creature(s) with the highest power cannot block."
-  },
-  {
-    "id": 30,
-    "name": "TURBO BUG",
-    "power": 4,
-    "keywords": [],
-    "effects": {
-      "ATTACK": [{
-        "type": "INFLICT",
-        "allButOne": true
-      }]
-    },
-    "unique": true,
-    "description": "<b>Attack</b>: The opponent loses all life except 1."
-  },
-  {
-    "id": 7,
-    "name": "ELEPHANTOPUS",
-    "power": 7,
-    "keywords": ["TOUGH"],
-    "effects": {
-      "PASSIVE": [{
-        "type": "NO_BLOCK",
-        "max": 4,
-        "value": -1
-      }]
-    },
-    "unique": true,
-    "description" : "The opponent cannot block with creatures with power 4 or less."
-  },
-  {
-    "id": 28,
-    "name": "STRANGE BARREL",
-    "power": 6,
-    "keywords": [],
-    "effects": {
-      "DEFEATED": [{
-        "type": "STEAL",
-        "value": 2,
-        "source": "HAND",
-        "selection": "RANDOM"
-      }]
-    },
-    "unique": true,
-    "description": "<b>Defeated</b>: Steal 2 random cards from the opponent's hand."
-  },
-  {
-    "id": 14,
-    "name": "HARPY MOTHER",
-    "power": 5,
-    "keywords": [],
-    "effects": {
-      "DEFEATED": [{
-        "type": "STEAL",
-        "value": 2,
-        "optional": true,
-        "max": 5,
-        "source": "BOARD",
-        "mustPlay": true
-      }]
-    },
-    "unique": true,
-    "description": "<b>Defeated</b>: Take control of up to 2 creatures with power 5 or less."
-  },
-  {
-    "id": 43,
-    "name": "THE LURKER",
-    "power": 4,
-    "keywords": ["TOUGH"],
-    "effects": {
-      "ATTACK": [{
-        "type": "KEYWORD_UP",
-        "value": "SNEAKY",
-        "moreAllies": true
-      }]
-    },
-    "unique": false,
-    "description": "<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn."
-  },
-  {
-    "id": 25,
-    "name": "SNAIL HYDRA",
-    "power": 9,
-    "keywords": [],
-    "effects": {
-      "ATTACK": [{
-        "type": "DESTROY",
-        "value": 1,
-        "lessAllies": true
-      }]
-    },
-    "unique": false,
-    "description": "<b>Attack</b>: If you control fewer creatures than the opponent, defeat a creature."
+    "unique": false
   },
   {
     "id": 42,
@@ -496,168 +567,32 @@
         "selfAllowed": true
       }]
     },
-    "unique": false,
-    "description": "<b>Attack</b>: Defeat the creature(s) with the lowest power."
+    "unique": false
   },
   {
-    "id": 8,
-    "name": "EXPLOSIVE TOAD",
-    "power": 5,
-    "keywords": ["FRENZY"],
-    "effects": {
-      "DEFEATED": [{
-        "type": "DESTROY",
-        "value": 1,
-        "selfAllowed": true
-      }]
-    },
-    "unique": false,
-    "description": "<b>Defeated</b>: Defeat a creature."
-  },
-  {
-    "id": 41,
-    "name": "HYENIX",
-    "power": 7,
-    "keywords": ["FRENZY"],
-    "effects": {
-      "LIFE_LOST": [{
-        "type": "REVIVE",
-        "location": "DISCARD"
-      }]
-    },
-    "unique": false,
-    "description": "When you lose life while this is in your discard pile, you may play this."
-  },
-  {
-    "id": 11,
-    "name": "GOBLIN WEREWOLF",
-    "power": 2,
-    "keywords": ["HUNTER"],
-    "effects": {
-      "PASSIVE": [{
-        "type": "POWER_UP",
-        "value": 6,
-        "self": true,
-        "selfTurn": true
-
-      }]
-    },
-    "unique": false,
-    "description": "Has <b>+6</b> power while it is your turn."
-  },
-  {
-    "id": 19,
-    "name": "MYSTERIOUS MERMAID",
-    "power": 7,
-    "keywords": [],
-    "effects": {
-      "PLAY": [{
-        "type": "GAIN",
-        "equal": true
-      }]
-    },
-    "unique": true,
-    "description": "<b>Play</b>: Stay your life equal to the opponent's."
-  },
-  {
-    "id": 23,
-    "name": "SHARKY GRAB-DOG-MUMMYPUS",
-    "power": 5,
-    "keywords": [],
-    "effects": {
-      "PASSIVE": [{
-        "type": "KEYWORD_UP",
-        "value": "FRENZY",
-        "opponentHas": true
-      },{
-        "type": "KEYWORD_UP",
-        "value": "SNEAKY",
-        "opponentHas": true
-      },{
-        "type": "KEYWORD_UP",
-        "value": "POISONOUS",
-        "opponentHas": true
-      },{
-        "type": "KEYWORD_UP",
-        "value": "HUNTER",
-        "opponentHas": true
-      }]
-    },
-    "unique": true,
-    "description": "Has <b>HUNTER</b> while an enemy creature does. Repeat for <b>SNEAKY</b>,<b>FRENZY</b>, and <b>POISONOUS</b>."
-  },
-  {
-    "id": 2,
-    "name": "BEE BEAR",
-    "power": 8,
-    "keywords": [],
-    "effects": {
-      "ATTACK": [{
-        "type": "NO_BLOCK",
-        "max": 6,
-        "value": -1
-      }]
-    },
-    "unique": true,
-    "description": "Cannot be blocked by creatures with power 6 or less."
-  },
-  {
-    "id": 4,
-    "name": "CHAMELEON SNIPER",
-    "power": 1,
-    "keywords": ["SNEAKY"],
-    "effects": {
-      "ATTACK": [{
-        "type": "INFLICT",
-        "value": 1
-      }]
-    },
-    "unique": true,
-    "description": "<b>Attack</b>: The opponent loses 1 life."
-  },
-  {
-    "id": 24,
-    "name": "SHIELD BUGS",
+    "id": 43,
+    "name": "THE LURKER",
     "power": 4,
     "keywords": ["TOUGH"],
     "effects": {
-      "PASSIVE": [{
-        "type": "POWER_UP",
-        "value": 1,
-        "allies": true,
-        "self": false
+      "ATTACK": [{
+        "type": "KEYWORD_UP",
+        "value": "SNEAKY",
+        "moreAllies": true
       }]
     },
-    "unique": false,
-    "description": "Other allied creatures have <b>+1</b> power."
+    "unique": false
   },
   {
-    "id": 38,
-    "name": "GOREAGLE ALPHA",
-    "power": 6,
-    "keywords": ["FRENZY", "HUNTER", "TOUGH"],
+    "id": 44,
+    "name": "TURF THE SURFER",
+    "power": 8,
     "effects": {
-      "PLAY": [{
-        "type": "INFLICT",
-        "value": 1,
-        "self": true
+      "ATTACK": [{
+        "type": "NO_BLOCK",
+        "value": 1
       }]
     },
-    "unique": false,
-    "description": "<b>Play</b>: Lose 1 life."
-  },
-  {
-    "id": 1,
-    "name": "AXOLOTL HEALER",
-    "power": 4,
-    "keywords": ["POISONOUS"],
-    "effects": {
-      "PLAY": [{
-        "type": "GAIN",
-        "value": 2
-      }]
-    },
-    "unique": false,
-    "description": "<b>Play</b>: Gain 2 life."
+    "unique": false
   }
 ]

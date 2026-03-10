@@ -1,7 +1,6 @@
 [ {
   "id" : 1,
   "name" : "AXOLOTL HEALER",
-  "description": "<b>Play</b>: Gain 2 life.",
   "power" : 4,
   "keywords" : [ "POISONOUS" ],
   "effects" : {
@@ -13,7 +12,6 @@
 }, {
   "id" : 13,
   "name" : "GRAVE ROBBER",
-  "description": "<b>Play</b>: Play a card from the opponent's discard pile.",
   "power" : 7,
   "keywords" : [ "TOUGH" ],
   "effects" : {
@@ -28,7 +26,6 @@
 }, {
   "id" : 15,
   "name" : "KANGASAURUS REX",
-  "description": "<b>Play</b>: Defeat all enemy creatures with power 4 or less.",
   "power" : 7,
   "effects" : {
     "PLAY" : [ {
@@ -41,7 +38,6 @@
 }, {
   "id" : 18,
   "name" : "LUCHATAUR",
-  "description": "“Want an encore?”",
   "power" : 9,
   "keywords" : [ "FRENZY" ],
   "unique": true

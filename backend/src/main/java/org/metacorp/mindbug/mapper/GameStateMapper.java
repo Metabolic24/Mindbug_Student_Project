@@ -75,11 +75,9 @@ public class GameStateMapper {
         result.setId(card.getCard().getId());
         result.setUuid(card.getUuid());
         result.setOwnerId(card.getOwner().getUuid());
-        result.setName(card.getCard().getName());
         result.setPower(card.getPower());
         result.setBasePower(card.getCard().getPower());
         result.setKeywords(card.getKeywords());
-        result.setDescription(card.getCard().getDescription());
         result.setHasAction(!card.getEffects(EffectTiming.ACTION).isEmpty());
         result.setStillTough(card.isStillTough());
         result.setAbleToBlock(card.isAbleToBlock());

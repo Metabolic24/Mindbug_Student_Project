@@ -25,10 +25,9 @@ const message = computed(() => {
   } else if (props.gameState?.choice) {
     if (props.gameState.choice.playerToChoose === props.gameState.player.uuid) {
       if (props.gameState.choice.type === "FRENZY" || props.gameState.choice.type === "HUNTER") {
-        return 'game.middle_area.choice' + props.gameState.choice.type
+        return 'game.middle_area.choice.' + props.gameState.choice.type
       } else if (props.gameState.choice.type === "BOOLEAN") {
-        //TODO A changer
-        return props.gameState.choice.message
+        return 'game.middle_area.choice.' + props.gameState.choice.sourceCard.id
       }
     } else {
       return 'game.middle_area.choice.waiting'
@@ -62,7 +61,7 @@ const isImageVisible = computed(() => {
 // Computed value for the image source URL
 const imgSrc = computed(() => {
   if (props.gameState?.choice) {
-    return props.gameState.choice.sourceCard
+    return props.gameState.choice.targetCard ? props.gameState.choice.targetCard : props.gameState.choice.sourceCard
   } else if (props.pickedCard) {
     return props.pickedCard
   }
@@ -82,7 +81,7 @@ const imgSrc = computed(() => {
       class="middle-card"
     />
 
-    <span>{{ t(message) }}</span>
+    <span>{{ message ? t(message) : "" }}</span>
   </div>
 </template>
 
