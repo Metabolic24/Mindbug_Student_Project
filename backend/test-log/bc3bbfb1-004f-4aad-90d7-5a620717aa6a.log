@@ -1,0 +1,240 @@
+2026-03-12 12:03:08.309 INFO  - Calculating first player...
+2026-03-12 12:03:08.311 INFO  - Banned card for Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) : SHARK DOG (b520ef6d-904d-435d-bf49-7e0dedc0fb17) (4)
+2026-03-12 12:03:08.311 INFO  - Banned card for Player2 (e218d836-07f9-4012-b451-e3003c3f8c76) : MYSTERIOUS MERMAID (2295ca2b-41d2-4469-9634-e0c8734f719c) (7)
+2026-03-12 12:03:08.311 INFO  - First player will be Player2 (e218d836-07f9-4012-b451-e3003c3f8c76)
+2026-03-12 12:03:08.318 INFO  - Game bc3bbfb1-004f-4aad-90d7-5a620717aa6a starting...
+2026-03-12 12:03:08.318 INFO  - Player Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) hand : {
+- THE LURKER ;
+- HUNGRY HUNGRY HAMSTER ;
+- FROBLIN INSTIGATOR ;
+- HARPY MOTHER ;
+- SPIDER OWL
+}
+2026-03-12 12:03:08.319 INFO  - Player Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) draw pile : {
+- FROBLIN INSTIGATOR ;
+- SNAIL THROWER ;
+- COMPOST DRAGON ;
+- EXPLOSIVE TOAD ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:08.319 INFO  - Player Player2 (e218d836-07f9-4012-b451-e3003c3f8c76) hand : {
+- PLATED SCORPION ;
+- TIGER SQUIRREL ;
+- KILLER BEE ;
+- HAMSTER LION ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:08.319 INFO  - Player Player2 (e218d836-07f9-4012-b451-e3003c3f8c76) draw pile : {
+- FERRET BOMBER ;
+- SPIDER OWL ;
+- CREEP FROM THE DEEP ;
+- CHAMELEON SNIPER ;
+- BUGSERKER
+}
+2026-03-12 12:03:08.319 DEBUG - FROBLIN INSTIGATOR (52aa3fa2-5304-4fde-8574-da001b2a329c) power changed (1 -> 1) due to FROBLIN INSTIGATOR (52aa3fa2-5304-4fde-8574-da001b2a329c) effect
+2026-03-12 12:03:08.319 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (52aa3fa2-5304-4fde-8574-da001b2a329c)
+2026-03-12 12:03:08.319 DEBUG - FROBLIN INSTIGATOR (52aa3fa2-5304-4fde-8574-da001b2a329c) power changed (1 -> 1) due to FROBLIN INSTIGATOR (52aa3fa2-5304-4fde-8574-da001b2a329c) effect
+2026-03-12 12:03:08.319 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (52aa3fa2-5304-4fde-8574-da001b2a329c)
+2026-03-12 12:03:08.319 INFO  - Life update for player Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) : 2 LP
+2026-03-12 12:03:08.319 DEBUG - FROBLIN INSTIGATOR (52aa3fa2-5304-4fde-8574-da001b2a329c) power changed (1 -> 1) due to FROBLIN INSTIGATOR (52aa3fa2-5304-4fde-8574-da001b2a329c) effect
+2026-03-12 12:03:08.319 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (52aa3fa2-5304-4fde-8574-da001b2a329c)
+2026-03-12 12:03:08.319 DEBUG - FROBLIN INSTIGATOR (52aa3fa2-5304-4fde-8574-da001b2a329c) power changed (1 -> 1) due to FROBLIN INSTIGATOR (52aa3fa2-5304-4fde-8574-da001b2a329c) effect
+2026-03-12 12:03:08.319 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (52aa3fa2-5304-4fde-8574-da001b2a329c)
+2026-03-12 12:03:08.319 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:08.320 DEBUG - Player Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) must choose 2 card(s) to discard (available targets : {
+- THE LURKER ;
+- HUNGRY HUNGRY HAMSTER ;
+- HARPY MOTHER ;
+- FROBLIN INSTIGATOR ;
+- SNAIL THROWER
+})
+2026-03-12 12:03:08.320 INFO  - New TARGET choice to be resolved by Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) (targets : {
+- THE LURKER ;
+- SNAIL THROWER ;
+- FROBLIN INSTIGATOR ;
+- HUNGRY HUNGRY HAMSTER ;
+- HARPY MOTHER
+})
+2026-03-12 12:03:08.320 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.320 DEBUG - THE LURKER (31883245-ff76-47f0-b079-7ea95da145da) discarded due to FERRET BOMBER (bc5e7a15-c78e-40b7-b63e-ac63c8ff7d74) effect
+2026-03-12 12:03:08.320 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) discarded due to FERRET BOMBER (bc5e7a15-c78e-40b7-b63e-ac63c8ff7d74) effect
+2026-03-12 12:03:08.320 INFO  - Resolving DISCARD effect of FERRET BOMBER (bc5e7a15-c78e-40b7-b63e-ac63c8ff7d74)
+2026-03-12 12:03:08.320 INFO  - Life update for player Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) : 1 LP
+2026-03-12 12:03:08.320 DEBUG - FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) power changed (1 -> 1) due to FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) effect
+2026-03-12 12:03:08.320 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5)
+2026-03-12 12:03:08.321 DEBUG - FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) power changed (1 -> 1) due to FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) effect
+2026-03-12 12:03:08.321 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5)
+2026-03-12 12:03:08.321 DEBUG - FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) power changed (1 -> 1) due to FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) effect
+2026-03-12 12:03:08.321 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5)
+2026-03-12 12:03:08.321 DEBUG - FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) power changed (1 -> 1) due to FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) effect
+2026-03-12 12:03:08.321 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5)
+2026-03-12 12:03:08.321 DEBUG - FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) power changed (1 -> 3) due to FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) effect
+2026-03-12 12:03:08.321 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5)
+2026-03-12 12:03:08.321 DEBUG - Player Player2 (e218d836-07f9-4012-b451-e3003c3f8c76) must choose 1 cards to steal (targets : {
+- KILLER BEE ;
+- HAMSTER LION ;
+- CREEP FROM THE DEEP ;
+- CHAMELEON SNIPER ;
+- BUGSERKER
+})
+2026-03-12 12:03:08.321 DEBUG - FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) power changed (1 -> 3) due to FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) effect
+2026-03-12 12:03:08.321 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5)
+2026-03-12 12:03:08.321 INFO  - New TARGET choice to be resolved by Player2 (e218d836-07f9-4012-b451-e3003c3f8c76) (targets : {
+- KILLER BEE ;
+- CREEP FROM THE DEEP ;
+- BUGSERKER ;
+- HAMSTER LION ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:08.321 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.321 DEBUG - Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) must decide if stolen card KILLER BEE (d132ab19-4018-4a74-a360-cfbcd8ae8b74) will be added to hand or board
+2026-03-12 12:03:08.321 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (5d8b70c5-5c92-4f78-aefb-8ba941535c9a)
+2026-03-12 12:03:08.321 DEBUG - FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) power changed (1 -> 3) due to FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) effect
+2026-03-12 12:03:08.321 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5)
+2026-03-12 12:03:08.321 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:08.321 DEBUG - KILLER BEE (d132ab19-4018-4a74-a360-cfbcd8ae8b74) stolen and played by Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) due to HUNGRY HUNGRY HAMSTER (5d8b70c5-5c92-4f78-aefb-8ba941535c9a) effect
+2026-03-12 12:03:08.321 DEBUG - FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) effect
+2026-03-12 12:03:08.321 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5)
+2026-03-12 12:03:08.321 INFO  - Life update for player Player2 (e218d836-07f9-4012-b451-e3003c3f8c76) : 2 LP
+2026-03-12 12:03:08.321 DEBUG - Player2 (e218d836-07f9-4012-b451-e3003c3f8c76) LP changed (3 -> 2) due to KILLER BEE (d132ab19-4018-4a74-a360-cfbcd8ae8b74) effect
+2026-03-12 12:03:08.321 INFO  - Resolving INFLICT effect of KILLER BEE (d132ab19-4018-4a74-a360-cfbcd8ae8b74)
+2026-03-12 12:03:08.321 DEBUG - FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) effect
+2026-03-12 12:03:08.321 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5)
+2026-03-12 12:03:08.321 DEBUG - FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) effect
+2026-03-12 12:03:08.321 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5)
+2026-03-12 12:03:08.321 DEBUG - MAJESTIC MANTICORE (60ee4268-3d8b-4f48-8b71-698b2b9c0584) effect destroys HUNGRY HUNGRY HAMSTER (5d8b70c5-5c92-4f78-aefb-8ba941535c9a)
+2026-03-12 12:03:08.321 DEBUG - MAJESTIC MANTICORE (60ee4268-3d8b-4f48-8b71-698b2b9c0584) effect destroys PLATED SCORPION (278fd804-a9ec-46e5-97f5-4b6651289deb)
+2026-03-12 12:03:08.321 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (60ee4268-3d8b-4f48-8b71-698b2b9c0584)
+2026-03-12 12:03:08.321 DEBUG - FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) power changed (1 -> 3) due to FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5) effect
+2026-03-12 12:03:08.321 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a11ff19-9680-4192-8b9c-06ff691a23f5)
+2026-03-12 12:03:08.321 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:08.322 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.322 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.322 DEBUG - CardInstance(uuid=9979bf6b-5696-4891-900d-036d7d3b6172, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.322 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.322 DEBUG - Player Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) must choose 1 cards to steal (targets : {
+- FROBLIN INSTIGATOR ;
+- THE LURKER ;
+- HUNGRY HUNGRY HAMSTER ;
+- SPIDER OWL ;
+- HUNGRY HUNGRY HAMSTER ;
+- FROBLIN INSTIGATOR ;
+- KILLER BEE
+})
+2026-03-12 12:03:08.322 DEBUG - CardInstance(uuid=9979bf6b-5696-4891-900d-036d7d3b6172, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.322 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.322 INFO  - New TARGET choice to be resolved by Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) (targets : {
+- FROBLIN INSTIGATOR ;
+- THE LURKER ;
+- KILLER BEE ;
+- FROBLIN INSTIGATOR ;
+- HUNGRY HUNGRY HAMSTER ;
+- SPIDER OWL ;
+- HUNGRY HUNGRY HAMSTER
+})
+2026-03-12 12:03:08.322 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.322 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) stolen and played by Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) due to COMPOST DRAGON (9979bf6b-5696-4891-900d-036d7d3b6172) effect
+2026-03-12 12:03:08.322 INFO  - Resolving STEAL effect of COMPOST DRAGON (9979bf6b-5696-4891-900d-036d7d3b6172)
+2026-03-12 12:03:08.322 DEBUG - CardInstance(uuid=e2e1bf8b-182e-47d4-aa84-634c109faf10, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.322 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.322 DEBUG - Player Player2 (e218d836-07f9-4012-b451-e3003c3f8c76) must choose 1 cards to steal (targets : {
+- CREEP FROM THE DEEP ;
+- CHAMELEON SNIPER ;
+- BUGSERKER
+})
+2026-03-12 12:03:08.322 DEBUG - CardInstance(uuid=e2e1bf8b-182e-47d4-aa84-634c109faf10, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.322 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.322 INFO  - New TARGET choice to be resolved by Player2 (e218d836-07f9-4012-b451-e3003c3f8c76) (targets : {
+- CREEP FROM THE DEEP ;
+- BUGSERKER ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:08.322 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.322 DEBUG - Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) must decide if stolen card CHAMELEON SNIPER (ebb8db1a-33d6-4a41-9a96-897003a5d3aa) will be added to hand or board
+2026-03-12 12:03:08.322 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10)
+2026-03-12 12:03:08.322 DEBUG - CardInstance(uuid=e2e1bf8b-182e-47d4-aa84-634c109faf10, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.322 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.322 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:08.322 DEBUG - CHAMELEON SNIPER (ebb8db1a-33d6-4a41-9a96-897003a5d3aa) stolen and drawn by Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) due to HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) effect
+2026-03-12 12:03:08.322 DEBUG - CardInstance(uuid=e2e1bf8b-182e-47d4-aa84-634c109faf10, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.322 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.323 DEBUG - CardInstance(uuid=e2e1bf8b-182e-47d4-aa84-634c109faf10, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.323 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.323 DEBUG - CardInstance(uuid=e2e1bf8b-182e-47d4-aa84-634c109faf10, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.323 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.323 DEBUG - CardInstance(uuid=e2e1bf8b-182e-47d4-aa84-634c109faf10, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.323 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.323 DEBUG - CardInstance(uuid=e2e1bf8b-182e-47d4-aa84-634c109faf10, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.323 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.323 DEBUG - CardInstance(uuid=e2e1bf8b-182e-47d4-aa84-634c109faf10, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.323 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.323 DEBUG - CardInstance(uuid=e2e1bf8b-182e-47d4-aa84-634c109faf10, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.323 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.323 DEBUG - CardInstance(uuid=e2e1bf8b-182e-47d4-aa84-634c109faf10, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.323 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.323 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) gains HUNTER keyword
+2026-03-12 12:03:08.323 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (c91610dc-0235-4042-a972-f3fb090662a7)
+2026-03-12 12:03:08.323 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) gains POISONOUS keyword
+2026-03-12 12:03:08.323 DEBUG - COMPOST DRAGON (9979bf6b-5696-4891-900d-036d7d3b6172) gains POISONOUS keyword
+2026-03-12 12:03:08.323 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (c91610dc-0235-4042-a972-f3fb090662a7)
+2026-03-12 12:03:08.323 DEBUG - CardInstance(uuid=c91610dc-0235-4042-a972-f3fb090662a7, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=1, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.323 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.323 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) gains HUNTER keyword
+2026-03-12 12:03:08.323 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (c91610dc-0235-4042-a972-f3fb090662a7)
+2026-03-12 12:03:08.323 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) gains POISONOUS keyword
+2026-03-12 12:03:08.323 DEBUG - COMPOST DRAGON (9979bf6b-5696-4891-900d-036d7d3b6172) gains POISONOUS keyword
+2026-03-12 12:03:08.323 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (c91610dc-0235-4042-a972-f3fb090662a7)
+2026-03-12 12:03:08.324 DEBUG - CardInstance(uuid=c91610dc-0235-4042-a972-f3fb090662a7, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=1, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.324 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.324 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) gains HUNTER keyword
+2026-03-12 12:03:08.324 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (c91610dc-0235-4042-a972-f3fb090662a7)
+2026-03-12 12:03:08.324 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) gains POISONOUS keyword
+2026-03-12 12:03:08.324 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (c91610dc-0235-4042-a972-f3fb090662a7)
+2026-03-12 12:03:08.324 DEBUG - CardInstance(uuid=c91610dc-0235-4042-a972-f3fb090662a7, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=1, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.324 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.324 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) gains HUNTER keyword
+2026-03-12 12:03:08.324 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (c91610dc-0235-4042-a972-f3fb090662a7)
+2026-03-12 12:03:08.324 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) gains POISONOUS keyword
+2026-03-12 12:03:08.324 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (c91610dc-0235-4042-a972-f3fb090662a7)
+2026-03-12 12:03:08.324 DEBUG - CardInstance(uuid=c91610dc-0235-4042-a972-f3fb090662a7, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=1, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.324 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.324 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) gains HUNTER keyword
+2026-03-12 12:03:08.324 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (c91610dc-0235-4042-a972-f3fb090662a7)
+2026-03-12 12:03:08.324 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) gains POISONOUS keyword
+2026-03-12 12:03:08.324 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (c91610dc-0235-4042-a972-f3fb090662a7)
+2026-03-12 12:03:08.324 DEBUG - CardInstance(uuid=c91610dc-0235-4042-a972-f3fb090662a7, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=1, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.324 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.324 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) gains HUNTER keyword
+2026-03-12 12:03:08.325 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (c91610dc-0235-4042-a972-f3fb090662a7)
+2026-03-12 12:03:08.325 DEBUG - HUNGRY HUNGRY HAMSTER (e2e1bf8b-182e-47d4-aa84-634c109faf10) gains POISONOUS keyword
+2026-03-12 12:03:08.325 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (c91610dc-0235-4042-a972-f3fb090662a7)
+2026-03-12 12:03:08.325 DEBUG - CardInstance(uuid=c91610dc-0235-4042-a972-f3fb090662a7, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@13c81bc5), power=1, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.325 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3af47a84-9007-49c8-9ffd-52ea9cccec9d)
+2026-03-12 12:03:08.325 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:08.325 DEBUG - Player Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) must choose 1 card(s) to destroy (available targets : {
+- MAJESTIC MANTICORE ;
+- PLATED SCORPION ;
+- BUGSERKER ;
+- HUNGRY HUNGRY HAMSTER ;
+- HARPY MOTHER ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:08.325 INFO  - New TARGET choice to be resolved by Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) (targets : {
+- PLATED SCORPION ;
+- BUGSERKER ;
+- MAJESTIC MANTICORE ;
+- HUNGRY HUNGRY HAMSTER ;
+- CHAMELEON SNIPER ;
+- HARPY MOTHER
+})
+2026-03-12 12:03:08.325 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.325 DEBUG - EXPLOSIVE TOAD (e8f6b30d-9dd7-46d4-8cd7-e045214a8f32) effect destroys PLATED SCORPION (278fd804-a9ec-46e5-97f5-4b6651289deb)
+2026-03-12 12:03:08.325 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (e8f6b30d-9dd7-46d4-8cd7-e045214a8f32)
+2026-03-12 12:03:08.325 INFO  - Life update for player Player2 (e218d836-07f9-4012-b451-e3003c3f8c76) : 1 LP
+2026-03-12 12:03:08.325 DEBUG - Player2 (e218d836-07f9-4012-b451-e3003c3f8c76) LP changed (2 -> 1) due to CHAMELEON SNIPER (ebb8db1a-33d6-4a41-9a96-897003a5d3aa) effect
+2026-03-12 12:03:08.325 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (ebb8db1a-33d6-4a41-9a96-897003a5d3aa)
+2026-03-12 12:03:08.325 DEBUG - BUGSERKER (d589b4e6-e721-481a-902f-541526805d1d) power changed (3 -> 11) due to BUGSERKER (d589b4e6-e721-481a-902f-541526805d1d) effect
+2026-03-12 12:03:08.325 INFO  - Resolving POWER_UP effect of BUGSERKER (d589b4e6-e721-481a-902f-541526805d1d)
+2026-03-12 12:03:08.326 INFO  - Life update for player Player2 (e218d836-07f9-4012-b451-e3003c3f8c76) : 0 LP
+2026-03-12 12:03:08.326 INFO  - Game over : Player1 (2165f384-7e0d-4fe8-be0f-029db83417fb) wins ; Player2 (e218d836-07f9-4012-b451-e3003c3f8c76) loses.
+2026-03-12 12:03:08.326 INFO  - End of the game

@@ -1,0 +1,117 @@
+2026-03-12 12:03:04.333 INFO  - Calculating first player...
+2026-03-12 12:03:04.335 INFO  - Banned card for Player1 (38c45e83-5ca9-4dd8-b5d6-96501ebbc2d8) : TUSKED EXTORTER (e35487a4-ffec-438b-bc51-3e6aa0bd0206) (8)
+2026-03-12 12:03:04.335 INFO  - Banned card for Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) : HUNGRY HUNGRY HAMSTER (500bbd26-1aba-4f07-8503-7c57a0cdf08f) (2)
+2026-03-12 12:03:04.335 INFO  - First player will be Player1 (38c45e83-5ca9-4dd8-b5d6-96501ebbc2d8)
+2026-03-12 12:03:04.345 INFO  - Game 9a173b09-063d-425f-a15a-96710cb8ab16 starting...
+2026-03-12 12:03:04.345 INFO  - Player Player1 (38c45e83-5ca9-4dd8-b5d6-96501ebbc2d8) hand : {
+- DEATHWEAVER ;
+- EXPLOSIVE TOAD ;
+- AXOLOTL HEALER ;
+- GOBLIN WEREWOLF ;
+- SHARKY GRAB-DOG-MUMMYPUS
+}
+2026-03-12 12:03:04.345 INFO  - Player Player1 (38c45e83-5ca9-4dd8-b5d6-96501ebbc2d8) draw pile : {
+- BRAIN FLY ;
+- TIGER SQUIRREL ;
+- HARPY MOTHER ;
+- SPIDER OWL ;
+- URCHIN HURLER
+}
+2026-03-12 12:03:04.345 INFO  - Player Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) hand : {
+- MAJESTIC MANTICORE ;
+- PLATED SCORPION ;
+- THE LURKER ;
+- TUSKED EXTORTER ;
+- HAMSTER LION
+}
+2026-03-12 12:03:04.345 INFO  - Player Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) draw pile : {
+- SNAIL HYDRA ;
+- COUNT DRACULEECH ;
+- LUCHATAUR ;
+- COMPOST DRAGON ;
+- THE LURKER
+}
+2026-03-12 12:03:04.346 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (e108309b-de24-4fa4-abb5-2b0d38716570) gains POISONOUS keyword
+2026-03-12 12:03:04.346 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (e108309b-de24-4fa4-abb5-2b0d38716570)
+2026-03-12 12:03:04.346 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (e108309b-de24-4fa4-abb5-2b0d38716570) gains POISONOUS keyword
+2026-03-12 12:03:04.346 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (e108309b-de24-4fa4-abb5-2b0d38716570)
+2026-03-12 12:03:04.346 INFO  - Life update for player Player1 (38c45e83-5ca9-4dd8-b5d6-96501ebbc2d8) : 2 LP
+2026-03-12 12:03:04.346 DEBUG - Player Player1 (38c45e83-5ca9-4dd8-b5d6-96501ebbc2d8) must choose 1 card(s) to destroy (available targets : {
+- PLATED SCORPION ;
+- MAJESTIC MANTICORE ;
+- SNAIL HYDRA ;
+- LUCHATAUR
+})
+2026-03-12 12:03:04.347 INFO  - New TARGET choice to be resolved by Player1 (38c45e83-5ca9-4dd8-b5d6-96501ebbc2d8) (targets : {
+- LUCHATAUR ;
+- PLATED SCORPION ;
+- SNAIL HYDRA ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:03:04.347 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.347 DEBUG - EXPLOSIVE TOAD (64a6c138-d203-4398-9b2c-637cabb0cc58) effect destroys MAJESTIC MANTICORE (fadcb177-ce7d-488d-b836-25349999f9f5)
+2026-03-12 12:03:04.347 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (64a6c138-d203-4398-9b2c-637cabb0cc58)
+2026-03-12 12:03:04.347 DEBUG - GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) power changed (2 -> 8) due to GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) effect
+2026-03-12 12:03:04.347 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96)
+2026-03-12 12:03:04.347 DEBUG - GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) power changed (2 -> 8) due to GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) effect
+2026-03-12 12:03:04.347 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96)
+2026-03-12 12:03:04.347 DEBUG - GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) power changed (2 -> 8) due to GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) effect
+2026-03-12 12:03:04.347 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96)
+2026-03-12 12:03:04.347 DEBUG - GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) power changed (2 -> 8) due to GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) effect
+2026-03-12 12:03:04.347 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96)
+2026-03-12 12:03:04.347 DEBUG - GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) power changed (2 -> 8) due to GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) effect
+2026-03-12 12:03:04.347 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96)
+2026-03-12 12:03:04.348 DEBUG - PLAY effects disabled for player Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) due to DEATHWEAVER (0b271800-d72e-4930-8434-65267d6e0e7f) effect
+2026-03-12 12:03:04.348 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (0b271800-d72e-4930-8434-65267d6e0e7f)
+2026-03-12 12:03:04.348 DEBUG - PLAY effects disabled for player Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) due to DEATHWEAVER (0b271800-d72e-4930-8434-65267d6e0e7f) effect
+2026-03-12 12:03:04.348 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (0b271800-d72e-4930-8434-65267d6e0e7f)
+2026-03-12 12:03:04.348 INFO  - Life update for player Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) : 2 LP
+2026-03-12 12:03:04.348 DEBUG - Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) LP changed (3 -> 2) due to COUNT DRACULEECH (f0e749b1-0398-4f3a-aa1b-8cb82ca1196c) effect
+2026-03-12 12:03:04.348 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (f0e749b1-0398-4f3a-aa1b-8cb82ca1196c)
+2026-03-12 12:03:04.348 DEBUG - PLAY effects disabled for player Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) due to DEATHWEAVER (0b271800-d72e-4930-8434-65267d6e0e7f) effect
+2026-03-12 12:03:04.348 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (0b271800-d72e-4930-8434-65267d6e0e7f)
+2026-03-12 12:03:04.348 DEBUG - Player Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) must choose 1 card(s) to destroy (available targets : {
+- GOBLIN WEREWOLF ;
+- DEATHWEAVER ;
+- SNAIL HYDRA ;
+- LUCHATAUR ;
+- COUNT DRACULEECH ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:04.348 DEBUG - PLAY effects disabled for player Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) due to DEATHWEAVER (0b271800-d72e-4930-8434-65267d6e0e7f) effect
+2026-03-12 12:03:04.348 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (0b271800-d72e-4930-8434-65267d6e0e7f)
+2026-03-12 12:03:04.348 INFO  - New TARGET choice to be resolved by Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) (targets : {
+- LUCHATAUR ;
+- SNAIL HYDRA ;
+- DEATHWEAVER ;
+- COUNT DRACULEECH ;
+- TUSKED EXTORTER ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:03:04.348 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.348 DEBUG - COUNT DRACULEECH (f0e749b1-0398-4f3a-aa1b-8cb82ca1196c) effect destroys TUSKED EXTORTER (ed09d875-66eb-4672-8b29-d1050da0bde4)
+2026-03-12 12:03:04.348 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (f0e749b1-0398-4f3a-aa1b-8cb82ca1196c)
+2026-03-12 12:03:04.348 DEBUG - PLAY effects disabled for player Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) due to DEATHWEAVER (0b271800-d72e-4930-8434-65267d6e0e7f) effect
+2026-03-12 12:03:04.348 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (0b271800-d72e-4930-8434-65267d6e0e7f)
+2026-03-12 12:03:04.348 DEBUG - GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) power changed (2 -> 8) due to GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) effect
+2026-03-12 12:03:04.348 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96)
+2026-03-12 12:03:04.348 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:04.348 DEBUG - GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) power changed (2 -> 8) due to GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96) effect
+2026-03-12 12:03:04.348 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b7407e07-33d9-4b16-957a-7ec376c9dd96)
+2026-03-12 12:03:04.349 INFO  - Life update for player Player1 (38c45e83-5ca9-4dd8-b5d6-96501ebbc2d8) : 1 LP
+2026-03-12 12:03:04.349 DEBUG - Player Player1 (38c45e83-5ca9-4dd8-b5d6-96501ebbc2d8) must choose 1 card(s) to destroy (available targets : {
+- SNAIL HYDRA ;
+- LUCHATAUR
+})
+2026-03-12 12:03:04.349 INFO  - New TARGET choice to be resolved by Player1 (38c45e83-5ca9-4dd8-b5d6-96501ebbc2d8) (targets : {
+- LUCHATAUR ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:04.349 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.349 DEBUG - TIGER SQUIRREL (3c4deafb-bf45-439d-bb60-d0b30f255d27) effect destroys SNAIL HYDRA (5fe7626a-f3ba-4a1a-9d1c-67184ae59418)
+2026-03-12 12:03:04.349 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (3c4deafb-bf45-439d-bb60-d0b30f255d27)
+2026-03-12 12:03:04.349 INFO  - New FRENZY choice to be resolved by Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) (attackingCard : LUCHATAUR (e358691a-2aaa-4004-98c3-195d15a19dd1))
+2026-03-12 12:03:04.349 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:04.349 INFO  - Life update for player Player1 (38c45e83-5ca9-4dd8-b5d6-96501ebbc2d8) : 0 LP
+2026-03-12 12:03:04.349 INFO  - Game over : Player2 (ecd6c57b-c3af-482c-b597-ffba7eebbfaf) wins ; Player1 (38c45e83-5ca9-4dd8-b5d6-96501ebbc2d8) loses.
+2026-03-12 12:03:04.349 INFO  - End of the game

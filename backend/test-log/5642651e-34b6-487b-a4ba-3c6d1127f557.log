@@ -1,0 +1,89 @@
+2026-03-12 12:03:44.911 INFO  - Calculating first player...
+2026-03-12 12:03:44.914 INFO  - Banned card for Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca) : TUSKED EXTORTER (1db558ed-3ef8-44f8-b599-ac449ac7bc37) (8)
+2026-03-12 12:03:44.914 INFO  - Banned card for Player2 (f6873e90-b03b-43c4-b513-356fee66dace) : SNAIL THROWER (8111dba3-e10b-43bc-ae37-9823f731a62c) (1)
+2026-03-12 12:03:44.914 INFO  - First player will be Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca)
+2026-03-12 12:03:44.920 INFO  - Game 5642651e-34b6-487b-a4ba-3c6d1127f557 starting...
+2026-03-12 12:03:44.921 INFO  - Player Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca) hand : {
+- COUNT DRACULEECH ;
+- TIGER SQUIRREL ;
+- DEATHWEAVER ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- MYSTERIOUS MERMAID
+}
+2026-03-12 12:03:44.921 INFO  - Player Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca) draw pile : {
+- KANGASAURUS REX ;
+- KILLER BEE ;
+- ELEPHANTOPUS ;
+- GOREAGLE ALPHA ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:03:44.921 INFO  - Player Player2 (f6873e90-b03b-43c4-b513-356fee66dace) hand : {
+- COUNT DRACULEECH ;
+- HUNGRY HUNGRY HAMSTER ;
+- BEE BEAR ;
+- SNAIL HYDRA ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:03:44.921 INFO  - Player Player2 (f6873e90-b03b-43c4-b513-356fee66dace) draw pile : {
+- AXOLOTL HEALER ;
+- CREEP FROM THE DEEP ;
+- FERRET BOMBER ;
+- HAMSTER LION ;
+- FERRET PACIFIER
+}
+2026-03-12 12:03:44.921 INFO  - Life update for player Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca) : 2 LP
+2026-03-12 12:03:44.921 DEBUG - Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca) LP changed (3 -> 2) due to COUNT DRACULEECH (f62c4a85-34d6-4ac5-affd-e6645e93cc88) effect
+2026-03-12 12:03:44.922 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (f62c4a85-34d6-4ac5-affd-e6645e93cc88)
+2026-03-12 12:03:44.922 DEBUG - Player Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca) must choose 1 card(s) to destroy (available targets : {
+- BEE BEAR ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:44.922 INFO  - New TARGET choice to be resolved by Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca) (targets : {
+- BEE BEAR ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:44.922 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.922 DEBUG - COUNT DRACULEECH (f62c4a85-34d6-4ac5-affd-e6645e93cc88) effect destroys BEE BEAR (f39ec2e9-f6e5-4ab2-a756-314adfe6bf8a)
+2026-03-12 12:03:44.922 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (f62c4a85-34d6-4ac5-affd-e6645e93cc88)
+2026-03-12 12:03:44.922 INFO  - Life update for player Player2 (f6873e90-b03b-43c4-b513-356fee66dace) : 2 LP
+2026-03-12 12:03:44.922 INFO  - Life update for player Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca) : 1 LP
+2026-03-12 12:03:44.922 DEBUG - Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca) LP changed (2 -> 1) due to COUNT DRACULEECH (f62c4a85-34d6-4ac5-affd-e6645e93cc88) effect
+2026-03-12 12:03:44.922 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (f62c4a85-34d6-4ac5-affd-e6645e93cc88)
+2026-03-12 12:03:44.922 DEBUG - Player Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca) must choose 1 card(s) to destroy (available targets : {
+- COUNT DRACULEECH ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:44.922 INFO  - New TARGET choice to be resolved by Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca) (targets : {
+- COUNT DRACULEECH ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:44.922 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.922 DEBUG - COUNT DRACULEECH (f62c4a85-34d6-4ac5-affd-e6645e93cc88) effect destroys COUNT DRACULEECH (f62c4a85-34d6-4ac5-affd-e6645e93cc88)
+2026-03-12 12:03:44.922 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (f62c4a85-34d6-4ac5-affd-e6645e93cc88)
+2026-03-12 12:03:44.922 DEBUG - PLAY effects disabled for player Player2 (f6873e90-b03b-43c4-b513-356fee66dace) due to DEATHWEAVER (440c64da-b414-4b38-88a9-148a197ed3b4) effect
+2026-03-12 12:03:44.922 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (440c64da-b414-4b38-88a9-148a197ed3b4)
+2026-03-12 12:03:44.923 DEBUG - PLAY effects disabled for player Player2 (f6873e90-b03b-43c4-b513-356fee66dace) due to DEATHWEAVER (440c64da-b414-4b38-88a9-148a197ed3b4) effect
+2026-03-12 12:03:44.923 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (440c64da-b414-4b38-88a9-148a197ed3b4)
+2026-03-12 12:03:44.923 INFO  - Life update for player Player2 (f6873e90-b03b-43c4-b513-356fee66dace) : 1 LP
+2026-03-12 12:03:44.923 DEBUG - Player2 (f6873e90-b03b-43c4-b513-356fee66dace) LP changed (2 -> 1) due to COUNT DRACULEECH (bbe35a8b-1171-43a4-bd47-9f7928c104d6) effect
+2026-03-12 12:03:44.923 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (bbe35a8b-1171-43a4-bd47-9f7928c104d6)
+2026-03-12 12:03:44.923 DEBUG - PLAY effects disabled for player Player2 (f6873e90-b03b-43c4-b513-356fee66dace) due to DEATHWEAVER (440c64da-b414-4b38-88a9-148a197ed3b4) effect
+2026-03-12 12:03:44.923 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (440c64da-b414-4b38-88a9-148a197ed3b4)
+2026-03-12 12:03:44.923 DEBUG - Player Player2 (f6873e90-b03b-43c4-b513-356fee66dace) must choose 1 card(s) to destroy (available targets : {
+- DEATHWEAVER ;
+- COUNT DRACULEECH ;
+- EXPLOSIVE TOAD
+})
+2026-03-12 12:03:44.923 DEBUG - PLAY effects disabled for player Player2 (f6873e90-b03b-43c4-b513-356fee66dace) due to DEATHWEAVER (440c64da-b414-4b38-88a9-148a197ed3b4) effect
+2026-03-12 12:03:44.923 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (440c64da-b414-4b38-88a9-148a197ed3b4)
+2026-03-12 12:03:44.923 INFO  - New TARGET choice to be resolved by Player2 (f6873e90-b03b-43c4-b513-356fee66dace) (targets : {
+- DEATHWEAVER ;
+- COUNT DRACULEECH ;
+- EXPLOSIVE TOAD
+})
+2026-03-12 12:03:44.923 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.923 DEBUG - COUNT DRACULEECH (bbe35a8b-1171-43a4-bd47-9f7928c104d6) effect destroys DEATHWEAVER (440c64da-b414-4b38-88a9-148a197ed3b4)
+2026-03-12 12:03:44.923 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (bbe35a8b-1171-43a4-bd47-9f7928c104d6)
+2026-03-12 12:03:44.923 INFO  - Life update for player Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca) : 0 LP
+2026-03-12 12:03:44.923 INFO  - Game over : Player2 (f6873e90-b03b-43c4-b513-356fee66dace) wins ; Player1 (737923fb-8433-4c75-9436-e7f5f38b5dca) loses.
+2026-03-12 12:03:44.923 INFO  - End of the game

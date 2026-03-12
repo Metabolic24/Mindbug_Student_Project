@@ -1,0 +1,123 @@
+2026-03-12 12:03:42.804 INFO  - Calculating first player...
+2026-03-12 12:03:42.807 INFO  - Banned card for Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) : TIGER SQUIRREL (83beb448-ae12-4a3f-8bed-353c111021ec) (3)
+2026-03-12 12:03:42.807 INFO  - Banned card for Player2 (1e1bd547-74d7-4072-90fe-d23be0256acb) : COMPOST DRAGON (debcd96e-3b72-4760-9f54-9794403fdd5e) (3)
+2026-03-12 12:03:42.807 INFO  - Banned card for Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) : TURBO BUG (689e50e8-1cb8-490b-8d20-5002b3ec417c) (4)
+2026-03-12 12:03:42.807 INFO  - Banned card for Player2 (1e1bd547-74d7-4072-90fe-d23be0256acb) : SHIELD BUGS (cf23d7a3-32e4-4870-8740-63b2cd79127f) (4)
+2026-03-12 12:03:42.807 INFO  - Banned card for Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) : COUNT DRACULEECH (d583c283-04e4-46d7-94ba-ad8d6b0e5fa9) (7)
+2026-03-12 12:03:42.807 INFO  - Banned card for Player2 (1e1bd547-74d7-4072-90fe-d23be0256acb) : LONE YETI (74a51dda-5883-464b-84fa-83e9c7488e89) (5)
+2026-03-12 12:03:42.807 INFO  - First player will be Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e)
+2026-03-12 12:03:42.821 INFO  - Game 48cd6f28-81e1-4573-9dce-20b6d6477c11 starting...
+2026-03-12 12:03:42.821 INFO  - Player Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) hand : {
+- TIGER SQUIRREL ;
+- KANGASAURUS REX ;
+- TURF THE SURFER ;
+- BUGSERKER ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:42.821 INFO  - Player Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) draw pile : {
+- SHARK DOG ;
+- FERRET PACIFIER ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- BUGSERKER ;
+- DEATHWEAVER
+}
+2026-03-12 12:03:42.821 INFO  - Player Player2 (1e1bd547-74d7-4072-90fe-d23be0256acb) hand : {
+- BEE BEAR ;
+- HAMSTER LION ;
+- KILLER BEE ;
+- FERRET BOMBER ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:03:42.821 INFO  - Player Player2 (1e1bd547-74d7-4072-90fe-d23be0256acb) draw pile : {
+-  GIRAFFODILE ;
+- HAMSTER LION ;
+- MYSTERIOUS MERMAID ;
+- RHINO TURTLE ;
+- PLATED SCORPION
+}
+2026-03-12 12:03:42.821 DEBUG - Player Player2 (1e1bd547-74d7-4072-90fe-d23be0256acb) must choose 1 cards to steal (targets : {
+- BEE BEAR ;
+- HAMSTER LION ;
+- KILLER BEE ;
+- FERRET BOMBER ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:42.821 INFO  - New TARGET choice to be resolved by Player2 (1e1bd547-74d7-4072-90fe-d23be0256acb) (targets : {
+- TUSKED EXTORTER ;
+- HAMSTER LION ;
+- FERRET BOMBER ;
+- KILLER BEE ;
+- BEE BEAR
+})
+2026-03-12 12:03:42.821 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.822 DEBUG - Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) must decide if stolen card BEE BEAR (99776cdc-9fa9-4f9e-887c-3370c0d98fe6) will be added to hand or board
+2026-03-12 12:03:42.822 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (8070f723-8d0e-43d7-b613-64c2dfc76de9)
+2026-03-12 12:03:42.822 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:42.822 DEBUG - BEE BEAR (99776cdc-9fa9-4f9e-887c-3370c0d98fe6) stolen and drawn by Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) due to HUNGRY HUNGRY HAMSTER (8070f723-8d0e-43d7-b613-64c2dfc76de9) effect
+2026-03-12 12:03:42.822 DEBUG - SHARK DOG (3ab4fb6c-dddb-4a49-9e01-dea49fb03994) effect destroys  GIRAFFODILE (ae6c66c1-8d44-47fe-a34e-39525ac02ff7)
+2026-03-12 12:03:42.822 INFO  - Resolving DESTROY effect of SHARK DOG (3ab4fb6c-dddb-4a49-9e01-dea49fb03994)
+2026-03-12 12:03:42.822 INFO  - Life update for player Player2 (1e1bd547-74d7-4072-90fe-d23be0256acb) : 2 LP
+2026-03-12 12:03:42.822 DEBUG - Player Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) must choose 2 card(s) to discard (available targets : {
+- TIGER SQUIRREL ;
+- KANGASAURUS REX ;
+- TURF THE SURFER ;
+- BUGSERKER ;
+- BEE BEAR
+})
+2026-03-12 12:03:42.822 INFO  - New TARGET choice to be resolved by Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) (targets : {
+- TURF THE SURFER ;
+- TIGER SQUIRREL ;
+- KANGASAURUS REX ;
+- BUGSERKER ;
+- BEE BEAR
+})
+2026-03-12 12:03:42.822 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.823 DEBUG - KANGASAURUS REX (7d8a36e2-5bd5-4885-94b1-8376569319e5) discarded due to FERRET BOMBER (26f39f77-4d07-440a-94b8-e521ae8f37f5) effect
+2026-03-12 12:03:42.823 DEBUG - BUGSERKER (8885cf9d-e018-4a3d-9947-34d5100ee43a) discarded due to FERRET BOMBER (26f39f77-4d07-440a-94b8-e521ae8f37f5) effect
+2026-03-12 12:03:42.823 INFO  - Resolving DISCARD effect of FERRET BOMBER (26f39f77-4d07-440a-94b8-e521ae8f37f5)
+2026-03-12 12:03:42.823 INFO  - Life update for player Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) : 2 LP
+2026-03-12 12:03:42.823 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.824 DEBUG - Player Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) must choose 1 card(s) to discard (available targets : {
+- TIGER SQUIRREL ;
+- TURF THE SURFER ;
+- FERRET PACIFIER ;
+- BUGSERKER ;
+- DEATHWEAVER
+})
+2026-03-12 12:03:42.824 INFO  - New TARGET choice to be resolved by Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) (targets : {
+- TURF THE SURFER ;
+- TIGER SQUIRREL ;
+- FERRET PACIFIER ;
+- DEATHWEAVER ;
+- BUGSERKER
+})
+2026-03-12 12:03:42.824 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.824 DEBUG - DEATHWEAVER (f896b2cb-0dce-4256-bd62-8b27cd3b44a6) discarded due to TUSKED EXTORTER (69f2a8d0-a289-4d68-bcee-fef604ed94c3) effect
+2026-03-12 12:03:42.824 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (69f2a8d0-a289-4d68-bcee-fef604ed94c3)
+2026-03-12 12:03:42.824 DEBUG - Player Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) must choose 1 card(s) to discard (available targets : {
+- TIGER SQUIRREL ;
+- FERRET PACIFIER ;
+- BUGSERKER
+})
+2026-03-12 12:03:42.824 INFO  - New TARGET choice to be resolved by Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) (targets : {
+- TIGER SQUIRREL ;
+- FERRET PACIFIER ;
+- BUGSERKER
+})
+2026-03-12 12:03:42.825 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.825 DEBUG - FERRET PACIFIER (35f64425-158d-48a6-a919-c0402f27fcfb) discarded due to TUSKED EXTORTER (69f2a8d0-a289-4d68-bcee-fef604ed94c3) effect
+2026-03-12 12:03:42.825 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (69f2a8d0-a289-4d68-bcee-fef604ed94c3)
+2026-03-12 12:03:42.825 INFO  - Resolving NO_BLOCK effect of BEE BEAR (99776cdc-9fa9-4f9e-887c-3370c0d98fe6)
+2026-03-12 12:03:42.825 INFO  - Life update for player Player2 (1e1bd547-74d7-4072-90fe-d23be0256acb) : 1 LP
+2026-03-12 12:03:42.825 DEBUG - CardInstance(uuid=3ab4fb6c-dddb-4a49-9e01-dea49fb03994, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7816454d), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.825 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16abf08-bb22-40c5-87db-76cc755a6f00)
+2026-03-12 12:03:42.826 DEBUG - CardInstance(uuid=3ab4fb6c-dddb-4a49-9e01-dea49fb03994, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7816454d), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.826 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16abf08-bb22-40c5-87db-76cc755a6f00)
+2026-03-12 12:03:42.826 DEBUG - CardInstance(uuid=7a3b3a26-4523-4465-8358-274aba16d87c, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7816454d), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.826 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16abf08-bb22-40c5-87db-76cc755a6f00)
+2026-03-12 12:03:42.826 DEBUG - TIGER SQUIRREL (7a3b3a26-4523-4465-8358-274aba16d87c) effect destroys HAMSTER LION (a16abf08-bb22-40c5-87db-76cc755a6f00)
+2026-03-12 12:03:42.826 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (7a3b3a26-4523-4465-8358-274aba16d87c)
+2026-03-12 12:03:42.826 INFO  - Resolving NO_BLOCK effect of BEE BEAR (99776cdc-9fa9-4f9e-887c-3370c0d98fe6)
+2026-03-12 12:03:42.826 INFO  - Life update for player Player2 (1e1bd547-74d7-4072-90fe-d23be0256acb) : 0 LP
+2026-03-12 12:03:42.826 INFO  - Game over : Player1 (4e9abc8e-3faa-4b76-9796-2216f49d987e) wins ; Player2 (1e1bd547-74d7-4072-90fe-d23be0256acb) loses.
+2026-03-12 12:03:42.826 INFO  - End of the game

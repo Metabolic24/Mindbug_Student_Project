@@ -1,0 +1,254 @@
+2026-03-12 12:03:42.520 INFO  - Calculating first player...
+2026-03-12 12:03:42.524 INFO  - Banned card for Player1 (6521fc4a-0e90-4cdb-9395-b3e7f74e34fa) : COMPOST DRAGON (484d189d-d6c7-40c2-806c-022d726e430f) (3)
+2026-03-12 12:03:42.524 INFO  - Banned card for Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009) : HAMSTER LION (222f5e82-5eda-415b-9e86-ee222a035af4) (8)
+2026-03-12 12:03:42.524 INFO  - First player will be Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009)
+2026-03-12 12:03:42.532 INFO  - Game 66d6d682-4b21-440b-9c74-1ab807bc2d46 starting...
+2026-03-12 12:03:42.532 INFO  - Player Player1 (6521fc4a-0e90-4cdb-9395-b3e7f74e34fa) hand : {
+- FERRET BOMBER ;
+- LUCHATAUR ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- SHARK DOG ;
+- LONE YETI
+}
+2026-03-12 12:03:42.533 INFO  - Player Player1 (6521fc4a-0e90-4cdb-9395-b3e7f74e34fa) draw pile : {
+- DEATHWEAVER ;
+- GOREAGLE ALPHA ;
+- HUNGRY HUNGRY HAMSTER ;
+- GORILLON ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:03:42.533 INFO  - Player Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009) hand : {
+- TIGER SQUIRREL ;
+- HAMSTER LION ;
+- SHIELD BUGS ;
+- AXOLOTL HEALER ;
+- GRAVE ROBBER
+}
+2026-03-12 12:03:42.533 INFO  - Player Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009) draw pile : {
+- KILLER BEE ;
+- THE LURKER ;
+- HYENIX ;
+- SHIELD BUGS ;
+- ELEPHANTOPUS
+}
+2026-03-12 12:03:42.533 DEBUG - Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009) LP changed (3 -> 5) due to AXOLOTL HEALER (49642568-6abd-401e-8a62-6d75be74e5ea) effect
+2026-03-12 12:03:42.533 INFO  - Resolving GAIN effect of AXOLOTL HEALER (49642568-6abd-401e-8a62-6d75be74e5ea)
+2026-03-12 12:03:42.533 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce) gains POISONOUS keyword
+2026-03-12 12:03:42.533 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce)
+2026-03-12 12:03:42.533 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce) gains POISONOUS keyword
+2026-03-12 12:03:42.534 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce)
+2026-03-12 12:03:42.534 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce) gains POISONOUS keyword
+2026-03-12 12:03:42.534 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce)
+2026-03-12 12:03:42.534 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce) gains POISONOUS keyword
+2026-03-12 12:03:42.534 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce)
+2026-03-12 12:03:42.534 DEBUG - SHARK DOG (91aa8d6d-1f64-4a08-81d3-bb7e474f10a0) effect destroys GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801)
+2026-03-12 12:03:42.534 INFO  - Resolving DESTROY effect of SHARK DOG (91aa8d6d-1f64-4a08-81d3-bb7e474f10a0)
+2026-03-12 12:03:42.534 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce) gains POISONOUS keyword
+2026-03-12 12:03:42.534 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce)
+2026-03-12 12:03:42.534 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.534 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce) gains POISONOUS keyword
+2026-03-12 12:03:42.534 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce)
+2026-03-12 12:03:42.534 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.534 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.534 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.534 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.534 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.535 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.535 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.535 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.535 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.535 DEBUG - PLAY effects disabled for player Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009) due to DEATHWEAVER (213264a0-e4b4-4f4b-8d28-672e171b9a5b) effect
+2026-03-12 12:03:42.535 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (213264a0-e4b4-4f4b-8d28-672e171b9a5b)
+2026-03-12 12:03:42.535 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.535 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.535 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.535 DEBUG - PLAY effects disabled for player Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009) due to DEATHWEAVER (213264a0-e4b4-4f4b-8d28-672e171b9a5b) effect
+2026-03-12 12:03:42.535 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (213264a0-e4b4-4f4b-8d28-672e171b9a5b)
+2026-03-12 12:03:42.535 DEBUG - HYENIX (c11f34e1-a6ba-4d3b-9bcd-5790228a8888) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.535 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.535 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.535 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.535 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce) gains FRENZY keyword
+2026-03-12 12:03:42.535 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce)
+2026-03-12 12:03:42.535 DEBUG - PLAY effects disabled for player Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009) due to DEATHWEAVER (213264a0-e4b4-4f4b-8d28-672e171b9a5b) effect
+2026-03-12 12:03:42.535 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (213264a0-e4b4-4f4b-8d28-672e171b9a5b)
+2026-03-12 12:03:42.535 DEBUG - HYENIX (c11f34e1-a6ba-4d3b-9bcd-5790228a8888) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.536 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.536 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.536 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.536 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce) gains FRENZY keyword
+2026-03-12 12:03:42.536 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce)
+2026-03-12 12:03:42.536 DEBUG - PLAY effects disabled for player Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009) due to DEATHWEAVER (213264a0-e4b4-4f4b-8d28-672e171b9a5b) effect
+2026-03-12 12:03:42.536 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (213264a0-e4b4-4f4b-8d28-672e171b9a5b)
+2026-03-12 12:03:42.536 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.536 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.536 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.536 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.536 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.536 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.536 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.536 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.536 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.536 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.536 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.536 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.536 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.536 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.537 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.537 DEBUG - Player Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009) must choose 2 card(s) to discard (available targets : {
+- TIGER SQUIRREL ;
+- HAMSTER LION ;
+- KILLER BEE ;
+- SHIELD BUGS ;
+- ELEPHANTOPUS
+})
+2026-03-12 12:03:42.537 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.537 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.537 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.537 INFO  - New TARGET choice to be resolved by Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009) (targets : {
+- TIGER SQUIRREL ;
+- SHIELD BUGS ;
+- KILLER BEE ;
+- HAMSTER LION ;
+- ELEPHANTOPUS
+})
+2026-03-12 12:03:42.537 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.537 DEBUG - TIGER SQUIRREL (33cedf81-b7f6-4418-9952-550c2ed4aa08) discarded due to FERRET BOMBER (a751949d-ceb8-48d1-8803-2cfbd8491ea2) effect
+2026-03-12 12:03:42.537 DEBUG - ELEPHANTOPUS (568ef519-0d34-4f1d-9976-633635a19001) discarded due to FERRET BOMBER (a751949d-ceb8-48d1-8803-2cfbd8491ea2) effect
+2026-03-12 12:03:42.537 INFO  - Resolving DISCARD effect of FERRET BOMBER (a751949d-ceb8-48d1-8803-2cfbd8491ea2)
+2026-03-12 12:03:42.537 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.537 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.537 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.537 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.537 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.537 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.538 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.538 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.538 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.538 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.538 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.538 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.538 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.538 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.538 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.538 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.538 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.538 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.538 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) gains SNEAKY keyword
+2026-03-12 12:03:42.538 INFO  - Resolving KEYWORD_UP effect of THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5)
+2026-03-12 12:03:42.538 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.538 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.538 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.538 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce) gains SNEAKY keyword
+2026-03-12 12:03:42.538 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4f3a3e5d-31b3-4bf2-b788-02ca3a1404ce)
+2026-03-12 12:03:42.539 DEBUG - LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4) power changed (5 -> 10) due to LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4) effect
+2026-03-12 12:03:42.539 INFO  - Resolving POWER_UP effect of LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4)
+2026-03-12 12:03:42.539 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.539 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.539 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.539 DEBUG - LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4) gains FRENZY keyword
+2026-03-12 12:03:42.539 INFO  - Resolving KEYWORD_UP effect of LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4)
+2026-03-12 12:03:42.539 DEBUG - LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4) power changed (5 -> 10) due to LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4) effect
+2026-03-12 12:03:42.539 INFO  - Resolving POWER_UP effect of LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4)
+2026-03-12 12:03:42.539 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.539 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.539 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.539 DEBUG - LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4) gains FRENZY keyword
+2026-03-12 12:03:42.539 INFO  - Resolving KEYWORD_UP effect of LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4)
+2026-03-12 12:03:42.539 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.539 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.539 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.539 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.539 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.539 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.539 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) gains SNEAKY keyword
+2026-03-12 12:03:42.539 INFO  - Resolving KEYWORD_UP effect of THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5)
+2026-03-12 12:03:42.540 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.540 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.540 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.540 INFO  - Life update for player Player1 (6521fc4a-0e90-4cdb-9395-b3e7f74e34fa) : 2 LP
+2026-03-12 12:03:42.540 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.540 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.540 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.540 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.540 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.540 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.540 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.540 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.540 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.540 DEBUG - Player Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009) must choose 1 cards to steal (targets : {
+- HAMSTER LION ;
+- KILLER BEE ;
+- SHIELD BUGS
+})
+2026-03-12 12:03:42.540 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.540 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.540 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.540 INFO  - New TARGET choice to be resolved by Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009) (targets : {
+- SHIELD BUGS ;
+- KILLER BEE ;
+- HAMSTER LION
+})
+2026-03-12 12:03:42.541 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.541 DEBUG - Player1 (6521fc4a-0e90-4cdb-9395-b3e7f74e34fa) must decide if stolen card SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) will be added to hand or board
+2026-03-12 12:03:42.541 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (641ac8f4-5d63-460b-9f89-547eeb5c9ae8)
+2026-03-12 12:03:42.541 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.541 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.541 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.541 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:42.541 DEBUG - SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) stolen and played by Player1 (6521fc4a-0e90-4cdb-9395-b3e7f74e34fa) due to HUNGRY HUNGRY HAMSTER (641ac8f4-5d63-460b-9f89-547eeb5c9ae8) effect
+2026-03-12 12:03:42.541 DEBUG - HUNGRY HUNGRY HAMSTER (641ac8f4-5d63-460b-9f89-547eeb5c9ae8) power changed (2 -> 3) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.541 DEBUG - LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4) power changed (5 -> 6) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.541 DEBUG - LUCHATAUR (43c61d9d-d6c4-418d-8f15-b795a7c8e020) power changed (9 -> 10) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.541 INFO  - Resolving POWER_UP effect of SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073)
+2026-03-12 12:03:42.541 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.541 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.541 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.541 DEBUG - HUNGRY HUNGRY HAMSTER (641ac8f4-5d63-460b-9f89-547eeb5c9ae8) power changed (2 -> 3) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.541 DEBUG - LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4) power changed (5 -> 6) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.541 DEBUG - LUCHATAUR (43c61d9d-d6c4-418d-8f15-b795a7c8e020) power changed (9 -> 10) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.541 INFO  - Resolving POWER_UP effect of SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073)
+2026-03-12 12:03:42.541 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.541 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.541 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.541 DEBUG - HUNGRY HUNGRY HAMSTER (641ac8f4-5d63-460b-9f89-547eeb5c9ae8) power changed (2 -> 3) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.541 DEBUG - LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4) power changed (5 -> 6) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.541 DEBUG - LUCHATAUR (43c61d9d-d6c4-418d-8f15-b795a7c8e020) power changed (9 -> 10) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.541 INFO  - Resolving POWER_UP effect of SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073)
+2026-03-12 12:03:42.541 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.541 DEBUG - KILLER BEE (5fd986ee-a3d6-4f7e-adcb-367f6d1741b4) power changed (5 -> 6) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.541 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.541 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.542 INFO  - Life update for player Player1 (6521fc4a-0e90-4cdb-9395-b3e7f74e34fa) : 1 LP
+2026-03-12 12:03:42.542 DEBUG - Player1 (6521fc4a-0e90-4cdb-9395-b3e7f74e34fa) LP changed (2 -> 1) due to KILLER BEE (5fd986ee-a3d6-4f7e-adcb-367f6d1741b4) effect
+2026-03-12 12:03:42.542 INFO  - Resolving INFLICT effect of KILLER BEE (5fd986ee-a3d6-4f7e-adcb-367f6d1741b4)
+2026-03-12 12:03:42.542 DEBUG - HUNGRY HUNGRY HAMSTER (641ac8f4-5d63-460b-9f89-547eeb5c9ae8) power changed (2 -> 3) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.542 DEBUG - LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4) power changed (5 -> 6) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.542 DEBUG - LUCHATAUR (43c61d9d-d6c4-418d-8f15-b795a7c8e020) power changed (9 -> 10) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.542 INFO  - Resolving POWER_UP effect of SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073)
+2026-03-12 12:03:42.542 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.542 DEBUG - KILLER BEE (5fd986ee-a3d6-4f7e-adcb-367f6d1741b4) power changed (5 -> 6) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.542 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.542 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.542 DEBUG - HUNGRY HUNGRY HAMSTER (641ac8f4-5d63-460b-9f89-547eeb5c9ae8) power changed (2 -> 3) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.542 DEBUG - LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4) power changed (5 -> 6) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.542 DEBUG - LUCHATAUR (43c61d9d-d6c4-418d-8f15-b795a7c8e020) power changed (9 -> 10) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.542 INFO  - Resolving POWER_UP effect of SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073)
+2026-03-12 12:03:42.542 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.542 DEBUG - KILLER BEE (5fd986ee-a3d6-4f7e-adcb-367f6d1741b4) power changed (5 -> 6) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.542 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.542 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.542 DEBUG - HUNGRY HUNGRY HAMSTER (641ac8f4-5d63-460b-9f89-547eeb5c9ae8) power changed (2 -> 3) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.542 DEBUG - GOREAGLE ALPHA (fe796fe0-2340-484a-8810-23d0495f8c49) power changed (6 -> 7) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.542 DEBUG - LONE YETI (071f1cc0-ef29-45fa-8ee1-808ddcc3f6c4) power changed (5 -> 6) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.542 DEBUG - LUCHATAUR (43c61d9d-d6c4-418d-8f15-b795a7c8e020) power changed (9 -> 10) due to SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073) effect
+2026-03-12 12:03:42.542 INFO  - Resolving POWER_UP effect of SHIELD BUGS (500ea43b-6ca4-42bc-b0f1-40f096dbc073)
+2026-03-12 12:03:42.542 DEBUG - GRAVE ROBBER (6a274651-b462-43b2-82b9-71565eec5801) power changed (7 -> 8) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.542 DEBUG - KILLER BEE (5fd986ee-a3d6-4f7e-adcb-367f6d1741b4) power changed (5 -> 6) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.542 DEBUG - THE LURKER (b2971292-94ea-41fc-8c9e-f9518f437ee5) power changed (4 -> 5) due to SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0) effect
+2026-03-12 12:03:42.542 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0bf1acf1-eb3f-4999-adaa-15a31d2131d0)
+2026-03-12 12:03:42.542 INFO  - Life update for player Player1 (6521fc4a-0e90-4cdb-9395-b3e7f74e34fa) : 0 LP
+2026-03-12 12:03:42.542 INFO  - Game over : Player2 (0eb10729-6317-4aeb-a5cf-48fbff5b0009) wins ; Player1 (6521fc4a-0e90-4cdb-9395-b3e7f74e34fa) loses.
+2026-03-12 12:03:42.542 INFO  - End of the game
+2026-03-12 12:03:42.542 DEBUG - Player1 (6521fc4a-0e90-4cdb-9395-b3e7f74e34fa) LP changed (1 -> 0) due to GOREAGLE ALPHA (fe796fe0-2340-484a-8810-23d0495f8c49) effect
+2026-03-12 12:03:42.542 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (fe796fe0-2340-484a-8810-23d0495f8c49)

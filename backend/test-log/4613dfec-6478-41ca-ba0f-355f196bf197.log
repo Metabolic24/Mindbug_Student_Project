@@ -1,0 +1,133 @@
+2026-03-12 12:18:29.831 INFO  - Calculating first player...
+2026-03-12 12:18:29.833 INFO  - Banned card for Player1 (3b6d93cc-b560-4307-9aed-3daa5372b6b0) : RHINO TURTLE (cda96d06-c9b1-46dc-ac30-8d432ee1d502) (8)
+2026-03-12 12:18:29.833 INFO  - Banned card for Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) : BEE BEAR (df483eb0-0863-413c-ae50-58240fa75450) (8)
+2026-03-12 12:18:29.833 INFO  - Banned card for Player1 (3b6d93cc-b560-4307-9aed-3daa5372b6b0) : TUSKED EXTORTER (9095e803-d48b-4e03-9392-9917be8d56dd) (8)
+2026-03-12 12:18:29.833 INFO  - Banned card for Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) : FERRET PACIFIER (f139bfa3-d6d6-487c-9284-1d526389e027) (4)
+2026-03-12 12:18:29.833 INFO  - First player will be Player1 (3b6d93cc-b560-4307-9aed-3daa5372b6b0)
+2026-03-12 12:18:29.840 INFO  - Game 4613dfec-6478-41ca-ba0f-355f196bf197 starting...
+2026-03-12 12:18:29.840 INFO  - Player Player1 (3b6d93cc-b560-4307-9aed-3daa5372b6b0) hand : {
+- HYENIX ;
+- MAJESTIC MANTICORE ;
+- TURF THE SURFER ;
+- GORILLON ;
+- FERRET BOMBER
+}
+2026-03-12 12:18:29.840 INFO  - Player Player1 (3b6d93cc-b560-4307-9aed-3daa5372b6b0) draw pile : {
+- HUNGRY HUNGRY HAMSTER ;
+- GOBLIN WEREWOLF ;
+- SNAIL THROWER ;
+- GRAVE ROBBER ;
+- LONE YETI
+}
+2026-03-12 12:18:29.840 INFO  - Player Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) hand : {
+-  GIRAFFODILE ;
+- SHIELD BUGS ;
+- HUNGRY HUNGRY HAMSTER ;
+- DEATHWEAVER ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:18:29.840 INFO  - Player Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) draw pile : {
+- CHAMELEON SNIPER ;
+- EXPLOSIVE TOAD ;
+- AXOLOTL HEALER ;
+- CREEP FROM THE DEEP ;
+- PLATED SCORPION
+}
+2026-03-12 12:18:29.840 DEBUG - Player Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) must choose 2 card(s) to discard (available targets : {
+-  GIRAFFODILE ;
+- SHIELD BUGS ;
+- HUNGRY HUNGRY HAMSTER ;
+- DEATHWEAVER ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:18:29.840 INFO  - New TARGET choice to be resolved by Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) (targets : {
+- DEATHWEAVER ;
+-  GIRAFFODILE ;
+- SHIELD BUGS ;
+- HUNGRY HUNGRY HAMSTER ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:18:29.840 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.840 DEBUG - DEATHWEAVER (85543622-41b0-4032-b86b-58dfa465dfd0) discarded due to FERRET BOMBER (a82ee658-3901-4111-85ed-4f6a443f888a) effect
+2026-03-12 12:18:29.840 DEBUG - HUNGRY HUNGRY HAMSTER (8a94d04e-7eb3-4ae9-865a-5aa0ccb5a434) discarded due to FERRET BOMBER (a82ee658-3901-4111-85ed-4f6a443f888a) effect
+2026-03-12 12:18:29.840 INFO  - Resolving DISCARD effect of FERRET BOMBER (a82ee658-3901-4111-85ed-4f6a443f888a)
+2026-03-12 12:18:29.840 INFO  - Life update for player Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) : 2 LP
+2026-03-12 12:18:29.840 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.841 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.841 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.841 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.841 INFO  - Life update for player Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) : 1 LP
+2026-03-12 12:18:29.841 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.841 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.841 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.841 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.841 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.841 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.841 INFO  - New FRENZY choice to be resolved by Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) (attackingCard : EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea))
+2026-03-12 12:18:29.841 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:29.841 INFO  - Life update for player Player1 (3b6d93cc-b560-4307-9aed-3daa5372b6b0) : 2 LP
+2026-03-12 12:18:29.841 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.841 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.841 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.841 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.841 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.841 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.841 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.841 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.841 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.841 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.841 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.841 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.841 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.842 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.842 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.842 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.842 DEBUG - Player Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) must choose 1 cards to steal (targets : {
+-  GIRAFFODILE ;
+- GOBLIN WEREWOLF ;
+- CHAMELEON SNIPER ;
+- AXOLOTL HEALER ;
+- CREEP FROM THE DEEP
+})
+2026-03-12 12:18:29.842 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.842 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.842 INFO  - New TARGET choice to be resolved by Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) (targets : {
+- CHAMELEON SNIPER ;
+- AXOLOTL HEALER ;
+-  GIRAFFODILE ;
+- CREEP FROM THE DEEP ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:18:29.842 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.842 DEBUG - Player1 (3b6d93cc-b560-4307-9aed-3daa5372b6b0) must decide if stolen card AXOLOTL HEALER (0aa64cfe-d4a6-4d34-a0ed-1fee9a41b9dd) will be added to hand or board
+2026-03-12 12:18:29.842 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (efc5928d-7e55-46b3-a34a-630fc2367826)
+2026-03-12 12:18:29.842 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.842 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.842 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:29.842 DEBUG - AXOLOTL HEALER (0aa64cfe-d4a6-4d34-a0ed-1fee9a41b9dd) stolen and played by Player1 (3b6d93cc-b560-4307-9aed-3daa5372b6b0) due to HUNGRY HUNGRY HAMSTER (efc5928d-7e55-46b3-a34a-630fc2367826) effect
+2026-03-12 12:18:29.842 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.842 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.842 DEBUG - Player1 (3b6d93cc-b560-4307-9aed-3daa5372b6b0) LP changed (2 -> 4) due to AXOLOTL HEALER (0aa64cfe-d4a6-4d34-a0ed-1fee9a41b9dd) effect
+2026-03-12 12:18:29.842 INFO  - Resolving GAIN effect of AXOLOTL HEALER (0aa64cfe-d4a6-4d34-a0ed-1fee9a41b9dd)
+2026-03-12 12:18:29.842 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.843 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.843 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) power changed (5 -> 6) due to SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a) effect
+2026-03-12 12:18:29.843 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.843 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.843 DEBUG - Player Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) must choose 1 card(s) to destroy (available targets : {
+- MAJESTIC MANTICORE ;
+- HUNGRY HUNGRY HAMSTER ;
+- SHIELD BUGS
+})
+2026-03-12 12:18:29.843 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.843 INFO  - New TARGET choice to be resolved by Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) (targets : {
+- MAJESTIC MANTICORE ;
+- SHIELD BUGS ;
+- HUNGRY HUNGRY HAMSTER
+})
+2026-03-12 12:18:29.843 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.843 DEBUG - EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea) effect destroys SHIELD BUGS (7f09ae28-8285-4dde-8cac-588a572e255a)
+2026-03-12 12:18:29.843 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (de7efc35-4e7e-420c-864e-cef01f2691ea)
+2026-03-12 12:18:29.843 INFO  - Life update for player Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) : 0 LP
+2026-03-12 12:18:29.843 INFO  - Game over : Player1 (3b6d93cc-b560-4307-9aed-3daa5372b6b0) wins ; Player2 (62ac358a-733f-4afe-a57b-3177f1ba4710) loses.
+2026-03-12 12:18:29.843 INFO  - End of the game

@@ -1,0 +1,255 @@
+2026-03-12 12:03:03.048 INFO  - Calculating first player...
+2026-03-12 12:03:03.051 INFO  - Banned card for Player1 (1580226a-46e1-4607-a91a-bcc02726d55a) : FROBLIN INSTIGATOR (209505b3-c62c-41d9-b33c-b7d6ce062893) (1)
+2026-03-12 12:03:03.051 INFO  - Banned card for Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) : TIGER SQUIRREL (6e6fab42-ef3c-4eea-a43b-b91d151a3c32) (3)
+2026-03-12 12:03:03.051 INFO  - First player will be Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d)
+2026-03-12 12:03:03.060 INFO  - Game 6a80fc9d-62d8-428a-9bf9-184ca024da16 starting...
+2026-03-12 12:03:03.061 INFO  - Player Player1 (1580226a-46e1-4607-a91a-bcc02726d55a) hand : {
+- KANGASAURUS REX ;
+- CREEP FROM THE DEEP ;
+- COMPOST DRAGON ;
+- GOBLIN WEREWOLF ;
+- PLATED SCORPION
+}
+2026-03-12 12:03:03.061 INFO  - Player Player1 (1580226a-46e1-4607-a91a-bcc02726d55a) draw pile : {
+- KILLER BEE ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- SPIDER OWL ;
+- HUNGRY HUNGRY HAMSTER ;
+- RHINO TURTLE
+}
+2026-03-12 12:03:03.061 INFO  - Player Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) hand : {
+- ELEPHANTOPUS ;
+- CREEP FROM THE DEEP ;
+- CHAMELEON SNIPER ;
+- HYENIX ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:03.061 INFO  - Player Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) draw pile : {
+- GORILLON ;
+- HAMSTER LION ;
+- BRAIN FLY ;
+- BUGSERKER ;
+- BEE BEAR
+}
+2026-03-12 12:03:03.062 DEBUG - KANGASAURUS REX (01895d05-6c63-4c5e-8f1a-9e1e3dd2aa99) effect destroys CREEP FROM THE DEEP (4faa7bbe-5c94-4596-9e11-f9a354eeaa2e)
+2026-03-12 12:03:03.062 INFO  - Resolving DESTROY effect of KANGASAURUS REX (01895d05-6c63-4c5e-8f1a-9e1e3dd2aa99)
+2026-03-12 12:03:03.063 INFO  - Life update for player Player1 (1580226a-46e1-4607-a91a-bcc02726d55a) : 2 LP
+2026-03-12 12:03:03.063 DEBUG - Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) LP changed (3 -> 5) due to AXOLOTL HEALER (a6ab42ed-63a5-48c9-8aa3-d893dc3df344) effect
+2026-03-12 12:03:03.063 INFO  - Resolving GAIN effect of AXOLOTL HEALER (a6ab42ed-63a5-48c9-8aa3-d893dc3df344)
+2026-03-12 12:03:03.064 DEBUG - Player Player1 (1580226a-46e1-4607-a91a-bcc02726d55a) must choose 1 cards to steal (targets : {
+- KANGASAURUS REX ;
+- PLATED SCORPION
+})
+2026-03-12 12:03:03.064 INFO  - New TARGET choice to be resolved by Player1 (1580226a-46e1-4607-a91a-bcc02726d55a) (targets : {
+- PLATED SCORPION ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:03.064 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.064 DEBUG - KANGASAURUS REX (01895d05-6c63-4c5e-8f1a-9e1e3dd2aa99) stolen and played by Player1 (1580226a-46e1-4607-a91a-bcc02726d55a) due to COMPOST DRAGON (567d1c0d-9f0f-4168-8cdf-3b2eecb72805) effect
+2026-03-12 12:03:03.064 INFO  - Resolving STEAL effect of COMPOST DRAGON (567d1c0d-9f0f-4168-8cdf-3b2eecb72805)
+2026-03-12 12:03:03.065 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.065 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.065 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.065 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.065 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.065 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.066 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.066 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.066 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.066 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.066 INFO  - New FRENZY choice to be resolved by Player1 (1580226a-46e1-4607-a91a-bcc02726d55a) (attackingCard : SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a))
+2026-03-12 12:03:03.066 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.067 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.067 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.067 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.067 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.067 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.067 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.067 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.067 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.068 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.068 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.068 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.068 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.069 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.069 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.069 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.069 DEBUG - Player Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) must choose 1 cards to steal (targets : {
+- CHAMELEON SNIPER ;
+- HAMSTER LION ;
+- BRAIN FLY ;
+- BEE BEAR
+})
+2026-03-12 12:03:03.070 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.070 INFO  - New TARGET choice to be resolved by Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) (targets : {
+- BEE BEAR ;
+- BRAIN FLY ;
+- HAMSTER LION ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:03.070 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.070 DEBUG - Player1 (1580226a-46e1-4607-a91a-bcc02726d55a) must decide if stolen card HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c) will be added to hand or board
+2026-03-12 12:03:03.070 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (0d01c434-7dd2-49fe-bd62-db2187a9883f)
+2026-03-12 12:03:03.070 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.070 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:03.070 DEBUG - HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c) stolen and drawn by Player1 (1580226a-46e1-4607-a91a-bcc02726d55a) due to HUNGRY HUNGRY HAMSTER (0d01c434-7dd2-49fe-bd62-db2187a9883f) effect
+2026-03-12 12:03:03.070 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.071 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.072 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.072 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.072 INFO  - Life update for player Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) : 4 LP
+2026-03-12 12:03:03.072 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.073 DEBUG - Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) must decide if HYENIX (50cfc335-ec3b-4817-a8c7-2d7e83a0c471) will revive
+2026-03-12 12:03:03.073 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.073 INFO  - New BOOLEAN choice to be resolved by Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) (target : )
+2026-03-12 12:03:03.073 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:03.073 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.074 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.074 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.074 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.074 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.074 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.075 INFO  - Life update for player Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) : 3 LP
+2026-03-12 12:03:03.075 DEBUG - Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) LP changed (4 -> 3) due to KILLER BEE (78663283-7628-436a-bf72-4e9bb0b2896e) effect
+2026-03-12 12:03:03.075 INFO  - Resolving INFLICT effect of KILLER BEE (78663283-7628-436a-bf72-4e9bb0b2896e)
+2026-03-12 12:03:03.075 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.075 DEBUG - Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) must decide if HYENIX (50cfc335-ec3b-4817-a8c7-2d7e83a0c471) will revive
+2026-03-12 12:03:03.075 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.075 INFO  - New BOOLEAN choice to be resolved by Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) (target : )
+2026-03-12 12:03:03.075 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:03.075 DEBUG - HYENIX (50cfc335-ec3b-4817-a8c7-2d7e83a0c471) revived using its own effect
+2026-03-12 12:03:03.076 INFO  - Resolving REVIVE effect of HYENIX (50cfc335-ec3b-4817-a8c7-2d7e83a0c471)
+2026-03-12 12:03:03.076 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.076 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.076 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.076 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.076 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.076 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.077 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.077 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.077 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.077 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.077 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.077 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.077 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.078 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.078 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.078 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.078 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.078 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.078 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.079 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.079 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.079 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.079 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.079 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.079 INFO  - Life update for player Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) : 2 LP
+2026-03-12 12:03:03.079 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.079 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.079 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.080 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.080 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.080 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.080 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.080 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.080 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains SNEAKY keyword
+2026-03-12 12:03:03.080 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.080 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.081 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.081 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.081 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains SNEAKY keyword
+2026-03-12 12:03:03.081 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.081 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.081 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.081 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.081 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains SNEAKY keyword
+2026-03-12 12:03:03.081 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.081 DEBUG - CardInstance(uuid=846e0ddb-7ee5-4fc1-886d-1a4ef5975ab9, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.081 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.081 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.082 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.082 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.082 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains SNEAKY keyword
+2026-03-12 12:03:03.082 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.082 DEBUG - CardInstance(uuid=846e0ddb-7ee5-4fc1-886d-1a4ef5975ab9, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.082 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.082 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.082 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.082 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.082 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains SNEAKY keyword
+2026-03-12 12:03:03.082 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.082 DEBUG - CardInstance(uuid=846e0ddb-7ee5-4fc1-886d-1a4ef5975ab9, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.083 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.083 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.083 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.083 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.083 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains SNEAKY keyword
+2026-03-12 12:03:03.083 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.083 DEBUG - CardInstance(uuid=846e0ddb-7ee5-4fc1-886d-1a4ef5975ab9, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.083 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.083 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.083 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:03.083 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.083 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.084 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains SNEAKY keyword
+2026-03-12 12:03:03.084 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.084 DEBUG - CardInstance(uuid=846e0ddb-7ee5-4fc1-886d-1a4ef5975ab9, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.084 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.084 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.084 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.084 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.084 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains SNEAKY keyword
+2026-03-12 12:03:03.084 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.084 DEBUG - CardInstance(uuid=846e0ddb-7ee5-4fc1-886d-1a4ef5975ab9, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.084 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.084 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.084 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains FRENZY keyword
+2026-03-12 12:03:03.084 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.084 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a) gains SNEAKY keyword
+2026-03-12 12:03:03.084 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (23125ae1-4145-490a-8f22-336c1550b48a)
+2026-03-12 12:03:03.084 DEBUG - CardInstance(uuid=846e0ddb-7ee5-4fc1-886d-1a4ef5975ab9, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.084 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.084 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.085 DEBUG - CardInstance(uuid=846e0ddb-7ee5-4fc1-886d-1a4ef5975ab9, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.085 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.085 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.085 DEBUG - CardInstance(uuid=846e0ddb-7ee5-4fc1-886d-1a4ef5975ab9, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.085 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.085 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.085 DEBUG - GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f) power changed (2 -> 8) due to GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f) effect
+2026-03-12 12:03:03.085 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f)
+2026-03-12 12:03:03.085 DEBUG - CardInstance(uuid=846e0ddb-7ee5-4fc1-886d-1a4ef5975ab9, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.085 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.085 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.086 DEBUG - CardInstance(uuid=846e0ddb-7ee5-4fc1-886d-1a4ef5975ab9, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.086 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.086 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.086 DEBUG - CardInstance(uuid=846e0ddb-7ee5-4fc1-886d-1a4ef5975ab9, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.086 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.086 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.086 DEBUG - GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f) power changed (2 -> 8) due to GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f) effect
+2026-03-12 12:03:03.086 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f)
+2026-03-12 12:03:03.086 DEBUG - CardInstance(uuid=846e0ddb-7ee5-4fc1-886d-1a4ef5975ab9, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.086 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.087 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.087 DEBUG - GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f) power changed (2 -> 8) due to GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f) effect
+2026-03-12 12:03:03.087 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f)
+2026-03-12 12:03:03.087 DEBUG - CardInstance(uuid=875acac3-1b7f-4e9b-8c2d-d9b26633fef0, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=7, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.088 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.088 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.088 DEBUG - CardInstance(uuid=875acac3-1b7f-4e9b-8c2d-d9b26633fef0, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=7, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.088 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.088 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.089 INFO  - Resolving NO_BLOCK effect of BEE BEAR (ce3ac49c-5edb-495b-aede-a0ac4d4a808e)
+2026-03-12 12:03:03.089 DEBUG - CardInstance(uuid=875acac3-1b7f-4e9b-8c2d-d9b26633fef0, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6595ffce), power=7, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.089 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9598df2f-7685-4d0b-8ce9-3fd70b41b29c)
+2026-03-12 12:03:03.089 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.090 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.090 DEBUG - GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f) power changed (2 -> 8) due to GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f) effect
+2026-03-12 12:03:03.090 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f)
+2026-03-12 12:03:03.090 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (875acac3-1b7f-4e9b-8c2d-d9b26633fef0)
+2026-03-12 12:03:03.090 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:03.090 DEBUG - GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f) power changed (2 -> 8) due to GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f) effect
+2026-03-12 12:03:03.090 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e524c1fb-0ae8-4993-9ac2-239c5b9b897f)
+2026-03-12 12:03:03.090 INFO  - Game over : Player1 (1580226a-46e1-4607-a91a-bcc02726d55a) wins ; Player2 (b32fdf47-1fda-4ecb-81e3-3975760f3e4d) loses.
+2026-03-12 12:03:03.090 INFO  - End of the game

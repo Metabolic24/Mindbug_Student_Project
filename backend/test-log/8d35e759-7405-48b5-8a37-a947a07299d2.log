@@ -1,0 +1,150 @@
+2026-03-12 12:03:42.681 INFO  - Calculating first player...
+2026-03-12 12:03:42.683 INFO  - Banned card for Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) : BRAIN FLY (7543f883-1a7c-4dd0-9aae-e7985e425e30) (4)
+2026-03-12 12:03:42.683 INFO  - Banned card for Player2 (8982b47c-7408-4510-8cdb-709979992bd9) : TURF THE SURFER (7761dc6e-6c55-47b9-ad16-e39eebbb1c6d) (8)
+2026-03-12 12:03:42.683 INFO  - First player will be Player2 (8982b47c-7408-4510-8cdb-709979992bd9)
+2026-03-12 12:03:42.692 INFO  - Game 8d35e759-7405-48b5-8a37-a947a07299d2 starting...
+2026-03-12 12:03:42.692 INFO  - Player Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) hand : {
+- SPIDER OWL ;
+- CHAMELEON SNIPER ;
+- HUNGRY HUNGRY HAMSTER ;
+- EXPLOSIVE TOAD ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:42.692 INFO  - Player Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) draw pile : {
+- TURF THE SURFER ;
+- COUNT DRACULEECH ;
+- FERRET BOMBER ;
+- KANGASAURUS REX ;
+- GRAVE ROBBER
+}
+2026-03-12 12:03:42.692 INFO  - Player Player2 (8982b47c-7408-4510-8cdb-709979992bd9) hand : {
+- SHARK DOG ;
+- FERRET PACIFIER ;
+- TIGER SQUIRREL ;
+- HYENIX ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:03:42.692 INFO  - Player Player2 (8982b47c-7408-4510-8cdb-709979992bd9) draw pile : {
+- TURBO BUG ;
+- HAMSTER LION ;
+- TUSKED EXTORTER ;
+- LUCHATAUR ;
+- COMPOST DRAGON
+}
+2026-03-12 12:03:42.693 DEBUG - Player Player2 (8982b47c-7408-4510-8cdb-709979992bd9) must choose 1 cards to steal (targets : {
+- SHARK DOG ;
+- FERRET PACIFIER ;
+- TIGER SQUIRREL ;
+- GOBLIN WEREWOLF ;
+- TURBO BUG
+})
+2026-03-12 12:03:42.693 INFO  - New TARGET choice to be resolved by Player2 (8982b47c-7408-4510-8cdb-709979992bd9) (targets : {
+- SHARK DOG ;
+- FERRET PACIFIER ;
+- TIGER SQUIRREL ;
+- GOBLIN WEREWOLF ;
+- TURBO BUG
+})
+2026-03-12 12:03:42.693 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.693 DEBUG - Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) must decide if stolen card TURBO BUG (ee66540a-25f0-4f44-bbd5-ef54f07dde09) will be added to hand or board
+2026-03-12 12:03:42.693 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (af8bf78c-3fea-4962-92b0-2bf58862b1d2)
+2026-03-12 12:03:42.693 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:42.693 DEBUG - TURBO BUG (ee66540a-25f0-4f44-bbd5-ef54f07dde09) stolen and played by Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) due to HUNGRY HUNGRY HAMSTER (af8bf78c-3fea-4962-92b0-2bf58862b1d2) effect
+2026-03-12 12:03:42.693 INFO  - Life update for player Player2 (8982b47c-7408-4510-8cdb-709979992bd9) : 1 LP
+2026-03-12 12:03:42.694 DEBUG - Player2 (8982b47c-7408-4510-8cdb-709979992bd9) LP changed (3 -> 1) due to TURBO BUG (ee66540a-25f0-4f44-bbd5-ef54f07dde09) effect
+2026-03-12 12:03:42.694 INFO  - Resolving INFLICT effect of TURBO BUG (ee66540a-25f0-4f44-bbd5-ef54f07dde09)
+2026-03-12 12:03:42.694 INFO  - Life update for player Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) : 2 LP
+2026-03-12 12:03:42.694 DEBUG - Player Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) must choose 1 card(s) that will be unable to block (targets : {
+- HYENIX ;
+- TIGER SQUIRREL ;
+- SHARK DOG
+})
+2026-03-12 12:03:42.694 INFO  - New TARGET choice to be resolved by Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) (targets : {
+- SHARK DOG ;
+- TIGER SQUIRREL ;
+- HYENIX
+})
+2026-03-12 12:03:42.694 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.694 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (d85664b7-97e6-49bc-b8ea-60cd9950dc95)
+2026-03-12 12:03:42.694 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (20bacfa1-d7a1-4f82-bced-4558272ccc42)
+2026-03-12 12:03:42.694 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (20bacfa1-d7a1-4f82-bced-4558272ccc42)
+2026-03-12 12:03:42.694 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (20bacfa1-d7a1-4f82-bced-4558272ccc42)
+2026-03-12 12:03:42.694 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (20bacfa1-d7a1-4f82-bced-4558272ccc42)
+2026-03-12 12:03:42.695 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (20bacfa1-d7a1-4f82-bced-4558272ccc42)
+2026-03-12 12:03:42.695 DEBUG - HYENIX (74bfedff-beb8-4046-91b3-b7ba65c86339) stolen and played by Player2 (8982b47c-7408-4510-8cdb-709979992bd9) due to COMPOST DRAGON (9363dce2-543b-4db3-979a-4e74e1f91436) effect
+2026-03-12 12:03:42.695 INFO  - Resolving STEAL effect of COMPOST DRAGON (9363dce2-543b-4db3-979a-4e74e1f91436)
+2026-03-12 12:03:42.695 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (20bacfa1-d7a1-4f82-bced-4558272ccc42)
+2026-03-12 12:03:42.695 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (20bacfa1-d7a1-4f82-bced-4558272ccc42)
+2026-03-12 12:03:42.695 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (20bacfa1-d7a1-4f82-bced-4558272ccc42)
+2026-03-12 12:03:42.695 INFO  - New FRENZY choice to be resolved by Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) (attackingCard : EXPLOSIVE TOAD (a4d22eb9-6bc7-40ec-9e9b-ea78ad6e4c93))
+2026-03-12 12:03:42.695 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.695 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (20bacfa1-d7a1-4f82-bced-4558272ccc42)
+2026-03-12 12:03:42.695 DEBUG - Player Player2 (8982b47c-7408-4510-8cdb-709979992bd9) must choose 2 card(s) to discard (available targets : {
+- GOBLIN WEREWOLF ;
+- HAMSTER LION ;
+- TUSKED EXTORTER ;
+- LUCHATAUR
+})
+2026-03-12 12:03:42.695 INFO  - New TARGET choice to be resolved by Player2 (8982b47c-7408-4510-8cdb-709979992bd9) (targets : {
+- HAMSTER LION ;
+- LUCHATAUR ;
+- GOBLIN WEREWOLF ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:42.696 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.696 DEBUG - HAMSTER LION (26c72839-4558-447e-bbb6-4a218a1a0a25) discarded due to FERRET BOMBER (ffe1a93b-2629-4c20-9f05-3b12f3f9814b) effect
+2026-03-12 12:03:42.696 DEBUG - GOBLIN WEREWOLF (702681fc-8a1f-4164-bab1-50ef3ae711a2) discarded due to FERRET BOMBER (ffe1a93b-2629-4c20-9f05-3b12f3f9814b) effect
+2026-03-12 12:03:42.696 INFO  - Resolving DISCARD effect of FERRET BOMBER (ffe1a93b-2629-4c20-9f05-3b12f3f9814b)
+2026-03-12 12:03:42.696 DEBUG - SHARK DOG (0e6c893d-df97-48ca-9a0a-bcc25c9f805a) effect destroys TURF THE SURFER (d85664b7-97e6-49bc-b8ea-60cd9950dc95)
+2026-03-12 12:03:42.696 INFO  - Resolving DESTROY effect of SHARK DOG (0e6c893d-df97-48ca-9a0a-bcc25c9f805a)
+2026-03-12 12:03:42.696 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.696 DEBUG - Player Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) must choose 1 cards to steal (targets : {
+- COMPOST DRAGON ;
+- FERRET PACIFIER ;
+- TIGER SQUIRREL ;
+- HAMSTER LION ;
+- GOBLIN WEREWOLF ;
+- SHARK DOG ;
+- HYENIX
+})
+2026-03-12 12:03:42.697 INFO  - New TARGET choice to be resolved by Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) (targets : {
+- HAMSTER LION ;
+- SHARK DOG ;
+- FERRET PACIFIER ;
+- TIGER SQUIRREL ;
+- HYENIX ;
+- COMPOST DRAGON ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:03:42.697 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.697 DEBUG - SHARK DOG (0e6c893d-df97-48ca-9a0a-bcc25c9f805a) stolen and played by Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) due to GRAVE ROBBER (52af1cf8-6f9d-48c5-92e1-cb1a8292b883) effect
+2026-03-12 12:03:42.697 INFO  - Resolving STEAL effect of GRAVE ROBBER (52af1cf8-6f9d-48c5-92e1-cb1a8292b883)
+2026-03-12 12:03:42.697 DEBUG - Player Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) must choose 1 card(s) to discard (available targets : {
+- MAJESTIC MANTICORE ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:42.697 INFO  - New TARGET choice to be resolved by Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) (targets : {
+- KANGASAURUS REX ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:03:42.697 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.697 DEBUG - MAJESTIC MANTICORE (0dd59e3a-d1e5-4eaa-986b-c10acd824c4e) discarded due to TUSKED EXTORTER (db3a41f0-23a3-480a-86d7-11fbf5ca94ff) effect
+2026-03-12 12:03:42.697 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (db3a41f0-23a3-480a-86d7-11fbf5ca94ff)
+2026-03-12 12:03:42.697 DEBUG - Player Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) must choose 1 card(s) to destroy (available targets : {
+- TUSKED EXTORTER ;
+- FERRET BOMBER ;
+- GRAVE ROBBER ;
+- SHARK DOG
+})
+2026-03-12 12:03:42.697 INFO  - New TARGET choice to be resolved by Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) (targets : {
+- SHARK DOG ;
+- GRAVE ROBBER ;
+- FERRET BOMBER ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:42.697 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.697 DEBUG - EXPLOSIVE TOAD (a4d22eb9-6bc7-40ec-9e9b-ea78ad6e4c93) effect destroys TUSKED EXTORTER (db3a41f0-23a3-480a-86d7-11fbf5ca94ff)
+2026-03-12 12:03:42.698 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (a4d22eb9-6bc7-40ec-9e9b-ea78ad6e4c93)
+2026-03-12 12:03:42.698 INFO  - Life update for player Player2 (8982b47c-7408-4510-8cdb-709979992bd9) : 0 LP
+2026-03-12 12:03:42.698 INFO  - Game over : Player1 (70a35256-58fe-4670-8a09-b8a9800d6662) wins ; Player2 (8982b47c-7408-4510-8cdb-709979992bd9) loses.
+2026-03-12 12:03:42.698 INFO  - End of the game

@@ -1,0 +1,103 @@
+2026-03-12 12:03:05.943 INFO  - Calculating first player...
+2026-03-12 12:03:05.944 INFO  - Banned card for Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) : KANGASAURUS REX (04c76d72-af23-4812-bf0b-2c0746d409af) (7)
+2026-03-12 12:03:05.944 INFO  - Banned card for Player2 (99202adc-0323-4272-9273-f049eb503cc2) : TIGER SQUIRREL (d98dde5d-c4be-46e3-9780-142e1a730984) (3)
+2026-03-12 12:03:05.945 INFO  - First player will be Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b)
+2026-03-12 12:03:05.951 INFO  - Game dc8705fc-b59b-40fc-a0a6-77352b1da3e0 starting...
+2026-03-12 12:03:05.951 INFO  - Player Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) hand : {
+- RHINO TURTLE ;
+- COUNT DRACULEECH ;
+- CREEP FROM THE DEEP ;
+- AXOLOTL HEALER ;
+- HYENIX
+}
+2026-03-12 12:03:05.952 INFO  - Player Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) draw pile : {
+- SNAIL THROWER ;
+- URCHIN HURLER ;
+- SPIDER OWL ;
+- KANGASAURUS REX ;
+- GRAVE ROBBER
+}
+2026-03-12 12:03:05.952 INFO  - Player Player2 (99202adc-0323-4272-9273-f049eb503cc2) hand : {
+- THE LURKER ;
+- SHIELD BUGS ;
+- DEATHWEAVER ;
+- KILLER BEE ;
+- THE LURKER
+}
+2026-03-12 12:03:05.952 INFO  - Player Player2 (99202adc-0323-4272-9273-f049eb503cc2) draw pile : {
+- COMPOST DRAGON ;
+- GOBLIN WEREWOLF ;
+- ELEPHANTOPUS ;
+- TUSKED EXTORTER ;
+- TURF THE SURFER
+}
+2026-03-12 12:03:05.952 INFO  - Life update for player Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) : 2 LP
+2026-03-12 12:03:05.952 DEBUG - Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) LP changed (3 -> 2) due to COUNT DRACULEECH (f46e0163-b0d0-4e76-8fa9-de052febcdf0) effect
+2026-03-12 12:03:05.952 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (f46e0163-b0d0-4e76-8fa9-de052febcdf0)
+2026-03-12 12:03:05.952 DEBUG - Player Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) must choose 1 card(s) to destroy (available targets : {
+- THE LURKER ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:05.952 INFO  - New TARGET choice to be resolved by Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) (targets : {
+- THE LURKER ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:05.952 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:05.952 DEBUG - COUNT DRACULEECH (f46e0163-b0d0-4e76-8fa9-de052febcdf0) effect destroys THE LURKER (f9fe4422-7eb4-4bdd-8c3c-ac32d0257ac9)
+2026-03-12 12:03:05.952 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (f46e0163-b0d0-4e76-8fa9-de052febcdf0)
+2026-03-12 12:03:05.952 INFO  - Resolving POWER_UP effect of SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2)
+2026-03-12 12:03:05.952 INFO  - Resolving POWER_UP effect of SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2)
+2026-03-12 12:03:05.952 INFO  - Resolving POWER_UP effect of SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2)
+2026-03-12 12:03:05.952 DEBUG - Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) LP changed (2 -> 4) due to AXOLOTL HEALER (921bdedb-0650-4c68-b53a-b0e9fd932bd7) effect
+2026-03-12 12:03:05.952 INFO  - Resolving GAIN effect of AXOLOTL HEALER (921bdedb-0650-4c68-b53a-b0e9fd932bd7)
+2026-03-12 12:03:05.952 INFO  - Resolving POWER_UP effect of SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2)
+2026-03-12 12:03:05.952 INFO  - Resolving POWER_UP effect of SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2)
+2026-03-12 12:03:05.952 DEBUG - KILLER BEE (d755f109-12ef-4340-9222-c74433e89435) power changed (5 -> 6) due to SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2) effect
+2026-03-12 12:03:05.952 INFO  - Resolving POWER_UP effect of SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2)
+2026-03-12 12:03:05.952 INFO  - Life update for player Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) : 3 LP
+2026-03-12 12:03:05.952 DEBUG - Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) LP changed (4 -> 3) due to KILLER BEE (d755f109-12ef-4340-9222-c74433e89435) effect
+2026-03-12 12:03:05.952 INFO  - Resolving INFLICT effect of KILLER BEE (d755f109-12ef-4340-9222-c74433e89435)
+2026-03-12 12:03:05.952 DEBUG - KILLER BEE (d755f109-12ef-4340-9222-c74433e89435) power changed (5 -> 6) due to SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2) effect
+2026-03-12 12:03:05.952 INFO  - Resolving POWER_UP effect of SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2)
+2026-03-12 12:03:05.952 DEBUG - KILLER BEE (d755f109-12ef-4340-9222-c74433e89435) power changed (5 -> 6) due to SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2) effect
+2026-03-12 12:03:05.953 INFO  - Resolving POWER_UP effect of SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2)
+2026-03-12 12:03:05.953 DEBUG - KILLER BEE (d755f109-12ef-4340-9222-c74433e89435) power changed (5 -> 6) due to SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2) effect
+2026-03-12 12:03:05.953 INFO  - Resolving POWER_UP effect of SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2)
+2026-03-12 12:03:05.953 DEBUG - KILLER BEE (d755f109-12ef-4340-9222-c74433e89435) power changed (5 -> 6) due to SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2) effect
+2026-03-12 12:03:05.953 INFO  - Resolving POWER_UP effect of SHIELD BUGS (10113456-8cce-4abd-ab08-e65699cb0cb2)
+2026-03-12 12:03:05.953 INFO  - Life update for player Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) : 2 LP
+2026-03-12 12:03:05.953 DEBUG - Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) LP changed (3 -> 2) due to COUNT DRACULEECH (f46e0163-b0d0-4e76-8fa9-de052febcdf0) effect
+2026-03-12 12:03:05.953 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (f46e0163-b0d0-4e76-8fa9-de052febcdf0)
+2026-03-12 12:03:05.953 DEBUG - Player Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) must choose 1 card(s) to destroy (available targets : {
+- KILLER BEE ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:05.953 INFO  - New TARGET choice to be resolved by Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) (targets : {
+- KILLER BEE ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:05.953 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:05.953 DEBUG - COUNT DRACULEECH (f46e0163-b0d0-4e76-8fa9-de052febcdf0) effect destroys KILLER BEE (d755f109-12ef-4340-9222-c74433e89435)
+2026-03-12 12:03:05.953 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (f46e0163-b0d0-4e76-8fa9-de052febcdf0)
+2026-03-12 12:03:05.953 INFO  - Life update for player Player2 (99202adc-0323-4272-9273-f049eb503cc2) : 2 LP
+2026-03-12 12:03:05.953 DEBUG - GOBLIN WEREWOLF (b1710544-d7af-4cbf-95fc-c0779c530f85) power changed (2 -> 8) due to GOBLIN WEREWOLF (b1710544-d7af-4cbf-95fc-c0779c530f85) effect
+2026-03-12 12:03:05.953 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b1710544-d7af-4cbf-95fc-c0779c530f85)
+2026-03-12 12:03:05.953 INFO  - Life update for player Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) : 1 LP
+2026-03-12 12:03:05.953 DEBUG - Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) LP changed (2 -> 1) due to COUNT DRACULEECH (f46e0163-b0d0-4e76-8fa9-de052febcdf0) effect
+2026-03-12 12:03:05.953 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (f46e0163-b0d0-4e76-8fa9-de052febcdf0)
+2026-03-12 12:03:05.953 DEBUG - Player Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) must choose 1 card(s) to destroy (available targets : {
+- GOBLIN WEREWOLF ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:05.953 INFO  - New TARGET choice to be resolved by Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) (targets : {
+- GOBLIN WEREWOLF ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:05.953 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:05.953 DEBUG - COUNT DRACULEECH (f46e0163-b0d0-4e76-8fa9-de052febcdf0) effect destroys COUNT DRACULEECH (f46e0163-b0d0-4e76-8fa9-de052febcdf0)
+2026-03-12 12:03:05.953 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (f46e0163-b0d0-4e76-8fa9-de052febcdf0)
+2026-03-12 12:03:05.953 DEBUG - GOBLIN WEREWOLF (b1710544-d7af-4cbf-95fc-c0779c530f85) power changed (2 -> 8) due to GOBLIN WEREWOLF (b1710544-d7af-4cbf-95fc-c0779c530f85) effect
+2026-03-12 12:03:05.953 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b1710544-d7af-4cbf-95fc-c0779c530f85)
+2026-03-12 12:03:05.953 INFO  - Life update for player Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) : 0 LP
+2026-03-12 12:03:05.953 INFO  - Game over : Player2 (99202adc-0323-4272-9273-f049eb503cc2) wins ; Player1 (2bb71a29-4e98-4090-906b-850c56e70c3b) loses.
+2026-03-12 12:03:05.953 INFO  - End of the game

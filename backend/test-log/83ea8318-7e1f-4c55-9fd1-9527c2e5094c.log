@@ -1,0 +1,104 @@
+2026-03-12 12:18:29.931 INFO  - Calculating first player...
+2026-03-12 12:18:29.933 INFO  - Banned card for Player1 (53b449bf-e96d-4ef3-8235-7b47c4b2ae3c) : FROBLIN INSTIGATOR (364721b4-03c0-446b-9d16-e4a886136ad9) (1)
+2026-03-12 12:18:29.933 INFO  - Banned card for Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) : BUGSERKER (a4d7f1af-bb49-49ef-9a56-7dad8aa45639) (3)
+2026-03-12 12:18:29.933 INFO  - First player will be Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f)
+2026-03-12 12:18:29.940 INFO  - Game 83ea8318-7e1f-4c55-9fd1-9527c2e5094c starting...
+2026-03-12 12:18:29.940 INFO  - Player Player1 (53b449bf-e96d-4ef3-8235-7b47c4b2ae3c) hand : {
+- SPIDER OWL ;
+- FERRET BOMBER ;
+- KILLER BEE ;
+- AXOLOTL HEALER ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:18:29.940 INFO  - Player Player1 (53b449bf-e96d-4ef3-8235-7b47c4b2ae3c) draw pile : {
+- CREEP FROM THE DEEP ;
+- EXPLOSIVE TOAD ;
+- SNAIL HYDRA ;
+- MAJESTIC MANTICORE ;
+- CHAMELEON SNIPER
+}
+2026-03-12 12:18:29.940 INFO  - Player Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) hand : {
+- TURF THE SURFER ;
+- GOREAGLE ALPHA ;
+- MYSTERIOUS MERMAID ;
+- GRAVE ROBBER ;
+- SHARK DOG
+}
+2026-03-12 12:18:29.940 INFO  - Player Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) draw pile : {
+- EXPLOSIVE TOAD ;
+- HYENIX ;
+- LUCHATAUR ;
+- TURBO BUG ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:18:29.941 DEBUG - Player1 (53b449bf-e96d-4ef3-8235-7b47c4b2ae3c) LP changed (3 -> 5) due to AXOLOTL HEALER (bbdc4553-afce-4b5d-adab-73e7f112ca05) effect
+2026-03-12 12:18:29.941 INFO  - Resolving GAIN effect of AXOLOTL HEALER (bbdc4553-afce-4b5d-adab-73e7f112ca05)
+2026-03-12 12:18:29.941 DEBUG - Player Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) must choose 2 card(s) to discard (available targets : {
+- GOREAGLE ALPHA ;
+- MYSTERIOUS MERMAID ;
+- SHARK DOG ;
+- EXPLOSIVE TOAD ;
+- HYENIX
+})
+2026-03-12 12:18:29.941 INFO  - New TARGET choice to be resolved by Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) (targets : {
+- EXPLOSIVE TOAD ;
+- SHARK DOG ;
+- MYSTERIOUS MERMAID ;
+- HYENIX ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:18:29.941 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.941 DEBUG - SHARK DOG (52325dc7-a1fb-4d83-81b5-ee203dd2f5bc) discarded due to FERRET BOMBER (ca4e5aca-18d6-40cb-8af3-d1608d058013) effect
+2026-03-12 12:18:29.941 DEBUG - GOREAGLE ALPHA (a8aff71d-8b4b-48f4-a89e-c13aea4ab1bf) discarded due to FERRET BOMBER (ca4e5aca-18d6-40cb-8af3-d1608d058013) effect
+2026-03-12 12:18:29.941 INFO  - Resolving DISCARD effect of FERRET BOMBER (ca4e5aca-18d6-40cb-8af3-d1608d058013)
+2026-03-12 12:18:29.941 DEBUG - Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) LP changed (3 -> 5) due to MYSTERIOUS MERMAID (9f1de2f6-28bd-4a33-95d9-de85bd687976) effect
+2026-03-12 12:18:29.941 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (9f1de2f6-28bd-4a33-95d9-de85bd687976)
+2026-03-12 12:18:29.941 INFO  - Life update for player Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) : 4 LP
+2026-03-12 12:18:29.941 DEBUG - Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) LP changed (5 -> 4) due to KILLER BEE (6c1e8876-f060-4168-9e91-1c871682e380) effect
+2026-03-12 12:18:29.941 INFO  - Resolving INFLICT effect of KILLER BEE (6c1e8876-f060-4168-9e91-1c871682e380)
+2026-03-12 12:18:29.942 INFO  - Life update for player Player1 (53b449bf-e96d-4ef3-8235-7b47c4b2ae3c) : 4 LP
+2026-03-12 12:18:29.942 DEBUG - Player Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) must choose 1 cards to steal (targets : {
+- EXPLOSIVE TOAD ;
+- HYENIX ;
+- LUCHATAUR ;
+- TURBO BUG
+})
+2026-03-12 12:18:29.942 INFO  - New TARGET choice to be resolved by Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) (targets : {
+- EXPLOSIVE TOAD ;
+- TURBO BUG ;
+- LUCHATAUR ;
+- HYENIX
+})
+2026-03-12 12:18:29.942 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.942 DEBUG - Player1 (53b449bf-e96d-4ef3-8235-7b47c4b2ae3c) must decide if stolen card TURBO BUG (f19aacc4-de82-4c7e-9391-d3bbaa3b3cf2) will be added to hand or board
+2026-03-12 12:18:29.942 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (e9f692ee-bb57-4927-9001-85fec23bd604)
+2026-03-12 12:18:29.942 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:29.942 DEBUG - TURBO BUG (f19aacc4-de82-4c7e-9391-d3bbaa3b3cf2) stolen and drawn by Player1 (53b449bf-e96d-4ef3-8235-7b47c4b2ae3c) due to HUNGRY HUNGRY HAMSTER (e9f692ee-bb57-4927-9001-85fec23bd604) effect
+2026-03-12 12:18:29.942 INFO  - Life update for player Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) : 3 LP
+2026-03-12 12:18:29.943 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:29.943 DEBUG - Player Player1 (53b449bf-e96d-4ef3-8235-7b47c4b2ae3c) must choose 1 card(s) to destroy (available targets : {
+- TURF THE SURFER ;
+- LUCHATAUR ;
+- EXPLOSIVE TOAD
+})
+2026-03-12 12:18:29.943 INFO  - New TARGET choice to be resolved by Player1 (53b449bf-e96d-4ef3-8235-7b47c4b2ae3c) (targets : {
+- EXPLOSIVE TOAD ;
+- LUCHATAUR ;
+- TURF THE SURFER
+})
+2026-03-12 12:18:29.943 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.943 DEBUG - SNAIL HYDRA (63fa15e8-39d2-42d4-b3e5-6419a8b8e131) effect destroys TURF THE SURFER (320d8845-29db-4ce1-90e8-1fcfc0b47cda)
+2026-03-12 12:18:29.943 INFO  - Resolving DESTROY effect of SNAIL HYDRA (63fa15e8-39d2-42d4-b3e5-6419a8b8e131)
+2026-03-12 12:18:29.944 DEBUG - Player Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) must choose 1 card(s) to destroy (available targets : {
+- SNAIL HYDRA ;
+- LUCHATAUR
+})
+2026-03-12 12:18:29.944 INFO  - New TARGET choice to be resolved by Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) (targets : {
+- SNAIL HYDRA ;
+- LUCHATAUR
+})
+2026-03-12 12:18:29.944 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.944 DEBUG - EXPLOSIVE TOAD (7c158911-7235-45cd-9c17-3687e78d0f81) effect destroys LUCHATAUR (baf8c20f-632e-4f55-97ed-3ef68bd2eca7)
+2026-03-12 12:18:29.944 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (7c158911-7235-45cd-9c17-3687e78d0f81)
+2026-03-12 12:18:29.944 INFO  - Game over : Player1 (53b449bf-e96d-4ef3-8235-7b47c4b2ae3c) wins ; Player2 (f8e1d171-4f11-4eba-8ee4-b1ea6652121f) loses.
+2026-03-12 12:18:29.944 INFO  - End of the game

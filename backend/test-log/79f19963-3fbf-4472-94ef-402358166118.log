@@ -1,0 +1,86 @@
+2026-03-12 12:03:44.863 INFO  - Calculating first player...
+2026-03-12 12:03:44.865 INFO  - Banned card for Player1 (63438c86-462a-4de6-9c15-c7d5bd343b55) : SPIDER OWL (b3b3f585-8d56-44dc-b5cf-e110a16bdbc1) (3)
+2026-03-12 12:03:44.865 INFO  - Banned card for Player2 (5898cfd6-c60a-4434-a3b6-f26bd550feaa) : COMPOST DRAGON (3a71c96d-f89e-413b-bbf1-bcd0b2182fd4) (3)
+2026-03-12 12:03:44.865 INFO  - Banned card for Player1 (63438c86-462a-4de6-9c15-c7d5bd343b55) : DEATHWEAVER (043506b7-da5f-4698-945f-09c25dfb7e99) (2)
+2026-03-12 12:03:44.865 INFO  - Banned card for Player2 (5898cfd6-c60a-4434-a3b6-f26bd550feaa) : SNAIL HYDRA (b56c5da3-2ab0-4119-af3e-4d6567023b2b) (9)
+2026-03-12 12:03:44.865 INFO  - First player will be Player2 (5898cfd6-c60a-4434-a3b6-f26bd550feaa)
+2026-03-12 12:03:44.874 INFO  - Game 79f19963-3fbf-4472-94ef-402358166118 starting...
+2026-03-12 12:03:44.874 INFO  - Player Player1 (63438c86-462a-4de6-9c15-c7d5bd343b55) hand : {
+- EXPLOSIVE TOAD ;
+- THE LURKER ;
+- FERRET BOMBER ;
+- COUNT DRACULEECH ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:44.874 INFO  - Player Player1 (63438c86-462a-4de6-9c15-c7d5bd343b55) draw pile : {
+- RHINO TURTLE ;
+- HUNGRY HUNGRY HAMSTER ;
+- THE LURKER ;
+- GOBLIN WEREWOLF ;
+- KILLER BEE
+}
+2026-03-12 12:03:44.874 INFO  - Player Player2 (5898cfd6-c60a-4434-a3b6-f26bd550feaa) hand : {
+- SHIELD BUGS ;
+- GRAVE ROBBER ;
+- MYSTERIOUS MERMAID ;
+- FROBLIN INSTIGATOR ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:03:44.874 INFO  - Player Player2 (5898cfd6-c60a-4434-a3b6-f26bd550feaa) draw pile : {
+- HAMSTER LION ;
+- TUSKED EXTORTER ;
+- TURF THE SURFER ;
+- HYENIX ;
+- FERRET PACIFIER
+}
+2026-03-12 12:03:44.875 INFO  - Life update for player Player2 (5898cfd6-c60a-4434-a3b6-f26bd550feaa) : 2 LP
+2026-03-12 12:03:44.875 DEBUG - Player2 (5898cfd6-c60a-4434-a3b6-f26bd550feaa) LP changed (3 -> 2) due to GOREAGLE ALPHA (062ded23-0db9-4611-846d-b682454d5845) effect
+2026-03-12 12:03:44.875 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (062ded23-0db9-4611-846d-b682454d5845)
+2026-03-12 12:03:44.875 DEBUG - Player Player1 (63438c86-462a-4de6-9c15-c7d5bd343b55) must choose 1 card(s) to destroy (available targets : {
+- GRAVE ROBBER ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:44.875 INFO  - New TARGET choice to be resolved by Player1 (63438c86-462a-4de6-9c15-c7d5bd343b55) (targets : {
+- GOREAGLE ALPHA ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:44.875 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.875 DEBUG - EXPLOSIVE TOAD (622566fe-8a07-4031-aa2a-4b7094f10e00) effect destroys GRAVE ROBBER (e9e0dca8-f605-4982-a150-93bf5e3715d0)
+2026-03-12 12:03:44.875 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (622566fe-8a07-4031-aa2a-4b7094f10e00)
+2026-03-12 12:03:44.875 INFO  - Life update for player Player1 (63438c86-462a-4de6-9c15-c7d5bd343b55) : 2 LP
+2026-03-12 12:03:44.875 INFO  - New FRENZY choice to be resolved by Player2 (5898cfd6-c60a-4434-a3b6-f26bd550feaa) (attackingCard : GOREAGLE ALPHA (062ded23-0db9-4611-846d-b682454d5845))
+2026-03-12 12:03:44.875 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.875 INFO  - Life update for player Player1 (63438c86-462a-4de6-9c15-c7d5bd343b55) : 1 LP
+2026-03-12 12:03:44.875 DEBUG - Player Player2 (5898cfd6-c60a-4434-a3b6-f26bd550feaa) must choose 2 card(s) to discard (available targets : {
+- SHIELD BUGS ;
+- MYSTERIOUS MERMAID ;
+- FROBLIN INSTIGATOR ;
+- HAMSTER LION ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:44.875 INFO  - New TARGET choice to be resolved by Player2 (5898cfd6-c60a-4434-a3b6-f26bd550feaa) (targets : {
+- HAMSTER LION ;
+- TUSKED EXTORTER ;
+- MYSTERIOUS MERMAID ;
+- SHIELD BUGS ;
+- FROBLIN INSTIGATOR
+})
+2026-03-12 12:03:44.875 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.875 DEBUG - TUSKED EXTORTER (6e8e4673-ad6c-4141-ad05-023b877b8c84) discarded due to FERRET BOMBER (42685fe1-1438-4269-9da1-6121ab72a90d) effect
+2026-03-12 12:03:44.875 DEBUG - FROBLIN INSTIGATOR (f625ebdd-694d-4b91-956b-76ecc4f0ad6d) discarded due to FERRET BOMBER (42685fe1-1438-4269-9da1-6121ab72a90d) effect
+2026-03-12 12:03:44.875 INFO  - Resolving DISCARD effect of FERRET BOMBER (42685fe1-1438-4269-9da1-6121ab72a90d)
+2026-03-12 12:03:44.875 DEBUG - HYENIX (d4d9ca07-ece6-4ebb-9e62-dc17929aaa3c) power changed (7 -> 8) due to SHIELD BUGS (da54beb4-75f0-47fc-9e14-54a96b87b14f) effect
+2026-03-12 12:03:44.875 DEBUG - GOREAGLE ALPHA (062ded23-0db9-4611-846d-b682454d5845) power changed (6 -> 7) due to SHIELD BUGS (da54beb4-75f0-47fc-9e14-54a96b87b14f) effect
+2026-03-12 12:03:44.875 DEBUG - GRAVE ROBBER (e9e0dca8-f605-4982-a150-93bf5e3715d0) power changed (7 -> 8) due to SHIELD BUGS (da54beb4-75f0-47fc-9e14-54a96b87b14f) effect
+2026-03-12 12:03:44.876 DEBUG - TURF THE SURFER (06010cd8-224b-4bcc-8e82-78bf54a4842c) power changed (8 -> 9) due to SHIELD BUGS (da54beb4-75f0-47fc-9e14-54a96b87b14f) effect
+2026-03-12 12:03:44.876 INFO  - Resolving POWER_UP effect of SHIELD BUGS (da54beb4-75f0-47fc-9e14-54a96b87b14f)
+2026-03-12 12:03:44.876 DEBUG - HYENIX (d4d9ca07-ece6-4ebb-9e62-dc17929aaa3c) power changed (7 -> 8) due to SHIELD BUGS (da54beb4-75f0-47fc-9e14-54a96b87b14f) effect
+2026-03-12 12:03:44.876 DEBUG - GOREAGLE ALPHA (062ded23-0db9-4611-846d-b682454d5845) power changed (6 -> 7) due to SHIELD BUGS (da54beb4-75f0-47fc-9e14-54a96b87b14f) effect
+2026-03-12 12:03:44.876 DEBUG - GRAVE ROBBER (e9e0dca8-f605-4982-a150-93bf5e3715d0) power changed (7 -> 8) due to SHIELD BUGS (da54beb4-75f0-47fc-9e14-54a96b87b14f) effect
+2026-03-12 12:03:44.876 DEBUG - TURF THE SURFER (06010cd8-224b-4bcc-8e82-78bf54a4842c) power changed (8 -> 9) due to SHIELD BUGS (da54beb4-75f0-47fc-9e14-54a96b87b14f) effect
+2026-03-12 12:03:44.876 INFO  - Resolving POWER_UP effect of SHIELD BUGS (da54beb4-75f0-47fc-9e14-54a96b87b14f)
+2026-03-12 12:03:44.876 INFO  - Life update for player Player1 (63438c86-462a-4de6-9c15-c7d5bd343b55) : 0 LP
+2026-03-12 12:03:44.876 INFO  - Game over : Player2 (5898cfd6-c60a-4434-a3b6-f26bd550feaa) wins ; Player1 (63438c86-462a-4de6-9c15-c7d5bd343b55) loses.
+2026-03-12 12:03:44.876 INFO  - End of the game
+2026-03-12 12:03:44.876 DEBUG - Player1 (63438c86-462a-4de6-9c15-c7d5bd343b55) LP changed (1 -> 0) due to COUNT DRACULEECH (5b563c23-2962-4d24-8bc4-2990f1901e5a) effect
+2026-03-12 12:03:44.876 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (5b563c23-2962-4d24-8bc4-2990f1901e5a)

@@ -1,0 +1,120 @@
+2026-03-12 12:03:04.363 INFO  - Calculating first player...
+2026-03-12 12:03:04.365 INFO  - Banned card for Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) : EXPLOSIVE TOAD (b9e9f78b-33be-40a6-984f-c66bffc07db8) (5)
+2026-03-12 12:03:04.365 INFO  - Banned card for Player2 (f0d2ada8-0544-477e-81fe-671e173cb1ad) : HAMSTER LION (ba4438d4-4499-4ec4-bfb0-14e4f26a842a) (8)
+2026-03-12 12:03:04.365 INFO  - First player will be Player2 (f0d2ada8-0544-477e-81fe-671e173cb1ad)
+2026-03-12 12:03:04.375 INFO  - Game 55b7c6e0-e1f4-42f7-ba40-27ce89bc54ff starting...
+2026-03-12 12:03:04.375 INFO  - Player Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) hand : {
+- SNAIL HYDRA ;
+- CREEP FROM THE DEEP ;
+- GOBLIN WEREWOLF ;
+- MAJESTIC MANTICORE ;
+- KILLER BEE
+}
+2026-03-12 12:03:04.375 INFO  - Player Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) draw pile : {
+- STRANGE BARREL ;
+- SNAIL THROWER ;
+- TIGER SQUIRREL ;
+- RHINO TURTLE ;
+- KILLER BEE
+}
+2026-03-12 12:03:04.375 INFO  - Player Player2 (f0d2ada8-0544-477e-81fe-671e173cb1ad) hand : {
+-  GIRAFFODILE ;
+- HUNGRY HUNGRY HAMSTER ;
+- LUCHATAUR ;
+- HARPY MOTHER ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:03:04.375 INFO  - Player Player2 (f0d2ada8-0544-477e-81fe-671e173cb1ad) draw pile : {
+- LONE YETI ;
+- BRAIN FLY ;
+- MAJESTIC MANTICORE ;
+- FROBLIN INSTIGATOR ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:04.376 DEBUG - GOBLIN WEREWOLF (91d41e1f-0bc3-4a0c-a1b1-bd6b3a92ec3f) power changed (2 -> 8) due to GOBLIN WEREWOLF (91d41e1f-0bc3-4a0c-a1b1-bd6b3a92ec3f) effect
+2026-03-12 12:03:04.376 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (91d41e1f-0bc3-4a0c-a1b1-bd6b3a92ec3f)
+2026-03-12 12:03:04.376 DEBUG - Player Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) must choose 1 card(s) to discard (available targets : {
+- SNAIL HYDRA ;
+- KILLER BEE ;
+- STRANGE BARREL ;
+- SNAIL THROWER ;
+- TIGER SQUIRREL
+})
+2026-03-12 12:03:04.376 INFO  - New TARGET choice to be resolved by Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) (targets : {
+- KILLER BEE ;
+- TIGER SQUIRREL ;
+- SNAIL HYDRA ;
+- STRANGE BARREL ;
+- SNAIL THROWER
+})
+2026-03-12 12:03:04.376 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.376 DEBUG - TIGER SQUIRREL (12711481-3785-4726-87c3-b1d746fe44cb) discarded due to TUSKED EXTORTER (2a8ae6d4-3fb7-4b5e-ba75-a0dedf612d94) effect
+2026-03-12 12:03:04.376 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (2a8ae6d4-3fb7-4b5e-ba75-a0dedf612d94)
+2026-03-12 12:03:04.376 DEBUG - Player Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) must choose 1 cards to steal (targets : {
+- KILLER BEE ;
+- STRANGE BARREL ;
+- SNAIL THROWER ;
+- RHINO TURTLE ;
+- KILLER BEE
+})
+2026-03-12 12:03:04.376 INFO  - New TARGET choice to be resolved by Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) (targets : {
+- KILLER BEE ;
+- STRANGE BARREL ;
+- RHINO TURTLE ;
+- KILLER BEE ;
+- SNAIL THROWER
+})
+2026-03-12 12:03:04.377 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.377 DEBUG - Player2 (f0d2ada8-0544-477e-81fe-671e173cb1ad) must decide if stolen card SNAIL THROWER (ef6e1aa1-f8ce-4e14-a4d4-c1022518a883) will be added to hand or board
+2026-03-12 12:03:04.377 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (efb8ddb2-0571-4ddd-909e-0555bd6810a2)
+2026-03-12 12:03:04.377 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:04.377 DEBUG - SNAIL THROWER (ef6e1aa1-f8ce-4e14-a4d4-c1022518a883) stolen and played by Player2 (f0d2ada8-0544-477e-81fe-671e173cb1ad) due to HUNGRY HUNGRY HAMSTER (efb8ddb2-0571-4ddd-909e-0555bd6810a2) effect
+2026-03-12 12:03:04.377 DEBUG - HUNGRY HUNGRY HAMSTER (efb8ddb2-0571-4ddd-909e-0555bd6810a2) gains HUNTER keyword
+2026-03-12 12:03:04.377 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ef6e1aa1-f8ce-4e14-a4d4-c1022518a883)
+2026-03-12 12:03:04.377 DEBUG - HUNGRY HUNGRY HAMSTER (efb8ddb2-0571-4ddd-909e-0555bd6810a2) gains POISONOUS keyword
+2026-03-12 12:03:04.377 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ef6e1aa1-f8ce-4e14-a4d4-c1022518a883)
+2026-03-12 12:03:04.377 DEBUG - HUNGRY HUNGRY HAMSTER (efb8ddb2-0571-4ddd-909e-0555bd6810a2) gains HUNTER keyword
+2026-03-12 12:03:04.377 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ef6e1aa1-f8ce-4e14-a4d4-c1022518a883)
+2026-03-12 12:03:04.377 DEBUG - HUNGRY HUNGRY HAMSTER (efb8ddb2-0571-4ddd-909e-0555bd6810a2) gains POISONOUS keyword
+2026-03-12 12:03:04.377 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ef6e1aa1-f8ce-4e14-a4d4-c1022518a883)
+2026-03-12 12:03:04.377 DEBUG - Player Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) must choose 1 card(s) to destroy (available targets : {
+- TUSKED EXTORTER ;
+- HUNGRY HUNGRY HAMSTER ;
+- SNAIL THROWER
+})
+2026-03-12 12:03:04.377 DEBUG - HUNGRY HUNGRY HAMSTER (efb8ddb2-0571-4ddd-909e-0555bd6810a2) gains HUNTER keyword
+2026-03-12 12:03:04.377 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ef6e1aa1-f8ce-4e14-a4d4-c1022518a883)
+2026-03-12 12:03:04.377 DEBUG - HUNGRY HUNGRY HAMSTER (efb8ddb2-0571-4ddd-909e-0555bd6810a2) gains POISONOUS keyword
+2026-03-12 12:03:04.377 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ef6e1aa1-f8ce-4e14-a4d4-c1022518a883)
+2026-03-12 12:03:04.377 INFO  - New TARGET choice to be resolved by Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) (targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- SNAIL THROWER ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:04.377 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.377 DEBUG - SNAIL HYDRA (97b383e2-0c9c-4bb1-94d4-0b5a9cacffad) effect destroys TUSKED EXTORTER (2a8ae6d4-3fb7-4b5e-ba75-a0dedf612d94)
+2026-03-12 12:03:04.377 INFO  - Resolving DESTROY effect of SNAIL HYDRA (97b383e2-0c9c-4bb1-94d4-0b5a9cacffad)
+2026-03-12 12:03:04.378 DEBUG - HUNGRY HUNGRY HAMSTER (efb8ddb2-0571-4ddd-909e-0555bd6810a2) gains HUNTER keyword
+2026-03-12 12:03:04.378 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ef6e1aa1-f8ce-4e14-a4d4-c1022518a883)
+2026-03-12 12:03:04.378 DEBUG - HUNGRY HUNGRY HAMSTER (efb8ddb2-0571-4ddd-909e-0555bd6810a2) gains POISONOUS keyword
+2026-03-12 12:03:04.378 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ef6e1aa1-f8ce-4e14-a4d4-c1022518a883)
+2026-03-12 12:03:04.378 DEBUG - FROBLIN INSTIGATOR (5cbb0464-14d1-4f46-88a4-805f993e2caf) stolen and drawn by Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) due to STRANGE BARREL (08a5188e-13fe-4b7d-8001-ff7c8b6abfdb) effect
+2026-03-12 12:03:04.378 DEBUG - LUCHATAUR (b5f111ce-f539-4b27-b7e5-b64512c4c815) stolen and drawn by Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) due to STRANGE BARREL (08a5188e-13fe-4b7d-8001-ff7c8b6abfdb) effect
+2026-03-12 12:03:04.378 INFO  - Resolving STEAL effect of STRANGE BARREL (08a5188e-13fe-4b7d-8001-ff7c8b6abfdb)
+2026-03-12 12:03:04.378 DEBUG - FROBLIN INSTIGATOR (5cbb0464-14d1-4f46-88a4-805f993e2caf) power changed (1 -> 1) due to FROBLIN INSTIGATOR (5cbb0464-14d1-4f46-88a4-805f993e2caf) effect
+2026-03-12 12:03:04.378 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (5cbb0464-14d1-4f46-88a4-805f993e2caf)
+2026-03-12 12:03:04.378 DEBUG - FROBLIN INSTIGATOR (5cbb0464-14d1-4f46-88a4-805f993e2caf) power changed (1 -> 1) due to FROBLIN INSTIGATOR (5cbb0464-14d1-4f46-88a4-805f993e2caf) effect
+2026-03-12 12:03:04.378 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (5cbb0464-14d1-4f46-88a4-805f993e2caf)
+2026-03-12 12:03:04.378 INFO  - Life update for player Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) : 2 LP
+2026-03-12 12:03:04.378 DEBUG - FROBLIN INSTIGATOR (5cbb0464-14d1-4f46-88a4-805f993e2caf) power changed (1 -> 1) due to FROBLIN INSTIGATOR (5cbb0464-14d1-4f46-88a4-805f993e2caf) effect
+2026-03-12 12:03:04.378 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (5cbb0464-14d1-4f46-88a4-805f993e2caf)
+2026-03-12 12:03:04.378 DEBUG - FROBLIN INSTIGATOR (5cbb0464-14d1-4f46-88a4-805f993e2caf) power changed (1 -> 1) due to FROBLIN INSTIGATOR (5cbb0464-14d1-4f46-88a4-805f993e2caf) effect
+2026-03-12 12:03:04.378 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (5cbb0464-14d1-4f46-88a4-805f993e2caf)
+2026-03-12 12:03:04.378 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:04.379 INFO  - Life update for player Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) : 1 LP
+2026-03-12 12:03:04.379 INFO  - Life update for player Player2 (f0d2ada8-0544-477e-81fe-671e173cb1ad) : 2 LP
+2026-03-12 12:03:04.379 DEBUG - Player2 (f0d2ada8-0544-477e-81fe-671e173cb1ad) LP changed (3 -> 2) due to KILLER BEE (28771485-275a-499f-80d4-d7d90f7938d1) effect
+2026-03-12 12:03:04.379 INFO  - Resolving INFLICT effect of KILLER BEE (28771485-275a-499f-80d4-d7d90f7938d1)
+2026-03-12 12:03:04.379 INFO  - Life update for player Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) : 0 LP
+2026-03-12 12:03:04.379 INFO  - Game over : Player2 (f0d2ada8-0544-477e-81fe-671e173cb1ad) wins ; Player1 (6c0d1880-385c-4fcc-b3ec-5bbeeee43835) loses.
+2026-03-12 12:03:04.379 INFO  - End of the game

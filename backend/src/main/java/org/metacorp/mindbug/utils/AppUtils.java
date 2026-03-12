@@ -4,10 +4,9 @@ import lombok.Setter;
 import org.metacorp.mindbug.app.GameEngine;
 import org.metacorp.mindbug.dto.player.PlayerLightDTO;
 import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.player.AiPlayer;
+import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.AttackService;
@@ -15,26 +14,56 @@ import org.metacorp.mindbug.service.game.PlayCardService;
 import org.metacorp.mindbug.service.game.StartService;
 
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
+
+import javax.swing.text.html.StyleSheet.ListPainter;
 
 /**
  * Utility class for ManualApp and AutoApp
  */
 public final class AppUtils {
 
+    private static final Random RND = new Random();
+
+
     @Setter
     private static boolean verbose = false;
+
+    private static boolean isAuto = false;
 
     /**
      * Start a new manual/auto game
      *
      * @return the created game
      */
-    public static Game startGame(PlayerService playerService) {
+    public static Game startGame(PlayerService playerService, boolean isAuto) {
+        AppUtils.isAuto = isAuto;
         PlayerLightDTO player1 = playerService.createPlayer("Player1");
         PlayerLightDTO player2 = playerService.createPlayer("Player2");
 
-        Game game = StartService.startGame(new AiPlayer(player1), new AiPlayer(player2));
+        System.out.println("ID player 1 : "+ player1.getUuid() + " / ID player 2 : " + player2.getUuid());
+
+        Game game = StartService.newGame(new Player(player1), new Player(player2));
+
+        for (Player player : game.getPlayers()) {
+            AppUtils.detailedSumUpPlayer(player);
+        }
+
+        System.out.println("\nDEBUT DU JEU !!!");
+        nextTurn(game);
+
+        return game;
+    }
+
+    public static Game start2v2Game(PlayerService playerService, boolean isAuto){
+        AppUtils.isAuto = isAuto;
+        PlayerLightDTO player1 = playerService.createPlayer("Player1");
+        PlayerLightDTO player2 = playerService.createPlayer("Player2");
+        PlayerLightDTO player3 = playerService.createPlayer("Player3");
+        PlayerLightDTO player4 = playerService.createPlayer("Player4");
+
+        Game game = StartService.newGame(new Player(player1), new Player(player2), new Player(player3), new Player(player4));
 
         for (Player player : game.getPlayers()) {
             AppUtils.detailedSumUpPlayer(player);
@@ -52,7 +81,7 @@ public final class AppUtils {
      * @param game the current game
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void play(Game game) throws GameStateException, WebSocketException {
+    public static void play(Game game) throws GameStateException {
         play(null, game);
     }
 
@@ -63,7 +92,7 @@ public final class AppUtils {
      * @param scanner the scanner to be used to read standard input (only for manual mode)
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void play(Scanner scanner, Game game) throws GameStateException, WebSocketException {
+    public static void play(Scanner scanner, Game game) throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
         List<CardInstance> hand = currentPlayer.getHand();
         if (hand.isEmpty()) {
@@ -76,7 +105,6 @@ public final class AppUtils {
         if (card != null) {
             System.out.printf("%s joue la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
             PlayCardService.pickCard(card, game);
-            PlayCardService.playCard(game);
         }
     }
 
@@ -86,7 +114,7 @@ public final class AppUtils {
      * @param game the current game
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void declareAttack(Game game) throws GameStateException, WebSocketException {
+    public static void declareAttack(Game game) throws GameStateException {
         declareAttack(null, game);
     }
 
@@ -97,7 +125,7 @@ public final class AppUtils {
      * @param scanner the scanner to be used to read standard input (only for manual mode)
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void declareAttack(Scanner scanner, Game game) throws GameStateException, WebSocketException {
+    public static void declareAttack(Scanner scanner, Game game) throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
 
         List<CardInstance> availableCards = currentPlayer.getBoard().stream().filter(CardInstance::isAbleToAttack).toList();
@@ -120,7 +148,7 @@ public final class AppUtils {
      * @param game the current game
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void resolveAttack(Game game) throws GameStateException, WebSocketException {
+    public static void resolveAttack(Game game) throws GameStateException {
         resolveAttack(null, game);
     }
 
@@ -131,20 +159,36 @@ public final class AppUtils {
      * @param scanner the scanner to be used to read standard input (only for manual mode)
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void resolveAttack(Scanner scanner, Game game) throws GameStateException, WebSocketException {
-        Player attackedPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
+    public static void resolveAttack(Scanner scanner, Game game) throws GameStateException {
+        if (scanner == null && !isAuto) {
+            scanner = new Scanner(System.in);
+        }
+        boolean noBlockerDeclaredYet = true;
+        List<Player> opponentPlayers = game.getAttackingCard().getOwner().getOpponents(game.getPlayers());
+        for (Player opponentPlayer : opponentPlayers) {
+            if (noBlockerDeclaredYet) {
 
-        List<CardInstance> availableCards = AiUtils.getBlockersList(game);
-        if (availableCards.isEmpty()) {
-            System.out.printf("%s ne peut pas défendre\n", attackedPlayer.getName());
-            AttackService.resolveAttack(null, game);
-        } else {
-            // Select a card and block with it
-            CardInstance card = (scanner == null) ? AiUtils.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
-            if (card != null) {
-                System.out.printf("%s défend avec la carte '%s'\n", attackedPlayer.getName(), card.getCard().getName());
-                AttackService.resolveAttack(card, game);
+                List<CardInstance> availableCards = AiUtils.getBlockersList(game);
+                if (availableCards.isEmpty()) {
+                    System.out.printf("%s ne peut pas défendre\n", opponentPlayer.getName());
+                    
+                } else {
+                    // Select a card and attack with it
+                    CardInstance card = (scanner == null) ? AiUtils.getRandomCard(availableCards) : getChosenCard(availableCards, scanner,true);
+                    if (card != null) {
+                        System.out.printf("%s défend avec la carte '%s'\n", opponentPlayer.getName(), card.getCard().getName());
+                        noBlockerDeclaredYet = false;
+                        AttackService.resolveAttack(card, game);
+                    }
+                    else {
+                        System.out.printf("%s chosen not block \n", opponentPlayer.getName());
+                    }
+                    
+                }
             }
+        }
+        if (noBlockerDeclaredYet) {
+            AttackService.resolveAttack(null, game); // nobody blocked this turn
         }
     }
 
@@ -202,9 +246,9 @@ public final class AppUtils {
     public static void runAndCheckErrors(Game game, GameEngine engine) {
         try {
             engine.run();
-        } catch (GameStateException | WebSocketException e) {
-            System.err.println(e.getMessage());
-            throw new RuntimeException(e);
+        } catch (GameStateException gst) {
+            System.err.println(gst.getMessage());
+            throw new RuntimeException(gst);
         } catch (Throwable t) {
             System.out.println("=================================");
             System.out.println("Une erreur s'est produite (cf contexte ci-dessous)");
@@ -225,20 +269,88 @@ public final class AppUtils {
      *
      * @param cards   the card list
      * @param scanner the scanner to be used to read standard input (only for manual mode)
+     * @param pass if  you want to pass the action
      * @return a random card from the list
      */
-    private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner) {
+    private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner, boolean pass) {
         System.out.println("Please choose a card : (only type the number)");
+        if (pass) {
+            System.out.println("       (0) - Do nothing"); // if you can pass the choice
+        }
         int index = 1;
         for (CardInstance card : cards) {
-            System.out.printf("(%d) - %s", index, card.getCard().getName());
+            System.out.printf("       (%d) - %s\n", index, card.getCard().getName());
+            index++;
         }
-
+      
         try {
-            return cards.get(Integer.parseInt(scanner.nextLine()));
+            int choiceNumber = Integer.parseInt(scanner.nextLine());
+            if (choiceNumber == 0 && pass) { // if you want to pass the choice
+                return null;
+            }
+            else {
+                return cards.get(choiceNumber - 1);
+            }
+            
         } catch (NumberFormatException | IndexOutOfBoundsException e) {
             System.err.println("Choix de carte invalide");
             return null;
         }
+    }
+
+    private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner) {
+        return getChosenCard( cards, scanner, false);
+    }
+
+    /**
+     * Return the chosen card from the given list
+     *
+     * @param cards   the card list
+     * @param scanner the scanner to be used to read standard input (only for manual mode)
+     * @param pass if  you want to pass the action
+     * @return a random card from the list
+     */
+    public static Player chosenOpponent(Game game, Player playerWhoTargets) {
+        List<Player> listOpponents = playerWhoTargets.getOpponents(game.getPlayers());
+        if (listOpponents.size() == 1) {
+            return listOpponents.getFirst();
+        }
+
+        int index = 1;
+        System.out.printf("\nPlease %s, choose an opponent to target : (only type the associated number)\n",
+                playerWhoTargets.getName());
+        for (Player opponent : listOpponents) {
+            System.out.printf("       (%d) - %s\n", index, opponent.getName());
+            index++;
+        }
+
+        Player target = null;
+        if (isAuto) {
+            target = listOpponents.get(RND.nextInt(listOpponents.size()));
+        } else {
+            Scanner scanner = new Scanner(System.in);
+            while (true) {
+                try {
+                    int choiceNumber = Integer.parseInt(scanner.nextLine());
+                    if (1 <= choiceNumber && choiceNumber <= listOpponents.size()) {
+                        target = listOpponents.get(choiceNumber - 1);
+                        break;
+                    }
+                    else {
+                        System.err.println("Invalid number");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("You must type a valid number");
+                }
+            }
+        }
+        System.out.printf("\n%s chose to target %s\n", playerWhoTargets.getName(), target.getName());
+        return target;
+    }
+    /**
+     * @return a random boolean value
+     */
+    public static boolean nextBoolean() {
+        return RND.nextBoolean();
     }
 }

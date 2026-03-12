@@ -1,0 +1,45 @@
+2026-03-12 12:18:27.744 INFO  - Calculating first player...
+2026-03-12 12:18:27.746 INFO  - Banned card for Player1 (6d787206-b68b-4d0c-859a-ed7a901a90cb) : HUNGRY HUNGRY HAMSTER (b1ff8fc2-cb77-4aab-96d7-cc04fecc7ab2) (2)
+2026-03-12 12:18:27.746 INFO  - Banned card for Player2 (95c05613-35d1-4793-a42f-fa2e29151f19) : GORILLON (d72eab4b-eaef-458c-8617-c3af892e3ae8) (10)
+2026-03-12 12:18:27.746 INFO  - First player will be Player2 (95c05613-35d1-4793-a42f-fa2e29151f19)
+2026-03-12 12:18:27.753 INFO  - Game a5bcac0d-5def-4d17-b2f2-bd7c3939ee2b starting...
+2026-03-12 12:18:27.753 INFO  - Player Player1 (6d787206-b68b-4d0c-859a-ed7a901a90cb) hand : {
+- FROBLIN INSTIGATOR ;
+- GOBLIN WEREWOLF ;
+- GOREAGLE ALPHA ;
+- AXOLOTL HEALER ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:18:27.754 INFO  - Player Player1 (6d787206-b68b-4d0c-859a-ed7a901a90cb) draw pile : {
+- HAMSTER LION ;
+- TURBO BUG ;
+- CREEP FROM THE DEEP ;
+- FERRET BOMBER ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:18:27.754 INFO  - Player Player2 (95c05613-35d1-4793-a42f-fa2e29151f19) hand : {
+- TIGER SQUIRREL ;
+- TUSKED EXTORTER ;
+- BEE BEAR ;
+- KILLER BEE ;
+- HYENIX
+}
+2026-03-12 12:18:27.754 INFO  - Player Player2 (95c05613-35d1-4793-a42f-fa2e29151f19) draw pile : {
+- SNAIL THROWER ;
+- PLATED SCORPION ;
+- EXPLOSIVE TOAD ;
+- URCHIN HURLER ;
+- BRAIN FLY
+}
+2026-03-12 12:18:27.754 INFO  - Life update for player Player1 (6d787206-b68b-4d0c-859a-ed7a901a90cb) : 2 LP
+2026-03-12 12:18:27.754 DEBUG - Player1 (6d787206-b68b-4d0c-859a-ed7a901a90cb) LP changed (3 -> 2) due to GOREAGLE ALPHA (cd4f7143-c3ae-4963-a811-a4bff07b4693) effect
+2026-03-12 12:18:27.754 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (cd4f7143-c3ae-4963-a811-a4bff07b4693)
+2026-03-12 12:18:27.754 INFO  - Resolving NO_BLOCK effect of BEE BEAR (39446e95-5352-4963-a5c0-dc53a5e2460f)
+2026-03-12 12:18:27.754 INFO  - Life update for player Player1 (6d787206-b68b-4d0c-859a-ed7a901a90cb) : 1 LP
+2026-03-12 12:18:27.754 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.755 INFO  - New FRENZY choice to be resolved by Player1 (6d787206-b68b-4d0c-859a-ed7a901a90cb) (attackingCard : GOREAGLE ALPHA (cd4f7143-c3ae-4963-a811-a4bff07b4693))
+2026-03-12 12:18:27.755 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:27.755 INFO  - Resolving NO_BLOCK effect of BEE BEAR (39446e95-5352-4963-a5c0-dc53a5e2460f)
+2026-03-12 12:18:27.755 INFO  - Life update for player Player1 (6d787206-b68b-4d0c-859a-ed7a901a90cb) : 0 LP
+2026-03-12 12:18:27.755 INFO  - Game over : Player2 (95c05613-35d1-4793-a42f-fa2e29151f19) wins ; Player1 (6d787206-b68b-4d0c-859a-ed7a901a90cb) loses.
+2026-03-12 12:18:27.755 INFO  - End of the game

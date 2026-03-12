@@ -1,0 +1,224 @@
+2026-03-12 12:03:44.056 INFO  - Calculating first player...
+2026-03-12 12:03:44.059 INFO  - Banned card for Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) : HYENIX (bf953239-a690-40c0-97be-8923348e30b0) (7)
+2026-03-12 12:03:44.059 INFO  - Banned card for Player2 (2d9d64bc-a190-4230-9ded-0b8d7ba1bac1) : GRAVE ROBBER (04cdaf27-5a51-411d-a196-3406d3808f75) (7)
+2026-03-12 12:03:44.059 INFO  - Banned card for Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) : GOBLIN WEREWOLF (69dab3cb-107e-4b48-8230-845e5b16590d) (2)
+2026-03-12 12:03:44.059 INFO  - Banned card for Player2 (2d9d64bc-a190-4230-9ded-0b8d7ba1bac1) : SHARK DOG (d09b1a89-b815-4020-85fc-5b7b32d06050) (4)
+2026-03-12 12:03:44.060 INFO  - First player will be Player2 (2d9d64bc-a190-4230-9ded-0b8d7ba1bac1)
+2026-03-12 12:03:44.068 INFO  - Game 3d629b44-e3db-4479-8341-13e76d67f897 starting...
+2026-03-12 12:03:44.068 INFO  - Player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) hand : {
+- LONE YETI ;
+- FERRET PACIFIER ;
+- TURF THE SURFER ;
+- GOREAGLE ALPHA ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:44.068 INFO  - Player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) draw pile : {
+- TURF THE SURFER ;
+- THE LURKER ;
+- URCHIN HURLER ;
+- GRAVE ROBBER ;
+- SNAIL HYDRA
+}
+2026-03-12 12:03:44.068 INFO  - Player Player2 (2d9d64bc-a190-4230-9ded-0b8d7ba1bac1) hand : {
+- TIGER SQUIRREL ;
+- LUCHATAUR ;
+- TURBO BUG ;
+- DEATHWEAVER ;
+- BRAIN FLY
+}
+2026-03-12 12:03:44.068 INFO  - Player Player2 (2d9d64bc-a190-4230-9ded-0b8d7ba1bac1) draw pile : {
+- EXPLOSIVE TOAD ;
+- CHAMELEON SNIPER ;
+- MAJESTIC MANTICORE ;
+- THE LURKER ;
+- PLATED SCORPION
+}
+2026-03-12 12:03:44.069 INFO  - Life update for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) : 2 LP
+2026-03-12 12:03:44.069 DEBUG - Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) LP changed (3 -> 2) due to GOREAGLE ALPHA (bf40312f-d9eb-4653-89da-50779d40995b) effect
+2026-03-12 12:03:44.069 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (bf40312f-d9eb-4653-89da-50779d40995b)
+2026-03-12 12:03:44.069 DEBUG - GOREAGLE ALPHA (bf40312f-d9eb-4653-89da-50779d40995b) stolen and played by Player2 (2d9d64bc-a190-4230-9ded-0b8d7ba1bac1) due to BRAIN FLY (35f35b16-d776-4bcf-8b49-e2e51bf265a5) effect
+2026-03-12 12:03:44.069 INFO  - Resolving STEAL effect of BRAIN FLY (35f35b16-d776-4bcf-8b49-e2e51bf265a5)
+2026-03-12 12:03:44.070 DEBUG - LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) power changed (5 -> 10) due to LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) effect
+2026-03-12 12:03:44.070 INFO  - Resolving POWER_UP effect of LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230)
+2026-03-12 12:03:44.070 DEBUG - LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) gains FRENZY keyword
+2026-03-12 12:03:44.070 INFO  - Resolving KEYWORD_UP effect of LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230)
+2026-03-12 12:03:44.070 DEBUG - LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) power changed (5 -> 10) due to LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) effect
+2026-03-12 12:03:44.070 INFO  - Resolving POWER_UP effect of LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230)
+2026-03-12 12:03:44.070 DEBUG - LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) gains FRENZY keyword
+2026-03-12 12:03:44.070 INFO  - Resolving KEYWORD_UP effect of LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230)
+2026-03-12 12:03:44.071 DEBUG - LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) power changed (5 -> 10) due to LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) effect
+2026-03-12 12:03:44.071 INFO  - Resolving POWER_UP effect of LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230)
+2026-03-12 12:03:44.071 DEBUG - LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) gains FRENZY keyword
+2026-03-12 12:03:44.071 INFO  - Resolving KEYWORD_UP effect of LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230)
+2026-03-12 12:03:44.071 DEBUG - LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) power changed (5 -> 10) due to LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) effect
+2026-03-12 12:03:44.071 INFO  - Resolving POWER_UP effect of LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230)
+2026-03-12 12:03:44.071 DEBUG - LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) gains FRENZY keyword
+2026-03-12 12:03:44.071 INFO  - Resolving KEYWORD_UP effect of LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230)
+2026-03-12 12:03:44.071 DEBUG - KANGASAURUS REX (78a58355-223c-49dd-a9b2-b57e08a50ceb) effect destroys TURBO BUG (5b4a516d-8a5d-43be-b416-a2d22e84dea0)
+2026-03-12 12:03:44.071 INFO  - Resolving DESTROY effect of KANGASAURUS REX (78a58355-223c-49dd-a9b2-b57e08a50ceb)
+2026-03-12 12:03:44.071 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.071 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.071 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.071 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.071 DEBUG - KANGASAURUS REX (78a58355-223c-49dd-a9b2-b57e08a50ceb) power changed (7 -> 9) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.071 DEBUG - LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) power changed (5 -> 7) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.071 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12)
+2026-03-12 12:03:44.071 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.071 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.072 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.072 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.072 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.072 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.072 DEBUG - KANGASAURUS REX (78a58355-223c-49dd-a9b2-b57e08a50ceb) power changed (7 -> 9) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.072 DEBUG - LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) power changed (5 -> 7) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.072 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12)
+2026-03-12 12:03:44.072 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.072 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.072 DEBUG - GRAVE ROBBER (9a74cb1b-f946-4597-bf2e-22645a9efa38) power changed (7 -> 9) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.072 DEBUG - KANGASAURUS REX (78a58355-223c-49dd-a9b2-b57e08a50ceb) power changed (7 -> 9) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.072 DEBUG - LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) power changed (5 -> 7) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.072 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12)
+2026-03-12 12:03:44.072 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.072 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.072 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.072 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.072 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.072 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.072 DEBUG - GRAVE ROBBER (9a74cb1b-f946-4597-bf2e-22645a9efa38) power changed (7 -> 9) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.073 DEBUG - KANGASAURUS REX (78a58355-223c-49dd-a9b2-b57e08a50ceb) power changed (7 -> 9) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.073 DEBUG - LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) power changed (5 -> 7) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.073 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12)
+2026-03-12 12:03:44.073 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.073 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.073 DEBUG - GRAVE ROBBER (9a74cb1b-f946-4597-bf2e-22645a9efa38) power changed (7 -> 9) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.073 DEBUG - KANGASAURUS REX (78a58355-223c-49dd-a9b2-b57e08a50ceb) power changed (7 -> 9) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.073 DEBUG - SNAIL HYDRA (a3db6de3-1030-4b2e-bb10-85514625e191) power changed (9 -> 11) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.073 DEBUG - LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230) power changed (5 -> 7) due to URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12) effect
+2026-03-12 12:03:44.073 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e3444e37-061c-4f83-9bde-f6c60ddfcd12)
+2026-03-12 12:03:44.073 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.073 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.073 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.073 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.073 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.073 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.073 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.073 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.073 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.073 INFO  - New FRENZY choice to be resolved by Player2 (2d9d64bc-a190-4230-9ded-0b8d7ba1bac1) (attackingCard : GOREAGLE ALPHA (bf40312f-d9eb-4653-89da-50779d40995b))
+2026-03-12 12:03:44.073 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.074 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.074 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.074 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.074 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.074 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.074 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.074 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.074 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.074 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.074 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.074 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.074 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.074 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.074 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.075 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.075 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.075 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.075 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.075 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.075 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.075 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.075 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.075 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.075 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.075 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.075 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.075 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.075 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b7fff61f-b97f-47fb-924c-18f17d25ee3b)
+2026-03-12 12:03:44.075 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.075 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.076 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b7fff61f-b97f-47fb-924c-18f17d25ee3b)
+2026-03-12 12:03:44.076 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.076 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.076 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b7fff61f-b97f-47fb-924c-18f17d25ee3b)
+2026-03-12 12:03:44.076 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.076 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.076 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b7fff61f-b97f-47fb-924c-18f17d25ee3b)
+2026-03-12 12:03:44.076 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.076 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.076 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b7fff61f-b97f-47fb-924c-18f17d25ee3b)
+2026-03-12 12:03:44.076 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.076 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.076 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b7fff61f-b97f-47fb-924c-18f17d25ee3b)
+2026-03-12 12:03:44.076 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.076 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.076 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b7fff61f-b97f-47fb-924c-18f17d25ee3b)
+2026-03-12 12:03:44.076 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.076 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.077 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b7fff61f-b97f-47fb-924c-18f17d25ee3b)
+2026-03-12 12:03:44.077 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.077 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.077 DEBUG - Player Player2 (2d9d64bc-a190-4230-9ded-0b8d7ba1bac1) must choose 1 card(s) to destroy (available targets : {
+- LONE YETI ;
+- KANGASAURUS REX ;
+- GRAVE ROBBER ;
+- SNAIL HYDRA ;
+- THE LURKER ;
+- TURF THE SURFER ;
+- FERRET PACIFIER ;
+- TURF THE SURFER ;
+- GOREAGLE ALPHA ;
+- DEATHWEAVER ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:44.077 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b7fff61f-b97f-47fb-924c-18f17d25ee3b)
+2026-03-12 12:03:44.077 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.077 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.077 INFO  - New TARGET choice to be resolved by Player2 (2d9d64bc-a190-4230-9ded-0b8d7ba1bac1) (targets : {
+- TURF THE SURFER ;
+- GOREAGLE ALPHA ;
+- GRAVE ROBBER ;
+- KANGASAURUS REX ;
+- SNAIL HYDRA ;
+- FERRET PACIFIER ;
+- THE LURKER ;
+- DEATHWEAVER ;
+- LONE YETI ;
+- TURF THE SURFER ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:44.077 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.077 DEBUG - EXPLOSIVE TOAD (6b91d08f-e322-4b01-aaed-9d133e6b2f02) effect destroys FERRET PACIFIER (b7fff61f-b97f-47fb-924c-18f17d25ee3b)
+2026-03-12 12:03:44.077 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (6b91d08f-e322-4b01-aaed-9d133e6b2f02)
+2026-03-12 12:03:44.077 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.077 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.077 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.077 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.077 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.077 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.078 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.078 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.078 DEBUG - PLAY effects disabled for player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) due to DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892) effect
+2026-03-12 12:03:44.078 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (ba5b9a36-ecd8-47c0-8ad0-932ec3d4a892)
+2026-03-12 12:03:44.078 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (9812550c-b0ff-4a49-81bf-fb5426adf06f)
+2026-03-12 12:03:44.078 INFO  - Life update for player Player2 (2d9d64bc-a190-4230-9ded-0b8d7ba1bac1) : 2 LP
+2026-03-12 12:03:44.078 INFO  - New FRENZY choice to be resolved by Player2 (2d9d64bc-a190-4230-9ded-0b8d7ba1bac1) (attackingCard : LUCHATAUR (297b91ed-ad82-4efc-9c69-41e663496457))
+2026-03-12 12:03:44.078 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.078 DEBUG - Player Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) must choose 1 card(s) that will be unable to block (targets : {
+- GOREAGLE ALPHA ;
+- LUCHATAUR
+})
+2026-03-12 12:03:44.079 INFO  - New TARGET choice to be resolved by Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) (targets : {
+- GOREAGLE ALPHA ;
+- LUCHATAUR
+})
+2026-03-12 12:03:44.079 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.079 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (9812550c-b0ff-4a49-81bf-fb5426adf06f)
+2026-03-12 12:03:44.079 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.079 INFO  - New FRENZY choice to be resolved by Player2 (2d9d64bc-a190-4230-9ded-0b8d7ba1bac1) (attackingCard : GOREAGLE ALPHA (bf40312f-d9eb-4653-89da-50779d40995b))
+2026-03-12 12:03:44.079 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.079 INFO  - New FRENZY choice to be resolved by Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) (attackingCard : LONE YETI (bbea2c03-06cd-44c8-b36d-05f1d53e9230))
+2026-03-12 12:03:44.079 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.080 DEBUG - TIGER SQUIRREL (298b4d97-16c6-42fd-a0a7-681b698f85c8) effect destroys TURF THE SURFER (24422850-1bcc-4f4b-bba1-4b85aa5c5d62)
+2026-03-12 12:03:44.080 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (298b4d97-16c6-42fd-a0a7-681b698f85c8)
+2026-03-12 12:03:44.080 INFO  - Game over : Player2 (2d9d64bc-a190-4230-9ded-0b8d7ba1bac1) wins ; Player1 (f35a40b2-40d5-4d23-99d1-190d09bce9c0) loses.
+2026-03-12 12:03:44.080 INFO  - End of the game

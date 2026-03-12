@@ -1,0 +1,136 @@
+2026-03-12 12:03:44.403 INFO  - Calculating first player...
+2026-03-12 12:03:44.406 INFO  - Banned card for Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) : FERRET PACIFIER (3a99eed4-e3c7-4e1e-9a8c-87e1b0b12361) (4)
+2026-03-12 12:03:44.406 INFO  - Banned card for Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) : AXOLOTL HEALER (8960593f-d0bb-4daf-bb9a-99e95f968443) (4)
+2026-03-12 12:03:44.406 INFO  - Banned card for Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) : THE LURKER (6bc15735-331f-4614-9e70-1cffe133000d) (4)
+2026-03-12 12:03:44.406 INFO  - Banned card for Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) : LONE YETI (d218af38-d03b-4c20-94eb-48fa825090ea) (5)
+2026-03-12 12:03:44.407 INFO  - First player will be Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30)
+2026-03-12 12:03:44.417 INFO  - Game 41b4aa68-b4f5-4479-a0ca-0043f3e47c7f starting...
+2026-03-12 12:03:44.417 INFO  - Player Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) hand : {
+- SNAIL THROWER ;
+- EXPLOSIVE TOAD ;
+- GRAVE ROBBER ;
+- COUNT DRACULEECH ;
+- FERRET BOMBER
+}
+2026-03-12 12:03:44.417 INFO  - Player Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) draw pile : {
+- FERRET BOMBER ;
+- URCHIN HURLER ;
+- GORILLON ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:03:44.417 INFO  - Player Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) hand : {
+- CREEP FROM THE DEEP ;
+- COMPOST DRAGON ;
+- KILLER BEE ;
+- BEE BEAR ;
+- PLATED SCORPION
+}
+2026-03-12 12:03:44.417 INFO  - Player Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) draw pile : {
+- RHINO TURTLE ;
+- STRANGE BARREL ;
+- CHAMELEON SNIPER ;
+- MAJESTIC MANTICORE ;
+- HARPY MOTHER
+}
+2026-03-12 12:03:44.418 INFO  - Life update for player Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) : 2 LP
+2026-03-12 12:03:44.418 DEBUG - Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) LP changed (3 -> 2) due to COUNT DRACULEECH (c665a17a-9802-4bbb-949e-a8278049cd0e) effect
+2026-03-12 12:03:44.418 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (c665a17a-9802-4bbb-949e-a8278049cd0e)
+2026-03-12 12:03:44.418 DEBUG - Player Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) must choose 1 card(s) to destroy (available targets : {
+- PLATED SCORPION ;
+- RHINO TURTLE ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:44.418 INFO  - New TARGET choice to be resolved by Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) (targets : {
+- RHINO TURTLE ;
+- PLATED SCORPION ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:44.418 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.418 DEBUG - COUNT DRACULEECH (c665a17a-9802-4bbb-949e-a8278049cd0e) effect destroys RHINO TURTLE (a6065cd8-79db-4ebc-aa64-96310bc55e5a)
+2026-03-12 12:03:44.418 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (c665a17a-9802-4bbb-949e-a8278049cd0e)
+2026-03-12 12:03:44.418 INFO  - Life update for player Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) : 1 LP
+2026-03-12 12:03:44.419 DEBUG - Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) LP changed (2 -> 1) due to KILLER BEE (ef6a26ae-b4a1-4d81-a947-ac092b72be23) effect
+2026-03-12 12:03:44.419 INFO  - Resolving INFLICT effect of KILLER BEE (ef6a26ae-b4a1-4d81-a947-ac092b72be23)
+2026-03-12 12:03:44.419 DEBUG - Player Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) must choose 2 card(s) to discard (available targets : {
+- CREEP FROM THE DEEP ;
+- COMPOST DRAGON ;
+- BEE BEAR ;
+- STRANGE BARREL ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:44.419 INFO  - New TARGET choice to be resolved by Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) (targets : {
+- CREEP FROM THE DEEP ;
+- COMPOST DRAGON ;
+- STRANGE BARREL ;
+- BEE BEAR ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:44.419 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.419 DEBUG - STRANGE BARREL (8801a7a3-6fd2-47ec-be51-20e9ac5bd007) discarded due to FERRET BOMBER (10f630cc-0845-4a7a-a05f-7285c7137cb0) effect
+2026-03-12 12:03:44.419 DEBUG - BEE BEAR (b92d3b3e-0307-454e-a531-f38b63e957d2) discarded due to FERRET BOMBER (10f630cc-0845-4a7a-a05f-7285c7137cb0) effect
+2026-03-12 12:03:44.419 INFO  - Resolving DISCARD effect of FERRET BOMBER (10f630cc-0845-4a7a-a05f-7285c7137cb0)
+2026-03-12 12:03:44.419 DEBUG - Player Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) must choose 1 cards to steal (targets : {
+- STRANGE BARREL ;
+- BEE BEAR ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:44.419 INFO  - New TARGET choice to be resolved by Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) (targets : {
+- STRANGE BARREL ;
+- BEE BEAR ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:44.420 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.420 DEBUG - CHAMELEON SNIPER (ffc749e4-2217-4955-af11-46ae69b055b3) stolen and played by Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) due to COMPOST DRAGON (5cddccfc-f26c-46fa-ab06-44fcc313feb6) effect
+2026-03-12 12:03:44.420 INFO  - Resolving STEAL effect of COMPOST DRAGON (5cddccfc-f26c-46fa-ab06-44fcc313feb6)
+2026-03-12 12:03:44.420 DEBUG - Player Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) must choose 2 card(s) to discard (available targets : {
+- CREEP FROM THE DEEP ;
+- MAJESTIC MANTICORE ;
+- HARPY MOTHER
+})
+2026-03-12 12:03:44.420 INFO  - New TARGET choice to be resolved by Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) (targets : {
+- CREEP FROM THE DEEP ;
+- MAJESTIC MANTICORE ;
+- HARPY MOTHER
+})
+2026-03-12 12:03:44.420 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.420 DEBUG - MAJESTIC MANTICORE (b0026fee-f38d-46e2-85c4-53ccd93b26d8) discarded due to FERRET BOMBER (c1707b56-0c90-4dc5-83db-e1af83894a18) effect
+2026-03-12 12:03:44.420 DEBUG - HARPY MOTHER (ef4b3bed-2c26-4de3-9b3f-85a93df4740a) discarded due to FERRET BOMBER (c1707b56-0c90-4dc5-83db-e1af83894a18) effect
+2026-03-12 12:03:44.420 INFO  - Resolving DISCARD effect of FERRET BOMBER (c1707b56-0c90-4dc5-83db-e1af83894a18)
+2026-03-12 12:03:44.420 INFO  - New FRENZY choice to be resolved by Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) (attackingCard : RHINO TURTLE (a6065cd8-79db-4ebc-aa64-96310bc55e5a))
+2026-03-12 12:03:44.420 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.421 DEBUG - Player Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) must choose 1 cards to steal (targets : {
+- STRANGE BARREL ;
+- BEE BEAR ;
+- MAJESTIC MANTICORE ;
+- HARPY MOTHER
+})
+2026-03-12 12:03:44.421 INFO  - New TARGET choice to be resolved by Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) (targets : {
+- STRANGE BARREL ;
+- MAJESTIC MANTICORE ;
+- BEE BEAR ;
+- HARPY MOTHER
+})
+2026-03-12 12:03:44.421 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.421 DEBUG - HARPY MOTHER (ef4b3bed-2c26-4de3-9b3f-85a93df4740a) stolen and played by Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) due to GRAVE ROBBER (facd5339-df58-435c-956c-460439a9d15a) effect
+2026-03-12 12:03:44.421 INFO  - Resolving STEAL effect of GRAVE ROBBER (facd5339-df58-435c-956c-460439a9d15a)
+2026-03-12 12:03:44.421 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.421 DEBUG - Player Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) must choose 2 cards to steal (targets : {
+- PLATED SCORPION ;
+- COMPOST DRAGON ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:44.421 INFO  - New TARGET choice to be resolved by Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) (targets : {
+- PLATED SCORPION ;
+- COMPOST DRAGON ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:44.421 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.421 DEBUG - COMPOST DRAGON (5cddccfc-f26c-46fa-ab06-44fcc313feb6) stolen and played by Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) due to HARPY MOTHER (ef4b3bed-2c26-4de3-9b3f-85a93df4740a) effect
+2026-03-12 12:03:44.422 DEBUG - CHAMELEON SNIPER (ffc749e4-2217-4955-af11-46ae69b055b3) stolen and played by Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) due to HARPY MOTHER (ef4b3bed-2c26-4de3-9b3f-85a93df4740a) effect
+2026-03-12 12:03:44.422 INFO  - Resolving STEAL effect of HARPY MOTHER (ef4b3bed-2c26-4de3-9b3f-85a93df4740a)
+2026-03-12 12:03:44.422 INFO  - Life update for player Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) : 2 LP
+2026-03-12 12:03:44.422 INFO  - New FRENZY choice to be resolved by Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) (attackingCard : RHINO TURTLE (a6065cd8-79db-4ebc-aa64-96310bc55e5a))
+2026-03-12 12:03:44.422 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.423 INFO  - Game over : Player1 (d311fdcc-c34d-43e2-b46b-fa0e97c9ec2e) wins ; Player2 (4929c43a-f6c9-42cf-ab92-3903d957ff30) loses.
+2026-03-12 12:03:44.423 INFO  - End of the game

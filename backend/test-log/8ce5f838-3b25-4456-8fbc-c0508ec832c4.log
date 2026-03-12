@@ -1,0 +1,83 @@
+2026-03-12 12:03:06.235 INFO  - Calculating first player...
+2026-03-12 12:03:06.236 INFO  - Banned card for Player1 (5fe9b480-46c8-4fdd-9b4b-29d53f25cb52) : KILLER BEE (42b367e0-2b61-45ee-8d93-c3de894a41e8) (5)
+2026-03-12 12:03:06.236 INFO  - Banned card for Player2 (7f273891-2783-4a75-afaa-5750c7d5997f) : PLATED SCORPION (af8d1659-0d39-4a35-a1f4-796aaefb75eb) (2)
+2026-03-12 12:03:06.236 INFO  - First player will be Player1 (5fe9b480-46c8-4fdd-9b4b-29d53f25cb52)
+2026-03-12 12:03:06.250 INFO  - Game 8ce5f838-3b25-4456-8fbc-c0508ec832c4 starting...
+2026-03-12 12:03:06.250 INFO  - Player Player1 (5fe9b480-46c8-4fdd-9b4b-29d53f25cb52) hand : {
+- HAMSTER LION ;
+- FROBLIN INSTIGATOR ;
+- TURBO BUG ;
+- CHAMELEON SNIPER ;
+- SNAIL HYDRA
+}
+2026-03-12 12:03:06.250 INFO  - Player Player1 (5fe9b480-46c8-4fdd-9b4b-29d53f25cb52) draw pile : {
+- KANGASAURUS REX ;
+- RHINO TURTLE ;
+- GOREAGLE ALPHA ;
+- COMPOST DRAGON ;
+- BRAIN FLY
+}
+2026-03-12 12:03:06.250 INFO  - Player Player2 (7f273891-2783-4a75-afaa-5750c7d5997f) hand : {
+- COMPOST DRAGON ;
+- KANGASAURUS REX ;
+- COUNT DRACULEECH ;
+- FERRET PACIFIER ;
+- SPIDER OWL
+}
+2026-03-12 12:03:06.250 INFO  - Player Player2 (7f273891-2783-4a75-afaa-5750c7d5997f) draw pile : {
+- SHIELD BUGS ;
+- HUNGRY HUNGRY HAMSTER ;
+-  GIRAFFODILE ;
+- GRAVE ROBBER ;
+- SHARKY GRAB-DOG-MUMMYPUS
+}
+2026-03-12 12:03:06.250 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cac75f7d-b0bd-4f4c-839f-7eede4a62926)
+2026-03-12 12:03:06.250 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cac75f7d-b0bd-4f4c-839f-7eede4a62926)
+2026-03-12 12:03:06.250 DEBUG - CardInstance(uuid=b43591e2-d399-44c3-9191-3cdd8724e404, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@582ea164), power=3, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.251 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cac75f7d-b0bd-4f4c-839f-7eede4a62926)
+2026-03-12 12:03:06.251 DEBUG - CardInstance(uuid=b43591e2-d399-44c3-9191-3cdd8724e404, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@582ea164), power=3, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.251 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cac75f7d-b0bd-4f4c-839f-7eede4a62926)
+2026-03-12 12:03:06.251 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.251 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.251 DEBUG - FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f) power changed (1 -> 1) due to FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f) effect
+2026-03-12 12:03:06.251 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f)
+2026-03-12 12:03:06.251 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.251 DEBUG - FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f) power changed (1 -> 1) due to FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f) effect
+2026-03-12 12:03:06.251 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f)
+2026-03-12 12:03:06.251 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.251 DEBUG - FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f) power changed (1 -> 1) due to FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f) effect
+2026-03-12 12:03:06.251 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f)
+2026-03-12 12:03:06.251 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.251 DEBUG - SPIDER OWL (b43591e2-d399-44c3-9191-3cdd8724e404) stolen and played by Player2 (7f273891-2783-4a75-afaa-5750c7d5997f) due to COMPOST DRAGON (b58ff642-616b-4822-9b2f-8d744e44412b) effect
+2026-03-12 12:03:06.251 INFO  - Resolving STEAL effect of COMPOST DRAGON (b58ff642-616b-4822-9b2f-8d744e44412b)
+2026-03-12 12:03:06.251 DEBUG - FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f) power changed (1 -> 1) due to FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f) effect
+2026-03-12 12:03:06.252 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f)
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 DEBUG - FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f) power changed (1 -> 1) due to FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f) effect
+2026-03-12 12:03:06.252 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9d271a60-0463-45ba-ae83-0aae65050c4f)
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 INFO  - Life update for player Player1 (5fe9b480-46c8-4fdd-9b4b-29d53f25cb52) : 2 LP
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 INFO  - Life update for player Player1 (5fe9b480-46c8-4fdd-9b4b-29d53f25cb52) : 1 LP
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.252 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356)
+2026-03-12 12:03:06.253 DEBUG - COMPOST DRAGON (b58ff642-616b-4822-9b2f-8d744e44412b) stolen and drawn by Player2 (7f273891-2783-4a75-afaa-5750c7d5997f) due to  GIRAFFODILE (f36b2a88-c30d-4c49-a6c6-e80bd42b78ab) effect
+2026-03-12 12:03:06.253 DEBUG - FERRET PACIFIER (a04dfdf6-562a-402f-bb5a-ea681ba52356) stolen and drawn by Player2 (7f273891-2783-4a75-afaa-5750c7d5997f) due to  GIRAFFODILE (f36b2a88-c30d-4c49-a6c6-e80bd42b78ab) effect
+2026-03-12 12:03:06.253 INFO  - Resolving STEAL effect of  GIRAFFODILE (f36b2a88-c30d-4c49-a6c6-e80bd42b78ab)
+2026-03-12 12:03:06.253 INFO  - Life update for player Player1 (5fe9b480-46c8-4fdd-9b4b-29d53f25cb52) : 0 LP
+2026-03-12 12:03:06.253 INFO  - Game over : Player2 (7f273891-2783-4a75-afaa-5750c7d5997f) wins ; Player1 (5fe9b480-46c8-4fdd-9b4b-29d53f25cb52) loses.
+2026-03-12 12:03:06.253 INFO  - End of the game

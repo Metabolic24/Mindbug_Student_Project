@@ -1,0 +1,71 @@
+2026-03-12 12:03:05.757 INFO  - Calculating first player...
+2026-03-12 12:03:05.760 INFO  - Banned card for Player1 (277abd0e-7691-4074-b6b6-9270e31a704a) : FERRET PACIFIER (ae44177e-d039-488b-bc54-485dd0517a65) (4)
+2026-03-12 12:03:05.760 INFO  - Banned card for Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) : THE LURKER (37f7bbe9-db7e-4df8-9538-e3dce1c70d19) (4)
+2026-03-12 12:03:05.760 INFO  - Banned card for Player1 (277abd0e-7691-4074-b6b6-9270e31a704a) : SPIDER OWL (5e26ffcf-2a50-4e99-952e-adc0946cc8db) (3)
+2026-03-12 12:03:05.760 INFO  - Banned card for Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) : ELEPHANTOPUS (93b78a98-f925-42ee-ad99-317141913d41) (7)
+2026-03-12 12:03:05.760 INFO  - First player will be Player2 (b01753fe-9f28-49ee-8df5-003f921344cc)
+2026-03-12 12:03:05.777 INFO  - Game be4fca5e-ac6d-4138-ba90-0bae757f5526 starting...
+2026-03-12 12:03:05.778 INFO  - Player Player1 (277abd0e-7691-4074-b6b6-9270e31a704a) hand : {
+- HYENIX ;
+- KILLER BEE ;
+- SHARK DOG ;
+- MAJESTIC MANTICORE ;
+- TURF THE SURFER
+}
+2026-03-12 12:03:05.778 INFO  - Player Player1 (277abd0e-7691-4074-b6b6-9270e31a704a) draw pile : {
+- FERRET BOMBER ;
+- GOBLIN WEREWOLF ;
+- FERRET PACIFIER ;
+- MYSTERIOUS MERMAID ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:05.778 INFO  - Player Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) hand : {
+- LONE YETI ;
+- EXPLOSIVE TOAD ;
+- STRANGE BARREL ;
+- GRAVE ROBBER ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:03:05.778 INFO  - Player Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) draw pile : {
+- HAMSTER LION ;
+- FROBLIN INSTIGATOR ;
+- TUSKED EXTORTER ;
+- GOBLIN WEREWOLF ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:03:05.778 INFO  - New FRENZY choice to be resolved by Player1 (277abd0e-7691-4074-b6b6-9270e31a704a) (attackingCard : HYENIX (a37958aa-e539-4140-b7fe-c3a529af3cf7))
+2026-03-12 12:03:05.778 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:05.779 DEBUG - Player Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) must choose 1 card(s) to destroy (available targets : {
+- TURF THE SURFER ;
+- HYENIX
+})
+2026-03-12 12:03:05.779 INFO  - New TARGET choice to be resolved by Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) (targets : {
+- TURF THE SURFER ;
+- HYENIX
+})
+2026-03-12 12:03:05.779 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:05.779 DEBUG - EXPLOSIVE TOAD (cffad3aa-6c84-4882-941b-76e15932c805) effect destroys TURF THE SURFER (c9a502bf-9991-46f0-bd57-175a6a6dc74f)
+2026-03-12 12:03:05.779 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (cffad3aa-6c84-4882-941b-76e15932c805)
+2026-03-12 12:03:05.779 INFO  - Life update for player Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) : 2 LP
+2026-03-12 12:03:05.779 INFO  - New FRENZY choice to be resolved by Player1 (277abd0e-7691-4074-b6b6-9270e31a704a) (attackingCard : HYENIX (a37958aa-e539-4140-b7fe-c3a529af3cf7))
+2026-03-12 12:03:05.779 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:05.779 INFO  - Life update for player Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) : 1 LP
+2026-03-12 12:03:05.779 DEBUG - TURF THE SURFER (c9a502bf-9991-46f0-bd57-175a6a6dc74f) stolen and played by Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) due to GRAVE ROBBER (15b9a747-db47-4c7e-9e47-192d7c513601) effect
+2026-03-12 12:03:05.779 INFO  - Resolving STEAL effect of GRAVE ROBBER (15b9a747-db47-4c7e-9e47-192d7c513601)
+2026-03-12 12:03:05.780 DEBUG - GOBLIN WEREWOLF (387a085c-68e9-4878-afc2-a7820f8d2f34) power changed (2 -> 8) due to GOBLIN WEREWOLF (387a085c-68e9-4878-afc2-a7820f8d2f34) effect
+2026-03-12 12:03:05.780 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (387a085c-68e9-4878-afc2-a7820f8d2f34)
+2026-03-12 12:03:05.780 DEBUG - Player Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) must choose 1 card(s) that will be unable to block (targets : {
+- HYENIX ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:03:05.780 INFO  - New TARGET choice to be resolved by Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) (targets : {
+- HYENIX ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:03:05.780 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:05.780 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (c9a502bf-9991-46f0-bd57-175a6a6dc74f)
+2026-03-12 12:03:05.780 INFO  - Life update for player Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) : 0 LP
+2026-03-12 12:03:05.780 INFO  - Game over : Player1 (277abd0e-7691-4074-b6b6-9270e31a704a) wins ; Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) loses.
+2026-03-12 12:03:05.780 INFO  - End of the game
+2026-03-12 12:03:05.780 DEBUG - Player2 (b01753fe-9f28-49ee-8df5-003f921344cc) LP changed (1 -> 0) due to KILLER BEE (ccc5c377-e1df-4ee0-b024-71ef9f96136c) effect
+2026-03-12 12:03:05.780 INFO  - Resolving INFLICT effect of KILLER BEE (ccc5c377-e1df-4ee0-b024-71ef9f96136c)

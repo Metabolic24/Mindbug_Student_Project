@@ -1,0 +1,734 @@
+2026-03-12 12:03:03.851 INFO  - Calculating first player...
+2026-03-12 12:03:03.853 INFO  - Banned card for Player1 (4cc3f8e8-d68a-4b58-bddd-94dc9915e1ad) : TUSKED EXTORTER (db10104b-56c0-4f79-b5e8-470b57df6e80) (8)
+2026-03-12 12:03:03.853 INFO  - Banned card for Player2 (4e426182-cf67-4b22-a2ae-f211db6acedc) : GOREAGLE ALPHA (ade030f8-6b26-4979-a6b2-b2808c327cf0) (6)
+2026-03-12 12:03:03.853 INFO  - First player will be Player1 (4cc3f8e8-d68a-4b58-bddd-94dc9915e1ad)
+2026-03-12 12:03:03.861 INFO  - Game a98bf6e1-dc41-453b-86d1-b899fe58ff4b starting...
+2026-03-12 12:03:03.861 INFO  - Player Player1 (4cc3f8e8-d68a-4b58-bddd-94dc9915e1ad) hand : {
+- BUGSERKER ;
+- THE LURKER ;
+- CHAMELEON SNIPER ;
+- BUGSERKER ;
+- SNAIL THROWER
+}
+2026-03-12 12:03:03.861 INFO  - Player Player1 (4cc3f8e8-d68a-4b58-bddd-94dc9915e1ad) draw pile : {
+- SHIELD BUGS ;
+- SHARK DOG ;
+- MYSTERIOUS MERMAID ;
+- HAMSTER LION ;
+- CREEP FROM THE DEEP
+}
+2026-03-12 12:03:03.861 INFO  - Player Player2 (4e426182-cf67-4b22-a2ae-f211db6acedc) hand : {
+- FERRET BOMBER ;
+- KANGASAURUS REX ;
+- PLATED SCORPION ;
+- KILLER BEE ;
+- TURF THE SURFER
+}
+2026-03-12 12:03:03.861 INFO  - Player Player2 (4e426182-cf67-4b22-a2ae-f211db6acedc) draw pile : {
+- MAJESTIC MANTICORE ;
+- TURBO BUG ;
+- LONE YETI ;
+- BEE BEAR ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:03.862 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.862 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.862 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.862 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.862 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.862 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.862 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.862 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.862 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.862 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.862 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.862 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.862 INFO  - Life update for player Player1 (4cc3f8e8-d68a-4b58-bddd-94dc9915e1ad) : 2 LP
+2026-03-12 12:03:03.863 DEBUG - Player1 (4cc3f8e8-d68a-4b58-bddd-94dc9915e1ad) LP changed (3 -> 2) due to KILLER BEE (6705a920-bd6d-41b8-856e-f662c232f70e) effect
+2026-03-12 12:03:03.863 INFO  - Resolving INFLICT effect of KILLER BEE (6705a920-bd6d-41b8-856e-f662c232f70e)
+2026-03-12 12:03:03.863 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.863 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.863 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.863 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.863 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.863 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.863 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.863 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.863 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.863 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.863 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.863 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.863 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.863 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.864 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.864 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.864 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.864 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.864 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.864 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.864 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.864 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.864 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.864 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.864 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.864 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.864 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.864 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.864 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.864 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.864 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.864 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.864 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.864 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.864 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.864 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.864 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.864 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.865 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.865 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.865 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.865 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.865 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.865 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.865 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.865 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.865 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.865 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.865 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.865 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.865 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.865 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.865 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.865 DEBUG - Player Player1 (4cc3f8e8-d68a-4b58-bddd-94dc9915e1ad) must choose 2 card(s) to discard (available targets : {
+- THE LURKER ;
+- SHARK DOG ;
+- MYSTERIOUS MERMAID ;
+- HAMSTER LION ;
+- CREEP FROM THE DEEP
+})
+2026-03-12 12:03:03.865 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.865 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.865 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.865 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.865 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.865 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.865 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.865 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.865 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.865 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.865 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.865 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.865 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.866 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.866 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.866 INFO  - New TARGET choice to be resolved by Player1 (4cc3f8e8-d68a-4b58-bddd-94dc9915e1ad) (targets : {
+- THE LURKER ;
+- HAMSTER LION ;
+- CREEP FROM THE DEEP ;
+- MYSTERIOUS MERMAID ;
+- SHARK DOG
+})
+2026-03-12 12:03:03.866 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.866 DEBUG - CREEP FROM THE DEEP (838c4482-7559-4bb4-a055-f7ce29009dc0) discarded due to FERRET BOMBER (ddcf9ce5-68dd-4211-a758-944f918e384e) effect
+2026-03-12 12:03:03.866 DEBUG - MYSTERIOUS MERMAID (fc9b6269-de62-4c84-bdec-e337712fe8ae) discarded due to FERRET BOMBER (ddcf9ce5-68dd-4211-a758-944f918e384e) effect
+2026-03-12 12:03:03.866 INFO  - Resolving DISCARD effect of FERRET BOMBER (ddcf9ce5-68dd-4211-a758-944f918e384e)
+2026-03-12 12:03:03.866 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.866 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.866 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.866 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.866 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.866 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.866 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.866 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.866 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.866 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.866 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.866 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.866 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.866 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.866 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.866 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.866 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.866 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.866 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.866 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.866 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.867 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.867 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.867 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.867 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.867 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.867 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.867 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.867 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.867 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.867 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.867 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.867 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.867 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.867 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.867 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.867 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.867 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.867 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.867 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.867 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.867 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.867 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.867 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.867 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.867 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.867 DEBUG - CardInstance(uuid=b3a564af-fcf8-4931-8e5c-a5409f39c5a1, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.868 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.868 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.868 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.868 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.868 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.868 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.868 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.868 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.868 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.868 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.868 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.868 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.868 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.868 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.868 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.868 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.868 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.868 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.868 DEBUG - CardInstance(uuid=b3a564af-fcf8-4931-8e5c-a5409f39c5a1, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.869 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.869 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.869 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.869 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.869 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.869 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.869 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.869 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.869 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.869 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.869 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.869 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.869 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.869 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.869 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.869 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.869 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.869 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.869 DEBUG - CardInstance(uuid=b3a564af-fcf8-4931-8e5c-a5409f39c5a1, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.870 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.870 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.870 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.870 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.870 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.870 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.870 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.870 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.870 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.870 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.870 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.870 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.870 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.870 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.870 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.870 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.870 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.870 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.871 DEBUG - CardInstance(uuid=b3a564af-fcf8-4931-8e5c-a5409f39c5a1, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.871 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.871 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.871 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.871 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.871 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.871 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.871 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.871 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.871 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.871 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.871 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.871 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.871 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.871 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.871 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.871 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.871 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.871 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.871 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.871 DEBUG - CardInstance(uuid=b3a564af-fcf8-4931-8e5c-a5409f39c5a1, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.872 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.872 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.872 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.872 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.872 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.872 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.872 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.872 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.872 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.872 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.872 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.872 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.872 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.872 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.873 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.873 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.873 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.873 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.873 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.873 DEBUG - CardInstance(uuid=b3a564af-fcf8-4931-8e5c-a5409f39c5a1, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.873 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.873 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.873 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.873 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.873 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.873 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.874 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.874 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.874 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.874 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.874 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.874 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.874 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.874 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.874 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.874 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.874 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.874 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.874 DEBUG - CardInstance(uuid=b3a564af-fcf8-4931-8e5c-a5409f39c5a1, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.874 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.874 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.874 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.874 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.874 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.874 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.874 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.874 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.874 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.874 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.874 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.874 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.874 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.874 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.874 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.874 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.874 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.874 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.874 DEBUG - CardInstance(uuid=b3a564af-fcf8-4931-8e5c-a5409f39c5a1, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.875 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.875 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.875 INFO  - Life update for player Player2 (4e426182-cf67-4b22-a2ae-f211db6acedc) : 2 LP
+2026-03-12 12:03:03.875 DEBUG - Player2 (4e426182-cf67-4b22-a2ae-f211db6acedc) LP changed (3 -> 2) due to CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) effect
+2026-03-12 12:03:03.875 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649)
+2026-03-12 12:03:03.875 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.875 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.875 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.875 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.875 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.875 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.875 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.875 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.875 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.875 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.875 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains HUNTER keyword
+2026-03-12 12:03:03.875 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.875 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.875 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.875 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.875 DEBUG - CHAMELEON SNIPER (751cbf56-fed8-4665-a21f-9f6998a6a649) gains POISONOUS keyword
+2026-03-12 12:03:03.875 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.875 DEBUG - CardInstance(uuid=b3a564af-fcf8-4931-8e5c-a5409f39c5a1, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.875 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.876 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.876 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:03.876 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.876 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.876 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.876 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.876 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.876 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.876 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.876 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.876 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.876 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.876 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.876 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.876 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.876 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.876 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.876 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.876 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.876 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.876 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.876 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.876 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.876 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.876 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.877 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.877 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.877 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.877 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.877 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.877 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.877 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.877 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.877 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.877 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.877 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.877 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.877 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.877 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.877 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.877 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.877 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.877 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.877 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.877 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.877 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.877 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.877 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.877 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.877 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.877 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.878 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.878 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.878 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.878 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.878 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.878 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.878 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.878 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.878 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.878 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.878 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.878 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.878 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.878 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.878 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.878 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.878 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.878 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.878 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.878 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.878 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.878 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.878 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.878 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.878 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.878 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.878 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.878 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.878 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.878 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.879 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.879 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.879 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.879 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.879 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.879 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.879 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.879 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.879 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.879 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.879 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.879 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.879 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.879 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.879 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.879 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.879 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.879 INFO  - New FRENZY choice to be resolved by Player1 (4cc3f8e8-d68a-4b58-bddd-94dc9915e1ad) (attackingCard : HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1))
+2026-03-12 12:03:03.879 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.879 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.879 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.879 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.879 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.879 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.879 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.879 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.879 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.879 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.879 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.879 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.879 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.879 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.879 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.879 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.879 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.879 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.880 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.880 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.880 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.880 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.880 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.880 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 DEBUG - SHARK DOG (086b31ed-8b58-48d7-b442-679c7309a0a1) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.880 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.880 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.880 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.880 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.880 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.880 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.880 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.880 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.880 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.880 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.880 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.880 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.880 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.880 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.881 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.881 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.881 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.881 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.881 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains HUNTER keyword
+2026-03-12 12:03:03.881 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.881 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.881 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.881 DEBUG - BUGSERKER (617d9ed9-efe1-42a9-98dd-45f23ac2afe3) gains POISONOUS keyword
+2026-03-12 12:03:03.881 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.881 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.881 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.881 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.881 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.881 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:03.881 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.881 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.881 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.881 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.881 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.881 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.881 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.881 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.881 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.881 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.881 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.881 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.881 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.882 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.882 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.882 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.882 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.882 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.882 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.882 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.882 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.882 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.882 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.882 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.882 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.882 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.882 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.882 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.882 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.882 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.882 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.882 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.882 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.882 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.882 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.882 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.883 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.883 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.883 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.883 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.883 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.883 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.883 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.883 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.883 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.884 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.884 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.884 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.884 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.884 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.884 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.884 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.884 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.884 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.884 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.884 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.884 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.884 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.884 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.884 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.884 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:03.884 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.885 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.885 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.885 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.885 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.885 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.885 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.885 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.885 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.885 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.885 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.885 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.885 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.885 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.885 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.885 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.885 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.885 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.885 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.886 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.886 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.886 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.886 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.886 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.886 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.886 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.886 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.886 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.886 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.886 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.886 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.886 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.886 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.886 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.886 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.886 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.886 DEBUG - SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1) power changed (1 -> 2) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.886 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) power changed (3 -> 4) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.886 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.886 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.886 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains HUNTER keyword
+2026-03-12 12:03:03.886 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains HUNTER keyword
+2026-03-12 12:03:03.886 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.886 DEBUG - BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5) gains POISONOUS keyword
+2026-03-12 12:03:03.886 DEBUG - SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) gains POISONOUS keyword
+2026-03-12 12:03:03.886 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.886 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.887 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.887 DEBUG - KANGASAURUS REX (0ad49d6f-eb66-40c5-a467-4c58e2b91a40) effect destroys BUGSERKER (cd431f63-a8af-419f-8d14-cf364fa1b1e5)
+2026-03-12 12:03:03.887 DEBUG - KANGASAURUS REX (0ad49d6f-eb66-40c5-a467-4c58e2b91a40) effect destroys SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.887 DEBUG - KANGASAURUS REX (0ad49d6f-eb66-40c5-a467-4c58e2b91a40) effect destroys SNAIL THROWER (af482ed1-4d93-46f8-b4cf-0ae938710be1)
+2026-03-12 12:03:03.887 INFO  - Resolving DESTROY effect of KANGASAURUS REX (0ad49d6f-eb66-40c5-a467-4c58e2b91a40)
+2026-03-12 12:03:03.887 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.887 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.887 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.887 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.887 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.887 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.887 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.887 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.887 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.887 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.887 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.887 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.887 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.887 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.887 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.887 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.888 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.888 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.888 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.888 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.888 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.888 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.888 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.888 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.888 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.888 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.888 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.888 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.888 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) gains SNEAKY keyword
+2026-03-12 12:03:03.888 INFO  - Resolving KEYWORD_UP effect of THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75)
+2026-03-12 12:03:03.888 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.888 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.888 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.888 DEBUG - CardInstance(uuid=ddcf9ce5-68dd-4211-a758-944f918e384e, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.889 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.889 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.889 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.889 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.889 DEBUG - CardInstance(uuid=0ad49d6f-eb66-40c5-a467-4c58e2b91a40, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.889 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.889 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.889 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.889 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.889 DEBUG - CardInstance(uuid=0ad49d6f-eb66-40c5-a467-4c58e2b91a40, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.889 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.889 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.889 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.889 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.889 DEBUG - CardInstance(uuid=0ad49d6f-eb66-40c5-a467-4c58e2b91a40, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.889 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.890 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.890 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.890 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.890 DEBUG - CardInstance(uuid=0ad49d6f-eb66-40c5-a467-4c58e2b91a40, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.890 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.890 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.890 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.890 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.890 DEBUG - CardInstance(uuid=0ad49d6f-eb66-40c5-a467-4c58e2b91a40, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.890 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.890 INFO  - New FRENZY choice to be resolved by Player1 (4cc3f8e8-d68a-4b58-bddd-94dc9915e1ad) (attackingCard : HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1))
+2026-03-12 12:03:03.890 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.890 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.890 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.890 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.890 DEBUG - CardInstance(uuid=0ad49d6f-eb66-40c5-a467-4c58e2b91a40, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.890 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.890 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.890 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.891 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.891 DEBUG - CardInstance(uuid=0ad49d6f-eb66-40c5-a467-4c58e2b91a40, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.891 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.891 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.891 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.891 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.891 DEBUG - CardInstance(uuid=8962fe49-3573-408f-9ff3-631a13951dab, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.891 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.891 DEBUG - THE LURKER (aa21d293-0dc8-49c5-9e2b-ddd130c6ce75) power changed (4 -> 5) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.891 DEBUG - HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1) power changed (8 -> 9) due to SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38) effect
+2026-03-12 12:03:03.891 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7dbb2430-0af0-4ffb-a460-01b5f581cc38)
+2026-03-12 12:03:03.891 DEBUG - CardInstance(uuid=8962fe49-3573-408f-9ff3-631a13951dab, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.891 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.891 DEBUG - CardInstance(uuid=8962fe49-3573-408f-9ff3-631a13951dab, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.892 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.892 DEBUG - CardInstance(uuid=8962fe49-3573-408f-9ff3-631a13951dab, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.892 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.892 DEBUG - CardInstance(uuid=8962fe49-3573-408f-9ff3-631a13951dab, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.892 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.892 DEBUG - CardInstance(uuid=8962fe49-3573-408f-9ff3-631a13951dab, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.892 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.892 DEBUG - CardInstance(uuid=8962fe49-3573-408f-9ff3-631a13951dab, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.892 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.892 INFO  - New FRENZY choice to be resolved by Player1 (4cc3f8e8-d68a-4b58-bddd-94dc9915e1ad) (attackingCard : HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1))
+2026-03-12 12:03:03.892 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.892 DEBUG - CardInstance(uuid=8962fe49-3573-408f-9ff3-631a13951dab, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.893 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)
+2026-03-12 12:03:03.893 INFO  - Game over : Player1 (4cc3f8e8-d68a-4b58-bddd-94dc9915e1ad) wins ; Player2 (4e426182-cf67-4b22-a2ae-f211db6acedc) loses.
+2026-03-12 12:03:03.893 INFO  - End of the game
+2026-03-12 12:03:03.893 DEBUG - CardInstance(uuid=8962fe49-3573-408f-9ff3-631a13951dab, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@10d49900), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.893 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a16a2a36-ba3c-46fc-9dcf-5af77272f9d1)

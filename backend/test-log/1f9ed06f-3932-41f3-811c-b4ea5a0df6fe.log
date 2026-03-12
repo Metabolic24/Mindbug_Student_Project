@@ -1,0 +1,88 @@
+2026-03-12 12:03:42.836 INFO  - Calculating first player...
+2026-03-12 12:03:42.838 INFO  - Banned card for Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca) : THE LURKER (e019a0e5-43ee-46b4-a9c4-c538ef111219) (4)
+2026-03-12 12:03:42.839 INFO  - Banned card for Player2 (c594c07e-9156-402e-a712-fc96c6b02217) : SHARK DOG (1e568ef9-5760-44fa-b496-0262055052b1) (4)
+2026-03-12 12:03:42.839 INFO  - Banned card for Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca) : RHINO TURTLE (5f28c5df-bde9-4163-98fb-e441e0542145) (8)
+2026-03-12 12:03:42.839 INFO  - Banned card for Player2 (c594c07e-9156-402e-a712-fc96c6b02217) : HAMSTER LION (4ab4f168-933e-4ad3-92cd-490d85abbaa6) (8)
+2026-03-12 12:03:42.839 INFO  - Banned card for Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca) : FERRET BOMBER (a02dd2e0-feb0-40e1-950c-fd3d9a4c0235) (2)
+2026-03-12 12:03:42.839 INFO  - Banned card for Player2 (c594c07e-9156-402e-a712-fc96c6b02217) : HUNGRY HUNGRY HAMSTER (d895a5df-1a93-4e26-bc06-0dc496bc385f) (2)
+2026-03-12 12:03:42.839 INFO  - Banned card for Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca) : LUCHATAUR (9493c5b3-9627-4431-9a36-b63df5bdd75e) (9)
+2026-03-12 12:03:42.839 INFO  - Banned card for Player2 (c594c07e-9156-402e-a712-fc96c6b02217) : GOBLIN WEREWOLF (51304fbd-b0f6-4e84-b1bc-def2673b385f) (2)
+2026-03-12 12:03:42.839 INFO  - First player will be Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca)
+2026-03-12 12:03:42.848 INFO  - Game 1f9ed06f-3932-41f3-811c-b4ea5a0df6fe starting...
+2026-03-12 12:03:42.848 INFO  - Player Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca) hand : {
+-  GIRAFFODILE ;
+- SNAIL HYDRA ;
+- GOREAGLE ALPHA ;
+- EXPLOSIVE TOAD ;
+- CREEP FROM THE DEEP
+}
+2026-03-12 12:03:42.848 INFO  - Player Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca) draw pile : {
+- KILLER BEE ;
+- SHIELD BUGS ;
+- THE LURKER ;
+- BUGSERKER ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:42.848 INFO  - Player Player2 (c594c07e-9156-402e-a712-fc96c6b02217) hand : {
+- COUNT DRACULEECH ;
+- SPIDER OWL ;
+- COMPOST DRAGON ;
+- FERRET PACIFIER ;
+- TURF THE SURFER
+}
+2026-03-12 12:03:42.848 INFO  - Player Player2 (c594c07e-9156-402e-a712-fc96c6b02217) draw pile : {
+- BUGSERKER ;
+- EXPLOSIVE TOAD ;
+- FERRET PACIFIER ;
+- PLATED SCORPION ;
+- LUCHATAUR
+}
+2026-03-12 12:03:42.848 INFO  - Life update for player Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca) : 2 LP
+2026-03-12 12:03:42.848 DEBUG - Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca) LP changed (3 -> 2) due to GOREAGLE ALPHA (3708a116-c205-40e9-844c-4dc72c4f5f2e) effect
+2026-03-12 12:03:42.848 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (3708a116-c205-40e9-844c-4dc72c4f5f2e)
+2026-03-12 12:03:42.849 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.849 INFO  - New FRENZY choice to be resolved by Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca) (attackingCard : GOREAGLE ALPHA (3708a116-c205-40e9-844c-4dc72c4f5f2e))
+2026-03-12 12:03:42.849 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.849 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.849 DEBUG - GOREAGLE ALPHA (3708a116-c205-40e9-844c-4dc72c4f5f2e) stolen and drawn by Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca) due to  GIRAFFODILE (547fb04c-80e8-446a-9a8b-3c7c715e15e0) effect
+2026-03-12 12:03:42.849 INFO  - Resolving STEAL effect of  GIRAFFODILE (547fb04c-80e8-446a-9a8b-3c7c715e15e0)
+2026-03-12 12:03:42.849 DEBUG - Player Player2 (c594c07e-9156-402e-a712-fc96c6b02217) must choose 1 card(s) that will be unable to block (targets : {
+-  GIRAFFODILE ;
+- CREEP FROM THE DEEP
+})
+2026-03-12 12:03:42.849 INFO  - New TARGET choice to be resolved by Player2 (c594c07e-9156-402e-a712-fc96c6b02217) (targets : {
+- CREEP FROM THE DEEP ;
+-  GIRAFFODILE
+})
+2026-03-12 12:03:42.849 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.849 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (f7cce9d0-2fdd-4093-bb30-7ed539387311)
+2026-03-12 12:03:42.850 DEBUG - Player Player2 (c594c07e-9156-402e-a712-fc96c6b02217) must choose 1 cards to steal (targets : {
+- SPIDER OWL ;
+- TURF THE SURFER
+})
+2026-03-12 12:03:42.850 INFO  - New TARGET choice to be resolved by Player2 (c594c07e-9156-402e-a712-fc96c6b02217) (targets : {
+- TURF THE SURFER ;
+- SPIDER OWL
+})
+2026-03-12 12:03:42.850 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.850 DEBUG - SPIDER OWL (029e3bf3-1cad-411c-85ce-d59f39dd6f1f) stolen and played by Player2 (c594c07e-9156-402e-a712-fc96c6b02217) due to COMPOST DRAGON (c6740666-fb9f-4f5a-af28-39948fe16d86) effect
+2026-03-12 12:03:42.850 INFO  - Resolving STEAL effect of COMPOST DRAGON (c6740666-fb9f-4f5a-af28-39948fe16d86)
+2026-03-12 12:03:42.850 DEBUG - Player Player2 (c594c07e-9156-402e-a712-fc96c6b02217) must choose 1 card(s) to destroy (available targets : {
+-  GIRAFFODILE ;
+- BUGSERKER ;
+- COMPOST DRAGON ;
+- SPIDER OWL
+})
+2026-03-12 12:03:42.850 INFO  - New TARGET choice to be resolved by Player2 (c594c07e-9156-402e-a712-fc96c6b02217) (targets : {
+-  GIRAFFODILE ;
+- COMPOST DRAGON ;
+- BUGSERKER ;
+- SPIDER OWL
+})
+2026-03-12 12:03:42.850 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.850 DEBUG - EXPLOSIVE TOAD (82ad141c-b048-4257-af06-afb0a856993e) effect destroys COMPOST DRAGON (c6740666-fb9f-4f5a-af28-39948fe16d86)
+2026-03-12 12:03:42.850 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (82ad141c-b048-4257-af06-afb0a856993e)
+2026-03-12 12:03:42.850 INFO  - Life update for player Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca) : 1 LP
+2026-03-12 12:03:42.851 INFO  - Life update for player Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca) : 0 LP
+2026-03-12 12:03:42.851 INFO  - Game over : Player2 (c594c07e-9156-402e-a712-fc96c6b02217) wins ; Player1 (85a6fe0c-54ad-44fa-921a-3bf51bd27eca) loses.
+2026-03-12 12:03:42.851 INFO  - End of the game

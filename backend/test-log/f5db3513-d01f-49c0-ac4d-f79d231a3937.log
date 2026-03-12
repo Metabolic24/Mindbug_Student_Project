@@ -1,0 +1,154 @@
+2026-03-12 12:03:44.196 INFO  - Calculating first player...
+2026-03-12 12:03:44.202 INFO  - Banned card for Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) : PLATED SCORPION (b887b166-5f1c-44a8-9ad8-87199439cf8e) (2)
+2026-03-12 12:03:44.202 INFO  - Banned card for Player2 (5e4097fb-3337-4fab-9f9a-8d75a0365853) : GRAVE ROBBER (2bf68313-1474-421a-a3a2-8abc900a132b) (7)
+2026-03-12 12:03:44.203 INFO  - First player will be Player2 (5e4097fb-3337-4fab-9f9a-8d75a0365853)
+2026-03-12 12:03:44.219 INFO  - Game f5db3513-d01f-49c0-ac4d-f79d231a3937 starting...
+2026-03-12 12:03:44.219 INFO  - Player Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) hand : {
+- COUNT DRACULEECH ;
+- GORILLON ;
+-  GIRAFFODILE ;
+- SHIELD BUGS ;
+- HAMSTER LION
+}
+2026-03-12 12:03:44.220 INFO  - Player Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) draw pile : {
+- FROBLIN INSTIGATOR ;
+- SNAIL HYDRA ;
+- TUSKED EXTORTER ;
+- TURF THE SURFER ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:44.220 INFO  - Player Player2 (5e4097fb-3337-4fab-9f9a-8d75a0365853) hand : {
+- SPIDER OWL ;
+- BEE BEAR ;
+- GOBLIN WEREWOLF ;
+- CREEP FROM THE DEEP ;
+- CREEP FROM THE DEEP
+}
+2026-03-12 12:03:44.220 INFO  - Player Player2 (5e4097fb-3337-4fab-9f9a-8d75a0365853) draw pile : {
+- RHINO TURTLE ;
+- MAJESTIC MANTICORE ;
+- BUGSERKER ;
+- HYENIX ;
+- COMPOST DRAGON
+}
+2026-03-12 12:03:44.220 DEBUG - CardInstance(uuid=2b7b97f7-8d21-4a68-931b-11b41e5d7392, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@23c00420), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.220 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cf3bc25b-db78-4a9a-9739-170fbbc855ba)
+2026-03-12 12:03:44.220 DEBUG - CardInstance(uuid=2b7b97f7-8d21-4a68-931b-11b41e5d7392, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@23c00420), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.220 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cf3bc25b-db78-4a9a-9739-170fbbc855ba)
+2026-03-12 12:03:44.220 DEBUG - CardInstance(uuid=2b7b97f7-8d21-4a68-931b-11b41e5d7392, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@23c00420), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.220 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cf3bc25b-db78-4a9a-9739-170fbbc855ba)
+2026-03-12 12:03:44.220 DEBUG - CardInstance(uuid=2b7b97f7-8d21-4a68-931b-11b41e5d7392, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@23c00420), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.221 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cf3bc25b-db78-4a9a-9739-170fbbc855ba)
+2026-03-12 12:03:44.221 DEBUG - CardInstance(uuid=2b7b97f7-8d21-4a68-931b-11b41e5d7392, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@23c00420), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.221 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cf3bc25b-db78-4a9a-9739-170fbbc855ba)
+2026-03-12 12:03:44.221 DEBUG - CardInstance(uuid=2b7b97f7-8d21-4a68-931b-11b41e5d7392, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@23c00420), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.221 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cf3bc25b-db78-4a9a-9739-170fbbc855ba)
+2026-03-12 12:03:44.221 DEBUG - CardInstance(uuid=2b7b97f7-8d21-4a68-931b-11b41e5d7392, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@23c00420), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.221 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cf3bc25b-db78-4a9a-9739-170fbbc855ba)
+2026-03-12 12:03:44.221 DEBUG - CardInstance(uuid=2b7b97f7-8d21-4a68-931b-11b41e5d7392, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@23c00420), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.221 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cf3bc25b-db78-4a9a-9739-170fbbc855ba)
+2026-03-12 12:03:44.221 INFO  - Life update for player Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) : 2 LP
+2026-03-12 12:03:44.222 DEBUG - FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b) power changed (1 -> 1) due to FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b) effect
+2026-03-12 12:03:44.222 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b)
+2026-03-12 12:03:44.222 DEBUG - FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b) power changed (1 -> 1) due to FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b) effect
+2026-03-12 12:03:44.222 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b)
+2026-03-12 12:03:44.222 INFO  - Resolving NO_BLOCK effect of BEE BEAR (9c619010-1a9c-46f4-a2b6-b498b0c9b829)
+2026-03-12 12:03:44.223 DEBUG - FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b) power changed (1 -> 1) due to FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b) effect
+2026-03-12 12:03:44.223 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b)
+2026-03-12 12:03:44.223 INFO  - Life update for player Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) : 1 LP
+2026-03-12 12:03:44.223 DEBUG - FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b) power changed (1 -> 1) due to FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b) effect
+2026-03-12 12:03:44.223 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b)
+2026-03-12 12:03:44.223 DEBUG - FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b) power changed (1 -> 1) due to FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b) effect
+2026-03-12 12:03:44.223 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b)
+2026-03-12 12:03:44.223 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.224 DEBUG - GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e) effect
+2026-03-12 12:03:44.224 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e)
+2026-03-12 12:03:44.224 DEBUG - Player Player2 (5e4097fb-3337-4fab-9f9a-8d75a0365853) must choose 1 card(s) to discard (available targets : {
+- RHINO TURTLE ;
+- BUGSERKER ;
+- HYENIX ;
+- COMPOST DRAGON
+})
+2026-03-12 12:03:44.224 INFO  - New TARGET choice to be resolved by Player2 (5e4097fb-3337-4fab-9f9a-8d75a0365853) (targets : {
+- HYENIX ;
+- COMPOST DRAGON ;
+- RHINO TURTLE ;
+- BUGSERKER
+})
+2026-03-12 12:03:44.224 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.224 DEBUG - BUGSERKER (aade5014-5bfc-43f5-bd6e-b37294d3d1e0) discarded due to TUSKED EXTORTER (3c8db963-c062-42f8-ab0f-8a38a85fdd96) effect
+2026-03-12 12:03:44.224 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (3c8db963-c062-42f8-ab0f-8a38a85fdd96)
+2026-03-12 12:03:44.224 DEBUG - GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e) effect
+2026-03-12 12:03:44.224 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e)
+2026-03-12 12:03:44.224 DEBUG - GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e) effect
+2026-03-12 12:03:44.224 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e)
+2026-03-12 12:03:44.224 DEBUG - GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e) effect
+2026-03-12 12:03:44.225 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e)
+2026-03-12 12:03:44.225 INFO  - Resolving NO_BLOCK effect of BEE BEAR (9c619010-1a9c-46f4-a2b6-b498b0c9b829)
+2026-03-12 12:03:44.225 DEBUG - GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e) effect
+2026-03-12 12:03:44.225 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e)
+2026-03-12 12:03:44.225 DEBUG - GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e) effect
+2026-03-12 12:03:44.225 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e)
+2026-03-12 12:03:44.225 DEBUG - KANGASAURUS REX (86da2ad1-666c-4909-9f92-7386305797e7) effect destroys CREEP FROM THE DEEP (bc8c6d9e-1890-4a7d-b27d-50e3004600cd)
+2026-03-12 12:03:44.225 DEBUG - KANGASAURUS REX (86da2ad1-666c-4909-9f92-7386305797e7) effect destroys GOBLIN WEREWOLF (1ab9c751-e600-482f-b537-6905511f7d0e)
+2026-03-12 12:03:44.225 INFO  - Resolving DESTROY effect of KANGASAURUS REX (86da2ad1-666c-4909-9f92-7386305797e7)
+2026-03-12 12:03:44.225 INFO  - Resolving NO_BLOCK effect of BEE BEAR (9c619010-1a9c-46f4-a2b6-b498b0c9b829)
+2026-03-12 12:03:44.225 DEBUG - Player Player2 (5e4097fb-3337-4fab-9f9a-8d75a0365853) must choose 1 cards to steal (targets : {
+- CREEP FROM THE DEEP ;
+- SPIDER OWL ;
+- BUGSERKER ;
+- MAJESTIC MANTICORE ;
+- CREEP FROM THE DEEP ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:03:44.225 INFO  - New TARGET choice to be resolved by Player2 (5e4097fb-3337-4fab-9f9a-8d75a0365853) (targets : {
+- MAJESTIC MANTICORE ;
+- GOBLIN WEREWOLF ;
+- SPIDER OWL ;
+- CREEP FROM THE DEEP ;
+- CREEP FROM THE DEEP ;
+- BUGSERKER
+})
+2026-03-12 12:03:44.225 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.225 DEBUG - BUGSERKER (aade5014-5bfc-43f5-bd6e-b37294d3d1e0) stolen and played by Player2 (5e4097fb-3337-4fab-9f9a-8d75a0365853) due to COMPOST DRAGON (e86775c1-9b42-4e66-aa72-c5b2fcbc7e6d) effect
+2026-03-12 12:03:44.225 INFO  - Resolving STEAL effect of COMPOST DRAGON (e86775c1-9b42-4e66-aa72-c5b2fcbc7e6d)
+2026-03-12 12:03:44.226 DEBUG - Player Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) must choose 1 card(s) to destroy (available targets : {
+- BEE BEAR ;
+- HYENIX ;
+- COMPOST DRAGON ;
+- BUGSERKER
+})
+2026-03-12 12:03:44.226 INFO  - New TARGET choice to be resolved by Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) (targets : {
+- HYENIX ;
+- COMPOST DRAGON ;
+- BEE BEAR ;
+- BUGSERKER
+})
+2026-03-12 12:03:44.226 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.226 DEBUG - SNAIL HYDRA (64b65b9e-bb29-449d-b750-11bddcf3466c) effect destroys HYENIX (283873af-eb01-479a-a3f2-932234c63619)
+2026-03-12 12:03:44.226 INFO  - Resolving DESTROY effect of SNAIL HYDRA (64b65b9e-bb29-449d-b750-11bddcf3466c)
+2026-03-12 12:03:44.226 DEBUG - Player Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) must choose 1 card(s) to destroy (available targets : {
+- BEE BEAR ;
+- COMPOST DRAGON ;
+- BUGSERKER ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:44.226 INFO  - New TARGET choice to be resolved by Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) (targets : {
+- COMPOST DRAGON ;
+- BEE BEAR ;
+- RHINO TURTLE ;
+- BUGSERKER
+})
+2026-03-12 12:03:44.226 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.226 DEBUG - SNAIL HYDRA (64b65b9e-bb29-449d-b750-11bddcf3466c) effect destroys RHINO TURTLE (66e7d5dc-1697-4112-9d61-192bf8d2e81f)
+2026-03-12 12:03:44.226 INFO  - Resolving DESTROY effect of SNAIL HYDRA (64b65b9e-bb29-449d-b750-11bddcf3466c)
+2026-03-12 12:03:44.227 DEBUG - HAMSTER LION (cf3bc25b-db78-4a9a-9739-170fbbc855ba) stolen and drawn by Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) due to  GIRAFFODILE (5665babc-5ef7-4863-a451-317711f35f45) effect
+2026-03-12 12:03:44.227 DEBUG - GORILLON (4dfea5e4-4a0f-4cf4-a83a-2c8c1f63acf5) stolen and drawn by Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) due to  GIRAFFODILE (5665babc-5ef7-4863-a451-317711f35f45) effect
+2026-03-12 12:03:44.227 DEBUG - FROBLIN INSTIGATOR (6d468782-d6b1-495a-a861-09663bc2549b) stolen and drawn by Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) due to  GIRAFFODILE (5665babc-5ef7-4863-a451-317711f35f45) effect
+2026-03-12 12:03:44.227 DEBUG - TUSKED EXTORTER (3c8db963-c062-42f8-ab0f-8a38a85fdd96) stolen and drawn by Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) due to  GIRAFFODILE (5665babc-5ef7-4863-a451-317711f35f45) effect
+2026-03-12 12:03:44.227 DEBUG - COUNT DRACULEECH (35fb53aa-b976-4b0f-892b-c52fe303a668) stolen and drawn by Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) due to  GIRAFFODILE (5665babc-5ef7-4863-a451-317711f35f45) effect
+2026-03-12 12:03:44.227 DEBUG - KANGASAURUS REX (86da2ad1-666c-4909-9f92-7386305797e7) stolen and drawn by Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) due to  GIRAFFODILE (5665babc-5ef7-4863-a451-317711f35f45) effect
+2026-03-12 12:03:44.227 INFO  - Resolving STEAL effect of  GIRAFFODILE (5665babc-5ef7-4863-a451-317711f35f45)
+2026-03-12 12:03:44.227 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.227 INFO  - Game over : Player1 (cd249f3a-6f90-4bd1-8aa3-d2b10219c7b4) wins ; Player2 (5e4097fb-3337-4fab-9f9a-8d75a0365853) loses.
+2026-03-12 12:03:44.227 INFO  - End of the game

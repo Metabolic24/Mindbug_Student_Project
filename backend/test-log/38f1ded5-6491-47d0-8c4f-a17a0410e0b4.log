@@ -1,0 +1,183 @@
+2026-03-12 12:18:24.626 INFO  - Calculating first player...
+2026-03-12 12:18:24.629 INFO  - Banned card for Player1 (d3c08f9d-298b-4702-be7c-af28d663b7f5) : PLATED SCORPION (66d4f1d2-9af1-453e-a870-4157fbc19700) (2)
+2026-03-12 12:18:24.629 INFO  - Banned card for Player2 (c27944a8-b52c-4601-89bf-0c48a3ddd3d1) : FROBLIN INSTIGATOR (d301391b-3adc-49d7-9e21-641fb71af8a7) (1)
+2026-03-12 12:18:24.629 INFO  - First player will be Player1 (d3c08f9d-298b-4702-be7c-af28d663b7f5)
+2026-03-12 12:18:24.638 INFO  - Game 38f1ded5-6491-47d0-8c4f-a17a0410e0b4 starting...
+2026-03-12 12:18:24.638 INFO  - Player Player1 (d3c08f9d-298b-4702-be7c-af28d663b7f5) hand : {
+- BEE BEAR ;
+- FERRET PACIFIER ;
+- TUSKED EXTORTER ;
+- HAMSTER LION ;
+- CREEP FROM THE DEEP
+}
+2026-03-12 12:18:24.638 INFO  - Player Player1 (d3c08f9d-298b-4702-be7c-af28d663b7f5) draw pile : {
+- SNAIL THROWER ;
+- TIGER SQUIRREL ;
+- COMPOST DRAGON ;
+- COUNT DRACULEECH ;
+- BRAIN FLY
+}
+2026-03-12 12:18:24.639 INFO  - Player Player2 (c27944a8-b52c-4601-89bf-0c48a3ddd3d1) hand : {
+- SNAIL HYDRA ;
+- LUCHATAUR ;
+- EXPLOSIVE TOAD ;
+- GOBLIN WEREWOLF ;
+- KANGASAURUS REX
+}
+2026-03-12 12:18:24.639 INFO  - Player Player2 (c27944a8-b52c-4601-89bf-0c48a3ddd3d1) draw pile : {
+- SHARK DOG ;
+- SHIELD BUGS ;
+- FERRET BOMBER ;
+- CHAMELEON SNIPER ;
+- GRAVE ROBBER
+}
+2026-03-12 12:18:24.640 INFO  - Resolving NO_BLOCK effect of BEE BEAR (2077fd5b-5814-41c1-88c3-634fbf6a06b6)
+2026-03-12 12:18:24.640 INFO  - Life update for player Player1 (d3c08f9d-298b-4702-be7c-af28d663b7f5) : 2 LP
+2026-03-12 12:18:24.641 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (25b51500-aa01-497e-b281-f1670224c462)
+2026-03-12 12:18:24.641 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (25b51500-aa01-497e-b281-f1670224c462)
+2026-03-12 12:18:24.642 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (25b51500-aa01-497e-b281-f1670224c462)
+2026-03-12 12:18:24.642 DEBUG - TIGER SQUIRREL (80b0d8f2-7d18-4777-a729-bd51d67ec6eb) effect destroys SNAIL HYDRA (d5e9e141-dc19-4961-8fe7-d38d7bc46994)
+2026-03-12 12:18:24.642 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (80b0d8f2-7d18-4777-a729-bd51d67ec6eb)
+2026-03-12 12:18:24.642 DEBUG - GOBLIN WEREWOLF (655a4572-1f40-4ae9-b5e5-ac330db0191e) power changed (2 -> 8) due to GOBLIN WEREWOLF (655a4572-1f40-4ae9-b5e5-ac330db0191e) effect
+2026-03-12 12:18:24.642 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (655a4572-1f40-4ae9-b5e5-ac330db0191e)
+2026-03-12 12:18:24.643 DEBUG - GOBLIN WEREWOLF (655a4572-1f40-4ae9-b5e5-ac330db0191e) power changed (2 -> 8) due to GOBLIN WEREWOLF (655a4572-1f40-4ae9-b5e5-ac330db0191e) effect
+2026-03-12 12:18:24.643 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (655a4572-1f40-4ae9-b5e5-ac330db0191e)
+2026-03-12 12:18:24.643 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:24.643 DEBUG - GOBLIN WEREWOLF (655a4572-1f40-4ae9-b5e5-ac330db0191e) power changed (2 -> 8) due to GOBLIN WEREWOLF (655a4572-1f40-4ae9-b5e5-ac330db0191e) effect
+2026-03-12 12:18:24.643 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (655a4572-1f40-4ae9-b5e5-ac330db0191e)
+2026-03-12 12:18:24.643 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:24.644 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:24.644 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.644 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.644 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.644 DEBUG - Player Player1 (d3c08f9d-298b-4702-be7c-af28d663b7f5) must choose 1 cards to steal (targets : {
+- BEE BEAR ;
+- FERRET PACIFIER ;
+- TIGER SQUIRREL ;
+- CREEP FROM THE DEEP
+})
+2026-03-12 12:18:24.645 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.645 INFO  - New TARGET choice to be resolved by Player1 (d3c08f9d-298b-4702-be7c-af28d663b7f5) (targets : {
+- TIGER SQUIRREL ;
+- BEE BEAR ;
+- FERRET PACIFIER ;
+- CREEP FROM THE DEEP
+})
+2026-03-12 12:18:24.645 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:24.645 DEBUG - CREEP FROM THE DEEP (0c873178-a37f-4705-88a6-bb5b97012ca2) stolen and played by Player1 (d3c08f9d-298b-4702-be7c-af28d663b7f5) due to COMPOST DRAGON (0bffb221-3ab3-42a6-8b41-646d70b97364) effect
+2026-03-12 12:18:24.645 INFO  - Resolving STEAL effect of COMPOST DRAGON (0bffb221-3ab3-42a6-8b41-646d70b97364)
+2026-03-12 12:18:24.645 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.645 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.645 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.645 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.645 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:24.646 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.646 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.646 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.646 INFO  - Life update for player Player1 (d3c08f9d-298b-4702-be7c-af28d663b7f5) : 1 LP
+2026-03-12 12:18:24.646 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.646 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.646 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.646 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.646 DEBUG - FERRET BOMBER (fb777788-4aaa-40f3-baae-89d3e2dce09d) power changed (2 -> 3) due to SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5) effect
+2026-03-12 12:18:24.647 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.647 DEBUG - Player Player1 (d3c08f9d-298b-4702-be7c-af28d663b7f5) must choose 2 card(s) to discard (available targets : {
+- HAMSTER LION ;
+- SNAIL THROWER ;
+- COUNT DRACULEECH ;
+- BRAIN FLY
+})
+2026-03-12 12:18:24.647 DEBUG - FERRET BOMBER (fb777788-4aaa-40f3-baae-89d3e2dce09d) power changed (2 -> 3) due to SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5) effect
+2026-03-12 12:18:24.647 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.647 INFO  - New TARGET choice to be resolved by Player1 (d3c08f9d-298b-4702-be7c-af28d663b7f5) (targets : {
+- BRAIN FLY ;
+- SNAIL THROWER ;
+- COUNT DRACULEECH ;
+- HAMSTER LION
+})
+2026-03-12 12:18:24.647 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:24.647 DEBUG - BRAIN FLY (0c7ef03e-105f-442c-9a42-0fecff210fe5) discarded due to FERRET BOMBER (fb777788-4aaa-40f3-baae-89d3e2dce09d) effect
+2026-03-12 12:18:24.647 DEBUG - COUNT DRACULEECH (cb51b99b-1e9f-4ef2-b2b5-1a65d17653ed) discarded due to FERRET BOMBER (fb777788-4aaa-40f3-baae-89d3e2dce09d) effect
+2026-03-12 12:18:24.647 INFO  - Resolving DISCARD effect of FERRET BOMBER (fb777788-4aaa-40f3-baae-89d3e2dce09d)
+2026-03-12 12:18:24.647 DEBUG - FERRET BOMBER (fb777788-4aaa-40f3-baae-89d3e2dce09d) power changed (2 -> 3) due to SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5) effect
+2026-03-12 12:18:24.647 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.647 DEBUG - FERRET BOMBER (fb777788-4aaa-40f3-baae-89d3e2dce09d) power changed (2 -> 3) due to SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5) effect
+2026-03-12 12:18:24.647 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.648 DEBUG - Player Player2 (c27944a8-b52c-4601-89bf-0c48a3ddd3d1) must choose 1 card(s) to discard (available targets : {
+- LUCHATAUR ;
+- KANGASAURUS REX ;
+- SHARK DOG ;
+- CHAMELEON SNIPER ;
+- GRAVE ROBBER
+})
+2026-03-12 12:18:24.648 DEBUG - FERRET BOMBER (fb777788-4aaa-40f3-baae-89d3e2dce09d) power changed (2 -> 3) due to SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5) effect
+2026-03-12 12:18:24.648 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.648 INFO  - New TARGET choice to be resolved by Player2 (c27944a8-b52c-4601-89bf-0c48a3ddd3d1) (targets : {
+- LUCHATAUR ;
+- GRAVE ROBBER ;
+- SHARK DOG ;
+- CHAMELEON SNIPER ;
+- KANGASAURUS REX
+})
+2026-03-12 12:18:24.648 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:24.648 DEBUG - GRAVE ROBBER (c0dcc0ad-58a5-48f3-b1a3-cf1af73b4157) discarded due to TUSKED EXTORTER (ed5d5d0d-b06d-4952-8ae4-88e3e74362a9) effect
+2026-03-12 12:18:24.648 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (ed5d5d0d-b06d-4952-8ae4-88e3e74362a9)
+2026-03-12 12:18:24.648 DEBUG - FERRET BOMBER (fb777788-4aaa-40f3-baae-89d3e2dce09d) power changed (2 -> 3) due to SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5) effect
+2026-03-12 12:18:24.648 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7ca674b8-0937-4748-8453-294032f68df5)
+2026-03-12 12:18:24.649 DEBUG - CardInstance(uuid=fb777788-4aaa-40f3-baae-89d3e2dce09d, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b529d7e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.652 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.653 DEBUG - CardInstance(uuid=fb777788-4aaa-40f3-baae-89d3e2dce09d, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b529d7e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.653 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.653 DEBUG - CardInstance(uuid=fb777788-4aaa-40f3-baae-89d3e2dce09d, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b529d7e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.653 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.653 DEBUG - CardInstance(uuid=fb777788-4aaa-40f3-baae-89d3e2dce09d, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b529d7e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.653 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.654 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.654 INFO  - New FRENZY choice to be resolved by Player1 (d3c08f9d-298b-4702-be7c-af28d663b7f5) (attackingCard : HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939))
+2026-03-12 12:18:24.654 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:24.654 INFO  - Life update for player Player2 (c27944a8-b52c-4601-89bf-0c48a3ddd3d1) : 2 LP
+2026-03-12 12:18:24.654 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.655 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.655 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.655 DEBUG - CardInstance(uuid=11b11488-a528-47e2-af98-fd277179deb5, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b529d7e), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.656 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.657 DEBUG - CardInstance(uuid=11b11488-a528-47e2-af98-fd277179deb5, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b529d7e), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.659 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.660 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.660 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.660 DEBUG - CardInstance(uuid=11b11488-a528-47e2-af98-fd277179deb5, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b529d7e), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.661 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.661 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.661 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.661 DEBUG - CardInstance(uuid=11b11488-a528-47e2-af98-fd277179deb5, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b529d7e), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.662 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.662 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.662 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.663 DEBUG - CardInstance(uuid=6973b031-81eb-4762-9a3f-1a2ffab39d9c, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b529d7e), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.663 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.663 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.663 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.663 DEBUG - CardInstance(uuid=6973b031-81eb-4762-9a3f-1a2ffab39d9c, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b529d7e), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.664 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.664 DEBUG - CHAMELEON SNIPER (498af4a6-38af-46c5-8060-9778538b7828) discarded due to TUSKED EXTORTER (ed5d5d0d-b06d-4952-8ae4-88e3e74362a9) effect
+2026-03-12 12:18:24.664 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (ed5d5d0d-b06d-4952-8ae4-88e3e74362a9)
+2026-03-12 12:18:24.664 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.664 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.665 DEBUG - CardInstance(uuid=6973b031-81eb-4762-9a3f-1a2ffab39d9c, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b529d7e), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.665 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.665 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.665 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.665 DEBUG - CardInstance(uuid=6973b031-81eb-4762-9a3f-1a2ffab39d9c, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b529d7e), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.665 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.666 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.666 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.666 DEBUG - CardInstance(uuid=6973b031-81eb-4762-9a3f-1a2ffab39d9c, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b529d7e), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.666 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b1814f6e-17bd-4e5a-bdf5-129a1fb33939)
+2026-03-12 12:18:24.666 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.666 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.666 INFO  - New FRENZY choice to be resolved by Player2 (c27944a8-b52c-4601-89bf-0c48a3ddd3d1) (attackingCard : LUCHATAUR (11b11488-a528-47e2-af98-fd277179deb5))
+2026-03-12 12:18:24.667 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:24.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (d46f2925-74cd-4002-a130-bdac1ceb61a9)
+2026-03-12 12:18:24.667 INFO  - Game over : Player2 (c27944a8-b52c-4601-89bf-0c48a3ddd3d1) wins ; Player1 (d3c08f9d-298b-4702-be7c-af28d663b7f5) loses.
+2026-03-12 12:18:24.667 INFO  - End of the game

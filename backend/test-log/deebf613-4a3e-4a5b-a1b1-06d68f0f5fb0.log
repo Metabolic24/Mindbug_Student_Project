@@ -1,0 +1,243 @@
+2026-03-12 12:03:44.531 INFO  - Calculating first player...
+2026-03-12 12:03:44.533 INFO  - Banned card for Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) : GRAVE ROBBER (e227fd1c-7a6e-41a8-a72c-853c2ec2d1ba) (7)
+2026-03-12 12:03:44.533 INFO  - Banned card for Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) : HYENIX (f74c77aa-4621-4a63-b540-ec32ed3b0098) (7)
+2026-03-12 12:03:44.533 INFO  - Banned card for Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) : BUGSERKER (1a1db002-220a-4277-9480-638892685b44) (3)
+2026-03-12 12:03:44.533 INFO  - Banned card for Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) : EXPLOSIVE TOAD (0f2228a1-a028-4f8d-bc6e-f5c297a916de) (5)
+2026-03-12 12:03:44.542 INFO  - First player will be Player2 (1e9ca472-9721-41ef-84c2-7497b295d936)
+2026-03-12 12:03:44.595 INFO  - Game deebf613-4a3e-4a5b-a1b1-06d68f0f5fb0 starting...
+2026-03-12 12:03:44.595 INFO  - Player Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) hand : {
+- SNAIL HYDRA ;
+- TURF THE SURFER ;
+- THE LURKER ;
+- HAMSTER LION ;
+- COUNT DRACULEECH
+}
+2026-03-12 12:03:44.595 INFO  - Player Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) draw pile : {
+- GOBLIN WEREWOLF ;
+- GOREAGLE ALPHA ;
+- PLATED SCORPION ;
+- COMPOST DRAGON ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:03:44.595 INFO  - Player Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) hand : {
+- COMPOST DRAGON ;
+- SHARK DOG ;
+- MAJESTIC MANTICORE ;
+- TUSKED EXTORTER ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:44.596 INFO  - Player Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) draw pile : {
+- LONE YETI ;
+- RHINO TURTLE ;
+- CREEP FROM THE DEEP ;
+- TUSKED EXTORTER ;
+-  GIRAFFODILE
+}
+2026-03-12 12:03:44.596 DEBUG - Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) LP changed (3 -> 5) due to AXOLOTL HEALER (d540ac28-6750-4a46-ac1f-9281aa7e3859) effect
+2026-03-12 12:03:44.596 INFO  - Resolving GAIN effect of AXOLOTL HEALER (d540ac28-6750-4a46-ac1f-9281aa7e3859)
+2026-03-12 12:03:44.596 DEBUG - GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21) power changed (2 -> 8) due to GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21) effect
+2026-03-12 12:03:44.596 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21)
+2026-03-12 12:03:44.596 DEBUG - GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21) power changed (2 -> 8) due to GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21) effect
+2026-03-12 12:03:44.596 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21)
+2026-03-12 12:03:44.596 DEBUG - GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21) power changed (2 -> 8) due to GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21) effect
+2026-03-12 12:03:44.596 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21)
+2026-03-12 12:03:44.597 DEBUG - GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21) power changed (2 -> 8) due to GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21) effect
+2026-03-12 12:03:44.597 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21)
+2026-03-12 12:03:44.597 DEBUG - GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21) power changed (2 -> 8) due to GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21) effect
+2026-03-12 12:03:44.597 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21)
+2026-03-12 12:03:44.597 DEBUG - GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21) power changed (2 -> 8) due to GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21) effect
+2026-03-12 12:03:44.597 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2a3910a5-1ff6-4689-ad32-aec193b8ce21)
+2026-03-12 12:03:44.597 DEBUG - SHARK DOG (5be34e80-1db8-464e-9ef2-f385257b3d16) effect destroys TURF THE SURFER (58c449e1-c823-4a0c-8352-c63793541637)
+2026-03-12 12:03:44.597 INFO  - Resolving DESTROY effect of SHARK DOG (5be34e80-1db8-464e-9ef2-f385257b3d16)
+2026-03-12 12:03:44.597 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.597 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) power changed (5 -> 10) due to LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) effect
+2026-03-12 12:03:44.598 INFO  - Resolving POWER_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.598 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) gains FRENZY keyword
+2026-03-12 12:03:44.598 INFO  - Resolving KEYWORD_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.598 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) power changed (5 -> 10) due to LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) effect
+2026-03-12 12:03:44.598 INFO  - Resolving POWER_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.598 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) gains FRENZY keyword
+2026-03-12 12:03:44.598 INFO  - Resolving KEYWORD_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.598 INFO  - Life update for player Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) : 2 LP
+2026-03-12 12:03:44.598 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) power changed (5 -> 10) due to LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) effect
+2026-03-12 12:03:44.598 INFO  - Resolving POWER_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.598 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) gains FRENZY keyword
+2026-03-12 12:03:44.598 INFO  - Resolving KEYWORD_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.598 INFO  - New FRENZY choice to be resolved by Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) (attackingCard : LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3))
+2026-03-12 12:03:44.598 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.598 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) power changed (5 -> 10) due to LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) effect
+2026-03-12 12:03:44.598 INFO  - Resolving POWER_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.598 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) gains FRENZY keyword
+2026-03-12 12:03:44.598 INFO  - Resolving KEYWORD_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.598 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) power changed (5 -> 10) due to LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) effect
+2026-03-12 12:03:44.598 INFO  - Resolving POWER_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.598 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) gains FRENZY keyword
+2026-03-12 12:03:44.598 INFO  - Resolving KEYWORD_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.599 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) power changed (5 -> 10) due to LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) effect
+2026-03-12 12:03:44.599 INFO  - Resolving POWER_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.599 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) gains FRENZY keyword
+2026-03-12 12:03:44.599 INFO  - Resolving KEYWORD_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.599 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) power changed (5 -> 10) due to LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) effect
+2026-03-12 12:03:44.599 INFO  - Resolving POWER_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.599 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) gains FRENZY keyword
+2026-03-12 12:03:44.599 INFO  - Resolving KEYWORD_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.599 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) power changed (5 -> 10) due to LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) effect
+2026-03-12 12:03:44.599 INFO  - Resolving POWER_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.599 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) gains FRENZY keyword
+2026-03-12 12:03:44.599 INFO  - Resolving KEYWORD_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.599 INFO  - New FRENZY choice to be resolved by Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) (attackingCard : LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3))
+2026-03-12 12:03:44.599 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.599 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) power changed (5 -> 10) due to LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) effect
+2026-03-12 12:03:44.599 INFO  - Resolving POWER_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.599 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) gains FRENZY keyword
+2026-03-12 12:03:44.599 INFO  - Resolving KEYWORD_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.599 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) power changed (5 -> 10) due to LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) effect
+2026-03-12 12:03:44.600 INFO  - Resolving POWER_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.600 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) gains FRENZY keyword
+2026-03-12 12:03:44.600 INFO  - Resolving KEYWORD_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.600 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) power changed (5 -> 10) due to LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) effect
+2026-03-12 12:03:44.600 INFO  - Resolving POWER_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.600 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) gains FRENZY keyword
+2026-03-12 12:03:44.600 INFO  - Resolving KEYWORD_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.600 INFO  - Life update for player Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) : 1 LP
+2026-03-12 12:03:44.600 DEBUG - Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) LP changed (2 -> 1) due to GOREAGLE ALPHA (7dc8cf94-c2b7-4b7a-a0f5-83f904f6561a) effect
+2026-03-12 12:03:44.600 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (7dc8cf94-c2b7-4b7a-a0f5-83f904f6561a)
+2026-03-12 12:03:44.600 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) power changed (5 -> 10) due to LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) effect
+2026-03-12 12:03:44.600 INFO  - Resolving POWER_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.600 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) gains FRENZY keyword
+2026-03-12 12:03:44.600 INFO  - Resolving KEYWORD_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.600 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) power changed (5 -> 10) due to LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) effect
+2026-03-12 12:03:44.600 INFO  - Resolving POWER_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.600 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) gains FRENZY keyword
+2026-03-12 12:03:44.600 INFO  - Resolving KEYWORD_UP effect of LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3)
+2026-03-12 12:03:44.600 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.600 INFO  - New FRENZY choice to be resolved by Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) (attackingCard : GOREAGLE ALPHA (7dc8cf94-c2b7-4b7a-a0f5-83f904f6561a))
+2026-03-12 12:03:44.600 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.600 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.601 DEBUG - Player Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) must choose 1 cards to steal (targets : {
+- AXOLOTL HEALER ;
+- MAJESTIC MANTICORE ;
+- SHARK DOG ;
+- LONE YETI
+})
+2026-03-12 12:03:44.601 INFO  - New TARGET choice to be resolved by Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) (targets : {
+- MAJESTIC MANTICORE ;
+- AXOLOTL HEALER ;
+- LONE YETI ;
+- SHARK DOG
+})
+2026-03-12 12:03:44.601 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.601 DEBUG - AXOLOTL HEALER (d540ac28-6750-4a46-ac1f-9281aa7e3859) stolen and played by Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) due to COMPOST DRAGON (45daa6d1-ff20-452f-a9c6-05abfb7272af) effect
+2026-03-12 12:03:44.601 INFO  - Resolving STEAL effect of COMPOST DRAGON (45daa6d1-ff20-452f-a9c6-05abfb7272af)
+2026-03-12 12:03:44.601 DEBUG - Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) LP changed (5 -> 7) due to AXOLOTL HEALER (d540ac28-6750-4a46-ac1f-9281aa7e3859) effect
+2026-03-12 12:03:44.602 INFO  - Resolving GAIN effect of AXOLOTL HEALER (d540ac28-6750-4a46-ac1f-9281aa7e3859)
+2026-03-12 12:03:44.602 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.602 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.602 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.602 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.603 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.603 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.603 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.603 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.603 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.603 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.603 DEBUG - Player Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) must choose 1 cards to steal (targets : {
+- COUNT DRACULEECH ;
+- SNAIL HYDRA ;
+- TURF THE SURFER ;
+- GOBLIN WEREWOLF ;
+- THE LURKER ;
+- PLATED SCORPION
+})
+2026-03-12 12:03:44.603 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.603 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.603 INFO  - New TARGET choice to be resolved by Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) (targets : {
+- THE LURKER ;
+- GOBLIN WEREWOLF ;
+- SNAIL HYDRA ;
+- PLATED SCORPION ;
+- COUNT DRACULEECH ;
+- TURF THE SURFER
+})
+2026-03-12 12:03:44.603 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.603 DEBUG - TURF THE SURFER (58c449e1-c823-4a0c-8352-c63793541637) stolen and played by Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) due to COMPOST DRAGON (4283164c-31d2-46c5-b843-bdf35f0fae5d) effect
+2026-03-12 12:03:44.603 INFO  - Resolving STEAL effect of COMPOST DRAGON (4283164c-31d2-46c5-b843-bdf35f0fae5d)
+2026-03-12 12:03:44.604 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.604 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.604 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.604 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.604 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (ce877114-877f-4221-978a-e604721daa47)
+2026-03-12 12:03:44.604 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.604 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.604 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.604 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.604 DEBUG - Player Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) must choose 1 card(s) to destroy (available targets : {
+- RHINO TURTLE ;
+- COMPOST DRAGON ;
+- TUSKED EXTORTER ;
+- GOREAGLE ALPHA ;
+- HAMSTER LION ;
+- COMPOST DRAGON ;
+- TURF THE SURFER
+})
+2026-03-12 12:03:44.604 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.604 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.604 INFO  - New TARGET choice to be resolved by Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) (targets : {
+- GOREAGLE ALPHA ;
+- COMPOST DRAGON ;
+- HAMSTER LION ;
+- TUSKED EXTORTER ;
+- COMPOST DRAGON ;
+- TURF THE SURFER ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:44.604 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.605 DEBUG - EXPLOSIVE TOAD (da982eec-c591-4673-9b92-5815fb34c8ed) effect destroys COMPOST DRAGON (4283164c-31d2-46c5-b843-bdf35f0fae5d)
+2026-03-12 12:03:44.605 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (da982eec-c591-4673-9b92-5815fb34c8ed)
+2026-03-12 12:03:44.605 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.605 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.605 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.605 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.605 DEBUG - Player Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) must choose 1 card(s) that will be unable to block (targets : {
+- RHINO TURTLE ;
+- COMPOST DRAGON ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:44.605 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.605 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.605 INFO  - New TARGET choice to be resolved by Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) (targets : {
+- COMPOST DRAGON ;
+- TUSKED EXTORTER ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:44.605 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.605 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (58c449e1-c823-4a0c-8352-c63793541637)
+2026-03-12 12:03:44.605 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[BlockModifier()]) no more able to attack
+2026-03-12 12:03:44.605 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.606 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[BlockModifier()]) no more able to attack
+2026-03-12 12:03:44.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.606 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.606 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.606 DEBUG - MAJESTIC MANTICORE (10172b9a-cc98-49f4-880b-6443658844f0) stolen and drawn by Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) due to  GIRAFFODILE (7e96f39b-df57-4ddb-913f-e0a767f072de) effect
+2026-03-12 12:03:44.606 DEBUG - SHARK DOG (5be34e80-1db8-464e-9ef2-f385257b3d16) stolen and drawn by Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) due to  GIRAFFODILE (7e96f39b-df57-4ddb-913f-e0a767f072de) effect
+2026-03-12 12:03:44.606 DEBUG - LONE YETI (fa8b39d7-5e80-46ad-aa43-3ccd4a56dcb3) stolen and drawn by Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) due to  GIRAFFODILE (7e96f39b-df57-4ddb-913f-e0a767f072de) effect
+2026-03-12 12:03:44.606 DEBUG - AXOLOTL HEALER (d540ac28-6750-4a46-ac1f-9281aa7e3859) stolen and drawn by Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) due to  GIRAFFODILE (7e96f39b-df57-4ddb-913f-e0a767f072de) effect
+2026-03-12 12:03:44.606 DEBUG - TUSKED EXTORTER (ce877114-877f-4221-978a-e604721daa47) stolen and drawn by Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) due to  GIRAFFODILE (7e96f39b-df57-4ddb-913f-e0a767f072de) effect
+2026-03-12 12:03:44.606 INFO  - Resolving STEAL effect of  GIRAFFODILE (7e96f39b-df57-4ddb-913f-e0a767f072de)
+2026-03-12 12:03:44.606 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.606 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.606 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.607 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.607 INFO  - New FRENZY choice to be resolved by Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) (attackingCard : HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4))
+2026-03-12 12:03:44.607 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.607 DEBUG - CardInstance(uuid=45daa6d1-ff20-452f-a9c6-05abfb7272af, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.607 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ca881551-5fed-486c-88a6-dc5448da98a4)
+2026-03-12 12:03:44.607 INFO  - New FRENZY choice to be resolved by Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) (attackingCard : RHINO TURTLE (b95de48a-4a41-444c-9dfc-453d5a6d6b68))
+2026-03-12 12:03:44.607 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.607 INFO  - Life update for player Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) : 0 LP
+2026-03-12 12:03:44.607 INFO  - Game over : Player2 (1e9ca472-9721-41ef-84c2-7497b295d936) wins ; Player1 (854fcfd7-9ef7-49cb-904a-cb278d49ceba) loses.
+2026-03-12 12:03:44.607 INFO  - End of the game

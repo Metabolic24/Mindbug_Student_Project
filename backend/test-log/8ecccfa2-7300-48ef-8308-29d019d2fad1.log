@@ -1,0 +1,216 @@
+2026-03-12 12:03:44.832 INFO  - Calculating first player...
+2026-03-12 12:03:44.834 INFO  - Banned card for Player1 (33e36fe8-04c3-4425-874b-37777dcfedad) : THE LURKER (83ba5ab2-41fd-4b3d-89b0-55dc9114ea55) (4)
+2026-03-12 12:03:44.834 INFO  - Banned card for Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) : TUSKED EXTORTER (89585069-5145-4643-8b71-ea729b51a49b) (8)
+2026-03-12 12:03:44.834 INFO  - First player will be Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1)
+2026-03-12 12:03:44.843 INFO  - Game 8ecccfa2-7300-48ef-8308-29d019d2fad1 starting...
+2026-03-12 12:03:44.844 INFO  - Player Player1 (33e36fe8-04c3-4425-874b-37777dcfedad) hand : {
+- HUNGRY HUNGRY HAMSTER ;
+- PLATED SCORPION ;
+- LUCHATAUR ;
+- FERRET PACIFIER ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:44.844 INFO  - Player Player1 (33e36fe8-04c3-4425-874b-37777dcfedad) draw pile : {
+- ELEPHANTOPUS ;
+- FROBLIN INSTIGATOR ;
+- BRAIN FLY ;
+- SNAIL HYDRA ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:44.844 INFO  - Player Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) hand : {
+- COUNT DRACULEECH ;
+- TUSKED EXTORTER ;
+-  GIRAFFODILE ;
+- SNAIL HYDRA ;
+- SHARK DOG
+}
+2026-03-12 12:03:44.844 INFO  - Player Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) draw pile : {
+- GORILLON ;
+- AXOLOTL HEALER ;
+- STRANGE BARREL ;
+- HAMSTER LION ;
+- FERRET BOMBER
+}
+2026-03-12 12:03:44.844 DEBUG - Player Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) must choose 1 cards to steal (targets : {
+- COUNT DRACULEECH ;
+- TUSKED EXTORTER ;
+- SNAIL HYDRA ;
+- SHARK DOG ;
+- GORILLON
+})
+2026-03-12 12:03:44.844 INFO  - New TARGET choice to be resolved by Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) (targets : {
+- GORILLON ;
+- COUNT DRACULEECH ;
+- SNAIL HYDRA ;
+- TUSKED EXTORTER ;
+- SHARK DOG
+})
+2026-03-12 12:03:44.844 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.844 DEBUG - Player1 (33e36fe8-04c3-4425-874b-37777dcfedad) must decide if stolen card TUSKED EXTORTER (bc8bd434-d6bc-41eb-8009-0dadff3d28de) will be added to hand or board
+2026-03-12 12:03:44.844 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (4c7c614a-4047-4f23-9150-fda585ab18f2)
+2026-03-12 12:03:44.844 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:44.845 DEBUG - TUSKED EXTORTER (bc8bd434-d6bc-41eb-8009-0dadff3d28de) stolen and drawn by Player1 (33e36fe8-04c3-4425-874b-37777dcfedad) due to HUNGRY HUNGRY HAMSTER (4c7c614a-4047-4f23-9150-fda585ab18f2) effect
+2026-03-12 12:03:44.845 INFO  - Life update for player Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) : 2 LP
+2026-03-12 12:03:44.845 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ede8c4e-5163-48c7-806f-faab37a2cef1)
+2026-03-12 12:03:44.845 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ede8c4e-5163-48c7-806f-faab37a2cef1)
+2026-03-12 12:03:44.845 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ede8c4e-5163-48c7-806f-faab37a2cef1)
+2026-03-12 12:03:44.845 DEBUG - Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) LP changed (2 -> 4) due to AXOLOTL HEALER (aa85bdec-da78-4fa5-b229-98eb7973c6f0) effect
+2026-03-12 12:03:44.845 INFO  - Resolving GAIN effect of AXOLOTL HEALER (aa85bdec-da78-4fa5-b229-98eb7973c6f0)
+2026-03-12 12:03:44.845 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ede8c4e-5163-48c7-806f-faab37a2cef1)
+2026-03-12 12:03:44.845 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ede8c4e-5163-48c7-806f-faab37a2cef1)
+2026-03-12 12:03:44.845 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ede8c4e-5163-48c7-806f-faab37a2cef1)
+2026-03-12 12:03:44.845 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ede8c4e-5163-48c7-806f-faab37a2cef1)
+2026-03-12 12:03:44.845 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ede8c4e-5163-48c7-806f-faab37a2cef1)
+2026-03-12 12:03:44.845 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.845 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.845 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ede8c4e-5163-48c7-806f-faab37a2cef1)
+2026-03-12 12:03:44.845 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.845 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.845 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.845 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.846 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.846 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.846 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.846 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.846 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.846 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.846 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.846 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.846 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.846 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.846 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.846 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.846 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.846 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.846 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.846 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.846 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.847 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.847 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.847 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.847 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.847 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.847 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.847 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.847 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.847 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.847 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.847 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.847 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.848 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.848 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.848 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.848 INFO  - New FRENZY choice to be resolved by Player1 (33e36fe8-04c3-4425-874b-37777dcfedad) (attackingCard : LUCHATAUR (6c08a2cb-5bc3-4177-a60b-9d4bd8441424))
+2026-03-12 12:03:44.848 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.848 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.848 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.848 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.848 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.848 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.848 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.848 DEBUG - CardInstance(uuid=4c7c614a-4047-4f23-9150-fda585ab18f2, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.848 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.848 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.849 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.849 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.849 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.849 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.849 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (506c7650-0e4d-4c05-9d5e-54e29c2a22e9)
+2026-03-12 12:03:44.849 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.849 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.849 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (506c7650-0e4d-4c05-9d5e-54e29c2a22e9)
+2026-03-12 12:03:44.849 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.849 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.849 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (506c7650-0e4d-4c05-9d5e-54e29c2a22e9)
+2026-03-12 12:03:44.849 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.849 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.849 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (506c7650-0e4d-4c05-9d5e-54e29c2a22e9)
+2026-03-12 12:03:44.849 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.849 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.849 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.849 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.850 DEBUG - CardInstance(uuid=6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2d0778d0), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.850 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5bdf6409-b2b8-4f82-ba04-c0e203d0ac90)
+2026-03-12 12:03:44.850 DEBUG - Player Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) must choose 1 cards to steal (targets : {
+- GORILLON ;
+- STRANGE BARREL ;
+- FERRET BOMBER
+})
+2026-03-12 12:03:44.850 INFO  - New TARGET choice to be resolved by Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) (targets : {
+- GORILLON ;
+- FERRET BOMBER ;
+- STRANGE BARREL
+})
+2026-03-12 12:03:44.850 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.850 DEBUG - Player1 (33e36fe8-04c3-4425-874b-37777dcfedad) must decide if stolen card FERRET BOMBER (1ef97376-f920-4d49-b906-6f75ade8066f) will be added to hand or board
+2026-03-12 12:03:44.850 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (a0c5dcc9-2c58-41ff-a1b0-959f57d60256)
+2026-03-12 12:03:44.850 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:44.850 DEBUG - FERRET BOMBER (1ef97376-f920-4d49-b906-6f75ade8066f) stolen and played by Player1 (33e36fe8-04c3-4425-874b-37777dcfedad) due to HUNGRY HUNGRY HAMSTER (a0c5dcc9-2c58-41ff-a1b0-959f57d60256) effect
+2026-03-12 12:03:44.850 DEBUG - GORILLON (b7484634-530b-46d3-b0dd-ec7e7778be2d) discarded due to FERRET BOMBER (1ef97376-f920-4d49-b906-6f75ade8066f) effect
+2026-03-12 12:03:44.850 DEBUG - STRANGE BARREL (55554654-9256-43a7-afe7-c5e3b6503503) discarded due to FERRET BOMBER (1ef97376-f920-4d49-b906-6f75ade8066f) effect
+2026-03-12 12:03:44.850 INFO  - Resolving DISCARD effect of FERRET BOMBER (1ef97376-f920-4d49-b906-6f75ade8066f)
+2026-03-12 12:03:44.850 INFO  - Life update for player Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) : 3 LP
+2026-03-12 12:03:44.850 DEBUG - Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) LP changed (4 -> 3) due to COUNT DRACULEECH (13641873-e7b6-4f1f-93ad-94fbf63ceac1) effect
+2026-03-12 12:03:44.851 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (13641873-e7b6-4f1f-93ad-94fbf63ceac1)
+2026-03-12 12:03:44.851 DEBUG - Player Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) must choose 1 card(s) to destroy (available targets : {
+- PLATED SCORPION ;
+- HUNGRY HUNGRY HAMSTER ;
+- FERRET BOMBER ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:44.851 INFO  - New TARGET choice to be resolved by Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) (targets : {
+- FERRET BOMBER ;
+- HUNGRY HUNGRY HAMSTER ;
+- COUNT DRACULEECH ;
+- PLATED SCORPION
+})
+2026-03-12 12:03:44.851 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.851 DEBUG - COUNT DRACULEECH (13641873-e7b6-4f1f-93ad-94fbf63ceac1) effect destroys PLATED SCORPION (6c68c3b2-40bd-4908-a7c1-bb9dfb3de1b9)
+2026-03-12 12:03:44.851 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (13641873-e7b6-4f1f-93ad-94fbf63ceac1)
+2026-03-12 12:03:44.851 DEBUG - FROBLIN INSTIGATOR (a6d15860-bcc5-4922-8623-236f1233660a) power changed (1 -> 3) due to FROBLIN INSTIGATOR (a6d15860-bcc5-4922-8623-236f1233660a) effect
+2026-03-12 12:03:44.851 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a6d15860-bcc5-4922-8623-236f1233660a)
+2026-03-12 12:03:44.851 DEBUG - FROBLIN INSTIGATOR (a6d15860-bcc5-4922-8623-236f1233660a) power changed (1 -> 3) due to FROBLIN INSTIGATOR (a6d15860-bcc5-4922-8623-236f1233660a) effect
+2026-03-12 12:03:44.851 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a6d15860-bcc5-4922-8623-236f1233660a)
+2026-03-12 12:03:44.851 INFO  - Life update for player Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) : 2 LP
+2026-03-12 12:03:44.851 DEBUG - Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) LP changed (3 -> 2) due to COUNT DRACULEECH (13641873-e7b6-4f1f-93ad-94fbf63ceac1) effect
+2026-03-12 12:03:44.851 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (13641873-e7b6-4f1f-93ad-94fbf63ceac1)
+2026-03-12 12:03:44.851 DEBUG - FROBLIN INSTIGATOR (a6d15860-bcc5-4922-8623-236f1233660a) power changed (1 -> 3) due to FROBLIN INSTIGATOR (a6d15860-bcc5-4922-8623-236f1233660a) effect
+2026-03-12 12:03:44.851 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a6d15860-bcc5-4922-8623-236f1233660a)
+2026-03-12 12:03:44.851 DEBUG - Player Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) must choose 1 card(s) to destroy (available targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- FROBLIN INSTIGATOR ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:44.851 DEBUG - FROBLIN INSTIGATOR (a6d15860-bcc5-4922-8623-236f1233660a) power changed (1 -> 3) due to FROBLIN INSTIGATOR (a6d15860-bcc5-4922-8623-236f1233660a) effect
+2026-03-12 12:03:44.852 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a6d15860-bcc5-4922-8623-236f1233660a)
+2026-03-12 12:03:44.852 INFO  - New TARGET choice to be resolved by Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) (targets : {
+- FROBLIN INSTIGATOR ;
+- HUNGRY HUNGRY HAMSTER ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:44.852 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.852 DEBUG - COUNT DRACULEECH (13641873-e7b6-4f1f-93ad-94fbf63ceac1) effect destroys FROBLIN INSTIGATOR (a6d15860-bcc5-4922-8623-236f1233660a)
+2026-03-12 12:03:44.852 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (13641873-e7b6-4f1f-93ad-94fbf63ceac1)
+2026-03-12 12:03:44.852 INFO  - Resolving POWER_UP effect of SHIELD BUGS (983ec1a8-b5d7-4c47-b9b8-a3800d2510db)
+2026-03-12 12:03:44.852 INFO  - Resolving POWER_UP effect of SHIELD BUGS (983ec1a8-b5d7-4c47-b9b8-a3800d2510db)
+2026-03-12 12:03:44.852 INFO  - Life update for player Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) : 1 LP
+2026-03-12 12:03:44.852 DEBUG - Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) LP changed (2 -> 1) due to COUNT DRACULEECH (13641873-e7b6-4f1f-93ad-94fbf63ceac1) effect
+2026-03-12 12:03:44.852 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (13641873-e7b6-4f1f-93ad-94fbf63ceac1)
+2026-03-12 12:03:44.852 INFO  - Resolving POWER_UP effect of SHIELD BUGS (983ec1a8-b5d7-4c47-b9b8-a3800d2510db)
+2026-03-12 12:03:44.852 DEBUG - Player Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) must choose 1 card(s) to destroy (available targets : {
+- SHIELD BUGS ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:44.852 INFO  - Resolving POWER_UP effect of SHIELD BUGS (983ec1a8-b5d7-4c47-b9b8-a3800d2510db)
+2026-03-12 12:03:44.852 INFO  - New TARGET choice to be resolved by Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) (targets : {
+- SHIELD BUGS ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:44.852 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.852 DEBUG - COUNT DRACULEECH (13641873-e7b6-4f1f-93ad-94fbf63ceac1) effect destroys SHIELD BUGS (983ec1a8-b5d7-4c47-b9b8-a3800d2510db)
+2026-03-12 12:03:44.852 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (13641873-e7b6-4f1f-93ad-94fbf63ceac1)
+2026-03-12 12:03:44.852 INFO  - Resolving POWER_UP effect of SHIELD BUGS (983ec1a8-b5d7-4c47-b9b8-a3800d2510db)
+2026-03-12 12:03:44.853 DEBUG - COUNT DRACULEECH (13641873-e7b6-4f1f-93ad-94fbf63ceac1) stolen and played by Player1 (33e36fe8-04c3-4425-874b-37777dcfedad) due to BRAIN FLY (3f1d14c0-228d-4afc-b499-3dcea6077d31) effect
+2026-03-12 12:03:44.853 INFO  - Resolving STEAL effect of BRAIN FLY (3f1d14c0-228d-4afc-b499-3dcea6077d31)
+2026-03-12 12:03:44.853 INFO  - Game over : Player1 (33e36fe8-04c3-4425-874b-37777dcfedad) wins ; Player2 (956cb0a8-061b-48d1-b698-9fec5e5bd9b1) loses.
+2026-03-12 12:03:44.853 INFO  - End of the game

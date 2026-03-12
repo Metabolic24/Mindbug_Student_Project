@@ -1,0 +1,159 @@
+2026-03-12 12:03:41.420 INFO  - Calculating first player...
+2026-03-12 12:03:41.423 INFO  - Banned card for Player1 (21fde436-9d53-4221-af28-5c354e9b8597) : CREEP FROM THE DEEP (04132d8b-ab59-4479-9585-8eab71ad44a4) (4)
+2026-03-12 12:03:41.423 INFO  - Banned card for Player2 (6be8889c-1896-4016-80b7-593e8a3a107b) : GRAVE ROBBER (fcc79ab0-fa1d-47a5-a433-fd83ceb1ab7c) (7)
+2026-03-12 12:03:41.423 INFO  - First player will be Player2 (6be8889c-1896-4016-80b7-593e8a3a107b)
+2026-03-12 12:03:41.430 INFO  - Game ce535110-b5c5-4ee5-a261-e0a36cb79221 starting...
+2026-03-12 12:03:41.431 INFO  - Player Player1 (21fde436-9d53-4221-af28-5c354e9b8597) hand : {
+- SPIDER OWL ;
+- TURF THE SURFER ;
+- KANGASAURUS REX ;
+- HAMSTER LION ;
+- BEE BEAR
+}
+2026-03-12 12:03:41.431 INFO  - Player Player1 (21fde436-9d53-4221-af28-5c354e9b8597) draw pile : {
+- SNAIL THROWER ;
+- LONE YETI ;
+- MAJESTIC MANTICORE ;
+- GOREAGLE ALPHA ;
+- RHINO TURTLE
+}
+2026-03-12 12:03:41.431 INFO  - Player Player2 (6be8889c-1896-4016-80b7-593e8a3a107b) hand : {
+- TUSKED EXTORTER ;
+- SNAIL HYDRA ;
+- DEATHWEAVER ;
+- HUNGRY HUNGRY HAMSTER ;
+- TURBO BUG
+}
+2026-03-12 12:03:41.431 INFO  - Player Player2 (6be8889c-1896-4016-80b7-593e8a3a107b) draw pile : {
+- BRAIN FLY ;
+- HAMSTER LION ;
+- RHINO TURTLE ;
+- FERRET PACIFIER ;
+- CHAMELEON SNIPER
+}
+2026-03-12 12:03:41.432 INFO  - Life update for player Player1 (21fde436-9d53-4221-af28-5c354e9b8597) : 1 LP
+2026-03-12 12:03:41.432 DEBUG - Player1 (21fde436-9d53-4221-af28-5c354e9b8597) LP changed (3 -> 1) due to TURBO BUG (95ddbe24-8957-419a-858f-a725da302b0c) effect
+2026-03-12 12:03:41.432 INFO  - Resolving INFLICT effect of TURBO BUG (95ddbe24-8957-419a-858f-a725da302b0c)
+2026-03-12 12:03:41.432 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.432 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.432 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.432 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.433 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.433 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.433 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.433 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.433 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.433 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.433 DEBUG - CardInstance(uuid=cdbd0190-7a37-4d4b-9ccf-5cce0b679b29, card=Card(id=31, setName=first_contact, name=TUSKED EXTORTER, power=8, keywords=[], effects={ATTACK=[DiscardEffect(value=1, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Attack</b>: The opponent discards a card., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a12f3e7), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.433 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b8b6d8c1-34a1-4bc1-9082-b9c0f3f8c975)
+2026-03-12 12:03:41.433 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.433 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.433 DEBUG - CardInstance(uuid=cdbd0190-7a37-4d4b-9ccf-5cce0b679b29, card=Card(id=31, setName=first_contact, name=TUSKED EXTORTER, power=8, keywords=[], effects={ATTACK=[DiscardEffect(value=1, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Attack</b>: The opponent discards a card., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a12f3e7), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.434 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b8b6d8c1-34a1-4bc1-9082-b9c0f3f8c975)
+2026-03-12 12:03:41.434 DEBUG - Player Player2 (6be8889c-1896-4016-80b7-593e8a3a107b) must choose 1 card(s) to destroy (available targets : {
+- TURF THE SURFER ;
+- KANGASAURUS REX ;
+- SNAIL THROWER ;
+- HAMSTER LION
+})
+2026-03-12 12:03:41.434 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.434 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.434 DEBUG - CardInstance(uuid=cdbd0190-7a37-4d4b-9ccf-5cce0b679b29, card=Card(id=31, setName=first_contact, name=TUSKED EXTORTER, power=8, keywords=[], effects={ATTACK=[DiscardEffect(value=1, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Attack</b>: The opponent discards a card., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a12f3e7), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.434 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b8b6d8c1-34a1-4bc1-9082-b9c0f3f8c975)
+2026-03-12 12:03:41.434 INFO  - New TARGET choice to be resolved by Player2 (6be8889c-1896-4016-80b7-593e8a3a107b) (targets : {
+- SNAIL THROWER ;
+- KANGASAURUS REX ;
+- TURF THE SURFER ;
+- HAMSTER LION
+})
+2026-03-12 12:03:41.434 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:41.434 DEBUG - SNAIL HYDRA (b52e5dc3-646b-4f06-a340-e728e00a2f41) effect destroys KANGASAURUS REX (6ed5c1ca-f0c5-44f2-b8ac-cf2ddff653ce)
+2026-03-12 12:03:41.435 INFO  - Resolving DESTROY effect of SNAIL HYDRA (b52e5dc3-646b-4f06-a340-e728e00a2f41)
+2026-03-12 12:03:41.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.435 DEBUG - CardInstance(uuid=cdbd0190-7a37-4d4b-9ccf-5cce0b679b29, card=Card(id=31, setName=first_contact, name=TUSKED EXTORTER, power=8, keywords=[], effects={ATTACK=[DiscardEffect(value=1, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Attack</b>: The opponent discards a card., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a12f3e7), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.435 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b8b6d8c1-34a1-4bc1-9082-b9c0f3f8c975)
+2026-03-12 12:03:41.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.435 DEBUG - CardInstance(uuid=cdbd0190-7a37-4d4b-9ccf-5cce0b679b29, card=Card(id=31, setName=first_contact, name=TUSKED EXTORTER, power=8, keywords=[], effects={ATTACK=[DiscardEffect(value=1, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Attack</b>: The opponent discards a card., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a12f3e7), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.435 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b8b6d8c1-34a1-4bc1-9082-b9c0f3f8c975)
+2026-03-12 12:03:41.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.436 DEBUG - CardInstance(uuid=cdbd0190-7a37-4d4b-9ccf-5cce0b679b29, card=Card(id=31, setName=first_contact, name=TUSKED EXTORTER, power=8, keywords=[], effects={ATTACK=[DiscardEffect(value=1, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Attack</b>: The opponent discards a card., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a12f3e7), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.436 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b8b6d8c1-34a1-4bc1-9082-b9c0f3f8c975)
+2026-03-12 12:03:41.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.436 DEBUG - CardInstance(uuid=cdbd0190-7a37-4d4b-9ccf-5cce0b679b29, card=Card(id=31, setName=first_contact, name=TUSKED EXTORTER, power=8, keywords=[], effects={ATTACK=[DiscardEffect(value=1, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Attack</b>: The opponent discards a card., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a12f3e7), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.436 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b8b6d8c1-34a1-4bc1-9082-b9c0f3f8c975)
+2026-03-12 12:03:41.437 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.437 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.437 DEBUG - CardInstance(uuid=cdbd0190-7a37-4d4b-9ccf-5cce0b679b29, card=Card(id=31, setName=first_contact, name=TUSKED EXTORTER, power=8, keywords=[], effects={ATTACK=[DiscardEffect(value=1, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Attack</b>: The opponent discards a card., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a12f3e7), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.437 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b8b6d8c1-34a1-4bc1-9082-b9c0f3f8c975)
+2026-03-12 12:03:41.437 DEBUG - Player Player2 (6be8889c-1896-4016-80b7-593e8a3a107b) must choose 1 card(s) to destroy (available targets : {
+- SNAIL THROWER ;
+- HAMSTER LION ;
+- LONE YETI
+})
+2026-03-12 12:03:41.437 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.437 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.437 DEBUG - CardInstance(uuid=cdbd0190-7a37-4d4b-9ccf-5cce0b679b29, card=Card(id=31, setName=first_contact, name=TUSKED EXTORTER, power=8, keywords=[], effects={ATTACK=[DiscardEffect(value=1, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Attack</b>: The opponent discards a card., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a12f3e7), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.438 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b8b6d8c1-34a1-4bc1-9082-b9c0f3f8c975)
+2026-03-12 12:03:41.438 INFO  - New TARGET choice to be resolved by Player2 (6be8889c-1896-4016-80b7-593e8a3a107b) (targets : {
+- SNAIL THROWER ;
+- HAMSTER LION ;
+- LONE YETI
+})
+2026-03-12 12:03:41.438 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:41.439 DEBUG - SNAIL HYDRA (b52e5dc3-646b-4f06-a340-e728e00a2f41) effect destroys SNAIL THROWER (6166dfc7-ff96-498d-8a3f-0e756fb45144)
+2026-03-12 12:03:41.439 INFO  - Resolving DESTROY effect of SNAIL HYDRA (b52e5dc3-646b-4f06-a340-e728e00a2f41)
+2026-03-12 12:03:41.439 DEBUG - CardInstance(uuid=cdbd0190-7a37-4d4b-9ccf-5cce0b679b29, card=Card(id=31, setName=first_contact, name=TUSKED EXTORTER, power=8, keywords=[], effects={ATTACK=[DiscardEffect(value=1, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Attack</b>: The opponent discards a card., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a12f3e7), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.439 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b8b6d8c1-34a1-4bc1-9082-b9c0f3f8c975)
+2026-03-12 12:03:41.439 DEBUG - CardInstance(uuid=cdbd0190-7a37-4d4b-9ccf-5cce0b679b29, card=Card(id=31, setName=first_contact, name=TUSKED EXTORTER, power=8, keywords=[], effects={ATTACK=[DiscardEffect(value=1, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Attack</b>: The opponent discards a card., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a12f3e7), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.439 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b8b6d8c1-34a1-4bc1-9082-b9c0f3f8c975)
+2026-03-12 12:03:41.440 DEBUG - CardInstance(uuid=cdbd0190-7a37-4d4b-9ccf-5cce0b679b29, card=Card(id=31, setName=first_contact, name=TUSKED EXTORTER, power=8, keywords=[], effects={ATTACK=[DiscardEffect(value=1, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Attack</b>: The opponent discards a card., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a12f3e7), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.440 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b8b6d8c1-34a1-4bc1-9082-b9c0f3f8c975)
+2026-03-12 12:03:41.440 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) power changed (5 -> 10) due to LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) effect
+2026-03-12 12:03:41.440 INFO  - Resolving POWER_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.440 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) gains FRENZY keyword
+2026-03-12 12:03:41.440 INFO  - Resolving KEYWORD_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.440 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) power changed (5 -> 10) due to LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) effect
+2026-03-12 12:03:41.440 INFO  - Resolving POWER_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.440 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) gains FRENZY keyword
+2026-03-12 12:03:41.440 INFO  - Resolving KEYWORD_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.441 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) power changed (5 -> 10) due to LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) effect
+2026-03-12 12:03:41.441 INFO  - Resolving POWER_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.441 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) gains FRENZY keyword
+2026-03-12 12:03:41.441 INFO  - Resolving KEYWORD_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.441 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) power changed (5 -> 10) due to LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) effect
+2026-03-12 12:03:41.441 INFO  - Resolving POWER_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.441 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) gains FRENZY keyword
+2026-03-12 12:03:41.441 INFO  - Resolving KEYWORD_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.442 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) power changed (5 -> 10) due to LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) effect
+2026-03-12 12:03:41.442 INFO  - Resolving POWER_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.442 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) gains FRENZY keyword
+2026-03-12 12:03:41.442 INFO  - Resolving KEYWORD_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.442 INFO  - Life update for player Player2 (6be8889c-1896-4016-80b7-593e8a3a107b) : 2 LP
+2026-03-12 12:03:41.442 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) power changed (5 -> 10) due to LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) effect
+2026-03-12 12:03:41.442 INFO  - Resolving POWER_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.443 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) gains FRENZY keyword
+2026-03-12 12:03:41.443 INFO  - Resolving KEYWORD_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.443 INFO  - New FRENZY choice to be resolved by Player1 (21fde436-9d53-4221-af28-5c354e9b8597) (attackingCard : LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482))
+2026-03-12 12:03:41.443 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:41.443 INFO  - Life update for player Player2 (6be8889c-1896-4016-80b7-593e8a3a107b) : 1 LP
+2026-03-12 12:03:41.443 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) power changed (5 -> 10) due to LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) effect
+2026-03-12 12:03:41.443 INFO  - Resolving POWER_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.443 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) gains FRENZY keyword
+2026-03-12 12:03:41.443 INFO  - Resolving KEYWORD_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.443 INFO  - New FRENZY choice to be resolved by Player1 (21fde436-9d53-4221-af28-5c354e9b8597) (attackingCard : LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482))
+2026-03-12 12:03:41.443 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) power changed (5 -> 10) due to LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) effect
+2026-03-12 12:03:41.444 INFO  - Resolving POWER_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.444 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) gains FRENZY keyword
+2026-03-12 12:03:41.444 INFO  - Resolving KEYWORD_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.444 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:41.444 INFO  - Life update for player Player2 (6be8889c-1896-4016-80b7-593e8a3a107b) : 0 LP
+2026-03-12 12:03:41.444 INFO  - Game over : Player1 (21fde436-9d53-4221-af28-5c354e9b8597) wins ; Player2 (6be8889c-1896-4016-80b7-593e8a3a107b) loses.
+2026-03-12 12:03:41.444 INFO  - End of the game
+2026-03-12 12:03:41.444 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) power changed (5 -> 10) due to LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) effect
+2026-03-12 12:03:41.444 INFO  - Resolving POWER_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)
+2026-03-12 12:03:41.444 DEBUG - LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482) gains FRENZY keyword
+2026-03-12 12:03:41.444 INFO  - Resolving KEYWORD_UP effect of LONE YETI (b0672558-6b3e-488b-8f75-ad731d13f482)

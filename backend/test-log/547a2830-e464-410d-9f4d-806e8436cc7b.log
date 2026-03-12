@@ -1,0 +1,136 @@
+2026-03-12 12:03:03.559 INFO  - Calculating first player...
+2026-03-12 12:03:03.562 INFO  - Banned card for Player1 (dc0f72a3-5257-4211-a676-130a7c151c33) : PLATED SCORPION (78d193a5-9e84-4bb5-8bbd-0ac9d2731632) (2)
+2026-03-12 12:03:03.562 INFO  - Banned card for Player2 (42dbbf12-2609-449a-9118-d505dc6e8e4e) : KILLER BEE (09ecadbd-dcaa-43b7-a4cd-a685aa4f7f6e) (5)
+2026-03-12 12:03:03.562 INFO  - First player will be Player2 (42dbbf12-2609-449a-9118-d505dc6e8e4e)
+2026-03-12 12:03:03.580 INFO  - Game 547a2830-e464-410d-9f4d-806e8436cc7b starting...
+2026-03-12 12:03:03.583 INFO  - Player Player1 (dc0f72a3-5257-4211-a676-130a7c151c33) hand : {
+- LUCHATAUR ;
+- TURF THE SURFER ;
+- BRAIN FLY ;
+- MAJESTIC MANTICORE ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:03.584 INFO  - Player Player1 (dc0f72a3-5257-4211-a676-130a7c151c33) draw pile : {
+- TUSKED EXTORTER ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- TURBO BUG ;
+- THE LURKER ;
+- SNAIL THROWER
+}
+2026-03-12 12:03:03.584 INFO  - Player Player2 (42dbbf12-2609-449a-9118-d505dc6e8e4e) hand : {
+- AXOLOTL HEALER ;
+- HYENIX ;
+- FROBLIN INSTIGATOR ;
+- GOREAGLE ALPHA ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:03.584 INFO  - Player Player2 (42dbbf12-2609-449a-9118-d505dc6e8e4e) draw pile : {
+-  GIRAFFODILE ;
+- HAMSTER LION ;
+- KANGASAURUS REX ;
+- FROBLIN INSTIGATOR ;
+- FERRET PACIFIER
+}
+2026-03-12 12:03:03.585 DEBUG - Player2 (42dbbf12-2609-449a-9118-d505dc6e8e4e) LP changed (3 -> 5) due to AXOLOTL HEALER (4a4820fa-8d3e-4429-aa12-9a9b0476b12c) effect
+2026-03-12 12:03:03.585 INFO  - Resolving GAIN effect of AXOLOTL HEALER (4a4820fa-8d3e-4429-aa12-9a9b0476b12c)
+2026-03-12 12:03:03.585 DEBUG - CardInstance(uuid=f0a1fb9e-bca4-4c7f-838d-f3c25aa613dc, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ad1f167), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.585 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c55ebba9-c10f-4436-8ada-ce875a109cc4)
+2026-03-12 12:03:03.585 DEBUG - CardInstance(uuid=f0a1fb9e-bca4-4c7f-838d-f3c25aa613dc, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ad1f167), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.586 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c55ebba9-c10f-4436-8ada-ce875a109cc4)
+2026-03-12 12:03:03.586 DEBUG - CardInstance(uuid=f0a1fb9e-bca4-4c7f-838d-f3c25aa613dc, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ad1f167), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.586 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c55ebba9-c10f-4436-8ada-ce875a109cc4)
+2026-03-12 12:03:03.586 DEBUG - CardInstance(uuid=f0a1fb9e-bca4-4c7f-838d-f3c25aa613dc, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ad1f167), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.586 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c55ebba9-c10f-4436-8ada-ce875a109cc4)
+2026-03-12 12:03:03.586 DEBUG - CardInstance(uuid=f0a1fb9e-bca4-4c7f-838d-f3c25aa613dc, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ad1f167), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.586 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c55ebba9-c10f-4436-8ada-ce875a109cc4)
+2026-03-12 12:03:03.586 DEBUG - CardInstance(uuid=f0a1fb9e-bca4-4c7f-838d-f3c25aa613dc, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ad1f167), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.586 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c55ebba9-c10f-4436-8ada-ce875a109cc4)
+2026-03-12 12:03:03.587 DEBUG - CardInstance(uuid=f0a1fb9e-bca4-4c7f-838d-f3c25aa613dc, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ad1f167), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.587 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c55ebba9-c10f-4436-8ada-ce875a109cc4)
+2026-03-12 12:03:03.587 INFO  - New FRENZY choice to be resolved by Player1 (dc0f72a3-5257-4211-a676-130a7c151c33) (attackingCard : LUCHATAUR (402121f4-cd11-4c9c-92d8-a07fcbea07c3))
+2026-03-12 12:03:03.587 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.587 DEBUG - CardInstance(uuid=f0a1fb9e-bca4-4c7f-838d-f3c25aa613dc, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ad1f167), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.587 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c55ebba9-c10f-4436-8ada-ce875a109cc4)
+2026-03-12 12:03:03.587 DEBUG - MAJESTIC MANTICORE (f0a1fb9e-bca4-4c7f-838d-f3c25aa613dc) effect destroys MAJESTIC MANTICORE (f0a1fb9e-bca4-4c7f-838d-f3c25aa613dc)
+2026-03-12 12:03:03.587 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (f0a1fb9e-bca4-4c7f-838d-f3c25aa613dc)
+2026-03-12 12:03:03.588 DEBUG - FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c) power changed (1 -> 3) due to FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c) effect
+2026-03-12 12:03:03.588 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c)
+2026-03-12 12:03:03.588 DEBUG - FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c) power changed (1 -> 3) due to FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c) effect
+2026-03-12 12:03:03.588 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c)
+2026-03-12 12:03:03.588 DEBUG - FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c) power changed (1 -> 1) due to FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c) effect
+2026-03-12 12:03:03.588 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c)
+2026-03-12 12:03:03.588 INFO  - New FRENZY choice to be resolved by Player1 (dc0f72a3-5257-4211-a676-130a7c151c33) (attackingCard : LUCHATAUR (402121f4-cd11-4c9c-92d8-a07fcbea07c3))
+2026-03-12 12:03:03.588 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.588 DEBUG - FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c) power changed (1 -> 1) due to FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c) effect
+2026-03-12 12:03:03.588 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c)
+2026-03-12 12:03:03.588 DEBUG - FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c) power changed (1 -> 1) due to FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c) effect
+2026-03-12 12:03:03.588 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (2b7ec658-99ce-4b2b-ab0f-58f0ab2c3d9c)
+2026-03-12 12:03:03.589 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:03.589 DEBUG - FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2) power changed (1 -> 1) due to FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2) effect
+2026-03-12 12:03:03.589 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2)
+2026-03-12 12:03:03.589 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains HUNTER keyword
+2026-03-12 12:03:03.589 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.589 DEBUG - FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2) power changed (1 -> 1) due to FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2) effect
+2026-03-12 12:03:03.589 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2)
+2026-03-12 12:03:03.589 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains HUNTER keyword
+2026-03-12 12:03:03.589 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.590 DEBUG - FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2) power changed (1 -> 1) due to FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2) effect
+2026-03-12 12:03:03.590 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2)
+2026-03-12 12:03:03.590 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains HUNTER keyword
+2026-03-12 12:03:03.590 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.590 DEBUG - FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2) power changed (1 -> 1) due to FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2) effect
+2026-03-12 12:03:03.590 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2)
+2026-03-12 12:03:03.590 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains HUNTER keyword
+2026-03-12 12:03:03.590 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.590 DEBUG - FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2) power changed (1 -> 1) due to FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2) effect
+2026-03-12 12:03:03.590 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (40f46a88-dde0-47b5-ade3-50ddd24315a2)
+2026-03-12 12:03:03.591 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains HUNTER keyword
+2026-03-12 12:03:03.591 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.591 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:03.592 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains SNEAKY keyword
+2026-03-12 12:03:03.592 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.592 DEBUG - Player Player1 (dc0f72a3-5257-4211-a676-130a7c151c33) must choose 1 cards to steal (targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- TUSKED EXTORTER ;
+- THE LURKER ;
+- SNAIL THROWER
+})
+2026-03-12 12:03:03.592 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains SNEAKY keyword
+2026-03-12 12:03:03.592 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.593 INFO  - New TARGET choice to be resolved by Player1 (dc0f72a3-5257-4211-a676-130a7c151c33) (targets : {
+- THE LURKER ;
+- SNAIL THROWER ;
+- HUNGRY HUNGRY HAMSTER ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:03.593 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.593 DEBUG - Player2 (42dbbf12-2609-449a-9118-d505dc6e8e4e) must decide if stolen card THE LURKER (fb545a6d-217f-473f-bb1a-3f729d06f310) will be added to hand or board
+2026-03-12 12:03:03.593 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (488c1408-1862-4511-9876-d04ac11b78f4)
+2026-03-12 12:03:03.593 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains SNEAKY keyword
+2026-03-12 12:03:03.593 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.593 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:03.593 DEBUG - THE LURKER (fb545a6d-217f-473f-bb1a-3f729d06f310) stolen and played by Player2 (42dbbf12-2609-449a-9118-d505dc6e8e4e) due to HUNGRY HUNGRY HAMSTER (488c1408-1862-4511-9876-d04ac11b78f4) effect
+2026-03-12 12:03:03.593 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains SNEAKY keyword
+2026-03-12 12:03:03.593 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.593 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains SNEAKY keyword
+2026-03-12 12:03:03.593 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.594 INFO  - Life update for player Player2 (42dbbf12-2609-449a-9118-d505dc6e8e4e) : 1 LP
+2026-03-12 12:03:03.594 DEBUG - Player2 (42dbbf12-2609-449a-9118-d505dc6e8e4e) LP changed (5 -> 1) due to TURBO BUG (38eec12f-e5be-44dd-8331-8f04d3ace323) effect
+2026-03-12 12:03:03.594 INFO  - Resolving INFLICT effect of TURBO BUG (38eec12f-e5be-44dd-8331-8f04d3ace323)
+2026-03-12 12:03:03.594 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains SNEAKY keyword
+2026-03-12 12:03:03.594 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.594 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains SNEAKY keyword
+2026-03-12 12:03:03.594 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.594 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains SNEAKY keyword
+2026-03-12 12:03:03.594 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.595 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains SNEAKY keyword
+2026-03-12 12:03:03.595 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.595 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains SNEAKY keyword
+2026-03-12 12:03:03.595 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.595 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7) gains SNEAKY keyword
+2026-03-12 12:03:03.595 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (3476eb95-2843-4997-ad35-00bda12946e7)
+2026-03-12 12:03:03.595 INFO  - New FRENZY choice to be resolved by Player1 (dc0f72a3-5257-4211-a676-130a7c151c33) (attackingCard : LUCHATAUR (402121f4-cd11-4c9c-92d8-a07fcbea07c3))
+2026-03-12 12:03:03.595 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.595 INFO  - Life update for player Player2 (42dbbf12-2609-449a-9118-d505dc6e8e4e) : 0 LP
+2026-03-12 12:03:03.595 INFO  - Game over : Player1 (dc0f72a3-5257-4211-a676-130a7c151c33) wins ; Player2 (42dbbf12-2609-449a-9118-d505dc6e8e4e) loses.
+2026-03-12 12:03:03.595 INFO  - End of the game

@@ -1,0 +1,221 @@
+2026-03-12 12:03:06.604 INFO  - Calculating first player...
+2026-03-12 12:03:06.606 INFO  - Banned card for Player1 (f94f989a-dfc6-4101-ba97-9dbcdc2acd02) : STRANGE BARREL (200ff66f-4af8-4f36-b31e-a6fbdf1b4946) (6)
+2026-03-12 12:03:06.606 INFO  - Banned card for Player2 (2d8ded56-3c63-42d4-b5eb-4dde1cb1c564) : HAMSTER LION (41ff7d8a-ca96-4f5a-a84a-227e38309ba8) (8)
+2026-03-12 12:03:06.606 INFO  - First player will be Player2 (2d8ded56-3c63-42d4-b5eb-4dde1cb1c564)
+2026-03-12 12:03:06.613 INFO  - Game 2916768d-1678-4b97-9838-10079a41519e starting...
+2026-03-12 12:03:06.614 INFO  - Player Player1 (f94f989a-dfc6-4101-ba97-9dbcdc2acd02) hand : {
+- CHAMELEON SNIPER ;
+- HUNGRY HUNGRY HAMSTER ;
+- BUGSERKER ;
+- GOBLIN WEREWOLF ;
+- KILLER BEE
+}
+2026-03-12 12:03:06.614 INFO  - Player Player1 (f94f989a-dfc6-4101-ba97-9dbcdc2acd02) draw pile : {
+- HAMSTER LION ;
+- PLATED SCORPION ;
+- TURF THE SURFER ;
+- THE LURKER ;
+- BRAIN FLY
+}
+2026-03-12 12:03:06.614 INFO  - Player Player2 (2d8ded56-3c63-42d4-b5eb-4dde1cb1c564) hand : {
+- MAJESTIC MANTICORE ;
+- LUCHATAUR ;
+- CREEP FROM THE DEEP ;
+- TIGER SQUIRREL ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:06.614 INFO  - Player Player2 (2d8ded56-3c63-42d4-b5eb-4dde1cb1c564) draw pile : {
+- MAJESTIC MANTICORE ;
+- TUSKED EXTORTER ;
+- FERRET PACIFIER ;
+- FROBLIN INSTIGATOR ;
+- SHARK DOG
+}
+2026-03-12 12:03:06.615 INFO  - Life update for player Player2 (2d8ded56-3c63-42d4-b5eb-4dde1cb1c564) : 2 LP
+2026-03-12 12:03:06.615 DEBUG - Player2 (2d8ded56-3c63-42d4-b5eb-4dde1cb1c564) LP changed (3 -> 2) due to KILLER BEE (5c8ade02-7ed3-461f-be62-50587fdc0b92) effect
+2026-03-12 12:03:06.615 INFO  - Resolving INFLICT effect of KILLER BEE (5c8ade02-7ed3-461f-be62-50587fdc0b92)
+2026-03-12 12:03:06.615 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.615 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.615 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.615 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.615 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.615 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.615 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.615 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.615 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.615 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.615 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.615 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.615 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.615 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.615 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.615 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.615 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.616 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.616 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.616 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.616 DEBUG - Player Player2 (2d8ded56-3c63-42d4-b5eb-4dde1cb1c564) must choose 1 cards to steal (targets : {
+- MAJESTIC MANTICORE ;
+- LUCHATAUR ;
+- CREEP FROM THE DEEP ;
+- FERRET PACIFIER ;
+- FROBLIN INSTIGATOR
+})
+2026-03-12 12:03:06.616 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.616 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.616 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.616 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.616 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.616 INFO  - New TARGET choice to be resolved by Player2 (2d8ded56-3c63-42d4-b5eb-4dde1cb1c564) (targets : {
+- FROBLIN INSTIGATOR ;
+- LUCHATAUR ;
+- MAJESTIC MANTICORE ;
+- CREEP FROM THE DEEP ;
+- FERRET PACIFIER
+})
+2026-03-12 12:03:06.616 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.616 DEBUG - Player1 (f94f989a-dfc6-4101-ba97-9dbcdc2acd02) must decide if stolen card FROBLIN INSTIGATOR (eb9ba7c7-8246-4451-b97d-cd8231af541e) will be added to hand or board
+2026-03-12 12:03:06.616 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (bf10dd1d-8229-4d66-a3ed-a3bab8501674)
+2026-03-12 12:03:06.616 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.616 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.616 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.616 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.616 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.616 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:06.616 DEBUG - FROBLIN INSTIGATOR (eb9ba7c7-8246-4451-b97d-cd8231af541e) stolen and drawn by Player1 (f94f989a-dfc6-4101-ba97-9dbcdc2acd02) due to HUNGRY HUNGRY HAMSTER (bf10dd1d-8229-4d66-a3ed-a3bab8501674) effect
+2026-03-12 12:03:06.616 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.616 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.616 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.616 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.616 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.616 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.617 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.617 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.617 DEBUG - Player Player1 (f94f989a-dfc6-4101-ba97-9dbcdc2acd02) must choose 1 card(s) to discard (available targets : {
+- CHAMELEON SNIPER ;
+- BUGSERKER ;
+- HAMSTER LION ;
+- PLATED SCORPION ;
+- TURF THE SURFER ;
+- FROBLIN INSTIGATOR
+})
+2026-03-12 12:03:06.617 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.617 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.617 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.617 INFO  - New TARGET choice to be resolved by Player1 (f94f989a-dfc6-4101-ba97-9dbcdc2acd02) (targets : {
+- BUGSERKER ;
+- FROBLIN INSTIGATOR ;
+- CHAMELEON SNIPER ;
+- PLATED SCORPION ;
+- TURF THE SURFER ;
+- HAMSTER LION
+})
+2026-03-12 12:03:06.617 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.617 DEBUG - HAMSTER LION (38878f2c-4879-4ed7-bbbc-838bf8b4ceca) discarded due to TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) effect
+2026-03-12 12:03:06.617 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f)
+2026-03-12 12:03:06.617 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.617 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.617 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.617 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.617 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.617 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.617 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.617 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.617 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.618 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.618 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.618 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.618 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.618 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.618 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.618 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.618 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.618 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.618 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.618 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.618 DEBUG - TUSKED EXTORTER (367d16e4-6d0d-4b6b-b86a-50a931caf17f) power changed (8 -> 9) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) power changed (6 -> 7) due to SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67) effect
+2026-03-12 12:03:06.618 INFO  - Resolving POWER_UP effect of SHIELD BUGS (19f3c130-8221-4d3f-921f-8738cc154d67)
+2026-03-12 12:03:06.619 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.619 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.619 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.619 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.619 DEBUG - Player Player1 (f94f989a-dfc6-4101-ba97-9dbcdc2acd02) must choose 1 cards to steal (targets : {
+- MAJESTIC MANTICORE ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:06.619 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.619 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.619 INFO  - New TARGET choice to be resolved by Player1 (f94f989a-dfc6-4101-ba97-9dbcdc2acd02) (targets : {
+- TUSKED EXTORTER ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:03:06.619 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.619 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) stolen and played by Player1 (f94f989a-dfc6-4101-ba97-9dbcdc2acd02) due to BRAIN FLY (d49237e3-acfa-448b-8483-9a4438d6793a) effect
+2026-03-12 12:03:06.619 INFO  - Resolving STEAL effect of BRAIN FLY (d49237e3-acfa-448b-8483-9a4438d6793a)
+2026-03-12 12:03:06.620 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.620 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.620 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.620 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.620 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.620 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.620 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.620 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.620 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.620 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.620 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.620 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.620 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.620 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.620 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.620 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.620 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.620 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.621 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (d1a70b6e-92e1-42c4-8837-fe48e3fb00e5)
+2026-03-12 12:03:06.621 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.621 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.621 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (d1a70b6e-92e1-42c4-8837-fe48e3fb00e5)
+2026-03-12 12:03:06.621 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.621 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.621 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (d1a70b6e-92e1-42c4-8837-fe48e3fb00e5)
+2026-03-12 12:03:06.621 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (d1a70b6e-92e1-42c4-8837-fe48e3fb00e5)
+2026-03-12 12:03:06.621 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (d1a70b6e-92e1-42c4-8837-fe48e3fb00e5)
+2026-03-12 12:03:06.621 DEBUG - GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) power changed (2 -> 8) due to GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c) effect
+2026-03-12 12:03:06.621 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (9eca2340-cc8e-4fe6-bacc-dbe2f6e0147c)
+2026-03-12 12:03:06.621 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (d1a70b6e-92e1-42c4-8837-fe48e3fb00e5)
+2026-03-12 12:03:06.621 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.621 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (d1a70b6e-92e1-42c4-8837-fe48e3fb00e5)
+2026-03-12 12:03:06.621 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (d1a70b6e-92e1-42c4-8837-fe48e3fb00e5)
+2026-03-12 12:03:06.621 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (d1a70b6e-92e1-42c4-8837-fe48e3fb00e5)
+2026-03-12 12:03:06.621 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (d1a70b6e-92e1-42c4-8837-fe48e3fb00e5)
+2026-03-12 12:03:06.621 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (d1a70b6e-92e1-42c4-8837-fe48e3fb00e5)
+2026-03-12 12:03:06.621 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) effect destroys FERRET PACIFIER (d1a70b6e-92e1-42c4-8837-fe48e3fb00e5)
+2026-03-12 12:03:06.621 DEBUG - MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0) effect destroys THE LURKER (2094673f-cf13-46cf-b8ee-520583d0dee3)
+2026-03-12 12:03:06.622 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (56746f24-bf55-464f-b8b1-8a24e16436e0)
+2026-03-12 12:03:06.622 INFO  - Life update for player Player1 (f94f989a-dfc6-4101-ba97-9dbcdc2acd02) : 2 LP
+2026-03-12 12:03:06.622 INFO  - New FRENZY choice to be resolved by Player2 (2d8ded56-3c63-42d4-b5eb-4dde1cb1c564) (attackingCard : LUCHATAUR (1c99a159-bdd8-409e-8545-f6623f647563))
+2026-03-12 12:03:06.622 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.622 INFO  - New FRENZY choice to be resolved by Player2 (2d8ded56-3c63-42d4-b5eb-4dde1cb1c564) (attackingCard : LUCHATAUR (1c99a159-bdd8-409e-8545-f6623f647563))
+2026-03-12 12:03:06.622 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.622 DEBUG - FROBLIN INSTIGATOR (eb9ba7c7-8246-4451-b97d-cd8231af541e) power changed (1 -> 1) due to FROBLIN INSTIGATOR (eb9ba7c7-8246-4451-b97d-cd8231af541e) effect
+2026-03-12 12:03:06.622 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (eb9ba7c7-8246-4451-b97d-cd8231af541e)
+2026-03-12 12:03:06.622 DEBUG - FROBLIN INSTIGATOR (eb9ba7c7-8246-4451-b97d-cd8231af541e) power changed (1 -> 1) due to FROBLIN INSTIGATOR (eb9ba7c7-8246-4451-b97d-cd8231af541e) effect
+2026-03-12 12:03:06.622 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (eb9ba7c7-8246-4451-b97d-cd8231af541e)
+2026-03-12 12:03:06.622 INFO  - New FRENZY choice to be resolved by Player2 (2d8ded56-3c63-42d4-b5eb-4dde1cb1c564) (attackingCard : LUCHATAUR (1c99a159-bdd8-409e-8545-f6623f647563))
+2026-03-12 12:03:06.622 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.622 INFO  - New FRENZY choice to be resolved by Player2 (2d8ded56-3c63-42d4-b5eb-4dde1cb1c564) (attackingCard : LUCHATAUR (1c99a159-bdd8-409e-8545-f6623f647563))
+2026-03-12 12:03:06.622 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.623 INFO  - Game over : Player2 (2d8ded56-3c63-42d4-b5eb-4dde1cb1c564) wins ; Player1 (f94f989a-dfc6-4101-ba97-9dbcdc2acd02) loses.
+2026-03-12 12:03:06.623 INFO  - End of the game

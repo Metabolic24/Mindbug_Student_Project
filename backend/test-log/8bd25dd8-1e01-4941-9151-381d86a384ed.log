@@ -1,0 +1,163 @@
+2026-03-12 12:18:28.284 INFO  - Calculating first player...
+2026-03-12 12:18:28.285 INFO  - Banned card for Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) : MAJESTIC MANTICORE (ed63976b-0300-441b-bbc8-306a1cccb557) (6)
+2026-03-12 12:18:28.285 INFO  - Banned card for Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) : ELEPHANTOPUS (51fec53e-cd0e-49e0-a4f6-7d33fdea53cf) (7)
+2026-03-12 12:18:28.285 INFO  - First player will be Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad)
+2026-03-12 12:18:28.297 INFO  - Game 8bd25dd8-1e01-4941-9151-381d86a384ed starting...
+2026-03-12 12:18:28.297 INFO  - Player Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) hand : {
+- GRAVE ROBBER ;
+- TUSKED EXTORTER ;
+- PLATED SCORPION ;
+- COUNT DRACULEECH ;
+- BUGSERKER
+}
+2026-03-12 12:18:28.298 INFO  - Player Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) draw pile : {
+- HAMSTER LION ;
+- GOBLIN WEREWOLF ;
+- TURF THE SURFER ;
+-  GIRAFFODILE ;
+- URCHIN HURLER
+}
+2026-03-12 12:18:28.298 INFO  - Player Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) hand : {
+- HUNGRY HUNGRY HAMSTER ;
+- KANGASAURUS REX ;
+- STRANGE BARREL ;
+- MYSTERIOUS MERMAID ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:18:28.298 INFO  - Player Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) draw pile : {
+- FERRET BOMBER ;
+- MAJESTIC MANTICORE ;
+- CREEP FROM THE DEEP ;
+- BUGSERKER ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:18:28.298 DEBUG - BUGSERKER (ce51cf6e-674e-4f5d-ad4e-6e8b38102870) stolen and drawn by Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) due to STRANGE BARREL (f7a6edcd-66c8-4557-ad2a-5bef921f7821) effect
+2026-03-12 12:18:28.298 DEBUG - GRAVE ROBBER (dc6123a6-b891-4899-8947-23769b791b19) stolen and drawn by Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) due to STRANGE BARREL (f7a6edcd-66c8-4557-ad2a-5bef921f7821) effect
+2026-03-12 12:18:28.298 INFO  - Resolving STEAL effect of STRANGE BARREL (f7a6edcd-66c8-4557-ad2a-5bef921f7821)
+2026-03-12 12:18:28.298 INFO  - Life update for player Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) : 2 LP
+2026-03-12 12:18:28.298 DEBUG - Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) LP changed (3 -> 2) due to COUNT DRACULEECH (a43ebde7-28a7-4280-bd63-ed056606ad26) effect
+2026-03-12 12:18:28.298 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (a43ebde7-28a7-4280-bd63-ed056606ad26)
+2026-03-12 12:18:28.298 DEBUG - COUNT DRACULEECH (a43ebde7-28a7-4280-bd63-ed056606ad26) effect destroys COUNT DRACULEECH (a43ebde7-28a7-4280-bd63-ed056606ad26)
+2026-03-12 12:18:28.298 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (a43ebde7-28a7-4280-bd63-ed056606ad26)
+2026-03-12 12:18:28.298 DEBUG - Player Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) must choose 2 card(s) to discard (available targets : {
+- TUSKED EXTORTER ;
+- PLATED SCORPION ;
+- HAMSTER LION ;
+- GOBLIN WEREWOLF ;
+- TURF THE SURFER
+})
+2026-03-12 12:18:28.298 INFO  - New TARGET choice to be resolved by Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) (targets : {
+- GOBLIN WEREWOLF ;
+- TURF THE SURFER ;
+- HAMSTER LION ;
+- PLATED SCORPION ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:18:28.298 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:28.298 DEBUG - GOBLIN WEREWOLF (5bb4df3f-aaaf-4842-865e-6a6ad4376ed6) discarded due to FERRET BOMBER (74cdd772-3f63-450a-bb41-da197bddf6a9) effect
+2026-03-12 12:18:28.298 DEBUG - HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7) discarded due to FERRET BOMBER (74cdd772-3f63-450a-bb41-da197bddf6a9) effect
+2026-03-12 12:18:28.298 INFO  - Resolving DISCARD effect of FERRET BOMBER (74cdd772-3f63-450a-bb41-da197bddf6a9)
+2026-03-12 12:18:28.299 INFO  - Resolving POWER_UP effect of URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61)
+2026-03-12 12:18:28.299 INFO  - Life update for player Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) : 1 LP
+2026-03-12 12:18:28.299 INFO  - Resolving POWER_UP effect of URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61)
+2026-03-12 12:18:28.299 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:28.299 INFO  - Resolving POWER_UP effect of URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61)
+2026-03-12 12:18:28.299 DEBUG - Player Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) must choose 1 cards to steal (targets : {
+- TUSKED EXTORTER ;
+- PLATED SCORPION ;
+- TURF THE SURFER ;
+-  GIRAFFODILE
+})
+2026-03-12 12:18:28.299 INFO  - New TARGET choice to be resolved by Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) (targets : {
+- TURF THE SURFER ;
+- PLATED SCORPION ;
+- TUSKED EXTORTER ;
+-  GIRAFFODILE
+})
+2026-03-12 12:18:28.299 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:28.299 DEBUG - Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) must decide if stolen card TUSKED EXTORTER (d0ac065b-3663-4eb3-8c11-ad99f33a0d19) will be added to hand or board
+2026-03-12 12:18:28.299 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (8fa57e32-3750-4b96-ae16-4f3266c16fcc)
+2026-03-12 12:18:28.299 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:28.299 DEBUG - TUSKED EXTORTER (d0ac065b-3663-4eb3-8c11-ad99f33a0d19) stolen and drawn by Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) due to HUNGRY HUNGRY HAMSTER (8fa57e32-3750-4b96-ae16-4f3266c16fcc) effect
+2026-03-12 12:18:28.299 INFO  - Resolving POWER_UP effect of URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61)
+2026-03-12 12:18:28.299 DEBUG -  GIRAFFODILE (5b3f0271-453c-4343-9211-cb8695882db3) power changed (7 -> 9) due to URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61) effect
+2026-03-12 12:18:28.299 INFO  - Resolving POWER_UP effect of URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61)
+2026-03-12 12:18:28.299 DEBUG - COUNT DRACULEECH (a43ebde7-28a7-4280-bd63-ed056606ad26) stolen and drawn by Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) due to  GIRAFFODILE (5b3f0271-453c-4343-9211-cb8695882db3) effect
+2026-03-12 12:18:28.299 DEBUG - GOBLIN WEREWOLF (5bb4df3f-aaaf-4842-865e-6a6ad4376ed6) stolen and drawn by Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) due to  GIRAFFODILE (5b3f0271-453c-4343-9211-cb8695882db3) effect
+2026-03-12 12:18:28.299 DEBUG - HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7) stolen and drawn by Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) due to  GIRAFFODILE (5b3f0271-453c-4343-9211-cb8695882db3) effect
+2026-03-12 12:18:28.299 INFO  - Resolving STEAL effect of  GIRAFFODILE (5b3f0271-453c-4343-9211-cb8695882db3)
+2026-03-12 12:18:28.300 DEBUG -  GIRAFFODILE (5b3f0271-453c-4343-9211-cb8695882db3) power changed (7 -> 9) due to URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61) effect
+2026-03-12 12:18:28.300 INFO  - Resolving POWER_UP effect of URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61)
+2026-03-12 12:18:28.300 DEBUG -  GIRAFFODILE (5b3f0271-453c-4343-9211-cb8695882db3) power changed (7 -> 9) due to URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61) effect
+2026-03-12 12:18:28.300 INFO  - Resolving POWER_UP effect of URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61)
+2026-03-12 12:18:28.300 DEBUG - GOBLIN WEREWOLF (5bb4df3f-aaaf-4842-865e-6a6ad4376ed6) power changed (2 -> 4) due to URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61) effect
+2026-03-12 12:18:28.300 DEBUG -  GIRAFFODILE (5b3f0271-453c-4343-9211-cb8695882db3) power changed (7 -> 9) due to URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61) effect
+2026-03-12 12:18:28.300 INFO  - Resolving POWER_UP effect of URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61)
+2026-03-12 12:18:28.300 DEBUG - GOBLIN WEREWOLF (5bb4df3f-aaaf-4842-865e-6a6ad4376ed6) power changed (4 -> 10) due to GOBLIN WEREWOLF (5bb4df3f-aaaf-4842-865e-6a6ad4376ed6) effect
+2026-03-12 12:18:28.300 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5bb4df3f-aaaf-4842-865e-6a6ad4376ed6)
+2026-03-12 12:18:28.300 DEBUG - KANGASAURUS REX (ff4a3e46-f6ed-463b-83d3-cb88ef26e401) effect destroys GOBLIN WEREWOLF (5bb4df3f-aaaf-4842-865e-6a6ad4376ed6)
+2026-03-12 12:18:28.300 INFO  - Resolving DESTROY effect of KANGASAURUS REX (ff4a3e46-f6ed-463b-83d3-cb88ef26e401)
+2026-03-12 12:18:28.300 DEBUG -  GIRAFFODILE (5b3f0271-453c-4343-9211-cb8695882db3) power changed (7 -> 9) due to URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61) effect
+2026-03-12 12:18:28.300 INFO  - Resolving POWER_UP effect of URCHIN HURLER (bc40081f-5ef9-4f65-8990-bfe2794fde61)
+2026-03-12 12:18:28.300 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:28.300 INFO  - Life update for player Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) : 1 LP
+2026-03-12 12:18:28.300 DEBUG - Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) LP changed (3 -> 1) due to MYSTERIOUS MERMAID (3b06a274-2e25-46a0-ac48-dda71cad48d1) effect
+2026-03-12 12:18:28.300 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (3b06a274-2e25-46a0-ac48-dda71cad48d1)
+2026-03-12 12:18:28.300 DEBUG - CardInstance(uuid=8fa57e32-3750-4b96-ae16-4f3266c16fcc, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@694b1ddb), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.300 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7)
+2026-03-12 12:18:28.300 DEBUG - CardInstance(uuid=8fa57e32-3750-4b96-ae16-4f3266c16fcc, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@694b1ddb), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.301 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7)
+2026-03-12 12:18:28.301 DEBUG - CardInstance(uuid=8fa57e32-3750-4b96-ae16-4f3266c16fcc, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@694b1ddb), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.301 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7)
+2026-03-12 12:18:28.301 DEBUG - Player Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) must choose 1 cards to steal (targets : {
+- GOBLIN WEREWOLF ;
+- URCHIN HURLER ;
+-  GIRAFFODILE
+})
+2026-03-12 12:18:28.301 DEBUG - CardInstance(uuid=8fa57e32-3750-4b96-ae16-4f3266c16fcc, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@694b1ddb), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.301 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7)
+2026-03-12 12:18:28.301 INFO  - New TARGET choice to be resolved by Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) (targets : {
+- GOBLIN WEREWOLF ;
+-  GIRAFFODILE ;
+- URCHIN HURLER
+})
+2026-03-12 12:18:28.301 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:28.301 DEBUG -  GIRAFFODILE (5b3f0271-453c-4343-9211-cb8695882db3) stolen and played by Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) due to GRAVE ROBBER (dc6123a6-b891-4899-8947-23769b791b19) effect
+2026-03-12 12:18:28.301 INFO  - Resolving STEAL effect of GRAVE ROBBER (dc6123a6-b891-4899-8947-23769b791b19)
+2026-03-12 12:18:28.301 DEBUG - CardInstance(uuid=8fa57e32-3750-4b96-ae16-4f3266c16fcc, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@694b1ddb), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.301 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7)
+2026-03-12 12:18:28.301 DEBUG - STRANGE BARREL (f7a6edcd-66c8-4557-ad2a-5bef921f7821) stolen and drawn by Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) due to  GIRAFFODILE (5b3f0271-453c-4343-9211-cb8695882db3) effect
+2026-03-12 12:18:28.301 DEBUG - FERRET BOMBER (74cdd772-3f63-450a-bb41-da197bddf6a9) stolen and drawn by Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) due to  GIRAFFODILE (5b3f0271-453c-4343-9211-cb8695882db3) effect
+2026-03-12 12:18:28.301 INFO  - Resolving STEAL effect of  GIRAFFODILE (5b3f0271-453c-4343-9211-cb8695882db3)
+2026-03-12 12:18:28.301 DEBUG - CardInstance(uuid=8fa57e32-3750-4b96-ae16-4f3266c16fcc, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@694b1ddb), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.301 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7)
+2026-03-12 12:18:28.301 DEBUG - CardInstance(uuid=8fa57e32-3750-4b96-ae16-4f3266c16fcc, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@694b1ddb), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.301 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7)
+2026-03-12 12:18:28.301 DEBUG - CardInstance(uuid=8fa57e32-3750-4b96-ae16-4f3266c16fcc, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@694b1ddb), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.301 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7)
+2026-03-12 12:18:28.301 INFO  - New FRENZY choice to be resolved by Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) (attackingCard : HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7))
+2026-03-12 12:18:28.301 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:28.301 DEBUG - CardInstance(uuid=8fa57e32-3750-4b96-ae16-4f3266c16fcc, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@694b1ddb), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.302 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7)
+2026-03-12 12:18:28.302 DEBUG - CardInstance(uuid=8fa57e32-3750-4b96-ae16-4f3266c16fcc, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@694b1ddb), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.302 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7)
+2026-03-12 12:18:28.302 DEBUG - MAJESTIC MANTICORE (888a0cfa-e162-471d-9610-a64353603f17) effect destroys HUNGRY HUNGRY HAMSTER (8fa57e32-3750-4b96-ae16-4f3266c16fcc)
+2026-03-12 12:18:28.302 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (888a0cfa-e162-471d-9610-a64353603f17)
+2026-03-12 12:18:28.302 DEBUG - CardInstance(uuid=888a0cfa-e162-471d-9610-a64353603f17, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@694b1ddb), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.302 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (99880af4-9725-47b3-811a-c9a1b1be27c7)
+2026-03-12 12:18:28.302 DEBUG - Player Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) must choose 1 card(s) that will be unable to block (targets : {
+- TUSKED EXTORTER ;
+- MYSTERIOUS MERMAID ;
+- GRAVE ROBBER ;
+- CREEP FROM THE DEEP
+})
+2026-03-12 12:18:28.302 INFO  - New TARGET choice to be resolved by Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) (targets : {
+- MYSTERIOUS MERMAID ;
+- TUSKED EXTORTER ;
+- GRAVE ROBBER ;
+- CREEP FROM THE DEEP
+})
+2026-03-12 12:18:28.302 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:28.302 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (9a5399aa-9984-4db9-b1d2-66fdf731b40c)
+2026-03-12 12:18:28.302 INFO  - Game over : Player2 (1510222f-05d3-4c6d-8f78-cb8c6e96bbad) wins ; Player1 (d5680e64-2ccb-497e-9de3-1803cb0e1ca8) loses.
+2026-03-12 12:18:28.303 INFO  - End of the game

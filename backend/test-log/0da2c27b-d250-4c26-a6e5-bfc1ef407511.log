@@ -1,0 +1,90 @@
+2026-03-12 12:18:25.334 INFO  - Calculating first player...
+2026-03-12 12:18:25.336 INFO  - Banned card for Player1 (e4d293d8-02b6-44b8-bcce-10b767cadda3) : SHIELD BUGS (cba419ca-7102-4478-bbf5-85e5ecffcf80) (4)
+2026-03-12 12:18:25.336 INFO  - Banned card for Player2 (5439e0b7-d512-4a46-84f6-f509db8e553f) : BUGSERKER (5297297c-9ee6-4bd3-b0b7-d908080388d9) (3)
+2026-03-12 12:18:25.336 INFO  - First player will be Player1 (e4d293d8-02b6-44b8-bcce-10b767cadda3)
+2026-03-12 12:18:25.344 INFO  - Game 0da2c27b-d250-4c26-a6e5-bfc1ef407511 starting...
+2026-03-12 12:18:25.344 INFO  - Player Player1 (e4d293d8-02b6-44b8-bcce-10b767cadda3) hand : {
+- GRAVE ROBBER ;
+- THE LURKER ;
+- ELEPHANTOPUS ;
+- HAMSTER LION ;
+- BUGSERKER
+}
+2026-03-12 12:18:25.345 INFO  - Player Player1 (e4d293d8-02b6-44b8-bcce-10b767cadda3) draw pile : {
+- SPIDER OWL ;
+- GORILLON ;
+- KANGASAURUS REX ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- SNAIL HYDRA
+}
+2026-03-12 12:18:25.345 INFO  - Player Player2 (5439e0b7-d512-4a46-84f6-f509db8e553f) hand : {
+- EXPLOSIVE TOAD ;
+- GOBLIN WEREWOLF ;
+- COMPOST DRAGON ;
+- PLATED SCORPION ;
+- CREEP FROM THE DEEP
+}
+2026-03-12 12:18:25.345 INFO  - Player Player2 (5439e0b7-d512-4a46-84f6-f509db8e553f) draw pile : {
+- RHINO TURTLE ;
+- HYENIX ;
+- TUSKED EXTORTER ;
+- PLATED SCORPION ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:18:25.345 DEBUG - CardInstance(uuid=70316705-c19c-4293-96af-dd22b478c922, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@73316a0a), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.346 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e83c3cb-5670-459e-b17e-f6da541f84c0)
+2026-03-12 12:18:25.346 DEBUG - CardInstance(uuid=70316705-c19c-4293-96af-dd22b478c922, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@73316a0a), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.346 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e83c3cb-5670-459e-b17e-f6da541f84c0)
+2026-03-12 12:18:25.346 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:25.346 INFO  - Life update for player Player2 (5439e0b7-d512-4a46-84f6-f509db8e553f) : 2 LP
+2026-03-12 12:18:25.346 DEBUG - Player2 (5439e0b7-d512-4a46-84f6-f509db8e553f) must decide if HYENIX (593475cf-31dd-484e-bb8b-139472b1de33) will revive
+2026-03-12 12:18:25.346 INFO  - New BOOLEAN choice to be resolved by Player2 (5439e0b7-d512-4a46-84f6-f509db8e553f) (target : )
+2026-03-12 12:18:25.346 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:25.347 INFO  - Life update for player Player2 (5439e0b7-d512-4a46-84f6-f509db8e553f) : 1 LP
+2026-03-12 12:18:25.347 DEBUG - Player2 (5439e0b7-d512-4a46-84f6-f509db8e553f) must decide if HYENIX (593475cf-31dd-484e-bb8b-139472b1de33) will revive
+2026-03-12 12:18:25.347 INFO  - New BOOLEAN choice to be resolved by Player2 (5439e0b7-d512-4a46-84f6-f509db8e553f) (target : )
+2026-03-12 12:18:25.347 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:25.347 INFO  - New FRENZY choice to be resolved by Player2 (5439e0b7-d512-4a46-84f6-f509db8e553f) (attackingCard : RHINO TURTLE (e7d65266-a1ec-4fe7-b5d1-275f54711455))
+2026-03-12 12:18:25.347 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.348 DEBUG - GOBLIN WEREWOLF (b5efd750-58ae-4a86-9700-cea352d33845) power changed (2 -> 8) due to GOBLIN WEREWOLF (b5efd750-58ae-4a86-9700-cea352d33845) effect
+2026-03-12 12:18:25.348 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b5efd750-58ae-4a86-9700-cea352d33845)
+2026-03-12 12:18:25.348 DEBUG - GOBLIN WEREWOLF (b5efd750-58ae-4a86-9700-cea352d33845) power changed (2 -> 8) due to GOBLIN WEREWOLF (b5efd750-58ae-4a86-9700-cea352d33845) effect
+2026-03-12 12:18:25.348 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b5efd750-58ae-4a86-9700-cea352d33845)
+2026-03-12 12:18:25.348 DEBUG - GOBLIN WEREWOLF (b5efd750-58ae-4a86-9700-cea352d33845) power changed (2 -> 8) due to GOBLIN WEREWOLF (b5efd750-58ae-4a86-9700-cea352d33845) effect
+2026-03-12 12:18:25.348 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b5efd750-58ae-4a86-9700-cea352d33845)
+2026-03-12 12:18:25.348 DEBUG - Player Player2 (5439e0b7-d512-4a46-84f6-f509db8e553f) must choose 1 card(s) to destroy (available targets : {
+- GORILLON ;
+- SNAIL HYDRA ;
+- PLATED SCORPION ;
+- TUSKED EXTORTER ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:18:25.348 INFO  - New TARGET choice to be resolved by Player2 (5439e0b7-d512-4a46-84f6-f509db8e553f) (targets : {
+- GORILLON ;
+- GOBLIN WEREWOLF ;
+- TUSKED EXTORTER ;
+- SNAIL HYDRA ;
+- PLATED SCORPION
+})
+2026-03-12 12:18:25.348 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.348 DEBUG - EXPLOSIVE TOAD (d5b62585-c559-4086-aecc-4fd8f17fdbd3) effect destroys GORILLON (6afd1c49-40fb-46d1-9e97-4acc5e20cff4)
+2026-03-12 12:18:25.348 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (d5b62585-c559-4086-aecc-4fd8f17fdbd3)
+2026-03-12 12:18:25.348 DEBUG - GOBLIN WEREWOLF (b5efd750-58ae-4a86-9700-cea352d33845) power changed (2 -> 8) due to GOBLIN WEREWOLF (b5efd750-58ae-4a86-9700-cea352d33845) effect
+2026-03-12 12:18:25.349 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b5efd750-58ae-4a86-9700-cea352d33845)
+2026-03-12 12:18:25.349 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:25.349 DEBUG - Player Player1 (e4d293d8-02b6-44b8-bcce-10b767cadda3) must choose 1 card(s) to destroy (available targets : {
+- PLATED SCORPION ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:18:25.349 INFO  - New TARGET choice to be resolved by Player1 (e4d293d8-02b6-44b8-bcce-10b767cadda3) (targets : {
+- TUSKED EXTORTER ;
+- PLATED SCORPION
+})
+2026-03-12 12:18:25.349 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.349 DEBUG - SNAIL HYDRA (5b9ce082-069d-460e-b4d6-fad45305592d) effect destroys TUSKED EXTORTER (7e9a5802-26a8-4193-b3dc-9ddcccdc59bc)
+2026-03-12 12:18:25.349 INFO  - Resolving DESTROY effect of SNAIL HYDRA (5b9ce082-069d-460e-b4d6-fad45305592d)
+2026-03-12 12:18:25.349 INFO  - Life update for player Player1 (e4d293d8-02b6-44b8-bcce-10b767cadda3) : 2 LP
+2026-03-12 12:18:25.349 DEBUG - KANGASAURUS REX (6426814b-f0fb-490e-bc00-be42a6edfa05) effect destroys PLATED SCORPION (64df1e47-2166-4873-ad92-fea8ff075d68)
+2026-03-12 12:18:25.349 INFO  - Resolving DESTROY effect of KANGASAURUS REX (6426814b-f0fb-490e-bc00-be42a6edfa05)
+2026-03-12 12:18:25.349 INFO  - Game over : Player1 (e4d293d8-02b6-44b8-bcce-10b767cadda3) wins ; Player2 (5439e0b7-d512-4a46-84f6-f509db8e553f) loses.
+2026-03-12 12:18:25.349 INFO  - End of the game

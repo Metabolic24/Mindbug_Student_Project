@@ -1,0 +1,60 @@
+2026-03-12 12:18:26.023 INFO  - Calculating first player...
+2026-03-12 12:18:26.025 INFO  - Banned card for Player1 (527fe160-facc-41c4-a848-af94c5450bf8) : FROBLIN INSTIGATOR (49997a7c-563b-4e5e-a47c-45b47e776835) (1)
+2026-03-12 12:18:26.025 INFO  - Banned card for Player2 (3211a725-60d8-43f4-9812-db188bc3e490) : KANGASAURUS REX (35169676-de8b-4b95-bab6-45fdcb7501e2) (7)
+2026-03-12 12:18:26.025 INFO  - First player will be Player2 (3211a725-60d8-43f4-9812-db188bc3e490)
+2026-03-12 12:18:26.033 INFO  - Game fff8edd8-d96c-4bc7-b7b4-95558c6d8033 starting...
+2026-03-12 12:18:26.033 INFO  - Player Player1 (527fe160-facc-41c4-a848-af94c5450bf8) hand : {
+- CHAMELEON SNIPER ;
+- URCHIN HURLER ;
+- GRAVE ROBBER ;
+- STRANGE BARREL ;
+- SNAIL HYDRA
+}
+2026-03-12 12:18:26.034 INFO  - Player Player1 (527fe160-facc-41c4-a848-af94c5450bf8) draw pile : {
+- AXOLOTL HEALER ;
+- THE LURKER ;
+- HARPY MOTHER ;
+- GOBLIN WEREWOLF ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:18:26.034 INFO  - Player Player2 (3211a725-60d8-43f4-9812-db188bc3e490) hand : {
+- MYSTERIOUS MERMAID ;
+- TUSKED EXTORTER ;
+- BEE BEAR ;
+- KANGASAURUS REX ;
+- FERRET BOMBER
+}
+2026-03-12 12:18:26.034 INFO  - Player Player2 (3211a725-60d8-43f4-9812-db188bc3e490) draw pile : {
+- RHINO TURTLE ;
+- COUNT DRACULEECH ;
+- ELEPHANTOPUS ;
+- PLATED SCORPION ;
+- SHIELD BUGS
+}
+2026-03-12 12:18:26.034 DEBUG - Player Player1 (527fe160-facc-41c4-a848-af94c5450bf8) must choose 2 card(s) to discard (available targets : {
+- CHAMELEON SNIPER ;
+- URCHIN HURLER ;
+- GRAVE ROBBER ;
+- STRANGE BARREL ;
+- SNAIL HYDRA
+})
+2026-03-12 12:18:26.034 INFO  - New TARGET choice to be resolved by Player1 (527fe160-facc-41c4-a848-af94c5450bf8) (targets : {
+- URCHIN HURLER ;
+- SNAIL HYDRA ;
+- STRANGE BARREL ;
+- CHAMELEON SNIPER ;
+- GRAVE ROBBER
+})
+2026-03-12 12:18:26.034 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:26.034 DEBUG - SNAIL HYDRA (5c08f8a5-41bf-4d18-a0fb-73cdf0ce62b4) discarded due to FERRET BOMBER (fa623c11-e910-41b5-985f-b3943d8e46d5) effect
+2026-03-12 12:18:26.034 DEBUG - CHAMELEON SNIPER (766b3d59-5965-4ea7-897f-70b916e7f5cf) discarded due to FERRET BOMBER (fa623c11-e910-41b5-985f-b3943d8e46d5) effect
+2026-03-12 12:18:26.034 INFO  - Resolving DISCARD effect of FERRET BOMBER (fa623c11-e910-41b5-985f-b3943d8e46d5)
+2026-03-12 12:18:26.034 DEBUG - Player1 (527fe160-facc-41c4-a848-af94c5450bf8) LP changed (3 -> 5) due to AXOLOTL HEALER (16c51e71-407b-4120-bea9-f27eef8f4fa7) effect
+2026-03-12 12:18:26.034 INFO  - Resolving GAIN effect of AXOLOTL HEALER (16c51e71-407b-4120-bea9-f27eef8f4fa7)
+2026-03-12 12:18:26.035 INFO  - Life update for player Player1 (527fe160-facc-41c4-a848-af94c5450bf8) : 4 LP
+2026-03-12 12:18:26.035 INFO  - Life update for player Player1 (527fe160-facc-41c4-a848-af94c5450bf8) : 3 LP
+2026-03-12 12:18:26.035 INFO  - Life update for player Player1 (527fe160-facc-41c4-a848-af94c5450bf8) : 2 LP
+2026-03-12 12:18:26.035 INFO  - Life update for player Player1 (527fe160-facc-41c4-a848-af94c5450bf8) : 1 LP
+2026-03-12 12:18:26.035 INFO  - Life update for player Player1 (527fe160-facc-41c4-a848-af94c5450bf8) : 0 LP
+2026-03-12 12:18:26.035 INFO  - Game over : Player2 (3211a725-60d8-43f4-9812-db188bc3e490) wins ; Player1 (527fe160-facc-41c4-a848-af94c5450bf8) loses.
+2026-03-12 12:18:26.035 INFO  - End of the game

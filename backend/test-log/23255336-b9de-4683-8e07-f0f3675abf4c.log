@@ -1,0 +1,136 @@
+2026-03-12 12:18:25.781 INFO  - Calculating first player...
+2026-03-12 12:18:25.784 INFO  - Banned card for Player1 (af503cef-234e-448b-9ea2-a7dcfbe316e7) : TUSKED EXTORTER (bd0b14d1-0535-4d26-b72c-a1406c04760d) (8)
+2026-03-12 12:18:25.784 INFO  - Banned card for Player2 (94b44060-edf9-4335-890e-f3aae55b4247) : SPIDER OWL (19bf11c8-c5b8-4873-83f4-1c0c14ee336a) (3)
+2026-03-12 12:18:25.784 INFO  - First player will be Player1 (af503cef-234e-448b-9ea2-a7dcfbe316e7)
+2026-03-12 12:18:25.798 INFO  - Game 23255336-b9de-4683-8e07-f0f3675abf4c starting...
+2026-03-12 12:18:25.798 INFO  - Player Player1 (af503cef-234e-448b-9ea2-a7dcfbe316e7) hand : {
+- GOBLIN WEREWOLF ;
+- COUNT DRACULEECH ;
+- SHIELD BUGS ;
+- HAMSTER LION ;
+- TURF THE SURFER
+}
+2026-03-12 12:18:25.798 INFO  - Player Player1 (af503cef-234e-448b-9ea2-a7dcfbe316e7) draw pile : {
+- GOREAGLE ALPHA ;
+- CREEP FROM THE DEEP ;
+- EXPLOSIVE TOAD ;
+- KANGASAURUS REX ;
+- BUGSERKER
+}
+2026-03-12 12:18:25.798 INFO  - Player Player2 (94b44060-edf9-4335-890e-f3aae55b4247) hand : {
+- RHINO TURTLE ;
+- AXOLOTL HEALER ;
+- SHARK DOG ;
+- PLATED SCORPION ;
+- SNAIL HYDRA
+}
+2026-03-12 12:18:25.798 INFO  - Player Player2 (94b44060-edf9-4335-890e-f3aae55b4247) draw pile : {
+- LUCHATAUR ;
+- FERRET PACIFIER ;
+- GOBLIN WEREWOLF ;
+- MAJESTIC MANTICORE ;
+- TURBO BUG
+}
+2026-03-12 12:18:25.799 DEBUG - GOBLIN WEREWOLF (da7ca04b-d8de-4de7-93da-a05fb0263ccd) power changed (2 -> 8) due to GOBLIN WEREWOLF (da7ca04b-d8de-4de7-93da-a05fb0263ccd) effect
+2026-03-12 12:18:25.799 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (da7ca04b-d8de-4de7-93da-a05fb0263ccd)
+2026-03-12 12:18:25.799 DEBUG - Player2 (94b44060-edf9-4335-890e-f3aae55b4247) LP changed (3 -> 5) due to AXOLOTL HEALER (3645730c-c245-4c16-90cb-2fe0bbcdfcea) effect
+2026-03-12 12:18:25.799 INFO  - Resolving GAIN effect of AXOLOTL HEALER (3645730c-c245-4c16-90cb-2fe0bbcdfcea)
+2026-03-12 12:18:25.799 DEBUG - GOBLIN WEREWOLF (da7ca04b-d8de-4de7-93da-a05fb0263ccd) power changed (2 -> 8) due to GOBLIN WEREWOLF (da7ca04b-d8de-4de7-93da-a05fb0263ccd) effect
+2026-03-12 12:18:25.799 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (da7ca04b-d8de-4de7-93da-a05fb0263ccd)
+2026-03-12 12:18:25.799 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:25.799 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0d52ad57-cfa1-49cf-b66a-f99fc476527f)
+2026-03-12 12:18:25.799 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0d52ad57-cfa1-49cf-b66a-f99fc476527f)
+2026-03-12 12:18:25.800 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0d52ad57-cfa1-49cf-b66a-f99fc476527f)
+2026-03-12 12:18:25.800 INFO  - New FRENZY choice to be resolved by Player2 (94b44060-edf9-4335-890e-f3aae55b4247) (attackingCard : LUCHATAUR (72255261-2235-4f1f-9f01-38e972c6f225))
+2026-03-12 12:18:25.800 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.800 INFO  - Resolving POWER_UP effect of SHIELD BUGS (0d52ad57-cfa1-49cf-b66a-f99fc476527f)
+2026-03-12 12:18:25.800 DEBUG - CardInstance(uuid=72255261-2235-4f1f-9f01-38e972c6f225, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.800 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.800 DEBUG - CardInstance(uuid=72255261-2235-4f1f-9f01-38e972c6f225, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.800 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.800 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.800 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.800 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.800 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.801 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.801 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.801 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.801 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.801 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.801 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.801 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.801 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.801 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.801 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.801 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.801 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.801 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.801 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.801 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.802 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.802 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.802 INFO  - Life update for player Player1 (af503cef-234e-448b-9ea2-a7dcfbe316e7) : 2 LP
+2026-03-12 12:18:25.802 DEBUG - Player1 (af503cef-234e-448b-9ea2-a7dcfbe316e7) LP changed (3 -> 2) due to GOREAGLE ALPHA (c0799acb-442a-4b12-8303-8c3d9ee4b278) effect
+2026-03-12 12:18:25.802 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (c0799acb-442a-4b12-8303-8c3d9ee4b278)
+2026-03-12 12:18:25.802 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.802 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.802 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.802 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.802 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.802 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.802 DEBUG - CardInstance(uuid=980d6207-9898-4226-ae7b-72cdea86361d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.802 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.802 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.802 DEBUG - CardInstance(uuid=980d6207-9898-4226-ae7b-72cdea86361d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.802 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.802 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.802 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:25.802 DEBUG - CardInstance(uuid=980d6207-9898-4226-ae7b-72cdea86361d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.803 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.803 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.803 INFO  - New FRENZY choice to be resolved by Player1 (af503cef-234e-448b-9ea2-a7dcfbe316e7) (attackingCard : GOREAGLE ALPHA (c0799acb-442a-4b12-8303-8c3d9ee4b278))
+2026-03-12 12:18:25.803 DEBUG - CardInstance(uuid=980d6207-9898-4226-ae7b-72cdea86361d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.803 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.803 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.803 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.803 DEBUG - CardInstance(uuid=980d6207-9898-4226-ae7b-72cdea86361d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.803 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.803 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.803 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:25.803 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.803 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.803 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.803 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.803 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.803 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.803 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.803 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.803 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.804 DEBUG - GOBLIN WEREWOLF (01323aab-7173-43bc-8cca-e097f1511f89) power changed (2 -> 8) due to GOBLIN WEREWOLF (01323aab-7173-43bc-8cca-e097f1511f89) effect
+2026-03-12 12:18:25.804 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (01323aab-7173-43bc-8cca-e097f1511f89)
+2026-03-12 12:18:25.804 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.804 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.804 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.804 DEBUG - CardInstance(uuid=01323aab-7173-43bc-8cca-e097f1511f89, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.804 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.804 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.804 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.804 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.804 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.804 INFO  - New FRENZY choice to be resolved by Player1 (af503cef-234e-448b-9ea2-a7dcfbe316e7) (attackingCard : HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e))
+2026-03-12 12:18:25.804 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.804 DEBUG - CardInstance(uuid=b16fd61f-8590-4d21-88e1-dd5d4b2445c3, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.804 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.812 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b16fd61f-8590-4d21-88e1-dd5d4b2445c3)
+2026-03-12 12:18:25.812 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.812 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.812 DEBUG - CardInstance(uuid=1946f9bf-6ae4-4a17-a8a7-f7cfae9fffbb, card=Card(id=25, setName=first_contact, name=SNAIL HYDRA, power=9, keywords=[], effects={ATTACK=[DestroyEffect(value=1, min=null, max=null, lessAllies=true, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: If you control fewer creatures than the opponent, defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=9, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.812 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.812 DEBUG - CardInstance(uuid=1946f9bf-6ae4-4a17-a8a7-f7cfae9fffbb, card=Card(id=25, setName=first_contact, name=SNAIL HYDRA, power=9, keywords=[], effects={ATTACK=[DestroyEffect(value=1, min=null, max=null, lessAllies=true, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: If you control fewer creatures than the opponent, defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@72288480), power=9, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.812 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (632bfdb7-1708-4488-a6ff-2b91a5ff4c6e)
+2026-03-12 12:18:25.813 INFO  - Life update for player Player1 (af503cef-234e-448b-9ea2-a7dcfbe316e7) : 1 LP
+2026-03-12 12:18:25.813 INFO  - Life update for player Player1 (af503cef-234e-448b-9ea2-a7dcfbe316e7) : 0 LP
+2026-03-12 12:18:25.813 INFO  - Game over : Player2 (94b44060-edf9-4335-890e-f3aae55b4247) wins ; Player1 (af503cef-234e-448b-9ea2-a7dcfbe316e7) loses.
+2026-03-12 12:18:25.813 INFO  - End of the game
+2026-03-12 12:18:25.813 DEBUG - Player1 (af503cef-234e-448b-9ea2-a7dcfbe316e7) LP changed (1 -> 0) due to COUNT DRACULEECH (36d98adc-e19d-4397-b70d-bc887c92874e) effect
+2026-03-12 12:18:25.813 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (36d98adc-e19d-4397-b70d-bc887c92874e)

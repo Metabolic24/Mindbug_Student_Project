@@ -1,0 +1,81 @@
+2026-03-12 12:03:08.287 INFO  - Calculating first player...
+2026-03-12 12:03:08.289 INFO  - Banned card for Player1 (75bdfb71-1829-45d6-ac66-212ec81660ae) : SPIDER OWL (899a05da-12bc-4a56-8b17-b4aefb1d581c) (3)
+2026-03-12 12:03:08.289 INFO  - Banned card for Player2 (489f6c54-8e0e-47f3-b330-9e890a89e012) : STRANGE BARREL (762bc0fa-200e-4fe7-8f7d-b07ddf2b021b) (6)
+2026-03-12 12:03:08.289 INFO  - First player will be Player2 (489f6c54-8e0e-47f3-b330-9e890a89e012)
+2026-03-12 12:03:08.297 INFO  - Game 44abdce4-58da-489a-b116-973ff51ead0f starting...
+2026-03-12 12:03:08.297 INFO  - Player Player1 (75bdfb71-1829-45d6-ac66-212ec81660ae) hand : {
+- HYENIX ;
+- GOBLIN WEREWOLF ;
+- TUSKED EXTORTER ;
+- HUNGRY HUNGRY HAMSTER ;
+- KILLER BEE
+}
+2026-03-12 12:03:08.298 INFO  - Player Player1 (75bdfb71-1829-45d6-ac66-212ec81660ae) draw pile : {
+- GOREAGLE ALPHA ;
+- AXOLOTL HEALER ;
+- LUCHATAUR ;
+- GRAVE ROBBER ;
+- FROBLIN INSTIGATOR
+}
+2026-03-12 12:03:08.298 INFO  - Player Player2 (489f6c54-8e0e-47f3-b330-9e890a89e012) hand : {
+- COUNT DRACULEECH ;
+- BEE BEAR ;
+- GOBLIN WEREWOLF ;
+- TIGER SQUIRREL ;
+- SNAIL HYDRA
+}
+2026-03-12 12:03:08.298 INFO  - Player Player2 (489f6c54-8e0e-47f3-b330-9e890a89e012) draw pile : {
+- URCHIN HURLER ;
+- HARPY MOTHER ;
+- BRAIN FLY ;
+- MAJESTIC MANTICORE ;
+- TURF THE SURFER
+}
+2026-03-12 12:03:08.298 DEBUG - GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) power changed (2 -> 8) due to GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) effect
+2026-03-12 12:03:08.298 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a)
+2026-03-12 12:03:08.298 INFO  - Resolving NO_BLOCK effect of BEE BEAR (d05b092a-597c-490c-a85b-dae3eda078d4)
+2026-03-12 12:03:08.298 INFO  - Life update for player Player1 (75bdfb71-1829-45d6-ac66-212ec81660ae) : 2 LP
+2026-03-12 12:03:08.298 DEBUG - GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) power changed (2 -> 8) due to GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) effect
+2026-03-12 12:03:08.298 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a)
+2026-03-12 12:03:08.299 DEBUG - GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) power changed (2 -> 8) due to GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) effect
+2026-03-12 12:03:08.299 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a)
+2026-03-12 12:03:08.299 DEBUG - GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b) power changed (2 -> 8) due to GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b) effect
+2026-03-12 12:03:08.299 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b)
+2026-03-12 12:03:08.299 DEBUG - GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) power changed (2 -> 8) due to GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) effect
+2026-03-12 12:03:08.299 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a)
+2026-03-12 12:03:08.299 DEBUG - GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) power changed (2 -> 8) due to GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) effect
+2026-03-12 12:03:08.299 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a)
+2026-03-12 12:03:08.299 INFO  - Life update for player Player2 (489f6c54-8e0e-47f3-b330-9e890a89e012) : 2 LP
+2026-03-12 12:03:08.299 DEBUG - Player2 (489f6c54-8e0e-47f3-b330-9e890a89e012) LP changed (3 -> 2) due to KILLER BEE (aaf0a469-7ba8-4e4f-9421-8976bdc4d667) effect
+2026-03-12 12:03:08.299 INFO  - Resolving INFLICT effect of KILLER BEE (aaf0a469-7ba8-4e4f-9421-8976bdc4d667)
+2026-03-12 12:03:08.299 DEBUG - GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) power changed (2 -> 8) due to GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) effect
+2026-03-12 12:03:08.299 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a)
+2026-03-12 12:03:08.299 DEBUG - GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b) power changed (2 -> 8) due to GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b) effect
+2026-03-12 12:03:08.299 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b)
+2026-03-12 12:03:08.299 DEBUG - GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b) power changed (2 -> 8) due to GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b) effect
+2026-03-12 12:03:08.299 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b)
+2026-03-12 12:03:08.299 DEBUG - TIGER SQUIRREL (2d69302b-fc32-46d3-b8f7-a06b02bbe3ad) effect destroys HYENIX (9da3cab2-e912-4ecd-8665-ef7354f21b8f)
+2026-03-12 12:03:08.299 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (2d69302b-fc32-46d3-b8f7-a06b02bbe3ad)
+2026-03-12 12:03:08.299 DEBUG - GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b) power changed (2 -> 8) due to GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b) effect
+2026-03-12 12:03:08.299 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b)
+2026-03-12 12:03:08.299 DEBUG - GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) power changed (2 -> 8) due to GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) effect
+2026-03-12 12:03:08.299 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a)
+2026-03-12 12:03:08.299 DEBUG - GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) power changed (2 -> 8) due to GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) effect
+2026-03-12 12:03:08.299 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a)
+2026-03-12 12:03:08.300 INFO  - Life update for player Player1 (75bdfb71-1829-45d6-ac66-212ec81660ae) : 1 LP
+2026-03-12 12:03:08.300 DEBUG - Player1 (75bdfb71-1829-45d6-ac66-212ec81660ae) LP changed (2 -> 1) due to GOREAGLE ALPHA (ea17c9c7-59f4-48b4-a5d8-147b1e914c75) effect
+2026-03-12 12:03:08.300 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (ea17c9c7-59f4-48b4-a5d8-147b1e914c75)
+2026-03-12 12:03:08.300 DEBUG - GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) power changed (2 -> 8) due to GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) effect
+2026-03-12 12:03:08.300 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a)
+2026-03-12 12:03:08.300 DEBUG - Player1 (75bdfb71-1829-45d6-ac66-212ec81660ae) must decide if HYENIX (9da3cab2-e912-4ecd-8665-ef7354f21b8f) will revive
+2026-03-12 12:03:08.300 DEBUG - GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) power changed (2 -> 8) due to GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) effect
+2026-03-12 12:03:08.300 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a)
+2026-03-12 12:03:08.300 INFO  - New BOOLEAN choice to be resolved by Player1 (75bdfb71-1829-45d6-ac66-212ec81660ae) (target : )
+2026-03-12 12:03:08.300 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:08.300 DEBUG - GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) power changed (2 -> 8) due to GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a) effect
+2026-03-12 12:03:08.300 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5efbd133-3aff-4b5a-bdec-062dbd53f44a)
+2026-03-12 12:03:08.300 DEBUG - GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b) power changed (2 -> 8) due to GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b) effect
+2026-03-12 12:03:08.300 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ef17dd37-2c10-4ae8-8793-bf4e127cc38b)
+2026-03-12 12:03:08.300 INFO  - Life update for player Player1 (75bdfb71-1829-45d6-ac66-212ec81660ae) : 0 LP
+2026-03-12 12:03:08.300 INFO  - Game over : Player2 (489f6c54-8e0e-47f3-b330-9e890a89e012) wins ; Player1 (75bdfb71-1829-45d6-ac66-212ec81660ae) loses.
+2026-03-12 12:03:08.300 INFO  - End of the game

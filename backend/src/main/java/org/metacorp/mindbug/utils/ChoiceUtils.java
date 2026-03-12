@@ -2,7 +2,6 @@ package org.metacorp.mindbug.utils;
 
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -14,8 +13,10 @@ import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.WebSocketService;
+import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.GameStateService;
+import org.metacorp.mindbug.service.game.PlayCardService;
 
 import java.util.List;
 import java.util.Optional;
@@ -27,19 +28,18 @@ public final class ChoiceUtils {
 
     }
 
-    public static void resolveBooleanChoice(Boolean choiceData, BooleanChoice choice, Game game) throws GameStateException, WebSocketException {
+    public static void resolveBooleanChoice(Boolean choiceData, BooleanChoice choice, Game game) {
         // First reset choice so it doesn't block next steps
         game.setChoice(null);
 
         if (choice != null) {
             choice.getEffectResolver().resolve(game, choiceData);
         } else {
-            // Should not happen
-            throw new GameStateException("No boolean choice to resolve");
+            //TODO Manage error
         }
     }
 
-    public static void resolveFrenzyChoice(Boolean attackAgain, FrenzyAttackChoice choice, Game game) throws GameStateException, WebSocketException {
+    public static void resolveFrenzyChoice(Boolean attackAgain, FrenzyAttackChoice choice, Game game) throws GameStateException {
         // First reset the choice in any case (so it does not block the next steps)
         game.setChoice(null);
 
@@ -53,9 +53,10 @@ public final class ChoiceUtils {
         }
     }
 
-    public static void resolveSimultaneousChoice(UUID cardId, SimultaneousEffectsChoice choice, Game game) throws GameStateException {
+    public static void resolveSimultaneousChoice(UUID cardId, SimultaneousEffectsChoice choice, Game game) {
         if (cardId == null) {
-            throw new GameStateException("Unable to resolve simultaneous choice due to missing card ID");
+            //TODO Raise an error
+            return;
         }
 
         Set<EffectsToApply> effectsToSort = choice.getEffectsToSort();
@@ -74,9 +75,10 @@ public final class ChoiceUtils {
         game.setChoice(null);
     }
 
-    public static void resolveTargetChoice(List<UUID> chosenTargetIds, TargetChoice choice, Game game) throws GameStateException, WebSocketException {
+    public static void resolveTargetChoice(List<UUID> chosenTargetIds, TargetChoice choice, Game game) {
         if (!choice.isOptional() && (chosenTargetIds == null || chosenTargetIds.size() != choice.getTargetsCount())) {
-            throw new GameStateException("Unable to resolve target choice due to missing targets");
+            //TODO Raise an error or log message
+            return;
         }
 
         // Check that there are chosen targets (can be null/empty if choice is optional)
@@ -85,7 +87,7 @@ public final class ChoiceUtils {
                     .filter(target -> chosenTargetIds.contains(target.getUuid()))
                     .toList();
             if (chosenTargets.size() != chosenTargetIds.size()) {
-                throw new GameStateException("Unable to resolve target choice due to invalid targets");
+                //TODO Raise an error or log message
             }
 
             choice.getEffect().resolve(game, chosenTargets);
@@ -97,7 +99,7 @@ public final class ChoiceUtils {
         }
     }
 
-    public static void resolveHunterChoice(UUID chosenTargetId, HunterChoice choice, Game game) throws GameStateException, WebSocketException {
+    public static void resolveHunterChoice(UUID chosenTargetId, HunterChoice choice, Game game) throws GameStateException {
         // First reset choice as attack resolution need to have no current choice
         game.setChoice(null);
 
@@ -106,17 +108,55 @@ public final class ChoiceUtils {
                     .filter(target -> chosenTargetId.equals(target.getUuid()))
                     .findFirst();
             if (chosenTarget.isEmpty()) {
-                throw new GameStateException("Unable to resolve hunter choice due to invalid target");
+                //TODO Raise an error or log message
             } else {
                 AttackService.resolveAttack(chosenTarget.get(), game);
             }
         } else {
-            Player opponent = choice.getAttackingCard().getOwner().getOpponent(game.getPlayers());
-            if (opponent.getBoard().isEmpty() || !opponent.canBlock(choice.getAttackingCard().hasKeyword(CardKeyword.SNEAKY))) {
+            List<Player> opponents = choice.getAttackingCard()
+                    .getOwner()
+                    .getOpponents(game.getPlayers());
+
+            boolean someoneCanBlock = opponents.stream()
+                    .anyMatch(opponent -> opponent.canBlock(choice.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)));
+
+            if (!someoneCanBlock) {
                 AttackService.resolveAttack(null, game);
             } else {
                 WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);
             }
         }
+    }
+
+    public static void askMindbugChoice(int index, List<Player> candidates, CardInstance card, Game game) {
+        if (index >= candidates.size()) {
+            try {
+                PlayCardService.playCard(game);
+            } catch (GameStateException e) {
+                throw new RuntimeException(e);
+            }
+            return;
+        }
+
+        Player current = candidates.get(index);
+
+        ResolvableEffect<Boolean> effect = (g, useMindbug) -> {
+            try {
+                if (useMindbug) {
+                    PlayCardService.playCard(current, g);
+                } else {
+                    askMindbugChoice(index + 1, candidates, card, g);
+                }
+            } catch (GameStateException e) {
+                throw new RuntimeException(e);
+            }
+        };
+
+        BooleanChoice mindbugChoice = new BooleanChoice(current, card, effect);
+        mindbugChoice.setPrompt(
+                current.getName() + " : voulez-vous utiliser un Mindbug pour voler cette carte ? (O/N)"
+        );
+
+        game.setChoice(mindbugChoice);
     }
 }

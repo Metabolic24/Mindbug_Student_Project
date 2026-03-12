@@ -1,0 +1,88 @@
+2026-03-12 12:03:42.244 INFO  - Calculating first player...
+2026-03-12 12:03:42.246 INFO  - Banned card for Player1 (c8ed2ea7-a9bd-4483-b2ce-cbf822c9ab87) : PLATED SCORPION (72113d01-1fce-42f5-bac7-d2ec92e7eca8) (2)
+2026-03-12 12:03:42.246 INFO  - Banned card for Player2 (f4e8b02b-e054-444c-9feb-658ddd20c76e) : KILLER BEE (4d965172-739f-42ea-ae13-54d3162948ec) (5)
+2026-03-12 12:03:42.246 INFO  - First player will be Player2 (f4e8b02b-e054-444c-9feb-658ddd20c76e)
+2026-03-12 12:03:42.256 INFO  - Game 53ca7253-c0f9-49dd-9a42-d807fae5717b starting...
+2026-03-12 12:03:42.256 INFO  - Player Player1 (c8ed2ea7-a9bd-4483-b2ce-cbf822c9ab87) hand : {
+- BRAIN FLY ;
+- SHIELD BUGS ;
+- GRAVE ROBBER ;
+- LUCHATAUR ;
+- HAMSTER LION
+}
+2026-03-12 12:03:42.257 INFO  - Player Player1 (c8ed2ea7-a9bd-4483-b2ce-cbf822c9ab87) draw pile : {
+- CREEP FROM THE DEEP ;
+- CHAMELEON SNIPER ;
+- GRAVE ROBBER ;
+- STRANGE BARREL ;
+- HYENIX
+}
+2026-03-12 12:03:42.257 INFO  - Player Player2 (f4e8b02b-e054-444c-9feb-658ddd20c76e) hand : {
+- SHARK DOG ;
+- TURF THE SURFER ;
+- HUNGRY HUNGRY HAMSTER ;
+- GOREAGLE ALPHA ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:42.257 INFO  - Player Player2 (f4e8b02b-e054-444c-9feb-658ddd20c76e) draw pile : {
+- ELEPHANTOPUS ;
+- URCHIN HURLER ;
+- COUNT DRACULEECH ;
+- BUGSERKER ;
+- FERRET PACIFIER
+}
+2026-03-12 12:03:42.258 DEBUG - Player Player1 (c8ed2ea7-a9bd-4483-b2ce-cbf822c9ab87) must choose 1 cards to steal (targets : {
+- BRAIN FLY ;
+- SHIELD BUGS ;
+- GRAVE ROBBER ;
+- LUCHATAUR ;
+- HAMSTER LION
+})
+2026-03-12 12:03:42.259 INFO  - New TARGET choice to be resolved by Player1 (c8ed2ea7-a9bd-4483-b2ce-cbf822c9ab87) (targets : {
+- LUCHATAUR ;
+- BRAIN FLY ;
+- SHIELD BUGS ;
+- GRAVE ROBBER ;
+- HAMSTER LION
+})
+2026-03-12 12:03:42.259 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.259 DEBUG - Player2 (f4e8b02b-e054-444c-9feb-658ddd20c76e) must decide if stolen card LUCHATAUR (6b8d644d-179f-4ccd-993d-5911670ac9f5) will be added to hand or board
+2026-03-12 12:03:42.259 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (557d266f-71ac-4456-9042-e9be749063bf)
+2026-03-12 12:03:42.259 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:42.259 DEBUG - LUCHATAUR (6b8d644d-179f-4ccd-993d-5911670ac9f5) stolen and drawn by Player2 (f4e8b02b-e054-444c-9feb-658ddd20c76e) due to HUNGRY HUNGRY HAMSTER (557d266f-71ac-4456-9042-e9be749063bf) effect
+2026-03-12 12:03:42.260 INFO  - Life update for player Player1 (c8ed2ea7-a9bd-4483-b2ce-cbf822c9ab87) : 2 LP
+2026-03-12 12:03:42.267 INFO  - New FRENZY choice to be resolved by Player2 (f4e8b02b-e054-444c-9feb-658ddd20c76e) (attackingCard : LUCHATAUR (6b8d644d-179f-4ccd-993d-5911670ac9f5))
+2026-03-12 12:03:42.267 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.267 DEBUG - CardInstance(uuid=557d266f-71ac-4456-9042-e9be749063bf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2a504ea7), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.267 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (acbde7b5-a053-4333-9b78-9df63d7d3145)
+2026-03-12 12:03:42.267 DEBUG - CardInstance(uuid=557d266f-71ac-4456-9042-e9be749063bf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2a504ea7), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.267 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (acbde7b5-a053-4333-9b78-9df63d7d3145)
+2026-03-12 12:03:42.268 INFO  - New FRENZY choice to be resolved by Player2 (f4e8b02b-e054-444c-9feb-658ddd20c76e) (attackingCard : LUCHATAUR (6b8d644d-179f-4ccd-993d-5911670ac9f5))
+2026-03-12 12:03:42.268 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.268 INFO  - Life update for player Player1 (c8ed2ea7-a9bd-4483-b2ce-cbf822c9ab87) : 1 LP
+2026-03-12 12:03:42.268 INFO  - New FRENZY choice to be resolved by Player2 (f4e8b02b-e054-444c-9feb-658ddd20c76e) (attackingCard : LUCHATAUR (6b8d644d-179f-4ccd-993d-5911670ac9f5))
+2026-03-12 12:03:42.268 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.268 INFO  - Life update for player Player2 (f4e8b02b-e054-444c-9feb-658ddd20c76e) : 2 LP
+2026-03-12 12:03:42.269 DEBUG - Player2 (f4e8b02b-e054-444c-9feb-658ddd20c76e) LP changed (3 -> 2) due to GOREAGLE ALPHA (13bb091d-b818-4cb7-b96a-2593f4526f7d) effect
+2026-03-12 12:03:42.269 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (13bb091d-b818-4cb7-b96a-2593f4526f7d)
+2026-03-12 12:03:42.269 DEBUG - HYENIX (8430dd22-62fc-41e9-9dcb-bb749d39fb55) power changed (7 -> 8) due to SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933) effect
+2026-03-12 12:03:42.269 DEBUG - STRANGE BARREL (4744ce66-5e70-4730-90c7-d245f48ce135) power changed (6 -> 7) due to SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933) effect
+2026-03-12 12:03:42.269 INFO  - Resolving POWER_UP effect of SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933)
+2026-03-12 12:03:42.269 DEBUG - HYENIX (8430dd22-62fc-41e9-9dcb-bb749d39fb55) power changed (7 -> 8) due to SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933) effect
+2026-03-12 12:03:42.269 DEBUG - STRANGE BARREL (4744ce66-5e70-4730-90c7-d245f48ce135) power changed (6 -> 7) due to SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933) effect
+2026-03-12 12:03:42.269 INFO  - Resolving POWER_UP effect of SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933)
+2026-03-12 12:03:42.269 DEBUG - HYENIX (8430dd22-62fc-41e9-9dcb-bb749d39fb55) power changed (7 -> 8) due to SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933) effect
+2026-03-12 12:03:42.269 DEBUG - STRANGE BARREL (4744ce66-5e70-4730-90c7-d245f48ce135) power changed (6 -> 7) due to SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933) effect
+2026-03-12 12:03:42.269 INFO  - Resolving POWER_UP effect of SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933)
+2026-03-12 12:03:42.269 DEBUG - HYENIX (8430dd22-62fc-41e9-9dcb-bb749d39fb55) power changed (7 -> 8) due to SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933) effect
+2026-03-12 12:03:42.269 DEBUG - STRANGE BARREL (4744ce66-5e70-4730-90c7-d245f48ce135) power changed (6 -> 7) due to SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933) effect
+2026-03-12 12:03:42.269 INFO  - Resolving POWER_UP effect of SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933)
+2026-03-12 12:03:42.269 DEBUG - HYENIX (8430dd22-62fc-41e9-9dcb-bb749d39fb55) power changed (7 -> 8) due to SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933) effect
+2026-03-12 12:03:42.269 DEBUG - STRANGE BARREL (4744ce66-5e70-4730-90c7-d245f48ce135) power changed (6 -> 7) due to SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933) effect
+2026-03-12 12:03:42.269 INFO  - Resolving POWER_UP effect of SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933)
+2026-03-12 12:03:42.269 DEBUG - HYENIX (8430dd22-62fc-41e9-9dcb-bb749d39fb55) power changed (7 -> 8) due to SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933) effect
+2026-03-12 12:03:42.270 DEBUG - STRANGE BARREL (4744ce66-5e70-4730-90c7-d245f48ce135) power changed (6 -> 7) due to SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933) effect
+2026-03-12 12:03:42.270 INFO  - Resolving POWER_UP effect of SHIELD BUGS (bd9b2a2e-ec92-43be-bc4f-7321d5acb933)
+2026-03-12 12:03:42.270 INFO  - Life update for player Player1 (c8ed2ea7-a9bd-4483-b2ce-cbf822c9ab87) : 0 LP
+2026-03-12 12:03:42.270 INFO  - Game over : Player2 (f4e8b02b-e054-444c-9feb-658ddd20c76e) wins ; Player1 (c8ed2ea7-a9bd-4483-b2ce-cbf822c9ab87) loses.
+2026-03-12 12:03:42.270 INFO  - End of the game

@@ -2,8 +2,6 @@ package org.metacorp.mindbug.service.game;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -12,19 +10,16 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.utils.SetUtils;
-import org.metacorp.mindbug.utils.MindbugGameTest;
+import org.metacorp.mindbug.utils.CardUtils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertInstanceOf;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class GameStateServiceTest extends MindbugGameTest {
+public class GameStateServiceTest {
 
     private Game game;
     private Player currentPlayer;
@@ -32,12 +27,12 @@ public class GameStateServiceTest extends MindbugGameTest {
 
     @BeforeEach
     public void initGame() {
-        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
     }
 
     @Test
-    public void testLifePointsLost_endGame() throws WebSocketException {
+    public void testLifePointsLost_endGame() {
         currentPlayer.getTeam().setLifePoints(0);
         org.metacorp.mindbug.service.game.GameStateService.lifePointLost(currentPlayer, game);
 
@@ -45,7 +40,7 @@ public class GameStateServiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void testLifePointsLost_effect() throws WebSocketException {
+    public void testLifePointsLost_effect() {
         CardInstance boardCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(boardCard);
         boardCard.getCard().getEffects().put(EffectTiming.LIFE_LOST, new ArrayList<>(List.of(new InflictEffect())));
@@ -60,7 +55,7 @@ public class GameStateServiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void refreshGameState_noPassiveEffects() throws WebSocketException, GameStateException {
+    public void refreshGameState_noPassiveEffects() {
         CardInstance boardCard = currentPlayer.getHand().getFirst();
         boardCard.setPower(boardCard.getPower() + 1);
         boardCard.setAbleToAttack(false);
@@ -70,7 +65,8 @@ public class GameStateServiceTest extends MindbugGameTest {
 
         currentPlayer.addCardToBoard(boardCard);
 
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = game.getOpponents().getFirst();
+      
         opponent.getDiscardPile().add(opponent.getHand().removeFirst());
         opponent.getDiscardPile().add(opponent.getHand().removeFirst());
         opponent.getDiscardPile().add(opponent.getDrawPile().removeFirst());
@@ -94,13 +90,13 @@ public class GameStateServiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void refreshGameState_multiplePassiveEffects() throws WebSocketException, GameStateException {
+    public void refreshGameState_multiplePassiveEffects() {
         // Create a new game manually, as we need to get some specific cards
         Player currentPlayer = new Player(playerService.createPlayer("player1"));
         Player opponent = new Player(playerService.createPlayer("player2"));
-        game = new Game(currentPlayer, opponent);
+        game = new Game(List.of(currentPlayer, opponent));
         game.setCurrentPlayer(currentPlayer);
-        game.setCards(SetUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey()));
+        game.setCards(CardUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey()));
 
         CardInstance card1 = findCard("FROBLIN INSTIGATOR");
         CardInstance card2 = findCard("SHARKY GRAB-DOG-MUMMYPUS");

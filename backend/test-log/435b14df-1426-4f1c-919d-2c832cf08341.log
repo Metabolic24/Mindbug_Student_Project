@@ -1,0 +1,126 @@
+2026-03-12 12:03:41.535 INFO  - Calculating first player...
+2026-03-12 12:03:41.538 INFO  - Banned card for Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) : FERRET BOMBER (d16dd5b6-0a61-4060-a671-6cfbd88101f9) (2)
+2026-03-12 12:03:41.538 INFO  - Banned card for Player2 (033ecbfa-d63d-41a6-9aa3-3e76354fdf1e) : SNAIL HYDRA (e52f572e-3523-4fb6-8738-14fca05b4f07) (9)
+2026-03-12 12:03:41.538 INFO  - First player will be Player2 (033ecbfa-d63d-41a6-9aa3-3e76354fdf1e)
+2026-03-12 12:03:41.546 INFO  - Game 435b14df-1426-4f1c-919d-2c832cf08341 starting...
+2026-03-12 12:03:41.547 INFO  - Player Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) hand : {
+- BEE BEAR ;
+- COUNT DRACULEECH ;
+- TURBO BUG ;
+- EXPLOSIVE TOAD ;
+- COUNT DRACULEECH
+}
+2026-03-12 12:03:41.547 INFO  - Player Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) draw pile : {
+- TUSKED EXTORTER ;
+- BUGSERKER ;
+- SNAIL HYDRA ;
+- FROBLIN INSTIGATOR ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:41.547 INFO  - Player Player2 (033ecbfa-d63d-41a6-9aa3-3e76354fdf1e) hand : {
+- MAJESTIC MANTICORE ;
+- DEATHWEAVER ;
+- COMPOST DRAGON ;
+- TIGER SQUIRREL ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:03:41.547 INFO  - Player Player2 (033ecbfa-d63d-41a6-9aa3-3e76354fdf1e) draw pile : {
+- FROBLIN INSTIGATOR ;
+- KILLER BEE ;
+- HUNGRY HUNGRY HAMSTER ;
+- ELEPHANTOPUS ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:41.548 DEBUG - Player Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) must choose 1 card(s) to destroy (available targets : {
+- COMPOST DRAGON ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:41.548 INFO  - New TARGET choice to be resolved by Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) (targets : {
+- TUSKED EXTORTER ;
+- COMPOST DRAGON
+})
+2026-03-12 12:03:41.548 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:41.549 DEBUG - EXPLOSIVE TOAD (582d3373-6d39-480d-a972-21935e1dbcdb) effect destroys TUSKED EXTORTER (41d1fae6-27f4-44d5-91e6-fe8e5e3789fc)
+2026-03-12 12:03:41.549 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (582d3373-6d39-480d-a972-21935e1dbcdb)
+2026-03-12 12:03:41.549 INFO  - Life update for player Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) : 2 LP
+2026-03-12 12:03:41.549 DEBUG - Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) LP changed (3 -> 2) due to KILLER BEE (21106250-dd48-4062-b5b4-f4d8b117294b) effect
+2026-03-12 12:03:41.549 INFO  - Resolving INFLICT effect of KILLER BEE (21106250-dd48-4062-b5b4-f4d8b117294b)
+2026-03-12 12:03:41.549 INFO  - Life update for player Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) : 1 LP
+2026-03-12 12:03:41.549 DEBUG - Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) LP changed (2 -> 1) due to COUNT DRACULEECH (399e5e7d-25c7-422a-9477-ca02b6f9ad03) effect
+2026-03-12 12:03:41.549 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (399e5e7d-25c7-422a-9477-ca02b6f9ad03)
+2026-03-12 12:03:41.549 DEBUG - Player Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) must choose 1 card(s) to destroy (available targets : {
+- COMPOST DRAGON ;
+- TIGER SQUIRREL ;
+- KILLER BEE ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:41.550 INFO  - New TARGET choice to be resolved by Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) (targets : {
+- COUNT DRACULEECH ;
+- COMPOST DRAGON ;
+- KILLER BEE ;
+- TIGER SQUIRREL
+})
+2026-03-12 12:03:41.550 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:41.550 DEBUG - COUNT DRACULEECH (399e5e7d-25c7-422a-9477-ca02b6f9ad03) effect destroys COMPOST DRAGON (e9d3c174-02fd-4145-ad05-628be332d3f4)
+2026-03-12 12:03:41.550 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (399e5e7d-25c7-422a-9477-ca02b6f9ad03)
+2026-03-12 12:03:41.550 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:41.550 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.550 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.550 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.551 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.551 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.551 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.551 DEBUG - Player Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) must choose 1 cards to steal (targets : {
+- BEE BEAR ;
+- COUNT DRACULEECH ;
+- TURBO BUG ;
+- TUSKED EXTORTER ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:41.551 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.551 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.551 INFO  - New TARGET choice to be resolved by Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) (targets : {
+- BEE BEAR ;
+- COUNT DRACULEECH ;
+- TURBO BUG ;
+- SNAIL HYDRA ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:41.551 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:41.552 DEBUG - Player2 (033ecbfa-d63d-41a6-9aa3-3e76354fdf1e) must decide if stolen card BEE BEAR (972d8b44-09e1-4379-8c7f-b2a484e44508) will be added to hand or board
+2026-03-12 12:03:41.552 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (b3f3b049-7115-4d82-91f2-576b0c373ca8)
+2026-03-12 12:03:41.552 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.552 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.552 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:41.552 DEBUG - BEE BEAR (972d8b44-09e1-4379-8c7f-b2a484e44508) stolen and drawn by Player2 (033ecbfa-d63d-41a6-9aa3-3e76354fdf1e) due to HUNGRY HUNGRY HAMSTER (b3f3b049-7115-4d82-91f2-576b0c373ca8) effect
+2026-03-12 12:03:41.552 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.552 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.552 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.552 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.553 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.553 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.553 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.553 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.553 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.553 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.553 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (204eafb9-9c8a-4f45-a6f2-5f7449f0d5b8)
+2026-03-12 12:03:41.553 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.553 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.553 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (204eafb9-9c8a-4f45-a6f2-5f7449f0d5b8)
+2026-03-12 12:03:41.554 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.554 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.554 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (204eafb9-9c8a-4f45-a6f2-5f7449f0d5b8)
+2026-03-12 12:03:41.554 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.554 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.554 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (204eafb9-9c8a-4f45-a6f2-5f7449f0d5b8)
+2026-03-12 12:03:41.554 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.555 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.555 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (204eafb9-9c8a-4f45-a6f2-5f7449f0d5b8)
+2026-03-12 12:03:41.555 DEBUG - BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) power changed (3 -> 11) due to BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb) effect
+2026-03-12 12:03:41.555 INFO  - Resolving POWER_UP effect of BUGSERKER (fea42d61-6ab0-4f9a-bf71-b7ca3d8e4acb)
+2026-03-12 12:03:41.555 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (204eafb9-9c8a-4f45-a6f2-5f7449f0d5b8)
+2026-03-12 12:03:41.555 INFO  - Life update for player Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) : 0 LP
+2026-03-12 12:03:41.555 INFO  - Game over : Player2 (033ecbfa-d63d-41a6-9aa3-3e76354fdf1e) wins ; Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) loses.
+2026-03-12 12:03:41.556 INFO  - End of the game
+2026-03-12 12:03:41.556 DEBUG - Player1 (ee67a4df-e161-47aa-9e64-5acc01e62533) LP changed (1 -> 0) due to COUNT DRACULEECH (399e5e7d-25c7-422a-9477-ca02b6f9ad03) effect
+2026-03-12 12:03:41.556 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (399e5e7d-25c7-422a-9477-ca02b6f9ad03)

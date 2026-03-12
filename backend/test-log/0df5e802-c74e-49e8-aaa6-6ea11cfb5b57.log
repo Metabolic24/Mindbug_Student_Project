@@ -1,0 +1,117 @@
+2026-03-12 12:03:08.157 INFO  - Calculating first player...
+2026-03-12 12:03:08.159 INFO  - Banned card for Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) : COMPOST DRAGON (c3f6f6ec-5184-4c9b-b5b2-f23d392f1eeb) (3)
+2026-03-12 12:03:08.159 INFO  - Banned card for Player2 (a8e0254e-ff0a-4f3b-92d9-24eed6b84733) : BUGSERKER (b618f7d9-4abe-4a82-9cd8-7d4ca8d18ec4) (3)
+2026-03-12 12:03:08.159 INFO  - Banned card for Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) : MYSTERIOUS MERMAID (ff9c8bd7-a1a8-407a-931c-4eae643d5610) (7)
+2026-03-12 12:03:08.159 INFO  - Banned card for Player2 (a8e0254e-ff0a-4f3b-92d9-24eed6b84733) : KANGASAURUS REX (5ea6758d-addf-4a2c-be40-f948e4d49c28) (7)
+2026-03-12 12:03:08.159 INFO  - Banned card for Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) : TUSKED EXTORTER (0ab8bfc5-5157-429d-982c-9fab8aeb3aae) (8)
+2026-03-12 12:03:08.160 INFO  - Banned card for Player2 (a8e0254e-ff0a-4f3b-92d9-24eed6b84733) : URCHIN HURLER (cffb2473-0b1d-4b9b-832e-98bbac4240cd) (5)
+2026-03-12 12:03:08.160 INFO  - First player will be Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd)
+2026-03-12 12:03:08.167 INFO  - Game 0df5e802-c74e-49e8-aaa6-6ea11cfb5b57 starting...
+2026-03-12 12:03:08.167 INFO  - Player Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) hand : {
+- MAJESTIC MANTICORE ;
+- SNAIL HYDRA ;
+- AXOLOTL HEALER ;
+- GOREAGLE ALPHA ;
+- TURF THE SURFER
+}
+2026-03-12 12:03:08.167 INFO  - Player Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) draw pile : {
+- PLATED SCORPION ;
+- EXPLOSIVE TOAD ;
+- BRAIN FLY ;
+- FERRET PACIFIER ;
+- TURF THE SURFER
+}
+2026-03-12 12:03:08.167 INFO  - Player Player2 (a8e0254e-ff0a-4f3b-92d9-24eed6b84733) hand : {
+- THE LURKER ;
+- SPIDER OWL ;
+- TIGER SQUIRREL ;
+- RHINO TURTLE ;
+- HYENIX
+}
+2026-03-12 12:03:08.167 INFO  - Player Player2 (a8e0254e-ff0a-4f3b-92d9-24eed6b84733) draw pile : {
+- SNAIL HYDRA ;
+- SNAIL THROWER ;
+- KANGASAURUS REX ;
+- LUCHATAUR ;
+- SHARKY GRAB-DOG-MUMMYPUS
+}
+2026-03-12 12:03:08.167 DEBUG - Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) LP changed (3 -> 5) due to AXOLOTL HEALER (538a1468-a88e-47c9-bcd9-54c99462ca42) effect
+2026-03-12 12:03:08.168 INFO  - Resolving GAIN effect of AXOLOTL HEALER (538a1468-a88e-47c9-bcd9-54c99462ca42)
+2026-03-12 12:03:08.168 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (0abce3e4-2e3c-47c4-964a-e8b39de85bbc)
+2026-03-12 12:03:08.168 INFO  - Life update for player Player2 (a8e0254e-ff0a-4f3b-92d9-24eed6b84733) : 2 LP
+2026-03-12 12:03:08.168 DEBUG - Player2 (a8e0254e-ff0a-4f3b-92d9-24eed6b84733) must decide if HYENIX (01dd1331-f200-42eb-95bc-21c3bffbf273) will revive
+2026-03-12 12:03:08.168 INFO  - New BOOLEAN choice to be resolved by Player2 (a8e0254e-ff0a-4f3b-92d9-24eed6b84733) (target : )
+2026-03-12 12:03:08.168 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:08.168 DEBUG - HYENIX (01dd1331-f200-42eb-95bc-21c3bffbf273) revived using its own effect
+2026-03-12 12:03:08.168 INFO  - Resolving REVIVE effect of HYENIX (01dd1331-f200-42eb-95bc-21c3bffbf273)
+2026-03-12 12:03:08.168 DEBUG - Player Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) must choose 1 card(s) that will be unable to block (targets : {
+- HYENIX ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:08.168 INFO  - New TARGET choice to be resolved by Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) (targets : {
+- HYENIX ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:08.168 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.168 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (0abce3e4-2e3c-47c4-964a-e8b39de85bbc)
+2026-03-12 12:03:08.168 DEBUG - Player Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) must choose 1 cards to steal (targets : {
+- HYENIX ;
+- SNAIL HYDRA ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:08.168 INFO  - New TARGET choice to be resolved by Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) (targets : {
+- HYENIX ;
+- RHINO TURTLE ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:08.168 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.169 DEBUG - RHINO TURTLE (86bb474f-6996-4544-8fda-b4346953f65b) stolen and played by Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) due to BRAIN FLY (f9b6de1c-b262-4973-a6e3-a44256a16499) effect
+2026-03-12 12:03:08.169 INFO  - Resolving STEAL effect of BRAIN FLY (f9b6de1c-b262-4973-a6e3-a44256a16499)
+2026-03-12 12:03:08.169 INFO  - New FRENZY choice to be resolved by Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) (attackingCard : RHINO TURTLE (86bb474f-6996-4544-8fda-b4346953f65b))
+2026-03-12 12:03:08.169 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:08.169 INFO  - Life update for player Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) : 4 LP
+2026-03-12 12:03:08.169 DEBUG - Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) LP changed (5 -> 4) due to GOREAGLE ALPHA (9839a16a-7b14-4eb7-a341-5f6e6cdb4bc3) effect
+2026-03-12 12:03:08.169 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (9839a16a-7b14-4eb7-a341-5f6e6cdb4bc3)
+2026-03-12 12:03:08.169 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:08.169 INFO  - Life update for player Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) : 3 LP
+2026-03-12 12:03:08.169 DEBUG - Player Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) must choose 1 card(s) that will be unable to block (targets : {
+- SNAIL HYDRA ;
+- LUCHATAUR
+})
+2026-03-12 12:03:08.169 INFO  - New TARGET choice to be resolved by Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) (targets : {
+- SNAIL HYDRA ;
+- LUCHATAUR
+})
+2026-03-12 12:03:08.169 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.169 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (4264d3e1-1f9b-4fea-b20b-382693ab2ebd)
+2026-03-12 12:03:08.169 INFO  - Life update for player Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) : 2 LP
+2026-03-12 12:03:08.169 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (4b848f8d-0c18-418a-ad06-a9675f6386cc)
+2026-03-12 12:03:08.169 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (4b848f8d-0c18-418a-ad06-a9675f6386cc)
+2026-03-12 12:03:08.169 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (4b848f8d-0c18-418a-ad06-a9675f6386cc)
+2026-03-12 12:03:08.169 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (4b848f8d-0c18-418a-ad06-a9675f6386cc)
+2026-03-12 12:03:08.169 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (4b848f8d-0c18-418a-ad06-a9675f6386cc)
+2026-03-12 12:03:08.170 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (4b848f8d-0c18-418a-ad06-a9675f6386cc)
+2026-03-12 12:03:08.170 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (4b848f8d-0c18-418a-ad06-a9675f6386cc)
+2026-03-12 12:03:08.170 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (4b848f8d-0c18-418a-ad06-a9675f6386cc)
+2026-03-12 12:03:08.170 DEBUG - Player Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) must choose 1 card(s) to destroy (available targets : {
+- SNAIL HYDRA ;
+- LUCHATAUR ;
+- TIGER SQUIRREL ;
+- FERRET PACIFIER
+})
+2026-03-12 12:03:08.170 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (4b848f8d-0c18-418a-ad06-a9675f6386cc)
+2026-03-12 12:03:08.170 INFO  - New TARGET choice to be resolved by Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) (targets : {
+- FERRET PACIFIER ;
+- SNAIL HYDRA ;
+- LUCHATAUR ;
+- TIGER SQUIRREL
+})
+2026-03-12 12:03:08.170 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.170 DEBUG - EXPLOSIVE TOAD (9c66563e-d770-492b-b2fe-da8ab8943404) effect destroys FERRET PACIFIER (4b848f8d-0c18-418a-ad06-a9675f6386cc)
+2026-03-12 12:03:08.170 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (9c66563e-d770-492b-b2fe-da8ab8943404)
+2026-03-12 12:03:08.170 INFO  - New FRENZY choice to be resolved by Player2 (a8e0254e-ff0a-4f3b-92d9-24eed6b84733) (attackingCard : LUCHATAUR (6fffcd43-d4f9-4429-a496-dbf6db70b39a))
+2026-03-12 12:03:08.170 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:08.170 INFO  - Life update for player Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) : 1 LP
+2026-03-12 12:03:08.170 INFO  - Life update for player Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) : 0 LP
+2026-03-12 12:03:08.170 INFO  - Game over : Player2 (a8e0254e-ff0a-4f3b-92d9-24eed6b84733) wins ; Player1 (5fb3edf9-e80a-431d-aa63-1ebfa193d8dd) loses.
+2026-03-12 12:03:08.170 INFO  - End of the game

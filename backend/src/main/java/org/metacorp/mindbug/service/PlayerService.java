@@ -53,6 +53,15 @@ public class PlayerService {
         return player;
     }
 
+    public PlayerLightDTO createPlayer(String playerName, UUID uuid){
+        PlayerLightDTO player = new PlayerLightDTO();
+        player.setName(playerName);
+        player.setUuid(uuid);
+        players.put(uuid, player);
+
+        return player;
+    }
+
     /**
      * Get player data by ID
      *

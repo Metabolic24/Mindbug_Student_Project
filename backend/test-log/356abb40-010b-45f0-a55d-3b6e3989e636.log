@@ -1,0 +1,286 @@
+2026-03-12 12:03:46.885 INFO  - Calculating first player...
+2026-03-12 12:03:46.887 INFO  - Banned card for Player1 (9959a758-e66b-4c45-83e9-1cfefd5144c7) : GORILLON (f1810bf8-6c1f-43aa-9700-d04f89118fab) (10)
+2026-03-12 12:03:46.887 INFO  - Banned card for Player2 (3cf09dc5-05e9-4244-8dc7-b44c7dcd2c9b) : TURBO BUG (f123ddfa-7e5f-446d-890b-e7ca07124b4b) (4)
+2026-03-12 12:03:46.887 INFO  - First player will be Player1 (9959a758-e66b-4c45-83e9-1cfefd5144c7)
+2026-03-12 12:03:46.894 INFO  - Game 356abb40-010b-45f0-a55d-3b6e3989e636 starting...
+2026-03-12 12:03:46.894 INFO  - Player Player1 (9959a758-e66b-4c45-83e9-1cfefd5144c7) hand : {
+- FROBLIN INSTIGATOR ;
+- CREEP FROM THE DEEP ;
+- RHINO TURTLE ;
+- EXPLOSIVE TOAD ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:03:46.895 INFO  - Player Player1 (9959a758-e66b-4c45-83e9-1cfefd5144c7) draw pile : {
+- BUGSERKER ;
+- HAMSTER LION ;
+- PLATED SCORPION ;
+- GOBLIN WEREWOLF ;
+- COMPOST DRAGON
+}
+2026-03-12 12:03:46.895 INFO  - Player Player2 (3cf09dc5-05e9-4244-8dc7-b44c7dcd2c9b) hand : {
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- FERRET PACIFIER ;
+- BEE BEAR ;
+- BUGSERKER ;
+- FROBLIN INSTIGATOR
+}
+2026-03-12 12:03:46.895 INFO  - Player Player2 (3cf09dc5-05e9-4244-8dc7-b44c7dcd2c9b) draw pile : {
+- FERRET PACIFIER ;
+- SNAIL THROWER ;
+- URCHIN HURLER ;
+- MYSTERIOUS MERMAID ;
+- LUCHATAUR
+}
+2026-03-12 12:03:46.895 DEBUG - FROBLIN INSTIGATOR (f5a156e5-8622-4850-9e50-d4ef6bf9fe04) power changed (1 -> 1) due to FROBLIN INSTIGATOR (f5a156e5-8622-4850-9e50-d4ef6bf9fe04) effect
+2026-03-12 12:03:46.895 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f5a156e5-8622-4850-9e50-d4ef6bf9fe04)
+2026-03-12 12:03:46.895 DEBUG - FROBLIN INSTIGATOR (f5a156e5-8622-4850-9e50-d4ef6bf9fe04) power changed (1 -> 1) due to FROBLIN INSTIGATOR (f5a156e5-8622-4850-9e50-d4ef6bf9fe04) effect
+2026-03-12 12:03:46.895 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f5a156e5-8622-4850-9e50-d4ef6bf9fe04)
+2026-03-12 12:03:46.895 DEBUG - FROBLIN INSTIGATOR (f5a156e5-8622-4850-9e50-d4ef6bf9fe04) power changed (1 -> 1) due to FROBLIN INSTIGATOR (f5a156e5-8622-4850-9e50-d4ef6bf9fe04) effect
+2026-03-12 12:03:46.895 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f5a156e5-8622-4850-9e50-d4ef6bf9fe04)
+2026-03-12 12:03:46.895 DEBUG - FROBLIN INSTIGATOR (f5a156e5-8622-4850-9e50-d4ef6bf9fe04) power changed (1 -> 1) due to FROBLIN INSTIGATOR (f5a156e5-8622-4850-9e50-d4ef6bf9fe04) effect
+2026-03-12 12:03:46.895 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f5a156e5-8622-4850-9e50-d4ef6bf9fe04)
+2026-03-12 12:03:46.895 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.895 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains POISONOUS keyword
+2026-03-12 12:03:46.895 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.895 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains HUNTER keyword
+2026-03-12 12:03:46.895 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.895 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains POISONOUS keyword
+2026-03-12 12:03:46.895 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.895 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains HUNTER keyword
+2026-03-12 12:03:46.895 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.895 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains POISONOUS keyword
+2026-03-12 12:03:46.895 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.895 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains HUNTER keyword
+2026-03-12 12:03:46.896 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.896 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains POISONOUS keyword
+2026-03-12 12:03:46.896 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.896 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains HUNTER keyword
+2026-03-12 12:03:46.896 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.896 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains POISONOUS keyword
+2026-03-12 12:03:46.896 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.896 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains HUNTER keyword
+2026-03-12 12:03:46.896 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.896 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (00fb2a1b-9d9d-4934-96ed-3617f0711f1f)
+2026-03-12 12:03:46.896 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains POISONOUS keyword
+2026-03-12 12:03:46.896 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.896 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains HUNTER keyword
+2026-03-12 12:03:46.896 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.896 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (00fb2a1b-9d9d-4934-96ed-3617f0711f1f)
+2026-03-12 12:03:46.896 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 9) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.896 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.896 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains POISONOUS keyword
+2026-03-12 12:03:46.896 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.896 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains HUNTER keyword
+2026-03-12 12:03:46.896 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.896 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (00fb2a1b-9d9d-4934-96ed-3617f0711f1f)
+2026-03-12 12:03:46.896 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 9) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.896 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.896 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains POISONOUS keyword
+2026-03-12 12:03:46.896 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.896 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5) gains HUNTER keyword
+2026-03-12 12:03:46.896 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4c9b775c-2542-43e0-bb30-7abf9239c3e5)
+2026-03-12 12:03:46.896 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (00fb2a1b-9d9d-4934-96ed-3617f0711f1f)
+2026-03-12 12:03:46.896 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.896 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 9) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.896 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.896 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (00fb2a1b-9d9d-4934-96ed-3617f0711f1f)
+2026-03-12 12:03:46.897 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 9) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.897 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.897 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (00fb2a1b-9d9d-4934-96ed-3617f0711f1f)
+2026-03-12 12:03:46.897 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 9) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.897 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.897 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (00fb2a1b-9d9d-4934-96ed-3617f0711f1f)
+2026-03-12 12:03:46.897 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.897 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 7) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.897 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.897 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 7) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.897 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.897 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 7) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.897 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.897 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 7) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.897 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.897 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ab07ecf4-a5d4-4572-8766-5be042655dbe)
+2026-03-12 12:03:46.897 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ab07ecf4-a5d4-4572-8766-5be042655dbe)
+2026-03-12 12:03:46.897 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 7) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.897 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.897 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ab07ecf4-a5d4-4572-8766-5be042655dbe)
+2026-03-12 12:03:46.897 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ab07ecf4-a5d4-4572-8766-5be042655dbe)
+2026-03-12 12:03:46.897 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.897 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 7) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.897 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.897 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ab07ecf4-a5d4-4572-8766-5be042655dbe)
+2026-03-12 12:03:46.897 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (ab07ecf4-a5d4-4572-8766-5be042655dbe)
+2026-03-12 12:03:46.898 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a667949e-bd7c-4a18-9f47-812532600771)
+2026-03-12 12:03:46.898 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a667949e-bd7c-4a18-9f47-812532600771)
+2026-03-12 12:03:46.898 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a667949e-bd7c-4a18-9f47-812532600771)
+2026-03-12 12:03:46.898 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a667949e-bd7c-4a18-9f47-812532600771)
+2026-03-12 12:03:46.898 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a667949e-bd7c-4a18-9f47-812532600771)
+2026-03-12 12:03:46.898 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a667949e-bd7c-4a18-9f47-812532600771)
+2026-03-12 12:03:46.898 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a667949e-bd7c-4a18-9f47-812532600771)
+2026-03-12 12:03:46.898 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a667949e-bd7c-4a18-9f47-812532600771)
+2026-03-12 12:03:46.898 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a667949e-bd7c-4a18-9f47-812532600771)
+2026-03-12 12:03:46.898 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a667949e-bd7c-4a18-9f47-812532600771)
+2026-03-12 12:03:46.898 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.898 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.898 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a667949e-bd7c-4a18-9f47-812532600771)
+2026-03-12 12:03:46.898 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (a667949e-bd7c-4a18-9f47-812532600771)
+2026-03-12 12:03:46.898 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.898 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.898 INFO  - Life update for player Player2 (3cf09dc5-05e9-4244-8dc7-b44c7dcd2c9b) : 2 LP
+2026-03-12 12:03:46.898 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.899 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.899 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.899 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.899 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.899 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.899 DEBUG - Player Player1 (9959a758-e66b-4c45-83e9-1cfefd5144c7) must choose 1 cards to steal (targets : {
+- CREEP FROM THE DEEP ;
+- FROBLIN INSTIGATOR ;
+- PLATED SCORPION
+})
+2026-03-12 12:03:46.899 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.899 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.899 INFO  - New TARGET choice to be resolved by Player1 (9959a758-e66b-4c45-83e9-1cfefd5144c7) (targets : {
+- CREEP FROM THE DEEP ;
+- FROBLIN INSTIGATOR ;
+- PLATED SCORPION
+})
+2026-03-12 12:03:46.899 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.899 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) stolen and played by Player1 (9959a758-e66b-4c45-83e9-1cfefd5144c7) due to COMPOST DRAGON (e4156d6a-7aad-4b30-abe0-208b2316f51c) effect
+2026-03-12 12:03:46.899 INFO  - Resolving STEAL effect of COMPOST DRAGON (e4156d6a-7aad-4b30-abe0-208b2316f51c)
+2026-03-12 12:03:46.899 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.899 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.899 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 11) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.899 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.899 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 11) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.899 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.899 INFO  - Resolving NO_BLOCK effect of BEE BEAR (ecee165c-f22f-4ac4-8e4d-d3e91b5644bf)
+2026-03-12 12:03:46.899 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 11) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.899 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.900 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 9) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.900 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.900 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.900 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.900 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 9) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.900 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.900 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.900 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.900 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 11) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.900 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.900 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.900 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 11) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.900 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.900 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.900 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 11) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.900 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.900 DEBUG - CardInstance(uuid=b22c5959-7cd0-45e3-8a17-4e55935feabb, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.900 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.900 DEBUG - Player2 (3cf09dc5-05e9-4244-8dc7-b44c7dcd2c9b) LP changed (2 -> 3) due to MYSTERIOUS MERMAID (b22c5959-7cd0-45e3-8a17-4e55935feabb) effect
+2026-03-12 12:03:46.900 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (b22c5959-7cd0-45e3-8a17-4e55935feabb)
+2026-03-12 12:03:46.900 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 11) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.900 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.900 DEBUG - CardInstance(uuid=b22c5959-7cd0-45e3-8a17-4e55935feabb, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.900 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.900 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.900 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.900 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 11) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.900 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.900 DEBUG - CardInstance(uuid=b22c5959-7cd0-45e3-8a17-4e55935feabb, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.901 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.901 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.901 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.901 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 13) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.901 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.901 DEBUG - CardInstance(uuid=b22c5959-7cd0-45e3-8a17-4e55935feabb, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.901 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.901 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 13) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.901 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.901 DEBUG - CardInstance(uuid=b22c5959-7cd0-45e3-8a17-4e55935feabb, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.901 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.901 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 13) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.901 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.901 DEBUG - CardInstance(uuid=b22c5959-7cd0-45e3-8a17-4e55935feabb, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.901 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.901 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.901 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.901 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 13) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.901 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.901 DEBUG - CardInstance(uuid=b22c5959-7cd0-45e3-8a17-4e55935feabb, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.901 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.901 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.902 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.902 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 13) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.902 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.902 DEBUG - CardInstance(uuid=b22c5959-7cd0-45e3-8a17-4e55935feabb, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.902 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.902 INFO  - New FRENZY choice to be resolved by Player1 (9959a758-e66b-4c45-83e9-1cfefd5144c7) (attackingCard : RHINO TURTLE (2f9e06d7-a66d-400f-9cd7-be92a01d447d))
+2026-03-12 12:03:46.902 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.902 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.902 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.902 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 13) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.902 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.902 DEBUG - CardInstance(uuid=b22c5959-7cd0-45e3-8a17-4e55935feabb, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.902 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.902 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.902 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.902 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 13) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.902 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.902 DEBUG - CardInstance(uuid=760635d5-4327-4beb-b996-057313adea3b, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.902 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.902 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 13) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.902 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.902 DEBUG - CardInstance(uuid=760635d5-4327-4beb-b996-057313adea3b, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.902 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.903 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 13) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.903 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.903 DEBUG - LUCHATAUR (760635d5-4327-4beb-b996-057313adea3b) power changed (9 -> 11) due to URCHIN HURLER (5f0924c6-4b9e-495f-8116-8effbe1ecc1f) effect
+2026-03-12 12:03:46.903 INFO  - Resolving POWER_UP effect of URCHIN HURLER (5f0924c6-4b9e-495f-8116-8effbe1ecc1f)
+2026-03-12 12:03:46.903 DEBUG - CardInstance(uuid=5f0924c6-4b9e-495f-8116-8effbe1ecc1f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.903 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.903 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.903 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.903 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 13) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.903 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.903 DEBUG - CardInstance(uuid=5f0924c6-4b9e-495f-8116-8effbe1ecc1f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.903 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.903 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.903 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.903 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 13) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.903 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.903 DEBUG - CardInstance(uuid=5f0924c6-4b9e-495f-8116-8effbe1ecc1f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.903 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.903 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 13) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.903 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.903 DEBUG - LUCHATAUR (760635d5-4327-4beb-b996-057313adea3b) power changed (9 -> 11) due to URCHIN HURLER (5f0924c6-4b9e-495f-8116-8effbe1ecc1f) effect
+2026-03-12 12:03:46.903 INFO  - Resolving POWER_UP effect of URCHIN HURLER (5f0924c6-4b9e-495f-8116-8effbe1ecc1f)
+2026-03-12 12:03:46.903 DEBUG - CardInstance(uuid=5f0924c6-4b9e-495f-8116-8effbe1ecc1f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.903 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.903 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 11) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.903 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.903 DEBUG - LUCHATAUR (760635d5-4327-4beb-b996-057313adea3b) power changed (9 -> 11) due to URCHIN HURLER (5f0924c6-4b9e-495f-8116-8effbe1ecc1f) effect
+2026-03-12 12:03:46.903 INFO  - Resolving POWER_UP effect of URCHIN HURLER (5f0924c6-4b9e-495f-8116-8effbe1ecc1f)
+2026-03-12 12:03:46.903 DEBUG - CardInstance(uuid=5f0924c6-4b9e-495f-8116-8effbe1ecc1f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.904 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.904 INFO  - New FRENZY choice to be resolved by Player2 (3cf09dc5-05e9-4244-8dc7-b44c7dcd2c9b) (attackingCard : LUCHATAUR (760635d5-4327-4beb-b996-057313adea3b))
+2026-03-12 12:03:46.904 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.904 DEBUG - FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) power changed (1 -> 11) due to FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7) effect
+2026-03-12 12:03:46.904 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (c7b2ca27-b39e-4ba2-8b5c-6f847c61bcc7)
+2026-03-12 12:03:46.904 DEBUG - LUCHATAUR (760635d5-4327-4beb-b996-057313adea3b) power changed (9 -> 11) due to URCHIN HURLER (5f0924c6-4b9e-495f-8116-8effbe1ecc1f) effect
+2026-03-12 12:03:46.904 INFO  - Resolving POWER_UP effect of URCHIN HURLER (5f0924c6-4b9e-495f-8116-8effbe1ecc1f)
+2026-03-12 12:03:46.904 DEBUG - CardInstance(uuid=5f0924c6-4b9e-495f-8116-8effbe1ecc1f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.904 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.904 INFO  - Resolving POWER_UP effect of URCHIN HURLER (5f0924c6-4b9e-495f-8116-8effbe1ecc1f)
+2026-03-12 12:03:46.904 DEBUG - CardInstance(uuid=5f0924c6-4b9e-495f-8116-8effbe1ecc1f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.904 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.904 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.904 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.904 DEBUG - CardInstance(uuid=5f0924c6-4b9e-495f-8116-8effbe1ecc1f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@17477bbb), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.904 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.904 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.904 DEBUG - GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) power changed (2 -> 8) due to GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b) effect
+2026-03-12 12:03:46.904 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (21ce1d51-b633-4d7e-aad8-50afe3f6a81b)
+2026-03-12 12:03:46.904 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.904 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)
+2026-03-12 12:03:46.904 INFO  - Game over : Player1 (9959a758-e66b-4c45-83e9-1cfefd5144c7) wins ; Player2 (3cf09dc5-05e9-4244-8dc7-b44c7dcd2c9b) loses.
+2026-03-12 12:03:46.904 INFO  - End of the game
+2026-03-12 12:03:46.904 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (08bc5524-bc2c-4b37-b7a3-9976533f065b)

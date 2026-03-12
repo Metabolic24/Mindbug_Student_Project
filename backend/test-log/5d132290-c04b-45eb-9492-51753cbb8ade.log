@@ -1,0 +1,124 @@
+2026-03-12 12:03:01.858 INFO  - Calculating first player...
+2026-03-12 12:03:01.873 INFO  - Banned card for Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) : STRANGE BARREL (450926b4-211e-4df0-96ce-c365bd2a4330) (6)
+2026-03-12 12:03:01.877 INFO  - Banned card for Player2 (4fa02125-1db1-489c-a262-d77ffbb46c57) : COMPOST DRAGON (e2e17287-ff9f-4a00-bcb9-14d6ea13af9c) (3)
+2026-03-12 12:03:01.877 INFO  - First player will be Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1)
+2026-03-12 12:03:02.247 INFO  - Game 5d132290-c04b-45eb-9492-51753cbb8ade starting...
+2026-03-12 12:03:02.248 INFO  - Player Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) hand : {
+- TUSKED EXTORTER ;
+- TIGER SQUIRREL ;
+- KILLER BEE ;
+- LUCHATAUR ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:02.249 INFO  - Player Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) draw pile : {
+- EXPLOSIVE TOAD ;
+- HYENIX ;
+-  GIRAFFODILE ;
+- MYSTERIOUS MERMAID ;
+- SNAIL HYDRA
+}
+2026-03-12 12:03:02.251 INFO  - Player Player2 (4fa02125-1db1-489c-a262-d77ffbb46c57) hand : {
+- THE LURKER ;
+- AXOLOTL HEALER ;
+- PLATED SCORPION ;
+- URCHIN HURLER ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:02.251 INFO  - Player Player2 (4fa02125-1db1-489c-a262-d77ffbb46c57) draw pile : {
+- BUGSERKER ;
+- MAJESTIC MANTICORE ;
+- FERRET BOMBER ;
+- TIGER SQUIRREL ;
+- TURBO BUG
+}
+2026-03-12 12:03:02.288 DEBUG - Player2 (4fa02125-1db1-489c-a262-d77ffbb46c57) LP changed (3 -> 5) due to AXOLOTL HEALER (29652ac5-ca17-4443-94eb-22be47d1e34f) effect
+2026-03-12 12:03:02.289 INFO  - Resolving GAIN effect of AXOLOTL HEALER (29652ac5-ca17-4443-94eb-22be47d1e34f)
+2026-03-12 12:03:02.290 DEBUG - Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) LP changed (3 -> 5) due to AXOLOTL HEALER (cdf23d25-78d2-43d2-91f1-bb64608426f7) effect
+2026-03-12 12:03:02.290 INFO  - Resolving GAIN effect of AXOLOTL HEALER (cdf23d25-78d2-43d2-91f1-bb64608426f7)
+2026-03-12 12:03:02.297 INFO  - New FRENZY choice to be resolved by Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) (attackingCard : HYENIX (383cbac3-a5ad-4fdd-b132-9408aff7e6aa))
+2026-03-12 12:03:02.297 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:02.302 INFO  - Life update for player Player2 (4fa02125-1db1-489c-a262-d77ffbb46c57) : 4 LP
+2026-03-12 12:03:02.302 DEBUG - Player2 (4fa02125-1db1-489c-a262-d77ffbb46c57) LP changed (5 -> 4) due to KILLER BEE (df89e117-564d-4eba-9bcf-21bd4c17a96a) effect
+2026-03-12 12:03:02.302 INFO  - Resolving INFLICT effect of KILLER BEE (df89e117-564d-4eba-9bcf-21bd4c17a96a)
+2026-03-12 12:03:02.303 DEBUG - MAJESTIC MANTICORE (d15c3068-d564-49e3-a556-7cfdb1a5cf38) power changed (6 -> 8) due to URCHIN HURLER (aef06252-d20f-48ad-923a-8e3fe6087873) effect
+2026-03-12 12:03:02.303 INFO  - Resolving POWER_UP effect of URCHIN HURLER (aef06252-d20f-48ad-923a-8e3fe6087873)
+2026-03-12 12:03:02.304 INFO  - Resolving POWER_UP effect of URCHIN HURLER (aef06252-d20f-48ad-923a-8e3fe6087873)
+2026-03-12 12:03:02.305 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:02.307 DEBUG - Player Player2 (4fa02125-1db1-489c-a262-d77ffbb46c57) must choose 1 card(s) to discard (available targets : {
+- THE LURKER ;
+- MAJESTIC MANTICORE ;
+- FERRET BOMBER ;
+- TIGER SQUIRREL ;
+- TURBO BUG
+})
+2026-03-12 12:03:02.308 INFO  - New TARGET choice to be resolved by Player2 (4fa02125-1db1-489c-a262-d77ffbb46c57) (targets : {
+- MAJESTIC MANTICORE ;
+- FERRET BOMBER ;
+- THE LURKER ;
+- TURBO BUG ;
+- TIGER SQUIRREL
+})
+2026-03-12 12:03:02.308 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:02.309 DEBUG - THE LURKER (a0bfee8a-84d2-44dd-8a40-e82e3f333250) discarded due to TUSKED EXTORTER (c4bbf7bb-73e6-419d-a83c-57b4d57ccde8) effect
+2026-03-12 12:03:02.309 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (c4bbf7bb-73e6-419d-a83c-57b4d57ccde8)
+2026-03-12 12:03:02.311 INFO  - Life update for player Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) : 4 LP
+2026-03-12 12:03:02.311 DEBUG - Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) LP changed (5 -> 4) due to MYSTERIOUS MERMAID (c6f59b2c-9fff-48eb-bb32-1306e31b2ae0) effect
+2026-03-12 12:03:02.312 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (c6f59b2c-9fff-48eb-bb32-1306e31b2ae0)
+2026-03-12 12:03:02.312 DEBUG - Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) must decide if HYENIX (383cbac3-a5ad-4fdd-b132-9408aff7e6aa) will revive
+2026-03-12 12:03:02.313 INFO  - New BOOLEAN choice to be resolved by Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) (target : )
+2026-03-12 12:03:02.313 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:02.315 DEBUG - AXOLOTL HEALER (cdf23d25-78d2-43d2-91f1-bb64608426f7) stolen and drawn by Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) due to  GIRAFFODILE (3a7500fa-6ba3-4dcf-ac81-c9805c6a2677) effect
+2026-03-12 12:03:02.315 DEBUG - HYENIX (383cbac3-a5ad-4fdd-b132-9408aff7e6aa) stolen and drawn by Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) due to  GIRAFFODILE (3a7500fa-6ba3-4dcf-ac81-c9805c6a2677) effect
+2026-03-12 12:03:02.315 DEBUG - KILLER BEE (df89e117-564d-4eba-9bcf-21bd4c17a96a) stolen and drawn by Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) due to  GIRAFFODILE (3a7500fa-6ba3-4dcf-ac81-c9805c6a2677) effect
+2026-03-12 12:03:02.315 DEBUG - TUSKED EXTORTER (c4bbf7bb-73e6-419d-a83c-57b4d57ccde8) stolen and drawn by Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) due to  GIRAFFODILE (3a7500fa-6ba3-4dcf-ac81-c9805c6a2677) effect
+2026-03-12 12:03:02.315 DEBUG - LUCHATAUR (38e2a1c4-c051-4a5c-9627-bdf6df67dc33) stolen and drawn by Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) due to  GIRAFFODILE (3a7500fa-6ba3-4dcf-ac81-c9805c6a2677) effect
+2026-03-12 12:03:02.315 INFO  - Resolving STEAL effect of  GIRAFFODILE (3a7500fa-6ba3-4dcf-ac81-c9805c6a2677)
+2026-03-12 12:03:02.318 DEBUG - MAJESTIC MANTICORE (69f26482-a551-43d6-a455-b98a4cf4d548) effect destroys MAJESTIC MANTICORE (69f26482-a551-43d6-a455-b98a4cf4d548)
+2026-03-12 12:03:02.318 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (69f26482-a551-43d6-a455-b98a4cf4d548)
+2026-03-12 12:03:02.319 DEBUG - Player Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) must choose 2 card(s) to discard (available targets : {
+- TIGER SQUIRREL ;
+- EXPLOSIVE TOAD ;
+- AXOLOTL HEALER ;
+- HYENIX ;
+- KILLER BEE ;
+- TUSKED EXTORTER ;
+- LUCHATAUR
+})
+2026-03-12 12:03:02.319 INFO  - New TARGET choice to be resolved by Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) (targets : {
+- AXOLOTL HEALER ;
+- KILLER BEE ;
+- TUSKED EXTORTER ;
+- HYENIX ;
+- TIGER SQUIRREL ;
+- LUCHATAUR ;
+- EXPLOSIVE TOAD
+})
+2026-03-12 12:03:02.319 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:02.319 DEBUG - KILLER BEE (df89e117-564d-4eba-9bcf-21bd4c17a96a) discarded due to FERRET BOMBER (79bb7ea1-4dbe-4ebd-b87d-15bb0ad2e49b) effect
+2026-03-12 12:03:02.319 DEBUG - TIGER SQUIRREL (047680ef-9c54-494d-9d88-c7b19bff369d) discarded due to FERRET BOMBER (79bb7ea1-4dbe-4ebd-b87d-15bb0ad2e49b) effect
+2026-03-12 12:03:02.320 INFO  - Resolving DISCARD effect of FERRET BOMBER (79bb7ea1-4dbe-4ebd-b87d-15bb0ad2e49b)
+2026-03-12 12:03:02.320 DEBUG - Player Player2 (4fa02125-1db1-489c-a262-d77ffbb46c57) must choose 1 card(s) to destroy (available targets : {
+- MYSTERIOUS MERMAID ;
+-  GIRAFFODILE ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:02.320 INFO  - New TARGET choice to be resolved by Player2 (4fa02125-1db1-489c-a262-d77ffbb46c57) (targets : {
+- MYSTERIOUS MERMAID ;
+- SNAIL HYDRA ;
+-  GIRAFFODILE
+})
+2026-03-12 12:03:02.321 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:02.321 DEBUG - TIGER SQUIRREL (ea607e2c-a317-4754-97af-7e080603ac94) effect destroys  GIRAFFODILE (3a7500fa-6ba3-4dcf-ac81-c9805c6a2677)
+2026-03-12 12:03:02.321 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (ea607e2c-a317-4754-97af-7e080603ac94)
+2026-03-12 12:03:02.322 INFO  - Life update for player Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) : 3 LP
+2026-03-12 12:03:02.323 DEBUG - Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) LP changed (3 -> 5) due to AXOLOTL HEALER (cdf23d25-78d2-43d2-91f1-bb64608426f7) effect
+2026-03-12 12:03:02.323 INFO  - Resolving GAIN effect of AXOLOTL HEALER (cdf23d25-78d2-43d2-91f1-bb64608426f7)
+2026-03-12 12:03:02.324 INFO  - Life update for player Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) : 4 LP
+2026-03-12 12:03:02.324 INFO  - New FRENZY choice to be resolved by Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) (attackingCard : HYENIX (383cbac3-a5ad-4fdd-b132-9408aff7e6aa))
+2026-03-12 12:03:02.325 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:02.325 INFO  - Life update for player Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) : 3 LP
+2026-03-12 12:03:02.326 INFO  - New FRENZY choice to be resolved by Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) (attackingCard : HYENIX (383cbac3-a5ad-4fdd-b132-9408aff7e6aa))
+2026-03-12 12:03:02.326 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:02.326 INFO  - Life update for player Player2 (4fa02125-1db1-489c-a262-d77ffbb46c57) : 3 LP
+2026-03-12 12:03:02.326 INFO  - Game over : Player1 (ee53b801-f1fb-4edc-b4e4-4e88619d8ea1) wins ; Player2 (4fa02125-1db1-489c-a262-d77ffbb46c57) loses.
+2026-03-12 12:03:02.326 INFO  - End of the game

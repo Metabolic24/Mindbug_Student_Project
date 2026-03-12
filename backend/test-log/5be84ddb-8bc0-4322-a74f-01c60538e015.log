@@ -1,0 +1,222 @@
+2026-03-12 12:03:46.863 INFO  - Calculating first player...
+2026-03-12 12:03:46.865 INFO  - Banned card for Player1 (cf03f7ad-369e-4079-b524-6675a713ed83) : SNAIL THROWER (8ec14db5-17bd-45b4-b462-042b7545dd23) (1)
+2026-03-12 12:03:46.865 INFO  - Banned card for Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) : TIGER SQUIRREL (e982ef79-dd7f-4f0a-a77f-5e015ad0d54f) (3)
+2026-03-12 12:03:46.865 INFO  - First player will be Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95)
+2026-03-12 12:03:46.871 INFO  - Game 5be84ddb-8bc0-4322-a74f-01c60538e015 starting...
+2026-03-12 12:03:46.871 INFO  - Player Player1 (cf03f7ad-369e-4079-b524-6675a713ed83) hand : {
+- FERRET PACIFIER ;
+- TUSKED EXTORTER ;
+- HARPY MOTHER ;
+- GRAVE ROBBER ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:46.872 INFO  - Player Player1 (cf03f7ad-369e-4079-b524-6675a713ed83) draw pile : {
+- HYENIX ;
+- FROBLIN INSTIGATOR ;
+- GRAVE ROBBER ;
+- KILLER BEE ;
+- THE LURKER
+}
+2026-03-12 12:03:46.872 INFO  - Player Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) hand : {
+- RHINO TURTLE ;
+- GOREAGLE ALPHA ;
+- HAMSTER LION ;
+- BUGSERKER ;
+- CHAMELEON SNIPER
+}
+2026-03-12 12:03:46.872 INFO  - Player Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) draw pile : {
+- EXPLOSIVE TOAD ;
+- LONE YETI ;
+- FERRET PACIFIER ;
+- LUCHATAUR ;
+- BRAIN FLY
+}
+2026-03-12 12:03:46.872 INFO  - Life update for player Player1 (cf03f7ad-369e-4079-b524-6675a713ed83) : 2 LP
+2026-03-12 12:03:46.872 DEBUG - Player1 (cf03f7ad-369e-4079-b524-6675a713ed83) LP changed (3 -> 2) due to CHAMELEON SNIPER (b9d3fde5-fd5d-4dc2-acf6-bb8cfe95743f) effect
+2026-03-12 12:03:46.872 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (b9d3fde5-fd5d-4dc2-acf6-bb8cfe95743f)
+2026-03-12 12:03:46.872 INFO  - Life update for player Player1 (cf03f7ad-369e-4079-b524-6675a713ed83) : 1 LP
+2026-03-12 12:03:46.872 DEBUG - Player Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) must choose 1 card(s) to discard (available targets : {
+- RHINO TURTLE ;
+- GOREAGLE ALPHA ;
+- HAMSTER LION ;
+- BUGSERKER ;
+- LONE YETI
+})
+2026-03-12 12:03:46.872 INFO  - New TARGET choice to be resolved by Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) (targets : {
+- LONE YETI ;
+- RHINO TURTLE ;
+- BUGSERKER ;
+- GOREAGLE ALPHA ;
+- HAMSTER LION
+})
+2026-03-12 12:03:46.872 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.872 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) discarded due to TUSKED EXTORTER (0ade4c93-5d82-4f94-bdee-55239a6f6961) effect
+2026-03-12 12:03:46.872 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (0ade4c93-5d82-4f94-bdee-55239a6f6961)
+2026-03-12 12:03:46.872 DEBUG - Player Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) must choose 1 card(s) to destroy (available targets : {
+- TUSKED EXTORTER ;
+- HARPY MOTHER
+})
+2026-03-12 12:03:46.872 INFO  - New TARGET choice to be resolved by Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) (targets : {
+- TUSKED EXTORTER ;
+- HARPY MOTHER
+})
+2026-03-12 12:03:46.872 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.872 DEBUG - EXPLOSIVE TOAD (bec01461-8984-4b63-b145-80c47d7db89c) effect destroys TUSKED EXTORTER (0ade4c93-5d82-4f94-bdee-55239a6f6961)
+2026-03-12 12:03:46.872 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (bec01461-8984-4b63-b145-80c47d7db89c)
+2026-03-12 12:03:46.872 DEBUG - Player Player1 (cf03f7ad-369e-4079-b524-6675a713ed83) must choose 1 cards to steal (targets : {
+- RHINO TURTLE ;
+- CHAMELEON SNIPER ;
+- EXPLOSIVE TOAD
+})
+2026-03-12 12:03:46.872 INFO  - New TARGET choice to be resolved by Player1 (cf03f7ad-369e-4079-b524-6675a713ed83) (targets : {
+- RHINO TURTLE ;
+- EXPLOSIVE TOAD ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:46.872 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.873 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) stolen and played by Player1 (cf03f7ad-369e-4079-b524-6675a713ed83) due to GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) effect
+2026-03-12 12:03:46.873 INFO  - Resolving STEAL effect of GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6)
+2026-03-12 12:03:46.873 INFO  - Life update for player Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) : 2 LP
+2026-03-12 12:03:46.873 DEBUG - Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) LP changed (3 -> 2) due to GOREAGLE ALPHA (5d3e12c1-2690-4ab7-880c-933c01549130) effect
+2026-03-12 12:03:46.873 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (5d3e12c1-2690-4ab7-880c-933c01549130)
+2026-03-12 12:03:46.873 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 DEBUG - HARPY MOTHER (cbd46987-a97a-4900-a547-6718991c7977) power changed (5 -> 6) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.873 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 DEBUG - HARPY MOTHER (cbd46987-a97a-4900-a547-6718991c7977) power changed (5 -> 6) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.873 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.873 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.873 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.873 INFO  - New FRENZY choice to be resolved by Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) (attackingCard : GOREAGLE ALPHA (5d3e12c1-2690-4ab7-880c-933c01549130))
+2026-03-12 12:03:46.873 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.873 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.873 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.873 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.873 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.873 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.873 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.873 INFO  - Life update for player Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) : 1 LP
+2026-03-12 12:03:46.873 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.874 INFO  - New FRENZY choice to be resolved by Player1 (cf03f7ad-369e-4079-b524-6675a713ed83) (attackingCard : RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278))
+2026-03-12 12:03:46.874 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.874 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.874 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.874 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.874 DEBUG - BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) power changed (3 -> 11) due to BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) effect
+2026-03-12 12:03:46.874 INFO  - Resolving POWER_UP effect of BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f)
+2026-03-12 12:03:46.874 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.874 DEBUG - BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) power changed (3 -> 11) due to BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) effect
+2026-03-12 12:03:46.874 INFO  - Resolving POWER_UP effect of BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f)
+2026-03-12 12:03:46.874 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 DEBUG - HYENIX (424f8d79-43b0-4985-9f07-11f51d5bbe02) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.874 DEBUG - BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) power changed (3 -> 11) due to BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) effect
+2026-03-12 12:03:46.874 INFO  - Resolving POWER_UP effect of BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f)
+2026-03-12 12:03:46.874 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 DEBUG - HYENIX (424f8d79-43b0-4985-9f07-11f51d5bbe02) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.874 DEBUG - BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) power changed (3 -> 11) due to BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) effect
+2026-03-12 12:03:46.874 INFO  - Resolving POWER_UP effect of BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f)
+2026-03-12 12:03:46.874 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 DEBUG - HYENIX (424f8d79-43b0-4985-9f07-11f51d5bbe02) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.874 DEBUG - BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) power changed (3 -> 11) due to BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) effect
+2026-03-12 12:03:46.874 INFO  - Resolving POWER_UP effect of BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f)
+2026-03-12 12:03:46.875 DEBUG - CardInstance(uuid=dc76c49b-1d43-47fc-9234-dddafd0da4e6, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@79fcd194), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.875 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a48135d4-64a3-4f5d-a4b3-5248eba8ca64)
+2026-03-12 12:03:46.875 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.875 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.875 DEBUG - HYENIX (424f8d79-43b0-4985-9f07-11f51d5bbe02) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.875 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.875 DEBUG - BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) power changed (3 -> 11) due to BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) effect
+2026-03-12 12:03:46.875 INFO  - Resolving POWER_UP effect of BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f)
+2026-03-12 12:03:46.875 DEBUG - CardInstance(uuid=dc76c49b-1d43-47fc-9234-dddafd0da4e6, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@79fcd194), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.875 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a48135d4-64a3-4f5d-a4b3-5248eba8ca64)
+2026-03-12 12:03:46.875 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.875 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.875 DEBUG - HYENIX (424f8d79-43b0-4985-9f07-11f51d5bbe02) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.875 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.875 DEBUG - BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) power changed (3 -> 11) due to BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) effect
+2026-03-12 12:03:46.875 INFO  - Resolving POWER_UP effect of BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f)
+2026-03-12 12:03:46.875 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.875 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.875 DEBUG - HYENIX (424f8d79-43b0-4985-9f07-11f51d5bbe02) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.875 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.875 DEBUG - BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) power changed (3 -> 11) due to BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) effect
+2026-03-12 12:03:46.875 INFO  - Resolving POWER_UP effect of BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f)
+2026-03-12 12:03:46.875 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.875 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.876 DEBUG - HYENIX (424f8d79-43b0-4985-9f07-11f51d5bbe02) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.876 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.876 DEBUG - BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) power changed (3 -> 11) due to BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) effect
+2026-03-12 12:03:46.876 INFO  - Resolving POWER_UP effect of BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f)
+2026-03-12 12:03:46.876 DEBUG - Player Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) must choose 1 cards to steal (targets : {
+- GRAVE ROBBER ;
+- RHINO TURTLE ;
+- HYENIX
+})
+2026-03-12 12:03:46.876 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.876 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.876 DEBUG - HYENIX (424f8d79-43b0-4985-9f07-11f51d5bbe02) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.876 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.876 DEBUG - BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) power changed (3 -> 11) due to BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) effect
+2026-03-12 12:03:46.876 INFO  - Resolving POWER_UP effect of BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f)
+2026-03-12 12:03:46.876 INFO  - New TARGET choice to be resolved by Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) (targets : {
+- GRAVE ROBBER ;
+- RHINO TURTLE ;
+- HYENIX
+})
+2026-03-12 12:03:46.876 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.876 DEBUG - GRAVE ROBBER (b3b6b359-9e92-4315-bb0c-e23cef7acba6) stolen and played by Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) due to BRAIN FLY (a8e2188d-534f-46c0-bda5-2578310e3f0d) effect
+2026-03-12 12:03:46.876 INFO  - Resolving STEAL effect of BRAIN FLY (a8e2188d-534f-46c0-bda5-2578310e3f0d)
+2026-03-12 12:03:46.876 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.877 DEBUG - HYENIX (424f8d79-43b0-4985-9f07-11f51d5bbe02) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.877 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.877 DEBUG - BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) power changed (3 -> 11) due to BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) effect
+2026-03-12 12:03:46.877 INFO  - Resolving POWER_UP effect of BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f)
+2026-03-12 12:03:46.877 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.877 DEBUG - HYENIX (424f8d79-43b0-4985-9f07-11f51d5bbe02) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.877 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.877 DEBUG - BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) power changed (3 -> 11) due to BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) effect
+2026-03-12 12:03:46.877 INFO  - Resolving POWER_UP effect of BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f)
+2026-03-12 12:03:46.877 DEBUG - KILLER BEE (5fd1221e-b144-41d8-a835-20bcb27ea407) power changed (5 -> 6) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.877 DEBUG - RHINO TURTLE (ce51ee2b-6d5c-48b8-b8e0-2ac119828278) power changed (8 -> 9) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.877 DEBUG - HYENIX (424f8d79-43b0-4985-9f07-11f51d5bbe02) power changed (7 -> 8) due to SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6) effect
+2026-03-12 12:03:46.877 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dc76c49b-1d43-47fc-9234-dddafd0da4e6)
+2026-03-12 12:03:46.877 DEBUG - BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) power changed (3 -> 11) due to BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f) effect
+2026-03-12 12:03:46.877 INFO  - Resolving POWER_UP effect of BUGSERKER (7fe9cfc3-dcb8-4520-96ed-28dd84e5fd0f)
+2026-03-12 12:03:46.877 INFO  - Life update for player Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) : 0 LP
+2026-03-12 12:03:46.877 INFO  - Game over : Player1 (cf03f7ad-369e-4079-b524-6675a713ed83) wins ; Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) loses.
+2026-03-12 12:03:46.877 INFO  - End of the game
+2026-03-12 12:03:46.877 DEBUG - Player2 (01fae514-4f41-45de-bbf1-fb0cc9380c95) LP changed (1 -> 0) due to KILLER BEE (5fd1221e-b144-41d8-a835-20bcb27ea407) effect
+2026-03-12 12:03:46.877 INFO  - Resolving INFLICT effect of KILLER BEE (5fd1221e-b144-41d8-a835-20bcb27ea407)

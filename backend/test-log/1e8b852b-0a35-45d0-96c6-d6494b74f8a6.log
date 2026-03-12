@@ -1,0 +1,60 @@
+2026-03-12 12:03:46.738 INFO  - Calculating first player...
+2026-03-12 12:03:46.740 INFO  - Banned card for Player1 (8946ef08-88cf-466f-a77c-8e26866afa04) : MAJESTIC MANTICORE (1571fbb5-df03-4345-924c-8ab74ad3a1ba) (6)
+2026-03-12 12:03:46.740 INFO  - Banned card for Player2 (ec950f9d-4865-4a1f-8f36-f9006b9dcbe6) : COUNT DRACULEECH (b6ce1cab-4643-4ebc-b5b5-d2985cbdaa11) (7)
+2026-03-12 12:03:46.740 INFO  - First player will be Player2 (ec950f9d-4865-4a1f-8f36-f9006b9dcbe6)
+2026-03-12 12:03:46.747 INFO  - Game 1e8b852b-0a35-45d0-96c6-d6494b74f8a6 starting...
+2026-03-12 12:03:46.747 INFO  - Player Player1 (8946ef08-88cf-466f-a77c-8e26866afa04) hand : {
+- FERRET PACIFIER ;
+- BUGSERKER ;
+- GOREAGLE ALPHA ;
+- GORILLON ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:03:46.748 INFO  - Player Player1 (8946ef08-88cf-466f-a77c-8e26866afa04) draw pile : {
+- PLATED SCORPION ;
+- RHINO TURTLE ;
+- COUNT DRACULEECH ;
+- SPIDER OWL ;
+-  GIRAFFODILE
+}
+2026-03-12 12:03:46.748 INFO  - Player Player2 (ec950f9d-4865-4a1f-8f36-f9006b9dcbe6) hand : {
+- SNAIL HYDRA ;
+- TURBO BUG ;
+- GOBLIN WEREWOLF ;
+- LUCHATAUR ;
+- KILLER BEE
+}
+2026-03-12 12:03:46.748 INFO  - Player Player2 (ec950f9d-4865-4a1f-8f36-f9006b9dcbe6) draw pile : {
+- HUNGRY HUNGRY HAMSTER ;
+- KILLER BEE ;
+- SNAIL HYDRA ;
+- TIGER SQUIRREL ;
+- FERRET BOMBER
+}
+2026-03-12 12:03:46.748 INFO  - Life update for player Player1 (8946ef08-88cf-466f-a77c-8e26866afa04) : 2 LP
+2026-03-12 12:03:46.748 DEBUG - Player1 (8946ef08-88cf-466f-a77c-8e26866afa04) LP changed (3 -> 2) due to GOREAGLE ALPHA (d1071d4d-8b2d-4273-81a0-71f1152f2e5b) effect
+2026-03-12 12:03:46.748 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (d1071d4d-8b2d-4273-81a0-71f1152f2e5b)
+2026-03-12 12:03:46.748 INFO  - New FRENZY choice to be resolved by Player2 (ec950f9d-4865-4a1f-8f36-f9006b9dcbe6) (attackingCard : LUCHATAUR (8484c86d-258d-4ec4-ba9c-4e2d19636509))
+2026-03-12 12:03:46.748 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.748 INFO  - New FRENZY choice to be resolved by Player2 (ec950f9d-4865-4a1f-8f36-f9006b9dcbe6) (attackingCard : LUCHATAUR (8484c86d-258d-4ec4-ba9c-4e2d19636509))
+2026-03-12 12:03:46.748 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.748 INFO  - Life update for player Player1 (8946ef08-88cf-466f-a77c-8e26866afa04) : 1 LP
+2026-03-12 12:03:46.748 DEBUG - Player1 (8946ef08-88cf-466f-a77c-8e26866afa04) LP changed (2 -> 1) due to TURBO BUG (472a907b-fb5b-4607-b0e4-e23da1db60f1) effect
+2026-03-12 12:03:46.748 INFO  - Resolving INFLICT effect of TURBO BUG (472a907b-fb5b-4607-b0e4-e23da1db60f1)
+2026-03-12 12:03:46.748 DEBUG - BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173) power changed (3 -> 11) due to BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173) effect
+2026-03-12 12:03:46.748 INFO  - Resolving POWER_UP effect of BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173)
+2026-03-12 12:03:46.748 DEBUG - BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173) power changed (3 -> 11) due to BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173) effect
+2026-03-12 12:03:46.748 INFO  - Resolving POWER_UP effect of BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173)
+2026-03-12 12:03:46.748 DEBUG - BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173) power changed (3 -> 11) due to BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173) effect
+2026-03-12 12:03:46.748 INFO  - Resolving POWER_UP effect of BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173)
+2026-03-12 12:03:46.748 DEBUG - BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173) power changed (3 -> 11) due to BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173) effect
+2026-03-12 12:03:46.748 INFO  - Resolving POWER_UP effect of BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173)
+2026-03-12 12:03:46.748 DEBUG - BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173) power changed (3 -> 11) due to BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173) effect
+2026-03-12 12:03:46.748 INFO  - Resolving POWER_UP effect of BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173)
+2026-03-12 12:03:46.748 DEBUG - BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173) power changed (3 -> 11) due to BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173) effect
+2026-03-12 12:03:46.748 INFO  - Resolving POWER_UP effect of BUGSERKER (04966fac-fa0c-4ecb-be6d-7700e9848173)
+2026-03-12 12:03:46.748 INFO  - Life update for player Player1 (8946ef08-88cf-466f-a77c-8e26866afa04) : 0 LP
+2026-03-12 12:03:46.748 INFO  - Game over : Player2 (ec950f9d-4865-4a1f-8f36-f9006b9dcbe6) wins ; Player1 (8946ef08-88cf-466f-a77c-8e26866afa04) loses.
+2026-03-12 12:03:46.748 INFO  - End of the game
+2026-03-12 12:03:46.748 DEBUG - Player1 (8946ef08-88cf-466f-a77c-8e26866afa04) LP changed (1 -> 0) due to KILLER BEE (c8d71afd-9822-4f94-a0dc-da95d4bd7b67) effect
+2026-03-12 12:03:46.748 INFO  - Resolving INFLICT effect of KILLER BEE (c8d71afd-9822-4f94-a0dc-da95d4bd7b67)

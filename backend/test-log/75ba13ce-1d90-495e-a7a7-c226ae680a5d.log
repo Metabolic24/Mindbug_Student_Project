@@ -1,0 +1,231 @@
+2026-03-12 12:03:41.471 INFO  - Calculating first player...
+2026-03-12 12:03:41.474 INFO  - Banned card for Player1 (5739696f-8510-49b7-a6b7-8f235413f80f) : LUCHATAUR (dca162ee-1ad5-4499-9934-76aeea2527ec) (9)
+2026-03-12 12:03:41.475 INFO  - Banned card for Player2 (367afebf-e695-4448-8ddf-09002aceed8d) : TIGER SQUIRREL (c2833e95-72e4-44c6-b15a-d13aae0eaac2) (3)
+2026-03-12 12:03:41.475 INFO  - First player will be Player1 (5739696f-8510-49b7-a6b7-8f235413f80f)
+2026-03-12 12:03:41.482 INFO  - Game 75ba13ce-1d90-495e-a7a7-c226ae680a5d starting...
+2026-03-12 12:03:41.482 INFO  - Player Player1 (5739696f-8510-49b7-a6b7-8f235413f80f) hand : {
+- CREEP FROM THE DEEP ;
+- HAMSTER LION ;
+- SPIDER OWL ;
+- GOREAGLE ALPHA ;
+- ELEPHANTOPUS
+}
+2026-03-12 12:03:41.483 INFO  - Player Player1 (5739696f-8510-49b7-a6b7-8f235413f80f) draw pile : {
+- GOBLIN WEREWOLF ;
+- MAJESTIC MANTICORE ;
+- CREEP FROM THE DEEP ;
+- GOREAGLE ALPHA ;
+- RHINO TURTLE
+}
+2026-03-12 12:03:41.483 INFO  - Player Player2 (367afebf-e695-4448-8ddf-09002aceed8d) hand : {
+- HUNGRY HUNGRY HAMSTER ;
+- SHIELD BUGS ;
+- BUGSERKER ;
+- STRANGE BARREL ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:41.483 INFO  - Player Player2 (367afebf-e695-4448-8ddf-09002aceed8d) draw pile : {
+- FERRET PACIFIER ;
+- URCHIN HURLER ;
+- CHAMELEON SNIPER ;
+- SNAIL HYDRA ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:41.484 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.484 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.484 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.484 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.484 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.485 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.485 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.485 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.485 DEBUG - Player Player1 (5739696f-8510-49b7-a6b7-8f235413f80f) must choose 1 cards to steal (targets : {
+- CREEP FROM THE DEEP ;
+- HAMSTER LION ;
+- SPIDER OWL ;
+- GOREAGLE ALPHA ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:03:41.485 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.485 INFO  - New TARGET choice to be resolved by Player1 (5739696f-8510-49b7-a6b7-8f235413f80f) (targets : {
+- HAMSTER LION ;
+- GOBLIN WEREWOLF ;
+- SPIDER OWL ;
+- CREEP FROM THE DEEP ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:41.485 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:41.485 DEBUG - Player2 (367afebf-e695-4448-8ddf-09002aceed8d) must decide if stolen card GOREAGLE ALPHA (c9f05f9b-f257-4fa6-9b26-39f87cdee795) will be added to hand or board
+2026-03-12 12:03:41.486 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (7fbb845f-3d1c-4cc5-bb1c-6fc0a76567cf)
+2026-03-12 12:03:41.486 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.486 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:41.486 DEBUG - GOREAGLE ALPHA (c9f05f9b-f257-4fa6-9b26-39f87cdee795) stolen and drawn by Player2 (367afebf-e695-4448-8ddf-09002aceed8d) due to HUNGRY HUNGRY HAMSTER (7fbb845f-3d1c-4cc5-bb1c-6fc0a76567cf) effect
+2026-03-12 12:03:41.486 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.486 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.486 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.486 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.486 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.487 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.487 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.487 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.487 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.487 DEBUG - CREEP FROM THE DEEP (b2885317-55d8-41d2-9e0a-2f8c83149de8) stolen and drawn by Player2 (367afebf-e695-4448-8ddf-09002aceed8d) due to STRANGE BARREL (3dcad908-3a0f-4c76-aa42-64dc109c0148) effect
+2026-03-12 12:03:41.487 DEBUG - CREEP FROM THE DEEP (48afde3b-c883-4054-b985-7db2db5d9f74) stolen and drawn by Player2 (367afebf-e695-4448-8ddf-09002aceed8d) due to STRANGE BARREL (3dcad908-3a0f-4c76-aa42-64dc109c0148) effect
+2026-03-12 12:03:41.487 INFO  - Resolving STEAL effect of STRANGE BARREL (3dcad908-3a0f-4c76-aa42-64dc109c0148)
+2026-03-12 12:03:41.487 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.487 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.488 INFO  - Life update for player Player2 (367afebf-e695-4448-8ddf-09002aceed8d) : 2 LP
+2026-03-12 12:03:41.488 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.488 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.488 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.488 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.489 INFO  - Life update for player Player2 (367afebf-e695-4448-8ddf-09002aceed8d) : 1 LP
+2026-03-12 12:03:41.489 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.489 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.489 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.489 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.490 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.490 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.490 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.490 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.490 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.490 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.490 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.490 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.491 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.491 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.491 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.491 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.491 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.491 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.491 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.491 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.492 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.492 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.492 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.492 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.492 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.492 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.493 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.493 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.493 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.493 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.493 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.493 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.493 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.493 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.493 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.494 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.494 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.494 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.494 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.494 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.494 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.494 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.495 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.495 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.495 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.495 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.495 DEBUG - CardInstance(uuid=48afde3b-c883-4054-b985-7db2db5d9f74, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.495 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.495 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.495 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.495 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.495 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.496 DEBUG - CardInstance(uuid=48afde3b-c883-4054-b985-7db2db5d9f74, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.496 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.496 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.496 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.496 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.496 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.496 DEBUG - CardInstance(uuid=48afde3b-c883-4054-b985-7db2db5d9f74, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.497 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.497 INFO  - Life update for player Player1 (5739696f-8510-49b7-a6b7-8f235413f80f) : 2 LP
+2026-03-12 12:03:41.497 DEBUG - Player1 (5739696f-8510-49b7-a6b7-8f235413f80f) LP changed (3 -> 2) due to GOREAGLE ALPHA (bbd083f5-2b1c-4e0d-a4c7-87c1da2196ea) effect
+2026-03-12 12:03:41.497 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (bbd083f5-2b1c-4e0d-a4c7-87c1da2196ea)
+2026-03-12 12:03:41.497 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.497 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.497 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.497 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.497 DEBUG - CardInstance(uuid=48afde3b-c883-4054-b985-7db2db5d9f74, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.498 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.498 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.498 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.498 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (f3e6607b-0e57-4215-b752-38f5d72ec6bd)
+2026-03-12 12:03:41.498 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.498 DEBUG - CardInstance(uuid=48afde3b-c883-4054-b985-7db2db5d9f74, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.498 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.499 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.499 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.499 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.499 DEBUG - CardInstance(uuid=48afde3b-c883-4054-b985-7db2db5d9f74, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.499 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.499 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.499 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.499 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.500 DEBUG - CardInstance(uuid=48afde3b-c883-4054-b985-7db2db5d9f74, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.500 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.500 DEBUG - GOBLIN WEREWOLF (943dc315-3602-4514-9fff-6ce342360114) power changed (2 -> 8) due to GOBLIN WEREWOLF (943dc315-3602-4514-9fff-6ce342360114) effect
+2026-03-12 12:03:41.500 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (943dc315-3602-4514-9fff-6ce342360114)
+2026-03-12 12:03:41.500 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.500 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.500 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.501 DEBUG - CardInstance(uuid=48afde3b-c883-4054-b985-7db2db5d9f74, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.501 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.501 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.501 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.501 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.502 DEBUG - CardInstance(uuid=48afde3b-c883-4054-b985-7db2db5d9f74, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.502 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.502 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.502 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.502 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.503 DEBUG - CardInstance(uuid=48afde3b-c883-4054-b985-7db2db5d9f74, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.503 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.503 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.503 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.503 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.503 DEBUG - CardInstance(uuid=48afde3b-c883-4054-b985-7db2db5d9f74, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.504 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.504 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:41.504 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.504 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.504 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.505 DEBUG - CardInstance(uuid=48afde3b-c883-4054-b985-7db2db5d9f74, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.505 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.506 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.506 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.506 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.506 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.506 INFO  - New FRENZY choice to be resolved by Player1 (5739696f-8510-49b7-a6b7-8f235413f80f) (attackingCard : GOREAGLE ALPHA (bbd083f5-2b1c-4e0d-a4c7-87c1da2196ea))
+2026-03-12 12:03:41.506 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:41.506 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.507 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.507 DEBUG - CardInstance(uuid=b2885317-55d8-41d2-9e0a-2f8c83149de8, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.507 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.507 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:41.507 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.507 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.507 DEBUG - CardInstance(uuid=71410b19-0c36-4709-8e54-5ded89b8f490, card=Card(id=33, setName=first_contact, name=BUGSERKER, power=3, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=8, self=true, allies=false, lifePoints=1, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+8</b> power while you have 1 life remaining., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=11, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.507 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.507 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.507 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.508 DEBUG - CardInstance(uuid=71410b19-0c36-4709-8e54-5ded89b8f490, card=Card(id=33, setName=first_contact, name=BUGSERKER, power=3, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=8, self=true, allies=false, lifePoints=1, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+8</b> power while you have 1 life remaining., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=11, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.508 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.508 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.508 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.508 DEBUG - CardInstance(uuid=71410b19-0c36-4709-8e54-5ded89b8f490, card=Card(id=33, setName=first_contact, name=BUGSERKER, power=3, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=8, self=true, allies=false, lifePoints=1, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+8</b> power while you have 1 life remaining., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=11, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.508 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.508 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.508 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.508 DEBUG - CardInstance(uuid=ce976a86-8b1a-47f3-ad12-5e88da214391, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.512 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.512 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ce976a86-8b1a-47f3-ad12-5e88da214391)
+2026-03-12 12:03:41.512 DEBUG - BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) power changed (3 -> 11) due to BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490) effect
+2026-03-12 12:03:41.512 INFO  - Resolving POWER_UP effect of BUGSERKER (71410b19-0c36-4709-8e54-5ded89b8f490)
+2026-03-12 12:03:41.512 DEBUG - CardInstance(uuid=ce976a86-8b1a-47f3-ad12-5e88da214391, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@539dd2d0), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:41.512 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (5e6f98dc-5e6e-49ba-9b5f-c451367e44c7)
+2026-03-12 12:03:41.512 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ce976a86-8b1a-47f3-ad12-5e88da214391)
+2026-03-12 12:03:41.513 INFO  - Life update for player Player2 (367afebf-e695-4448-8ddf-09002aceed8d) : 0 LP
+2026-03-12 12:03:41.513 INFO  - Game over : Player1 (5739696f-8510-49b7-a6b7-8f235413f80f) wins ; Player2 (367afebf-e695-4448-8ddf-09002aceed8d) loses.
+2026-03-12 12:03:41.513 INFO  - End of the game

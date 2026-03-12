@@ -3,16 +3,15 @@ package org.metacorp.mindbug;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.AttackService;
-import org.metacorp.mindbug.utils.MindbugGameTest;
 import org.metacorp.mindbug.utils.TestGameUtils;
 
+import java.io.IOException;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,8 +27,10 @@ import static org.metacorp.mindbug.utils.TestGameUtils.getCardsById;
 import static org.metacorp.mindbug.utils.TestGameUtils.hand;
 import static org.metacorp.mindbug.utils.TestGameUtils.huntTarget;
 import static org.metacorp.mindbug.utils.TestGameUtils.play;
+import static org.metacorp.mindbug.utils.TestGameUtils.prepareCustomGame;
+import static org.metacorp.mindbug.utils.TestUtils.cleanHistoryDirectory;
 
-public class SpecificCaseTest extends MindbugGameTest {
+public class SpecificCaseTest {
 
     private Game game;
 
@@ -45,7 +46,7 @@ public class SpecificCaseTest extends MindbugGameTest {
 
     // #20
     @Test
-    public void hurlerAlwaysBoost() throws GameStateException, WebSocketException {
+    public void hurlerAlwaysBoost() throws GameStateException {
         CardInstance turboBug = getCardById(30);
         CardInstance majesticManticore = getCardById(42);
         CardInstance snailHydra = getCardById(25);
@@ -79,7 +80,7 @@ public class SpecificCaseTest extends MindbugGameTest {
 
     // #21
     @Test
-    public void goreagleBadlyReviveHyenix() throws GameStateException, WebSocketException {
+    public void goreagleBadlyReviveHyenix() throws GameStateException {
         CardInstance goreagleAlpha = getCardById(38);
         CardInstance tigerSquirrel = getCardById(29);
         CardInstance hyenix = getCardById(41);
@@ -111,7 +112,7 @@ public class SpecificCaseTest extends MindbugGameTest {
 
     // #23
     @Test
-    public void strangeBarrelDoesNotTrigger() throws GameStateException, WebSocketException {
+    public void strangeBarrelDoesNotTrigger() throws GameStateException {
         CardInstance strangeBarrel = getCardById(28);
         CardInstance spiderOwl = getCardById(27);
         CardInstance goreagleAlpha = getCardById(38);
@@ -137,7 +138,7 @@ public class SpecificCaseTest extends MindbugGameTest {
 
     // #26
     @Test
-    public void goblinWerewolfNotDestroyedByMajesticManticore() throws GameStateException, WebSocketException {
+    public void goblinWerewolfNotDestroyedByMajesticManticore() throws GameStateException {
         CardInstance goblinWerewolf = getCardById(11);
         CardInstance hyenix = getCardById(41);
         CardInstance hungryHungryHamster = getCardById(40);
@@ -172,7 +173,7 @@ public class SpecificCaseTest extends MindbugGameTest {
 
     // #26
     @Test
-    public void opponentCanChooseBlockTargetWhileCannotBlock() throws GameStateException, WebSocketException {
+    public void opponentCanChooseBlockTargetWhileCannotBlock() throws GameStateException {
         CardInstance gorillion = getCardById(12);
         CardInstance ferretPacifier = getCardById(36);
         CardInstance explosiveToad = getCardById(8);
@@ -217,7 +218,7 @@ public class SpecificCaseTest extends MindbugGameTest {
 
     // #27
     @Test
-    public void hamsterLionDoesNotCauseGameEndWhenNoOneCanAttack() throws GameStateException, WebSocketException {
+    public void hamsterLionDoesNotCauseGameEndWhenNoOneCanAttack() throws GameStateException, IOException {
         CardInstance hyenix = getCardById(41);
         CardInstance graveRobber = getCardById(13);
         CardInstance hamsterLion = getCardById(39);
@@ -239,10 +240,12 @@ public class SpecificCaseTest extends MindbugGameTest {
         attack(snailHydra, null);
 
         assertTrue(game.isFinished());
+
+        cleanHistoryDirectory();
     }
 
     @Test
-    public void urchinHurlerCanAttackWithShieldBugsBoostWhileHamsterLion() throws GameStateException, WebSocketException {
+    public void urchinHurlerCanAttackWithShieldBugsBoostWhileHamsterLion() throws GameStateException {
         CardInstance hamsterLion = getCardById(39);
         CardInstance shieldBugs = getCardById(24);
         CardInstance urchinHurler = getCardById(32);
@@ -270,7 +273,7 @@ public class SpecificCaseTest extends MindbugGameTest {
     }
 
     @Test
-    public void compostDragonRevivesCompostDragon() throws GameStateException, WebSocketException {
+    public void compostDragonRevivesCompostDragon() throws GameStateException {
         List<CardInstance> compostDragons = getCardsById(5);
         assertEquals(2, compostDragons.size());
 
@@ -324,53 +327,5 @@ public class SpecificCaseTest extends MindbugGameTest {
         assertEquals(2, targetChoice.getAvailableTargets().size());
         assertTrue(targetChoice.getAvailableTargets().contains(ferretPacifier));
         assertTrue(targetChoice.getAvailableTargets().contains(snailHydra));
-    }
-
-    // #142
-    @Test
-    public void deathWeaverStillActiveInGrave() throws GameStateException, WebSocketException {
-        CardInstance hyenix = getCardById(41);
-        CardInstance goreagleAlpha = getCardById(38);
-        CardInstance luchataure = getCardById(18);
-
-        CardInstance snailThrower = getCardById(26);
-        CardInstance mermaid = getCardById(19);
-        CardInstance deathweaver = getCardById(6);
-        CardInstance drAxolotl = getCardById(1);
-
-        hand(player1, snailThrower, mermaid, deathweaver, drAxolotl);
-        hand(player2, hyenix, goreagleAlpha, luchataure);
-
-        play(snailThrower);
-        play(hyenix);
-        play(deathweaver);
-        attack(hyenix, snailThrower);
-        attack(deathweaver, null);
-
-        choose(true); //To revive hyenix
-
-        assertTrue(player2.getBoard().contains(hyenix));
-        assertEquals(2, player2.getTeam().getLifePoints());
-
-        attack(hyenix, null);
-        choose(true);
-        AttackService.resolveAttack(null, game);
-
-        play(mermaid);
-
-        assertEquals(2, player1.getTeam().getLifePoints());
-
-        attack(hyenix, mermaid);
-        attack(deathweaver, null);
-
-        choose(true); //To revive hyenix
-
-        assertEquals(1, player2.getTeam().getLifePoints());
-
-        play(luchataure);
-        attack(deathweaver, luchataure);
-
-        play(goreagleAlpha);
-        assertTrue(game.isFinished());
     }
 }

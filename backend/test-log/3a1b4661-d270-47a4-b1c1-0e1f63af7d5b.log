@@ -1,0 +1,60 @@
+2026-03-12 12:18:29.869 INFO  - Calculating first player...
+2026-03-12 12:18:29.870 INFO  - Banned card for Player1 (253a0bf1-aa74-4af8-97ae-409355dea205) : AXOLOTL HEALER (c72a5252-2d3b-4d11-ad5e-0c869f0c1f2a) (4)
+2026-03-12 12:18:29.871 INFO  - Banned card for Player2 (f44204da-974b-461c-b627-da232576dd81) : DEATHWEAVER (cfe1c975-3a08-49ab-b4ac-7bcf0e2c8213) (2)
+2026-03-12 12:18:29.871 INFO  - First player will be Player1 (253a0bf1-aa74-4af8-97ae-409355dea205)
+2026-03-12 12:18:29.878 INFO  - Game 3a1b4661-d270-47a4-b1c1-0e1f63af7d5b starting...
+2026-03-12 12:18:29.879 INFO  - Player Player1 (253a0bf1-aa74-4af8-97ae-409355dea205) hand : {
+- THE LURKER ;
+- RHINO TURTLE ;
+- COUNT DRACULEECH ;
+- SPIDER OWL ;
+- KILLER BEE
+}
+2026-03-12 12:18:29.879 INFO  - Player Player1 (253a0bf1-aa74-4af8-97ae-409355dea205) draw pile : {
+- COMPOST DRAGON ;
+- MAJESTIC MANTICORE ;
+- MYSTERIOUS MERMAID ;
+- TUSKED EXTORTER ;
+- HYENIX
+}
+2026-03-12 12:18:29.879 INFO  - Player Player2 (f44204da-974b-461c-b627-da232576dd81) hand : {
+- GOBLIN WEREWOLF ;
+- GOREAGLE ALPHA ;
+- TUSKED EXTORTER ;
+- HARPY MOTHER ;
+- CREEP FROM THE DEEP
+}
+2026-03-12 12:18:29.879 INFO  - Player Player2 (f44204da-974b-461c-b627-da232576dd81) draw pile : {
+- BRAIN FLY ;
+- ELEPHANTOPUS ;
+- TIGER SQUIRREL ;
+- GORILLON ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:18:29.879 INFO  - Life update for player Player2 (f44204da-974b-461c-b627-da232576dd81) : 2 LP
+2026-03-12 12:18:29.879 DEBUG - Player2 (f44204da-974b-461c-b627-da232576dd81) LP changed (3 -> 2) due to KILLER BEE (739c1add-cd39-477e-8f18-16230a519450) effect
+2026-03-12 12:18:29.879 INFO  - Resolving INFLICT effect of KILLER BEE (739c1add-cd39-477e-8f18-16230a519450)
+2026-03-12 12:18:29.879 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:29.880 INFO  - Life update for player Player2 (f44204da-974b-461c-b627-da232576dd81) : 1 LP
+2026-03-12 12:18:29.880 DEBUG - Player2 (f44204da-974b-461c-b627-da232576dd81) LP changed (2 -> 1) due to GOREAGLE ALPHA (b12aa27a-ab3d-4dc3-bbb4-3ab42a51fdae) effect
+2026-03-12 12:18:29.880 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (b12aa27a-ab3d-4dc3-bbb4-3ab42a51fdae)
+2026-03-12 12:18:29.880 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:29.880 INFO  - New FRENZY choice to be resolved by Player2 (f44204da-974b-461c-b627-da232576dd81) (attackingCard : GOREAGLE ALPHA (b12aa27a-ab3d-4dc3-bbb4-3ab42a51fdae))
+2026-03-12 12:18:29.880 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:29.880 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:29.880 DEBUG - Player Player2 (f44204da-974b-461c-b627-da232576dd81) must choose 1 cards to steal (targets : {
+- COUNT DRACULEECH ;
+- RHINO TURTLE
+})
+2026-03-12 12:18:29.880 INFO  - New TARGET choice to be resolved by Player2 (f44204da-974b-461c-b627-da232576dd81) (targets : {
+- COUNT DRACULEECH ;
+- RHINO TURTLE
+})
+2026-03-12 12:18:29.880 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.880 DEBUG - COUNT DRACULEECH (816ae99a-b7c0-4903-b9df-12cef32878fe) stolen and played by Player2 (f44204da-974b-461c-b627-da232576dd81) due to BRAIN FLY (3b960cae-ba2b-45f6-b378-9b0ecf73bf72) effect
+2026-03-12 12:18:29.880 INFO  - Resolving STEAL effect of BRAIN FLY (3b960cae-ba2b-45f6-b378-9b0ecf73bf72)
+2026-03-12 12:18:29.880 INFO  - Life update for player Player2 (f44204da-974b-461c-b627-da232576dd81) : 0 LP
+2026-03-12 12:18:29.880 INFO  - Game over : Player1 (253a0bf1-aa74-4af8-97ae-409355dea205) wins ; Player2 (f44204da-974b-461c-b627-da232576dd81) loses.
+2026-03-12 12:18:29.881 INFO  - End of the game
+2026-03-12 12:18:29.881 DEBUG - Player2 (f44204da-974b-461c-b627-da232576dd81) LP changed (1 -> 0) due to COUNT DRACULEECH (816ae99a-b7c0-4903-b9df-12cef32878fe) effect
+2026-03-12 12:18:29.881 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (816ae99a-b7c0-4903-b9df-12cef32878fe)

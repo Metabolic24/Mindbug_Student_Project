@@ -1,0 +1,245 @@
+2026-03-12 12:18:27.687 INFO  - Calculating first player...
+2026-03-12 12:18:27.689 INFO  - Banned card for Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) : TURF THE SURFER (6861a109-126f-45b8-868a-4996d47e27be) (8)
+2026-03-12 12:18:27.689 INFO  - Banned card for Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) : SNAIL HYDRA (48ab5603-6d4c-4153-b45d-f6bc27d4a127) (9)
+2026-03-12 12:18:27.689 INFO  - First player will be Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383)
+2026-03-12 12:18:27.697 INFO  - Game bfc99be1-f0e6-4494-8745-80e5c62695c7 starting...
+2026-03-12 12:18:27.697 INFO  - Player Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) hand : {
+- SNAIL HYDRA ;
+- HUNGRY HUNGRY HAMSTER ;
+- GRAVE ROBBER ;
+- TURBO BUG ;
+- LUCHATAUR
+}
+2026-03-12 12:18:27.698 INFO  - Player Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) draw pile : {
+- TIGER SQUIRREL ;
+- MAJESTIC MANTICORE ;
+- GRAVE ROBBER ;
+- URCHIN HURLER ;
+- GORILLON
+}
+2026-03-12 12:18:27.698 INFO  - Player Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) hand : {
+- CREEP FROM THE DEEP ;
+- LUCHATAUR ;
+- RHINO TURTLE ;
+- TUSKED EXTORTER ;
+- ELEPHANTOPUS
+}
+2026-03-12 12:18:27.698 INFO  - Player Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) draw pile : {
+- PLATED SCORPION ;
+- BRAIN FLY ;
+- COMPOST DRAGON ;
+- SHIELD BUGS ;
+- SPIDER OWL
+}
+2026-03-12 12:18:27.698 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.699 DEBUG - CREEP FROM THE DEEP (8309d5ce-3c03-4574-afc9-e08964b93245) stolen and played by Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) due to GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) effect
+2026-03-12 12:18:27.699 INFO  - Resolving STEAL effect of GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912)
+2026-03-12 12:18:27.699 DEBUG - Player Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) must choose 1 cards to steal (targets : {
+- LUCHATAUR ;
+- RHINO TURTLE ;
+- TUSKED EXTORTER ;
+- ELEPHANTOPUS ;
+- BRAIN FLY
+})
+2026-03-12 12:18:27.699 INFO  - New TARGET choice to be resolved by Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) (targets : {
+- ELEPHANTOPUS ;
+- RHINO TURTLE ;
+- LUCHATAUR ;
+- BRAIN FLY ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:18:27.699 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.699 DEBUG - Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) must decide if stolen card RHINO TURTLE (edde0754-18b8-4ae7-bd61-2b6d6c09f975) will be added to hand or board
+2026-03-12 12:18:27.699 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (6303b61b-05d6-4e9b-b2ac-1b7d50d5f0c8)
+2026-03-12 12:18:27.699 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:27.699 DEBUG - RHINO TURTLE (edde0754-18b8-4ae7-bd61-2b6d6c09f975) stolen and played by Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) due to HUNGRY HUNGRY HAMSTER (6303b61b-05d6-4e9b-b2ac-1b7d50d5f0c8) effect
+2026-03-12 12:18:27.699 DEBUG - Player Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) must choose 1 cards to steal (targets : {
+- GRAVE ROBBER ;
+- RHINO TURTLE
+})
+2026-03-12 12:18:27.699 INFO  - New TARGET choice to be resolved by Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) (targets : {
+- RHINO TURTLE ;
+- GRAVE ROBBER
+})
+2026-03-12 12:18:27.699 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.699 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) stolen and played by Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) due to BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) effect
+2026-03-12 12:18:27.700 INFO  - Resolving STEAL effect of BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445)
+2026-03-12 12:18:27.700 INFO  - Life update for player Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) : 2 LP
+2026-03-12 12:18:27.700 INFO  - New FRENZY choice to be resolved by Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) (attackingCard : RHINO TURTLE (edde0754-18b8-4ae7-bd61-2b6d6c09f975))
+2026-03-12 12:18:27.700 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:27.700 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) stolen and played by Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) due to GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) effect
+2026-03-12 12:18:27.700 INFO  - Resolving STEAL effect of GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d)
+2026-03-12 12:18:27.700 DEBUG - Player Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) must choose 1 cards to steal (targets : {
+- GRAVE ROBBER ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:18:27.700 INFO  - New TARGET choice to be resolved by Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) (targets : {
+- GRAVE ROBBER ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:18:27.700 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.700 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) stolen and played by Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) due to BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) effect
+2026-03-12 12:18:27.700 INFO  - Resolving STEAL effect of BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445)
+2026-03-12 12:18:27.700 DEBUG - Player Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) must choose 1 card(s) to discard (available targets : {
+- SNAIL HYDRA ;
+- TIGER SQUIRREL ;
+- MAJESTIC MANTICORE ;
+- URCHIN HURLER ;
+- GORILLON
+})
+2026-03-12 12:18:27.701 INFO  - New TARGET choice to be resolved by Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) (targets : {
+- MAJESTIC MANTICORE ;
+- GORILLON ;
+- SNAIL HYDRA ;
+- TIGER SQUIRREL ;
+- URCHIN HURLER
+})
+2026-03-12 12:18:27.701 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.701 DEBUG - TIGER SQUIRREL (e51b4e0a-56ed-4f85-a7d8-900b3d32f8f4) discarded due to TUSKED EXTORTER (ad30ced4-094d-400b-9235-d9294f71bc82) effect
+2026-03-12 12:18:27.701 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (ad30ced4-094d-400b-9235-d9294f71bc82)
+2026-03-12 12:18:27.701 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.701 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.701 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.701 DEBUG - TURBO BUG (f5d40534-dc65-4235-ae8a-93cc999964ea) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.701 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.701 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.701 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.701 DEBUG - Player Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) must choose 1 cards to steal (targets : {
+- TUSKED EXTORTER ;
+- PLATED SCORPION
+})
+2026-03-12 12:18:27.701 INFO  - New TARGET choice to be resolved by Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) (targets : {
+- PLATED SCORPION ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:18:27.701 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.701 DEBUG - TUSKED EXTORTER (ad30ced4-094d-400b-9235-d9294f71bc82) stolen and played by Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) due to COMPOST DRAGON (d5cf557b-6790-4c66-a1a2-8e5a117e8338) effect
+2026-03-12 12:18:27.701 INFO  - Resolving STEAL effect of COMPOST DRAGON (d5cf557b-6790-4c66-a1a2-8e5a117e8338)
+2026-03-12 12:18:27.702 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - TURBO BUG (f5d40534-dc65-4235-ae8a-93cc999964ea) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.702 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - MAJESTIC MANTICORE (5cf6e01a-8100-4864-a5be-617e0a880fb3) power changed (6 -> 8) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - TURBO BUG (f5d40534-dc65-4235-ae8a-93cc999964ea) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.702 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.702 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - MAJESTIC MANTICORE (5cf6e01a-8100-4864-a5be-617e0a880fb3) power changed (6 -> 8) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - TURBO BUG (f5d40534-dc65-4235-ae8a-93cc999964ea) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.702 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - MAJESTIC MANTICORE (5cf6e01a-8100-4864-a5be-617e0a880fb3) power changed (6 -> 8) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - TURBO BUG (f5d40534-dc65-4235-ae8a-93cc999964ea) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.702 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.703 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - MAJESTIC MANTICORE (5cf6e01a-8100-4864-a5be-617e0a880fb3) power changed (6 -> 8) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - TURBO BUG (f5d40534-dc65-4235-ae8a-93cc999964ea) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - SNAIL HYDRA (a5dc48ad-19d1-4110-b0aa-73728a011c71) power changed (9 -> 11) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.703 INFO  - New FRENZY choice to be resolved by Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) (attackingCard : LUCHATAUR (ec291fe1-0fe6-4334-879c-d52f44a6c679))
+2026-03-12 12:18:27.703 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:27.703 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - MAJESTIC MANTICORE (5cf6e01a-8100-4864-a5be-617e0a880fb3) power changed (6 -> 8) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - SNAIL HYDRA (a5dc48ad-19d1-4110-b0aa-73728a011c71) power changed (9 -> 11) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.703 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - MAJESTIC MANTICORE (5cf6e01a-8100-4864-a5be-617e0a880fb3) power changed (6 -> 8) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - SNAIL HYDRA (a5dc48ad-19d1-4110-b0aa-73728a011c71) power changed (9 -> 11) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.703 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.704 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.704 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.704 DEBUG - MAJESTIC MANTICORE (5cf6e01a-8100-4864-a5be-617e0a880fb3) power changed (6 -> 8) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.704 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.704 DEBUG - SNAIL HYDRA (a5dc48ad-19d1-4110-b0aa-73728a011c71) power changed (9 -> 11) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.704 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.704 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.704 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8638be0d-b516-4898-8466-b053310cd960)
+2026-03-12 12:18:27.704 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.704 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.704 DEBUG - MAJESTIC MANTICORE (5cf6e01a-8100-4864-a5be-617e0a880fb3) power changed (6 -> 8) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.704 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.704 DEBUG - SNAIL HYDRA (a5dc48ad-19d1-4110-b0aa-73728a011c71) power changed (9 -> 11) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.704 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.704 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.705 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8638be0d-b516-4898-8466-b053310cd960)
+2026-03-12 12:18:27.705 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 DEBUG - MAJESTIC MANTICORE (5cf6e01a-8100-4864-a5be-617e0a880fb3) power changed (6 -> 8) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 DEBUG - SNAIL HYDRA (a5dc48ad-19d1-4110-b0aa-73728a011c71) power changed (9 -> 11) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.705 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8638be0d-b516-4898-8466-b053310cd960)
+2026-03-12 12:18:27.705 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8638be0d-b516-4898-8466-b053310cd960)
+2026-03-12 12:18:27.705 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8638be0d-b516-4898-8466-b053310cd960)
+2026-03-12 12:18:27.705 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 DEBUG - MAJESTIC MANTICORE (5cf6e01a-8100-4864-a5be-617e0a880fb3) power changed (6 -> 8) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.705 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8638be0d-b516-4898-8466-b053310cd960)
+2026-03-12 12:18:27.705 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 DEBUG - MAJESTIC MANTICORE (5cf6e01a-8100-4864-a5be-617e0a880fb3) power changed (6 -> 8) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.705 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.706 DEBUG - TUSKED EXTORTER (ad30ced4-094d-400b-9235-d9294f71bc82) power changed (8 -> 9) due to SHIELD BUGS (c84b3990-923d-4722-bb33-b1d3d16856bd) effect
+2026-03-12 12:18:27.706 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c84b3990-923d-4722-bb33-b1d3d16856bd)
+2026-03-12 12:18:27.706 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.706 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.706 DEBUG - MAJESTIC MANTICORE (5cf6e01a-8100-4864-a5be-617e0a880fb3) power changed (6 -> 8) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.706 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.706 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.706 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.706 DEBUG - TUSKED EXTORTER (ad30ced4-094d-400b-9235-d9294f71bc82) power changed (8 -> 9) due to SHIELD BUGS (c84b3990-923d-4722-bb33-b1d3d16856bd) effect
+2026-03-12 12:18:27.706 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c84b3990-923d-4722-bb33-b1d3d16856bd)
+2026-03-12 12:18:27.706 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.706 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.706 DEBUG - MAJESTIC MANTICORE (5cf6e01a-8100-4864-a5be-617e0a880fb3) power changed (6 -> 8) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.706 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.706 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.706 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.706 DEBUG - TUSKED EXTORTER (ad30ced4-094d-400b-9235-d9294f71bc82) power changed (8 -> 9) due to SHIELD BUGS (c84b3990-923d-4722-bb33-b1d3d16856bd) effect
+2026-03-12 12:18:27.706 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c84b3990-923d-4722-bb33-b1d3d16856bd)
+2026-03-12 12:18:27.706 DEBUG - TUSKED EXTORTER (ad30ced4-094d-400b-9235-d9294f71bc82) power changed (8 -> 9) due to SHIELD BUGS (c84b3990-923d-4722-bb33-b1d3d16856bd) effect
+2026-03-12 12:18:27.706 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c84b3990-923d-4722-bb33-b1d3d16856bd)
+2026-03-12 12:18:27.707 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (ad30ced4-094d-400b-9235-d9294f71bc82)
+2026-03-12 12:18:27.707 DEBUG - TUSKED EXTORTER (ad30ced4-094d-400b-9235-d9294f71bc82) power changed (8 -> 9) due to SHIELD BUGS (c84b3990-923d-4722-bb33-b1d3d16856bd) effect
+2026-03-12 12:18:27.707 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c84b3990-923d-4722-bb33-b1d3d16856bd)
+2026-03-12 12:18:27.707 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c84b3990-923d-4722-bb33-b1d3d16856bd)
+2026-03-12 12:18:27.707 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.707 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.707 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.707 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.707 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.707 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c84b3990-923d-4722-bb33-b1d3d16856bd)
+2026-03-12 12:18:27.707 DEBUG - GRAVE ROBBER (70247fd7-5a80-4579-b90a-d3a357fec53d) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.707 DEBUG - GORILLON (254f63d1-c382-44ea-bc99-91ba20fac51c) power changed (10 -> 12) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.707 DEBUG - BRAIN FLY (bba2eae0-fda0-4842-a553-8e85ba5bc445) power changed (4 -> 6) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.707 DEBUG - GRAVE ROBBER (da178572-be18-4726-b36c-58577e68d912) power changed (7 -> 9) due to URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7) effect
+2026-03-12 12:18:27.707 INFO  - Resolving POWER_UP effect of URCHIN HURLER (6f79829e-263c-4c20-a6e1-99f6cff6b3d7)
+2026-03-12 12:18:27.707 INFO  - Game over : Player1 (d9d57d08-5db8-4d68-8dcb-932d163a23ee) wins ; Player2 (78fe3ed6-de02-4a6c-beed-9c6a53f16383) loses.
+2026-03-12 12:18:27.707 INFO  - End of the game

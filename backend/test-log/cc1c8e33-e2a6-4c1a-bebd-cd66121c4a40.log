@@ -1,0 +1,138 @@
+2026-03-12 12:03:42.288 INFO  - Calculating first player...
+2026-03-12 12:03:42.291 INFO  - Banned card for Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb) : RHINO TURTLE (85c3b763-0b3a-41de-8054-4643a463c2ee) (8)
+2026-03-12 12:03:42.291 INFO  - Banned card for Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) : AXOLOTL HEALER (23e2b4c9-a879-4a00-884e-601fae6ddf87) (4)
+2026-03-12 12:03:42.291 INFO  - First player will be Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb)
+2026-03-12 12:03:42.301 INFO  - Game cc1c8e33-e2a6-4c1a-bebd-cd66121c4a40 starting...
+2026-03-12 12:03:42.301 INFO  - Player Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb) hand : {
+- STRANGE BARREL ;
+- SPIDER OWL ;
+- MYSTERIOUS MERMAID ;
+- DEATHWEAVER ;
+- KILLER BEE
+}
+2026-03-12 12:03:42.301 INFO  - Player Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb) draw pile : {
+- EXPLOSIVE TOAD ;
+- TUSKED EXTORTER ;
+- CREEP FROM THE DEEP ;
+- SNAIL HYDRA ;
+- FERRET BOMBER
+}
+2026-03-12 12:03:42.302 INFO  - Player Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) hand : {
+- FROBLIN INSTIGATOR ;
+- GOREAGLE ALPHA ;
+- MAJESTIC MANTICORE ;
+- CHAMELEON SNIPER ;
+- ELEPHANTOPUS
+}
+2026-03-12 12:03:42.302 INFO  - Player Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) draw pile : {
+- HAMSTER LION ;
+- KANGASAURUS REX ;
+- AXOLOTL HEALER ;
+- HAMSTER LION ;
+- RHINO TURTLE
+}
+2026-03-12 12:03:42.302 DEBUG - FROBLIN INSTIGATOR (590f3f56-0d5d-4173-9ef8-272d15257f9c) power changed (1 -> 1) due to FROBLIN INSTIGATOR (590f3f56-0d5d-4173-9ef8-272d15257f9c) effect
+2026-03-12 12:03:42.302 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (590f3f56-0d5d-4173-9ef8-272d15257f9c)
+2026-03-12 12:03:42.302 DEBUG - FROBLIN INSTIGATOR (590f3f56-0d5d-4173-9ef8-272d15257f9c) power changed (1 -> 1) due to FROBLIN INSTIGATOR (590f3f56-0d5d-4173-9ef8-272d15257f9c) effect
+2026-03-12 12:03:42.302 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (590f3f56-0d5d-4173-9ef8-272d15257f9c)
+2026-03-12 12:03:42.303 DEBUG - GOREAGLE ALPHA (2fa4cd5f-3c79-4491-a5fc-8a772c3063d4) stolen and drawn by Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb) due to STRANGE BARREL (56e2b4ca-d275-40fe-b721-bae6e0291b45) effect
+2026-03-12 12:03:42.303 DEBUG - CHAMELEON SNIPER (509c1faf-4cce-472a-8b2f-e856a182735d) stolen and drawn by Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb) due to STRANGE BARREL (56e2b4ca-d275-40fe-b721-bae6e0291b45) effect
+2026-03-12 12:03:42.303 INFO  - Resolving STEAL effect of STRANGE BARREL (56e2b4ca-d275-40fe-b721-bae6e0291b45)
+2026-03-12 12:03:42.303 DEBUG - Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) LP changed (3 -> 5) due to AXOLOTL HEALER (c812e567-0daa-4f73-9dbd-6a733afb86c4) effect
+2026-03-12 12:03:42.303 INFO  - Resolving GAIN effect of AXOLOTL HEALER (c812e567-0daa-4f73-9dbd-6a733afb86c4)
+2026-03-12 12:03:42.303 INFO  - Life update for player Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) : 4 LP
+2026-03-12 12:03:42.303 DEBUG - Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) LP changed (5 -> 4) due to KILLER BEE (2cef30c4-7714-4a14-b9ab-96bd9ba903db) effect
+2026-03-12 12:03:42.303 INFO  - Resolving INFLICT effect of KILLER BEE (2cef30c4-7714-4a14-b9ab-96bd9ba903db)
+2026-03-12 12:03:42.304 DEBUG - CardInstance(uuid=2cef30c4-7714-4a14-b9ab-96bd9ba903db, card=Card(id=16, setName=first_contact, name=KILLER BEE, power=5, keywords=[HUNTER], effects={PLAY=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.304 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.304 DEBUG - CardInstance(uuid=2cef30c4-7714-4a14-b9ab-96bd9ba903db, card=Card(id=16, setName=first_contact, name=KILLER BEE, power=5, keywords=[HUNTER], effects={PLAY=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.304 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.305 DEBUG - CardInstance(uuid=509c1faf-4cce-472a-8b2f-e856a182735d, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.305 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.305 DEBUG - CardInstance(uuid=509c1faf-4cce-472a-8b2f-e856a182735d, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.305 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.305 DEBUG - CardInstance(uuid=2cef30c4-7714-4a14-b9ab-96bd9ba903db, card=Card(id=16, setName=first_contact, name=KILLER BEE, power=5, keywords=[HUNTER], effects={PLAY=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.305 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.306 INFO  - New FRENZY choice to be resolved by Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) (attackingCard : HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5))
+2026-03-12 12:03:42.306 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.306 DEBUG - CardInstance(uuid=2cef30c4-7714-4a14-b9ab-96bd9ba903db, card=Card(id=16, setName=first_contact, name=KILLER BEE, power=5, keywords=[HUNTER], effects={PLAY=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.306 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.306 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.306 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.306 DEBUG - CardInstance(uuid=b7f1ec48-53f0-4619-ac53-aab3e247a987, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.308 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.309 DEBUG - Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb) LP changed (3 -> 4) due to MYSTERIOUS MERMAID (b7f1ec48-53f0-4619-ac53-aab3e247a987) effect
+2026-03-12 12:03:42.309 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (b7f1ec48-53f0-4619-ac53-aab3e247a987)
+2026-03-12 12:03:42.309 DEBUG - CardInstance(uuid=b7f1ec48-53f0-4619-ac53-aab3e247a987, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.309 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.309 DEBUG - CardInstance(uuid=b7f1ec48-53f0-4619-ac53-aab3e247a987, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.309 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.309 DEBUG - CardInstance(uuid=b7f1ec48-53f0-4619-ac53-aab3e247a987, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.309 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.309 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.309 DEBUG - CardInstance(uuid=b7f1ec48-53f0-4619-ac53-aab3e247a987, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.309 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.309 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.309 DEBUG - CardInstance(uuid=ed4d19c6-09a5-421e-8846-60dffd157b77, card=Card(id=8, setName=first_contact, name=EXPLOSIVE TOAD, power=5, keywords=[FRENZY], effects={DEFEATED=[DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Defeated</b>: Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=5, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.310 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.310 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.310 DEBUG - CardInstance(uuid=ed4d19c6-09a5-421e-8846-60dffd157b77, card=Card(id=8, setName=first_contact, name=EXPLOSIVE TOAD, power=5, keywords=[FRENZY], effects={DEFEATED=[DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Defeated</b>: Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=5, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.310 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.310 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.310 DEBUG - CardInstance(uuid=b7f1ec48-53f0-4619-ac53-aab3e247a987, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.310 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.310 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.310 DEBUG - Player Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb) must choose 1 card(s) to destroy (available targets : {
+- HAMSTER LION ;
+- ELEPHANTOPUS ;
+- MYSTERIOUS MERMAID
+})
+2026-03-12 12:03:42.310 DEBUG - CardInstance(uuid=b7f1ec48-53f0-4619-ac53-aab3e247a987, card=Card(id=19, setName=first_contact, name=MYSTERIOUS MERMAID, power=7, keywords=[], effects={PLAY=[GainEffect(value=0, equal=true)]}, unique=true, description=<b>Play</b>: Stay your life equal to the opponent's., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.310 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.310 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.311 INFO  - New TARGET choice to be resolved by Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb) (targets : {
+- MYSTERIOUS MERMAID ;
+- HAMSTER LION ;
+- ELEPHANTOPUS
+})
+2026-03-12 12:03:42.311 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.311 DEBUG - EXPLOSIVE TOAD (ed4d19c6-09a5-421e-8846-60dffd157b77) effect destroys HAMSTER LION (f8d5a5d4-23d7-4199-a6d5-21df7421dbe5)
+2026-03-12 12:03:42.311 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (ed4d19c6-09a5-421e-8846-60dffd157b77)
+2026-03-12 12:03:42.311 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.311 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.311 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.311 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.312 INFO  - Life update for player Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb) : 3 LP
+2026-03-12 12:03:42.312 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.312 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.312 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.312 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.312 INFO  - Life update for player Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb) : 2 LP
+2026-03-12 12:03:42.312 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.312 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.312 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.312 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6a3c1b72-0e36-4216-9e58-844fb7498d5b)
+2026-03-12 12:03:42.312 INFO  - Life update for player Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) : 3 LP
+2026-03-12 12:03:42.313 DEBUG - CardInstance(uuid=34e59cf5-88e7-4ef2-be2f-76526a284b07, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.313 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a00d326b-6d05-4a5a-a687-95f6a1590835)
+2026-03-12 12:03:42.313 DEBUG - CardInstance(uuid=34e59cf5-88e7-4ef2-be2f-76526a284b07, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.313 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a00d326b-6d05-4a5a-a687-95f6a1590835)
+2026-03-12 12:03:42.313 DEBUG - CardInstance(uuid=34e59cf5-88e7-4ef2-be2f-76526a284b07, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1ab1d93d), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.313 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a00d326b-6d05-4a5a-a687-95f6a1590835)
+2026-03-12 12:03:42.314 DEBUG - PLAY effects disabled for player Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) due to DEATHWEAVER (3a4504d0-a0da-4550-a235-1a05eab2f40b) effect
+2026-03-12 12:03:42.314 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (3a4504d0-a0da-4550-a235-1a05eab2f40b)
+2026-03-12 12:03:42.314 DEBUG - PLAY effects disabled for player Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) due to DEATHWEAVER (3a4504d0-a0da-4550-a235-1a05eab2f40b) effect
+2026-03-12 12:03:42.314 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (3a4504d0-a0da-4550-a235-1a05eab2f40b)
+2026-03-12 12:03:42.314 INFO  - New FRENZY choice to be resolved by Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) (attackingCard : RHINO TURTLE (c488efce-a3e0-4389-a061-230bf9508ace))
+2026-03-12 12:03:42.314 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.314 INFO  - Life update for player Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) : 2 LP
+2026-03-12 12:03:42.314 INFO  - Life update for player Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) : 1 LP
+2026-03-12 12:03:42.314 DEBUG - KANGASAURUS REX (ffc0b32c-3378-4f97-8046-bfbff375b2f0) effect destroys SPIDER OWL (34e59cf5-88e7-4ef2-be2f-76526a284b07)
+2026-03-12 12:03:42.315 INFO  - Resolving DESTROY effect of KANGASAURUS REX (ffc0b32c-3378-4f97-8046-bfbff375b2f0)
+2026-03-12 12:03:42.315 INFO  - Resolving DISCARD effect of FERRET BOMBER (d8427629-637c-4185-9d78-77a6c088fe94)
+2026-03-12 12:03:42.315 INFO  - Life update for player Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb) : 1 LP
+2026-03-12 12:03:42.315 DEBUG - Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb) LP changed (2 -> 1) due to GOREAGLE ALPHA (2fa4cd5f-3c79-4491-a5fc-8a772c3063d4) effect
+2026-03-12 12:03:42.315 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (2fa4cd5f-3c79-4491-a5fc-8a772c3063d4)
+2026-03-12 12:03:42.315 INFO  - Life update for player Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) : 0 LP
+2026-03-12 12:03:42.315 INFO  - Game over : Player1 (110db3c1-8515-41f8-a1d0-d60e67c290bb) wins ; Player2 (4f652938-d6dd-40e5-8a57-8eb32c380fdc) loses.
+2026-03-12 12:03:42.315 INFO  - End of the game

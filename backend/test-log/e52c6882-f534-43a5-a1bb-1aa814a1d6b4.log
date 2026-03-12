@@ -1,0 +1,211 @@
+2026-03-12 12:03:03.117 INFO  - Calculating first player...
+2026-03-12 12:03:03.120 INFO  - Banned card for Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) : RHINO TURTLE (14d1a904-6c58-40df-a646-761b61701cc8) (8)
+2026-03-12 12:03:03.121 INFO  - Banned card for Player2 (53f7da1b-6b10-4860-a6fc-d8bcbda896e4) : KILLER BEE (6fdd12c7-8797-445c-abb9-2b1340849d4e) (5)
+2026-03-12 12:03:03.121 INFO  - First player will be Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f)
+2026-03-12 12:03:03.133 INFO  - Game e52c6882-f534-43a5-a1bb-1aa814a1d6b4 starting...
+2026-03-12 12:03:03.133 INFO  - Player Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) hand : {
+- STRANGE BARREL ;
+- BUGSERKER ;
+- SPIDER OWL ;
+- LUCHATAUR ;
+- COMPOST DRAGON
+}
+2026-03-12 12:03:03.134 INFO  - Player Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) draw pile : {
+- HARPY MOTHER ;
+- CREEP FROM THE DEEP ;
+- TURF THE SURFER ;
+- SPIDER OWL ;
+- SNAIL HYDRA
+}
+2026-03-12 12:03:03.134 INFO  - Player Player2 (53f7da1b-6b10-4860-a6fc-d8bcbda896e4) hand : {
+- LUCHATAUR ;
+- FERRET PACIFIER ;
+- FERRET PACIFIER ;
+- THE LURKER ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:03:03.134 INFO  - Player Player2 (53f7da1b-6b10-4860-a6fc-d8bcbda896e4) draw pile : {
+- GOREAGLE ALPHA ;
+- GOBLIN WEREWOLF ;
+- COMPOST DRAGON ;
+- HAMSTER LION ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:03:03.135 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.136 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.136 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.136 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.136 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.137 INFO  - Life update for player Player2 (53f7da1b-6b10-4860-a6fc-d8bcbda896e4) : 2 LP
+2026-03-12 12:03:03.137 DEBUG - Player2 (53f7da1b-6b10-4860-a6fc-d8bcbda896e4) LP changed (3 -> 2) due to GOREAGLE ALPHA (83de8f08-5b7d-4bd4-bf20-796fd81dd037) effect
+2026-03-12 12:03:03.137 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (83de8f08-5b7d-4bd4-bf20-796fd81dd037)
+2026-03-12 12:03:03.137 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.137 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.137 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.138 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.138 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.138 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.138 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.138 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.138 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:03.138 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.139 DEBUG - COMPOST DRAGON (acbeb319-7bc0-4816-8f9f-eed0ac35ac45) stolen and drawn by Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) due to STRANGE BARREL (143d8b58-e3b3-4925-8e08-94c2ead9f00c) effect
+2026-03-12 12:03:03.139 DEBUG - GOBLIN WEREWOLF (0cd3a277-2ea0-4cc3-b93f-b1a3ba2cc430) stolen and drawn by Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) due to STRANGE BARREL (143d8b58-e3b3-4925-8e08-94c2ead9f00c) effect
+2026-03-12 12:03:03.139 INFO  - Resolving STEAL effect of STRANGE BARREL (143d8b58-e3b3-4925-8e08-94c2ead9f00c)
+2026-03-12 12:03:03.139 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.139 INFO  - New FRENZY choice to be resolved by Player2 (53f7da1b-6b10-4860-a6fc-d8bcbda896e4) (attackingCard : GOREAGLE ALPHA (83de8f08-5b7d-4bd4-bf20-796fd81dd037))
+2026-03-12 12:03:03.139 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.139 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.139 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.140 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.140 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:03.140 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6679d43e-f839-4c61-bd2d-c92fec40d6ca)
+2026-03-12 12:03:03.140 DEBUG - Player Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) must choose 1 card(s) to discard (available targets : {
+- SPIDER OWL ;
+- LUCHATAUR ;
+- COMPOST DRAGON ;
+- HARPY MOTHER ;
+- TURF THE SURFER ;
+- COMPOST DRAGON ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:03:03.140 INFO  - New TARGET choice to be resolved by Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) (targets : {
+- TURF THE SURFER ;
+- HARPY MOTHER ;
+- LUCHATAUR ;
+- GOBLIN WEREWOLF ;
+- SPIDER OWL ;
+- COMPOST DRAGON ;
+- COMPOST DRAGON
+})
+2026-03-12 12:03:03.140 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.140 DEBUG - HARPY MOTHER (ec8e3383-0b75-4e04-8dfd-9be1e610d9d1) discarded due to TUSKED EXTORTER (e116a8a3-02dc-43d9-87f8-d4b7ed609999) effect
+2026-03-12 12:03:03.140 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (e116a8a3-02dc-43d9-87f8-d4b7ed609999)
+2026-03-12 12:03:03.141 INFO  - Life update for player Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) : 2 LP
+2026-03-12 12:03:03.141 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.141 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.141 DEBUG - GOBLIN WEREWOLF (0cd3a277-2ea0-4cc3-b93f-b1a3ba2cc430) power changed (2 -> 8) due to GOBLIN WEREWOLF (0cd3a277-2ea0-4cc3-b93f-b1a3ba2cc430) effect
+2026-03-12 12:03:03.141 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (0cd3a277-2ea0-4cc3-b93f-b1a3ba2cc430)
+2026-03-12 12:03:03.142 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.142 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.142 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.142 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.142 DEBUG - Player Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) must choose 1 card(s) that will be unable to block (targets : {
+- LUCHATAUR ;
+- GOREAGLE ALPHA ;
+- TUSKED EXTORTER ;
+- FERRET PACIFIER
+})
+2026-03-12 12:03:03.142 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.142 INFO  - New TARGET choice to be resolved by Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) (targets : {
+- LUCHATAUR ;
+- TUSKED EXTORTER ;
+- GOREAGLE ALPHA ;
+- FERRET PACIFIER
+})
+2026-03-12 12:03:03.143 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.143 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (c3c12cc5-0f52-45e7-aa42-46fff7bbfb57)
+2026-03-12 12:03:03.143 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.143 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.143 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.143 INFO  - Life update for player Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) : 1 LP
+2026-03-12 12:03:03.143 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.143 INFO  - New FRENZY choice to be resolved by Player2 (53f7da1b-6b10-4860-a6fc-d8bcbda896e4) (attackingCard : LUCHATAUR (843819a4-c3a9-47e6-b7ee-26c7e9427e4a))
+2026-03-12 12:03:03.144 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.144 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.144 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.144 DEBUG - Player Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) must choose 1 card(s) that will be unable to block (targets : {
+- LUCHATAUR ;
+- TUSKED EXTORTER ;
+- FERRET PACIFIER
+})
+2026-03-12 12:03:03.144 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.144 INFO  - New TARGET choice to be resolved by Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) (targets : {
+- LUCHATAUR ;
+- TUSKED EXTORTER ;
+- FERRET PACIFIER
+})
+2026-03-12 12:03:03.144 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.144 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (c3c12cc5-0f52-45e7-aa42-46fff7bbfb57)
+2026-03-12 12:03:03.145 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.145 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.145 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.145 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.145 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.145 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.145 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.145 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.145 DEBUG - TIGER SQUIRREL (f19ea48a-4510-433b-ad95-14c301354fb2) effect destroys LUCHATAUR (aca4e1db-3532-499c-a10c-29d74394ea4d)
+2026-03-12 12:03:03.146 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (f19ea48a-4510-433b-ad95-14c301354fb2)
+2026-03-12 12:03:03.146 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.146 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.146 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.146 DEBUG - Player Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) must choose 1 cards to steal (targets : {
+- BUGSERKER ;
+- STRANGE BARREL ;
+- CREEP FROM THE DEEP ;
+- HARPY MOTHER ;
+- GOBLIN WEREWOLF ;
+- TURF THE SURFER ;
+- LUCHATAUR
+})
+2026-03-12 12:03:03.146 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.146 INFO  - New TARGET choice to be resolved by Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) (targets : {
+- TURF THE SURFER ;
+- HARPY MOTHER ;
+- LUCHATAUR ;
+- GOBLIN WEREWOLF ;
+- BUGSERKER ;
+- CREEP FROM THE DEEP ;
+- STRANGE BARREL
+})
+2026-03-12 12:03:03.146 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.147 DEBUG - TURF THE SURFER (c3c12cc5-0f52-45e7-aa42-46fff7bbfb57) stolen and played by Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) due to COMPOST DRAGON (acbeb319-7bc0-4816-8f9f-eed0ac35ac45) effect
+2026-03-12 12:03:03.147 INFO  - Resolving STEAL effect of COMPOST DRAGON (acbeb319-7bc0-4816-8f9f-eed0ac35ac45)
+2026-03-12 12:03:03.147 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.147 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.147 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.147 DEBUG - CardInstance(uuid=acbeb319-7bc0-4816-8f9f-eed0ac35ac45, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3f2ae973), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.152 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f789321b-299f-48c5-95a6-3f6679cc6e6b)
+2026-03-12 12:03:03.152 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.152 DEBUG - CardInstance(uuid=acbeb319-7bc0-4816-8f9f-eed0ac35ac45, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3f2ae973), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.152 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f789321b-299f-48c5-95a6-3f6679cc6e6b)
+2026-03-12 12:03:03.153 DEBUG - Player Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) must choose 1 card(s) that will be unable to block (targets : {
+- LUCHATAUR ;
+- FERRET PACIFIER ;
+- THE LURKER ;
+- TIGER SQUIRREL ;
+- HAMSTER LION
+})
+2026-03-12 12:03:03.153 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.153 DEBUG - CardInstance(uuid=acbeb319-7bc0-4816-8f9f-eed0ac35ac45, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3f2ae973), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.153 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f789321b-299f-48c5-95a6-3f6679cc6e6b)
+2026-03-12 12:03:03.153 INFO  - New TARGET choice to be resolved by Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) (targets : {
+- LUCHATAUR ;
+- THE LURKER ;
+- FERRET PACIFIER ;
+- TIGER SQUIRREL ;
+- HAMSTER LION
+})
+2026-03-12 12:03:03.153 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.153 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (c3c12cc5-0f52-45e7-aa42-46fff7bbfb57)
+2026-03-12 12:03:03.154 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.154 DEBUG - CardInstance(uuid=acbeb319-7bc0-4816-8f9f-eed0ac35ac45, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3f2ae973), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.154 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f789321b-299f-48c5-95a6-3f6679cc6e6b)
+2026-03-12 12:03:03.160 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.160 DEBUG - CardInstance(uuid=acbeb319-7bc0-4816-8f9f-eed0ac35ac45, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3f2ae973), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.161 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f789321b-299f-48c5-95a6-3f6679cc6e6b)
+2026-03-12 12:03:03.161 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.161 DEBUG - CardInstance(uuid=acbeb319-7bc0-4816-8f9f-eed0ac35ac45, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3f2ae973), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.161 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f789321b-299f-48c5-95a6-3f6679cc6e6b)
+2026-03-12 12:03:03.161 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.162 DEBUG - CardInstance(uuid=c3c12cc5-0f52-45e7-aa42-46fff7bbfb57, card=Card(id=44, setName=first_contact, name=TURF THE SURFER, power=8, keywords=[], effects={ATTACK=[NoBlockEffect(value=1, max=null, min=null, highest=false, keyword=null)]}, unique=false, description=<b>Attack</b>: Choose a creature. It cannot block this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3f2ae973), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.162 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f789321b-299f-48c5-95a6-3f6679cc6e6b)
+2026-03-12 12:03:03.162 INFO  - New FRENZY choice to be resolved by Player2 (53f7da1b-6b10-4860-a6fc-d8bcbda896e4) (attackingCard : HAMSTER LION (f789321b-299f-48c5-95a6-3f6679cc6e6b))
+2026-03-12 12:03:03.162 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.162 INFO  - Life update for player Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) : 0 LP
+2026-03-12 12:03:03.162 INFO  - Game over : Player2 (53f7da1b-6b10-4860-a6fc-d8bcbda896e4) wins ; Player1 (69aeca2d-37a3-4f38-af06-1c294d854b7f) loses.
+2026-03-12 12:03:03.162 INFO  - End of the game
+2026-03-12 12:03:03.162 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ab7ee495-286e-43e4-a9e5-3c42308b07c7)
+2026-03-12 12:03:03.162 DEBUG - CardInstance(uuid=c3c12cc5-0f52-45e7-aa42-46fff7bbfb57, card=Card(id=44, setName=first_contact, name=TURF THE SURFER, power=8, keywords=[], effects={ATTACK=[NoBlockEffect(value=1, max=null, min=null, highest=false, keyword=null)]}, unique=false, description=<b>Attack</b>: Choose a creature. It cannot block this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3f2ae973), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.162 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f789321b-299f-48c5-95a6-3f6679cc6e6b)

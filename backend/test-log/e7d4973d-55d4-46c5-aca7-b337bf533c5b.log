@@ -1,0 +1,102 @@
+2026-03-12 12:03:03.947 INFO  - Calculating first player...
+2026-03-12 12:03:03.949 INFO  - Banned card for Player1 (576093b8-2da2-469d-85d3-ad1afe017f1d) : SHARK DOG (33f25a8e-d5f0-4a0e-8e7e-a2be08b5c16f) (4)
+2026-03-12 12:03:03.949 INFO  - Banned card for Player2 (a51a21fc-f5b8-48c9-ae48-f6892e037a03) : MYSTERIOUS MERMAID (b5dea2d7-b04a-49d6-903a-98ae81c2e8a3) (7)
+2026-03-12 12:03:03.949 INFO  - First player will be Player2 (a51a21fc-f5b8-48c9-ae48-f6892e037a03)
+2026-03-12 12:03:03.956 INFO  - Game e7d4973d-55d4-46c5-aca7-b337bf533c5b starting...
+2026-03-12 12:03:03.957 INFO  - Player Player1 (576093b8-2da2-469d-85d3-ad1afe017f1d) hand : {
+- COMPOST DRAGON ;
+- BEE BEAR ;
+- FERRET PACIFIER ;
+- TIGER SQUIRREL ;
+- HARPY MOTHER
+}
+2026-03-12 12:03:03.957 INFO  - Player Player1 (576093b8-2da2-469d-85d3-ad1afe017f1d) draw pile : {
+- HYENIX ;
+- GRAVE ROBBER ;
+- FERRET BOMBER ;
+- GOREAGLE ALPHA ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:03:03.957 INFO  - Player Player2 (a51a21fc-f5b8-48c9-ae48-f6892e037a03) hand : {
+- FROBLIN INSTIGATOR ;
+- LONE YETI ;
+- SHIELD BUGS ;
+- TURF THE SURFER ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:03.957 INFO  - Player Player2 (a51a21fc-f5b8-48c9-ae48-f6892e037a03) draw pile : {
+- HYENIX ;
+- SPIDER OWL ;
+- CREEP FROM THE DEEP ;
+- TURBO BUG ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:03.958 DEBUG - TIGER SQUIRREL (c4c77035-7707-48bf-ac51-ecfc0e371096) effect destroys TURF THE SURFER (d47d0b00-62a4-4001-8ffc-2ffb22519691)
+2026-03-12 12:03:03.958 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (c4c77035-7707-48bf-ac51-ecfc0e371096)
+2026-03-12 12:03:03.958 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.958 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.958 INFO  - Life update for player Player2 (a51a21fc-f5b8-48c9-ae48-f6892e037a03) : 2 LP
+2026-03-12 12:03:03.958 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.958 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.958 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.958 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.959 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.959 DEBUG - TIGER SQUIRREL (c4c77035-7707-48bf-ac51-ecfc0e371096) stolen and played by Player1 (576093b8-2da2-469d-85d3-ad1afe017f1d) due to COMPOST DRAGON (13c980e5-8c9e-4d07-bd97-83b699ddd30a) effect
+2026-03-12 12:03:03.959 INFO  - Resolving STEAL effect of COMPOST DRAGON (13c980e5-8c9e-4d07-bd97-83b699ddd30a)
+2026-03-12 12:03:03.959 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.959 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.959 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.959 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.959 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.959 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.959 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.959 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.959 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.959 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.960 DEBUG - Player Player2 (a51a21fc-f5b8-48c9-ae48-f6892e037a03) must choose 2 card(s) to discard (available targets : {
+- FROBLIN INSTIGATOR ;
+- LONE YETI ;
+- KANGASAURUS REX ;
+- HYENIX ;
+- SPIDER OWL
+})
+2026-03-12 12:03:03.960 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.960 INFO  - New TARGET choice to be resolved by Player2 (a51a21fc-f5b8-48c9-ae48-f6892e037a03) (targets : {
+- LONE YETI ;
+- KANGASAURUS REX ;
+- FROBLIN INSTIGATOR ;
+- HYENIX ;
+- SPIDER OWL
+})
+2026-03-12 12:03:03.960 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.960 DEBUG - LONE YETI (2c182f8a-373e-488b-bf34-7e4dd611882f) discarded due to FERRET BOMBER (ff56a511-218d-418c-a8cd-ec26b4f875ad) effect
+2026-03-12 12:03:03.960 DEBUG - KANGASAURUS REX (614f474c-9ce1-4f34-949c-90ccd7b53f83) discarded due to FERRET BOMBER (ff56a511-218d-418c-a8cd-ec26b4f875ad) effect
+2026-03-12 12:03:03.960 INFO  - Resolving DISCARD effect of FERRET BOMBER (ff56a511-218d-418c-a8cd-ec26b4f875ad)
+2026-03-12 12:03:03.960 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.960 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a9dde47d-4682-497c-a7df-8b832ffc35de)
+2026-03-12 12:03:03.960 INFO  - Life update for player Player2 (a51a21fc-f5b8-48c9-ae48-f6892e037a03) : 1 LP
+2026-03-12 12:03:03.961 INFO  - Life update for player Player1 (576093b8-2da2-469d-85d3-ad1afe017f1d) : 1 LP
+2026-03-12 12:03:03.961 DEBUG - Player1 (576093b8-2da2-469d-85d3-ad1afe017f1d) LP changed (3 -> 1) due to TURBO BUG (1060bb31-5a59-4f16-b8c9-4158a2be683a) effect
+2026-03-12 12:03:03.961 INFO  - Resolving INFLICT effect of TURBO BUG (1060bb31-5a59-4f16-b8c9-4158a2be683a)
+2026-03-12 12:03:03.961 DEBUG - Player Player1 (576093b8-2da2-469d-85d3-ad1afe017f1d) must choose 1 cards to steal (targets : {
+- TURF THE SURFER ;
+- LONE YETI ;
+- KANGASAURUS REX ;
+- SHIELD BUGS ;
+- TURBO BUG
+})
+2026-03-12 12:03:03.961 INFO  - New TARGET choice to be resolved by Player1 (576093b8-2da2-469d-85d3-ad1afe017f1d) (targets : {
+- LONE YETI ;
+- KANGASAURUS REX ;
+- SHIELD BUGS ;
+- TURBO BUG ;
+- TURF THE SURFER
+})
+2026-03-12 12:03:03.961 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.961 DEBUG - LONE YETI (2c182f8a-373e-488b-bf34-7e4dd611882f) stolen and played by Player1 (576093b8-2da2-469d-85d3-ad1afe017f1d) due to GRAVE ROBBER (ef985f05-2fbc-43a1-969f-c9397955164e) effect
+2026-03-12 12:03:03.961 INFO  - Resolving STEAL effect of GRAVE ROBBER (ef985f05-2fbc-43a1-969f-c9397955164e)
+2026-03-12 12:03:03.961 INFO  - Life update for player Player1 (576093b8-2da2-469d-85d3-ad1afe017f1d) : 0 LP
+2026-03-12 12:03:03.961 INFO  - Game over : Player2 (a51a21fc-f5b8-48c9-ae48-f6892e037a03) wins ; Player1 (576093b8-2da2-469d-85d3-ad1afe017f1d) loses.
+2026-03-12 12:03:03.961 INFO  - End of the game
+2026-03-12 12:03:03.961 DEBUG - Player1 (576093b8-2da2-469d-85d3-ad1afe017f1d) LP changed (1 -> 0) due to GOREAGLE ALPHA (9cff4d15-bd54-4f3d-aec0-b610fa5497f8) effect
+2026-03-12 12:03:03.961 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (9cff4d15-bd54-4f3d-aec0-b610fa5497f8)

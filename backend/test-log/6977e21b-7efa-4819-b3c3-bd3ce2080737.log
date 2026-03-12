@@ -1,0 +1,233 @@
+2026-03-12 12:18:27.474 INFO  - Calculating first player...
+2026-03-12 12:18:27.476 INFO  - Banned card for Player1 (ca715bc1-d76d-4116-994e-666b82598049) : AXOLOTL HEALER (cc55dded-ef1b-4443-81dd-61fdf7df3a3f) (4)
+2026-03-12 12:18:27.476 INFO  - Banned card for Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) : HYENIX (ccd16761-cbcf-4336-baf1-d93ba82c22f8) (7)
+2026-03-12 12:18:27.476 INFO  - First player will be Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c)
+2026-03-12 12:18:27.483 INFO  - Game 6977e21b-7efa-4819-b3c3-bd3ce2080737 starting...
+2026-03-12 12:18:27.483 INFO  - Player Player1 (ca715bc1-d76d-4116-994e-666b82598049) hand : {
+- GOREAGLE ALPHA ;
+- ELEPHANTOPUS ;
+- TURF THE SURFER ;
+- HAMSTER LION ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:18:27.484 INFO  - Player Player1 (ca715bc1-d76d-4116-994e-666b82598049) draw pile : {
+- KILLER BEE ;
+- FERRET BOMBER ;
+- BUGSERKER ;
+- KILLER BEE ;
+- TURBO BUG
+}
+2026-03-12 12:18:27.484 INFO  - Player Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) hand : {
+- AXOLOTL HEALER ;
+- URCHIN HURLER ;
+- KANGASAURUS REX ;
+- THE LURKER ;
+- SPIDER OWL
+}
+2026-03-12 12:18:27.484 INFO  - Player Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) draw pile : {
+- GOREAGLE ALPHA ;
+- HAMSTER LION ;
+- TUSKED EXTORTER ;
+- FERRET PACIFIER ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:18:27.484 DEBUG - Player Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) must choose 1 cards to steal (targets : {
+- AXOLOTL HEALER ;
+- URCHIN HURLER ;
+- KANGASAURUS REX ;
+- THE LURKER ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:18:27.484 INFO  - New TARGET choice to be resolved by Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) (targets : {
+- AXOLOTL HEALER ;
+- URCHIN HURLER ;
+- GOREAGLE ALPHA ;
+- KANGASAURUS REX ;
+- THE LURKER
+})
+2026-03-12 12:18:27.484 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.484 DEBUG - Player1 (ca715bc1-d76d-4116-994e-666b82598049) must decide if stolen card THE LURKER (396061f5-bc4b-476b-ad2c-03cd38e897f6) will be added to hand or board
+2026-03-12 12:18:27.484 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (99b6f765-d229-43cc-b2e6-465d66f77756)
+2026-03-12 12:18:27.484 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:27.484 DEBUG - THE LURKER (396061f5-bc4b-476b-ad2c-03cd38e897f6) stolen and drawn by Player1 (ca715bc1-d76d-4116-994e-666b82598049) due to HUNGRY HUNGRY HAMSTER (99b6f765-d229-43cc-b2e6-465d66f77756) effect
+2026-03-12 12:18:27.484 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.485 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.485 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.485 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.485 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.485 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.485 DEBUG - Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) LP changed (3 -> 5) due to AXOLOTL HEALER (1ce5510a-875e-4b7f-afc1-48907edcb3c0) effect
+2026-03-12 12:18:27.485 INFO  - Resolving GAIN effect of AXOLOTL HEALER (1ce5510a-875e-4b7f-afc1-48907edcb3c0)
+2026-03-12 12:18:27.485 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.485 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.485 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.485 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.485 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.485 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.485 INFO  - Life update for player Player1 (ca715bc1-d76d-4116-994e-666b82598049) : 2 LP
+2026-03-12 12:18:27.485 DEBUG - Player1 (ca715bc1-d76d-4116-994e-666b82598049) LP changed (3 -> 2) due to GOREAGLE ALPHA (13fcb9da-8688-41f9-a244-89df8ff78499) effect
+2026-03-12 12:18:27.485 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (13fcb9da-8688-41f9-a244-89df8ff78499)
+2026-03-12 12:18:27.485 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.485 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.485 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.486 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.486 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.486 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.486 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.486 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.486 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.486 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.486 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.486 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.486 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.486 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.486 DEBUG - CardInstance(uuid=13fcb9da-8688-41f9-a244-89df8ff78499, card=Card(id=38, setName=first_contact, name=GOREAGLE ALPHA, power=6, keywords=[FRENZY, TOUGH, HUNTER], effects={PLAY=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: Lose 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6032622), power=6, keywords=[FRENZY, TOUGH, HUNTER], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.486 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f752acae-b5ca-43a9-bd3a-c5715778bd57)
+2026-03-12 12:18:27.486 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.486 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.486 DEBUG - CardInstance(uuid=13fcb9da-8688-41f9-a244-89df8ff78499, card=Card(id=38, setName=first_contact, name=GOREAGLE ALPHA, power=6, keywords=[FRENZY, TOUGH, HUNTER], effects={PLAY=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: Lose 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6032622), power=6, keywords=[FRENZY, TOUGH, HUNTER], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.486 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f752acae-b5ca-43a9-bd3a-c5715778bd57)
+2026-03-12 12:18:27.486 DEBUG - Player Player1 (ca715bc1-d76d-4116-994e-666b82598049) must choose 1 card(s) that will be unable to block (targets : {
+- SPIDER OWL ;
+- HAMSTER LION
+})
+2026-03-12 12:18:27.486 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.486 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.486 DEBUG - CardInstance(uuid=13fcb9da-8688-41f9-a244-89df8ff78499, card=Card(id=38, setName=first_contact, name=GOREAGLE ALPHA, power=6, keywords=[FRENZY, TOUGH, HUNTER], effects={PLAY=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: Lose 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6032622), power=6, keywords=[FRENZY, TOUGH, HUNTER], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.486 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f752acae-b5ca-43a9-bd3a-c5715778bd57)
+2026-03-12 12:18:27.486 INFO  - New TARGET choice to be resolved by Player1 (ca715bc1-d76d-4116-994e-666b82598049) (targets : {
+- HAMSTER LION ;
+- SPIDER OWL
+})
+2026-03-12 12:18:27.487 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.487 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (dc1564ae-6747-4149-93e2-4fcf8ddd8707)
+2026-03-12 12:18:27.487 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[BlockModifier()]) no more able to attack
+2026-03-12 12:18:27.487 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.487 DEBUG - CardInstance(uuid=13fcb9da-8688-41f9-a244-89df8ff78499, card=Card(id=38, setName=first_contact, name=GOREAGLE ALPHA, power=6, keywords=[FRENZY, TOUGH, HUNTER], effects={PLAY=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: Lose 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6032622), power=6, keywords=[FRENZY, TOUGH, HUNTER], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.487 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f752acae-b5ca-43a9-bd3a-c5715778bd57)
+2026-03-12 12:18:27.487 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[BlockModifier()]) no more able to attack
+2026-03-12 12:18:27.487 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.487 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.487 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.487 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.487 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.487 INFO  - Life update for player Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) : 4 LP
+2026-03-12 12:18:27.487 DEBUG - Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) LP changed (5 -> 4) due to GOREAGLE ALPHA (2bba8ad2-7a05-4d32-b2b1-f866bac8e955) effect
+2026-03-12 12:18:27.487 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (2bba8ad2-7a05-4d32-b2b1-f866bac8e955)
+2026-03-12 12:18:27.487 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.487 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.487 DEBUG - CardInstance(uuid=686d4bd1-a605-479a-a809-a0bb6b3f3682, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@118e2487), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.488 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6166ca3d-b20e-4860-a824-572c0decfdef)
+2026-03-12 12:18:27.488 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.488 INFO  - New FRENZY choice to be resolved by Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) (attackingCard : GOREAGLE ALPHA (2bba8ad2-7a05-4d32-b2b1-f866bac8e955))
+2026-03-12 12:18:27.488 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:27.488 DEBUG - Player Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) must choose 2 card(s) to discard (available targets : {
+- URCHIN HURLER ;
+- KANGASAURUS REX ;
+- TUSKED EXTORTER ;
+- FERRET PACIFIER ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:18:27.488 INFO  - New TARGET choice to be resolved by Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) (targets : {
+- TUSKED EXTORTER ;
+- URCHIN HURLER ;
+- FERRET PACIFIER ;
+- KANGASAURUS REX ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:18:27.488 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.488 DEBUG - KANGASAURUS REX (62252924-a26c-4ac6-920a-c7ec38bc2ea8) discarded due to FERRET BOMBER (1250bb88-51f8-4a77-92c4-751fad3d84c3) effect
+2026-03-12 12:18:27.488 DEBUG - GOBLIN WEREWOLF (31d8a0da-d065-4ca6-987c-91dd2081814d) discarded due to FERRET BOMBER (1250bb88-51f8-4a77-92c4-751fad3d84c3) effect
+2026-03-12 12:18:27.488 INFO  - Resolving DISCARD effect of FERRET BOMBER (1250bb88-51f8-4a77-92c4-751fad3d84c3)
+2026-03-12 12:18:27.488 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.488 INFO  - New FRENZY choice to be resolved by Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) (attackingCard : GOREAGLE ALPHA (2bba8ad2-7a05-4d32-b2b1-f866bac8e955))
+2026-03-12 12:18:27.488 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:27.488 INFO  - Life update for player Player1 (ca715bc1-d76d-4116-994e-666b82598049) : 1 LP
+2026-03-12 12:18:27.488 INFO  - Life update for player Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) : 3 LP
+2026-03-12 12:18:27.488 DEBUG - Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) LP changed (4 -> 3) due to KILLER BEE (4ca22eb5-54bc-41e4-9ce1-5ad348816436) effect
+2026-03-12 12:18:27.488 INFO  - Resolving INFLICT effect of KILLER BEE (4ca22eb5-54bc-41e4-9ce1-5ad348816436)
+2026-03-12 12:18:27.488 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.488 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.488 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.488 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.488 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.488 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.488 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.488 INFO  - New FRENZY choice to be resolved by Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) (attackingCard : GOREAGLE ALPHA (2bba8ad2-7a05-4d32-b2b1-f866bac8e955))
+2026-03-12 12:18:27.489 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.489 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.489 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:27.489 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.489 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.489 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.489 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.489 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.489 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.489 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.489 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.489 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.489 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.489 DEBUG - TUSKED EXTORTER (2c2a66bc-a57b-4550-8253-0594480e0cd6) power changed (8 -> 10) due to URCHIN HURLER (906d870c-ce96-424c-9da9-ef95bf916b22) effect
+2026-03-12 12:18:27.489 INFO  - Resolving POWER_UP effect of URCHIN HURLER (906d870c-ce96-424c-9da9-ef95bf916b22)
+2026-03-12 12:18:27.489 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.489 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.489 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.489 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.489 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.489 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.489 DEBUG - Player Player1 (ca715bc1-d76d-4116-994e-666b82598049) must choose 1 card(s) to discard (available targets : {
+- ELEPHANTOPUS ;
+- THE LURKER ;
+- KILLER BEE ;
+- TURBO BUG
+})
+2026-03-12 12:18:27.489 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.489 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.489 INFO  - New TARGET choice to be resolved by Player1 (ca715bc1-d76d-4116-994e-666b82598049) (targets : {
+- ELEPHANTOPUS ;
+- KILLER BEE ;
+- THE LURKER ;
+- TURBO BUG
+})
+2026-03-12 12:18:27.489 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.489 DEBUG - THE LURKER (396061f5-bc4b-476b-ad2c-03cd38e897f6) discarded due to TUSKED EXTORTER (2c2a66bc-a57b-4550-8253-0594480e0cd6) effect
+2026-03-12 12:18:27.489 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (2c2a66bc-a57b-4550-8253-0594480e0cd6)
+2026-03-12 12:18:27.489 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.489 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.489 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.490 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.490 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.490 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.490 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.490 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.490 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.490 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.490 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.490 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.490 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (da7f7b82-b2f8-4ebf-83cd-79902f9de9be)
+2026-03-12 12:18:27.490 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.490 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.490 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (da7f7b82-b2f8-4ebf-83cd-79902f9de9be)
+2026-03-12 12:18:27.490 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.490 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.490 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (5bc7bfe5-0040-4475-b130-cdfde1d7870d)
+2026-03-12 12:18:27.490 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (da7f7b82-b2f8-4ebf-83cd-79902f9de9be)
+2026-03-12 12:18:27.490 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.490 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.490 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (5bc7bfe5-0040-4475-b130-cdfde1d7870d)
+2026-03-12 12:18:27.490 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (da7f7b82-b2f8-4ebf-83cd-79902f9de9be)
+2026-03-12 12:18:27.491 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.491 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.491 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (5bc7bfe5-0040-4475-b130-cdfde1d7870d)
+2026-03-12 12:18:27.491 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.491 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.491 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (5bc7bfe5-0040-4475-b130-cdfde1d7870d)
+2026-03-12 12:18:27.491 INFO  - Life update for player Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) : 2 LP
+2026-03-12 12:18:27.491 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.491 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.491 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (5bc7bfe5-0040-4475-b130-cdfde1d7870d)
+2026-03-12 12:18:27.491 DEBUG - BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) power changed (3 -> 11) due to BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295) effect
+2026-03-12 12:18:27.491 INFO  - Resolving POWER_UP effect of BUGSERKER (d04aedc6-14ed-4951-9a0c-c2f8ef903295)
+2026-03-12 12:18:27.491 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (5bc7bfe5-0040-4475-b130-cdfde1d7870d)
+2026-03-12 12:18:27.491 INFO  - Game over : Player1 (ca715bc1-d76d-4116-994e-666b82598049) wins ; Player2 (e2168fbe-c84a-4d8e-8ad2-aa73a3be587c) loses.
+2026-03-12 12:18:27.491 INFO  - End of the game

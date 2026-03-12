@@ -1,0 +1,250 @@
+2026-03-12 12:18:29.678 INFO  - Calculating first player...
+2026-03-12 12:18:29.680 INFO  - Banned card for Player1 (aeea89c7-79e8-4291-99c8-f477afb104e6) : COMPOST DRAGON (8dec5c7a-84e7-4fd0-8479-f25ae84dfff4) (3)
+2026-03-12 12:18:29.680 INFO  - Banned card for Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) : TUSKED EXTORTER (2882d4d6-e628-479c-bf9a-36e236e76e10) (8)
+2026-03-12 12:18:29.680 INFO  - First player will be Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379)
+2026-03-12 12:18:29.686 INFO  - Game 06cdf6e5-d973-4e50-80be-3b7e75985ff3 starting...
+2026-03-12 12:18:29.687 INFO  - Player Player1 (aeea89c7-79e8-4291-99c8-f477afb104e6) hand : {
+- HUNGRY HUNGRY HAMSTER ;
+- AXOLOTL HEALER ;
+- SHARK DOG ;
+- KANGASAURUS REX ;
+- PLATED SCORPION
+}
+2026-03-12 12:18:29.687 INFO  - Player Player1 (aeea89c7-79e8-4291-99c8-f477afb104e6) draw pile : {
+- RHINO TURTLE ;
+- COUNT DRACULEECH ;
+- HYENIX ;
+- URCHIN HURLER ;
+- BRAIN FLY
+}
+2026-03-12 12:18:29.687 INFO  - Player Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) hand : {
+- SNAIL THROWER ;
+- LONE YETI ;
+- PLATED SCORPION ;
+- TUSKED EXTORTER ;
+- HAMSTER LION
+}
+2026-03-12 12:18:29.687 INFO  - Player Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) draw pile : {
+- DEATHWEAVER ;
+- COMPOST DRAGON ;
+- CREEP FROM THE DEEP ;
+- AXOLOTL HEALER ;
+- BUGSERKER
+}
+2026-03-12 12:18:29.687 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.687 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.687 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.687 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.687 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.687 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.687 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.687 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.687 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.687 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.687 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.687 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.687 DEBUG - Player1 (aeea89c7-79e8-4291-99c8-f477afb104e6) LP changed (3 -> 5) due to AXOLOTL HEALER (179dc4fd-98f8-4f94-9b2f-62e058d3873c) effect
+2026-03-12 12:18:29.687 INFO  - Resolving GAIN effect of AXOLOTL HEALER (179dc4fd-98f8-4f94-9b2f-62e058d3873c)
+2026-03-12 12:18:29.687 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.687 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.688 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.688 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.688 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.688 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.688 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.688 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.688 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.688 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.688 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.688 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.688 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.688 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.688 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.688 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.688 INFO  - Life update for player Player1 (aeea89c7-79e8-4291-99c8-f477afb104e6) : 4 LP
+2026-03-12 12:18:29.688 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.688 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.688 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.688 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.688 INFO  - New FRENZY choice to be resolved by Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) (attackingCard : LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e))
+2026-03-12 12:18:29.688 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:29.688 INFO  - Life update for player Player1 (aeea89c7-79e8-4291-99c8-f477afb104e6) : 3 LP
+2026-03-12 12:18:29.688 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.688 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.688 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.689 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 INFO  - New FRENZY choice to be resolved by Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) (attackingCard : LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e))
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.689 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.689 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:29.689 INFO  - Life update for player Player1 (aeea89c7-79e8-4291-99c8-f477afb104e6) : 2 LP
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.689 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.689 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 INFO  - New FRENZY choice to be resolved by Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) (attackingCard : LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e))
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.689 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.689 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.689 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.689 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.689 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.689 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.689 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.689 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.689 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.689 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.689 DEBUG - CardInstance(uuid=5efb3db2-6a7e-443f-ac5e-248c5e06c45d, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@69cc49ec), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.689 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (fea88110-fac7-400e-90b6-8e189873d3ba)
+2026-03-12 12:18:29.689 DEBUG - CardInstance(uuid=5efb3db2-6a7e-443f-ac5e-248c5e06c45d, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@69cc49ec), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.690 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (fea88110-fac7-400e-90b6-8e189873d3ba)
+2026-03-12 12:18:29.690 DEBUG - CardInstance(uuid=5efb3db2-6a7e-443f-ac5e-248c5e06c45d, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@69cc49ec), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.690 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (fea88110-fac7-400e-90b6-8e189873d3ba)
+2026-03-12 12:18:29.690 DEBUG - CardInstance(uuid=5efb3db2-6a7e-443f-ac5e-248c5e06c45d, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@69cc49ec), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.690 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (fea88110-fac7-400e-90b6-8e189873d3ba)
+2026-03-12 12:18:29.690 DEBUG - CardInstance(uuid=5efb3db2-6a7e-443f-ac5e-248c5e06c45d, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@69cc49ec), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.690 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (fea88110-fac7-400e-90b6-8e189873d3ba)
+2026-03-12 12:18:29.690 DEBUG - CardInstance(uuid=d23ac9b7-4cb9-4025-a120-0ec227dcfa66, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@69cc49ec), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.690 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (fea88110-fac7-400e-90b6-8e189873d3ba)
+2026-03-12 12:18:29.690 INFO  - New FRENZY choice to be resolved by Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) (attackingCard : LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e))
+2026-03-12 12:18:29.690 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:29.690 DEBUG - CardInstance(uuid=d23ac9b7-4cb9-4025-a120-0ec227dcfa66, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@69cc49ec), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.690 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (fea88110-fac7-400e-90b6-8e189873d3ba)
+2026-03-12 12:18:29.690 DEBUG - CardInstance(uuid=d23ac9b7-4cb9-4025-a120-0ec227dcfa66, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@69cc49ec), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.690 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (fea88110-fac7-400e-90b6-8e189873d3ba)
+2026-03-12 12:18:29.690 DEBUG - CardInstance(uuid=d23ac9b7-4cb9-4025-a120-0ec227dcfa66, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@69cc49ec), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.690 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (fea88110-fac7-400e-90b6-8e189873d3ba)
+2026-03-12 12:18:29.690 DEBUG - CardInstance(uuid=d23ac9b7-4cb9-4025-a120-0ec227dcfa66, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@69cc49ec), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.690 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (fea88110-fac7-400e-90b6-8e189873d3ba)
+2026-03-12 12:18:29.690 DEBUG - CardInstance(uuid=d23ac9b7-4cb9-4025-a120-0ec227dcfa66, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@69cc49ec), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.690 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (fea88110-fac7-400e-90b6-8e189873d3ba)
+2026-03-12 12:18:29.690 DEBUG - CardInstance(uuid=d23ac9b7-4cb9-4025-a120-0ec227dcfa66, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@69cc49ec), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.690 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (fea88110-fac7-400e-90b6-8e189873d3ba)
+2026-03-12 12:18:29.691 INFO  - New FRENZY choice to be resolved by Player1 (aeea89c7-79e8-4291-99c8-f477afb104e6) (attackingCard : RHINO TURTLE (724c2faf-d60a-474d-8e92-6e95f89cd554))
+2026-03-12 12:18:29.691 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:29.691 DEBUG - Player Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) must choose 1 cards to steal (targets : {
+- SNAIL THROWER ;
+- DEATHWEAVER ;
+- COMPOST DRAGON ;
+- AXOLOTL HEALER ;
+- BUGSERKER
+})
+2026-03-12 12:18:29.691 INFO  - New TARGET choice to be resolved by Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) (targets : {
+- BUGSERKER ;
+- AXOLOTL HEALER ;
+- SNAIL THROWER ;
+- DEATHWEAVER ;
+- COMPOST DRAGON
+})
+2026-03-12 12:18:29.691 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.692 DEBUG - Player1 (aeea89c7-79e8-4291-99c8-f477afb104e6) must decide if stolen card SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3) will be added to hand or board
+2026-03-12 12:18:29.692 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01)
+2026-03-12 12:18:29.692 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:29.692 DEBUG - SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3) stolen and played by Player1 (aeea89c7-79e8-4291-99c8-f477afb104e6) due to HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01) effect
+2026-03-12 12:18:29.692 DEBUG - HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01) gains HUNTER keyword
+2026-03-12 12:18:29.692 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.692 DEBUG - HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01) gains POISONOUS keyword
+2026-03-12 12:18:29.692 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.692 DEBUG - HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01) gains HUNTER keyword
+2026-03-12 12:18:29.692 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.692 DEBUG - HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01) gains POISONOUS keyword
+2026-03-12 12:18:29.692 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.692 DEBUG - HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01) gains HUNTER keyword
+2026-03-12 12:18:29.692 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.692 DEBUG - HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01) gains POISONOUS keyword
+2026-03-12 12:18:29.692 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.692 DEBUG - Player Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) must choose 1 cards to steal (targets : {
+- TUSKED EXTORTER ;
+- HAMSTER LION
+})
+2026-03-12 12:18:29.692 DEBUG - HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01) gains HUNTER keyword
+2026-03-12 12:18:29.692 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.692 DEBUG - HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01) gains POISONOUS keyword
+2026-03-12 12:18:29.692 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.692 INFO  - New TARGET choice to be resolved by Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) (targets : {
+- TUSKED EXTORTER ;
+- HAMSTER LION
+})
+2026-03-12 12:18:29.692 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.692 DEBUG - TUSKED EXTORTER (e6fb8704-acf9-405d-b4f4-dc18fe787fcc) stolen and played by Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) due to COMPOST DRAGON (c6dd54c9-ffac-4d64-8a21-38e324a0f221) effect
+2026-03-12 12:18:29.692 INFO  - Resolving STEAL effect of COMPOST DRAGON (c6dd54c9-ffac-4d64-8a21-38e324a0f221)
+2026-03-12 12:18:29.692 DEBUG - HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01) gains HUNTER keyword
+2026-03-12 12:18:29.692 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.692 DEBUG - HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01) gains POISONOUS keyword
+2026-03-12 12:18:29.693 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.693 DEBUG - HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01) gains HUNTER keyword
+2026-03-12 12:18:29.693 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.693 DEBUG - HUNGRY HUNGRY HAMSTER (a8978042-f377-490d-a78b-fb134f354d01) gains POISONOUS keyword
+2026-03-12 12:18:29.693 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.693 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:29.693 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.693 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.693 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.693 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.693 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.693 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4c155db5-4bf6-438b-8c2b-d18b84d720b3)
+2026-03-12 12:18:29.693 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:29.693 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.693 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.693 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.693 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.693 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.693 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.693 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.693 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.693 DEBUG - RHINO TURTLE (724c2faf-d60a-474d-8e92-6e95f89cd554) power changed (8 -> 10) due to URCHIN HURLER (f7d8d157-8223-4ab3-9bf3-1798c6696c1f) effect
+2026-03-12 12:18:29.693 INFO  - Resolving POWER_UP effect of URCHIN HURLER (f7d8d157-8223-4ab3-9bf3-1798c6696c1f)
+2026-03-12 12:18:29.693 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.693 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.693 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.693 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.694 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.694 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.694 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.694 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.694 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.694 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.694 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.694 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.694 INFO  - New FRENZY choice to be resolved by Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) (attackingCard : LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e))
+2026-03-12 12:18:29.694 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:29.694 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.694 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.694 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.694 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.694 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.694 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.694 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.694 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.694 INFO  - New FRENZY choice to be resolved by Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) (attackingCard : LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e))
+2026-03-12 12:18:29.694 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:29.694 INFO  - Life update for player Player1 (aeea89c7-79e8-4291-99c8-f477afb104e6) : 1 LP
+2026-03-12 12:18:29.694 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.694 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.694 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.694 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.694 INFO  - New FRENZY choice to be resolved by Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) (attackingCard : LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e))
+2026-03-12 12:18:29.694 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.694 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.694 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.694 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.694 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:29.694 INFO  - Life update for player Player1 (aeea89c7-79e8-4291-99c8-f477afb104e6) : 0 LP
+2026-03-12 12:18:29.694 INFO  - Game over : Player2 (1eb4e1eb-da47-4fa0-9c28-86676d698379) wins ; Player1 (aeea89c7-79e8-4291-99c8-f477afb104e6) loses.
+2026-03-12 12:18:29.694 INFO  - End of the game
+2026-03-12 12:18:29.694 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) power changed (5 -> 10) due to LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) effect
+2026-03-12 12:18:29.694 INFO  - Resolving POWER_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)
+2026-03-12 12:18:29.695 DEBUG - LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e) gains FRENZY keyword
+2026-03-12 12:18:29.695 INFO  - Resolving KEYWORD_UP effect of LONE YETI (f13bf7dc-13f6-4c7f-8dde-a75e01c6394e)

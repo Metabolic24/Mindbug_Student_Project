@@ -1,0 +1,513 @@
+2026-03-12 12:18:27.531 INFO  - Calculating first player...
+2026-03-12 12:18:27.533 INFO  - Banned card for Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) : FERRET BOMBER (826b8ae2-4049-4db9-8a69-8a391c76135a) (2)
+2026-03-12 12:18:27.533 INFO  - Banned card for Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) : GRAVE ROBBER (345577f7-bf84-4e54-8839-d06c02e7ac1b) (7)
+2026-03-12 12:18:27.533 INFO  - First player will be Player2 (d784af3c-0a69-4f96-bcb2-391af610e352)
+2026-03-12 12:18:27.542 INFO  - Game 28c99330-3f16-44dc-9114-455cfdba19dc starting...
+2026-03-12 12:18:27.542 INFO  - Player Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) hand : {
+- BEE BEAR ;
+- GOREAGLE ALPHA ;
+- EXPLOSIVE TOAD ;
+- CHAMELEON SNIPER ;
+- PLATED SCORPION
+}
+2026-03-12 12:18:27.542 INFO  - Player Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) draw pile : {
+- AXOLOTL HEALER ;
+- HUNGRY HUNGRY HAMSTER ;
+- DEATHWEAVER ;
+- GOREAGLE ALPHA ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:18:27.542 INFO  - Player Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) hand : {
+- RHINO TURTLE ;
+- MAJESTIC MANTICORE ;
+- PLATED SCORPION ;
+- SHIELD BUGS ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:18:27.542 INFO  - Player Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) draw pile : {
+- TIGER SQUIRREL ;
+- BUGSERKER ;
+- HAMSTER LION ;
+- HUNGRY HUNGRY HAMSTER ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:18:27.543 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.543 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.543 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.543 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.543 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.543 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.543 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.543 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.543 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.543 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.543 INFO  - Resolving NO_BLOCK effect of BEE BEAR (2317641c-2bc2-45e0-a782-41d0ade67dbc)
+2026-03-12 12:18:27.543 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.543 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.543 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.544 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.544 DEBUG - Player Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) must choose 1 cards to steal (targets : {
+- SHIELD BUGS ;
+- TIGER SQUIRREL ;
+- BUGSERKER ;
+- HAMSTER LION ;
+- HUNGRY HUNGRY HAMSTER
+})
+2026-03-12 12:18:27.544 INFO  - New TARGET choice to be resolved by Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) (targets : {
+- SHIELD BUGS ;
+- TIGER SQUIRREL ;
+- BUGSERKER ;
+- HAMSTER LION ;
+- HUNGRY HUNGRY HAMSTER
+})
+2026-03-12 12:18:27.544 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.544 DEBUG - Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) must decide if stolen card HAMSTER LION (4f86c0a9-228a-4426-bb5e-ba63d34a4b2b) will be added to hand or board
+2026-03-12 12:18:27.544 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (99dd8bd4-9202-496a-9429-58f27a471a92)
+2026-03-12 12:18:27.544 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:27.544 DEBUG - HAMSTER LION (4f86c0a9-228a-4426-bb5e-ba63d34a4b2b) stolen and played by Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) due to HUNGRY HUNGRY HAMSTER (99dd8bd4-9202-496a-9429-58f27a471a92) effect
+2026-03-12 12:18:27.544 DEBUG - CardInstance(uuid=4c75f7c6-c966-41f3-a123-6cc5e87a7fed, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a917017), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.544 DEBUG - CardInstance(uuid=de58fd4d-6686-487c-923b-dba8411bc47e, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a917017), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.545 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (4f86c0a9-228a-4426-bb5e-ba63d34a4b2b)
+2026-03-12 12:18:27.545 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.545 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.545 DEBUG - CardInstance(uuid=de58fd4d-6686-487c-923b-dba8411bc47e, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a917017), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.545 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (4f86c0a9-228a-4426-bb5e-ba63d34a4b2b)
+2026-03-12 12:18:27.545 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.545 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.545 DEBUG - CardInstance(uuid=de58fd4d-6686-487c-923b-dba8411bc47e, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3a917017), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.545 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (4f86c0a9-228a-4426-bb5e-ba63d34a4b2b)
+2026-03-12 12:18:27.545 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) effect destroys HAMSTER LION (4f86c0a9-228a-4426-bb5e-ba63d34a4b2b)
+2026-03-12 12:18:27.545 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c)
+2026-03-12 12:18:27.545 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.545 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.545 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.545 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.545 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.545 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.546 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.546 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.546 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.546 DEBUG - Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) LP changed (3 -> 5) due to AXOLOTL HEALER (e40e75e5-2454-4d10-8393-5ac354f882a2) effect
+2026-03-12 12:18:27.546 INFO  - Resolving GAIN effect of AXOLOTL HEALER (e40e75e5-2454-4d10-8393-5ac354f882a2)
+2026-03-12 12:18:27.546 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.546 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.546 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.546 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.546 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.547 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.547 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.547 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.547 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.547 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.547 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.547 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.547 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.547 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.547 DEBUG - Player Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) must choose 1 cards to steal (targets : {
+- GOREAGLE ALPHA ;
+- EXPLOSIVE TOAD ;
+- PLATED SCORPION ;
+- DEATHWEAVER ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:18:27.547 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.547 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.547 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.547 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.547 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.547 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.547 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.547 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.547 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.547 INFO  - New TARGET choice to be resolved by Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) (targets : {
+- EXPLOSIVE TOAD ;
+- PLATED SCORPION ;
+- GOREAGLE ALPHA ;
+- DEATHWEAVER ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:18:27.547 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.547 DEBUG - Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) must decide if stolen card GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) will be added to hand or board
+2026-03-12 12:18:27.547 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf)
+2026-03-12 12:18:27.547 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.548 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.548 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.548 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.548 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.548 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.548 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.548 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.548 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.548 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:27.548 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) stolen and played by Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) due to HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) effect
+2026-03-12 12:18:27.548 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.548 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.548 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.548 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.548 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.548 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.548 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.548 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.548 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.548 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.548 INFO  - Life update for player Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) : 2 LP
+2026-03-12 12:18:27.548 DEBUG - Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) LP changed (3 -> 2) due to GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) effect
+2026-03-12 12:18:27.549 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a)
+2026-03-12 12:18:27.549 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.549 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.549 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.549 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.549 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.549 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.549 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.549 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.549 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.550 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.550 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.550 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.550 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.550 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.550 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.550 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.550 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.551 INFO  - Life update for player Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) : 1 LP
+2026-03-12 12:18:27.551 DEBUG - Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) LP changed (2 -> 1) due to CHAMELEON SNIPER (faaf3e31-9465-4125-8410-97947eb02488) effect
+2026-03-12 12:18:27.551 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (faaf3e31-9465-4125-8410-97947eb02488)
+2026-03-12 12:18:27.551 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.551 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.551 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.551 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.551 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.551 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.552 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.552 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.552 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.552 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.552 INFO  - New FRENZY choice to be resolved by Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) (attackingCard : GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a))
+2026-03-12 12:18:27.552 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.552 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.552 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.552 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:27.552 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.552 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.553 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.553 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.553 DEBUG - PLAY effects disabled for player Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) due to DEATHWEAVER (f8b58e8f-ebf8-49f6-8a94-63ef4c930ff6) effect
+2026-03-12 12:18:27.553 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (f8b58e8f-ebf8-49f6-8a94-63ef4c930ff6)
+2026-03-12 12:18:27.553 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.553 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.553 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.553 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.554 DEBUG - PLAY effects disabled for player Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) due to DEATHWEAVER (f8b58e8f-ebf8-49f6-8a94-63ef4c930ff6) effect
+2026-03-12 12:18:27.554 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (f8b58e8f-ebf8-49f6-8a94-63ef4c930ff6)
+2026-03-12 12:18:27.554 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.554 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.554 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.554 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (4 -> 12) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.554 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.554 DEBUG - PLAY effects disabled for player Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) due to DEATHWEAVER (f8b58e8f-ebf8-49f6-8a94-63ef4c930ff6) effect
+2026-03-12 12:18:27.554 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (f8b58e8f-ebf8-49f6-8a94-63ef4c930ff6)
+2026-03-12 12:18:27.554 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.554 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.554 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (4 -> 12) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.555 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.555 DEBUG - PLAY effects disabled for player Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) due to DEATHWEAVER (f8b58e8f-ebf8-49f6-8a94-63ef4c930ff6) effect
+2026-03-12 12:18:27.555 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (f8b58e8f-ebf8-49f6-8a94-63ef4c930ff6)
+2026-03-12 12:18:27.555 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.555 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (4 -> 12) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.555 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.555 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.555 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.555 DEBUG - TIGER SQUIRREL (17380807-b406-410a-a027-bc3840f0c73c) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - MAJESTIC MANTICORE (f4f177fc-e75f-44b3-bd96-4c9cce4c0d52) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - PLATED SCORPION (de58fd4d-6686-487c-923b-dba8411bc47e) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - RHINO TURTLE (a3dbeacd-4625-4fcf-85ea-3297ef0b1446) power changed (8 -> 9) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - GOREAGLE ALPHA (675bc1ba-f374-4631-b351-ea8e52bd519a) power changed (6 -> 7) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - HUNGRY HUNGRY HAMSTER (423a9e43-b68a-4cf5-b589-9407d9884cbf) power changed (2 -> 3) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 DEBUG - TIGER SQUIRREL (6737a73c-9ed5-4215-8ce7-d5941ffd12ea) power changed (3 -> 4) due to SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb) effect
+2026-03-12 12:18:27.555 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d0e2bf56-4a08-4141-94ce-ba94f3ec99eb)
+2026-03-12 12:18:27.555 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (4 -> 12) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.555 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.555 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.556 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.556 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.556 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.556 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.556 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.556 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.556 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.556 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.556 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.556 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.556 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.556 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.556 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.556 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.556 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.556 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.556 DEBUG - Player Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) must choose 1 card(s) to destroy (available targets : {
+- GOBLIN WEREWOLF ;
+- MAJESTIC MANTICORE ;
+- RHINO TURTLE ;
+- PLATED SCORPION ;
+- TIGER SQUIRREL ;
+- HUNGRY HUNGRY HAMSTER ;
+- GOREAGLE ALPHA ;
+- TIGER SQUIRREL ;
+- BUGSERKER ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:18:27.556 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.556 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.556 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.556 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.556 INFO  - New TARGET choice to be resolved by Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) (targets : {
+- TIGER SQUIRREL ;
+- MAJESTIC MANTICORE ;
+- TUSKED EXTORTER ;
+- GOBLIN WEREWOLF ;
+- PLATED SCORPION ;
+- BUGSERKER ;
+- RHINO TURTLE ;
+- GOREAGLE ALPHA ;
+- HUNGRY HUNGRY HAMSTER ;
+- TIGER SQUIRREL
+})
+2026-03-12 12:18:27.557 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.557 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.557 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.557 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.557 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.557 DEBUG - EXPLOSIVE TOAD (c35fc9d8-9897-4edd-a503-d6a021a1564e) effect destroys TUSKED EXTORTER (4460ede9-f6c3-47e7-941f-29412bf896ad)
+2026-03-12 12:18:27.557 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (c35fc9d8-9897-4edd-a503-d6a021a1564e)
+2026-03-12 12:18:27.557 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.557 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.557 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.557 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.557 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.557 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.557 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.557 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.557 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.557 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.557 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.558 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.558 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.558 DEBUG - GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) power changed (2 -> 8) due to GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed) effect
+2026-03-12 12:18:27.558 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (4c75f7c6-c966-41f3-a123-6cc5e87a7fed)
+2026-03-12 12:18:27.558 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.558 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.558 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.558 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.558 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.558 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.558 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.558 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.559 INFO  - Life update for player Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) : 4 LP
+2026-03-12 12:18:27.559 DEBUG - Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) LP changed (5 -> 4) due to GOREAGLE ALPHA (cba1ecb8-4cb8-4a34-9023-bccfee77378c) effect
+2026-03-12 12:18:27.559 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (cba1ecb8-4cb8-4a34-9023-bccfee77378c)
+2026-03-12 12:18:27.559 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.559 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.559 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.559 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.559 INFO  - Life update for player Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) : 3 LP
+2026-03-12 12:18:27.559 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.559 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.559 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.559 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.560 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.560 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.560 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.560 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.560 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.560 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.560 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.560 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.560 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.560 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.560 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.560 INFO  - New FRENZY choice to be resolved by Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) (attackingCard : GOREAGLE ALPHA (cba1ecb8-4cb8-4a34-9023-bccfee77378c))
+2026-03-12 12:18:27.561 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.561 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.561 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:27.561 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.561 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.561 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.561 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.561 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.561 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.561 DEBUG - BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) power changed (3 -> 11) due to BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75) effect
+2026-03-12 12:18:27.561 INFO  - Resolving POWER_UP effect of BUGSERKER (05418854-2868-44a6-a0ac-1a8e2475fb75)
+2026-03-12 12:18:27.561 INFO  - Game over : Player2 (d784af3c-0a69-4f96-bcb2-391af610e352) wins ; Player1 (7e7f6898-0f7a-4c64-8d76-a8510de9a7a5) loses.
+2026-03-12 12:18:27.561 INFO  - End of the game

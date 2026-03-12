@@ -1,0 +1,190 @@
+2026-03-12 12:03:42.046 INFO  - Calculating first player...
+2026-03-12 12:03:42.048 INFO  - Banned card for Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) : LUCHATAUR (a1d46546-2fd0-4c5c-9a04-68fa50fa3378) (9)
+2026-03-12 12:03:42.048 INFO  - Banned card for Player2 (bb1c6e98-2a4b-41d8-ab19-90a895e13561) : MAJESTIC MANTICORE (0fc509a7-8614-4b75-a3bd-148c858161ba) (6)
+2026-03-12 12:03:42.049 INFO  - First player will be Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c)
+2026-03-12 12:03:42.057 INFO  - Game 114931f3-c3ef-4cee-a3fa-43c6eef9ee27 starting...
+2026-03-12 12:03:42.057 INFO  - Player Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) hand : {
+- COMPOST DRAGON ;
+- GOBLIN WEREWOLF ;
+- FERRET PACIFIER ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:42.057 INFO  - Player Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) draw pile : {
+- GRAVE ROBBER ;
+- GOREAGLE ALPHA ;
+- THE LURKER ;
+- BUGSERKER ;
+- COMPOST DRAGON
+}
+2026-03-12 12:03:42.057 INFO  - Player Player2 (bb1c6e98-2a4b-41d8-ab19-90a895e13561) hand : {
+- HARPY MOTHER ;
+- TUSKED EXTORTER ;
+- KANGASAURUS REX ;
+- FERRET BOMBER ;
+- HYENIX
+}
+2026-03-12 12:03:42.057 INFO  - Player Player2 (bb1c6e98-2a4b-41d8-ab19-90a895e13561) draw pile : {
+- EXPLOSIVE TOAD ;
+- COUNT DRACULEECH ;
+- KANGASAURUS REX ;
+- SHIELD BUGS ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:42.058 DEBUG - GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) power changed (2 -> 8) due to GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) effect
+2026-03-12 12:03:42.058 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb)
+2026-03-12 12:03:42.058 DEBUG - GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) power changed (2 -> 8) due to GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) effect
+2026-03-12 12:03:42.058 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb)
+2026-03-12 12:03:42.058 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.058 DEBUG - GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) power changed (2 -> 8) due to GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) effect
+2026-03-12 12:03:42.058 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb)
+2026-03-12 12:03:42.058 DEBUG - GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) power changed (2 -> 8) due to GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) effect
+2026-03-12 12:03:42.058 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb)
+2026-03-12 12:03:42.058 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.059 DEBUG - GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) power changed (2 -> 8) due to GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) effect
+2026-03-12 12:03:42.059 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb)
+2026-03-12 12:03:42.059 DEBUG - GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) power changed (2 -> 8) due to GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) effect
+2026-03-12 12:03:42.059 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb)
+2026-03-12 12:03:42.059 DEBUG - EXPLOSIVE TOAD (cdf1a430-743e-4d87-a386-781a7469e484) effect destroys GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb)
+2026-03-12 12:03:42.059 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (cdf1a430-743e-4d87-a386-781a7469e484)
+2026-03-12 12:03:42.059 DEBUG - GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) stolen and played by Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) due to COMPOST DRAGON (779c331b-4f06-4a3b-8bc1-b3dbdcfdfb39) effect
+2026-03-12 12:03:42.059 INFO  - Resolving STEAL effect of COMPOST DRAGON (779c331b-4f06-4a3b-8bc1-b3dbdcfdfb39)
+2026-03-12 12:03:42.059 DEBUG - GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) power changed (2 -> 8) due to GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) effect
+2026-03-12 12:03:42.059 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb)
+2026-03-12 12:03:42.059 DEBUG - GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) power changed (2 -> 8) due to GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) effect
+2026-03-12 12:03:42.060 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb)
+2026-03-12 12:03:42.060 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.060 DEBUG - GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) power changed (2 -> 8) due to GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) effect
+2026-03-12 12:03:42.060 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb)
+2026-03-12 12:03:42.060 DEBUG - GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) power changed (2 -> 8) due to GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb) effect
+2026-03-12 12:03:42.060 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb)
+2026-03-12 12:03:42.060 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) effect destroys GOBLIN WEREWOLF (5c74f9f8-8e43-451e-b08b-daa8b5ffa8fb)
+2026-03-12 12:03:42.061 INFO  - Resolving DESTROY effect of KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5)
+2026-03-12 12:03:42.061 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee) gains SNEAKY keyword
+2026-03-12 12:03:42.061 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee)
+2026-03-12 12:03:42.061 DEBUG - Player Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) must choose 2 card(s) to discard (available targets : {
+- FERRET PACIFIER ;
+- AXOLOTL HEALER ;
+- GRAVE ROBBER ;
+- GOREAGLE ALPHA ;
+- THE LURKER
+})
+2026-03-12 12:03:42.061 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee) gains SNEAKY keyword
+2026-03-12 12:03:42.062 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee)
+2026-03-12 12:03:42.062 INFO  - New TARGET choice to be resolved by Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) (targets : {
+- AXOLOTL HEALER ;
+- GOREAGLE ALPHA ;
+- FERRET PACIFIER ;
+- THE LURKER ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:42.062 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.062 DEBUG - FERRET PACIFIER (2ffe42ae-69f7-4f51-828a-d201a9119eff) discarded due to FERRET BOMBER (13b4fec6-f633-462d-8633-406dcd423c1f) effect
+2026-03-12 12:03:42.062 DEBUG - THE LURKER (e01d5934-08d6-4584-84cf-e5efeb4e290f) discarded due to FERRET BOMBER (13b4fec6-f633-462d-8633-406dcd423c1f) effect
+2026-03-12 12:03:42.062 INFO  - Resolving DISCARD effect of FERRET BOMBER (13b4fec6-f633-462d-8633-406dcd423c1f)
+2026-03-12 12:03:42.062 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee) gains SNEAKY keyword
+2026-03-12 12:03:42.062 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee)
+2026-03-12 12:03:42.062 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee) gains SNEAKY keyword
+2026-03-12 12:03:42.062 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee)
+2026-03-12 12:03:42.063 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee) gains SNEAKY keyword
+2026-03-12 12:03:42.063 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee)
+2026-03-12 12:03:42.063 DEBUG - Player Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) must choose 1 cards to steal (targets : {
+- COMPOST DRAGON ;
+- GOBLIN WEREWOLF ;
+- FERRET PACIFIER ;
+- THE LURKER
+})
+2026-03-12 12:03:42.063 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee) gains SNEAKY keyword
+2026-03-12 12:03:42.063 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee)
+2026-03-12 12:03:42.063 INFO  - New TARGET choice to be resolved by Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) (targets : {
+- FERRET PACIFIER ;
+- COMPOST DRAGON ;
+- GOBLIN WEREWOLF ;
+- THE LURKER
+})
+2026-03-12 12:03:42.063 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.063 DEBUG - THE LURKER (e01d5934-08d6-4584-84cf-e5efeb4e290f) stolen and played by Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) due to COMPOST DRAGON (8a25bb12-bb51-4274-8393-b44ce3d1077d) effect
+2026-03-12 12:03:42.064 INFO  - Resolving STEAL effect of COMPOST DRAGON (8a25bb12-bb51-4274-8393-b44ce3d1077d)
+2026-03-12 12:03:42.064 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee) gains SNEAKY keyword
+2026-03-12 12:03:42.064 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee)
+2026-03-12 12:03:42.064 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee) gains SNEAKY keyword
+2026-03-12 12:03:42.064 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (5c7f06a5-11bf-4306-abad-c6f00b1dc1ee)
+2026-03-12 12:03:42.064 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.065 INFO  - Life update for player Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) : 2 LP
+2026-03-12 12:03:42.065 DEBUG - Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) LP changed (3 -> 2) due to GOREAGLE ALPHA (158fe3ac-8781-4286-836d-122bff632f41) effect
+2026-03-12 12:03:42.065 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (158fe3ac-8781-4286-836d-122bff632f41)
+2026-03-12 12:03:42.065 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.065 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.065 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.065 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.065 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.065 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.065 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.065 INFO  - New FRENZY choice to be resolved by Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) (attackingCard : GOREAGLE ALPHA (158fe3ac-8781-4286-836d-122bff632f41))
+2026-03-12 12:03:42.066 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.066 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.066 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.066 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.066 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.066 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.066 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.066 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.066 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.066 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.066 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.066 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.067 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.067 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.067 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.067 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.067 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.067 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.067 DEBUG - Player Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) must choose 1 cards to steal (targets : {
+- HYENIX ;
+- EXPLOSIVE TOAD ;
+- KANGASAURUS REX ;
+- FERRET BOMBER
+})
+2026-03-12 12:03:42.067 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.067 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.067 INFO  - New TARGET choice to be resolved by Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) (targets : {
+- HYENIX ;
+- KANGASAURUS REX ;
+- EXPLOSIVE TOAD ;
+- FERRET BOMBER
+})
+2026-03-12 12:03:42.067 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.067 DEBUG - HYENIX (083d753f-3fe9-4c59-ac10-be2ba501fadd) stolen and played by Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) due to GRAVE ROBBER (17755dd1-3f81-4ad3-bbe7-228efaf199e1) effect
+2026-03-12 12:03:42.067 INFO  - Resolving STEAL effect of GRAVE ROBBER (17755dd1-3f81-4ad3-bbe7-228efaf199e1)
+2026-03-12 12:03:42.067 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.068 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.068 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.068 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.068 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.068 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.068 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.068 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.068 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.068 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.068 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.068 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.069 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.069 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.069 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.069 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.069 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.069 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.069 DEBUG - KANGASAURUS REX (983d0fba-1f31-4240-b4f7-7f7160a4d6a5) power changed (7 -> 8) due to SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf) effect
+2026-03-12 12:03:42.069 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e8d284f4-cc78-4d00-aaba-196027dd6faf)
+2026-03-12 12:03:42.070 DEBUG - AXOLOTL HEALER (96b6382b-a2df-408f-b434-212ba107da05) discarded due to TUSKED EXTORTER (550c987f-46e3-4fd5-9944-50bc34f05a1b) effect
+2026-03-12 12:03:42.070 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (550c987f-46e3-4fd5-9944-50bc34f05a1b)
+2026-03-12 12:03:42.070 INFO  - Life update for player Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) : 1 LP
+2026-03-12 12:03:42.070 DEBUG - Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) must decide if HYENIX (083d753f-3fe9-4c59-ac10-be2ba501fadd) will revive
+2026-03-12 12:03:42.070 INFO  - New BOOLEAN choice to be resolved by Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) (target : )
+2026-03-12 12:03:42.070 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:42.070 DEBUG - HYENIX (083d753f-3fe9-4c59-ac10-be2ba501fadd) revived using its own effect
+2026-03-12 12:03:42.070 INFO  - Resolving REVIVE effect of HYENIX (083d753f-3fe9-4c59-ac10-be2ba501fadd)
+2026-03-12 12:03:42.071 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (550c987f-46e3-4fd5-9944-50bc34f05a1b)
+2026-03-12 12:03:42.071 INFO  - Life update for player Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) : 0 LP
+2026-03-12 12:03:42.071 INFO  - Game over : Player2 (bb1c6e98-2a4b-41d8-ab19-90a895e13561) wins ; Player1 (a1ab6b96-8b50-4fcd-a2b8-ed05b624f63c) loses.
+2026-03-12 12:03:42.071 INFO  - End of the game

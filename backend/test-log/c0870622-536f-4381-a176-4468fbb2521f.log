@@ -1,0 +1,104 @@
+2026-03-12 12:03:40.988 INFO  - Calculating first player...
+2026-03-12 12:03:40.993 INFO  - Banned card for Player1 (1fbfb0a6-8bb0-40e1-b0e3-d80a2ff1a8bb) : HYENIX (2c66748c-e79f-4cdd-b466-44eef3932238) (7)
+2026-03-12 12:03:40.993 INFO  - Banned card for Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) : TURBO BUG (7aaff660-0b30-4c10-b473-3ee9acd15b1a) (4)
+2026-03-12 12:03:40.993 INFO  - First player will be Player1 (1fbfb0a6-8bb0-40e1-b0e3-d80a2ff1a8bb)
+2026-03-12 12:03:41.017 INFO  - Game c0870622-536f-4381-a176-4468fbb2521f starting...
+2026-03-12 12:03:41.018 INFO  - Player Player1 (1fbfb0a6-8bb0-40e1-b0e3-d80a2ff1a8bb) hand : {
+- SPIDER OWL ;
+-  GIRAFFODILE ;
+- DEATHWEAVER ;
+- AXOLOTL HEALER ;
+- BEE BEAR
+}
+2026-03-12 12:03:41.018 INFO  - Player Player1 (1fbfb0a6-8bb0-40e1-b0e3-d80a2ff1a8bb) draw pile : {
+- TURF THE SURFER ;
+- PLATED SCORPION ;
+- SPIDER OWL ;
+- EXPLOSIVE TOAD ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:41.019 INFO  - Player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) hand : {
+- AXOLOTL HEALER ;
+- KILLER BEE ;
+- FROBLIN INSTIGATOR ;
+- COUNT DRACULEECH ;
+- LUCHATAUR
+}
+2026-03-12 12:03:41.019 INFO  - Player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) draw pile : {
+- THE LURKER ;
+- SNAIL THROWER ;
+- GOBLIN WEREWOLF ;
+- HYENIX ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:41.020 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.021 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.021 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.021 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.022 DEBUG - FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141) power changed (1 -> 1) due to FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141) effect
+2026-03-12 12:03:41.022 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141)
+2026-03-12 12:03:41.022 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.022 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.022 DEBUG - FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141) power changed (1 -> 1) due to FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141) effect
+2026-03-12 12:03:41.022 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141)
+2026-03-12 12:03:41.022 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.022 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.022 DEBUG - FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141) power changed (1 -> 1) due to FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141) effect
+2026-03-12 12:03:41.023 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141)
+2026-03-12 12:03:41.023 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.023 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.023 DEBUG - Player1 (1fbfb0a6-8bb0-40e1-b0e3-d80a2ff1a8bb) LP changed (3 -> 5) due to AXOLOTL HEALER (09329a7a-e446-4d2a-a9f9-f00cdda8fe0c) effect
+2026-03-12 12:03:41.023 INFO  - Resolving GAIN effect of AXOLOTL HEALER (09329a7a-e446-4d2a-a9f9-f00cdda8fe0c)
+2026-03-12 12:03:41.023 DEBUG - FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141) power changed (1 -> 1) due to FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141) effect
+2026-03-12 12:03:41.023 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141)
+2026-03-12 12:03:41.024 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.024 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.024 DEBUG - FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141) power changed (1 -> 1) due to FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141) effect
+2026-03-12 12:03:41.024 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141)
+2026-03-12 12:03:41.024 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.024 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.024 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:41.024 DEBUG - FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141) power changed (1 -> 1) due to FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141) effect
+2026-03-12 12:03:41.025 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (31c324dc-07be-4e8e-8a06-da523d3ed141)
+2026-03-12 12:03:41.025 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.025 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.025 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.025 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.025 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.025 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.025 INFO  - Life update for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) : 2 LP
+2026-03-12 12:03:41.025 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.026 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.026 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.026 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.026 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.026 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.026 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.026 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.026 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.027 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.027 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.027 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.027 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.027 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.027 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.027 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.028 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.028 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.028 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.028 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.028 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.028 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.028 DEBUG - PLAY effects disabled for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) due to DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b) effect
+2026-03-12 12:03:41.028 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (9ce2d742-7efb-427f-a497-d84e086bd73b)
+2026-03-12 12:03:41.031 INFO  - Resolving NO_BLOCK effect of BEE BEAR (25c04a9a-ab81-4102-b523-6af5ee2bfde1)
+2026-03-12 12:03:41.032 INFO  - Life update for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) : 1 LP
+2026-03-12 12:03:41.034 INFO  - Life update for player Player1 (1fbfb0a6-8bb0-40e1-b0e3-d80a2ff1a8bb) : 4 LP
+2026-03-12 12:03:41.034 DEBUG - Player1 (1fbfb0a6-8bb0-40e1-b0e3-d80a2ff1a8bb) LP changed (5 -> 4) due to KILLER BEE (982f9a23-ee47-46f4-a0c9-02a9003290d9) effect
+2026-03-12 12:03:41.035 INFO  - Resolving INFLICT effect of KILLER BEE (982f9a23-ee47-46f4-a0c9-02a9003290d9)
+2026-03-12 12:03:41.035 INFO  - Resolving NO_BLOCK effect of BEE BEAR (25c04a9a-ab81-4102-b523-6af5ee2bfde1)
+2026-03-12 12:03:41.036 INFO  - New FRENZY choice to be resolved by Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) (attackingCard : LUCHATAUR (6aeae534-b514-4545-aa7e-0fe5e7f89fec))
+2026-03-12 12:03:41.037 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:41.038 INFO  - Life update for player Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) : 0 LP
+2026-03-12 12:03:41.038 INFO  - Game over : Player1 (1fbfb0a6-8bb0-40e1-b0e3-d80a2ff1a8bb) wins ; Player2 (f4464ebb-b3e5-4bbe-a0b3-ad5e5f320e56) loses.
+2026-03-12 12:03:41.038 INFO  - End of the game

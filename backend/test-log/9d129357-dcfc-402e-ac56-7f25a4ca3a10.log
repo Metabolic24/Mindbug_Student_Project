@@ -1,0 +1,152 @@
+2026-03-12 12:03:46.987 INFO  - Calculating first player...
+2026-03-12 12:03:46.989 INFO  - Banned card for Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) : KILLER BEE (bf73ab94-afb2-46bf-a995-9a8831ae6974) (5)
+2026-03-12 12:03:46.989 INFO  - Banned card for Player2 (4d216bd7-f43b-4a65-b2f5-f3f96d017b55) : SHIELD BUGS (865925ed-c3ff-4970-955e-25d2ec079c03) (4)
+2026-03-12 12:03:46.989 INFO  - First player will be Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065)
+2026-03-12 12:03:46.997 INFO  - Game 9d129357-dcfc-402e-ac56-7f25a4ca3a10 starting...
+2026-03-12 12:03:46.997 INFO  - Player Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) hand : {
+- GOREAGLE ALPHA ;
+- AXOLOTL HEALER ;
+-  GIRAFFODILE ;
+- RHINO TURTLE ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:46.997 INFO  - Player Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) draw pile : {
+- EXPLOSIVE TOAD ;
+- RHINO TURTLE ;
+- FERRET PACIFIER ;
+- TIGER SQUIRREL ;
+- THE LURKER
+}
+2026-03-12 12:03:46.997 INFO  - Player Player2 (4d216bd7-f43b-4a65-b2f5-f3f96d017b55) hand : {
+- DEATHWEAVER ;
+- SHARK DOG ;
+- BUGSERKER ;
+- TURF THE SURFER ;
+- SNAIL HYDRA
+}
+2026-03-12 12:03:46.998 INFO  - Player Player2 (4d216bd7-f43b-4a65-b2f5-f3f96d017b55) draw pile : {
+- HAMSTER LION ;
+- SPIDER OWL ;
+- HAMSTER LION ;
+- EXPLOSIVE TOAD ;
+- HYENIX
+}
+2026-03-12 12:03:46.998 DEBUG - Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) LP changed (3 -> 5) due to AXOLOTL HEALER (48964014-4970-40e1-a6df-7275b9a398d6) effect
+2026-03-12 12:03:46.998 INFO  - Resolving GAIN effect of AXOLOTL HEALER (48964014-4970-40e1-a6df-7275b9a398d6)
+2026-03-12 12:03:46.998 DEBUG - PLAY effects disabled for player Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) due to DEATHWEAVER (93f234ea-e442-4cfa-b64a-098ee0f1d818) effect
+2026-03-12 12:03:46.998 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (93f234ea-e442-4cfa-b64a-098ee0f1d818)
+2026-03-12 12:03:46.998 DEBUG - PLAY effects disabled for player Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) due to DEATHWEAVER (93f234ea-e442-4cfa-b64a-098ee0f1d818) effect
+2026-03-12 12:03:46.998 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (93f234ea-e442-4cfa-b64a-098ee0f1d818)
+2026-03-12 12:03:46.998 DEBUG - CardInstance(uuid=f2a1a860-dbed-4c69-806d-c39deb8d7e05, card=Card(id=10, setName=first_contact, name= GIRAFFODILE, power=7, keywords=[], effects={PLAY=[StealEffect(value=-1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Play</b>: Draw your entire discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.998 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (90b0c9d8-86c2-4d37-a867-5184aaca4427)
+2026-03-12 12:03:46.998 DEBUG - CardInstance(uuid=f2a1a860-dbed-4c69-806d-c39deb8d7e05, card=Card(id=10, setName=first_contact, name= GIRAFFODILE, power=7, keywords=[], effects={PLAY=[StealEffect(value=-1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Play</b>: Draw your entire discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.998 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (90b0c9d8-86c2-4d37-a867-5184aaca4427)
+2026-03-12 12:03:46.998 DEBUG - CardInstance(uuid=f2a1a860-dbed-4c69-806d-c39deb8d7e05, card=Card(id=10, setName=first_contact, name= GIRAFFODILE, power=7, keywords=[], effects={PLAY=[StealEffect(value=-1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Play</b>: Draw your entire discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.998 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (90b0c9d8-86c2-4d37-a867-5184aaca4427)
+2026-03-12 12:03:46.998 DEBUG - CardInstance(uuid=f2a1a860-dbed-4c69-806d-c39deb8d7e05, card=Card(id=10, setName=first_contact, name= GIRAFFODILE, power=7, keywords=[], effects={PLAY=[StealEffect(value=-1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Play</b>: Draw your entire discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.998 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (90b0c9d8-86c2-4d37-a867-5184aaca4427)
+2026-03-12 12:03:46.998 DEBUG - CardInstance(uuid=f2a1a860-dbed-4c69-806d-c39deb8d7e05, card=Card(id=10, setName=first_contact, name= GIRAFFODILE, power=7, keywords=[], effects={PLAY=[StealEffect(value=-1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Play</b>: Draw your entire discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.999 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (90b0c9d8-86c2-4d37-a867-5184aaca4427)
+2026-03-12 12:03:46.999 DEBUG - CardInstance(uuid=f2a1a860-dbed-4c69-806d-c39deb8d7e05, card=Card(id=10, setName=first_contact, name= GIRAFFODILE, power=7, keywords=[], effects={PLAY=[StealEffect(value=-1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Play</b>: Draw your entire discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.999 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (90b0c9d8-86c2-4d37-a867-5184aaca4427)
+2026-03-12 12:03:46.999 DEBUG - CardInstance(uuid=f2a1a860-dbed-4c69-806d-c39deb8d7e05, card=Card(id=10, setName=first_contact, name= GIRAFFODILE, power=7, keywords=[], effects={PLAY=[StealEffect(value=-1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Play</b>: Draw your entire discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.999 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (90b0c9d8-86c2-4d37-a867-5184aaca4427)
+2026-03-12 12:03:46.999 INFO  - New FRENZY choice to be resolved by Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) (attackingCard : RHINO TURTLE (8ef8e823-ba88-4801-ba0f-7a9a0b2d51c4))
+2026-03-12 12:03:46.999 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.999 DEBUG - CardInstance(uuid=f2a1a860-dbed-4c69-806d-c39deb8d7e05, card=Card(id=10, setName=first_contact, name= GIRAFFODILE, power=7, keywords=[], effects={PLAY=[StealEffect(value=-1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Play</b>: Draw your entire discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.999 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (90b0c9d8-86c2-4d37-a867-5184aaca4427)
+2026-03-12 12:03:46.999 INFO  - New FRENZY choice to be resolved by Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) (attackingCard : RHINO TURTLE (cb168d8a-d248-42d9-b5e0-a885d8aa0016))
+2026-03-12 12:03:46.999 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.999 INFO  - New FRENZY choice to be resolved by Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) (attackingCard : EXPLOSIVE TOAD (61b83eb9-a8d1-4c9e-90a3-6b236cdce1b9))
+2026-03-12 12:03:46.999 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:47.000 DEBUG - Player Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) must choose 1 card(s) to destroy (available targets : {
+- SNAIL HYDRA ;
+- BUGSERKER ;
+- SHARK DOG ;
+- TURF THE SURFER ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:47.000 INFO  - New TARGET choice to be resolved by Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) (targets : {
+- RHINO TURTLE ;
+- SNAIL HYDRA ;
+- BUGSERKER ;
+- TURF THE SURFER ;
+- SHARK DOG
+})
+2026-03-12 12:03:47.000 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:47.000 DEBUG - EXPLOSIVE TOAD (61b83eb9-a8d1-4c9e-90a3-6b236cdce1b9) effect destroys BUGSERKER (ed069a74-89cd-449b-80c0-748a59d548d7)
+2026-03-12 12:03:47.000 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (61b83eb9-a8d1-4c9e-90a3-6b236cdce1b9)
+2026-03-12 12:03:47.000 DEBUG - KANGASAURUS REX (2bd3c3c9-a240-4474-a9d9-d3b88dead22e) effect destroys SHARK DOG (9a1c2441-6e83-4fff-80a6-143428e8f3c6)
+2026-03-12 12:03:47.000 INFO  - Resolving DESTROY effect of KANGASAURUS REX (2bd3c3c9-a240-4474-a9d9-d3b88dead22e)
+2026-03-12 12:03:47.000 DEBUG - Player Player2 (4d216bd7-f43b-4a65-b2f5-f3f96d017b55) must choose 1 card(s) that will be unable to block (targets : {
+- THE LURKER ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:47.000 INFO  - New TARGET choice to be resolved by Player2 (4d216bd7-f43b-4a65-b2f5-f3f96d017b55) (targets : {
+- THE LURKER ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:47.001 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:47.001 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (27f367c8-3917-40a5-8687-e3f1a757a3a4)
+2026-03-12 12:03:47.001 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6926488e-1994-4acb-9eea-72904eb64f3b)
+2026-03-12 12:03:47.001 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6926488e-1994-4acb-9eea-72904eb64f3b)
+2026-03-12 12:03:47.001 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (6926488e-1994-4acb-9eea-72904eb64f3b)
+2026-03-12 12:03:47.001 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.001 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.001 DEBUG - CardInstance(uuid=9c55d8af-95ac-4682-b39f-6ba56db996dd, card=Card(id=38, setName=first_contact, name=GOREAGLE ALPHA, power=6, keywords=[FRENZY, TOUGH, HUNTER], effects={PLAY=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: Lose 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=6, keywords=[FRENZY, TOUGH, HUNTER], stillTough=true, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.001 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.001 INFO  - Life update for player Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) : 4 LP
+2026-03-12 12:03:47.001 DEBUG - Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) LP changed (5 -> 4) due to GOREAGLE ALPHA (9c55d8af-95ac-4682-b39f-6ba56db996dd) effect
+2026-03-12 12:03:47.001 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (9c55d8af-95ac-4682-b39f-6ba56db996dd)
+2026-03-12 12:03:47.001 DEBUG - CardInstance(uuid=9c55d8af-95ac-4682-b39f-6ba56db996dd, card=Card(id=38, setName=first_contact, name=GOREAGLE ALPHA, power=6, keywords=[FRENZY, TOUGH, HUNTER], effects={PLAY=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: Lose 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=6, keywords=[FRENZY, TOUGH, HUNTER], stillTough=true, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.001 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.001 DEBUG - CardInstance(uuid=9c55d8af-95ac-4682-b39f-6ba56db996dd, card=Card(id=38, setName=first_contact, name=GOREAGLE ALPHA, power=6, keywords=[FRENZY, TOUGH, HUNTER], effects={PLAY=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: Lose 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=6, keywords=[FRENZY, TOUGH, HUNTER], stillTough=true, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.001 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.002 DEBUG - CardInstance(uuid=9c55d8af-95ac-4682-b39f-6ba56db996dd, card=Card(id=38, setName=first_contact, name=GOREAGLE ALPHA, power=6, keywords=[FRENZY, TOUGH, HUNTER], effects={PLAY=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: Lose 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=6, keywords=[FRENZY, TOUGH, HUNTER], stillTough=true, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.002 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.002 DEBUG - CardInstance(uuid=9c55d8af-95ac-4682-b39f-6ba56db996dd, card=Card(id=38, setName=first_contact, name=GOREAGLE ALPHA, power=6, keywords=[FRENZY, TOUGH, HUNTER], effects={PLAY=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: Lose 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=6, keywords=[FRENZY, TOUGH, HUNTER], stillTough=true, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.002 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.002 DEBUG - CardInstance(uuid=54381160-d622-4f37-ab86-cc466cb45e85, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.002 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.002 DEBUG - Player Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) must choose 1 card(s) to destroy (available targets : {
+- SNAIL HYDRA ;
+- TURF THE SURFER ;
+- HAMSTER LION ;
+- HYENIX
+})
+2026-03-12 12:03:47.002 DEBUG - CardInstance(uuid=54381160-d622-4f37-ab86-cc466cb45e85, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.002 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.002 INFO  - New TARGET choice to be resolved by Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) (targets : {
+- HAMSTER LION ;
+- HYENIX ;
+- SNAIL HYDRA ;
+- TURF THE SURFER
+})
+2026-03-12 12:03:47.002 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:47.002 DEBUG - TIGER SQUIRREL (54381160-d622-4f37-ab86-cc466cb45e85) effect destroys SNAIL HYDRA (934495e2-875c-42fa-b719-86a3706d8f0b)
+2026-03-12 12:03:47.002 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (54381160-d622-4f37-ab86-cc466cb45e85)
+2026-03-12 12:03:47.002 DEBUG - CardInstance(uuid=54381160-d622-4f37-ab86-cc466cb45e85, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.002 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.002 DEBUG - CardInstance(uuid=54381160-d622-4f37-ab86-cc466cb45e85, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.002 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.003 DEBUG - CardInstance(uuid=54381160-d622-4f37-ab86-cc466cb45e85, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.003 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.003 INFO  - New FRENZY choice to be resolved by Player2 (4d216bd7-f43b-4a65-b2f5-f3f96d017b55) (attackingCard : HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2))
+2026-03-12 12:03:47.003 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:47.003 DEBUG - CardInstance(uuid=54381160-d622-4f37-ab86-cc466cb45e85, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.003 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.003 DEBUG - CardInstance(uuid=54381160-d622-4f37-ab86-cc466cb45e85, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.003 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.003 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:47.003 DEBUG - CardInstance(uuid=54381160-d622-4f37-ab86-cc466cb45e85, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.003 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.003 DEBUG - CardInstance(uuid=54381160-d622-4f37-ab86-cc466cb45e85, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.003 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.004 DEBUG - CardInstance(uuid=54381160-d622-4f37-ab86-cc466cb45e85, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.004 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.004 DEBUG - CardInstance(uuid=54381160-d622-4f37-ab86-cc466cb45e85, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.004 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.004 DEBUG - CardInstance(uuid=54381160-d622-4f37-ab86-cc466cb45e85, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e1ea16d), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.004 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7da26eec-5393-4caf-9aba-df7ccf25c2c2)
+2026-03-12 12:03:47.004 INFO  - Game over : Player2 (4d216bd7-f43b-4a65-b2f5-f3f96d017b55) wins ; Player1 (c8878a39-3610-4d65-9138-bfd25dbf9065) loses.
+2026-03-12 12:03:47.004 INFO  - End of the game

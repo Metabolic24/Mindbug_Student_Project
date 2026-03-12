@@ -1,0 +1,183 @@
+2026-03-12 12:03:04.226 INFO  - Calculating first player...
+2026-03-12 12:03:04.228 INFO  - Banned card for Player1 (e1b2d1e9-336b-4e12-9f7d-4399b6dcf1b3) : HAMSTER LION (5e241b4c-bd6c-4552-8922-387e8418dd89) (8)
+2026-03-12 12:03:04.228 INFO  - Banned card for Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) : BRAIN FLY (88dc3b6b-9cfb-4e20-9dd4-e4c13b91bfc4) (4)
+2026-03-12 12:03:04.228 INFO  - First player will be Player1 (e1b2d1e9-336b-4e12-9f7d-4399b6dcf1b3)
+2026-03-12 12:03:04.252 INFO  - Game 6fb4b888-caea-4519-beae-af04bf83702b starting...
+2026-03-12 12:03:04.252 INFO  - Player Player1 (e1b2d1e9-336b-4e12-9f7d-4399b6dcf1b3) hand : {
+- TUSKED EXTORTER ;
+- SNAIL HYDRA ;
+- RHINO TURTLE ;
+- COMPOST DRAGON ;
+- FERRET BOMBER
+}
+2026-03-12 12:03:04.252 INFO  - Player Player1 (e1b2d1e9-336b-4e12-9f7d-4399b6dcf1b3) draw pile : {
+- FERRET PACIFIER ;
+- SNAIL THROWER ;
+- FROBLIN INSTIGATOR ;
+- LUCHATAUR ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:04.253 INFO  - Player Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) hand : {
+- SHARK DOG ;
+- FERRET BOMBER ;
+- EXPLOSIVE TOAD ;
+- TURBO BUG ;
+- THE LURKER
+}
+2026-03-12 12:03:04.253 INFO  - Player Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) draw pile : {
+- GOREAGLE ALPHA ;
+- SHIELD BUGS ;
+- GRAVE ROBBER ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- COUNT DRACULEECH
+}
+2026-03-12 12:03:04.253 DEBUG - Player Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) must choose 2 card(s) to discard (available targets : {
+- SHARK DOG ;
+- FERRET BOMBER ;
+- EXPLOSIVE TOAD ;
+- TURBO BUG ;
+- THE LURKER
+})
+2026-03-12 12:03:04.253 INFO  - New TARGET choice to be resolved by Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) (targets : {
+- FERRET BOMBER ;
+- EXPLOSIVE TOAD ;
+- THE LURKER ;
+- SHARK DOG ;
+- TURBO BUG
+})
+2026-03-12 12:03:04.253 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.254 DEBUG - THE LURKER (591a1898-f7bf-4d6d-a4f2-e057a915f529) discarded due to FERRET BOMBER (9be9852e-bcf4-413b-87f2-3d212e091b15) effect
+2026-03-12 12:03:04.254 DEBUG - TURBO BUG (115e0392-b503-4413-b664-903bf62c8f12) discarded due to FERRET BOMBER (9be9852e-bcf4-413b-87f2-3d212e091b15) effect
+2026-03-12 12:03:04.254 INFO  - Resolving DISCARD effect of FERRET BOMBER (9be9852e-bcf4-413b-87f2-3d212e091b15)
+2026-03-12 12:03:04.254 INFO  - Life update for player Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) : 2 LP
+2026-03-12 12:03:04.254 DEBUG - Player Player1 (e1b2d1e9-336b-4e12-9f7d-4399b6dcf1b3) must choose 2 card(s) to discard (available targets : {
+- TUSKED EXTORTER ;
+- SNAIL HYDRA ;
+- RHINO TURTLE ;
+- COMPOST DRAGON ;
+- FERRET PACIFIER
+})
+2026-03-12 12:03:04.254 INFO  - New TARGET choice to be resolved by Player1 (e1b2d1e9-336b-4e12-9f7d-4399b6dcf1b3) (targets : {
+- TUSKED EXTORTER ;
+- SNAIL HYDRA ;
+- COMPOST DRAGON ;
+- FERRET PACIFIER ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:04.254 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.254 DEBUG - COMPOST DRAGON (d0fe039a-9d82-4316-8a07-a22b93b84682) discarded due to FERRET BOMBER (5818e7e2-2557-4145-aaab-9036ec14b891) effect
+2026-03-12 12:03:04.254 DEBUG - FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167) discarded due to FERRET BOMBER (5818e7e2-2557-4145-aaab-9036ec14b891) effect
+2026-03-12 12:03:04.254 INFO  - Resolving DISCARD effect of FERRET BOMBER (5818e7e2-2557-4145-aaab-9036ec14b891)
+2026-03-12 12:03:04.255 DEBUG - Player Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) must choose 1 cards to steal (targets : {
+- COMPOST DRAGON ;
+- FERRET PACIFIER ;
+- FERRET BOMBER
+})
+2026-03-12 12:03:04.255 INFO  - New TARGET choice to be resolved by Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) (targets : {
+- COMPOST DRAGON ;
+- FERRET BOMBER ;
+- FERRET PACIFIER
+})
+2026-03-12 12:03:04.255 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.255 DEBUG - FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167) stolen and played by Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) due to GRAVE ROBBER (88fccb05-29e5-4620-b17b-e07880eabf31) effect
+2026-03-12 12:03:04.255 INFO  - Resolving STEAL effect of GRAVE ROBBER (88fccb05-29e5-4620-b17b-e07880eabf31)
+2026-03-12 12:03:04.255 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.255 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.256 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.256 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.256 INFO  - Life update for player Player1 (e1b2d1e9-336b-4e12-9f7d-4399b6dcf1b3) : 2 LP
+2026-03-12 12:03:04.256 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.256 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.256 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.256 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.256 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.256 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.256 DEBUG - Player Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) must choose 1 card(s) to discard (available targets : {
+- EXPLOSIVE TOAD ;
+- GOREAGLE ALPHA ;
+- SHIELD BUGS ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:04.256 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.257 INFO  - New TARGET choice to be resolved by Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) (targets : {
+- EXPLOSIVE TOAD ;
+- SHIELD BUGS ;
+- GOREAGLE ALPHA ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:04.257 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.257 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (7a51f8b1-0b60-45de-807e-59dba3525e77) discarded due to TUSKED EXTORTER (6f7dafcb-c051-4bc7-9d26-3ed0ae563ee4) effect
+2026-03-12 12:03:04.257 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (6f7dafcb-c051-4bc7-9d26-3ed0ae563ee4)
+2026-03-12 12:03:04.257 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.257 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.257 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.257 DEBUG - Player Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) must choose 1 card(s) to destroy (available targets : {
+- TUSKED EXTORTER ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:04.257 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.257 INFO  - New TARGET choice to be resolved by Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) (targets : {
+- TUSKED EXTORTER ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:04.257 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.258 DEBUG - SHARK DOG (95a62fbb-59e0-4a39-870a-a6af96dd2a11) effect destroys SNAIL HYDRA (14e5eeb6-62a3-49f7-96b3-852af7f7354d)
+2026-03-12 12:03:04.258 INFO  - Resolving DESTROY effect of SHARK DOG (95a62fbb-59e0-4a39-870a-a6af96dd2a11)
+2026-03-12 12:03:04.258 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.258 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:04.258 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.258 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.258 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.258 DEBUG - Player Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) must choose 1 card(s) to discard (available targets : {
+- EXPLOSIVE TOAD ;
+- GOREAGLE ALPHA ;
+- SHIELD BUGS ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:04.258 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.258 INFO  - New TARGET choice to be resolved by Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) (targets : {
+- EXPLOSIVE TOAD ;
+- SHIELD BUGS ;
+- GOREAGLE ALPHA ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:04.259 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.259 DEBUG - SHIELD BUGS (15a34fb1-307d-4b13-b128-8d01d05a7b56) discarded due to TUSKED EXTORTER (6f7dafcb-c051-4bc7-9d26-3ed0ae563ee4) effect
+2026-03-12 12:03:04.259 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (6f7dafcb-c051-4bc7-9d26-3ed0ae563ee4)
+2026-03-12 12:03:04.259 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (bad9f9e0-050e-40e5-b7d6-729f5da1f167)
+2026-03-12 12:03:04.259 DEBUG - FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) effect
+2026-03-12 12:03:04.259 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9)
+2026-03-12 12:03:04.259 DEBUG - FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) effect
+2026-03-12 12:03:04.259 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9)
+2026-03-12 12:03:04.259 DEBUG - FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) effect
+2026-03-12 12:03:04.259 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9)
+2026-03-12 12:03:04.259 DEBUG - FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) effect
+2026-03-12 12:03:04.259 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9)
+2026-03-12 12:03:04.259 DEBUG - FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) power changed (1 -> 5) due to FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) effect
+2026-03-12 12:03:04.259 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9)
+2026-03-12 12:03:04.259 DEBUG - FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) power changed (1 -> 5) due to FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) effect
+2026-03-12 12:03:04.259 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9)
+2026-03-12 12:03:04.260 DEBUG - FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) power changed (1 -> 5) due to FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) effect
+2026-03-12 12:03:04.260 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9)
+2026-03-12 12:03:04.260 INFO  - Life update for player Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) : 1 LP
+2026-03-12 12:03:04.260 DEBUG - Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) LP changed (2 -> 1) due to GOREAGLE ALPHA (55c2e537-3c8a-4742-9c9e-2d4b14f356f5) effect
+2026-03-12 12:03:04.260 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (55c2e537-3c8a-4742-9c9e-2d4b14f356f5)
+2026-03-12 12:03:04.260 DEBUG - FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) power changed (1 -> 5) due to FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) effect
+2026-03-12 12:03:04.260 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9)
+2026-03-12 12:03:04.260 DEBUG - FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) power changed (1 -> 5) due to FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) effect
+2026-03-12 12:03:04.260 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9)
+2026-03-12 12:03:04.260 DEBUG - FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) power changed (1 -> 7) due to FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) effect
+2026-03-12 12:03:04.260 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9)
+2026-03-12 12:03:04.260 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (f536443f-5393-4908-ba57-4c6df0f6e9fb)
+2026-03-12 12:03:04.260 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (f536443f-5393-4908-ba57-4c6df0f6e9fb)
+2026-03-12 12:03:04.260 DEBUG - FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) power changed (1 -> 7) due to FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9) effect
+2026-03-12 12:03:04.260 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cdf17cbf-c9b5-475a-ab15-cab755afdec9)
+2026-03-12 12:03:04.260 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (f536443f-5393-4908-ba57-4c6df0f6e9fb)
+2026-03-12 12:03:04.260 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (f536443f-5393-4908-ba57-4c6df0f6e9fb)
+2026-03-12 12:03:04.260 INFO  - Life update for player Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) : 0 LP
+2026-03-12 12:03:04.261 INFO  - Game over : Player1 (e1b2d1e9-336b-4e12-9f7d-4399b6dcf1b3) wins ; Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) loses.
+2026-03-12 12:03:04.261 INFO  - End of the game
+2026-03-12 12:03:04.261 DEBUG - Player2 (67be8e7e-b629-4c3c-984e-d137161840bd) LP changed (1 -> 0) due to COUNT DRACULEECH (90692323-f190-4d35-a5e8-1e5696a9f207) effect
+2026-03-12 12:03:04.261 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (90692323-f190-4d35-a5e8-1e5696a9f207)

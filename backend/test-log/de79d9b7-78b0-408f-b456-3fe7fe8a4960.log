@@ -1,0 +1,375 @@
+2026-03-12 12:03:06.113 INFO  - Calculating first player...
+2026-03-12 12:03:06.114 INFO  - Banned card for Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) : HYENIX (253faa62-6b55-4703-9563-bd9116618e17) (7)
+2026-03-12 12:03:06.114 INFO  - Banned card for Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) : COMPOST DRAGON (da1c9706-b5a0-4699-a5a9-eb797e25142a) (3)
+2026-03-12 12:03:06.114 INFO  - First player will be Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59)
+2026-03-12 12:03:06.121 INFO  - Game de79d9b7-78b0-408f-b456-3fe7fe8a4960 starting...
+2026-03-12 12:03:06.121 INFO  - Player Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) hand : {
+- FROBLIN INSTIGATOR ;
+- GRAVE ROBBER ;
+- KANGASAURUS REX ;
+- COUNT DRACULEECH ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:03:06.121 INFO  - Player Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) draw pile : {
+- TUSKED EXTORTER ;
+- THE LURKER ;
+- HUNGRY HUNGRY HAMSTER ;
+- THE LURKER ;
+- FERRET PACIFIER
+}
+2026-03-12 12:03:06.121 INFO  - Player Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) hand : {
+- LUCHATAUR ;
+- SHIELD BUGS ;
+- HUNGRY HUNGRY HAMSTER ;
+- CHAMELEON SNIPER ;
+- COMPOST DRAGON
+}
+2026-03-12 12:03:06.121 INFO  - Player Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) draw pile : {
+- HYENIX ;
+- HAMSTER LION ;
+- PLATED SCORPION ;
+- GRAVE ROBBER ;
+- FERRET BOMBER
+}
+2026-03-12 12:03:06.122 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.122 DEBUG - COMPOST DRAGON (093ee036-8f3b-47a8-98e0-22d90ee60695) stolen and played by Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) due to GRAVE ROBBER (78835e18-7d09-4783-bc31-38f58ceffee3) effect
+2026-03-12 12:03:06.122 INFO  - Resolving STEAL effect of GRAVE ROBBER (78835e18-7d09-4783-bc31-38f58ceffee3)
+2026-03-12 12:03:06.122 DEBUG - Player Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) must choose 1 cards to steal (targets : {
+- FROBLIN INSTIGATOR ;
+- KANGASAURUS REX ;
+- TUSKED EXTORTER ;
+- THE LURKER ;
+- HUNGRY HUNGRY HAMSTER
+})
+2026-03-12 12:03:06.122 INFO  - New TARGET choice to be resolved by Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) (targets : {
+- FROBLIN INSTIGATOR ;
+- HUNGRY HUNGRY HAMSTER ;
+- KANGASAURUS REX ;
+- THE LURKER ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:06.122 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.122 DEBUG - Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) must decide if stolen card KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) will be added to hand or board
+2026-03-12 12:03:06.122 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (bdc83316-4f22-4c11-a878-61bd9ca41104)
+2026-03-12 12:03:06.122 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:06.122 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) stolen and drawn by Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) due to HUNGRY HUNGRY HAMSTER (bdc83316-4f22-4c11-a878-61bd9ca41104) effect
+2026-03-12 12:03:06.122 INFO  - Life update for player Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) : 2 LP
+2026-03-12 12:03:06.122 DEBUG - Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) LP changed (3 -> 2) due to COUNT DRACULEECH (56a8db63-2075-4184-8b67-3343140c8e5b) effect
+2026-03-12 12:03:06.122 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (56a8db63-2075-4184-8b67-3343140c8e5b)
+2026-03-12 12:03:06.122 DEBUG - Player Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) must choose 1 card(s) to destroy (available targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- COUNT DRACULEECH ;
+- TUSKED EXTORTER ;
+- GRAVE ROBBER ;
+- COMPOST DRAGON
+})
+2026-03-12 12:03:06.122 INFO  - New TARGET choice to be resolved by Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) (targets : {
+- COMPOST DRAGON ;
+- HUNGRY HUNGRY HAMSTER ;
+- COUNT DRACULEECH ;
+- GRAVE ROBBER ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:06.122 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.122 DEBUG - COUNT DRACULEECH (56a8db63-2075-4184-8b67-3343140c8e5b) effect destroys COMPOST DRAGON (093ee036-8f3b-47a8-98e0-22d90ee60695)
+2026-03-12 12:03:06.122 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (56a8db63-2075-4184-8b67-3343140c8e5b)
+2026-03-12 12:03:06.122 DEBUG - Player Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) must choose 1 cards to steal (targets : {
+- LUCHATAUR ;
+- SHIELD BUGS ;
+- CHAMELEON SNIPER ;
+- HAMSTER LION ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:06.123 INFO  - New TARGET choice to be resolved by Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) (targets : {
+- LUCHATAUR ;
+- SHIELD BUGS ;
+- HAMSTER LION ;
+- KANGASAURUS REX ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:06.123 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.123 DEBUG - Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) must decide if stolen card HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570) will be added to hand or board
+2026-03-12 12:03:06.123 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (41863279-1348-4243-a65e-d3114d45170f)
+2026-03-12 12:03:06.123 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:06.123 DEBUG - HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570) stolen and drawn by Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) due to HUNGRY HUNGRY HAMSTER (41863279-1348-4243-a65e-d3114d45170f) effect
+2026-03-12 12:03:06.123 DEBUG - Player Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) must choose 1 card(s) to discard (available targets : {
+- SHIELD BUGS ;
+- CHAMELEON SNIPER ;
+- KANGASAURUS REX ;
+- PLATED SCORPION ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:06.123 INFO  - New TARGET choice to be resolved by Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) (targets : {
+- SHIELD BUGS ;
+- KANGASAURUS REX ;
+- PLATED SCORPION ;
+- CHAMELEON SNIPER ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:06.123 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.123 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) discarded due to TUSKED EXTORTER (f65e2790-ba1d-42b3-990d-a9a4049189d2) effect
+2026-03-12 12:03:06.123 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (f65e2790-ba1d-42b3-990d-a9a4049189d2)
+2026-03-12 12:03:06.123 DEBUG - COMPOST DRAGON (093ee036-8f3b-47a8-98e0-22d90ee60695) stolen and played by Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) due to GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532) effect
+2026-03-12 12:03:06.123 INFO  - Resolving STEAL effect of GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532)
+2026-03-12 12:03:06.123 DEBUG - Player Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) must choose 1 cards to steal (targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- KANGASAURUS REX ;
+- HYENIX
+})
+2026-03-12 12:03:06.123 INFO  - New TARGET choice to be resolved by Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) (targets : {
+- KANGASAURUS REX ;
+- HUNGRY HUNGRY HAMSTER ;
+- HYENIX
+})
+2026-03-12 12:03:06.123 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.124 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) stolen and played by Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) due to COMPOST DRAGON (093ee036-8f3b-47a8-98e0-22d90ee60695) effect
+2026-03-12 12:03:06.124 INFO  - Resolving STEAL effect of COMPOST DRAGON (093ee036-8f3b-47a8-98e0-22d90ee60695)
+2026-03-12 12:03:06.124 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) effect destroys HUNGRY HUNGRY HAMSTER (41863279-1348-4243-a65e-d3114d45170f)
+2026-03-12 12:03:06.124 INFO  - Resolving DESTROY effect of KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88)
+2026-03-12 12:03:06.124 DEBUG - Player Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) must choose 2 card(s) to discard (available targets : {
+- FROBLIN INSTIGATOR ;
+- TUSKED EXTORTER ;
+- THE LURKER ;
+- THE LURKER ;
+- FERRET PACIFIER ;
+- HAMSTER LION
+})
+2026-03-12 12:03:06.124 INFO  - New TARGET choice to be resolved by Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) (targets : {
+- FROBLIN INSTIGATOR ;
+- HAMSTER LION ;
+- THE LURKER ;
+- THE LURKER ;
+- FERRET PACIFIER ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:06.124 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.124 DEBUG - THE LURKER (69bbe7b7-50f9-4aca-b496-f65ccfa3684c) discarded due to FERRET BOMBER (4ebad697-77dc-4ea6-bf62-2ad2c2bd337d) effect
+2026-03-12 12:03:06.124 DEBUG - FERRET PACIFIER (3a84d342-7def-4819-b8aa-9efa94acb877) discarded due to FERRET BOMBER (4ebad697-77dc-4ea6-bf62-2ad2c2bd337d) effect
+2026-03-12 12:03:06.125 INFO  - Resolving DISCARD effect of FERRET BOMBER (4ebad697-77dc-4ea6-bf62-2ad2c2bd337d)
+2026-03-12 12:03:06.125 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 9) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.125 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.125 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 9) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.125 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.125 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 9) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.125 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.125 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.125 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.125 DEBUG - FERRET BOMBER (4ebad697-77dc-4ea6-bf62-2ad2c2bd337d) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.125 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.125 DEBUG - CHAMELEON SNIPER (3842d6e9-258a-46a2-99e1-811319ab0703) power changed (1 -> 2) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.125 DEBUG - GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.125 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.125 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 9) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.125 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.125 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.125 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.125 DEBUG - FERRET BOMBER (4ebad697-77dc-4ea6-bf62-2ad2c2bd337d) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.125 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.125 DEBUG - CHAMELEON SNIPER (3842d6e9-258a-46a2-99e1-811319ab0703) power changed (1 -> 2) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.125 DEBUG - GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.125 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.125 INFO  - Life update for player Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) : 1 LP
+2026-03-12 12:03:06.125 DEBUG - Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) LP changed (2 -> 1) due to COUNT DRACULEECH (56a8db63-2075-4184-8b67-3343140c8e5b) effect
+2026-03-12 12:03:06.125 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (56a8db63-2075-4184-8b67-3343140c8e5b)
+2026-03-12 12:03:06.125 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 9) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.125 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.126 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.126 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.126 DEBUG - FERRET BOMBER (4ebad697-77dc-4ea6-bf62-2ad2c2bd337d) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.126 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.126 DEBUG - CHAMELEON SNIPER (3842d6e9-258a-46a2-99e1-811319ab0703) power changed (1 -> 2) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.126 DEBUG - GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.126 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.126 DEBUG - Player Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) must choose 1 card(s) to destroy (available targets : {
+- LUCHATAUR ;
+- GRAVE ROBBER ;
+- KANGASAURUS REX ;
+- FERRET BOMBER ;
+- CHAMELEON SNIPER ;
+- PLATED SCORPION ;
+- SHIELD BUGS ;
+- COUNT DRACULEECH ;
+- TUSKED EXTORTER ;
+- GRAVE ROBBER ;
+- THE LURKER ;
+- FROBLIN INSTIGATOR
+})
+2026-03-12 12:03:06.126 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 9) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.126 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.126 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.126 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.126 DEBUG - FERRET BOMBER (4ebad697-77dc-4ea6-bf62-2ad2c2bd337d) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.126 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.126 DEBUG - CHAMELEON SNIPER (3842d6e9-258a-46a2-99e1-811319ab0703) power changed (1 -> 2) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.126 DEBUG - GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.126 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.126 INFO  - New TARGET choice to be resolved by Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) (targets : {
+- FROBLIN INSTIGATOR ;
+- LUCHATAUR ;
+- KANGASAURUS REX ;
+- SHIELD BUGS ;
+- FERRET BOMBER ;
+- PLATED SCORPION ;
+- THE LURKER ;
+- CHAMELEON SNIPER ;
+- COUNT DRACULEECH ;
+- GRAVE ROBBER ;
+- TUSKED EXTORTER ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:06.126 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.126 DEBUG - COUNT DRACULEECH (56a8db63-2075-4184-8b67-3343140c8e5b) effect destroys FERRET BOMBER (4ebad697-77dc-4ea6-bf62-2ad2c2bd337d)
+2026-03-12 12:03:06.126 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (56a8db63-2075-4184-8b67-3343140c8e5b)
+2026-03-12 12:03:06.126 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 9) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.126 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.127 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - CHAMELEON SNIPER (3842d6e9-258a-46a2-99e1-811319ab0703) power changed (1 -> 2) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.127 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 7) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.127 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.127 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - CHAMELEON SNIPER (3842d6e9-258a-46a2-99e1-811319ab0703) power changed (1 -> 2) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.127 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 7) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.127 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.127 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - CHAMELEON SNIPER (3842d6e9-258a-46a2-99e1-811319ab0703) power changed (1 -> 2) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.127 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 5) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.127 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.127 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - CHAMELEON SNIPER (3842d6e9-258a-46a2-99e1-811319ab0703) power changed (1 -> 2) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.127 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 5) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.127 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.127 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - CHAMELEON SNIPER (3842d6e9-258a-46a2-99e1-811319ab0703) power changed (1 -> 2) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 DEBUG - GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.127 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.127 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (f65e2790-ba1d-42b3-990d-a9a4049189d2)
+2026-03-12 12:03:06.128 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 5) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.128 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - CHAMELEON SNIPER (3842d6e9-258a-46a2-99e1-811319ab0703) power changed (1 -> 2) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.128 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 5) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.128 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.128 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 5) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.128 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - GRAVE ROBBER (8d676e73-86b6-4a8b-b3f6-ca5f6aa9f532) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.128 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 3) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.128 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.128 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 3) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.128 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.128 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 5) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.128 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.128 DEBUG - CardInstance(uuid=1d20ce0b-e965-4057-a3f8-8332e173a807, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4203529f), power=3, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.128 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570)
+2026-03-12 12:03:06.128 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 5) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.128 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.128 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.128 DEBUG - CardInstance(uuid=1d20ce0b-e965-4057-a3f8-8332e173a807, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4203529f), power=3, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.129 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570)
+2026-03-12 12:03:06.129 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 5) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.129 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.129 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.129 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.129 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.129 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.129 DEBUG - CardInstance(uuid=1d20ce0b-e965-4057-a3f8-8332e173a807, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4203529f), power=3, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.129 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570)
+2026-03-12 12:03:06.129 INFO  - New FRENZY choice to be resolved by Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) (attackingCard : LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130))
+2026-03-12 12:03:06.129 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.129 DEBUG - FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) power changed (1 -> 5) due to FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b) effect
+2026-03-12 12:03:06.129 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (d6bb2bcb-d4f7-4b5d-a7ff-bc95993b149b)
+2026-03-12 12:03:06.129 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.129 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.129 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.129 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.129 DEBUG - CardInstance(uuid=1d20ce0b-e965-4057-a3f8-8332e173a807, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4203529f), power=3, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.130 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570)
+2026-03-12 12:03:06.130 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.130 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.130 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.130 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.130 DEBUG - CardInstance(uuid=1d20ce0b-e965-4057-a3f8-8332e173a807, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4203529f), power=3, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.130 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570)
+2026-03-12 12:03:06.130 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.130 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.130 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.130 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.130 DEBUG - CardInstance(uuid=1d20ce0b-e965-4057-a3f8-8332e173a807, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4203529f), power=3, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.130 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570)
+2026-03-12 12:03:06.131 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.131 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.131 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.131 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.131 DEBUG - CardInstance(uuid=1d20ce0b-e965-4057-a3f8-8332e173a807, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4203529f), power=3, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.131 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570)
+2026-03-12 12:03:06.131 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.131 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.131 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.131 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.131 DEBUG - CardInstance(uuid=1d20ce0b-e965-4057-a3f8-8332e173a807, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4203529f), power=3, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.131 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570)
+2026-03-12 12:03:06.131 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.131 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.131 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.131 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.131 DEBUG - CardInstance(uuid=1d20ce0b-e965-4057-a3f8-8332e173a807, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4203529f), power=3, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.131 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570)
+2026-03-12 12:03:06.131 DEBUG - LUCHATAUR (1d0cccb9-0b08-4ebf-b061-b9ffc9ed9130) power changed (9 -> 10) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.131 DEBUG - KANGASAURUS REX (5aa89632-4a6e-4c76-8d4e-61d0a1a7ed88) power changed (7 -> 8) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.132 DEBUG - PLATED SCORPION (1d20ce0b-e965-4057-a3f8-8332e173a807) power changed (2 -> 3) due to SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620) effect
+2026-03-12 12:03:06.132 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f109bad5-df6f-4eba-a203-49d91b60e620)
+2026-03-12 12:03:06.132 DEBUG - CardInstance(uuid=1d20ce0b-e965-4057-a3f8-8332e173a807, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4203529f), power=3, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.132 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570)
+2026-03-12 12:03:06.132 DEBUG - CardInstance(uuid=1d20ce0b-e965-4057-a3f8-8332e173a807, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4203529f), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.132 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570)
+2026-03-12 12:03:06.132 INFO  - New FRENZY choice to be resolved by Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) (attackingCard : HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570))
+2026-03-12 12:03:06.132 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.132 DEBUG - CardInstance(uuid=1d20ce0b-e965-4057-a3f8-8332e173a807, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4203529f), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.132 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (a97dd022-e417-43d5-98d2-978bbc070570)
+2026-03-12 12:03:06.132 INFO  - Game over : Player2 (68c316b0-afd8-4c85-b70d-c5d79f522007) wins ; Player1 (5565f9a3-6d41-4d09-83bc-8524bcac8b59) loses.
+2026-03-12 12:03:06.132 INFO  - End of the game

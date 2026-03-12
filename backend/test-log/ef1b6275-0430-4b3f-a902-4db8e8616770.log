@@ -1,0 +1,194 @@
+2026-03-12 12:03:06.717 INFO  - Calculating first player...
+2026-03-12 12:03:06.718 INFO  - Banned card for Player1 (c8225ee9-60c6-46f9-a69a-2f1a0520104c) : HYENIX (d9a98314-1780-4282-ba03-61b62a183f9b) (7)
+2026-03-12 12:03:06.718 INFO  - Banned card for Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) : AXOLOTL HEALER (4b35e6c9-2674-417c-a278-0f7e4bd93dad) (4)
+2026-03-12 12:03:06.718 INFO  - First player will be Player1 (c8225ee9-60c6-46f9-a69a-2f1a0520104c)
+2026-03-12 12:03:06.726 INFO  - Game ef1b6275-0430-4b3f-a902-4db8e8616770 starting...
+2026-03-12 12:03:06.726 INFO  - Player Player1 (c8225ee9-60c6-46f9-a69a-2f1a0520104c) hand : {
+- GRAVE ROBBER ;
+- SHIELD BUGS ;
+- SHIELD BUGS ;
+- BEE BEAR ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:06.726 INFO  - Player Player1 (c8225ee9-60c6-46f9-a69a-2f1a0520104c) draw pile : {
+- COMPOST DRAGON ;
+- COUNT DRACULEECH ;
+- SHARK DOG ;
+- TIGER SQUIRREL ;
+- KILLER BEE
+}
+2026-03-12 12:03:06.726 INFO  - Player Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) hand : {
+- FROBLIN INSTIGATOR ;
+- MAJESTIC MANTICORE ;
+- COMPOST DRAGON ;
+- RHINO TURTLE ;
+- HARPY MOTHER
+}
+2026-03-12 12:03:06.726 INFO  - Player Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) draw pile : {
+- PLATED SCORPION ;
+- HAMSTER LION ;
+- EXPLOSIVE TOAD ;
+- LONE YETI ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:03:06.727 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.727 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.727 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.727 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.727 DEBUG - COMPOST DRAGON (50b001f3-28af-4ba3-b2c1-13ecd34ce32f) power changed (3 -> 4) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:06.727 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.727 DEBUG - COMPOST DRAGON (50b001f3-28af-4ba3-b2c1-13ecd34ce32f) power changed (3 -> 4) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:06.727 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.727 DEBUG - COMPOST DRAGON (50b001f3-28af-4ba3-b2c1-13ecd34ce32f) power changed (3 -> 4) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:06.727 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.727 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.727 INFO  - New FRENZY choice to be resolved by Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) (attackingCard : RHINO TURTLE (f4fe456a-ad78-443c-954b-4695ca313514))
+2026-03-12 12:03:06.727 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.727 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.727 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.727 DEBUG - MAJESTIC MANTICORE (44a7f8f5-9b3e-496d-980e-43aebda412f7) power changed (6 -> 7) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:06.727 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.727 DEBUG - MAJESTIC MANTICORE (44a7f8f5-9b3e-496d-980e-43aebda412f7) power changed (6 -> 7) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:06.727 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.727 DEBUG - MAJESTIC MANTICORE (44a7f8f5-9b3e-496d-980e-43aebda412f7) power changed (6 -> 7) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:06.727 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.728 DEBUG - MAJESTIC MANTICORE (44a7f8f5-9b3e-496d-980e-43aebda412f7) power changed (6 -> 7) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:06.728 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.728 DEBUG - MAJESTIC MANTICORE (44a7f8f5-9b3e-496d-980e-43aebda412f7) power changed (6 -> 7) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:06.728 DEBUG - SHARK DOG (58219dbb-a13a-49fc-9642-17ee672888b5) power changed (4 -> 5) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:06.728 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.728 DEBUG - MAJESTIC MANTICORE (44a7f8f5-9b3e-496d-980e-43aebda412f7) power changed (6 -> 7) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:06.728 DEBUG - SHARK DOG (58219dbb-a13a-49fc-9642-17ee672888b5) power changed (4 -> 5) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:06.728 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:06.728 DEBUG - MAJESTIC MANTICORE (44a7f8f5-9b3e-496d-980e-43aebda412f7) power changed (6 -> 7) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:07.871 DEBUG - SHARK DOG (58219dbb-a13a-49fc-9642-17ee672888b5) power changed (4 -> 5) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:07.871 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:07.871 INFO  - New FRENZY choice to be resolved by Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) (attackingCard : RHINO TURTLE (f4fe456a-ad78-443c-954b-4695ca313514))
+2026-03-12 12:03:07.871 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:07.871 DEBUG - MAJESTIC MANTICORE (44a7f8f5-9b3e-496d-980e-43aebda412f7) power changed (6 -> 7) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:07.871 DEBUG - SHARK DOG (58219dbb-a13a-49fc-9642-17ee672888b5) power changed (4 -> 5) due to SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136) effect
+2026-03-12 12:03:07.871 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8298d95e-3f79-4a24-9e2a-fac95c71c136)
+2026-03-12 12:03:07.871 DEBUG - FROBLIN INSTIGATOR (0c4c991b-8b85-4664-b550-23487951c3fc) power changed (1 -> 5) due to FROBLIN INSTIGATOR (0c4c991b-8b85-4664-b550-23487951c3fc) effect
+2026-03-12 12:03:07.871 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (0c4c991b-8b85-4664-b550-23487951c3fc)
+2026-03-12 12:03:07.872 DEBUG - FROBLIN INSTIGATOR (0c4c991b-8b85-4664-b550-23487951c3fc) power changed (1 -> 5) due to FROBLIN INSTIGATOR (0c4c991b-8b85-4664-b550-23487951c3fc) effect
+2026-03-12 12:03:07.872 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (0c4c991b-8b85-4664-b550-23487951c3fc)
+2026-03-12 12:03:07.872 DEBUG - MAJESTIC MANTICORE (44a7f8f5-9b3e-496d-980e-43aebda412f7) effect destroys PLATED SCORPION (84f09055-cf9c-4609-b51e-2c0c7c9e4ecf)
+2026-03-12 12:03:07.872 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (44a7f8f5-9b3e-496d-980e-43aebda412f7)
+2026-03-12 12:03:07.872 DEBUG - FROBLIN INSTIGATOR (0c4c991b-8b85-4664-b550-23487951c3fc) power changed (1 -> 5) due to FROBLIN INSTIGATOR (0c4c991b-8b85-4664-b550-23487951c3fc) effect
+2026-03-12 12:03:07.872 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (0c4c991b-8b85-4664-b550-23487951c3fc)
+2026-03-12 12:03:07.872 DEBUG - CardInstance(uuid=58219dbb-a13a-49fc-9642-17ee672888b5, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7ebaf0d), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.872 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bfab2337-20f4-4942-a12b-72c64698980a)
+2026-03-12 12:03:07.872 DEBUG - CardInstance(uuid=58219dbb-a13a-49fc-9642-17ee672888b5, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7ebaf0d), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.872 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bfab2337-20f4-4942-a12b-72c64698980a)
+2026-03-12 12:03:07.872 DEBUG - CardInstance(uuid=58219dbb-a13a-49fc-9642-17ee672888b5, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7ebaf0d), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.872 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bfab2337-20f4-4942-a12b-72c64698980a)
+2026-03-12 12:03:07.872 DEBUG - CardInstance(uuid=58219dbb-a13a-49fc-9642-17ee672888b5, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7ebaf0d), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.872 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bfab2337-20f4-4942-a12b-72c64698980a)
+2026-03-12 12:03:07.872 DEBUG - CardInstance(uuid=58219dbb-a13a-49fc-9642-17ee672888b5, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7ebaf0d), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.872 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bfab2337-20f4-4942-a12b-72c64698980a)
+2026-03-12 12:03:07.872 INFO  - New FRENZY choice to be resolved by Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) (attackingCard : HAMSTER LION (bfab2337-20f4-4942-a12b-72c64698980a))
+2026-03-12 12:03:07.872 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:07.872 DEBUG - CardInstance(uuid=58219dbb-a13a-49fc-9642-17ee672888b5, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7ebaf0d), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.872 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bfab2337-20f4-4942-a12b-72c64698980a)
+2026-03-12 12:03:07.872 DEBUG - SHARK DOG (58219dbb-a13a-49fc-9642-17ee672888b5) effect destroys RHINO TURTLE (f4fe456a-ad78-443c-954b-4695ca313514)
+2026-03-12 12:03:07.872 INFO  - Resolving DESTROY effect of SHARK DOG (58219dbb-a13a-49fc-9642-17ee672888b5)
+2026-03-12 12:03:07.872 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:07.872 INFO  - Life update for player Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) : 2 LP
+2026-03-12 12:03:07.872 INFO  - New FRENZY choice to be resolved by Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) (attackingCard : EXPLOSIVE TOAD (be1278f0-eb96-474e-b61c-b8e6af6f1635))
+2026-03-12 12:03:07.872 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:07.872 INFO  - Life update for player Player1 (c8225ee9-60c6-46f9-a69a-2f1a0520104c) : 2 LP
+2026-03-12 12:03:07.872 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.872 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 DEBUG - Player Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) must choose 1 cards to steal (targets : {
+- FROBLIN INSTIGATOR ;
+- HAMSTER LION ;
+- PLATED SCORPION ;
+- RHINO TURTLE ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:03:07.873 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 INFO  - New TARGET choice to be resolved by Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) (targets : {
+- FROBLIN INSTIGATOR ;
+- PLATED SCORPION ;
+- HAMSTER LION ;
+- MAJESTIC MANTICORE ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:07.873 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:07.873 DEBUG - PLATED SCORPION (84f09055-cf9c-4609-b51e-2c0c7c9e4ecf) stolen and played by Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) due to COMPOST DRAGON (8e3b140d-1941-4b18-8757-9a4d5c6854bf) effect
+2026-03-12 12:03:07.873 INFO  - Resolving STEAL effect of COMPOST DRAGON (8e3b140d-1941-4b18-8757-9a4d5c6854bf)
+2026-03-12 12:03:07.873 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 INFO  - Life update for player Player1 (c8225ee9-60c6-46f9-a69a-2f1a0520104c) : 1 LP
+2026-03-12 12:03:07.873 DEBUG - Player1 (c8225ee9-60c6-46f9-a69a-2f1a0520104c) LP changed (2 -> 1) due to COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) effect
+2026-03-12 12:03:07.873 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e)
+2026-03-12 12:03:07.873 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 DEBUG - Player Player1 (c8225ee9-60c6-46f9-a69a-2f1a0520104c) must choose 1 card(s) to destroy (available targets : {
+- EXPLOSIVE TOAD ;
+- LONE YETI ;
+- COMPOST DRAGON ;
+- PLATED SCORPION ;
+- SHIELD BUGS ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:07.873 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 INFO  - New TARGET choice to be resolved by Player1 (c8225ee9-60c6-46f9-a69a-2f1a0520104c) (targets : {
+- COMPOST DRAGON ;
+- PLATED SCORPION ;
+- SHIELD BUGS ;
+- EXPLOSIVE TOAD ;
+- COUNT DRACULEECH ;
+- LONE YETI
+})
+2026-03-12 12:03:07.873 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:07.873 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) effect destroys SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e)
+2026-03-12 12:03:07.873 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 DEBUG - Player Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) must choose 1 card(s) to destroy (available targets : {
+- SHIELD BUGS ;
+- COUNT DRACULEECH ;
+- LONE YETI ;
+- COMPOST DRAGON ;
+- PLATED SCORPION
+})
+2026-03-12 12:03:07.873 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.873 INFO  - New TARGET choice to be resolved by Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) (targets : {
+- COMPOST DRAGON ;
+- SHIELD BUGS ;
+- PLATED SCORPION ;
+- COUNT DRACULEECH ;
+- LONE YETI
+})
+2026-03-12 12:03:07.873 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:07.873 DEBUG - EXPLOSIVE TOAD (be1278f0-eb96-474e-b61c-b8e6af6f1635) effect destroys LONE YETI (d3da7f34-513a-43d9-979b-6920d721f7ca)
+2026-03-12 12:03:07.873 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (be1278f0-eb96-474e-b61c-b8e6af6f1635)
+2026-03-12 12:03:07.874 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.874 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.874 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.874 DEBUG - COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) power changed (7 -> 8) due to SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b) effect
+2026-03-12 12:03:07.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (1efa8406-bf6c-4800-9d6f-741d728a664b)
+2026-03-12 12:03:07.874 INFO  - Life update for player Player1 (c8225ee9-60c6-46f9-a69a-2f1a0520104c) : 0 LP
+2026-03-12 12:03:07.874 INFO  - Game over : Player2 (d3040343-6cdd-4000-9810-9cd250665bf0) wins ; Player1 (c8225ee9-60c6-46f9-a69a-2f1a0520104c) loses.
+2026-03-12 12:03:07.874 INFO  - End of the game
+2026-03-12 12:03:07.874 DEBUG - Player1 (c8225ee9-60c6-46f9-a69a-2f1a0520104c) LP changed (1 -> 0) due to COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e) effect
+2026-03-12 12:03:07.874 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (fff88bdd-f8bb-4b58-96c9-18de2a85369e)

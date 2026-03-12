@@ -1,0 +1,146 @@
+2026-03-12 12:03:46.534 INFO  - Calculating first player...
+2026-03-12 12:03:46.535 INFO  - Banned card for Player1 (068cd041-c2b6-4e99-bbc7-a16118f30fde) : KILLER BEE (9236b841-d268-44e1-a669-466c48990603) (5)
+2026-03-12 12:03:46.535 INFO  - Banned card for Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) : SNAIL HYDRA (836cf93d-60b0-4fbc-a866-26512fbef6ba) (9)
+2026-03-12 12:03:46.535 INFO  - First player will be Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca)
+2026-03-12 12:03:46.540 INFO  - Game 6f131c74-8436-4625-a8ea-a0d1677c4a57 starting...
+2026-03-12 12:03:46.540 INFO  - Player Player1 (068cd041-c2b6-4e99-bbc7-a16118f30fde) hand : {
+- SHIELD BUGS ;
+- LONE YETI ;
+- EXPLOSIVE TOAD ;
+- TIGER SQUIRREL ;
+- SNAIL HYDRA
+}
+2026-03-12 12:03:46.540 INFO  - Player Player1 (068cd041-c2b6-4e99-bbc7-a16118f30fde) draw pile : {
+- RHINO TURTLE ;
+- URCHIN HURLER ;
+- TIGER SQUIRREL ;
+- FERRET PACIFIER ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:03:46.540 INFO  - Player Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) hand : {
+- SHARK DOG ;
+- HYENIX ;
+- BRAIN FLY ;
+- GOREAGLE ALPHA ;
+- MYSTERIOUS MERMAID
+}
+2026-03-12 12:03:46.540 INFO  - Player Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) draw pile : {
+- MAJESTIC MANTICORE ;
+- RHINO TURTLE ;
+- FROBLIN INSTIGATOR ;
+- FERRET BOMBER ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:03:46.540 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) power changed (5 -> 10) due to LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) effect
+2026-03-12 12:03:46.540 INFO  - Resolving POWER_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.540 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) gains FRENZY keyword
+2026-03-12 12:03:46.540 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.540 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) power changed (5 -> 10) due to LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) effect
+2026-03-12 12:03:46.540 INFO  - Resolving POWER_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.540 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) gains FRENZY keyword
+2026-03-12 12:03:46.540 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.540 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) power changed (5 -> 10) due to LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) effect
+2026-03-12 12:03:46.540 INFO  - Resolving POWER_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.540 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) gains FRENZY keyword
+2026-03-12 12:03:46.541 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.541 INFO  - Life update for player Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) : 2 LP
+2026-03-12 12:03:46.541 DEBUG - Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) LP changed (3 -> 2) due to GOREAGLE ALPHA (476f8568-5770-4502-ac9a-877f9dc918e8) effect
+2026-03-12 12:03:46.541 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (476f8568-5770-4502-ac9a-877f9dc918e8)
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) power changed (5 -> 10) due to LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) effect
+2026-03-12 12:03:46.541 INFO  - Resolving POWER_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) gains FRENZY keyword
+2026-03-12 12:03:46.541 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) power changed (5 -> 10) due to LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) effect
+2026-03-12 12:03:46.541 INFO  - Resolving POWER_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) gains FRENZY keyword
+2026-03-12 12:03:46.541 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) power changed (5 -> 6) due to SHIELD BUGS (816b36eb-c263-4acb-8241-dceaa8d752e6) effect
+2026-03-12 12:03:46.541 INFO  - Resolving POWER_UP effect of SHIELD BUGS (816b36eb-c263-4acb-8241-dceaa8d752e6)
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) power changed (5 -> 6) due to SHIELD BUGS (816b36eb-c263-4acb-8241-dceaa8d752e6) effect
+2026-03-12 12:03:46.541 INFO  - Resolving POWER_UP effect of SHIELD BUGS (816b36eb-c263-4acb-8241-dceaa8d752e6)
+2026-03-12 12:03:46.541 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) power changed (5 -> 6) due to SHIELD BUGS (816b36eb-c263-4acb-8241-dceaa8d752e6) effect
+2026-03-12 12:03:46.541 INFO  - Resolving POWER_UP effect of SHIELD BUGS (816b36eb-c263-4acb-8241-dceaa8d752e6)
+2026-03-12 12:03:46.541 INFO  - New FRENZY choice to be resolved by Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) (attackingCard : GOREAGLE ALPHA (476f8568-5770-4502-ac9a-877f9dc918e8))
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) power changed (5 -> 6) due to SHIELD BUGS (816b36eb-c263-4acb-8241-dceaa8d752e6) effect
+2026-03-12 12:03:46.541 INFO  - Resolving POWER_UP effect of SHIELD BUGS (816b36eb-c263-4acb-8241-dceaa8d752e6)
+2026-03-12 12:03:46.541 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) power changed (5 -> 6) due to SHIELD BUGS (816b36eb-c263-4acb-8241-dceaa8d752e6) effect
+2026-03-12 12:03:46.541 INFO  - Resolving POWER_UP effect of SHIELD BUGS (816b36eb-c263-4acb-8241-dceaa8d752e6)
+2026-03-12 12:03:46.541 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) power changed (5 -> 10) due to LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) effect
+2026-03-12 12:03:46.541 INFO  - Resolving POWER_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) gains FRENZY keyword
+2026-03-12 12:03:46.541 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) power changed (5 -> 10) due to LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) effect
+2026-03-12 12:03:46.541 INFO  - Resolving POWER_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) gains FRENZY keyword
+2026-03-12 12:03:46.541 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) power changed (5 -> 10) due to LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) effect
+2026-03-12 12:03:46.541 INFO  - Resolving POWER_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.541 DEBUG - LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de) gains FRENZY keyword
+2026-03-12 12:03:46.541 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4d36b98a-2420-44c0-a9db-4f100d0b83de)
+2026-03-12 12:03:46.541 INFO  - New FRENZY choice to be resolved by Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) (attackingCard : HYENIX (c402dddd-474f-4dbc-8405-efdc2d893a91))
+2026-03-12 12:03:46.541 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.541 DEBUG - Player Player1 (068cd041-c2b6-4e99-bbc7-a16118f30fde) must choose 1 card(s) to destroy (available targets : {
+- HYENIX ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:46.541 INFO  - New TARGET choice to be resolved by Player1 (068cd041-c2b6-4e99-bbc7-a16118f30fde) (targets : {
+- GOREAGLE ALPHA ;
+- HYENIX
+})
+2026-03-12 12:03:46.541 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.542 DEBUG - EXPLOSIVE TOAD (da66f4e0-ca01-4b50-ab5b-0d85eff2b7a6) effect destroys GOREAGLE ALPHA (476f8568-5770-4502-ac9a-877f9dc918e8)
+2026-03-12 12:03:46.542 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (da66f4e0-ca01-4b50-ab5b-0d85eff2b7a6)
+2026-03-12 12:03:46.542 INFO  - New FRENZY choice to be resolved by Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) (attackingCard : HYENIX (c402dddd-474f-4dbc-8405-efdc2d893a91))
+2026-03-12 12:03:46.542 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.542 INFO  - Life update for player Player1 (068cd041-c2b6-4e99-bbc7-a16118f30fde) : 2 LP
+2026-03-12 12:03:46.542 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.542 DEBUG - Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) LP changed (2 -> 2) due to MYSTERIOUS MERMAID (78d6a071-d5aa-4059-b9ea-c96cb1fa33af) effect
+2026-03-12 12:03:46.542 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (78d6a071-d5aa-4059-b9ea-c96cb1fa33af)
+2026-03-12 12:03:46.542 DEBUG - SNAIL HYDRA (2fd0a50b-68fc-4411-93d6-7c44abd88fed) power changed (9 -> 11) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 DEBUG - RHINO TURTLE (a735ca00-4971-4966-9f1d-e45818144d06) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 DEBUG - TUSKED EXTORTER (3a15caf9-3c51-47c1-a861-b5087b28f738) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 INFO  - Resolving POWER_UP effect of URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539)
+2026-03-12 12:03:46.542 DEBUG - SNAIL HYDRA (2fd0a50b-68fc-4411-93d6-7c44abd88fed) power changed (9 -> 11) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 DEBUG - RHINO TURTLE (a735ca00-4971-4966-9f1d-e45818144d06) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 DEBUG - TUSKED EXTORTER (3a15caf9-3c51-47c1-a861-b5087b28f738) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 INFO  - Resolving POWER_UP effect of URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539)
+2026-03-12 12:03:46.542 INFO  - Life update for player Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) : 1 LP
+2026-03-12 12:03:46.542 DEBUG - SNAIL HYDRA (2fd0a50b-68fc-4411-93d6-7c44abd88fed) power changed (9 -> 11) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 DEBUG - RHINO TURTLE (a735ca00-4971-4966-9f1d-e45818144d06) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 DEBUG - TUSKED EXTORTER (3a15caf9-3c51-47c1-a861-b5087b28f738) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 INFO  - Resolving POWER_UP effect of URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539)
+2026-03-12 12:03:46.542 DEBUG - Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) must decide if HYENIX (c402dddd-474f-4dbc-8405-efdc2d893a91) will revive
+2026-03-12 12:03:46.542 DEBUG - SNAIL HYDRA (2fd0a50b-68fc-4411-93d6-7c44abd88fed) power changed (9 -> 11) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 DEBUG - RHINO TURTLE (a735ca00-4971-4966-9f1d-e45818144d06) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 DEBUG - TUSKED EXTORTER (3a15caf9-3c51-47c1-a861-b5087b28f738) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 INFO  - Resolving POWER_UP effect of URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539)
+2026-03-12 12:03:46.542 INFO  - New BOOLEAN choice to be resolved by Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) (target : )
+2026-03-12 12:03:46.542 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:46.542 DEBUG - SNAIL HYDRA (2fd0a50b-68fc-4411-93d6-7c44abd88fed) power changed (9 -> 11) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 DEBUG - RHINO TURTLE (a735ca00-4971-4966-9f1d-e45818144d06) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.542 DEBUG - TUSKED EXTORTER (3a15caf9-3c51-47c1-a861-b5087b28f738) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.543 INFO  - Resolving POWER_UP effect of URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539)
+2026-03-12 12:03:46.543 DEBUG - SNAIL HYDRA (2fd0a50b-68fc-4411-93d6-7c44abd88fed) power changed (9 -> 11) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.543 DEBUG - RHINO TURTLE (a735ca00-4971-4966-9f1d-e45818144d06) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.543 DEBUG - TUSKED EXTORTER (3a15caf9-3c51-47c1-a861-b5087b28f738) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.543 INFO  - Resolving POWER_UP effect of URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539)
+2026-03-12 12:03:46.543 DEBUG - SNAIL HYDRA (2fd0a50b-68fc-4411-93d6-7c44abd88fed) power changed (9 -> 11) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.543 DEBUG - RHINO TURTLE (a735ca00-4971-4966-9f1d-e45818144d06) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.543 DEBUG - TUSKED EXTORTER (3a15caf9-3c51-47c1-a861-b5087b28f738) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.543 DEBUG - TIGER SQUIRREL (957cd781-6829-46d1-a5be-e9401dbc77e1) power changed (3 -> 5) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.543 INFO  - Resolving POWER_UP effect of URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539)
+2026-03-12 12:03:46.543 DEBUG - SNAIL HYDRA (2fd0a50b-68fc-4411-93d6-7c44abd88fed) power changed (9 -> 11) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.543 DEBUG - RHINO TURTLE (a735ca00-4971-4966-9f1d-e45818144d06) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.543 DEBUG - TUSKED EXTORTER (3a15caf9-3c51-47c1-a861-b5087b28f738) power changed (8 -> 10) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.543 DEBUG - TIGER SQUIRREL (957cd781-6829-46d1-a5be-e9401dbc77e1) power changed (3 -> 5) due to URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539) effect
+2026-03-12 12:03:46.543 INFO  - Resolving POWER_UP effect of URCHIN HURLER (95ea0a7d-ab25-48cd-8bcf-011f3d742539)
+2026-03-12 12:03:46.543 DEBUG - MAJESTIC MANTICORE (acc071cd-ac7e-485d-9ad2-e458fd14e79f) effect destroys TIGER SQUIRREL (957cd781-6829-46d1-a5be-e9401dbc77e1)
+2026-03-12 12:03:46.543 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (acc071cd-ac7e-485d-9ad2-e458fd14e79f)
+2026-03-12 12:03:46.543 INFO  - New FRENZY choice to be resolved by Player1 (068cd041-c2b6-4e99-bbc7-a16118f30fde) (attackingCard : RHINO TURTLE (a735ca00-4971-4966-9f1d-e45818144d06))
+2026-03-12 12:03:46.543 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.543 INFO  - Life update for player Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) : 0 LP
+2026-03-12 12:03:46.543 INFO  - Game over : Player1 (068cd041-c2b6-4e99-bbc7-a16118f30fde) wins ; Player2 (141d5e70-fb4e-405b-8543-e44097ad82ca) loses.
+2026-03-12 12:03:46.543 INFO  - End of the game

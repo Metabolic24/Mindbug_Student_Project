@@ -1,0 +1,565 @@
+2026-03-12 12:03:03.374 INFO  - Calculating first player...
+2026-03-12 12:03:03.377 INFO  - Banned card for Player1 (69019a26-d515-4456-9f95-cb6d9c121964) : TUSKED EXTORTER (a3f9932e-1bfe-4b2d-b8b9-e46c44ddc066) (8)
+2026-03-12 12:03:03.377 INFO  - Banned card for Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) : TURF THE SURFER (a140e5ca-9cd9-4fcd-b0ff-32da11deacac) (8)
+2026-03-12 12:03:03.377 INFO  - Banned card for Player1 (69019a26-d515-4456-9f95-cb6d9c121964) : LUCHATAUR (977aee76-9b3e-4a38-a9e3-d6b230990241) (9)
+2026-03-12 12:03:03.377 INFO  - Banned card for Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) : GOREAGLE ALPHA (5a745d31-9548-400e-b5d0-e84a2479a692) (6)
+2026-03-12 12:03:03.377 INFO  - First player will be Player1 (69019a26-d515-4456-9f95-cb6d9c121964)
+2026-03-12 12:03:03.385 INFO  - Game fb207951-50cf-4daa-ac03-f8aa7f3f12d8 starting...
+2026-03-12 12:03:03.385 INFO  - Player Player1 (69019a26-d515-4456-9f95-cb6d9c121964) hand : {
+- GORILLON ;
+- GOBLIN WEREWOLF ;
+- TURF THE SURFER ;
+- KILLER BEE ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:03.385 INFO  - Player Player1 (69019a26-d515-4456-9f95-cb6d9c121964) draw pile : {
+- SPIDER OWL ;
+- AXOLOTL HEALER ;
+- FROBLIN INSTIGATOR ;
+- KANGASAURUS REX ;
+- BRAIN FLY
+}
+2026-03-12 12:03:03.385 INFO  - Player Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) hand : {
+- HAMSTER LION ;
+- AXOLOTL HEALER ;
+- HARPY MOTHER ;
+- FERRET BOMBER ;
+- COUNT DRACULEECH
+}
+2026-03-12 12:03:03.385 INFO  - Player Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) draw pile : {
+- FERRET PACIFIER ;
+- HYENIX ;
+- COMPOST DRAGON ;
+- BEE BEAR ;
+- RHINO TURTLE
+}
+2026-03-12 12:03:03.385 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (5960ac8d-39d9-44ac-8b3d-3104c9ab1ac0)
+2026-03-12 12:03:03.385 INFO  - Life update for player Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) : 2 LP
+2026-03-12 12:03:03.385 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.386 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.386 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.386 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.386 INFO  - Life update for player Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) : 1 LP
+2026-03-12 12:03:03.386 DEBUG - Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) LP changed (2 -> 1) due to COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) effect
+2026-03-12 12:03:03.386 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37)
+2026-03-12 12:03:03.386 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.386 DEBUG - Player Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) must choose 1 card(s) to destroy (available targets : {
+- TURF THE SURFER ;
+- GORILLON ;
+- COUNT DRACULEECH ;
+- FERRET PACIFIER
+})
+2026-03-12 12:03:03.386 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.386 INFO  - New TARGET choice to be resolved by Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) (targets : {
+- TURF THE SURFER ;
+- COUNT DRACULEECH ;
+- GORILLON ;
+- FERRET PACIFIER
+})
+2026-03-12 12:03:03.386 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.386 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) effect destroys TURF THE SURFER (5960ac8d-39d9-44ac-8b3d-3104c9ab1ac0)
+2026-03-12 12:03:03.387 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37)
+2026-03-12 12:03:03.387 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.387 INFO  - Life update for player Player1 (69019a26-d515-4456-9f95-cb6d9c121964) : 2 LP
+2026-03-12 12:03:03.387 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.387 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.387 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.387 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.387 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.388 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.388 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.388 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.388 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.388 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.388 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.388 DEBUG - Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) LP changed (1 -> 3) due to AXOLOTL HEALER (b8119808-cf1b-4f29-9eb1-edc324822be9) effect
+2026-03-12 12:03:03.388 INFO  - Resolving GAIN effect of AXOLOTL HEALER (b8119808-cf1b-4f29-9eb1-edc324822be9)
+2026-03-12 12:03:03.388 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.388 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.388 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.388 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.388 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.389 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.389 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.389 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.389 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.389 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.389 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.389 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.389 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.389 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.389 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.389 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.389 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.389 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.390 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.390 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.390 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.390 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.390 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.391 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.391 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.391 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.391 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.391 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.391 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.391 DEBUG - GOBLIN WEREWOLF (e9d747d1-d93b-4f53-8953-8388b86bdaba) power changed (2 -> 3) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.391 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.391 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.392 DEBUG - GOBLIN WEREWOLF (e9d747d1-d93b-4f53-8953-8388b86bdaba) power changed (3 -> 9) due to GOBLIN WEREWOLF (e9d747d1-d93b-4f53-8953-8388b86bdaba) effect
+2026-03-12 12:03:03.392 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e9d747d1-d93b-4f53-8953-8388b86bdaba)
+2026-03-12 12:03:03.392 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.392 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.392 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.392 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.392 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.392 DEBUG - GOBLIN WEREWOLF (e9d747d1-d93b-4f53-8953-8388b86bdaba) power changed (2 -> 3) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.393 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.393 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.393 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.393 DEBUG - CardInstance(uuid=e9d747d1-d93b-4f53-8953-8388b86bdaba, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.393 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.393 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.393 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.393 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.393 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.393 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.394 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.394 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.394 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.394 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.394 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.394 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.394 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.394 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.395 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.395 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.395 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.395 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.395 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.395 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.395 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.395 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.396 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.396 DEBUG - Player Player1 (69019a26-d515-4456-9f95-cb6d9c121964) must choose 1 cards to steal (targets : {
+- COUNT DRACULEECH ;
+- HAMSTER LION
+})
+2026-03-12 12:03:03.396 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.396 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.396 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.396 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.396 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.396 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.396 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.396 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.396 INFO  - New TARGET choice to be resolved by Player1 (69019a26-d515-4456-9f95-cb6d9c121964) (targets : {
+- HAMSTER LION ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:03.397 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.397 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) stolen and played by Player1 (69019a26-d515-4456-9f95-cb6d9c121964) due to BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) effect
+2026-03-12 12:03:03.397 INFO  - Resolving STEAL effect of BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9)
+2026-03-12 12:03:03.397 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.397 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.397 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.397 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.397 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.397 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.397 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.397 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.397 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.398 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.398 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.398 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.398 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.398 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.398 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.398 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.398 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.398 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.398 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.398 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.398 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.398 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.399 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.399 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.399 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.399 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.399 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.399 DEBUG - Player Player1 (69019a26-d515-4456-9f95-cb6d9c121964) must choose 2 card(s) to discard (available targets : {
+- KILLER BEE ;
+- AXOLOTL HEALER ;
+- FROBLIN INSTIGATOR ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:03.399 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.399 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.399 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.399 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.399 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.399 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.399 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.400 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.400 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.400 INFO  - New TARGET choice to be resolved by Player1 (69019a26-d515-4456-9f95-cb6d9c121964) (targets : {
+- FROBLIN INSTIGATOR ;
+- AXOLOTL HEALER ;
+- KILLER BEE ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:03.400 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.400 DEBUG - FROBLIN INSTIGATOR (662b8a57-4261-4c17-9d89-88bda22eefb1) discarded due to FERRET BOMBER (4d462236-340a-4a39-9cb0-a1a19aff8e71) effect
+2026-03-12 12:03:03.400 DEBUG - KILLER BEE (db899a33-505b-405b-8990-1057f9c07fd7) discarded due to FERRET BOMBER (4d462236-340a-4a39-9cb0-a1a19aff8e71) effect
+2026-03-12 12:03:03.400 INFO  - Resolving DISCARD effect of FERRET BOMBER (4d462236-340a-4a39-9cb0-a1a19aff8e71)
+2026-03-12 12:03:03.400 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.401 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.401 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.401 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.401 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.401 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.401 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.401 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.401 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.401 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.402 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.402 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.402 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.402 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.402 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.402 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.402 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.403 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.403 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.403 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.403 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.403 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.403 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.403 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.403 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.403 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.404 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.404 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.404 DEBUG - Player1 (69019a26-d515-4456-9f95-cb6d9c121964) LP changed (2 -> 4) due to AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) effect
+2026-03-12 12:03:03.404 INFO  - Resolving GAIN effect of AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb)
+2026-03-12 12:03:03.404 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.404 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.404 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.404 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.404 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.405 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.405 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.405 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.405 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.405 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.405 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.405 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.405 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.405 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.405 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.405 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.405 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.405 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.406 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.406 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.406 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.407 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.407 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.407 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.407 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.407 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.407 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.407 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.407 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.408 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.408 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.408 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.408 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.408 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.408 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.408 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.408 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.408 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.408 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.408 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.409 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.409 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.409 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.409 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.409 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.409 DEBUG - KANGASAURUS REX (b27dd3e8-eb90-4072-909b-b85dc84cc9d2) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.409 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.409 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.409 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.409 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.409 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.409 DEBUG - KANGASAURUS REX (b27dd3e8-eb90-4072-909b-b85dc84cc9d2) effect destroys FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.409 DEBUG - KANGASAURUS REX (b27dd3e8-eb90-4072-909b-b85dc84cc9d2) effect destroys AXOLOTL HEALER (b8119808-cf1b-4f29-9eb1-edc324822be9)
+2026-03-12 12:03:03.410 DEBUG - KANGASAURUS REX (b27dd3e8-eb90-4072-909b-b85dc84cc9d2) effect destroys FERRET BOMBER (4d462236-340a-4a39-9cb0-a1a19aff8e71)
+2026-03-12 12:03:03.410 INFO  - Resolving DESTROY effect of KANGASAURUS REX (b27dd3e8-eb90-4072-909b-b85dc84cc9d2)
+2026-03-12 12:03:03.410 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.410 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.410 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.410 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.410 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.410 DEBUG - KANGASAURUS REX (b27dd3e8-eb90-4072-909b-b85dc84cc9d2) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.410 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.410 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.410 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.410 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.410 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.410 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.410 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.410 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.411 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.411 DEBUG - KANGASAURUS REX (b27dd3e8-eb90-4072-909b-b85dc84cc9d2) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.411 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.411 DEBUG - CardInstance(uuid=5927ac59-da34-412a-9b9d-5a16a3085aea, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.411 DEBUG - CardInstance(uuid=a5fe124a-0e29-4b36-ab26-0ea27845839b, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c972ae6), power=4, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:03.411 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (12802dee-a8f0-49f3-af56-943b71208544)
+2026-03-12 12:03:03.411 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.411 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.411 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.411 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.411 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.411 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.412 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.412 INFO  - Life update for player Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) : 2 LP
+2026-03-12 12:03:03.412 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.412 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.412 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.413 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.413 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.413 INFO  - Life update for player Player1 (69019a26-d515-4456-9f95-cb6d9c121964) : 3 LP
+2026-03-12 12:03:03.413 DEBUG - Player1 (69019a26-d515-4456-9f95-cb6d9c121964) LP changed (4 -> 3) due to COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) effect
+2026-03-12 12:03:03.413 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37)
+2026-03-12 12:03:03.413 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.413 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.413 DEBUG - Player Player1 (69019a26-d515-4456-9f95-cb6d9c121964) must choose 1 card(s) to destroy (available targets : {
+- HARPY MOTHER ;
+- RHINO TURTLE ;
+- GORILLON ;
+- SHIELD BUGS ;
+- SPIDER OWL ;
+- BRAIN FLY ;
+- COUNT DRACULEECH ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:03:03.414 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.414 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.414 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.414 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) power changed (7 -> 8) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.414 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.414 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.414 INFO  - New TARGET choice to be resolved by Player1 (69019a26-d515-4456-9f95-cb6d9c121964) (targets : {
+- SPIDER OWL ;
+- AXOLOTL HEALER ;
+- HARPY MOTHER ;
+- BRAIN FLY ;
+- RHINO TURTLE ;
+- SHIELD BUGS ;
+- COUNT DRACULEECH ;
+- GORILLON
+})
+2026-03-12 12:03:03.414 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.414 DEBUG - COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37) effect destroys COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37)
+2026-03-12 12:03:03.414 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (3ef43d7a-775f-4515-aaf5-7ae29848ce37)
+2026-03-12 12:03:03.414 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.414 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.414 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.414 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.414 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.414 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.414 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.414 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.414 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.414 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.415 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.415 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.415 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.415 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.415 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.415 DEBUG - Player Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) must choose 1 cards to steal (targets : {
+- FERRET PACIFIER ;
+- AXOLOTL HEALER ;
+- FERRET BOMBER ;
+- HAMSTER LION
+})
+2026-03-12 12:03:03.415 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.415 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.415 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.415 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.415 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.415 INFO  - New TARGET choice to be resolved by Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) (targets : {
+- AXOLOTL HEALER ;
+- HAMSTER LION ;
+- FERRET BOMBER ;
+- FERRET PACIFIER
+})
+2026-03-12 12:03:03.415 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.415 DEBUG - FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa) stolen and played by Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) due to COMPOST DRAGON (72b2ac79-9c68-48d3-a441-52365d1e6b5d) effect
+2026-03-12 12:03:03.415 INFO  - Resolving STEAL effect of COMPOST DRAGON (72b2ac79-9c68-48d3-a441-52365d1e6b5d)
+2026-03-12 12:03:03.415 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.415 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.415 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.416 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.416 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.416 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.416 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.416 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.416 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.416 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.416 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.416 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e13fa60c-1bbe-49c8-ac0e-502b46e77faa)
+2026-03-12 12:03:03.416 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.416 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.416 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.416 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.416 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.416 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.416 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.416 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.416 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.417 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.417 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.417 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.417 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.417 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.417 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.417 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.417 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.417 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.417 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.417 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.417 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.417 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.417 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.417 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.417 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.418 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.418 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.418 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.418 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.418 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.419 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.419 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.419 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.419 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.419 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.420 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.420 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.420 INFO  - Resolving NO_BLOCK effect of BEE BEAR (c70151cb-651d-416f-825c-ea13543bbf9d)
+2026-03-12 12:03:03.420 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.420 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.420 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.420 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.420 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.420 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.420 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.420 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.421 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.421 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.421 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.421 DEBUG - AXOLOTL HEALER (b2ea17ad-7d99-416a-beb4-f671b8ee62bb) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.421 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.421 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.421 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.421 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.421 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.421 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.421 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.421 DEBUG - Player Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) must choose 2 cards to steal (targets : {
+- SHIELD BUGS ;
+- SPIDER OWL ;
+- BRAIN FLY
+})
+2026-03-12 12:03:03.421 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) power changed (3 -> 4) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.421 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) power changed (4 -> 5) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.421 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.421 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.421 INFO  - New TARGET choice to be resolved by Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) (targets : {
+- SPIDER OWL ;
+- BRAIN FLY ;
+- SHIELD BUGS
+})
+2026-03-12 12:03:03.422 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.422 DEBUG - SPIDER OWL (a5fe124a-0e29-4b36-ab26-0ea27845839b) stolen and played by Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) due to HARPY MOTHER (e66d1162-eacc-4226-80bd-8582431e6351) effect
+2026-03-12 12:03:03.422 DEBUG - BRAIN FLY (e3c1918f-829d-4142-ba07-79d2b8d8a8e9) stolen and played by Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) due to HARPY MOTHER (e66d1162-eacc-4226-80bd-8582431e6351) effect
+2026-03-12 12:03:03.422 INFO  - Resolving STEAL effect of HARPY MOTHER (e66d1162-eacc-4226-80bd-8582431e6351)
+2026-03-12 12:03:03.422 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.423 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.423 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.423 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.423 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.423 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.423 INFO  - New FRENZY choice to be resolved by Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) (attackingCard : RHINO TURTLE (6474c607-900f-4788-ab33-31ca77d684cc))
+2026-03-12 12:03:03.423 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.423 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.423 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.423 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.423 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.424 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.424 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.424 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.424 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.424 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.424 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.424 INFO  - Life update for player Player1 (69019a26-d515-4456-9f95-cb6d9c121964) : 2 LP
+2026-03-12 12:03:03.424 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.424 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.424 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.424 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.424 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.425 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.425 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.425 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.425 INFO  - Life update for player Player1 (69019a26-d515-4456-9f95-cb6d9c121964) : 1 LP
+2026-03-12 12:03:03.425 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.425 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.425 DEBUG - GORILLON (167bb4f3-f6ff-4916-85ab-321f729d6c35) power changed (10 -> 11) due to SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea) effect
+2026-03-12 12:03:03.425 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.425 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.425 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5927ac59-da34-412a-9b9d-5a16a3085aea)
+2026-03-12 12:03:03.425 INFO  - Game over : Player1 (69019a26-d515-4456-9f95-cb6d9c121964) wins ; Player2 (340985a3-4e21-46e3-a86e-66e3081ac886) loses.
+2026-03-12 12:03:03.425 INFO  - End of the game

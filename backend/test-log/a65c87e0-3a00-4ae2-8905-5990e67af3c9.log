@@ -1,0 +1,147 @@
+2026-03-12 12:03:08.210 INFO  - Calculating first player...
+2026-03-12 12:03:08.212 INFO  - Banned card for Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) : BEE BEAR (85c0724e-daa5-4137-8b1c-e67a9adffafa) (8)
+2026-03-12 12:03:08.212 INFO  - Banned card for Player2 (76008d27-ed68-4d03-beea-d6ccdeaf39d7) : SNAIL HYDRA (fec2abd6-ea37-4658-b0a7-2b76e9420b86) (9)
+2026-03-12 12:03:08.212 INFO  - First player will be Player2 (76008d27-ed68-4d03-beea-d6ccdeaf39d7)
+2026-03-12 12:03:08.221 INFO  - Game a65c87e0-3a00-4ae2-8905-5990e67af3c9 starting...
+2026-03-12 12:03:08.221 INFO  - Player Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) hand : {
+- GOREAGLE ALPHA ;
+- GRAVE ROBBER ;
+- PLATED SCORPION ;
+- HUNGRY HUNGRY HAMSTER ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:08.222 INFO  - Player Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) draw pile : {
+- SHIELD BUGS ;
+- SHARK DOG ;
+- BUGSERKER ;
+- HYENIX ;
+- HAMSTER LION
+}
+2026-03-12 12:03:08.222 INFO  - Player Player2 (76008d27-ed68-4d03-beea-d6ccdeaf39d7) hand : {
+- TURF THE SURFER ;
+- SNAIL THROWER ;
+- KANGASAURUS REX ;
+- STRANGE BARREL ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:03:08.222 INFO  - Player Player2 (76008d27-ed68-4d03-beea-d6ccdeaf39d7) draw pile : {
+- FERRET BOMBER ;
+- DEATHWEAVER ;
+- FERRET PACIFIER ;
+- HYENIX ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:08.222 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.222 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.222 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.222 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.223 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.223 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.223 INFO  - New FRENZY choice to be resolved by Player2 (76008d27-ed68-4d03-beea-d6ccdeaf39d7) (attackingCard : EXPLOSIVE TOAD (c8fc67e9-d548-421d-8816-2ce0ac1191f5))
+2026-03-12 12:03:08.223 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:08.223 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.223 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.223 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.223 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.223 DEBUG - SHARK DOG (3a181f26-1005-4c99-8a27-578f34efa774) power changed (4 -> 5) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.223 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.223 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.223 DEBUG - SHARK DOG (3a181f26-1005-4c99-8a27-578f34efa774) power changed (4 -> 5) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.223 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.223 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.223 DEBUG - SHARK DOG (3a181f26-1005-4c99-8a27-578f34efa774) power changed (4 -> 5) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.223 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.223 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.223 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (52813aa0-ba4e-4279-b4df-a8dfdd4739e1)
+2026-03-12 12:03:08.223 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (52813aa0-ba4e-4279-b4df-a8dfdd4739e1)
+2026-03-12 12:03:08.223 DEBUG - SHARK DOG (3a181f26-1005-4c99-8a27-578f34efa774) power changed (4 -> 5) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.224 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.224 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.224 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (52813aa0-ba4e-4279-b4df-a8dfdd4739e1)
+2026-03-12 12:03:08.224 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (52813aa0-ba4e-4279-b4df-a8dfdd4739e1)
+2026-03-12 12:03:08.224 DEBUG - SHARK DOG (3a181f26-1005-4c99-8a27-578f34efa774) effect destroys TURF THE SURFER (e35bc2d4-8b41-4d3b-910a-40d4837b7dc8)
+2026-03-12 12:03:08.224 INFO  - Resolving DESTROY effect of SHARK DOG (3a181f26-1005-4c99-8a27-578f34efa774)
+2026-03-12 12:03:08.224 DEBUG - SHARK DOG (3a181f26-1005-4c99-8a27-578f34efa774) power changed (4 -> 5) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.224 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.224 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.224 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (52813aa0-ba4e-4279-b4df-a8dfdd4739e1)
+2026-03-12 12:03:08.224 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (52813aa0-ba4e-4279-b4df-a8dfdd4739e1)
+2026-03-12 12:03:08.224 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:08.224 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.224 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.224 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.224 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.224 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.224 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.224 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.224 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.224 DEBUG - Player Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) must choose 2 card(s) to discard (available targets : {
+- GOREAGLE ALPHA ;
+- PLATED SCORPION ;
+- HUNGRY HUNGRY HAMSTER ;
+- SHIELD BUGS ;
+- BUGSERKER
+})
+2026-03-12 12:03:08.224 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.224 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.224 INFO  - New TARGET choice to be resolved by Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) (targets : {
+- SHIELD BUGS ;
+- PLATED SCORPION ;
+- BUGSERKER ;
+- GOREAGLE ALPHA ;
+- HUNGRY HUNGRY HAMSTER
+})
+2026-03-12 12:03:08.224 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.225 DEBUG - SHIELD BUGS (1d33f20b-2270-4776-ad61-93c4e08685dd) discarded due to FERRET BOMBER (16615534-f1ad-47b8-a131-2315c71be54c) effect
+2026-03-12 12:03:08.225 DEBUG - BUGSERKER (3fbcf235-ca17-47d4-9bbe-db4b627776a1) discarded due to FERRET BOMBER (16615534-f1ad-47b8-a131-2315c71be54c) effect
+2026-03-12 12:03:08.225 INFO  - Resolving DISCARD effect of FERRET BOMBER (16615534-f1ad-47b8-a131-2315c71be54c)
+2026-03-12 12:03:08.225 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.225 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.225 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.225 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.225 DEBUG - PLATED SCORPION (33e8095c-ae7f-404c-836a-3b94dcef7505) power changed (2 -> 3) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.225 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.225 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.225 DEBUG - PLATED SCORPION (33e8095c-ae7f-404c-836a-3b94dcef7505) power changed (2 -> 3) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.225 DEBUG - GRAVE ROBBER (5411dfd3-b9e7-4c77-9a2e-d5408c0e91ae) power changed (7 -> 8) due to SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc) effect
+2026-03-12 12:03:08.225 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c79befee-7943-42f5-a73e-088112a52ffc)
+2026-03-12 12:03:08.225 INFO  - New FRENZY choice to be resolved by Player2 (76008d27-ed68-4d03-beea-d6ccdeaf39d7) (attackingCard : EXPLOSIVE TOAD (c8fc67e9-d548-421d-8816-2ce0ac1191f5))
+2026-03-12 12:03:08.225 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:08.225 DEBUG - Player Player2 (76008d27-ed68-4d03-beea-d6ccdeaf39d7) must choose 1 card(s) to destroy (available targets : {
+- GRAVE ROBBER ;
+- PLATED SCORPION ;
+- FERRET BOMBER
+})
+2026-03-12 12:03:08.225 INFO  - New TARGET choice to be resolved by Player2 (76008d27-ed68-4d03-beea-d6ccdeaf39d7) (targets : {
+- PLATED SCORPION ;
+- FERRET BOMBER ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:08.225 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.226 DEBUG - EXPLOSIVE TOAD (c8fc67e9-d548-421d-8816-2ce0ac1191f5) effect destroys FERRET BOMBER (16615534-f1ad-47b8-a131-2315c71be54c)
+2026-03-12 12:03:08.226 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (c8fc67e9-d548-421d-8816-2ce0ac1191f5)
+2026-03-12 12:03:08.226 INFO  - Life update for player Player2 (76008d27-ed68-4d03-beea-d6ccdeaf39d7) : 2 LP
+2026-03-12 12:03:08.226 DEBUG - Player2 (76008d27-ed68-4d03-beea-d6ccdeaf39d7) must decide if HYENIX (d6d9a508-f144-47e6-a958-58691dfca32c) will revive
+2026-03-12 12:03:08.226 INFO  - New BOOLEAN choice to be resolved by Player2 (76008d27-ed68-4d03-beea-d6ccdeaf39d7) (target : )
+2026-03-12 12:03:08.226 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:08.226 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (147586dc-5549-47b6-b6a8-85f0cc296af7)
+2026-03-12 12:03:08.226 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (147586dc-5549-47b6-b6a8-85f0cc296af7)
+2026-03-12 12:03:08.227 DEBUG - PLAY effects disabled for player Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) due to DEATHWEAVER (0b9f3679-4d6c-4269-8bba-3611b123238a) effect
+2026-03-12 12:03:08.227 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (0b9f3679-4d6c-4269-8bba-3611b123238a)
+2026-03-12 12:03:08.227 DEBUG - PLAY effects disabled for player Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) due to DEATHWEAVER (0b9f3679-4d6c-4269-8bba-3611b123238a) effect
+2026-03-12 12:03:08.227 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (0b9f3679-4d6c-4269-8bba-3611b123238a)
+2026-03-12 12:03:08.227 DEBUG - Player2 (76008d27-ed68-4d03-beea-d6ccdeaf39d7) LP changed (2 -> 4) due to AXOLOTL HEALER (f8bbcc5c-e9b3-4555-b3a6-ffc23f9c63ce) effect
+2026-03-12 12:03:08.227 INFO  - Resolving GAIN effect of AXOLOTL HEALER (f8bbcc5c-e9b3-4555-b3a6-ffc23f9c63ce)
+2026-03-12 12:03:08.227 INFO  - Life update for player Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) : 2 LP
+2026-03-12 12:03:08.227 DEBUG - Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) LP changed (3 -> 2) due to GOREAGLE ALPHA (7dcc3846-a002-4d14-b496-6c0b16f50f78) effect
+2026-03-12 12:03:08.227 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (7dcc3846-a002-4d14-b496-6c0b16f50f78)
+2026-03-12 12:03:08.228 DEBUG - Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) must decide if HYENIX (6b1aabdb-c226-4239-8230-a55b77cacef2) will revive
+2026-03-12 12:03:08.228 INFO  - New BOOLEAN choice to be resolved by Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) (target : )
+2026-03-12 12:03:08.228 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:08.228 DEBUG - Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) must decide if stolen card STRANGE BARREL (e0142c75-a7f4-4cc1-90cb-071e26ab5231) will be added to hand or board
+2026-03-12 12:03:08.228 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (b4dd2289-3bca-4d1e-898f-cc275ae07706)
+2026-03-12 12:03:08.228 INFO  - New BOOLEAN choice to be resolved by Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) (target : e0142c75-a7f4-4cc1-90cb-071e26ab5231)
+2026-03-12 12:03:08.228 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:08.228 DEBUG - STRANGE BARREL (e0142c75-a7f4-4cc1-90cb-071e26ab5231) stolen and drawn by Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) due to HUNGRY HUNGRY HAMSTER (b4dd2289-3bca-4d1e-898f-cc275ae07706) effect
+2026-03-12 12:03:08.229 INFO  - Game over : Player1 (f5edaf00-2411-4406-b006-5ef9ae0f1c1a) wins ; Player2 (76008d27-ed68-4d03-beea-d6ccdeaf39d7) loses.
+2026-03-12 12:03:08.229 INFO  - End of the game

@@ -1,0 +1,95 @@
+2026-03-12 12:18:29.614 INFO  - Calculating first player...
+2026-03-12 12:18:29.615 INFO  - Banned card for Player1 (c15e7874-be4f-440b-ba8b-76b1c9690a2c) : GRAVE ROBBER (f84b68c2-1295-46c5-bd92-b25c2c9376a1) (7)
+2026-03-12 12:18:29.615 INFO  - Banned card for Player2 (b5ad4bb4-028f-4e7b-a529-9c3907ef1c1d) : CREEP FROM THE DEEP (e3d7a3c1-f8eb-4f95-9871-e90c1aeb00d0) (4)
+2026-03-12 12:18:29.615 INFO  - First player will be Player1 (c15e7874-be4f-440b-ba8b-76b1c9690a2c)
+2026-03-12 12:18:29.622 INFO  - Game d3d6714e-e3ea-4221-a87f-c539fbf62cc5 starting...
+2026-03-12 12:18:29.623 INFO  - Player Player1 (c15e7874-be4f-440b-ba8b-76b1c9690a2c) hand : {
+- HUNGRY HUNGRY HAMSTER ;
+- GOBLIN WEREWOLF ;
+- PLATED SCORPION ;
+- GOBLIN WEREWOLF ;
+- SHARK DOG
+}
+2026-03-12 12:18:29.623 INFO  - Player Player1 (c15e7874-be4f-440b-ba8b-76b1c9690a2c) draw pile : {
+- THE LURKER ;
+- STRANGE BARREL ;
+- KILLER BEE ;
+- HYENIX ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:18:29.623 INFO  - Player Player2 (b5ad4bb4-028f-4e7b-a529-9c3907ef1c1d) hand : {
+- RHINO TURTLE ;
+- BUGSERKER ;
+- PLATED SCORPION ;
+- AXOLOTL HEALER ;
+- SHIELD BUGS
+}
+2026-03-12 12:18:29.623 INFO  - Player Player2 (b5ad4bb4-028f-4e7b-a529-9c3907ef1c1d) draw pile : {
+- FERRET BOMBER ;
+- LUCHATAUR ;
+- DEATHWEAVER ;
+- ELEPHANTOPUS ;
+- FROBLIN INSTIGATOR
+}
+2026-03-12 12:18:29.623 DEBUG - GOBLIN WEREWOLF (cf376e8f-af84-4754-88ed-4bf1b96953c9) power changed (2 -> 8) due to GOBLIN WEREWOLF (cf376e8f-af84-4754-88ed-4bf1b96953c9) effect
+2026-03-12 12:18:29.623 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (cf376e8f-af84-4754-88ed-4bf1b96953c9)
+2026-03-12 12:18:29.623 DEBUG - GOBLIN WEREWOLF (cf376e8f-af84-4754-88ed-4bf1b96953c9) power changed (2 -> 8) due to GOBLIN WEREWOLF (cf376e8f-af84-4754-88ed-4bf1b96953c9) effect
+2026-03-12 12:18:29.623 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (cf376e8f-af84-4754-88ed-4bf1b96953c9)
+2026-03-12 12:18:29.623 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:29.623 INFO  - Life update for player Player1 (c15e7874-be4f-440b-ba8b-76b1c9690a2c) : 2 LP
+2026-03-12 12:18:29.623 DEBUG - Player Player2 (b5ad4bb4-028f-4e7b-a529-9c3907ef1c1d) must choose 1 cards to steal (targets : {
+- RHINO TURTLE ;
+- BUGSERKER ;
+- AXOLOTL HEALER ;
+- SHIELD BUGS ;
+- FERRET BOMBER
+})
+2026-03-12 12:18:29.623 INFO  - New TARGET choice to be resolved by Player2 (b5ad4bb4-028f-4e7b-a529-9c3907ef1c1d) (targets : {
+- FERRET BOMBER ;
+- BUGSERKER ;
+- AXOLOTL HEALER ;
+- RHINO TURTLE ;
+- SHIELD BUGS
+})
+2026-03-12 12:18:29.623 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.623 DEBUG - Player1 (c15e7874-be4f-440b-ba8b-76b1c9690a2c) must decide if stolen card FERRET BOMBER (8a58416f-b67c-4bc7-b546-2d51ad27571c) will be added to hand or board
+2026-03-12 12:18:29.624 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (b226af21-d8e9-4d43-aa9f-fc6c3abec02f)
+2026-03-12 12:18:29.624 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:29.624 DEBUG - FERRET BOMBER (8a58416f-b67c-4bc7-b546-2d51ad27571c) stolen and played by Player1 (c15e7874-be4f-440b-ba8b-76b1c9690a2c) due to HUNGRY HUNGRY HAMSTER (b226af21-d8e9-4d43-aa9f-fc6c3abec02f) effect
+2026-03-12 12:18:29.624 DEBUG - Player Player2 (b5ad4bb4-028f-4e7b-a529-9c3907ef1c1d) must choose 2 card(s) to discard (available targets : {
+- RHINO TURTLE ;
+- BUGSERKER ;
+- AXOLOTL HEALER ;
+- SHIELD BUGS ;
+- LUCHATAUR
+})
+2026-03-12 12:18:29.624 INFO  - New TARGET choice to be resolved by Player2 (b5ad4bb4-028f-4e7b-a529-9c3907ef1c1d) (targets : {
+- BUGSERKER ;
+- AXOLOTL HEALER ;
+- LUCHATAUR ;
+- RHINO TURTLE ;
+- SHIELD BUGS
+})
+2026-03-12 12:18:29.624 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.624 DEBUG - BUGSERKER (5cbf0045-845b-42d9-9b5a-6c12a12bffe9) discarded due to FERRET BOMBER (8a58416f-b67c-4bc7-b546-2d51ad27571c) effect
+2026-03-12 12:18:29.624 DEBUG - LUCHATAUR (5da0214f-c336-4a71-8644-81af82441c70) discarded due to FERRET BOMBER (8a58416f-b67c-4bc7-b546-2d51ad27571c) effect
+2026-03-12 12:18:29.624 INFO  - Resolving DISCARD effect of FERRET BOMBER (8a58416f-b67c-4bc7-b546-2d51ad27571c)
+2026-03-12 12:18:29.624 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (aaaab972-ba2c-4395-9161-d315aabf24a0)
+2026-03-12 12:18:29.624 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (aaaab972-ba2c-4395-9161-d315aabf24a0)
+2026-03-12 12:18:29.624 DEBUG - GOBLIN WEREWOLF (d8143977-af41-4570-b1be-f202d4e064d5) power changed (2 -> 8) due to GOBLIN WEREWOLF (d8143977-af41-4570-b1be-f202d4e064d5) effect
+2026-03-12 12:18:29.624 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (d8143977-af41-4570-b1be-f202d4e064d5)
+2026-03-12 12:18:29.624 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (aaaab972-ba2c-4395-9161-d315aabf24a0)
+2026-03-12 12:18:29.624 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (aaaab972-ba2c-4395-9161-d315aabf24a0)
+2026-03-12 12:18:29.624 INFO  - Life update for player Player1 (c15e7874-be4f-440b-ba8b-76b1c9690a2c) : 1 LP
+2026-03-12 12:18:29.624 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (aaaab972-ba2c-4395-9161-d315aabf24a0)
+2026-03-12 12:18:29.624 DEBUG - GOBLIN WEREWOLF (d8143977-af41-4570-b1be-f202d4e064d5) power changed (2 -> 8) due to GOBLIN WEREWOLF (d8143977-af41-4570-b1be-f202d4e064d5) effect
+2026-03-12 12:18:29.624 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (d8143977-af41-4570-b1be-f202d4e064d5)
+2026-03-12 12:18:29.624 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (aaaab972-ba2c-4395-9161-d315aabf24a0)
+2026-03-12 12:18:29.624 INFO  - Life update for player Player2 (b5ad4bb4-028f-4e7b-a529-9c3907ef1c1d) : 2 LP
+2026-03-12 12:18:29.624 DEBUG - GOBLIN WEREWOLF (d8143977-af41-4570-b1be-f202d4e064d5) power changed (2 -> 8) due to GOBLIN WEREWOLF (d8143977-af41-4570-b1be-f202d4e064d5) effect
+2026-03-12 12:18:29.624 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (d8143977-af41-4570-b1be-f202d4e064d5)
+2026-03-12 12:18:29.624 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (aaaab972-ba2c-4395-9161-d315aabf24a0)
+2026-03-12 12:18:29.624 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (aaaab972-ba2c-4395-9161-d315aabf24a0)
+2026-03-12 12:18:29.624 INFO  - Life update for player Player1 (c15e7874-be4f-440b-ba8b-76b1c9690a2c) : 0 LP
+2026-03-12 12:18:29.625 INFO  - Game over : Player2 (b5ad4bb4-028f-4e7b-a529-9c3907ef1c1d) wins ; Player1 (c15e7874-be4f-440b-ba8b-76b1c9690a2c) loses.
+2026-03-12 12:18:29.625 INFO  - End of the game

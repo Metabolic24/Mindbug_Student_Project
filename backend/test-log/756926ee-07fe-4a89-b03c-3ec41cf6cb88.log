@@ -1,0 +1,692 @@
+2026-03-12 12:03:08.071 INFO  - Calculating first player...
+2026-03-12 12:03:08.075 INFO  - Banned card for Player1 (47dfcb77-3267-492c-94a1-9c86aeb14f5c) : RHINO TURTLE (7e3db580-c510-4d17-af44-0c22a309e044) (8)
+2026-03-12 12:03:08.076 INFO  - Banned card for Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) : HYENIX (56ad9b66-b25d-4e3b-91dc-e24c5f4a4ca6) (7)
+2026-03-12 12:03:08.076 INFO  - First player will be Player1 (47dfcb77-3267-492c-94a1-9c86aeb14f5c)
+2026-03-12 12:03:08.091 INFO  - Game 756926ee-07fe-4a89-b03c-3ec41cf6cb88 starting...
+2026-03-12 12:03:08.091 INFO  - Player Player1 (47dfcb77-3267-492c-94a1-9c86aeb14f5c) hand : {
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- GRAVE ROBBER ;
+- GOREAGLE ALPHA ;
+- HUNGRY HUNGRY HAMSTER ;
+- PLATED SCORPION
+}
+2026-03-12 12:03:08.092 INFO  - Player Player1 (47dfcb77-3267-492c-94a1-9c86aeb14f5c) draw pile : {
+- SHIELD BUGS ;
+- SNAIL HYDRA ;
+- CHAMELEON SNIPER ;
+- DEATHWEAVER ;
+- KILLER BEE
+}
+2026-03-12 12:03:08.092 INFO  - Player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) hand : {
+- HYENIX ;
+- HAMSTER LION ;
+- BUGSERKER ;
+- SHARK DOG ;
+- ELEPHANTOPUS
+}
+2026-03-12 12:03:08.092 INFO  - Player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) draw pile : {
+- GOBLIN WEREWOLF ;
+- TURBO BUG ;
+- COMPOST DRAGON ;
+- COUNT DRACULEECH ;
+- GRAVE ROBBER
+}
+2026-03-12 12:03:08.092 DEBUG - Player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) must choose 1 cards to steal (targets : {
+- HYENIX ;
+- HAMSTER LION ;
+- BUGSERKER ;
+- SHARK DOG ;
+- ELEPHANTOPUS
+})
+2026-03-12 12:03:08.093 INFO  - New TARGET choice to be resolved by Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) (targets : {
+- HAMSTER LION ;
+- ELEPHANTOPUS ;
+- SHARK DOG ;
+- HYENIX ;
+- BUGSERKER
+})
+2026-03-12 12:03:08.093 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.093 DEBUG - Player1 (47dfcb77-3267-492c-94a1-9c86aeb14f5c) must decide if stolen card BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) will be added to hand or board
+2026-03-12 12:03:08.093 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d)
+2026-03-12 12:03:08.093 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:08.093 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) stolen and drawn by Player1 (47dfcb77-3267-492c-94a1-9c86aeb14f5c) due to HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) effect
+2026-03-12 12:03:08.093 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.093 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.093 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.093 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.093 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.093 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.093 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.093 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.093 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.093 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.093 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.093 DEBUG - CardInstance(uuid=4c8b73c9-2ba8-4587-aa00-df8fe093681d, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4fa6fb7f), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.094 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.094 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.094 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.094 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.094 DEBUG - CardInstance(uuid=4c8b73c9-2ba8-4587-aa00-df8fe093681d, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4fa6fb7f), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.094 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.094 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.094 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.094 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.094 DEBUG - CardInstance(uuid=4c8b73c9-2ba8-4587-aa00-df8fe093681d, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4fa6fb7f), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.094 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.094 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.094 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.094 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.094 DEBUG - CardInstance(uuid=4c8b73c9-2ba8-4587-aa00-df8fe093681d, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4fa6fb7f), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.094 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.094 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.095 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.095 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.095 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.095 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.095 DEBUG - CardInstance(uuid=4c8b73c9-2ba8-4587-aa00-df8fe093681d, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4fa6fb7f), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.095 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.095 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.095 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.095 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.095 DEBUG - CardInstance(uuid=4c8b73c9-2ba8-4587-aa00-df8fe093681d, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4fa6fb7f), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.095 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.095 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.095 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.095 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.095 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.095 DEBUG - CardInstance(uuid=4c8b73c9-2ba8-4587-aa00-df8fe093681d, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4fa6fb7f), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.095 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.095 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.095 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.095 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.095 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.095 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.095 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.095 DEBUG - CardInstance(uuid=4c8b73c9-2ba8-4587-aa00-df8fe093681d, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4fa6fb7f), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.095 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.095 INFO  - Life update for player Player1 (47dfcb77-3267-492c-94a1-9c86aeb14f5c) : 2 LP
+2026-03-12 12:03:08.096 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.096 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.096 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.096 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.096 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.096 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.096 DEBUG - CardInstance(uuid=4c8b73c9-2ba8-4587-aa00-df8fe093681d, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4fa6fb7f), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.096 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.096 INFO  - New FRENZY choice to be resolved by Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) (attackingCard : HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b))
+2026-03-12 12:03:08.096 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:08.096 INFO  - Life update for player Player1 (47dfcb77-3267-492c-94a1-9c86aeb14f5c) : 1 LP
+2026-03-12 12:03:08.096 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.096 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.096 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.096 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.096 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.096 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.096 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.096 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.096 DEBUG - CardInstance(uuid=4c8b73c9-2ba8-4587-aa00-df8fe093681d, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4fa6fb7f), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.096 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.096 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.096 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.096 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.096 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.096 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.096 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.096 DEBUG - CardInstance(uuid=4c8b73c9-2ba8-4587-aa00-df8fe093681d, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4fa6fb7f), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.097 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.097 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.097 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.097 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.097 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.097 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.097 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.097 DEBUG - CardInstance(uuid=4c8b73c9-2ba8-4587-aa00-df8fe093681d, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4fa6fb7f), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.097 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.097 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.097 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.097 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.097 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.097 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.097 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.097 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.097 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.097 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.097 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.097 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.097 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.097 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.097 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.098 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.098 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.098 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.098 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.098 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.098 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.098 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.098 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.098 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.098 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.098 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.098 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.098 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.098 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.098 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.098 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.098 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.098 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.098 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.098 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.098 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.098 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) stolen and played by Player1 (47dfcb77-3267-492c-94a1-9c86aeb14f5c) due to GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) effect
+2026-03-12 12:03:08.098 INFO  - Resolving STEAL effect of GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca)
+2026-03-12 12:03:08.098 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.098 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.098 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.098 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.098 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.098 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.098 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.098 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.099 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.099 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.099 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.099 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.099 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.099 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.099 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.099 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.099 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.099 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.099 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.099 DEBUG - CardInstance(uuid=d84528e5-838d-40ef-a4f4-35dd452a11c3, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.099 DEBUG - CardInstance(uuid=9985c95d-9524-4569-aff8-c1abdebf1f2e, card=Card(id=41, setName=first_contact, name=HYENIX, power=7, keywords=[FRENZY], effects={LIFE_LOST=[ReviveEffect()]}, unique=false, description=When you lose life while this is in your discard pile, you may play this., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.099 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.099 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.099 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.099 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.099 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.099 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.099 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.099 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.099 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.099 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.099 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.099 DEBUG - CardInstance(uuid=d84528e5-838d-40ef-a4f4-35dd452a11c3, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.099 DEBUG - CardInstance(uuid=9985c95d-9524-4569-aff8-c1abdebf1f2e, card=Card(id=41, setName=first_contact, name=HYENIX, power=7, keywords=[FRENZY], effects={LIFE_LOST=[ReviveEffect()]}, unique=false, description=When you lose life while this is in your discard pile, you may play this., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.099 DEBUG - CardInstance(uuid=02c43c8d-5afb-420e-b8d2-13ef75af80b5, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.099 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.100 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.100 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.100 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.100 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.100 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.100 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.100 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.100 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.100 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.100 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.100 DEBUG - CardInstance(uuid=d84528e5-838d-40ef-a4f4-35dd452a11c3, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.100 DEBUG - CardInstance(uuid=9985c95d-9524-4569-aff8-c1abdebf1f2e, card=Card(id=41, setName=first_contact, name=HYENIX, power=7, keywords=[FRENZY], effects={LIFE_LOST=[ReviveEffect()]}, unique=false, description=When you lose life while this is in your discard pile, you may play this., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.100 DEBUG - CardInstance(uuid=02c43c8d-5afb-420e-b8d2-13ef75af80b5, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.100 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.100 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.101 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.101 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.101 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.101 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.101 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.101 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.101 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.102 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.102 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.102 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.102 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.102 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.102 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.102 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.102 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.102 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.102 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.102 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.102 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.102 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.103 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.103 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.103 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.103 DEBUG - HUNGRY HUNGRY HAMSTER (4c8b73c9-2ba8-4587-aa00-df8fe093681d) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.103 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.103 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.103 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.103 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.103 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.104 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.104 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.104 DEBUG - CardInstance(uuid=d84528e5-838d-40ef-a4f4-35dd452a11c3, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.104 DEBUG - CardInstance(uuid=9985c95d-9524-4569-aff8-c1abdebf1f2e, card=Card(id=41, setName=first_contact, name=HYENIX, power=7, keywords=[FRENZY], effects={LIFE_LOST=[ReviveEffect()]}, unique=false, description=When you lose life while this is in your discard pile, you may play this., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.104 DEBUG - CardInstance(uuid=02c43c8d-5afb-420e-b8d2-13ef75af80b5, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.104 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.104 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.104 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:08.104 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.104 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.104 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.104 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.104 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.104 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.104 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.104 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.104 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.104 DEBUG - CardInstance(uuid=d84528e5-838d-40ef-a4f4-35dd452a11c3, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.104 DEBUG - CardInstance(uuid=9985c95d-9524-4569-aff8-c1abdebf1f2e, card=Card(id=41, setName=first_contact, name=HYENIX, power=7, keywords=[FRENZY], effects={LIFE_LOST=[ReviveEffect()]}, unique=false, description=When you lose life while this is in your discard pile, you may play this., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.104 DEBUG - CardInstance(uuid=02c43c8d-5afb-420e-b8d2-13ef75af80b5, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.104 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.104 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.104 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.104 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.104 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.104 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.104 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.104 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.104 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.105 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.105 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.105 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.105 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.105 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.105 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.105 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.105 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.105 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.105 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.105 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.105 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.105 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.105 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.105 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.105 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.105 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.105 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.105 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.105 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.105 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.106 DEBUG - CardInstance(uuid=d84528e5-838d-40ef-a4f4-35dd452a11c3, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.106 DEBUG - CardInstance(uuid=9985c95d-9524-4569-aff8-c1abdebf1f2e, card=Card(id=41, setName=first_contact, name=HYENIX, power=7, keywords=[FRENZY], effects={LIFE_LOST=[ReviveEffect()]}, unique=false, description=When you lose life while this is in your discard pile, you may play this., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.106 DEBUG - CardInstance(uuid=02c43c8d-5afb-420e-b8d2-13ef75af80b5, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.106 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.106 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.106 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.106 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.106 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.106 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.106 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.106 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.106 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.106 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.106 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.106 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.106 DEBUG - CardInstance(uuid=8c0b1ab0-14b0-4e2a-9277-1070216f0dbf, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.106 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.106 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.106 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.106 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.106 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.106 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.106 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.106 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.106 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.106 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.106 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.106 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.106 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.107 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.107 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.107 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.107 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.107 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.107 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.107 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.107 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.107 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.107 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.107 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.107 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.107 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.107 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.107 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.107 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.107 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.107 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.107 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.107 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.107 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.107 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.107 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.107 DEBUG - CardInstance(uuid=8c0b1ab0-14b0-4e2a-9277-1070216f0dbf, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.107 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.107 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.108 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.108 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.108 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.108 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.108 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.108 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.108 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.108 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.108 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.108 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.108 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.108 DEBUG - CardInstance(uuid=8c0b1ab0-14b0-4e2a-9277-1070216f0dbf, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.109 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.109 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.109 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.109 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.109 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.109 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.109 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.109 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.109 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.109 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.109 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.109 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.109 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.109 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.110 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.110 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.110 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.110 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.110 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.110 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.110 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.110 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.110 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.110 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.110 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.110 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.110 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.111 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.111 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.111 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.111 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.112 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.112 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.112 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.112 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.112 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.112 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.112 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.112 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.112 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.112 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.112 DEBUG - CardInstance(uuid=8c0b1ab0-14b0-4e2a-9277-1070216f0dbf, card=Card(id=22, setName=first_contact, name=SHARK DOG, power=4, keywords=[HUNTER], effects={ATTACK=[DestroyEffect(value=1, min=6, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=true, description=<b>Attack</b>: Defeat an enemy creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=4, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.112 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.112 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.112 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.112 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.112 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.112 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.112 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.112 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.112 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.112 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.112 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.112 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.112 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.112 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.112 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.113 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.113 DEBUG - CardInstance(uuid=b2d549eb-ff46-4109-a670-d9cc57de4524, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.113 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.113 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.113 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.113 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.113 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.113 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.113 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.113 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.113 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.113 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.113 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.113 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.113 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.113 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.113 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.113 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.113 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.113 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.113 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.113 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.113 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.113 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.114 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.114 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.114 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains FRENZY keyword
+2026-03-12 12:03:08.114 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.114 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains HUNTER keyword
+2026-03-12 12:03:08.114 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.114 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.114 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.114 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.114 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.114 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.114 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.114 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.114 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.115 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.115 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.115 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.115 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains FRENZY keyword
+2026-03-12 12:03:08.115 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.115 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains HUNTER keyword
+2026-03-12 12:03:08.115 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.115 DEBUG - CardInstance(uuid=b2d549eb-ff46-4109-a670-d9cc57de4524, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.115 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.115 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.115 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.115 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.115 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.115 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.115 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.115 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.115 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.116 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.116 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.116 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.116 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.116 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.116 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.116 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.116 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.116 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains FRENZY keyword
+2026-03-12 12:03:08.116 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.116 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains HUNTER keyword
+2026-03-12 12:03:08.117 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.117 DEBUG - CardInstance(uuid=b2d549eb-ff46-4109-a670-d9cc57de4524, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.117 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.117 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.117 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.117 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.117 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.117 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.117 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.117 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.117 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.117 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.117 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.117 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.117 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.117 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.117 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.117 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains FRENZY keyword
+2026-03-12 12:03:08.117 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.117 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains HUNTER keyword
+2026-03-12 12:03:08.117 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.117 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.118 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.118 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.118 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.118 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.118 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.118 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.118 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.118 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.118 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.118 DEBUG - KILLER BEE (21f84ab6-1fdd-47ac-a163-02a612e9eeab) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.118 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.118 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.118 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.118 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.118 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.118 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.118 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains FRENZY keyword
+2026-03-12 12:03:08.119 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.119 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains HUNTER keyword
+2026-03-12 12:03:08.119 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.119 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.119 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.119 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.119 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.119 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.119 INFO  - Life update for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) : 2 LP
+2026-03-12 12:03:08.119 DEBUG - Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) LP changed (3 -> 2) due to KILLER BEE (21f84ab6-1fdd-47ac-a163-02a612e9eeab) effect
+2026-03-12 12:03:08.119 INFO  - Resolving INFLICT effect of KILLER BEE (21f84ab6-1fdd-47ac-a163-02a612e9eeab)
+2026-03-12 12:03:08.119 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.119 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.119 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.119 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.119 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.119 DEBUG - KILLER BEE (21f84ab6-1fdd-47ac-a163-02a612e9eeab) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.119 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.119 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.119 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.119 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.119 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.119 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.119 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains FRENZY keyword
+2026-03-12 12:03:08.119 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.119 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains HUNTER keyword
+2026-03-12 12:03:08.119 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.119 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.120 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.120 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.120 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.120 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.120 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.120 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.120 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.120 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.120 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.120 DEBUG - KILLER BEE (21f84ab6-1fdd-47ac-a163-02a612e9eeab) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.120 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.120 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.120 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.120 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.120 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.120 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.120 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.120 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.120 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains FRENZY keyword
+2026-03-12 12:03:08.120 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.120 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains HUNTER keyword
+2026-03-12 12:03:08.120 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.120 DEBUG - CardInstance(uuid=b2d549eb-ff46-4109-a670-d9cc57de4524, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.120 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.120 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.120 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.120 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.120 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.120 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.120 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.120 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 DEBUG - KILLER BEE (21f84ab6-1fdd-47ac-a163-02a612e9eeab) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.121 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.121 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.121 DEBUG - GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) power changed (2 -> 8) due to GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b) effect
+2026-03-12 12:03:08.121 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b)
+2026-03-12 12:03:08.121 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains FRENZY keyword
+2026-03-12 12:03:08.121 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.121 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains HUNTER keyword
+2026-03-12 12:03:08.121 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.121 DEBUG - CardInstance(uuid=b2d549eb-ff46-4109-a670-d9cc57de4524, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.121 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.121 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.121 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.121 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.121 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 DEBUG - KILLER BEE (21f84ab6-1fdd-47ac-a163-02a612e9eeab) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.121 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.121 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.121 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.121 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains FRENZY keyword
+2026-03-12 12:03:08.121 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.121 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains HUNTER keyword
+2026-03-12 12:03:08.121 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.121 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.121 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.121 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.121 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.122 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.122 DEBUG - HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b) power changed (8 -> 9) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.122 DEBUG - CHAMELEON SNIPER (a94edc51-2ff8-481b-84d9-385da93289e8) power changed (1 -> 2) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.122 DEBUG - DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.122 DEBUG - SNAIL HYDRA (e46b8048-cc2c-43e5-87ca-618f1cb7018b) power changed (9 -> 10) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.122 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.122 DEBUG - KILLER BEE (21f84ab6-1fdd-47ac-a163-02a612e9eeab) power changed (5 -> 6) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.122 DEBUG - GOREAGLE ALPHA (fbfb602b-6a11-4c42-93a3-35cda9e323f6) power changed (6 -> 7) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.122 DEBUG - GRAVE ROBBER (dcb4c8c2-065e-4217-b0e2-5fa949f33cca) power changed (7 -> 8) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.122 DEBUG - PLATED SCORPION (486a810d-0bed-4afe-9564-8fbbf65962ff) power changed (2 -> 3) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.122 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (3 -> 4) due to SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321) effect
+2026-03-12 12:03:08.122 INFO  - Resolving POWER_UP effect of SHIELD BUGS (aae6a3b8-986b-4ca5-8c93-35b29b490321)
+2026-03-12 12:03:08.122 DEBUG - BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) power changed (4 -> 12) due to BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c) effect
+2026-03-12 12:03:08.122 INFO  - Resolving POWER_UP effect of BUGSERKER (47902fac-ff68-42d6-beb7-8d142e232b9c)
+2026-03-12 12:03:08.122 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains FRENZY keyword
+2026-03-12 12:03:08.122 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.122 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d) gains HUNTER keyword
+2026-03-12 12:03:08.122 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (ba463479-4866-45b0-b0b9-c5ecca073d9d)
+2026-03-12 12:03:08.122 DEBUG - CardInstance(uuid=fe4cb391-4a3f-4d9d-ae4b-a5282fc0540b, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2520010e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:08.122 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d7ad3241-aff2-4dd5-acaf-4ca96a273a2b)
+2026-03-12 12:03:08.122 DEBUG - PLAY effects disabled for player Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) due to DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff) effect
+2026-03-12 12:03:08.122 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (368f2477-a464-452c-ac05-b306c64e7bff)
+2026-03-12 12:03:08.122 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d84528e5-838d-40ef-a4f4-35dd452a11c3)
+2026-03-12 12:03:08.122 INFO  - Life update for player Player1 (47dfcb77-3267-492c-94a1-9c86aeb14f5c) : 0 LP
+2026-03-12 12:03:08.122 INFO  - Game over : Player2 (89a72ea0-1e34-42ec-91af-f68d07053135) wins ; Player1 (47dfcb77-3267-492c-94a1-9c86aeb14f5c) loses.
+2026-03-12 12:03:08.122 INFO  - End of the game
+2026-03-12 12:03:08.122 DEBUG - Player1 (47dfcb77-3267-492c-94a1-9c86aeb14f5c) LP changed (1 -> 0) due to GOREAGLE ALPHA (fbfb602b-6a11-4c42-93a3-35cda9e323f6) effect
+2026-03-12 12:03:08.122 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (fbfb602b-6a11-4c42-93a3-35cda9e323f6)

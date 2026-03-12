@@ -1,0 +1,90 @@
+2026-03-12 12:03:41.910 INFO  - Calculating first player...
+2026-03-12 12:03:41.913 INFO  - Banned card for Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f) : RHINO TURTLE (165fcb4d-80b8-40bf-9061-6224df477207) (8)
+2026-03-12 12:03:41.913 INFO  - Banned card for Player2 (e9d02003-37d9-4629-ab15-4f30bf328269) : CHAMELEON SNIPER (2d40ec1b-d81f-4089-83ff-cccddb1d88a6) (1)
+2026-03-12 12:03:41.913 INFO  - First player will be Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f)
+2026-03-12 12:03:41.922 INFO  - Game 726bcb38-6624-433e-bd0c-90712617b9ac starting...
+2026-03-12 12:03:41.922 INFO  - Player Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f) hand : {
+- COMPOST DRAGON ;
+- CREEP FROM THE DEEP ;
+- THE LURKER ;
+- FERRET BOMBER ;
+- PLATED SCORPION
+}
+2026-03-12 12:03:41.922 INFO  - Player Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f) draw pile : {
+- SNAIL THROWER ;
+- KANGASAURUS REX ;
+- PLATED SCORPION ;
+- KILLER BEE ;
+- SPIDER OWL
+}
+2026-03-12 12:03:41.922 INFO  - Player Player2 (e9d02003-37d9-4629-ab15-4f30bf328269) hand : {
+- SNAIL HYDRA ;
+- DEATHWEAVER ;
+- GOREAGLE ALPHA ;
+- FERRET BOMBER ;
+- STRANGE BARREL
+}
+2026-03-12 12:03:41.923 INFO  - Player Player2 (e9d02003-37d9-4629-ab15-4f30bf328269) draw pile : {
+- FROBLIN INSTIGATOR ;
+- GRAVE ROBBER ;
+- HUNGRY HUNGRY HAMSTER ;
+- TIGER SQUIRREL ;
+- HYENIX
+}
+2026-03-12 12:03:41.923 INFO  - Life update for player Player2 (e9d02003-37d9-4629-ab15-4f30bf328269) : 2 LP
+2026-03-12 12:03:41.923 DEBUG - Player2 (e9d02003-37d9-4629-ab15-4f30bf328269) LP changed (3 -> 2) due to GOREAGLE ALPHA (b176b2a8-90b6-4a58-8fda-72cb4189b6ff) effect
+2026-03-12 12:03:41.923 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (b176b2a8-90b6-4a58-8fda-72cb4189b6ff)
+2026-03-12 12:03:41.924 INFO  - Life update for player Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f) : 2 LP
+2026-03-12 12:03:41.924 DEBUG - Player Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f) must choose 2 card(s) to discard (available targets : {
+- COMPOST DRAGON ;
+- FERRET BOMBER ;
+- SNAIL THROWER ;
+- KANGASAURUS REX ;
+- PLATED SCORPION
+})
+2026-03-12 12:03:41.924 INFO  - New TARGET choice to be resolved by Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f) (targets : {
+- FERRET BOMBER ;
+- COMPOST DRAGON ;
+- KANGASAURUS REX ;
+- SNAIL THROWER ;
+- PLATED SCORPION
+})
+2026-03-12 12:03:41.924 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:41.925 DEBUG - SNAIL THROWER (c6616b35-af87-4efb-bb0f-cf05e728c1cc) discarded due to FERRET BOMBER (e80a105c-edf1-4eb7-8fa4-ddd2650f5734) effect
+2026-03-12 12:03:41.925 DEBUG - PLATED SCORPION (9e360c33-3283-4e8c-aa96-b43ec0de6623) discarded due to FERRET BOMBER (e80a105c-edf1-4eb7-8fa4-ddd2650f5734) effect
+2026-03-12 12:03:41.925 INFO  - Resolving DISCARD effect of FERRET BOMBER (e80a105c-edf1-4eb7-8fa4-ddd2650f5734)
+2026-03-12 12:03:41.925 INFO  - Life update for player Player2 (e9d02003-37d9-4629-ab15-4f30bf328269) : 1 LP
+2026-03-12 12:03:41.925 DEBUG - Player2 (e9d02003-37d9-4629-ab15-4f30bf328269) LP changed (2 -> 1) due to KILLER BEE (a2187f6d-7d0f-4f1d-97ac-caa9c06290d4) effect
+2026-03-12 12:03:41.925 INFO  - Resolving INFLICT effect of KILLER BEE (a2187f6d-7d0f-4f1d-97ac-caa9c06290d4)
+2026-03-12 12:03:41.925 INFO  - Life update for player Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f) : 1 LP
+2026-03-12 12:03:41.925 DEBUG - PLAY effects disabled for player Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f) due to DEATHWEAVER (b1c58187-5ad1-4bb7-a607-1514af41268a) effect
+2026-03-12 12:03:41.926 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (b1c58187-5ad1-4bb7-a607-1514af41268a)
+2026-03-12 12:03:41.926 DEBUG - PLAY effects disabled for player Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f) due to DEATHWEAVER (b1c58187-5ad1-4bb7-a607-1514af41268a) effect
+2026-03-12 12:03:41.926 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (b1c58187-5ad1-4bb7-a607-1514af41268a)
+2026-03-12 12:03:41.926 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:41.926 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:41.926 INFO  - New FRENZY choice to be resolved by Player2 (e9d02003-37d9-4629-ab15-4f30bf328269) (attackingCard : GOREAGLE ALPHA (b176b2a8-90b6-4a58-8fda-72cb4189b6ff))
+2026-03-12 12:03:41.926 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:41.927 DEBUG - Player Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f) must choose 1 cards to steal (targets : {
+- THE LURKER ;
+- CREEP FROM THE DEEP ;
+- SNAIL THROWER ;
+- PLATED SCORPION ;
+- KILLER BEE ;
+- PLATED SCORPION
+})
+2026-03-12 12:03:41.927 INFO  - New TARGET choice to be resolved by Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f) (targets : {
+- THE LURKER ;
+- KILLER BEE ;
+- SNAIL THROWER ;
+- CREEP FROM THE DEEP ;
+- PLATED SCORPION ;
+- PLATED SCORPION
+})
+2026-03-12 12:03:41.927 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:41.927 DEBUG - PLATED SCORPION (9e360c33-3283-4e8c-aa96-b43ec0de6623) stolen and played by Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f) due to COMPOST DRAGON (392e856b-e52e-4052-9e18-8902de7f6ebe) effect
+2026-03-12 12:03:41.927 INFO  - Resolving STEAL effect of COMPOST DRAGON (392e856b-e52e-4052-9e18-8902de7f6ebe)
+2026-03-12 12:03:41.927 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:41.928 INFO  - Life update for player Player2 (e9d02003-37d9-4629-ab15-4f30bf328269) : 0 LP
+2026-03-12 12:03:41.928 INFO  - Game over : Player1 (4b7cb8d2-da53-4a07-bcd3-5d6190c7bf2f) wins ; Player2 (e9d02003-37d9-4629-ab15-4f30bf328269) loses.
+2026-03-12 12:03:41.928 INFO  - End of the game

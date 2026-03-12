@@ -1,0 +1,218 @@
+2026-03-12 12:03:42.328 INFO  - Calculating first player...
+2026-03-12 12:03:42.330 INFO  - Banned card for Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) : BUGSERKER (764dae31-324f-496c-8716-6afcf065f682) (3)
+2026-03-12 12:03:42.330 INFO  - Banned card for Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) : ELEPHANTOPUS (7a25f3bc-4d94-4a7a-830a-67fb1ae5ac52) (7)
+2026-03-12 12:03:42.330 INFO  - First player will be Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb)
+2026-03-12 12:03:42.338 INFO  - Game 4824d40a-0e5f-4b7c-9ff4-36db65d2c97f starting...
+2026-03-12 12:03:42.338 INFO  - Player Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) hand : {
+- FERRET BOMBER ;
+- KANGASAURUS REX ;
+- SNAIL HYDRA ;
+- KILLER BEE ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:42.339 INFO  - Player Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) draw pile : {
+- PLATED SCORPION ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- TURF THE SURFER ;
+- EXPLOSIVE TOAD ;
+- HYENIX
+}
+2026-03-12 12:03:42.339 INFO  - Player Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) hand : {
+- THE LURKER ;
+- HAMSTER LION ;
+- CREEP FROM THE DEEP ;
+- TURF THE SURFER ;
+- STRANGE BARREL
+}
+2026-03-12 12:03:42.339 INFO  - Player Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) draw pile : {
+- DEATHWEAVER ;
+- RHINO TURTLE ;
+- HARPY MOTHER ;
+- GRAVE ROBBER ;
+- FROBLIN INSTIGATOR
+}
+2026-03-12 12:03:42.339 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.340 DEBUG - KANGASAURUS REX (54dbeffa-f03a-4789-9b32-db81f7027da6) stolen and drawn by Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) due to STRANGE BARREL (10b1795e-a047-4166-9fcd-9ccce42ad776) effect
+2026-03-12 12:03:42.340 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (68dcd2a1-4798-4be4-b190-9c16e39e131a) stolen and drawn by Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) due to STRANGE BARREL (10b1795e-a047-4166-9fcd-9ccce42ad776) effect
+2026-03-12 12:03:42.340 INFO  - Resolving STEAL effect of STRANGE BARREL (10b1795e-a047-4166-9fcd-9ccce42ad776)
+2026-03-12 12:03:42.340 DEBUG - CardInstance(uuid=d1901921-e920-4be3-b814-22b9e0aaf07d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@c1386b4), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.340 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bc63b4ce-e126-4b6c-adb3-b4f73d8aae28)
+2026-03-12 12:03:42.340 DEBUG - CardInstance(uuid=d1901921-e920-4be3-b814-22b9e0aaf07d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@c1386b4), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.340 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bc63b4ce-e126-4b6c-adb3-b4f73d8aae28)
+2026-03-12 12:03:42.341 DEBUG - CardInstance(uuid=d1901921-e920-4be3-b814-22b9e0aaf07d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@c1386b4), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.341 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bc63b4ce-e126-4b6c-adb3-b4f73d8aae28)
+2026-03-12 12:03:42.341 DEBUG - CardInstance(uuid=d1901921-e920-4be3-b814-22b9e0aaf07d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@c1386b4), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.341 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bc63b4ce-e126-4b6c-adb3-b4f73d8aae28)
+2026-03-12 12:03:42.341 DEBUG - CardInstance(uuid=d1901921-e920-4be3-b814-22b9e0aaf07d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@c1386b4), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.341 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bc63b4ce-e126-4b6c-adb3-b4f73d8aae28)
+2026-03-12 12:03:42.342 DEBUG - CardInstance(uuid=d1901921-e920-4be3-b814-22b9e0aaf07d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@c1386b4), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.342 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bc63b4ce-e126-4b6c-adb3-b4f73d8aae28)
+2026-03-12 12:03:42.342 DEBUG - CardInstance(uuid=d1901921-e920-4be3-b814-22b9e0aaf07d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@c1386b4), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.342 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bc63b4ce-e126-4b6c-adb3-b4f73d8aae28)
+2026-03-12 12:03:42.342 DEBUG - CardInstance(uuid=d1901921-e920-4be3-b814-22b9e0aaf07d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@c1386b4), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.342 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bc63b4ce-e126-4b6c-adb3-b4f73d8aae28)
+2026-03-12 12:03:42.342 DEBUG - CardInstance(uuid=d1901921-e920-4be3-b814-22b9e0aaf07d, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@c1386b4), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.342 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (bc63b4ce-e126-4b6c-adb3-b4f73d8aae28)
+2026-03-12 12:03:42.343 INFO  - Life update for player Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) : 2 LP
+2026-03-12 12:03:42.343 DEBUG - Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) LP changed (3 -> 2) due to KILLER BEE (8d27e8a0-7f42-4faa-a062-2f7e909cbd40) effect
+2026-03-12 12:03:42.343 INFO  - Resolving INFLICT effect of KILLER BEE (8d27e8a0-7f42-4faa-a062-2f7e909cbd40)
+2026-03-12 12:03:42.343 DEBUG - Player Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) must choose 2 card(s) to discard (available targets : {
+- TURF THE SURFER ;
+- DEATHWEAVER ;
+- KANGASAURUS REX ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:42.343 INFO  - New TARGET choice to be resolved by Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) (targets : {
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- TURF THE SURFER ;
+- KANGASAURUS REX ;
+- DEATHWEAVER ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:42.343 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.343 DEBUG - TURF THE SURFER (14348bf0-ac1e-48dd-bf0c-aef0650c96e3) discarded due to FERRET BOMBER (c116597d-f392-4630-8520-84eaffb8cdd5) effect
+2026-03-12 12:03:42.343 DEBUG - KANGASAURUS REX (54dbeffa-f03a-4789-9b32-db81f7027da6) discarded due to FERRET BOMBER (c116597d-f392-4630-8520-84eaffb8cdd5) effect
+2026-03-12 12:03:42.343 INFO  - Resolving DISCARD effect of FERRET BOMBER (c116597d-f392-4630-8520-84eaffb8cdd5)
+2026-03-12 12:03:42.344 DEBUG - Player Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) must choose 1 card(s) that will be unable to block (targets : {
+- RHINO TURTLE ;
+- HARPY MOTHER
+})
+2026-03-12 12:03:42.344 INFO  - New TARGET choice to be resolved by Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) (targets : {
+- HARPY MOTHER ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:42.344 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.344 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (c4e99972-0d6e-4781-94df-7c3c84470312)
+2026-03-12 12:03:42.344 DEBUG - Player Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) must choose 2 cards to steal (targets : {
+- KILLER BEE ;
+- FERRET BOMBER
+})
+2026-03-12 12:03:42.344 INFO  - New TARGET choice to be resolved by Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) (targets : {
+- FERRET BOMBER ;
+- KILLER BEE
+})
+2026-03-12 12:03:42.344 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.344 DEBUG - FERRET BOMBER (c116597d-f392-4630-8520-84eaffb8cdd5) stolen and played by Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) due to HARPY MOTHER (65a6e59f-1d7b-429a-94b6-584f352ec9c3) effect
+2026-03-12 12:03:42.344 DEBUG - KILLER BEE (8d27e8a0-7f42-4faa-a062-2f7e909cbd40) stolen and played by Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) due to HARPY MOTHER (65a6e59f-1d7b-429a-94b6-584f352ec9c3) effect
+2026-03-12 12:03:42.344 INFO  - Resolving STEAL effect of HARPY MOTHER (65a6e59f-1d7b-429a-94b6-584f352ec9c3)
+2026-03-12 12:03:42.344 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.345 INFO  - Life update for player Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) : 2 LP
+2026-03-12 12:03:42.345 DEBUG - Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) must decide if HYENIX (d8a14090-2c5b-45f8-8874-0af8d881dcca) will revive
+2026-03-12 12:03:42.345 INFO  - New BOOLEAN choice to be resolved by Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) (target : )
+2026-03-12 12:03:42.345 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:42.345 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.345 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.345 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.345 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.345 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.345 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.345 DEBUG - Player Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) must choose 1 card(s) to destroy (available targets : {
+- RHINO TURTLE ;
+- FERRET BOMBER ;
+- FROBLIN INSTIGATOR ;
+- TURF THE SURFER
+})
+2026-03-12 12:03:42.346 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.346 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.346 INFO  - New TARGET choice to be resolved by Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) (targets : {
+- TURF THE SURFER ;
+- FROBLIN INSTIGATOR ;
+- FERRET BOMBER ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:42.346 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.346 DEBUG - EXPLOSIVE TOAD (d062c00f-0681-4e77-b4dc-4b26419845cf) effect destroys RHINO TURTLE (976fbbf7-c75b-4b77-bc8c-0856cc538132)
+2026-03-12 12:03:42.346 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (d062c00f-0681-4e77-b4dc-4b26419845cf)
+2026-03-12 12:03:42.346 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.346 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.346 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.346 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.346 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 7) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.346 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.346 DEBUG - Player Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) must choose 1 cards to steal (targets : {
+- SNAIL HYDRA ;
+- HYENIX ;
+- PLATED SCORPION ;
+- KANGASAURUS REX ;
+- EXPLOSIVE TOAD
+})
+2026-03-12 12:03:42.347 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 7) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.347 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.347 INFO  - New TARGET choice to be resolved by Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) (targets : {
+- SNAIL HYDRA ;
+- HYENIX ;
+- KANGASAURUS REX ;
+- EXPLOSIVE TOAD ;
+- PLATED SCORPION
+})
+2026-03-12 12:03:42.348 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.348 DEBUG - HYENIX (d8a14090-2c5b-45f8-8874-0af8d881dcca) stolen and played by Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) due to GRAVE ROBBER (a73b6728-8bf4-4bce-b687-72b954cb7bc1) effect
+2026-03-12 12:03:42.348 INFO  - Resolving STEAL effect of GRAVE ROBBER (a73b6728-8bf4-4bce-b687-72b954cb7bc1)
+2026-03-12 12:03:42.348 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 9) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.348 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.348 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 9) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.348 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.348 DEBUG - Player Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) must choose 1 card(s) that will be unable to block (targets : {
+- RHINO TURTLE ;
+- FERRET BOMBER ;
+- FROBLIN INSTIGATOR ;
+- GRAVE ROBBER ;
+- HYENIX
+})
+2026-03-12 12:03:42.348 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 9) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.349 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.349 INFO  - New TARGET choice to be resolved by Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) (targets : {
+- HYENIX ;
+- FROBLIN INSTIGATOR ;
+- GRAVE ROBBER ;
+- FERRET BOMBER ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:42.349 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.349 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (c4e99972-0d6e-4781-94df-7c3c84470312)
+2026-03-12 12:03:42.349 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 9) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.349 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.349 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 9) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.349 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.349 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 9) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.349 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.349 INFO  - Life update for player Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) : 1 LP
+2026-03-12 12:03:42.349 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 9) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.349 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.349 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 9) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.349 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.350 DEBUG - Player Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) must choose 1 card(s) that will be unable to block (targets : {
+- RHINO TURTLE ;
+- FERRET BOMBER ;
+- FROBLIN INSTIGATOR ;
+- GRAVE ROBBER ;
+- HYENIX
+})
+2026-03-12 12:03:42.350 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 9) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.350 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.350 INFO  - New TARGET choice to be resolved by Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) (targets : {
+- HYENIX ;
+- FROBLIN INSTIGATOR ;
+- GRAVE ROBBER ;
+- FERRET BOMBER ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:42.350 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.350 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (c4e99972-0d6e-4781-94df-7c3c84470312)
+2026-03-12 12:03:42.350 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 9) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.350 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.350 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 7) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.350 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.350 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 7) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.350 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.350 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 9) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.350 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.350 DEBUG - PLAY effects disabled for player Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) due to DEATHWEAVER (92a761d6-d80d-494b-bbf0-f119b01ca715) effect
+2026-03-12 12:03:42.350 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (92a761d6-d80d-494b-bbf0-f119b01ca715)
+2026-03-12 12:03:42.350 DEBUG - FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) power changed (1 -> 9) due to FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8) effect
+2026-03-12 12:03:42.350 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9be7e176-b003-440b-8ab1-6762f86b33a8)
+2026-03-12 12:03:42.350 DEBUG - PLAY effects disabled for player Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) due to DEATHWEAVER (92a761d6-d80d-494b-bbf0-f119b01ca715) effect
+2026-03-12 12:03:42.350 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (92a761d6-d80d-494b-bbf0-f119b01ca715)
+2026-03-12 12:03:42.350 INFO  - Game over : Player2 (0e941cad-6da9-4bb7-bec3-42092ad65ebb) wins ; Player1 (cb98c686-afee-4582-9bd3-17d4a9b2f5f7) loses.
+2026-03-12 12:03:42.350 INFO  - End of the game

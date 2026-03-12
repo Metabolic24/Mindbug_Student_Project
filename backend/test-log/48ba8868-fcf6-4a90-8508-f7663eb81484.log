@@ -1,0 +1,153 @@
+2026-03-12 12:18:25.175 INFO  - Calculating first player...
+2026-03-12 12:18:25.177 INFO  - Banned card for Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054) : URCHIN HURLER (eb52cc14-6e00-451d-9dc3-898aa0a99d10) (5)
+2026-03-12 12:18:25.177 INFO  - Banned card for Player2 (1c83ea0b-c77e-4ba1-8254-be5096ea0cde) : GOBLIN WEREWOLF (dc1a1787-264a-4bf3-9cae-217658dec4ab) (2)
+2026-03-12 12:18:25.178 INFO  - First player will be Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054)
+2026-03-12 12:18:25.186 INFO  - Game 48ba8868-fcf6-4a90-8508-f7663eb81484 starting...
+2026-03-12 12:18:25.186 INFO  - Player Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054) hand : {
+- MAJESTIC MANTICORE ;
+- CREEP FROM THE DEEP ;
+- TURF THE SURFER ;
+- TUSKED EXTORTER ;
+- BUGSERKER
+}
+2026-03-12 12:18:25.187 INFO  - Player Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054) draw pile : {
+- SNAIL THROWER ;
+- DEATHWEAVER ;
+- TIGER SQUIRREL ;
+- HYENIX ;
+- LUCHATAUR
+}
+2026-03-12 12:18:25.187 INFO  - Player Player2 (1c83ea0b-c77e-4ba1-8254-be5096ea0cde) hand : {
+- LONE YETI ;
+- SPIDER OWL ;
+- HAMSTER LION ;
+- GOBLIN WEREWOLF ;
+- FERRET BOMBER
+}
+2026-03-12 12:18:25.187 INFO  - Player Player2 (1c83ea0b-c77e-4ba1-8254-be5096ea0cde) draw pile : {
+- GOREAGLE ALPHA ;
+- PLATED SCORPION ;
+- TUSKED EXTORTER ;
+- AXOLOTL HEALER ;
+- GRAVE ROBBER
+}
+2026-03-12 12:18:25.187 DEBUG - CardInstance(uuid=53c3e6aa-58e1-48ed-b045-6a3063ed6283, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2e013ba1), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.187 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6a3c6c4a-3b6d-4f5e-8861-6ddf1f193a46)
+2026-03-12 12:18:25.187 DEBUG - CardInstance(uuid=53c3e6aa-58e1-48ed-b045-6a3063ed6283, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2e013ba1), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.187 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6a3c6c4a-3b6d-4f5e-8861-6ddf1f193a46)
+2026-03-12 12:18:25.188 DEBUG - CardInstance(uuid=b3cb3adf-66bb-498b-b1ea-df460a088b14, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2e013ba1), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.188 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6a3c6c4a-3b6d-4f5e-8861-6ddf1f193a46)
+2026-03-12 12:18:25.188 DEBUG - CardInstance(uuid=b3cb3adf-66bb-498b-b1ea-df460a088b14, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2e013ba1), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.188 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6a3c6c4a-3b6d-4f5e-8861-6ddf1f193a46)
+2026-03-12 12:18:25.188 DEBUG - CardInstance(uuid=b3cb3adf-66bb-498b-b1ea-df460a088b14, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2e013ba1), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.188 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6a3c6c4a-3b6d-4f5e-8861-6ddf1f193a46)
+2026-03-12 12:18:25.188 DEBUG - CardInstance(uuid=b3cb3adf-66bb-498b-b1ea-df460a088b14, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2e013ba1), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.189 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6a3c6c4a-3b6d-4f5e-8861-6ddf1f193a46)
+2026-03-12 12:18:25.189 DEBUG - MAJESTIC MANTICORE (53c3e6aa-58e1-48ed-b045-6a3063ed6283) effect destroys SPIDER OWL (00a30bf3-d1e6-43a2-8f4e-f9dc85362b70)
+2026-03-12 12:18:25.189 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (53c3e6aa-58e1-48ed-b045-6a3063ed6283)
+2026-03-12 12:18:25.189 DEBUG - CardInstance(uuid=b3cb3adf-66bb-498b-b1ea-df460a088b14, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2e013ba1), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.189 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6a3c6c4a-3b6d-4f5e-8861-6ddf1f193a46)
+2026-03-12 12:18:25.189 INFO  - Life update for player Player2 (1c83ea0b-c77e-4ba1-8254-be5096ea0cde) : 2 LP
+2026-03-12 12:18:25.190 DEBUG - Player2 (1c83ea0b-c77e-4ba1-8254-be5096ea0cde) LP changed (3 -> 2) due to GOREAGLE ALPHA (67f17f9c-6d69-4b00-b7a5-5655b6806c8c) effect
+2026-03-12 12:18:25.190 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (67f17f9c-6d69-4b00-b7a5-5655b6806c8c)
+2026-03-12 12:18:25.190 DEBUG - PLAY effects disabled for player Player2 (1c83ea0b-c77e-4ba1-8254-be5096ea0cde) due to DEATHWEAVER (8882eddf-13a4-4126-876b-5fc707418b0f) effect
+2026-03-12 12:18:25.190 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (8882eddf-13a4-4126-876b-5fc707418b0f)
+2026-03-12 12:18:25.190 DEBUG - PLAY effects disabled for player Player2 (1c83ea0b-c77e-4ba1-8254-be5096ea0cde) due to DEATHWEAVER (8882eddf-13a4-4126-876b-5fc707418b0f) effect
+2026-03-12 12:18:25.190 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (8882eddf-13a4-4126-876b-5fc707418b0f)
+2026-03-12 12:18:25.190 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:25.190 DEBUG - PLAY effects disabled for player Player2 (1c83ea0b-c77e-4ba1-8254-be5096ea0cde) due to DEATHWEAVER (8882eddf-13a4-4126-876b-5fc707418b0f) effect
+2026-03-12 12:18:25.190 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (8882eddf-13a4-4126-876b-5fc707418b0f)
+2026-03-12 12:18:25.190 INFO  - New FRENZY choice to be resolved by Player2 (1c83ea0b-c77e-4ba1-8254-be5096ea0cde) (attackingCard : GOREAGLE ALPHA (67f17f9c-6d69-4b00-b7a5-5655b6806c8c))
+2026-03-12 12:18:25.190 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.190 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:25.191 DEBUG - GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60) power changed (2 -> 8) due to GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60) effect
+2026-03-12 12:18:25.191 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60)
+2026-03-12 12:18:25.191 DEBUG - GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60) power changed (2 -> 8) due to GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60) effect
+2026-03-12 12:18:25.191 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60)
+2026-03-12 12:18:25.191 DEBUG - GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60) power changed (2 -> 8) due to GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60) effect
+2026-03-12 12:18:25.191 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60)
+2026-03-12 12:18:25.191 DEBUG - Player Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054) must choose 2 card(s) to discard (available targets : {
+- TUSKED EXTORTER ;
+- BUGSERKER ;
+- SNAIL THROWER ;
+- TIGER SQUIRREL ;
+- HYENIX
+})
+2026-03-12 12:18:25.191 DEBUG - GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60) power changed (2 -> 8) due to GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60) effect
+2026-03-12 12:18:25.191 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60)
+2026-03-12 12:18:25.191 INFO  - New TARGET choice to be resolved by Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054) (targets : {
+- BUGSERKER ;
+- TUSKED EXTORTER ;
+- TIGER SQUIRREL ;
+- HYENIX ;
+- SNAIL THROWER
+})
+2026-03-12 12:18:25.191 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.192 DEBUG - BUGSERKER (5ae969af-1e7c-4b30-bf79-0fd284078815) discarded due to FERRET BOMBER (aa261930-aea5-46ec-a519-d8f37dfbfe66) effect
+2026-03-12 12:18:25.192 DEBUG - SNAIL THROWER (7fa032a4-b1f2-438c-80e2-63c6c6cd835e) discarded due to FERRET BOMBER (aa261930-aea5-46ec-a519-d8f37dfbfe66) effect
+2026-03-12 12:18:25.192 INFO  - Resolving DISCARD effect of FERRET BOMBER (aa261930-aea5-46ec-a519-d8f37dfbfe66)
+2026-03-12 12:18:25.192 DEBUG - GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60) power changed (2 -> 8) due to GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60) effect
+2026-03-12 12:18:25.192 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ca35240c-6fdb-4062-bdc1-c1e6d1a64f60)
+2026-03-12 12:18:25.192 DEBUG - Player Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054) must choose 1 card(s) that will be unable to block (targets : {
+- GOBLIN WEREWOLF ;
+- FERRET BOMBER
+})
+2026-03-12 12:18:25.192 INFO  - New TARGET choice to be resolved by Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054) (targets : {
+- GOBLIN WEREWOLF ;
+- FERRET BOMBER
+})
+2026-03-12 12:18:25.192 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.192 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (aca8afbe-e395-4d88-932f-d91ea14b9f9b)
+2026-03-12 12:18:25.192 DEBUG - Player Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054) must choose 1 card(s) that will be unable to block (targets : {
+- FERRET BOMBER ;
+- LONE YETI
+})
+2026-03-12 12:18:25.193 INFO  - New TARGET choice to be resolved by Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054) (targets : {
+- LONE YETI ;
+- FERRET BOMBER
+})
+2026-03-12 12:18:25.193 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.193 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (aca8afbe-e395-4d88-932f-d91ea14b9f9b)
+2026-03-12 12:18:25.193 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) power changed (5 -> 10) due to LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) effect
+2026-03-12 12:18:25.193 INFO  - Resolving POWER_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.193 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) gains FRENZY keyword
+2026-03-12 12:18:25.193 INFO  - Resolving KEYWORD_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.193 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) power changed (5 -> 10) due to LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) effect
+2026-03-12 12:18:25.193 INFO  - Resolving POWER_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.193 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) gains FRENZY keyword
+2026-03-12 12:18:25.193 INFO  - Resolving KEYWORD_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.193 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) power changed (5 -> 10) due to LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) effect
+2026-03-12 12:18:25.193 INFO  - Resolving POWER_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.193 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) gains FRENZY keyword
+2026-03-12 12:18:25.193 INFO  - Resolving KEYWORD_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.193 INFO  - New FRENZY choice to be resolved by Player2 (1c83ea0b-c77e-4ba1-8254-be5096ea0cde) (attackingCard : LONE YETI (708836b4-7630-4930-b585-0f2a5b965305))
+2026-03-12 12:18:25.194 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.194 INFO  - Life update for player Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054) : 2 LP
+2026-03-12 12:18:25.194 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) power changed (5 -> 10) due to LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) effect
+2026-03-12 12:18:25.194 INFO  - Resolving POWER_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.194 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) gains FRENZY keyword
+2026-03-12 12:18:25.194 INFO  - Resolving KEYWORD_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.194 INFO  - New FRENZY choice to be resolved by Player2 (1c83ea0b-c77e-4ba1-8254-be5096ea0cde) (attackingCard : LONE YETI (708836b4-7630-4930-b585-0f2a5b965305))
+2026-03-12 12:18:25.194 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) power changed (5 -> 10) due to LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) effect
+2026-03-12 12:18:25.194 INFO  - Resolving POWER_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.194 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) gains FRENZY keyword
+2026-03-12 12:18:25.194 INFO  - Resolving KEYWORD_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.194 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.194 INFO  - Life update for player Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054) : 1 LP
+2026-03-12 12:18:25.194 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) power changed (5 -> 10) due to LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) effect
+2026-03-12 12:18:25.194 INFO  - Resolving POWER_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.194 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) gains FRENZY keyword
+2026-03-12 12:18:25.194 INFO  - Resolving KEYWORD_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.194 INFO  - New FRENZY choice to be resolved by Player2 (1c83ea0b-c77e-4ba1-8254-be5096ea0cde) (attackingCard : LONE YETI (708836b4-7630-4930-b585-0f2a5b965305))
+2026-03-12 12:18:25.194 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) power changed (5 -> 10) due to LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) effect
+2026-03-12 12:18:25.194 INFO  - Resolving POWER_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.194 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) gains FRENZY keyword
+2026-03-12 12:18:25.194 INFO  - Resolving KEYWORD_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.195 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.195 INFO  - Life update for player Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054) : 0 LP
+2026-03-12 12:18:25.195 INFO  - Game over : Player2 (1c83ea0b-c77e-4ba1-8254-be5096ea0cde) wins ; Player1 (6bbf9e19-c9cf-4f9b-a8af-1bddd1e53054) loses.
+2026-03-12 12:18:25.195 INFO  - End of the game
+2026-03-12 12:18:25.195 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) power changed (5 -> 10) due to LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) effect
+2026-03-12 12:18:25.195 INFO  - Resolving POWER_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)
+2026-03-12 12:18:25.195 DEBUG - LONE YETI (708836b4-7630-4930-b585-0f2a5b965305) gains FRENZY keyword
+2026-03-12 12:18:25.195 INFO  - Resolving KEYWORD_UP effect of LONE YETI (708836b4-7630-4930-b585-0f2a5b965305)

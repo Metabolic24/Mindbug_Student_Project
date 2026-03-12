@@ -1,0 +1,110 @@
+2026-03-12 12:03:06.420 INFO  - Calculating first player...
+2026-03-12 12:03:06.421 INFO  - Banned card for Player1 (e2c7ae42-edf4-4045-a141-a065f12a5959) : CHAMELEON SNIPER (074fc02c-e35e-48f2-a44e-110f803f52ba) (1)
+2026-03-12 12:03:06.421 INFO  - Banned card for Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4) : HUNGRY HUNGRY HAMSTER (f3a0bf03-1506-4a5e-b3b0-adf43825ade1) (2)
+2026-03-12 12:03:06.422 INFO  - First player will be Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4)
+2026-03-12 12:03:06.431 INFO  - Game 22293196-30a1-4c1b-982f-3ea13efbdffb starting...
+2026-03-12 12:03:06.431 INFO  - Player Player1 (e2c7ae42-edf4-4045-a141-a065f12a5959) hand : {
+- RHINO TURTLE ;
+- COMPOST DRAGON ;
+- LUCHATAUR ;
+- CREEP FROM THE DEEP ;
+- ELEPHANTOPUS
+}
+2026-03-12 12:03:06.431 INFO  - Player Player1 (e2c7ae42-edf4-4045-a141-a065f12a5959) draw pile : {
+- FERRET BOMBER ;
+- RHINO TURTLE ;
+- SHARK DOG ;
+- KILLER BEE ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:06.431 INFO  - Player Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4) hand : {
+- STRANGE BARREL ;
+- TURF THE SURFER ;
+- HYENIX ;
+- LONE YETI ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:03:06.431 INFO  - Player Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4) draw pile : {
+- GOREAGLE ALPHA ;
+- GORILLON ;
+- TIGER SQUIRREL ;
+- FERRET BOMBER ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:06.432 INFO  - New FRENZY choice to be resolved by Player1 (e2c7ae42-edf4-4045-a141-a065f12a5959) (attackingCard : RHINO TURTLE (467eb884-c8d7-41c1-b307-319bb6b845d4))
+2026-03-12 12:03:06.432 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.432 DEBUG - COMPOST DRAGON (059eadbe-ff24-45e9-b55a-5fafb60959dc) stolen and drawn by Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4) due to STRANGE BARREL (68ffa2e9-15f3-4b96-b02c-a99eea070a83) effect
+2026-03-12 12:03:06.432 DEBUG - LUCHATAUR (3f4499b5-a4ad-4e54-8b81-53fdfe7dd9c5) stolen and drawn by Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4) due to STRANGE BARREL (68ffa2e9-15f3-4b96-b02c-a99eea070a83) effect
+2026-03-12 12:03:06.432 INFO  - Resolving STEAL effect of STRANGE BARREL (68ffa2e9-15f3-4b96-b02c-a99eea070a83)
+2026-03-12 12:03:06.432 DEBUG - Player Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4) must choose 2 card(s) to discard (available targets : {
+- HYENIX ;
+- LONE YETI ;
+- TUSKED EXTORTER ;
+- GOREAGLE ALPHA ;
+- COMPOST DRAGON ;
+- LUCHATAUR
+})
+2026-03-12 12:03:06.432 INFO  - New TARGET choice to be resolved by Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4) (targets : {
+- TUSKED EXTORTER ;
+- LONE YETI ;
+- HYENIX ;
+- LUCHATAUR ;
+- GOREAGLE ALPHA ;
+- COMPOST DRAGON
+})
+2026-03-12 12:03:06.432 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.432 DEBUG - TUSKED EXTORTER (b929ec8b-6dc0-4f43-bc6f-02e8c07243c4) discarded due to FERRET BOMBER (5d9d9596-0f69-43d7-aec2-52e2c8b6bef3) effect
+2026-03-12 12:03:06.432 DEBUG - GOREAGLE ALPHA (63052c72-4b92-4920-bf52-fb7c59a58f83) discarded due to FERRET BOMBER (5d9d9596-0f69-43d7-aec2-52e2c8b6bef3) effect
+2026-03-12 12:03:06.432 INFO  - Resolving DISCARD effect of FERRET BOMBER (5d9d9596-0f69-43d7-aec2-52e2c8b6bef3)
+2026-03-12 12:03:06.432 INFO  - Life update for player Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4) : 2 LP
+2026-03-12 12:03:06.433 DEBUG - Player Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4) must choose 1 cards to steal (targets : {
+- TURF THE SURFER ;
+- STRANGE BARREL ;
+- TUSKED EXTORTER ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:06.433 INFO  - New TARGET choice to be resolved by Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4) (targets : {
+- TUSKED EXTORTER ;
+- STRANGE BARREL ;
+- TURF THE SURFER ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:06.433 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.433 DEBUG - TURF THE SURFER (d286ab39-9f55-48fb-8d91-0735783cdf75) stolen and played by Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4) due to COMPOST DRAGON (059eadbe-ff24-45e9-b55a-5fafb60959dc) effect
+2026-03-12 12:03:06.433 INFO  - Resolving STEAL effect of COMPOST DRAGON (059eadbe-ff24-45e9-b55a-5fafb60959dc)
+2026-03-12 12:03:06.433 INFO  - Life update for player Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4) : 1 LP
+2026-03-12 12:03:06.433 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.433 DEBUG - KANGASAURUS REX (5faf024f-b01a-4ad0-95c1-371b40447715) effect destroys COMPOST DRAGON (059eadbe-ff24-45e9-b55a-5fafb60959dc)
+2026-03-12 12:03:06.433 INFO  - Resolving DESTROY effect of KANGASAURUS REX (5faf024f-b01a-4ad0-95c1-371b40447715)
+2026-03-12 12:03:06.433 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.433 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.434 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.434 DEBUG - SHARK DOG (4abb6b5f-98cc-4a2f-95d1-24cefef2ccc4) discarded due to FERRET BOMBER (daf3451f-7bfd-4b14-af21-054c9599a71d) effect
+2026-03-12 12:03:06.434 DEBUG - KILLER BEE (a2085142-9470-4885-950f-30026df8a4a1) discarded due to FERRET BOMBER (daf3451f-7bfd-4b14-af21-054c9599a71d) effect
+2026-03-12 12:03:06.434 INFO  - Resolving DISCARD effect of FERRET BOMBER (daf3451f-7bfd-4b14-af21-054c9599a71d)
+2026-03-12 12:03:06.434 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.434 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.434 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.434 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.434 INFO  - Life update for player Player1 (e2c7ae42-edf4-4045-a141-a065f12a5959) : 2 LP
+2026-03-12 12:03:06.434 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.434 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.434 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.434 INFO  - New FRENZY choice to be resolved by Player1 (e2c7ae42-edf4-4045-a141-a065f12a5959) (attackingCard : RHINO TURTLE (13a7b902-5459-4f02-b2f9-09ef0807917a))
+2026-03-12 12:03:06.434 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.434 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.434 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.434 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.434 INFO  - Life update for player Player1 (e2c7ae42-edf4-4045-a141-a065f12a5959) : 1 LP
+2026-03-12 12:03:06.434 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.434 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.435 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.435 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.435 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.435 DEBUG - TIGER SQUIRREL (ec7d660e-8130-4c18-a03f-b7f8e468145c) effect destroys ELEPHANTOPUS (8b5caf60-3c4c-4c9b-94d2-663431a3d0cb)
+2026-03-12 12:03:06.435 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (ec7d660e-8130-4c18-a03f-b7f8e468145c)
+2026-03-12 12:03:06.435 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.435 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.435 INFO  - Life update for player Player1 (e2c7ae42-edf4-4045-a141-a065f12a5959) : 0 LP
+2026-03-12 12:03:06.435 INFO  - Game over : Player2 (a3ce4ddb-a082-4176-8bb5-7d81994e8ca4) wins ; Player1 (e2c7ae42-edf4-4045-a141-a065f12a5959) loses.
+2026-03-12 12:03:06.435 INFO  - End of the game

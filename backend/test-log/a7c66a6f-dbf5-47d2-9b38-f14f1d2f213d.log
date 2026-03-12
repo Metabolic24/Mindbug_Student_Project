@@ -1,0 +1,120 @@
+2026-03-12 12:03:41.317 INFO  - Calculating first player...
+2026-03-12 12:03:41.319 INFO  - Banned card for Player1 (9457735b-cb65-4deb-ad71-d3506ec16c1d) : SPIDER OWL (a5c8556e-1c47-4243-a25d-39acf3e5432f) (3)
+2026-03-12 12:03:41.319 INFO  - Banned card for Player2 (99a8dfab-5bff-4e8b-b1a1-eb68d12d8b42) : TURF THE SURFER (a58cfb15-93a2-406b-9d40-fc6a71dc0918) (8)
+2026-03-12 12:03:41.319 INFO  - First player will be Player2 (99a8dfab-5bff-4e8b-b1a1-eb68d12d8b42)
+2026-03-12 12:03:41.328 INFO  - Game a7c66a6f-dbf5-47d2-9b38-f14f1d2f213d starting...
+2026-03-12 12:03:41.328 INFO  - Player Player1 (9457735b-cb65-4deb-ad71-d3506ec16c1d) hand : {
+- BEE BEAR ;
+- FROBLIN INSTIGATOR ;
+- THE LURKER ;
+- GOBLIN WEREWOLF ;
+- MYSTERIOUS MERMAID
+}
+2026-03-12 12:03:41.328 INFO  - Player Player1 (9457735b-cb65-4deb-ad71-d3506ec16c1d) draw pile : {
+- HUNGRY HUNGRY HAMSTER ;
+- HARPY MOTHER ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+-  GIRAFFODILE ;
+- LUCHATAUR
+}
+2026-03-12 12:03:41.329 INFO  - Player Player2 (99a8dfab-5bff-4e8b-b1a1-eb68d12d8b42) hand : {
+- SHARK DOG ;
+- LUCHATAUR ;
+- PLATED SCORPION ;
+- GOBLIN WEREWOLF ;
+- KILLER BEE
+}
+2026-03-12 12:03:41.329 INFO  - Player Player2 (99a8dfab-5bff-4e8b-b1a1-eb68d12d8b42) draw pile : {
+- FERRET PACIFIER ;
+- CREEP FROM THE DEEP ;
+- HYENIX ;
+- CREEP FROM THE DEEP ;
+- BRAIN FLY
+}
+2026-03-12 12:03:41.330 DEBUG - GOBLIN WEREWOLF (fb0c69fc-6e13-4366-b1cf-fbeecfe95fcf) power changed (2 -> 8) due to GOBLIN WEREWOLF (fb0c69fc-6e13-4366-b1cf-fbeecfe95fcf) effect
+2026-03-12 12:03:41.330 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fb0c69fc-6e13-4366-b1cf-fbeecfe95fcf)
+2026-03-12 12:03:41.330 DEBUG - GOBLIN WEREWOLF (fb0c69fc-6e13-4366-b1cf-fbeecfe95fcf) power changed (2 -> 8) due to GOBLIN WEREWOLF (fb0c69fc-6e13-4366-b1cf-fbeecfe95fcf) effect
+2026-03-12 12:03:41.330 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fb0c69fc-6e13-4366-b1cf-fbeecfe95fcf)
+2026-03-12 12:03:41.331 DEBUG - GOBLIN WEREWOLF (fb0c69fc-6e13-4366-b1cf-fbeecfe95fcf) power changed (2 -> 8) due to GOBLIN WEREWOLF (fb0c69fc-6e13-4366-b1cf-fbeecfe95fcf) effect
+2026-03-12 12:03:41.331 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fb0c69fc-6e13-4366-b1cf-fbeecfe95fcf)
+2026-03-12 12:03:41.331 INFO  - Resolving NO_BLOCK effect of BEE BEAR (c1a4ee83-ca36-402b-b9dc-b5881ee36a13)
+2026-03-12 12:03:41.331 INFO  - Life update for player Player2 (99a8dfab-5bff-4e8b-b1a1-eb68d12d8b42) : 2 LP
+2026-03-12 12:03:41.331 DEBUG - GOBLIN WEREWOLF (fb0c69fc-6e13-4366-b1cf-fbeecfe95fcf) power changed (2 -> 8) due to GOBLIN WEREWOLF (fb0c69fc-6e13-4366-b1cf-fbeecfe95fcf) effect
+2026-03-12 12:03:41.331 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (fb0c69fc-6e13-4366-b1cf-fbeecfe95fcf)
+2026-03-12 12:03:41.331 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:41.334 INFO  - Life update for player Player1 (9457735b-cb65-4deb-ad71-d3506ec16c1d) : 2 LP
+2026-03-12 12:03:41.334 DEBUG - Player1 (9457735b-cb65-4deb-ad71-d3506ec16c1d) LP changed (3 -> 2) due to MYSTERIOUS MERMAID (3045e805-6e84-4879-a401-b44be97de4d8) effect
+2026-03-12 12:03:41.334 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (3045e805-6e84-4879-a401-b44be97de4d8)
+2026-03-12 12:03:41.334 DEBUG - GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) power changed (2 -> 8) due to GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) effect
+2026-03-12 12:03:41.334 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9)
+2026-03-12 12:03:41.335 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:41.335 DEBUG - GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) power changed (2 -> 8) due to GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) effect
+2026-03-12 12:03:41.335 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9)
+2026-03-12 12:03:41.335 DEBUG - GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) power changed (2 -> 8) due to GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) effect
+2026-03-12 12:03:41.335 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9)
+2026-03-12 12:03:41.335 INFO  - Life update for player Player2 (99a8dfab-5bff-4e8b-b1a1-eb68d12d8b42) : 1 LP
+2026-03-12 12:03:41.335 DEBUG - GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) power changed (2 -> 8) due to GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) effect
+2026-03-12 12:03:41.335 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9)
+2026-03-12 12:03:41.336 DEBUG - GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) power changed (2 -> 8) due to GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) effect
+2026-03-12 12:03:41.336 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9)
+2026-03-12 12:03:41.336 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:41.336 DEBUG - GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) power changed (2 -> 8) due to GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) effect
+2026-03-12 12:03:41.336 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9)
+2026-03-12 12:03:41.337 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (cb3fe814-8537-4a36-b2e4-eb1336415bf3)
+2026-03-12 12:03:41.337 DEBUG - GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) power changed (2 -> 8) due to GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) effect
+2026-03-12 12:03:41.337 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9)
+2026-03-12 12:03:41.337 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (cb3fe814-8537-4a36-b2e4-eb1336415bf3)
+2026-03-12 12:03:41.337 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:41.337 DEBUG - GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) power changed (2 -> 8) due to GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) effect
+2026-03-12 12:03:41.337 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9)
+2026-03-12 12:03:41.338 DEBUG - GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) power changed (2 -> 8) due to GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) effect
+2026-03-12 12:03:41.338 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9)
+2026-03-12 12:03:41.338 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:41.338 DEBUG - GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) power changed (2 -> 8) due to GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) effect
+2026-03-12 12:03:41.339 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9)
+2026-03-12 12:03:41.340 DEBUG - MYSTERIOUS MERMAID (3045e805-6e84-4879-a401-b44be97de4d8) stolen and played by Player2 (99a8dfab-5bff-4e8b-b1a1-eb68d12d8b42) due to BRAIN FLY (817c3fc8-0ef1-41f2-aa49-9313e37b7c00) effect
+2026-03-12 12:03:41.340 INFO  - Resolving STEAL effect of BRAIN FLY (817c3fc8-0ef1-41f2-aa49-9313e37b7c00)
+2026-03-12 12:03:41.341 DEBUG - FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) effect
+2026-03-12 12:03:41.341 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d)
+2026-03-12 12:03:41.341 DEBUG - FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) effect
+2026-03-12 12:03:41.341 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d)
+2026-03-12 12:03:41.342 DEBUG - FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) effect
+2026-03-12 12:03:41.342 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d)
+2026-03-12 12:03:41.342 DEBUG - FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) effect
+2026-03-12 12:03:41.342 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d)
+2026-03-12 12:03:41.342 DEBUG - FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) effect
+2026-03-12 12:03:41.342 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d)
+2026-03-12 12:03:41.343 DEBUG - BEE BEAR (c1a4ee83-ca36-402b-b9dc-b5881ee36a13) stolen and drawn by Player1 (9457735b-cb65-4deb-ad71-d3506ec16c1d) due to  GIRAFFODILE (7231a5e9-0d9d-4f95-b018-e1203d6cb82c) effect
+2026-03-12 12:03:41.343 DEBUG - HARPY MOTHER (7d6660ca-da9b-4ba7-b8a1-ca530eaa2871) stolen and drawn by Player1 (9457735b-cb65-4deb-ad71-d3506ec16c1d) due to  GIRAFFODILE (7231a5e9-0d9d-4f95-b018-e1203d6cb82c) effect
+2026-03-12 12:03:41.343 DEBUG - THE LURKER (02ae20c2-71e2-4f47-9b6e-d05e5e433961) stolen and drawn by Player1 (9457735b-cb65-4deb-ad71-d3506ec16c1d) due to  GIRAFFODILE (7231a5e9-0d9d-4f95-b018-e1203d6cb82c) effect
+2026-03-12 12:03:41.343 DEBUG - GOBLIN WEREWOLF (7e149699-494e-4f73-9adf-c1d1a0413bc9) stolen and drawn by Player1 (9457735b-cb65-4deb-ad71-d3506ec16c1d) due to  GIRAFFODILE (7231a5e9-0d9d-4f95-b018-e1203d6cb82c) effect
+2026-03-12 12:03:41.343 INFO  - Resolving STEAL effect of  GIRAFFODILE (7231a5e9-0d9d-4f95-b018-e1203d6cb82c)
+2026-03-12 12:03:41.343 DEBUG - FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) effect
+2026-03-12 12:03:41.343 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d)
+2026-03-12 12:03:41.343 DEBUG - FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) effect
+2026-03-12 12:03:41.343 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d)
+2026-03-12 12:03:41.344 DEBUG - FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) effect
+2026-03-12 12:03:41.344 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d)
+2026-03-12 12:03:41.344 DEBUG - FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) effect
+2026-03-12 12:03:41.344 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d)
+2026-03-12 12:03:41.344 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:41.345 DEBUG - FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d) effect
+2026-03-12 12:03:41.345 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (cc4d4e0c-91a0-4807-9dc8-d4ea1932d98d)
+2026-03-12 12:03:41.345 INFO  - New FRENZY choice to be resolved by Player2 (99a8dfab-5bff-4e8b-b1a1-eb68d12d8b42) (attackingCard : LUCHATAUR (95e8fb4f-c4d8-4902-ab38-9d887f31d51b))
+2026-03-12 12:03:41.345 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:41.346 DEBUG - Player Player2 (99a8dfab-5bff-4e8b-b1a1-eb68d12d8b42) must choose 1 cards to steal (targets : {
+- KILLER BEE ;
+- HYENIX
+})
+2026-03-12 12:03:41.346 INFO  - New TARGET choice to be resolved by Player2 (99a8dfab-5bff-4e8b-b1a1-eb68d12d8b42) (targets : {
+- KILLER BEE ;
+- HYENIX
+})
+2026-03-12 12:03:41.346 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:41.346 DEBUG - Player1 (9457735b-cb65-4deb-ad71-d3506ec16c1d) must decide if stolen card KILLER BEE (5b1b8bed-ab14-4d31-a7ef-79562b091437) will be added to hand or board
+2026-03-12 12:03:41.346 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (b39adcf1-2c7c-4eb7-8a25-10b722f77974)
+2026-03-12 12:03:41.346 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:41.346 DEBUG - KILLER BEE (5b1b8bed-ab14-4d31-a7ef-79562b091437) stolen and drawn by Player1 (9457735b-cb65-4deb-ad71-d3506ec16c1d) due to HUNGRY HUNGRY HAMSTER (b39adcf1-2c7c-4eb7-8a25-10b722f77974) effect
+2026-03-12 12:03:41.347 INFO  - Life update for player Player2 (99a8dfab-5bff-4e8b-b1a1-eb68d12d8b42) : 0 LP
+2026-03-12 12:03:41.347 INFO  - Game over : Player1 (9457735b-cb65-4deb-ad71-d3506ec16c1d) wins ; Player2 (99a8dfab-5bff-4e8b-b1a1-eb68d12d8b42) loses.
+2026-03-12 12:03:41.347 INFO  - End of the game

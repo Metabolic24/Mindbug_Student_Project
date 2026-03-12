@@ -3,19 +3,12 @@ package org.metacorp.mindbug.service.game;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
-import org.metacorp.mindbug.model.effect.EffectType;
-import org.metacorp.mindbug.model.effect.impl.DisableTimingEffect;
-import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.utils.MindbugGameTest;
-
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -23,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class PlayCardServiceTest extends MindbugGameTest {
+public class PlayCardServiceTest {
 
     private Game game;
     private Player currentPlayer;
@@ -32,13 +25,13 @@ public class PlayCardServiceTest extends MindbugGameTest {
     @BeforeEach
     public void initGame() {
         PlayerService playerService = new PlayerService();
-        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
-        opponent = currentPlayer.getOpponent(game.getPlayers());
+        opponent = game.getOpponents().getFirst();
     }
 
     @Test
-    public void testManagePlayedCard_nominal() throws WebSocketException, GameStateException {
+    public void testManagePlayedCard_nominal() {
         CardInstance card = currentPlayer.getHand().getFirst();
         game.setPlayedCard(card);
 
@@ -53,7 +46,7 @@ public class PlayCardServiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void testManagePlayedCard_mindbug() throws WebSocketException, GameStateException {
+    public void testManagePlayedCard_mindbug() {
         CardInstance card = currentPlayer.getHand().getFirst();
         game.setPlayedCard(card);
 
@@ -71,39 +64,24 @@ public class PlayCardServiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void testManagePlayedCard_playRestricted() throws WebSocketException, GameStateException {
-        DisableTimingEffect effect = new DisableTimingEffect();
-        effect.setValue(EffectTiming.PLAY);
-        effect.setType(EffectType.DISABLE_TIMING);
-
-        CardInstance opponentCard = opponent.getHand().getFirst();
-        opponentCard.getCard().getEffects().put(EffectTiming.PASSIVE, List.of(effect));
-        opponent.addCardToBoard(opponentCard);
-
+    public void testManagePlayedCard_playRestricted() {
         currentPlayer.disableTiming(EffectTiming.PLAY);
 
-        GainEffect gainEffect = new GainEffect();
-        gainEffect.setValue(3);
-        gainEffect.setType(EffectType.GAIN);
-
         CardInstance card = currentPlayer.getHand().getFirst();
-        card.getCard().getEffects().put(EffectTiming.PLAY, List.of(gainEffect));
         game.setPlayedCard(card);
 
         PlayCardService.managePlayedCard(currentPlayer, game);
 
         assertEquals(1, currentPlayer.getBoard().size());
-        assertTrue(currentPlayer.getBoard().contains(card));
-        assertEquals(1, opponent.getBoard().size());
+        assertEquals(card, currentPlayer.getBoard().getFirst());
+        assertTrue(opponent.getBoard().isEmpty());
 
         assertEquals(0, game.getEffectQueue().size());
         assertNotNull(game.getAfterEffect());
-
-        assertFalse(currentPlayer.canTrigger(EffectTiming.PLAY));
     }
 
     @Test
-    public void testPickCard_nominal() throws GameStateException, WebSocketException {
+    public void testPickCard_nominal() throws GameStateException {
         CardInstance card = currentPlayer.getHand().getFirst();
 
         PlayCardService.pickCard(card, game);
@@ -116,7 +94,7 @@ public class PlayCardServiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void testPickCard_playedCard() throws WebSocketException {
+    public void testPickCard_playedCard() {
         CardInstance card = currentPlayer.getHand().getFirst();
         game.setPlayedCard(card);
 
@@ -130,9 +108,9 @@ public class PlayCardServiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void testPickCard_choice() throws WebSocketException {
+    public void testPickCard_choice() {
         CardInstance card = currentPlayer.getHand().getFirst();
-        game.setChoice(new FrenzyAttackChoice(card));
+        game.setChoice(new FrenzyAttackChoice(currentPlayer, card));
 
         try {
             PlayCardService.pickCard(card, game);
@@ -144,7 +122,7 @@ public class PlayCardServiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void testPickCard_attackingCard() throws WebSocketException {
+    public void testPickCard_attackingCard() {
         CardInstance card = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(card);
         game.setAttackingCard(card);

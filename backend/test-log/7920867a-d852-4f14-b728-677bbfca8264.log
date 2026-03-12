@@ -1,0 +1,44 @@
+2026-03-12 12:03:02.655 INFO  - Calculating first player...
+2026-03-12 12:03:02.659 INFO  - Banned card for Player1 (7bfb465a-0b65-47a2-8cb3-c00f08c782f5) : MYSTERIOUS MERMAID (d0df3891-66c9-40a1-abde-312e1a43ee22) (7)
+2026-03-12 12:03:02.660 INFO  - Banned card for Player2 (d91d5fea-bd4e-4715-a772-42532ddc4f9e) : SNAIL HYDRA (05894d8d-c40c-4551-a690-ff89fceca195) (9)
+2026-03-12 12:03:02.660 INFO  - First player will be Player2 (d91d5fea-bd4e-4715-a772-42532ddc4f9e)
+2026-03-12 12:03:02.670 INFO  - Game 7920867a-d852-4f14-b728-677bbfca8264 starting...
+2026-03-12 12:03:02.670 INFO  - Player Player1 (7bfb465a-0b65-47a2-8cb3-c00f08c782f5) hand : {
+- KANGASAURUS REX ;
+- TURF THE SURFER ;
+- DEATHWEAVER ;
+- GOBLIN WEREWOLF ;
+- SHARK DOG
+}
+2026-03-12 12:03:02.670 INFO  - Player Player1 (7bfb465a-0b65-47a2-8cb3-c00f08c782f5) draw pile : {
+- LUCHATAUR ;
+- TIGER SQUIRREL ;
+- LUCHATAUR ;
+-  GIRAFFODILE ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:02.671 INFO  - Player Player2 (d91d5fea-bd4e-4715-a772-42532ddc4f9e) hand : {
+- GORILLON ;
+- HYENIX ;
+- BUGSERKER ;
+- HUNGRY HUNGRY HAMSTER ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:03:02.671 INFO  - Player Player2 (d91d5fea-bd4e-4715-a772-42532ddc4f9e) draw pile : {
+- HYENIX ;
+- TUSKED EXTORTER ;
+- SPIDER OWL ;
+- URCHIN HURLER ;
+- CHAMELEON SNIPER
+}
+2026-03-12 12:03:02.672 INFO  - Life update for player Player2 (d91d5fea-bd4e-4715-a772-42532ddc4f9e) : 2 LP
+2026-03-12 12:03:02.673 DEBUG - Player2 (d91d5fea-bd4e-4715-a772-42532ddc4f9e) LP changed (3 -> 2) due to GOREAGLE ALPHA (af82bc6a-42e6-433f-b60b-a93815445a34) effect
+2026-03-12 12:03:02.673 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (af82bc6a-42e6-433f-b60b-a93815445a34)
+2026-03-12 12:03:02.674 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:02.674 INFO  - New FRENZY choice to be resolved by Player2 (d91d5fea-bd4e-4715-a772-42532ddc4f9e) (attackingCard : GOREAGLE ALPHA (af82bc6a-42e6-433f-b60b-a93815445a34))
+2026-03-12 12:03:02.674 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:02.674 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:02.675 INFO  - Life update for player Player2 (d91d5fea-bd4e-4715-a772-42532ddc4f9e) : 1 LP
+2026-03-12 12:03:02.675 INFO  - Life update for player Player2 (d91d5fea-bd4e-4715-a772-42532ddc4f9e) : 0 LP
+2026-03-12 12:03:02.676 INFO  - Game over : Player1 (7bfb465a-0b65-47a2-8cb3-c00f08c782f5) wins ; Player2 (d91d5fea-bd4e-4715-a772-42532ddc4f9e) loses.
+2026-03-12 12:03:02.676 INFO  - End of the game

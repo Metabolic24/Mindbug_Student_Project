@@ -1,0 +1,132 @@
+2026-03-12 12:03:02.918 INFO  - Calculating first player...
+2026-03-12 12:03:02.921 INFO  - Banned card for Player1 (f1e7df1b-9377-4ec7-8f6a-f1b2ab1668b8) : HUNGRY HUNGRY HAMSTER (47951f3c-8274-4652-8397-d93c32c19303) (2)
+2026-03-12 12:03:02.921 INFO  - Banned card for Player2 (f3cf22ec-9af2-4d36-8674-75ce9cb6104b) : TURF THE SURFER (d5e8d9f5-0b84-42b1-b31d-fa05d9c1e8b5) (8)
+2026-03-12 12:03:02.921 INFO  - First player will be Player2 (f3cf22ec-9af2-4d36-8674-75ce9cb6104b)
+2026-03-12 12:03:02.930 INFO  - Game 7c3792f4-e468-4e3c-b763-e7502464ab7b starting...
+2026-03-12 12:03:02.930 INFO  - Player Player1 (f1e7df1b-9377-4ec7-8f6a-f1b2ab1668b8) hand : {
+-  GIRAFFODILE ;
+- MYSTERIOUS MERMAID ;
+- BUGSERKER ;
+- MAJESTIC MANTICORE ;
+- GRAVE ROBBER
+}
+2026-03-12 12:03:02.931 INFO  - Player Player1 (f1e7df1b-9377-4ec7-8f6a-f1b2ab1668b8) draw pile : {
+- MAJESTIC MANTICORE ;
+- THE LURKER ;
+- COMPOST DRAGON ;
+- TUSKED EXTORTER ;
+- HAMSTER LION
+}
+2026-03-12 12:03:02.931 INFO  - Player Player2 (f3cf22ec-9af2-4d36-8674-75ce9cb6104b) hand : {
+- LUCHATAUR ;
+- LUCHATAUR ;
+- PLATED SCORPION ;
+- GOBLIN WEREWOLF ;
+- CHAMELEON SNIPER
+}
+2026-03-12 12:03:02.931 INFO  - Player Player2 (f3cf22ec-9af2-4d36-8674-75ce9cb6104b) draw pile : {
+- SNAIL HYDRA ;
+- KANGASAURUS REX ;
+- PLATED SCORPION ;
+- AXOLOTL HEALER ;
+- SPIDER OWL
+}
+2026-03-12 12:03:02.932 INFO  - New FRENZY choice to be resolved by Player2 (f3cf22ec-9af2-4d36-8674-75ce9cb6104b) (attackingCard : LUCHATAUR (7e773fd4-e35e-4f69-84cf-75dc44106d23))
+2026-03-12 12:03:02.933 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:02.933 INFO  - Life update for player Player1 (f1e7df1b-9377-4ec7-8f6a-f1b2ab1668b8) : 2 LP
+2026-03-12 12:03:02.933 DEBUG - Player1 (f1e7df1b-9377-4ec7-8f6a-f1b2ab1668b8) LP changed (2 -> 3) due to MYSTERIOUS MERMAID (68efb2f1-907d-4f98-9336-b90fd38e8fdc) effect
+2026-03-12 12:03:02.933 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (68efb2f1-907d-4f98-9336-b90fd38e8fdc)
+2026-03-12 12:03:02.934 INFO  - New FRENZY choice to be resolved by Player2 (f3cf22ec-9af2-4d36-8674-75ce9cb6104b) (attackingCard : LUCHATAUR (7e773fd4-e35e-4f69-84cf-75dc44106d23))
+2026-03-12 12:03:02.934 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:02.934 INFO  - Life update for player Player1 (f1e7df1b-9377-4ec7-8f6a-f1b2ab1668b8) : 2 LP
+2026-03-12 12:03:02.935 DEBUG - LUCHATAUR (7e773fd4-e35e-4f69-84cf-75dc44106d23) stolen and played by Player1 (f1e7df1b-9377-4ec7-8f6a-f1b2ab1668b8) due to GRAVE ROBBER (e6d01f58-1372-4a92-bd53-560073b8948b) effect
+2026-03-12 12:03:02.935 INFO  - Resolving STEAL effect of GRAVE ROBBER (e6d01f58-1372-4a92-bd53-560073b8948b)
+2026-03-12 12:03:02.935 DEBUG - KANGASAURUS REX (f23443f5-ccf3-4817-84cd-91be69b273bc) effect destroys BUGSERKER (3a9c0106-989c-4df3-b6e9-10f92bfbff09)
+2026-03-12 12:03:02.935 INFO  - Resolving DESTROY effect of KANGASAURUS REX (f23443f5-ccf3-4817-84cd-91be69b273bc)
+2026-03-12 12:03:02.937 DEBUG - Player Player2 (f3cf22ec-9af2-4d36-8674-75ce9cb6104b) must choose 1 card(s) to discard (available targets : {
+- LUCHATAUR ;
+- GOBLIN WEREWOLF ;
+- CHAMELEON SNIPER ;
+- AXOLOTL HEALER ;
+- SPIDER OWL
+})
+2026-03-12 12:03:02.937 INFO  - New TARGET choice to be resolved by Player2 (f3cf22ec-9af2-4d36-8674-75ce9cb6104b) (targets : {
+- SPIDER OWL ;
+- LUCHATAUR ;
+- GOBLIN WEREWOLF ;
+- CHAMELEON SNIPER ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:03:02.937 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:02.937 DEBUG - GOBLIN WEREWOLF (c6be30ad-cc71-4899-8c7a-94a0cae145f6) discarded due to TUSKED EXTORTER (a03a61ef-4e21-492d-9e3a-676e4ebf7693) effect
+2026-03-12 12:03:02.937 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (a03a61ef-4e21-492d-9e3a-676e4ebf7693)
+2026-03-12 12:03:02.938 DEBUG - CardInstance(uuid=858503f6-b9e8-41ef-953b-65803e9a717f, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.940 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.940 DEBUG - CardInstance(uuid=858503f6-b9e8-41ef-953b-65803e9a717f, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.941 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.942 DEBUG - CardInstance(uuid=1392b69a-aae6-41dc-9807-66bfc80f2492, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.942 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.943 DEBUG - CardInstance(uuid=1392b69a-aae6-41dc-9807-66bfc80f2492, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.943 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.943 DEBUG - MAJESTIC MANTICORE (0743de6a-9959-4ae6-98e3-ff7231619b3a) effect destroys CHAMELEON SNIPER (1392b69a-aae6-41dc-9807-66bfc80f2492)
+2026-03-12 12:03:02.943 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (0743de6a-9959-4ae6-98e3-ff7231619b3a)
+2026-03-12 12:03:02.943 DEBUG - CardInstance(uuid=858503f6-b9e8-41ef-953b-65803e9a717f, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=2, keywords=[TOUGH, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.944 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.944 DEBUG - CardInstance(uuid=a208131b-c3db-4285-a8d2-d00baaf2e44b, card=Card(id=25, setName=first_contact, name=SNAIL HYDRA, power=9, keywords=[], effects={ATTACK=[DestroyEffect(value=1, min=null, max=null, lessAllies=true, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: If you control fewer creatures than the opponent, defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=9, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.947 DEBUG - CardInstance(uuid=3b1b2b9f-1b77-47e3-9eb7-f19884ecb646, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.948 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.948 DEBUG - CardInstance(uuid=a208131b-c3db-4285-a8d2-d00baaf2e44b, card=Card(id=25, setName=first_contact, name=SNAIL HYDRA, power=9, keywords=[], effects={ATTACK=[DestroyEffect(value=1, min=null, max=null, lessAllies=true, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: If you control fewer creatures than the opponent, defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=9, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.948 DEBUG - CardInstance(uuid=3b1b2b9f-1b77-47e3-9eb7-f19884ecb646, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.949 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.949 DEBUG - CardInstance(uuid=bb0ff321-ca19-4113-bd13-d3199f31d8ae, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=3, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.949 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.949 DEBUG - CardInstance(uuid=bb0ff321-ca19-4113-bd13-d3199f31d8ae, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=3, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.949 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.950 INFO  - Life update for player Player1 (f1e7df1b-9377-4ec7-8f6a-f1b2ab1668b8) : 1 LP
+2026-03-12 12:03:02.950 DEBUG - Player Player1 (f1e7df1b-9377-4ec7-8f6a-f1b2ab1668b8) must choose 1 cards to steal (targets : {
+-  GIRAFFODILE ;
+- MYSTERIOUS MERMAID ;
+- MAJESTIC MANTICORE ;
+- BUGSERKER ;
+- GRAVE ROBBER ;
+- LUCHATAUR ;
+- TUSKED EXTORTER ;
+- MAJESTIC MANTICORE ;
+- HAMSTER LION
+})
+2026-03-12 12:03:02.950 INFO  - New TARGET choice to be resolved by Player1 (f1e7df1b-9377-4ec7-8f6a-f1b2ab1668b8) (targets : {
+- MYSTERIOUS MERMAID ;
+- TUSKED EXTORTER ;
+- LUCHATAUR ;
+- BUGSERKER ;
+- GRAVE ROBBER ;
+- HAMSTER LION ;
+- MAJESTIC MANTICORE ;
+- MAJESTIC MANTICORE ;
+-  GIRAFFODILE
+})
+2026-03-12 12:03:02.950 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:02.950 DEBUG - HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4) stolen and played by Player1 (f1e7df1b-9377-4ec7-8f6a-f1b2ab1668b8) due to COMPOST DRAGON (9eed4869-6b28-42aa-903b-d1d2a68da318) effect
+2026-03-12 12:03:02.950 INFO  - Resolving STEAL effect of COMPOST DRAGON (9eed4869-6b28-42aa-903b-d1d2a68da318)
+2026-03-12 12:03:02.950 DEBUG - CardInstance(uuid=bb0ff321-ca19-4113-bd13-d3199f31d8ae, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=3, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.951 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.951 DEBUG - CardInstance(uuid=bb0ff321-ca19-4113-bd13-d3199f31d8ae, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=3, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.951 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.951 DEBUG - CardInstance(uuid=bb0ff321-ca19-4113-bd13-d3199f31d8ae, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=3, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.951 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.952 DEBUG - Player2 (f3cf22ec-9af2-4d36-8674-75ce9cb6104b) LP changed (3 -> 5) due to AXOLOTL HEALER (e2428942-4e2a-4de6-aece-a423ef5f7924) effect
+2026-03-12 12:03:02.952 INFO  - Resolving GAIN effect of AXOLOTL HEALER (e2428942-4e2a-4de6-aece-a423ef5f7924)
+2026-03-12 12:03:02.952 DEBUG - CardInstance(uuid=bb0ff321-ca19-4113-bd13-d3199f31d8ae, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=3, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.952 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.952 DEBUG - CardInstance(uuid=bb0ff321-ca19-4113-bd13-d3199f31d8ae, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=3, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.952 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.952 DEBUG - CardInstance(uuid=bb0ff321-ca19-4113-bd13-d3199f31d8ae, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=3, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.953 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.953 DEBUG - CardInstance(uuid=bb0ff321-ca19-4113-bd13-d3199f31d8ae, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[POISONOUS, SNEAKY], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@74f89bad), power=3, keywords=[POISONOUS, SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.953 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7cb4d201-9729-490d-a044-b250ab3a57d4)
+2026-03-12 12:03:02.953 INFO  - New FRENZY choice to be resolved by Player2 (f3cf22ec-9af2-4d36-8674-75ce9cb6104b) (attackingCard : LUCHATAUR (3b1b2b9f-1b77-47e3-9eb7-f19884ecb646))
+2026-03-12 12:03:02.953 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:02.954 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:02.954 INFO  - Life update for player Player1 (f1e7df1b-9377-4ec7-8f6a-f1b2ab1668b8) : 0 LP
+2026-03-12 12:03:02.954 INFO  - Game over : Player2 (f3cf22ec-9af2-4d36-8674-75ce9cb6104b) wins ; Player1 (f1e7df1b-9377-4ec7-8f6a-f1b2ab1668b8) loses.
+2026-03-12 12:03:02.954 INFO  - End of the game

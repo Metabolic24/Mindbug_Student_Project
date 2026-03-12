@@ -1,0 +1,222 @@
+2026-03-12 12:18:25.364 INFO  - Calculating first player...
+2026-03-12 12:18:25.366 INFO  - Banned card for Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) : FERRET PACIFIER (d999c82d-db9c-4c23-96fc-3f5ab6fd4197) (4)
+2026-03-12 12:18:25.367 INFO  - Banned card for Player2 (407c9f21-7edd-47b0-be17-ef34a10f8f65) : GOREAGLE ALPHA (d21f78c6-ed1b-451e-8319-2d247c94626c) (6)
+2026-03-12 12:18:25.367 INFO  - First player will be Player2 (407c9f21-7edd-47b0-be17-ef34a10f8f65)
+2026-03-12 12:18:25.375 INFO  - Game 3225e865-8592-4aa7-8349-75a6167fc2d1 starting...
+2026-03-12 12:18:25.375 INFO  - Player Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) hand : {
+- HARPY MOTHER ;
+- HAMSTER LION ;
+- GOREAGLE ALPHA ;
+- EXPLOSIVE TOAD ;
+- GORILLON
+}
+2026-03-12 12:18:25.375 INFO  - Player Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) draw pile : {
+- SNAIL HYDRA ;
+- COUNT DRACULEECH ;
+- SPIDER OWL ;
+- PLATED SCORPION ;
+- TURF THE SURFER
+}
+2026-03-12 12:18:25.375 INFO  - Player Player2 (407c9f21-7edd-47b0-be17-ef34a10f8f65) hand : {
+- CREEP FROM THE DEEP ;
+- CHAMELEON SNIPER ;
+- MAJESTIC MANTICORE ;
+- CREEP FROM THE DEEP ;
+- HYENIX
+}
+2026-03-12 12:18:25.375 INFO  - Player Player2 (407c9f21-7edd-47b0-be17-ef34a10f8f65) draw pile : {
+- SHIELD BUGS ;
+- THE LURKER ;
+- FERRET PACIFIER ;
+- KANGASAURUS REX ;
+- SHIELD BUGS
+}
+2026-03-12 12:18:25.376 DEBUG - HYENIX (16617888-5484-4d61-ad14-8a7336bf4001) power changed (7 -> 8) due to SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361) effect
+2026-03-12 12:18:25.376 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361)
+2026-03-12 12:18:25.376 DEBUG - HYENIX (16617888-5484-4d61-ad14-8a7336bf4001) power changed (7 -> 8) due to SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361) effect
+2026-03-12 12:18:25.376 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361)
+2026-03-12 12:18:25.376 DEBUG - HYENIX (16617888-5484-4d61-ad14-8a7336bf4001) power changed (7 -> 8) due to SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361) effect
+2026-03-12 12:18:25.376 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361)
+2026-03-12 12:18:25.376 DEBUG - HYENIX (16617888-5484-4d61-ad14-8a7336bf4001) power changed (7 -> 8) due to SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361) effect
+2026-03-12 12:18:25.376 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361)
+2026-03-12 12:18:25.376 DEBUG - HYENIX (16617888-5484-4d61-ad14-8a7336bf4001) power changed (7 -> 8) due to SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361) effect
+2026-03-12 12:18:25.376 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361)
+2026-03-12 12:18:25.376 DEBUG - HYENIX (16617888-5484-4d61-ad14-8a7336bf4001) power changed (7 -> 8) due to SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361) effect
+2026-03-12 12:18:25.376 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361)
+2026-03-12 12:18:25.377 DEBUG - HYENIX (16617888-5484-4d61-ad14-8a7336bf4001) power changed (7 -> 8) due to SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361) effect
+2026-03-12 12:18:25.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361)
+2026-03-12 12:18:25.377 DEBUG - CardInstance(uuid=cabc99ff-5128-4d78-9d39-70e51b6fa361, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@231d3ce), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.377 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (56474078-22c1-456b-b420-ef3002ffa050)
+2026-03-12 12:18:25.377 DEBUG - HYENIX (16617888-5484-4d61-ad14-8a7336bf4001) power changed (7 -> 8) due to SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361) effect
+2026-03-12 12:18:25.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361)
+2026-03-12 12:18:25.377 DEBUG - CardInstance(uuid=cabc99ff-5128-4d78-9d39-70e51b6fa361, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@231d3ce), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.377 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (56474078-22c1-456b-b420-ef3002ffa050)
+2026-03-12 12:18:25.377 DEBUG - MAJESTIC MANTICORE (9aaa91f3-452a-407a-a99e-9094015bc8f9) power changed (6 -> 7) due to SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361) effect
+2026-03-12 12:18:25.377 DEBUG - HYENIX (16617888-5484-4d61-ad14-8a7336bf4001) power changed (7 -> 8) due to SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361) effect
+2026-03-12 12:18:25.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361)
+2026-03-12 12:18:25.377 DEBUG - CardInstance(uuid=cabc99ff-5128-4d78-9d39-70e51b6fa361, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@231d3ce), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.378 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (56474078-22c1-456b-b420-ef3002ffa050)
+2026-03-12 12:18:25.378 DEBUG - MAJESTIC MANTICORE (9aaa91f3-452a-407a-a99e-9094015bc8f9) power changed (6 -> 7) due to SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361) effect
+2026-03-12 12:18:25.378 DEBUG - HYENIX (16617888-5484-4d61-ad14-8a7336bf4001) power changed (7 -> 8) due to SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361) effect
+2026-03-12 12:18:25.378 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cabc99ff-5128-4d78-9d39-70e51b6fa361)
+2026-03-12 12:18:25.378 DEBUG - CardInstance(uuid=cabc99ff-5128-4d78-9d39-70e51b6fa361, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@231d3ce), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.378 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (56474078-22c1-456b-b420-ef3002ffa050)
+2026-03-12 12:18:25.378 DEBUG - CardInstance(uuid=9aaa91f3-452a-407a-a99e-9094015bc8f9, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@231d3ce), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.378 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (56474078-22c1-456b-b420-ef3002ffa050)
+2026-03-12 12:18:25.378 DEBUG - CardInstance(uuid=9aaa91f3-452a-407a-a99e-9094015bc8f9, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@231d3ce), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.378 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (56474078-22c1-456b-b420-ef3002ffa050)
+2026-03-12 12:18:25.379 DEBUG - CardInstance(uuid=9aaa91f3-452a-407a-a99e-9094015bc8f9, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@231d3ce), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.379 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (56474078-22c1-456b-b420-ef3002ffa050)
+2026-03-12 12:18:25.379 DEBUG - CardInstance(uuid=9aaa91f3-452a-407a-a99e-9094015bc8f9, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@231d3ce), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.379 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (56474078-22c1-456b-b420-ef3002ffa050)
+2026-03-12 12:18:25.379 INFO  - New FRENZY choice to be resolved by Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) (attackingCard : EXPLOSIVE TOAD (f3c8e55d-2dc4-4d5c-81ae-9563a86f75aa))
+2026-03-12 12:18:25.379 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.379 INFO  - Life update for player Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) : 2 LP
+2026-03-12 12:18:25.379 DEBUG - Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) LP changed (3 -> 2) due to GOREAGLE ALPHA (a21f7ffc-716b-4372-b4d0-41a7a565558f) effect
+2026-03-12 12:18:25.380 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (a21f7ffc-716b-4372-b4d0-41a7a565558f)
+2026-03-12 12:18:25.380 DEBUG - Player Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) must choose 1 card(s) to destroy (available targets : {
+- CREEP FROM THE DEEP ;
+- CREEP FROM THE DEEP ;
+- KANGASAURUS REX ;
+- HARPY MOTHER ;
+- GORILLON ;
+- GOREAGLE ALPHA ;
+- SNAIL HYDRA
+})
+2026-03-12 12:18:25.380 INFO  - New TARGET choice to be resolved by Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) (targets : {
+- CREEP FROM THE DEEP ;
+- KANGASAURUS REX ;
+- HARPY MOTHER ;
+- GOREAGLE ALPHA ;
+- GORILLON ;
+- SNAIL HYDRA ;
+- CREEP FROM THE DEEP
+})
+2026-03-12 12:18:25.380 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.380 DEBUG - EXPLOSIVE TOAD (f3c8e55d-2dc4-4d5c-81ae-9563a86f75aa) effect destroys GORILLON (da0288ea-50ef-4c1c-b434-b3a7eef5dde4)
+2026-03-12 12:18:25.380 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (f3c8e55d-2dc4-4d5c-81ae-9563a86f75aa)
+2026-03-12 12:18:25.380 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.380 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.381 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.381 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.381 DEBUG - CREEP FROM THE DEEP (4fee2412-0ea5-4f18-ae1c-6c57a25e3b31) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.381 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.381 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.381 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.381 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.381 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.381 DEBUG - CREEP FROM THE DEEP (4fee2412-0ea5-4f18-ae1c-6c57a25e3b31) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.381 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.381 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.381 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.381 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.381 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.381 INFO  - Life update for player Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) : 1 LP
+2026-03-12 12:18:25.381 DEBUG - Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) LP changed (2 -> 1) due to COUNT DRACULEECH (ccb35dad-4cd8-48f1-896b-188f0f0608da) effect
+2026-03-12 12:18:25.381 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (ccb35dad-4cd8-48f1-896b-188f0f0608da)
+2026-03-12 12:18:25.381 DEBUG - CREEP FROM THE DEEP (4fee2412-0ea5-4f18-ae1c-6c57a25e3b31) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.382 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.382 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.382 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.382 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.382 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.382 DEBUG - Player Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) must choose 1 card(s) to destroy (available targets : {
+- CREEP FROM THE DEEP ;
+- CREEP FROM THE DEEP ;
+- KANGASAURUS REX ;
+- FERRET PACIFIER ;
+- SHIELD BUGS ;
+- HARPY MOTHER ;
+- GOREAGLE ALPHA ;
+- SNAIL HYDRA ;
+- PLATED SCORPION ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:18:25.382 DEBUG - CREEP FROM THE DEEP (4fee2412-0ea5-4f18-ae1c-6c57a25e3b31) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.382 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.382 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.382 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.382 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.382 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.382 INFO  - New TARGET choice to be resolved by Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) (targets : {
+- CREEP FROM THE DEEP ;
+- KANGASAURUS REX ;
+- HARPY MOTHER ;
+- GOREAGLE ALPHA ;
+- PLATED SCORPION ;
+- SHIELD BUGS ;
+- SNAIL HYDRA ;
+- FERRET PACIFIER ;
+- CREEP FROM THE DEEP ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:18:25.382 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.382 DEBUG - COUNT DRACULEECH (ccb35dad-4cd8-48f1-896b-188f0f0608da) effect destroys COUNT DRACULEECH (ccb35dad-4cd8-48f1-896b-188f0f0608da)
+2026-03-12 12:18:25.382 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (ccb35dad-4cd8-48f1-896b-188f0f0608da)
+2026-03-12 12:18:25.383 DEBUG - CREEP FROM THE DEEP (4fee2412-0ea5-4f18-ae1c-6c57a25e3b31) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.383 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.383 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.383 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.383 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.383 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.383 DEBUG - CREEP FROM THE DEEP (4fee2412-0ea5-4f18-ae1c-6c57a25e3b31) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.383 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.383 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.383 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.383 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.383 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.383 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:25.383 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.383 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.384 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.384 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.384 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.384 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.384 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.384 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.384 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.384 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.384 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.384 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.384 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.384 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.384 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.384 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.384 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.384 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.384 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.384 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.385 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.385 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.385 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.385 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.385 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.385 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.385 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.385 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.385 DEBUG - CHAMELEON SNIPER (26492073-f395-4ebc-91cd-ea3c015cd0b1) power changed (1 -> 2) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.385 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.385 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.385 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.385 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.385 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.385 DEBUG - CHAMELEON SNIPER (26492073-f395-4ebc-91cd-ea3c015cd0b1) power changed (1 -> 2) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.385 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.385 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.386 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.386 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.386 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.386 DEBUG - CHAMELEON SNIPER (26492073-f395-4ebc-91cd-ea3c015cd0b1) power changed (1 -> 2) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.386 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.386 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.386 DEBUG - KANGASAURUS REX (0ca2b4c0-8393-43bc-a69e-b9dc40796891) power changed (7 -> 8) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.386 DEBUG - FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.386 DEBUG - CREEP FROM THE DEEP (ad5f9e43-1a45-4781-977b-bff76971186b) power changed (4 -> 5) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.386 DEBUG - CHAMELEON SNIPER (26492073-f395-4ebc-91cd-ea3c015cd0b1) power changed (1 -> 2) due to SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3) effect
+2026-03-12 12:18:25.386 INFO  - Resolving POWER_UP effect of SHIELD BUGS (211a7a9b-bb70-470a-8b41-d4d169834de3)
+2026-03-12 12:18:25.386 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fe2e9df9-e031-44c4-bff7-490a8ca5fa37)
+2026-03-12 12:18:25.386 INFO  - Life update for player Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) : 0 LP
+2026-03-12 12:18:25.386 INFO  - Game over : Player2 (407c9f21-7edd-47b0-be17-ef34a10f8f65) wins ; Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) loses.
+2026-03-12 12:18:25.386 INFO  - End of the game
+2026-03-12 12:18:25.386 DEBUG - Player1 (2cb700e5-8424-4820-80ae-c9ec507ebe85) LP changed (1 -> 0) due to CHAMELEON SNIPER (26492073-f395-4ebc-91cd-ea3c015cd0b1) effect
+2026-03-12 12:18:25.386 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (26492073-f395-4ebc-91cd-ea3c015cd0b1)

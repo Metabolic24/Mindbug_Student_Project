@@ -1,0 +1,115 @@
+2026-03-12 12:03:42.161 INFO  - Calculating first player...
+2026-03-12 12:03:42.163 INFO  - Banned card for Player1 (56cab983-2766-495b-92ec-fbad79df2dbe) : DEATHWEAVER (784111d9-6cef-42d0-b7f1-570220a07c47) (2)
+2026-03-12 12:03:42.163 INFO  - Banned card for Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) : KILLER BEE (7efe42d4-e648-467d-a802-7e39ef2c1557) (5)
+2026-03-12 12:03:42.163 INFO  - First player will be Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc)
+2026-03-12 12:03:42.169 INFO  - Game de248810-491f-46ef-9eab-bf06861ecaf8 starting...
+2026-03-12 12:03:42.169 INFO  - Player Player1 (56cab983-2766-495b-92ec-fbad79df2dbe) hand : {
+- SNAIL THROWER ;
+- PLATED SCORPION ;
+- KANGASAURUS REX ;
+- RHINO TURTLE ;
+- HYENIX
+}
+2026-03-12 12:03:42.170 INFO  - Player Player1 (56cab983-2766-495b-92ec-fbad79df2dbe) draw pile : {
+- THE LURKER ;
+- COUNT DRACULEECH ;
+- SNAIL HYDRA ;
+- TURBO BUG ;
+- HAMSTER LION
+}
+2026-03-12 12:03:42.170 INFO  - Player Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) hand : {
+- SPIDER OWL ;
+- COUNT DRACULEECH ;
+- BRAIN FLY ;
+- FERRET PACIFIER ;
+- GORILLON
+}
+2026-03-12 12:03:42.170 INFO  - Player Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) draw pile : {
+- EXPLOSIVE TOAD ;
+- CREEP FROM THE DEEP ;
+- SHARK DOG ;
+- COMPOST DRAGON ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:03:42.170 INFO  - Life update for player Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) : 2 LP
+2026-03-12 12:03:42.170 DEBUG - Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) LP changed (3 -> 2) due to COUNT DRACULEECH (4411ec4e-8087-4cb8-a986-42876fb28701) effect
+2026-03-12 12:03:42.170 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (4411ec4e-8087-4cb8-a986-42876fb28701)
+2026-03-12 12:03:42.170 DEBUG - Player Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) must choose 1 card(s) to destroy (available targets : {
+- KANGASAURUS REX ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:42.170 INFO  - New TARGET choice to be resolved by Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) (targets : {
+- KANGASAURUS REX ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:42.170 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.170 DEBUG - COUNT DRACULEECH (4411ec4e-8087-4cb8-a986-42876fb28701) effect destroys KANGASAURUS REX (22cfa75e-3fd5-485c-897f-3c85b6b83f08)
+2026-03-12 12:03:42.170 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (4411ec4e-8087-4cb8-a986-42876fb28701)
+2026-03-12 12:03:42.171 INFO  - Life update for player Player1 (56cab983-2766-495b-92ec-fbad79df2dbe) : 2 LP
+2026-03-12 12:03:42.171 INFO  - Life update for player Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) : 1 LP
+2026-03-12 12:03:42.171 DEBUG - Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) LP changed (2 -> 1) due to COUNT DRACULEECH (4411ec4e-8087-4cb8-a986-42876fb28701) effect
+2026-03-12 12:03:42.171 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (4411ec4e-8087-4cb8-a986-42876fb28701)
+2026-03-12 12:03:42.171 DEBUG - Player Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) must choose 1 card(s) to destroy (available targets : {
+- RHINO TURTLE ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:42.171 INFO  - New TARGET choice to be resolved by Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) (targets : {
+- RHINO TURTLE ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:42.171 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.171 DEBUG - COUNT DRACULEECH (4411ec4e-8087-4cb8-a986-42876fb28701) effect destroys COUNT DRACULEECH (4411ec4e-8087-4cb8-a986-42876fb28701)
+2026-03-12 12:03:42.171 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (4411ec4e-8087-4cb8-a986-42876fb28701)
+2026-03-12 12:03:42.172 DEBUG - CardInstance(uuid=288b8edf-d227-467c-ab5c-a04a03061f04, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c79d093), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.172 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (87acbe70-9659-49dd-97ce-9556cbb90227)
+2026-03-12 12:03:42.172 DEBUG - CardInstance(uuid=288b8edf-d227-467c-ab5c-a04a03061f04, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c79d093), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.172 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (87acbe70-9659-49dd-97ce-9556cbb90227)
+2026-03-12 12:03:42.172 DEBUG - CardInstance(uuid=288b8edf-d227-467c-ab5c-a04a03061f04, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c79d093), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.172 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (87acbe70-9659-49dd-97ce-9556cbb90227)
+2026-03-12 12:03:42.173 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1a9b0df-d821-46a0-997f-4f18fb8a3260)
+2026-03-12 12:03:42.173 DEBUG - CardInstance(uuid=288b8edf-d227-467c-ab5c-a04a03061f04, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c79d093), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.173 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (87acbe70-9659-49dd-97ce-9556cbb90227)
+2026-03-12 12:03:42.173 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1a9b0df-d821-46a0-997f-4f18fb8a3260)
+2026-03-12 12:03:42.173 DEBUG - THE LURKER (72317fcd-66f6-4933-a88b-86461a6b79a2) gains HUNTER keyword
+2026-03-12 12:03:42.173 DEBUG - TURBO BUG (8b152c8d-d271-4abb-8b88-287f6d416a0a) gains HUNTER keyword
+2026-03-12 12:03:42.173 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (1a64f4f9-810a-4ef3-881d-a3de1400b318)
+2026-03-12 12:03:42.173 DEBUG - THE LURKER (72317fcd-66f6-4933-a88b-86461a6b79a2) gains POISONOUS keyword
+2026-03-12 12:03:42.173 DEBUG - TURBO BUG (8b152c8d-d271-4abb-8b88-287f6d416a0a) gains POISONOUS keyword
+2026-03-12 12:03:42.173 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (1a64f4f9-810a-4ef3-881d-a3de1400b318)
+2026-03-12 12:03:42.173 DEBUG - CardInstance(uuid=288b8edf-d227-467c-ab5c-a04a03061f04, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c79d093), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.173 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (87acbe70-9659-49dd-97ce-9556cbb90227)
+2026-03-12 12:03:42.173 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1a9b0df-d821-46a0-997f-4f18fb8a3260)
+2026-03-12 12:03:42.173 DEBUG - THE LURKER (72317fcd-66f6-4933-a88b-86461a6b79a2) gains HUNTER keyword
+2026-03-12 12:03:42.173 DEBUG - TURBO BUG (8b152c8d-d271-4abb-8b88-287f6d416a0a) gains HUNTER keyword
+2026-03-12 12:03:42.173 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (1a64f4f9-810a-4ef3-881d-a3de1400b318)
+2026-03-12 12:03:42.173 DEBUG - THE LURKER (72317fcd-66f6-4933-a88b-86461a6b79a2) gains POISONOUS keyword
+2026-03-12 12:03:42.173 DEBUG - TURBO BUG (8b152c8d-d271-4abb-8b88-287f6d416a0a) gains POISONOUS keyword
+2026-03-12 12:03:42.173 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (1a64f4f9-810a-4ef3-881d-a3de1400b318)
+2026-03-12 12:03:42.174 DEBUG - CardInstance(uuid=288b8edf-d227-467c-ab5c-a04a03061f04, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c79d093), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.174 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (87acbe70-9659-49dd-97ce-9556cbb90227)
+2026-03-12 12:03:42.174 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1a9b0df-d821-46a0-997f-4f18fb8a3260)
+2026-03-12 12:03:42.174 DEBUG - THE LURKER (72317fcd-66f6-4933-a88b-86461a6b79a2) gains HUNTER keyword
+2026-03-12 12:03:42.174 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (1a64f4f9-810a-4ef3-881d-a3de1400b318)
+2026-03-12 12:03:42.174 DEBUG - THE LURKER (72317fcd-66f6-4933-a88b-86461a6b79a2) gains POISONOUS keyword
+2026-03-12 12:03:42.174 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (1a64f4f9-810a-4ef3-881d-a3de1400b318)
+2026-03-12 12:03:42.174 DEBUG - CardInstance(uuid=288b8edf-d227-467c-ab5c-a04a03061f04, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c79d093), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.174 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (87acbe70-9659-49dd-97ce-9556cbb90227)
+2026-03-12 12:03:42.174 DEBUG - THE LURKER (72317fcd-66f6-4933-a88b-86461a6b79a2) gains HUNTER keyword
+2026-03-12 12:03:42.174 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (1a64f4f9-810a-4ef3-881d-a3de1400b318)
+2026-03-12 12:03:42.174 DEBUG - THE LURKER (72317fcd-66f6-4933-a88b-86461a6b79a2) gains POISONOUS keyword
+2026-03-12 12:03:42.174 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (1a64f4f9-810a-4ef3-881d-a3de1400b318)
+2026-03-12 12:03:42.174 DEBUG - CardInstance(uuid=288b8edf-d227-467c-ab5c-a04a03061f04, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1c79d093), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.174 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (87acbe70-9659-49dd-97ce-9556cbb90227)
+2026-03-12 12:03:42.174 DEBUG - THE LURKER (72317fcd-66f6-4933-a88b-86461a6b79a2) gains HUNTER keyword
+2026-03-12 12:03:42.174 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (1a64f4f9-810a-4ef3-881d-a3de1400b318)
+2026-03-12 12:03:42.175 DEBUG - THE LURKER (72317fcd-66f6-4933-a88b-86461a6b79a2) gains POISONOUS keyword
+2026-03-12 12:03:42.175 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (1a64f4f9-810a-4ef3-881d-a3de1400b318)
+2026-03-12 12:03:42.175 DEBUG - THE LURKER (72317fcd-66f6-4933-a88b-86461a6b79a2) gains HUNTER keyword
+2026-03-12 12:03:42.175 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (1a64f4f9-810a-4ef3-881d-a3de1400b318)
+2026-03-12 12:03:42.175 DEBUG - THE LURKER (72317fcd-66f6-4933-a88b-86461a6b79a2) gains POISONOUS keyword
+2026-03-12 12:03:42.175 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (1a64f4f9-810a-4ef3-881d-a3de1400b318)
+2026-03-12 12:03:42.175 INFO  - Life update for player Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) : 0 LP
+2026-03-12 12:03:42.175 INFO  - Game over : Player1 (56cab983-2766-495b-92ec-fbad79df2dbe) wins ; Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) loses.
+2026-03-12 12:03:42.175 INFO  - End of the game
+2026-03-12 12:03:42.175 DEBUG - Player2 (074acdb2-7dd3-4080-81c2-d46595318bcc) LP changed (1 -> 0) due to GOREAGLE ALPHA (0c3be886-c232-4645-9004-854892d4b78e) effect
+2026-03-12 12:03:42.175 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (0c3be886-c232-4645-9004-854892d4b78e)

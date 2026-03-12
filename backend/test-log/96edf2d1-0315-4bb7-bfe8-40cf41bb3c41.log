@@ -1,0 +1,43 @@
+2026-03-12 12:03:08.519 INFO  - Calculating first player...
+2026-03-12 12:03:08.521 INFO  - Banned card for Player1 (729cab95-9301-43a6-8aac-c4ebd5529460) : HAMSTER LION (22d9012c-1247-44be-9d0d-ce1dae6cce55) (8)
+2026-03-12 12:03:08.521 INFO  - Banned card for Player2 (1515afef-af71-43aa-9660-e72502e0457b) : THE LURKER (dbe7bba7-70fc-4e26-9490-8a5107b7dc5b) (4)
+2026-03-12 12:03:08.521 INFO  - First player will be Player1 (729cab95-9301-43a6-8aac-c4ebd5529460)
+2026-03-12 12:03:08.529 INFO  - Game 96edf2d1-0315-4bb7-bfe8-40cf41bb3c41 starting...
+2026-03-12 12:03:08.529 INFO  - Player Player1 (729cab95-9301-43a6-8aac-c4ebd5529460) hand : {
+- GOREAGLE ALPHA ;
+- BUGSERKER ;
+- DEATHWEAVER ;
+- PLATED SCORPION ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:08.530 INFO  - Player Player1 (729cab95-9301-43a6-8aac-c4ebd5529460) draw pile : {
+- CREEP FROM THE DEEP ;
+- HYENIX ;
+- BUGSERKER ;
+- KILLER BEE ;
+- HARPY MOTHER
+}
+2026-03-12 12:03:08.530 INFO  - Player Player2 (1515afef-af71-43aa-9660-e72502e0457b) hand : {
+- GOREAGLE ALPHA ;
+- CHAMELEON SNIPER ;
+- PLATED SCORPION ;
+- KANGASAURUS REX ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:03:08.530 INFO  - Player Player2 (1515afef-af71-43aa-9660-e72502e0457b) draw pile : {
+- STRANGE BARREL ;
+- GOBLIN WEREWOLF ;
+- RHINO TURTLE ;
+- COUNT DRACULEECH ;
+- GRAVE ROBBER
+}
+2026-03-12 12:03:08.530 INFO  - Life update for player Player2 (1515afef-af71-43aa-9660-e72502e0457b) : 2 LP
+2026-03-12 12:03:08.530 INFO  - Life update for player Player2 (1515afef-af71-43aa-9660-e72502e0457b) : 1 LP
+2026-03-12 12:03:08.530 DEBUG - Player2 (1515afef-af71-43aa-9660-e72502e0457b) LP changed (2 -> 1) due to GOREAGLE ALPHA (d76ec389-6ff0-4061-9b89-3519ab854eb1) effect
+2026-03-12 12:03:08.530 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (d76ec389-6ff0-4061-9b89-3519ab854eb1)
+2026-03-12 12:03:08.530 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:08.531 INFO  - Life update for player Player2 (1515afef-af71-43aa-9660-e72502e0457b) : 0 LP
+2026-03-12 12:03:08.531 INFO  - Game over : Player1 (729cab95-9301-43a6-8aac-c4ebd5529460) wins ; Player2 (1515afef-af71-43aa-9660-e72502e0457b) loses.
+2026-03-12 12:03:08.531 INFO  - End of the game
+2026-03-12 12:03:08.531 DEBUG - Player2 (1515afef-af71-43aa-9660-e72502e0457b) LP changed (1 -> 0) due to KILLER BEE (d924b3f3-c839-42bd-8c8d-26310ca7262c) effect
+2026-03-12 12:03:08.531 INFO  - Resolving INFLICT effect of KILLER BEE (d924b3f3-c839-42bd-8c8d-26310ca7262c)

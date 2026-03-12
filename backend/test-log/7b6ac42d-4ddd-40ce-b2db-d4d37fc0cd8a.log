@@ -1,0 +1,141 @@
+2026-03-12 12:18:29.596 INFO  - Calculating first player...
+2026-03-12 12:18:29.597 INFO  - Banned card for Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) :  GIRAFFODILE (7ea6d49a-6aa7-4633-bf2c-eb3b71411489) (7)
+2026-03-12 12:18:29.597 INFO  - Banned card for Player2 (4491ff00-563e-495a-bb3d-342e784fbdcf) : KANGASAURUS REX (a08083bb-cb55-40cd-ae16-2c60a710d9a4) (7)
+2026-03-12 12:18:29.597 INFO  - Banned card for Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) : CREEP FROM THE DEEP (8cc21ca2-f765-48bd-a3bf-52dcba1c25e3) (4)
+2026-03-12 12:18:29.597 INFO  - Banned card for Player2 (4491ff00-563e-495a-bb3d-342e784fbdcf) : EXPLOSIVE TOAD (0ec05f40-5a2f-4a2f-803b-19484f32669a) (5)
+2026-03-12 12:18:29.598 INFO  - First player will be Player2 (4491ff00-563e-495a-bb3d-342e784fbdcf)
+2026-03-12 12:18:29.603 INFO  - Game 7b6ac42d-4ddd-40ce-b2db-d4d37fc0cd8a starting...
+2026-03-12 12:18:29.603 INFO  - Player Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) hand : {
+- PLATED SCORPION ;
+- TIGER SQUIRREL ;
+- COUNT DRACULEECH ;
+- HYENIX ;
+- FROBLIN INSTIGATOR
+}
+2026-03-12 12:18:29.603 INFO  - Player Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) draw pile : {
+- HARPY MOTHER ;
+- RHINO TURTLE ;
+- EXPLOSIVE TOAD ;
+- FROBLIN INSTIGATOR ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:18:29.603 INFO  - Player Player2 (4491ff00-563e-495a-bb3d-342e784fbdcf) hand : {
+- LUCHATAUR ;
+- THE LURKER ;
+- MAJESTIC MANTICORE ;
+- BUGSERKER ;
+- HAMSTER LION
+}
+2026-03-12 12:18:29.603 INFO  - Player Player2 (4491ff00-563e-495a-bb3d-342e784fbdcf) draw pile : {
+- HAMSTER LION ;
+- MAJESTIC MANTICORE ;
+- SNAIL THROWER ;
+- PLATED SCORPION ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:18:29.603 DEBUG - CardInstance(uuid=d0fad5e1-ac31-44cb-b085-3b898465d4ad, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3d3b4e09), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.603 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (88b3635e-dddc-4344-84c9-c9118665013c)
+2026-03-12 12:18:29.603 DEBUG - CardInstance(uuid=d0fad5e1-ac31-44cb-b085-3b898465d4ad, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3d3b4e09), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.603 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (88b3635e-dddc-4344-84c9-c9118665013c)
+2026-03-12 12:18:29.603 DEBUG - CardInstance(uuid=81a980d0-2b11-47fb-b3d5-a7ab0360f481, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3d3b4e09), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.603 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (88b3635e-dddc-4344-84c9-c9118665013c)
+2026-03-12 12:18:29.603 DEBUG - TIGER SQUIRREL (81a980d0-2b11-47fb-b3d5-a7ab0360f481) effect destroys HAMSTER LION (88b3635e-dddc-4344-84c9-c9118665013c)
+2026-03-12 12:18:29.603 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (81a980d0-2b11-47fb-b3d5-a7ab0360f481)
+2026-03-12 12:18:29.604 INFO  - Life update for player Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) : 2 LP
+2026-03-12 12:18:29.604 DEBUG - Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) LP changed (3 -> 2) due to COUNT DRACULEECH (d0fad5e1-ac31-44cb-b085-3b898465d4ad) effect
+2026-03-12 12:18:29.604 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (d0fad5e1-ac31-44cb-b085-3b898465d4ad)
+2026-03-12 12:18:29.604 DEBUG - Player Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) must choose 1 card(s) to destroy (available targets : {
+- MAJESTIC MANTICORE ;
+- THE LURKER ;
+- MAJESTIC MANTICORE ;
+- COUNT DRACULEECH ;
+- TIGER SQUIRREL ;
+- HARPY MOTHER
+})
+2026-03-12 12:18:29.604 INFO  - New TARGET choice to be resolved by Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) (targets : {
+- COUNT DRACULEECH ;
+- THE LURKER ;
+- MAJESTIC MANTICORE ;
+- TIGER SQUIRREL ;
+- MAJESTIC MANTICORE ;
+- HARPY MOTHER
+})
+2026-03-12 12:18:29.604 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.604 DEBUG - COUNT DRACULEECH (d0fad5e1-ac31-44cb-b085-3b898465d4ad) effect destroys MAJESTIC MANTICORE (d3fc98c6-d796-47d2-9873-22c537314ef5)
+2026-03-12 12:18:29.604 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (d0fad5e1-ac31-44cb-b085-3b898465d4ad)
+2026-03-12 12:18:29.604 INFO  - Life update for player Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) : 1 LP
+2026-03-12 12:18:29.604 DEBUG - Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) LP changed (2 -> 1) due to COUNT DRACULEECH (d0fad5e1-ac31-44cb-b085-3b898465d4ad) effect
+2026-03-12 12:18:29.604 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (d0fad5e1-ac31-44cb-b085-3b898465d4ad)
+2026-03-12 12:18:29.604 DEBUG - Player Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) must choose 1 card(s) to destroy (available targets : {
+- MAJESTIC MANTICORE ;
+- PLATED SCORPION ;
+- COUNT DRACULEECH ;
+- TIGER SQUIRREL ;
+- HARPY MOTHER ;
+- PLATED SCORPION
+})
+2026-03-12 12:18:29.605 INFO  - New TARGET choice to be resolved by Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) (targets : {
+- PLATED SCORPION ;
+- COUNT DRACULEECH ;
+- TIGER SQUIRREL ;
+- PLATED SCORPION ;
+- MAJESTIC MANTICORE ;
+- HARPY MOTHER
+})
+2026-03-12 12:18:29.605 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.605 DEBUG - COUNT DRACULEECH (d0fad5e1-ac31-44cb-b085-3b898465d4ad) effect destroys COUNT DRACULEECH (d0fad5e1-ac31-44cb-b085-3b898465d4ad)
+2026-03-12 12:18:29.605 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (d0fad5e1-ac31-44cb-b085-3b898465d4ad)
+2026-03-12 12:18:29.605 DEBUG - PLATED SCORPION (65a77038-9094-4ff5-ac57-bb1312cf01fb) gains HUNTER keyword
+2026-03-12 12:18:29.605 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6d21459f-572c-4eed-b5fb-6725037505c8)
+2026-03-12 12:18:29.605 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6d21459f-572c-4eed-b5fb-6725037505c8)
+2026-03-12 12:18:29.605 DEBUG - PLATED SCORPION (65a77038-9094-4ff5-ac57-bb1312cf01fb) gains HUNTER keyword
+2026-03-12 12:18:29.605 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6d21459f-572c-4eed-b5fb-6725037505c8)
+2026-03-12 12:18:29.605 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6d21459f-572c-4eed-b5fb-6725037505c8)
+2026-03-12 12:18:29.605 DEBUG - PLATED SCORPION (65a77038-9094-4ff5-ac57-bb1312cf01fb) gains HUNTER keyword
+2026-03-12 12:18:29.605 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6d21459f-572c-4eed-b5fb-6725037505c8)
+2026-03-12 12:18:29.605 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6d21459f-572c-4eed-b5fb-6725037505c8)
+2026-03-12 12:18:29.605 DEBUG - PLATED SCORPION (65a77038-9094-4ff5-ac57-bb1312cf01fb) gains HUNTER keyword
+2026-03-12 12:18:29.605 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6d21459f-572c-4eed-b5fb-6725037505c8)
+2026-03-12 12:18:29.605 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6d21459f-572c-4eed-b5fb-6725037505c8)
+2026-03-12 12:18:29.605 DEBUG - MAJESTIC MANTICORE (6adce9cf-01ff-441b-91bf-5b349ee81b6b) effect destroys SNAIL THROWER (6d21459f-572c-4eed-b5fb-6725037505c8)
+2026-03-12 12:18:29.605 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (6adce9cf-01ff-441b-91bf-5b349ee81b6b)
+2026-03-12 12:18:29.605 DEBUG - Player Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) must choose 2 cards to steal (targets : {
+- PLATED SCORPION
+})
+2026-03-12 12:18:29.606 INFO  - New TARGET choice to be resolved by Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) (targets : {
+- PLATED SCORPION
+})
+2026-03-12 12:18:29.606 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.606 DEBUG - PLATED SCORPION (65a77038-9094-4ff5-ac57-bb1312cf01fb) stolen and played by Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) due to HARPY MOTHER (1455102e-a190-4650-af66-b38d4bbdd712) effect
+2026-03-12 12:18:29.606 INFO  - Resolving STEAL effect of HARPY MOTHER (1455102e-a190-4650-af66-b38d4bbdd712)
+2026-03-12 12:18:29.606 DEBUG - Player Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) must choose 1 card(s) to destroy (available targets : {
+- MAJESTIC MANTICORE ;
+- TIGER SQUIRREL ;
+- PLATED SCORPION ;
+- PLATED SCORPION
+})
+2026-03-12 12:18:29.606 INFO  - New TARGET choice to be resolved by Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) (targets : {
+- PLATED SCORPION ;
+- TIGER SQUIRREL ;
+- PLATED SCORPION ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:18:29.606 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.606 DEBUG - EXPLOSIVE TOAD (7eff5d13-3908-4e00-bd92-a1a4daadfce3) effect destroys PLATED SCORPION (0acdeec1-b658-47cd-9fba-5e695e4911a2)
+2026-03-12 12:18:29.606 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (7eff5d13-3908-4e00-bd92-a1a4daadfce3)
+2026-03-12 12:18:29.606 DEBUG - MAJESTIC MANTICORE (6adce9cf-01ff-441b-91bf-5b349ee81b6b) effect destroys PLATED SCORPION (0acdeec1-b658-47cd-9fba-5e695e4911a2)
+2026-03-12 12:18:29.606 DEBUG - MAJESTIC MANTICORE (6adce9cf-01ff-441b-91bf-5b349ee81b6b) effect destroys PLATED SCORPION (65a77038-9094-4ff5-ac57-bb1312cf01fb)
+2026-03-12 12:18:29.606 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (6adce9cf-01ff-441b-91bf-5b349ee81b6b)
+2026-03-12 12:18:29.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (e3a70213-109b-45a1-99e6-14d6ee699537)
+2026-03-12 12:18:29.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (e3a70213-109b-45a1-99e6-14d6ee699537)
+2026-03-12 12:18:29.606 DEBUG - CardInstance(uuid=fc353388-9dbe-4bbc-8439-61f5995c7cca, card=Card(id=41, setName=first_contact, name=HYENIX, power=7, keywords=[FRENZY], effects={LIFE_LOST=[ReviveEffect()]}, unique=false, description=When you lose life while this is in your discard pile, you may play this., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3d3b4e09), power=7, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (e3a70213-109b-45a1-99e6-14d6ee699537)
+2026-03-12 12:18:29.606 DEBUG - CardInstance(uuid=fc353388-9dbe-4bbc-8439-61f5995c7cca, card=Card(id=41, setName=first_contact, name=HYENIX, power=7, keywords=[FRENZY], effects={LIFE_LOST=[ReviveEffect()]}, unique=false, description=When you lose life while this is in your discard pile, you may play this., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3d3b4e09), power=7, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (e3a70213-109b-45a1-99e6-14d6ee699537)
+2026-03-12 12:18:29.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (e3a70213-109b-45a1-99e6-14d6ee699537)
+2026-03-12 12:18:29.606 INFO  - New FRENZY choice to be resolved by Player2 (4491ff00-563e-495a-bb3d-342e784fbdcf) (attackingCard : HAMSTER LION (e3a70213-109b-45a1-99e6-14d6ee699537))
+2026-03-12 12:18:29.606 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:29.607 INFO  - Life update for player Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) : 0 LP
+2026-03-12 12:18:29.607 INFO  - Game over : Player2 (4491ff00-563e-495a-bb3d-342e784fbdcf) wins ; Player1 (8cc8df7b-6e0b-4a8c-ac77-78587f8e58bf) loses.
+2026-03-12 12:18:29.607 INFO  - End of the game
+2026-03-12 12:18:29.607 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (e3a70213-109b-45a1-99e6-14d6ee699537)

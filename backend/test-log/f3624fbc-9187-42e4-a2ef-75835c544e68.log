@@ -1,0 +1,48 @@
+2026-03-12 12:03:08.135 INFO  - Calculating first player...
+2026-03-12 12:03:08.136 INFO  - Banned card for Player1 (94b2e3d4-72c9-48cf-b41c-1d8f161d030e) : COUNT DRACULEECH (85ed37ac-f1aa-474f-b77e-82088d2d5f89) (7)
+2026-03-12 12:03:08.136 INFO  - Banned card for Player2 (018f59ad-e123-4b22-9105-4c50584bce6a) : HYENIX (fe04f788-d0ae-4f5f-a5fb-e4301e0d80ad) (7)
+2026-03-12 12:03:08.136 INFO  - Banned card for Player1 (94b2e3d4-72c9-48cf-b41c-1d8f161d030e) : GRAVE ROBBER (c63f5a63-bf1a-408b-ab52-a1c59bac39b2) (7)
+2026-03-12 12:03:08.136 INFO  - Banned card for Player2 (018f59ad-e123-4b22-9105-4c50584bce6a) : SNAIL THROWER (af08b933-641c-4520-b5cb-ae69bfc8ac2c) (1)
+2026-03-12 12:03:08.137 INFO  - First player will be Player1 (94b2e3d4-72c9-48cf-b41c-1d8f161d030e)
+2026-03-12 12:03:08.145 INFO  - Game f3624fbc-9187-42e4-a2ef-75835c544e68 starting...
+2026-03-12 12:03:08.145 INFO  - Player Player1 (94b2e3d4-72c9-48cf-b41c-1d8f161d030e) hand : {
+- LONE YETI ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- FERRET BOMBER ;
+- SNAIL HYDRA ;
+- COMPOST DRAGON
+}
+2026-03-12 12:03:08.146 INFO  - Player Player1 (94b2e3d4-72c9-48cf-b41c-1d8f161d030e) draw pile : {
+- KILLER BEE ;
+- SPIDER OWL ;
+- SHIELD BUGS ;
+- HUNGRY HUNGRY HAMSTER ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:03:08.146 INFO  - Player Player2 (018f59ad-e123-4b22-9105-4c50584bce6a) hand : {
+- BEE BEAR ;
+- THE LURKER ;
+- PLATED SCORPION ;
+- CHAMELEON SNIPER ;
+- RHINO TURTLE
+}
+2026-03-12 12:03:08.146 INFO  - Player Player2 (018f59ad-e123-4b22-9105-4c50584bce6a) draw pile : {
+- FERRET BOMBER ;
+- HAMSTER LION ;
+- PLATED SCORPION ;
+- HYENIX ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:03:08.146 INFO  - Life update for player Player2 (018f59ad-e123-4b22-9105-4c50584bce6a) : 2 LP
+2026-03-12 12:03:08.146 INFO  - Resolving NO_BLOCK effect of BEE BEAR (ec7f121c-f51c-4123-9921-fec5ce8e73df)
+2026-03-12 12:03:08.146 INFO  - Life update for player Player1 (94b2e3d4-72c9-48cf-b41c-1d8f161d030e) : 2 LP
+2026-03-12 12:03:08.146 INFO  - Resolving NO_BLOCK effect of BEE BEAR (ec7f121c-f51c-4123-9921-fec5ce8e73df)
+2026-03-12 12:03:08.147 INFO  - Life update for player Player2 (018f59ad-e123-4b22-9105-4c50584bce6a) : 1 LP
+2026-03-12 12:03:08.147 DEBUG - Player2 (018f59ad-e123-4b22-9105-4c50584bce6a) LP changed (2 -> 1) due to KILLER BEE (c4d44f5d-3437-4778-89d5-59fedb6b321d) effect
+2026-03-12 12:03:08.147 INFO  - Resolving INFLICT effect of KILLER BEE (c4d44f5d-3437-4778-89d5-59fedb6b321d)
+2026-03-12 12:03:08.147 INFO  - Life update for player Player1 (94b2e3d4-72c9-48cf-b41c-1d8f161d030e) : 1 LP
+2026-03-12 12:03:08.147 DEBUG - Player1 (94b2e3d4-72c9-48cf-b41c-1d8f161d030e) LP changed (2 -> 1) due to CHAMELEON SNIPER (0d9c37fd-c50c-4732-bfb7-af56744ce20c) effect
+2026-03-12 12:03:08.147 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (0d9c37fd-c50c-4732-bfb7-af56744ce20c)
+2026-03-12 12:03:08.147 INFO  - Life update for player Player1 (94b2e3d4-72c9-48cf-b41c-1d8f161d030e) : 0 LP
+2026-03-12 12:03:08.147 INFO  - Game over : Player2 (018f59ad-e123-4b22-9105-4c50584bce6a) wins ; Player1 (94b2e3d4-72c9-48cf-b41c-1d8f161d030e) loses.
+2026-03-12 12:03:08.147 INFO  - End of the game

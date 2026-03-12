@@ -1,0 +1,402 @@
+2026-03-12 12:03:47.124 INFO  - Calculating first player...
+2026-03-12 12:03:47.126 INFO  - Banned card for Player1 (b9c1b19d-da60-45a9-8342-509ad82cbe52) : TIGER SQUIRREL (b75e640d-4fd8-4cae-a800-3af4cdf6b851) (3)
+2026-03-12 12:03:47.126 INFO  - Banned card for Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) : LUCHATAUR (871ca252-acf9-443c-be41-3d2fe58a8f81) (9)
+2026-03-12 12:03:47.126 INFO  - First player will be Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e)
+2026-03-12 12:03:47.134 INFO  - Game 73d70974-55f0-4e31-88dd-15cbb631bb67 starting...
+2026-03-12 12:03:47.134 INFO  - Player Player1 (b9c1b19d-da60-45a9-8342-509ad82cbe52) hand : {
+- HAMSTER LION ;
+- HARPY MOTHER ;
+- TURBO BUG ;
+- MYSTERIOUS MERMAID ;
+- GRAVE ROBBER
+}
+2026-03-12 12:03:47.134 INFO  - Player Player1 (b9c1b19d-da60-45a9-8342-509ad82cbe52) draw pile : {
+- GOREAGLE ALPHA ;
+- DEATHWEAVER ;
+- ELEPHANTOPUS ;
+- HYENIX ;
+- RHINO TURTLE
+}
+2026-03-12 12:03:47.134 INFO  - Player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) hand : {
+- TUSKED EXTORTER ;
+- BRAIN FLY ;
+- SHIELD BUGS ;
+- RHINO TURTLE ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:03:47.134 INFO  - Player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) draw pile : {
+- GRAVE ROBBER ;
+- AXOLOTL HEALER ;
+- MAJESTIC MANTICORE ;
+- BEE BEAR ;
+- FROBLIN INSTIGATOR
+}
+2026-03-12 12:03:47.134 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.134 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.134 DEBUG - CardInstance(uuid=29767e72-dc7e-4c1a-b4ef-4b816dbd6b28, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@746e534), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.134 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.134 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.134 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.134 DEBUG - CardInstance(uuid=29767e72-dc7e-4c1a-b4ef-4b816dbd6b28, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@746e534), power=8, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.135 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.135 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.135 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.135 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.135 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.135 DEBUG - CardInstance(uuid=f1136bef-7f07-46a2-b972-3755eb6a113a, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@746e534), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.135 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.135 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.135 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.135 DEBUG - CardInstance(uuid=29767e72-dc7e-4c1a-b4ef-4b816dbd6b28, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@746e534), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.135 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.135 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.135 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.135 DEBUG - CardInstance(uuid=29767e72-dc7e-4c1a-b4ef-4b816dbd6b28, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@746e534), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.135 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.135 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.135 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.135 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.135 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.135 DEBUG - CardInstance(uuid=f1136bef-7f07-46a2-b972-3755eb6a113a, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@746e534), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.136 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.136 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:47.136 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.136 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.136 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.136 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.136 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.136 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.136 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.136 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.136 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.136 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.136 INFO  - Life update for player Player1 (b9c1b19d-da60-45a9-8342-509ad82cbe52) : 2 LP
+2026-03-12 12:03:47.136 DEBUG - Player1 (b9c1b19d-da60-45a9-8342-509ad82cbe52) LP changed (3 -> 2) due to GOREAGLE ALPHA (d0e38071-431a-40d3-a127-76e4554232a1) effect
+2026-03-12 12:03:47.136 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (d0e38071-431a-40d3-a127-76e4554232a1)
+2026-03-12 12:03:47.136 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.136 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.136 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.136 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.136 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.136 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.136 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.136 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.137 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.137 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.137 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.137 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.137 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.137 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.137 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.137 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.137 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.137 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.137 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.137 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.137 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.137 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.137 DEBUG - AXOLOTL HEALER (c3cedb7a-07b6-4c1b-9035-a39fc1dfc29a) power changed (4 -> 5) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.137 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.137 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.137 DEBUG - Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) LP changed (3 -> 5) due to AXOLOTL HEALER (c3cedb7a-07b6-4c1b-9035-a39fc1dfc29a) effect
+2026-03-12 12:03:47.137 INFO  - Resolving GAIN effect of AXOLOTL HEALER (c3cedb7a-07b6-4c1b-9035-a39fc1dfc29a)
+2026-03-12 12:03:47.137 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.137 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.137 DEBUG - AXOLOTL HEALER (c3cedb7a-07b6-4c1b-9035-a39fc1dfc29a) power changed (4 -> 5) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.137 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.137 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.137 DEBUG - AXOLOTL HEALER (c3cedb7a-07b6-4c1b-9035-a39fc1dfc29a) power changed (4 -> 5) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.137 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.137 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.137 DEBUG - AXOLOTL HEALER (c3cedb7a-07b6-4c1b-9035-a39fc1dfc29a) power changed (4 -> 5) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.137 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.137 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.137 DEBUG - Player1 (b9c1b19d-da60-45a9-8342-509ad82cbe52) LP changed (2 -> 5) due to MYSTERIOUS MERMAID (31de1013-38d3-4e4a-9432-0c5d83546cfa) effect
+2026-03-12 12:03:47.137 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (31de1013-38d3-4e4a-9432-0c5d83546cfa)
+2026-03-12 12:03:47.138 DEBUG - AXOLOTL HEALER (c3cedb7a-07b6-4c1b-9035-a39fc1dfc29a) power changed (4 -> 5) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.138 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.138 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.138 DEBUG - AXOLOTL HEALER (c3cedb7a-07b6-4c1b-9035-a39fc1dfc29a) power changed (4 -> 5) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.138 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.138 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.138 DEBUG - AXOLOTL HEALER (c3cedb7a-07b6-4c1b-9035-a39fc1dfc29a) power changed (4 -> 5) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 DEBUG - GRAVE ROBBER (62f9b00d-f023-4418-9071-c8280c1facc7) power changed (7 -> 8) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.138 DEBUG - HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405) stolen and played by Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to GRAVE ROBBER (62f9b00d-f023-4418-9071-c8280c1facc7) effect
+2026-03-12 12:03:47.138 INFO  - Resolving STEAL effect of GRAVE ROBBER (62f9b00d-f023-4418-9071-c8280c1facc7)
+2026-03-12 12:03:47.138 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.138 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.138 DEBUG - HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 DEBUG - AXOLOTL HEALER (c3cedb7a-07b6-4c1b-9035-a39fc1dfc29a) power changed (4 -> 5) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 DEBUG - GRAVE ROBBER (62f9b00d-f023-4418-9071-c8280c1facc7) power changed (7 -> 8) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.138 DEBUG - CardInstance(uuid=f656447e-fcee-434d-b5bc-e1ee14fa1db2, card=Card(id=30, setName=first_contact, name=TURBO BUG, power=4, keywords=[], effects={ATTACK=[InflictEffect(value=0, self=false, allButOne=true, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses all life except 1., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.138 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.138 DEBUG - HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 DEBUG - AXOLOTL HEALER (c3cedb7a-07b6-4c1b-9035-a39fc1dfc29a) power changed (4 -> 5) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 DEBUG - GRAVE ROBBER (62f9b00d-f023-4418-9071-c8280c1facc7) power changed (7 -> 8) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.138 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.139 DEBUG - CardInstance(uuid=f656447e-fcee-434d-b5bc-e1ee14fa1db2, card=Card(id=30, setName=first_contact, name=TURBO BUG, power=4, keywords=[], effects={ATTACK=[InflictEffect(value=0, self=false, allButOne=true, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses all life except 1., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.139 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.139 DEBUG - HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.139 DEBUG - AXOLOTL HEALER (c3cedb7a-07b6-4c1b-9035-a39fc1dfc29a) power changed (4 -> 5) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.139 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 3) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.139 DEBUG - GRAVE ROBBER (62f9b00d-f023-4418-9071-c8280c1facc7) power changed (7 -> 8) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.139 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.139 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.139 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.139 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.139 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.139 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.139 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.139 DEBUG - HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.139 DEBUG - AXOLOTL HEALER (c3cedb7a-07b6-4c1b-9035-a39fc1dfc29a) power changed (4 -> 5) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.139 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (8 -> 9) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.139 DEBUG - GRAVE ROBBER (62f9b00d-f023-4418-9071-c8280c1facc7) power changed (7 -> 8) due to SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a) effect
+2026-03-12 12:03:47.139 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f1136bef-7f07-46a2-b972-3755eb6a113a)
+2026-03-12 12:03:47.139 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.139 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.139 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.139 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.139 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.139 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.139 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.139 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.139 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.139 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.139 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.139 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.140 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.140 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.140 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.140 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.140 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.140 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.140 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.140 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.140 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.140 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.140 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.140 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.140 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.140 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.140 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.140 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.140 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.140 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.140 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.140 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.140 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.140 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.140 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.140 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.140 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.140 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.140 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.141 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.141 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.141 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.141 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.141 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.141 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.141 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.141 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.141 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.141 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.141 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.141 INFO  - New FRENZY choice to be resolved by Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) (attackingCard : HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405))
+2026-03-12 12:03:47.141 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:47.141 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.141 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.141 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.141 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.141 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.141 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.141 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.141 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.141 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.141 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.141 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.141 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.141 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.141 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.142 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.142 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.142 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.142 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.142 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.142 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.142 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:47.142 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.142 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.142 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.142 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.142 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.142 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.142 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.142 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.142 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.142 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.142 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.142 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.142 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.142 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.142 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.142 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.143 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.143 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.143 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.143 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.143 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.143 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.143 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.143 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.143 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.143 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.143 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.143 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.143 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.143 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:47.143 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.143 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.143 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.143 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.143 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.143 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.143 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.143 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.143 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.143 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.143 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.143 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.143 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.143 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.143 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.144 DEBUG - CardInstance(uuid=254e53b6-532e-46d7-807a-3754200e433c, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@37665305), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.144 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0e37a73c-eafd-4343-bba9-6eb8f7505405)
+2026-03-12 12:03:47.144 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.144 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.144 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.144 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.144 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.144 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.144 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.144 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.144 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.144 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.144 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.144 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.144 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.144 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.144 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.144 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.144 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.144 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.144 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.144 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.144 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.144 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.144 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.144 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.144 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.144 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.144 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.144 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.144 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.144 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.144 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.144 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.144 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.144 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.144 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.145 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.145 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.145 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.145 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.145 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.145 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.145 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.145 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.145 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.145 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.145 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.145 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.145 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.145 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.145 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.145 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.145 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.145 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.145 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.145 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.145 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.145 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.145 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.145 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.145 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (6b9f541a-ab6f-4a24-82e5-e816eca82f4f)
+2026-03-12 12:03:47.145 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.145 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.145 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.145 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.145 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.145 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.145 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.145 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.145 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.145 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.145 INFO  - Resolving NO_BLOCK effect of BEE BEAR (c2c39570-ad96-456f-937b-b2792a2eb75d)
+2026-03-12 12:03:47.145 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.145 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.145 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.145 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.145 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.145 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.145 DEBUG - GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) power changed (2 -> 8) due to GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28) effect
+2026-03-12 12:03:47.145 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (29767e72-dc7e-4c1a-b4ef-4b816dbd6b28)
+2026-03-12 12:03:47.145 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.145 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.145 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.145 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.146 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.146 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.146 DEBUG - PLAY effects disabled for player Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c) effect
+2026-03-12 12:03:47.146 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (254e53b6-532e-46d7-807a-3754200e433c)
+2026-03-12 12:03:47.146 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.146 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.146 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.146 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.146 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.146 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.146 INFO  - New FRENZY choice to be resolved by Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) (attackingCard : RHINO TURTLE (b26c6f0b-e5a5-4030-8dca-7d126c26481e))
+2026-03-12 12:03:47.146 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:47.146 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.146 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.146 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.146 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.146 DEBUG - Player Player1 (b9c1b19d-da60-45a9-8342-509ad82cbe52) must choose 2 cards to steal (targets : {
+- FROBLIN INSTIGATOR
+})
+2026-03-12 12:03:47.146 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.146 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.146 INFO  - New TARGET choice to be resolved by Player1 (b9c1b19d-da60-45a9-8342-509ad82cbe52) (targets : {
+- FROBLIN INSTIGATOR
+})
+2026-03-12 12:03:47.146 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:47.146 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) stolen and played by Player1 (b9c1b19d-da60-45a9-8342-509ad82cbe52) due to HARPY MOTHER (3204b6cc-67c3-4e5f-8344-a1e43f9185e0) effect
+2026-03-12 12:03:47.146 INFO  - Resolving STEAL effect of HARPY MOTHER (3204b6cc-67c3-4e5f-8344-a1e43f9185e0)
+2026-03-12 12:03:47.146 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.146 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.146 DEBUG - FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d) effect
+2026-03-12 12:03:47.146 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (9a7549d1-1adc-467b-b4cc-cbee5f111c2d)
+2026-03-12 12:03:47.146 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:47.147 DEBUG - GRAVE ROBBER (26970c76-24ce-45ab-bd5a-a667fbaff549) stolen and played by Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) due to BRAIN FLY (d9e6516f-18ee-442b-ae49-9d603bfb74ab) effect
+2026-03-12 12:03:47.147 INFO  - Resolving STEAL effect of BRAIN FLY (d9e6516f-18ee-442b-ae49-9d603bfb74ab)
+2026-03-12 12:03:47.147 INFO  - Game over : Player2 (3ece9688-0f28-4b0b-a9cf-5eb6229d8c4e) wins ; Player1 (b9c1b19d-da60-45a9-8342-509ad82cbe52) loses.
+2026-03-12 12:03:47.147 INFO  - End of the game
