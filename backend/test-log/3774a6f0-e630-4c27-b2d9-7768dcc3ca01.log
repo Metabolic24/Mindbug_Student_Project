@@ -1,0 +1,99 @@
+2026-03-12 12:03:44.711 INFO  - Calculating first player...
+2026-03-12 12:03:44.714 INFO  - Banned card for Player1 (c467960d-c25b-4fa1-ac4f-685b0ed0d5a3) : KILLER BEE (dbea6643-9ed8-4d13-a78b-e7246af4e3e6) (5)
+2026-03-12 12:03:44.714 INFO  - Banned card for Player2 (e43e904e-fd19-4741-bb1a-1a66f62f1e9b) : HAMSTER LION (89a5643a-ffc9-4c1a-9b18-a0f8cddcc5dd) (8)
+2026-03-12 12:03:44.714 INFO  - First player will be Player2 (e43e904e-fd19-4741-bb1a-1a66f62f1e9b)
+2026-03-12 12:03:44.721 INFO  - Game 3774a6f0-e630-4c27-b2d9-7768dcc3ca01 starting...
+2026-03-12 12:03:44.721 INFO  - Player Player1 (c467960d-c25b-4fa1-ac4f-685b0ed0d5a3) hand : {
+- TUSKED EXTORTER ;
+- DEATHWEAVER ;
+- URCHIN HURLER ;
+- PLATED SCORPION ;
+- SPIDER OWL
+}
+2026-03-12 12:03:44.721 INFO  - Player Player1 (c467960d-c25b-4fa1-ac4f-685b0ed0d5a3) draw pile : {
+- GOREAGLE ALPHA ;
+- MAJESTIC MANTICORE ;
+- CHAMELEON SNIPER ;
+- CREEP FROM THE DEEP ;
+- SNAIL HYDRA
+}
+2026-03-12 12:03:44.721 INFO  - Player Player2 (e43e904e-fd19-4741-bb1a-1a66f62f1e9b) hand : {
+- FERRET BOMBER ;
+- COMPOST DRAGON ;
+- GORILLON ;
+- LONE YETI ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:03:44.721 INFO  - Player Player2 (e43e904e-fd19-4741-bb1a-1a66f62f1e9b) draw pile : {
+- GOBLIN WEREWOLF ;
+- COMPOST DRAGON ;
+- FROBLIN INSTIGATOR ;
+- MAJESTIC MANTICORE ;
+- KILLER BEE
+}
+2026-03-12 12:03:44.722 DEBUG - Player Player1 (c467960d-c25b-4fa1-ac4f-685b0ed0d5a3) must choose 2 card(s) to discard (available targets : {
+- TUSKED EXTORTER ;
+- DEATHWEAVER ;
+- URCHIN HURLER ;
+- PLATED SCORPION ;
+- SPIDER OWL
+})
+2026-03-12 12:03:44.722 INFO  - New TARGET choice to be resolved by Player1 (c467960d-c25b-4fa1-ac4f-685b0ed0d5a3) (targets : {
+- DEATHWEAVER ;
+- TUSKED EXTORTER ;
+- SPIDER OWL ;
+- PLATED SCORPION ;
+- URCHIN HURLER
+})
+2026-03-12 12:03:44.722 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.722 DEBUG - TUSKED EXTORTER (876a272a-1c66-425b-be9d-c73f2f33626f) discarded due to FERRET BOMBER (14fa3435-18c6-4fcf-b1f3-17cb7a882d9f) effect
+2026-03-12 12:03:44.722 DEBUG - SPIDER OWL (fb995106-6bf1-4d36-8433-844c9ae06ab0) discarded due to FERRET BOMBER (14fa3435-18c6-4fcf-b1f3-17cb7a882d9f) effect
+2026-03-12 12:03:44.722 INFO  - Resolving DISCARD effect of FERRET BOMBER (14fa3435-18c6-4fcf-b1f3-17cb7a882d9f)
+2026-03-12 12:03:44.722 INFO  - Life update for player Player1 (c467960d-c25b-4fa1-ac4f-685b0ed0d5a3) : 2 LP
+2026-03-12 12:03:44.722 DEBUG - Player1 (c467960d-c25b-4fa1-ac4f-685b0ed0d5a3) LP changed (3 -> 2) due to GOREAGLE ALPHA (49dd1edf-9b95-44ab-a29a-3b6aa63997ae) effect
+2026-03-12 12:03:44.722 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (49dd1edf-9b95-44ab-a29a-3b6aa63997ae)
+2026-03-12 12:03:44.722 DEBUG - GOREAGLE ALPHA (49dd1edf-9b95-44ab-a29a-3b6aa63997ae) power changed (6 -> 8) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.722 INFO  - Resolving POWER_UP effect of URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634)
+2026-03-12 12:03:44.722 DEBUG - GOREAGLE ALPHA (49dd1edf-9b95-44ab-a29a-3b6aa63997ae) power changed (6 -> 8) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.722 INFO  - Resolving POWER_UP effect of URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634)
+2026-03-12 12:03:44.722 DEBUG - CHAMELEON SNIPER (0945191d-b87b-4d7c-b574-5e825fd9f7c6) power changed (1 -> 3) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.722 DEBUG - GOREAGLE ALPHA (49dd1edf-9b95-44ab-a29a-3b6aa63997ae) power changed (6 -> 8) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.722 INFO  - Resolving POWER_UP effect of URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634)
+2026-03-12 12:03:44.723 DEBUG - Player Player2 (e43e904e-fd19-4741-bb1a-1a66f62f1e9b) must choose 1 card(s) to destroy (available targets : {
+- GOREAGLE ALPHA ;
+- URCHIN HURLER ;
+- CHAMELEON SNIPER ;
+- FERRET BOMBER ;
+- COMPOST DRAGON
+})
+2026-03-12 12:03:44.723 INFO  - New TARGET choice to be resolved by Player2 (e43e904e-fd19-4741-bb1a-1a66f62f1e9b) (targets : {
+- CHAMELEON SNIPER ;
+- FERRET BOMBER ;
+- URCHIN HURLER ;
+- COMPOST DRAGON ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:44.723 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.723 DEBUG - EXPLOSIVE TOAD (29dd4c2e-d610-43fb-8eb2-47c15ae4b8cd) effect destroys CHAMELEON SNIPER (0945191d-b87b-4d7c-b574-5e825fd9f7c6)
+2026-03-12 12:03:44.723 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (29dd4c2e-d610-43fb-8eb2-47c15ae4b8cd)
+2026-03-12 12:03:44.723 DEBUG - GOREAGLE ALPHA (49dd1edf-9b95-44ab-a29a-3b6aa63997ae) power changed (6 -> 8) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.723 INFO  - Resolving POWER_UP effect of URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634)
+2026-03-12 12:03:44.723 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.723 DEBUG - GOREAGLE ALPHA (49dd1edf-9b95-44ab-a29a-3b6aa63997ae) power changed (6 -> 8) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.723 INFO  - Resolving POWER_UP effect of URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634)
+2026-03-12 12:03:44.723 DEBUG - GOREAGLE ALPHA (49dd1edf-9b95-44ab-a29a-3b6aa63997ae) power changed (6 -> 8) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.723 INFO  - Resolving POWER_UP effect of URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634)
+2026-03-12 12:03:44.723 DEBUG - PLATED SCORPION (bba62e70-1286-4c88-ad90-5c0694dbce7c) power changed (2 -> 4) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.723 DEBUG - GOREAGLE ALPHA (49dd1edf-9b95-44ab-a29a-3b6aa63997ae) power changed (6 -> 8) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.723 INFO  - Resolving POWER_UP effect of URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634)
+2026-03-12 12:03:44.724 INFO  - Life update for player Player1 (c467960d-c25b-4fa1-ac4f-685b0ed0d5a3) : 1 LP
+2026-03-12 12:03:44.724 DEBUG - PLATED SCORPION (bba62e70-1286-4c88-ad90-5c0694dbce7c) power changed (2 -> 4) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.724 DEBUG - GOREAGLE ALPHA (49dd1edf-9b95-44ab-a29a-3b6aa63997ae) power changed (6 -> 8) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.724 INFO  - Resolving POWER_UP effect of URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634)
+2026-03-12 12:03:44.724 DEBUG - PLATED SCORPION (bba62e70-1286-4c88-ad90-5c0694dbce7c) power changed (2 -> 4) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.724 DEBUG - GOREAGLE ALPHA (49dd1edf-9b95-44ab-a29a-3b6aa63997ae) power changed (6 -> 8) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.724 DEBUG - SNAIL HYDRA (c71497db-c871-4f26-a4c4-bc5ea323729a) power changed (9 -> 11) due to URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634) effect
+2026-03-12 12:03:44.724 INFO  - Resolving POWER_UP effect of URCHIN HURLER (d56d8ba7-f4c5-4847-b9e7-6ba13ea08634)
+2026-03-12 12:03:44.724 INFO  - Life update for player Player1 (c467960d-c25b-4fa1-ac4f-685b0ed0d5a3) : 0 LP
+2026-03-12 12:03:44.724 INFO  - Game over : Player2 (e43e904e-fd19-4741-bb1a-1a66f62f1e9b) wins ; Player1 (c467960d-c25b-4fa1-ac4f-685b0ed0d5a3) loses.
+2026-03-12 12:03:44.724 INFO  - End of the game

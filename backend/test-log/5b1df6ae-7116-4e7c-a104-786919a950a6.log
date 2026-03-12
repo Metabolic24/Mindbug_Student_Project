@@ -1,0 +1,261 @@
+2026-03-12 12:03:07.907 INFO  - Calculating first player...
+2026-03-12 12:03:07.908 INFO  - Banned card for Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) : SNAIL HYDRA (8d1fc45f-46ed-4b6f-9a98-3b450f374eb9) (9)
+2026-03-12 12:03:07.909 INFO  - Banned card for Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) : GRAVE ROBBER (e18b5c77-51c7-4772-a222-ae022193396b) (7)
+2026-03-12 12:03:07.909 INFO  - First player will be Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86)
+2026-03-12 12:03:07.915 INFO  - Game 5b1df6ae-7116-4e7c-a104-786919a950a6 starting...
+2026-03-12 12:03:07.916 INFO  - Player Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) hand : {
+- TIGER SQUIRREL ;
+- SHIELD BUGS ;
+- SPIDER OWL ;
+- TIGER SQUIRREL ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:07.916 INFO  - Player Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) draw pile : {
+- BRAIN FLY ;
+- FROBLIN INSTIGATOR ;
+- HUNGRY HUNGRY HAMSTER ;
+- THE LURKER ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:07.916 INFO  - Player Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) hand : {
+- LONE YETI ;
+- AXOLOTL HEALER ;
+- FERRET PACIFIER ;
+- EXPLOSIVE TOAD ;
+- SPIDER OWL
+}
+2026-03-12 12:03:07.916 INFO  - Player Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) draw pile : {
+- TURF THE SURFER ;
+- KANGASAURUS REX ;
+- HAMSTER LION ;
+- LUCHATAUR ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:03:07.916 DEBUG - Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) LP changed (3 -> 5) due to AXOLOTL HEALER (18d99ea0-ada2-490a-a7db-f0f7ddaee1dc) effect
+2026-03-12 12:03:07.916 INFO  - Resolving GAIN effect of AXOLOTL HEALER (18d99ea0-ada2-490a-a7db-f0f7ddaee1dc)
+2026-03-12 12:03:07.916 DEBUG - Player Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) must choose 1 cards to steal (targets : {
+- LONE YETI ;
+- FERRET PACIFIER ;
+- EXPLOSIVE TOAD ;
+- TURF THE SURFER ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:07.916 INFO  - New TARGET choice to be resolved by Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) (targets : {
+- LONE YETI ;
+- FERRET PACIFIER ;
+- TURF THE SURFER ;
+- KANGASAURUS REX ;
+- EXPLOSIVE TOAD
+})
+2026-03-12 12:03:07.916 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:07.916 DEBUG - Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) must decide if stolen card TURF THE SURFER (9656103f-a68b-47cc-97e0-6c2ba2e4db4b) will be added to hand or board
+2026-03-12 12:03:07.916 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (30c1cb1f-0e44-4366-b8ef-f0b956f438ed)
+2026-03-12 12:03:07.916 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:07.916 DEBUG - TURF THE SURFER (9656103f-a68b-47cc-97e0-6c2ba2e4db4b) stolen and drawn by Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) due to HUNGRY HUNGRY HAMSTER (30c1cb1f-0e44-4366-b8ef-f0b956f438ed) effect
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.917 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.917 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.917 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.917 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - FROBLIN INSTIGATOR (5fbccc24-570b-4eb6-8689-c3fedc45bfa1) power changed (1 -> 3) due to FROBLIN INSTIGATOR (5fbccc24-570b-4eb6-8689-c3fedc45bfa1) effect
+2026-03-12 12:03:07.917 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (5fbccc24-570b-4eb6-8689-c3fedc45bfa1)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.917 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.917 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - FROBLIN INSTIGATOR (5fbccc24-570b-4eb6-8689-c3fedc45bfa1) power changed (1 -> 3) due to FROBLIN INSTIGATOR (5fbccc24-570b-4eb6-8689-c3fedc45bfa1) effect
+2026-03-12 12:03:07.917 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (5fbccc24-570b-4eb6-8689-c3fedc45bfa1)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.917 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.917 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.917 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.917 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 INFO  - New FRENZY choice to be resolved by Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) (attackingCard : LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c))
+2026-03-12 12:03:07.917 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.917 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.917 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.917 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.917 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 INFO  - New FRENZY choice to be resolved by Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) (attackingCard : LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c))
+2026-03-12 12:03:07.917 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:07.917 INFO  - Life update for player Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) : 2 LP
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.917 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.917 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 INFO  - New FRENZY choice to be resolved by Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) (attackingCard : LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c))
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.917 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.917 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.917 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:07.917 INFO  - Life update for player Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) : 1 LP
+2026-03-12 12:03:07.917 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.918 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.918 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 INFO  - New FRENZY choice to be resolved by Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) (attackingCard : LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c))
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.918 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.918 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.918 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.918 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.918 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.918 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.918 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.918 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - Player Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) must choose 1 cards to steal (targets : {
+- FERRET PACIFIER ;
+- EXPLOSIVE TOAD ;
+- KANGASAURUS REX ;
+- HAMSTER LION ;
+- LUCHATAUR
+})
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.918 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.918 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 INFO  - New TARGET choice to be resolved by Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) (targets : {
+- LUCHATAUR ;
+- FERRET PACIFIER ;
+- KANGASAURUS REX ;
+- EXPLOSIVE TOAD ;
+- HAMSTER LION
+})
+2026-03-12 12:03:07.918 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:07.918 DEBUG - Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) must decide if stolen card KANGASAURUS REX (6c771a46-fb7c-4a3f-8536-ca585ca90d2e) will be added to hand or board
+2026-03-12 12:03:07.918 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (4804f9ab-fed3-4fba-8e21-0a6d1af2de34)
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.918 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.918 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:07.918 DEBUG - KANGASAURUS REX (6c771a46-fb7c-4a3f-8536-ca585ca90d2e) stolen and drawn by Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) due to HUNGRY HUNGRY HAMSTER (4804f9ab-fed3-4fba-8e21-0a6d1af2de34) effect
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.918 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.918 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) power changed (5 -> 10) due to LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) effect
+2026-03-12 12:03:07.918 INFO  - Resolving POWER_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.918 DEBUG - LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c) gains FRENZY keyword
+2026-03-12 12:03:07.918 INFO  - Resolving KEYWORD_UP effect of LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c)
+2026-03-12 12:03:07.919 INFO  - New FRENZY choice to be resolved by Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) (attackingCard : LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c))
+2026-03-12 12:03:07.919 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:07.919 DEBUG - KANGASAURUS REX (6c771a46-fb7c-4a3f-8536-ca585ca90d2e) power changed (7 -> 8) due to SHIELD BUGS (21fb9c7f-de8f-4918-9ead-964947b92b4d) effect
+2026-03-12 12:03:07.919 INFO  - Resolving POWER_UP effect of SHIELD BUGS (21fb9c7f-de8f-4918-9ead-964947b92b4d)
+2026-03-12 12:03:07.919 DEBUG - KANGASAURUS REX (6c771a46-fb7c-4a3f-8536-ca585ca90d2e) power changed (7 -> 8) due to SHIELD BUGS (21fb9c7f-de8f-4918-9ead-964947b92b4d) effect
+2026-03-12 12:03:07.919 INFO  - Resolving POWER_UP effect of SHIELD BUGS (21fb9c7f-de8f-4918-9ead-964947b92b4d)
+2026-03-12 12:03:07.919 INFO  - Resolving POWER_UP effect of SHIELD BUGS (21fb9c7f-de8f-4918-9ead-964947b92b4d)
+2026-03-12 12:03:07.919 INFO  - New FRENZY choice to be resolved by Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) (attackingCard : LUCHATAUR (3199481b-4ae8-41b6-b839-f8884a45f5cd))
+2026-03-12 12:03:07.919 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:07.919 INFO  - Resolving POWER_UP effect of SHIELD BUGS (21fb9c7f-de8f-4918-9ead-964947b92b4d)
+2026-03-12 12:03:07.919 INFO  - Resolving POWER_UP effect of SHIELD BUGS (21fb9c7f-de8f-4918-9ead-964947b92b4d)
+2026-03-12 12:03:07.919 INFO  - Resolving POWER_UP effect of SHIELD BUGS (21fb9c7f-de8f-4918-9ead-964947b92b4d)
+2026-03-12 12:03:07.919 INFO  - Resolving POWER_UP effect of SHIELD BUGS (21fb9c7f-de8f-4918-9ead-964947b92b4d)
+2026-03-12 12:03:07.919 INFO  - Resolving POWER_UP effect of SHIELD BUGS (21fb9c7f-de8f-4918-9ead-964947b92b4d)
+2026-03-12 12:03:07.919 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (d47938f2-c820-4036-b036-79b20edeb2e0)
+2026-03-12 12:03:07.919 INFO  - Resolving POWER_UP effect of SHIELD BUGS (21fb9c7f-de8f-4918-9ead-964947b92b4d)
+2026-03-12 12:03:07.919 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (d47938f2-c820-4036-b036-79b20edeb2e0)
+2026-03-12 12:03:07.919 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.919 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.919 DEBUG - CardInstance(uuid=9ff594d5-9f73-4eaa-9076-9b4dabc9c66b, card=Card(id=3, setName=first_contact, name=BRAIN FLY, power=4, keywords=[], effects={PLAY=[StealEffect(value=1, optional=false, min=6, max=null, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Play</b>: Take control of a creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.919 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.920 DEBUG - Player Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) must choose 1 cards to steal (targets : {
+- LUCHATAUR ;
+- HAMSTER LION
+})
+2026-03-12 12:03:07.920 DEBUG - CardInstance(uuid=9ff594d5-9f73-4eaa-9076-9b4dabc9c66b, card=Card(id=3, setName=first_contact, name=BRAIN FLY, power=4, keywords=[], effects={PLAY=[StealEffect(value=1, optional=false, min=6, max=null, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Play</b>: Take control of a creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.920 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.920 INFO  - New TARGET choice to be resolved by Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) (targets : {
+- LUCHATAUR ;
+- HAMSTER LION
+})
+2026-03-12 12:03:07.920 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:07.920 DEBUG - LUCHATAUR (3199481b-4ae8-41b6-b839-f8884a45f5cd) stolen and played by Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) due to BRAIN FLY (9ff594d5-9f73-4eaa-9076-9b4dabc9c66b) effect
+2026-03-12 12:03:07.920 INFO  - Resolving STEAL effect of BRAIN FLY (9ff594d5-9f73-4eaa-9076-9b4dabc9c66b)
+2026-03-12 12:03:07.920 DEBUG - CardInstance(uuid=9ff594d5-9f73-4eaa-9076-9b4dabc9c66b, card=Card(id=3, setName=first_contact, name=BRAIN FLY, power=4, keywords=[], effects={PLAY=[StealEffect(value=1, optional=false, min=6, max=null, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Play</b>: Take control of a creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.920 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.920 DEBUG - CardInstance(uuid=9ff594d5-9f73-4eaa-9076-9b4dabc9c66b, card=Card(id=3, setName=first_contact, name=BRAIN FLY, power=4, keywords=[], effects={PLAY=[StealEffect(value=1, optional=false, min=6, max=null, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Play</b>: Take control of a creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.920 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.920 DEBUG - CardInstance(uuid=3199481b-4ae8-41b6-b839-f8884a45f5cd, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.920 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.920 INFO  - New FRENZY choice to be resolved by Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) (attackingCard : LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c))
+2026-03-12 12:03:07.920 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:07.920 DEBUG - CardInstance(uuid=3199481b-4ae8-41b6-b839-f8884a45f5cd, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.920 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.920 DEBUG - CardInstance(uuid=3199481b-4ae8-41b6-b839-f8884a45f5cd, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.921 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.921 DEBUG - CardInstance(uuid=6725c709-1cf3-4f02-8e54-654d7969941c, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.921 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.921 DEBUG - Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) LP changed (1 -> 3) due to AXOLOTL HEALER (6725c709-1cf3-4f02-8e54-654d7969941c) effect
+2026-03-12 12:03:07.921 INFO  - Resolving GAIN effect of AXOLOTL HEALER (6725c709-1cf3-4f02-8e54-654d7969941c)
+2026-03-12 12:03:07.921 DEBUG - CardInstance(uuid=6725c709-1cf3-4f02-8e54-654d7969941c, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.921 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.921 DEBUG - CardInstance(uuid=6725c709-1cf3-4f02-8e54-654d7969941c, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.921 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.921 DEBUG - CardInstance(uuid=3199481b-4ae8-41b6-b839-f8884a45f5cd, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.921 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.921 INFO  - New FRENZY choice to be resolved by Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) (attackingCard : LONE YETI (4989d357-5276-4a7d-88ad-8e29d248e48c))
+2026-03-12 12:03:07.921 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:07.921 DEBUG - CardInstance(uuid=3199481b-4ae8-41b6-b839-f8884a45f5cd, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.921 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.921 DEBUG - CardInstance(uuid=3199481b-4ae8-41b6-b839-f8884a45f5cd, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.921 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.921 DEBUG - CardInstance(uuid=3199481b-4ae8-41b6-b839-f8884a45f5cd, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.921 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.921 DEBUG - CardInstance(uuid=9656103f-a68b-47cc-97e0-6c2ba2e4db4b, card=Card(id=44, setName=first_contact, name=TURF THE SURFER, power=8, keywords=[], effects={ATTACK=[NoBlockEffect(value=1, max=null, min=null, highest=false, keyword=null)]}, unique=false, description=<b>Attack</b>: Choose a creature. It cannot block this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.921 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.921 DEBUG - CardInstance(uuid=9656103f-a68b-47cc-97e0-6c2ba2e4db4b, card=Card(id=44, setName=first_contact, name=TURF THE SURFER, power=8, keywords=[], effects={ATTACK=[NoBlockEffect(value=1, max=null, min=null, highest=false, keyword=null)]}, unique=false, description=<b>Attack</b>: Choose a creature. It cannot block this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.921 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.922 DEBUG - CardInstance(uuid=9656103f-a68b-47cc-97e0-6c2ba2e4db4b, card=Card(id=44, setName=first_contact, name=TURF THE SURFER, power=8, keywords=[], effects={ATTACK=[NoBlockEffect(value=1, max=null, min=null, highest=false, keyword=null)]}, unique=false, description=<b>Attack</b>: Choose a creature. It cannot block this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.922 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.922 DEBUG - CardInstance(uuid=9656103f-a68b-47cc-97e0-6c2ba2e4db4b, card=Card(id=44, setName=first_contact, name=TURF THE SURFER, power=8, keywords=[], effects={ATTACK=[NoBlockEffect(value=1, max=null, min=null, highest=false, keyword=null)]}, unique=false, description=<b>Attack</b>: Choose a creature. It cannot block this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4e9bd2c8), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:07.922 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (cfa0ab02-2502-4144-bbff-697466d16123)
+2026-03-12 12:03:07.922 INFO  - New FRENZY choice to be resolved by Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) (attackingCard : LUCHATAUR (3199481b-4ae8-41b6-b839-f8884a45f5cd))
+2026-03-12 12:03:07.922 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:07.922 DEBUG - Player Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) must choose 1 card(s) to destroy (available targets : {
+- LUCHATAUR ;
+- TURF THE SURFER
+})
+2026-03-12 12:03:07.922 INFO  - New TARGET choice to be resolved by Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) (targets : {
+- LUCHATAUR ;
+- TURF THE SURFER
+})
+2026-03-12 12:03:07.922 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:07.922 DEBUG - EXPLOSIVE TOAD (59ac2bbe-b409-42f6-aa47-6a319ef05977) effect destroys LUCHATAUR (3199481b-4ae8-41b6-b839-f8884a45f5cd)
+2026-03-12 12:03:07.922 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (59ac2bbe-b409-42f6-aa47-6a319ef05977)
+2026-03-12 12:03:07.922 DEBUG - GOBLIN WEREWOLF (22ee5ac4-a214-4a40-b2b3-79c060f3d807) power changed (2 -> 8) due to GOBLIN WEREWOLF (22ee5ac4-a214-4a40-b2b3-79c060f3d807) effect
+2026-03-12 12:03:07.922 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (22ee5ac4-a214-4a40-b2b3-79c060f3d807)
+2026-03-12 12:03:07.922 DEBUG - GOBLIN WEREWOLF (22ee5ac4-a214-4a40-b2b3-79c060f3d807) power changed (2 -> 8) due to GOBLIN WEREWOLF (22ee5ac4-a214-4a40-b2b3-79c060f3d807) effect
+2026-03-12 12:03:07.922 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (22ee5ac4-a214-4a40-b2b3-79c060f3d807)
+2026-03-12 12:03:07.922 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:07.922 DEBUG - GOBLIN WEREWOLF (22ee5ac4-a214-4a40-b2b3-79c060f3d807) power changed (2 -> 8) due to GOBLIN WEREWOLF (22ee5ac4-a214-4a40-b2b3-79c060f3d807) effect
+2026-03-12 12:03:07.922 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (22ee5ac4-a214-4a40-b2b3-79c060f3d807)
+2026-03-12 12:03:07.922 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (9656103f-a68b-47cc-97e0-6c2ba2e4db4b)
+2026-03-12 12:03:07.922 INFO  - Life update for player Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) : 4 LP
+2026-03-12 12:03:07.922 DEBUG - GOBLIN WEREWOLF (22ee5ac4-a214-4a40-b2b3-79c060f3d807) power changed (2 -> 8) due to GOBLIN WEREWOLF (22ee5ac4-a214-4a40-b2b3-79c060f3d807) effect
+2026-03-12 12:03:07.922 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (22ee5ac4-a214-4a40-b2b3-79c060f3d807)
+2026-03-12 12:03:07.922 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:07.922 DEBUG - THE LURKER (5fe619a9-8642-4b81-9063-8d7d9ec84c07) gains SNEAKY keyword
+2026-03-12 12:03:07.922 INFO  - Resolving KEYWORD_UP effect of THE LURKER (5fe619a9-8642-4b81-9063-8d7d9ec84c07)
+2026-03-12 12:03:07.922 INFO  - Life update for player Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) : 3 LP
+2026-03-12 12:03:07.922 INFO  - Game over : Player1 (79f70528-eb98-498f-a9a1-5e2075d44b86) wins ; Player2 (038aaf13-68c9-4bcb-8ca9-d7db8f0dc21a) loses.
+2026-03-12 12:03:07.922 INFO  - End of the game

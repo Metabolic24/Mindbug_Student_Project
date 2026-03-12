@@ -1,0 +1,135 @@
+2026-03-12 12:03:47.059 INFO  - Calculating first player...
+2026-03-12 12:03:47.061 INFO  - Banned card for Player1 (bf46191a-9841-4310-a880-7fa20b0b8d5c) : TURF THE SURFER (0e83ebfd-ac75-48c8-819a-e7f73bfb90df) (8)
+2026-03-12 12:03:47.061 INFO  - Banned card for Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) : FERRET PACIFIER (2d2010fd-9bf5-47b8-9217-de829fef60a6) (4)
+2026-03-12 12:03:47.061 INFO  - First player will be Player1 (bf46191a-9841-4310-a880-7fa20b0b8d5c)
+2026-03-12 12:03:47.066 INFO  - Game 0d27a3b4-679d-4f6f-82e1-f9a07fffb783 starting...
+2026-03-12 12:03:47.067 INFO  - Player Player1 (bf46191a-9841-4310-a880-7fa20b0b8d5c) hand : {
+- EXPLOSIVE TOAD ;
+- KILLER BEE ;
+- CHAMELEON SNIPER ;
+- SPIDER OWL ;
+- COMPOST DRAGON
+}
+2026-03-12 12:03:47.067 INFO  - Player Player1 (bf46191a-9841-4310-a880-7fa20b0b8d5c) draw pile : {
+- HAMSTER LION ;
+- DEATHWEAVER ;
+- SNAIL THROWER ;
+- SHIELD BUGS ;
+- SNAIL HYDRA
+}
+2026-03-12 12:03:47.067 INFO  - Player Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) hand : {
+- HUNGRY HUNGRY HAMSTER ;
+- URCHIN HURLER ;
+- MAJESTIC MANTICORE ;
+- GOREAGLE ALPHA ;
+- FERRET BOMBER
+}
+2026-03-12 12:03:47.067 INFO  - Player Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) draw pile : {
+- STRANGE BARREL ;
+- BRAIN FLY ;
+- RHINO TURTLE ;
+- TUSKED EXTORTER ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:47.067 DEBUG - Player Player1 (bf46191a-9841-4310-a880-7fa20b0b8d5c) must choose 1 cards to steal (targets : {
+- EXPLOSIVE TOAD ;
+- KILLER BEE ;
+- CHAMELEON SNIPER ;
+- COMPOST DRAGON ;
+- HAMSTER LION
+})
+2026-03-12 12:03:47.067 INFO  - New TARGET choice to be resolved by Player1 (bf46191a-9841-4310-a880-7fa20b0b8d5c) (targets : {
+- HAMSTER LION ;
+- COMPOST DRAGON ;
+- EXPLOSIVE TOAD ;
+- CHAMELEON SNIPER ;
+- KILLER BEE
+})
+2026-03-12 12:03:47.067 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:47.067 DEBUG - Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) must decide if stolen card CHAMELEON SNIPER (420f2551-cbbb-4e6a-ab9c-9e0878b61ca1) will be added to hand or board
+2026-03-12 12:03:47.067 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (438f7dd0-90e0-41ff-babf-748ee41ae403)
+2026-03-12 12:03:47.067 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:47.067 DEBUG - CHAMELEON SNIPER (420f2551-cbbb-4e6a-ab9c-9e0878b61ca1) stolen and drawn by Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) due to HUNGRY HUNGRY HAMSTER (438f7dd0-90e0-41ff-babf-748ee41ae403) effect
+2026-03-12 12:03:47.068 DEBUG - PLAY effects disabled for player Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) due to DEATHWEAVER (a52ef8b9-00e7-4537-b83f-f13be9d5b658) effect
+2026-03-12 12:03:47.068 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (a52ef8b9-00e7-4537-b83f-f13be9d5b658)
+2026-03-12 12:03:47.068 DEBUG - PLAY effects disabled for player Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) due to DEATHWEAVER (a52ef8b9-00e7-4537-b83f-f13be9d5b658) effect
+2026-03-12 12:03:47.068 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (a52ef8b9-00e7-4537-b83f-f13be9d5b658)
+2026-03-12 12:03:47.068 DEBUG - MAJESTIC MANTICORE (a8d42bd8-c867-4d65-a564-b373f1e7ce0f) power changed (6 -> 8) due to URCHIN HURLER (9cc39e1d-2153-4960-ad20-db84783b17b6) effect
+2026-03-12 12:03:47.068 INFO  - Resolving POWER_UP effect of URCHIN HURLER (9cc39e1d-2153-4960-ad20-db84783b17b6)
+2026-03-12 12:03:47.068 DEBUG - PLAY effects disabled for player Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) due to DEATHWEAVER (a52ef8b9-00e7-4537-b83f-f13be9d5b658) effect
+2026-03-12 12:03:47.068 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (a52ef8b9-00e7-4537-b83f-f13be9d5b658)
+2026-03-12 12:03:47.068 DEBUG - PLAY effects disabled for player Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) due to DEATHWEAVER (a52ef8b9-00e7-4537-b83f-f13be9d5b658) effect
+2026-03-12 12:03:47.068 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (a52ef8b9-00e7-4537-b83f-f13be9d5b658)
+2026-03-12 12:03:47.068 INFO  - Resolving POWER_UP effect of URCHIN HURLER (9cc39e1d-2153-4960-ad20-db84783b17b6)
+2026-03-12 12:03:47.068 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:47.068 INFO  - Resolving POWER_UP effect of URCHIN HURLER (9cc39e1d-2153-4960-ad20-db84783b17b6)
+2026-03-12 12:03:47.068 DEBUG - Player Player1 (bf46191a-9841-4310-a880-7fa20b0b8d5c) must choose 2 card(s) to discard (available targets : {
+- KILLER BEE ;
+- COMPOST DRAGON ;
+- HAMSTER LION ;
+- SNAIL THROWER ;
+- SHIELD BUGS
+})
+2026-03-12 12:03:47.068 INFO  - New TARGET choice to be resolved by Player1 (bf46191a-9841-4310-a880-7fa20b0b8d5c) (targets : {
+- SNAIL THROWER ;
+- SHIELD BUGS ;
+- HAMSTER LION ;
+- COMPOST DRAGON ;
+- KILLER BEE
+})
+2026-03-12 12:03:47.068 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:47.068 DEBUG - COMPOST DRAGON (d91b9aa1-6c14-4ea0-821e-f1e111216b26) discarded due to FERRET BOMBER (29935378-9b50-43c5-88dd-86b1400404c6) effect
+2026-03-12 12:03:47.068 DEBUG - KILLER BEE (b0f16e61-3ef4-4246-bc38-43cceaedc844) discarded due to FERRET BOMBER (29935378-9b50-43c5-88dd-86b1400404c6) effect
+2026-03-12 12:03:47.068 INFO  - Resolving DISCARD effect of FERRET BOMBER (29935378-9b50-43c5-88dd-86b1400404c6)
+2026-03-12 12:03:47.068 INFO  - New FRENZY choice to be resolved by Player1 (bf46191a-9841-4310-a880-7fa20b0b8d5c) (attackingCard : EXPLOSIVE TOAD (cc4bdb00-d32d-4a9d-89df-3bd03412239a))
+2026-03-12 12:03:47.068 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:47.068 INFO  - Life update for player Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) : 2 LP
+2026-03-12 12:03:47.068 INFO  - New FRENZY choice to be resolved by Player1 (bf46191a-9841-4310-a880-7fa20b0b8d5c) (attackingCard : EXPLOSIVE TOAD (cc4bdb00-d32d-4a9d-89df-3bd03412239a))
+2026-03-12 12:03:47.069 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:47.069 INFO  - Life update for player Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) : 1 LP
+2026-03-12 12:03:47.069 DEBUG - EXPLOSIVE TOAD (cc4bdb00-d32d-4a9d-89df-3bd03412239a) effect destroys RHINO TURTLE (f66a1fa7-6ad8-4614-a6ff-c145c96f3821)
+2026-03-12 12:03:47.069 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (cc4bdb00-d32d-4a9d-89df-3bd03412239a)
+2026-03-12 12:03:47.069 INFO  - Life update for player Player1 (bf46191a-9841-4310-a880-7fa20b0b8d5c) : 2 LP
+2026-03-12 12:03:47.069 INFO  - New FRENZY choice to be resolved by Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) (attackingCard : RHINO TURTLE (f66a1fa7-6ad8-4614-a6ff-c145c96f3821))
+2026-03-12 12:03:47.069 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:47.069 INFO  - Life update for player Player1 (bf46191a-9841-4310-a880-7fa20b0b8d5c) : 1 LP
+2026-03-12 12:03:47.069 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9da383b5-d6c5-494f-a9bd-e06916d839a0)
+2026-03-12 12:03:47.069 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9da383b5-d6c5-494f-a9bd-e06916d839a0)
+2026-03-12 12:03:47.069 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9da383b5-d6c5-494f-a9bd-e06916d839a0)
+2026-03-12 12:03:47.069 INFO  - New FRENZY choice to be resolved by Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) (attackingCard : RHINO TURTLE (f66a1fa7-6ad8-4614-a6ff-c145c96f3821))
+2026-03-12 12:03:47.069 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:47.069 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9da383b5-d6c5-494f-a9bd-e06916d839a0)
+2026-03-12 12:03:47.069 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.069 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.069 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.069 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.069 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.069 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.069 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.070 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.070 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.070 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.070 DEBUG - CardInstance(uuid=420f2551-cbbb-4e6a-ab9c-9e0878b61ca1, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@541897c6), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.070 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b59118ee-209e-4dd7-b78e-de05d705687b)
+2026-03-12 12:03:47.070 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.070 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.070 DEBUG - CardInstance(uuid=420f2551-cbbb-4e6a-ab9c-9e0878b61ca1, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@541897c6), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.070 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b59118ee-209e-4dd7-b78e-de05d705687b)
+2026-03-12 12:03:47.070 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.070 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.070 DEBUG - CardInstance(uuid=420f2551-cbbb-4e6a-ab9c-9e0878b61ca1, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@541897c6), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.070 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b59118ee-209e-4dd7-b78e-de05d705687b)
+2026-03-12 12:03:47.070 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.070 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.070 DEBUG - CardInstance(uuid=420f2551-cbbb-4e6a-ab9c-9e0878b61ca1, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@541897c6), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:47.070 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b59118ee-209e-4dd7-b78e-de05d705687b)
+2026-03-12 12:03:47.070 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.070 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.070 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.071 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.071 DEBUG - SNAIL HYDRA (5ca5ec59-044f-49db-9975-5c811084469a) discarded due to TUSKED EXTORTER (2603ce2b-aaf6-441b-8245-a64910087e58) effect
+2026-03-12 12:03:47.071 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (2603ce2b-aaf6-441b-8245-a64910087e58)
+2026-03-12 12:03:47.071 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.071 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (7b17a256-5c46-40ab-97fc-c5716d62c713)
+2026-03-12 12:03:47.071 INFO  - Game over : Player2 (85b90980-37a3-4b25-9787-9d6a37c4d90c) wins ; Player1 (bf46191a-9841-4310-a880-7fa20b0b8d5c) loses.
+2026-03-12 12:03:47.071 INFO  - End of the game

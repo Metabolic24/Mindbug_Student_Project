@@ -1,0 +1,51 @@
+2026-03-12 12:03:44.464 INFO  - Calculating first player...
+2026-03-12 12:03:44.466 INFO  - Banned card for Player1 (d84444d4-a5fe-43c6-af4d-0bbe12f9dbea) : GOBLIN WEREWOLF (64c41151-9e88-489f-bc7b-adcaa3604d6c) (2)
+2026-03-12 12:03:44.466 INFO  - Banned card for Player2 (6d195f0d-c10d-4bc9-acb9-9a5c52677c17) : GOREAGLE ALPHA (3e33cd87-517a-409e-8ebc-76a9989f843c) (6)
+2026-03-12 12:03:44.466 INFO  - First player will be Player2 (6d195f0d-c10d-4bc9-acb9-9a5c52677c17)
+2026-03-12 12:03:44.475 INFO  - Game 45c679ec-9cad-4af9-9253-f6ad71afff7a starting...
+2026-03-12 12:03:44.475 INFO  - Player Player1 (d84444d4-a5fe-43c6-af4d-0bbe12f9dbea) hand : {
+- BUGSERKER ;
+- COUNT DRACULEECH ;
+- THE LURKER ;
+- BEE BEAR ;
+- KILLER BEE
+}
+2026-03-12 12:03:44.476 INFO  - Player Player1 (d84444d4-a5fe-43c6-af4d-0bbe12f9dbea) draw pile : {
+- THE LURKER ;
+- LONE YETI ;
+- SHARK DOG ;
+- TURBO BUG ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:03:44.476 INFO  - Player Player2 (6d195f0d-c10d-4bc9-acb9-9a5c52677c17) hand : {
+- BUGSERKER ;
+- EXPLOSIVE TOAD ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+-  GIRAFFODILE ;
+- RHINO TURTLE
+}
+2026-03-12 12:03:44.476 INFO  - Player Player2 (6d195f0d-c10d-4bc9-acb9-9a5c52677c17) draw pile : {
+- GRAVE ROBBER ;
+- TURF THE SURFER ;
+- TURF THE SURFER ;
+- PLATED SCORPION ;
+- DEATHWEAVER
+}
+2026-03-12 12:03:44.476 INFO  - Life update for player Player2 (6d195f0d-c10d-4bc9-acb9-9a5c52677c17) : 2 LP
+2026-03-12 12:03:44.476 DEBUG - Player2 (6d195f0d-c10d-4bc9-acb9-9a5c52677c17) LP changed (3 -> 2) due to KILLER BEE (583ac1d3-e161-4c23-99f2-86a67ce3d080) effect
+2026-03-12 12:03:44.476 INFO  - Resolving INFLICT effect of KILLER BEE (583ac1d3-e161-4c23-99f2-86a67ce3d080)
+2026-03-12 12:03:44.476 INFO  - Resolving NO_BLOCK effect of BEE BEAR (cdeadd71-7434-4500-af9a-371a78dcf884)
+2026-03-12 12:03:44.477 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (d9f73c3f-0f96-430f-993a-656d71fd1b81) gains HUNTER keyword
+2026-03-12 12:03:44.477 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (d9f73c3f-0f96-430f-993a-656d71fd1b81)
+2026-03-12 12:03:44.477 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (d9f73c3f-0f96-430f-993a-656d71fd1b81) gains HUNTER keyword
+2026-03-12 12:03:44.477 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (d9f73c3f-0f96-430f-993a-656d71fd1b81)
+2026-03-12 12:03:44.477 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.477 INFO  - Life update for player Player1 (d84444d4-a5fe-43c6-af4d-0bbe12f9dbea) : 2 LP
+2026-03-12 12:03:44.477 INFO  - New FRENZY choice to be resolved by Player2 (6d195f0d-c10d-4bc9-acb9-9a5c52677c17) (attackingCard : RHINO TURTLE (ce5c1e4f-7ed5-48bf-aaa4-fda86425f64b))
+2026-03-12 12:03:44.477 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.477 INFO  - Life update for player Player1 (d84444d4-a5fe-43c6-af4d-0bbe12f9dbea) : 1 LP
+2026-03-12 12:03:44.477 INFO  - Life update for player Player1 (d84444d4-a5fe-43c6-af4d-0bbe12f9dbea) : 0 LP
+2026-03-12 12:03:44.477 INFO  - Game over : Player2 (6d195f0d-c10d-4bc9-acb9-9a5c52677c17) wins ; Player1 (d84444d4-a5fe-43c6-af4d-0bbe12f9dbea) loses.
+2026-03-12 12:03:44.478 INFO  - End of the game
+2026-03-12 12:03:44.478 DEBUG - Player1 (d84444d4-a5fe-43c6-af4d-0bbe12f9dbea) LP changed (1 -> 0) due to COUNT DRACULEECH (81a20db9-ffda-4d66-9def-59fbe97f4efa) effect
+2026-03-12 12:03:44.478 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (81a20db9-ffda-4d66-9def-59fbe97f4efa)

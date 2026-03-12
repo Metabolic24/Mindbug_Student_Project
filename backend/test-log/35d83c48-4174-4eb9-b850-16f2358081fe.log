@@ -1,0 +1,110 @@
+2026-03-12 12:18:24.694 INFO  - Calculating first player...
+2026-03-12 12:18:24.697 INFO  - Banned card for Player1 (d695ec1c-a659-4f58-bb4c-1c6387e911cd) : HUNGRY HUNGRY HAMSTER (fac821f0-c25e-48df-8dad-1b4c8392fbc5) (2)
+2026-03-12 12:18:24.697 INFO  - Banned card for Player2 (44541afe-dbce-49b8-8801-c24fdd2014e9) : BUGSERKER (c682dd5d-7eeb-4868-b86c-f5a8b45eae4b) (3)
+2026-03-12 12:18:24.697 INFO  - First player will be Player2 (44541afe-dbce-49b8-8801-c24fdd2014e9)
+2026-03-12 12:18:24.705 INFO  - Game 35d83c48-4174-4eb9-b850-16f2358081fe starting...
+2026-03-12 12:18:24.705 INFO  - Player Player1 (d695ec1c-a659-4f58-bb4c-1c6387e911cd) hand : {
+- TIGER SQUIRREL ;
+- HAMSTER LION ;
+- LUCHATAUR ;
+- KILLER BEE ;
+- SNAIL THROWER
+}
+2026-03-12 12:18:24.706 INFO  - Player Player1 (d695ec1c-a659-4f58-bb4c-1c6387e911cd) draw pile : {
+- FROBLIN INSTIGATOR ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- SNAIL HYDRA ;
+- GOBLIN WEREWOLF ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:18:24.706 INFO  - Player Player2 (44541afe-dbce-49b8-8801-c24fdd2014e9) hand : {
+-  GIRAFFODILE ;
+- SHARK DOG ;
+- MAJESTIC MANTICORE ;
+- URCHIN HURLER ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:18:24.706 INFO  - Player Player2 (44541afe-dbce-49b8-8801-c24fdd2014e9) draw pile : {
+- COUNT DRACULEECH ;
+- TURBO BUG ;
+- KANGASAURUS REX ;
+- THE LURKER ;
+- SNAIL HYDRA
+}
+2026-03-12 12:18:24.708 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e1176b9f-4239-4e00-94cf-d3b3e9dac89b)
+2026-03-12 12:18:24.708 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e1176b9f-4239-4e00-94cf-d3b3e9dac89b)
+2026-03-12 12:18:24.708 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:24.708 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e1176b9f-4239-4e00-94cf-d3b3e9dac89b)
+2026-03-12 12:18:24.709 DEBUG - FROBLIN INSTIGATOR (04500988-b965-4d1e-9800-66cac475c480) power changed (1 -> 1) due to FROBLIN INSTIGATOR (04500988-b965-4d1e-9800-66cac475c480) effect
+2026-03-12 12:18:24.709 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (04500988-b965-4d1e-9800-66cac475c480)
+2026-03-12 12:18:24.709 DEBUG - FROBLIN INSTIGATOR (04500988-b965-4d1e-9800-66cac475c480) power changed (1 -> 1) due to FROBLIN INSTIGATOR (04500988-b965-4d1e-9800-66cac475c480) effect
+2026-03-12 12:18:24.709 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (04500988-b965-4d1e-9800-66cac475c480)
+2026-03-12 12:18:24.709 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e1176b9f-4239-4e00-94cf-d3b3e9dac89b)
+2026-03-12 12:18:24.709 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:24.710 DEBUG - FROBLIN INSTIGATOR (04500988-b965-4d1e-9800-66cac475c480) power changed (1 -> 1) due to FROBLIN INSTIGATOR (04500988-b965-4d1e-9800-66cac475c480) effect
+2026-03-12 12:18:24.710 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (04500988-b965-4d1e-9800-66cac475c480)
+2026-03-12 12:18:24.710 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e1176b9f-4239-4e00-94cf-d3b3e9dac89b)
+2026-03-12 12:18:24.710 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e1176b9f-4239-4e00-94cf-d3b3e9dac89b)
+2026-03-12 12:18:24.710 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (72af8980-568d-4960-854e-85d5634899c5) gains HUNTER keyword
+2026-03-12 12:18:24.710 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (72af8980-568d-4960-854e-85d5634899c5)
+2026-03-12 12:18:24.710 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e1176b9f-4239-4e00-94cf-d3b3e9dac89b)
+2026-03-12 12:18:24.710 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (72af8980-568d-4960-854e-85d5634899c5) gains HUNTER keyword
+2026-03-12 12:18:24.711 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (72af8980-568d-4960-854e-85d5634899c5)
+2026-03-12 12:18:24.711 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:24.711 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (87a405ab-25f2-4ee1-ab94-71fffbea46f8)
+2026-03-12 12:18:24.711 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (87a405ab-25f2-4ee1-ab94-71fffbea46f8)
+2026-03-12 12:18:24.711 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (87a405ab-25f2-4ee1-ab94-71fffbea46f8)
+2026-03-12 12:18:24.712 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (87a405ab-25f2-4ee1-ab94-71fffbea46f8)
+2026-03-12 12:18:24.712 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (87a405ab-25f2-4ee1-ab94-71fffbea46f8)
+2026-03-12 12:18:24.712 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (87a405ab-25f2-4ee1-ab94-71fffbea46f8)
+2026-03-12 12:18:24.712 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (87a405ab-25f2-4ee1-ab94-71fffbea46f8)
+2026-03-12 12:18:24.712 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (87a405ab-25f2-4ee1-ab94-71fffbea46f8)
+2026-03-12 12:18:24.712 DEBUG - GOBLIN WEREWOLF (14233a6a-b9d3-428e-89c3-057fbab15c0e) power changed (2 -> 8) due to GOBLIN WEREWOLF (14233a6a-b9d3-428e-89c3-057fbab15c0e) effect
+2026-03-12 12:18:24.713 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (14233a6a-b9d3-428e-89c3-057fbab15c0e)
+2026-03-12 12:18:24.713 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (87a405ab-25f2-4ee1-ab94-71fffbea46f8)
+2026-03-12 12:18:24.713 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (87a405ab-25f2-4ee1-ab94-71fffbea46f8)
+2026-03-12 12:18:24.713 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (87a405ab-25f2-4ee1-ab94-71fffbea46f8)
+2026-03-12 12:18:24.713 DEBUG - GOBLIN WEREWOLF (14233a6a-b9d3-428e-89c3-057fbab15c0e) gains POISONOUS keyword
+2026-03-12 12:18:24.713 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (87a405ab-25f2-4ee1-ab94-71fffbea46f8)
+2026-03-12 12:18:24.714 DEBUG - MAJESTIC MANTICORE (ad9d69da-6f54-4930-9e50-8fe2dffe1311) effect destroys SNAIL THROWER (87a405ab-25f2-4ee1-ab94-71fffbea46f8)
+2026-03-12 12:18:24.714 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (ad9d69da-6f54-4930-9e50-8fe2dffe1311)
+2026-03-12 12:18:24.714 DEBUG - CardInstance(uuid=ad9d69da-6f54-4930-9e50-8fe2dffe1311, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@a1b7549), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.714 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d3269220-2de7-48d0-8773-afcb5bba69a4)
+2026-03-12 12:18:24.715 DEBUG - CardInstance(uuid=ad9d69da-6f54-4930-9e50-8fe2dffe1311, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@a1b7549), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.715 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d3269220-2de7-48d0-8773-afcb5bba69a4)
+2026-03-12 12:18:24.715 DEBUG - CardInstance(uuid=ad9d69da-6f54-4930-9e50-8fe2dffe1311, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@a1b7549), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.715 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d3269220-2de7-48d0-8773-afcb5bba69a4)
+2026-03-12 12:18:24.716 DEBUG - URCHIN HURLER (e1176b9f-4239-4e00-94cf-d3b3e9dac89b) stolen and drawn by Player2 (44541afe-dbce-49b8-8801-c24fdd2014e9) due to  GIRAFFODILE (78900d97-9a6a-49b5-9dff-0751a243aeba) effect
+2026-03-12 12:18:24.716 INFO  - Resolving STEAL effect of  GIRAFFODILE (78900d97-9a6a-49b5-9dff-0751a243aeba)
+2026-03-12 12:18:24.716 DEBUG - CardInstance(uuid=ad9d69da-6f54-4930-9e50-8fe2dffe1311, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@a1b7549), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.716 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d3269220-2de7-48d0-8773-afcb5bba69a4)
+2026-03-12 12:18:24.716 DEBUG - CardInstance(uuid=ad9d69da-6f54-4930-9e50-8fe2dffe1311, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@a1b7549), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.716 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d3269220-2de7-48d0-8773-afcb5bba69a4)
+2026-03-12 12:18:24.716 DEBUG - CardInstance(uuid=ad9d69da-6f54-4930-9e50-8fe2dffe1311, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@a1b7549), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.717 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d3269220-2de7-48d0-8773-afcb5bba69a4)
+2026-03-12 12:18:24.717 DEBUG - CardInstance(uuid=ad9d69da-6f54-4930-9e50-8fe2dffe1311, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@a1b7549), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.717 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d3269220-2de7-48d0-8773-afcb5bba69a4)
+2026-03-12 12:18:24.717 DEBUG - CardInstance(uuid=ec70aa66-70de-47a6-8092-ec3e1d6eb0f1, card=Card(id=30, setName=first_contact, name=TURBO BUG, power=4, keywords=[], effects={ATTACK=[InflictEffect(value=0, self=false, allButOne=true, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses all life except 1., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@a1b7549), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.718 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d3269220-2de7-48d0-8773-afcb5bba69a4)
+2026-03-12 12:18:24.718 DEBUG - CardInstance(uuid=ec70aa66-70de-47a6-8092-ec3e1d6eb0f1, card=Card(id=30, setName=first_contact, name=TURBO BUG, power=4, keywords=[], effects={ATTACK=[InflictEffect(value=0, self=false, allButOne=true, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses all life except 1., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@a1b7549), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.718 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (d3269220-2de7-48d0-8773-afcb5bba69a4)
+2026-03-12 12:18:24.719 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e1176b9f-4239-4e00-94cf-d3b3e9dac89b)
+2026-03-12 12:18:24.719 INFO  - Life update for player Player2 (44541afe-dbce-49b8-8801-c24fdd2014e9) : 2 LP
+2026-03-12 12:18:24.719 DEBUG - Player2 (44541afe-dbce-49b8-8801-c24fdd2014e9) LP changed (3 -> 2) due to KILLER BEE (4988b727-e786-42df-9fb0-e8eb7afa44e3) effect
+2026-03-12 12:18:24.719 INFO  - Resolving INFLICT effect of KILLER BEE (4988b727-e786-42df-9fb0-e8eb7afa44e3)
+2026-03-12 12:18:24.720 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e1176b9f-4239-4e00-94cf-d3b3e9dac89b)
+2026-03-12 12:18:24.720 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:24.720 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e1176b9f-4239-4e00-94cf-d3b3e9dac89b)
+2026-03-12 12:18:24.721 DEBUG - GOBLIN WEREWOLF (b749cb5d-c38e-4828-aec2-1506d22db001) power changed (2 -> 8) due to GOBLIN WEREWOLF (b749cb5d-c38e-4828-aec2-1506d22db001) effect
+2026-03-12 12:18:24.721 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b749cb5d-c38e-4828-aec2-1506d22db001)
+2026-03-12 12:18:24.721 DEBUG - GOBLIN WEREWOLF (b749cb5d-c38e-4828-aec2-1506d22db001) power changed (2 -> 8) due to GOBLIN WEREWOLF (b749cb5d-c38e-4828-aec2-1506d22db001) effect
+2026-03-12 12:18:24.721 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b749cb5d-c38e-4828-aec2-1506d22db001)
+2026-03-12 12:18:24.722 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:24.722 INFO  - Life update for player Player2 (44541afe-dbce-49b8-8801-c24fdd2014e9) : 1 LP
+2026-03-12 12:18:24.723 INFO  - New FRENZY choice to be resolved by Player1 (d695ec1c-a659-4f58-bb4c-1c6387e911cd) (attackingCard : LUCHATAUR (7273ab5f-db96-4fc8-b9cb-5716d9008f50))
+2026-03-12 12:18:24.723 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:24.724 INFO  - New FRENZY choice to be resolved by Player1 (d695ec1c-a659-4f58-bb4c-1c6387e911cd) (attackingCard : LUCHATAUR (7273ab5f-db96-4fc8-b9cb-5716d9008f50))
+2026-03-12 12:18:24.724 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:24.724 INFO  - Life update for player Player2 (44541afe-dbce-49b8-8801-c24fdd2014e9) : 0 LP
+2026-03-12 12:18:24.724 INFO  - Game over : Player1 (d695ec1c-a659-4f58-bb4c-1c6387e911cd) wins ; Player2 (44541afe-dbce-49b8-8801-c24fdd2014e9) loses.
+2026-03-12 12:18:24.724 INFO  - End of the game

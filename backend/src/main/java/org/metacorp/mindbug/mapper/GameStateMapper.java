@@ -21,16 +21,23 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class GameStateMapper {
 
     public static GameStateDTO fromGame(Game game) {
         Player currentPlayer = game.getCurrentPlayer();
+        List<Player> opponents = game.getOpponents();
+        Player ally = game.getAlly();
+
         // Build the GameStateDTO
-        GameStateDTO gameStateDTO = new GameStateDTO(game.getUuid(),
-                fromPlayer(currentPlayer),
-                fromPlayer(game.getOpponent()));
+        GameStateDTO gameStateDTO = new GameStateDTO();
+        gameStateDTO.setUuid(game.getUuid());
+        gameStateDTO.setPlayer(fromPlayer(currentPlayer));
+        gameStateDTO.setAlly(ally != null ? fromPlayer(ally) : null);
+        gameStateDTO.setOpponent(fromPlayer(opponents.getFirst()));
+        gameStateDTO.setOpponents(opponents.stream().map(GameStateMapper::fromPlayer).toList());
         gameStateDTO.setForcedAttack(game.isForcedAttack());
 
         // Update the card field if needed
@@ -48,8 +55,8 @@ public class GameStateMapper {
         }
 
         // Update the winner field if needed
-        if (game.getWinner() != null) {
-            gameStateDTO.setWinner(game.getWinner().getUuid());
+        if (game.getWinners() != null) {
+            gameStateDTO.setWinners(game.getWinners().stream().map(Player::getUuid).toList());
         }
 
         return gameStateDTO;
@@ -59,6 +66,7 @@ public class GameStateMapper {
         PlayerDTO result = new PlayerDTO();
         result.setUuid(player.getUuid());
         result.setName(player.getName());
+        result.setTeamId(System.identityHashCode(player.getTeam()));
         result.setLifePoints(player.getTeam().getLifePoints());
         result.setMindbugCount(player.getMindBugs());
         result.setDrawPileCount(player.getDrawPile().size());

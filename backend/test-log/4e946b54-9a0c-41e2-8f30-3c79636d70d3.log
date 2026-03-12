@@ -1,0 +1,312 @@
+2026-03-12 12:03:44.021 INFO  - Calculating first player...
+2026-03-12 12:03:44.024 INFO  - Banned card for Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) : SHIELD BUGS (3204aaaa-aff0-406d-ba60-27ab98933d17) (4)
+2026-03-12 12:03:44.024 INFO  - Banned card for Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) : SPIDER OWL (e400d16e-0c59-4fe7-af2a-c5763909cc89) (3)
+2026-03-12 12:03:44.024 INFO  - First player will be Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb)
+2026-03-12 12:03:44.032 INFO  - Game 4e946b54-9a0c-41e2-8f30-3c79636d70d3 starting...
+2026-03-12 12:03:44.032 INFO  - Player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) hand : {
+- THE LURKER ;
+- PLATED SCORPION ;
+- SHIELD BUGS ;
+- HYENIX ;
+- CREEP FROM THE DEEP
+}
+2026-03-12 12:03:44.033 INFO  - Player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) draw pile : {
+- RHINO TURTLE ;
+- BRAIN FLY ;
+- AXOLOTL HEALER ;
+- GRAVE ROBBER ;
+- LONE YETI
+}
+2026-03-12 12:03:44.033 INFO  - Player Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) hand : {
+- HAMSTER LION ;
+- FERRET PACIFIER ;
+- KILLER BEE ;
+- GORILLON ;
+- DEATHWEAVER
+}
+2026-03-12 12:03:44.033 INFO  - Player Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) draw pile : {
+- HUNGRY HUNGRY HAMSTER ;
+- KANGASAURUS REX ;
+- GOREAGLE ALPHA ;
+- MYSTERIOUS MERMAID ;
+-  GIRAFFODILE
+}
+2026-03-12 12:03:44.033 INFO  - Life update for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) : 2 LP
+2026-03-12 12:03:44.033 DEBUG - Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) LP changed (3 -> 2) due to KILLER BEE (e3cedfd0-7383-4237-bad7-92dbc5f9b17c) effect
+2026-03-12 12:03:44.033 INFO  - Resolving INFLICT effect of KILLER BEE (e3cedfd0-7383-4237-bad7-92dbc5f9b17c)
+2026-03-12 12:03:44.033 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.033 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.033 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.033 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.033 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.033 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.033 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.034 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.034 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.034 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.034 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.034 DEBUG - CardInstance(uuid=d0eae311-c005-4e03-a2ac-076cb9a18502, card=Card(id=41, setName=first_contact, name=HYENIX, power=7, keywords=[FRENZY], effects={LIFE_LOST=[ReviveEffect()]}, unique=false, description=When you lose life while this is in your discard pile, you may play this., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=7, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.034 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.034 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.034 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.034 DEBUG - CardInstance(uuid=d0eae311-c005-4e03-a2ac-076cb9a18502, card=Card(id=41, setName=first_contact, name=HYENIX, power=7, keywords=[FRENZY], effects={LIFE_LOST=[ReviveEffect()]}, unique=false, description=When you lose life while this is in your discard pile, you may play this., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=7, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.034 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.034 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.034 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.034 DEBUG - CardInstance(uuid=8ba13082-5dfe-4672-a213-e0f579e8da49, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.034 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.034 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.034 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.034 DEBUG - CardInstance(uuid=8ba13082-5dfe-4672-a213-e0f579e8da49, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.034 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.034 DEBUG - CardInstance(uuid=8ba13082-5dfe-4672-a213-e0f579e8da49, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.034 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.034 DEBUG - CardInstance(uuid=8ba13082-5dfe-4672-a213-e0f579e8da49, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.035 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.035 DEBUG - CardInstance(uuid=8ba13082-5dfe-4672-a213-e0f579e8da49, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.035 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.035 DEBUG - CardInstance(uuid=8ba13082-5dfe-4672-a213-e0f579e8da49, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.035 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.035 DEBUG - CardInstance(uuid=8ba13082-5dfe-4672-a213-e0f579e8da49, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.035 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.035 INFO  - New FRENZY choice to be resolved by Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) (attackingCard : HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261))
+2026-03-12 12:03:44.035 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.035 DEBUG - CardInstance(uuid=8ba13082-5dfe-4672-a213-e0f579e8da49, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.035 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.035 DEBUG - Player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) must choose 1 cards to steal (targets : {
+- KILLER BEE ;
+- DEATHWEAVER ;
+- HAMSTER LION
+})
+2026-03-12 12:03:44.035 INFO  - New TARGET choice to be resolved by Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) (targets : {
+- HAMSTER LION ;
+- KILLER BEE ;
+- DEATHWEAVER
+})
+2026-03-12 12:03:44.036 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.036 DEBUG - KILLER BEE (e3cedfd0-7383-4237-bad7-92dbc5f9b17c) stolen and played by Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) effect
+2026-03-12 12:03:44.036 INFO  - Resolving STEAL effect of GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269)
+2026-03-12 12:03:44.036 INFO  - Life update for player Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) : 2 LP
+2026-03-12 12:03:44.036 DEBUG - Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) LP changed (3 -> 2) due to KILLER BEE (e3cedfd0-7383-4237-bad7-92dbc5f9b17c) effect
+2026-03-12 12:03:44.036 INFO  - Resolving INFLICT effect of KILLER BEE (e3cedfd0-7383-4237-bad7-92dbc5f9b17c)
+2026-03-12 12:03:44.036 DEBUG - KANGASAURUS REX (8eb9214d-3ba1-4030-9267-06b713d642b1) effect destroys THE LURKER (8ba13082-5dfe-4672-a213-e0f579e8da49)
+2026-03-12 12:03:44.036 INFO  - Resolving DESTROY effect of KANGASAURUS REX (8eb9214d-3ba1-4030-9267-06b713d642b1)
+2026-03-12 12:03:44.036 INFO  - Life update for player Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) : 1 LP
+2026-03-12 12:03:44.036 DEBUG - Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) LP changed (2 -> 1) due to GOREAGLE ALPHA (fe8684fe-18c4-492a-b082-fde0dc6b0672) effect
+2026-03-12 12:03:44.037 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (fe8684fe-18c4-492a-b082-fde0dc6b0672)
+2026-03-12 12:03:44.037 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.037 DEBUG - DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) stolen and drawn by Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) due to  GIRAFFODILE (8def6b8b-39b8-4e9a-a59c-8ecda0df5cf4) effect
+2026-03-12 12:03:44.037 DEBUG - HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261) stolen and drawn by Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) due to  GIRAFFODILE (8def6b8b-39b8-4e9a-a59c-8ecda0df5cf4) effect
+2026-03-12 12:03:44.037 INFO  - Resolving STEAL effect of  GIRAFFODILE (8def6b8b-39b8-4e9a-a59c-8ecda0df5cf4)
+2026-03-12 12:03:44.037 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.037 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.037 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.037 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.037 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.037 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.037 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.037 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.037 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.037 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.038 INFO  - New FRENZY choice to be resolved by Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) (attackingCard : GOREAGLE ALPHA (fe8684fe-18c4-492a-b082-fde0dc6b0672))
+2026-03-12 12:03:44.038 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.038 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.038 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.038 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.038 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.038 DEBUG - Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) LP changed (2 -> 4) due to AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) effect
+2026-03-12 12:03:44.038 INFO  - Resolving GAIN effect of AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b)
+2026-03-12 12:03:44.038 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.038 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.039 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.039 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.039 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.039 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.039 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.039 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.039 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.039 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.039 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.039 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.039 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.039 DEBUG - Player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) must choose 1 cards to steal (targets : {
+- BRAIN FLY ;
+- LONE YETI
+})
+2026-03-12 12:03:44.039 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.039 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.039 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.039 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.039 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.039 INFO  - New TARGET choice to be resolved by Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) (targets : {
+- LONE YETI ;
+- BRAIN FLY
+})
+2026-03-12 12:03:44.039 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.039 DEBUG - Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) must decide if stolen card LONE YETI (bd8551a7-19aa-4224-bf8b-1a9d3b398664) will be added to hand or board
+2026-03-12 12:03:44.039 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (26c80af6-a791-4b7c-a61b-60fc1bc9f745)
+2026-03-12 12:03:44.040 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.040 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:44.040 DEBUG - LONE YETI (bd8551a7-19aa-4224-bf8b-1a9d3b398664) stolen and played by Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) due to HUNGRY HUNGRY HAMSTER (26c80af6-a791-4b7c-a61b-60fc1bc9f745) effect
+2026-03-12 12:03:44.040 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.040 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.040 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.040 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.040 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.040 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.041 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.041 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.041 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.041 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.041 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.041 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 DEBUG - BRAIN FLY (5cf5984c-a882-4c8e-b340-f97bbc402475) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.041 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.041 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.041 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 DEBUG - BRAIN FLY (5cf5984c-a882-4c8e-b340-f97bbc402475) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.041 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.041 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.041 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.042 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 DEBUG - BRAIN FLY (5cf5984c-a882-4c8e-b340-f97bbc402475) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.042 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.042 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.042 DEBUG - Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) LP changed (1 -> 4) due to MYSTERIOUS MERMAID (abcd4128-4bbf-45f8-98c8-7dd043f9eb4a) effect
+2026-03-12 12:03:44.042 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (abcd4128-4bbf-45f8-98c8-7dd043f9eb4a)
+2026-03-12 12:03:44.042 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 DEBUG - BRAIN FLY (5cf5984c-a882-4c8e-b340-f97bbc402475) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.042 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.042 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.042 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 DEBUG - BRAIN FLY (5cf5984c-a882-4c8e-b340-f97bbc402475) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.042 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.042 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.042 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.043 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 DEBUG - BRAIN FLY (5cf5984c-a882-4c8e-b340-f97bbc402475) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.043 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.043 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.043 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 DEBUG - BRAIN FLY (5cf5984c-a882-4c8e-b340-f97bbc402475) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.043 DEBUG - PLAY effects disabled for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) due to DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b) effect
+2026-03-12 12:03:44.043 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (1e647a82-4f6d-457d-addf-20936056812b)
+2026-03-12 12:03:44.043 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 DEBUG - BRAIN FLY (5cf5984c-a882-4c8e-b340-f97bbc402475) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.043 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.044 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.044 DEBUG - RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342) power changed (8 -> 9) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.044 DEBUG - AXOLOTL HEALER (d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.044 DEBUG - BRAIN FLY (5cf5984c-a882-4c8e-b340-f97bbc402475) power changed (4 -> 5) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.044 DEBUG - PLATED SCORPION (657a22bc-1dbf-49ec-9bd9-edd0a7869ee6) power changed (2 -> 3) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.044 DEBUG - GRAVE ROBBER (68760cc1-463f-4f6f-9c98-7fd7b00f0269) power changed (7 -> 8) due to SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843) effect
+2026-03-12 12:03:44.044 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a336a2c5-f50b-46ec-9bfe-994df1516843)
+2026-03-12 12:03:44.044 DEBUG - CardInstance(uuid=d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.044 DEBUG - CardInstance(uuid=5cf5984c-a882-4c8e-b340-f97bbc402475, card=Card(id=3, setName=first_contact, name=BRAIN FLY, power=4, keywords=[], effects={PLAY=[StealEffect(value=1, optional=false, min=6, max=null, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Play</b>: Take control of a creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.044 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.044 DEBUG - CardInstance(uuid=d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.044 DEBUG - CardInstance(uuid=5cf5984c-a882-4c8e-b340-f97bbc402475, card=Card(id=3, setName=first_contact, name=BRAIN FLY, power=4, keywords=[], effects={PLAY=[StealEffect(value=1, optional=false, min=6, max=null, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Play</b>: Take control of a creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.044 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.044 DEBUG - CardInstance(uuid=d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.045 DEBUG - CardInstance(uuid=5cf5984c-a882-4c8e-b340-f97bbc402475, card=Card(id=3, setName=first_contact, name=BRAIN FLY, power=4, keywords=[], effects={PLAY=[StealEffect(value=1, optional=false, min=6, max=null, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Play</b>: Take control of a creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.045 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.045 INFO  - New FRENZY choice to be resolved by Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) (attackingCard : RHINO TURTLE (e90fba81-53d6-4455-ae8e-668589575342))
+2026-03-12 12:03:44.045 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.045 DEBUG - CardInstance(uuid=d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.045 DEBUG - CardInstance(uuid=5cf5984c-a882-4c8e-b340-f97bbc402475, card=Card(id=3, setName=first_contact, name=BRAIN FLY, power=4, keywords=[], effects={PLAY=[StealEffect(value=1, optional=false, min=6, max=null, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Play</b>: Take control of a creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.045 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.045 DEBUG - CardInstance(uuid=d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.045 DEBUG - CardInstance(uuid=5cf5984c-a882-4c8e-b340-f97bbc402475, card=Card(id=3, setName=first_contact, name=BRAIN FLY, power=4, keywords=[], effects={PLAY=[StealEffect(value=1, optional=false, min=6, max=null, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Play</b>: Take control of a creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.045 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.045 DEBUG - CardInstance(uuid=d02f14f0-7e9f-4681-9c9b-aa5e84b85c8b, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.045 DEBUG - CardInstance(uuid=5cf5984c-a882-4c8e-b340-f97bbc402475, card=Card(id=3, setName=first_contact, name=BRAIN FLY, power=4, keywords=[], effects={PLAY=[StealEffect(value=1, optional=false, min=6, max=null, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Play</b>: Take control of a creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.045 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.045 DEBUG - CardInstance(uuid=5cf5984c-a882-4c8e-b340-f97bbc402475, card=Card(id=3, setName=first_contact, name=BRAIN FLY, power=4, keywords=[], effects={PLAY=[StealEffect(value=1, optional=false, min=6, max=null, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Play</b>: Take control of a creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.045 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.045 DEBUG - CardInstance(uuid=5cf5984c-a882-4c8e-b340-f97bbc402475, card=Card(id=3, setName=first_contact, name=BRAIN FLY, power=4, keywords=[], effects={PLAY=[StealEffect(value=1, optional=false, min=6, max=null, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Play</b>: Take control of a creature with power 6 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@b787274), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.046 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (c495954a-6e1c-49a2-b396-61001d861261)
+2026-03-12 12:03:44.046 INFO  - Life update for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) : 3 LP
+2026-03-12 12:03:44.046 DEBUG - Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) must decide if HYENIX (d0eae311-c005-4e03-a2ac-076cb9a18502) will revive
+2026-03-12 12:03:44.046 INFO  - New BOOLEAN choice to be resolved by Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) (target : )
+2026-03-12 12:03:44.046 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:44.046 DEBUG - HYENIX (d0eae311-c005-4e03-a2ac-076cb9a18502) revived using its own effect
+2026-03-12 12:03:44.046 INFO  - Resolving REVIVE effect of HYENIX (d0eae311-c005-4e03-a2ac-076cb9a18502)
+2026-03-12 12:03:44.046 INFO  - Life update for player Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) : 2 LP
+2026-03-12 12:03:44.046 DEBUG - Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) must decide if HYENIX (d0eae311-c005-4e03-a2ac-076cb9a18502) will revive
+2026-03-12 12:03:44.046 INFO  - New BOOLEAN choice to be resolved by Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) (target : )
+2026-03-12 12:03:44.046 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:44.046 INFO  - Game over : Player2 (8d1e1be2-07c7-4fe6-afd0-2fc048c9bf66) wins ; Player1 (329e52dd-cc8b-46b2-a21c-11653bf141eb) loses.
+2026-03-12 12:03:44.046 INFO  - End of the game

@@ -1,0 +1,180 @@
+2026-03-12 12:03:08.366 INFO  - Calculating first player...
+2026-03-12 12:03:08.367 INFO  - Banned card for Player1 (dd891e1c-979d-4714-82cb-eb11221419aa) : HAMSTER LION (f960c67d-569e-45c9-b9c3-32c58e91f8d9) (8)
+2026-03-12 12:03:08.367 INFO  - Banned card for Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) : KILLER BEE (e36356f2-ec9c-43ed-a12d-96b92d4ed501) (5)
+2026-03-12 12:03:08.367 INFO  - First player will be Player1 (dd891e1c-979d-4714-82cb-eb11221419aa)
+2026-03-12 12:03:08.374 INFO  - Game 10a15457-46a8-4903-bfcc-032f465ff68f starting...
+2026-03-12 12:03:08.374 INFO  - Player Player1 (dd891e1c-979d-4714-82cb-eb11221419aa) hand : {
+- BEE BEAR ;
+- LUCHATAUR ;
+- MYSTERIOUS MERMAID ;
+- URCHIN HURLER ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:08.374 INFO  - Player Player1 (dd891e1c-979d-4714-82cb-eb11221419aa) draw pile : {
+- SNAIL HYDRA ;
+- COUNT DRACULEECH ;
+- STRANGE BARREL ;
+- GRAVE ROBBER ;
+- DEATHWEAVER
+}
+2026-03-12 12:03:08.374 INFO  - Player Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) hand : {
+- TIGER SQUIRREL ;
+- BUGSERKER ;
+- COUNT DRACULEECH ;
+- TURF THE SURFER ;
+- HYENIX
+}
+2026-03-12 12:03:08.374 INFO  - Player Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) draw pile : {
+- HUNGRY HUNGRY HAMSTER ;
+- SHARK DOG ;
+- LUCHATAUR ;
+- FROBLIN INSTIGATOR ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:08.375 INFO  - Resolving NO_BLOCK effect of BEE BEAR (68246fe1-76cf-4ac2-aa90-65f8bd91ef5d)
+2026-03-12 12:03:08.375 DEBUG - Player Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) must choose 1 cards to steal (targets : {
+- TIGER SQUIRREL ;
+- BUGSERKER ;
+- TURF THE SURFER ;
+- HUNGRY HUNGRY HAMSTER ;
+- SHARK DOG
+})
+2026-03-12 12:03:08.375 INFO  - New TARGET choice to be resolved by Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) (targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- BUGSERKER ;
+- TIGER SQUIRREL ;
+- TURF THE SURFER ;
+- SHARK DOG
+})
+2026-03-12 12:03:08.375 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.375 DEBUG - Player1 (dd891e1c-979d-4714-82cb-eb11221419aa) must decide if stolen card TURF THE SURFER (f89da539-7ed0-4f6a-89db-f46dfde064a2) will be added to hand or board
+2026-03-12 12:03:08.375 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (49e26fc9-51c4-41a8-9882-f401269c8542)
+2026-03-12 12:03:08.376 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:08.376 DEBUG - TURF THE SURFER (f89da539-7ed0-4f6a-89db-f46dfde064a2) stolen and drawn by Player1 (dd891e1c-979d-4714-82cb-eb11221419aa) due to HUNGRY HUNGRY HAMSTER (49e26fc9-51c4-41a8-9882-f401269c8542) effect
+2026-03-12 12:03:08.376 DEBUG - Player1 (dd891e1c-979d-4714-82cb-eb11221419aa) LP changed (3 -> 3) due to MYSTERIOUS MERMAID (698977a9-1e7e-411e-8c67-7de899ded2df) effect
+2026-03-12 12:03:08.376 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (698977a9-1e7e-411e-8c67-7de899ded2df)
+2026-03-12 12:03:08.376 INFO  - New FRENZY choice to be resolved by Player1 (dd891e1c-979d-4714-82cb-eb11221419aa) (attackingCard : LUCHATAUR (aef0e02b-b58b-4bce-9353-2058137c91f4))
+2026-03-12 12:03:08.376 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:08.376 DEBUG - Player Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) must choose 1 card(s) to destroy (available targets : {
+- LUCHATAUR ;
+- BEE BEAR ;
+- MYSTERIOUS MERMAID
+})
+2026-03-12 12:03:08.376 INFO  - New TARGET choice to be resolved by Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) (targets : {
+- BEE BEAR ;
+- LUCHATAUR ;
+- MYSTERIOUS MERMAID
+})
+2026-03-12 12:03:08.376 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.376 DEBUG - TIGER SQUIRREL (f285e797-7ce8-4afd-a787-e6db07b52d77) effect destroys LUCHATAUR (aef0e02b-b58b-4bce-9353-2058137c91f4)
+2026-03-12 12:03:08.377 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (f285e797-7ce8-4afd-a787-e6db07b52d77)
+2026-03-12 12:03:08.377 INFO  - Resolving NO_BLOCK effect of BEE BEAR (68246fe1-76cf-4ac2-aa90-65f8bd91ef5d)
+2026-03-12 12:03:08.377 INFO  - Life update for player Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) : 2 LP
+2026-03-12 12:03:08.377 DEBUG - Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) must decide if HYENIX (dd0fef53-8723-45d2-816f-c0ce6ef69c82) will revive
+2026-03-12 12:03:08.377 INFO  - New BOOLEAN choice to be resolved by Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) (target : )
+2026-03-12 12:03:08.377 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:08.377 DEBUG - HYENIX (dd0fef53-8723-45d2-816f-c0ce6ef69c82) revived using its own effect
+2026-03-12 12:03:08.377 INFO  - Resolving REVIVE effect of HYENIX (dd0fef53-8723-45d2-816f-c0ce6ef69c82)
+2026-03-12 12:03:08.377 DEBUG - Player Player1 (dd891e1c-979d-4714-82cb-eb11221419aa) must choose 1 cards to steal (targets : {
+- URCHIN HURLER ;
+- SNAIL HYDRA ;
+- COUNT DRACULEECH ;
+- STRANGE BARREL ;
+- TURF THE SURFER
+})
+2026-03-12 12:03:08.377 INFO  - New TARGET choice to be resolved by Player1 (dd891e1c-979d-4714-82cb-eb11221419aa) (targets : {
+- TURF THE SURFER ;
+- URCHIN HURLER ;
+- STRANGE BARREL ;
+- SNAIL HYDRA ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:08.378 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.378 DEBUG - Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) must decide if stolen card TURF THE SURFER (f89da539-7ed0-4f6a-89db-f46dfde064a2) will be added to hand or board
+2026-03-12 12:03:08.378 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (3f706af9-1d33-463b-b22f-3b8fa7b7bfa7)
+2026-03-12 12:03:08.378 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:08.378 DEBUG - TURF THE SURFER (f89da539-7ed0-4f6a-89db-f46dfde064a2) stolen and drawn by Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) due to HUNGRY HUNGRY HAMSTER (3f706af9-1d33-463b-b22f-3b8fa7b7bfa7) effect
+2026-03-12 12:03:08.378 DEBUG - BEE BEAR (68246fe1-76cf-4ac2-aa90-65f8bd91ef5d) power changed (8 -> 10) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.378 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.378 INFO  - Life update for player Player1 (dd891e1c-979d-4714-82cb-eb11221419aa) : 2 LP
+2026-03-12 12:03:08.378 DEBUG - BEE BEAR (68246fe1-76cf-4ac2-aa90-65f8bd91ef5d) power changed (8 -> 10) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.378 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.378 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:08.379 DEBUG - BEE BEAR (68246fe1-76cf-4ac2-aa90-65f8bd91ef5d) power changed (8 -> 10) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.379 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.379 DEBUG - BEE BEAR (68246fe1-76cf-4ac2-aa90-65f8bd91ef5d) power changed (8 -> 10) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.379 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.379 INFO  - Resolving NO_BLOCK effect of BEE BEAR (68246fe1-76cf-4ac2-aa90-65f8bd91ef5d)
+2026-03-12 12:03:08.379 DEBUG - BEE BEAR (68246fe1-76cf-4ac2-aa90-65f8bd91ef5d) power changed (8 -> 10) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.379 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.379 DEBUG - BEE BEAR (68246fe1-76cf-4ac2-aa90-65f8bd91ef5d) power changed (8 -> 10) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.379 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.379 DEBUG - Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) LP changed (2 -> 4) due to AXOLOTL HEALER (cef248fd-b037-4437-8952-bf6f86d00274) effect
+2026-03-12 12:03:08.379 INFO  - Resolving GAIN effect of AXOLOTL HEALER (cef248fd-b037-4437-8952-bf6f86d00274)
+2026-03-12 12:03:08.379 DEBUG - BEE BEAR (68246fe1-76cf-4ac2-aa90-65f8bd91ef5d) power changed (8 -> 10) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.379 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.379 DEBUG - BEE BEAR (68246fe1-76cf-4ac2-aa90-65f8bd91ef5d) power changed (8 -> 10) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.380 DEBUG - SNAIL HYDRA (28f032d2-d6e6-47ee-a0dc-6d7e135f2d88) power changed (9 -> 11) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.380 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.380 DEBUG - Player Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) must choose 1 card(s) that will be unable to block (targets : {
+- BEE BEAR ;
+- URCHIN HURLER ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:08.380 INFO  - New TARGET choice to be resolved by Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) (targets : {
+- URCHIN HURLER ;
+- BEE BEAR ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:08.380 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.380 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (f89da539-7ed0-4f6a-89db-f46dfde064a2)
+2026-03-12 12:03:08.380 DEBUG - SNAIL HYDRA (28f032d2-d6e6-47ee-a0dc-6d7e135f2d88) power changed (9 -> 11) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.380 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.380 DEBUG - Player Player1 (dd891e1c-979d-4714-82cb-eb11221419aa) must choose 1 card(s) to destroy (available targets : {
+- HYENIX ;
+- SHARK DOG ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:03:08.380 DEBUG - SNAIL HYDRA (28f032d2-d6e6-47ee-a0dc-6d7e135f2d88) power changed (9 -> 11) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.380 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.380 INFO  - New TARGET choice to be resolved by Player1 (dd891e1c-979d-4714-82cb-eb11221419aa) (targets : {
+- AXOLOTL HEALER ;
+- HYENIX ;
+- SHARK DOG
+})
+2026-03-12 12:03:08.380 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.380 DEBUG - SNAIL HYDRA (28f032d2-d6e6-47ee-a0dc-6d7e135f2d88) effect destroys HYENIX (dd0fef53-8723-45d2-816f-c0ce6ef69c82)
+2026-03-12 12:03:08.380 INFO  - Resolving DESTROY effect of SNAIL HYDRA (28f032d2-d6e6-47ee-a0dc-6d7e135f2d88)
+2026-03-12 12:03:08.380 DEBUG - SNAIL HYDRA (28f032d2-d6e6-47ee-a0dc-6d7e135f2d88) power changed (9 -> 11) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.380 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.381 DEBUG - SNAIL HYDRA (28f032d2-d6e6-47ee-a0dc-6d7e135f2d88) power changed (9 -> 11) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.381 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.381 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.381 INFO  - Life update for player Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) : 3 LP
+2026-03-12 12:03:08.381 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.381 DEBUG - Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) must decide if HYENIX (dd0fef53-8723-45d2-816f-c0ce6ef69c82) will revive
+2026-03-12 12:03:08.381 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.381 INFO  - New BOOLEAN choice to be resolved by Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) (target : )
+2026-03-12 12:03:08.381 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:08.381 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.381 DEBUG - FROBLIN INSTIGATOR (26f52783-c9b0-4825-b477-f951c83d4cfb) power changed (1 -> 1) due to FROBLIN INSTIGATOR (26f52783-c9b0-4825-b477-f951c83d4cfb) effect
+2026-03-12 12:03:08.381 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (26f52783-c9b0-4825-b477-f951c83d4cfb)
+2026-03-12 12:03:08.381 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.381 DEBUG - FROBLIN INSTIGATOR (26f52783-c9b0-4825-b477-f951c83d4cfb) power changed (1 -> 1) due to FROBLIN INSTIGATOR (26f52783-c9b0-4825-b477-f951c83d4cfb) effect
+2026-03-12 12:03:08.381 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (26f52783-c9b0-4825-b477-f951c83d4cfb)
+2026-03-12 12:03:08.381 DEBUG - COUNT DRACULEECH (71205bbb-4a2b-404e-a7ad-8acc01b3a8a3) power changed (7 -> 9) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.381 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.381 DEBUG - FROBLIN INSTIGATOR (26f52783-c9b0-4825-b477-f951c83d4cfb) power changed (1 -> 1) due to FROBLIN INSTIGATOR (26f52783-c9b0-4825-b477-f951c83d4cfb) effect
+2026-03-12 12:03:08.381 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (26f52783-c9b0-4825-b477-f951c83d4cfb)
+2026-03-12 12:03:08.381 DEBUG - FROBLIN INSTIGATOR (26f52783-c9b0-4825-b477-f951c83d4cfb) power changed (1 -> 1) due to FROBLIN INSTIGATOR (26f52783-c9b0-4825-b477-f951c83d4cfb) effect
+2026-03-12 12:03:08.382 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (26f52783-c9b0-4825-b477-f951c83d4cfb)
+2026-03-12 12:03:08.382 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:08.382 DEBUG - COUNT DRACULEECH (71205bbb-4a2b-404e-a7ad-8acc01b3a8a3) power changed (7 -> 9) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.382 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.382 DEBUG - COUNT DRACULEECH (71205bbb-4a2b-404e-a7ad-8acc01b3a8a3) power changed (7 -> 9) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.382 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.382 DEBUG - STRANGE BARREL (8c06f5ba-aa06-4cba-9bc3-eb709570392d) power changed (6 -> 8) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.382 DEBUG - COUNT DRACULEECH (71205bbb-4a2b-404e-a7ad-8acc01b3a8a3) power changed (7 -> 9) due to URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36) effect
+2026-03-12 12:03:08.382 INFO  - Resolving POWER_UP effect of URCHIN HURLER (00e6768d-4463-49b8-b27e-2e087edb7a36)
+2026-03-12 12:03:08.382 INFO  - Game over : Player1 (dd891e1c-979d-4714-82cb-eb11221419aa) wins ; Player2 (3848ae91-e27d-4d61-9bb1-07b3ae285aff) loses.
+2026-03-12 12:03:08.382 INFO  - End of the game

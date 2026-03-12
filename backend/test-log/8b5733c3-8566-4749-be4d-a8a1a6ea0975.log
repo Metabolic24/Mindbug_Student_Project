@@ -1,0 +1,152 @@
+2026-03-12 12:18:28.220 INFO  - Calculating first player...
+2026-03-12 12:18:28.222 INFO  - Banned card for Player1 (3564ba85-7bf4-4f27-82c3-a595e8d1776d) : TURF THE SURFER (8715877d-d407-4059-8e15-2e2a8022a434) (8)
+2026-03-12 12:18:28.222 INFO  - Banned card for Player2 (24e0b64e-31c1-4526-a399-dd5bee6c86db) : TURF THE SURFER (ebc92f17-02e9-4700-94dd-9cd39ea4d398) (8)
+2026-03-12 12:18:28.222 INFO  - Banned card for Player1 (3564ba85-7bf4-4f27-82c3-a595e8d1776d) : HARPY MOTHER (bb190ea9-1f9f-4a4b-954c-181430f67c0d) (5)
+2026-03-12 12:18:28.222 INFO  - Banned card for Player2 (24e0b64e-31c1-4526-a399-dd5bee6c86db) : URCHIN HURLER (8425997e-f436-4c4b-96c0-df819fde7e06) (5)
+2026-03-12 12:18:28.222 INFO  - Banned card for Player1 (3564ba85-7bf4-4f27-82c3-a595e8d1776d) : GRAVE ROBBER (abe3af2d-66e8-4b48-972d-6814af5551f7) (7)
+2026-03-12 12:18:28.222 INFO  - Banned card for Player2 (24e0b64e-31c1-4526-a399-dd5bee6c86db) : SHIELD BUGS (9b1428d2-82bc-416a-9ee0-2231d3a3859f) (4)
+2026-03-12 12:18:28.222 INFO  - First player will be Player1 (3564ba85-7bf4-4f27-82c3-a595e8d1776d)
+2026-03-12 12:18:28.229 INFO  - Game 8b5733c3-8566-4749-be4d-a8a1a6ea0975 starting...
+2026-03-12 12:18:28.229 INFO  - Player Player1 (3564ba85-7bf4-4f27-82c3-a595e8d1776d) hand : {
+- GOBLIN WEREWOLF ;
+- BUGSERKER ;
+- FERRET BOMBER ;
+- SNAIL HYDRA ;
+- PLATED SCORPION
+}
+2026-03-12 12:18:28.229 INFO  - Player Player1 (3564ba85-7bf4-4f27-82c3-a595e8d1776d) draw pile : {
+- CHAMELEON SNIPER ;
+- RHINO TURTLE ;
+- BEE BEAR ;
+- HAMSTER LION ;
+- SHIELD BUGS
+}
+2026-03-12 12:18:28.229 INFO  - Player Player2 (24e0b64e-31c1-4526-a399-dd5bee6c86db) hand : {
+- RHINO TURTLE ;
+-  GIRAFFODILE ;
+- COUNT DRACULEECH ;
+- COMPOST DRAGON ;
+- SHARK DOG
+}
+2026-03-12 12:18:28.229 INFO  - Player Player2 (24e0b64e-31c1-4526-a399-dd5bee6c86db) draw pile : {
+- HUNGRY HUNGRY HAMSTER ;
+- MAJESTIC MANTICORE ;
+- FROBLIN INSTIGATOR ;
+- LUCHATAUR ;
+- FERRET PACIFIER
+}
+2026-03-12 12:18:28.229 DEBUG - Player Player1 (3564ba85-7bf4-4f27-82c3-a595e8d1776d) must choose 1 cards to steal (targets : {
+- GOBLIN WEREWOLF ;
+- FERRET BOMBER ;
+- SNAIL HYDRA ;
+- PLATED SCORPION ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:18:28.229 INFO  - New TARGET choice to be resolved by Player1 (3564ba85-7bf4-4f27-82c3-a595e8d1776d) (targets : {
+- SNAIL HYDRA ;
+- CHAMELEON SNIPER ;
+- GOBLIN WEREWOLF ;
+- FERRET BOMBER ;
+- PLATED SCORPION
+})
+2026-03-12 12:18:28.229 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:28.229 DEBUG - Player2 (24e0b64e-31c1-4526-a399-dd5bee6c86db) must decide if stolen card SNAIL HYDRA (5c563fd8-2481-49ee-8792-82676c98a348) will be added to hand or board
+2026-03-12 12:18:28.229 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (5d032f8b-9094-4f53-b27c-8e2675b9a826)
+2026-03-12 12:18:28.229 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:28.229 DEBUG - SNAIL HYDRA (5c563fd8-2481-49ee-8792-82676c98a348) stolen and played by Player2 (24e0b64e-31c1-4526-a399-dd5bee6c86db) due to HUNGRY HUNGRY HAMSTER (5d032f8b-9094-4f53-b27c-8e2675b9a826) effect
+2026-03-12 12:18:28.230 INFO  - Life update for player Player2 (24e0b64e-31c1-4526-a399-dd5bee6c86db) : 2 LP
+2026-03-12 12:18:28.230 DEBUG - Player2 (24e0b64e-31c1-4526-a399-dd5bee6c86db) LP changed (3 -> 2) due to COUNT DRACULEECH (099b783c-c0f1-497d-8ba1-e0da382b8951) effect
+2026-03-12 12:18:28.230 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (099b783c-c0f1-497d-8ba1-e0da382b8951)
+2026-03-12 12:18:28.230 DEBUG - Player Player2 (24e0b64e-31c1-4526-a399-dd5bee6c86db) must choose 1 card(s) to destroy (available targets : {
+- CHAMELEON SNIPER ;
+- BEE BEAR ;
+- COUNT DRACULEECH ;
+- HUNGRY HUNGRY HAMSTER ;
+- SNAIL HYDRA
+})
+2026-03-12 12:18:28.230 INFO  - New TARGET choice to be resolved by Player2 (24e0b64e-31c1-4526-a399-dd5bee6c86db) (targets : {
+- BEE BEAR ;
+- SNAIL HYDRA ;
+- CHAMELEON SNIPER ;
+- COUNT DRACULEECH ;
+- HUNGRY HUNGRY HAMSTER
+})
+2026-03-12 12:18:28.230 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:28.230 DEBUG - COUNT DRACULEECH (099b783c-c0f1-497d-8ba1-e0da382b8951) effect destroys CHAMELEON SNIPER (2214d139-8706-432e-ba45-1981dbd37d17)
+2026-03-12 12:18:28.230 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (099b783c-c0f1-497d-8ba1-e0da382b8951)
+2026-03-12 12:18:28.230 DEBUG - CardInstance(uuid=5d032f8b-9094-4f53-b27c-8e2675b9a826, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e66bf2d), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.230 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (24c56ba9-929a-4429-bfb5-3e57dd713bc2)
+2026-03-12 12:18:28.230 DEBUG - CardInstance(uuid=5d032f8b-9094-4f53-b27c-8e2675b9a826, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e66bf2d), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.230 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (24c56ba9-929a-4429-bfb5-3e57dd713bc2)
+2026-03-12 12:18:28.230 DEBUG - CardInstance(uuid=5d032f8b-9094-4f53-b27c-8e2675b9a826, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e66bf2d), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.230 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (24c56ba9-929a-4429-bfb5-3e57dd713bc2)
+2026-03-12 12:18:28.231 DEBUG - CardInstance(uuid=5d032f8b-9094-4f53-b27c-8e2675b9a826, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e66bf2d), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.231 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (24c56ba9-929a-4429-bfb5-3e57dd713bc2)
+2026-03-12 12:18:28.231 DEBUG - CardInstance(uuid=5d032f8b-9094-4f53-b27c-8e2675b9a826, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e66bf2d), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.231 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (24c56ba9-929a-4429-bfb5-3e57dd713bc2)
+2026-03-12 12:18:28.231 DEBUG - GOBLIN WEREWOLF (64379267-146a-40bb-b098-16ba335c08a7) power changed (2 -> 8) due to GOBLIN WEREWOLF (64379267-146a-40bb-b098-16ba335c08a7) effect
+2026-03-12 12:18:28.231 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (64379267-146a-40bb-b098-16ba335c08a7)
+2026-03-12 12:18:28.231 DEBUG - CardInstance(uuid=5d032f8b-9094-4f53-b27c-8e2675b9a826, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e66bf2d), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.231 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (24c56ba9-929a-4429-bfb5-3e57dd713bc2)
+2026-03-12 12:18:28.231 DEBUG - CardInstance(uuid=5d032f8b-9094-4f53-b27c-8e2675b9a826, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e66bf2d), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.231 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (24c56ba9-929a-4429-bfb5-3e57dd713bc2)
+2026-03-12 12:18:28.231 DEBUG - CardInstance(uuid=5d032f8b-9094-4f53-b27c-8e2675b9a826, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e66bf2d), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.231 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (24c56ba9-929a-4429-bfb5-3e57dd713bc2)
+2026-03-12 12:18:28.231 DEBUG - CardInstance(uuid=5d032f8b-9094-4f53-b27c-8e2675b9a826, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e66bf2d), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.231 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (24c56ba9-929a-4429-bfb5-3e57dd713bc2)
+2026-03-12 12:18:28.231 DEBUG - CardInstance(uuid=5d032f8b-9094-4f53-b27c-8e2675b9a826, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e66bf2d), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.231 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (24c56ba9-929a-4429-bfb5-3e57dd713bc2)
+2026-03-12 12:18:28.231 DEBUG - CardInstance(uuid=5d032f8b-9094-4f53-b27c-8e2675b9a826, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e66bf2d), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.231 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (24c56ba9-929a-4429-bfb5-3e57dd713bc2)
+2026-03-12 12:18:28.231 DEBUG - CardInstance(uuid=5d032f8b-9094-4f53-b27c-8e2675b9a826, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e66bf2d), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.231 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (24c56ba9-929a-4429-bfb5-3e57dd713bc2)
+2026-03-12 12:18:28.232 DEBUG - CardInstance(uuid=5d032f8b-9094-4f53-b27c-8e2675b9a826, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1e66bf2d), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:28.232 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (24c56ba9-929a-4429-bfb5-3e57dd713bc2)
+2026-03-12 12:18:28.232 INFO  - Life update for player Player1 (3564ba85-7bf4-4f27-82c3-a595e8d1776d) : 2 LP
+2026-03-12 12:18:28.232 DEBUG - RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27) power changed (8 -> 9) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 DEBUG - PLATED SCORPION (f8445a52-5f50-43da-8b28-84631eda8f87) power changed (2 -> 3) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 INFO  - Resolving POWER_UP effect of SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e)
+2026-03-12 12:18:28.232 DEBUG - RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27) power changed (8 -> 9) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 DEBUG - PLATED SCORPION (f8445a52-5f50-43da-8b28-84631eda8f87) power changed (2 -> 3) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 INFO  - Resolving POWER_UP effect of SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e)
+2026-03-12 12:18:28.232 DEBUG - RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27) power changed (8 -> 9) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 DEBUG - PLATED SCORPION (f8445a52-5f50-43da-8b28-84631eda8f87) power changed (2 -> 3) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 INFO  - Resolving POWER_UP effect of SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e)
+2026-03-12 12:18:28.232 DEBUG - COUNT DRACULEECH (099b783c-c0f1-497d-8ba1-e0da382b8951) stolen and played by Player2 (24e0b64e-31c1-4526-a399-dd5bee6c86db) due to COMPOST DRAGON (4d9f16c1-0977-41a5-9c33-c0fbad2b36d8) effect
+2026-03-12 12:18:28.232 INFO  - Resolving STEAL effect of COMPOST DRAGON (4d9f16c1-0977-41a5-9c33-c0fbad2b36d8)
+2026-03-12 12:18:28.232 DEBUG - RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27) power changed (8 -> 9) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 DEBUG - PLATED SCORPION (f8445a52-5f50-43da-8b28-84631eda8f87) power changed (2 -> 3) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 INFO  - Resolving POWER_UP effect of SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e)
+2026-03-12 12:18:28.232 DEBUG - RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27) power changed (8 -> 9) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 DEBUG - PLATED SCORPION (f8445a52-5f50-43da-8b28-84631eda8f87) power changed (2 -> 3) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 INFO  - Resolving POWER_UP effect of SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e)
+2026-03-12 12:18:28.232 DEBUG - RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27) power changed (8 -> 9) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 DEBUG - PLATED SCORPION (f8445a52-5f50-43da-8b28-84631eda8f87) power changed (2 -> 3) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 INFO  - Resolving POWER_UP effect of SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e)
+2026-03-12 12:18:28.232 INFO  - New FRENZY choice to be resolved by Player1 (3564ba85-7bf4-4f27-82c3-a595e8d1776d) (attackingCard : RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27))
+2026-03-12 12:18:28.232 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:28.232 DEBUG - RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27) power changed (8 -> 9) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 DEBUG - PLATED SCORPION (f8445a52-5f50-43da-8b28-84631eda8f87) power changed (2 -> 3) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 INFO  - Resolving POWER_UP effect of SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e)
+2026-03-12 12:18:28.232 DEBUG - RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27) power changed (8 -> 9) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 DEBUG - PLATED SCORPION (f8445a52-5f50-43da-8b28-84631eda8f87) power changed (2 -> 3) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 INFO  - Resolving POWER_UP effect of SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e)
+2026-03-12 12:18:28.232 DEBUG - RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27) power changed (8 -> 9) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 DEBUG - PLATED SCORPION (f8445a52-5f50-43da-8b28-84631eda8f87) power changed (2 -> 3) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.232 INFO  - Resolving POWER_UP effect of SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e)
+2026-03-12 12:18:28.233 INFO  - Life update for player Player1 (3564ba85-7bf4-4f27-82c3-a595e8d1776d) : 1 LP
+2026-03-12 12:18:28.233 DEBUG - RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27) power changed (8 -> 9) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.233 DEBUG - PLATED SCORPION (f8445a52-5f50-43da-8b28-84631eda8f87) power changed (2 -> 3) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.233 INFO  - Resolving POWER_UP effect of SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e)
+2026-03-12 12:18:28.233 DEBUG - RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27) power changed (8 -> 9) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.233 DEBUG - PLATED SCORPION (f8445a52-5f50-43da-8b28-84631eda8f87) power changed (2 -> 3) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.233 INFO  - Resolving POWER_UP effect of SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e)
+2026-03-12 12:18:28.233 DEBUG - RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27) power changed (8 -> 9) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.233 DEBUG - PLATED SCORPION (f8445a52-5f50-43da-8b28-84631eda8f87) power changed (2 -> 3) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.233 INFO  - Resolving POWER_UP effect of SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e)
+2026-03-12 12:18:28.233 DEBUG - RHINO TURTLE (cb44ade8-daea-48b2-be77-7e6f239e6d27) power changed (8 -> 9) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.233 DEBUG - PLATED SCORPION (f8445a52-5f50-43da-8b28-84631eda8f87) power changed (2 -> 3) due to SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e) effect
+2026-03-12 12:18:28.233 INFO  - Resolving POWER_UP effect of SHIELD BUGS (444c8aee-3082-4495-bfd8-0be3d20d950e)
+2026-03-12 12:18:28.233 INFO  - Life update for player Player1 (3564ba85-7bf4-4f27-82c3-a595e8d1776d) : 0 LP
+2026-03-12 12:18:28.233 INFO  - Game over : Player2 (24e0b64e-31c1-4526-a399-dd5bee6c86db) wins ; Player1 (3564ba85-7bf4-4f27-82c3-a595e8d1776d) loses.
+2026-03-12 12:18:28.233 INFO  - End of the game

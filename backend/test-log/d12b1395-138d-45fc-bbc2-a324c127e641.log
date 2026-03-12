@@ -1,0 +1,115 @@
+2026-03-12 12:03:41.947 INFO  - Calculating first player...
+2026-03-12 12:03:41.950 INFO  - Banned card for Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) : FERRET PACIFIER (2aa165a9-9d12-4102-8e4c-5fb76a548bce) (4)
+2026-03-12 12:03:41.950 INFO  - Banned card for Player2 (598b4f67-0a58-4b06-80cf-305b899092d4) : KILLER BEE (ab4c08e9-1a09-45e6-8c74-f9d0d2dc1d1d) (5)
+2026-03-12 12:03:41.950 INFO  - First player will be Player2 (598b4f67-0a58-4b06-80cf-305b899092d4)
+2026-03-12 12:03:41.962 INFO  - Game d12b1395-138d-45fc-bbc2-a324c127e641 starting...
+2026-03-12 12:03:41.962 INFO  - Player Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) hand : {
+- SNAIL HYDRA ;
+- HYENIX ;
+- BUGSERKER ;
+- TURF THE SURFER ;
+- SPIDER OWL
+}
+2026-03-12 12:03:41.962 INFO  - Player Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) draw pile : {
+- STRANGE BARREL ;
+- ELEPHANTOPUS ;
+- SNAIL HYDRA ;
+-  GIRAFFODILE ;
+- BEE BEAR
+}
+2026-03-12 12:03:41.962 INFO  - Player Player2 (598b4f67-0a58-4b06-80cf-305b899092d4) hand : {
+- SPIDER OWL ;
+- MYSTERIOUS MERMAID ;
+- FROBLIN INSTIGATOR ;
+- TUSKED EXTORTER ;
+- LUCHATAUR
+}
+2026-03-12 12:03:41.962 INFO  - Player Player2 (598b4f67-0a58-4b06-80cf-305b899092d4) draw pile : {
+- MAJESTIC MANTICORE ;
+- PLATED SCORPION ;
+- SNAIL THROWER ;
+- HAMSTER LION ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:03:41.963 DEBUG - Player Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) must choose 1 card(s) to discard (available targets : {
+- SNAIL HYDRA ;
+- BUGSERKER ;
+- TURF THE SURFER ;
+- SPIDER OWL ;
+- STRANGE BARREL
+})
+2026-03-12 12:03:41.963 INFO  - New TARGET choice to be resolved by Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) (targets : {
+- TURF THE SURFER ;
+- STRANGE BARREL ;
+- SNAIL HYDRA ;
+- SPIDER OWL ;
+- BUGSERKER
+})
+2026-03-12 12:03:41.963 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:41.963 DEBUG - STRANGE BARREL (a03e223b-d04e-4f72-b1ce-25104958e30b) discarded due to TUSKED EXTORTER (bf51a4a5-7d6d-4e4f-b031-885b30b3db6d) effect
+2026-03-12 12:03:41.963 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (bf51a4a5-7d6d-4e4f-b031-885b30b3db6d)
+2026-03-12 12:03:41.964 DEBUG - Player Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) must choose 1 card(s) to discard (available targets : {
+- BUGSERKER ;
+- TURF THE SURFER ;
+- SPIDER OWL ;
+- ELEPHANTOPUS ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:41.964 INFO  - New TARGET choice to be resolved by Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) (targets : {
+- SNAIL HYDRA ;
+- ELEPHANTOPUS ;
+- TURF THE SURFER ;
+- SPIDER OWL ;
+- BUGSERKER
+})
+2026-03-12 12:03:41.964 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:41.964 DEBUG - TURF THE SURFER (5029a026-9e43-4c68-9ea4-3735cb3bee8d) discarded due to TUSKED EXTORTER (bf51a4a5-7d6d-4e4f-b031-885b30b3db6d) effect
+2026-03-12 12:03:41.964 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (bf51a4a5-7d6d-4e4f-b031-885b30b3db6d)
+2026-03-12 12:03:41.964 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.964 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.964 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.964 DEBUG - Player2 (598b4f67-0a58-4b06-80cf-305b899092d4) LP changed (3 -> 3) due to MYSTERIOUS MERMAID (f545111b-2f00-4423-b5ad-d000ebf0612f) effect
+2026-03-12 12:03:41.964 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (f545111b-2f00-4423-b5ad-d000ebf0612f)
+2026-03-12 12:03:41.965 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.965 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.965 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.965 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.965 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.965 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.965 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.965 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.965 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.965 INFO  - Life update for player Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) : 2 LP
+2026-03-12 12:03:41.966 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.966 DEBUG - Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) must decide if HYENIX (e32dd901-f7e7-4378-bb40-7aac6a52b2f9) will revive
+2026-03-12 12:03:41.966 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.966 INFO  - New BOOLEAN choice to be resolved by Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) (target : )
+2026-03-12 12:03:41.966 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:41.966 DEBUG - HYENIX (e32dd901-f7e7-4378-bb40-7aac6a52b2f9) revived using its own effect
+2026-03-12 12:03:41.966 INFO  - Resolving REVIVE effect of HYENIX (e32dd901-f7e7-4378-bb40-7aac6a52b2f9)
+2026-03-12 12:03:41.966 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.966 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.966 INFO  - Life update for player Player2 (598b4f67-0a58-4b06-80cf-305b899092d4) : 2 LP
+2026-03-12 12:03:41.966 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.966 INFO  - New FRENZY choice to be resolved by Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) (attackingCard : HYENIX (e32dd901-f7e7-4378-bb40-7aac6a52b2f9))
+2026-03-12 12:03:41.966 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:41.966 INFO  - Life update for player Player2 (598b4f67-0a58-4b06-80cf-305b899092d4) : 1 LP
+2026-03-12 12:03:41.967 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.967 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.967 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.967 INFO  - Life update for player Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) : 1 LP
+2026-03-12 12:03:41.967 DEBUG - BUGSERKER (555597d3-b421-4ce0-a5a3-e5508679e4a0) power changed (3 -> 11) due to BUGSERKER (555597d3-b421-4ce0-a5a3-e5508679e4a0) effect
+2026-03-12 12:03:41.967 INFO  - Resolving POWER_UP effect of BUGSERKER (555597d3-b421-4ce0-a5a3-e5508679e4a0)
+2026-03-12 12:03:41.967 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.967 DEBUG - BUGSERKER (555597d3-b421-4ce0-a5a3-e5508679e4a0) power changed (3 -> 11) due to BUGSERKER (555597d3-b421-4ce0-a5a3-e5508679e4a0) effect
+2026-03-12 12:03:41.967 INFO  - Resolving POWER_UP effect of BUGSERKER (555597d3-b421-4ce0-a5a3-e5508679e4a0)
+2026-03-12 12:03:41.968 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.968 DEBUG - BUGSERKER (555597d3-b421-4ce0-a5a3-e5508679e4a0) power changed (3 -> 11) due to BUGSERKER (555597d3-b421-4ce0-a5a3-e5508679e4a0) effect
+2026-03-12 12:03:41.968 INFO  - Resolving POWER_UP effect of BUGSERKER (555597d3-b421-4ce0-a5a3-e5508679e4a0)
+2026-03-12 12:03:41.968 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.968 DEBUG - BUGSERKER (555597d3-b421-4ce0-a5a3-e5508679e4a0) power changed (3 -> 11) due to BUGSERKER (555597d3-b421-4ce0-a5a3-e5508679e4a0) effect
+2026-03-12 12:03:41.968 INFO  - Resolving POWER_UP effect of BUGSERKER (555597d3-b421-4ce0-a5a3-e5508679e4a0)
+2026-03-12 12:03:41.968 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (7a27239d-6377-49e6-9cc4-ec2de2fbda4b)
+2026-03-12 12:03:41.968 INFO  - Life update for player Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) : 0 LP
+2026-03-12 12:03:41.968 INFO  - Game over : Player2 (598b4f67-0a58-4b06-80cf-305b899092d4) wins ; Player1 (4cf4449f-a16f-4c10-8faf-4ec1e70dc1a7) loses.
+2026-03-12 12:03:41.968 INFO  - End of the game

@@ -1,0 +1,261 @@
+2026-03-12 12:18:24.350 INFO  - Calculating first player...
+2026-03-12 12:18:24.352 INFO  - Banned card for Player1 (2da9378b-e616-4312-89f6-38d525efc65c) : EXPLOSIVE TOAD (dfcccbd8-7b87-4b26-8a73-496a04087a5d) (5)
+2026-03-12 12:18:24.352 INFO  - Banned card for Player2 (8db70e51-0616-45b1-8cfd-51026b6606bb) : STRANGE BARREL (9dd94e04-0b4b-4c45-9a73-9e404aaf5f8a) (6)
+2026-03-12 12:18:24.352 INFO  - First player will be Player2 (8db70e51-0616-45b1-8cfd-51026b6606bb)
+2026-03-12 12:18:24.361 INFO  - Game ecafce81-50b1-4285-af07-787cd8ec2c95 starting...
+2026-03-12 12:18:24.361 INFO  - Player Player1 (2da9378b-e616-4312-89f6-38d525efc65c) hand : {
+- FROBLIN INSTIGATOR ;
+- CHAMELEON SNIPER ;
+- HAMSTER LION ;
+- BUGSERKER ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:18:24.362 INFO  - Player Player1 (2da9378b-e616-4312-89f6-38d525efc65c) draw pile : {
+- GOREAGLE ALPHA ;
+- TURF THE SURFER ;
+- HARPY MOTHER ;
+- THE LURKER ;
+- THE LURKER
+}
+2026-03-12 12:18:24.362 INFO  - Player Player2 (8db70e51-0616-45b1-8cfd-51026b6606bb) hand : {
+- ELEPHANTOPUS ;
+- FERRET PACIFIER ;
+- GOBLIN WEREWOLF ;
+- KILLER BEE ;
+- COMPOST DRAGON
+}
+2026-03-12 12:18:24.362 INFO  - Player Player2 (8db70e51-0616-45b1-8cfd-51026b6606bb) draw pile : {
+- SNAIL HYDRA ;
+- SHIELD BUGS ;
+- BUGSERKER ;
+- PLATED SCORPION ;
+- LUCHATAUR
+}
+2026-03-12 12:18:24.363 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.363 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.363 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.363 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.363 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:24.363 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.364 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.364 DEBUG - CardInstance(uuid=e206864d-d6bb-473b-8bdc-bd0944f9380a, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4acc27fd), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.364 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0d1ae8cb-91f7-46c0-a318-78e604eb22a2)
+2026-03-12 12:18:24.364 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.364 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.364 DEBUG - CardInstance(uuid=e206864d-d6bb-473b-8bdc-bd0944f9380a, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4acc27fd), power=8, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.364 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0d1ae8cb-91f7-46c0-a318-78e604eb22a2)
+2026-03-12 12:18:24.365 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.365 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.365 DEBUG - CardInstance(uuid=e206864d-d6bb-473b-8bdc-bd0944f9380a, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4acc27fd), power=8, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.365 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0d1ae8cb-91f7-46c0-a318-78e604eb22a2)
+2026-03-12 12:18:24.365 DEBUG - CardInstance(uuid=e206864d-d6bb-473b-8bdc-bd0944f9380a, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4acc27fd), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.366 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0d1ae8cb-91f7-46c0-a318-78e604eb22a2)
+2026-03-12 12:18:24.366 DEBUG - CardInstance(uuid=e206864d-d6bb-473b-8bdc-bd0944f9380a, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4acc27fd), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.366 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0d1ae8cb-91f7-46c0-a318-78e604eb22a2)
+2026-03-12 12:18:24.366 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.366 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.366 DEBUG - CardInstance(uuid=e206864d-d6bb-473b-8bdc-bd0944f9380a, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4acc27fd), power=8, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.366 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0d1ae8cb-91f7-46c0-a318-78e604eb22a2)
+2026-03-12 12:18:24.367 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.367 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.367 DEBUG - CardInstance(uuid=1e920683-f760-43c3-8b97-f5bd72533b88, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4acc27fd), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.372 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0d1ae8cb-91f7-46c0-a318-78e604eb22a2)
+2026-03-12 12:18:24.373 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.373 DEBUG - CardInstance(uuid=e206864d-d6bb-473b-8bdc-bd0944f9380a, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4acc27fd), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.373 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0d1ae8cb-91f7-46c0-a318-78e604eb22a2)
+2026-03-12 12:18:24.373 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.374 DEBUG - CardInstance(uuid=e206864d-d6bb-473b-8bdc-bd0944f9380a, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4acc27fd), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.374 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0d1ae8cb-91f7-46c0-a318-78e604eb22a2)
+2026-03-12 12:18:24.374 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.374 INFO  - New FRENZY choice to be resolved by Player1 (2da9378b-e616-4312-89f6-38d525efc65c) (attackingCard : HAMSTER LION (0d1ae8cb-91f7-46c0-a318-78e604eb22a2))
+2026-03-12 12:18:24.374 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:24.374 DEBUG - CardInstance(uuid=e206864d-d6bb-473b-8bdc-bd0944f9380a, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@4acc27fd), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.375 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (0d1ae8cb-91f7-46c0-a318-78e604eb22a2)
+2026-03-12 12:18:24.375 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.375 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.375 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.375 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.375 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.375 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.375 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.375 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.375 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.376 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (8 -> 9) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.376 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.376 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.376 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.376 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.376 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.376 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.376 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.376 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.376 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.376 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.376 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.376 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.376 DEBUG - Player Player2 (8db70e51-0616-45b1-8cfd-51026b6606bb) must choose 1 cards to steal (targets : {
+- FERRET PACIFIER ;
+- KILLER BEE ;
+- COMPOST DRAGON ;
+- BUGSERKER ;
+- PLATED SCORPION
+})
+2026-03-12 12:18:24.376 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.376 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.376 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.377 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.377 INFO  - New TARGET choice to be resolved by Player2 (8db70e51-0616-45b1-8cfd-51026b6606bb) (targets : {
+- PLATED SCORPION ;
+- COMPOST DRAGON ;
+- KILLER BEE ;
+- BUGSERKER ;
+- FERRET PACIFIER
+})
+2026-03-12 12:18:24.377 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:24.377 DEBUG - Player1 (2da9378b-e616-4312-89f6-38d525efc65c) must decide if stolen card KILLER BEE (be69a5bc-845b-44ce-a784-133cc9f49585) will be added to hand or board
+2026-03-12 12:18:24.377 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (e96f2f0b-37fc-482b-9089-652e541ba919)
+2026-03-12 12:18:24.377 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.377 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.377 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.377 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.377 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:24.378 DEBUG - KILLER BEE (be69a5bc-845b-44ce-a784-133cc9f49585) stolen and played by Player1 (2da9378b-e616-4312-89f6-38d525efc65c) due to HUNGRY HUNGRY HAMSTER (e96f2f0b-37fc-482b-9089-652e541ba919) effect
+2026-03-12 12:18:24.378 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.378 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.378 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.378 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.378 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.378 INFO  - Life update for player Player2 (8db70e51-0616-45b1-8cfd-51026b6606bb) : 2 LP
+2026-03-12 12:18:24.378 DEBUG - Player2 (8db70e51-0616-45b1-8cfd-51026b6606bb) LP changed (3 -> 2) due to KILLER BEE (be69a5bc-845b-44ce-a784-133cc9f49585) effect
+2026-03-12 12:18:24.378 INFO  - Resolving INFLICT effect of KILLER BEE (be69a5bc-845b-44ce-a784-133cc9f49585)
+2026-03-12 12:18:24.378 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.378 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.378 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.378 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.378 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.378 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.379 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.379 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.379 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.379 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (8 -> 9) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.379 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.379 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.379 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.379 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.379 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.379 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.379 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (8 -> 9) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.379 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.379 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.380 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.380 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.380 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.380 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.380 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.380 INFO  - Life update for player Player2 (8db70e51-0616-45b1-8cfd-51026b6606bb) : 1 LP
+2026-03-12 12:18:24.380 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.380 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.380 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.380 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.380 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.380 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.381 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.381 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.381 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.381 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (8 -> 9) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.381 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.381 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.382 INFO  - Life update for player Player1 (2da9378b-e616-4312-89f6-38d525efc65c) : 2 LP
+2026-03-12 12:18:24.382 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.382 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.382 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.382 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.382 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (8 -> 9) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.382 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.382 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.382 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.382 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.383 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.383 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.383 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.383 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.383 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.383 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.383 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.383 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.383 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.383 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.383 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.383 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.384 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (8 -> 9) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.384 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.384 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.384 INFO  - Life update for player Player1 (2da9378b-e616-4312-89f6-38d525efc65c) : 1 LP
+2026-03-12 12:18:24.384 DEBUG - BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) power changed (3 -> 11) due to BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) effect
+2026-03-12 12:18:24.384 INFO  - Resolving POWER_UP effect of BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc)
+2026-03-12 12:18:24.384 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.385 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.385 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.385 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.385 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (8 -> 9) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.385 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.385 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.385 DEBUG - BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) power changed (3 -> 11) due to BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) effect
+2026-03-12 12:18:24.385 INFO  - Resolving POWER_UP effect of BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc)
+2026-03-12 12:18:24.386 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.386 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.386 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.386 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.386 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.386 DEBUG - BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) power changed (3 -> 11) due to BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) effect
+2026-03-12 12:18:24.386 INFO  - Resolving POWER_UP effect of BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc)
+2026-03-12 12:18:24.386 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.386 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.386 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.386 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.386 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.387 DEBUG - BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) power changed (3 -> 11) due to BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) effect
+2026-03-12 12:18:24.387 INFO  - Resolving POWER_UP effect of BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc)
+2026-03-12 12:18:24.387 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.387 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.387 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.387 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.387 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (8 -> 9) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.387 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.387 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.388 DEBUG - BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) power changed (3 -> 11) due to BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) effect
+2026-03-12 12:18:24.388 INFO  - Resolving POWER_UP effect of BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc)
+2026-03-12 12:18:24.388 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.388 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.388 DEBUG - SNAIL HYDRA (4ec4f0f6-54bc-4dcd-9247-bfd0e9f68e92) power changed (9 -> 10) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.388 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.388 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (8 -> 9) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.388 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.388 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.389 DEBUG - BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) power changed (3 -> 11) due to BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) effect
+2026-03-12 12:18:24.389 INFO  - Resolving POWER_UP effect of BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc)
+2026-03-12 12:18:24.389 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 8) due to GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) effect
+2026-03-12 12:18:24.389 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a)
+2026-03-12 12:18:24.389 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.389 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (8 -> 9) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.389 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.389 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.389 DEBUG - BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) power changed (3 -> 11) due to BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) effect
+2026-03-12 12:18:24.389 INFO  - Resolving POWER_UP effect of BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc)
+2026-03-12 12:18:24.389 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.389 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.389 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.390 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.390 DEBUG - THE LURKER (c0bd0f43-7a91-4581-aa1c-f93c9ab68192) gains SNEAKY keyword
+2026-03-12 12:18:24.392 INFO  - Resolving KEYWORD_UP effect of THE LURKER (c0bd0f43-7a91-4581-aa1c-f93c9ab68192)
+2026-03-12 12:18:24.392 DEBUG - BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) power changed (3 -> 11) due to BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc) effect
+2026-03-12 12:18:24.392 INFO  - Resolving POWER_UP effect of BUGSERKER (17c9f402-cd55-4401-9b6c-28690ab818dc)
+2026-03-12 12:18:24.392 DEBUG - ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88) power changed (7 -> 8) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.392 DEBUG - GOBLIN WEREWOLF (e206864d-d6bb-473b-8bdc-bd0944f9380a) power changed (2 -> 3) due to SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a) effect
+2026-03-12 12:18:24.392 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b510f351-c31b-4dac-8e29-72d850d6b73a)
+2026-03-12 12:18:24.392 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (1e920683-f760-43c3-8b97-f5bd72533b88)
+2026-03-12 12:18:24.392 INFO  - Life update for player Player2 (8db70e51-0616-45b1-8cfd-51026b6606bb) : 0 LP
+2026-03-12 12:18:24.392 INFO  - Game over : Player1 (2da9378b-e616-4312-89f6-38d525efc65c) wins ; Player2 (8db70e51-0616-45b1-8cfd-51026b6606bb) loses.
+2026-03-12 12:18:24.392 INFO  - End of the game

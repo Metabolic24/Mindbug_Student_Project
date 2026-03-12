@@ -1,0 +1,220 @@
+2026-03-12 12:18:29.808 INFO  - Calculating first player...
+2026-03-12 12:18:29.810 INFO  - Banned card for Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) : FROBLIN INSTIGATOR (6a9fbfe6-5630-4c56-b6ff-931ff64a318b) (1)
+2026-03-12 12:18:29.810 INFO  - Banned card for Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) : HUNGRY HUNGRY HAMSTER (a6644b47-78b0-498b-be20-7c85373d35e8) (2)
+2026-03-12 12:18:29.810 INFO  - First player will be Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145)
+2026-03-12 12:18:29.817 INFO  - Game 6ddc9de3-6edb-412d-acab-11b3e13a8266 starting...
+2026-03-12 12:18:29.817 INFO  - Player Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) hand : {
+- TIGER SQUIRREL ;
+- COUNT DRACULEECH ;
+- HAMSTER LION ;
+- KILLER BEE ;
+- SPIDER OWL
+}
+2026-03-12 12:18:29.817 INFO  - Player Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) draw pile : {
+- THE LURKER ;
+- TURF THE SURFER ;
+- FERRET PACIFIER ;
+- COMPOST DRAGON ;
+- FERRET BOMBER
+}
+2026-03-12 12:18:29.817 INFO  - Player Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) hand : {
+- HUNGRY HUNGRY HAMSTER ;
+- COUNT DRACULEECH ;
+- GOBLIN WEREWOLF ;
+- AXOLOTL HEALER ;
+- CREEP FROM THE DEEP
+}
+2026-03-12 12:18:29.817 INFO  - Player Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) draw pile : {
+- DEATHWEAVER ;
+- MAJESTIC MANTICORE ;
+- GRAVE ROBBER ;
+- GOREAGLE ALPHA ;
+- GORILLON
+}
+2026-03-12 12:18:29.817 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.818 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.818 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.818 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.818 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:29.818 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.818 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.818 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.818 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.818 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.818 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.818 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:29.818 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.818 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.818 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.818 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.818 DEBUG - CardInstance(uuid=2aa9570f-d205-468d-818f-20e274b3b769, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1826475), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.818 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.819 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.819 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.819 DEBUG - CardInstance(uuid=2aa9570f-d205-468d-818f-20e274b3b769, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1826475), power=8, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.819 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.819 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.819 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.819 DEBUG - CardInstance(uuid=3beb8f51-722d-4456-ab2c-7eb22cb3bd75, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1826475), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.819 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.819 DEBUG - CardInstance(uuid=2aa9570f-d205-468d-818f-20e274b3b769, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1826475), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.819 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.819 DEBUG - CardInstance(uuid=2aa9570f-d205-468d-818f-20e274b3b769, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1826475), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.819 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.819 INFO  - New FRENZY choice to be resolved by Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) (attackingCard : HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566))
+2026-03-12 12:18:29.819 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:29.819 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.819 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.819 DEBUG - CardInstance(uuid=2aa9570f-d205-468d-818f-20e274b3b769, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1826475), power=8, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.819 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.820 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.820 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.820 DEBUG - CardInstance(uuid=2aa9570f-d205-468d-818f-20e274b3b769, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1826475), power=8, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.820 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.820 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.820 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.820 DEBUG - CardInstance(uuid=42c81b3f-0c24-40ed-9b07-d23acfce3a3e, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1826475), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.820 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.820 DEBUG - PLAY effects disabled for player Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) due to DEATHWEAVER (42c81b3f-0c24-40ed-9b07-d23acfce3a3e) effect
+2026-03-12 12:18:29.820 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (42c81b3f-0c24-40ed-9b07-d23acfce3a3e)
+2026-03-12 12:18:29.820 DEBUG - CardInstance(uuid=2aa9570f-d205-468d-818f-20e274b3b769, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1826475), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.820 DEBUG - CardInstance(uuid=42c81b3f-0c24-40ed-9b07-d23acfce3a3e, card=Card(id=6, setName=first_contact, name=DEATHWEAVER, power=2, keywords=[POISONOUS], effects={PASSIVE=[DisableTimingEffect(value=PLAY)]}, unique=true, description=The opponent cannot activate play effects., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1826475), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.820 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.820 DEBUG - PLAY effects disabled for player Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) due to DEATHWEAVER (42c81b3f-0c24-40ed-9b07-d23acfce3a3e) effect
+2026-03-12 12:18:29.820 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (42c81b3f-0c24-40ed-9b07-d23acfce3a3e)
+2026-03-12 12:18:29.820 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.820 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.821 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.821 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.821 DEBUG - Player Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) must choose 1 cards to steal (targets : {
+- TIGER SQUIRREL ;
+- COUNT DRACULEECH ;
+- HAMSTER LION
+})
+2026-03-12 12:18:29.821 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.821 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.821 INFO  - New TARGET choice to be resolved by Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) (targets : {
+- COUNT DRACULEECH ;
+- TIGER SQUIRREL ;
+- HAMSTER LION
+})
+2026-03-12 12:18:29.821 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.821 DEBUG - HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566) stolen and played by Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) due to GRAVE ROBBER (25db16f8-7c0c-44fc-8a79-74f887a438f3) effect
+2026-03-12 12:18:29.821 INFO  - Resolving STEAL effect of GRAVE ROBBER (25db16f8-7c0c-44fc-8a79-74f887a438f3)
+2026-03-12 12:18:29.821 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.821 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.821 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.821 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.821 DEBUG - CardInstance(uuid=9e92075a-8735-4c82-b60a-accfe9377bd3, card=Card(id=44, setName=first_contact, name=TURF THE SURFER, power=8, keywords=[], effects={ATTACK=[NoBlockEffect(value=1, max=null, min=null, highest=false, keyword=null)]}, unique=false, description=<b>Attack</b>: Choose a creature. It cannot block this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6ba355e4), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.821 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.821 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.821 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.821 DEBUG - CardInstance(uuid=9e92075a-8735-4c82-b60a-accfe9377bd3, card=Card(id=44, setName=first_contact, name=TURF THE SURFER, power=8, keywords=[], effects={ATTACK=[NoBlockEffect(value=1, max=null, min=null, highest=false, keyword=null)]}, unique=false, description=<b>Attack</b>: Choose a creature. It cannot block this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6ba355e4), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.821 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.821 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.821 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.821 DEBUG - CardInstance(uuid=9e92075a-8735-4c82-b60a-accfe9377bd3, card=Card(id=44, setName=first_contact, name=TURF THE SURFER, power=8, keywords=[], effects={ATTACK=[NoBlockEffect(value=1, max=null, min=null, highest=false, keyword=null)]}, unique=false, description=<b>Attack</b>: Choose a creature. It cannot block this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6ba355e4), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.821 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.821 DEBUG - CardInstance(uuid=9e92075a-8735-4c82-b60a-accfe9377bd3, card=Card(id=44, setName=first_contact, name=TURF THE SURFER, power=8, keywords=[], effects={ATTACK=[NoBlockEffect(value=1, max=null, min=null, highest=false, keyword=null)]}, unique=false, description=<b>Attack</b>: Choose a creature. It cannot block this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6ba355e4), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.821 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.821 DEBUG - CardInstance(uuid=d9fe5e72-fa35-4950-9492-5b30cb14bc30, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6ba355e4), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.821 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.821 DEBUG - Player Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) must choose 1 cards to steal (targets : {
+- TIGER SQUIRREL ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:18:29.821 DEBUG - CardInstance(uuid=d9fe5e72-fa35-4950-9492-5b30cb14bc30, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6ba355e4), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.821 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.822 INFO  - New TARGET choice to be resolved by Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) (targets : {
+- COUNT DRACULEECH ;
+- TIGER SQUIRREL
+})
+2026-03-12 12:18:29.822 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.822 DEBUG - TIGER SQUIRREL (9b7226b3-01d1-477a-83ff-eed21bcc1e82) stolen and played by Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) due to COMPOST DRAGON (d9fe5e72-fa35-4950-9492-5b30cb14bc30) effect
+2026-03-12 12:18:29.822 INFO  - Resolving STEAL effect of COMPOST DRAGON (d9fe5e72-fa35-4950-9492-5b30cb14bc30)
+2026-03-12 12:18:29.822 DEBUG - CardInstance(uuid=d9fe5e72-fa35-4950-9492-5b30cb14bc30, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6ba355e4), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.822 DEBUG - CardInstance(uuid=9b7226b3-01d1-477a-83ff-eed21bcc1e82, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6ba355e4), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.822 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.822 DEBUG - Player Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) must choose 1 card(s) to destroy (available targets : {
+- GRAVE ROBBER ;
+- HAMSTER LION
+})
+2026-03-12 12:18:29.822 DEBUG - CardInstance(uuid=d9fe5e72-fa35-4950-9492-5b30cb14bc30, card=Card(id=5, setName=first_contact, name=COMPOST DRAGON, power=3, keywords=[HUNTER], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=SELF_DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from your discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6ba355e4), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.822 DEBUG - CardInstance(uuid=9b7226b3-01d1-477a-83ff-eed21bcc1e82, card=Card(id=29, setName=first_contact, name=TIGER SQUIRREL, power=3, keywords=[SNEAKY], effects={PLAY=[DestroyEffect(value=1, min=7, max=null, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat an enemy creature with power 7 or more., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6ba355e4), power=3, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:29.822 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.822 INFO  - New TARGET choice to be resolved by Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) (targets : {
+- GRAVE ROBBER ;
+- HAMSTER LION
+})
+2026-03-12 12:18:29.822 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.822 DEBUG - TIGER SQUIRREL (9b7226b3-01d1-477a-83ff-eed21bcc1e82) effect destroys HAMSTER LION (795cd38a-5aca-4fce-9611-dbdad6110566)
+2026-03-12 12:18:29.822 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (9b7226b3-01d1-477a-83ff-eed21bcc1e82)
+2026-03-12 12:18:29.822 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.822 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.822 DEBUG - GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) power changed (2 -> 8) due to GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769) effect
+2026-03-12 12:18:29.822 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (2aa9570f-d205-468d-818f-20e274b3b769)
+2026-03-12 12:18:29.822 DEBUG - Player Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) must choose 1 card(s) that will be unable to block (targets : {
+- GOBLIN WEREWOLF ;
+- GRAVE ROBBER ;
+- CREEP FROM THE DEEP
+})
+2026-03-12 12:18:29.822 INFO  - New TARGET choice to be resolved by Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) (targets : {
+- CREEP FROM THE DEEP ;
+- GRAVE ROBBER ;
+- GOBLIN WEREWOLF
+})
+2026-03-12 12:18:29.822 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.822 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (9e92075a-8735-4c82-b60a-accfe9377bd3)
+2026-03-12 12:18:29.822 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.822 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.822 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.822 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 DEBUG - Player Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) must choose 2 card(s) to discard (available targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- AXOLOTL HEALER ;
+- MAJESTIC MANTICORE ;
+- GOREAGLE ALPHA ;
+- GORILLON
+})
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - New TARGET choice to be resolved by Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) (targets : {
+- AXOLOTL HEALER ;
+- MAJESTIC MANTICORE ;
+- HUNGRY HUNGRY HAMSTER ;
+- GORILLON ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:18:29.823 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:29.823 DEBUG - HUNGRY HUNGRY HAMSTER (f97cdc8e-b8c0-4ae4-ab84-8950b4b9c9c8) discarded due to FERRET BOMBER (90f3e020-f4f3-4963-9b6a-ae65207e21d5) effect
+2026-03-12 12:18:29.823 DEBUG - GORILLON (3e2c6245-5b05-4df1-b310-89ff2b0679fc) discarded due to FERRET BOMBER (90f3e020-f4f3-4963-9b6a-ae65207e21d5) effect
+2026-03-12 12:18:29.823 INFO  - Resolving DISCARD effect of FERRET BOMBER (90f3e020-f4f3-4963-9b6a-ae65207e21d5)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Life update for player Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) : 2 LP
+2026-03-12 12:18:29.823 DEBUG - Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) LP changed (3 -> 2) due to GOREAGLE ALPHA (0f129dc8-e44d-42aa-bf0f-a59d9fe15da7) effect
+2026-03-12 12:18:29.823 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (0f129dc8-e44d-42aa-bf0f-a59d9fe15da7)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Life update for player Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) : 1 LP
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.823 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.824 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.824 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.824 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (fd218574-877a-44c2-854d-bdbf6166400d)
+2026-03-12 12:18:29.824 INFO  - Life update for player Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) : 0 LP
+2026-03-12 12:18:29.824 INFO  - Game over : Player1 (3935c5ad-2f36-48c4-9817-d5014190ca46) wins ; Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) loses.
+2026-03-12 12:18:29.824 INFO  - End of the game
+2026-03-12 12:18:29.824 DEBUG - Player2 (30d0cb63-e112-41fd-a54d-bc48bc2b8145) LP changed (1 -> 0) due to KILLER BEE (e5170a93-5537-48b6-90c7-604c90c4c510) effect
+2026-03-12 12:18:29.824 INFO  - Resolving INFLICT effect of KILLER BEE (e5170a93-5537-48b6-90c7-604c90c4c510)

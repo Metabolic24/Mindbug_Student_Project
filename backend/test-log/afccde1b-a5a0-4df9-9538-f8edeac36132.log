@@ -1,0 +1,65 @@
+2026-03-12 12:03:04.008 INFO  - Calculating first player...
+2026-03-12 12:03:04.010 INFO  - Banned card for Player1 (961ec858-acad-4148-aa03-1b748a94461d) : CREEP FROM THE DEEP (2d0d25d3-6dc5-41b8-84d1-3900e233088e) (4)
+2026-03-12 12:03:04.011 INFO  - Banned card for Player2 (23f98a72-d0b4-4d39-8cd8-ee69db744fb2) : GOREAGLE ALPHA (677d7d86-35ef-406a-b3a9-c405a3c67079) (6)
+2026-03-12 12:03:04.011 INFO  - First player will be Player2 (23f98a72-d0b4-4d39-8cd8-ee69db744fb2)
+2026-03-12 12:03:04.020 INFO  - Game afccde1b-a5a0-4df9-9538-f8edeac36132 starting...
+2026-03-12 12:03:04.020 INFO  - Player Player1 (961ec858-acad-4148-aa03-1b748a94461d) hand : {
+- COMPOST DRAGON ;
+- SNAIL HYDRA ;
+- HYENIX ;
+- TUSKED EXTORTER ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:04.021 INFO  - Player Player1 (961ec858-acad-4148-aa03-1b748a94461d) draw pile : {
+- KANGASAURUS REX ;
+- GRAVE ROBBER ;
+- DEATHWEAVER ;
+- FROBLIN INSTIGATOR ;
+- RHINO TURTLE
+}
+2026-03-12 12:03:04.021 INFO  - Player Player2 (23f98a72-d0b4-4d39-8cd8-ee69db744fb2) hand : {
+- SPIDER OWL ;
+- EXPLOSIVE TOAD ;
+- TURF THE SURFER ;
+- CREEP FROM THE DEEP ;
+- RHINO TURTLE
+}
+2026-03-12 12:03:04.021 INFO  - Player Player2 (23f98a72-d0b4-4d39-8cd8-ee69db744fb2) draw pile : {
+- KILLER BEE ;
+- SNAIL THROWER ;
+- GORILLON ;
+- URCHIN HURLER ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:04.021 DEBUG - Player Player1 (961ec858-acad-4148-aa03-1b748a94461d) must choose 1 card(s) to destroy (available targets : {
+- EXPLOSIVE TOAD ;
+- SPIDER OWL
+})
+2026-03-12 12:03:04.021 INFO  - New TARGET choice to be resolved by Player1 (961ec858-acad-4148-aa03-1b748a94461d) (targets : {
+- SPIDER OWL ;
+- EXPLOSIVE TOAD
+})
+2026-03-12 12:03:04.022 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.022 DEBUG - SNAIL HYDRA (47b215c6-a2c3-4441-bd8e-1718a756980d) effect destroys EXPLOSIVE TOAD (df91b709-c759-4e3a-90c5-1c7f88293f05)
+2026-03-12 12:03:04.022 INFO  - Resolving DESTROY effect of SNAIL HYDRA (47b215c6-a2c3-4441-bd8e-1718a756980d)
+2026-03-12 12:03:04.022 DEBUG - Player Player2 (23f98a72-d0b4-4d39-8cd8-ee69db744fb2) must choose 1 card(s) to destroy (available targets : {
+- SNAIL HYDRA ;
+- SPIDER OWL
+})
+2026-03-12 12:03:04.022 INFO  - New TARGET choice to be resolved by Player2 (23f98a72-d0b4-4d39-8cd8-ee69db744fb2) (targets : {
+- SPIDER OWL ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:04.022 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:04.022 DEBUG - EXPLOSIVE TOAD (df91b709-c759-4e3a-90c5-1c7f88293f05) effect destroys SNAIL HYDRA (47b215c6-a2c3-4441-bd8e-1718a756980d)
+2026-03-12 12:03:04.022 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (df91b709-c759-4e3a-90c5-1c7f88293f05)
+2026-03-12 12:03:04.023 INFO  - Life update for player Player1 (961ec858-acad-4148-aa03-1b748a94461d) : 2 LP
+2026-03-12 12:03:04.023 INFO  - Life update for player Player1 (961ec858-acad-4148-aa03-1b748a94461d) : 1 LP
+2026-03-12 12:03:04.023 DEBUG - MAJESTIC MANTICORE (8503a58c-3095-4fa7-8fb9-f968e0f457ed) effect destroys SPIDER OWL (d10ee424-a42f-49b2-9874-336f9212be8f)
+2026-03-12 12:03:04.023 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (8503a58c-3095-4fa7-8fb9-f968e0f457ed)
+2026-03-12 12:03:04.023 INFO  - Life update for player Player2 (23f98a72-d0b4-4d39-8cd8-ee69db744fb2) : 2 LP
+2026-03-12 12:03:04.023 INFO  - Life update for player Player1 (961ec858-acad-4148-aa03-1b748a94461d) : 0 LP
+2026-03-12 12:03:04.024 INFO  - Game over : Player2 (23f98a72-d0b4-4d39-8cd8-ee69db744fb2) wins ; Player1 (961ec858-acad-4148-aa03-1b748a94461d) loses.
+2026-03-12 12:03:04.024 INFO  - End of the game
+2026-03-12 12:03:04.024 DEBUG - Player1 (961ec858-acad-4148-aa03-1b748a94461d) LP changed (1 -> 0) due to KILLER BEE (64b166b0-1ed0-4c80-99e0-a10146c797f6) effect
+2026-03-12 12:03:04.024 INFO  - Resolving INFLICT effect of KILLER BEE (64b166b0-1ed0-4c80-99e0-a10146c797f6)

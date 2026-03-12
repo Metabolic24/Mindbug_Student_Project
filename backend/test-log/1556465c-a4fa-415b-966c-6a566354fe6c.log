@@ -1,0 +1,132 @@
+2026-03-12 12:18:25.140 INFO  - Calculating first player...
+2026-03-12 12:18:25.142 INFO  - Banned card for Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) : FERRET PACIFIER (d6564d4f-9bdb-40ad-9774-4e990433de55) (4)
+2026-03-12 12:18:25.142 INFO  - Banned card for Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) : FROBLIN INSTIGATOR (b03f57a4-2036-4d1a-a8e1-a02d29835262) (1)
+2026-03-12 12:18:25.142 INFO  - First player will be Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8)
+2026-03-12 12:18:25.150 INFO  - Game 1556465c-a4fa-415b-966c-6a566354fe6c starting...
+2026-03-12 12:18:25.150 INFO  - Player Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) hand : {
+- KANGASAURUS REX ;
+- STRANGE BARREL ;
+- HUNGRY HUNGRY HAMSTER ;
+- AXOLOTL HEALER ;
+- SHIELD BUGS
+}
+2026-03-12 12:18:25.151 INFO  - Player Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) draw pile : {
+- RHINO TURTLE ;
+- TURF THE SURFER ;
+- TURF THE SURFER ;
+- PLATED SCORPION ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:18:25.151 INFO  - Player Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) hand : {
+- KILLER BEE ;
+- KANGASAURUS REX ;
+- PLATED SCORPION ;
+- CHAMELEON SNIPER ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:18:25.151 INFO  - Player Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) draw pile : {
+- LUCHATAUR ;
+- URCHIN HURLER ;
+- KILLER BEE ;
+- COMPOST DRAGON ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:18:25.151 DEBUG - Player Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) must choose 1 cards to steal (targets : {
+- KILLER BEE ;
+- KANGASAURUS REX ;
+- PLATED SCORPION ;
+- CHAMELEON SNIPER ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:18:25.152 INFO  - New TARGET choice to be resolved by Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) (targets : {
+- KILLER BEE ;
+- PLATED SCORPION ;
+- KANGASAURUS REX ;
+- CHAMELEON SNIPER ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:18:25.152 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.152 DEBUG - Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) must decide if stolen card AXOLOTL HEALER (9696f1e0-793d-4d26-9291-ae01f62c1e6f) will be added to hand or board
+2026-03-12 12:18:25.152 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (9ca519e5-2c4b-47f7-ae7f-4dfd44263ba0)
+2026-03-12 12:18:25.152 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:25.152 DEBUG - AXOLOTL HEALER (9696f1e0-793d-4d26-9291-ae01f62c1e6f) stolen and drawn by Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) due to HUNGRY HUNGRY HAMSTER (9ca519e5-2c4b-47f7-ae7f-4dfd44263ba0) effect
+2026-03-12 12:18:25.152 DEBUG - KANGASAURUS REX (c5a599f3-ee5c-459e-baea-e1712245dd37) effect destroys HUNGRY HUNGRY HAMSTER (9ca519e5-2c4b-47f7-ae7f-4dfd44263ba0)
+2026-03-12 12:18:25.152 INFO  - Resolving DESTROY effect of KANGASAURUS REX (c5a599f3-ee5c-459e-baea-e1712245dd37)
+2026-03-12 12:18:25.153 DEBUG - Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) LP changed (3 -> 5) due to AXOLOTL HEALER (9696f1e0-793d-4d26-9291-ae01f62c1e6f) effect
+2026-03-12 12:18:25.153 INFO  - Resolving GAIN effect of AXOLOTL HEALER (9696f1e0-793d-4d26-9291-ae01f62c1e6f)
+2026-03-12 12:18:25.153 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5)
+2026-03-12 12:18:25.153 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5)
+2026-03-12 12:18:25.153 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5)
+2026-03-12 12:18:25.153 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5)
+2026-03-12 12:18:25.153 DEBUG - KANGASAURUS REX (d01003af-6dc2-4979-801a-b566b33b32a7) power changed (7 -> 8) due to SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5) effect
+2026-03-12 12:18:25.153 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5)
+2026-03-12 12:18:25.153 DEBUG - KANGASAURUS REX (d01003af-6dc2-4979-801a-b566b33b32a7) effect destroys CHAMELEON SNIPER (107ed0b8-42bf-4447-adae-d5d08c73904d)
+2026-03-12 12:18:25.154 INFO  - Resolving DESTROY effect of KANGASAURUS REX (d01003af-6dc2-4979-801a-b566b33b32a7)
+2026-03-12 12:18:25.154 DEBUG - KANGASAURUS REX (d01003af-6dc2-4979-801a-b566b33b32a7) power changed (7 -> 8) due to SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5) effect
+2026-03-12 12:18:25.154 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5)
+2026-03-12 12:18:25.154 DEBUG - KANGASAURUS REX (d01003af-6dc2-4979-801a-b566b33b32a7) power changed (7 -> 8) due to SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5) effect
+2026-03-12 12:18:25.154 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5)
+2026-03-12 12:18:25.154 DEBUG - KANGASAURUS REX (d01003af-6dc2-4979-801a-b566b33b32a7) power changed (7 -> 8) due to SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5) effect
+2026-03-12 12:18:25.154 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5)
+2026-03-12 12:18:25.154 DEBUG - KANGASAURUS REX (d01003af-6dc2-4979-801a-b566b33b32a7) power changed (7 -> 8) due to SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5) effect
+2026-03-12 12:18:25.154 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5)
+2026-03-12 12:18:25.154 DEBUG - KANGASAURUS REX (d01003af-6dc2-4979-801a-b566b33b32a7) power changed (7 -> 8) due to SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5) effect
+2026-03-12 12:18:25.154 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5)
+2026-03-12 12:18:25.154 DEBUG - KANGASAURUS REX (d01003af-6dc2-4979-801a-b566b33b32a7) power changed (7 -> 8) due to SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5) effect
+2026-03-12 12:18:25.155 INFO  - Resolving POWER_UP effect of SHIELD BUGS (9be41ef5-2928-4458-a5b2-7d6378321cf5)
+2026-03-12 12:18:25.155 INFO  - New FRENZY choice to be resolved by Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) (attackingCard : LUCHATAUR (580a8ea8-6ed7-447f-8754-dd3a8eff7e8b))
+2026-03-12 12:18:25.155 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.155 INFO  - Life update for player Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) : 4 LP
+2026-03-12 12:18:25.155 DEBUG - Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) LP changed (5 -> 4) due to KILLER BEE (f411d7f4-4edc-4696-9c3a-439b65168cad) effect
+2026-03-12 12:18:25.155 INFO  - Resolving INFLICT effect of KILLER BEE (f411d7f4-4edc-4696-9c3a-439b65168cad)
+2026-03-12 12:18:25.155 DEBUG - Player Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) must choose 1 card(s) that will be unable to block (targets : {
+- LUCHATAUR ;
+- KILLER BEE
+})
+2026-03-12 12:18:25.155 INFO  - New TARGET choice to be resolved by Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) (targets : {
+- LUCHATAUR ;
+- KILLER BEE
+})
+2026-03-12 12:18:25.155 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.155 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (2e3ae943-fac0-48ef-b6d7-d046eb22928a)
+2026-03-12 12:18:25.156 INFO  - Life update for player Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) : 3 LP
+2026-03-12 12:18:25.156 DEBUG - Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) LP changed (4 -> 3) due to KILLER BEE (cbaa0d3c-0b4c-45c8-ba5a-22861f3a0786) effect
+2026-03-12 12:18:25.156 INFO  - Resolving INFLICT effect of KILLER BEE (cbaa0d3c-0b4c-45c8-ba5a-22861f3a0786)
+2026-03-12 12:18:25.156 DEBUG - LUCHATAUR (580a8ea8-6ed7-447f-8754-dd3a8eff7e8b) power changed (9 -> 11) due to URCHIN HURLER (31cc3e10-4f7f-442f-9839-cac20c408861) effect
+2026-03-12 12:18:25.156 DEBUG - KILLER BEE (cbaa0d3c-0b4c-45c8-ba5a-22861f3a0786) power changed (5 -> 7) due to URCHIN HURLER (31cc3e10-4f7f-442f-9839-cac20c408861) effect
+2026-03-12 12:18:25.156 DEBUG - KILLER BEE (f411d7f4-4edc-4696-9c3a-439b65168cad) power changed (5 -> 7) due to URCHIN HURLER (31cc3e10-4f7f-442f-9839-cac20c408861) effect
+2026-03-12 12:18:25.156 INFO  - Resolving POWER_UP effect of URCHIN HURLER (31cc3e10-4f7f-442f-9839-cac20c408861)
+2026-03-12 12:18:25.156 DEBUG - KILLER BEE (cbaa0d3c-0b4c-45c8-ba5a-22861f3a0786) power changed (5 -> 7) due to URCHIN HURLER (31cc3e10-4f7f-442f-9839-cac20c408861) effect
+2026-03-12 12:18:25.156 DEBUG - KILLER BEE (f411d7f4-4edc-4696-9c3a-439b65168cad) power changed (5 -> 7) due to URCHIN HURLER (31cc3e10-4f7f-442f-9839-cac20c408861) effect
+2026-03-12 12:18:25.156 INFO  - Resolving POWER_UP effect of URCHIN HURLER (31cc3e10-4f7f-442f-9839-cac20c408861)
+2026-03-12 12:18:25.156 DEBUG - KILLER BEE (cbaa0d3c-0b4c-45c8-ba5a-22861f3a0786) power changed (5 -> 7) due to URCHIN HURLER (31cc3e10-4f7f-442f-9839-cac20c408861) effect
+2026-03-12 12:18:25.156 DEBUG - PLATED SCORPION (6c246b2f-373d-4d1e-8ada-28ca8a1a6db6) power changed (2 -> 4) due to URCHIN HURLER (31cc3e10-4f7f-442f-9839-cac20c408861) effect
+2026-03-12 12:18:25.156 DEBUG - KILLER BEE (f411d7f4-4edc-4696-9c3a-439b65168cad) power changed (5 -> 7) due to URCHIN HURLER (31cc3e10-4f7f-442f-9839-cac20c408861) effect
+2026-03-12 12:18:25.156 INFO  - Resolving POWER_UP effect of URCHIN HURLER (31cc3e10-4f7f-442f-9839-cac20c408861)
+2026-03-12 12:18:25.157 INFO  - Life update for player Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) : 2 LP
+2026-03-12 12:18:25.157 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:25.157 DEBUG - Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) LP changed (2 -> 4) due to AXOLOTL HEALER (88cf5c33-52f6-44bf-a826-c4b3c9d80f8d) effect
+2026-03-12 12:18:25.157 INFO  - Resolving GAIN effect of AXOLOTL HEALER (88cf5c33-52f6-44bf-a826-c4b3c9d80f8d)
+2026-03-12 12:18:25.158 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:25.158 DEBUG - Player Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) must choose 1 card(s) to discard (available targets : {
+- COMPOST DRAGON ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:18:25.158 INFO  - New TARGET choice to be resolved by Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) (targets : {
+- COMPOST DRAGON ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:18:25.158 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.158 DEBUG - COMPOST DRAGON (06190895-928a-45e9-9739-2af0f2b1c737) discarded due to TUSKED EXTORTER (ac59f116-c925-402d-9b86-6306d9ab811a) effect
+2026-03-12 12:18:25.158 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (ac59f116-c925-402d-9b86-6306d9ab811a)
+2026-03-12 12:18:25.158 INFO  - Life update for player Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) : 2 LP
+2026-03-12 12:18:25.158 INFO  - Life update for player Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) : 1 LP
+2026-03-12 12:18:25.158 DEBUG - Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) LP changed (2 -> 1) due to GOREAGLE ALPHA (6f9032f1-7f36-4011-8884-4f1b10d86307) effect
+2026-03-12 12:18:25.158 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (6f9032f1-7f36-4011-8884-4f1b10d86307)
+2026-03-12 12:18:25.159 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:25.159 INFO  - New FRENZY choice to be resolved by Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) (attackingCard : GOREAGLE ALPHA (6f9032f1-7f36-4011-8884-4f1b10d86307))
+2026-03-12 12:18:25.159 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.159 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:25.159 INFO  - Life update for player Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) : 0 LP
+2026-03-12 12:18:25.159 INFO  - Game over : Player1 (bd1ead44-25fe-4802-a755-6064bdbfa0c8) wins ; Player2 (9fd50d2b-7a3a-4d7c-8bac-0a8e2569ccb6) loses.
+2026-03-12 12:18:25.159 INFO  - End of the game

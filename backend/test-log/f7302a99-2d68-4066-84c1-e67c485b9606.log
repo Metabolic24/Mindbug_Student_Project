@@ -1,0 +1,101 @@
+2026-03-12 12:03:46.679 INFO  - Calculating first player...
+2026-03-12 12:03:46.681 INFO  - Banned card for Player1 (e6a5ce9d-3879-4860-ba74-fe073907e661) : COMPOST DRAGON (0934e4f8-e863-4dc1-b4de-e8783a9ab703) (3)
+2026-03-12 12:03:46.681 INFO  - Banned card for Player2 (f0af525c-99aa-4415-a930-ea6cc3f67cc9) : HAMSTER LION (ec19d83a-f9cf-4715-a71c-8a25a2195135) (8)
+2026-03-12 12:03:46.681 INFO  - First player will be Player2 (f0af525c-99aa-4415-a930-ea6cc3f67cc9)
+2026-03-12 12:03:46.690 INFO  - Game f7302a99-2d68-4066-84c1-e67c485b9606 starting...
+2026-03-12 12:03:46.690 INFO  - Player Player1 (e6a5ce9d-3879-4860-ba74-fe073907e661) hand : {
+- GOREAGLE ALPHA ;
+- GRAVE ROBBER ;
+- SPIDER OWL ;
+- SHARK DOG ;
+- MYSTERIOUS MERMAID
+}
+2026-03-12 12:03:46.690 INFO  - Player Player1 (e6a5ce9d-3879-4860-ba74-fe073907e661) draw pile : {
+- TUSKED EXTORTER ;
+- TUSKED EXTORTER ;
+- CREEP FROM THE DEEP ;
+- HUNGRY HUNGRY HAMSTER ;
+- FROBLIN INSTIGATOR
+}
+2026-03-12 12:03:46.690 INFO  - Player Player2 (f0af525c-99aa-4415-a930-ea6cc3f67cc9) hand : {
+- FERRET BOMBER ;
+- GOBLIN WEREWOLF ;
+- AXOLOTL HEALER ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:46.690 INFO  - Player Player2 (f0af525c-99aa-4415-a930-ea6cc3f67cc9) draw pile : {
+- MAJESTIC MANTICORE ;
+- PLATED SCORPION ;
+- HYENIX ;
+- LUCHATAUR ;
+- RHINO TURTLE
+}
+2026-03-12 12:03:46.690 INFO  - Life update for player Player2 (f0af525c-99aa-4415-a930-ea6cc3f67cc9) : 2 LP
+2026-03-12 12:03:46.690 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc)
+2026-03-12 12:03:46.690 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc)
+2026-03-12 12:03:46.690 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc)
+2026-03-12 12:03:46.690 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc)
+2026-03-12 12:03:46.690 DEBUG - PLATED SCORPION (c666e2b5-ed99-429b-8063-18e2fa1bb3a7) power changed (2 -> 3) due to SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc) effect
+2026-03-12 12:03:46.690 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc)
+2026-03-12 12:03:46.691 DEBUG - PLATED SCORPION (c666e2b5-ed99-429b-8063-18e2fa1bb3a7) power changed (2 -> 3) due to SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc) effect
+2026-03-12 12:03:46.691 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc)
+2026-03-12 12:03:46.691 DEBUG - PLATED SCORPION (c666e2b5-ed99-429b-8063-18e2fa1bb3a7) power changed (2 -> 3) due to SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc) effect
+2026-03-12 12:03:46.691 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc)
+2026-03-12 12:03:46.691 DEBUG - PLATED SCORPION (c666e2b5-ed99-429b-8063-18e2fa1bb3a7) power changed (2 -> 3) due to SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc) effect
+2026-03-12 12:03:46.691 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc)
+2026-03-12 12:03:46.691 DEBUG - PLATED SCORPION (c666e2b5-ed99-429b-8063-18e2fa1bb3a7) power changed (2 -> 3) due to SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc) effect
+2026-03-12 12:03:46.691 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc)
+2026-03-12 12:03:46.691 DEBUG - PLATED SCORPION (c666e2b5-ed99-429b-8063-18e2fa1bb3a7) power changed (2 -> 3) due to SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc) effect
+2026-03-12 12:03:46.691 INFO  - Resolving POWER_UP effect of SHIELD BUGS (7b9cf02d-b29a-4d80-acf3-4df55f4e09fc)
+2026-03-12 12:03:46.691 INFO  - Life update for player Player2 (f0af525c-99aa-4415-a930-ea6cc3f67cc9) : 1 LP
+2026-03-12 12:03:46.691 DEBUG - Player Player1 (e6a5ce9d-3879-4860-ba74-fe073907e661) must choose 2 card(s) to discard (available targets : {
+- GOREAGLE ALPHA ;
+- SPIDER OWL ;
+- MYSTERIOUS MERMAID ;
+- TUSKED EXTORTER ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:46.691 INFO  - New TARGET choice to be resolved by Player1 (e6a5ce9d-3879-4860-ba74-fe073907e661) (targets : {
+- SPIDER OWL ;
+- TUSKED EXTORTER ;
+- GOREAGLE ALPHA ;
+- MYSTERIOUS MERMAID ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:46.691 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.691 DEBUG - TUSKED EXTORTER (06008f31-9245-46c5-aa62-4e6a92d40606) discarded due to FERRET BOMBER (53d31482-3ec9-4ae9-8b8d-d2a5fdcd15b7) effect
+2026-03-12 12:03:46.691 DEBUG - MYSTERIOUS MERMAID (68d3b079-37f1-49b6-a191-d6557c8b183c) discarded due to FERRET BOMBER (53d31482-3ec9-4ae9-8b8d-d2a5fdcd15b7) effect
+2026-03-12 12:03:46.691 INFO  - Resolving DISCARD effect of FERRET BOMBER (53d31482-3ec9-4ae9-8b8d-d2a5fdcd15b7)
+2026-03-12 12:03:46.692 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.692 DEBUG - GOBLIN WEREWOLF (6b2d9f67-bcfa-4d41-8c54-87fe46c6ce96) power changed (2 -> 8) due to GOBLIN WEREWOLF (6b2d9f67-bcfa-4d41-8c54-87fe46c6ce96) effect
+2026-03-12 12:03:46.692 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (6b2d9f67-bcfa-4d41-8c54-87fe46c6ce96)
+2026-03-12 12:03:46.692 DEBUG - GOBLIN WEREWOLF (6b2d9f67-bcfa-4d41-8c54-87fe46c6ce96) power changed (2 -> 8) due to GOBLIN WEREWOLF (6b2d9f67-bcfa-4d41-8c54-87fe46c6ce96) effect
+2026-03-12 12:03:46.692 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (6b2d9f67-bcfa-4d41-8c54-87fe46c6ce96)
+2026-03-12 12:03:46.692 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.692 DEBUG - GOBLIN WEREWOLF (6b2d9f67-bcfa-4d41-8c54-87fe46c6ce96) power changed (2 -> 8) due to GOBLIN WEREWOLF (6b2d9f67-bcfa-4d41-8c54-87fe46c6ce96) effect
+2026-03-12 12:03:46.692 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (6b2d9f67-bcfa-4d41-8c54-87fe46c6ce96)
+2026-03-12 12:03:46.692 DEBUG - Player Player2 (f0af525c-99aa-4415-a930-ea6cc3f67cc9) must choose 1 cards to steal (targets : {
+- AXOLOTL HEALER ;
+- MAJESTIC MANTICORE ;
+- HYENIX ;
+- LUCHATAUR ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:46.692 INFO  - New TARGET choice to be resolved by Player2 (f0af525c-99aa-4415-a930-ea6cc3f67cc9) (targets : {
+- LUCHATAUR ;
+- AXOLOTL HEALER ;
+- MAJESTIC MANTICORE ;
+- RHINO TURTLE ;
+- HYENIX
+})
+2026-03-12 12:03:46.692 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.692 DEBUG - Player1 (e6a5ce9d-3879-4860-ba74-fe073907e661) must decide if stolen card MAJESTIC MANTICORE (097027bb-c401-45f8-a6fe-1b91b8789127) will be added to hand or board
+2026-03-12 12:03:46.692 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (42e33ca2-0b0f-4988-8b95-47de0bb8e0cb)
+2026-03-12 12:03:46.692 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:46.692 DEBUG - MAJESTIC MANTICORE (097027bb-c401-45f8-a6fe-1b91b8789127) stolen and played by Player1 (e6a5ce9d-3879-4860-ba74-fe073907e661) due to HUNGRY HUNGRY HAMSTER (42e33ca2-0b0f-4988-8b95-47de0bb8e0cb) effect
+2026-03-12 12:03:46.693 DEBUG - SHARK DOG (143d22d3-6b91-4b67-ab14-1aa42ac38443) effect destroys HYENIX (9309826b-cf96-4ab0-aeb7-32027e39a897)
+2026-03-12 12:03:46.693 INFO  - Resolving DESTROY effect of SHARK DOG (143d22d3-6b91-4b67-ab14-1aa42ac38443)
+2026-03-12 12:03:46.693 INFO  - Life update for player Player2 (f0af525c-99aa-4415-a930-ea6cc3f67cc9) : 0 LP
+2026-03-12 12:03:46.693 INFO  - Game over : Player1 (e6a5ce9d-3879-4860-ba74-fe073907e661) wins ; Player2 (f0af525c-99aa-4415-a930-ea6cc3f67cc9) loses.
+2026-03-12 12:03:46.693 INFO  - End of the game

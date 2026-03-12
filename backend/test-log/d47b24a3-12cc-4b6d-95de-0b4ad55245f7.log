@@ -1,0 +1,159 @@
+2026-03-12 12:03:06.637 INFO  - Calculating first player...
+2026-03-12 12:03:06.639 INFO  - Banned card for Player1 (d97c0a6e-e64b-4ded-ac4d-d7284d39e6ca) : DEATHWEAVER (b0b97b6a-8aed-4881-91f1-00cd6a79677a) (2)
+2026-03-12 12:03:06.639 INFO  - Banned card for Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) : HARPY MOTHER (604e7ea6-bdab-4725-b618-369123c652ee) (5)
+2026-03-12 12:03:06.639 INFO  - First player will be Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f)
+2026-03-12 12:03:06.647 INFO  - Game d47b24a3-12cc-4b6d-95de-0b4ad55245f7 starting...
+2026-03-12 12:03:06.647 INFO  - Player Player1 (d97c0a6e-e64b-4ded-ac4d-d7284d39e6ca) hand : {
+- BEE BEAR ;
+- KANGASAURUS REX ;
+- MAJESTIC MANTICORE ;
+- HAMSTER LION ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:06.647 INFO  - Player Player1 (d97c0a6e-e64b-4ded-ac4d-d7284d39e6ca) draw pile : {
+- RHINO TURTLE ;
+- TURF THE SURFER ;
+- BUGSERKER ;
+- GOREAGLE ALPHA ;
+- SNAIL HYDRA
+}
+2026-03-12 12:03:06.647 INFO  - Player Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) hand : {
+- LUCHATAUR ;
+- EXPLOSIVE TOAD ;
+- FERRET PACIFIER ;
+- COMPOST DRAGON ;
+- GORILLON
+}
+2026-03-12 12:03:06.647 INFO  - Player Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) draw pile : {
+- PLATED SCORPION ;
+- COUNT DRACULEECH ;
+- AXOLOTL HEALER ;
+- HYENIX ;
+- FERRET BOMBER
+}
+2026-03-12 12:03:06.648 INFO  - New FRENZY choice to be resolved by Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) (attackingCard : LUCHATAUR (3dfa6d44-c094-4293-b8cf-4340bfdcacd2))
+2026-03-12 12:03:06.648 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.648 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8995a661-b6cd-47f2-9930-6c77d84bba37)
+2026-03-12 12:03:06.648 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8995a661-b6cd-47f2-9930-6c77d84bba37)
+2026-03-12 12:03:06.648 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8995a661-b6cd-47f2-9930-6c77d84bba37)
+2026-03-12 12:03:06.648 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8995a661-b6cd-47f2-9930-6c77d84bba37)
+2026-03-12 12:03:06.648 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8995a661-b6cd-47f2-9930-6c77d84bba37)
+2026-03-12 12:03:06.648 DEBUG - Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) LP changed (3 -> 5) due to AXOLOTL HEALER (aec8999a-2ea4-4b68-81a5-5da4af21de22) effect
+2026-03-12 12:03:06.648 INFO  - Resolving GAIN effect of AXOLOTL HEALER (aec8999a-2ea4-4b68-81a5-5da4af21de22)
+2026-03-12 12:03:06.648 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8995a661-b6cd-47f2-9930-6c77d84bba37)
+2026-03-12 12:03:06.648 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8995a661-b6cd-47f2-9930-6c77d84bba37)
+2026-03-12 12:03:06.649 INFO  - Resolving NO_BLOCK effect of BEE BEAR (db6c6b50-5c56-48c1-91e4-7d8fd12edb48)
+2026-03-12 12:03:06.649 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8995a661-b6cd-47f2-9930-6c77d84bba37)
+2026-03-12 12:03:06.649 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8995a661-b6cd-47f2-9930-6c77d84bba37)
+2026-03-12 12:03:06.649 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8995a661-b6cd-47f2-9930-6c77d84bba37)
+2026-03-12 12:03:06.649 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8995a661-b6cd-47f2-9930-6c77d84bba37)
+2026-03-12 12:03:06.649 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8995a661-b6cd-47f2-9930-6c77d84bba37)
+2026-03-12 12:03:06.649 DEBUG - MAJESTIC MANTICORE (1d86e13b-fbca-48bf-8995-5520508a2b64) effect destroys FERRET PACIFIER (8995a661-b6cd-47f2-9930-6c77d84bba37)
+2026-03-12 12:03:06.649 DEBUG - MAJESTIC MANTICORE (1d86e13b-fbca-48bf-8995-5520508a2b64) effect destroys AXOLOTL HEALER (aec8999a-2ea4-4b68-81a5-5da4af21de22)
+2026-03-12 12:03:06.649 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (1d86e13b-fbca-48bf-8995-5520508a2b64)
+2026-03-12 12:03:06.649 DEBUG - Player Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) must choose 1 card(s) to destroy (available targets : {
+- MAJESTIC MANTICORE ;
+- LUCHATAUR ;
+- HYENIX
+})
+2026-03-12 12:03:06.649 INFO  - New TARGET choice to be resolved by Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) (targets : {
+- MAJESTIC MANTICORE ;
+- HYENIX ;
+- LUCHATAUR
+})
+2026-03-12 12:03:06.649 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.649 DEBUG - EXPLOSIVE TOAD (fd9de88c-1460-41dd-8317-6dc860af5033) effect destroys HYENIX (78f58749-6da1-48ff-a4f7-45891ff3e95b)
+2026-03-12 12:03:06.649 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (fd9de88c-1460-41dd-8317-6dc860af5033)
+2026-03-12 12:03:06.650 DEBUG - Player Player1 (d97c0a6e-e64b-4ded-ac4d-d7284d39e6ca) must choose 2 card(s) to discard (available targets : {
+- KANGASAURUS REX ;
+- HAMSTER LION ;
+- AXOLOTL HEALER ;
+- TURF THE SURFER ;
+- BUGSERKER
+})
+2026-03-12 12:03:06.650 INFO  - New TARGET choice to be resolved by Player1 (d97c0a6e-e64b-4ded-ac4d-d7284d39e6ca) (targets : {
+- TURF THE SURFER ;
+- AXOLOTL HEALER ;
+- KANGASAURUS REX ;
+- HAMSTER LION ;
+- BUGSERKER
+})
+2026-03-12 12:03:06.650 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.650 DEBUG - HAMSTER LION (d31253b9-4ffa-4928-8fe2-fc02cb31d107) discarded due to FERRET BOMBER (6cafc295-3b5f-4346-9db6-ba6ed2abcb59) effect
+2026-03-12 12:03:06.650 DEBUG - BUGSERKER (fba0095e-7021-4402-a729-cf9bbd20b730) discarded due to FERRET BOMBER (6cafc295-3b5f-4346-9db6-ba6ed2abcb59) effect
+2026-03-12 12:03:06.650 INFO  - Resolving DISCARD effect of FERRET BOMBER (6cafc295-3b5f-4346-9db6-ba6ed2abcb59)
+2026-03-12 12:03:06.650 DEBUG - KANGASAURUS REX (58ed52e0-4ffb-4939-95a0-a7471b06a770) effect destroys FERRET BOMBER (6cafc295-3b5f-4346-9db6-ba6ed2abcb59)
+2026-03-12 12:03:06.650 INFO  - Resolving DESTROY effect of KANGASAURUS REX (58ed52e0-4ffb-4939-95a0-a7471b06a770)
+2026-03-12 12:03:06.650 INFO  - Life update for player Player1 (d97c0a6e-e64b-4ded-ac4d-d7284d39e6ca) : 2 LP
+2026-03-12 12:03:06.650 DEBUG - Player1 (d97c0a6e-e64b-4ded-ac4d-d7284d39e6ca) LP changed (3 -> 2) due to GOREAGLE ALPHA (ad36341e-bbdf-47ad-bfb6-8f5133426d09) effect
+2026-03-12 12:03:06.650 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (ad36341e-bbdf-47ad-bfb6-8f5133426d09)
+2026-03-12 12:03:06.650 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.650 INFO  - New FRENZY choice to be resolved by Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) (attackingCard : LUCHATAUR (3dfa6d44-c094-4293-b8cf-4340bfdcacd2))
+2026-03-12 12:03:06.650 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.651 DEBUG - Player Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) must choose 1 cards to steal (targets : {
+- FERRET PACIFIER ;
+- AXOLOTL HEALER ;
+- EXPLOSIVE TOAD ;
+- HYENIX ;
+- FERRET BOMBER ;
+- LUCHATAUR
+})
+2026-03-12 12:03:06.651 INFO  - New TARGET choice to be resolved by Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) (targets : {
+- FERRET PACIFIER ;
+- HYENIX ;
+- LUCHATAUR ;
+- FERRET BOMBER ;
+- AXOLOTL HEALER ;
+- EXPLOSIVE TOAD
+})
+2026-03-12 12:03:06.651 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.651 DEBUG - EXPLOSIVE TOAD (fd9de88c-1460-41dd-8317-6dc860af5033) stolen and played by Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) due to COMPOST DRAGON (a82f43aa-7e3d-4483-be49-77b327a3ad0f) effect
+2026-03-12 12:03:06.651 INFO  - Resolving STEAL effect of COMPOST DRAGON (a82f43aa-7e3d-4483-be49-77b327a3ad0f)
+2026-03-12 12:03:06.651 DEBUG - Player1 (d97c0a6e-e64b-4ded-ac4d-d7284d39e6ca) LP changed (2 -> 4) due to AXOLOTL HEALER (81e57300-77f7-4705-a92a-584dca2102f6) effect
+2026-03-12 12:03:06.651 INFO  - Resolving GAIN effect of AXOLOTL HEALER (81e57300-77f7-4705-a92a-584dca2102f6)
+2026-03-12 12:03:06.651 DEBUG - Player Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) must choose 1 card(s) to destroy (available targets : {
+- SNAIL HYDRA ;
+- AXOLOTL HEALER ;
+- PLATED SCORPION ;
+- COMPOST DRAGON
+})
+2026-03-12 12:03:06.651 INFO  - New TARGET choice to be resolved by Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) (targets : {
+- SNAIL HYDRA ;
+- PLATED SCORPION ;
+- AXOLOTL HEALER ;
+- COMPOST DRAGON
+})
+2026-03-12 12:03:06.651 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.652 DEBUG - EXPLOSIVE TOAD (fd9de88c-1460-41dd-8317-6dc860af5033) effect destroys SNAIL HYDRA (e64c2bf7-ecdd-4f0c-a0dd-bc3920462a58)
+2026-03-12 12:03:06.652 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (fd9de88c-1460-41dd-8317-6dc860af5033)
+2026-03-12 12:03:06.652 INFO  - Life update for player Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) : 4 LP
+2026-03-12 12:03:06.652 DEBUG - Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) LP changed (5 -> 4) due to COUNT DRACULEECH (1a23492e-6c0e-4124-9d7a-ac942d25ef60) effect
+2026-03-12 12:03:06.652 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (1a23492e-6c0e-4124-9d7a-ac942d25ef60)
+2026-03-12 12:03:06.652 DEBUG - Player Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) must choose 1 card(s) to destroy (available targets : {
+- TURF THE SURFER ;
+- COMPOST DRAGON ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:06.652 INFO  - New TARGET choice to be resolved by Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) (targets : {
+- TURF THE SURFER ;
+- COUNT DRACULEECH ;
+- COMPOST DRAGON
+})
+2026-03-12 12:03:06.652 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.652 DEBUG - COUNT DRACULEECH (1a23492e-6c0e-4124-9d7a-ac942d25ef60) effect destroys COMPOST DRAGON (a82f43aa-7e3d-4483-be49-77b327a3ad0f)
+2026-03-12 12:03:06.652 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (1a23492e-6c0e-4124-9d7a-ac942d25ef60)
+2026-03-12 12:03:06.652 DEBUG - Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) must decide if HYENIX (78f58749-6da1-48ff-a4f7-45891ff3e95b) will revive
+2026-03-12 12:03:06.652 INFO  - New BOOLEAN choice to be resolved by Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) (target : )
+2026-03-12 12:03:06.652 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:06.653 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (04e79f40-cdb7-4515-8ffa-628bcb423414)
+2026-03-12 12:03:06.653 INFO  - Life update for player Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) : 3 LP
+2026-03-12 12:03:06.653 DEBUG - Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) must decide if HYENIX (78f58749-6da1-48ff-a4f7-45891ff3e95b) will revive
+2026-03-12 12:03:06.653 INFO  - New BOOLEAN choice to be resolved by Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) (target : )
+2026-03-12 12:03:06.653 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:06.653 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (04e79f40-cdb7-4515-8ffa-628bcb423414)
+2026-03-12 12:03:06.653 INFO  - Life update for player Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) : 2 LP
+2026-03-12 12:03:06.653 DEBUG - Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) must decide if HYENIX (78f58749-6da1-48ff-a4f7-45891ff3e95b) will revive
+2026-03-12 12:03:06.653 INFO  - New BOOLEAN choice to be resolved by Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) (target : )
+2026-03-12 12:03:06.653 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:06.653 INFO  - Game over : Player2 (c0d74d70-95ef-4c78-a489-d8b36604aa7f) wins ; Player1 (d97c0a6e-e64b-4ded-ac4d-d7284d39e6ca) loses.
+2026-03-12 12:03:06.653 INFO  - End of the game

@@ -2,8 +2,6 @@ package org.metacorp.mindbug.model.choice;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -12,7 +10,7 @@ import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
-import org.metacorp.mindbug.utils.MindbugGameTest;
+import org.metacorp.mindbug.service.game.StartService;
 
 import java.util.HashSet;
 import java.util.List;
@@ -21,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TargetChoiceTest extends MindbugGameTest {
+public class TargetChoiceTest {
     private Game game;
     private Player currentPlayer;
     private Player opponent;
@@ -30,10 +28,10 @@ public class TargetChoiceTest extends MindbugGameTest {
     @BeforeEach
     public void initGame() {
         PlayerService playerService = new PlayerService();
-        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
-        opponent = currentPlayer.getOpponent(game.getPlayers());
-        effect = (_, choiceResolver) -> {
+        opponent = game.getOpponents().getFirst();
+        effect = (game, choiceResolver) -> {
             for (CardInstance card : choiceResolver) {
                 card.getOwner().addCardToDiscardPile(card);
             }
@@ -41,7 +39,7 @@ public class TargetChoiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void testResolve() throws GameStateException, WebSocketException {
+    public void testResolve() {
         DestroyEffect destroyEffect = new DestroyEffect();
         CardInstance currentCard = currentPlayer.getHand().removeFirst();
         currentCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(destroyEffect));

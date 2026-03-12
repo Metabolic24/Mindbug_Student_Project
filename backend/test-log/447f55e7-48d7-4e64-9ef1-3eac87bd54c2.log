@@ -1,0 +1,126 @@
+2026-03-12 12:03:06.666 INFO  - Calculating first player...
+2026-03-12 12:03:06.668 INFO  - Banned card for Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) : MYSTERIOUS MERMAID (36eb40a9-d967-45be-afab-49e66331621e) (7)
+2026-03-12 12:03:06.668 INFO  - Banned card for Player2 (5420ea43-e8f5-43e9-a314-b6e8ad3aea0c) : SNAIL THROWER (d7f7d4db-1f1e-448e-b3b4-12d53f80d450) (1)
+2026-03-12 12:03:06.668 INFO  - First player will be Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743)
+2026-03-12 12:03:06.676 INFO  - Game 447f55e7-48d7-4e64-9ef1-3eac87bd54c2 starting...
+2026-03-12 12:03:06.677 INFO  - Player Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) hand : {
+- COMPOST DRAGON ;
+- FERRET BOMBER ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- SNAIL HYDRA ;
+- HYENIX
+}
+2026-03-12 12:03:06.683 INFO  - Player Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) draw pile : {
+- LUCHATAUR ;
+- TURF THE SURFER ;
+- MAJESTIC MANTICORE ;
+- HAMSTER LION ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:03:06.683 INFO  - Player Player2 (5420ea43-e8f5-43e9-a314-b6e8ad3aea0c) hand : {
+- FERRET BOMBER ;
+- COUNT DRACULEECH ;
+- CREEP FROM THE DEEP ;
+- PLATED SCORPION ;
+- STRANGE BARREL
+}
+2026-03-12 12:03:06.683 INFO  - Player Player2 (5420ea43-e8f5-43e9-a314-b6e8ad3aea0c) draw pile : {
+- EXPLOSIVE TOAD ;
+- RHINO TURTLE ;
+- HAMSTER LION ;
+-  GIRAFFODILE ;
+- THE LURKER
+}
+2026-03-12 12:03:06.683 DEBUG - Player Player2 (5420ea43-e8f5-43e9-a314-b6e8ad3aea0c) must choose 2 card(s) to discard (available targets : {
+- FERRET BOMBER ;
+- COUNT DRACULEECH ;
+- CREEP FROM THE DEEP ;
+- PLATED SCORPION ;
+- EXPLOSIVE TOAD
+})
+2026-03-12 12:03:06.683 INFO  - New TARGET choice to be resolved by Player2 (5420ea43-e8f5-43e9-a314-b6e8ad3aea0c) (targets : {
+- EXPLOSIVE TOAD ;
+- FERRET BOMBER ;
+- COUNT DRACULEECH ;
+- CREEP FROM THE DEEP ;
+- PLATED SCORPION
+})
+2026-03-12 12:03:06.683 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.683 DEBUG - CREEP FROM THE DEEP (80a44cb1-3dcc-4719-9085-afafed50a734) discarded due to FERRET BOMBER (145c86a6-726e-44b1-a4bf-ad67ef07dcb8) effect
+2026-03-12 12:03:06.683 DEBUG - PLATED SCORPION (19f6d302-5b54-4ff8-9274-7ebe009ee642) discarded due to FERRET BOMBER (145c86a6-726e-44b1-a4bf-ad67ef07dcb8) effect
+2026-03-12 12:03:06.683 INFO  - Resolving DISCARD effect of FERRET BOMBER (145c86a6-726e-44b1-a4bf-ad67ef07dcb8)
+2026-03-12 12:03:06.683 DEBUG - LUCHATAUR (9199cb2e-571c-4774-9eeb-8d4fdc7eb21c) stolen and drawn by Player2 (5420ea43-e8f5-43e9-a314-b6e8ad3aea0c) due to STRANGE BARREL (b0c63282-cfe3-4498-82fc-a694ad264a4b) effect
+2026-03-12 12:03:06.683 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (8aef889e-77ad-422f-8fb5-ebac2b3446eb) stolen and drawn by Player2 (5420ea43-e8f5-43e9-a314-b6e8ad3aea0c) due to STRANGE BARREL (b0c63282-cfe3-4498-82fc-a694ad264a4b) effect
+2026-03-12 12:03:06.683 INFO  - Resolving STEAL effect of STRANGE BARREL (b0c63282-cfe3-4498-82fc-a694ad264a4b)
+2026-03-12 12:03:06.683 INFO  - New FRENZY choice to be resolved by Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) (attackingCard : HYENIX (9770f744-4303-49b8-ae6d-7025c40abec3))
+2026-03-12 12:03:06.684 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.684 INFO  - Life update for player Player2 (5420ea43-e8f5-43e9-a314-b6e8ad3aea0c) : 2 LP
+2026-03-12 12:03:06.684 INFO  - Life update for player Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) : 2 LP
+2026-03-12 12:03:06.684 DEBUG - Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) must decide if HYENIX (9770f744-4303-49b8-ae6d-7025c40abec3) will revive
+2026-03-12 12:03:06.684 INFO  - New BOOLEAN choice to be resolved by Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) (target : )
+2026-03-12 12:03:06.684 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:06.684 INFO  - New FRENZY choice to be resolved by Player2 (5420ea43-e8f5-43e9-a314-b6e8ad3aea0c) (attackingCard : RHINO TURTLE (ba649096-53d7-412d-9f40-ddcbc3117aae))
+2026-03-12 12:03:06.684 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.684 DEBUG - Player Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) must choose 1 card(s) to destroy (available targets : {
+- RHINO TURTLE ;
+- LUCHATAUR
+})
+2026-03-12 12:03:06.684 INFO  - New TARGET choice to be resolved by Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) (targets : {
+- LUCHATAUR ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:06.684 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.684 DEBUG - SNAIL HYDRA (2a5383fb-7db4-42a7-a8c3-67884aeba6a6) effect destroys RHINO TURTLE (ba649096-53d7-412d-9f40-ddcbc3117aae)
+2026-03-12 12:03:06.684 INFO  - Resolving DESTROY effect of SNAIL HYDRA (2a5383fb-7db4-42a7-a8c3-67884aeba6a6)
+2026-03-12 12:03:06.685 DEBUG - Player Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) must choose 2 card(s) to discard (available targets : {
+- COMPOST DRAGON ;
+- TURF THE SURFER ;
+- MAJESTIC MANTICORE ;
+- HAMSTER LION
+})
+2026-03-12 12:03:06.685 INFO  - New TARGET choice to be resolved by Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) (targets : {
+- TURF THE SURFER ;
+- MAJESTIC MANTICORE ;
+- HAMSTER LION ;
+- COMPOST DRAGON
+})
+2026-03-12 12:03:06.685 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.685 DEBUG - TURF THE SURFER (96b0a5cd-05ae-4166-874c-a7830356e18c) discarded due to FERRET BOMBER (39f0696c-d7c4-4e2c-adc3-47eaf33c84a8) effect
+2026-03-12 12:03:06.685 DEBUG - COMPOST DRAGON (7a837bc9-b8be-49da-968d-9562e87641b0) discarded due to FERRET BOMBER (39f0696c-d7c4-4e2c-adc3-47eaf33c84a8) effect
+2026-03-12 12:03:06.685 INFO  - Resolving DISCARD effect of FERRET BOMBER (39f0696c-d7c4-4e2c-adc3-47eaf33c84a8)
+2026-03-12 12:03:06.685 DEBUG - CardInstance(uuid=39f0696c-d7c4-4e2c-adc3-47eaf33c84a8, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3831f4c2), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.685 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6772f52e-7ab5-451c-91bb-fad3858b8ab2)
+2026-03-12 12:03:06.685 DEBUG - CardInstance(uuid=39f0696c-d7c4-4e2c-adc3-47eaf33c84a8, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3831f4c2), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.685 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6772f52e-7ab5-451c-91bb-fad3858b8ab2)
+2026-03-12 12:03:06.685 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (8aef889e-77ad-422f-8fb5-ebac2b3446eb) gains FRENZY keyword
+2026-03-12 12:03:06.685 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (8aef889e-77ad-422f-8fb5-ebac2b3446eb)
+2026-03-12 12:03:06.685 DEBUG - CardInstance(uuid=39f0696c-d7c4-4e2c-adc3-47eaf33c84a8, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3831f4c2), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.685 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6772f52e-7ab5-451c-91bb-fad3858b8ab2)
+2026-03-12 12:03:06.685 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (8aef889e-77ad-422f-8fb5-ebac2b3446eb) gains FRENZY keyword
+2026-03-12 12:03:06.685 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (8aef889e-77ad-422f-8fb5-ebac2b3446eb)
+2026-03-12 12:03:06.685 DEBUG - CardInstance(uuid=39f0696c-d7c4-4e2c-adc3-47eaf33c84a8, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3831f4c2), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.685 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6772f52e-7ab5-451c-91bb-fad3858b8ab2)
+2026-03-12 12:03:06.685 DEBUG - CardInstance(uuid=39f0696c-d7c4-4e2c-adc3-47eaf33c84a8, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3831f4c2), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.686 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6772f52e-7ab5-451c-91bb-fad3858b8ab2)
+2026-03-12 12:03:06.686 DEBUG - Player Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) must choose 1 card(s) to destroy (available targets : {
+- FERRET BOMBER ;
+- HAMSTER LION
+})
+2026-03-12 12:03:06.686 DEBUG - CardInstance(uuid=39f0696c-d7c4-4e2c-adc3-47eaf33c84a8, card=Card(id=9, setName=first_contact, name=FERRET BOMBER, power=2, keywords=[SNEAKY], effects={PLAY=[DiscardEffect(value=2, eachEnemy=false, self=false, drawPile=false)]}, unique=false, description=<b>Play</b>: The opponent discards 2 cards., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3831f4c2), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.686 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (6772f52e-7ab5-451c-91bb-fad3858b8ab2)
+2026-03-12 12:03:06.686 INFO  - New TARGET choice to be resolved by Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) (targets : {
+- HAMSTER LION ;
+- FERRET BOMBER
+})
+2026-03-12 12:03:06.686 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.686 DEBUG - EXPLOSIVE TOAD (6e6f7e2c-d47b-423a-b4cb-24b23ca40bfa) effect destroys HAMSTER LION (6772f52e-7ab5-451c-91bb-fad3858b8ab2)
+2026-03-12 12:03:06.686 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (6e6f7e2c-d47b-423a-b4cb-24b23ca40bfa)
+2026-03-12 12:03:06.686 INFO  - Life update for player Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) : 1 LP
+2026-03-12 12:03:06.686 DEBUG - Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) must decide if HYENIX (9770f744-4303-49b8-ae6d-7025c40abec3) will revive
+2026-03-12 12:03:06.686 INFO  - New BOOLEAN choice to be resolved by Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) (target : )
+2026-03-12 12:03:06.686 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:06.686 DEBUG - HYENIX (9770f744-4303-49b8-ae6d-7025c40abec3) revived using its own effect
+2026-03-12 12:03:06.686 INFO  - Resolving REVIVE effect of HYENIX (9770f744-4303-49b8-ae6d-7025c40abec3)
+2026-03-12 12:03:06.686 INFO  - Life update for player Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) : 0 LP
+2026-03-12 12:03:06.686 INFO  - Game over : Player2 (5420ea43-e8f5-43e9-a314-b6e8ad3aea0c) wins ; Player1 (d00a5b4e-6f4e-4b01-a77b-44b60ddc7743) loses.
+2026-03-12 12:03:06.686 INFO  - End of the game

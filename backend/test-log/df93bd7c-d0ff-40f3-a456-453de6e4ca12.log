@@ -1,0 +1,177 @@
+2026-03-12 12:18:25.600 INFO  - Calculating first player...
+2026-03-12 12:18:25.602 INFO  - Banned card for Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) : COUNT DRACULEECH (9fa2c5dc-1702-4621-a8d4-23077b08d6b7) (7)
+2026-03-12 12:18:25.602 INFO  - Banned card for Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) : TIGER SQUIRREL (6c139c4b-25c0-418d-b8c8-c209b5d696d0) (3)
+2026-03-12 12:18:25.602 INFO  - First player will be Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3)
+2026-03-12 12:18:25.612 INFO  - Game df93bd7c-d0ff-40f3-a456-453de6e4ca12 starting...
+2026-03-12 12:18:25.612 INFO  - Player Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) hand : {
+- RHINO TURTLE ;
+- THE LURKER ;
+- DEATHWEAVER ;
+- THE LURKER ;
+- SNAIL HYDRA
+}
+2026-03-12 12:18:25.612 INFO  - Player Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) draw pile : {
+- HARPY MOTHER ;
+- SPIDER OWL ;
+- GOREAGLE ALPHA ;
+- SPIDER OWL ;
+- LUCHATAUR
+}
+2026-03-12 12:18:25.612 INFO  - Player Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) hand : {
+- GRAVE ROBBER ;
+- TUSKED EXTORTER ;
+- LONE YETI ;
+- COMPOST DRAGON ;
+- PLATED SCORPION
+}
+2026-03-12 12:18:25.612 INFO  - Player Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) draw pile : {
+- MYSTERIOUS MERMAID ;
+- SHIELD BUGS ;
+- RHINO TURTLE ;
+- GORILLON ;
+- FERRET PACIFIER
+}
+2026-03-12 12:18:25.613 DEBUG - PLAY effects disabled for player Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) due to DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273) effect
+2026-03-12 12:18:25.613 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273)
+2026-03-12 12:18:25.613 DEBUG - PLAY effects disabled for player Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) due to DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273) effect
+2026-03-12 12:18:25.613 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273)
+2026-03-12 12:18:25.613 DEBUG - PLAY effects disabled for player Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) due to DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273) effect
+2026-03-12 12:18:25.613 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273)
+2026-03-12 12:18:25.613 DEBUG - PLAY effects disabled for player Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) due to DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273) effect
+2026-03-12 12:18:25.613 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273)
+2026-03-12 12:18:25.613 DEBUG - DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273) stolen and played by Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) due to GRAVE ROBBER (56ed5f1a-0891-4f60-b687-3bb4e4970489) effect
+2026-03-12 12:18:25.613 INFO  - Resolving STEAL effect of GRAVE ROBBER (56ed5f1a-0891-4f60-b687-3bb4e4970489)
+2026-03-12 12:18:25.613 DEBUG - PLAY effects disabled for player Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) due to DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273) effect
+2026-03-12 12:18:25.613 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273)
+2026-03-12 12:18:25.613 DEBUG - PLAY effects disabled for player Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) due to DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273) effect
+2026-03-12 12:18:25.613 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273)
+2026-03-12 12:18:25.613 DEBUG - PLAY effects disabled for player Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) due to DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273) effect
+2026-03-12 12:18:25.613 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273)
+2026-03-12 12:18:25.614 DEBUG - PLAY effects disabled for player Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) due to DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273) effect
+2026-03-12 12:18:25.614 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (394ef68b-4044-4c30-b471-82a9bc935273)
+2026-03-12 12:18:25.614 INFO  - Life update for player Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) : 2 LP
+2026-03-12 12:18:25.614 DEBUG - Player Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) must choose 1 card(s) to destroy (available targets : {
+- GRAVE ROBBER ;
+- LONE YETI
+})
+2026-03-12 12:18:25.614 INFO  - New TARGET choice to be resolved by Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) (targets : {
+- GRAVE ROBBER ;
+- LONE YETI
+})
+2026-03-12 12:18:25.614 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.614 DEBUG - SNAIL HYDRA (74ebd747-a698-4030-8f2d-0ab00589fec0) effect destroys GRAVE ROBBER (56ed5f1a-0891-4f60-b687-3bb4e4970489)
+2026-03-12 12:18:25.615 INFO  - Resolving DESTROY effect of SNAIL HYDRA (74ebd747-a698-4030-8f2d-0ab00589fec0)
+2026-03-12 12:18:25.615 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 10) due to LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) effect
+2026-03-12 12:18:25.615 INFO  - Resolving POWER_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.615 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) gains FRENZY keyword
+2026-03-12 12:18:25.615 INFO  - Resolving KEYWORD_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.615 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 10) due to LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) effect
+2026-03-12 12:18:25.615 INFO  - Resolving POWER_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.615 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) gains FRENZY keyword
+2026-03-12 12:18:25.615 INFO  - Resolving KEYWORD_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.615 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 10) due to LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) effect
+2026-03-12 12:18:25.615 INFO  - Resolving POWER_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.615 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) gains FRENZY keyword
+2026-03-12 12:18:25.615 INFO  - Resolving KEYWORD_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.615 INFO  - New FRENZY choice to be resolved by Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) (attackingCard : LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258))
+2026-03-12 12:18:25.615 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.615 INFO  - Life update for player Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) : 1 LP
+2026-03-12 12:18:25.615 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 10) due to LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) effect
+2026-03-12 12:18:25.616 INFO  - Resolving POWER_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.616 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) gains FRENZY keyword
+2026-03-12 12:18:25.616 INFO  - Resolving KEYWORD_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.616 INFO  - New FRENZY choice to be resolved by Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) (attackingCard : LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258))
+2026-03-12 12:18:25.616 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 10) due to LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) effect
+2026-03-12 12:18:25.616 INFO  - Resolving POWER_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.616 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) gains FRENZY keyword
+2026-03-12 12:18:25.616 INFO  - Resolving KEYWORD_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.616 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.616 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 10) due to LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) effect
+2026-03-12 12:18:25.616 INFO  - Resolving POWER_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.616 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) gains FRENZY keyword
+2026-03-12 12:18:25.616 INFO  - Resolving KEYWORD_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.616 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 10) due to LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) effect
+2026-03-12 12:18:25.616 INFO  - Resolving POWER_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.616 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) gains FRENZY keyword
+2026-03-12 12:18:25.616 INFO  - Resolving KEYWORD_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.616 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 10) due to LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) effect
+2026-03-12 12:18:25.616 INFO  - Resolving POWER_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.616 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) gains FRENZY keyword
+2026-03-12 12:18:25.616 INFO  - Resolving KEYWORD_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.616 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 10) due to LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) effect
+2026-03-12 12:18:25.616 INFO  - Resolving POWER_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.616 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) gains FRENZY keyword
+2026-03-12 12:18:25.616 INFO  - Resolving KEYWORD_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.617 DEBUG - Player Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) must choose 1 cards to steal (targets : {
+- DEATHWEAVER ;
+- PLATED SCORPION ;
+- GRAVE ROBBER
+})
+2026-03-12 12:18:25.617 INFO  - New TARGET choice to be resolved by Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) (targets : {
+- PLATED SCORPION ;
+- DEATHWEAVER ;
+- GRAVE ROBBER
+})
+2026-03-12 12:18:25.617 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.617 DEBUG - PLATED SCORPION (f975b91e-245a-47e2-a533-26fcc46fe7e0) stolen and played by Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) due to COMPOST DRAGON (fdf0196c-2b86-4884-8203-4a25dad9699c) effect
+2026-03-12 12:18:25.617 INFO  - Resolving STEAL effect of COMPOST DRAGON (fdf0196c-2b86-4884-8203-4a25dad9699c)
+2026-03-12 12:18:25.617 DEBUG - PLATED SCORPION (f975b91e-245a-47e2-a533-26fcc46fe7e0) power changed (2 -> 3) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.617 DEBUG - COMPOST DRAGON (fdf0196c-2b86-4884-8203-4a25dad9699c) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.617 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 6) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.617 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef)
+2026-03-12 12:18:25.617 DEBUG - PLATED SCORPION (f975b91e-245a-47e2-a533-26fcc46fe7e0) power changed (2 -> 3) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.617 DEBUG - COMPOST DRAGON (fdf0196c-2b86-4884-8203-4a25dad9699c) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.617 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 6) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.617 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef)
+2026-03-12 12:18:25.617 DEBUG - COMPOST DRAGON (fdf0196c-2b86-4884-8203-4a25dad9699c) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.617 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 6) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.617 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef)
+2026-03-12 12:18:25.617 DEBUG - Player Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) must choose 2 cards to steal (targets : {
+- COMPOST DRAGON ;
+- SHIELD BUGS
+})
+2026-03-12 12:18:25.617 DEBUG - COMPOST DRAGON (fdf0196c-2b86-4884-8203-4a25dad9699c) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.618 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 6) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.618 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef)
+2026-03-12 12:18:25.618 INFO  - New TARGET choice to be resolved by Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) (targets : {
+- SHIELD BUGS ;
+- COMPOST DRAGON
+})
+2026-03-12 12:18:25.618 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.618 DEBUG - SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) stolen and played by Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) due to HARPY MOTHER (6951918e-3e59-4d0f-b56d-cffa4f67b0d8) effect
+2026-03-12 12:18:25.618 DEBUG - COMPOST DRAGON (fdf0196c-2b86-4884-8203-4a25dad9699c) stolen and played by Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) due to HARPY MOTHER (6951918e-3e59-4d0f-b56d-cffa4f67b0d8) effect
+2026-03-12 12:18:25.618 INFO  - Resolving STEAL effect of HARPY MOTHER (6951918e-3e59-4d0f-b56d-cffa4f67b0d8)
+2026-03-12 12:18:25.618 DEBUG - SPIDER OWL (e64f9006-785a-4798-a792-2ac2af4c009d) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.618 DEBUG - COMPOST DRAGON (fdf0196c-2b86-4884-8203-4a25dad9699c) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.618 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef)
+2026-03-12 12:18:25.618 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 10) due to LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) effect
+2026-03-12 12:18:25.618 INFO  - Resolving POWER_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.618 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) gains FRENZY keyword
+2026-03-12 12:18:25.618 INFO  - Resolving KEYWORD_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.618 DEBUG - SPIDER OWL (e64f9006-785a-4798-a792-2ac2af4c009d) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.618 DEBUG - COMPOST DRAGON (fdf0196c-2b86-4884-8203-4a25dad9699c) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.618 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef)
+2026-03-12 12:18:25.618 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) power changed (5 -> 10) due to LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) effect
+2026-03-12 12:18:25.618 INFO  - Resolving POWER_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.618 DEBUG - LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258) gains FRENZY keyword
+2026-03-12 12:18:25.618 INFO  - Resolving KEYWORD_UP effect of LONE YETI (916b2fe8-2199-47bd-bbc9-ae33ffaa1258)
+2026-03-12 12:18:25.618 DEBUG - SPIDER OWL (e64f9006-785a-4798-a792-2ac2af4c009d) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.618 DEBUG - COMPOST DRAGON (fdf0196c-2b86-4884-8203-4a25dad9699c) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.618 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef)
+2026-03-12 12:18:25.618 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e395fdbd-9868-4ddc-bb39-8534a23f31f1)
+2026-03-12 12:18:25.619 DEBUG - SPIDER OWL (e64f9006-785a-4798-a792-2ac2af4c009d) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.619 DEBUG - COMPOST DRAGON (fdf0196c-2b86-4884-8203-4a25dad9699c) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.619 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef)
+2026-03-12 12:18:25.619 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e395fdbd-9868-4ddc-bb39-8534a23f31f1)
+2026-03-12 12:18:25.619 INFO  - Life update for player Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) : 2 LP
+2026-03-12 12:18:25.619 DEBUG - SPIDER OWL (e64f9006-785a-4798-a792-2ac2af4c009d) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.619 DEBUG - COMPOST DRAGON (fdf0196c-2b86-4884-8203-4a25dad9699c) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.619 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef)
+2026-03-12 12:18:25.619 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e395fdbd-9868-4ddc-bb39-8534a23f31f1)
+2026-03-12 12:18:25.619 DEBUG - SPIDER OWL (e64f9006-785a-4798-a792-2ac2af4c009d) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.619 DEBUG - COMPOST DRAGON (fdf0196c-2b86-4884-8203-4a25dad9699c) power changed (3 -> 4) due to SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef) effect
+2026-03-12 12:18:25.619 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8b4b0881-0585-44de-90d1-7a0281ee35ef)
+2026-03-12 12:18:25.619 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (e395fdbd-9868-4ddc-bb39-8534a23f31f1)
+2026-03-12 12:18:25.619 INFO  - Life update for player Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) : 0 LP
+2026-03-12 12:18:25.619 INFO  - Game over : Player2 (93f0d302-8b2c-4944-be6f-df9c22d47db6) wins ; Player1 (d1aa2262-3f3a-4816-958e-61ae44b8a9e3) loses.
+2026-03-12 12:18:25.619 INFO  - End of the game

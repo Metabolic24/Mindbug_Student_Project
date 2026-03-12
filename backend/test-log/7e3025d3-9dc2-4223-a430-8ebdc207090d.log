@@ -1,0 +1,311 @@
+2026-03-12 12:03:42.427 INFO  - Calculating first player...
+2026-03-12 12:03:42.429 INFO  - Banned card for Player1 (c546c1e4-4217-427b-a071-ff74ead68088) : KANGASAURUS REX (70001cf9-5b3d-4d20-9c77-284a29ed07d3) (7)
+2026-03-12 12:03:42.429 INFO  - Banned card for Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) : SHIELD BUGS (b6dce258-716b-4f2a-8bd4-ed8b4b5b7a57) (4)
+2026-03-12 12:03:42.429 INFO  - First player will be Player1 (c546c1e4-4217-427b-a071-ff74ead68088)
+2026-03-12 12:03:42.436 INFO  - Game 7e3025d3-9dc2-4223-a430-8ebdc207090d starting...
+2026-03-12 12:03:42.436 INFO  - Player Player1 (c546c1e4-4217-427b-a071-ff74ead68088) hand : {
+- LUCHATAUR ;
+- SHIELD BUGS ;
+- SNAIL THROWER ;
+- LUCHATAUR ;
+- COUNT DRACULEECH
+}
+2026-03-12 12:03:42.437 INFO  - Player Player1 (c546c1e4-4217-427b-a071-ff74ead68088) draw pile : {
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- URCHIN HURLER ;
+- BEE BEAR ;
+- LONE YETI ;
+- SPIDER OWL
+}
+2026-03-12 12:03:42.437 INFO  - Player Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) hand : {
+- AXOLOTL HEALER ;
+- HAMSTER LION ;
+- SNAIL HYDRA ;
+- COUNT DRACULEECH ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:03:42.437 INFO  - Player Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) draw pile : {
+- COMPOST DRAGON ;
+- THE LURKER ;
+- BRAIN FLY ;
+- GOBLIN WEREWOLF ;
+- GRAVE ROBBER
+}
+2026-03-12 12:03:42.437 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.437 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.437 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.437 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.437 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.438 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.438 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.438 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.438 DEBUG - SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae) power changed (1 -> 2) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.438 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.438 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains HUNTER keyword
+2026-03-12 12:03:42.438 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.438 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains POISONOUS keyword
+2026-03-12 12:03:42.439 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.439 DEBUG - SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae) power changed (1 -> 2) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.439 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.439 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains HUNTER keyword
+2026-03-12 12:03:42.439 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.439 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains POISONOUS keyword
+2026-03-12 12:03:42.439 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.439 DEBUG - SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae) power changed (1 -> 2) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.439 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.439 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains HUNTER keyword
+2026-03-12 12:03:42.439 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.439 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains POISONOUS keyword
+2026-03-12 12:03:42.439 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.439 DEBUG - Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) LP changed (3 -> 5) due to AXOLOTL HEALER (44468fad-3173-4783-a875-5836d451bbd4) effect
+2026-03-12 12:03:42.440 INFO  - Resolving GAIN effect of AXOLOTL HEALER (44468fad-3173-4783-a875-5836d451bbd4)
+2026-03-12 12:03:42.440 DEBUG - SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae) power changed (1 -> 2) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.440 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.440 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains HUNTER keyword
+2026-03-12 12:03:42.440 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.440 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains POISONOUS keyword
+2026-03-12 12:03:42.440 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.440 DEBUG - SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae) power changed (1 -> 2) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.440 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.440 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains HUNTER keyword
+2026-03-12 12:03:42.440 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.440 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains POISONOUS keyword
+2026-03-12 12:03:42.440 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.440 DEBUG - LUCHATAUR (d56d7a25-c6db-4401-b900-cf2ebe44d90c) power changed (9 -> 10) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.440 DEBUG - SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae) power changed (1 -> 2) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.440 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.440 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains HUNTER keyword
+2026-03-12 12:03:42.440 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.440 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains POISONOUS keyword
+2026-03-12 12:03:42.440 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.441 DEBUG - LUCHATAUR (d56d7a25-c6db-4401-b900-cf2ebe44d90c) power changed (9 -> 10) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.441 DEBUG - SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae) power changed (1 -> 2) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.441 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.441 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains HUNTER keyword
+2026-03-12 12:03:42.441 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.441 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains POISONOUS keyword
+2026-03-12 12:03:42.441 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.441 DEBUG - Player Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) must choose 1 card(s) to destroy (available targets : {
+- SNAIL THROWER ;
+- SHIELD BUGS ;
+- LUCHATAUR
+})
+2026-03-12 12:03:42.441 DEBUG - LUCHATAUR (d56d7a25-c6db-4401-b900-cf2ebe44d90c) power changed (9 -> 10) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.441 DEBUG - SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae) power changed (1 -> 2) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.441 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.441 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains HUNTER keyword
+2026-03-12 12:03:42.441 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.441 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains POISONOUS keyword
+2026-03-12 12:03:42.441 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.441 INFO  - New TARGET choice to be resolved by Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) (targets : {
+- SHIELD BUGS ;
+- LUCHATAUR ;
+- SNAIL THROWER
+})
+2026-03-12 12:03:42.442 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.442 DEBUG - SNAIL HYDRA (c11422fa-8be0-47a2-a5c7-ea66c171d60c) effect destroys LUCHATAUR (d56d7a25-c6db-4401-b900-cf2ebe44d90c)
+2026-03-12 12:03:42.442 INFO  - Resolving DESTROY effect of SNAIL HYDRA (c11422fa-8be0-47a2-a5c7-ea66c171d60c)
+2026-03-12 12:03:42.442 DEBUG - SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae) power changed (1 -> 2) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.442 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.442 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains HUNTER keyword
+2026-03-12 12:03:42.442 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.442 DEBUG - SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) gains POISONOUS keyword
+2026-03-12 12:03:42.442 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (86c9f3aa-92c0-4ea5-b7ba-b8a70cfefdae)
+2026-03-12 12:03:42.442 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.442 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.442 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.442 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.442 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.442 DEBUG - Player Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) must choose 1 cards to steal (targets : {
+- SNAIL HYDRA ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:03:42.442 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.442 INFO  - New TARGET choice to be resolved by Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) (targets : {
+- SNAIL HYDRA ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:03:42.443 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.443 DEBUG - SNAIL HYDRA (c11422fa-8be0-47a2-a5c7-ea66c171d60c) stolen and played by Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) due to COMPOST DRAGON (79f528df-874e-4422-978f-4974e9d9fb6e) effect
+2026-03-12 12:03:42.443 INFO  - Resolving STEAL effect of COMPOST DRAGON (79f528df-874e-4422-978f-4974e9d9fb6e)
+2026-03-12 12:03:42.443 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.443 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.443 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) power changed (5 -> 6) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.443 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.443 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) gains HUNTER keyword
+2026-03-12 12:03:42.443 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131)
+2026-03-12 12:03:42.443 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) power changed (5 -> 6) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.443 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.443 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) gains HUNTER keyword
+2026-03-12 12:03:42.443 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131)
+2026-03-12 12:03:42.443 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) power changed (5 -> 6) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.443 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.443 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) gains FRENZY keyword
+2026-03-12 12:03:42.444 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131)
+2026-03-12 12:03:42.444 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) gains HUNTER keyword
+2026-03-12 12:03:42.444 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131)
+2026-03-12 12:03:42.444 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) power changed (5 -> 6) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.444 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.444 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) gains FRENZY keyword
+2026-03-12 12:03:42.444 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131)
+2026-03-12 12:03:42.444 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) gains HUNTER keyword
+2026-03-12 12:03:42.444 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131)
+2026-03-12 12:03:42.444 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) power changed (5 -> 6) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.444 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.444 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) gains FRENZY keyword
+2026-03-12 12:03:42.444 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131)
+2026-03-12 12:03:42.444 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) power changed (5 -> 6) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.444 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.444 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) gains FRENZY keyword
+2026-03-12 12:03:42.444 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131)
+2026-03-12 12:03:42.444 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) power changed (5 -> 6) due to SHIELD BUGS (c88678db-676d-4772-b300-50551f036110) effect
+2026-03-12 12:03:42.444 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.444 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131) gains FRENZY keyword
+2026-03-12 12:03:42.444 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (f2aa2ce6-bc3c-426c-b59e-6866dda81131)
+2026-03-12 12:03:42.444 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.445 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c88678db-676d-4772-b300-50551f036110)
+2026-03-12 12:03:42.445 INFO  - New FRENZY choice to be resolved by Player1 (c546c1e4-4217-427b-a071-ff74ead68088) (attackingCard : LUCHATAUR (e48dee5c-d463-4743-a6bc-fdbcaff41e2b))
+2026-03-12 12:03:42.445 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.445 DEBUG - EXPLOSIVE TOAD (1ae458b2-85c0-42f9-8511-75180e19d2dc) effect destroys COUNT DRACULEECH (01c658d2-7d9e-4383-bd0b-3fc1d07b4685)
+2026-03-12 12:03:42.445 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (1ae458b2-85c0-42f9-8511-75180e19d2dc)
+2026-03-12 12:03:42.445 DEBUG - GOBLIN WEREWOLF (ee7ba12b-9e7b-49af-8621-9160850ee42d) power changed (2 -> 8) due to GOBLIN WEREWOLF (ee7ba12b-9e7b-49af-8621-9160850ee42d) effect
+2026-03-12 12:03:42.445 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ee7ba12b-9e7b-49af-8621-9160850ee42d)
+2026-03-12 12:03:42.446 DEBUG - GOBLIN WEREWOLF (ee7ba12b-9e7b-49af-8621-9160850ee42d) power changed (2 -> 8) due to GOBLIN WEREWOLF (ee7ba12b-9e7b-49af-8621-9160850ee42d) effect
+2026-03-12 12:03:42.446 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ee7ba12b-9e7b-49af-8621-9160850ee42d)
+2026-03-12 12:03:42.446 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.446 DEBUG - GOBLIN WEREWOLF (ee7ba12b-9e7b-49af-8621-9160850ee42d) power changed (2 -> 8) due to GOBLIN WEREWOLF (ee7ba12b-9e7b-49af-8621-9160850ee42d) effect
+2026-03-12 12:03:42.446 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ee7ba12b-9e7b-49af-8621-9160850ee42d)
+2026-03-12 12:03:42.446 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 10) due to LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) effect
+2026-03-12 12:03:42.446 INFO  - Resolving POWER_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.446 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) gains FRENZY keyword
+2026-03-12 12:03:42.446 INFO  - Resolving KEYWORD_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.446 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 10) due to LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) effect
+2026-03-12 12:03:42.446 INFO  - Resolving POWER_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.446 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) gains FRENZY keyword
+2026-03-12 12:03:42.446 INFO  - Resolving KEYWORD_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.446 INFO  - Life update for player Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) : 4 LP
+2026-03-12 12:03:42.446 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 10) due to LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) effect
+2026-03-12 12:03:42.446 INFO  - Resolving POWER_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.446 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) gains FRENZY keyword
+2026-03-12 12:03:42.446 INFO  - Resolving KEYWORD_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.446 INFO  - New FRENZY choice to be resolved by Player1 (c546c1e4-4217-427b-a071-ff74ead68088) (attackingCard : LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162))
+2026-03-12 12:03:42.447 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.447 INFO  - Life update for player Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) : 3 LP
+2026-03-12 12:03:42.447 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 10) due to LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) effect
+2026-03-12 12:03:42.447 INFO  - Resolving POWER_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.447 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) gains FRENZY keyword
+2026-03-12 12:03:42.447 INFO  - Resolving KEYWORD_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.447 INFO  - New FRENZY choice to be resolved by Player1 (c546c1e4-4217-427b-a071-ff74ead68088) (attackingCard : LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162))
+2026-03-12 12:03:42.447 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 10) due to LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) effect
+2026-03-12 12:03:42.447 INFO  - Resolving POWER_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.447 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) gains FRENZY keyword
+2026-03-12 12:03:42.447 INFO  - Resolving KEYWORD_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.447 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.447 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 10) due to LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) effect
+2026-03-12 12:03:42.447 INFO  - Resolving POWER_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.447 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) gains FRENZY keyword
+2026-03-12 12:03:42.447 INFO  - Resolving KEYWORD_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.447 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 10) due to LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) effect
+2026-03-12 12:03:42.447 INFO  - Resolving POWER_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.447 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) gains FRENZY keyword
+2026-03-12 12:03:42.447 INFO  - Resolving KEYWORD_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.447 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 10) due to LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) effect
+2026-03-12 12:03:42.447 INFO  - Resolving POWER_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.447 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) gains FRENZY keyword
+2026-03-12 12:03:42.447 INFO  - Resolving KEYWORD_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.448 DEBUG - Player Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) must choose 1 cards to steal (targets : {
+- LUCHATAUR ;
+- SNAIL THROWER ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- SHIELD BUGS ;
+- LUCHATAUR ;
+- COUNT DRACULEECH ;
+- BEE BEAR
+})
+2026-03-12 12:03:42.448 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 10) due to LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) effect
+2026-03-12 12:03:42.448 INFO  - Resolving POWER_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.448 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) gains FRENZY keyword
+2026-03-12 12:03:42.448 INFO  - Resolving KEYWORD_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.448 INFO  - New TARGET choice to be resolved by Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) (targets : {
+- BEE BEAR ;
+- LUCHATAUR ;
+- SHIELD BUGS ;
+- SNAIL THROWER ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- COUNT DRACULEECH ;
+- LUCHATAUR
+})
+2026-03-12 12:03:42.448 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.448 DEBUG - BEE BEAR (33ba7cfc-8b5c-470c-9e2c-10954547a33a) stolen and played by Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) due to GRAVE ROBBER (d5c738d5-5f5f-465f-a25f-f8a664e3cd72) effect
+2026-03-12 12:03:42.448 INFO  - Resolving STEAL effect of GRAVE ROBBER (d5c738d5-5f5f-465f-a25f-f8a664e3cd72)
+2026-03-12 12:03:42.448 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 10) due to LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) effect
+2026-03-12 12:03:42.448 INFO  - Resolving POWER_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.448 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) gains FRENZY keyword
+2026-03-12 12:03:42.448 INFO  - Resolving KEYWORD_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.448 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 10) due to LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) effect
+2026-03-12 12:03:42.448 INFO  - Resolving POWER_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.448 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) gains FRENZY keyword
+2026-03-12 12:03:42.448 INFO  - Resolving KEYWORD_UP effect of LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162)
+2026-03-12 12:03:42.448 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 7) due to URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f) effect
+2026-03-12 12:03:42.448 INFO  - Resolving POWER_UP effect of URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f)
+2026-03-12 12:03:42.449 DEBUG - CardInstance(uuid=69ed40dd-724d-420c-b67d-6e5f69dd2162, card=Card(id=17, setName=first_contact, name=LONE YETI, power=5, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=5, self=true, allies=false, lifePoints=null, alone=true, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null), KeywordUpEffect(value=FRENZY, self=true, allies=false, max=null, alone=true, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=While this is your only allied creature, it has <b>+5</b> power and <b>FRENZY</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[TOUGH], stillTough=true, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.449 DEBUG - CardInstance(uuid=90942e74-d828-4791-ba35-a32ad263da4f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.449 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.449 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 7) due to URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f) effect
+2026-03-12 12:03:42.449 INFO  - Resolving POWER_UP effect of URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f)
+2026-03-12 12:03:42.449 DEBUG - CardInstance(uuid=90942e74-d828-4791-ba35-a32ad263da4f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.449 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.449 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 7) due to URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f) effect
+2026-03-12 12:03:42.449 DEBUG - SPIDER OWL (c5e52cbe-1f51-470c-957a-bf2701569932) power changed (3 -> 5) due to URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f) effect
+2026-03-12 12:03:42.449 INFO  - Resolving POWER_UP effect of URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f)
+2026-03-12 12:03:42.449 DEBUG - CardInstance(uuid=90942e74-d828-4791-ba35-a32ad263da4f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.449 DEBUG - CardInstance(uuid=c5e52cbe-1f51-470c-957a-bf2701569932, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.449 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.449 DEBUG - CardInstance(uuid=c5e52cbe-1f51-470c-957a-bf2701569932, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.450 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.450 INFO  - Resolving NO_BLOCK effect of BEE BEAR (33ba7cfc-8b5c-470c-9e2c-10954547a33a)
+2026-03-12 12:03:42.450 DEBUG - CardInstance(uuid=c5e52cbe-1f51-470c-957a-bf2701569932, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[BlockModifier()]) no more able to attack
+2026-03-12 12:03:42.450 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.450 INFO  - Life update for player Player1 (c546c1e4-4217-427b-a071-ff74ead68088) : 2 LP
+2026-03-12 12:03:42.450 DEBUG - CardInstance(uuid=c5e52cbe-1f51-470c-957a-bf2701569932, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[BlockModifier()]) no more able to attack
+2026-03-12 12:03:42.450 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.450 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 7) due to URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f) effect
+2026-03-12 12:03:42.450 DEBUG - SPIDER OWL (c5e52cbe-1f51-470c-957a-bf2701569932) power changed (3 -> 5) due to URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f) effect
+2026-03-12 12:03:42.450 INFO  - Resolving POWER_UP effect of URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f)
+2026-03-12 12:03:42.450 DEBUG - CardInstance(uuid=90942e74-d828-4791-ba35-a32ad263da4f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.450 DEBUG - CardInstance(uuid=c5e52cbe-1f51-470c-957a-bf2701569932, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.450 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.450 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 7) due to URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f) effect
+2026-03-12 12:03:42.450 DEBUG - SPIDER OWL (c5e52cbe-1f51-470c-957a-bf2701569932) power changed (3 -> 5) due to URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f) effect
+2026-03-12 12:03:42.450 INFO  - Resolving POWER_UP effect of URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f)
+2026-03-12 12:03:42.450 DEBUG - CardInstance(uuid=90942e74-d828-4791-ba35-a32ad263da4f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.451 DEBUG - CardInstance(uuid=c5e52cbe-1f51-470c-957a-bf2701569932, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.451 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.451 INFO  - New FRENZY choice to be resolved by Player1 (c546c1e4-4217-427b-a071-ff74ead68088) (attackingCard : LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162))
+2026-03-12 12:03:42.451 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.451 DEBUG - LONE YETI (69ed40dd-724d-420c-b67d-6e5f69dd2162) power changed (5 -> 7) due to URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f) effect
+2026-03-12 12:03:42.451 DEBUG - SPIDER OWL (c5e52cbe-1f51-470c-957a-bf2701569932) power changed (3 -> 5) due to URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f) effect
+2026-03-12 12:03:42.451 INFO  - Resolving POWER_UP effect of URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f)
+2026-03-12 12:03:42.451 DEBUG - CardInstance(uuid=90942e74-d828-4791-ba35-a32ad263da4f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.451 DEBUG - CardInstance(uuid=c5e52cbe-1f51-470c-957a-bf2701569932, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.451 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.451 DEBUG - SPIDER OWL (c5e52cbe-1f51-470c-957a-bf2701569932) power changed (3 -> 5) due to URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f) effect
+2026-03-12 12:03:42.451 INFO  - Resolving POWER_UP effect of URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f)
+2026-03-12 12:03:42.451 DEBUG - CardInstance(uuid=90942e74-d828-4791-ba35-a32ad263da4f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.451 DEBUG - CardInstance(uuid=c5e52cbe-1f51-470c-957a-bf2701569932, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.451 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.451 DEBUG - CardInstance(uuid=c5e52cbe-1f51-470c-957a-bf2701569932, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.451 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.451 INFO  - Resolving NO_BLOCK effect of BEE BEAR (33ba7cfc-8b5c-470c-9e2c-10954547a33a)
+2026-03-12 12:03:42.451 DEBUG - CardInstance(uuid=c5e52cbe-1f51-470c-957a-bf2701569932, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[BlockModifier()]) no more able to attack
+2026-03-12 12:03:42.452 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.452 INFO  - Life update for player Player1 (c546c1e4-4217-427b-a071-ff74ead68088) : 1 LP
+2026-03-12 12:03:42.452 DEBUG - CardInstance(uuid=c5e52cbe-1f51-470c-957a-bf2701569932, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=3, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=false, protection=false, initialCard=null, modifiers=[BlockModifier()]) no more able to attack
+2026-03-12 12:03:42.452 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.452 DEBUG - SPIDER OWL (c5e52cbe-1f51-470c-957a-bf2701569932) power changed (3 -> 5) due to URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f) effect
+2026-03-12 12:03:42.452 INFO  - Resolving POWER_UP effect of URCHIN HURLER (90942e74-d828-4791-ba35-a32ad263da4f)
+2026-03-12 12:03:42.452 DEBUG - CardInstance(uuid=90942e74-d828-4791-ba35-a32ad263da4f, card=Card(id=32, setName=first_contact, name=URCHIN HURLER, power=5, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=true, description=Other allied creatures have <b>+2</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.452 DEBUG - CardInstance(uuid=c5e52cbe-1f51-470c-957a-bf2701569932, card=Card(id=27, setName=first_contact, name=SPIDER OWL, power=3, keywords=[SNEAKY, POISONOUS], effects={}, unique=false, description=“Hanging in there.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@20afd96f), power=5, keywords=[SNEAKY, POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:42.452 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b1c349d-d87d-4a6b-b3c7-c4c9225b4dd4)
+2026-03-12 12:03:42.452 INFO  - Game over : Player2 (f03a9a16-bc34-4e69-ac89-8e9d3fdfee71) wins ; Player1 (c546c1e4-4217-427b-a071-ff74ead68088) loses.
+2026-03-12 12:03:42.452 INFO  - End of the game

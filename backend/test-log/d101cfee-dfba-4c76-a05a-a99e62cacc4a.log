@@ -1,0 +1,136 @@
+2026-03-12 12:03:42.860 INFO  - Calculating first player...
+2026-03-12 12:03:42.863 INFO  - Banned card for Player1 (a185020d-4000-45dc-844f-792cb551878a) : TUSKED EXTORTER (92a5292b-ef56-4889-ae10-61ec57a1936b) (8)
+2026-03-12 12:03:42.863 INFO  - Banned card for Player2 (5faf0c33-5471-47d4-98a7-2ea332f43c2b) : RHINO TURTLE (4ad461d4-09e1-49eb-83ca-b5f4b2dec051) (8)
+2026-03-12 12:03:42.863 INFO  - Banned card for Player1 (a185020d-4000-45dc-844f-792cb551878a) : LUCHATAUR (027cb8ad-7105-443b-9e92-32bccd856d48) (9)
+2026-03-12 12:03:42.863 INFO  - Banned card for Player2 (5faf0c33-5471-47d4-98a7-2ea332f43c2b) : KILLER BEE (ef0a7723-072f-4766-84e8-225aea620781) (5)
+2026-03-12 12:03:42.863 INFO  - First player will be Player1 (a185020d-4000-45dc-844f-792cb551878a)
+2026-03-12 12:03:42.871 INFO  - Game d101cfee-dfba-4c76-a05a-a99e62cacc4a starting...
+2026-03-12 12:03:42.871 INFO  - Player Player1 (a185020d-4000-45dc-844f-792cb551878a) hand : {
+- THE LURKER ;
+- AXOLOTL HEALER ;
+- BUGSERKER ;
+- GOREAGLE ALPHA ;
+- BUGSERKER
+}
+2026-03-12 12:03:42.871 INFO  - Player Player1 (a185020d-4000-45dc-844f-792cb551878a) draw pile : {
+- TUSKED EXTORTER ;
+- SHIELD BUGS ;
+- CREEP FROM THE DEEP ;
+- SNAIL THROWER ;
+- HYENIX
+}
+2026-03-12 12:03:42.872 INFO  - Player Player2 (5faf0c33-5471-47d4-98a7-2ea332f43c2b) hand : {
+- COMPOST DRAGON ;
+- GOBLIN WEREWOLF ;
+- SNAIL HYDRA ;
+- MYSTERIOUS MERMAID ;
+- GRAVE ROBBER
+}
+2026-03-12 12:03:42.872 INFO  - Player Player2 (5faf0c33-5471-47d4-98a7-2ea332f43c2b) draw pile : {
+- PLATED SCORPION ;
+- COUNT DRACULEECH ;
+- LONE YETI ;
+- CHAMELEON SNIPER ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:42.872 DEBUG - Player1 (a185020d-4000-45dc-844f-792cb551878a) LP changed (3 -> 5) due to AXOLOTL HEALER (b8ae0b73-c658-4ba5-8eec-9bb91acfbc08) effect
+2026-03-12 12:03:42.872 INFO  - Resolving GAIN effect of AXOLOTL HEALER (b8ae0b73-c658-4ba5-8eec-9bb91acfbc08)
+2026-03-12 12:03:42.872 DEBUG - GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) effect
+2026-03-12 12:03:42.872 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf)
+2026-03-12 12:03:42.872 DEBUG - Player Player2 (5faf0c33-5471-47d4-98a7-2ea332f43c2b) must choose 1 card(s) to destroy (available targets : {
+- AXOLOTL HEALER ;
+- THE LURKER
+})
+2026-03-12 12:03:42.872 INFO  - New TARGET choice to be resolved by Player2 (5faf0c33-5471-47d4-98a7-2ea332f43c2b) (targets : {
+- AXOLOTL HEALER ;
+- THE LURKER
+})
+2026-03-12 12:03:42.872 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.872 DEBUG - SNAIL HYDRA (d5cd3f06-43c7-401d-8f94-6839cd9cbb2b) effect destroys AXOLOTL HEALER (b8ae0b73-c658-4ba5-8eec-9bb91acfbc08)
+2026-03-12 12:03:42.872 INFO  - Resolving DESTROY effect of SNAIL HYDRA (d5cd3f06-43c7-401d-8f94-6839cd9cbb2b)
+2026-03-12 12:03:43.984 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dcac1e8e-d7e1-4101-acf2-695edfc28030)
+2026-03-12 12:03:43.985 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dcac1e8e-d7e1-4101-acf2-695edfc28030)
+2026-03-12 12:03:43.985 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dcac1e8e-d7e1-4101-acf2-695edfc28030)
+2026-03-12 12:03:43.985 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dcac1e8e-d7e1-4101-acf2-695edfc28030)
+2026-03-12 12:03:43.985 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dcac1e8e-d7e1-4101-acf2-695edfc28030)
+2026-03-12 12:03:43.985 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dcac1e8e-d7e1-4101-acf2-695edfc28030)
+2026-03-12 12:03:43.985 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dcac1e8e-d7e1-4101-acf2-695edfc28030)
+2026-03-12 12:03:43.985 INFO  - Resolving POWER_UP effect of SHIELD BUGS (dcac1e8e-d7e1-4101-acf2-695edfc28030)
+2026-03-12 12:03:43.985 DEBUG - Player Player2 (5faf0c33-5471-47d4-98a7-2ea332f43c2b) must choose 1 cards to steal (targets : {
+- GOBLIN WEREWOLF ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:43.985 INFO  - New TARGET choice to be resolved by Player2 (5faf0c33-5471-47d4-98a7-2ea332f43c2b) (targets : {
+- GOBLIN WEREWOLF ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:43.985 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:43.985 DEBUG - GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) stolen and played by Player2 (5faf0c33-5471-47d4-98a7-2ea332f43c2b) due to COMPOST DRAGON (755107d4-75ec-4f61-b1b2-a6df6e030386) effect
+2026-03-12 12:03:43.985 INFO  - Resolving STEAL effect of COMPOST DRAGON (755107d4-75ec-4f61-b1b2-a6df6e030386)
+2026-03-12 12:03:43.985 DEBUG - GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) effect
+2026-03-12 12:03:43.985 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf)
+2026-03-12 12:03:43.985 DEBUG - GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) effect
+2026-03-12 12:03:43.985 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf)
+2026-03-12 12:03:43.985 DEBUG - GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) effect
+2026-03-12 12:03:43.985 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf)
+2026-03-12 12:03:43.986 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6fab4c27-5f1c-4ede-b049-d0c1a1432a2f)
+2026-03-12 12:03:43.986 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6fab4c27-5f1c-4ede-b049-d0c1a1432a2f)
+2026-03-12 12:03:43.986 DEBUG - GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) effect
+2026-03-12 12:03:43.986 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf)
+2026-03-12 12:03:43.986 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6fab4c27-5f1c-4ede-b049-d0c1a1432a2f)
+2026-03-12 12:03:43.986 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6fab4c27-5f1c-4ede-b049-d0c1a1432a2f)
+2026-03-12 12:03:43.986 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:43.986 DEBUG - GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) effect
+2026-03-12 12:03:43.986 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf)
+2026-03-12 12:03:43.986 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6fab4c27-5f1c-4ede-b049-d0c1a1432a2f)
+2026-03-12 12:03:43.986 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6fab4c27-5f1c-4ede-b049-d0c1a1432a2f)
+2026-03-12 12:03:43.986 DEBUG - GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) effect
+2026-03-12 12:03:43.986 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf)
+2026-03-12 12:03:43.986 INFO  - Life update for player Player1 (a185020d-4000-45dc-844f-792cb551878a) : 4 LP
+2026-03-12 12:03:43.986 DEBUG - Player1 (a185020d-4000-45dc-844f-792cb551878a) LP changed (5 -> 4) due to GOREAGLE ALPHA (82b3a951-8ab8-44fa-8cd3-a11f6ff78847) effect
+2026-03-12 12:03:43.986 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (82b3a951-8ab8-44fa-8cd3-a11f6ff78847)
+2026-03-12 12:03:43.986 DEBUG - Player1 (a185020d-4000-45dc-844f-792cb551878a) must decide if HYENIX (fe7b466e-b751-4ee4-bc95-0052a89f3ddc) will revive
+2026-03-12 12:03:43.986 INFO  - New BOOLEAN choice to be resolved by Player1 (a185020d-4000-45dc-844f-792cb551878a) (target : )
+2026-03-12 12:03:43.986 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:43.986 DEBUG - GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) effect
+2026-03-12 12:03:43.986 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf)
+2026-03-12 12:03:43.987 DEBUG - GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) effect
+2026-03-12 12:03:43.987 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf)
+2026-03-12 12:03:43.987 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:43.987 INFO  - New FRENZY choice to be resolved by Player1 (a185020d-4000-45dc-844f-792cb551878a) (attackingCard : GOREAGLE ALPHA (82b3a951-8ab8-44fa-8cd3-a11f6ff78847))
+2026-03-12 12:03:43.987 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:43.987 DEBUG - GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) effect
+2026-03-12 12:03:43.987 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf)
+2026-03-12 12:03:43.987 DEBUG - GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) effect
+2026-03-12 12:03:43.987 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf)
+2026-03-12 12:03:43.987 DEBUG - GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) power changed (2 -> 8) due to GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf) effect
+2026-03-12 12:03:43.987 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1ee5f66b-c725-43ca-a053-c6459848adaf)
+2026-03-12 12:03:43.987 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:43.987 INFO  - New FRENZY choice to be resolved by Player1 (a185020d-4000-45dc-844f-792cb551878a) (attackingCard : GOREAGLE ALPHA (82b3a951-8ab8-44fa-8cd3-a11f6ff78847))
+2026-03-12 12:03:43.987 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:43.987 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:43.987 INFO  - Life update for player Player1 (a185020d-4000-45dc-844f-792cb551878a) : 3 LP
+2026-03-12 12:03:43.987 DEBUG - Player1 (a185020d-4000-45dc-844f-792cb551878a) LP changed (4 -> 3) due to CHAMELEON SNIPER (76cb5f76-2350-4532-849a-c6291286b593) effect
+2026-03-12 12:03:43.987 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (76cb5f76-2350-4532-849a-c6291286b593)
+2026-03-12 12:03:43.987 DEBUG - Player1 (a185020d-4000-45dc-844f-792cb551878a) must decide if HYENIX (fe7b466e-b751-4ee4-bc95-0052a89f3ddc) will revive
+2026-03-12 12:03:43.987 INFO  - New BOOLEAN choice to be resolved by Player1 (a185020d-4000-45dc-844f-792cb551878a) (target : )
+2026-03-12 12:03:43.987 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:43.987 INFO  - Life update for player Player1 (a185020d-4000-45dc-844f-792cb551878a) : 2 LP
+2026-03-12 12:03:43.987 DEBUG - Player1 (a185020d-4000-45dc-844f-792cb551878a) must decide if HYENIX (fe7b466e-b751-4ee4-bc95-0052a89f3ddc) will revive
+2026-03-12 12:03:43.987 INFO  - New BOOLEAN choice to be resolved by Player1 (a185020d-4000-45dc-844f-792cb551878a) (target : )
+2026-03-12 12:03:43.987 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:43.987 INFO  - Life update for player Player1 (a185020d-4000-45dc-844f-792cb551878a) : 1 LP
+2026-03-12 12:03:43.987 DEBUG - Player1 (a185020d-4000-45dc-844f-792cb551878a) LP changed (2 -> 1) due to CHAMELEON SNIPER (76cb5f76-2350-4532-849a-c6291286b593) effect
+2026-03-12 12:03:43.987 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (76cb5f76-2350-4532-849a-c6291286b593)
+2026-03-12 12:03:43.987 DEBUG - BUGSERKER (51150214-26d0-43bd-aeff-e7ce99821b5c) power changed (3 -> 11) due to BUGSERKER (51150214-26d0-43bd-aeff-e7ce99821b5c) effect
+2026-03-12 12:03:43.987 INFO  - Resolving POWER_UP effect of BUGSERKER (51150214-26d0-43bd-aeff-e7ce99821b5c)
+2026-03-12 12:03:43.987 DEBUG - Player1 (a185020d-4000-45dc-844f-792cb551878a) must decide if HYENIX (fe7b466e-b751-4ee4-bc95-0052a89f3ddc) will revive
+2026-03-12 12:03:43.987 DEBUG - BUGSERKER (51150214-26d0-43bd-aeff-e7ce99821b5c) power changed (3 -> 11) due to BUGSERKER (51150214-26d0-43bd-aeff-e7ce99821b5c) effect
+2026-03-12 12:03:43.987 INFO  - Resolving POWER_UP effect of BUGSERKER (51150214-26d0-43bd-aeff-e7ce99821b5c)
+2026-03-12 12:03:43.987 INFO  - New BOOLEAN choice to be resolved by Player1 (a185020d-4000-45dc-844f-792cb551878a) (target : )
+2026-03-12 12:03:43.988 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:43.988 DEBUG - BUGSERKER (51150214-26d0-43bd-aeff-e7ce99821b5c) power changed (3 -> 11) due to BUGSERKER (51150214-26d0-43bd-aeff-e7ce99821b5c) effect
+2026-03-12 12:03:43.988 INFO  - Resolving POWER_UP effect of BUGSERKER (51150214-26d0-43bd-aeff-e7ce99821b5c)
+2026-03-12 12:03:43.988 INFO  - Life update for player Player1 (a185020d-4000-45dc-844f-792cb551878a) : 0 LP
+2026-03-12 12:03:43.988 INFO  - Game over : Player2 (5faf0c33-5471-47d4-98a7-2ea332f43c2b) wins ; Player1 (a185020d-4000-45dc-844f-792cb551878a) loses.
+2026-03-12 12:03:43.988 INFO  - End of the game

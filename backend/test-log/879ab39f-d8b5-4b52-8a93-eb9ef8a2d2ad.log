@@ -1,0 +1,44 @@
+2026-03-12 12:18:27.765 INFO  - Calculating first player...
+2026-03-12 12:18:27.767 INFO  - Banned card for Player1 (24c22317-dba3-4033-bb0b-8ee5d7f99c49) : BRAIN FLY (d12656b2-b7cf-431e-8bc5-eef689be2ad4) (4)
+2026-03-12 12:18:27.767 INFO  - Banned card for Player2 (649006af-857f-404e-84ec-0e37477e5b08) : RHINO TURTLE (6f372892-a648-40a6-ad16-eec910f0ea2f) (8)
+2026-03-12 12:18:27.767 INFO  - First player will be Player2 (649006af-857f-404e-84ec-0e37477e5b08)
+2026-03-12 12:18:27.776 INFO  - Game 879ab39f-d8b5-4b52-8a93-eb9ef8a2d2ad starting...
+2026-03-12 12:18:27.776 INFO  - Player Player1 (24c22317-dba3-4033-bb0b-8ee5d7f99c49) hand : {
+- CHAMELEON SNIPER ;
+- DEATHWEAVER ;
+- LUCHATAUR ;
+- GRAVE ROBBER ;
+- HAMSTER LION
+}
+2026-03-12 12:18:27.776 INFO  - Player Player1 (24c22317-dba3-4033-bb0b-8ee5d7f99c49) draw pile : {
+- MAJESTIC MANTICORE ;
+- KANGASAURUS REX ;
+- TURF THE SURFER ;
+- HYENIX ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:18:27.776 INFO  - Player Player2 (649006af-857f-404e-84ec-0e37477e5b08) hand : {
+- TUSKED EXTORTER ;
+- TIGER SQUIRREL ;
+- EXPLOSIVE TOAD ;
+- TURF THE SURFER ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:18:27.776 INFO  - Player Player2 (649006af-857f-404e-84ec-0e37477e5b08) draw pile : {
+- SPIDER OWL ;
+- MYSTERIOUS MERMAID ;
+- PLATED SCORPION ;
+- SNAIL HYDRA ;
+-  GIRAFFODILE
+}
+2026-03-12 12:18:27.777 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (fd227738-03e0-46aa-a864-7b790bfc9123)
+2026-03-12 12:18:27.777 INFO  - Life update for player Player1 (24c22317-dba3-4033-bb0b-8ee5d7f99c49) : 2 LP
+2026-03-12 12:18:27.777 INFO  - Life update for player Player2 (649006af-857f-404e-84ec-0e37477e5b08) : 2 LP
+2026-03-12 12:18:27.777 DEBUG - Player2 (649006af-857f-404e-84ec-0e37477e5b08) LP changed (3 -> 2) due to CHAMELEON SNIPER (6bc79cbc-4dc0-48a3-b56a-210bf5b6248a) effect
+2026-03-12 12:18:27.777 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (6bc79cbc-4dc0-48a3-b56a-210bf5b6248a)
+2026-03-12 12:18:27.777 INFO  - Life update for player Player2 (649006af-857f-404e-84ec-0e37477e5b08) : 1 LP
+2026-03-12 12:18:27.777 INFO  - Life update for player Player2 (649006af-857f-404e-84ec-0e37477e5b08) : 0 LP
+2026-03-12 12:18:27.777 INFO  - Game over : Player1 (24c22317-dba3-4033-bb0b-8ee5d7f99c49) wins ; Player2 (649006af-857f-404e-84ec-0e37477e5b08) loses.
+2026-03-12 12:18:27.777 INFO  - End of the game
+2026-03-12 12:18:27.777 DEBUG - Player2 (649006af-857f-404e-84ec-0e37477e5b08) LP changed (1 -> 0) due to CHAMELEON SNIPER (6bc79cbc-4dc0-48a3-b56a-210bf5b6248a) effect
+2026-03-12 12:18:27.777 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (6bc79cbc-4dc0-48a3-b56a-210bf5b6248a)

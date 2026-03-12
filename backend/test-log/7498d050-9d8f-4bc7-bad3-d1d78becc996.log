@@ -1,0 +1,278 @@
+2026-03-12 12:18:24.474 INFO  - Calculating first player...
+2026-03-12 12:18:24.476 INFO  - Banned card for Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) : EXPLOSIVE TOAD (2722d0d6-da9c-4bfa-b4bb-0417068767e3) (5)
+2026-03-12 12:18:24.476 INFO  - Banned card for Player2 (0c1fe9ce-fc7b-4ab1-842a-75dd360faabb) : COUNT DRACULEECH (6100cfd5-bb28-417c-95a6-66ba6de527d8) (7)
+2026-03-12 12:18:24.476 INFO  - First player will be Player2 (0c1fe9ce-fc7b-4ab1-842a-75dd360faabb)
+2026-03-12 12:18:24.483 INFO  - Game 7498d050-9d8f-4bc7-bad3-d1d78becc996 starting...
+2026-03-12 12:18:24.483 INFO  - Player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) hand : {
+- CREEP FROM THE DEEP ;
+- PLATED SCORPION ;
+- HUNGRY HUNGRY HAMSTER ;
+- SHARK DOG ;
+- BUGSERKER
+}
+2026-03-12 12:18:24.484 INFO  - Player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) draw pile : {
+- PLATED SCORPION ;
+- HAMSTER LION ;
+- CREEP FROM THE DEEP ;
+- AXOLOTL HEALER ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:18:24.484 INFO  - Player Player2 (0c1fe9ce-fc7b-4ab1-842a-75dd360faabb) hand : {
+- SNAIL HYDRA ;
+- KANGASAURUS REX ;
+- BUGSERKER ;
+- HUNGRY HUNGRY HAMSTER ;
+- DEATHWEAVER
+}
+2026-03-12 12:18:24.484 INFO  - Player Player2 (0c1fe9ce-fc7b-4ab1-842a-75dd360faabb) draw pile : {
+- CHAMELEON SNIPER ;
+- SHIELD BUGS ;
+- MAJESTIC MANTICORE ;
+- STRANGE BARREL ;
+- FERRET PACIFIER
+}
+2026-03-12 12:18:24.485 DEBUG - PLAY effects disabled for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014) effect
+2026-03-12 12:18:24.485 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014)
+2026-03-12 12:18:24.485 DEBUG - PLAY effects disabled for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014) effect
+2026-03-12 12:18:24.485 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014)
+2026-03-12 12:18:24.485 DEBUG - PLAY effects disabled for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014) effect
+2026-03-12 12:18:24.485 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014)
+2026-03-12 12:18:24.485 DEBUG - PLAY effects disabled for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014) effect
+2026-03-12 12:18:24.485 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014)
+2026-03-12 12:18:24.485 DEBUG - PLAY effects disabled for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014) effect
+2026-03-12 12:18:24.485 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014)
+2026-03-12 12:18:24.485 DEBUG - PLAY effects disabled for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014) effect
+2026-03-12 12:18:24.485 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014)
+2026-03-12 12:18:24.485 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:24.486 DEBUG - PLAY effects disabled for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014) effect
+2026-03-12 12:18:24.486 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014)
+2026-03-12 12:18:24.486 DEBUG - PLAY effects disabled for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014) effect
+2026-03-12 12:18:24.486 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014)
+2026-03-12 12:18:24.486 DEBUG - PLAY effects disabled for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014) effect
+2026-03-12 12:18:24.486 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014)
+2026-03-12 12:18:24.486 INFO  - Life update for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) : 2 LP
+2026-03-12 12:18:24.486 DEBUG - PLAY effects disabled for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014) effect
+2026-03-12 12:18:24.486 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014)
+2026-03-12 12:18:24.486 DEBUG - PLAY effects disabled for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014) effect
+2026-03-12 12:18:24.486 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014)
+2026-03-12 12:18:24.486 DEBUG - PLAY effects disabled for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014) effect
+2026-03-12 12:18:24.486 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014)
+2026-03-12 12:18:24.486 DEBUG - PLAY effects disabled for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014) effect
+2026-03-12 12:18:24.486 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (41b82e49-0a50-4c8c-9481-6bc467073014)
+2026-03-12 12:18:24.487 DEBUG - CardInstance(uuid=41cc5c89-a6b6-43e5-81cd-48ab66e1b03f, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2586e878), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.491 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (25815c3e-d96f-4c13-8ce2-d5e8f31c79f7)
+2026-03-12 12:18:24.491 DEBUG - CardInstance(uuid=41cc5c89-a6b6-43e5-81cd-48ab66e1b03f, card=Card(id=42, setName=first_contact, name=MAJESTIC MANTICORE, power=6, keywords=[POISONOUS], effects={ATTACK=[DestroyEffect(value=-1, min=null, max=null, lessAllies=false, lowest=true, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Defeat the creature(s) with the lowest power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2586e878), power=6, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.491 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (25815c3e-d96f-4c13-8ce2-d5e8f31c79f7)
+2026-03-12 12:18:24.491 DEBUG - CardInstance(uuid=69a5c29b-d41e-4f20-bd42-de3a5c8f0def, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2586e878), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.494 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (25815c3e-d96f-4c13-8ce2-d5e8f31c79f7)
+2026-03-12 12:18:24.494 DEBUG - Player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) must choose 1 cards to steal (targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- SHARK DOG ;
+- PLATED SCORPION ;
+- CREEP FROM THE DEEP ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:18:24.494 DEBUG - CardInstance(uuid=69a5c29b-d41e-4f20-bd42-de3a5c8f0def, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2586e878), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.495 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (25815c3e-d96f-4c13-8ce2-d5e8f31c79f7)
+2026-03-12 12:18:24.495 INFO  - New TARGET choice to be resolved by Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) (targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- PLATED SCORPION ;
+- CREEP FROM THE DEEP ;
+- SHARK DOG ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:18:24.495 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:24.495 DEBUG - Player2 (0c1fe9ce-fc7b-4ab1-842a-75dd360faabb) must decide if stolen card AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) will be added to hand or board
+2026-03-12 12:18:24.495 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (69a5c29b-d41e-4f20-bd42-de3a5c8f0def)
+2026-03-12 12:18:24.495 DEBUG - CardInstance(uuid=69a5c29b-d41e-4f20-bd42-de3a5c8f0def, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2586e878), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.495 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (25815c3e-d96f-4c13-8ce2-d5e8f31c79f7)
+2026-03-12 12:18:24.495 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:24.495 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) stolen and played by Player2 (0c1fe9ce-fc7b-4ab1-842a-75dd360faabb) due to HUNGRY HUNGRY HAMSTER (69a5c29b-d41e-4f20-bd42-de3a5c8f0def) effect
+2026-03-12 12:18:24.495 DEBUG - CardInstance(uuid=69a5c29b-d41e-4f20-bd42-de3a5c8f0def, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2586e878), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.495 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (25815c3e-d96f-4c13-8ce2-d5e8f31c79f7)
+2026-03-12 12:18:24.496 DEBUG - Player2 (0c1fe9ce-fc7b-4ab1-842a-75dd360faabb) LP changed (3 -> 5) due to AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) effect
+2026-03-12 12:18:24.496 INFO  - Resolving GAIN effect of AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35)
+2026-03-12 12:18:24.496 DEBUG - CardInstance(uuid=69a5c29b-d41e-4f20-bd42-de3a5c8f0def, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2586e878), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.496 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (25815c3e-d96f-4c13-8ce2-d5e8f31c79f7)
+2026-03-12 12:18:24.496 DEBUG - CardInstance(uuid=69a5c29b-d41e-4f20-bd42-de3a5c8f0def, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2586e878), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.496 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (25815c3e-d96f-4c13-8ce2-d5e8f31c79f7)
+2026-03-12 12:18:24.496 DEBUG - CardInstance(uuid=7d23d9d2-a895-4799-8d35-bff6d0544a35, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2586e878), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.498 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (25815c3e-d96f-4c13-8ce2-d5e8f31c79f7)
+2026-03-12 12:18:24.498 DEBUG - CardInstance(uuid=7d23d9d2-a895-4799-8d35-bff6d0544a35, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2586e878), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.498 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (25815c3e-d96f-4c13-8ce2-d5e8f31c79f7)
+2026-03-12 12:18:24.498 DEBUG - MAJESTIC MANTICORE (41cc5c89-a6b6-43e5-81cd-48ab66e1b03f) effect destroys BUGSERKER (42e13449-70a8-4210-8af5-559c7b39b714)
+2026-03-12 12:18:24.499 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (41cc5c89-a6b6-43e5-81cd-48ab66e1b03f)
+2026-03-12 12:18:24.499 DEBUG - CardInstance(uuid=7d23d9d2-a895-4799-8d35-bff6d0544a35, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2586e878), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.499 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (25815c3e-d96f-4c13-8ce2-d5e8f31c79f7)
+2026-03-12 12:18:24.499 DEBUG - CardInstance(uuid=7d23d9d2-a895-4799-8d35-bff6d0544a35, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2586e878), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.499 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (25815c3e-d96f-4c13-8ce2-d5e8f31c79f7)
+2026-03-12 12:18:24.499 DEBUG - CardInstance(uuid=7d23d9d2-a895-4799-8d35-bff6d0544a35, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2586e878), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:24.500 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (25815c3e-d96f-4c13-8ce2-d5e8f31c79f7)
+2026-03-12 12:18:24.500 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.500 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.500 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.500 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.500 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.501 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.501 DEBUG - Player Player2 (0c1fe9ce-fc7b-4ab1-842a-75dd360faabb) must choose 1 cards to steal (targets : {
+- KANGASAURUS REX ;
+- BUGSERKER ;
+- STRANGE BARREL ;
+- FERRET PACIFIER
+})
+2026-03-12 12:18:24.501 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.501 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.501 INFO  - New TARGET choice to be resolved by Player2 (0c1fe9ce-fc7b-4ab1-842a-75dd360faabb) (targets : {
+- BUGSERKER ;
+- KANGASAURUS REX ;
+- FERRET PACIFIER ;
+- STRANGE BARREL
+})
+2026-03-12 12:18:24.501 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:24.501 DEBUG - Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) must decide if stolen card FERRET PACIFIER (ff1ee318-19be-4bcb-9bc2-f9d9ba9743b5) will be added to hand or board
+2026-03-12 12:18:24.501 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (94ab2858-98ed-4e32-b2a7-130c7909b05a)
+2026-03-12 12:18:24.501 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.501 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.501 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:24.502 DEBUG - FERRET PACIFIER (ff1ee318-19be-4bcb-9bc2-f9d9ba9743b5) stolen and played by Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) due to HUNGRY HUNGRY HAMSTER (94ab2858-98ed-4e32-b2a7-130c7909b05a) effect
+2026-03-12 12:18:24.502 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.502 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.502 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ff1ee318-19be-4bcb-9bc2-f9d9ba9743b5)
+2026-03-12 12:18:24.502 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.502 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.502 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ff1ee318-19be-4bcb-9bc2-f9d9ba9743b5)
+2026-03-12 12:18:24.513 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.513 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.513 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.513 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ff1ee318-19be-4bcb-9bc2-f9d9ba9743b5)
+2026-03-12 12:18:24.513 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.513 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.514 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.514 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ff1ee318-19be-4bcb-9bc2-f9d9ba9743b5)
+2026-03-12 12:18:24.514 INFO  - Life update for player Player2 (0c1fe9ce-fc7b-4ab1-842a-75dd360faabb) : 4 LP
+2026-03-12 12:18:24.514 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.514 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.514 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.514 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ff1ee318-19be-4bcb-9bc2-f9d9ba9743b5)
+2026-03-12 12:18:24.514 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.514 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.514 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.514 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ff1ee318-19be-4bcb-9bc2-f9d9ba9743b5)
+2026-03-12 12:18:24.515 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.515 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.515 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.515 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.515 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ff1ee318-19be-4bcb-9bc2-f9d9ba9743b5)
+2026-03-12 12:18:24.515 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) effect destroys HUNGRY HUNGRY HAMSTER (94ab2858-98ed-4e32-b2a7-130c7909b05a)
+2026-03-12 12:18:24.515 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) effect destroys FERRET PACIFIER (ff1ee318-19be-4bcb-9bc2-f9d9ba9743b5)
+2026-03-12 12:18:24.515 INFO  - Resolving DESTROY effect of KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06)
+2026-03-12 12:18:24.515 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.515 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.515 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.515 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.515 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.515 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.516 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.516 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.516 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.516 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.516 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.516 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.516 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.516 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.516 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.516 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.516 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.516 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.516 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.517 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.517 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.517 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.517 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.517 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.517 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.517 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.517 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.517 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.517 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.517 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.517 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.517 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.517 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.518 DEBUG - AXOLOTL HEALER (7d23d9d2-a895-4799-8d35-bff6d0544a35) power changed (4 -> 5) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.518 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.518 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.518 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.518 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.518 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.518 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.518 DEBUG - Player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) must choose 1 card(s) to destroy (available targets : {
+- SHIELD BUGS ;
+- BUGSERKER ;
+- KANGASAURUS REX ;
+- STRANGE BARREL ;
+- PLATED SCORPION
+})
+2026-03-12 12:18:24.518 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.518 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.519 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.519 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.519 INFO  - New TARGET choice to be resolved by Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) (targets : {
+- SHIELD BUGS ;
+- BUGSERKER ;
+- KANGASAURUS REX ;
+- PLATED SCORPION ;
+- STRANGE BARREL
+})
+2026-03-12 12:18:24.519 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:24.519 DEBUG - EXPLOSIVE TOAD (48eebec5-30ff-4c2b-8b03-ed850c186f12) effect destroys PLATED SCORPION (c0135c89-27c4-4390-b5bb-d0ab9247b645)
+2026-03-12 12:18:24.519 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (48eebec5-30ff-4c2b-8b03-ed850c186f12)
+2026-03-12 12:18:24.519 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.519 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.519 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.519 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.519 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.519 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.519 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.519 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.520 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.520 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.520 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.520 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.520 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.520 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.520 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.520 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.521 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.521 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.521 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.522 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.522 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.522 DEBUG - KANGASAURUS REX (18fe95de-c8e7-41d0-8e18-0a3801c64c06) power changed (7 -> 8) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.522 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.522 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.522 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.522 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.522 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.522 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.522 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.523 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.523 INFO  - Life update for player Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) : 1 LP
+2026-03-12 12:18:24.523 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.523 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.523 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.523 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.523 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.523 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.523 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.524 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.524 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.524 DEBUG - BUGSERKER (d9ec6d25-8586-400b-9256-46e07a022b32) power changed (3 -> 4) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.524 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.524 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.524 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.524 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.524 DEBUG - STRANGE BARREL (c211fb9d-1174-4abd-897f-fc33d2e1fac7) power changed (6 -> 7) due to SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb) effect
+2026-03-12 12:18:24.524 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f6c2a87b-3168-4179-bfaa-8ec389fb6afb)
+2026-03-12 12:18:24.525 INFO  - Game over : Player2 (0c1fe9ce-fc7b-4ab1-842a-75dd360faabb) wins ; Player1 (f015a31e-c28a-4e60-b85a-885ff0fb40bb) loses.
+2026-03-12 12:18:24.525 INFO  - End of the game

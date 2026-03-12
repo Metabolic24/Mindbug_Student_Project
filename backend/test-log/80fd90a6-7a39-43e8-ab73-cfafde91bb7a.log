@@ -1,0 +1,133 @@
+2026-03-12 12:03:44.682 INFO  - Calculating first player...
+2026-03-12 12:03:44.684 INFO  - Banned card for Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) : SHARK DOG (970464b4-f3d3-4543-94ca-2f9f4bde637f) (4)
+2026-03-12 12:03:44.684 INFO  - Banned card for Player2 (69d2c07a-2a05-4421-913b-5ef2cfc691b8) : FERRET BOMBER (b508be4b-c2ff-423d-8d3a-6097b4483598) (2)
+2026-03-12 12:03:44.684 INFO  - First player will be Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d)
+2026-03-12 12:03:44.692 INFO  - Game 80fd90a6-7a39-43e8-ab73-cfafde91bb7a starting...
+2026-03-12 12:03:44.692 INFO  - Player Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) hand : {
+- THE LURKER ;
+- SNAIL THROWER ;
+- SNAIL HYDRA ;
+- BEE BEAR ;
+- CREEP FROM THE DEEP
+}
+2026-03-12 12:03:44.693 INFO  - Player Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) draw pile : {
+- AXOLOTL HEALER ;
+- HYENIX ;
+- CHAMELEON SNIPER ;
+- GRAVE ROBBER ;
+- LUCHATAUR
+}
+2026-03-12 12:03:44.693 INFO  - Player Player2 (69d2c07a-2a05-4421-913b-5ef2cfc691b8) hand : {
+- RHINO TURTLE ;
+- EXPLOSIVE TOAD ;
+- TIGER SQUIRREL ;
+- TIGER SQUIRREL ;
+- BRAIN FLY
+}
+2026-03-12 12:03:44.693 INFO  - Player Player2 (69d2c07a-2a05-4421-913b-5ef2cfc691b8) draw pile : {
+- MYSTERIOUS MERMAID ;
+-  GIRAFFODILE ;
+- SHIELD BUGS ;
+- GOBLIN WEREWOLF ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:44.693 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) effect destroys SNAIL HYDRA (61539b7d-49eb-4cce-b766-4a28d8c9de55)
+2026-03-12 12:03:44.693 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a)
+2026-03-12 12:03:44.694 INFO  - Resolving NO_BLOCK effect of BEE BEAR (8b2bef45-6a3b-4898-8ad8-607af60175ae)
+2026-03-12 12:03:44.694 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) power changed (3 -> 4) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.694 DEBUG - RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd) power changed (8 -> 9) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.694 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3)
+2026-03-12 12:03:44.694 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) power changed (3 -> 4) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.694 DEBUG - RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd) power changed (8 -> 9) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.694 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3)
+2026-03-12 12:03:44.694 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) power changed (3 -> 4) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.695 DEBUG - RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd) power changed (8 -> 9) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.695 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3)
+2026-03-12 12:03:44.695 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) power changed (3 -> 4) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.695 DEBUG - RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd) power changed (8 -> 9) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.695 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3)
+2026-03-12 12:03:44.695 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) power changed (3 -> 4) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.695 DEBUG - RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd) power changed (8 -> 9) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.695 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3)
+2026-03-12 12:03:44.695 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) power changed (3 -> 4) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.695 DEBUG - RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd) power changed (8 -> 9) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.695 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3)
+2026-03-12 12:03:44.695 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) power changed (3 -> 4) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.695 DEBUG - RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd) power changed (8 -> 9) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.695 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3)
+2026-03-12 12:03:44.696 DEBUG - CHAMELEON SNIPER (89ed88f7-a91d-45de-a987-965d58d9bdc2) gains HUNTER keyword
+2026-03-12 12:03:44.696 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.696 DEBUG - CHAMELEON SNIPER (89ed88f7-a91d-45de-a987-965d58d9bdc2) gains POISONOUS keyword
+2026-03-12 12:03:44.696 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.696 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) power changed (3 -> 4) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.696 DEBUG - RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd) power changed (8 -> 9) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.696 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3)
+2026-03-12 12:03:44.696 DEBUG - CHAMELEON SNIPER (89ed88f7-a91d-45de-a987-965d58d9bdc2) gains HUNTER keyword
+2026-03-12 12:03:44.696 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.696 DEBUG - CHAMELEON SNIPER (89ed88f7-a91d-45de-a987-965d58d9bdc2) gains POISONOUS keyword
+2026-03-12 12:03:44.696 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.696 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) power changed (3 -> 4) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.696 DEBUG - RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd) power changed (8 -> 9) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.696 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3)
+2026-03-12 12:03:44.696 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.696 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.696 INFO  - New FRENZY choice to be resolved by Player2 (69d2c07a-2a05-4421-913b-5ef2cfc691b8) (attackingCard : RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd))
+2026-03-12 12:03:44.696 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.696 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) power changed (3 -> 4) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.696 DEBUG - RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd) power changed (8 -> 9) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.696 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3)
+2026-03-12 12:03:44.696 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.697 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.697 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) power changed (3 -> 4) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.697 DEBUG - RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd) power changed (8 -> 9) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.697 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3)
+2026-03-12 12:03:44.697 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.697 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.697 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) power changed (3 -> 4) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.697 DEBUG - RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd) power changed (8 -> 9) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.697 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3)
+2026-03-12 12:03:44.697 DEBUG - THE LURKER (98152b24-a8af-4e3c-beac-6014bdb007e7) gains HUNTER keyword
+2026-03-12 12:03:44.697 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.697 DEBUG - THE LURKER (98152b24-a8af-4e3c-beac-6014bdb007e7) gains POISONOUS keyword
+2026-03-12 12:03:44.697 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.697 DEBUG - TIGER SQUIRREL (004bda55-508e-4f83-b22e-55f3981ff71a) power changed (3 -> 4) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.697 DEBUG - RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd) power changed (8 -> 9) due to SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3) effect
+2026-03-12 12:03:44.697 INFO  - Resolving POWER_UP effect of SHIELD BUGS (b9b077f8-2ef9-4fb8-99cd-c16011c53fe3)
+2026-03-12 12:03:44.697 DEBUG - THE LURKER (98152b24-a8af-4e3c-beac-6014bdb007e7) gains HUNTER keyword
+2026-03-12 12:03:44.697 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.697 DEBUG - THE LURKER (98152b24-a8af-4e3c-beac-6014bdb007e7) gains POISONOUS keyword
+2026-03-12 12:03:44.698 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c)
+2026-03-12 12:03:44.698 INFO  - New FRENZY choice to be resolved by Player2 (69d2c07a-2a05-4421-913b-5ef2cfc691b8) (attackingCard : RHINO TURTLE (70dae8fb-099c-4112-9049-f3f0f784b1bd))
+2026-03-12 12:03:44.698 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.698 INFO  - Life update for player Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) : 2 LP
+2026-03-12 12:03:44.698 DEBUG - Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) must decide if HYENIX (f1820d9b-353c-487a-a8aa-1ed0ca6ef7d7) will revive
+2026-03-12 12:03:44.698 INFO  - New BOOLEAN choice to be resolved by Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) (target : )
+2026-03-12 12:03:44.698 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:44.698 INFO  - Resolving NO_BLOCK effect of BEE BEAR (8b2bef45-6a3b-4898-8ad8-607af60175ae)
+2026-03-12 12:03:44.698 INFO  - Life update for player Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) : 1 LP
+2026-03-12 12:03:44.699 DEBUG - Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) must decide if HYENIX (f1820d9b-353c-487a-a8aa-1ed0ca6ef7d7) will revive
+2026-03-12 12:03:44.699 INFO  - New BOOLEAN choice to be resolved by Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) (target : )
+2026-03-12 12:03:44.699 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:44.699 DEBUG - HYENIX (f1820d9b-353c-487a-a8aa-1ed0ca6ef7d7) revived using its own effect
+2026-03-12 12:03:44.699 INFO  - Resolving REVIVE effect of HYENIX (f1820d9b-353c-487a-a8aa-1ed0ca6ef7d7)
+2026-03-12 12:03:44.699 DEBUG - Player Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) must choose 1 cards to steal (targets : {
+-  GIRAFFODILE ;
+- SHIELD BUGS ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:44.699 INFO  - New TARGET choice to be resolved by Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) (targets : {
+- SHIELD BUGS ;
+-  GIRAFFODILE ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:44.699 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.699 DEBUG -  GIRAFFODILE (8aa918bd-85ba-46a6-a358-4d88bec87c1c) stolen and played by Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) due to GRAVE ROBBER (79cd8fe6-eb4a-4359-8700-11c49c439579) effect
+2026-03-12 12:03:44.699 INFO  - Resolving STEAL effect of GRAVE ROBBER (79cd8fe6-eb4a-4359-8700-11c49c439579)
+2026-03-12 12:03:44.699 DEBUG - SNAIL HYDRA (61539b7d-49eb-4cce-b766-4a28d8c9de55) stolen and drawn by Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) due to  GIRAFFODILE (8aa918bd-85ba-46a6-a358-4d88bec87c1c) effect
+2026-03-12 12:03:44.699 DEBUG - CHAMELEON SNIPER (89ed88f7-a91d-45de-a987-965d58d9bdc2) stolen and drawn by Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) due to  GIRAFFODILE (8aa918bd-85ba-46a6-a358-4d88bec87c1c) effect
+2026-03-12 12:03:44.700 DEBUG - SNAIL THROWER (6a606dc6-722d-4ba4-b1ba-9d5d461d5d3c) stolen and drawn by Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) due to  GIRAFFODILE (8aa918bd-85ba-46a6-a358-4d88bec87c1c) effect
+2026-03-12 12:03:44.700 DEBUG - BEE BEAR (8b2bef45-6a3b-4898-8ad8-607af60175ae) stolen and drawn by Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) due to  GIRAFFODILE (8aa918bd-85ba-46a6-a358-4d88bec87c1c) effect
+2026-03-12 12:03:44.700 INFO  - Resolving STEAL effect of  GIRAFFODILE (8aa918bd-85ba-46a6-a358-4d88bec87c1c)
+2026-03-12 12:03:44.700 INFO  - Life update for player Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) : 0 LP
+2026-03-12 12:03:44.700 INFO  - Game over : Player2 (69d2c07a-2a05-4421-913b-5ef2cfc691b8) wins ; Player1 (c6a2a53f-791f-4250-a12f-a0cf2479d37d) loses.
+2026-03-12 12:03:44.700 INFO  - End of the game

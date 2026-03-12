@@ -1,0 +1,59 @@
+2026-03-12 12:03:06.093 INFO  - Calculating first player...
+2026-03-12 12:03:06.095 INFO  - Banned card for Player1 (7f6e023f-d9cd-4f53-8733-fa229c68a6d1) : DEATHWEAVER (30e6d755-9af0-4d2a-808b-e5c2b8232b74) (2)
+2026-03-12 12:03:06.095 INFO  - Banned card for Player2 (d3dcff6e-1ef9-4e91-b39f-5d42ff51a176) : STRANGE BARREL (b25afbd7-9502-4846-9381-e4c61862ba8b) (6)
+2026-03-12 12:03:06.095 INFO  - First player will be Player2 (d3dcff6e-1ef9-4e91-b39f-5d42ff51a176)
+2026-03-12 12:03:06.102 INFO  - Game ef3866fc-8833-4504-a9b1-3273f0486a5f starting...
+2026-03-12 12:03:06.103 INFO  - Player Player1 (7f6e023f-d9cd-4f53-8733-fa229c68a6d1) hand : {
+- HAMSTER LION ;
+- SPIDER OWL ;
+- RHINO TURTLE ;
+- KANGASAURUS REX ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:03:06.103 INFO  - Player Player1 (7f6e023f-d9cd-4f53-8733-fa229c68a6d1) draw pile : {
+- TURF THE SURFER ;
+- GRAVE ROBBER ;
+- SNAIL THROWER ;
+- PLATED SCORPION ;
+- COMPOST DRAGON
+}
+2026-03-12 12:03:06.103 INFO  - Player Player2 (d3dcff6e-1ef9-4e91-b39f-5d42ff51a176) hand : {
+- FROBLIN INSTIGATOR ;
+- FERRET BOMBER ;
+- KILLER BEE ;
+- KANGASAURUS REX ;
+- SNAIL HYDRA
+}
+2026-03-12 12:03:06.103 INFO  - Player Player2 (d3dcff6e-1ef9-4e91-b39f-5d42ff51a176) draw pile : {
+- SNAIL HYDRA ;
+- SHIELD BUGS ;
+- CHAMELEON SNIPER ;
+- EXPLOSIVE TOAD ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:06.104 INFO  - Life update for player Player1 (7f6e023f-d9cd-4f53-8733-fa229c68a6d1) : 2 LP
+2026-03-12 12:03:06.104 INFO  - Life update for player Player1 (7f6e023f-d9cd-4f53-8733-fa229c68a6d1) : 1 LP
+2026-03-12 12:03:06.104 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (897b29c1-782e-4eee-9217-37cf16fcf721)
+2026-03-12 12:03:06.104 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (897b29c1-782e-4eee-9217-37cf16fcf721)
+2026-03-12 12:03:06.104 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (897b29c1-782e-4eee-9217-37cf16fcf721)
+2026-03-12 12:03:06.104 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (897b29c1-782e-4eee-9217-37cf16fcf721)
+2026-03-12 12:03:06.104 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (897b29c1-782e-4eee-9217-37cf16fcf721)
+2026-03-12 12:03:06.104 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (897b29c1-782e-4eee-9217-37cf16fcf721)
+2026-03-12 12:03:06.104 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a3dc9c1e-d84e-48a2-a965-521f44fe8afe)
+2026-03-12 12:03:06.105 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a3dc9c1e-d84e-48a2-a965-521f44fe8afe)
+2026-03-12 12:03:06.105 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (e27cf69d-b539-438c-b4aa-b6278ce85297)
+2026-03-12 12:03:06.105 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a3dc9c1e-d84e-48a2-a965-521f44fe8afe)
+2026-03-12 12:03:06.105 INFO  - Life update for player Player2 (d3dcff6e-1ef9-4e91-b39f-5d42ff51a176) : 2 LP
+2026-03-12 12:03:06.105 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a3dc9c1e-d84e-48a2-a965-521f44fe8afe)
+2026-03-12 12:03:06.105 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a3dc9c1e-d84e-48a2-a965-521f44fe8afe)
+2026-03-12 12:03:06.105 DEBUG - CHAMELEON SNIPER (9f110af0-32be-4403-8416-497c3714a95a) power changed (1 -> 2) due to SHIELD BUGS (a3dc9c1e-d84e-48a2-a965-521f44fe8afe) effect
+2026-03-12 12:03:06.105 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a3dc9c1e-d84e-48a2-a965-521f44fe8afe)
+2026-03-12 12:03:06.105 DEBUG - CHAMELEON SNIPER (9f110af0-32be-4403-8416-497c3714a95a) power changed (1 -> 2) due to SHIELD BUGS (a3dc9c1e-d84e-48a2-a965-521f44fe8afe) effect
+2026-03-12 12:03:06.105 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a3dc9c1e-d84e-48a2-a965-521f44fe8afe)
+2026-03-12 12:03:06.105 DEBUG - CHAMELEON SNIPER (9f110af0-32be-4403-8416-497c3714a95a) power changed (1 -> 2) due to SHIELD BUGS (a3dc9c1e-d84e-48a2-a965-521f44fe8afe) effect
+2026-03-12 12:03:06.105 INFO  - Resolving POWER_UP effect of SHIELD BUGS (a3dc9c1e-d84e-48a2-a965-521f44fe8afe)
+2026-03-12 12:03:06.105 INFO  - Life update for player Player1 (7f6e023f-d9cd-4f53-8733-fa229c68a6d1) : 0 LP
+2026-03-12 12:03:06.105 INFO  - Game over : Player2 (d3dcff6e-1ef9-4e91-b39f-5d42ff51a176) wins ; Player1 (7f6e023f-d9cd-4f53-8733-fa229c68a6d1) loses.
+2026-03-12 12:03:06.105 INFO  - End of the game
+2026-03-12 12:03:06.105 DEBUG - Player1 (7f6e023f-d9cd-4f53-8733-fa229c68a6d1) LP changed (1 -> 0) due to GOREAGLE ALPHA (5986bb7a-dc72-4c2e-ba38-a262f8d7cf29) effect
+2026-03-12 12:03:06.105 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (5986bb7a-dc72-4c2e-ba38-a262f8d7cf29)

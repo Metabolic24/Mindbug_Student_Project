@@ -1,0 +1,183 @@
+2026-03-12 12:03:44.361 INFO  - Calculating first player...
+2026-03-12 12:03:44.365 INFO  - Banned card for Player1 (5e04fcc1-238d-4df6-89b6-573a21d666d7) : COUNT DRACULEECH (3acb05a3-d498-4867-803b-5bde0a864b0a) (7)
+2026-03-12 12:03:44.365 INFO  - Banned card for Player2 (df34923e-fbc8-4c7b-96aa-8a3edb83b8de) : FERRET BOMBER (6b6f74b2-13f7-4d2c-a36e-9353afd45e57) (2)
+2026-03-12 12:03:44.365 INFO  - First player will be Player1 (5e04fcc1-238d-4df6-89b6-573a21d666d7)
+2026-03-12 12:03:44.374 INFO  - Game e1297b7b-b1e6-4a29-9a5a-cd7f15be5729 starting...
+2026-03-12 12:03:44.374 INFO  - Player Player1 (5e04fcc1-238d-4df6-89b6-573a21d666d7) hand : {
+- THE LURKER ;
+- TURF THE SURFER ;
+- AXOLOTL HEALER ;
+- STRANGE BARREL ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:44.375 INFO  - Player Player1 (5e04fcc1-238d-4df6-89b6-573a21d666d7) draw pile : {
+- SPIDER OWL ;
+- SPIDER OWL ;
+- LUCHATAUR ;
+- MAJESTIC MANTICORE ;
+- GRAVE ROBBER
+}
+2026-03-12 12:03:44.375 INFO  - Player Player2 (df34923e-fbc8-4c7b-96aa-8a3edb83b8de) hand : {
+- FERRET BOMBER ;
+- KANGASAURUS REX ;
+- HAMSTER LION ;
+- BRAIN FLY ;
+- SNAIL THROWER
+}
+2026-03-12 12:03:44.375 INFO  - Player Player2 (df34923e-fbc8-4c7b-96aa-8a3edb83b8de) draw pile : {
+- HYENIX ;
+- GOREAGLE ALPHA ;
+- GOBLIN WEREWOLF ;
+- SNAIL HYDRA ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:03:44.375 DEBUG - STRANGE BARREL (baf0697c-d6bb-4265-84ef-4bd000fdfdec) stolen and played by Player2 (df34923e-fbc8-4c7b-96aa-8a3edb83b8de) due to BRAIN FLY (01ad8d95-57c5-4bde-9a1e-19131443d592) effect
+2026-03-12 12:03:44.375 INFO  - Resolving STEAL effect of BRAIN FLY (01ad8d95-57c5-4bde-9a1e-19131443d592)
+2026-03-12 12:03:44.375 DEBUG - Player Player1 (5e04fcc1-238d-4df6-89b6-573a21d666d7) must choose 1 card(s) that will be unable to block (targets : {
+- BRAIN FLY ;
+- STRANGE BARREL ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:44.375 INFO  - New TARGET choice to be resolved by Player1 (5e04fcc1-238d-4df6-89b6-573a21d666d7) (targets : {
+- KANGASAURUS REX ;
+- STRANGE BARREL ;
+- BRAIN FLY
+})
+2026-03-12 12:03:44.376 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.376 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0)
+2026-03-12 12:03:44.376 DEBUG - AXOLOTL HEALER (a11ec5f6-d4aa-4b53-954d-09e9714817ba) stolen and drawn by Player2 (df34923e-fbc8-4c7b-96aa-8a3edb83b8de) due to STRANGE BARREL (baf0697c-d6bb-4265-84ef-4bd000fdfdec) effect
+2026-03-12 12:03:44.376 DEBUG - SPIDER OWL (e516c4b0-ff8a-4760-95a1-b8b588d6d0a7) stolen and drawn by Player2 (df34923e-fbc8-4c7b-96aa-8a3edb83b8de) due to STRANGE BARREL (baf0697c-d6bb-4265-84ef-4bd000fdfdec) effect
+2026-03-12 12:03:44.376 INFO  - Resolving STEAL effect of STRANGE BARREL (baf0697c-d6bb-4265-84ef-4bd000fdfdec)
+2026-03-12 12:03:44.376 DEBUG - Player Player1 (5e04fcc1-238d-4df6-89b6-573a21d666d7) must choose 2 card(s) to discard (available targets : {
+- THE LURKER ;
+- SHIELD BUGS ;
+- LUCHATAUR ;
+- MAJESTIC MANTICORE ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:44.376 INFO  - New TARGET choice to be resolved by Player1 (5e04fcc1-238d-4df6-89b6-573a21d666d7) (targets : {
+- THE LURKER ;
+- MAJESTIC MANTICORE ;
+- GRAVE ROBBER ;
+- LUCHATAUR ;
+- SHIELD BUGS
+})
+2026-03-12 12:03:44.376 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.376 DEBUG - THE LURKER (4b307fda-57b9-4dcd-8a5d-9f38a8fe14f7) discarded due to FERRET BOMBER (8e6d5099-904c-4ae5-bf5a-e5722a158df5) effect
+2026-03-12 12:03:44.376 DEBUG - GRAVE ROBBER (ef6bb634-9400-4401-8bf9-3bec8529b348) discarded due to FERRET BOMBER (8e6d5099-904c-4ae5-bf5a-e5722a158df5) effect
+2026-03-12 12:03:44.376 INFO  - Resolving DISCARD effect of FERRET BOMBER (8e6d5099-904c-4ae5-bf5a-e5722a158df5)
+2026-03-12 12:03:44.376 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 DEBUG - SPIDER OWL (fd39ff13-0004-432b-bd20-3be50f4fa3f8) power changed (3 -> 4) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.377 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 DEBUG - SPIDER OWL (fd39ff13-0004-432b-bd20-3be50f4fa3f8) power changed (3 -> 4) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.377 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 DEBUG - SPIDER OWL (fd39ff13-0004-432b-bd20-3be50f4fa3f8) power changed (3 -> 4) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.377 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 DEBUG - SPIDER OWL (fd39ff13-0004-432b-bd20-3be50f4fa3f8) power changed (3 -> 4) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.377 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 DEBUG - SPIDER OWL (fd39ff13-0004-432b-bd20-3be50f4fa3f8) power changed (3 -> 4) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.377 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 DEBUG - SPIDER OWL (fd39ff13-0004-432b-bd20-3be50f4fa3f8) power changed (3 -> 4) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.377 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.377 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.377 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.377 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.378 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.378 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.378 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.378 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.378 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.378 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.378 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0)
+2026-03-12 12:03:44.378 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.378 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.378 INFO  - Life update for player Player2 (df34923e-fbc8-4c7b-96aa-8a3edb83b8de) : 2 LP
+2026-03-12 12:03:44.378 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.378 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.378 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.378 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.378 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.378 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.379 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.379 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.379 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0)
+2026-03-12 12:03:44.379 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.379 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.379 INFO  - Life update for player Player2 (df34923e-fbc8-4c7b-96aa-8a3edb83b8de) : 1 LP
+2026-03-12 12:03:44.379 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.379 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.379 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.379 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.379 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.379 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.379 DEBUG - GOBLIN WEREWOLF (923c36e9-a845-4b31-9dd1-1e17db504c0a) power changed (2 -> 8) due to GOBLIN WEREWOLF (923c36e9-a845-4b31-9dd1-1e17db504c0a) effect
+2026-03-12 12:03:44.379 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (923c36e9-a845-4b31-9dd1-1e17db504c0a)
+2026-03-12 12:03:44.379 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.379 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.379 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.379 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.379 DEBUG - TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0) power changed (8 -> 9) due to SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6) effect
+2026-03-12 12:03:44.379 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cf8283c3-667a-4df5-893a-d965bcc80ec6)
+2026-03-12 12:03:44.379 INFO  - New FRENZY choice to be resolved by Player2 (df34923e-fbc8-4c7b-96aa-8a3edb83b8de) (attackingCard : HYENIX (2731318d-f34c-4dd9-8dfe-e02b89cf07c4))
+2026-03-12 12:03:44.380 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.380 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.380 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.380 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.380 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.380 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.380 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.380 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.380 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.380 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.381 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.381 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.381 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.381 DEBUG - Player Player1 (5e04fcc1-238d-4df6-89b6-573a21d666d7) must choose 1 card(s) that will be unable to block (targets : {
+- SNAIL THROWER ;
+- EXPLOSIVE TOAD
+})
+2026-03-12 12:03:44.381 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.381 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.381 INFO  - New TARGET choice to be resolved by Player1 (5e04fcc1-238d-4df6-89b6-573a21d666d7) (targets : {
+- EXPLOSIVE TOAD ;
+- SNAIL THROWER
+})
+2026-03-12 12:03:44.381 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.381 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0)
+2026-03-12 12:03:44.381 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.381 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.381 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.381 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.381 DEBUG - Player Player2 (df34923e-fbc8-4c7b-96aa-8a3edb83b8de) must choose 1 card(s) to destroy (available targets : {
+- TURF THE SURFER ;
+- MAJESTIC MANTICORE ;
+- LUCHATAUR ;
+- SNAIL THROWER
+})
+2026-03-12 12:03:44.381 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.381 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.382 INFO  - New TARGET choice to be resolved by Player2 (df34923e-fbc8-4c7b-96aa-8a3edb83b8de) (targets : {
+- TURF THE SURFER ;
+- MAJESTIC MANTICORE ;
+- LUCHATAUR ;
+- SNAIL THROWER
+})
+2026-03-12 12:03:44.382 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.382 DEBUG - EXPLOSIVE TOAD (8c19435f-1a99-4ad4-8203-eb59f175a66d) effect destroys LUCHATAUR (846b7204-5c33-4d93-974c-47999f01df76)
+2026-03-12 12:03:44.382 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (8c19435f-1a99-4ad4-8203-eb59f175a66d)
+2026-03-12 12:03:44.382 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.382 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.382 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.382 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (5fcd4b52-5ee0-49e3-82cb-c9d6adfb6805)
+2026-03-12 12:03:44.382 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (8ed22f9b-2e97-4ab2-be8e-4fea788ed0e0)
+2026-03-12 12:03:44.382 INFO  - Life update for player Player2 (df34923e-fbc8-4c7b-96aa-8a3edb83b8de) : 0 LP
+2026-03-12 12:03:44.382 INFO  - Game over : Player1 (5e04fcc1-238d-4df6-89b6-573a21d666d7) wins ; Player2 (df34923e-fbc8-4c7b-96aa-8a3edb83b8de) loses.
+2026-03-12 12:03:44.382 INFO  - End of the game

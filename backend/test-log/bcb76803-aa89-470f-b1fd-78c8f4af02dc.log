@@ -1,0 +1,88 @@
+2026-03-12 12:03:47.152 INFO  - Calculating first player...
+2026-03-12 12:03:47.153 INFO  - Banned card for Player1 (21b61039-688f-419f-8cb0-16ff75adf18e) : SNAIL THROWER (bb4485bf-8c11-44c6-b3e8-50f62ceaf145) (1)
+2026-03-12 12:03:47.153 INFO  - Banned card for Player2 (a60cf910-79ed-439d-a647-c1ce4ad984cc) : MAJESTIC MANTICORE (8a50932e-34e0-45d0-8cc0-68120bd61bac) (6)
+2026-03-12 12:03:47.153 INFO  - First player will be Player2 (a60cf910-79ed-439d-a647-c1ce4ad984cc)
+2026-03-12 12:03:47.161 INFO  - Game bcb76803-aa89-470f-b1fd-78c8f4af02dc starting...
+2026-03-12 12:03:47.161 INFO  - Player Player1 (21b61039-688f-419f-8cb0-16ff75adf18e) hand : {
+- PLATED SCORPION ;
+- COMPOST DRAGON ;
+- HYENIX ;
+- BUGSERKER ;
+- URCHIN HURLER
+}
+2026-03-12 12:03:47.161 INFO  - Player Player1 (21b61039-688f-419f-8cb0-16ff75adf18e) draw pile : {
+- THE LURKER ;
+- HAMSTER LION ;
+- GOREAGLE ALPHA ;
+- FERRET PACIFIER ;
+- GRAVE ROBBER
+}
+2026-03-12 12:03:47.161 INFO  - Player Player2 (a60cf910-79ed-439d-a647-c1ce4ad984cc) hand : {
+- HARPY MOTHER ;
+- KANGASAURUS REX ;
+- HUNGRY HUNGRY HAMSTER ;
+- PLATED SCORPION ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:03:47.161 INFO  - Player Player2 (a60cf910-79ed-439d-a647-c1ce4ad984cc) draw pile : {
+- FERRET BOMBER ;
+- LUCHATAUR ;
+- COUNT DRACULEECH ;
+- SPIDER OWL ;
+- HAMSTER LION
+}
+2026-03-12 12:03:47.162 DEBUG - BUGSERKER (f21b4388-0791-4b09-8246-a59e3631c586) power changed (3 -> 5) due to URCHIN HURLER (4e8df071-5521-4fdb-8e6d-30f8af4bbd0d) effect
+2026-03-12 12:03:47.162 INFO  - Resolving POWER_UP effect of URCHIN HURLER (4e8df071-5521-4fdb-8e6d-30f8af4bbd0d)
+2026-03-12 12:03:47.162 DEBUG - BUGSERKER (f21b4388-0791-4b09-8246-a59e3631c586) power changed (3 -> 5) due to URCHIN HURLER (4e8df071-5521-4fdb-8e6d-30f8af4bbd0d) effect
+2026-03-12 12:03:47.162 INFO  - Resolving POWER_UP effect of URCHIN HURLER (4e8df071-5521-4fdb-8e6d-30f8af4bbd0d)
+2026-03-12 12:03:47.162 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:47.162 DEBUG - BUGSERKER (f21b4388-0791-4b09-8246-a59e3631c586) power changed (3 -> 5) due to URCHIN HURLER (4e8df071-5521-4fdb-8e6d-30f8af4bbd0d) effect
+2026-03-12 12:03:47.162 INFO  - Resolving POWER_UP effect of URCHIN HURLER (4e8df071-5521-4fdb-8e6d-30f8af4bbd0d)
+2026-03-12 12:03:47.162 DEBUG - Player Player2 (a60cf910-79ed-439d-a647-c1ce4ad984cc) must choose 2 cards to steal (targets : {
+- BUGSERKER
+})
+2026-03-12 12:03:47.162 INFO  - New TARGET choice to be resolved by Player2 (a60cf910-79ed-439d-a647-c1ce4ad984cc) (targets : {
+- BUGSERKER
+})
+2026-03-12 12:03:47.162 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:47.162 DEBUG - BUGSERKER (f21b4388-0791-4b09-8246-a59e3631c586) stolen and played by Player2 (a60cf910-79ed-439d-a647-c1ce4ad984cc) due to HARPY MOTHER (cb83ad68-340c-485a-b979-bd477a497420) effect
+2026-03-12 12:03:47.162 INFO  - Resolving STEAL effect of HARPY MOTHER (cb83ad68-340c-485a-b979-bd477a497420)
+2026-03-12 12:03:47.163 INFO  - Life update for player Player1 (21b61039-688f-419f-8cb0-16ff75adf18e) : 2 LP
+2026-03-12 12:03:47.163 DEBUG - Player1 (21b61039-688f-419f-8cb0-16ff75adf18e) must decide if HYENIX (764408fa-aca8-4781-b654-c02800512863) will revive
+2026-03-12 12:03:47.163 INFO  - New BOOLEAN choice to be resolved by Player1 (21b61039-688f-419f-8cb0-16ff75adf18e) (target : )
+2026-03-12 12:03:47.163 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:47.163 DEBUG - HYENIX (764408fa-aca8-4781-b654-c02800512863) revived using its own effect
+2026-03-12 12:03:47.163 INFO  - Resolving REVIVE effect of HYENIX (764408fa-aca8-4781-b654-c02800512863)
+2026-03-12 12:03:47.163 INFO  - Life update for player Player1 (21b61039-688f-419f-8cb0-16ff75adf18e) : 1 LP
+2026-03-12 12:03:47.163 DEBUG - Player1 (21b61039-688f-419f-8cb0-16ff75adf18e) LP changed (2 -> 1) due to GOREAGLE ALPHA (ffa3f0b1-4fa3-4634-82e5-a431e8bb4c93) effect
+2026-03-12 12:03:47.163 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (ffa3f0b1-4fa3-4634-82e5-a431e8bb4c93)
+2026-03-12 12:03:47.163 INFO  - Life update for player Player2 (a60cf910-79ed-439d-a647-c1ce4ad984cc) : 2 LP
+2026-03-12 12:03:47.163 INFO  - New FRENZY choice to be resolved by Player1 (21b61039-688f-419f-8cb0-16ff75adf18e) (attackingCard : HYENIX (764408fa-aca8-4781-b654-c02800512863))
+2026-03-12 12:03:47.163 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:47.163 INFO  - Life update for player Player2 (a60cf910-79ed-439d-a647-c1ce4ad984cc) : 1 LP
+2026-03-12 12:03:47.163 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ced4ee39-6fd3-4e9e-8d81-eb14db00086a)
+2026-03-12 12:03:47.163 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ced4ee39-6fd3-4e9e-8d81-eb14db00086a)
+2026-03-12 12:03:47.164 DEBUG - Player Player1 (21b61039-688f-419f-8cb0-16ff75adf18e) must choose 1 card(s) to discard (available targets : {
+- PLATED SCORPION ;
+- COMPOST DRAGON ;
+- THE LURKER ;
+- HAMSTER LION ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:47.164 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ced4ee39-6fd3-4e9e-8d81-eb14db00086a)
+2026-03-12 12:03:47.164 INFO  - New TARGET choice to be resolved by Player1 (21b61039-688f-419f-8cb0-16ff75adf18e) (targets : {
+- PLATED SCORPION ;
+- COMPOST DRAGON ;
+- HAMSTER LION ;
+- THE LURKER ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:47.164 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:47.164 DEBUG - PLATED SCORPION (ebf21144-3dcb-4bf8-9a0c-a36ef75c8479) discarded due to TUSKED EXTORTER (88f8c7b6-1100-47c0-a256-6f78375fa1f2) effect
+2026-03-12 12:03:47.164 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (88f8c7b6-1100-47c0-a256-6f78375fa1f2)
+2026-03-12 12:03:47.164 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ced4ee39-6fd3-4e9e-8d81-eb14db00086a)
+2026-03-12 12:03:47.164 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ced4ee39-6fd3-4e9e-8d81-eb14db00086a)
+2026-03-12 12:03:47.164 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ced4ee39-6fd3-4e9e-8d81-eb14db00086a)
+2026-03-12 12:03:47.164 INFO  - Life update for player Player2 (a60cf910-79ed-439d-a647-c1ce4ad984cc) : 0 LP
+2026-03-12 12:03:47.164 INFO  - Game over : Player1 (21b61039-688f-419f-8cb0-16ff75adf18e) wins ; Player2 (a60cf910-79ed-439d-a647-c1ce4ad984cc) loses.
+2026-03-12 12:03:47.164 INFO  - End of the game

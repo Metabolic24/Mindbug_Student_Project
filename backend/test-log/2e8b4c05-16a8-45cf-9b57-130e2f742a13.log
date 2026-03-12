@@ -1,0 +1,337 @@
+2026-03-12 12:03:42.650 INFO  - Calculating first player...
+2026-03-12 12:03:42.652 INFO  - Banned card for Player1 (05a5fa8d-32f4-4ed7-8312-b366f76e0eb5) : KILLER BEE (8a9c4225-8671-4d58-9270-b42e32b67992) (5)
+2026-03-12 12:03:42.653 INFO  - Banned card for Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) : KANGASAURUS REX (bd7fd862-2c81-4291-9685-cc3e177cf2fa) (7)
+2026-03-12 12:03:42.653 INFO  - First player will be Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c)
+2026-03-12 12:03:42.661 INFO  - Game 2e8b4c05-16a8-45cf-9b57-130e2f742a13 starting...
+2026-03-12 12:03:42.661 INFO  - Player Player1 (05a5fa8d-32f4-4ed7-8312-b366f76e0eb5) hand : {
+- GOBLIN WEREWOLF ;
+- PLATED SCORPION ;
+- RHINO TURTLE ;
+- KILLER BEE ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:42.661 INFO  - Player Player1 (05a5fa8d-32f4-4ed7-8312-b366f76e0eb5) draw pile : {
+- HUNGRY HUNGRY HAMSTER ;
+- HUNGRY HUNGRY HAMSTER ;
+- SNAIL THROWER ;
+- URCHIN HURLER ;
+- COUNT DRACULEECH
+}
+2026-03-12 12:03:42.661 INFO  - Player Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) hand : {
+- GORILLON ;
+- KANGASAURUS REX ;
+- SHARK DOG ;
+- STRANGE BARREL ;
+- TURF THE SURFER
+}
+2026-03-12 12:03:42.662 INFO  - Player Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) draw pile : {
+- FROBLIN INSTIGATOR ;
+- SHIELD BUGS ;
+- RHINO TURTLE ;
+- CHAMELEON SNIPER ;
+- COUNT DRACULEECH
+}
+2026-03-12 12:03:42.662 DEBUG - MAJESTIC MANTICORE (f83516f6-5eab-4020-8cc2-22db414c285a) effect destroys SHARK DOG (2eb1080e-6a0c-4fb5-ba06-b79f9bc6a71e)
+2026-03-12 12:03:42.662 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (f83516f6-5eab-4020-8cc2-22db414c285a)
+2026-03-12 12:03:42.663 DEBUG - KILLER BEE (4ebf7f19-bd53-4c48-b6da-0e36af759c8d) stolen and drawn by Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) due to STRANGE BARREL (ce3a855f-a122-4d44-a694-4801434ef806) effect
+2026-03-12 12:03:42.663 DEBUG - RHINO TURTLE (b1294ea3-c1de-40fb-839c-785ee990189f) stolen and drawn by Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) due to STRANGE BARREL (ce3a855f-a122-4d44-a694-4801434ef806) effect
+2026-03-12 12:03:42.663 INFO  - Resolving STEAL effect of STRANGE BARREL (ce3a855f-a122-4d44-a694-4801434ef806)
+2026-03-12 12:03:42.663 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 1) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.663 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.663 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 1) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.663 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.663 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 1) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.663 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.663 DEBUG - Player Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) must choose 1 cards to steal (targets : {
+- GORILLON ;
+- KANGASAURUS REX ;
+- TURF THE SURFER ;
+- SHIELD BUGS ;
+- KILLER BEE ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:42.663 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 1) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.663 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.663 INFO  - New TARGET choice to be resolved by Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) (targets : {
+- TURF THE SURFER ;
+- RHINO TURTLE ;
+- GORILLON ;
+- SHIELD BUGS ;
+- KILLER BEE ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:42.663 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.663 DEBUG - Player1 (05a5fa8d-32f4-4ed7-8312-b366f76e0eb5) must decide if stolen card SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) will be added to hand or board
+2026-03-12 12:03:42.663 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf)
+2026-03-12 12:03:42.663 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 1) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.663 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.663 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:42.663 DEBUG - SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) stolen and drawn by Player1 (05a5fa8d-32f4-4ed7-8312-b366f76e0eb5) due to HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) effect
+2026-03-12 12:03:42.663 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 1) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.663 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.663 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 1) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.663 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.664 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.664 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.664 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.664 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.664 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.664 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.664 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains HUNTER keyword
+2026-03-12 12:03:42.664 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.664 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains POISONOUS keyword
+2026-03-12 12:03:42.664 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.664 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.664 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.664 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains HUNTER keyword
+2026-03-12 12:03:42.664 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.664 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains POISONOUS keyword
+2026-03-12 12:03:42.664 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.664 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 5) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.664 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.664 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains HUNTER keyword
+2026-03-12 12:03:42.664 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.664 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains POISONOUS keyword
+2026-03-12 12:03:42.664 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.664 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 5) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.664 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.664 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains HUNTER keyword
+2026-03-12 12:03:42.664 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.664 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains POISONOUS keyword
+2026-03-12 12:03:42.664 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.664 DEBUG - GOBLIN WEREWOLF (c536eb57-227b-4040-9085-1d7e57932bdd) power changed (2 -> 8) due to GOBLIN WEREWOLF (c536eb57-227b-4040-9085-1d7e57932bdd) effect
+2026-03-12 12:03:42.664 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (c536eb57-227b-4040-9085-1d7e57932bdd)
+2026-03-12 12:03:42.664 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 5) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.665 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.665 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains HUNTER keyword
+2026-03-12 12:03:42.665 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.665 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains POISONOUS keyword
+2026-03-12 12:03:42.665 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.665 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 5) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.665 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.665 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains HUNTER keyword
+2026-03-12 12:03:42.665 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.665 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains POISONOUS keyword
+2026-03-12 12:03:42.665 DEBUG - GOBLIN WEREWOLF (c536eb57-227b-4040-9085-1d7e57932bdd) gains POISONOUS keyword
+2026-03-12 12:03:42.665 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.665 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 5) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.665 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.665 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains HUNTER keyword
+2026-03-12 12:03:42.665 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.665 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains POISONOUS keyword
+2026-03-12 12:03:42.665 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.665 INFO  - New FRENZY choice to be resolved by Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) (attackingCard : RHINO TURTLE (f75094c3-62b1-4751-a546-bbdf26bf72f9))
+2026-03-12 12:03:42.665 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.665 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 5) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.665 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.665 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains HUNTER keyword
+2026-03-12 12:03:42.665 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.665 DEBUG - HUNGRY HUNGRY HAMSTER (83b924f5-0c7f-41b1-bfc9-9d79fa203dcf) gains POISONOUS keyword
+2026-03-12 12:03:42.665 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4cab7e06-c4f0-4ebc-821f-edd29ddeccef)
+2026-03-12 12:03:42.665 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.665 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.665 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.665 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.665 INFO  - Life update for player Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) : 2 LP
+2026-03-12 12:03:42.665 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.665 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.665 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.665 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.665 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 5) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 5) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 5) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 5) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 5) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.666 INFO  - New FRENZY choice to be resolved by Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) (attackingCard : RHINO TURTLE (b1294ea3-c1de-40fb-839c-785ee990189f))
+2026-03-12 12:03:42.666 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 5) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.666 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.666 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.666 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.667 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.667 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.667 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.667 DEBUG - FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) power changed (1 -> 3) due to FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe) effect
+2026-03-12 12:03:42.667 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (f60ae108-c20c-4c98-b681-b0efd8136cbe)
+2026-03-12 12:03:42.667 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.667 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.667 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.667 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.667 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.667 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.667 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.667 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.667 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.667 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.667 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.667 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.667 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.667 INFO  - Life update for player Player1 (05a5fa8d-32f4-4ed7-8312-b366f76e0eb5) : 2 LP
+2026-03-12 12:03:42.667 DEBUG - Player1 (05a5fa8d-32f4-4ed7-8312-b366f76e0eb5) LP changed (3 -> 2) due to KILLER BEE (4ebf7f19-bd53-4c48-b6da-0e36af759c8d) effect
+2026-03-12 12:03:42.667 INFO  - Resolving INFLICT effect of KILLER BEE (4ebf7f19-bd53-4c48-b6da-0e36af759c8d)
+2026-03-12 12:03:42.667 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.667 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.667 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.667 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.667 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.667 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.667 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.667 DEBUG - Player Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) must choose 1 cards to steal (targets : {
+- GORILLON ;
+- KANGASAURUS REX ;
+- TURF THE SURFER ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:42.667 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.668 INFO  - New TARGET choice to be resolved by Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) (targets : {
+- COUNT DRACULEECH ;
+- TURF THE SURFER ;
+- GORILLON ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:42.668 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.668 DEBUG - Player1 (05a5fa8d-32f4-4ed7-8312-b366f76e0eb5) must decide if stolen card COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) will be added to hand or board
+2026-03-12 12:03:42.668 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6)
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.668 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) stolen and played by Player1 (05a5fa8d-32f4-4ed7-8312-b366f76e0eb5) due to HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) effect
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) power changed (5 -> 6) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (8 -> 10) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.668 DEBUG - SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) power changed (4 -> 6) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (8 -> 10) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.668 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (3 -> 5) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.668 INFO  - Resolving POWER_UP effect of URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7)
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) power changed (5 -> 6) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.668 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) power changed (5 -> 6) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) power changed (5 -> 6) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (8 -> 10) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.669 DEBUG - SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) power changed (4 -> 6) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (8 -> 10) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.669 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (3 -> 5) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.669 INFO  - Resolving POWER_UP effect of URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7)
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) power changed (5 -> 6) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (8 -> 10) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.669 DEBUG - SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) power changed (4 -> 6) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (8 -> 10) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.669 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (3 -> 5) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.669 INFO  - Resolving POWER_UP effect of URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7)
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) power changed (5 -> 6) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) power changed (5 -> 6) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6) power changed (2 -> 3) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.669 DEBUG - KANGASAURUS REX (e2e544a7-43e5-40ab-ac1b-69ece5e5b3f3) effect destroys SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.669 DEBUG - KANGASAURUS REX (e2e544a7-43e5-40ab-ac1b-69ece5e5b3f3) effect destroys HUNGRY HUNGRY HAMSTER (e6087ce2-f9eb-4e11-b69f-ae74be3336b6)
+2026-03-12 12:03:42.669 INFO  - Resolving DESTROY effect of KANGASAURUS REX (e2e544a7-43e5-40ab-ac1b-69ece5e5b3f3)
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 DEBUG - URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) power changed (5 -> 6) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.669 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.670 DEBUG - URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) power changed (5 -> 6) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.670 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (8 -> 10) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.670 DEBUG - SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) power changed (4 -> 6) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (8 -> 10) due to URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7) effect
+2026-03-12 12:03:42.670 INFO  - Resolving POWER_UP effect of URCHIN HURLER (0340d3b1-ae92-4631-bf4a-9d101603d8f7)
+2026-03-12 12:03:42.670 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.670 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.670 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.670 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.670 DEBUG - Player Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) must choose 1 card(s) that will be unable to block (targets : {
+- COUNT DRACULEECH ;
+- SHIELD BUGS ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.670 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.670 INFO  - New TARGET choice to be resolved by Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) (targets : {
+- COUNT DRACULEECH ;
+- SHIELD BUGS ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:03:42.670 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.670 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (b25999e5-8f7b-4e0a-89ee-0cca365e7495)
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (3cda472e-56b2-4dd5-9331-0afb12b75adf) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.670 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.670 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.671 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.671 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.671 DEBUG - COUNT DRACULEECH (97fd47bc-91ca-47fc-aaad-d279ad4ba1c1) power changed (7 -> 8) due to SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6) effect
+2026-03-12 12:03:42.671 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c1d21cdb-51b9-4e16-b309-18eef28fb8b6)
+2026-03-12 12:03:42.671 INFO  - Game over : Player2 (d0347554-c953-4bcc-8bc2-1ed772c7ef3c) wins ; Player1 (05a5fa8d-32f4-4ed7-8312-b366f76e0eb5) loses.
+2026-03-12 12:03:42.671 INFO  - End of the game

@@ -1,0 +1,107 @@
+2026-03-12 12:18:25.528 INFO  - Calculating first player...
+2026-03-12 12:18:25.530 INFO  - Banned card for Player1 (ef7683c0-fe28-43a7-8ae2-b8625d2e7920) : AXOLOTL HEALER (a83d561d-5240-44f5-aaf1-64b9659acfde) (4)
+2026-03-12 12:18:25.531 INFO  - Banned card for Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) : HUNGRY HUNGRY HAMSTER (3c4a46ee-8d01-46e5-aec2-6bbe839bb799) (2)
+2026-03-12 12:18:25.531 INFO  - First player will be Player1 (ef7683c0-fe28-43a7-8ae2-b8625d2e7920)
+2026-03-12 12:18:25.539 INFO  - Game 24a54b5e-fc1e-46c5-b5d9-47e8c6540f13 starting...
+2026-03-12 12:18:25.539 INFO  - Player Player1 (ef7683c0-fe28-43a7-8ae2-b8625d2e7920) hand : {
+- BRAIN FLY ;
+- HYENIX ;
+- FERRET BOMBER ;
+- CREEP FROM THE DEEP ;
+- SPIDER OWL
+}
+2026-03-12 12:18:25.539 INFO  - Player Player1 (ef7683c0-fe28-43a7-8ae2-b8625d2e7920) draw pile : {
+- TIGER SQUIRREL ;
+- RHINO TURTLE ;
+- TURF THE SURFER ;
+- GRAVE ROBBER ;
+- LUCHATAUR
+}
+2026-03-12 12:18:25.539 INFO  - Player Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) hand : {
+- STRANGE BARREL ;
+- CHAMELEON SNIPER ;
+- SNAIL HYDRA ;
+- HUNGRY HUNGRY HAMSTER ;
+-  GIRAFFODILE
+}
+2026-03-12 12:18:25.539 INFO  - Player Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) draw pile : {
+- EXPLOSIVE TOAD ;
+- SNAIL THROWER ;
+- KANGASAURUS REX ;
+- KILLER BEE ;
+- HARPY MOTHER
+}
+2026-03-12 12:18:25.540 INFO  - Life update for player Player1 (ef7683c0-fe28-43a7-8ae2-b8625d2e7920) : 2 LP
+2026-03-12 12:18:25.540 DEBUG - Player1 (ef7683c0-fe28-43a7-8ae2-b8625d2e7920) LP changed (3 -> 2) due to CHAMELEON SNIPER (867bfa36-1c0d-450e-ad3f-72326f6de195) effect
+2026-03-12 12:18:25.540 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (867bfa36-1c0d-450e-ad3f-72326f6de195)
+2026-03-12 12:18:25.540 INFO  - Life update for player Player1 (ef7683c0-fe28-43a7-8ae2-b8625d2e7920) : 1 LP
+2026-03-12 12:18:25.540 DEBUG - CHAMELEON SNIPER (867bfa36-1c0d-450e-ad3f-72326f6de195) stolen and drawn by Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) due to  GIRAFFODILE (1a0c619c-9030-4330-9df1-0a236bc1ba58) effect
+2026-03-12 12:18:25.540 DEBUG - EXPLOSIVE TOAD (332f5cb5-edba-4480-a706-7dfd93b91280) stolen and drawn by Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) due to  GIRAFFODILE (1a0c619c-9030-4330-9df1-0a236bc1ba58) effect
+2026-03-12 12:18:25.540 INFO  - Resolving STEAL effect of  GIRAFFODILE (1a0c619c-9030-4330-9df1-0a236bc1ba58)
+2026-03-12 12:18:25.541 INFO  - Life update for player Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) : 2 LP
+2026-03-12 12:18:25.541 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07)
+2026-03-12 12:18:25.541 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07)
+2026-03-12 12:18:25.541 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07)
+2026-03-12 12:18:25.541 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07)
+2026-03-12 12:18:25.541 INFO  - New FRENZY choice to be resolved by Player1 (ef7683c0-fe28-43a7-8ae2-b8625d2e7920) (attackingCard : RHINO TURTLE (4f06b0a8-da3e-444b-b1b4-cbf1c3b7c921))
+2026-03-12 12:18:25.541 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.541 DEBUG - Player Player1 (ef7683c0-fe28-43a7-8ae2-b8625d2e7920) must choose 1 cards to steal (targets : {
+-  GIRAFFODILE ;
+- SNAIL THROWER
+})
+2026-03-12 12:18:25.541 INFO  - New TARGET choice to be resolved by Player1 (ef7683c0-fe28-43a7-8ae2-b8625d2e7920) (targets : {
+- SNAIL THROWER ;
+-  GIRAFFODILE
+})
+2026-03-12 12:18:25.541 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.541 DEBUG - SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07) stolen and played by Player1 (ef7683c0-fe28-43a7-8ae2-b8625d2e7920) due to GRAVE ROBBER (2471bf2d-8721-469b-9036-ef9b0b87cf75) effect
+2026-03-12 12:18:25.542 INFO  - Resolving STEAL effect of GRAVE ROBBER (2471bf2d-8721-469b-9036-ef9b0b87cf75)
+2026-03-12 12:18:25.542 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07)
+2026-03-12 12:18:25.542 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07)
+2026-03-12 12:18:25.542 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07)
+2026-03-12 12:18:25.542 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07)
+2026-03-12 12:18:25.542 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07)
+2026-03-12 12:18:25.542 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07)
+2026-03-12 12:18:25.542 DEBUG - Player Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) must choose 1 card(s) to destroy (available targets : {
+- RHINO TURTLE ;
+- GRAVE ROBBER ;
+- SNAIL THROWER
+})
+2026-03-12 12:18:25.542 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07)
+2026-03-12 12:18:25.542 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07)
+2026-03-12 12:18:25.542 INFO  - New TARGET choice to be resolved by Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) (targets : {
+- RHINO TURTLE ;
+- GRAVE ROBBER ;
+- SNAIL THROWER
+})
+2026-03-12 12:18:25.542 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.542 DEBUG - EXPLOSIVE TOAD (332f5cb5-edba-4480-a706-7dfd93b91280) effect destroys SNAIL THROWER (238ac86e-b05c-4272-ad6b-3844edcb5c07)
+2026-03-12 12:18:25.542 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (332f5cb5-edba-4480-a706-7dfd93b91280)
+2026-03-12 12:18:25.543 DEBUG - KANGASAURUS REX (f98888e1-3a08-4edf-b93b-2265947b510a) effect destroys TIGER SQUIRREL (d5e1aeab-9b0c-447c-8c48-6c5cad172f09)
+2026-03-12 12:18:25.543 INFO  - Resolving DESTROY effect of KANGASAURUS REX (f98888e1-3a08-4edf-b93b-2265947b510a)
+2026-03-12 12:18:25.543 DEBUG - Player Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) must choose 2 card(s) to discard (available targets : {
+- SNAIL HYDRA ;
+- HUNGRY HUNGRY HAMSTER ;
+- CHAMELEON SNIPER ;
+- KILLER BEE ;
+- HARPY MOTHER
+})
+2026-03-12 12:18:25.543 INFO  - New TARGET choice to be resolved by Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) (targets : {
+- SNAIL HYDRA ;
+- CHAMELEON SNIPER ;
+- HARPY MOTHER ;
+- HUNGRY HUNGRY HAMSTER ;
+- KILLER BEE
+})
+2026-03-12 12:18:25.543 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.543 DEBUG - CHAMELEON SNIPER (867bfa36-1c0d-450e-ad3f-72326f6de195) discarded due to FERRET BOMBER (fef30d0b-61e7-4628-b9b6-018c8b8450ea) effect
+2026-03-12 12:18:25.543 DEBUG - HUNGRY HUNGRY HAMSTER (fc5cabb2-1507-4214-9065-b44e1a785bb3) discarded due to FERRET BOMBER (fef30d0b-61e7-4628-b9b6-018c8b8450ea) effect
+2026-03-12 12:18:25.543 INFO  - Resolving DISCARD effect of FERRET BOMBER (fef30d0b-61e7-4628-b9b6-018c8b8450ea)
+2026-03-12 12:18:25.543 DEBUG - HYENIX (e448df88-5355-4de8-ade1-44c6ec4431d5) stolen and drawn by Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) due to STRANGE BARREL (8ae69e07-5b40-4a1e-8bb5-bef4e75ae35b) effect
+2026-03-12 12:18:25.543 DEBUG - LUCHATAUR (823af1cc-6f9a-4acf-b4ae-386082854e84) stolen and drawn by Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) due to STRANGE BARREL (8ae69e07-5b40-4a1e-8bb5-bef4e75ae35b) effect
+2026-03-12 12:18:25.543 INFO  - Resolving STEAL effect of STRANGE BARREL (8ae69e07-5b40-4a1e-8bb5-bef4e75ae35b)
+2026-03-12 12:18:25.544 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (9277c9e5-48c2-4dc6-bcb4-b5a49d557edd)
+2026-03-12 12:18:25.544 INFO  - Life update for player Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) : 1 LP
+2026-03-12 12:18:25.544 INFO  - Life update for player Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) : 0 LP
+2026-03-12 12:18:25.544 INFO  - Game over : Player1 (ef7683c0-fe28-43a7-8ae2-b8625d2e7920) wins ; Player2 (dba1c790-e8f3-4fd6-a116-186545e0b85e) loses.
+2026-03-12 12:18:25.544 INFO  - End of the game

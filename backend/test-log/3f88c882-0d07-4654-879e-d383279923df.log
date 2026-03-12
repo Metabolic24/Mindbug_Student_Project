@@ -1,0 +1,270 @@
+2026-03-12 12:03:46.597 INFO  - Calculating first player...
+2026-03-12 12:03:46.598 INFO  - Banned card for Player1 (cfc56371-b734-4e63-a3e4-594c5b16e265) : SPIDER OWL (4d392081-bee7-4e49-9ce6-f3bcf1c0aa46) (3)
+2026-03-12 12:03:46.598 INFO  - Banned card for Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) : SHARKY GRAB-DOG-MUMMYPUS (724da465-08d7-4f62-bc12-3787f7d75f0f) (5)
+2026-03-12 12:03:46.598 INFO  - First player will be Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e)
+2026-03-12 12:03:46.604 INFO  - Game 3f88c882-0d07-4654-879e-d383279923df starting...
+2026-03-12 12:03:46.604 INFO  - Player Player1 (cfc56371-b734-4e63-a3e4-594c5b16e265) hand : {
+- MAJESTIC MANTICORE ;
+- FROBLIN INSTIGATOR ;
+- HAMSTER LION ;
+- TUSKED EXTORTER ;
+- TURF THE SURFER
+}
+2026-03-12 12:03:46.604 INFO  - Player Player1 (cfc56371-b734-4e63-a3e4-594c5b16e265) draw pile : {
+- THE LURKER ;
+- PLATED SCORPION ;
+- SNAIL HYDRA ;
+- FERRET BOMBER ;
+- BEE BEAR
+}
+2026-03-12 12:03:46.604 INFO  - Player Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) hand : {
+- FERRET PACIFIER ;
+- CREEP FROM THE DEEP ;
+- AXOLOTL HEALER ;
+- HUNGRY HUNGRY HAMSTER ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:03:46.604 INFO  - Player Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) draw pile : {
+- KANGASAURUS REX ;
+- CREEP FROM THE DEEP ;
+- HYENIX ;
+- LUCHATAUR ;
+- BRAIN FLY
+}
+2026-03-12 12:03:46.605 DEBUG - Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) LP changed (3 -> 5) due to AXOLOTL HEALER (d0fa7534-d6ba-468e-b87b-96ee8894561f) effect
+2026-03-12 12:03:46.605 INFO  - Resolving GAIN effect of AXOLOTL HEALER (d0fa7534-d6ba-468e-b87b-96ee8894561f)
+2026-03-12 12:03:46.605 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.605 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.605 DEBUG - GOBLIN WEREWOLF (1f3c7f06-93ec-43ad-a3b0-345987dc9b04) power changed (2 -> 8) due to GOBLIN WEREWOLF (1f3c7f06-93ec-43ad-a3b0-345987dc9b04) effect
+2026-03-12 12:03:46.605 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1f3c7f06-93ec-43ad-a3b0-345987dc9b04)
+2026-03-12 12:03:46.605 DEBUG - CardInstance(uuid=1f3c7f06-93ec-43ad-a3b0-345987dc9b04, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=8, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.605 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.605 DEBUG - CardInstance(uuid=1f3c7f06-93ec-43ad-a3b0-345987dc9b04, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.605 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.605 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.605 INFO  - New FRENZY choice to be resolved by Player1 (cfc56371-b734-4e63-a3e4-594c5b16e265) (attackingCard : HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220))
+2026-03-12 12:03:46.605 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.605 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.605 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.605 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.605 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.605 DEBUG - Player Player1 (cfc56371-b734-4e63-a3e4-594c5b16e265) must choose 1 cards to steal (targets : {
+- MAJESTIC MANTICORE ;
+- FROBLIN INSTIGATOR ;
+- TUSKED EXTORTER ;
+- THE LURKER ;
+- PLATED SCORPION
+})
+2026-03-12 12:03:46.605 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.605 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.605 INFO  - New TARGET choice to be resolved by Player1 (cfc56371-b734-4e63-a3e4-594c5b16e265) (targets : {
+- MAJESTIC MANTICORE ;
+- FROBLIN INSTIGATOR ;
+- PLATED SCORPION ;
+- THE LURKER ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:46.605 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.606 DEBUG - Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) must decide if stolen card MAJESTIC MANTICORE (4930962f-aa24-4e21-9428-fca27188062e) will be added to hand or board
+2026-03-12 12:03:46.606 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (b9666209-1e4c-43ed-8660-cc3558d9b5cf)
+2026-03-12 12:03:46.606 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.606 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:46.606 DEBUG - MAJESTIC MANTICORE (4930962f-aa24-4e21-9428-fca27188062e) stolen and drawn by Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) due to HUNGRY HUNGRY HAMSTER (b9666209-1e4c-43ed-8660-cc3558d9b5cf) effect
+2026-03-12 12:03:46.606 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.606 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.606 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.606 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.606 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.606 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.606 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.606 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.606 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.606 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.606 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.607 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.607 DEBUG - CardInstance(uuid=b9666209-1e4c-43ed-8660-cc3558d9b5cf, card=Card(id=40, setName=first_contact, name=HUNGRY HUNGRY HAMSTER, power=2, keywords=[SNEAKY], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=OPPONENT, source=HAND, mustPlay=false, mayPlay=true)]}, unique=false, description=<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=2, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.607 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.607 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.607 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.607 DEBUG - CardInstance(uuid=f23b07e5-e64d-483e-a750-c3e79e01cd87, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.607 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.607 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (f23b07e5-e64d-483e-a750-c3e79e01cd87)
+2026-03-12 12:03:46.607 DEBUG - CardInstance(uuid=f23b07e5-e64d-483e-a750-c3e79e01cd87, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.607 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.607 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (f23b07e5-e64d-483e-a750-c3e79e01cd87)
+2026-03-12 12:03:46.607 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.607 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.607 DEBUG - CardInstance(uuid=f23b07e5-e64d-483e-a750-c3e79e01cd87, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.607 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.607 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (f23b07e5-e64d-483e-a750-c3e79e01cd87)
+2026-03-12 12:03:46.607 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.608 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.608 DEBUG - CardInstance(uuid=f23b07e5-e64d-483e-a750-c3e79e01cd87, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.608 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.608 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (f23b07e5-e64d-483e-a750-c3e79e01cd87)
+2026-03-12 12:03:46.608 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.608 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.608 DEBUG - CardInstance(uuid=f23b07e5-e64d-483e-a750-c3e79e01cd87, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.608 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.608 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (f23b07e5-e64d-483e-a750-c3e79e01cd87)
+2026-03-12 12:03:46.608 DEBUG - KANGASAURUS REX (b73de3cf-0e7c-40ed-b5a4-0dc43043d080) effect destroys PLATED SCORPION (c28f884c-e14c-4ff8-8b14-24768c6f9661)
+2026-03-12 12:03:46.608 INFO  - Resolving DESTROY effect of KANGASAURUS REX (b73de3cf-0e7c-40ed-b5a4-0dc43043d080)
+2026-03-12 12:03:46.608 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 5) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.608 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.608 DEBUG - CardInstance(uuid=f23b07e5-e64d-483e-a750-c3e79e01cd87, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.608 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.608 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (f23b07e5-e64d-483e-a750-c3e79e01cd87)
+2026-03-12 12:03:46.608 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 5) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.608 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.608 DEBUG - CardInstance(uuid=f23b07e5-e64d-483e-a750-c3e79e01cd87, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.608 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.609 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (f23b07e5-e64d-483e-a750-c3e79e01cd87)
+2026-03-12 12:03:46.609 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 5) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.609 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.609 DEBUG - CardInstance(uuid=f23b07e5-e64d-483e-a750-c3e79e01cd87, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.609 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.609 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (f23b07e5-e64d-483e-a750-c3e79e01cd87)
+2026-03-12 12:03:46.609 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 5) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.609 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.609 DEBUG - CardInstance(uuid=b73de3cf-0e7c-40ed-b5a4-0dc43043d080, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.609 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.609 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 5) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.609 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.609 DEBUG - CardInstance(uuid=b73de3cf-0e7c-40ed-b5a4-0dc43043d080, card=Card(id=15, setName=first_contact, name=KANGASAURUS REX, power=7, keywords=[], effects={PLAY=[DestroyEffect(value=-1, min=null, max=4, lessAllies=false, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Play</b>: Defeat all enemy creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.609 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.610 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 5) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.610 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.610 DEBUG - CardInstance(uuid=047a52da-b6f8-4515-9295-4ff840ae2ca4, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.610 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.610 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 5) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.610 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.610 DEBUG - CardInstance(uuid=047a52da-b6f8-4515-9295-4ff840ae2ca4, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.610 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.610 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.610 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.610 DEBUG - CardInstance(uuid=047a52da-b6f8-4515-9295-4ff840ae2ca4, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.610 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.610 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.610 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.610 DEBUG - CardInstance(uuid=047a52da-b6f8-4515-9295-4ff840ae2ca4, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.610 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.610 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.610 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.610 DEBUG - CardInstance(uuid=047a52da-b6f8-4515-9295-4ff840ae2ca4, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.611 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.611 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.611 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.611 DEBUG - CardInstance(uuid=047a52da-b6f8-4515-9295-4ff840ae2ca4, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.611 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.611 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 9) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.611 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.611 DEBUG - CardInstance(uuid=047a52da-b6f8-4515-9295-4ff840ae2ca4, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.611 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.611 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 9) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.611 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.611 DEBUG - CardInstance(uuid=047a52da-b6f8-4515-9295-4ff840ae2ca4, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1a85e86e), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.611 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (3b4c355e-93fc-4b17-b085-1a197d645220)
+2026-03-12 12:03:46.611 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.611 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.611 INFO  - New FRENZY choice to be resolved by Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) (attackingCard : LUCHATAUR (18f4152e-5136-432b-8b77-5dee13c9f25b))
+2026-03-12 12:03:46.611 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.611 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.611 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.611 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.611 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.611 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.611 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.611 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.611 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.611 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.611 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.612 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.612 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.612 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.612 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.612 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 9) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.612 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.612 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 9) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.612 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.612 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 9) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.612 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.612 DEBUG - Player Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) must choose 1 cards to steal (targets : {
+- SNAIL HYDRA ;
+- FROBLIN INSTIGATOR ;
+- BEE BEAR ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:46.612 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 9) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.612 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.612 INFO  - New TARGET choice to be resolved by Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) (targets : {
+- SNAIL HYDRA ;
+- FROBLIN INSTIGATOR ;
+- BEE BEAR ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:46.612 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.612 DEBUG - BEE BEAR (5179c397-b6b4-4ab7-a15a-d379da80f100) stolen and played by Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) due to BRAIN FLY (0777b028-2ef3-4b9d-b9be-e0720a5fbbb8) effect
+2026-03-12 12:03:46.612 INFO  - Resolving STEAL effect of BRAIN FLY (0777b028-2ef3-4b9d-b9be-e0720a5fbbb8)
+2026-03-12 12:03:46.612 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.612 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.612 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.612 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.612 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 9) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.612 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.612 DEBUG - CREEP FROM THE DEEP (39eb273b-d4b7-4a68-b7f1-f077817096d4) discarded due to FERRET BOMBER (ac8f3295-273c-4f0c-b82f-d7af564cb0b9) effect
+2026-03-12 12:03:46.612 INFO  - Resolving DISCARD effect of FERRET BOMBER (ac8f3295-273c-4f0c-b82f-d7af564cb0b9)
+2026-03-12 12:03:46.612 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 9) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.612 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.613 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 9) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.613 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.613 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.613 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.613 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.613 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.613 INFO  - Life update for player Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) : 4 LP
+2026-03-12 12:03:46.613 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.613 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.613 DEBUG - Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) must decide if HYENIX (57a6304d-13cb-4a42-a577-230a98497b74) will revive
+2026-03-12 12:03:46.613 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.613 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.613 INFO  - New BOOLEAN choice to be resolved by Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) (target : )
+2026-03-12 12:03:46.613 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:46.613 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.613 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.613 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 7) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.613 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.613 DEBUG - MAJESTIC MANTICORE (4930962f-aa24-4e21-9428-fca27188062e) effect destroys FERRET BOMBER (ac8f3295-273c-4f0c-b82f-d7af564cb0b9)
+2026-03-12 12:03:46.613 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (4930962f-aa24-4e21-9428-fca27188062e)
+2026-03-12 12:03:46.613 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 5) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.613 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.613 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 5) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.613 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.613 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 5) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.613 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.614 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (9e1248d9-0f92-4caf-8135-6f3e8ceca5ee)
+2026-03-12 12:03:46.614 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 5) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.614 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.614 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 3) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.614 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.614 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 3) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.614 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.614 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.614 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 1) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.614 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.614 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 1) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.614 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.614 DEBUG - FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) power changed (1 -> 1) due to FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44) effect
+2026-03-12 12:03:46.614 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (019dcb6e-7aec-4ad9-bc34-f7e62b69db44)
+2026-03-12 12:03:46.614 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.614 INFO  - Life update for player Player1 (cfc56371-b734-4e63-a3e4-594c5b16e265) : 2 LP
+2026-03-12 12:03:46.614 INFO  - Game over : Player2 (39d171ca-5d55-4292-a3d3-5c6a861b473e) wins ; Player1 (cfc56371-b734-4e63-a3e4-594c5b16e265) loses.
+2026-03-12 12:03:46.614 INFO  - End of the game

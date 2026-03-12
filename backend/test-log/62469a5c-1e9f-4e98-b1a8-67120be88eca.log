@@ -1,0 +1,99 @@
+2026-03-12 12:03:08.024 INFO  - Calculating first player...
+2026-03-12 12:03:08.027 INFO  - Banned card for Player1 (9e84cd0f-d442-419c-bf6d-b94f5a9d58f2) : FERRET BOMBER (412c3817-c96d-4882-b71d-ddfc5541c20c) (2)
+2026-03-12 12:03:08.027 INFO  - Banned card for Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) : EXPLOSIVE TOAD (c0d65f3b-d418-4852-baa7-d5f514229869) (5)
+2026-03-12 12:03:08.027 INFO  - First player will be Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e)
+2026-03-12 12:03:08.050 INFO  - Game 62469a5c-1e9f-4e98-b1a8-67120be88eca starting...
+2026-03-12 12:03:08.050 INFO  - Player Player1 (9e84cd0f-d442-419c-bf6d-b94f5a9d58f2) hand : {
+- CHAMELEON SNIPER ;
+- MAJESTIC MANTICORE ;
+- MAJESTIC MANTICORE ;
+- AXOLOTL HEALER ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:03:08.051 INFO  - Player Player1 (9e84cd0f-d442-419c-bf6d-b94f5a9d58f2) draw pile : {
+- SPIDER OWL ;
+- GOBLIN WEREWOLF ;
+- COUNT DRACULEECH ;
+- COMPOST DRAGON ;
+- SPIDER OWL
+}
+2026-03-12 12:03:08.051 INFO  - Player Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) hand : {
+- SHARK DOG ;
+- SNAIL HYDRA ;
+- AXOLOTL HEALER ;
+- FERRET PACIFIER ;
+- SNAIL HYDRA
+}
+2026-03-12 12:03:08.051 INFO  - Player Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) draw pile : {
+- HUNGRY HUNGRY HAMSTER ;
+- TURBO BUG ;
+- PLATED SCORPION ;
+- LUCHATAUR ;
+- DEATHWEAVER
+}
+2026-03-12 12:03:08.051 DEBUG - Player1 (9e84cd0f-d442-419c-bf6d-b94f5a9d58f2) LP changed (3 -> 5) due to AXOLOTL HEALER (cff91581-5e65-4aa7-82c2-ec18561c87d2) effect
+2026-03-12 12:03:08.051 INFO  - Resolving GAIN effect of AXOLOTL HEALER (cff91581-5e65-4aa7-82c2-ec18561c87d2)
+2026-03-12 12:03:08.052 DEBUG - Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) LP changed (3 -> 5) due to AXOLOTL HEALER (53a21f5e-92d7-4930-8782-3d47702afb6f) effect
+2026-03-12 12:03:08.052 INFO  - Resolving GAIN effect of AXOLOTL HEALER (53a21f5e-92d7-4930-8782-3d47702afb6f)
+2026-03-12 12:03:08.052 DEBUG - Player Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) must choose 1 card(s) to destroy (available targets : {
+- MAJESTIC MANTICORE ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:03:08.052 INFO  - New TARGET choice to be resolved by Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) (targets : {
+- MAJESTIC MANTICORE ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:03:08.052 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.052 DEBUG - SHARK DOG (a7224f45-1a50-4185-ad9f-e648073cf22a) effect destroys MAJESTIC MANTICORE (c3c3c823-36bb-4d05-82d6-848b92df337a)
+2026-03-12 12:03:08.052 INFO  - Resolving DESTROY effect of SHARK DOG (a7224f45-1a50-4185-ad9f-e648073cf22a)
+2026-03-12 12:03:08.052 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:08.052 DEBUG - MAJESTIC MANTICORE (ba889a69-db98-473c-9b6f-d0bbce569c3c) effect destroys MAJESTIC MANTICORE (ba889a69-db98-473c-9b6f-d0bbce569c3c)
+2026-03-12 12:03:08.052 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (ba889a69-db98-473c-9b6f-d0bbce569c3c)
+2026-03-12 12:03:08.052 DEBUG - Player Player1 (9e84cd0f-d442-419c-bf6d-b94f5a9d58f2) must choose 1 cards to steal (targets : {
+- AXOLOTL HEALER ;
+- MAJESTIC MANTICORE ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:03:08.052 INFO  - New TARGET choice to be resolved by Player1 (9e84cd0f-d442-419c-bf6d-b94f5a9d58f2) (targets : {
+- MAJESTIC MANTICORE ;
+- MAJESTIC MANTICORE ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:03:08.053 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.053 DEBUG - AXOLOTL HEALER (cff91581-5e65-4aa7-82c2-ec18561c87d2) stolen and played by Player1 (9e84cd0f-d442-419c-bf6d-b94f5a9d58f2) due to COMPOST DRAGON (50e239ae-6e4c-4154-9ff1-9b50f8c7d800) effect
+2026-03-12 12:03:08.053 INFO  - Resolving STEAL effect of COMPOST DRAGON (50e239ae-6e4c-4154-9ff1-9b50f8c7d800)
+2026-03-12 12:03:08.053 DEBUG - Player1 (9e84cd0f-d442-419c-bf6d-b94f5a9d58f2) LP changed (5 -> 7) due to AXOLOTL HEALER (cff91581-5e65-4aa7-82c2-ec18561c87d2) effect
+2026-03-12 12:03:08.053 INFO  - Resolving GAIN effect of AXOLOTL HEALER (cff91581-5e65-4aa7-82c2-ec18561c87d2)
+2026-03-12 12:03:08.053 DEBUG - Player Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) must choose 1 card(s) to destroy (available targets : {
+- COUNT DRACULEECH ;
+- COMPOST DRAGON ;
+- AXOLOTL HEALER ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:08.053 INFO  - New TARGET choice to be resolved by Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) (targets : {
+- COMPOST DRAGON ;
+- CHAMELEON SNIPER ;
+- COUNT DRACULEECH ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:03:08.053 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:08.053 DEBUG - SNAIL HYDRA (af5dbf05-6b8b-4043-9aef-1cbe68b368f4) effect destroys AXOLOTL HEALER (cff91581-5e65-4aa7-82c2-ec18561c87d2)
+2026-03-12 12:03:08.053 INFO  - Resolving DESTROY effect of SNAIL HYDRA (af5dbf05-6b8b-4043-9aef-1cbe68b368f4)
+2026-03-12 12:03:08.053 DEBUG - GOBLIN WEREWOLF (1c50d570-bef4-41ed-858d-80aa7e34f591) power changed (2 -> 8) due to GOBLIN WEREWOLF (1c50d570-bef4-41ed-858d-80aa7e34f591) effect
+2026-03-12 12:03:08.053 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (1c50d570-bef4-41ed-858d-80aa7e34f591)
+2026-03-12 12:03:08.054 INFO  - Life update for player Player1 (9e84cd0f-d442-419c-bf6d-b94f5a9d58f2) : 1 LP
+2026-03-12 12:03:08.054 DEBUG - Player1 (9e84cd0f-d442-419c-bf6d-b94f5a9d58f2) LP changed (7 -> 1) due to TURBO BUG (a96ff5ac-e00a-4661-8df4-934aa3e68899) effect
+2026-03-12 12:03:08.054 INFO  - Resolving INFLICT effect of TURBO BUG (a96ff5ac-e00a-4661-8df4-934aa3e68899)
+2026-03-12 12:03:08.054 INFO  - Life update for player Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) : 4 LP
+2026-03-12 12:03:08.054 DEBUG - Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) LP changed (5 -> 4) due to CHAMELEON SNIPER (ac9a20c6-9c4c-43c3-8ac5-315edf23ca8f) effect
+2026-03-12 12:03:08.054 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (ac9a20c6-9c4c-43c3-8ac5-315edf23ca8f)
+2026-03-12 12:03:08.055 INFO  - Life update for player Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) : 3 LP
+2026-03-12 12:03:08.055 INFO  - Life update for player Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) : 2 LP
+2026-03-12 12:03:08.055 DEBUG - Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) must decide if stolen card TIGER SQUIRREL (da708018-bb6a-4cdb-9a65-d9d489fa4d7f) will be added to hand or board
+2026-03-12 12:03:08.055 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (78189aee-efc0-41bb-b315-f8278de0e496)
+2026-03-12 12:03:08.056 INFO  - New BOOLEAN choice to be resolved by Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) (target : da708018-bb6a-4cdb-9a65-d9d489fa4d7f)
+2026-03-12 12:03:08.056 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:08.056 DEBUG - TIGER SQUIRREL (da708018-bb6a-4cdb-9a65-d9d489fa4d7f) stolen and drawn by Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) due to HUNGRY HUNGRY HAMSTER (78189aee-efc0-41bb-b315-f8278de0e496) effect
+2026-03-12 12:03:08.056 INFO  - Life update for player Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) : 1 LP
+2026-03-12 12:03:08.057 INFO  - Game over : Player2 (2c3b5005-6380-4397-acb4-a271d55cb63e) wins ; Player1 (9e84cd0f-d442-419c-bf6d-b94f5a9d58f2) loses.
+2026-03-12 12:03:08.057 INFO  - End of the game

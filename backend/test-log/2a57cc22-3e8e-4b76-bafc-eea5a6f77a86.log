@@ -1,0 +1,208 @@
+2026-03-12 12:18:25.097 INFO  - Calculating first player...
+2026-03-12 12:18:25.099 INFO  - Banned card for Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) : FERRET PACIFIER (964b0315-8602-4e85-9af3-0cacaaf7f5b1) (4)
+2026-03-12 12:18:25.099 INFO  - Banned card for Player2 (79f9fb24-2c5b-4faa-a7fa-955a5f1097a2) : HYENIX (1c915026-3d6c-40fc-beba-31f9a832ebdd) (7)
+2026-03-12 12:18:25.099 INFO  - First player will be Player2 (79f9fb24-2c5b-4faa-a7fa-955a5f1097a2)
+2026-03-12 12:18:25.107 INFO  - Game 2a57cc22-3e8e-4b76-bafc-eea5a6f77a86 starting...
+2026-03-12 12:18:25.108 INFO  - Player Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) hand : {
+- COUNT DRACULEECH ;
+- HUNGRY HUNGRY HAMSTER ;
+- KANGASAURUS REX ;
+- MAJESTIC MANTICORE ;
+- CREEP FROM THE DEEP
+}
+2026-03-12 12:18:25.108 INFO  - Player Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) draw pile : {
+- MAJESTIC MANTICORE ;
+- EXPLOSIVE TOAD ;
+- HAMSTER LION ;
+- GRAVE ROBBER ;
+- COMPOST DRAGON
+}
+2026-03-12 12:18:25.108 INFO  - Player Player2 (79f9fb24-2c5b-4faa-a7fa-955a5f1097a2) hand : {
+- FROBLIN INSTIGATOR ;
+- SHIELD BUGS ;
+- LUCHATAUR ;
+- EXPLOSIVE TOAD ;
+- BUGSERKER
+}
+2026-03-12 12:18:25.109 INFO  - Player Player2 (79f9fb24-2c5b-4faa-a7fa-955a5f1097a2) draw pile : {
+- THE LURKER ;
+- ELEPHANTOPUS ;
+- FROBLIN INSTIGATOR ;
+- DEATHWEAVER ;
+- KILLER BEE
+}
+2026-03-12 12:18:25.109 DEBUG - Player Player2 (79f9fb24-2c5b-4faa-a7fa-955a5f1097a2) must choose 1 cards to steal (targets : {
+- FROBLIN INSTIGATOR ;
+- SHIELD BUGS ;
+- LUCHATAUR ;
+- EXPLOSIVE TOAD ;
+- THE LURKER
+})
+2026-03-12 12:18:25.109 INFO  - New TARGET choice to be resolved by Player2 (79f9fb24-2c5b-4faa-a7fa-955a5f1097a2) (targets : {
+- THE LURKER ;
+- FROBLIN INSTIGATOR ;
+- LUCHATAUR ;
+- EXPLOSIVE TOAD ;
+- SHIELD BUGS
+})
+2026-03-12 12:18:25.110 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.110 DEBUG - Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) must decide if stolen card EXPLOSIVE TOAD (5a1b7c99-0739-4027-9ddc-9cb0c32322ef) will be added to hand or board
+2026-03-12 12:18:25.110 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (ae587470-1eac-4ec2-9190-82fbb496605a)
+2026-03-12 12:18:25.110 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:25.110 DEBUG - EXPLOSIVE TOAD (5a1b7c99-0739-4027-9ddc-9cb0c32322ef) stolen and drawn by Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) due to HUNGRY HUNGRY HAMSTER (ae587470-1eac-4ec2-9190-82fbb496605a) effect
+2026-03-12 12:18:25.110 DEBUG - KANGASAURUS REX (92f1b707-8476-4ac7-9c98-e2a298ec4678) effect destroys BUGSERKER (b1b46045-e964-4e7d-9d49-6ee85a2a3b15)
+2026-03-12 12:18:25.111 INFO  - Resolving DESTROY effect of KANGASAURUS REX (92f1b707-8476-4ac7-9c98-e2a298ec4678)
+2026-03-12 12:18:25.111 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.111 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.111 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.111 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.111 DEBUG - ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b) power changed (7 -> 8) due to SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0) effect
+2026-03-12 12:18:25.111 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.111 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.111 DEBUG - ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b) power changed (7 -> 8) due to SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0) effect
+2026-03-12 12:18:25.111 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.112 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.112 DEBUG - ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b) power changed (7 -> 8) due to SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0) effect
+2026-03-12 12:18:25.112 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.112 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.112 DEBUG - ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b) power changed (7 -> 8) due to SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0) effect
+2026-03-12 12:18:25.112 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.112 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.112 DEBUG - ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b) power changed (7 -> 8) due to SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0) effect
+2026-03-12 12:18:25.112 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.112 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.113 DEBUG - Player Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) must choose 1 card(s) to destroy (available targets : {
+- ELEPHANTOPUS ;
+- SHIELD BUGS ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:18:25.113 DEBUG - ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b) power changed (7 -> 8) due to SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0) effect
+2026-03-12 12:18:25.113 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.113 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.113 INFO  - New TARGET choice to be resolved by Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) (targets : {
+- ELEPHANTOPUS ;
+- MAJESTIC MANTICORE ;
+- SHIELD BUGS
+})
+2026-03-12 12:18:25.113 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.113 DEBUG - EXPLOSIVE TOAD (45536d3c-74c4-4358-a072-d6fb1fa5624c) effect destroys SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.113 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (45536d3c-74c4-4358-a072-d6fb1fa5624c)
+2026-03-12 12:18:25.113 DEBUG - ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b) power changed (7 -> 8) due to SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0) effect
+2026-03-12 12:18:25.113 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.113 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.113 DEBUG - ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b) power changed (7 -> 8) due to SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0) effect
+2026-03-12 12:18:25.114 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.114 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.114 DEBUG - ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b) power changed (7 -> 8) due to SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0) effect
+2026-03-12 12:18:25.114 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.114 DEBUG - CardInstance(uuid=05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3aeb267), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.114 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9666d510-d07e-46fb-bc24-d3dadc2e8064)
+2026-03-12 12:18:25.114 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.115 DEBUG - ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b) power changed (7 -> 8) due to SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0) effect
+2026-03-12 12:18:25.115 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.115 DEBUG - CardInstance(uuid=05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0, card=Card(id=24, setName=first_contact, name=SHIELD BUGS, power=4, keywords=[TOUGH], effects={PASSIVE=[PowerUpEffect(value=1, self=false, allies=true, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Other allied creatures have <b>+1</b> power., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3aeb267), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.115 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (9666d510-d07e-46fb-bc24-d3dadc2e8064)
+2026-03-12 12:18:25.115 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (48c1cbc1-4fca-42b1-bb19-4b46e76e512b)
+2026-03-12 12:18:25.115 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.115 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.115 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.115 DEBUG - Player Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) must choose 1 cards to steal (targets : {
+- BUGSERKER ;
+- ELEPHANTOPUS
+})
+2026-03-12 12:18:25.115 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.115 INFO  - New TARGET choice to be resolved by Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) (targets : {
+- ELEPHANTOPUS ;
+- BUGSERKER
+})
+2026-03-12 12:18:25.115 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.116 DEBUG - BUGSERKER (b1b46045-e964-4e7d-9d49-6ee85a2a3b15) stolen and played by Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) due to GRAVE ROBBER (c1eedc0e-1316-46a3-b068-9891a5153556) effect
+2026-03-12 12:18:25.116 INFO  - Resolving STEAL effect of GRAVE ROBBER (c1eedc0e-1316-46a3-b068-9891a5153556)
+2026-03-12 12:18:25.116 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.116 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.116 DEBUG - LUCHATAUR (1d75c5f5-5bd1-4643-b603-0697dc816c0b) power changed (9 -> 10) due to SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0) effect
+2026-03-12 12:18:25.116 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.116 DEBUG - LUCHATAUR (1d75c5f5-5bd1-4643-b603-0697dc816c0b) power changed (9 -> 10) due to SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0) effect
+2026-03-12 12:18:25.116 INFO  - Resolving POWER_UP effect of SHIELD BUGS (05b8d7e0-9ad0-4ddc-9a78-fc1900ea27d0)
+2026-03-12 12:18:25.116 INFO  - Life update for player Player2 (79f9fb24-2c5b-4faa-a7fa-955a5f1097a2) : 2 LP
+2026-03-12 12:18:25.117 DEBUG - FROBLIN INSTIGATOR (298834aa-d328-421d-8d78-480e3e5d8903) power changed (1 -> 1) due to FROBLIN INSTIGATOR (298834aa-d328-421d-8d78-480e3e5d8903) effect
+2026-03-12 12:18:25.117 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (298834aa-d328-421d-8d78-480e3e5d8903)
+2026-03-12 12:18:25.117 DEBUG - FROBLIN INSTIGATOR (298834aa-d328-421d-8d78-480e3e5d8903) power changed (1 -> 1) due to FROBLIN INSTIGATOR (298834aa-d328-421d-8d78-480e3e5d8903) effect
+2026-03-12 12:18:25.117 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (298834aa-d328-421d-8d78-480e3e5d8903)
+2026-03-12 12:18:25.117 INFO  - Life update for player Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) : 2 LP
+2026-03-12 12:18:25.117 DEBUG - Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) LP changed (3 -> 2) due to KILLER BEE (38839603-2475-4b66-831f-3ad8c0660e7f) effect
+2026-03-12 12:18:25.117 INFO  - Resolving INFLICT effect of KILLER BEE (38839603-2475-4b66-831f-3ad8c0660e7f)
+2026-03-12 12:18:25.117 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.118 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.118 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.118 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.118 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 1) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.118 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.118 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 1) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.118 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.118 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.118 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.118 DEBUG - PLAY effects disabled for player Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) due to DEATHWEAVER (041c3d65-a7b9-40db-a16d-684f825ba497) effect
+2026-03-12 12:18:25.118 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (041c3d65-a7b9-40db-a16d-684f825ba497)
+2026-03-12 12:18:25.118 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.119 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.119 DEBUG - PLAY effects disabled for player Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) due to DEATHWEAVER (041c3d65-a7b9-40db-a16d-684f825ba497) effect
+2026-03-12 12:18:25.119 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (041c3d65-a7b9-40db-a16d-684f825ba497)
+2026-03-12 12:18:25.119 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.119 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.119 DEBUG - PLAY effects disabled for player Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) due to DEATHWEAVER (041c3d65-a7b9-40db-a16d-684f825ba497) effect
+2026-03-12 12:18:25.119 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (041c3d65-a7b9-40db-a16d-684f825ba497)
+2026-03-12 12:18:25.119 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.119 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.119 DEBUG - PLAY effects disabled for player Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) due to DEATHWEAVER (041c3d65-a7b9-40db-a16d-684f825ba497) effect
+2026-03-12 12:18:25.119 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (041c3d65-a7b9-40db-a16d-684f825ba497)
+2026-03-12 12:18:25.119 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 1) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.119 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.119 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 1) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.120 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.120 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 1) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.120 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.120 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 1) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.120 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.120 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.120 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.120 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.120 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.120 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.120 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.121 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.121 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.121 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.121 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.121 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.121 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.121 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.121 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.122 INFO  - Life update for player Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) : 1 LP
+2026-03-12 12:18:25.122 DEBUG - Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) LP changed (2 -> 1) due to COUNT DRACULEECH (f4f715c9-467a-46e4-93c0-f5ad023eb74e) effect
+2026-03-12 12:18:25.122 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (f4f715c9-467a-46e4-93c0-f5ad023eb74e)
+2026-03-12 12:18:25.122 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.122 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.122 DEBUG - Player Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) must choose 1 card(s) to destroy (available targets : {
+- FROBLIN INSTIGATOR ;
+- THE LURKER ;
+- GRAVE ROBBER ;
+- COUNT DRACULEECH ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:18:25.122 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 3) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.122 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.123 INFO  - New TARGET choice to be resolved by Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) (targets : {
+- THE LURKER ;
+- FROBLIN INSTIGATOR ;
+- MAJESTIC MANTICORE ;
+- COUNT DRACULEECH ;
+- GRAVE ROBBER
+})
+2026-03-12 12:18:25.123 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.123 DEBUG - COUNT DRACULEECH (f4f715c9-467a-46e4-93c0-f5ad023eb74e) effect destroys THE LURKER (4bfd9358-a2db-4ec0-b21b-28bd4b9e8aa6)
+2026-03-12 12:18:25.123 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (f4f715c9-467a-46e4-93c0-f5ad023eb74e)
+2026-03-12 12:18:25.123 DEBUG - FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) power changed (1 -> 1) due to FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9) effect
+2026-03-12 12:18:25.123 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (493cf2fb-076f-4024-a305-a916d4d498d9)
+2026-03-12 12:18:25.123 INFO  - Game over : Player1 (78800f01-2f97-412f-9ed1-ae7bb4b4f673) wins ; Player2 (79f9fb24-2c5b-4faa-a7fa-955a5f1097a2) loses.
+2026-03-12 12:18:25.123 INFO  - End of the game

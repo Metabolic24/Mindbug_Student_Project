@@ -1,0 +1,254 @@
+2026-03-12 12:03:03.693 INFO  - Calculating first player...
+2026-03-12 12:03:03.696 INFO  - Banned card for Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) : AXOLOTL HEALER (8b710cec-10ec-4fa1-b6da-908723797fb2) (4)
+2026-03-12 12:03:03.696 INFO  - Banned card for Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) : FERRET PACIFIER (9c2162c8-1a03-4dea-bde0-1c6b17dec690) (4)
+2026-03-12 12:03:03.696 INFO  - Banned card for Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) : COMPOST DRAGON (d93e010c-b314-49e2-836c-c1d35125e3d6) (3)
+2026-03-12 12:03:03.696 INFO  - Banned card for Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) : FROBLIN INSTIGATOR (ecf154ba-966a-49c2-9b4c-56862f3e4451) (1)
+2026-03-12 12:03:03.696 INFO  - First player will be Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7)
+2026-03-12 12:03:03.705 INFO  - Game 1a86bde8-57a0-4de0-9091-0835ecfe9746 starting...
+2026-03-12 12:03:03.705 INFO  - Player Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) hand : {
+- RHINO TURTLE ;
+- GOREAGLE ALPHA ;
+- RHINO TURTLE ;
+- AXOLOTL HEALER ;
+- SPIDER OWL
+}
+2026-03-12 12:03:03.705 INFO  - Player Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) draw pile : {
+- TURBO BUG ;
+- STRANGE BARREL ;
+- EXPLOSIVE TOAD ;
+- TUSKED EXTORTER ;
+- SHARKY GRAB-DOG-MUMMYPUS
+}
+2026-03-12 12:03:03.705 INFO  - Player Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) hand : {
+- GRAVE ROBBER ;
+-  GIRAFFODILE ;
+- HUNGRY HUNGRY HAMSTER ;
+- KANGASAURUS REX ;
+- URCHIN HURLER
+}
+2026-03-12 12:03:03.705 INFO  - Player Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) draw pile : {
+- EXPLOSIVE TOAD ;
+- SNAIL THROWER ;
+- FROBLIN INSTIGATOR ;
+- LUCHATAUR ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:03:03.705 INFO  - Resolving POWER_UP effect of URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9)
+2026-03-12 12:03:03.706 INFO  - New FRENZY choice to be resolved by Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) (attackingCard : RHINO TURTLE (d0a8dd1b-0324-4336-972f-a5554ab9500a))
+2026-03-12 12:03:03.706 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.706 DEBUG - Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) LP changed (3 -> 5) due to AXOLOTL HEALER (b8eb9c48-9227-4611-b761-eb949840aa46) effect
+2026-03-12 12:03:03.706 INFO  - Resolving GAIN effect of AXOLOTL HEALER (b8eb9c48-9227-4611-b761-eb949840aa46)
+2026-03-12 12:03:03.706 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97)
+2026-03-12 12:03:03.707 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97)
+2026-03-12 12:03:03.707 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97)
+2026-03-12 12:03:03.707 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97)
+2026-03-12 12:03:03.707 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97)
+2026-03-12 12:03:03.707 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97)
+2026-03-12 12:03:03.707 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97)
+2026-03-12 12:03:03.707 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97)
+2026-03-12 12:03:03.708 DEBUG - AXOLOTL HEALER (b8eb9c48-9227-4611-b761-eb949840aa46) stolen and played by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) due to GRAVE ROBBER (6ac81daa-97b9-4e59-b538-27c66ae1a6a2) effect
+2026-03-12 12:03:03.708 INFO  - Resolving STEAL effect of GRAVE ROBBER (6ac81daa-97b9-4e59-b538-27c66ae1a6a2)
+2026-03-12 12:03:03.708 DEBUG - Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) LP changed (3 -> 5) due to AXOLOTL HEALER (b8eb9c48-9227-4611-b761-eb949840aa46) effect
+2026-03-12 12:03:03.708 INFO  - Resolving GAIN effect of AXOLOTL HEALER (b8eb9c48-9227-4611-b761-eb949840aa46)
+2026-03-12 12:03:03.709 INFO  - Life update for player Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) : 4 LP
+2026-03-12 12:03:03.709 DEBUG - Player Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) must choose 1 cards to steal (targets : {
+- GOREAGLE ALPHA ;
+- TURBO BUG ;
+- STRANGE BARREL ;
+- TUSKED EXTORTER ;
+- SHARKY GRAB-DOG-MUMMYPUS
+})
+2026-03-12 12:03:03.709 INFO  - New TARGET choice to be resolved by Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) (targets : {
+- STRANGE BARREL ;
+- TURBO BUG ;
+- TUSKED EXTORTER ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:03.709 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.709 DEBUG - Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) must decide if stolen card SHARKY GRAB-DOG-MUMMYPUS (b07caaf9-0f75-4d4e-9345-ccdf099c922e) will be added to hand or board
+2026-03-12 12:03:03.709 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (d0a9f5ab-0170-4d04-95e6-07af04917e67)
+2026-03-12 12:03:03.709 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:03.710 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (b07caaf9-0f75-4d4e-9345-ccdf099c922e) stolen and drawn by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) due to HUNGRY HUNGRY HAMSTER (d0a9f5ab-0170-4d04-95e6-07af04917e67) effect
+2026-03-12 12:03:03.710 INFO  - Life update for player Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) : 4 LP
+2026-03-12 12:03:03.710 DEBUG - Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) LP changed (5 -> 4) due to GOREAGLE ALPHA (cc37b329-4397-4a65-a5ba-b36ca42cc519) effect
+2026-03-12 12:03:03.710 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (cc37b329-4397-4a65-a5ba-b36ca42cc519)
+2026-03-12 12:03:03.710 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.710 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.710 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.710 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.710 INFO  - New FRENZY choice to be resolved by Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) (attackingCard : RHINO TURTLE (804999cd-6f51-4312-84de-c3bbb59ecb0e))
+2026-03-12 12:03:03.710 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.711 DEBUG - Player Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) must choose 1 card(s) to destroy (available targets : {
+- GRAVE ROBBER ;
+- RHINO TURTLE ;
+- RHINO TURTLE ;
+- GOREAGLE ALPHA ;
+- STRANGE BARREL
+})
+2026-03-12 12:03:03.711 INFO  - New TARGET choice to be resolved by Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) (targets : {
+- STRANGE BARREL ;
+- RHINO TURTLE ;
+- RHINO TURTLE ;
+- GRAVE ROBBER ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:03.712 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.712 DEBUG - EXPLOSIVE TOAD (bc237d2f-e7cf-4d7a-a874-e1a6432f4fd5) effect destroys GRAVE ROBBER (6ac81daa-97b9-4e59-b538-27c66ae1a6a2)
+2026-03-12 12:03:03.712 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (bc237d2f-e7cf-4d7a-a874-e1a6432f4fd5)
+2026-03-12 12:03:03.712 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:03.712 INFO  - New FRENZY choice to be resolved by Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) (attackingCard : GOREAGLE ALPHA (cc37b329-4397-4a65-a5ba-b36ca42cc519))
+2026-03-12 12:03:03.712 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.712 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:03.713 INFO  - New FRENZY choice to be resolved by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) (attackingCard : LUCHATAUR (feeb71c5-b16c-4c0e-af30-5ec7c889e5bd))
+2026-03-12 12:03:03.713 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.713 INFO  - New FRENZY choice to be resolved by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) (attackingCard : LUCHATAUR (feeb71c5-b16c-4c0e-af30-5ec7c889e5bd))
+2026-03-12 12:03:03.713 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.713 DEBUG - Player Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) must choose 1 card(s) to discard (available targets : {
+-  GIRAFFODILE ;
+- EXPLOSIVE TOAD ;
+- TIGER SQUIRREL
+})
+2026-03-12 12:03:03.713 INFO  - New TARGET choice to be resolved by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) (targets : {
+- TIGER SQUIRREL ;
+- EXPLOSIVE TOAD ;
+-  GIRAFFODILE
+})
+2026-03-12 12:03:03.714 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.714 DEBUG - TIGER SQUIRREL (5de5c5fc-eff6-480c-accf-aad58b398836) discarded due to TUSKED EXTORTER (5a94009e-5b82-419b-a0d9-1d5999420d35) effect
+2026-03-12 12:03:03.714 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (5a94009e-5b82-419b-a0d9-1d5999420d35)
+2026-03-12 12:03:03.714 DEBUG - URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) stolen and drawn by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) due to  GIRAFFODILE (5cd9caac-9eaa-43a3-a2c4-003fb33eb3b2) effect
+2026-03-12 12:03:03.714 DEBUG - SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97) stolen and drawn by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) due to  GIRAFFODILE (5cd9caac-9eaa-43a3-a2c4-003fb33eb3b2) effect
+2026-03-12 12:03:03.715 DEBUG - KANGASAURUS REX (3636d28e-cfcb-4d3c-9647-70b213c310a9) stolen and drawn by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) due to  GIRAFFODILE (5cd9caac-9eaa-43a3-a2c4-003fb33eb3b2) effect
+2026-03-12 12:03:03.715 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) stolen and drawn by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) due to  GIRAFFODILE (5cd9caac-9eaa-43a3-a2c4-003fb33eb3b2) effect
+2026-03-12 12:03:03.715 DEBUG - AXOLOTL HEALER (b8eb9c48-9227-4611-b761-eb949840aa46) stolen and drawn by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) due to  GIRAFFODILE (5cd9caac-9eaa-43a3-a2c4-003fb33eb3b2) effect
+2026-03-12 12:03:03.715 DEBUG - HUNGRY HUNGRY HAMSTER (d0a9f5ab-0170-4d04-95e6-07af04917e67) stolen and drawn by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) due to  GIRAFFODILE (5cd9caac-9eaa-43a3-a2c4-003fb33eb3b2) effect
+2026-03-12 12:03:03.715 DEBUG - GRAVE ROBBER (6ac81daa-97b9-4e59-b538-27c66ae1a6a2) stolen and drawn by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) due to  GIRAFFODILE (5cd9caac-9eaa-43a3-a2c4-003fb33eb3b2) effect
+2026-03-12 12:03:03.716 DEBUG - TIGER SQUIRREL (5de5c5fc-eff6-480c-accf-aad58b398836) stolen and drawn by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) due to  GIRAFFODILE (5cd9caac-9eaa-43a3-a2c4-003fb33eb3b2) effect
+2026-03-12 12:03:03.716 INFO  - Resolving STEAL effect of  GIRAFFODILE (5cd9caac-9eaa-43a3-a2c4-003fb33eb3b2)
+2026-03-12 12:03:03.716 INFO  - Life update for player Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) : 1 LP
+2026-03-12 12:03:03.716 DEBUG - Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) LP changed (4 -> 1) due to TURBO BUG (10f52bce-517f-48ad-a9ce-0f972539c1ba) effect
+2026-03-12 12:03:03.716 INFO  - Resolving INFLICT effect of TURBO BUG (10f52bce-517f-48ad-a9ce-0f972539c1ba)
+2026-03-12 12:03:03.716 DEBUG - HUNGRY HUNGRY HAMSTER (d0a9f5ab-0170-4d04-95e6-07af04917e67) stolen and drawn by Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) due to STRANGE BARREL (cfcb22d5-b0b4-463b-891d-43f6f418ed52) effect
+2026-03-12 12:03:03.716 DEBUG - AXOLOTL HEALER (b8eb9c48-9227-4611-b761-eb949840aa46) stolen and drawn by Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) due to STRANGE BARREL (cfcb22d5-b0b4-463b-891d-43f6f418ed52) effect
+2026-03-12 12:03:03.717 INFO  - Resolving STEAL effect of STRANGE BARREL (cfcb22d5-b0b4-463b-891d-43f6f418ed52)
+2026-03-12 12:03:03.717 DEBUG - Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) LP changed (4 -> 6) due to AXOLOTL HEALER (b8eb9c48-9227-4611-b761-eb949840aa46) effect
+2026-03-12 12:03:03.717 INFO  - Resolving GAIN effect of AXOLOTL HEALER (b8eb9c48-9227-4611-b761-eb949840aa46)
+2026-03-12 12:03:03.717 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.717 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.717 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.717 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.717 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.717 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.717 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.717 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.718 INFO  - Life update for player Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) : 5 LP
+2026-03-12 12:03:03.718 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.718 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.718 INFO  - New FRENZY choice to be resolved by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) (attackingCard : LUCHATAUR (feeb71c5-b16c-4c0e-af30-5ec7c889e5bd))
+2026-03-12 12:03:03.718 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:03.718 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.718 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.718 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.718 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.718 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.718 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.718 DEBUG - Player Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) must choose 1 cards to steal (targets : {
+- EXPLOSIVE TOAD ;
+- URCHIN HURLER ;
+- SNAIL THROWER ;
+- KANGASAURUS REX ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:03.718 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.718 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.718 INFO  - New TARGET choice to be resolved by Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) (targets : {
+- URCHIN HURLER ;
+- KANGASAURUS REX ;
+- EXPLOSIVE TOAD ;
+- SNAIL THROWER ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:03.718 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.719 DEBUG - Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) must decide if stolen card EXPLOSIVE TOAD (72f1c349-29ce-4d4c-9d98-1da3845747ee) will be added to hand or board
+2026-03-12 12:03:03.719 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (d0a9f5ab-0170-4d04-95e6-07af04917e67)
+2026-03-12 12:03:03.719 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.719 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.719 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:03.719 DEBUG - EXPLOSIVE TOAD (72f1c349-29ce-4d4c-9d98-1da3845747ee) stolen and drawn by Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) due to HUNGRY HUNGRY HAMSTER (d0a9f5ab-0170-4d04-95e6-07af04917e67) effect
+2026-03-12 12:03:03.719 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.719 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.719 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 5) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.719 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.719 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.719 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.719 DEBUG - TIGER SQUIRREL (5de5c5fc-eff6-480c-accf-aad58b398836) power changed (3 -> 5) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.719 DEBUG - LUCHATAUR (feeb71c5-b16c-4c0e-af30-5ec7c889e5bd) power changed (9 -> 11) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.719 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (7 -> 9) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.719 INFO  - Resolving POWER_UP effect of URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9)
+2026-03-12 12:03:03.719 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.719 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.720 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.720 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.720 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 7) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.720 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.720 DEBUG - TIGER SQUIRREL (5de5c5fc-eff6-480c-accf-aad58b398836) power changed (3 -> 5) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.720 DEBUG - LUCHATAUR (feeb71c5-b16c-4c0e-af30-5ec7c889e5bd) power changed (9 -> 11) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.720 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (7 -> 9) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.720 INFO  - Resolving POWER_UP effect of URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9)
+2026-03-12 12:03:03.720 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 9) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.720 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.720 DEBUG - KANGASAURUS REX (3636d28e-cfcb-4d3c-9647-70b213c310a9) power changed (7 -> 9) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.720 DEBUG - TIGER SQUIRREL (5de5c5fc-eff6-480c-accf-aad58b398836) power changed (3 -> 5) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.720 DEBUG - LUCHATAUR (feeb71c5-b16c-4c0e-af30-5ec7c889e5bd) power changed (9 -> 11) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.720 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (9 -> 11) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.720 INFO  - Resolving POWER_UP effect of URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9)
+2026-03-12 12:03:03.720 DEBUG - KANGASAURUS REX (3636d28e-cfcb-4d3c-9647-70b213c310a9) effect destroys HUNGRY HUNGRY HAMSTER (d0a9f5ab-0170-4d04-95e6-07af04917e67)
+2026-03-12 12:03:03.720 INFO  - Resolving DESTROY effect of KANGASAURUS REX (3636d28e-cfcb-4d3c-9647-70b213c310a9)
+2026-03-12 12:03:03.720 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 9) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.720 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.720 DEBUG - KANGASAURUS REX (3636d28e-cfcb-4d3c-9647-70b213c310a9) power changed (7 -> 9) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.720 DEBUG - TIGER SQUIRREL (5de5c5fc-eff6-480c-accf-aad58b398836) power changed (3 -> 5) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.720 DEBUG - LUCHATAUR (feeb71c5-b16c-4c0e-af30-5ec7c889e5bd) power changed (9 -> 11) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.721 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (9 -> 11) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.721 INFO  - Resolving POWER_UP effect of URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9)
+2026-03-12 12:03:03.721 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 9) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.721 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.721 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 9) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.721 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.721 DEBUG - Player Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) must choose 1 card(s) to destroy (available targets : {
+- LUCHATAUR ;
+- TIGER SQUIRREL ;
+- FROBLIN INSTIGATOR ;
+- URCHIN HURLER ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:03.721 DEBUG - FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) power changed (1 -> 9) due to FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d) effect
+2026-03-12 12:03:03.721 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.721 INFO  - New TARGET choice to be resolved by Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) (targets : {
+- URCHIN HURLER ;
+- KANGASAURUS REX ;
+- TIGER SQUIRREL ;
+- LUCHATAUR ;
+- FROBLIN INSTIGATOR
+})
+2026-03-12 12:03:03.721 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:03.721 DEBUG - EXPLOSIVE TOAD (72f1c349-29ce-4d4c-9d98-1da3845747ee) effect destroys FROBLIN INSTIGATOR (8c295ba7-77e6-47cd-b2d0-e3d4bf53119d)
+2026-03-12 12:03:03.721 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (72f1c349-29ce-4d4c-9d98-1da3845747ee)
+2026-03-12 12:03:03.722 DEBUG - KANGASAURUS REX (3636d28e-cfcb-4d3c-9647-70b213c310a9) power changed (7 -> 9) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.722 DEBUG - TIGER SQUIRREL (5de5c5fc-eff6-480c-accf-aad58b398836) power changed (3 -> 5) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.722 DEBUG - LUCHATAUR (feeb71c5-b16c-4c0e-af30-5ec7c889e5bd) power changed (9 -> 11) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.722 INFO  - Resolving POWER_UP effect of URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9)
+2026-03-12 12:03:03.722 DEBUG - KANGASAURUS REX (3636d28e-cfcb-4d3c-9647-70b213c310a9) power changed (7 -> 9) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.722 DEBUG - TIGER SQUIRREL (5de5c5fc-eff6-480c-accf-aad58b398836) power changed (3 -> 5) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.722 DEBUG - SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97) power changed (1 -> 3) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.722 DEBUG - LUCHATAUR (feeb71c5-b16c-4c0e-af30-5ec7c889e5bd) power changed (9 -> 11) due to URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9) effect
+2026-03-12 12:03:03.722 INFO  - Resolving POWER_UP effect of URCHIN HURLER (0e6c7acf-c06a-4f3f-a861-a5c2f26cb6c9)
+2026-03-12 12:03:03.722 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97)
+2026-03-12 12:03:03.722 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97)
+2026-03-12 12:03:03.722 DEBUG - TIGER SQUIRREL (5de5c5fc-eff6-480c-accf-aad58b398836) gains HUNTER keyword
+2026-03-12 12:03:03.722 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97)
+2026-03-12 12:03:03.722 DEBUG - TIGER SQUIRREL (5de5c5fc-eff6-480c-accf-aad58b398836) gains POISONOUS keyword
+2026-03-12 12:03:03.722 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e8a20e67-6145-429c-9c98-b06abb91ea97)
+2026-03-12 12:03:03.723 INFO  - Game over : Player2 (ab85f11f-cd0a-491f-b0f6-0fda033be1d1) wins ; Player1 (be76cc77-8238-4b73-9c21-e3ee08ce6ad7) loses.
+2026-03-12 12:03:03.723 INFO  - End of the game

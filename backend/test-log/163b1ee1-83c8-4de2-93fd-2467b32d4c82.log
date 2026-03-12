@@ -1,0 +1,210 @@
+2026-03-12 12:03:46.653 INFO  - Calculating first player...
+2026-03-12 12:03:46.656 INFO  - Banned card for Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) : HYENIX (b67dd8ee-9ea1-45e0-8864-5501bb66b0ed) (7)
+2026-03-12 12:03:46.656 INFO  - Banned card for Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) : PLATED SCORPION (b6fa1985-ff26-48a4-9bb6-2de5c43d1537) (2)
+2026-03-12 12:03:46.656 INFO  - First player will be Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c)
+2026-03-12 12:03:46.664 INFO  - Game 163b1ee1-83c8-4de2-93fd-2467b32d4c82 starting...
+2026-03-12 12:03:46.664 INFO  - Player Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) hand : {
+- FERRET BOMBER ;
+- THE LURKER ;
+- COMPOST DRAGON ;
+- BRAIN FLY ;
+- CREEP FROM THE DEEP
+}
+2026-03-12 12:03:46.664 INFO  - Player Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) draw pile : {
+- SNAIL THROWER ;
+- TURF THE SURFER ;
+- SNAIL HYDRA ;
+- SHARK DOG ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:03:46.664 INFO  - Player Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) hand : {
+- HAMSTER LION ;
+- BUGSERKER ;
+- EXPLOSIVE TOAD ;
+- HUNGRY HUNGRY HAMSTER ;
+- DEATHWEAVER
+}
+2026-03-12 12:03:46.664 INFO  - Player Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) draw pile : {
+- KANGASAURUS REX ;
+- TURF THE SURFER ;
+- GOREAGLE ALPHA ;
+- HUNGRY HUNGRY HAMSTER ;
+-  GIRAFFODILE
+}
+2026-03-12 12:03:46.665 DEBUG - Player Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) must choose 1 cards to steal (targets : {
+- FERRET BOMBER ;
+- THE LURKER ;
+- COMPOST DRAGON ;
+- CREEP FROM THE DEEP ;
+- SNAIL THROWER
+})
+2026-03-12 12:03:46.665 INFO  - New TARGET choice to be resolved by Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) (targets : {
+- CREEP FROM THE DEEP ;
+- FERRET BOMBER ;
+- THE LURKER ;
+- SNAIL THROWER ;
+- COMPOST DRAGON
+})
+2026-03-12 12:03:46.665 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.665 DEBUG - Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) must decide if stolen card CREEP FROM THE DEEP (3cd62380-748c-473f-8147-ff6fb6c85824) will be added to hand or board
+2026-03-12 12:03:46.665 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (d33cbe7a-0d97-4964-9f50-c6dcecbefe37)
+2026-03-12 12:03:46.665 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:46.665 DEBUG - CREEP FROM THE DEEP (3cd62380-748c-473f-8147-ff6fb6c85824) stolen and played by Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) due to HUNGRY HUNGRY HAMSTER (d33cbe7a-0d97-4964-9f50-c6dcecbefe37) effect
+2026-03-12 12:03:46.665 INFO  - Life update for player Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) : 2 LP
+2026-03-12 12:03:46.665 DEBUG - KANGASAURUS REX (0d802dfc-c48a-4da1-a75a-f89bdc8c6e16) effect destroys COMPOST DRAGON (9c0cfeb2-aa37-4a1f-a46f-39f5f950d472)
+2026-03-12 12:03:46.665 INFO  - Resolving DESTROY effect of KANGASAURUS REX (0d802dfc-c48a-4da1-a75a-f89bdc8c6e16)
+2026-03-12 12:03:46.665 INFO  - Life update for player Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) : 1 LP
+2026-03-12 12:03:46.666 DEBUG - Player Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) must choose 1 card(s) that will be unable to block (targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:46.666 INFO  - New TARGET choice to be resolved by Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) (targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- KANGASAURUS REX
+})
+2026-03-12 12:03:46.666 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.666 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (663d08ba-365f-41a5-b2bf-5994d334c195)
+2026-03-12 12:03:46.666 INFO  - Life update for player Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) : 2 LP
+2026-03-12 12:03:46.666 DEBUG - Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) LP changed (3 -> 2) due to GOREAGLE ALPHA (25098560-badb-40c2-8be6-7b716710eefe) effect
+2026-03-12 12:03:46.666 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (25098560-badb-40c2-8be6-7b716710eefe)
+2026-03-12 12:03:46.666 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.666 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.666 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.666 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.666 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.666 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.666 DEBUG - Player Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) must choose 1 card(s) to destroy (available targets : {
+- TURF THE SURFER ;
+- SNAIL HYDRA ;
+- SNAIL THROWER ;
+- HUNGRY HUNGRY HAMSTER ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:46.666 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.666 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.666 INFO  - New TARGET choice to be resolved by Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) (targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- TURF THE SURFER ;
+- GOREAGLE ALPHA ;
+- SNAIL THROWER ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:46.666 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.667 DEBUG - EXPLOSIVE TOAD (18eb74bd-e823-4581-834f-8b0eec332fab) effect destroys HUNGRY HUNGRY HAMSTER (d33cbe7a-0d97-4964-9f50-c6dcecbefe37)
+2026-03-12 12:03:46.667 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (18eb74bd-e823-4581-834f-8b0eec332fab)
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 DEBUG - SHARK DOG (b89162f3-cc1d-479f-9ac9-0797437a1fd6) gains POISONOUS keyword
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 DEBUG - SHARK DOG (b89162f3-cc1d-479f-9ac9-0797437a1fd6) gains POISONOUS keyword
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 DEBUG - SHARK DOG (b89162f3-cc1d-479f-9ac9-0797437a1fd6) gains POISONOUS keyword
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 INFO  - New FRENZY choice to be resolved by Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) (attackingCard : GOREAGLE ALPHA (25098560-badb-40c2-8be6-7b716710eefe))
+2026-03-12 12:03:46.667 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.667 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 DEBUG - PLAY effects disabled for player Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) due to DEATHWEAVER (7a20f8eb-81c7-446f-a99a-06cecd3b4fac) effect
+2026-03-12 12:03:46.668 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (7a20f8eb-81c7-446f-a99a-06cecd3b4fac)
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 DEBUG - PLAY effects disabled for player Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) due to DEATHWEAVER (7a20f8eb-81c7-446f-a99a-06cecd3b4fac) effect
+2026-03-12 12:03:46.668 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (7a20f8eb-81c7-446f-a99a-06cecd3b4fac)
+2026-03-12 12:03:46.668 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains HUNTER keyword
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains POISONOUS keyword
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 DEBUG - PLAY effects disabled for player Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) due to DEATHWEAVER (7a20f8eb-81c7-446f-a99a-06cecd3b4fac) effect
+2026-03-12 12:03:46.668 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (7a20f8eb-81c7-446f-a99a-06cecd3b4fac)
+2026-03-12 12:03:46.668 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains HUNTER keyword
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains POISONOUS keyword
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 DEBUG - PLAY effects disabled for player Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) due to DEATHWEAVER (7a20f8eb-81c7-446f-a99a-06cecd3b4fac) effect
+2026-03-12 12:03:46.668 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (7a20f8eb-81c7-446f-a99a-06cecd3b4fac)
+2026-03-12 12:03:46.668 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains HUNTER keyword
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains POISONOUS keyword
+2026-03-12 12:03:46.668 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.668 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains HUNTER keyword
+2026-03-12 12:03:46.669 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.669 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains POISONOUS keyword
+2026-03-12 12:03:46.669 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.669 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains HUNTER keyword
+2026-03-12 12:03:46.669 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.669 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains POISONOUS keyword
+2026-03-12 12:03:46.669 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.669 INFO  - Life update for player Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) : 1 LP
+2026-03-12 12:03:46.669 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains HUNTER keyword
+2026-03-12 12:03:46.669 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.669 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains POISONOUS keyword
+2026-03-12 12:03:46.669 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.669 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains HUNTER keyword
+2026-03-12 12:03:46.669 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.669 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains POISONOUS keyword
+2026-03-12 12:03:46.669 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.669 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains HUNTER keyword
+2026-03-12 12:03:46.669 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.669 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains POISONOUS keyword
+2026-03-12 12:03:46.669 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.669 DEBUG - CREEP FROM THE DEEP (3cd62380-748c-473f-8147-ff6fb6c85824) stolen and drawn by Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) due to  GIRAFFODILE (15754d81-6b31-4df9-9d25-e024e799e987) effect
+2026-03-12 12:03:46.669 DEBUG - KANGASAURUS REX (0d802dfc-c48a-4da1-a75a-f89bdc8c6e16) stolen and drawn by Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) due to  GIRAFFODILE (15754d81-6b31-4df9-9d25-e024e799e987) effect
+2026-03-12 12:03:46.669 DEBUG - EXPLOSIVE TOAD (18eb74bd-e823-4581-834f-8b0eec332fab) stolen and drawn by Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) due to  GIRAFFODILE (15754d81-6b31-4df9-9d25-e024e799e987) effect
+2026-03-12 12:03:46.669 DEBUG - HUNGRY HUNGRY HAMSTER (d33cbe7a-0d97-4964-9f50-c6dcecbefe37) stolen and drawn by Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) due to  GIRAFFODILE (15754d81-6b31-4df9-9d25-e024e799e987) effect
+2026-03-12 12:03:46.669 DEBUG - GOREAGLE ALPHA (25098560-badb-40c2-8be6-7b716710eefe) stolen and drawn by Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) due to  GIRAFFODILE (15754d81-6b31-4df9-9d25-e024e799e987) effect
+2026-03-12 12:03:46.669 DEBUG - DEATHWEAVER (7a20f8eb-81c7-446f-a99a-06cecd3b4fac) stolen and drawn by Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) due to  GIRAFFODILE (15754d81-6b31-4df9-9d25-e024e799e987) effect
+2026-03-12 12:03:46.669 INFO  - Resolving STEAL effect of  GIRAFFODILE (15754d81-6b31-4df9-9d25-e024e799e987)
+2026-03-12 12:03:46.669 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains HUNTER keyword
+2026-03-12 12:03:46.669 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.669 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains POISONOUS keyword
+2026-03-12 12:03:46.670 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.670 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains HUNTER keyword
+2026-03-12 12:03:46.670 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.670 DEBUG - TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882) gains POISONOUS keyword
+2026-03-12 12:03:46.670 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (4822d953-6193-435f-9532-60d82650836a)
+2026-03-12 12:03:46.670 DEBUG - Player Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) must choose 1 card(s) to destroy (available targets : {
+- SNAIL HYDRA ;
+- TIGER SQUIRREL
+})
+2026-03-12 12:03:46.670 INFO  - New TARGET choice to be resolved by Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) (targets : {
+- TIGER SQUIRREL ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:46.670 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.670 DEBUG - EXPLOSIVE TOAD (18eb74bd-e823-4581-834f-8b0eec332fab) effect destroys TIGER SQUIRREL (81848cff-d9c0-4858-8639-24ad4939a882)
+2026-03-12 12:03:46.670 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (18eb74bd-e823-4581-834f-8b0eec332fab)
+2026-03-12 12:03:46.670 DEBUG - CardInstance(uuid=424b2ee1-841b-4ef8-80a6-677c7ef0fb6d, card=Card(id=25, setName=first_contact, name=SNAIL HYDRA, power=9, keywords=[], effects={ATTACK=[DestroyEffect(value=1, min=null, max=null, lessAllies=true, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: If you control fewer creatures than the opponent, defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@446a692f), power=9, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.670 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7adb555e-53a0-4838-bc9a-a8637bd45f5d)
+2026-03-12 12:03:46.670 DEBUG - CardInstance(uuid=424b2ee1-841b-4ef8-80a6-677c7ef0fb6d, card=Card(id=25, setName=first_contact, name=SNAIL HYDRA, power=9, keywords=[], effects={ATTACK=[DestroyEffect(value=1, min=null, max=null, lessAllies=true, lowest=false, selfAllowed=false, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: If you control fewer creatures than the opponent, defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@446a692f), power=9, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.671 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7adb555e-53a0-4838-bc9a-a8637bd45f5d)
+2026-03-12 12:03:46.671 DEBUG - CardInstance(uuid=36dadc8c-33ce-47d3-b355-ff0a17beb4dc, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@446a692f), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.671 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7adb555e-53a0-4838-bc9a-a8637bd45f5d)
+2026-03-12 12:03:46.671 DEBUG - CardInstance(uuid=36dadc8c-33ce-47d3-b355-ff0a17beb4dc, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@446a692f), power=4, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.671 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7adb555e-53a0-4838-bc9a-a8637bd45f5d)
+2026-03-12 12:03:46.671 DEBUG - CardInstance(uuid=36dadc8c-33ce-47d3-b355-ff0a17beb4dc, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@446a692f), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.671 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7adb555e-53a0-4838-bc9a-a8637bd45f5d)
+2026-03-12 12:03:46.671 INFO  - New FRENZY choice to be resolved by Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) (attackingCard : HAMSTER LION (7adb555e-53a0-4838-bc9a-a8637bd45f5d))
+2026-03-12 12:03:46.671 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.671 DEBUG - CardInstance(uuid=36dadc8c-33ce-47d3-b355-ff0a17beb4dc, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@446a692f), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.671 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (7adb555e-53a0-4838-bc9a-a8637bd45f5d)
+2026-03-12 12:03:46.671 INFO  - Life update for player Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) : 0 LP
+2026-03-12 12:03:46.671 INFO  - Game over : Player1 (9947093f-1714-4ce5-88cd-80f2f3bb966c) wins ; Player2 (0947ec56-88b5-4c67-9f2a-96ffae1842f2) loses.
+2026-03-12 12:03:46.671 INFO  - End of the game

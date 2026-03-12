@@ -1,0 +1,135 @@
+2026-03-12 12:18:28.024 INFO  - Calculating first player...
+2026-03-12 12:18:28.027 INFO  - Banned card for Player1 (91dbc93f-d82f-4b67-b3a2-6d17f0a72061) : SHARKY GRAB-DOG-MUMMYPUS (46b15e8b-56dc-4709-943d-2c355c049831) (5)
+2026-03-12 12:18:28.027 INFO  - Banned card for Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) : CREEP FROM THE DEEP (76a76ec8-4521-481d-bf82-5da28532c3ff) (4)
+2026-03-12 12:18:28.027 INFO  - First player will be Player1 (91dbc93f-d82f-4b67-b3a2-6d17f0a72061)
+2026-03-12 12:18:28.033 INFO  - Game b11576b2-66a8-4153-a7a1-64880b4379a3 starting...
+2026-03-12 12:18:28.033 INFO  - Player Player1 (91dbc93f-d82f-4b67-b3a2-6d17f0a72061) hand : {
+- GORILLON ;
+- TUSKED EXTORTER ;
+- BEE BEAR ;
+- SNAIL HYDRA ;
+- FROBLIN INSTIGATOR
+}
+2026-03-12 12:18:28.034 INFO  - Player Player1 (91dbc93f-d82f-4b67-b3a2-6d17f0a72061) draw pile : {
+- URCHIN HURLER ;
+- FROBLIN INSTIGATOR ;
+- MAJESTIC MANTICORE ;
+- LONE YETI ;
+- PLATED SCORPION
+}
+2026-03-12 12:18:28.034 INFO  - Player Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) hand : {
+- GOBLIN WEREWOLF ;
+- FERRET PACIFIER ;
+- LUCHATAUR ;
+- FERRET BOMBER ;
+-  GIRAFFODILE
+}
+2026-03-12 12:18:28.034 INFO  - Player Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) draw pile : {
+- TUSKED EXTORTER ;
+- BRAIN FLY ;
+- CHAMELEON SNIPER ;
+- AXOLOTL HEALER ;
+- STRANGE BARREL
+}
+2026-03-12 12:18:28.034 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.034 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.034 INFO  - Resolving NO_BLOCK effect of BEE BEAR (9be67afc-fcd5-451c-bf3c-23efb661cddc)
+2026-03-12 12:18:28.034 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.034 INFO  - Life update for player Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) : 2 LP
+2026-03-12 12:18:28.034 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.034 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.035 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.035 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.035 INFO  - Resolving NO_BLOCK effect of BEE BEAR (9be67afc-fcd5-451c-bf3c-23efb661cddc)
+2026-03-12 12:18:28.035 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.035 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.035 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.035 INFO  - Life update for player Player1 (91dbc93f-d82f-4b67-b3a2-6d17f0a72061) : 2 LP
+2026-03-12 12:18:28.035 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.035 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.035 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.035 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.035 DEBUG - GOBLIN WEREWOLF (c3864a18-8f2b-45e2-921a-1ddccdccbbcc) power changed (2 -> 8) due to GOBLIN WEREWOLF (c3864a18-8f2b-45e2-921a-1ddccdccbbcc) effect
+2026-03-12 12:18:28.035 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (c3864a18-8f2b-45e2-921a-1ddccdccbbcc)
+2026-03-12 12:18:28.035 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.035 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.035 DEBUG - Player Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) must choose 1 card(s) to discard (available targets : {
+- FERRET BOMBER ;
+-  GIRAFFODILE ;
+- TUSKED EXTORTER ;
+- BRAIN FLY ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:18:28.035 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.036 INFO  - New TARGET choice to be resolved by Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) (targets : {
+- BRAIN FLY ;
+- CHAMELEON SNIPER ;
+- FERRET BOMBER ;
+-  GIRAFFODILE ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:18:28.036 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:28.036 DEBUG - TUSKED EXTORTER (26d9038e-f165-498b-9ecb-e63de0808861) discarded due to TUSKED EXTORTER (3183c321-4037-464f-a4b3-33dddd675808) effect
+2026-03-12 12:18:28.036 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (3183c321-4037-464f-a4b3-33dddd675808)
+2026-03-12 12:18:28.036 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab)
+2026-03-12 12:18:28.036 DEBUG - GOBLIN WEREWOLF (c3864a18-8f2b-45e2-921a-1ddccdccbbcc) power changed (2 -> 8) due to GOBLIN WEREWOLF (c3864a18-8f2b-45e2-921a-1ddccdccbbcc) effect
+2026-03-12 12:18:28.036 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (c3864a18-8f2b-45e2-921a-1ddccdccbbcc)
+2026-03-12 12:18:28.036 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:28.036 DEBUG - GOBLIN WEREWOLF (c3864a18-8f2b-45e2-921a-1ddccdccbbcc) power changed (2 -> 8) due to GOBLIN WEREWOLF (c3864a18-8f2b-45e2-921a-1ddccdccbbcc) effect
+2026-03-12 12:18:28.036 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (c3864a18-8f2b-45e2-921a-1ddccdccbbcc)
+2026-03-12 12:18:28.036 DEBUG - SNAIL HYDRA (c9be9742-d5b8-4617-ae0d-4fe865e65419) stolen and played by Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) due to BRAIN FLY (9c3284eb-e009-402f-aa32-481c193141b1) effect
+2026-03-12 12:18:28.036 INFO  - Resolving STEAL effect of BRAIN FLY (9c3284eb-e009-402f-aa32-481c193141b1)
+2026-03-12 12:18:28.036 INFO  - Resolving POWER_UP effect of URCHIN HURLER (b8cb431b-92f7-44e1-868b-79b7e159124b)
+2026-03-12 12:18:28.036 INFO  - Resolving POWER_UP effect of URCHIN HURLER (b8cb431b-92f7-44e1-868b-79b7e159124b)
+2026-03-12 12:18:28.036 DEBUG - FROBLIN INSTIGATOR (43785948-32c5-4ebc-afdc-074c2761ba86) power changed (1 -> 3) due to URCHIN HURLER (b8cb431b-92f7-44e1-868b-79b7e159124b) effect
+2026-03-12 12:18:28.037 INFO  - Resolving POWER_UP effect of URCHIN HURLER (b8cb431b-92f7-44e1-868b-79b7e159124b)
+2026-03-12 12:18:28.037 DEBUG - FROBLIN INSTIGATOR (43785948-32c5-4ebc-afdc-074c2761ba86) power changed (3 -> 5) due to FROBLIN INSTIGATOR (43785948-32c5-4ebc-afdc-074c2761ba86) effect
+2026-03-12 12:18:28.037 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (43785948-32c5-4ebc-afdc-074c2761ba86)
+2026-03-12 12:18:28.037 DEBUG - FROBLIN INSTIGATOR (43785948-32c5-4ebc-afdc-074c2761ba86) power changed (1 -> 3) due to FROBLIN INSTIGATOR (43785948-32c5-4ebc-afdc-074c2761ba86) effect
+2026-03-12 12:18:28.037 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (43785948-32c5-4ebc-afdc-074c2761ba86)
+2026-03-12 12:18:28.037 INFO  - New FRENZY choice to be resolved by Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) (attackingCard : LUCHATAUR (0c1dbb88-bc84-42dc-8ec9-d5543f6bb244))
+2026-03-12 12:18:28.037 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:28.037 DEBUG - FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) power changed (1 -> 1) due to FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) effect
+2026-03-12 12:18:28.037 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1)
+2026-03-12 12:18:28.037 DEBUG - FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) power changed (1 -> 1) due to FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) effect
+2026-03-12 12:18:28.037 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1)
+2026-03-12 12:18:28.037 DEBUG - FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) power changed (1 -> 1) due to FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) effect
+2026-03-12 12:18:28.037 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1)
+2026-03-12 12:18:28.037 DEBUG - TUSKED EXTORTER (26d9038e-f165-498b-9ecb-e63de0808861) stolen and drawn by Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) due to  GIRAFFODILE (4f560ad7-9f96-4eed-b7ec-2b5584076e0e) effect
+2026-03-12 12:18:28.037 DEBUG - FERRET PACIFIER (2ab4bb2b-3498-4bbd-831a-5c0ec597e0ab) stolen and drawn by Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) due to  GIRAFFODILE (4f560ad7-9f96-4eed-b7ec-2b5584076e0e) effect
+2026-03-12 12:18:28.037 DEBUG - GOBLIN WEREWOLF (c3864a18-8f2b-45e2-921a-1ddccdccbbcc) stolen and drawn by Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) due to  GIRAFFODILE (4f560ad7-9f96-4eed-b7ec-2b5584076e0e) effect
+2026-03-12 12:18:28.037 DEBUG - BRAIN FLY (9c3284eb-e009-402f-aa32-481c193141b1) stolen and drawn by Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) due to  GIRAFFODILE (4f560ad7-9f96-4eed-b7ec-2b5584076e0e) effect
+2026-03-12 12:18:28.037 INFO  - Resolving STEAL effect of  GIRAFFODILE (4f560ad7-9f96-4eed-b7ec-2b5584076e0e)
+2026-03-12 12:18:28.037 DEBUG - FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) power changed (1 -> 1) due to FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) effect
+2026-03-12 12:18:28.037 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1)
+2026-03-12 12:18:28.038 DEBUG - FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) power changed (1 -> 1) due to FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) effect
+2026-03-12 12:18:28.038 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1)
+2026-03-12 12:18:28.038 DEBUG - FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) power changed (1 -> 3) due to FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) effect
+2026-03-12 12:18:28.038 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1)
+2026-03-12 12:18:28.038 DEBUG - FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) power changed (1 -> 3) due to FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) effect
+2026-03-12 12:18:28.038 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1)
+2026-03-12 12:18:28.038 DEBUG - FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) power changed (1 -> 3) due to FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) effect
+2026-03-12 12:18:28.038 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1)
+2026-03-12 12:18:28.038 DEBUG - FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) power changed (1 -> 1) due to FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) effect
+2026-03-12 12:18:28.038 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1)
+2026-03-12 12:18:28.038 DEBUG - FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) power changed (1 -> 1) due to FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1) effect
+2026-03-12 12:18:28.038 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (fdbf89e3-f68e-427e-ba58-4dec76266de1)
+2026-03-12 12:18:28.038 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:28.038 INFO  - Life update for player Player1 (91dbc93f-d82f-4b67-b3a2-6d17f0a72061) : 1 LP
+2026-03-12 12:18:28.038 INFO  - New FRENZY choice to be resolved by Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) (attackingCard : LUCHATAUR (0c1dbb88-bc84-42dc-8ec9-d5543f6bb244))
+2026-03-12 12:18:28.038 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:28.038 DEBUG - Player Player1 (91dbc93f-d82f-4b67-b3a2-6d17f0a72061) must choose 1 card(s) to discard (available targets : {
+- GORILLON ;
+- LONE YETI
+})
+2026-03-12 12:18:28.039 INFO  - New TARGET choice to be resolved by Player1 (91dbc93f-d82f-4b67-b3a2-6d17f0a72061) (targets : {
+- LONE YETI ;
+- GORILLON
+})
+2026-03-12 12:18:28.039 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:28.039 DEBUG - LONE YETI (33cd38c1-fb69-4cd9-98b9-6704580341a1) discarded due to TUSKED EXTORTER (26d9038e-f165-498b-9ecb-e63de0808861) effect
+2026-03-12 12:18:28.039 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (26d9038e-f165-498b-9ecb-e63de0808861)
+2026-03-12 12:18:28.039 INFO  - Resolving DISCARD effect of FERRET BOMBER (103cce9b-1f72-4c47-b80c-4730858510c1)
+2026-03-12 12:18:28.039 INFO  - Life update for player Player1 (91dbc93f-d82f-4b67-b3a2-6d17f0a72061) : 0 LP
+2026-03-12 12:18:28.039 INFO  - Game over : Player2 (372690d9-1ba6-49ce-a8e5-8bc3bb1156c2) wins ; Player1 (91dbc93f-d82f-4b67-b3a2-6d17f0a72061) loses.
+2026-03-12 12:18:28.039 INFO  - End of the game

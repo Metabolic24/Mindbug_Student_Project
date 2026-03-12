@@ -12,7 +12,7 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.BounceEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.utils.MindbugGameTest;
+import org.metacorp.mindbug.service.game.StartService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class BounceEffectResolverTest extends MindbugGameTest {
+public class BounceEffectResolverTest {
 
     private Game game;
     private CardInstance randomCard;
@@ -33,9 +33,9 @@ public class BounceEffectResolverTest extends MindbugGameTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         Player currentPlayer = game.getCurrentPlayer();
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponents().getFirst();
 
         randomCard = currentPlayer.getHand().getFirst();
         randomCard.setStillTough(false);
@@ -43,7 +43,7 @@ public class BounceEffectResolverTest extends MindbugGameTest {
 
         effect = new BounceEffect();
         effect.setType(EffectType.BOUNCE);
-        effectResolver = new BounceEffectResolver(effect, randomCard);
+        effectResolver = new BounceEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }
 
@@ -53,7 +53,7 @@ public class BounceEffectResolverTest extends MindbugGameTest {
 
         effect.setValue(1);
 
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, randomCard, timing);
         assertTrue(opponentPlayer.getBoard().isEmpty());
         assertEquals(5, opponentPlayer.getHand().size());
         assertNull(game.getChoice());
@@ -66,7 +66,7 @@ public class BounceEffectResolverTest extends MindbugGameTest {
 
         effect.setValue(1);
 
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, randomCard, timing);
         assertEquals(2, opponentPlayer.getBoard().size());
         assertEquals(3, opponentPlayer.getHand().size());
 

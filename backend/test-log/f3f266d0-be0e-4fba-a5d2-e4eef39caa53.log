@@ -1,0 +1,60 @@
+2026-03-12 12:03:06.445 INFO  - Calculating first player...
+2026-03-12 12:03:06.447 INFO  - Banned card for Player1 (c21b616c-f7cd-4c2b-8025-6cea9d29302b) : HAMSTER LION (b4589a6d-232a-4a72-8e0f-d84dd877c6fe) (8)
+2026-03-12 12:03:06.447 INFO  - Banned card for Player2 (23c9d2ef-09aa-47a9-92b5-55144b2c2c9f) : BUGSERKER (8ab6c247-8d86-4ab2-a061-40b10fae261d) (3)
+2026-03-12 12:03:06.447 INFO  - First player will be Player1 (c21b616c-f7cd-4c2b-8025-6cea9d29302b)
+2026-03-12 12:03:06.455 INFO  - Game f3f266d0-be0e-4fba-a5d2-e4eef39caa53 starting...
+2026-03-12 12:03:06.455 INFO  - Player Player1 (c21b616c-f7cd-4c2b-8025-6cea9d29302b) hand : {
+- GRAVE ROBBER ;
+- COMPOST DRAGON ;
+- TURBO BUG ;
+- GOREAGLE ALPHA ;
+- SPIDER OWL
+}
+2026-03-12 12:03:06.455 INFO  - Player Player1 (c21b616c-f7cd-4c2b-8025-6cea9d29302b) draw pile : {
+- MAJESTIC MANTICORE ;
+- FROBLIN INSTIGATOR ;
+- SHIELD BUGS ;
+- HUNGRY HUNGRY HAMSTER ;
+- HYENIX
+}
+2026-03-12 12:03:06.455 INFO  - Player Player2 (23c9d2ef-09aa-47a9-92b5-55144b2c2c9f) hand : {
+- BRAIN FLY ;
+- CREEP FROM THE DEEP ;
+- GOBLIN WEREWOLF ;
+- SPIDER OWL ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:06.455 INFO  - Player Player2 (23c9d2ef-09aa-47a9-92b5-55144b2c2c9f) draw pile : {
+- SNAIL HYDRA ;
+- SNAIL HYDRA ;
+- RHINO TURTLE ;
+- EXPLOSIVE TOAD ;
+- MYSTERIOUS MERMAID
+}
+2026-03-12 12:03:06.456 INFO  - Life update for player Player1 (c21b616c-f7cd-4c2b-8025-6cea9d29302b) : 2 LP
+2026-03-12 12:03:06.456 DEBUG - Player1 (c21b616c-f7cd-4c2b-8025-6cea9d29302b) LP changed (3 -> 2) due to GOREAGLE ALPHA (d734e037-b7a8-4f5c-80cb-0aaa2a5996ec) effect
+2026-03-12 12:03:06.456 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (d734e037-b7a8-4f5c-80cb-0aaa2a5996ec)
+2026-03-12 12:03:06.456 DEBUG - GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df) power changed (2 -> 8) due to GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df) effect
+2026-03-12 12:03:06.456 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df)
+2026-03-12 12:03:06.456 DEBUG - GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df) power changed (2 -> 8) due to GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df) effect
+2026-03-12 12:03:06.456 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df)
+2026-03-12 12:03:06.456 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.456 DEBUG - GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df) power changed (2 -> 8) due to GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df) effect
+2026-03-12 12:03:06.456 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df)
+2026-03-12 12:03:06.456 DEBUG - GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df) power changed (2 -> 8) due to GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df) effect
+2026-03-12 12:03:06.456 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df)
+2026-03-12 12:03:06.456 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.456 DEBUG - GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df) power changed (2 -> 8) due to GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df) effect
+2026-03-12 12:03:06.456 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (b13a18c0-7489-434c-a5cf-a9c3ecd336df)
+2026-03-12 12:03:06.457 INFO  - Life update for player Player2 (23c9d2ef-09aa-47a9-92b5-55144b2c2c9f) : 1 LP
+2026-03-12 12:03:06.457 DEBUG - Player2 (23c9d2ef-09aa-47a9-92b5-55144b2c2c9f) LP changed (3 -> 1) due to TURBO BUG (511911fc-3e09-455e-acfa-5aa92419f236) effect
+2026-03-12 12:03:06.457 INFO  - Resolving INFLICT effect of TURBO BUG (511911fc-3e09-455e-acfa-5aa92419f236)
+2026-03-12 12:03:06.457 DEBUG - GOREAGLE ALPHA (d734e037-b7a8-4f5c-80cb-0aaa2a5996ec) stolen and played by Player1 (c21b616c-f7cd-4c2b-8025-6cea9d29302b) due to COMPOST DRAGON (bb2922c9-1b87-45c0-b5af-421b3316b2f9) effect
+2026-03-12 12:03:06.457 INFO  - Resolving STEAL effect of COMPOST DRAGON (bb2922c9-1b87-45c0-b5af-421b3316b2f9)
+2026-03-12 12:03:06.457 INFO  - Life update for player Player1 (c21b616c-f7cd-4c2b-8025-6cea9d29302b) : 1 LP
+2026-03-12 12:03:06.457 DEBUG - Player1 (c21b616c-f7cd-4c2b-8025-6cea9d29302b) LP changed (2 -> 1) due to GOREAGLE ALPHA (d734e037-b7a8-4f5c-80cb-0aaa2a5996ec) effect
+2026-03-12 12:03:06.457 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (d734e037-b7a8-4f5c-80cb-0aaa2a5996ec)
+2026-03-12 12:03:06.457 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.457 INFO  - Life update for player Player2 (23c9d2ef-09aa-47a9-92b5-55144b2c2c9f) : 0 LP
+2026-03-12 12:03:06.457 INFO  - Game over : Player1 (c21b616c-f7cd-4c2b-8025-6cea9d29302b) wins ; Player2 (23c9d2ef-09aa-47a9-92b5-55144b2c2c9f) loses.
+2026-03-12 12:03:06.457 INFO  - End of the game

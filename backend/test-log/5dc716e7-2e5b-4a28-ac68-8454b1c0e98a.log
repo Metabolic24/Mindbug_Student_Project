@@ -1,0 +1,145 @@
+2026-03-12 12:03:06.288 INFO  - Calculating first player...
+2026-03-12 12:03:06.290 INFO  - Banned card for Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) : LONE YETI (f7818264-0fc2-4c79-b3e6-1ff66e751f2b) (5)
+2026-03-12 12:03:06.290 INFO  - Banned card for Player2 (e0207911-4d2a-4aeb-b8fa-7374c82819fe) : KILLER BEE (f20c9e34-96f9-43ad-a400-dd8d5ddda50c) (5)
+2026-03-12 12:03:06.291 INFO  - Banned card for Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) : SNAIL HYDRA (72e7531f-808c-4f87-a324-3ed23addc140) (9)
+2026-03-12 12:03:06.291 INFO  - Banned card for Player2 (e0207911-4d2a-4aeb-b8fa-7374c82819fe) : COUNT DRACULEECH (c175c734-b520-4684-bd3e-8b95af156fc3) (7)
+2026-03-12 12:03:06.291 INFO  - First player will be Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b)
+2026-03-12 12:03:06.299 INFO  - Game 5dc716e7-2e5b-4a28-ac68-8454b1c0e98a starting...
+2026-03-12 12:03:06.299 INFO  - Player Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) hand : {
+- HYENIX ;
+- TIGER SQUIRREL ;
+- SHARK DOG ;
+- SPIDER OWL ;
+- HAMSTER LION
+}
+2026-03-12 12:03:06.299 INFO  - Player Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) draw pile : {
+- GRAVE ROBBER ;
+- SPIDER OWL ;
+- LUCHATAUR ;
+- DEATHWEAVER ;
+- GORILLON
+}
+2026-03-12 12:03:06.299 INFO  - Player Player2 (e0207911-4d2a-4aeb-b8fa-7374c82819fe) hand : {
+- BEE BEAR ;
+- BRAIN FLY ;
+- THE LURKER ;
+- FERRET PACIFIER ;
+- HARPY MOTHER
+}
+2026-03-12 12:03:06.299 INFO  - Player Player2 (e0207911-4d2a-4aeb-b8fa-7374c82819fe) draw pile : {
+- AXOLOTL HEALER ;
+-  GIRAFFODILE ;
+- HUNGRY HUNGRY HAMSTER ;
+- FERRET BOMBER ;
+- PLATED SCORPION
+}
+2026-03-12 12:03:06.299 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.299 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.299 DEBUG - CardInstance(uuid=a0f9bf2a-462a-4dcd-aecb-2b400a3f4fb5, card=Card(id=14, setName=first_contact, name=HARPY MOTHER, power=5, keywords=[], effects={DEFEATED=[StealEffect(value=2, optional=true, min=null, max=5, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Defeated</b>: Take control of up to 2 creatures with power 5 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=5, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.299 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.299 DEBUG - CardInstance(uuid=a0f9bf2a-462a-4dcd-aecb-2b400a3f4fb5, card=Card(id=14, setName=first_contact, name=HARPY MOTHER, power=5, keywords=[], effects={DEFEATED=[StealEffect(value=2, optional=true, min=null, max=5, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Defeated</b>: Take control of up to 2 creatures with power 5 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=5, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.299 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.300 DEBUG - CardInstance(uuid=a0f9bf2a-462a-4dcd-aecb-2b400a3f4fb5, card=Card(id=14, setName=first_contact, name=HARPY MOTHER, power=5, keywords=[], effects={DEFEATED=[StealEffect(value=2, optional=true, min=null, max=5, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Defeated</b>: Take control of up to 2 creatures with power 5 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=5, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.300 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.300 DEBUG - CardInstance(uuid=a0f9bf2a-462a-4dcd-aecb-2b400a3f4fb5, card=Card(id=14, setName=first_contact, name=HARPY MOTHER, power=5, keywords=[], effects={DEFEATED=[StealEffect(value=2, optional=true, min=null, max=5, selection=null, source=BOARD, mustPlay=true, mayPlay=false)]}, unique=true, description=<b>Defeated</b>: Take control of up to 2 creatures with power 5 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=5, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.300 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.300 DEBUG - CardInstance(uuid=693348ee-6d43-4352-9e0d-f42b6e589bde, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.300 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.300 DEBUG - Player2 (e0207911-4d2a-4aeb-b8fa-7374c82819fe) LP changed (3 -> 5) due to AXOLOTL HEALER (693348ee-6d43-4352-9e0d-f42b6e589bde) effect
+2026-03-12 12:03:06.300 INFO  - Resolving GAIN effect of AXOLOTL HEALER (693348ee-6d43-4352-9e0d-f42b6e589bde)
+2026-03-12 12:03:06.300 DEBUG - CardInstance(uuid=693348ee-6d43-4352-9e0d-f42b6e589bde, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.300 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.300 DEBUG - CardInstance(uuid=693348ee-6d43-4352-9e0d-f42b6e589bde, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.300 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.300 DEBUG - CardInstance(uuid=693348ee-6d43-4352-9e0d-f42b6e589bde, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.300 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.300 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:06.300 DEBUG - CardInstance(uuid=693348ee-6d43-4352-9e0d-f42b6e589bde, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.300 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.301 DEBUG - CardInstance(uuid=693348ee-6d43-4352-9e0d-f42b6e589bde, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.301 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.301 DEBUG - CardInstance(uuid=693348ee-6d43-4352-9e0d-f42b6e589bde, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.301 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.301 DEBUG - CardInstance(uuid=693348ee-6d43-4352-9e0d-f42b6e589bde, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.301 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.301 DEBUG - CardInstance(uuid=693348ee-6d43-4352-9e0d-f42b6e589bde, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.301 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.301 DEBUG - CardInstance(uuid=693348ee-6d43-4352-9e0d-f42b6e589bde, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@6d695ec4), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.301 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (53879c90-3393-4417-bca7-b1df2af1353b)
+2026-03-12 12:03:06.301 DEBUG - Player Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) must choose 1 cards to steal (targets : {
+- HARPY MOTHER ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:03:06.301 INFO  - New TARGET choice to be resolved by Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) (targets : {
+- HARPY MOTHER ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:03:06.301 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.301 DEBUG - HARPY MOTHER (a0f9bf2a-462a-4dcd-aecb-2b400a3f4fb5) stolen and played by Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) due to GRAVE ROBBER (1723048a-bc10-4e0d-90e1-91693e329b95) effect
+2026-03-12 12:03:06.302 INFO  - Resolving STEAL effect of GRAVE ROBBER (1723048a-bc10-4e0d-90e1-91693e329b95)
+2026-03-12 12:03:06.302 INFO  - Life update for player Player2 (e0207911-4d2a-4aeb-b8fa-7374c82819fe) : 4 LP
+2026-03-12 12:03:06.302 DEBUG - AXOLOTL HEALER (693348ee-6d43-4352-9e0d-f42b6e589bde) stolen and drawn by Player2 (e0207911-4d2a-4aeb-b8fa-7374c82819fe) due to  GIRAFFODILE (516f7b4b-66f0-42e8-b649-0dcc82f933f7) effect
+2026-03-12 12:03:06.302 DEBUG - BRAIN FLY (979b3a7a-8d1f-436e-9448-4eaf25d27baa) stolen and drawn by Player2 (e0207911-4d2a-4aeb-b8fa-7374c82819fe) due to  GIRAFFODILE (516f7b4b-66f0-42e8-b649-0dcc82f933f7) effect
+2026-03-12 12:03:06.302 INFO  - Resolving STEAL effect of  GIRAFFODILE (516f7b4b-66f0-42e8-b649-0dcc82f933f7)
+2026-03-12 12:03:06.302 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (733867a2-e6e6-4e43-91a4-3a57ce67ba21)
+2026-03-12 12:03:06.302 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (733867a2-e6e6-4e43-91a4-3a57ce67ba21)
+2026-03-12 12:03:06.302 INFO  - Resolving NO_BLOCK effect of BEE BEAR (b0478563-187f-4f7b-8154-a13c764a4228)
+2026-03-12 12:03:06.302 INFO  - Life update for player Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) : 2 LP
+2026-03-12 12:03:06.302 DEBUG - Player Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) must choose 1 cards to steal (targets : {
+- TIGER SQUIRREL ;
+- SPIDER OWL ;
+- SPIDER OWL ;
+- LUCHATAUR ;
+- DEATHWEAVER
+})
+2026-03-12 12:03:06.302 INFO  - New TARGET choice to be resolved by Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) (targets : {
+- TIGER SQUIRREL ;
+- LUCHATAUR ;
+- DEATHWEAVER ;
+- SPIDER OWL ;
+- SPIDER OWL
+})
+2026-03-12 12:03:06.303 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.303 DEBUG - Player2 (e0207911-4d2a-4aeb-b8fa-7374c82819fe) must decide if stolen card SPIDER OWL (3d5c70c5-2e29-4b3c-8a69-44955db4542b) will be added to hand or board
+2026-03-12 12:03:06.303 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (280a9b9a-106b-46c9-a89c-22b4d18e6f5f)
+2026-03-12 12:03:06.303 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:06.303 DEBUG - SPIDER OWL (3d5c70c5-2e29-4b3c-8a69-44955db4542b) stolen and played by Player2 (e0207911-4d2a-4aeb-b8fa-7374c82819fe) due to HUNGRY HUNGRY HAMSTER (280a9b9a-106b-46c9-a89c-22b4d18e6f5f) effect
+2026-03-12 12:03:06.303 DEBUG - Player Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) must choose 2 card(s) to discard (available targets : {
+- TIGER SQUIRREL ;
+- SPIDER OWL ;
+- LUCHATAUR ;
+- DEATHWEAVER ;
+- GORILLON
+})
+2026-03-12 12:03:06.303 INFO  - New TARGET choice to be resolved by Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) (targets : {
+- GORILLON ;
+- TIGER SQUIRREL ;
+- LUCHATAUR ;
+- DEATHWEAVER ;
+- SPIDER OWL
+})
+2026-03-12 12:03:06.303 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.303 DEBUG - TIGER SQUIRREL (826f2b41-2dc6-4785-947c-f579c3127229) discarded due to FERRET BOMBER (ff5c98c5-00ed-4e22-99df-3beb2b1e13ac) effect
+2026-03-12 12:03:06.303 DEBUG - LUCHATAUR (f9955425-847c-48cc-9417-02dcfc093b47) discarded due to FERRET BOMBER (ff5c98c5-00ed-4e22-99df-3beb2b1e13ac) effect
+2026-03-12 12:03:06.303 INFO  - Resolving DISCARD effect of FERRET BOMBER (ff5c98c5-00ed-4e22-99df-3beb2b1e13ac)
+2026-03-12 12:03:06.303 DEBUG - Player Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) must choose 2 cards to steal (targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- FERRET BOMBER
+})
+2026-03-12 12:03:06.304 INFO  - New TARGET choice to be resolved by Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) (targets : {
+- FERRET BOMBER ;
+- HUNGRY HUNGRY HAMSTER
+})
+2026-03-12 12:03:06.304 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.304 DEBUG - FERRET BOMBER (ff5c98c5-00ed-4e22-99df-3beb2b1e13ac) stolen and played by Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) due to HARPY MOTHER (a0f9bf2a-462a-4dcd-aecb-2b400a3f4fb5) effect
+2026-03-12 12:03:06.304 DEBUG - HUNGRY HUNGRY HAMSTER (280a9b9a-106b-46c9-a89c-22b4d18e6f5f) stolen and played by Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) due to HARPY MOTHER (a0f9bf2a-462a-4dcd-aecb-2b400a3f4fb5) effect
+2026-03-12 12:03:06.304 INFO  - Resolving STEAL effect of HARPY MOTHER (a0f9bf2a-462a-4dcd-aecb-2b400a3f4fb5)
+2026-03-12 12:03:06.304 INFO  - Resolving NO_BLOCK effect of BEE BEAR (b0478563-187f-4f7b-8154-a13c764a4228)
+2026-03-12 12:03:06.304 INFO  - Life update for player Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) : 1 LP
+2026-03-12 12:03:06.304 DEBUG - Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) must decide if HYENIX (51b647dd-6e7f-4cc7-8d35-24583f706c5c) will revive
+2026-03-12 12:03:06.304 INFO  - New BOOLEAN choice to be resolved by Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) (target : )
+2026-03-12 12:03:06.304 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:06.305 INFO  - Resolving NO_BLOCK effect of BEE BEAR (b0478563-187f-4f7b-8154-a13c764a4228)
+2026-03-12 12:03:06.305 INFO  - Life update for player Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) : 0 LP
+2026-03-12 12:03:06.305 INFO  - Game over : Player2 (e0207911-4d2a-4aeb-b8fa-7374c82819fe) wins ; Player1 (6381c3f6-7175-4e78-8281-cc17c962d70b) loses.
+2026-03-12 12:03:06.305 INFO  - End of the game

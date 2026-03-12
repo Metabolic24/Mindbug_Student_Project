@@ -1,0 +1,94 @@
+2026-03-12 12:03:46.548 INFO  - Calculating first player...
+2026-03-12 12:03:46.549 INFO  - Banned card for Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) : COMPOST DRAGON (8b2a806a-27a0-4daf-a106-bc5e970f4174) (3)
+2026-03-12 12:03:46.549 INFO  - Banned card for Player2 (59ea9401-b7a1-46a8-8a38-e8480a54a308) : FERRET BOMBER (9f2a9840-a2c3-4723-a6b9-b3477d66103b) (2)
+2026-03-12 12:03:46.549 INFO  - First player will be Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb)
+2026-03-12 12:03:46.554 INFO  - Game 08abe354-2ecf-43e6-bdaa-436a6e205d00 starting...
+2026-03-12 12:03:46.554 INFO  - Player Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) hand : {
+- LUCHATAUR ;
+- CREEP FROM THE DEEP ;
+- TIGER SQUIRREL ;
+- GOREAGLE ALPHA ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:03:46.554 INFO  - Player Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) draw pile : {
+- THE LURKER ;
+- SPIDER OWL ;
+- FERRET PACIFIER ;
+- HARPY MOTHER ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:46.554 INFO  - Player Player2 (59ea9401-b7a1-46a8-8a38-e8480a54a308) hand : {
+- GOBLIN WEREWOLF ;
+- COUNT DRACULEECH ;
+- KILLER BEE ;
+- FERRET PACIFIER ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:46.554 INFO  - Player Player2 (59ea9401-b7a1-46a8-8a38-e8480a54a308) draw pile : {
+- RHINO TURTLE ;
+- FROBLIN INSTIGATOR ;
+- PLATED SCORPION ;
+- MAJESTIC MANTICORE ;
+- THE LURKER
+}
+2026-03-12 12:03:46.554 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (91024f42-79c4-435c-9029-147eb818147a)
+2026-03-12 12:03:46.554 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (91024f42-79c4-435c-9029-147eb818147a)
+2026-03-12 12:03:46.554 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.554 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (91024f42-79c4-435c-9029-147eb818147a)
+2026-03-12 12:03:46.555 DEBUG - EXPLOSIVE TOAD (8178990c-cbc3-4929-b8ab-66ca864e11cc) effect destroys RHINO TURTLE (b98eb511-8d71-4293-b483-9bc88cf6aa85)
+2026-03-12 12:03:46.555 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (8178990c-cbc3-4929-b8ab-66ca864e11cc)
+2026-03-12 12:03:46.555 INFO  - New FRENZY choice to be resolved by Player2 (59ea9401-b7a1-46a8-8a38-e8480a54a308) (attackingCard : RHINO TURTLE (b98eb511-8d71-4293-b483-9bc88cf6aa85))
+2026-03-12 12:03:46.555 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.555 INFO  - New FRENZY choice to be resolved by Player2 (59ea9401-b7a1-46a8-8a38-e8480a54a308) (attackingCard : RHINO TURTLE (b98eb511-8d71-4293-b483-9bc88cf6aa85))
+2026-03-12 12:03:46.555 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.555 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8204fd45-adbe-462e-a47a-7bd15bfc1780)
+2026-03-12 12:03:46.555 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8204fd45-adbe-462e-a47a-7bd15bfc1780)
+2026-03-12 12:03:46.555 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8204fd45-adbe-462e-a47a-7bd15bfc1780)
+2026-03-12 12:03:46.555 INFO  - New FRENZY choice to be resolved by Player2 (59ea9401-b7a1-46a8-8a38-e8480a54a308) (attackingCard : RHINO TURTLE (b98eb511-8d71-4293-b483-9bc88cf6aa85))
+2026-03-12 12:03:46.555 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.555 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (8204fd45-adbe-462e-a47a-7bd15bfc1780)
+2026-03-12 12:03:46.555 INFO  - Life update for player Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) : 2 LP
+2026-03-12 12:03:46.555 DEBUG - Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) LP changed (3 -> 2) due to KILLER BEE (c7aa7c1e-d118-4ca6-9f03-4d557659b704) effect
+2026-03-12 12:03:46.555 INFO  - Resolving INFLICT effect of KILLER BEE (c7aa7c1e-d118-4ca6-9f03-4d557659b704)
+2026-03-12 12:03:46.555 INFO  - New FRENZY choice to be resolved by Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) (attackingCard : LUCHATAUR (12e82be7-8a2e-42ce-8b8e-1ec63a5b51fa))
+2026-03-12 12:03:46.555 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.555 DEBUG - Player Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) must choose 1 cards to steal (targets : {
+- TIGER SQUIRREL ;
+- GOREAGLE ALPHA ;
+- SPIDER OWL ;
+- HARPY MOTHER ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:03:46.555 INFO  - New TARGET choice to be resolved by Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) (targets : {
+- HARPY MOTHER ;
+- SPIDER OWL ;
+- AXOLOTL HEALER ;
+- TIGER SQUIRREL ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:46.555 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.555 DEBUG - Player2 (59ea9401-b7a1-46a8-8a38-e8480a54a308) must decide if stolen card TIGER SQUIRREL (8ff2f8a5-c65e-4648-98b9-8f7863b80b23) will be added to hand or board
+2026-03-12 12:03:46.555 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (9d3e5a78-d21d-4938-a90d-fe48b862acd0)
+2026-03-12 12:03:46.555 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:46.555 DEBUG - TIGER SQUIRREL (8ff2f8a5-c65e-4648-98b9-8f7863b80b23) stolen and drawn by Player2 (59ea9401-b7a1-46a8-8a38-e8480a54a308) due to HUNGRY HUNGRY HAMSTER (9d3e5a78-d21d-4938-a90d-fe48b862acd0) effect
+2026-03-12 12:03:46.555 INFO  - New FRENZY choice to be resolved by Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) (attackingCard : LUCHATAUR (12e82be7-8a2e-42ce-8b8e-1ec63a5b51fa))
+2026-03-12 12:03:46.555 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.555 INFO  - Life update for player Player2 (59ea9401-b7a1-46a8-8a38-e8480a54a308) : 2 LP
+2026-03-12 12:03:46.556 DEBUG - TIGER SQUIRREL (8ff2f8a5-c65e-4648-98b9-8f7863b80b23) effect destroys LUCHATAUR (12e82be7-8a2e-42ce-8b8e-1ec63a5b51fa)
+2026-03-12 12:03:46.556 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (8ff2f8a5-c65e-4648-98b9-8f7863b80b23)
+2026-03-12 12:03:46.556 DEBUG - Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) LP changed (2 -> 4) due to AXOLOTL HEALER (c29664d6-58a8-4ee0-b74f-f7a508a23cca) effect
+2026-03-12 12:03:46.556 INFO  - Resolving GAIN effect of AXOLOTL HEALER (c29664d6-58a8-4ee0-b74f-f7a508a23cca)
+2026-03-12 12:03:46.556 INFO  - Life update for player Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) : 3 LP
+2026-03-12 12:03:46.556 INFO  - Life update for player Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) : 2 LP
+2026-03-12 12:03:46.556 DEBUG - Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) LP changed (3 -> 2) due to GOREAGLE ALPHA (e9c75694-4d76-4949-be0e-d9b2e7ed78e0) effect
+2026-03-12 12:03:46.556 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (e9c75694-4d76-4949-be0e-d9b2e7ed78e0)
+2026-03-12 12:03:46.556 INFO  - Life update for player Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) : 1 LP
+2026-03-12 12:03:46.556 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:46.556 INFO  - New FRENZY choice to be resolved by Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) (attackingCard : GOREAGLE ALPHA (e9c75694-4d76-4949-be0e-d9b2e7ed78e0))
+2026-03-12 12:03:46.556 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.556 INFO  - Life update for player Player2 (59ea9401-b7a1-46a8-8a38-e8480a54a308) : 1 LP
+2026-03-12 12:03:46.556 DEBUG - GOBLIN WEREWOLF (beaa7ef8-90b5-4e10-a5bd-bb58f668c268) power changed (2 -> 8) due to GOBLIN WEREWOLF (beaa7ef8-90b5-4e10-a5bd-bb58f668c268) effect
+2026-03-12 12:03:46.556 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (beaa7ef8-90b5-4e10-a5bd-bb58f668c268)
+2026-03-12 12:03:46.556 INFO  - Life update for player Player2 (59ea9401-b7a1-46a8-8a38-e8480a54a308) : 0 LP
+2026-03-12 12:03:46.556 INFO  - Game over : Player1 (5028aafd-f8d9-4ac7-9cbf-29fe332a56fb) wins ; Player2 (59ea9401-b7a1-46a8-8a38-e8480a54a308) loses.
+2026-03-12 12:03:46.556 INFO  - End of the game

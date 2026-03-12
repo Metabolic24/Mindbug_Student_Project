@@ -1,0 +1,115 @@
+2026-03-12 12:03:44.733 INFO  - Calculating first player...
+2026-03-12 12:03:44.735 INFO  - Banned card for Player1 (2f53e31c-1719-449a-b998-0a59d5882eea) : MYSTERIOUS MERMAID (3554b0b9-8175-4b3b-bc45-c9f20259a44c) (7)
+2026-03-12 12:03:44.735 INFO  - Banned card for Player2 (7fa2ceae-803e-4057-b1e7-c31c18d69001) : AXOLOTL HEALER (28944f09-73ee-480a-9043-2fb767a89749) (4)
+2026-03-12 12:03:44.735 INFO  - First player will be Player1 (2f53e31c-1719-449a-b998-0a59d5882eea)
+2026-03-12 12:03:44.743 INFO  - Game 89d7b56b-fdd8-4bf1-a12f-dd0e8db088df starting...
+2026-03-12 12:03:44.743 INFO  - Player Player1 (2f53e31c-1719-449a-b998-0a59d5882eea) hand : {
+- FERRET PACIFIER ;
+- KILLER BEE ;
+- SHARK DOG ;
+- SHIELD BUGS ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:03:44.744 INFO  - Player Player1 (2f53e31c-1719-449a-b998-0a59d5882eea) draw pile : {
+- TIGER SQUIRREL ;
+- GOREAGLE ALPHA ;
+- TIGER SQUIRREL ;
+- HARPY MOTHER ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:44.744 INFO  - Player Player2 (7fa2ceae-803e-4057-b1e7-c31c18d69001) hand : {
+- GORILLON ;
+- HUNGRY HUNGRY HAMSTER ;
+- GRAVE ROBBER ;
+- HAMSTER LION ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:44.744 INFO  - Player Player2 (7fa2ceae-803e-4057-b1e7-c31c18d69001) draw pile : {
+- MAJESTIC MANTICORE ;
+- CHAMELEON SNIPER ;
+- SNAIL HYDRA ;
+- KANGASAURUS REX ;
+- THE LURKER
+}
+2026-03-12 12:03:44.744 DEBUG - Player Player1 (2f53e31c-1719-449a-b998-0a59d5882eea) must choose 1 cards to steal (targets : {
+- FERRET PACIFIER ;
+- KILLER BEE ;
+- SHARK DOG ;
+- SHIELD BUGS ;
+- TIGER SQUIRREL
+})
+2026-03-12 12:03:44.744 INFO  - New TARGET choice to be resolved by Player1 (2f53e31c-1719-449a-b998-0a59d5882eea) (targets : {
+- SHIELD BUGS ;
+- FERRET PACIFIER ;
+- TIGER SQUIRREL ;
+- KILLER BEE ;
+- SHARK DOG
+})
+2026-03-12 12:03:44.744 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.744 DEBUG - Player2 (7fa2ceae-803e-4057-b1e7-c31c18d69001) must decide if stolen card FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4) will be added to hand or board
+2026-03-12 12:03:44.744 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (7de848d3-86a0-42d4-905f-a7b4d114a4d3)
+2026-03-12 12:03:44.744 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:44.744 DEBUG - FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4) stolen and played by Player2 (7fa2ceae-803e-4057-b1e7-c31c18d69001) due to HUNGRY HUNGRY HAMSTER (7de848d3-86a0-42d4-905f-a7b4d114a4d3) effect
+2026-03-12 12:03:44.744 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.744 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.744 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.745 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.745 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.745 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.745 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.745 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.745 INFO  - New FRENZY choice to be resolved by Player1 (2f53e31c-1719-449a-b998-0a59d5882eea) (attackingCard : EXPLOSIVE TOAD (2f9d0858-30de-41fd-8f7f-2257acca69e3))
+2026-03-12 12:03:44.745 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.745 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.745 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.745 INFO  - Life update for player Player1 (2f53e31c-1719-449a-b998-0a59d5882eea) : 2 LP
+2026-03-12 12:03:44.745 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.745 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.745 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.745 INFO  - Life update for player Player2 (7fa2ceae-803e-4057-b1e7-c31c18d69001) : 2 LP
+2026-03-12 12:03:44.745 DEBUG - Player2 (7fa2ceae-803e-4057-b1e7-c31c18d69001) LP changed (3 -> 2) due to KILLER BEE (4c0c195f-ddfa-4c3b-ab3e-063ed651bd79) effect
+2026-03-12 12:03:44.745 INFO  - Resolving INFLICT effect of KILLER BEE (4c0c195f-ddfa-4c3b-ab3e-063ed651bd79)
+2026-03-12 12:03:44.745 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.745 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.746 INFO  - Life update for player Player1 (2f53e31c-1719-449a-b998-0a59d5882eea) : 1 LP
+2026-03-12 12:03:44.746 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.746 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.746 DEBUG - EXPLOSIVE TOAD (2f9d0858-30de-41fd-8f7f-2257acca69e3) power changed (5 -> 6) due to SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d) effect
+2026-03-12 12:03:44.746 DEBUG - KILLER BEE (4c0c195f-ddfa-4c3b-ab3e-063ed651bd79) power changed (5 -> 6) due to SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d) effect
+2026-03-12 12:03:44.746 INFO  - Resolving POWER_UP effect of SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d)
+2026-03-12 12:03:44.746 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.746 DEBUG - EXPLOSIVE TOAD (2f9d0858-30de-41fd-8f7f-2257acca69e3) power changed (5 -> 6) due to SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d) effect
+2026-03-12 12:03:44.746 DEBUG - KILLER BEE (4c0c195f-ddfa-4c3b-ab3e-063ed651bd79) power changed (5 -> 6) due to SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d) effect
+2026-03-12 12:03:44.746 INFO  - Resolving POWER_UP effect of SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d)
+2026-03-12 12:03:44.746 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.746 DEBUG - EXPLOSIVE TOAD (2f9d0858-30de-41fd-8f7f-2257acca69e3) power changed (5 -> 6) due to SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d) effect
+2026-03-12 12:03:44.746 DEBUG - KILLER BEE (4c0c195f-ddfa-4c3b-ab3e-063ed651bd79) power changed (5 -> 6) due to SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d) effect
+2026-03-12 12:03:44.746 INFO  - Resolving POWER_UP effect of SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d)
+2026-03-12 12:03:44.746 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.746 DEBUG - EXPLOSIVE TOAD (2f9d0858-30de-41fd-8f7f-2257acca69e3) power changed (5 -> 6) due to SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d) effect
+2026-03-12 12:03:44.746 DEBUG - KILLER BEE (4c0c195f-ddfa-4c3b-ab3e-063ed651bd79) power changed (5 -> 6) due to SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d) effect
+2026-03-12 12:03:44.746 INFO  - Resolving POWER_UP effect of SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d)
+2026-03-12 12:03:44.746 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (b1ac2dd7-90c0-4e0e-a7ed-5201827e48c4)
+2026-03-12 12:03:44.746 DEBUG - EXPLOSIVE TOAD (2f9d0858-30de-41fd-8f7f-2257acca69e3) power changed (5 -> 6) due to SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d) effect
+2026-03-12 12:03:44.746 DEBUG - KILLER BEE (4c0c195f-ddfa-4c3b-ab3e-063ed651bd79) power changed (5 -> 6) due to SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d) effect
+2026-03-12 12:03:44.746 INFO  - Resolving POWER_UP effect of SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d)
+2026-03-12 12:03:44.746 DEBUG - EXPLOSIVE TOAD (2f9d0858-30de-41fd-8f7f-2257acca69e3) power changed (5 -> 6) due to SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d) effect
+2026-03-12 12:03:44.746 DEBUG - KILLER BEE (4c0c195f-ddfa-4c3b-ab3e-063ed651bd79) power changed (5 -> 6) due to SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d) effect
+2026-03-12 12:03:44.746 INFO  - Resolving POWER_UP effect of SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d)
+2026-03-12 12:03:44.746 DEBUG - MAJESTIC MANTICORE (be4b25d3-004e-4fbf-b36d-600dfe048b94) effect destroys SHIELD BUGS (85af49f9-4c97-4ae7-ba29-9b21e0a2ea3d)
+2026-03-12 12:03:44.746 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (be4b25d3-004e-4fbf-b36d-600dfe048b94)
+2026-03-12 12:03:44.747 DEBUG - EXPLOSIVE TOAD (2f9d0858-30de-41fd-8f7f-2257acca69e3) power changed (5 -> 6) due to SHIELD BUGS (f839eca7-3b98-4b6d-8460-f18a4d44a72b) effect
+2026-03-12 12:03:44.747 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f839eca7-3b98-4b6d-8460-f18a4d44a72b)
+2026-03-12 12:03:44.747 DEBUG - EXPLOSIVE TOAD (2f9d0858-30de-41fd-8f7f-2257acca69e3) power changed (5 -> 6) due to SHIELD BUGS (f839eca7-3b98-4b6d-8460-f18a4d44a72b) effect
+2026-03-12 12:03:44.747 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f839eca7-3b98-4b6d-8460-f18a4d44a72b)
+2026-03-12 12:03:44.747 DEBUG - MAJESTIC MANTICORE (be4b25d3-004e-4fbf-b36d-600dfe048b94) effect destroys SHIELD BUGS (f839eca7-3b98-4b6d-8460-f18a4d44a72b)
+2026-03-12 12:03:44.747 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (be4b25d3-004e-4fbf-b36d-600dfe048b94)
+2026-03-12 12:03:44.747 DEBUG - EXPLOSIVE TOAD (2f9d0858-30de-41fd-8f7f-2257acca69e3) power changed (5 -> 6) due to SHIELD BUGS (f839eca7-3b98-4b6d-8460-f18a4d44a72b) effect
+2026-03-12 12:03:44.747 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f839eca7-3b98-4b6d-8460-f18a4d44a72b)
+2026-03-12 12:03:44.747 DEBUG - EXPLOSIVE TOAD (2f9d0858-30de-41fd-8f7f-2257acca69e3) effect destroys MAJESTIC MANTICORE (be4b25d3-004e-4fbf-b36d-600dfe048b94)
+2026-03-12 12:03:44.747 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (2f9d0858-30de-41fd-8f7f-2257acca69e3)
+2026-03-12 12:03:44.747 INFO  - Life update for player Player1 (2f53e31c-1719-449a-b998-0a59d5882eea) : 0 LP
+2026-03-12 12:03:44.747 INFO  - Game over : Player2 (7fa2ceae-803e-4057-b1e7-c31c18d69001) wins ; Player1 (2f53e31c-1719-449a-b998-0a59d5882eea) loses.
+2026-03-12 12:03:44.747 INFO  - End of the game
+2026-03-12 12:03:44.747 DEBUG - Player1 (2f53e31c-1719-449a-b998-0a59d5882eea) LP changed (1 -> 0) due to CHAMELEON SNIPER (70c60eb8-064d-469e-91f1-15840f18301a) effect
+2026-03-12 12:03:44.747 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (70c60eb8-064d-469e-91f1-15840f18301a)

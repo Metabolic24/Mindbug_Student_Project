@@ -1,0 +1,47 @@
+2026-03-12 12:03:05.686 INFO  - Calculating first player...
+2026-03-12 12:03:05.688 INFO  - Banned card for Player1 (94dd979d-0c84-439f-875e-838e55844e58) : MAJESTIC MANTICORE (9fcfae0b-abe9-43fb-beca-27692c03f278) (6)
+2026-03-12 12:03:05.688 INFO  - Banned card for Player2 (6e56f4c9-44ff-4d8a-9879-c3f7bed0ce24) : COMPOST DRAGON (c7178e92-8a41-491b-92b8-26ada152e035) (3)
+2026-03-12 12:03:05.688 INFO  - First player will be Player1 (94dd979d-0c84-439f-875e-838e55844e58)
+2026-03-12 12:03:05.695 INFO  - Game 3e909b36-c18d-487e-9882-b403a7aedf29 starting...
+2026-03-12 12:03:05.695 INFO  - Player Player1 (94dd979d-0c84-439f-875e-838e55844e58) hand : {
+- MYSTERIOUS MERMAID ;
+- TURF THE SURFER ;
+- PLATED SCORPION ;
+-  GIRAFFODILE ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:03:05.696 INFO  - Player Player1 (94dd979d-0c84-439f-875e-838e55844e58) draw pile : {
+- HARPY MOTHER ;
+- TURBO BUG ;
+- KILLER BEE ;
+- MAJESTIC MANTICORE ;
+- SHARK DOG
+}
+2026-03-12 12:03:05.696 INFO  - Player Player2 (6e56f4c9-44ff-4d8a-9879-c3f7bed0ce24) hand : {
+- RHINO TURTLE ;
+- COMPOST DRAGON ;
+- TUSKED EXTORTER ;
+- HYENIX ;
+- COUNT DRACULEECH
+}
+2026-03-12 12:03:05.696 INFO  - Player Player2 (6e56f4c9-44ff-4d8a-9879-c3f7bed0ce24) draw pile : {
+- CREEP FROM THE DEEP ;
+- TUSKED EXTORTER ;
+- GOBLIN WEREWOLF ;
+- HUNGRY HUNGRY HAMSTER ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:05.696 INFO  - Life update for player Player1 (94dd979d-0c84-439f-875e-838e55844e58) : 2 LP
+2026-03-12 12:03:05.696 DEBUG - Player1 (94dd979d-0c84-439f-875e-838e55844e58) LP changed (3 -> 2) due to GOREAGLE ALPHA (40501630-90ed-4b88-9ac3-fe7345b20711) effect
+2026-03-12 12:03:05.696 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (40501630-90ed-4b88-9ac3-fe7345b20711)
+2026-03-12 12:03:05.696 INFO  - Life update for player Player2 (6e56f4c9-44ff-4d8a-9879-c3f7bed0ce24) : 1 LP
+2026-03-12 12:03:05.696 DEBUG - Player2 (6e56f4c9-44ff-4d8a-9879-c3f7bed0ce24) LP changed (3 -> 1) due to TURBO BUG (52b15c0b-ded8-4408-816b-c825e6fd8e9a) effect
+2026-03-12 12:03:05.696 INFO  - Resolving INFLICT effect of TURBO BUG (52b15c0b-ded8-4408-816b-c825e6fd8e9a)
+2026-03-12 12:03:05.696 DEBUG - Player2 (6e56f4c9-44ff-4d8a-9879-c3f7bed0ce24) must decide if HYENIX (253b161d-2ff3-40dd-9072-7a8bf8e2f2d9) will revive
+2026-03-12 12:03:05.696 INFO  - New BOOLEAN choice to be resolved by Player2 (6e56f4c9-44ff-4d8a-9879-c3f7bed0ce24) (target : )
+2026-03-12 12:03:05.696 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:05.697 INFO  - Life update for player Player2 (6e56f4c9-44ff-4d8a-9879-c3f7bed0ce24) : 0 LP
+2026-03-12 12:03:05.697 INFO  - Game over : Player1 (94dd979d-0c84-439f-875e-838e55844e58) wins ; Player2 (6e56f4c9-44ff-4d8a-9879-c3f7bed0ce24) loses.
+2026-03-12 12:03:05.697 INFO  - End of the game
+2026-03-12 12:03:05.697 DEBUG - Player2 (6e56f4c9-44ff-4d8a-9879-c3f7bed0ce24) LP changed (1 -> 0) due to COUNT DRACULEECH (814836ec-190e-4030-b981-11b6a5965474) effect
+2026-03-12 12:03:05.697 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (814836ec-190e-4030-b981-11b6a5965474)

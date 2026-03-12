@@ -9,12 +9,12 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.GiveEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.utils.MindbugGameTest;
+import org.metacorp.mindbug.service.game.StartService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class GiveEffectResolverTest extends MindbugGameTest {
+public class GiveEffectResolverTest {
 
     private Game game;
     private CardInstance randomCard;
@@ -28,23 +28,23 @@ public class GiveEffectResolverTest extends MindbugGameTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         currentPlayer = game.getCurrentPlayer();
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponents().getFirst();
 
         currentPlayer.addCardToBoard(randomCard);
 
         effect = new GiveEffect();
         effect.setType(EffectType.GIVE);
-        effectResolver = new GiveEffectResolver(effect, randomCard);
+        effectResolver = new GiveEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }
 
     @Test
     public void testBasic() {
         effect.setItself(true);
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(currentPlayer.getBoard().isEmpty());
         assertEquals(1, opponentPlayer.getBoard().size());

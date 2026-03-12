@@ -1,0 +1,300 @@
+2026-03-12 12:18:26.240 INFO  - Calculating first player...
+2026-03-12 12:18:26.242 INFO  - Banned card for Player1 (f1aa6826-ece0-43a4-aa08-14f9ab2e7792) : ELEPHANTOPUS (a97b8ac7-c9ba-4495-b71d-7bc814946f74) (7)
+2026-03-12 12:18:26.242 INFO  - Banned card for Player2 (44e56680-17bd-426f-b098-57427ac54ab8) : SHARK DOG (22455627-ca75-498a-8238-45193151ffe2) (4)
+2026-03-12 12:18:26.242 INFO  - First player will be Player1 (f1aa6826-ece0-43a4-aa08-14f9ab2e7792)
+2026-03-12 12:18:26.257 INFO  - Game 9465fc28-a006-4c56-b609-bb96e5694cbf starting...
+2026-03-12 12:18:26.257 INFO  - Player Player1 (f1aa6826-ece0-43a4-aa08-14f9ab2e7792) hand : {
+- PLATED SCORPION ;
+- RHINO TURTLE ;
+- TIGER SQUIRREL ;
+- TUSKED EXTORTER ;
+- SNAIL HYDRA
+}
+2026-03-12 12:18:26.258 INFO  - Player Player1 (f1aa6826-ece0-43a4-aa08-14f9ab2e7792) draw pile : {
+- HAMSTER LION ;
+- CREEP FROM THE DEEP ;
+- CREEP FROM THE DEEP ;
+- AXOLOTL HEALER ;
+- PLATED SCORPION
+}
+2026-03-12 12:18:26.258 INFO  - Player Player2 (44e56680-17bd-426f-b098-57427ac54ab8) hand : {
+- LONE YETI ;
+-  GIRAFFODILE ;
+- COUNT DRACULEECH ;
+- FERRET PACIFIER ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:18:26.258 INFO  - Player Player2 (44e56680-17bd-426f-b098-57427ac54ab8) draw pile : {
+- SNAIL THROWER ;
+- BRAIN FLY ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- SHIELD BUGS ;
+- SHIELD BUGS
+}
+2026-03-12 12:18:26.258 INFO  - Life update for player Player2 (44e56680-17bd-426f-b098-57427ac54ab8) : 2 LP
+2026-03-12 12:18:26.258 DEBUG - Player2 (44e56680-17bd-426f-b098-57427ac54ab8) LP changed (3 -> 2) due to COUNT DRACULEECH (7f8f2212-2d16-4c8b-811d-2336332b40a6) effect
+2026-03-12 12:18:26.258 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (7f8f2212-2d16-4c8b-811d-2336332b40a6)
+2026-03-12 12:18:26.258 DEBUG - Player Player2 (44e56680-17bd-426f-b098-57427ac54ab8) must choose 1 card(s) to destroy (available targets : {
+- SNAIL HYDRA ;
+- TUSKED EXTORTER ;
+- COUNT DRACULEECH
+})
+2026-03-12 12:18:26.258 INFO  - New TARGET choice to be resolved by Player2 (44e56680-17bd-426f-b098-57427ac54ab8) (targets : {
+- SNAIL HYDRA ;
+- COUNT DRACULEECH ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:18:26.258 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:26.258 DEBUG - COUNT DRACULEECH (7f8f2212-2d16-4c8b-811d-2336332b40a6) effect destroys TUSKED EXTORTER (90bc0bf0-3e5d-4411-9ba6-15ec78039d73)
+2026-03-12 12:18:26.258 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (7f8f2212-2d16-4c8b-811d-2336332b40a6)
+2026-03-12 12:18:26.258 INFO  - Life update for player Player2 (44e56680-17bd-426f-b098-57427ac54ab8) : 1 LP
+2026-03-12 12:18:26.258 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:26.258 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:26.259 DEBUG - EXPLOSIVE TOAD (f7f812b2-cc45-42fe-9c2a-77bcd1de59dd) effect destroys RHINO TURTLE (8825310c-3713-4469-9bb5-31e898dc30e8)
+2026-03-12 12:18:26.259 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (f7f812b2-cc45-42fe-9c2a-77bcd1de59dd)
+2026-03-12 12:18:26.259 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7) gains FRENZY keyword
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7)
+2026-03-12 12:18:26.259 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7) gains POISONOUS keyword
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7)
+2026-03-12 12:18:26.259 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7) gains HUNTER keyword
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7)
+2026-03-12 12:18:26.259 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7) gains FRENZY keyword
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7)
+2026-03-12 12:18:26.259 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7) gains POISONOUS keyword
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7)
+2026-03-12 12:18:26.259 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7) gains HUNTER keyword
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7)
+2026-03-12 12:18:26.259 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7) gains FRENZY keyword
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7)
+2026-03-12 12:18:26.259 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7) gains POISONOUS keyword
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7)
+2026-03-12 12:18:26.259 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7) gains HUNTER keyword
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7)
+2026-03-12 12:18:26.259 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7) gains FRENZY keyword
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7)
+2026-03-12 12:18:26.259 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7) gains POISONOUS keyword
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7)
+2026-03-12 12:18:26.259 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7) gains HUNTER keyword
+2026-03-12 12:18:26.259 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7)
+2026-03-12 12:18:27.424 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.424 DEBUG - Player1 (f1aa6826-ece0-43a4-aa08-14f9ab2e7792) LP changed (3 -> 5) due to AXOLOTL HEALER (32167f78-c6cb-488d-a512-2a97990da8d9) effect
+2026-03-12 12:18:27.424 INFO  - Resolving GAIN effect of AXOLOTL HEALER (32167f78-c6cb-488d-a512-2a97990da8d9)
+2026-03-12 12:18:27.425 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) power changed (5 -> 10) due to LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) effect
+2026-03-12 12:18:27.425 INFO  - Resolving POWER_UP effect of LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f)
+2026-03-12 12:18:27.425 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) gains FRENZY keyword
+2026-03-12 12:18:27.425 INFO  - Resolving KEYWORD_UP effect of LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f)
+2026-03-12 12:18:27.425 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) power changed (5 -> 10) due to LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) effect
+2026-03-12 12:18:27.425 INFO  - Resolving POWER_UP effect of LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f)
+2026-03-12 12:18:27.425 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) gains FRENZY keyword
+2026-03-12 12:18:27.425 INFO  - Resolving KEYWORD_UP effect of LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f)
+2026-03-12 12:18:27.425 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.425 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) power changed (5 -> 10) due to LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) effect
+2026-03-12 12:18:27.425 INFO  - Resolving POWER_UP effect of LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f)
+2026-03-12 12:18:27.425 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) gains FRENZY keyword
+2026-03-12 12:18:27.425 INFO  - Resolving KEYWORD_UP effect of LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f)
+2026-03-12 12:18:27.425 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) power changed (5 -> 10) due to LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) effect
+2026-03-12 12:18:27.425 INFO  - Resolving POWER_UP effect of LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f)
+2026-03-12 12:18:27.425 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) gains FRENZY keyword
+2026-03-12 12:18:27.425 INFO  - Resolving KEYWORD_UP effect of LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f)
+2026-03-12 12:18:27.425 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) power changed (5 -> 10) due to LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) effect
+2026-03-12 12:18:27.425 INFO  - Resolving POWER_UP effect of LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f)
+2026-03-12 12:18:27.425 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) gains FRENZY keyword
+2026-03-12 12:18:27.425 INFO  - Resolving KEYWORD_UP effect of LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f)
+2026-03-12 12:18:27.425 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) power changed (5 -> 6) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.426 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.426 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) power changed (5 -> 6) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.426 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.426 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.426 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.426 DEBUG -  GIRAFFODILE (ccf193aa-1d9b-4a92-ad1f-905f29a827ce) power changed (7 -> 8) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.426 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.426 DEBUG - COUNT DRACULEECH (7f8f2212-2d16-4c8b-811d-2336332b40a6) stolen and drawn by Player2 (44e56680-17bd-426f-b098-57427ac54ab8) due to  GIRAFFODILE (ccf193aa-1d9b-4a92-ad1f-905f29a827ce) effect
+2026-03-12 12:18:27.426 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) stolen and drawn by Player2 (44e56680-17bd-426f-b098-57427ac54ab8) due to  GIRAFFODILE (ccf193aa-1d9b-4a92-ad1f-905f29a827ce) effect
+2026-03-12 12:18:27.426 DEBUG - EXPLOSIVE TOAD (f7f812b2-cc45-42fe-9c2a-77bcd1de59dd) stolen and drawn by Player2 (44e56680-17bd-426f-b098-57427ac54ab8) due to  GIRAFFODILE (ccf193aa-1d9b-4a92-ad1f-905f29a827ce) effect
+2026-03-12 12:18:27.426 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (389b4b6f-5ea8-4bca-894e-eeb11374eee7) stolen and drawn by Player2 (44e56680-17bd-426f-b098-57427ac54ab8) due to  GIRAFFODILE (ccf193aa-1d9b-4a92-ad1f-905f29a827ce) effect
+2026-03-12 12:18:27.426 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) stolen and drawn by Player2 (44e56680-17bd-426f-b098-57427ac54ab8) due to  GIRAFFODILE (ccf193aa-1d9b-4a92-ad1f-905f29a827ce) effect
+2026-03-12 12:18:27.426 INFO  - Resolving STEAL effect of  GIRAFFODILE (ccf193aa-1d9b-4a92-ad1f-905f29a827ce)
+2026-03-12 12:18:27.426 DEBUG -  GIRAFFODILE (ccf193aa-1d9b-4a92-ad1f-905f29a827ce) power changed (7 -> 8) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.426 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.426 DEBUG -  GIRAFFODILE (ccf193aa-1d9b-4a92-ad1f-905f29a827ce) power changed (7 -> 8) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.426 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.426 DEBUG -  GIRAFFODILE (ccf193aa-1d9b-4a92-ad1f-905f29a827ce) power changed (7 -> 8) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.426 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.426 DEBUG -  GIRAFFODILE (ccf193aa-1d9b-4a92-ad1f-905f29a827ce) power changed (7 -> 8) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.426 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.427 DEBUG -  GIRAFFODILE (ccf193aa-1d9b-4a92-ad1f-905f29a827ce) power changed (7 -> 8) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.427 DEBUG - EXPLOSIVE TOAD (f7f812b2-cc45-42fe-9c2a-77bcd1de59dd) power changed (5 -> 6) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.427 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.427 DEBUG -  GIRAFFODILE (ccf193aa-1d9b-4a92-ad1f-905f29a827ce) power changed (7 -> 8) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.427 DEBUG - EXPLOSIVE TOAD (f7f812b2-cc45-42fe-9c2a-77bcd1de59dd) power changed (5 -> 6) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.427 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.427 DEBUG - EXPLOSIVE TOAD (f7f812b2-cc45-42fe-9c2a-77bcd1de59dd) power changed (5 -> 6) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.427 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.427 DEBUG - EXPLOSIVE TOAD (f7f812b2-cc45-42fe-9c2a-77bcd1de59dd) power changed (5 -> 6) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.427 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.427 DEBUG - EXPLOSIVE TOAD (f7f812b2-cc45-42fe-9c2a-77bcd1de59dd) power changed (5 -> 6) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.427 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) power changed (4 -> 5) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.427 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.427 DEBUG - EXPLOSIVE TOAD (f7f812b2-cc45-42fe-9c2a-77bcd1de59dd) power changed (6 -> 7) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.427 DEBUG - SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) power changed (4 -> 5) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.427 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.427 DEBUG - EXPLOSIVE TOAD (f7f812b2-cc45-42fe-9c2a-77bcd1de59dd) power changed (5 -> 6) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.427 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) power changed (4 -> 5) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.427 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.427 DEBUG - EXPLOSIVE TOAD (f7f812b2-cc45-42fe-9c2a-77bcd1de59dd) power changed (6 -> 7) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.427 DEBUG - SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) power changed (4 -> 5) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.427 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.427 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) power changed (4 -> 5) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.427 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.428 DEBUG - SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) power changed (4 -> 5) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.428 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.428 DEBUG - Player Player2 (44e56680-17bd-426f-b098-57427ac54ab8) must choose 1 card(s) to destroy (available targets : {
+- PLATED SCORPION ;
+- SHIELD BUGS ;
+- SHIELD BUGS
+})
+2026-03-12 12:18:27.428 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) power changed (4 -> 5) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.428 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.428 DEBUG - SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) power changed (4 -> 5) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.428 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.428 INFO  - New TARGET choice to be resolved by Player2 (44e56680-17bd-426f-b098-57427ac54ab8) (targets : {
+- SHIELD BUGS ;
+- SHIELD BUGS ;
+- PLATED SCORPION
+})
+2026-03-12 12:18:27.434 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.434 DEBUG - EXPLOSIVE TOAD (f7f812b2-cc45-42fe-9c2a-77bcd1de59dd) effect destroys SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.434 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (f7f812b2-cc45-42fe-9c2a-77bcd1de59dd)
+2026-03-12 12:18:27.434 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) power changed (4 -> 5) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.434 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.434 DEBUG - SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) power changed (4 -> 5) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.434 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.434 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) power changed (4 -> 5) due to SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) effect
+2026-03-12 12:18:27.434 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5)
+2026-03-12 12:18:27.434 DEBUG - SHIELD BUGS (e55ba64e-8725-4073-9672-e758371b7ea5) power changed (4 -> 5) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.434 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.434 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.434 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.434 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.434 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.434 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.435 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.435 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.435 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.435 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.435 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - BRAIN FLY (f81d0e32-145b-4d89-88db-9168e6b5dc68) power changed (4 -> 5) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.435 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.435 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - BRAIN FLY (f81d0e32-145b-4d89-88db-9168e6b5dc68) power changed (4 -> 5) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.435 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.435 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - BRAIN FLY (f81d0e32-145b-4d89-88db-9168e6b5dc68) power changed (4 -> 5) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.435 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.435 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.435 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.435 DEBUG - BRAIN FLY (f81d0e32-145b-4d89-88db-9168e6b5dc68) power changed (4 -> 5) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.436 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.436 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.436 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.436 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.436 DEBUG - CardInstance(uuid=de98adf1-85b4-44df-afcb-a4f13bf2e8f2, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1aa31454), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.436 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (13cfb3e4-fddb-48d4-93c6-ee78eafe46ef)
+2026-03-12 12:18:27.436 DEBUG - BRAIN FLY (f81d0e32-145b-4d89-88db-9168e6b5dc68) power changed (4 -> 5) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.436 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.436 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.436 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.436 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.436 DEBUG - CardInstance(uuid=de98adf1-85b4-44df-afcb-a4f13bf2e8f2, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1aa31454), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.436 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (13cfb3e4-fddb-48d4-93c6-ee78eafe46ef)
+2026-03-12 12:18:27.436 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.436 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.436 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.436 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.436 DEBUG - CardInstance(uuid=de98adf1-85b4-44df-afcb-a4f13bf2e8f2, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1aa31454), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.436 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (13cfb3e4-fddb-48d4-93c6-ee78eafe46ef)
+2026-03-12 12:18:27.436 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.436 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.436 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.436 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.436 DEBUG - CardInstance(uuid=de98adf1-85b4-44df-afcb-a4f13bf2e8f2, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1aa31454), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.436 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (13cfb3e4-fddb-48d4-93c6-ee78eafe46ef)
+2026-03-12 12:18:27.436 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.436 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.436 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.436 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.436 DEBUG - CardInstance(uuid=de98adf1-85b4-44df-afcb-a4f13bf2e8f2, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1aa31454), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.436 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (13cfb3e4-fddb-48d4-93c6-ee78eafe46ef)
+2026-03-12 12:18:27.436 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.436 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.436 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.436 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.436 DEBUG - CardInstance(uuid=de98adf1-85b4-44df-afcb-a4f13bf2e8f2, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1aa31454), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.436 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (13cfb3e4-fddb-48d4-93c6-ee78eafe46ef)
+2026-03-12 12:18:27.436 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) power changed (5 -> 6) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.436 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.436 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.436 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.436 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.437 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.437 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.437 DEBUG - CardInstance(uuid=de98adf1-85b4-44df-afcb-a4f13bf2e8f2, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1aa31454), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.437 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (13cfb3e4-fddb-48d4-93c6-ee78eafe46ef)
+2026-03-12 12:18:27.437 DEBUG - LONE YETI (0cac90f3-358d-4d06-9abe-5125ec91f37f) power changed (5 -> 6) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.437 DEBUG - SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2) power changed (1 -> 2) due to SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) effect
+2026-03-12 12:18:27.437 INFO  - Resolving POWER_UP effect of SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9)
+2026-03-12 12:18:27.437 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains HUNTER keyword
+2026-03-12 12:18:27.437 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.437 DEBUG - SHIELD BUGS (f729dbf3-9829-4036-a23b-274f71527ba9) gains POISONOUS keyword
+2026-03-12 12:18:27.437 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (de98adf1-85b4-44df-afcb-a4f13bf2e8f2)
+2026-03-12 12:18:27.437 DEBUG - CardInstance(uuid=de98adf1-85b4-44df-afcb-a4f13bf2e8f2, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@1aa31454), power=2, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.437 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (13cfb3e4-fddb-48d4-93c6-ee78eafe46ef)
+2026-03-12 12:18:27.437 INFO  - Life update for player Player2 (44e56680-17bd-426f-b098-57427ac54ab8) : 0 LP
+2026-03-12 12:18:27.437 INFO  - Game over : Player1 (f1aa6826-ece0-43a4-aa08-14f9ab2e7792) wins ; Player2 (44e56680-17bd-426f-b098-57427ac54ab8) loses.
+2026-03-12 12:18:27.437 INFO  - End of the game

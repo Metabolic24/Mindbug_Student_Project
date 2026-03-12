@@ -7,7 +7,9 @@ import org.metacorp.mindbug.dto.PlayerDTO;
 import org.metacorp.mindbug.dto.choice.AbstractChoiceDTO;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 /**
@@ -18,9 +20,11 @@ public class WsPlayerGameState {
 
     private UUID uuid;
     private PlayerDTO player;
+    private PlayerDTO ally;
     private PlayerDTO opponent;
+    private List<PlayerDTO> opponents;
     private Boolean playerTurn;
-    private UUID winner;
+    private List<UUID> winners;
 
     private CardDTO card;
     private AbstractChoiceDTO choice;
@@ -28,26 +32,61 @@ public class WsPlayerGameState {
     /**
      * Constructor
      *
-     * @param gameState the GameStateDTO to
-     * @param isPlayer  is it a DTO for the current player or his/her opponent
+     * @param gameState the GameStateDTO to transform
+     * @param playerId  the player receiving this state
      */
-    public WsPlayerGameState(GameStateDTO gameState, boolean isPlayer) {
+    public WsPlayerGameState(GameStateDTO gameState, UUID playerId) {
         this.uuid = gameState.getUuid();
-        this.player = isPlayer ? gameState.getPlayer() : gameState.getOpponent();
-        this.opponent = isPlayer ? gameState.getOpponent() : gameState.getPlayer();
-        this.playerTurn = isPlayer;
-        this.winner = gameState.getWinner();
+        this.playerTurn = playerId.equals(gameState.getPlayer().getUuid());
+        this.winners = gameState.getWinners();
         this.card = gameState.getCard();
         this.choice = gameState.getChoice();
 
-        List<CardDTO> opponentHand = new ArrayList<>(this.opponent.getHand().size());
-        for (CardDTO cardDTO : this.opponent.getHand()) {
-            CardDTO copy = new CardDTO();
-            copy.setUuid(cardDTO.getUuid());
-            opponentHand.add(copy);
+        Map<UUID, PlayerDTO> playerById = new LinkedHashMap<>();
+        addIfNotNull(playerById, gameState.getPlayer());
+        addIfNotNull(playerById, gameState.getAlly());
+        for (PlayerDTO stateOpponent : gameState.getOpponents()) {
+            addIfNotNull(playerById, stateOpponent);
         }
 
-        this.opponent = new PlayerDTO(this.opponent);
-        this.opponent.setHand(opponentHand);
+        PlayerDTO current = playerById.get(playerId);
+        if (current == null) {
+            throw new IllegalArgumentException("Unknown player in game state: " + playerId);
+        }
+        this.player = new PlayerDTO(current);
+
+        this.ally = null;
+        this.opponents = new ArrayList<>();
+        for (PlayerDTO candidate : playerById.values()) {
+            if (candidate.getUuid().equals(this.player.getUuid())) {
+                continue;
+            }
+
+            if (candidate.getTeamId().equals(this.player.getTeamId())) {
+                this.ally = new PlayerDTO(candidate);
+            } else {
+                this.opponents.add(withHiddenHand(candidate));
+            }
+        }
+
+        this.opponent = opponents.isEmpty() ? null : opponents.getFirst();
+    }
+
+    private static void addIfNotNull(Map<UUID, PlayerDTO> players, PlayerDTO player) {
+        if (player != null) {
+            players.put(player.getUuid(), player);
+        }
+    }
+
+    private static PlayerDTO withHiddenHand(PlayerDTO player) {
+        PlayerDTO hiddenPlayer = new PlayerDTO(player);
+        List<CardDTO> hiddenHand = new ArrayList<>(player.getHand().size());
+        for (CardDTO cardDTO : player.getHand()) {
+            CardDTO hiddenCard = new CardDTO();
+            hiddenCard.setUuid(cardDTO.getUuid());
+            hiddenHand.add(hiddenCard);
+        }
+        hiddenPlayer.setHand(hiddenHand);
+        return hiddenPlayer;
     }
 }

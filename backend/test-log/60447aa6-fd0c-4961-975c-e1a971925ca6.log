@@ -1,0 +1,104 @@
+2026-03-12 12:03:44.619 INFO  - Calculating first player...
+2026-03-12 12:03:44.621 INFO  - Banned card for Player1 (cab49f68-ccb4-49e5-8682-8577637426b6) : BUGSERKER (61b9f3f3-e334-4afe-be77-3631454bd116) (3)
+2026-03-12 12:03:44.621 INFO  - Banned card for Player2 (0881cba1-dfb4-47d9-b716-510af2d2fd9d) : TURBO BUG (ccb5c056-7708-4a73-9867-8651ceae6668) (4)
+2026-03-12 12:03:44.621 INFO  - First player will be Player2 (0881cba1-dfb4-47d9-b716-510af2d2fd9d)
+2026-03-12 12:03:44.631 INFO  - Game 60447aa6-fd0c-4961-975c-e1a971925ca6 starting...
+2026-03-12 12:03:44.631 INFO  - Player Player1 (cab49f68-ccb4-49e5-8682-8577637426b6) hand : {
+- CREEP FROM THE DEEP ;
+- COUNT DRACULEECH ;
+- PLATED SCORPION ;
+- AXOLOTL HEALER ;
+- CHAMELEON SNIPER
+}
+2026-03-12 12:03:44.631 INFO  - Player Player1 (cab49f68-ccb4-49e5-8682-8577637426b6) draw pile : {
+- TUSKED EXTORTER ;
+- FERRET PACIFIER ;
+- BRAIN FLY ;
+- FROBLIN INSTIGATOR ;
+- LONE YETI
+}
+2026-03-12 12:03:44.631 INFO  - Player Player2 (0881cba1-dfb4-47d9-b716-510af2d2fd9d) hand : {
+- KILLER BEE ;
+- GOREAGLE ALPHA ;
+- FERRET PACIFIER ;
+- LUCHATAUR ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:03:44.631 INFO  - Player Player2 (0881cba1-dfb4-47d9-b716-510af2d2fd9d) draw pile : {
+- SNAIL HYDRA ;
+- HAMSTER LION ;
+-  GIRAFFODILE ;
+- URCHIN HURLER ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:03:44.632 INFO  - New FRENZY choice to be resolved by Player2 (0881cba1-dfb4-47d9-b716-510af2d2fd9d) (attackingCard : EXPLOSIVE TOAD (e7921d43-1d2f-4eda-bd30-eb961472b080))
+2026-03-12 12:03:44.632 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.632 INFO  - Life update for player Player1 (cab49f68-ccb4-49e5-8682-8577637426b6) : 2 LP
+2026-03-12 12:03:44.632 DEBUG - EXPLOSIVE TOAD (e7921d43-1d2f-4eda-bd30-eb961472b080) effect destroys COUNT DRACULEECH (ceb96077-6c2a-459b-809c-d6c6e3e2677a)
+2026-03-12 12:03:44.632 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (e7921d43-1d2f-4eda-bd30-eb961472b080)
+2026-03-12 12:03:44.632 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (c6b847a0-123e-46e6-aff6-88a4c9c3de1b)
+2026-03-12 12:03:44.632 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (c6b847a0-123e-46e6-aff6-88a4c9c3de1b)
+2026-03-12 12:03:44.632 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (c6b847a0-123e-46e6-aff6-88a4c9c3de1b)
+2026-03-12 12:03:44.632 INFO  - Life update for player Player1 (cab49f68-ccb4-49e5-8682-8577637426b6) : 1 LP
+2026-03-12 12:03:44.632 DEBUG - Player1 (cab49f68-ccb4-49e5-8682-8577637426b6) LP changed (2 -> 1) due to KILLER BEE (f8c56706-eb5c-465c-b224-29312f4004e3) effect
+2026-03-12 12:03:44.632 INFO  - Resolving INFLICT effect of KILLER BEE (f8c56706-eb5c-465c-b224-29312f4004e3)
+2026-03-12 12:03:44.632 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (c6b847a0-123e-46e6-aff6-88a4c9c3de1b)
+2026-03-12 12:03:44.632 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (c6b847a0-123e-46e6-aff6-88a4c9c3de1b)
+2026-03-12 12:03:44.632 INFO  - Life update for player Player2 (0881cba1-dfb4-47d9-b716-510af2d2fd9d) : 2 LP
+2026-03-12 12:03:44.633 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (c6b847a0-123e-46e6-aff6-88a4c9c3de1b)
+2026-03-12 12:03:44.633 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (c6b847a0-123e-46e6-aff6-88a4c9c3de1b)
+2026-03-12 12:03:44.633 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.633 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.633 DEBUG - FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8) power changed (1 -> 3) due to FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8) effect
+2026-03-12 12:03:44.633 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8)
+2026-03-12 12:03:44.633 DEBUG - FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8) power changed (1 -> 3) due to FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8) effect
+2026-03-12 12:03:44.633 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8)
+2026-03-12 12:03:44.633 DEBUG - FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8) power changed (1 -> 3) due to FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8) effect
+2026-03-12 12:03:44.634 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8)
+2026-03-12 12:03:44.634 DEBUG - FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8) power changed (1 -> 3) due to FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8) effect
+2026-03-12 12:03:44.634 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8)
+2026-03-12 12:03:44.634 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.634 DEBUG - FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8) power changed (1 -> 3) due to FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8) effect
+2026-03-12 12:03:44.634 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (307445f9-0d56-4617-8eab-d983f3ff70d8)
+2026-03-12 12:03:44.634 DEBUG - CardInstance(uuid=fef27447-261e-4069-a538-79fcfe61c347, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2fccf49e), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.634 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (1c868adb-e302-4f9a-8e3e-c8e81e4d0a45)
+2026-03-12 12:03:44.634 DEBUG - CardInstance(uuid=fef27447-261e-4069-a538-79fcfe61c347, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2fccf49e), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.635 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (1c868adb-e302-4f9a-8e3e-c8e81e4d0a45)
+2026-03-12 12:03:44.635 DEBUG - CardInstance(uuid=fef27447-261e-4069-a538-79fcfe61c347, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2fccf49e), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.635 DEBUG - CardInstance(uuid=8fd2e273-4fd3-4254-942b-0153da8a97f5, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2fccf49e), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.635 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (1c868adb-e302-4f9a-8e3e-c8e81e4d0a45)
+2026-03-12 12:03:44.635 DEBUG - Player1 (cab49f68-ccb4-49e5-8682-8577637426b6) LP changed (1 -> 3) due to AXOLOTL HEALER (8fd2e273-4fd3-4254-942b-0153da8a97f5) effect
+2026-03-12 12:03:44.635 INFO  - Resolving GAIN effect of AXOLOTL HEALER (8fd2e273-4fd3-4254-942b-0153da8a97f5)
+2026-03-12 12:03:44.635 DEBUG - CardInstance(uuid=fef27447-261e-4069-a538-79fcfe61c347, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2fccf49e), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.635 DEBUG - CardInstance(uuid=8fd2e273-4fd3-4254-942b-0153da8a97f5, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2fccf49e), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.635 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (1c868adb-e302-4f9a-8e3e-c8e81e4d0a45)
+2026-03-12 12:03:44.635 DEBUG - CardInstance(uuid=fef27447-261e-4069-a538-79fcfe61c347, card=Card(id=35, setName=first_contact, name=CREEP FROM THE DEEP, power=4, keywords=[POISONOUS, HUNTER], effects={}, unique=false, description=“shining !”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2fccf49e), power=4, keywords=[POISONOUS, HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.635 DEBUG - CardInstance(uuid=8fd2e273-4fd3-4254-942b-0153da8a97f5, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@2fccf49e), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.635 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (1c868adb-e302-4f9a-8e3e-c8e81e4d0a45)
+2026-03-12 12:03:44.636 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e5329187-6225-4afc-9ddf-f54f4ec1d50c)
+2026-03-12 12:03:44.636 INFO  - Resolving POWER_UP effect of URCHIN HURLER (e5329187-6225-4afc-9ddf-f54f4ec1d50c)
+2026-03-12 12:03:44.636 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.636 INFO  - Life update for player Player2 (0881cba1-dfb4-47d9-b716-510af2d2fd9d) : 1 LP
+2026-03-12 12:03:44.636 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ac9b9e09-e178-4bea-a036-aa66e8fff484)
+2026-03-12 12:03:44.636 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ac9b9e09-e178-4bea-a036-aa66e8fff484)
+2026-03-12 12:03:44.637 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ac9b9e09-e178-4bea-a036-aa66e8fff484)
+2026-03-12 12:03:44.637 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ac9b9e09-e178-4bea-a036-aa66e8fff484)
+2026-03-12 12:03:44.637 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (ac9b9e09-e178-4bea-a036-aa66e8fff484)
+2026-03-12 12:03:44.637 DEBUG - Player Player2 (0881cba1-dfb4-47d9-b716-510af2d2fd9d) must choose 1 card(s) to discard (available targets : {
+- GOREAGLE ALPHA ;
+- LUCHATAUR ;
+-  GIRAFFODILE ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:03:44.637 INFO  - New TARGET choice to be resolved by Player2 (0881cba1-dfb4-47d9-b716-510af2d2fd9d) (targets : {
+-  GIRAFFODILE ;
+- MAJESTIC MANTICORE ;
+- GOREAGLE ALPHA ;
+- LUCHATAUR
+})
+2026-03-12 12:03:44.637 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.637 DEBUG - GOREAGLE ALPHA (e19a2311-363b-4bd1-af6c-a2a43a19519a) discarded due to TUSKED EXTORTER (b2de93de-b123-449d-8958-b240c7e06855) effect
+2026-03-12 12:03:44.637 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (b2de93de-b123-449d-8958-b240c7e06855)
+2026-03-12 12:03:44.637 INFO  - Life update for player Player2 (0881cba1-dfb4-47d9-b716-510af2d2fd9d) : 0 LP
+2026-03-12 12:03:44.637 INFO  - Game over : Player1 (cab49f68-ccb4-49e5-8682-8577637426b6) wins ; Player2 (0881cba1-dfb4-47d9-b716-510af2d2fd9d) loses.
+2026-03-12 12:03:44.637 INFO  - End of the game

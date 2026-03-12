@@ -1,0 +1,141 @@
+2026-03-12 12:18:25.862 INFO  - Calculating first player...
+2026-03-12 12:18:25.864 INFO  - Banned card for Player1 (ebabc49d-28d6-4a31-a0bb-33dac8edddef) : HYENIX (1c4e8930-506d-4a2b-a9c6-78b7dc6209ff) (7)
+2026-03-12 12:18:25.864 INFO  - Banned card for Player2 (616f2d7a-c459-4ba0-8fce-0b998aa24b4e) : CREEP FROM THE DEEP (1c7094d2-ef7d-485c-a99d-79cdc272bad2) (4)
+2026-03-12 12:18:25.865 INFO  - First player will be Player1 (ebabc49d-28d6-4a31-a0bb-33dac8edddef)
+2026-03-12 12:18:25.872 INFO  - Game 6d265c5f-13ba-49b3-9f05-e3af9ba851c0 starting...
+2026-03-12 12:18:25.872 INFO  - Player Player1 (ebabc49d-28d6-4a31-a0bb-33dac8edddef) hand : {
+- SNAIL HYDRA ;
+- MAJESTIC MANTICORE ;
+- TURF THE SURFER ;
+- KANGASAURUS REX ;
+- COUNT DRACULEECH
+}
+2026-03-12 12:18:25.873 INFO  - Player Player1 (ebabc49d-28d6-4a31-a0bb-33dac8edddef) draw pile : {
+- TUSKED EXTORTER ;
+- TURF THE SURFER ;
+- KILLER BEE ;
+- TIGER SQUIRREL ;
+- HARPY MOTHER
+}
+2026-03-12 12:18:25.873 INFO  - Player Player2 (616f2d7a-c459-4ba0-8fce-0b998aa24b4e) hand : {
+- HAMSTER LION ;
+- BUGSERKER ;
+- URCHIN HURLER ;
+- TIGER SQUIRREL ;
+- KILLER BEE
+}
+2026-03-12 12:18:25.873 INFO  - Player Player2 (616f2d7a-c459-4ba0-8fce-0b998aa24b4e) draw pile : {
+- COUNT DRACULEECH ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- HUNGRY HUNGRY HAMSTER ;
+- KANGASAURUS REX ;
+- BUGSERKER
+}
+2026-03-12 12:18:25.873 INFO  - Life update for player Player1 (ebabc49d-28d6-4a31-a0bb-33dac8edddef) : 2 LP
+2026-03-12 12:18:25.873 DEBUG - Player1 (ebabc49d-28d6-4a31-a0bb-33dac8edddef) LP changed (3 -> 2) due to KILLER BEE (dbd8d3a7-56ec-4efd-9b93-29a76960db66) effect
+2026-03-12 12:18:25.873 INFO  - Resolving INFLICT effect of KILLER BEE (dbd8d3a7-56ec-4efd-9b93-29a76960db66)
+2026-03-12 12:18:25.874 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (9966097b-b3fe-4908-aec7-90fcbec3b05c)
+2026-03-12 12:18:25.874 INFO  - Life update for player Player2 (616f2d7a-c459-4ba0-8fce-0b998aa24b4e) : 2 LP
+2026-03-12 12:18:25.874 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:25.874 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (9966097b-b3fe-4908-aec7-90fcbec3b05c)
+2026-03-12 12:18:25.874 INFO  - Life update for player Player2 (616f2d7a-c459-4ba0-8fce-0b998aa24b4e) : 1 LP
+2026-03-12 12:18:25.874 DEBUG - CardInstance(uuid=9966097b-b3fe-4908-aec7-90fcbec3b05c, card=Card(id=44, setName=first_contact, name=TURF THE SURFER, power=8, keywords=[], effects={ATTACK=[NoBlockEffect(value=1, max=null, min=null, highest=false, keyword=null)]}, unique=false, description=<b>Attack</b>: Choose a creature. It cannot block this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.874 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.874 DEBUG - CardInstance(uuid=9966097b-b3fe-4908-aec7-90fcbec3b05c, card=Card(id=44, setName=first_contact, name=TURF THE SURFER, power=8, keywords=[], effects={ATTACK=[NoBlockEffect(value=1, max=null, min=null, highest=false, keyword=null)]}, unique=false, description=<b>Attack</b>: Choose a creature. It cannot block this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=8, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.874 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.874 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.875 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.875 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.875 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.875 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.875 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.875 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.875 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.875 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.875 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.875 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.875 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.875 DEBUG - BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) power changed (3 -> 11) due to BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) effect
+2026-03-12 12:18:25.875 INFO  - Resolving POWER_UP effect of BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9)
+2026-03-12 12:18:25.875 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.875 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.875 DEBUG - BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) power changed (3 -> 11) due to BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) effect
+2026-03-12 12:18:25.876 INFO  - Resolving POWER_UP effect of BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9)
+2026-03-12 12:18:25.876 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.876 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.876 DEBUG - Player Player1 (ebabc49d-28d6-4a31-a0bb-33dac8edddef) must choose 1 card(s) that will be unable to block (targets : {
+- HAMSTER LION ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- BUGSERKER
+})
+2026-03-12 12:18:25.876 DEBUG - BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) power changed (3 -> 11) due to BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) effect
+2026-03-12 12:18:25.876 INFO  - Resolving POWER_UP effect of BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9)
+2026-03-12 12:18:25.876 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.876 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.876 INFO  - New TARGET choice to be resolved by Player1 (ebabc49d-28d6-4a31-a0bb-33dac8edddef) (targets : {
+- BUGSERKER ;
+- HAMSTER LION ;
+- SHARKY GRAB-DOG-MUMMYPUS
+})
+2026-03-12 12:18:25.876 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.876 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (9966097b-b3fe-4908-aec7-90fcbec3b05c)
+2026-03-12 12:18:25.876 DEBUG - BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) power changed (3 -> 11) due to BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) effect
+2026-03-12 12:18:25.876 INFO  - Resolving POWER_UP effect of BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9)
+2026-03-12 12:18:25.876 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.877 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.877 DEBUG - BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) power changed (3 -> 11) due to BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) effect
+2026-03-12 12:18:25.877 INFO  - Resolving POWER_UP effect of BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9)
+2026-03-12 12:18:25.877 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.877 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.877 DEBUG - BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) power changed (3 -> 11) due to BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) effect
+2026-03-12 12:18:25.877 INFO  - Resolving POWER_UP effect of BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9)
+2026-03-12 12:18:25.877 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.877 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.877 DEBUG - BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) power changed (3 -> 11) due to BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) effect
+2026-03-12 12:18:25.877 INFO  - Resolving POWER_UP effect of BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9)
+2026-03-12 12:18:25.877 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.877 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.877 DEBUG - Player Player1 (ebabc49d-28d6-4a31-a0bb-33dac8edddef) must choose 1 cards to steal (targets : {
+- MAJESTIC MANTICORE ;
+- KANGASAURUS REX ;
+- TUSKED EXTORTER ;
+- TURF THE SURFER ;
+- KILLER BEE
+})
+2026-03-12 12:18:25.877 DEBUG - BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) power changed (3 -> 11) due to BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) effect
+2026-03-12 12:18:25.877 INFO  - Resolving POWER_UP effect of BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9)
+2026-03-12 12:18:25.878 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.878 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.878 INFO  - New TARGET choice to be resolved by Player1 (ebabc49d-28d6-4a31-a0bb-33dac8edddef) (targets : {
+- TURF THE SURFER ;
+- KANGASAURUS REX ;
+- TUSKED EXTORTER ;
+- KILLER BEE ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:18:25.878 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.878 DEBUG - Player2 (616f2d7a-c459-4ba0-8fce-0b998aa24b4e) must decide if stolen card MAJESTIC MANTICORE (f2c61a70-7f1e-4989-a9d6-999635bc0eb3) will be added to hand or board
+2026-03-12 12:18:25.878 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (bcdf9a36-52ca-4d57-89b4-96142347cf05)
+2026-03-12 12:18:25.878 DEBUG - BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) power changed (3 -> 11) due to BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) effect
+2026-03-12 12:18:25.878 INFO  - Resolving POWER_UP effect of BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9)
+2026-03-12 12:18:25.878 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.878 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.894 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:25.894 DEBUG - MAJESTIC MANTICORE (f2c61a70-7f1e-4989-a9d6-999635bc0eb3) stolen and played by Player2 (616f2d7a-c459-4ba0-8fce-0b998aa24b4e) due to HUNGRY HUNGRY HAMSTER (bcdf9a36-52ca-4d57-89b4-96142347cf05) effect
+2026-03-12 12:18:25.894 DEBUG - BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) power changed (3 -> 11) due to BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) effect
+2026-03-12 12:18:25.895 INFO  - Resolving POWER_UP effect of BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9)
+2026-03-12 12:18:25.895 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.895 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.895 DEBUG - BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) power changed (3 -> 11) due to BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) effect
+2026-03-12 12:18:25.895 INFO  - Resolving POWER_UP effect of BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9)
+2026-03-12 12:18:25.895 DEBUG - CardInstance(uuid=8a972a03-0d6e-446a-9f8b-9107cc2fcc0a, card=Card(id=34, setName=first_contact, name=COUNT DRACULEECH, power=7, keywords=[], effects={ATTACK=[InflictEffect(value=1, self=true, allButOne=false, mindbugCount=false), DestroyEffect(value=1, min=null, max=null, lessAllies=false, lowest=false, selfAllowed=true, allies=false, itself=false)]}, unique=false, description=<b>Attack</b>: Lose 1 life. Defeat a creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=7, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.895 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.895 DEBUG - BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) power changed (3 -> 11) due to BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9) effect
+2026-03-12 12:18:25.895 INFO  - Resolving POWER_UP effect of BUGSERKER (995a9510-a725-4dde-81f1-5032c1da73b9)
+2026-03-12 12:18:25.895 DEBUG - CardInstance(uuid=b563a2d4-a0cb-4fff-967a-7472b09975af, card=Card(id=16, setName=first_contact, name=KILLER BEE, power=5, keywords=[HUNTER], effects={PLAY=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=false, description=<b>Play</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7b0525a8), power=5, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:25.895 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (b2bdd2cf-d3ca-4b87-a7d4-7410cf12fd73)
+2026-03-12 12:18:25.895 INFO  - Life update for player Player2 (616f2d7a-c459-4ba0-8fce-0b998aa24b4e) : 0 LP
+2026-03-12 12:18:25.895 INFO  - Game over : Player1 (ebabc49d-28d6-4a31-a0bb-33dac8edddef) wins ; Player2 (616f2d7a-c459-4ba0-8fce-0b998aa24b4e) loses.
+2026-03-12 12:18:25.895 INFO  - End of the game
+2026-03-12 12:18:25.895 DEBUG - Player2 (616f2d7a-c459-4ba0-8fce-0b998aa24b4e) LP changed (1 -> 0) due to KILLER BEE (b563a2d4-a0cb-4fff-967a-7472b09975af) effect
+2026-03-12 12:18:25.895 INFO  - Resolving INFLICT effect of KILLER BEE (b563a2d4-a0cb-4fff-967a-7472b09975af)

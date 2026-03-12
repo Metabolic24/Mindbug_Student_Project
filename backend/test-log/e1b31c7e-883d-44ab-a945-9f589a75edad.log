@@ -1,0 +1,108 @@
+2026-03-12 12:18:26.087 INFO  - Calculating first player...
+2026-03-12 12:18:26.106 INFO  - Banned card for Player1 (48321cdd-0bbc-4a7a-917d-ddea5fd48ef0) : BUGSERKER (462234df-af24-4435-a879-373bb382f764) (3)
+2026-03-12 12:18:26.107 INFO  - Banned card for Player2 (b89e2d01-9d4b-4974-bb7e-88ba9f0a5bd0) : URCHIN HURLER (2381afef-39b1-4874-9cda-0b99986d0d38) (5)
+2026-03-12 12:18:26.107 INFO  - First player will be Player2 (b89e2d01-9d4b-4974-bb7e-88ba9f0a5bd0)
+2026-03-12 12:18:26.113 INFO  - Game e1b31c7e-883d-44ab-a945-9f589a75edad starting...
+2026-03-12 12:18:26.113 INFO  - Player Player1 (48321cdd-0bbc-4a7a-917d-ddea5fd48ef0) hand : {
+- ELEPHANTOPUS ;
+- CREEP FROM THE DEEP ;
+- GOBLIN WEREWOLF ;
+- COMPOST DRAGON ;
+- LONE YETI
+}
+2026-03-12 12:18:26.114 INFO  - Player Player1 (48321cdd-0bbc-4a7a-917d-ddea5fd48ef0) draw pile : {
+- KILLER BEE ;
+- RHINO TURTLE ;
+- BUGSERKER ;
+- SNAIL HYDRA ;
+- HYENIX
+}
+2026-03-12 12:18:26.114 INFO  - Player Player2 (b89e2d01-9d4b-4974-bb7e-88ba9f0a5bd0) hand : {
+- TURF THE SURFER ;
+- SNAIL THROWER ;
+- HARPY MOTHER ;
+- THE LURKER ;
+- CREEP FROM THE DEEP
+}
+2026-03-12 12:18:26.114 INFO  - Player Player2 (b89e2d01-9d4b-4974-bb7e-88ba9f0a5bd0) draw pile : {
+- HUNGRY HUNGRY HAMSTER ;
+- TIGER SQUIRREL ;
+- FERRET BOMBER ;
+- BRAIN FLY ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:18:26.114 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:26.114 DEBUG - Player Player1 (48321cdd-0bbc-4a7a-917d-ddea5fd48ef0) must choose 1 cards to steal (targets : {
+- ELEPHANTOPUS ;
+- CREEP FROM THE DEEP ;
+- GOBLIN WEREWOLF ;
+- LONE YETI ;
+- KILLER BEE
+})
+2026-03-12 12:18:26.114 INFO  - New TARGET choice to be resolved by Player1 (48321cdd-0bbc-4a7a-917d-ddea5fd48ef0) (targets : {
+- CREEP FROM THE DEEP ;
+- LONE YETI ;
+- ELEPHANTOPUS ;
+- GOBLIN WEREWOLF ;
+- KILLER BEE
+})
+2026-03-12 12:18:26.114 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:26.114 DEBUG - Player2 (b89e2d01-9d4b-4974-bb7e-88ba9f0a5bd0) must decide if stolen card ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b) will be added to hand or board
+2026-03-12 12:18:26.114 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (8bad0b60-7d30-4184-8516-bf5b33ac3915)
+2026-03-12 12:18:26.114 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:26.114 DEBUG - ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b) stolen and played by Player2 (b89e2d01-9d4b-4974-bb7e-88ba9f0a5bd0) due to HUNGRY HUNGRY HAMSTER (8bad0b60-7d30-4184-8516-bf5b33ac3915) effect
+2026-03-12 12:18:26.114 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.114 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.114 DEBUG - GOBLIN WEREWOLF (c09d8f51-11aa-4dbf-9a5c-a176448ef577) power changed (2 -> 8) due to GOBLIN WEREWOLF (c09d8f51-11aa-4dbf-9a5c-a176448ef577) effect
+2026-03-12 12:18:26.114 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (c09d8f51-11aa-4dbf-9a5c-a176448ef577)
+2026-03-12 12:18:26.114 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.115 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.115 INFO  - Life update for player Player1 (48321cdd-0bbc-4a7a-917d-ddea5fd48ef0) : 2 LP
+2026-03-12 12:18:26.115 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.115 DEBUG - GOBLIN WEREWOLF (c09d8f51-11aa-4dbf-9a5c-a176448ef577) power changed (2 -> 8) due to GOBLIN WEREWOLF (c09d8f51-11aa-4dbf-9a5c-a176448ef577) effect
+2026-03-12 12:18:26.115 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (c09d8f51-11aa-4dbf-9a5c-a176448ef577)
+2026-03-12 12:18:26.115 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.115 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:26.115 DEBUG - GOBLIN WEREWOLF (c09d8f51-11aa-4dbf-9a5c-a176448ef577) power changed (2 -> 8) due to GOBLIN WEREWOLF (c09d8f51-11aa-4dbf-9a5c-a176448ef577) effect
+2026-03-12 12:18:26.115 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (c09d8f51-11aa-4dbf-9a5c-a176448ef577)
+2026-03-12 12:18:26.115 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.115 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.117 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.117 INFO  - Life update for player Player1 (48321cdd-0bbc-4a7a-917d-ddea5fd48ef0) : 1 LP
+2026-03-12 12:18:26.117 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.117 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.117 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.117 INFO  - Life update for player Player2 (b89e2d01-9d4b-4974-bb7e-88ba9f0a5bd0) : 2 LP
+2026-03-12 12:18:26.117 DEBUG - Player2 (b89e2d01-9d4b-4974-bb7e-88ba9f0a5bd0) LP changed (3 -> 2) due to KILLER BEE (a1c73305-5fa2-46db-a5ac-1ecb63a4eab5) effect
+2026-03-12 12:18:26.117 INFO  - Resolving INFLICT effect of KILLER BEE (a1c73305-5fa2-46db-a5ac-1ecb63a4eab5)
+2026-03-12 12:18:26.117 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.117 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.117 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.117 DEBUG - Player Player1 (48321cdd-0bbc-4a7a-917d-ddea5fd48ef0) must choose 2 card(s) to discard (available targets : {
+- CREEP FROM THE DEEP ;
+- LONE YETI ;
+- RHINO TURTLE ;
+- BUGSERKER ;
+- SNAIL HYDRA
+})
+2026-03-12 12:18:26.117 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.117 INFO  - New TARGET choice to be resolved by Player1 (48321cdd-0bbc-4a7a-917d-ddea5fd48ef0) (targets : {
+- RHINO TURTLE ;
+- BUGSERKER ;
+- CREEP FROM THE DEEP ;
+- LONE YETI ;
+- SNAIL HYDRA
+})
+2026-03-12 12:18:26.120 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:26.120 DEBUG - BUGSERKER (44b0eabc-c09d-4cab-a122-699d1f121c55) discarded due to FERRET BOMBER (235fa7d8-cabc-4eb0-9aa4-12ce7c78bbf1) effect
+2026-03-12 12:18:26.120 DEBUG - LONE YETI (f9cfe861-f4d4-4554-b148-e8836ba4c3e5) discarded due to FERRET BOMBER (235fa7d8-cabc-4eb0-9aa4-12ce7c78bbf1) effect
+2026-03-12 12:18:26.120 INFO  - Resolving DISCARD effect of FERRET BOMBER (235fa7d8-cabc-4eb0-9aa4-12ce7c78bbf1)
+2026-03-12 12:18:26.120 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.120 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.120 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:26.120 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.120 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.120 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (cfd1d299-1d4f-464c-af41-ad2dc3ab188b)
+2026-03-12 12:18:26.120 INFO  - Life update for player Player1 (48321cdd-0bbc-4a7a-917d-ddea5fd48ef0) : 0 LP
+2026-03-12 12:18:26.120 INFO  - Game over : Player2 (b89e2d01-9d4b-4974-bb7e-88ba9f0a5bd0) wins ; Player1 (48321cdd-0bbc-4a7a-917d-ddea5fd48ef0) loses.
+2026-03-12 12:18:26.120 INFO  - End of the game

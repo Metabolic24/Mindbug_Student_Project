@@ -1,0 +1,621 @@
+2026-03-12 12:03:44.307 INFO  - Calculating first player...
+2026-03-12 12:03:44.309 INFO  - Banned card for Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) : TIGER SQUIRREL (0a4bd19a-9764-4835-b578-082baf14021b) (3)
+2026-03-12 12:03:44.309 INFO  - Banned card for Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) : EXPLOSIVE TOAD (75ee35d8-914f-4453-b5d3-0d3ca175c2c4) (5)
+2026-03-12 12:03:44.309 INFO  - First player will be Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c)
+2026-03-12 12:03:44.317 INFO  - Game 051e912a-2d67-4616-b54f-1919f8de1607 starting...
+2026-03-12 12:03:44.317 INFO  - Player Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) hand : {
+- TUSKED EXTORTER ;
+- RHINO TURTLE ;
+- GOREAGLE ALPHA ;
+- HUNGRY HUNGRY HAMSTER ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:44.317 INFO  - Player Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) draw pile : {
+- KILLER BEE ;
+- HAMSTER LION ;
+- CHAMELEON SNIPER ;
+- AXOLOTL HEALER ;
+- DEATHWEAVER
+}
+2026-03-12 12:03:44.317 INFO  - Player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) hand : {
+- HYENIX ;
+- TURF THE SURFER ;
+- SHIELD BUGS ;
+- ELEPHANTOPUS ;
+- BUGSERKER
+}
+2026-03-12 12:03:44.317 INFO  - Player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) draw pile : {
+- THE LURKER ;
+-  GIRAFFODILE ;
+- COUNT DRACULEECH ;
+- PLATED SCORPION ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:03:44.318 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.318 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.318 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.318 DEBUG - Player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) must choose 1 cards to steal (targets : {
+- HYENIX ;
+- TURF THE SURFER ;
+- ELEPHANTOPUS ;
+- BUGSERKER ;
+- THE LURKER
+})
+2026-03-12 12:03:44.318 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.318 INFO  - New TARGET choice to be resolved by Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) (targets : {
+- ELEPHANTOPUS ;
+- THE LURKER ;
+- HYENIX ;
+- BUGSERKER ;
+- TURF THE SURFER
+})
+2026-03-12 12:03:44.318 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.318 DEBUG - Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) must decide if stolen card ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947) will be added to hand or board
+2026-03-12 12:03:44.318 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (edd068af-8622-4122-adea-3c15550ca7a6)
+2026-03-12 12:03:44.318 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.318 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:44.318 DEBUG - ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947) stolen and played by Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) due to HUNGRY HUNGRY HAMSTER (edd068af-8622-4122-adea-3c15550ca7a6) effect
+2026-03-12 12:03:44.319 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.319 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.319 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.319 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.319 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.319 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.319 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.319 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.319 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.319 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.319 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.319 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.319 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.319 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.319 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.319 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.319 INFO  - Life update for player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) : 2 LP
+2026-03-12 12:03:44.319 DEBUG - Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) LP changed (3 -> 2) due to KILLER BEE (7837b1f9-efdd-4ca0-8124-c74ddebe375b) effect
+2026-03-12 12:03:44.319 INFO  - Resolving INFLICT effect of KILLER BEE (7837b1f9-efdd-4ca0-8124-c74ddebe375b)
+2026-03-12 12:03:44.320 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.320 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.320 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.320 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.320 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.320 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.320 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.320 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.320 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.320 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.320 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.320 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.320 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.320 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.320 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.320 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.320 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.320 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.320 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.321 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.321 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.321 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.321 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.321 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.321 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.321 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.321 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.321 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.321 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.321 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.321 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.321 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.321 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.321 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.321 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.321 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.321 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.321 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.321 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.322 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.322 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.322 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.322 INFO  - Life update for player Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) : 2 LP
+2026-03-12 12:03:44.322 DEBUG - Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) LP changed (3 -> 2) due to GOREAGLE ALPHA (79e14282-87be-453a-a3f7-9750cc514bdd) effect
+2026-03-12 12:03:44.322 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (79e14282-87be-453a-a3f7-9750cc514bdd)
+2026-03-12 12:03:44.322 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.322 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.322 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.322 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.322 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.322 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.322 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.322 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.322 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.322 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.322 DEBUG - Player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) must choose 1 card(s) that will be unable to block (targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- ELEPHANTOPUS ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:44.322 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.322 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.322 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.322 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.322 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.322 INFO  - New TARGET choice to be resolved by Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) (targets : {
+- ELEPHANTOPUS ;
+- HUNGRY HUNGRY HAMSTER ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:44.323 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.323 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0)
+2026-03-12 12:03:44.323 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.323 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.323 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.323 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.323 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.323 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.323 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.323 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.323 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.323 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.323 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.323 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.323 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.323 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.323 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.323 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.324 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.324 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.324 INFO  - New FRENZY choice to be resolved by Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) (attackingCard : GOREAGLE ALPHA (79e14282-87be-453a-a3f7-9750cc514bdd))
+2026-03-12 12:03:44.324 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.324 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.324 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.324 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.324 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.324 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.324 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.324 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.324 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.325 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.325 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.325 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.325 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.325 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.325 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.325 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.325 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.325 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.326 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.326 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.326 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.326 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.326 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.326 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.326 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.326 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.326 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.326 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.327 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.327 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.327 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (3 -> 9) due to GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) effect
+2026-03-12 12:03:44.327 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945)
+2026-03-12 12:03:44.327 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.327 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.327 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.327 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.327 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.328 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.328 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.328 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (3 -> 9) due to GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) effect
+2026-03-12 12:03:44.328 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945)
+2026-03-12 12:03:44.328 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.328 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.328 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (3 -> 9) due to GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) effect
+2026-03-12 12:03:44.328 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945)
+2026-03-12 12:03:44.328 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.328 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.328 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.329 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.329 INFO  - Life update for player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) : 1 LP
+2026-03-12 12:03:44.329 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.329 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.329 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.329 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.329 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.329 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.329 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.329 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.329 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.329 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.329 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.329 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.329 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.329 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.329 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.329 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.329 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.329 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.329 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.329 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (3 -> 9) due to GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) effect
+2026-03-12 12:03:44.329 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945)
+2026-03-12 12:03:44.329 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.330 DEBUG - Player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) must choose 1 card(s) that will be unable to block (targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- ELEPHANTOPUS ;
+- RHINO TURTLE ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:44.330 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.330 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.330 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.330 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.330 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.330 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.330 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.330 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.330 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.330 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (3 -> 9) due to GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) effect
+2026-03-12 12:03:44.330 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945)
+2026-03-12 12:03:44.330 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.330 INFO  - New TARGET choice to be resolved by Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) (targets : {
+- TUSKED EXTORTER ;
+- ELEPHANTOPUS ;
+- HUNGRY HUNGRY HAMSTER ;
+- RHINO TURTLE
+})
+2026-03-12 12:03:44.330 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:44.330 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0)
+2026-03-12 12:03:44.330 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.330 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.330 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.330 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.330 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.330 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.331 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.331 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.331 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.331 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (3 -> 9) due to GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) effect
+2026-03-12 12:03:44.331 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945)
+2026-03-12 12:03:44.331 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.331 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.331 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.331 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.331 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.331 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.331 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.331 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.331 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.331 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.331 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (3 -> 9) due to GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) effect
+2026-03-12 12:03:44.331 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945)
+2026-03-12 12:03:44.331 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.331 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.331 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.331 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.331 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.331 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.331 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.331 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.331 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.331 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.331 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (bc7aece5-19c1-443f-9eef-52839fec3947)
+2026-03-12 12:03:44.332 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.332 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.332 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.332 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.332 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.332 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.332 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (3 -> 9) due to GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) effect
+2026-03-12 12:03:44.332 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945)
+2026-03-12 12:03:44.332 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 DEBUG - COUNT DRACULEECH (ca17e3a2-68f0-4934-b63c-c8cdcce61239) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.332 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.332 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.332 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.333 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (3 -> 9) due to GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) effect
+2026-03-12 12:03:44.333 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945)
+2026-03-12 12:03:44.333 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - COUNT DRACULEECH (ca17e3a2-68f0-4934-b63c-c8cdcce61239) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.333 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.333 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.333 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - COUNT DRACULEECH (ca17e3a2-68f0-4934-b63c-c8cdcce61239) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.333 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.333 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.333 DEBUG - Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) LP changed (2 -> 4) due to AXOLOTL HEALER (5ff866a3-746c-4152-84b9-3d191f47d772) effect
+2026-03-12 12:03:44.333 INFO  - Resolving GAIN effect of AXOLOTL HEALER (5ff866a3-746c-4152-84b9-3d191f47d772)
+2026-03-12 12:03:44.333 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 DEBUG - COUNT DRACULEECH (ca17e3a2-68f0-4934-b63c-c8cdcce61239) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.333 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.334 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.334 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.334 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - COUNT DRACULEECH (ca17e3a2-68f0-4934-b63c-c8cdcce61239) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.334 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.334 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.334 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (3 -> 9) due to GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) effect
+2026-03-12 12:03:44.334 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945)
+2026-03-12 12:03:44.334 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - HYENIX (d2b969bb-3a57-4939-9f4c-aa3e9ecb203f) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - COUNT DRACULEECH (ca17e3a2-68f0-4934-b63c-c8cdcce61239) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.334 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.334 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.334 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (3 -> 9) due to GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) effect
+2026-03-12 12:03:44.334 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945)
+2026-03-12 12:03:44.334 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - HYENIX (d2b969bb-3a57-4939-9f4c-aa3e9ecb203f) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.334 DEBUG - COUNT DRACULEECH (ca17e3a2-68f0-4934-b63c-c8cdcce61239) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.335 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.335 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.335 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.335 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (dc8656f4-f95b-431c-9f8d-15b583c83686)
+2026-03-12 12:03:44.335 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.335 DEBUG -  GIRAFFODILE (94921d56-2fe9-452d-be5f-d8d396895b13) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.335 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) power changed (4 -> 5) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.335 DEBUG - PLATED SCORPION (f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3) power changed (2 -> 3) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.335 DEBUG - HYENIX (d2b969bb-3a57-4939-9f4c-aa3e9ecb203f) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.335 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 4) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.335 DEBUG - TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0) power changed (8 -> 9) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.335 DEBUG - COUNT DRACULEECH (ca17e3a2-68f0-4934-b63c-c8cdcce61239) power changed (7 -> 8) due to SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d) effect
+2026-03-12 12:03:44.335 INFO  - Resolving POWER_UP effect of SHIELD BUGS (272fcacd-7ca1-4e26-bd1d-e3b6973c285d)
+2026-03-12 12:03:44.335 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (4 -> 12) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.335 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.335 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.335 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.335 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.335 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.336 DEBUG - GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) power changed (2 -> 8) due to GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945) effect
+2026-03-12 12:03:44.336 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (dd8e38ca-c55f-4732-80c1-0e03fc4f7945)
+2026-03-12 12:03:44.336 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:44.336 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.336 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.336 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.336 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.336 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.336 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.336 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.336 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.336 INFO  - New FRENZY choice to be resolved by Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) (attackingCard : RHINO TURTLE (11cc307e-56cc-4498-a39e-52d435d8c868))
+2026-03-12 12:03:44.336 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:44.336 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.336 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.336 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.336 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.336 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.336 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.337 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.337 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.337 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.337 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.337 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.337 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.337 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) gains SNEAKY keyword
+2026-03-12 12:03:44.337 INFO  - Resolving KEYWORD_UP effect of THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb)
+2026-03-12 12:03:44.337 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.337 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.337 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.337 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.337 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.337 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.338 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.338 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.338 DEBUG - Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) LP changed (4 -> 6) due to AXOLOTL HEALER (683b7a2a-4607-405f-a27d-69499363d1af) effect
+2026-03-12 12:03:44.338 INFO  - Resolving GAIN effect of AXOLOTL HEALER (683b7a2a-4607-405f-a27d-69499363d1af)
+2026-03-12 12:03:44.338 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.338 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.338 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.338 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.338 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) gains SNEAKY keyword
+2026-03-12 12:03:44.338 INFO  - Resolving KEYWORD_UP effect of THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb)
+2026-03-12 12:03:44.338 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.338 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.338 INFO  - Life update for player Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) : 5 LP
+2026-03-12 12:03:44.338 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.338 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.338 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.338 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.338 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.338 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.338 DEBUG - PLAY effects disabled for player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) due to DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6) effect
+2026-03-12 12:03:44.338 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6)
+2026-03-12 12:03:44.339 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.339 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.339 DEBUG - PLAY effects disabled for player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) due to DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6) effect
+2026-03-12 12:03:44.339 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6)
+2026-03-12 12:03:44.339 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) gains SNEAKY keyword
+2026-03-12 12:03:44.339 INFO  - Resolving KEYWORD_UP effect of THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb)
+2026-03-12 12:03:44.339 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.339 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.339 DEBUG - PLAY effects disabled for player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) due to DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6) effect
+2026-03-12 12:03:44.339 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6)
+2026-03-12 12:03:44.339 INFO  - Life update for player Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) : 4 LP
+2026-03-12 12:03:44.339 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.339 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.339 DEBUG - PLAY effects disabled for player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) due to DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6) effect
+2026-03-12 12:03:44.339 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6)
+2026-03-12 12:03:44.339 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.339 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.339 DEBUG - PLAY effects disabled for player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) due to DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6) effect
+2026-03-12 12:03:44.339 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6)
+2026-03-12 12:03:44.340 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.340 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.340 DEBUG - PLAY effects disabled for player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) due to DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6) effect
+2026-03-12 12:03:44.340 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6)
+2026-03-12 12:03:44.340 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.340 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.340 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.340 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.340 DEBUG - PLAY effects disabled for player Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) due to DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6) effect
+2026-03-12 12:03:44.340 INFO  - Resolving DISABLE_TIMING effect of DEATHWEAVER (923f6599-ca8d-49b1-a966-fd70d65ab6f6)
+2026-03-12 12:03:44.340 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.340 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.341 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.341 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.341 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.341 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.341 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.341 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.341 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.341 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.341 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (dc8656f4-f95b-431c-9f8d-15b583c83686)
+2026-03-12 12:03:44.341 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.341 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.341 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.341 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.341 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.341 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.341 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.342 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.342 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.342 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.342 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.342 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.342 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.342 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.342 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.342 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.342 DEBUG - BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) power changed (3 -> 11) due to BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f) effect
+2026-03-12 12:03:44.342 INFO  - Resolving POWER_UP effect of BUGSERKER (119eeb40-b065-437e-9783-f01b7fd97b4f)
+2026-03-12 12:03:44.342 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.342 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.342 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.343 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.343 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.343 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.343 DEBUG - THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb) gains SNEAKY keyword
+2026-03-12 12:03:44.343 INFO  - Resolving KEYWORD_UP effect of THE LURKER (d163dd11-c3c7-431e-8d9a-7dde8a7dacdb)
+2026-03-12 12:03:44.343 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.343 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.343 INFO  - Life update for player Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) : 3 LP
+2026-03-12 12:03:44.343 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.343 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.343 DEBUG - CardInstance(uuid=f99c6f13-0ea8-44dd-9c09-4d2a2890c3a3, card=Card(id=20, setName=first_contact, name=PLATED SCORPION, power=2, keywords=[TOUGH, POISONOUS], effects={}, unique=false, description=“The sting is only half the problem.”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@18be3205), power=2, keywords=[TOUGH, POISONOUS], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:44.343 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (f999768b-de36-43cd-a3f5-7af43a9631cc)
+2026-03-12 12:03:44.344 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (5199bb21-f8c2-49a0-a353-4c761533ede0)
+2026-03-12 12:03:44.344 INFO  - Life update for player Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) : 2 LP
+2026-03-12 12:03:44.344 INFO  - Game over : Player2 (ba21823f-33c6-4068-97b0-b77422da5c9c) wins ; Player1 (1fd3706b-e554-4596-be52-d443f6cfd80c) loses.
+2026-03-12 12:03:44.344 INFO  - End of the game

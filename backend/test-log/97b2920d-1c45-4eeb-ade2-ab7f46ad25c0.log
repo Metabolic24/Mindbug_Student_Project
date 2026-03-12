@@ -1,0 +1,112 @@
+2026-03-12 12:03:47.171 INFO  - Calculating first player...
+2026-03-12 12:03:47.173 INFO  - Banned card for Player1 (ef685857-33fb-4161-9a84-424a6d2b96ef) : HAMSTER LION (467766a4-a348-4be0-8edf-a0450b0b00a8) (8)
+2026-03-12 12:03:47.173 INFO  - Banned card for Player2 (a4f091be-ad99-44ad-80db-f059be8be665) : SHARKY GRAB-DOG-MUMMYPUS (afd399ec-34c8-449d-ab61-48984e60b4c9) (5)
+2026-03-12 12:03:47.173 INFO  - First player will be Player1 (ef685857-33fb-4161-9a84-424a6d2b96ef)
+2026-03-12 12:03:47.180 INFO  - Game 97b2920d-1c45-4eeb-ade2-ab7f46ad25c0 starting...
+2026-03-12 12:03:47.180 INFO  - Player Player1 (ef685857-33fb-4161-9a84-424a6d2b96ef) hand : {
+- BUGSERKER ;
+- URCHIN HURLER ;
+- GRAVE ROBBER ;
+- CREEP FROM THE DEEP ;
+- PLATED SCORPION
+}
+2026-03-12 12:03:47.180 INFO  - Player Player1 (ef685857-33fb-4161-9a84-424a6d2b96ef) draw pile : {
+- TUSKED EXTORTER ;
+- TIGER SQUIRREL ;
+- TURF THE SURFER ;
+- CHAMELEON SNIPER ;
+- SNAIL HYDRA
+}
+2026-03-12 12:03:47.181 INFO  - Player Player2 (a4f091be-ad99-44ad-80db-f059be8be665) hand : {
+- FERRET BOMBER ;
+- MYSTERIOUS MERMAID ;
+- FERRET BOMBER ;
+- EXPLOSIVE TOAD ;
+-  GIRAFFODILE
+}
+2026-03-12 12:03:47.181 INFO  - Player Player2 (a4f091be-ad99-44ad-80db-f059be8be665) draw pile : {
+- GOBLIN WEREWOLF ;
+- CREEP FROM THE DEEP ;
+- MAJESTIC MANTICORE ;
+- GOREAGLE ALPHA ;
+- FERRET PACIFIER
+}
+2026-03-12 12:03:47.181 DEBUG - Player2 (a4f091be-ad99-44ad-80db-f059be8be665) LP changed (3 -> 3) due to MYSTERIOUS MERMAID (d53e925a-6c73-491b-95af-82e056518360) effect
+2026-03-12 12:03:47.181 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (d53e925a-6c73-491b-95af-82e056518360)
+2026-03-12 12:03:47.181 DEBUG - Player Player1 (ef685857-33fb-4161-9a84-424a6d2b96ef) must choose 2 card(s) to discard (available targets : {
+- BUGSERKER ;
+- URCHIN HURLER ;
+- CREEP FROM THE DEEP ;
+- PLATED SCORPION ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:47.181 INFO  - New TARGET choice to be resolved by Player1 (ef685857-33fb-4161-9a84-424a6d2b96ef) (targets : {
+- URCHIN HURLER ;
+- PLATED SCORPION ;
+- TUSKED EXTORTER ;
+- CREEP FROM THE DEEP ;
+- BUGSERKER
+})
+2026-03-12 12:03:47.181 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:47.181 DEBUG - URCHIN HURLER (c41423ad-1387-406e-b995-51f621ab7608) discarded due to FERRET BOMBER (6c753eb6-17bf-42ac-a24a-b3640dd98baf) effect
+2026-03-12 12:03:47.181 DEBUG - CREEP FROM THE DEEP (005085a7-188d-433f-b849-544a0bd65e2a) discarded due to FERRET BOMBER (6c753eb6-17bf-42ac-a24a-b3640dd98baf) effect
+2026-03-12 12:03:47.181 INFO  - Resolving DISCARD effect of FERRET BOMBER (6c753eb6-17bf-42ac-a24a-b3640dd98baf)
+2026-03-12 12:03:47.181 DEBUG - GOBLIN WEREWOLF (ccab1bba-cf70-42e7-b8ed-608c6c30bd28) power changed (2 -> 8) due to GOBLIN WEREWOLF (ccab1bba-cf70-42e7-b8ed-608c6c30bd28) effect
+2026-03-12 12:03:47.181 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ccab1bba-cf70-42e7-b8ed-608c6c30bd28)
+2026-03-12 12:03:47.181 DEBUG - GOBLIN WEREWOLF (ccab1bba-cf70-42e7-b8ed-608c6c30bd28) power changed (2 -> 8) due to GOBLIN WEREWOLF (ccab1bba-cf70-42e7-b8ed-608c6c30bd28) effect
+2026-03-12 12:03:47.181 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ccab1bba-cf70-42e7-b8ed-608c6c30bd28)
+2026-03-12 12:03:47.181 DEBUG - GOBLIN WEREWOLF (ccab1bba-cf70-42e7-b8ed-608c6c30bd28) power changed (2 -> 8) due to GOBLIN WEREWOLF (ccab1bba-cf70-42e7-b8ed-608c6c30bd28) effect
+2026-03-12 12:03:47.181 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ccab1bba-cf70-42e7-b8ed-608c6c30bd28)
+2026-03-12 12:03:47.181 DEBUG - MYSTERIOUS MERMAID (d53e925a-6c73-491b-95af-82e056518360) stolen and drawn by Player2 (a4f091be-ad99-44ad-80db-f059be8be665) due to  GIRAFFODILE (836ac2dc-c5d4-47aa-a61a-647d2e1f487d) effect
+2026-03-12 12:03:47.182 DEBUG - FERRET BOMBER (6c753eb6-17bf-42ac-a24a-b3640dd98baf) stolen and drawn by Player2 (a4f091be-ad99-44ad-80db-f059be8be665) due to  GIRAFFODILE (836ac2dc-c5d4-47aa-a61a-647d2e1f487d) effect
+2026-03-12 12:03:47.182 INFO  - Resolving STEAL effect of  GIRAFFODILE (836ac2dc-c5d4-47aa-a61a-647d2e1f487d)
+2026-03-12 12:03:47.182 DEBUG - GOBLIN WEREWOLF (ccab1bba-cf70-42e7-b8ed-608c6c30bd28) power changed (2 -> 8) due to GOBLIN WEREWOLF (ccab1bba-cf70-42e7-b8ed-608c6c30bd28) effect
+2026-03-12 12:03:47.182 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (ccab1bba-cf70-42e7-b8ed-608c6c30bd28)
+2026-03-12 12:03:47.182 DEBUG - Player2 (a4f091be-ad99-44ad-80db-f059be8be665) LP changed (3 -> 3) due to MYSTERIOUS MERMAID (d53e925a-6c73-491b-95af-82e056518360) effect
+2026-03-12 12:03:47.182 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (d53e925a-6c73-491b-95af-82e056518360)
+2026-03-12 12:03:47.182 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:47.182 INFO  - Life update for player Player2 (a4f091be-ad99-44ad-80db-f059be8be665) : 2 LP
+2026-03-12 12:03:47.182 DEBUG - MAJESTIC MANTICORE (f1e3f50a-f828-45a1-8dd9-e92443174ed5) effect destroys TIGER SQUIRREL (ee3dac63-0e96-4032-ac87-565d9459c6a7)
+2026-03-12 12:03:47.182 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (f1e3f50a-f828-45a1-8dd9-e92443174ed5)
+2026-03-12 12:03:47.182 INFO  - Life update for player Player1 (ef685857-33fb-4161-9a84-424a6d2b96ef) : 2 LP
+2026-03-12 12:03:47.183 DEBUG - MAJESTIC MANTICORE (f1e3f50a-f828-45a1-8dd9-e92443174ed5) effect destroys MAJESTIC MANTICORE (f1e3f50a-f828-45a1-8dd9-e92443174ed5)
+2026-03-12 12:03:47.183 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (f1e3f50a-f828-45a1-8dd9-e92443174ed5)
+2026-03-12 12:03:47.183 DEBUG - Player Player2 (a4f091be-ad99-44ad-80db-f059be8be665) must choose 1 card(s) to discard (available targets : {
+- FERRET BOMBER ;
+- EXPLOSIVE TOAD ;
+- GOREAGLE ALPHA ;
+- FERRET BOMBER ;
+- FERRET PACIFIER
+})
+2026-03-12 12:03:47.183 INFO  - New TARGET choice to be resolved by Player2 (a4f091be-ad99-44ad-80db-f059be8be665) (targets : {
+- FERRET PACIFIER ;
+- FERRET BOMBER ;
+- GOREAGLE ALPHA ;
+- FERRET BOMBER ;
+- EXPLOSIVE TOAD
+})
+2026-03-12 12:03:47.183 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:47.183 DEBUG - FERRET PACIFIER (4c5441e7-d9ea-46e2-8221-136d84f3b6a5) discarded due to TUSKED EXTORTER (2438ac3b-d2e1-4ed0-9517-e26151aefdcf) effect
+2026-03-12 12:03:47.183 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (2438ac3b-d2e1-4ed0-9517-e26151aefdcf)
+2026-03-12 12:03:47.183 INFO  - Life update for player Player2 (a4f091be-ad99-44ad-80db-f059be8be665) : 1 LP
+2026-03-12 12:03:47.183 DEBUG - Player Player1 (ef685857-33fb-4161-9a84-424a6d2b96ef) must choose 2 card(s) to discard (available targets : {
+- BUGSERKER ;
+- TURF THE SURFER ;
+- CHAMELEON SNIPER ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:47.183 INFO  - New TARGET choice to be resolved by Player1 (ef685857-33fb-4161-9a84-424a6d2b96ef) (targets : {
+- SNAIL HYDRA ;
+- BUGSERKER ;
+- TURF THE SURFER ;
+- CHAMELEON SNIPER
+})
+2026-03-12 12:03:47.183 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:47.184 DEBUG - SNAIL HYDRA (19f44e0a-e758-404c-922e-fd468f878567) discarded due to FERRET BOMBER (156c957c-c448-4f49-a8d8-9bef4e93f0a6) effect
+2026-03-12 12:03:47.184 DEBUG - CHAMELEON SNIPER (28cac524-2d90-4b59-b386-cab5a833c38b) discarded due to FERRET BOMBER (156c957c-c448-4f49-a8d8-9bef4e93f0a6) effect
+2026-03-12 12:03:47.184 INFO  - Resolving DISCARD effect of FERRET BOMBER (156c957c-c448-4f49-a8d8-9bef4e93f0a6)
+2026-03-12 12:03:47.184 INFO  - Life update for player Player1 (ef685857-33fb-4161-9a84-424a6d2b96ef) : 1 LP
+2026-03-12 12:03:47.184 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (941dfcef-51c8-46e1-8b3b-378d09b5ea24)
+2026-03-12 12:03:47.184 INFO  - Life update for player Player2 (a4f091be-ad99-44ad-80db-f059be8be665) : 0 LP
+2026-03-12 12:03:47.184 INFO  - Game over : Player1 (ef685857-33fb-4161-9a84-424a6d2b96ef) wins ; Player2 (a4f091be-ad99-44ad-80db-f059be8be665) loses.
+2026-03-12 12:03:47.184 INFO  - End of the game

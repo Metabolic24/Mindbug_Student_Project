@@ -1,0 +1,85 @@
+2026-03-12 12:03:05.890 INFO  - Calculating first player...
+2026-03-12 12:03:05.892 INFO  - Banned card for Player1 (d54c65bb-ffe0-482f-9fe5-315207664de5) : MYSTERIOUS MERMAID (462dce19-8b2c-4b72-8323-9644abe129b6) (7)
+2026-03-12 12:03:05.892 INFO  - Banned card for Player2 (3f71a3e8-b9fa-441a-9518-e9daee920818) : COMPOST DRAGON (22440bad-19fb-4c91-8ca5-91d25ce5b2b9) (3)
+2026-03-12 12:03:05.892 INFO  - First player will be Player1 (d54c65bb-ffe0-482f-9fe5-315207664de5)
+2026-03-12 12:03:05.900 INFO  - Game 7813403d-fea5-4544-bbbd-52733ab594b6 starting...
+2026-03-12 12:03:05.901 INFO  - Player Player1 (d54c65bb-ffe0-482f-9fe5-315207664de5) hand : {
+- BUGSERKER ;
+- THE LURKER ;
+- HYENIX ;
+- EXPLOSIVE TOAD ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:03:05.901 INFO  - Player Player1 (d54c65bb-ffe0-482f-9fe5-315207664de5) draw pile : {
+- CREEP FROM THE DEEP ;
+- TUSKED EXTORTER ;
+- SNAIL HYDRA ;
+- GOBLIN WEREWOLF ;
+- FERRET PACIFIER
+}
+2026-03-12 12:03:05.901 INFO  - Player Player2 (3f71a3e8-b9fa-441a-9518-e9daee920818) hand : {
+- HAMSTER LION ;
+- CHAMELEON SNIPER ;
+- GRAVE ROBBER ;
+- ELEPHANTOPUS ;
+- THE LURKER
+}
+2026-03-12 12:03:05.901 INFO  - Player Player2 (3f71a3e8-b9fa-441a-9518-e9daee920818) draw pile : {
+- COMPOST DRAGON ;
+- RHINO TURTLE ;
+- PLATED SCORPION ;
+- GOREAGLE ALPHA ;
+- FERRET BOMBER
+}
+2026-03-12 12:03:05.902 INFO  - Life update for player Player2 (3f71a3e8-b9fa-441a-9518-e9daee920818) : 2 LP
+2026-03-12 12:03:05.902 INFO  - New FRENZY choice to be resolved by Player2 (3f71a3e8-b9fa-441a-9518-e9daee920818) (attackingCard : RHINO TURTLE (202a2e52-6ca1-48aa-9171-77cd682c9dba))
+2026-03-12 12:03:05.902 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:05.902 DEBUG - Player Player2 (3f71a3e8-b9fa-441a-9518-e9daee920818) must choose 1 card(s) to discard (available targets : {
+- HAMSTER LION ;
+- CHAMELEON SNIPER ;
+- ELEPHANTOPUS ;
+- PLATED SCORPION ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:05.902 INFO  - New TARGET choice to be resolved by Player2 (3f71a3e8-b9fa-441a-9518-e9daee920818) (targets : {
+- HAMSTER LION ;
+- CHAMELEON SNIPER ;
+- PLATED SCORPION ;
+- ELEPHANTOPUS ;
+- GOREAGLE ALPHA
+})
+2026-03-12 12:03:05.902 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:05.902 DEBUG - ELEPHANTOPUS (9e449ef3-2123-471d-ae1b-8e4376f96945) discarded due to TUSKED EXTORTER (2c3b7032-5b3b-48fb-8ebe-4642c1719d43) effect
+2026-03-12 12:03:05.902 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (2c3b7032-5b3b-48fb-8ebe-4642c1719d43)
+2026-03-12 12:03:05.903 DEBUG - THE LURKER (dc8b8367-7080-450f-9dd1-2465c331985f) gains SNEAKY keyword
+2026-03-12 12:03:05.903 INFO  - Resolving KEYWORD_UP effect of THE LURKER (dc8b8367-7080-450f-9dd1-2465c331985f)
+2026-03-12 12:03:05.903 INFO  - Life update for player Player1 (d54c65bb-ffe0-482f-9fe5-315207664de5) : 2 LP
+2026-03-12 12:03:05.903 INFO  - New FRENZY choice to be resolved by Player2 (3f71a3e8-b9fa-441a-9518-e9daee920818) (attackingCard : RHINO TURTLE (202a2e52-6ca1-48aa-9171-77cd682c9dba))
+2026-03-12 12:03:05.903 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:05.903 DEBUG - Player Player1 (d54c65bb-ffe0-482f-9fe5-315207664de5) must choose 1 card(s) to destroy (available targets : {
+- GRAVE ROBBER ;
+- THE LURKER ;
+- CHAMELEON SNIPER ;
+- TUSKED EXTORTER ;
+- SNAIL HYDRA ;
+- BUGSERKER
+})
+2026-03-12 12:03:05.903 INFO  - New TARGET choice to be resolved by Player1 (d54c65bb-ffe0-482f-9fe5-315207664de5) (targets : {
+- SNAIL HYDRA ;
+- BUGSERKER ;
+- TUSKED EXTORTER ;
+- THE LURKER ;
+- CHAMELEON SNIPER ;
+- GRAVE ROBBER
+})
+2026-03-12 12:03:05.903 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:05.903 DEBUG - EXPLOSIVE TOAD (b69a0a54-24b7-479e-858e-ea1bf17d994c) effect destroys BUGSERKER (80455def-65c6-4505-80be-6c7e6844dd4f)
+2026-03-12 12:03:05.903 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (b69a0a54-24b7-479e-858e-ea1bf17d994c)
+2026-03-12 12:03:05.903 INFO  - Life update for player Player1 (d54c65bb-ffe0-482f-9fe5-315207664de5) : 1 LP
+2026-03-12 12:03:05.903 DEBUG - Player1 (d54c65bb-ffe0-482f-9fe5-315207664de5) LP changed (2 -> 1) due to CHAMELEON SNIPER (cf7a0d55-d2a5-4da6-b9e4-f5fdcd03176f) effect
+2026-03-12 12:03:05.903 INFO  - Resolving INFLICT effect of CHAMELEON SNIPER (cf7a0d55-d2a5-4da6-b9e4-f5fdcd03176f)
+2026-03-12 12:03:05.904 DEBUG - BUGSERKER (80455def-65c6-4505-80be-6c7e6844dd4f) power changed (3 -> 11) due to BUGSERKER (80455def-65c6-4505-80be-6c7e6844dd4f) effect
+2026-03-12 12:03:05.904 INFO  - Resolving POWER_UP effect of BUGSERKER (80455def-65c6-4505-80be-6c7e6844dd4f)
+2026-03-12 12:03:05.904 INFO  - Life update for player Player1 (d54c65bb-ffe0-482f-9fe5-315207664de5) : 0 LP
+2026-03-12 12:03:05.904 INFO  - Game over : Player2 (3f71a3e8-b9fa-441a-9518-e9daee920818) wins ; Player1 (d54c65bb-ffe0-482f-9fe5-315207664de5) loses.
+2026-03-12 12:03:05.904 INFO  - End of the game

@@ -1,0 +1,151 @@
+2026-03-12 12:18:24.978 INFO  - Calculating first player...
+2026-03-12 12:18:24.981 INFO  - Banned card for Player1 (bef1cbcc-0ec6-4755-898b-3c4471a22bbb) :  GIRAFFODILE (72a7bbcb-6135-46e4-9c61-c2ee1ee2625e) (7)
+2026-03-12 12:18:24.981 INFO  - Banned card for Player2 (2b093be7-6696-477a-8ccc-37b5b42783cb) : FROBLIN INSTIGATOR (4d071e4b-b709-43ce-b24b-a4c65a1c1954) (1)
+2026-03-12 12:18:24.981 INFO  - First player will be Player1 (bef1cbcc-0ec6-4755-898b-3c4471a22bbb)
+2026-03-12 12:18:24.990 INFO  - Game 1110f812-520a-43c7-b5c8-f3e6cf5d9b50 starting...
+2026-03-12 12:18:24.990 INFO  - Player Player1 (bef1cbcc-0ec6-4755-898b-3c4471a22bbb) hand : {
+- SPIDER OWL ;
+- EXPLOSIVE TOAD ;
+- AXOLOTL HEALER ;
+- HARPY MOTHER ;
+- CREEP FROM THE DEEP
+}
+2026-03-12 12:18:24.991 INFO  - Player Player1 (bef1cbcc-0ec6-4755-898b-3c4471a22bbb) draw pile : {
+- SHIELD BUGS ;
+- TURF THE SURFER ;
+- FERRET BOMBER ;
+- KANGASAURUS REX ;
+- SNAIL HYDRA
+}
+2026-03-12 12:18:24.991 INFO  - Player Player2 (2b093be7-6696-477a-8ccc-37b5b42783cb) hand : {
+- HUNGRY HUNGRY HAMSTER ;
+- HYENIX ;
+- AXOLOTL HEALER ;
+- GOBLIN WEREWOLF ;
+- FERRET PACIFIER
+}
+2026-03-12 12:18:24.991 INFO  - Player Player2 (2b093be7-6696-477a-8ccc-37b5b42783cb) draw pile : {
+- BUGSERKER ;
+- MAJESTIC MANTICORE ;
+- GRAVE ROBBER ;
+- SHIELD BUGS ;
+- THE LURKER
+}
+2026-03-12 12:18:24.993 DEBUG - GOBLIN WEREWOLF (410c21ba-5cc0-4503-b33e-eb94f72b4c73) power changed (2 -> 8) due to GOBLIN WEREWOLF (410c21ba-5cc0-4503-b33e-eb94f72b4c73) effect
+2026-03-12 12:18:24.993 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (410c21ba-5cc0-4503-b33e-eb94f72b4c73)
+2026-03-12 12:18:24.994 DEBUG - Player1 (bef1cbcc-0ec6-4755-898b-3c4471a22bbb) LP changed (3 -> 5) due to AXOLOTL HEALER (4fcc75f7-1475-4a1e-817c-c08e9e53a322) effect
+2026-03-12 12:18:24.994 INFO  - Resolving GAIN effect of AXOLOTL HEALER (4fcc75f7-1475-4a1e-817c-c08e9e53a322)
+2026-03-12 12:18:24.994 DEBUG - MAJESTIC MANTICORE (6660249c-d9c6-4587-800d-35e991b41819) effect destroys SPIDER OWL (8cc83ed0-9da6-413c-8f3f-316fc240d47f)
+2026-03-12 12:18:24.994 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (6660249c-d9c6-4587-800d-35e991b41819)
+2026-03-12 12:18:24.994 INFO  - Life update for player Player2 (2b093be7-6696-477a-8ccc-37b5b42783cb) : 2 LP
+2026-03-12 12:18:24.995 INFO  - Life update for player Player1 (bef1cbcc-0ec6-4755-898b-3c4471a22bbb) : 4 LP
+2026-03-12 12:18:24.995 INFO  - New FRENZY choice to be resolved by Player2 (2b093be7-6696-477a-8ccc-37b5b42783cb) (attackingCard : HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138))
+2026-03-12 12:18:24.995 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:24.995 INFO  - Life update for player Player1 (bef1cbcc-0ec6-4755-898b-3c4471a22bbb) : 3 LP
+2026-03-12 12:18:24.995 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.995 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:24.995 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.995 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:24.995 DEBUG - EXPLOSIVE TOAD (0e98083a-c674-49ec-ac0b-453e473625f9) power changed (5 -> 6) due to SHIELD BUGS (5ba5d80d-452a-4bd7-9c3e-fb954aedc69f) effect
+2026-03-12 12:18:24.995 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5ba5d80d-452a-4bd7-9c3e-fb954aedc69f)
+2026-03-12 12:18:24.995 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.995 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:24.996 DEBUG - EXPLOSIVE TOAD (0e98083a-c674-49ec-ac0b-453e473625f9) power changed (5 -> 6) due to SHIELD BUGS (5ba5d80d-452a-4bd7-9c3e-fb954aedc69f) effect
+2026-03-12 12:18:24.996 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5ba5d80d-452a-4bd7-9c3e-fb954aedc69f)
+2026-03-12 12:18:24.996 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.996 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:24.996 DEBUG - EXPLOSIVE TOAD (0e98083a-c674-49ec-ac0b-453e473625f9) power changed (5 -> 6) due to SHIELD BUGS (5ba5d80d-452a-4bd7-9c3e-fb954aedc69f) effect
+2026-03-12 12:18:24.996 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5ba5d80d-452a-4bd7-9c3e-fb954aedc69f)
+2026-03-12 12:18:24.996 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.996 DEBUG - FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d) power changed (4 -> 5) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.996 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:24.996 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d)
+2026-03-12 12:18:24.996 DEBUG - EXPLOSIVE TOAD (0e98083a-c674-49ec-ac0b-453e473625f9) power changed (5 -> 6) due to SHIELD BUGS (5ba5d80d-452a-4bd7-9c3e-fb954aedc69f) effect
+2026-03-12 12:18:24.996 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5ba5d80d-452a-4bd7-9c3e-fb954aedc69f)
+2026-03-12 12:18:24.996 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.997 DEBUG - FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d) power changed (4 -> 5) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.997 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:24.997 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d)
+2026-03-12 12:18:24.997 DEBUG - EXPLOSIVE TOAD (0e98083a-c674-49ec-ac0b-453e473625f9) power changed (5 -> 6) due to SHIELD BUGS (5ba5d80d-452a-4bd7-9c3e-fb954aedc69f) effect
+2026-03-12 12:18:24.997 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5ba5d80d-452a-4bd7-9c3e-fb954aedc69f)
+2026-03-12 12:18:24.997 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.997 DEBUG - FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d) power changed (4 -> 5) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.997 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:24.997 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d)
+2026-03-12 12:18:24.997 DEBUG - EXPLOSIVE TOAD (0e98083a-c674-49ec-ac0b-453e473625f9) power changed (5 -> 6) due to SHIELD BUGS (5ba5d80d-452a-4bd7-9c3e-fb954aedc69f) effect
+2026-03-12 12:18:24.997 INFO  - Resolving POWER_UP effect of SHIELD BUGS (5ba5d80d-452a-4bd7-9c3e-fb954aedc69f)
+2026-03-12 12:18:24.997 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.997 DEBUG - FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d) power changed (4 -> 5) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.998 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:24.998 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d)
+2026-03-12 12:18:24.998 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.998 DEBUG - FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d) power changed (4 -> 5) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.998 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:24.998 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d)
+2026-03-12 12:18:24.998 INFO  - New FRENZY choice to be resolved by Player2 (2b093be7-6696-477a-8ccc-37b5b42783cb) (attackingCard : HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138))
+2026-03-12 12:18:24.998 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:24.998 INFO  - Life update for player Player1 (bef1cbcc-0ec6-4755-898b-3c4471a22bbb) : 2 LP
+2026-03-12 12:18:24.998 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.999 DEBUG - FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d) power changed (4 -> 5) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.999 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:24.999 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d)
+2026-03-12 12:18:24.999 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.999 DEBUG - FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d) power changed (4 -> 5) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.999 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:24.999 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d)
+2026-03-12 12:18:24.999 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.999 DEBUG - FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d) power changed (4 -> 5) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:24.999 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:24.999 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (33b71c9d-afd6-49e1-a7d4-aef482a57c4d)
+2026-03-12 12:18:25.000 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:25.000 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:25.000 DEBUG - Player Player1 (bef1cbcc-0ec6-4755-898b-3c4471a22bbb) must choose 1 card(s) to destroy (available targets : {
+- HYENIX ;
+- SHIELD BUGS
+})
+2026-03-12 12:18:25.000 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) power changed (7 -> 8) due to SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0) effect
+2026-03-12 12:18:25.000 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:25.000 INFO  - New TARGET choice to be resolved by Player1 (bef1cbcc-0ec6-4755-898b-3c4471a22bbb) (targets : {
+- HYENIX ;
+- SHIELD BUGS
+})
+2026-03-12 12:18:25.000 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.000 DEBUG - EXPLOSIVE TOAD (0e98083a-c674-49ec-ac0b-453e473625f9) effect destroys HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138)
+2026-03-12 12:18:25.000 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (0e98083a-c674-49ec-ac0b-453e473625f9)
+2026-03-12 12:18:25.000 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:25.000 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:25.001 INFO  - Life update for player Player1 (bef1cbcc-0ec6-4755-898b-3c4471a22bbb) : 1 LP
+2026-03-12 12:18:25.001 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:25.001 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:25.001 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:25.001 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:25.001 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:25.001 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:25.001 INFO  - Resolving POWER_UP effect of SHIELD BUGS (d72ab7b7-68f8-4d7e-b3f2-9bd34443a4e0)
+2026-03-12 12:18:25.002 DEBUG - Player2 (2b093be7-6696-477a-8ccc-37b5b42783cb) LP changed (2 -> 4) due to AXOLOTL HEALER (79ad5152-f215-48e0-8b7d-c822b9a2f8b8) effect
+2026-03-12 12:18:25.002 INFO  - Resolving GAIN effect of AXOLOTL HEALER (79ad5152-f215-48e0-8b7d-c822b9a2f8b8)
+2026-03-12 12:18:25.002 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (7400ccb3-15b0-43c2-96cb-dea905c527c2)
+2026-03-12 12:18:25.002 INFO  - Life update for player Player2 (2b093be7-6696-477a-8ccc-37b5b42783cb) : 3 LP
+2026-03-12 12:18:25.002 DEBUG - Player2 (2b093be7-6696-477a-8ccc-37b5b42783cb) must decide if HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) will revive
+2026-03-12 12:18:25.003 INFO  - New BOOLEAN choice to be resolved by Player2 (2b093be7-6696-477a-8ccc-37b5b42783cb) (target : )
+2026-03-12 12:18:25.003 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:25.003 DEBUG - HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138) revived using its own effect
+2026-03-12 12:18:25.003 INFO  - Resolving REVIVE effect of HYENIX (dacc5fcc-e6fb-4e69-83c9-c0f3ea651138)
+2026-03-12 12:18:25.003 DEBUG - Player Player2 (2b093be7-6696-477a-8ccc-37b5b42783cb) must choose 2 card(s) to discard (available targets : {
+- HUNGRY HUNGRY HAMSTER ;
+- GRAVE ROBBER ;
+- THE LURKER
+})
+2026-03-12 12:18:25.003 INFO  - New TARGET choice to be resolved by Player2 (2b093be7-6696-477a-8ccc-37b5b42783cb) (targets : {
+- GRAVE ROBBER ;
+- HUNGRY HUNGRY HAMSTER ;
+- THE LURKER
+})
+2026-03-12 12:18:25.004 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.004 DEBUG - GRAVE ROBBER (97e6d1aa-7277-478f-85e1-e18d9f867d0d) discarded due to FERRET BOMBER (893994ad-45cb-4bf7-b3fd-0876fdbc9c7f) effect
+2026-03-12 12:18:25.004 DEBUG - HUNGRY HUNGRY HAMSTER (0f66cd85-fd5f-495d-8d9f-fc3f173a23b1) discarded due to FERRET BOMBER (893994ad-45cb-4bf7-b3fd-0876fdbc9c7f) effect
+2026-03-12 12:18:25.004 INFO  - Resolving DISCARD effect of FERRET BOMBER (893994ad-45cb-4bf7-b3fd-0876fdbc9c7f)
+2026-03-12 12:18:25.005 DEBUG - KANGASAURUS REX (660ed9e8-f2f0-4ab1-b731-ded83a7199e2) effect destroys THE LURKER (207cbc0a-5e0e-40e6-99f3-c7298ba6bf4f)
+2026-03-12 12:18:25.005 INFO  - Resolving DESTROY effect of KANGASAURUS REX (660ed9e8-f2f0-4ab1-b731-ded83a7199e2)
+2026-03-12 12:18:25.005 INFO  - Game over : Player1 (bef1cbcc-0ec6-4755-898b-3c4471a22bbb) wins ; Player2 (2b093be7-6696-477a-8ccc-37b5b42783cb) loses.
+2026-03-12 12:18:25.005 INFO  - End of the game

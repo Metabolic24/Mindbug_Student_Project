@@ -1,0 +1,86 @@
+2026-03-12 12:03:06.530 INFO  - Calculating first player...
+2026-03-12 12:03:06.532 INFO  - Banned card for Player1 (70c1f6c9-1626-46dd-940b-4219231de526) : HYENIX (58c87bcc-9e01-4bac-8f08-6760ba73079c) (7)
+2026-03-12 12:03:06.533 INFO  - Banned card for Player2 (84109b39-faf2-4929-bcdd-969cb9ee18b7) :  GIRAFFODILE (e1c15887-dca5-4cc2-8fa5-3765655417e8) (7)
+2026-03-12 12:03:06.533 INFO  - Banned card for Player1 (70c1f6c9-1626-46dd-940b-4219231de526) : THE LURKER (674d597d-97e7-40ef-96bd-eebdbf2ec0ad) (4)
+2026-03-12 12:03:06.533 INFO  - Banned card for Player2 (84109b39-faf2-4929-bcdd-969cb9ee18b7) : TURF THE SURFER (56d9c466-5b71-419f-94fa-0be1ea3627cd) (8)
+2026-03-12 12:03:06.533 INFO  - First player will be Player2 (84109b39-faf2-4929-bcdd-969cb9ee18b7)
+2026-03-12 12:03:06.541 INFO  - Game 31721daf-d404-4ba9-a377-8098ffc317d1 starting...
+2026-03-12 12:03:06.541 INFO  - Player Player1 (70c1f6c9-1626-46dd-940b-4219231de526) hand : {
+- TUSKED EXTORTER ;
+- HAMSTER LION ;
+- SHIELD BUGS ;
+- FERRET PACIFIER ;
+- GOREAGLE ALPHA
+}
+2026-03-12 12:03:06.541 INFO  - Player Player1 (70c1f6c9-1626-46dd-940b-4219231de526) draw pile : {
+- BRAIN FLY ;
+- SPIDER OWL ;
+- HUNGRY HUNGRY HAMSTER ;
+- BUGSERKER ;
+- LUCHATAUR
+}
+2026-03-12 12:03:06.542 INFO  - Player Player2 (84109b39-faf2-4929-bcdd-969cb9ee18b7) hand : {
+- LONE YETI ;
+- MAJESTIC MANTICORE ;
+- MYSTERIOUS MERMAID ;
+- BUGSERKER ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:03:06.542 INFO  - Player Player2 (84109b39-faf2-4929-bcdd-969cb9ee18b7) draw pile : {
+- GOREAGLE ALPHA ;
+- AXOLOTL HEALER ;
+- GRAVE ROBBER ;
+- HARPY MOTHER ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:06.542 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) power changed (5 -> 10) due to LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) effect
+2026-03-12 12:03:06.542 INFO  - Resolving POWER_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.542 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) gains FRENZY keyword
+2026-03-12 12:03:06.542 INFO  - Resolving KEYWORD_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.542 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) power changed (5 -> 10) due to LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) effect
+2026-03-12 12:03:06.542 INFO  - Resolving POWER_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.542 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) gains FRENZY keyword
+2026-03-12 12:03:06.542 INFO  - Resolving KEYWORD_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.542 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) power changed (5 -> 10) due to LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) effect
+2026-03-12 12:03:06.542 INFO  - Resolving POWER_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.542 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) gains FRENZY keyword
+2026-03-12 12:03:06.542 INFO  - Resolving KEYWORD_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.543 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) power changed (5 -> 10) due to LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) effect
+2026-03-12 12:03:06.543 INFO  - Resolving POWER_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.543 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) gains FRENZY keyword
+2026-03-12 12:03:06.543 INFO  - Resolving KEYWORD_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.543 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) power changed (5 -> 10) due to LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) effect
+2026-03-12 12:03:06.543 INFO  - Resolving POWER_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.543 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) gains FRENZY keyword
+2026-03-12 12:03:06.543 INFO  - Resolving KEYWORD_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.543 INFO  - New FRENZY choice to be resolved by Player2 (84109b39-faf2-4929-bcdd-969cb9ee18b7) (attackingCard : LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d))
+2026-03-12 12:03:06.543 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.543 INFO  - Life update for player Player1 (70c1f6c9-1626-46dd-940b-4219231de526) : 2 LP
+2026-03-12 12:03:06.543 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) power changed (5 -> 10) due to LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) effect
+2026-03-12 12:03:06.543 INFO  - Resolving POWER_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.543 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) gains FRENZY keyword
+2026-03-12 12:03:06.543 INFO  - Resolving KEYWORD_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.543 INFO  - New FRENZY choice to be resolved by Player2 (84109b39-faf2-4929-bcdd-969cb9ee18b7) (attackingCard : LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d))
+2026-03-12 12:03:06.543 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) power changed (5 -> 10) due to LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) effect
+2026-03-12 12:03:06.543 INFO  - Resolving POWER_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.543 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) gains FRENZY keyword
+2026-03-12 12:03:06.543 INFO  - Resolving KEYWORD_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.543 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.543 INFO  - Life update for player Player1 (70c1f6c9-1626-46dd-940b-4219231de526) : 1 LP
+2026-03-12 12:03:06.543 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) power changed (5 -> 10) due to LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) effect
+2026-03-12 12:03:06.543 INFO  - Resolving POWER_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.543 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) gains FRENZY keyword
+2026-03-12 12:03:06.544 INFO  - Resolving KEYWORD_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.544 INFO  - New FRENZY choice to be resolved by Player2 (84109b39-faf2-4929-bcdd-969cb9ee18b7) (attackingCard : LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d))
+2026-03-12 12:03:06.544 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) power changed (5 -> 10) due to LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) effect
+2026-03-12 12:03:06.544 INFO  - Resolving POWER_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.544 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) gains FRENZY keyword
+2026-03-12 12:03:06.544 INFO  - Resolving KEYWORD_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.544 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.544 INFO  - Life update for player Player1 (70c1f6c9-1626-46dd-940b-4219231de526) : 0 LP
+2026-03-12 12:03:06.544 INFO  - Game over : Player2 (84109b39-faf2-4929-bcdd-969cb9ee18b7) wins ; Player1 (70c1f6c9-1626-46dd-940b-4219231de526) loses.
+2026-03-12 12:03:06.544 INFO  - End of the game
+2026-03-12 12:03:06.544 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) power changed (5 -> 10) due to LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) effect
+2026-03-12 12:03:06.544 INFO  - Resolving POWER_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)
+2026-03-12 12:03:06.544 DEBUG - LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d) gains FRENZY keyword
+2026-03-12 12:03:06.544 INFO  - Resolving KEYWORD_UP effect of LONE YETI (2b280c8d-fb7f-40a8-871e-d1340d95b67d)

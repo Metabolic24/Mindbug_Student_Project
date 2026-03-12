@@ -1,0 +1,99 @@
+2026-03-12 12:18:27.569 INFO  - Calculating first player...
+2026-03-12 12:18:27.572 INFO  - Banned card for Player1 (caa1f286-f9db-41af-9f41-04ada475ce58) : GOBLIN WEREWOLF (cbc66374-6762-4796-8fb8-f22ac6a4ac69) (2)
+2026-03-12 12:18:27.572 INFO  - Banned card for Player2 (86f64b4e-287c-4734-97ee-8bc6f13ebf73) : CHAMELEON SNIPER (10be89e3-05e5-41a7-a636-54e9b3b38cf4) (1)
+2026-03-12 12:18:27.572 INFO  - First player will be Player1 (caa1f286-f9db-41af-9f41-04ada475ce58)
+2026-03-12 12:18:27.581 INFO  - Game 762bb7fb-41ec-46e0-a8d5-8ac1bb1723c3 starting...
+2026-03-12 12:18:27.581 INFO  - Player Player1 (caa1f286-f9db-41af-9f41-04ada475ce58) hand : {
+- SNAIL HYDRA ;
+- GOREAGLE ALPHA ;
+- HUNGRY HUNGRY HAMSTER ;
+- AXOLOTL HEALER ;
+- RHINO TURTLE
+}
+2026-03-12 12:18:27.582 INFO  - Player Player1 (caa1f286-f9db-41af-9f41-04ada475ce58) draw pile : {
+- KANGASAURUS REX ;
+- SPIDER OWL ;
+- SPIDER OWL ;
+- EXPLOSIVE TOAD ;
+- HAMSTER LION
+}
+2026-03-12 12:18:27.582 INFO  - Player Player2 (86f64b4e-287c-4734-97ee-8bc6f13ebf73) hand : {
+- GRAVE ROBBER ;
+- TURF THE SURFER ;
+- TUSKED EXTORTER ;
+- BUGSERKER ;
+- SHARKY GRAB-DOG-MUMMYPUS
+}
+2026-03-12 12:18:27.582 INFO  - Player Player2 (86f64b4e-287c-4734-97ee-8bc6f13ebf73) draw pile : {
+-  GIRAFFODILE ;
+- FERRET PACIFIER ;
+- BEE BEAR ;
+- TIGER SQUIRREL ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:18:27.582 DEBUG - Player Player1 (caa1f286-f9db-41af-9f41-04ada475ce58) must choose 1 card(s) to destroy (available targets : {
+- BUGSERKER ;
+- TURF THE SURFER
+})
+2026-03-12 12:18:27.582 INFO  - New TARGET choice to be resolved by Player1 (caa1f286-f9db-41af-9f41-04ada475ce58) (targets : {
+- BUGSERKER ;
+- TURF THE SURFER
+})
+2026-03-12 12:18:27.582 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.582 DEBUG - SNAIL HYDRA (eacfccbb-3133-4ecb-b5e1-acbe858ee36c) effect destroys TURF THE SURFER (83404b15-daba-4ed6-a4b3-6410ce12328e)
+2026-03-12 12:18:27.582 INFO  - Resolving DESTROY effect of SNAIL HYDRA (eacfccbb-3133-4ecb-b5e1-acbe858ee36c)
+2026-03-12 12:18:27.583 DEBUG - TURF THE SURFER (83404b15-daba-4ed6-a4b3-6410ce12328e) stolen and drawn by Player2 (86f64b4e-287c-4734-97ee-8bc6f13ebf73) due to  GIRAFFODILE (ca298477-f4c7-44cb-89dc-fd4549938dbb) effect
+2026-03-12 12:18:27.583 DEBUG - BUGSERKER (a1c90192-893f-41f1-8ab3-b58727bd861a) stolen and drawn by Player2 (86f64b4e-287c-4734-97ee-8bc6f13ebf73) due to  GIRAFFODILE (ca298477-f4c7-44cb-89dc-fd4549938dbb) effect
+2026-03-12 12:18:27.583 INFO  - Resolving STEAL effect of  GIRAFFODILE (ca298477-f4c7-44cb-89dc-fd4549938dbb)
+2026-03-12 12:18:27.583 DEBUG - Player Player1 (caa1f286-f9db-41af-9f41-04ada475ce58) must choose 1 card(s) to destroy (available targets : {
+- GRAVE ROBBER ;
+-  GIRAFFODILE
+})
+2026-03-12 12:18:27.583 INFO  - New TARGET choice to be resolved by Player1 (caa1f286-f9db-41af-9f41-04ada475ce58) (targets : {
+- GRAVE ROBBER ;
+-  GIRAFFODILE
+})
+2026-03-12 12:18:27.583 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.583 DEBUG - SNAIL HYDRA (eacfccbb-3133-4ecb-b5e1-acbe858ee36c) effect destroys  GIRAFFODILE (ca298477-f4c7-44cb-89dc-fd4549938dbb)
+2026-03-12 12:18:27.583 INFO  - Resolving DESTROY effect of SNAIL HYDRA (eacfccbb-3133-4ecb-b5e1-acbe858ee36c)
+2026-03-12 12:18:27.583 DEBUG - TIGER SQUIRREL (88dceade-7cc2-4c69-8888-462b906245ac) effect destroys SNAIL HYDRA (eacfccbb-3133-4ecb-b5e1-acbe858ee36c)
+2026-03-12 12:18:27.583 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (88dceade-7cc2-4c69-8888-462b906245ac)
+2026-03-12 12:18:27.583 INFO  - Life update for player Player1 (caa1f286-f9db-41af-9f41-04ada475ce58) : 2 LP
+2026-03-12 12:18:27.583 DEBUG - Player1 (caa1f286-f9db-41af-9f41-04ada475ce58) LP changed (2 -> 4) due to AXOLOTL HEALER (e59c4582-45af-4609-b02f-5493bc71799f) effect
+2026-03-12 12:18:27.583 INFO  - Resolving GAIN effect of AXOLOTL HEALER (e59c4582-45af-4609-b02f-5493bc71799f)
+2026-03-12 12:18:27.583 INFO  - Life update for player Player1 (caa1f286-f9db-41af-9f41-04ada475ce58) : 3 LP
+2026-03-12 12:18:27.584 DEBUG - Player1 (caa1f286-f9db-41af-9f41-04ada475ce58) LP changed (4 -> 3) due to GOREAGLE ALPHA (ada2ad0f-770d-47d5-a857-96e2fb4be07d) effect
+2026-03-12 12:18:27.584 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (ada2ad0f-770d-47d5-a857-96e2fb4be07d)
+2026-03-12 12:18:27.584 INFO  - Life update for player Player2 (86f64b4e-287c-4734-97ee-8bc6f13ebf73) : 2 LP
+2026-03-12 12:18:27.584 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (31031953-7c55-4e7a-ac2d-8bc8f12e2d3f)
+2026-03-12 12:18:27.584 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (31031953-7c55-4e7a-ac2d-8bc8f12e2d3f)
+2026-03-12 12:18:27.584 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (31031953-7c55-4e7a-ac2d-8bc8f12e2d3f)
+2026-03-12 12:18:27.584 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (31031953-7c55-4e7a-ac2d-8bc8f12e2d3f)
+2026-03-12 12:18:27.585 DEBUG - Player Player2 (86f64b4e-287c-4734-97ee-8bc6f13ebf73) must choose 1 card(s) that will be unable to block (targets : {
+- RHINO TURTLE ;
+- AXOLOTL HEALER ;
+- GOREAGLE ALPHA ;
+- SPIDER OWL
+})
+2026-03-12 12:18:27.585 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (31031953-7c55-4e7a-ac2d-8bc8f12e2d3f)
+2026-03-12 12:18:27.585 INFO  - New TARGET choice to be resolved by Player2 (86f64b4e-287c-4734-97ee-8bc6f13ebf73) (targets : {
+- SPIDER OWL ;
+- GOREAGLE ALPHA ;
+- AXOLOTL HEALER ;
+- RHINO TURTLE
+})
+2026-03-12 12:18:27.585 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.585 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (83404b15-daba-4ed6-a4b3-6410ce12328e)
+2026-03-12 12:18:27.585 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (31031953-7c55-4e7a-ac2d-8bc8f12e2d3f)
+2026-03-12 12:18:27.585 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (31031953-7c55-4e7a-ac2d-8bc8f12e2d3f)
+2026-03-12 12:18:27.585 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (31031953-7c55-4e7a-ac2d-8bc8f12e2d3f)
+2026-03-12 12:18:27.585 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (31031953-7c55-4e7a-ac2d-8bc8f12e2d3f)
+2026-03-12 12:18:27.585 INFO  - New FRENZY choice to be resolved by Player1 (caa1f286-f9db-41af-9f41-04ada475ce58) (attackingCard : RHINO TURTLE (b005aa4d-c498-4588-a05a-9d1aac0543e1))
+2026-03-12 12:18:27.585 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:27.585 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (31031953-7c55-4e7a-ac2d-8bc8f12e2d3f)
+2026-03-12 12:18:27.585 INFO  - Life update for player Player2 (86f64b4e-287c-4734-97ee-8bc6f13ebf73) : 1 LP
+2026-03-12 12:18:27.586 DEBUG - MAJESTIC MANTICORE (74a14600-26c4-40d0-9c0c-9b255bb1b7b6) effect destroys SPIDER OWL (e250c07e-f03d-4e5c-95b6-bb48fb7d5adc)
+2026-03-12 12:18:27.586 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (74a14600-26c4-40d0-9c0c-9b255bb1b7b6)
+2026-03-12 12:18:27.586 INFO  - Life update for player Player2 (86f64b4e-287c-4734-97ee-8bc6f13ebf73) : 0 LP
+2026-03-12 12:18:27.586 INFO  - Game over : Player1 (caa1f286-f9db-41af-9f41-04ada475ce58) wins ; Player2 (86f64b4e-287c-4734-97ee-8bc6f13ebf73) loses.
+2026-03-12 12:18:27.586 INFO  - End of the game

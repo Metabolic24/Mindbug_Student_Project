@@ -1,0 +1,494 @@
+2026-03-12 12:03:02.831 INFO  - Calculating first player...
+2026-03-12 12:03:02.834 INFO  - Banned card for Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) : RHINO TURTLE (e1a08551-7ed3-400a-b65d-ea7db498172a) (8)
+2026-03-12 12:03:02.834 INFO  - Banned card for Player2 (ff26a392-3007-441b-84c6-5959b8909f50) : COMPOST DRAGON (9a26ef0f-c1e9-455f-ae85-1c17f31216ac) (3)
+2026-03-12 12:03:02.834 INFO  - First player will be Player1 (54ce3805-e79f-4c65-ad11-7e300048345a)
+2026-03-12 12:03:02.842 INFO  - Game f60959ce-06a9-456a-bed8-122fcd6cf019 starting...
+2026-03-12 12:03:02.842 INFO  - Player Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) hand : {
+- ELEPHANTOPUS ;
+- GOREAGLE ALPHA ;
+- CHAMELEON SNIPER ;
+- FERRET PACIFIER ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:03:02.843 INFO  - Player Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) draw pile : {
+- EXPLOSIVE TOAD ;
+- FROBLIN INSTIGATOR ;
+- TURF THE SURFER ;
+- THE LURKER ;
+- LUCHATAUR
+}
+2026-03-12 12:03:02.843 INFO  - Player Player2 (ff26a392-3007-441b-84c6-5959b8909f50) hand : {
+- HAMSTER LION ;
+- SHIELD BUGS ;
+- SNAIL HYDRA ;
+- FERRET BOMBER ;
+- LONE YETI
+}
+2026-03-12 12:03:02.843 INFO  - Player Player2 (ff26a392-3007-441b-84c6-5959b8909f50) draw pile : {
+- HYENIX ;
+- FROBLIN INSTIGATOR ;
+- PLATED SCORPION ;
+- GOBLIN WEREWOLF ;
+-  GIRAFFODILE
+}
+2026-03-12 12:03:02.844 INFO  - Life update for player Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) : 2 LP
+2026-03-12 12:03:02.844 DEBUG - Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) LP changed (3 -> 2) due to GOREAGLE ALPHA (c365e7e4-762e-4e45-b00d-b0771f400540) effect
+2026-03-12 12:03:02.844 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (c365e7e4-762e-4e45-b00d-b0771f400540)
+2026-03-12 12:03:02.844 DEBUG - Player Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) must choose 2 card(s) to discard (available targets : {
+- ELEPHANTOPUS ;
+- CHAMELEON SNIPER ;
+- FERRET PACIFIER ;
+- AXOLOTL HEALER ;
+- EXPLOSIVE TOAD
+})
+2026-03-12 12:03:02.845 INFO  - New TARGET choice to be resolved by Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) (targets : {
+- FERRET PACIFIER ;
+- AXOLOTL HEALER ;
+- CHAMELEON SNIPER ;
+- EXPLOSIVE TOAD ;
+- ELEPHANTOPUS
+})
+2026-03-12 12:03:02.845 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:02.845 DEBUG - FERRET PACIFIER (91137a4d-40bf-43a7-b813-8b8b600c3ae2) discarded due to FERRET BOMBER (bd42ccea-96c6-4879-8044-d90b380af491) effect
+2026-03-12 12:03:02.845 DEBUG - ELEPHANTOPUS (e8c84dfe-a448-40e0-815b-789470cb4967) discarded due to FERRET BOMBER (bd42ccea-96c6-4879-8044-d90b380af491) effect
+2026-03-12 12:03:02.845 INFO  - Resolving DISCARD effect of FERRET BOMBER (bd42ccea-96c6-4879-8044-d90b380af491)
+2026-03-12 12:03:02.845 INFO  - Life update for player Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) : 1 LP
+2026-03-12 12:03:02.846 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:02.846 INFO  - New FRENZY choice to be resolved by Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) (attackingCard : GOREAGLE ALPHA (c365e7e4-762e-4e45-b00d-b0771f400540))
+2026-03-12 12:03:02.846 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:02.847 INFO  - New FRENZY choice to be resolved by Player2 (ff26a392-3007-441b-84c6-5959b8909f50) (attackingCard : HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7))
+2026-03-12 12:03:02.847 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:02.847 DEBUG - Player Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) must choose 1 card(s) to destroy (available targets : {
+- HYENIX ;
+- GOREAGLE ALPHA ;
+- THE LURKER
+})
+2026-03-12 12:03:02.847 INFO  - New TARGET choice to be resolved by Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) (targets : {
+- GOREAGLE ALPHA ;
+- HYENIX ;
+- THE LURKER
+})
+2026-03-12 12:03:02.847 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:02.847 DEBUG - EXPLOSIVE TOAD (406d37f6-1634-4187-a4f5-f3a341d5b380) effect destroys GOREAGLE ALPHA (c365e7e4-762e-4e45-b00d-b0771f400540)
+2026-03-12 12:03:02.847 INFO  - Resolving DESTROY effect of EXPLOSIVE TOAD (406d37f6-1634-4187-a4f5-f3a341d5b380)
+2026-03-12 12:03:02.847 DEBUG - CardInstance(uuid=2cd4599a-ce6a-4a4c-9750-e06cd9a5ebcd, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.848 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.848 DEBUG - CardInstance(uuid=2cd4599a-ce6a-4a4c-9750-e06cd9a5ebcd, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.848 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.848 DEBUG - CardInstance(uuid=324f3ec3-24a1-4429-90f9-36933b7e8ea7, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.852 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.852 DEBUG - CardInstance(uuid=324f3ec3-24a1-4429-90f9-36933b7e8ea7, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.853 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.853 DEBUG - CardInstance(uuid=324f3ec3-24a1-4429-90f9-36933b7e8ea7, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.853 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.853 DEBUG - CardInstance(uuid=324f3ec3-24a1-4429-90f9-36933b7e8ea7, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.853 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.853 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 7) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.854 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.854 DEBUG - CardInstance(uuid=324f3ec3-24a1-4429-90f9-36933b7e8ea7, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.854 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.854 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 7) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.854 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.854 DEBUG - CardInstance(uuid=324f3ec3-24a1-4429-90f9-36933b7e8ea7, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.854 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.855 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 5) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.855 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.855 DEBUG - CardInstance(uuid=2cd4599a-ce6a-4a4c-9750-e06cd9a5ebcd, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.855 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.855 INFO  - New FRENZY choice to be resolved by Player2 (ff26a392-3007-441b-84c6-5959b8909f50) (attackingCard : HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b))
+2026-03-12 12:03:02.855 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:02.855 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 5) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.855 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.856 DEBUG - CardInstance(uuid=2cd4599a-ce6a-4a4c-9750-e06cd9a5ebcd, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.856 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.856 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 5) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.856 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.856 DEBUG - CardInstance(uuid=2cd4599a-ce6a-4a4c-9750-e06cd9a5ebcd, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.856 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.856 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:02.857 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 3) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.857 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.857 DEBUG - CardInstance(uuid=3423a449-32fa-45f7-9bed-d7e4bcf03b00, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.857 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.857 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 3) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.858 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.858 DEBUG - CardInstance(uuid=3423a449-32fa-45f7-9bed-d7e4bcf03b00, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.858 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.858 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 3) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.858 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.858 DEBUG - CardInstance(uuid=3423a449-32fa-45f7-9bed-d7e4bcf03b00, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.859 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.859 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 3) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.859 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.859 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.859 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.859 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.859 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.859 DEBUG - CardInstance(uuid=3423a449-32fa-45f7-9bed-d7e4bcf03b00, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.860 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.860 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 3) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.860 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.860 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.860 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.860 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.860 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.860 DEBUG - CardInstance(uuid=3423a449-32fa-45f7-9bed-d7e4bcf03b00, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.860 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.861 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 5) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.861 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.861 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.861 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.861 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.861 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.861 DEBUG - CardInstance(uuid=2cd4599a-ce6a-4a4c-9750-e06cd9a5ebcd, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.861 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.863 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.863 DEBUG - Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) LP changed (1 -> 3) due to AXOLOTL HEALER (577bb900-b1be-466c-84cf-3ddb1bb6b518) effect
+2026-03-12 12:03:02.863 INFO  - Resolving GAIN effect of AXOLOTL HEALER (577bb900-b1be-466c-84cf-3ddb1bb6b518)
+2026-03-12 12:03:02.863 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 5) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.863 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.863 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.863 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.863 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.863 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.863 DEBUG - CardInstance(uuid=2cd4599a-ce6a-4a4c-9750-e06cd9a5ebcd, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.864 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.864 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.864 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 5) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.864 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.864 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.864 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.864 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.864 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.864 DEBUG - CardInstance(uuid=2cd4599a-ce6a-4a4c-9750-e06cd9a5ebcd, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.864 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.864 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.865 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 5) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.865 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.865 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.865 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.865 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.865 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.865 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.865 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.865 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.865 DEBUG - CardInstance(uuid=2cd4599a-ce6a-4a4c-9750-e06cd9a5ebcd, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.865 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.865 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.865 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 5) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.865 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.865 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.865 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.865 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.865 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.866 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.866 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.866 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.866 DEBUG - CardInstance(uuid=2cd4599a-ce6a-4a4c-9750-e06cd9a5ebcd, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.866 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.866 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.866 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 7) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.866 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.866 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.866 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.866 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.866 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.866 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.866 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.866 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.866 DEBUG - CardInstance(uuid=2cd4599a-ce6a-4a4c-9750-e06cd9a5ebcd, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.867 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.867 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.867 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 7) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.867 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.867 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.867 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.867 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.867 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.867 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.867 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.868 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.868 DEBUG - CardInstance(uuid=2cd4599a-ce6a-4a4c-9750-e06cd9a5ebcd, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.868 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.868 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.868 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 7) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.868 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.868 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.869 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.869 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.869 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.869 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.869 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.869 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.869 DEBUG - CardInstance(uuid=2cd4599a-ce6a-4a4c-9750-e06cd9a5ebcd, card=Card(id=43, setName=first_contact, name=THE LURKER, power=4, keywords=[TOUGH], effects={ATTACK=[KeywordUpEffect(value=SNEAKY, self=true, allies=false, max=null, alone=false, moreAllies=true, opponentHas=false, alliesCount=null)]}, unique=false, description=<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.869 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.869 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.870 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 5) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.870 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.870 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.870 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.870 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.870 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.870 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.870 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.870 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.870 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.870 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.870 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 5) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.871 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.871 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.871 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.871 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.871 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.871 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.871 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.871 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.871 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.871 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.871 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 7) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.872 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.872 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.872 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.872 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.872 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.872 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.872 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.872 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.872 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.872 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.872 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 7) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.873 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.873 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.873 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.873 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.873 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.873 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.873 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.873 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.873 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.873 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.874 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 7) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.874 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.874 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.874 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.874 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.874 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.874 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.874 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.874 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 12) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.874 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.874 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.875 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.875 DEBUG - FERRET BOMBER (bd42ccea-96c6-4879-8044-d90b380af491) stolen and drawn by Player2 (ff26a392-3007-441b-84c6-5959b8909f50) due to  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) effect
+2026-03-12 12:03:02.875 INFO  - Resolving STEAL effect of  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7)
+2026-03-12 12:03:02.875 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 7) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.875 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.875 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.875 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.875 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.875 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.875 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.875 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.876 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 12) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.876 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.876 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.876 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.876 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 7) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.876 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.876 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.876 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.876 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.876 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.876 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.877 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.877 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 12) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.877 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.877 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.877 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.877 DEBUG - Player Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) must choose 1 card(s) that will be unable to block (targets : {
+- HYENIX ;
+- HAMSTER LION ;
+- SNAIL HYDRA ;
+- SHIELD BUGS ;
+- FROBLIN INSTIGATOR ;
+-  GIRAFFODILE
+})
+2026-03-12 12:03:02.877 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 7) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.877 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.877 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.877 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.877 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.877 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.877 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.877 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.877 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 12) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.877 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.877 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.878 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.878 INFO  - New TARGET choice to be resolved by Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) (targets : {
+- SHIELD BUGS ;
+- FROBLIN INSTIGATOR ;
+- SNAIL HYDRA ;
+- HYENIX ;
+- HAMSTER LION ;
+-  GIRAFFODILE
+})
+2026-03-12 12:03:02.878 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:02.878 INFO  - Resolving NO_BLOCK effect of TURF THE SURFER (085fd60e-81e8-4351-a419-2f4d440be679)
+2026-03-12 12:03:02.878 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 7) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.878 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.878 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.878 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.878 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.878 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.878 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.878 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.878 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 12) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.879 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.879 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.879 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.879 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 5) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.879 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.879 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.879 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.879 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.880 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.880 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.880 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.880 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 12) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.880 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.881 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.881 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.881 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 5) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.881 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.881 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.882 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.882 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.882 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.882 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.882 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.882 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 12) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.882 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.882 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.882 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.882 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 5) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.882 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.882 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.883 DEBUG - SNAIL HYDRA (359dd41c-0141-4565-98dc-87ded9c162e0) power changed (9 -> 10) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.883 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.883 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.883 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.883 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.883 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 12) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.883 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.883 DEBUG - CardInstance(uuid=577bb900-b1be-466c-84cf-3ddb1bb6b518, card=Card(id=1, setName=first_contact, name=AXOLOTL HEALER, power=4, keywords=[POISONOUS], effects={PLAY=[GainEffect(value=2, equal=false)]}, unique=false, description=<b>Play</b>: Gain 2 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=4, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.883 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.883 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 3) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.883 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.883 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.883 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.883 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.884 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.884 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.884 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.884 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.884 DEBUG - CardInstance(uuid=3423a449-32fa-45f7-9bed-d7e4bcf03b00, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.884 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.884 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 3) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.884 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.884 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.884 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.884 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.884 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.884 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.884 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.885 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.885 DEBUG - CardInstance(uuid=3423a449-32fa-45f7-9bed-d7e4bcf03b00, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.885 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.885 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 3) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.885 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.885 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.885 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.885 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.885 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.885 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.885 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.885 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.885 DEBUG - CardInstance(uuid=3423a449-32fa-45f7-9bed-d7e4bcf03b00, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.886 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.886 INFO  - New FRENZY choice to be resolved by Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) (attackingCard : LUCHATAUR (73c70acf-0cc8-47a8-9096-a0ad94fcc6b3))
+2026-03-12 12:03:02.886 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:02.886 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 3) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.886 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.886 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.886 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.886 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.886 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.886 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.886 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.886 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.887 DEBUG - CardInstance(uuid=3423a449-32fa-45f7-9bed-d7e4bcf03b00, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.887 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.887 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 3) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.887 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.887 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.887 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.887 DEBUG - HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b) power changed (8 -> 9) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.887 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.887 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.887 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 10) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.887 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.887 DEBUG - CardInstance(uuid=3423a449-32fa-45f7-9bed-d7e4bcf03b00, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@5fafa76d), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:02.887 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (992f7501-8b47-498d-9f42-481fd5cfaf7b)
+2026-03-12 12:03:02.888 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 1) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.888 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.888 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.888 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.888 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.888 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.888 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 8) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.888 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.888 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 1) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.889 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.889 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.889 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.889 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.889 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.889 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 8) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.889 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.890 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:02.890 DEBUG - FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) power changed (1 -> 1) due to FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00) effect
+2026-03-12 12:03:02.890 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (3423a449-32fa-45f7-9bed-d7e4bcf03b00)
+2026-03-12 12:03:02.891 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.891 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.891 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.891 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.891 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 8) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.891 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.891 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.891 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.891 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.892 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.892 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 8) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.892 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.892 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.892 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.892 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.892 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.892 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 8) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.892 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.892 INFO  - Life update for player Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) : 2 LP
+2026-03-12 12:03:02.892 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.893 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.893 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.893 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.893 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 8) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.893 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.893 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (1 -> 2) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.893 DEBUG - HYENIX (733a9a7d-04d7-491e-ac48-df30ee5d6ff7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.893 DEBUG -  GIRAFFODILE (19c09b00-bd9c-4efb-a9d7-10a4872d31b7) power changed (7 -> 8) due to SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d) effect
+2026-03-12 12:03:02.893 INFO  - Resolving POWER_UP effect of SHIELD BUGS (8d36e7f6-7e87-4d98-90a6-c5dadfde6e3d)
+2026-03-12 12:03:02.893 DEBUG - FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) power changed (2 -> 8) due to FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75) effect
+2026-03-12 12:03:02.893 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (a9da1206-61c6-400b-a1d6-e946eed59f75)
+2026-03-12 12:03:02.893 INFO  - Game over : Player2 (ff26a392-3007-441b-84c6-5959b8909f50) wins ; Player1 (54ce3805-e79f-4c65-ad11-7e300048345a) loses.
+2026-03-12 12:03:02.893 INFO  - End of the game

@@ -1,0 +1,751 @@
+2026-03-12 12:03:42.463 INFO  - Calculating first player...
+2026-03-12 12:03:42.465 INFO  - Banned card for Player1 (a0d3c37e-0f52-45ff-a0af-9457691ac143) : MAJESTIC MANTICORE (0318301d-bbc2-4df5-af1e-ae85aee66eaf) (6)
+2026-03-12 12:03:42.465 INFO  - Banned card for Player2 (cb7f23c9-3049-41f2-a3ab-b794034c059f) : AXOLOTL HEALER (00ffdc38-95f7-4284-98ea-6bc4d65c2cd4) (4)
+2026-03-12 12:03:42.465 INFO  - First player will be Player1 (a0d3c37e-0f52-45ff-a0af-9457691ac143)
+2026-03-12 12:03:42.474 INFO  - Game 4077693e-8df5-4461-a518-5b57021dfbb1 starting...
+2026-03-12 12:03:42.474 INFO  - Player Player1 (a0d3c37e-0f52-45ff-a0af-9457691ac143) hand : {
+- CREEP FROM THE DEEP ;
+- TUSKED EXTORTER ;
+- BEE BEAR ;
+- SHIELD BUGS ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:42.475 INFO  - Player Player1 (a0d3c37e-0f52-45ff-a0af-9457691ac143) draw pile : {
+- FERRET PACIFIER ;
+- RHINO TURTLE ;
+- GRAVE ROBBER ;
+- THE LURKER ;
+- STRANGE BARREL
+}
+2026-03-12 12:03:42.475 INFO  - Player Player2 (cb7f23c9-3049-41f2-a3ab-b794034c059f) hand : {
+- PLATED SCORPION ;
+- ELEPHANTOPUS ;
+- AXOLOTL HEALER ;
+- TURBO BUG ;
+- BUGSERKER
+}
+2026-03-12 12:03:42.475 INFO  - Player Player2 (cb7f23c9-3049-41f2-a3ab-b794034c059f) draw pile : {
+- KILLER BEE ;
+- GOBLIN WEREWOLF ;
+- HUNGRY HUNGRY HAMSTER ;
+- CHAMELEON SNIPER ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:03:42.475 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (08a6d621-4211-42eb-8c23-8e2d055c985e)
+2026-03-12 12:03:42.476 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (08a6d621-4211-42eb-8c23-8e2d055c985e)
+2026-03-12 12:03:42.476 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.476 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (08a6d621-4211-42eb-8c23-8e2d055c985e)
+2026-03-12 12:03:42.476 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (08a6d621-4211-42eb-8c23-8e2d055c985e)
+2026-03-12 12:03:42.476 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (08a6d621-4211-42eb-8c23-8e2d055c985e)
+2026-03-12 12:03:42.476 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (08a6d621-4211-42eb-8c23-8e2d055c985e)
+2026-03-12 12:03:42.476 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (08a6d621-4211-42eb-8c23-8e2d055c985e)
+2026-03-12 12:03:42.476 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (08a6d621-4211-42eb-8c23-8e2d055c985e)
+2026-03-12 12:03:42.476 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (08a6d621-4211-42eb-8c23-8e2d055c985e)
+2026-03-12 12:03:42.476 INFO  - New FRENZY choice to be resolved by Player1 (a0d3c37e-0f52-45ff-a0af-9457691ac143) (attackingCard : RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9))
+2026-03-12 12:03:42.477 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.477 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.477 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.477 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.477 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.477 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.477 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.477 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.477 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.477 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.477 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.477 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.477 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.477 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.477 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.477 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.477 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.478 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.478 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.478 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.478 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.478 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.478 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.478 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.478 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.478 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.479 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.479 INFO  - Life update for player Player1 (a0d3c37e-0f52-45ff-a0af-9457691ac143) : 2 LP
+2026-03-12 12:03:42.479 DEBUG - Player1 (a0d3c37e-0f52-45ff-a0af-9457691ac143) LP changed (3 -> 2) due to KILLER BEE (65710ce5-7cd7-46ea-98b0-be8e6c48e18b) effect
+2026-03-12 12:03:42.479 INFO  - Resolving INFLICT effect of KILLER BEE (65710ce5-7cd7-46ea-98b0-be8e6c48e18b)
+2026-03-12 12:03:42.479 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.479 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.479 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.479 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.479 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.479 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.479 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.479 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.479 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.479 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.479 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.479 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.479 INFO  - Life update for player Player2 (cb7f23c9-3049-41f2-a3ab-b794034c059f) : 2 LP
+2026-03-12 12:03:42.479 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.479 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.479 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.479 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.480 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.480 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.480 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.480 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.480 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.480 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.480 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.480 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.480 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.480 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.480 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.480 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.480 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.480 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.480 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.480 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.480 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.480 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.480 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.480 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.480 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.481 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.481 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.481 INFO  - Life update for player Player2 (cb7f23c9-3049-41f2-a3ab-b794034c059f) : 1 LP
+2026-03-12 12:03:42.481 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.481 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.481 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.481 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.481 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.481 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.482 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.482 DEBUG - Player Player1 (a0d3c37e-0f52-45ff-a0af-9457691ac143) must choose 1 cards to steal (targets : {
+- SHIELD BUGS ;
+- GRAVE ROBBER ;
+- THE LURKER ;
+- STRANGE BARREL
+})
+2026-03-12 12:03:42.482 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.482 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.482 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.482 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.482 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.482 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.482 INFO  - New TARGET choice to be resolved by Player1 (a0d3c37e-0f52-45ff-a0af-9457691ac143) (targets : {
+- STRANGE BARREL ;
+- GRAVE ROBBER ;
+- THE LURKER ;
+- SHIELD BUGS
+})
+2026-03-12 12:03:42.482 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.482 DEBUG - Player2 (cb7f23c9-3049-41f2-a3ab-b794034c059f) must decide if stolen card GRAVE ROBBER (9884b20b-17c2-4501-b621-7e71967868a5) will be added to hand or board
+2026-03-12 12:03:42.482 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (8a7da6d2-dac1-4f06-bedb-a8ea2ff91ac4)
+2026-03-12 12:03:42.482 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.482 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.482 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.482 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.482 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.482 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.482 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:03:42.483 DEBUG - GRAVE ROBBER (9884b20b-17c2-4501-b621-7e71967868a5) stolen and played by Player2 (cb7f23c9-3049-41f2-a3ab-b794034c059f) due to HUNGRY HUNGRY HAMSTER (8a7da6d2-dac1-4f06-bedb-a8ea2ff91ac4) effect
+2026-03-12 12:03:42.483 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.483 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.483 DEBUG - CREEP FROM THE DEEP (de714442-2108-4cb0-bd28-342bfc948e06) stolen and played by Player2 (cb7f23c9-3049-41f2-a3ab-b794034c059f) due to GRAVE ROBBER (9884b20b-17c2-4501-b621-7e71967868a5) effect
+2026-03-12 12:03:42.483 INFO  - Resolving STEAL effect of GRAVE ROBBER (9884b20b-17c2-4501-b621-7e71967868a5)
+2026-03-12 12:03:42.483 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.483 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.483 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.483 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.483 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.483 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.483 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.484 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.484 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (3a29f271-a984-4ee0-84d0-bf8c7ea6df97)
+2026-03-12 12:03:42.484 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.484 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.484 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.484 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.484 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.485 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.485 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.485 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.485 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.485 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.485 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.485 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.485 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.485 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.485 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.485 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.485 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.485 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.485 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.485 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.485 DEBUG - GOBLIN WEREWOLF (3b5a7d83-5461-4b7b-8fa0-1103cbe93e2c) power changed (2 -> 8) due to GOBLIN WEREWOLF (3b5a7d83-5461-4b7b-8fa0-1103cbe93e2c) effect
+2026-03-12 12:03:42.485 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (3b5a7d83-5461-4b7b-8fa0-1103cbe93e2c)
+2026-03-12 12:03:42.485 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.486 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.486 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.486 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.486 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.486 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.486 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.486 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.486 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.486 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.486 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.486 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.486 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.486 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.486 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.486 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.486 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.486 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.487 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.487 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.487 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.487 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.487 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.487 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.487 DEBUG - GOBLIN WEREWOLF (3b5a7d83-5461-4b7b-8fa0-1103cbe93e2c) power changed (2 -> 8) due to GOBLIN WEREWOLF (3b5a7d83-5461-4b7b-8fa0-1103cbe93e2c) effect
+2026-03-12 12:03:42.487 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (3b5a7d83-5461-4b7b-8fa0-1103cbe93e2c)
+2026-03-12 12:03:42.487 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:03:42.487 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.487 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.487 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.487 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.487 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.487 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.487 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.487 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.487 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.487 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.487 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.487 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.487 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.487 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.487 DEBUG - GOBLIN WEREWOLF (3b5a7d83-5461-4b7b-8fa0-1103cbe93e2c) power changed (2 -> 8) due to GOBLIN WEREWOLF (3b5a7d83-5461-4b7b-8fa0-1103cbe93e2c) effect
+2026-03-12 12:03:42.488 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (3b5a7d83-5461-4b7b-8fa0-1103cbe93e2c)
+2026-03-12 12:03:42.488 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.488 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.488 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.488 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.488 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.488 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.488 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.488 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.488 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.488 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.488 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.488 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.488 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.488 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.488 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.488 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.488 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.488 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.488 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.488 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.488 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.488 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.488 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.488 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.488 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.488 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.488 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.488 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.489 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.489 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.489 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.489 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.489 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.489 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.489 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.489 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.489 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.489 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.489 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.489 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.489 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.489 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.489 INFO  - New FRENZY choice to be resolved by Player1 (a0d3c37e-0f52-45ff-a0af-9457691ac143) (attackingCard : RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9))
+2026-03-12 12:03:42.489 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:42.489 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.489 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.489 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.489 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.490 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.490 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.490 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.490 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.490 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.490 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.490 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.490 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.490 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.490 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.490 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.490 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.490 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.490 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.490 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.490 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.490 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.490 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.490 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.490 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.490 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.491 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.491 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.491 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.491 INFO  - Life update for player Player1 (a0d3c37e-0f52-45ff-a0af-9457691ac143) : 1 LP
+2026-03-12 12:03:42.491 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.491 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.491 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.491 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.491 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.491 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.491 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.491 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.491 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.491 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.491 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.491 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.491 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.491 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.491 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.491 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.492 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.492 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.492 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.492 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.492 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.492 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.492 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.492 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.492 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.492 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.492 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.492 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.492 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.492 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.492 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.492 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.492 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.493 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.493 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.493 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.493 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.493 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.493 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.493 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.493 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.493 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.493 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.493 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.493 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.493 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.493 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.493 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.493 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.493 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.493 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.493 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.493 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.493 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.493 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.493 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.493 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.493 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.493 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.494 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.494 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.494 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.494 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.494 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.494 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.494 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.494 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.494 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.494 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.494 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.494 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.494 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.494 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.494 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.494 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.494 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.494 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.494 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.494 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.494 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.494 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.494 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.494 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.494 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.494 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.494 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.494 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.495 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.495 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.495 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.495 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.495 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.495 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.495 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.495 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.495 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.495 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.495 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.495 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.495 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.495 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.495 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.495 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.495 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.495 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.496 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.496 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.496 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.496 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.496 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.496 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.496 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.496 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.496 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.496 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.496 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.496 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.496 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.496 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.496 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.496 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.496 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.497 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.497 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.497 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.497 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.497 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.497 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.497 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.497 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.497 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.497 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.497 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.497 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.497 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.497 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.497 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.497 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.497 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.497 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.498 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.498 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.498 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.498 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.498 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.498 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.498 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.498 DEBUG - Player Player2 (cb7f23c9-3049-41f2-a3ab-b794034c059f) must choose 1 card(s) to discard (available targets : {
+- AXOLOTL HEALER ;
+- TURBO BUG
+})
+2026-03-12 12:03:42.498 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.498 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.498 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.498 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.498 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.498 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.498 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.498 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.498 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.498 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.498 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.498 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.498 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.498 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.498 INFO  - New TARGET choice to be resolved by Player2 (cb7f23c9-3049-41f2-a3ab-b794034c059f) (targets : {
+- TURBO BUG ;
+- AXOLOTL HEALER
+})
+2026-03-12 12:03:42.498 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:42.498 DEBUG - TURBO BUG (ec78b520-a1c8-4e47-8c62-e19402731db5) discarded due to TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) effect
+2026-03-12 12:03:42.499 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14)
+2026-03-12 12:03:42.499 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.499 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.499 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.499 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.499 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.499 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.499 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.499 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.499 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.499 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.499 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.499 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.499 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.499 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.499 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.499 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.499 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.500 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.500 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.500 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.500 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.500 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.500 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.500 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.500 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.500 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.500 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.500 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.500 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.500 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.500 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.500 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.500 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.500 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.500 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.500 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.500 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.500 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.500 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.500 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.500 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.500 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.500 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.500 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.500 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.501 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.501 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.501 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.501 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.501 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.501 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.501 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.501 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.501 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.501 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.501 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.501 DEBUG - Player2 (cb7f23c9-3049-41f2-a3ab-b794034c059f) LP changed (1 -> 3) due to AXOLOTL HEALER (e5ba106b-0fd4-4a99-bef3-748214bee96d) effect
+2026-03-12 12:03:42.501 INFO  - Resolving GAIN effect of AXOLOTL HEALER (e5ba106b-0fd4-4a99-bef3-748214bee96d)
+2026-03-12 12:03:42.501 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.501 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.501 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.501 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.501 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.501 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.501 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.501 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.501 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.501 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.501 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.501 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.501 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.501 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.502 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.502 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.502 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.502 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.502 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.502 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.502 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.502 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.502 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.502 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.502 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.502 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.502 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.502 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.502 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.502 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.502 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.502 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.502 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.502 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.502 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.503 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.503 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.503 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.503 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.503 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.503 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.503 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.503 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.503 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (6 -> 7) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.503 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.503 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.503 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (8 -> 9) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.503 DEBUG - SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) power changed (4 -> 5) due to SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) effect
+2026-03-12 12:03:42.503 INFO  - Resolving POWER_UP effect of SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2)
+2026-03-12 12:03:42.503 DEBUG - TUSKED EXTORTER (b1c7b0fb-51c3-4836-9db9-06a552612f14) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.503 DEBUG - STRANGE BARREL (38548c25-e16d-4b62-81d2-6b435ff6c189) power changed (7 -> 8) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.503 DEBUG - BEE BEAR (97944c00-1430-4f24-b596-271be3b2df3e) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.503 DEBUG - THE LURKER (86b5638a-096f-4389-b952-7860f967d63f) power changed (5 -> 6) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.503 DEBUG - SHIELD BUGS (c7344bdb-608d-4168-aaff-0f11a0306de2) power changed (4 -> 5) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.503 DEBUG - RHINO TURTLE (ada31477-4c6f-40c6-b184-1f3dabdaa7e9) power changed (9 -> 10) due to SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff) effect
+2026-03-12 12:03:42.503 INFO  - Resolving POWER_UP effect of SHIELD BUGS (cfbe8264-5b39-4d94-828e-201347c2bcff)
+2026-03-12 12:03:42.504 INFO  - Game over : Player1 (a0d3c37e-0f52-45ff-a0af-9457691ac143) wins ; Player2 (cb7f23c9-3049-41f2-a3ab-b794034c059f) loses.
+2026-03-12 12:03:42.504 INFO  - End of the game

@@ -1,0 +1,181 @@
+2026-03-12 12:18:27.661 INFO  - Calculating first player...
+2026-03-12 12:18:27.663 INFO  - Banned card for Player1 (58556d0e-1075-4abd-a2bd-cad5de339527) : BUGSERKER (48be7a75-840e-4264-8ef9-83b85456130b) (3)
+2026-03-12 12:18:27.663 INFO  - Banned card for Player2 (96532a91-1ca3-4a34-aad2-f1808fe46c69) : COMPOST DRAGON (f44ef2d3-296d-4bf4-ba71-92860183aba3) (3)
+2026-03-12 12:18:27.663 INFO  - Banned card for Player1 (58556d0e-1075-4abd-a2bd-cad5de339527) : SHIELD BUGS (26549b5a-9134-4f88-9509-c0ef207be672) (4)
+2026-03-12 12:18:27.663 INFO  - Banned card for Player2 (96532a91-1ca3-4a34-aad2-f1808fe46c69) : FERRET PACIFIER (878eae59-2f6e-4d02-90dd-f15e81c9fc51) (4)
+2026-03-12 12:18:27.663 INFO  - Banned card for Player1 (58556d0e-1075-4abd-a2bd-cad5de339527) : CHAMELEON SNIPER (e3d076cc-78a6-488b-b428-700288c750dc) (1)
+2026-03-12 12:18:27.663 INFO  - Banned card for Player2 (96532a91-1ca3-4a34-aad2-f1808fe46c69) : SHARK DOG (7d1c083b-3b44-46a8-baf2-803322896884) (4)
+2026-03-12 12:18:27.663 INFO  - First player will be Player2 (96532a91-1ca3-4a34-aad2-f1808fe46c69)
+2026-03-12 12:18:27.670 INFO  - Game 542d70a5-866a-474c-924a-b014b0619af7 starting...
+2026-03-12 12:18:27.671 INFO  - Player Player1 (58556d0e-1075-4abd-a2bd-cad5de339527) hand : {
+- SNAIL HYDRA ;
+- SHIELD BUGS ;
+- FROBLIN INSTIGATOR ;
+- COUNT DRACULEECH ;
+- HAMSTER LION
+}
+2026-03-12 12:18:27.671 INFO  - Player Player1 (58556d0e-1075-4abd-a2bd-cad5de339527) draw pile : {
+- HYENIX ;
+- HYENIX ;
+- TIGER SQUIRREL ;
+- GOREAGLE ALPHA ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:18:27.671 INFO  - Player Player2 (96532a91-1ca3-4a34-aad2-f1808fe46c69) hand : {
+- SNAIL THROWER ;
+- SPIDER OWL ;
+- SNAIL HYDRA ;
+- EXPLOSIVE TOAD ;
+- STRANGE BARREL
+}
+2026-03-12 12:18:27.671 INFO  - Player Player2 (96532a91-1ca3-4a34-aad2-f1808fe46c69) draw pile : {
+- PLATED SCORPION ;
+- MYSTERIOUS MERMAID ;
+- THE LURKER ;
+- URCHIN HURLER ;
+- AXOLOTL HEALER
+}
+2026-03-12 12:18:27.671 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.671 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.671 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.671 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.671 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.671 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.671 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.671 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.671 DEBUG - PLATED SCORPION (f839f45d-c7c8-4684-b341-9df3388744a3) gains HUNTER keyword
+2026-03-12 12:18:27.671 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.671 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.671 DEBUG - PLATED SCORPION (f839f45d-c7c8-4684-b341-9df3388744a3) gains HUNTER keyword
+2026-03-12 12:18:27.671 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.671 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.672 DEBUG - PLATED SCORPION (f839f45d-c7c8-4684-b341-9df3388744a3) gains HUNTER keyword
+2026-03-12 12:18:27.672 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.672 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.672 DEBUG - CardInstance(uuid=e393512e-5923-405d-bfac-839a9dc8c71e, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3cfab340), power=1, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.672 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (61c119bd-638b-4169-9e03-1c46ee63e176)
+2026-03-12 12:18:27.672 DEBUG - PLATED SCORPION (f839f45d-c7c8-4684-b341-9df3388744a3) gains HUNTER keyword
+2026-03-12 12:18:27.672 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.672 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.672 DEBUG - CardInstance(uuid=e393512e-5923-405d-bfac-839a9dc8c71e, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3cfab340), power=1, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.672 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (61c119bd-638b-4169-9e03-1c46ee63e176)
+2026-03-12 12:18:27.672 DEBUG - PLATED SCORPION (f839f45d-c7c8-4684-b341-9df3388744a3) gains HUNTER keyword
+2026-03-12 12:18:27.672 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.672 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.672 DEBUG - CardInstance(uuid=e393512e-5923-405d-bfac-839a9dc8c71e, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3cfab340), power=1, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.673 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (61c119bd-638b-4169-9e03-1c46ee63e176)
+2026-03-12 12:18:27.673 DEBUG - PLATED SCORPION (f839f45d-c7c8-4684-b341-9df3388744a3) gains HUNTER keyword
+2026-03-12 12:18:27.673 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.673 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.673 DEBUG - CardInstance(uuid=e393512e-5923-405d-bfac-839a9dc8c71e, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3cfab340), power=1, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.673 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (61c119bd-638b-4169-9e03-1c46ee63e176)
+2026-03-12 12:18:27.673 INFO  - Life update for player Player1 (58556d0e-1075-4abd-a2bd-cad5de339527) : 2 LP
+2026-03-12 12:18:27.673 DEBUG - Player1 (58556d0e-1075-4abd-a2bd-cad5de339527) LP changed (3 -> 2) due to COUNT DRACULEECH (dce5cdcf-494f-4ba6-b808-094b9d9b300c) effect
+2026-03-12 12:18:27.673 INFO  - Resolving INFLICT effect of COUNT DRACULEECH (dce5cdcf-494f-4ba6-b808-094b9d9b300c)
+2026-03-12 12:18:27.673 DEBUG - PLATED SCORPION (f839f45d-c7c8-4684-b341-9df3388744a3) gains HUNTER keyword
+2026-03-12 12:18:27.673 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.673 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.673 DEBUG - CardInstance(uuid=e393512e-5923-405d-bfac-839a9dc8c71e, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3cfab340), power=1, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.673 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (61c119bd-638b-4169-9e03-1c46ee63e176)
+2026-03-12 12:18:27.674 DEBUG - Player Player1 (58556d0e-1075-4abd-a2bd-cad5de339527) must choose 1 card(s) to destroy (available targets : {
+- SNAIL THROWER ;
+- PLATED SCORPION ;
+- SNAIL HYDRA ;
+- COUNT DRACULEECH ;
+- HAMSTER LION
+})
+2026-03-12 12:18:27.674 DEBUG - PLATED SCORPION (f839f45d-c7c8-4684-b341-9df3388744a3) gains HUNTER keyword
+2026-03-12 12:18:27.674 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.674 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.674 DEBUG - CardInstance(uuid=e393512e-5923-405d-bfac-839a9dc8c71e, card=Card(id=26, setName=first_contact, name=SNAIL THROWER, power=1, keywords=[POISONOUS], effects={PASSIVE=[KeywordUpEffect(value=HUNTER, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null), KeywordUpEffect(value=POISONOUS, self=false, allies=true, max=4, alone=false, moreAllies=false, opponentHas=false, alliesCount=null)]}, unique=true, description=Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONUS</b>., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@3cfab340), power=1, keywords=[POISONOUS], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:18:27.674 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (61c119bd-638b-4169-9e03-1c46ee63e176)
+2026-03-12 12:18:27.674 INFO  - New TARGET choice to be resolved by Player1 (58556d0e-1075-4abd-a2bd-cad5de339527) (targets : {
+- SNAIL HYDRA ;
+- SNAIL THROWER ;
+- COUNT DRACULEECH ;
+- PLATED SCORPION ;
+- HAMSTER LION
+})
+2026-03-12 12:18:27.674 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.674 DEBUG - COUNT DRACULEECH (dce5cdcf-494f-4ba6-b808-094b9d9b300c) effect destroys HAMSTER LION (61c119bd-638b-4169-9e03-1c46ee63e176)
+2026-03-12 12:18:27.674 INFO  - Resolving DESTROY effect of COUNT DRACULEECH (dce5cdcf-494f-4ba6-b808-094b9d9b300c)
+2026-03-12 12:18:27.674 DEBUG - PLATED SCORPION (f839f45d-c7c8-4684-b341-9df3388744a3) gains HUNTER keyword
+2026-03-12 12:18:27.674 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.674 INFO  - Resolving KEYWORD_UP effect of SNAIL THROWER (e393512e-5923-405d-bfac-839a9dc8c71e)
+2026-03-12 12:18:27.674 INFO  - Life update for player Player1 (58556d0e-1075-4abd-a2bd-cad5de339527) : 1 LP
+2026-03-12 12:18:27.674 INFO  - Resolving POWER_UP effect of SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975)
+2026-03-12 12:18:27.675 INFO  - Resolving POWER_UP effect of SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975)
+2026-03-12 12:18:27.675 INFO  - Resolving POWER_UP effect of SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975)
+2026-03-12 12:18:27.675 INFO  - Life update for player Player2 (96532a91-1ca3-4a34-aad2-f1808fe46c69) : 1 LP
+2026-03-12 12:18:27.675 DEBUG - Player2 (96532a91-1ca3-4a34-aad2-f1808fe46c69) LP changed (3 -> 1) due to MYSTERIOUS MERMAID (8c1b8794-a17a-4c88-8a2c-de2e68a8ea3d) effect
+2026-03-12 12:18:27.675 INFO  - Resolving GAIN effect of MYSTERIOUS MERMAID (8c1b8794-a17a-4c88-8a2c-de2e68a8ea3d)
+2026-03-12 12:18:27.675 INFO  - Resolving POWER_UP effect of SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975)
+2026-03-12 12:18:27.675 INFO  - Resolving POWER_UP effect of SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975)
+2026-03-12 12:18:27.675 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 2) due to SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975) effect
+2026-03-12 12:18:27.675 INFO  - Resolving POWER_UP effect of SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975)
+2026-03-12 12:18:27.675 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (2 -> 4) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.675 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.675 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 2) due to SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975) effect
+2026-03-12 12:18:27.675 INFO  - Resolving POWER_UP effect of SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975)
+2026-03-12 12:18:27.675 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (2 -> 4) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.675 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.675 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 2) due to SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975) effect
+2026-03-12 12:18:27.675 INFO  - Resolving POWER_UP effect of SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975)
+2026-03-12 12:18:27.675 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (2 -> 4) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.675 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.675 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 2) due to SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975) effect
+2026-03-12 12:18:27.675 INFO  - Resolving POWER_UP effect of SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975)
+2026-03-12 12:18:27.675 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (2 -> 4) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.675 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.676 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 2) due to SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975) effect
+2026-03-12 12:18:27.676 INFO  - Resolving POWER_UP effect of SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975)
+2026-03-12 12:18:27.676 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (2 -> 4) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.676 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.676 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 2) due to SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975) effect
+2026-03-12 12:18:27.676 DEBUG - HYENIX (0d314c10-2255-4ce8-a215-4795d0cb77d0) power changed (7 -> 8) due to SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975) effect
+2026-03-12 12:18:27.676 INFO  - Resolving POWER_UP effect of SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975)
+2026-03-12 12:18:27.676 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (2 -> 6) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.676 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.676 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 2) due to SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975) effect
+2026-03-12 12:18:27.676 DEBUG - HYENIX (0d314c10-2255-4ce8-a215-4795d0cb77d0) power changed (7 -> 8) due to SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975) effect
+2026-03-12 12:18:27.676 INFO  - Resolving POWER_UP effect of SHIELD BUGS (20c4d246-cace-4cb4-b3a2-e16f1a959975)
+2026-03-12 12:18:27.676 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (2 -> 6) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.676 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.676 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 3) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.676 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.676 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 3) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.676 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.676 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 5) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.676 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.676 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 5) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.676 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.676 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 3) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.676 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.676 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 3) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.676 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.676 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 5) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.677 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.677 DEBUG - Player Player1 (58556d0e-1075-4abd-a2bd-cad5de339527) must choose 1 card(s) to destroy (available targets : {
+- SNAIL HYDRA ;
+- MYSTERIOUS MERMAID
+})
+2026-03-12 12:18:27.677 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 5) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.677 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.677 INFO  - New TARGET choice to be resolved by Player1 (58556d0e-1075-4abd-a2bd-cad5de339527) (targets : {
+- SNAIL HYDRA ;
+- MYSTERIOUS MERMAID
+})
+2026-03-12 12:18:27.677 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:27.677 DEBUG - TIGER SQUIRREL (db5b574f-23e1-4b2c-af14-0076d4aa2e5b) effect destroys SNAIL HYDRA (f794b01c-c2f6-46e6-a279-89f1bca1b360)
+2026-03-12 12:18:27.677 INFO  - Resolving DESTROY effect of TIGER SQUIRREL (db5b574f-23e1-4b2c-af14-0076d4aa2e5b)
+2026-03-12 12:18:27.677 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 5) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.677 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.677 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 5) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.677 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.677 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 5) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.677 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.677 DEBUG - FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) power changed (1 -> 5) due to FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf) effect
+2026-03-12 12:18:27.677 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (aad6f8a2-e14d-47c5-b917-8c5590d24bbf)
+2026-03-12 12:18:27.677 INFO  - Life update for player Player2 (96532a91-1ca3-4a34-aad2-f1808fe46c69) : 0 LP
+2026-03-12 12:18:27.677 INFO  - Game over : Player1 (58556d0e-1075-4abd-a2bd-cad5de339527) wins ; Player2 (96532a91-1ca3-4a34-aad2-f1808fe46c69) loses.
+2026-03-12 12:18:27.677 INFO  - End of the game

@@ -1,0 +1,120 @@
+2026-03-12 12:18:25.061 INFO  - Calculating first player...
+2026-03-12 12:18:25.063 INFO  - Banned card for Player1 (61b65fde-dcf6-4b4a-8ad7-c0496a3b2b17) : PLATED SCORPION (52a7ab9b-a15f-4170-b745-0593e0c46698) (2)
+2026-03-12 12:18:25.063 INFO  - Banned card for Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b) : SNAIL HYDRA (fd05b78c-e41a-4b07-9012-238c5553ba72) (9)
+2026-03-12 12:18:25.063 INFO  - First player will be Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b)
+2026-03-12 12:18:25.070 INFO  - Game 50470b2f-9ed3-44e0-8c76-39f9d87a3adf starting...
+2026-03-12 12:18:25.071 INFO  - Player Player1 (61b65fde-dcf6-4b4a-8ad7-c0496a3b2b17) hand : {
+- LUCHATAUR ;
+- EXPLOSIVE TOAD ;
+- FERRET PACIFIER ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- HYENIX
+}
+2026-03-12 12:18:25.071 INFO  - Player Player1 (61b65fde-dcf6-4b4a-8ad7-c0496a3b2b17) draw pile : {
+- CREEP FROM THE DEEP ;
+- HYENIX ;
+- FERRET BOMBER ;
+- BRAIN FLY ;
+- MAJESTIC MANTICORE
+}
+2026-03-12 12:18:25.072 INFO  - Player Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b) hand : {
+- THE LURKER ;
+- RHINO TURTLE ;
+- FERRET BOMBER ;
+- GRAVE ROBBER ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:18:25.072 INFO  - Player Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b) draw pile : {
+- TURF THE SURFER ;
+- BEE BEAR ;
+- KANGASAURUS REX ;
+- TUSKED EXTORTER ;
+- HARPY MOTHER
+}
+2026-03-12 12:18:25.072 DEBUG - Player Player1 (61b65fde-dcf6-4b4a-8ad7-c0496a3b2b17) must choose 2 card(s) to discard (available targets : {
+- LUCHATAUR ;
+- EXPLOSIVE TOAD ;
+- FERRET PACIFIER ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- HYENIX
+})
+2026-03-12 12:18:25.072 INFO  - New TARGET choice to be resolved by Player1 (61b65fde-dcf6-4b4a-8ad7-c0496a3b2b17) (targets : {
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- LUCHATAUR ;
+- EXPLOSIVE TOAD ;
+- HYENIX ;
+- FERRET PACIFIER
+})
+2026-03-12 12:18:25.072 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.073 DEBUG - EXPLOSIVE TOAD (7c6ffcf6-67f9-488c-add0-f0a15e0df741) discarded due to FERRET BOMBER (e0b2cc42-04d2-4759-8280-a355df1c6220) effect
+2026-03-12 12:18:25.073 DEBUG - HYENIX (3cad6f49-1518-4f60-bbb1-444c14849b86) discarded due to FERRET BOMBER (e0b2cc42-04d2-4759-8280-a355df1c6220) effect
+2026-03-12 12:18:25.073 INFO  - Resolving DISCARD effect of FERRET BOMBER (e0b2cc42-04d2-4759-8280-a355df1c6220)
+2026-03-12 12:18:25.073 INFO  - New FRENZY choice to be resolved by Player1 (61b65fde-dcf6-4b4a-8ad7-c0496a3b2b17) (attackingCard : LUCHATAUR (eb6887e8-eb31-4e3c-b164-c7b1203fdfe6))
+2026-03-12 12:18:25.073 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.073 DEBUG - Player Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b) must choose 1 cards to steal (targets : {
+- EXPLOSIVE TOAD ;
+- HYENIX
+})
+2026-03-12 12:18:25.073 INFO  - New TARGET choice to be resolved by Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b) (targets : {
+- EXPLOSIVE TOAD ;
+- HYENIX
+})
+2026-03-12 12:18:25.073 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.074 DEBUG - HYENIX (3cad6f49-1518-4f60-bbb1-444c14849b86) stolen and played by Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b) due to GRAVE ROBBER (29a7a9e1-5ab0-4dde-b633-696dad79cfe0) effect
+2026-03-12 12:18:25.074 INFO  - Resolving STEAL effect of GRAVE ROBBER (29a7a9e1-5ab0-4dde-b633-696dad79cfe0)
+2026-03-12 12:18:25.074 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4dacc836-2a26-48ba-b693-941b933e49e0) gains FRENZY keyword
+2026-03-12 12:18:25.074 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4dacc836-2a26-48ba-b693-941b933e49e0)
+2026-03-12 12:18:25.074 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (4dacc836-2a26-48ba-b693-941b933e49e0) gains FRENZY keyword
+2026-03-12 12:18:25.074 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (4dacc836-2a26-48ba-b693-941b933e49e0)
+2026-03-12 12:18:25.074 INFO  - New FRENZY choice to be resolved by Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b) (attackingCard : HYENIX (3cad6f49-1518-4f60-bbb1-444c14849b86))
+2026-03-12 12:18:25.074 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.074 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (871ac743-3464-442c-a0f5-1e731a19eb64)
+2026-03-12 12:18:25.074 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (871ac743-3464-442c-a0f5-1e731a19eb64)
+2026-03-12 12:18:25.075 INFO  - New FRENZY choice to be resolved by Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b) (attackingCard : HYENIX (3cad6f49-1518-4f60-bbb1-444c14849b86))
+2026-03-12 12:18:25.075 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.075 INFO  - New FRENZY choice to be resolved by Player1 (61b65fde-dcf6-4b4a-8ad7-c0496a3b2b17) (attackingCard : LUCHATAUR (eb6887e8-eb31-4e3c-b164-c7b1203fdfe6))
+2026-03-12 12:18:25.075 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.075 DEBUG - Player Player1 (61b65fde-dcf6-4b4a-8ad7-c0496a3b2b17) must choose 1 cards to steal (targets : {
+- HYENIX ;
+- FERRET BOMBER ;
+- BRAIN FLY ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:18:25.075 INFO  - New TARGET choice to be resolved by Player1 (61b65fde-dcf6-4b4a-8ad7-c0496a3b2b17) (targets : {
+- HYENIX ;
+- BRAIN FLY ;
+- FERRET BOMBER ;
+- MAJESTIC MANTICORE
+})
+2026-03-12 12:18:25.075 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.076 DEBUG - Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b) must decide if stolen card MAJESTIC MANTICORE (20e35fdc-58ed-425d-8578-c8e9f128466b) will be added to hand or board
+2026-03-12 12:18:25.076 INFO  - Resolving STEAL effect of HUNGRY HUNGRY HAMSTER (81815b10-48b5-4724-a2a5-871e1fca0f99)
+2026-03-12 12:18:25.076 DEBUG - Resolving BOOLEAN choice...
+2026-03-12 12:18:25.076 DEBUG - MAJESTIC MANTICORE (20e35fdc-58ed-425d-8578-c8e9f128466b) stolen and played by Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b) due to HUNGRY HUNGRY HAMSTER (81815b10-48b5-4724-a2a5-871e1fca0f99) effect
+2026-03-12 12:18:25.076 DEBUG - Player Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b) must choose 2 card(s) to discard (available targets : {
+- THE LURKER ;
+- BEE BEAR ;
+- KANGASAURUS REX ;
+- HARPY MOTHER
+})
+2026-03-12 12:18:25.076 INFO  - New TARGET choice to be resolved by Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b) (targets : {
+- THE LURKER ;
+- HARPY MOTHER ;
+- BEE BEAR ;
+- KANGASAURUS REX
+})
+2026-03-12 12:18:25.076 DEBUG - Resolving TARGET choice...
+2026-03-12 12:18:25.076 DEBUG - HARPY MOTHER (c0284aaa-fb0b-47a3-803c-98a03157f6c8) discarded due to FERRET BOMBER (dda94157-78bc-4c24-b9aa-f4417b3e5d7f) effect
+2026-03-12 12:18:25.076 DEBUG - KANGASAURUS REX (780062f1-a1e6-4cd2-a5d9-1cb0a7144fb7) discarded due to FERRET BOMBER (dda94157-78bc-4c24-b9aa-f4417b3e5d7f) effect
+2026-03-12 12:18:25.076 INFO  - Resolving DISCARD effect of FERRET BOMBER (dda94157-78bc-4c24-b9aa-f4417b3e5d7f)
+2026-03-12 12:18:25.076 DEBUG - MAJESTIC MANTICORE (20e35fdc-58ed-425d-8578-c8e9f128466b) effect destroys HUNGRY HUNGRY HAMSTER (81815b10-48b5-4724-a2a5-871e1fca0f99)
+2026-03-12 12:18:25.077 DEBUG - MAJESTIC MANTICORE (20e35fdc-58ed-425d-8578-c8e9f128466b) effect destroys FERRET BOMBER (dda94157-78bc-4c24-b9aa-f4417b3e5d7f)
+2026-03-12 12:18:25.077 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (20e35fdc-58ed-425d-8578-c8e9f128466b)
+2026-03-12 12:18:25.077 INFO  - New FRENZY choice to be resolved by Player1 (61b65fde-dcf6-4b4a-8ad7-c0496a3b2b17) (attackingCard : LUCHATAUR (eb6887e8-eb31-4e3c-b164-c7b1203fdfe6))
+2026-03-12 12:18:25.077 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.077 INFO  - New FRENZY choice to be resolved by Player1 (61b65fde-dcf6-4b4a-8ad7-c0496a3b2b17) (attackingCard : LUCHATAUR (eb6887e8-eb31-4e3c-b164-c7b1203fdfe6))
+2026-03-12 12:18:25.078 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:18:25.078 DEBUG - BEE BEAR (d4a55f18-c8f0-4dd9-901d-8fdfccc2eada) stolen and played by Player1 (61b65fde-dcf6-4b4a-8ad7-c0496a3b2b17) due to BRAIN FLY (7ab756d0-f1ba-4914-8e60-5ad17bb90d02) effect
+2026-03-12 12:18:25.078 INFO  - Resolving STEAL effect of BRAIN FLY (7ab756d0-f1ba-4914-8e60-5ad17bb90d02)
+2026-03-12 12:18:25.079 INFO  - Game over : Player1 (61b65fde-dcf6-4b4a-8ad7-c0496a3b2b17) wins ; Player2 (f4272068-0201-42d2-96f6-a013fb6ede6b) loses.
+2026-03-12 12:18:25.079 INFO  - End of the game

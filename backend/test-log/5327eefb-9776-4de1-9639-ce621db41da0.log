@@ -1,0 +1,210 @@
+2026-03-12 12:03:06.207 INFO  - Calculating first player...
+2026-03-12 12:03:06.209 INFO  - Banned card for Player1 (05a41f34-2233-4e11-932f-8dd816a13853) : THE LURKER (afb47318-8bb3-4e07-8646-d6e15adeb667) (4)
+2026-03-12 12:03:06.209 INFO  - Banned card for Player2 (04a55727-041a-493b-a6fc-05f773aeb38e) : PLATED SCORPION (e8e9ddd7-7061-4214-bb75-f45141fb35dd) (2)
+2026-03-12 12:03:06.209 INFO  - First player will be Player1 (05a41f34-2233-4e11-932f-8dd816a13853)
+2026-03-12 12:03:06.217 INFO  - Game 5327eefb-9776-4de1-9639-ce621db41da0 starting...
+2026-03-12 12:03:06.217 INFO  - Player Player1 (05a41f34-2233-4e11-932f-8dd816a13853) hand : {
+- LONE YETI ;
+- KANGASAURUS REX ;
+- HAMSTER LION ;
+- KANGASAURUS REX ;
+- MYSTERIOUS MERMAID
+}
+2026-03-12 12:03:06.217 INFO  - Player Player1 (05a41f34-2233-4e11-932f-8dd816a13853) draw pile : {
+- BRAIN FLY ;
+- BUGSERKER ;
+- CREEP FROM THE DEEP ;
+- LUCHATAUR ;
+- THE LURKER
+}
+2026-03-12 12:03:06.217 INFO  - Player Player2 (04a55727-041a-493b-a6fc-05f773aeb38e) hand : {
+- HYENIX ;
+- FERRET PACIFIER ;
+- TUSKED EXTORTER ;
+- FROBLIN INSTIGATOR ;
+- GOBLIN WEREWOLF
+}
+2026-03-12 12:03:06.217 INFO  - Player Player2 (04a55727-041a-493b-a6fc-05f773aeb38e) draw pile : {
+- GRAVE ROBBER ;
+- SNAIL HYDRA ;
+- GOBLIN WEREWOLF ;
+- BEE BEAR ;
+- ELEPHANTOPUS
+}
+2026-03-12 12:03:06.217 DEBUG - LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd) power changed (5 -> 10) due to LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd) effect
+2026-03-12 12:03:06.217 INFO  - Resolving POWER_UP effect of LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd)
+2026-03-12 12:03:06.218 DEBUG - LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd) gains FRENZY keyword
+2026-03-12 12:03:06.218 INFO  - Resolving KEYWORD_UP effect of LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd)
+2026-03-12 12:03:06.218 DEBUG - LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd) power changed (5 -> 10) due to LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd) effect
+2026-03-12 12:03:06.218 INFO  - Resolving POWER_UP effect of LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd)
+2026-03-12 12:03:06.218 DEBUG - LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd) gains FRENZY keyword
+2026-03-12 12:03:06.218 INFO  - Resolving KEYWORD_UP effect of LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd)
+2026-03-12 12:03:06.218 DEBUG - LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd) power changed (5 -> 10) due to LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd) effect
+2026-03-12 12:03:06.218 INFO  - Resolving POWER_UP effect of LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd)
+2026-03-12 12:03:06.218 DEBUG - LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd) gains FRENZY keyword
+2026-03-12 12:03:06.218 INFO  - Resolving KEYWORD_UP effect of LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd)
+2026-03-12 12:03:06.218 DEBUG - LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd) power changed (5 -> 10) due to LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd) effect
+2026-03-12 12:03:06.218 INFO  - Resolving POWER_UP effect of LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd)
+2026-03-12 12:03:06.218 DEBUG - LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd) gains FRENZY keyword
+2026-03-12 12:03:06.218 INFO  - Resolving KEYWORD_UP effect of LONE YETI (86abba7b-6650-4833-9844-fd8f7b4cb6bd)
+2026-03-12 12:03:06.218 DEBUG - TUSKED EXTORTER (a1584c71-3868-46ec-a1a5-27c032099b2d) stolen and played by Player1 (05a41f34-2233-4e11-932f-8dd816a13853) due to BRAIN FLY (d224ae69-2473-4109-8330-bb13bbb2f161) effect
+2026-03-12 12:03:06.218 INFO  - Resolving STEAL effect of BRAIN FLY (d224ae69-2473-4109-8330-bb13bbb2f161)
+2026-03-12 12:03:06.218 DEBUG - FROBLIN INSTIGATOR (07122e91-6add-4212-bf66-52023b3e70ef) power changed (1 -> 1) due to FROBLIN INSTIGATOR (07122e91-6add-4212-bf66-52023b3e70ef) effect
+2026-03-12 12:03:06.218 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (07122e91-6add-4212-bf66-52023b3e70ef)
+2026-03-12 12:03:06.218 DEBUG - FROBLIN INSTIGATOR (07122e91-6add-4212-bf66-52023b3e70ef) power changed (1 -> 1) due to FROBLIN INSTIGATOR (07122e91-6add-4212-bf66-52023b3e70ef) effect
+2026-03-12 12:03:06.218 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (07122e91-6add-4212-bf66-52023b3e70ef)
+2026-03-12 12:03:06.219 DEBUG - GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda) power changed (2 -> 8) due to GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda) effect
+2026-03-12 12:03:06.219 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda)
+2026-03-12 12:03:06.219 DEBUG - GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda) power changed (2 -> 8) due to GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda) effect
+2026-03-12 12:03:06.219 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda)
+2026-03-12 12:03:06.219 DEBUG - GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda) power changed (2 -> 8) due to GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda) effect
+2026-03-12 12:03:06.219 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda)
+2026-03-12 12:03:06.219 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.219 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.219 DEBUG - CardInstance(uuid=5d14338f-d57c-4dc4-8bda-4d94dcd44cda, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.219 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.219 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.219 DEBUG - GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda) power changed (2 -> 8) due to GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda) effect
+2026-03-12 12:03:06.219 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda)
+2026-03-12 12:03:06.219 DEBUG - CardInstance(uuid=2d602ed0-80e0-4908-bea0-58b6ef3c7987, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.219 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.219 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.219 DEBUG - GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda) power changed (2 -> 8) due to GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda) effect
+2026-03-12 12:03:06.219 INFO  - Resolving POWER_UP effect of GOBLIN WEREWOLF (5d14338f-d57c-4dc4-8bda-4d94dcd44cda)
+2026-03-12 12:03:06.219 DEBUG - CardInstance(uuid=2d602ed0-80e0-4908-bea0-58b6ef3c7987, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.219 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.220 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.220 DEBUG - CardInstance(uuid=5d14338f-d57c-4dc4-8bda-4d94dcd44cda, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.220 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.220 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.220 DEBUG - Player Player2 (04a55727-041a-493b-a6fc-05f773aeb38e) must choose 1 card(s) to discard (available targets : {
+- HYENIX ;
+- GOBLIN WEREWOLF ;
+- SNAIL HYDRA ;
+- BEE BEAR ;
+- ELEPHANTOPUS
+})
+2026-03-12 12:03:06.220 DEBUG - CardInstance(uuid=5d14338f-d57c-4dc4-8bda-4d94dcd44cda, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.220 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.220 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.220 INFO  - New TARGET choice to be resolved by Player2 (04a55727-041a-493b-a6fc-05f773aeb38e) (targets : {
+- ELEPHANTOPUS ;
+- GOBLIN WEREWOLF ;
+- BEE BEAR ;
+- HYENIX ;
+- SNAIL HYDRA
+})
+2026-03-12 12:03:06.220 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.220 DEBUG - GOBLIN WEREWOLF (920a5af7-0973-4973-be73-e888fb00b495) discarded due to TUSKED EXTORTER (a1584c71-3868-46ec-a1a5-27c032099b2d) effect
+2026-03-12 12:03:06.220 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (a1584c71-3868-46ec-a1a5-27c032099b2d)
+2026-03-12 12:03:06.220 DEBUG - CardInstance(uuid=5d14338f-d57c-4dc4-8bda-4d94dcd44cda, card=Card(id=11, setName=first_contact, name=GOBLIN WEREWOLF, power=2, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=6, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=false, selfTurn=true, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+6</b> power while it is your turn., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=2, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.220 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.220 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.220 DEBUG - CardInstance(uuid=2d602ed0-80e0-4908-bea0-58b6ef3c7987, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.220 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.220 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.220 DEBUG - CardInstance(uuid=2d602ed0-80e0-4908-bea0-58b6ef3c7987, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.220 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.220 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.220 DEBUG - CardInstance(uuid=2d602ed0-80e0-4908-bea0-58b6ef3c7987, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.220 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.220 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.220 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.221 DEBUG - CardInstance(uuid=2d602ed0-80e0-4908-bea0-58b6ef3c7987, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.221 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.221 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.221 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.221 DEBUG - CardInstance(uuid=2d602ed0-80e0-4908-bea0-58b6ef3c7987, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.221 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.221 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.221 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.221 DEBUG - CardInstance(uuid=2d602ed0-80e0-4908-bea0-58b6ef3c7987, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.221 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.221 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.221 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.221 DEBUG - CardInstance(uuid=2d602ed0-80e0-4908-bea0-58b6ef3c7987, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.221 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.221 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.221 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.221 DEBUG - CardInstance(uuid=2d602ed0-80e0-4908-bea0-58b6ef3c7987, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.221 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.221 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.221 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.221 DEBUG - CardInstance(uuid=2d602ed0-80e0-4908-bea0-58b6ef3c7987, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.221 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.221 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.221 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.221 INFO  - New FRENZY choice to be resolved by Player1 (05a41f34-2233-4e11-932f-8dd816a13853) (attackingCard : HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8))
+2026-03-12 12:03:06.222 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.222 DEBUG - CardInstance(uuid=2d602ed0-80e0-4908-bea0-58b6ef3c7987, card=Card(id=36, setName=first_contact, name=FERRET PACIFIER, power=4, keywords=[], effects={PASSIVE=[NoBlockEffect(value=-1, max=null, min=null, highest=true, keyword=null)]}, unique=false, description=The enemy creature(s) with the highest power cannot block., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=4, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.222 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.222 INFO  - Resolving NO_BLOCK effect of FERRET PACIFIER (2d602ed0-80e0-4908-bea0-58b6ef3c7987)
+2026-03-12 12:03:06.222 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.222 DEBUG - CardInstance(uuid=f486b1e4-530a-4193-b04a-0d4f30ee046d, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.222 DEBUG - CardInstance(uuid=4790315e-27a1-4202-95f6-2044e38fe6a2, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.222 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.222 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.222 DEBUG - CardInstance(uuid=f486b1e4-530a-4193-b04a-0d4f30ee046d, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.222 DEBUG - CardInstance(uuid=4790315e-27a1-4202-95f6-2044e38fe6a2, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.222 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.222 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.222 DEBUG - CardInstance(uuid=f486b1e4-530a-4193-b04a-0d4f30ee046d, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.222 DEBUG - CardInstance(uuid=4790315e-27a1-4202-95f6-2044e38fe6a2, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.222 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.222 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.222 DEBUG - CardInstance(uuid=f486b1e4-530a-4193-b04a-0d4f30ee046d, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.222 DEBUG - CardInstance(uuid=4790315e-27a1-4202-95f6-2044e38fe6a2, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.222 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.222 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.222 DEBUG - Player Player2 (04a55727-041a-493b-a6fc-05f773aeb38e) must choose 1 card(s) to discard (available targets : {
+- HYENIX ;
+- BEE BEAR
+})
+2026-03-12 12:03:06.222 DEBUG - CardInstance(uuid=f486b1e4-530a-4193-b04a-0d4f30ee046d, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.222 DEBUG - CardInstance(uuid=4790315e-27a1-4202-95f6-2044e38fe6a2, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.223 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.223 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.223 INFO  - New TARGET choice to be resolved by Player2 (04a55727-041a-493b-a6fc-05f773aeb38e) (targets : {
+- BEE BEAR ;
+- HYENIX
+})
+2026-03-12 12:03:06.223 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.223 DEBUG - HYENIX (98328d46-5df4-4fe8-8895-fd05d3efb7c8) discarded due to TUSKED EXTORTER (a1584c71-3868-46ec-a1a5-27c032099b2d) effect
+2026-03-12 12:03:06.223 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (a1584c71-3868-46ec-a1a5-27c032099b2d)
+2026-03-12 12:03:06.223 DEBUG - CardInstance(uuid=f486b1e4-530a-4193-b04a-0d4f30ee046d, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.223 DEBUG - CardInstance(uuid=4790315e-27a1-4202-95f6-2044e38fe6a2, card=Card(id=7, setName=first_contact, name=ELEPHANTOPUS, power=7, keywords=[TOUGH], effects={PASSIVE=[NoBlockEffect(value=-1, max=4, min=null, highest=false, keyword=null)]}, unique=true, description=The opponent cannot block with creatures with power 4 or less., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.223 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.223 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (4790315e-27a1-4202-95f6-2044e38fe6a2)
+2026-03-12 12:03:06.223 DEBUG - CardInstance(uuid=f486b1e4-530a-4193-b04a-0d4f30ee046d, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.223 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.223 DEBUG - CardInstance(uuid=f486b1e4-530a-4193-b04a-0d4f30ee046d, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.223 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.223 DEBUG - Player Player2 (04a55727-041a-493b-a6fc-05f773aeb38e) must choose 1 card(s) to destroy (available targets : {
+- TUSKED EXTORTER ;
+- BUGSERKER ;
+- HAMSTER LION
+})
+2026-03-12 12:03:06.224 DEBUG - CardInstance(uuid=f486b1e4-530a-4193-b04a-0d4f30ee046d, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.224 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.224 INFO  - New TARGET choice to be resolved by Player2 (04a55727-041a-493b-a6fc-05f773aeb38e) (targets : {
+- HAMSTER LION ;
+- BUGSERKER ;
+- TUSKED EXTORTER
+})
+2026-03-12 12:03:06.224 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:06.224 DEBUG - SNAIL HYDRA (e1be424a-f6da-4eb2-97e8-c6d27f6d37f4) effect destroys TUSKED EXTORTER (a1584c71-3868-46ec-a1a5-27c032099b2d)
+2026-03-12 12:03:06.224 INFO  - Resolving DESTROY effect of SNAIL HYDRA (e1be424a-f6da-4eb2-97e8-c6d27f6d37f4)
+2026-03-12 12:03:06.224 DEBUG - CardInstance(uuid=f486b1e4-530a-4193-b04a-0d4f30ee046d, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.224 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.224 DEBUG - CardInstance(uuid=f486b1e4-530a-4193-b04a-0d4f30ee046d, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.224 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.224 DEBUG - CardInstance(uuid=f486b1e4-530a-4193-b04a-0d4f30ee046d, card=Card(id=13, setName=first_contact, name=GRAVE ROBBER, power=7, keywords=[TOUGH], effects={PLAY=[StealEffect(value=1, optional=false, min=null, max=null, selection=null, source=DISCARD, mustPlay=true, mayPlay=false)]}, unique=false, description=<b>Play</b>: Play a card from the opponent's discard pile., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@7582a16b), power=7, keywords=[TOUGH], stillTough=true, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:06.224 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (ec261c02-e43e-4b66-9651-73b5f33355e8)
+2026-03-12 12:03:06.225 INFO  - Life update for player Player1 (05a41f34-2233-4e11-932f-8dd816a13853) : 2 LP
+2026-03-12 12:03:06.225 INFO  - Resolving NO_BLOCK effect of BEE BEAR (4621e797-ee10-4285-bfdf-e9b3e26c9b07)
+2026-03-12 12:03:06.225 INFO  - Resolving NO_BLOCK effect of BEE BEAR (4621e797-ee10-4285-bfdf-e9b3e26c9b07)
+2026-03-12 12:03:06.226 INFO  - Resolving NO_BLOCK effect of BEE BEAR (4621e797-ee10-4285-bfdf-e9b3e26c9b07)
+2026-03-12 12:03:06.226 INFO  - New FRENZY choice to be resolved by Player1 (05a41f34-2233-4e11-932f-8dd816a13853) (attackingCard : LUCHATAUR (79f1f8bf-a60e-43e0-8fef-f841cfe2732a))
+2026-03-12 12:03:06.226 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:06.226 INFO  - Game over : Player1 (05a41f34-2233-4e11-932f-8dd816a13853) wins ; Player2 (04a55727-041a-493b-a6fc-05f773aeb38e) loses.
+2026-03-12 12:03:06.226 INFO  - End of the game

@@ -2,10 +2,10 @@ package org.metacorp.mindbug.utils;
 
 import lombok.Getter;
 import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.AttackService;
@@ -19,21 +19,49 @@ import java.util.stream.Collectors;
 
 public class TestGameUtils {
 
+    
     private static Game game;
 
     @Getter
     private static Player player1;
     @Getter
     private static Player player2;
+    @Getter
+    private static Player player3;
+    @Getter
+    private static Player player4;
 
+  
     public static Game prepareCustomGame() {
         PlayerService playerService = new PlayerService();
         player1 = new Player(playerService.createPlayer("player1"));
         player2 = new Player(playerService.createPlayer("player2"));
 
-        game = new Game(player1, player2);
+        game = new Game(List.of(player1, player2));
 
-        List<CardInstance> cards = SetUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey());
+        List<CardInstance> cards = CardUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey());
+        Collections.shuffle(cards);
+        game.setCards(cards);
+
+        for (Player player : game.getPlayers()) {
+            player.getTeam().setLifePoints(3);
+        }
+
+        game.setCurrentPlayer(player1);
+
+        return game;
+    }
+
+    public static Game prepareCustomGame2v2() {
+        PlayerService playerService = new PlayerService();
+        player1 = new Player(playerService.createPlayer("player1"));
+        player2 = new Player(playerService.createPlayer("player2"));
+        player3 = new Player(playerService.createPlayer("player3"));
+        player4 = new Player(playerService.createPlayer("player4"));
+
+        game = new Game(List.of(player1, player2, player3, player4));
+
+        List<CardInstance> cards = CardUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey());
         Collections.shuffle(cards);
         game.setCards(cards);
 
@@ -54,20 +82,31 @@ public class TestGameUtils {
         return game.getCards().stream().filter(cardInstance -> cardInstance.getCard().getId() == id).collect(Collectors.toList());
     }
 
-    public static void attack(CardInstance attackingCard, CardInstance defendingCard) throws GameStateException, WebSocketException {
+    public static void attack(CardInstance attackingCard, CardInstance defendingCard) throws GameStateException {
         AttackService.declareAttack(attackingCard, game);
-        if (game.getAttackingCard() != null && game.getChoice() == null) {
-            AttackService.resolveAttack(defendingCard, game);
-        }
+        AttackService.resolveAttack(defendingCard, game);
     }
 
-    public static void play(CardInstance pickedCard) throws GameStateException, WebSocketException {
-        play(pickedCard, null);
-    }
-
-    public static void play(CardInstance pickedCard, Player mindbugger) throws GameStateException, WebSocketException {
+    public static void play(CardInstance pickedCard) throws GameStateException {
         PlayCardService.pickCard(pickedCard, game);
-        PlayCardService.playCard(mindbugger, game);
+        resolveMindbugChoices(false);
+    }
+
+    public static void play(CardInstance pickedCard, Player mindbugger) throws GameStateException {
+        PlayCardService.pickCard(pickedCard, game);
+
+        while (isMindbugDecision(game)) {
+            BooleanChoice choice = (BooleanChoice) game.getChoice();
+            if (mindbugger != null && choice.getPlayerToChoose().equals(mindbugger)) {
+                choose(true);
+                return;
+            }
+            choose(false);
+        }
+
+        if (mindbugger != null && isMindbugDecision(game)) {
+            choose(true);
+        }
     }
 
     public static void hand(Player player, CardInstance... cards) {
@@ -77,6 +116,7 @@ public class TestGameUtils {
         }
     }
 
+
     public static void board(Player player, CardInstance... cards) {
         for (CardInstance card : cards) {
             card.setOwner(player);
@@ -84,6 +124,7 @@ public class TestGameUtils {
         }
     }
 
+  
     public static void discard(Player player, CardInstance... cards) {
         for (CardInstance card : cards) {
             card.setOwner(player);
@@ -98,16 +139,39 @@ public class TestGameUtils {
         }
     }
 
-    public static void huntTarget(CardInstance card) throws GameStateException, WebSocketException {
+
+    public static void huntTarget(CardInstance card) throws GameStateException {
         ChoiceService.resolveChoice(card == null ? null : card.getUuid(), game);
     }
 
-    public static void chooseTargets(CardInstance... cards) throws GameStateException, WebSocketException {
+
+    public static void chooseTargets(CardInstance... cards) throws GameStateException {
         ChoiceService.resolveChoice(Arrays.stream(cards).map(CardInstance::getUuid).toList(), game);
     }
 
-    public static void choose(boolean choice) throws GameStateException, WebSocketException {
+
+    public static void choose(boolean choice) throws GameStateException {
         ChoiceService.resolveChoice(choice, game);
+    }
+
+    private static void resolveMindbugChoices(boolean useMindbug) throws GameStateException {
+        while (isMindbugDecision(game) && !game.isFinished()) {
+            ChoiceService.resolveChoice(useMindbug, game);
+        }
+    }
+
+    private static boolean isMindbugDecision(Game game) {
+        if (!(game.getChoice() instanceof BooleanChoice)) {
+            return false;
+        }
+
+        CardInstance playedCard = game.getPlayedCard();
+        if (playedCard == null) {
+            return false;
+        }
+
+        return game.getPlayers().stream()
+                .noneMatch(player -> player.getBoard().contains(playedCard));
     }
 
     private TestGameUtils() {

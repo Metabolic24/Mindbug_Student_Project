@@ -1,0 +1,53 @@
+2026-03-12 12:18:27.877 INFO  - Calculating first player...
+2026-03-12 12:18:27.879 INFO  - Banned card for Player1 (98bc33cd-d4fd-4551-9844-27802d124240) : BRAIN FLY (da821042-50e2-422f-b002-898e233fd0af) (4)
+2026-03-12 12:18:27.879 INFO  - Banned card for Player2 (a91b7dd1-462d-488e-a78a-8a7e5b0beaa6) : LUCHATAUR (c06e7c5a-0e6c-459b-a3ea-6d8261dfdfa3) (9)
+2026-03-12 12:18:27.879 INFO  - First player will be Player2 (a91b7dd1-462d-488e-a78a-8a7e5b0beaa6)
+2026-03-12 12:18:27.886 INFO  - Game 9f86adba-d4ea-4b98-ba2c-e1774a5d0182 starting...
+2026-03-12 12:18:27.886 INFO  - Player Player1 (98bc33cd-d4fd-4551-9844-27802d124240) hand : {
+- TURBO BUG ;
+- LONE YETI ;
+- MAJESTIC MANTICORE ;
+- MYSTERIOUS MERMAID ;
+- SPIDER OWL
+}
+2026-03-12 12:18:27.886 INFO  - Player Player1 (98bc33cd-d4fd-4551-9844-27802d124240) draw pile : {
+- KILLER BEE ;
+- GOREAGLE ALPHA ;
+- HAMSTER LION ;
+- AXOLOTL HEALER ;
+- HUNGRY HUNGRY HAMSTER
+}
+2026-03-12 12:18:27.886 INFO  - Player Player2 (a91b7dd1-462d-488e-a78a-8a7e5b0beaa6) hand : {
+- URCHIN HURLER ;
+- SHIELD BUGS ;
+- GORILLON ;
+- COMPOST DRAGON ;
+- EXPLOSIVE TOAD
+}
+2026-03-12 12:18:27.886 INFO  - Player Player2 (a91b7dd1-462d-488e-a78a-8a7e5b0beaa6) draw pile : {
+- GRAVE ROBBER ;
+- RHINO TURTLE ;
+- TUSKED EXTORTER ;
+- FERRET PACIFIER ;
+-  GIRAFFODILE
+}
+2026-03-12 12:18:27.887 DEBUG - Resolving HUNTER choice...
+2026-03-12 12:18:27.887 DEBUG - MAJESTIC MANTICORE (22e7a7b1-803a-4fbf-bf12-5e26818080db) effect destroys MAJESTIC MANTICORE (22e7a7b1-803a-4fbf-bf12-5e26818080db)
+2026-03-12 12:18:27.887 INFO  - Resolving DESTROY effect of MAJESTIC MANTICORE (22e7a7b1-803a-4fbf-bf12-5e26818080db)
+2026-03-12 12:18:27.887 INFO  - Resolving POWER_UP effect of URCHIN HURLER (5ef8b987-78be-4485-a30f-d4db4caeef42)
+2026-03-12 12:18:27.887 INFO  - Resolving POWER_UP effect of URCHIN HURLER (5ef8b987-78be-4485-a30f-d4db4caeef42)
+2026-03-12 12:18:27.887 DEBUG - EXPLOSIVE TOAD (19b5936f-9926-477f-ab34-5794dc648e36) power changed (5 -> 7) due to URCHIN HURLER (5ef8b987-78be-4485-a30f-d4db4caeef42) effect
+2026-03-12 12:18:27.887 INFO  - Resolving POWER_UP effect of URCHIN HURLER (5ef8b987-78be-4485-a30f-d4db4caeef42)
+2026-03-12 12:18:27.887 INFO  - Life update for player Player2 (a91b7dd1-462d-488e-a78a-8a7e5b0beaa6) : 1 LP
+2026-03-12 12:18:27.887 DEBUG - Player2 (a91b7dd1-462d-488e-a78a-8a7e5b0beaa6) LP changed (3 -> 1) due to TURBO BUG (4f243a9a-7aee-4854-91f9-d1a22453388e) effect
+2026-03-12 12:18:27.887 INFO  - Resolving INFLICT effect of TURBO BUG (4f243a9a-7aee-4854-91f9-d1a22453388e)
+2026-03-12 12:18:27.887 DEBUG - EXPLOSIVE TOAD (19b5936f-9926-477f-ab34-5794dc648e36) power changed (5 -> 7) due to URCHIN HURLER (5ef8b987-78be-4485-a30f-d4db4caeef42) effect
+2026-03-12 12:18:27.888 INFO  - Resolving POWER_UP effect of URCHIN HURLER (5ef8b987-78be-4485-a30f-d4db4caeef42)
+2026-03-12 12:18:27.888 INFO  - Life update for player Player1 (98bc33cd-d4fd-4551-9844-27802d124240) : 2 LP
+2026-03-12 12:18:27.888 DEBUG - EXPLOSIVE TOAD (19b5936f-9926-477f-ab34-5794dc648e36) power changed (5 -> 7) due to URCHIN HURLER (5ef8b987-78be-4485-a30f-d4db4caeef42) effect
+2026-03-12 12:18:27.888 INFO  - Resolving POWER_UP effect of URCHIN HURLER (5ef8b987-78be-4485-a30f-d4db4caeef42)
+2026-03-12 12:18:27.888 INFO  - Life update for player Player2 (a91b7dd1-462d-488e-a78a-8a7e5b0beaa6) : 0 LP
+2026-03-12 12:18:27.888 INFO  - Game over : Player1 (98bc33cd-d4fd-4551-9844-27802d124240) wins ; Player2 (a91b7dd1-462d-488e-a78a-8a7e5b0beaa6) loses.
+2026-03-12 12:18:27.888 INFO  - End of the game
+2026-03-12 12:18:27.888 DEBUG - Player2 (a91b7dd1-462d-488e-a78a-8a7e5b0beaa6) LP changed (1 -> 0) due to KILLER BEE (0678decd-3bec-45a5-b093-d68d765ecfdb) effect
+2026-03-12 12:18:27.888 INFO  - Resolving INFLICT effect of KILLER BEE (0678decd-3bec-45a5-b093-d68d765ecfdb)

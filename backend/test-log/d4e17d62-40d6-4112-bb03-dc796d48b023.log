@@ -1,0 +1,41 @@
+2026-03-12 12:03:06.698 INFO  - Calculating first player...
+2026-03-12 12:03:06.700 INFO  - Banned card for Player1 (b6c7fcff-8cff-442d-9fe9-888ef647dc39) : HARPY MOTHER (a9a2e1a0-b656-4779-a974-c217e8c669cc) (5)
+2026-03-12 12:03:06.700 INFO  - Banned card for Player2 (85121b23-35ea-49c6-9a1b-bcdb6aa81266) : TUSKED EXTORTER (31e51774-aada-430a-82b4-5276e2f1f8e6) (8)
+2026-03-12 12:03:06.700 INFO  - First player will be Player2 (85121b23-35ea-49c6-9a1b-bcdb6aa81266)
+2026-03-12 12:03:06.708 INFO  - Game d4e17d62-40d6-4112-bb03-dc796d48b023 starting...
+2026-03-12 12:03:06.708 INFO  - Player Player1 (b6c7fcff-8cff-442d-9fe9-888ef647dc39) hand : {
+- GOREAGLE ALPHA ;
+- CREEP FROM THE DEEP ;
+- PLATED SCORPION ;
+- RHINO TURTLE ;
+- SHIELD BUGS
+}
+2026-03-12 12:03:06.708 INFO  - Player Player1 (b6c7fcff-8cff-442d-9fe9-888ef647dc39) draw pile : {
+-  GIRAFFODILE ;
+- PLATED SCORPION ;
+- KILLER BEE ;
+- SHIELD BUGS ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:06.708 INFO  - Player Player2 (85121b23-35ea-49c6-9a1b-bcdb6aa81266) hand : {
+- BEE BEAR ;
+- MAJESTIC MANTICORE ;
+- GOREAGLE ALPHA ;
+- LUCHATAUR ;
+- TIGER SQUIRREL
+}
+2026-03-12 12:03:06.708 INFO  - Player Player2 (85121b23-35ea-49c6-9a1b-bcdb6aa81266) draw pile : {
+- LUCHATAUR ;
+- GORILLON ;
+- HUNGRY HUNGRY HAMSTER ;
+- FERRET BOMBER ;
+- KILLER BEE
+}
+2026-03-12 12:03:06.709 INFO  - Life update for player Player1 (b6c7fcff-8cff-442d-9fe9-888ef647dc39) : 2 LP
+2026-03-12 12:03:06.709 DEBUG - Player1 (b6c7fcff-8cff-442d-9fe9-888ef647dc39) LP changed (3 -> 2) due to GOREAGLE ALPHA (9145dad3-42ac-4f78-8bcb-9f133caf222d) effect
+2026-03-12 12:03:06.709 INFO  - Resolving INFLICT effect of GOREAGLE ALPHA (9145dad3-42ac-4f78-8bcb-9f133caf222d)
+2026-03-12 12:03:06.709 INFO  - Life update for player Player1 (b6c7fcff-8cff-442d-9fe9-888ef647dc39) : 1 LP
+2026-03-12 12:03:06.709 INFO  - Resolving NO_BLOCK effect of BEE BEAR (4f0ec06e-3df8-46d2-ab0d-ef471bc5174f)
+2026-03-12 12:03:06.709 INFO  - Life update for player Player1 (b6c7fcff-8cff-442d-9fe9-888ef647dc39) : 0 LP
+2026-03-12 12:03:06.709 INFO  - Game over : Player2 (85121b23-35ea-49c6-9a1b-bcdb6aa81266) wins ; Player1 (b6c7fcff-8cff-442d-9fe9-888ef647dc39) loses.
+2026-03-12 12:03:06.709 INFO  - End of the game

@@ -1,0 +1,624 @@
+2026-03-12 12:03:46.786 INFO  - Calculating first player...
+2026-03-12 12:03:46.788 INFO  - Banned card for Player1 (53792ffd-7642-4d6f-b8f2-a5aef309cc8f) : GRAVE ROBBER (0b5c77bb-24db-462d-bedf-59f033123c88) (7)
+2026-03-12 12:03:46.788 INFO  - Banned card for Player2 (cb093f81-a8b7-4957-881a-050421968499) : BRAIN FLY (bb5a0256-c828-452b-b4a6-d58b41a059c9) (4)
+2026-03-12 12:03:46.788 INFO  - First player will be Player1 (53792ffd-7642-4d6f-b8f2-a5aef309cc8f)
+2026-03-12 12:03:46.796 INFO  - Game eca8ce79-6364-410f-96cb-b958feb4381e starting...
+2026-03-12 12:03:46.797 INFO  - Player Player1 (53792ffd-7642-4d6f-b8f2-a5aef309cc8f) hand : {
+-  GIRAFFODILE ;
+- SHARKY GRAB-DOG-MUMMYPUS ;
+- CHAMELEON SNIPER ;
+- LUCHATAUR ;
+- TUSKED EXTORTER
+}
+2026-03-12 12:03:46.797 INFO  - Player Player1 (53792ffd-7642-4d6f-b8f2-a5aef309cc8f) draw pile : {
+- FROBLIN INSTIGATOR ;
+- ELEPHANTOPUS ;
+- RHINO TURTLE ;
+- THE LURKER ;
+- STRANGE BARREL
+}
+2026-03-12 12:03:46.797 INFO  - Player Player2 (cb093f81-a8b7-4957-881a-050421968499) hand : {
+- GORILLON ;
+- SHIELD BUGS ;
+- CREEP FROM THE DEEP ;
+- PLATED SCORPION ;
+- TURBO BUG
+}
+2026-03-12 12:03:46.797 INFO  - Player Player2 (cb093f81-a8b7-4957-881a-050421968499) draw pile : {
+- THE LURKER ;
+- HAMSTER LION ;
+- RHINO TURTLE ;
+- URCHIN HURLER ;
+- KANGASAURUS REX
+}
+2026-03-12 12:03:46.797 INFO  - Life update for player Player1 (53792ffd-7642-4d6f-b8f2-a5aef309cc8f) : 2 LP
+2026-03-12 12:03:46.797 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.797 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.798 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.798 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.798 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.798 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.798 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.798 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 DEBUG - THE LURKER (018cd963-c2f6-400b-b09a-b49a26bcacaa) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.798 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.798 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 DEBUG - THE LURKER (018cd963-c2f6-400b-b09a-b49a26bcacaa) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.798 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.798 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 DEBUG - THE LURKER (018cd963-c2f6-400b-b09a-b49a26bcacaa) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.798 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.798 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 DEBUG - THE LURKER (018cd963-c2f6-400b-b09a-b49a26bcacaa) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.798 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.798 DEBUG - THE LURKER (018cd963-c2f6-400b-b09a-b49a26bcacaa) gains SNEAKY keyword
+2026-03-12 12:03:46.798 INFO  - Resolving KEYWORD_UP effect of THE LURKER (018cd963-c2f6-400b-b09a-b49a26bcacaa)
+2026-03-12 12:03:46.798 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 DEBUG - THE LURKER (018cd963-c2f6-400b-b09a-b49a26bcacaa) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.798 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.798 INFO  - Life update for player Player1 (53792ffd-7642-4d6f-b8f2-a5aef309cc8f) : 1 LP
+2026-03-12 12:03:46.798 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 DEBUG - THE LURKER (018cd963-c2f6-400b-b09a-b49a26bcacaa) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.798 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.798 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 DEBUG - THE LURKER (018cd963-c2f6-400b-b09a-b49a26bcacaa) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.798 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.798 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.798 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.798 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.798 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.798 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.799 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.799 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.799 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.799 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.799 DEBUG - Player Player2 (cb093f81-a8b7-4957-881a-050421968499) must choose 1 card(s) to discard (available targets : {
+- GORILLON ;
+- CREEP FROM THE DEEP ;
+- TURBO BUG ;
+- HAMSTER LION ;
+- URCHIN HURLER
+})
+2026-03-12 12:03:46.799 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.799 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.799 INFO  - New TARGET choice to be resolved by Player2 (cb093f81-a8b7-4957-881a-050421968499) (targets : {
+- GORILLON ;
+- TURBO BUG ;
+- HAMSTER LION ;
+- URCHIN HURLER ;
+- CREEP FROM THE DEEP
+})
+2026-03-12 12:03:46.799 DEBUG - Resolving TARGET choice...
+2026-03-12 12:03:46.799 DEBUG - CREEP FROM THE DEEP (b99ae948-0cbf-47b6-8a92-3b53e304ee30) discarded due to TUSKED EXTORTER (51ead8fc-cf28-4fa1-a134-c99f4f3a5300) effect
+2026-03-12 12:03:46.799 INFO  - Resolving DISCARD effect of TUSKED EXTORTER (51ead8fc-cf28-4fa1-a134-c99f4f3a5300)
+2026-03-12 12:03:46.799 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.799 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.799 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.799 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.799 DEBUG - PLATED SCORPION (7a1241ac-99fa-4fe4-87f1-6ddc94279928) power changed (2 -> 3) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.799 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.799 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.799 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.799 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.799 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.799 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.799 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.799 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.799 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.799 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.800 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.800 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.800 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.800 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.800 DEBUG - CardInstance(uuid=44c4c8d9-f3b7-43a3-b960-2dd0b33cb265, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.800 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.800 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.800 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.800 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.800 INFO  - Resolving NO_BLOCK effect of ELEPHANTOPUS (d4c181f9-d8f2-4324-ba8b-681c8573a043)
+2026-03-12 12:03:46.800 DEBUG - CardInstance(uuid=44c4c8d9-f3b7-43a3-b960-2dd0b33cb265, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.800 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.800 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.800 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.800 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.800 DEBUG - CardInstance(uuid=44c4c8d9-f3b7-43a3-b960-2dd0b33cb265, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.800 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.800 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.800 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.800 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.800 DEBUG - CardInstance(uuid=44c4c8d9-f3b7-43a3-b960-2dd0b33cb265, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.800 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.800 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.800 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.800 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.800 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.800 DEBUG - CardInstance(uuid=44c4c8d9-f3b7-43a3-b960-2dd0b33cb265, card=Card(id=4, setName=first_contact, name=CHAMELEON SNIPER, power=1, keywords=[SNEAKY], effects={ATTACK=[InflictEffect(value=1, self=false, allButOne=false, mindbugCount=false)]}, unique=true, description=<b>Attack</b>: The opponent loses 1 life., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[SNEAKY], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.800 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.801 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) effect destroys CHAMELEON SNIPER (44c4c8d9-f3b7-43a3-b960-2dd0b33cb265)
+2026-03-12 12:03:46.801 INFO  - Resolving DESTROY effect of KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049)
+2026-03-12 12:03:46.801 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.801 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.801 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.801 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.801 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 1) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.801 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.801 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.801 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.801 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.801 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 1) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.801 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.801 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.801 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.801 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.801 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 1) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.801 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.801 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.801 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.801 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.801 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 1) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.801 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.801 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.801 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.801 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.802 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.802 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.802 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.802 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.802 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73) gains FRENZY keyword
+2026-03-12 12:03:46.802 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73)
+2026-03-12 12:03:46.802 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.802 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.802 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.802 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.802 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.802 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73) gains FRENZY keyword
+2026-03-12 12:03:46.802 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73)
+2026-03-12 12:03:46.802 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.802 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.802 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.802 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.802 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.802 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73) gains FRENZY keyword
+2026-03-12 12:03:46.802 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73)
+2026-03-12 12:03:46.802 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.802 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.802 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.802 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.802 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.802 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.802 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73) gains FRENZY keyword
+2026-03-12 12:03:46.802 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73)
+2026-03-12 12:03:46.802 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.802 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.802 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.803 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.803 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.803 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73) gains FRENZY keyword
+2026-03-12 12:03:46.803 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73)
+2026-03-12 12:03:46.803 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.803 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.803 INFO  - New FRENZY choice to be resolved by Player1 (53792ffd-7642-4d6f-b8f2-a5aef309cc8f) (attackingCard : SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73))
+2026-03-12 12:03:46.803 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.803 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.803 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.803 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.803 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73) gains FRENZY keyword
+2026-03-12 12:03:46.803 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73)
+2026-03-12 12:03:46.803 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.803 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.803 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.803 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.803 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.803 DEBUG - SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73) gains FRENZY keyword
+2026-03-12 12:03:46.803 INFO  - Resolving KEYWORD_UP effect of SHARKY GRAB-DOG-MUMMYPUS (e7a91200-830a-43e3-b46f-6a87d65b7c73)
+2026-03-12 12:03:46.803 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.803 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.803 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 1) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.803 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.803 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.803 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.803 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.803 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.803 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 1) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.803 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.804 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.804 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.804 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.804 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.804 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.804 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.804 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.804 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.804 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.804 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.804 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.804 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.804 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.804 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.804 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.804 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.804 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.804 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.804 INFO  - New FRENZY choice to be resolved by Player2 (cb093f81-a8b7-4957-881a-050421968499) (attackingCard : RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d))
+2026-03-12 12:03:46.804 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.804 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.804 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.804 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.804 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.804 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.804 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.804 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.804 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.804 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.805 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.805 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.805 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 3) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.805 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.805 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.805 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.805 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.805 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.805 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.805 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.805 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=3, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.805 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.805 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 1) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.805 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.805 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.805 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.805 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.805 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.805 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.805 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.805 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.805 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.805 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 1) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.805 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.805 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.806 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.806 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.806 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.806 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.806 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.806 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.806 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.806 DEBUG - Player1 (53792ffd-7642-4d6f-b8f2-a5aef309cc8f) LP changed (1 -> 1) due to TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) effect
+2026-03-12 12:03:46.806 INFO  - Resolving INFLICT effect of TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef)
+2026-03-12 12:03:46.806 DEBUG - FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) power changed (1 -> 1) due to FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d) effect
+2026-03-12 12:03:46.806 INFO  - Resolving POWER_UP effect of FROBLIN INSTIGATOR (11536e44-6c7c-44e5-8134-5dfca5646e2d)
+2026-03-12 12:03:46.806 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.806 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.806 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.806 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.806 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.806 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.806 DEBUG - CardInstance(uuid=11536e44-6c7c-44e5-8134-5dfca5646e2d, card=Card(id=37, setName=first_contact, name=FROBLIN INSTIGATOR, power=1, keywords=[HUNTER], effects={PASSIVE=[PowerUpEffect(value=2, self=true, allies=false, lifePoints=null, alone=false, noMindbug=false, forEachAlly=true, selfTurn=false, alliesCount=null, enemiesCount=null)]}, unique=false, description=Has <b>+2</b> power for each other allied creature., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=1, keywords=[HUNTER], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.807 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.807 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.807 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.807 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.807 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.807 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.807 DEBUG - CardInstance(uuid=de0423cb-8456-4591-895c-e74af4e9b3a1, card=Card(id=28, setName=first_contact, name=STRANGE BARREL, power=6, keywords=[], effects={DEFEATED=[StealEffect(value=2, optional=false, min=null, max=null, selection=RANDOM, source=HAND, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Defeated</b>: Steal 2 random cards from the opponent's hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=6, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.807 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.807 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.807 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.808 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.808 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.808 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.808 DEBUG - CardInstance(uuid=de0423cb-8456-4591-895c-e74af4e9b3a1, card=Card(id=28, setName=first_contact, name=STRANGE BARREL, power=6, keywords=[], effects={DEFEATED=[StealEffect(value=2, optional=false, min=null, max=null, selection=RANDOM, source=HAND, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Defeated</b>: Steal 2 random cards from the opponent's hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=6, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.808 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.808 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.808 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.808 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.808 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.808 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.808 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.808 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.808 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.808 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (11 -> 13) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.808 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (5 -> 7) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.808 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.808 DEBUG - SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) power changed (4 -> 6) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.808 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (8 -> 10) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.808 INFO  - Resolving POWER_UP effect of URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3)
+2026-03-12 12:03:46.809 DEBUG - CardInstance(uuid=de0423cb-8456-4591-895c-e74af4e9b3a1, card=Card(id=28, setName=first_contact, name=STRANGE BARREL, power=6, keywords=[], effects={DEFEATED=[StealEffect(value=2, optional=false, min=null, max=null, selection=RANDOM, source=HAND, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Defeated</b>: Steal 2 random cards from the opponent's hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=6, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.809 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.809 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.809 DEBUG - CardInstance(uuid=de0423cb-8456-4591-895c-e74af4e9b3a1, card=Card(id=28, setName=first_contact, name=STRANGE BARREL, power=6, keywords=[], effects={DEFEATED=[StealEffect(value=2, optional=false, min=null, max=null, selection=RANDOM, source=HAND, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Defeated</b>: Steal 2 random cards from the opponent's hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=6, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.809 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.809 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.809 DEBUG - CardInstance(uuid=de0423cb-8456-4591-895c-e74af4e9b3a1, card=Card(id=28, setName=first_contact, name=STRANGE BARREL, power=6, keywords=[], effects={DEFEATED=[StealEffect(value=2, optional=false, min=null, max=null, selection=RANDOM, source=HAND, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Defeated</b>: Steal 2 random cards from the opponent's hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=6, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.809 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.809 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.809 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.810 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.810 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.810 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.810 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (11 -> 13) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.810 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (5 -> 7) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.810 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.810 DEBUG - SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) power changed (4 -> 6) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.810 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (8 -> 10) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.810 INFO  - Resolving POWER_UP effect of URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3)
+2026-03-12 12:03:46.810 DEBUG - CardInstance(uuid=de0423cb-8456-4591-895c-e74af4e9b3a1, card=Card(id=28, setName=first_contact, name=STRANGE BARREL, power=6, keywords=[], effects={DEFEATED=[StealEffect(value=2, optional=false, min=null, max=null, selection=RANDOM, source=HAND, mustPlay=false, mayPlay=false)]}, unique=true, description=<b>Defeated</b>: Steal 2 random cards from the opponent's hand., evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=6, keywords=[], stillTough=false, ableToAttackTwice=false, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.810 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.810 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.810 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.810 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.810 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.810 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.810 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.811 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.811 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.811 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (11 -> 13) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.811 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (5 -> 7) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.811 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.811 DEBUG - SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) power changed (4 -> 6) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.811 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (8 -> 10) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.811 INFO  - Resolving POWER_UP effect of URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3)
+2026-03-12 12:03:46.811 DEBUG - CardInstance(uuid=a61bbe66-e3ca-4468-a7e4-69d85b0c004f, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.811 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.811 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.811 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.811 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.811 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.811 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.811 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.811 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.811 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.811 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (11 -> 13) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.811 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (5 -> 7) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.811 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.811 DEBUG - SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) power changed (4 -> 6) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.811 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (8 -> 10) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.811 INFO  - Resolving POWER_UP effect of URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3)
+2026-03-12 12:03:46.811 DEBUG - CardInstance(uuid=a61bbe66-e3ca-4468-a7e4-69d85b0c004f, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.811 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.811 INFO  - New FRENZY choice to be resolved by Player2 (cb093f81-a8b7-4957-881a-050421968499) (attackingCard : RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d))
+2026-03-12 12:03:46.811 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.811 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.811 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.811 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.811 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.811 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.812 DEBUG - CardInstance(uuid=a61bbe66-e3ca-4468-a7e4-69d85b0c004f, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.812 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.812 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.812 DEBUG - CardInstance(uuid=a61bbe66-e3ca-4468-a7e4-69d85b0c004f, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.812 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.812 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.812 DEBUG - CardInstance(uuid=66a0d349-59ae-4d61-84de-4f60fe6ebe35, card=Card(id=21, setName=first_contact, name=RHINO TURTLE, power=8, keywords=[FRENZY, TOUGH], effects={}, unique=false, description=“There are not enough shields to stop me!”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=8, keywords=[FRENZY, TOUGH], stillTough=true, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.812 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.812 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.812 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.812 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.812 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (11 -> 13) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.812 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (5 -> 7) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.812 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.812 DEBUG - SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) power changed (4 -> 6) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.812 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (8 -> 10) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.812 INFO  - Resolving POWER_UP effect of URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3)
+2026-03-12 12:03:46.812 DEBUG - CardInstance(uuid=66a0d349-59ae-4d61-84de-4f60fe6ebe35, card=Card(id=21, setName=first_contact, name=RHINO TURTLE, power=8, keywords=[FRENZY, TOUGH], effects={}, unique=false, description=“There are not enough shields to stop me!”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=8, keywords=[FRENZY, TOUGH], stillTough=true, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.813 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.813 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.813 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.813 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.813 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.813 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.813 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.813 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.813 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.813 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (11 -> 13) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.813 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (5 -> 7) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.813 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.813 DEBUG - SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) power changed (4 -> 6) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.813 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (8 -> 10) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.813 INFO  - Resolving POWER_UP effect of URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3)
+2026-03-12 12:03:46.813 DEBUG - CardInstance(uuid=66a0d349-59ae-4d61-84de-4f60fe6ebe35, card=Card(id=21, setName=first_contact, name=RHINO TURTLE, power=8, keywords=[FRENZY, TOUGH], effects={}, unique=false, description=“There are not enough shields to stop me!”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=8, keywords=[FRENZY, TOUGH], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.813 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.813 INFO  - New FRENZY choice to be resolved by Player2 (cb093f81-a8b7-4957-881a-050421968499) (attackingCard : RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d))
+2026-03-12 12:03:46.813 DEBUG - Resolving FRENZY choice...
+2026-03-12 12:03:46.813 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.813 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.813 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.813 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.813 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.813 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.813 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.813 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.813 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (11 -> 13) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.813 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (5 -> 7) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.813 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.813 DEBUG - SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) power changed (4 -> 6) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.813 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (8 -> 10) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.813 INFO  - Resolving POWER_UP effect of URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3)
+2026-03-12 12:03:46.813 DEBUG - CardInstance(uuid=66a0d349-59ae-4d61-84de-4f60fe6ebe35, card=Card(id=21, setName=first_contact, name=RHINO TURTLE, power=8, keywords=[FRENZY, TOUGH], effects={}, unique=false, description=“There are not enough shields to stop me!”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=8, keywords=[FRENZY, TOUGH], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.813 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.813 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.814 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.814 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.814 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.814 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.814 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.814 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.814 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.814 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (11 -> 13) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.814 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (5 -> 7) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.814 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (9 -> 11) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.814 DEBUG - SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) power changed (4 -> 6) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.814 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (8 -> 10) due to URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) effect
+2026-03-12 12:03:46.814 INFO  - Resolving POWER_UP effect of URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3)
+2026-03-12 12:03:46.814 DEBUG - CardInstance(uuid=a61bbe66-e3ca-4468-a7e4-69d85b0c004f, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.814 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.814 DEBUG - RHINO TURTLE (e913d9ed-950b-4985-a5b0-630f0036af8d) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.814 DEBUG - GORILLON (97041e3c-a023-4b79-a9f1-42fadd0a5765) power changed (10 -> 11) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.814 DEBUG - TURBO BUG (5f681ad6-80d2-457d-9067-b4bb8d0544ef) power changed (4 -> 5) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.814 DEBUG - HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08) power changed (8 -> 9) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.814 DEBUG - URCHIN HURLER (c7b357e8-44bb-4ef3-9de3-39f90a27eff3) power changed (5 -> 6) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.814 DEBUG - KANGASAURUS REX (645459f4-8791-479b-9b9e-c0dab648d049) power changed (7 -> 8) due to SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319) effect
+2026-03-12 12:03:46.814 INFO  - Resolving POWER_UP effect of SHIELD BUGS (e0f40301-a78a-46e0-bd7b-006beaaa2319)
+2026-03-12 12:03:46.814 DEBUG - CardInstance(uuid=a61bbe66-e3ca-4468-a7e4-69d85b0c004f, card=Card(id=18, setName=first_contact, name=LUCHATAUR, power=9, keywords=[FRENZY], effects={}, unique=false, description=“Want an encore?”, evolution=false), owner=AiPlayer(resolver=org.metacorp.mindbug.service.game.ai.RandomAiResolver@323c6f9c), power=9, keywords=[FRENZY], stillTough=false, ableToAttackTwice=true, ableToAttack=false, ableToBlock=true, protection=false, initialCard=null, modifiers=[]) no more able to attack
+2026-03-12 12:03:46.814 INFO  - Resolving NO_ATTACK effect of HAMSTER LION (2a3d4da3-9ffa-4928-bb44-4c428b79cc08)
+2026-03-12 12:03:46.814 INFO  - Game over : Player2 (cb093f81-a8b7-4957-881a-050421968499) wins ; Player1 (53792ffd-7642-4d6f-b8f2-a5aef309cc8f) loses.
+2026-03-12 12:03:46.814 INFO  - End of the game

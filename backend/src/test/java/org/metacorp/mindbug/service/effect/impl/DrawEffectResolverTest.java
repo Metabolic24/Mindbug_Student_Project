@@ -9,13 +9,14 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.DrawEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.utils.MindbugGameTest;
+import org.metacorp.mindbug.service.game.StartService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DrawEffectResolverTest extends MindbugGameTest {
+public class DrawEffectResolverTest {
 
     private Game game;
+    private CardInstance randomCard;
     private Player currentPlayer;
 
     private DrawEffect effect;
@@ -25,20 +26,20 @@ public class DrawEffectResolverTest extends MindbugGameTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
-        CardInstance randomCard = currentPlayer.getHand().getFirst();
+        randomCard = currentPlayer.getHand().getFirst();
 
         effect = new DrawEffect();
         effect.setType(EffectType.DRAW);
-        effectResolver = new DrawEffectResolver(effect, randomCard);
+        effectResolver = new DrawEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }
 
     @Test
     public void testBasic_draw2Over5() {
         effect.setValue(2);
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(7, currentPlayer.getHand().size());
         assertEquals(3, currentPlayer.getDrawPile().size());
@@ -51,7 +52,7 @@ public class DrawEffectResolverTest extends MindbugGameTest {
         assertEquals(3, currentPlayer.getDrawPile().size());
 
         effect.setValue(4);
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(10, currentPlayer.getHand().size());
         assertEquals(0, currentPlayer.getDrawPile().size());
@@ -64,7 +65,7 @@ public class DrawEffectResolverTest extends MindbugGameTest {
         assertEquals(0, currentPlayer.getDrawPile().size());
 
         effect.setValue(2);
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, randomCard, timing);
 
         assertEquals(10, currentPlayer.getHand().size());
         assertEquals(0, currentPlayer.getDrawPile().size());
