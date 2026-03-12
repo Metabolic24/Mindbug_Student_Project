@@ -1,8 +1,6 @@
 package org.metacorp.mindbug.service.game;
 
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
-import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -18,30 +16,14 @@ import java.util.Comparator;
 import java.util.List;
 
 import static org.metacorp.mindbug.service.game.CardService.getPassiveEffects;
-import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 public class GameStateService {
 
-    /**
-     * Refresh the game state
-     *
-     * @param game the current game state
-     * @throws GameStateException if an error occurred while refreshing game state
-     * @throws WebSocketException if an error occurred while sending game event through WebSocket
-     */
-    public static void refreshGameState(Game game) throws GameStateException, WebSocketException {
+    public static void refreshGameState(Game game) {
         refreshGameState(game, false);
     }
 
-    /**
-     * Refresh the game state
-     *
-     * @param game    the current game state
-     * @param newTurn true if it has been triggered at the end of a player's turn
-     * @throws GameStateException if an error occurred while refreshing game state
-     * @throws WebSocketException if an error occurred while sending game event through WebSocket
-     */
-    public static void refreshGameState(Game game, boolean newTurn) throws GameStateException, WebSocketException {
+    public static void refreshGameState(Game game, boolean newTurn) {
         List<EffectsToApply> passiveEffects = new ArrayList<>();
 
         for (Player player : game.getPlayers()) {
@@ -56,32 +38,18 @@ public class GameStateService {
 
         // Apply effects
         for (EffectsToApply effect : passiveEffects) {
-            EffectResolver.getResolver(effect.getEffects().getFirst(), effect.getCard()).apply(game, effect.getTiming());
+            EffectResolver<?> effectResolver = EffectResolver.getResolver(effect.getEffects().getFirst());
+            effectResolver.apply(game, effect.getCard(), effect.getTiming());
         }
     }
 
-    /**
-     * Starts a new turn
-     *
-     * @param game the current game state
-     * @throws GameStateException if an error occurred while refreshing game state
-     * @throws WebSocketException if an error occurred while sending game event through WebSocket
-     */
-    public static void newTurn(Game game) throws GameStateException, WebSocketException {
+    public static void newTurn(Game game) {
         newTurn(game, false);
     }
 
-    /**
-     * Starts a new turn
-     *
-     * @param game    the current game state
-     * @param mindbug indicates whether the last turn was ended by a mindbug use
-     * @throws GameStateException if an error occurred while refreshing game state
-     * @throws WebSocketException if an error occurred while sending game event through WebSocket
-     */
-    public static void newTurn(Game game, boolean mindbug) throws GameStateException, WebSocketException {
+    public static void newTurn(Game game, boolean mindbug) {
         if (!mindbug) {
-            game.setCurrentPlayer(game.getOpponent());
+            game.setNextPlayer();
         }
 
         refreshGameState(game, true);
@@ -94,14 +62,7 @@ public class GameStateService {
         }
     }
 
-    /**
-     * Method triggered when a player loses at least one life point
-     *
-     * @param player the player that lost life point(s)
-     * @param game   the current game state
-     * @throws WebSocketException if an error occurred while sending game event through WebSocket
-     */
-    public static void lifePointLost(Player player, Game game) throws WebSocketException {
+    public static void lifePointLost(Player player, Game game) {
         WebSocketService.sendGameEvent(WsGameEventType.LP_DOWN, game);
         HistoryService.logLifeUpdate(game, player);
 
@@ -119,21 +80,30 @@ public class GameStateService {
         }
     }
 
-    /**
-     * Update the game state after game finished
-     *
-     * @param loser the losing player
-     * @param game  the current game state
-     * @throws WebSocketException if an error occurred while sending game event through WebSocket
-     */
-    public static void endGame(Player loser, Game game) throws WebSocketException {
-        Player winner = loser.getOpponent(game.getPlayers());
-        game.getLogger().info("Game over : {} wins ; {} loses.", getLoggablePlayer(winner), getLoggablePlayer(loser));
+    public static void endGame(Player loser, Game game) {
+        if(game.typeGameMode() == 1){
+            Player winner = loser.getOpponents(game.getPlayers()).getFirst();
+            System.out.println("\n<<<<< GAME OVER >>>>>");
+            System.out.printf("%s wins ; %s loses\n", winner.getName(), loser.getName());
 
-        game.setWinner(winner);
+            game.setWinners(List.of(winner));
 
-        WebSocketService.sendGameEvent(WsGameEventType.FINISHED, game);
-        HistoryService.saveHistory(game);
+            WebSocketService.sendGameEvent(WsGameEventType.FINISHED, game);
+            HistoryService.saveHistory(game);
+        } 
+        else if(game.typeGameMode() == 2){
+            List<Player> winners = loser.getOpponents(game.getPlayers());
+            Player loserAllie = loser.getAlly(game.getPlayers());
+
+            System.out.println("\n<<<<< GAME OVER >>>>>");
+            System.out.printf("%s & %s win ; %s & %s lose\n", winners.getFirst().getName(), winners.get(1).getName(), loser.getName(), loserAllie.getName());
+
+            game.setWinners(winners);
+
+            // Add the websocket game event
+            WebSocketService.sendGameEvent(WsGameEventType.FINISHED, game);
+            HistoryService.saveHistory(game);
+        }
     }
 
     /**

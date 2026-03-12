@@ -18,9 +18,7 @@
         <grizzly.version>4.0.2</grizzly.version>
         <jersey.version>4.0.2</jersey.version>
         <slf4j.version>2.0.17</slf4j.version>
-
         <main.class>org.metacorp.mindbug.app.RestApp</main.class>
-        <log.folder>${project.basedir}/log</log.folder>
     </properties>
 
     <dependencyManagement>
@@ -121,7 +119,7 @@
             <version>2.2.2</version>
         </dependency>
 
-        <!-- Logging dependencies -->
+        <!-- Utile pour enlever un warning sur le serveur WS-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -129,38 +127,27 @@
         </dependency>
 
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.5.27</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
 
-        <!-- Test dependencies -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>6.0.2</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- MISC -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.40</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>6.0.2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
-        <resources>
-            <resource>
-                <filtering>true</filtering>
-                <directory>${project.basedir}/src/main/resources</directory>
-                <includes>
-                    <include>**/*</include>
-                </includes>
-            </resource>
-        </resources>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -222,28 +209,6 @@
                     <mainClass>${main.class}</mainClass>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>io.swagger.core.v3</groupId>
-                <artifactId>swagger-maven-plugin-jakarta</artifactId>
-                <version>2.2.43</version>
-                <configuration>
-                    <outputFileName>openapi</outputFileName>
-                    <outputPath>${project.build.directory}/openapi</outputPath>
-                    <outputFormat>YAML</outputFormat>
-                    <resourcePackages>
-                        <package>org.metacorp.mindbug.controller</package>
-                    </resourcePackages>
-                    <prettyPrint>true</prettyPrint>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>resolve</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
@@ -256,9 +221,23 @@
         </profile>
 
         <profile>
+            <id>auto2v2</id>
+            <properties>
+                <main.class>org.metacorp.mindbug.app.AutoApp2v2</main.class>
+            </properties>
+        </profile>
+
+        <profile>
             <id>manual</id>
             <properties>
                 <main.class>org.metacorp.mindbug.app.ManualApp</main.class>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>manual2v2</id>
+            <properties>
+                <main.class>org.metacorp.mindbug.app.ManualApp2v2</main.class>
             </properties>
         </profile>
     </profiles>

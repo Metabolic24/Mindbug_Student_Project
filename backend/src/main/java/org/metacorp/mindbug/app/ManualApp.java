@@ -1,7 +1,6 @@
 package org.metacorp.mindbug.app;
 
 import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.choice.AbstractChoice;
@@ -23,10 +22,24 @@ import java.util.stream.Stream;
 public class ManualApp {
 
     private static final String AVAILABLE_ACTIONS = "Actions possibles : play, p, attack, a, sumup, s, details, d, stop, exit\n";
+    private static final String MODE_2V2 = "2v2";
 
-    static void main() {
+    public static void main() {
+        main(new String[0]);
+    }
+
+    public static void main(String[] args) {
         PlayerService playerService = new PlayerService();
-        Game game = AppUtils.startGame(playerService);
+        boolean is2v2 = false;
+        if (args != null && args.length > 0 && args[0] != null) {
+            switch (args[0].toLowerCase()) {
+                case MODE_2V2 -> is2v2 = true;
+                default -> System.out.printf("Mode inconnu '%s', démarrage en 1v1.%n", args[0]);
+            }
+        }
+        Game game = is2v2
+                ? AppUtils.start2v2Game(playerService, false)
+                : AppUtils.startGame(playerService, false);
 
         System.out.println(AVAILABLE_ACTIONS);
 
@@ -48,7 +61,7 @@ public class ManualApp {
      * @return true if command has been successfully processed, false otherwise
      * @throws GameStateException if the game reaches an inconsistant state
      */
-    private static boolean resolveTurn(Scanner scanner, Game game) throws GameStateException, WebSocketException {
+    private static boolean resolveTurn(Scanner scanner, Game game) throws GameStateException {
         boolean turnResolved = false;
 
         String input = scanner.nextLine();
@@ -135,12 +148,12 @@ public class ManualApp {
         if (choice == null) {
             System.err.println("Action invalide");
         } else {
-            String input = scanner.nextLine();
 
             try {
                 switch (choice.getType()) {
                     case SIMULTANEOUS -> {
                         System.out.println("Résolution d'un choix d'ordonnancement d'effets simultanés");
+                        String input = scanner.nextLine();
 
                         SimultaneousEffectsChoice simultaneousEffectsChoice = (SimultaneousEffectsChoice) choice;
                         if (simultaneousEffectsChoice.getEffectsToSort().stream()
@@ -156,6 +169,16 @@ public class ManualApp {
                         System.out.println("Résolution d'un choix de cible(s)");
 
                         TargetChoice targetChoice = (TargetChoice) choice;
+
+                        targetChoice.getAvailableTargets().forEach(target ->
+                            System.out.println(
+                                "- " + target.getCard().getName()
+                                + " (id: " + target.getUuid() + ")"
+                            )
+                        );
+
+                        String input = scanner.nextLine();
+
                         String[] tokens = input.split(" ");
 
                         for (String token : tokens) {
@@ -172,6 +195,15 @@ public class ManualApp {
                     case HUNTER -> {
                         System.out.println("Résolution d'un choix de cible d'attaque");
                         HunterChoice hunterChoice = (HunterChoice) choice;
+                        
+                        hunterChoice.getAvailableTargets().forEach(target ->
+                            System.out.println(
+                                "- " + target.getCard().getName()
+                                + " (id: " + target.getUuid() + ")"
+                            )
+                        );
+
+                        String input = scanner.nextLine();
 
                         if (input != null && !input.isBlank()) {
                             if (hunterChoice.getAvailableTargets().stream()
@@ -188,6 +220,8 @@ public class ManualApp {
                     case FRENZY, BOOLEAN -> {
                         System.out.printf("Résolution d'un choix booléen de type %s\n", choice.getType());
 
+                        String input = scanner.nextLine();
+                        
                         switch ((input.toLowerCase())) {
                             case "y", "o", "yes", "oui" -> {
                                 System.out.println("Valeur choisie : OUI");
@@ -204,7 +238,7 @@ public class ManualApp {
                         // Should not happen
                     }
                 }
-            } catch (GameStateException | WebSocketException e) {
+            } catch (GameStateException e) {
                 System.err.println(e.getMessage());
             }
         }
@@ -227,12 +261,20 @@ public class ManualApp {
      * @param choice the choice to print
      */
     private static void printChoice(AbstractChoice<?> choice) {
+        if (choice.getPrompt() != null) {
+            System.out.println(choice.getPrompt());
+            return;
+        }
+        
         switch (choice.getType()) {
             case SIMULTANEOUS ->
                     System.out.println("Veuillez choisir l'effet à résoudre en premier : (only type the ID)");
             case TARGET ->
                     System.out.println("Veuillez choisir la/les cibles : (type the card(s) ID separated by 'space' character)");
-            case HUNTER -> System.out.println("Veuillez choisir la cible à chasser (si souhaité) : (only type the ID)");
+            case HUNTER -> {
+                System.out.println("Veuillez choisir la cible à chasser (si souhaité) : (only type the ID)");
+                System.out.println("- Don't chose a prey (enter no number)");
+            }
             case FRENZY -> System.out.println("Voulez-vous attaquer à nouveau? (O/N)");
             case BOOLEAN -> System.out.println("Voulez-vous faire revenir Hyénix? (O/N)");
             default -> {

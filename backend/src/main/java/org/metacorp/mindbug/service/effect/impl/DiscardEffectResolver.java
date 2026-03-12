@@ -9,14 +9,11 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-
-import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
-import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
-import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 /**
  * Effect resolver for DisableTimingEffect
@@ -26,20 +23,23 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
     /**
      * Constructor
      *
-     * @param effect       the effect to be resolved
-     * @param effectSource the card which owns the effect
+     * @param effect the effect to be resolved
      */
-    public DiscardEffectResolver(DiscardEffect effect, CardInstance effectSource) {
-        super(effect, effectSource);
+    public DiscardEffectResolver(DiscardEffect effect) {
+        super(effect);
     }
 
     @Override
-    public void apply(Game game, EffectTiming timing) {
-        Player opponent = effectSource.getOwner().getOpponent(game.getPlayers());
-
-        int value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue();
-
-        Player playerToDiscard = effect.isSelf() ? effectSource.getOwner() : opponent;
+    public void apply(Game game, CardInstance card, EffectTiming timing) {
+        Player playerToDiscard = card.getOwner();
+        int value = effect.getValue();
+    
+        if (!effect.isSelf()) {
+            Player opponent = AppUtils.chosenOpponent(game, card.getOwner());
+            playerToDiscard =  opponent;
+            value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue(); 
+        }
+                
         List<CardInstance> availableCards = effect.isDrawPile() ? playerToDiscard.getDrawPile() : playerToDiscard.getHand();
 
         if (availableCards.size() <= value || value == -1) {
@@ -47,16 +47,12 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
         } else if (effect.isDrawPile()) {
             resolve(game, new ArrayList<>(availableCards.subList(0, value)));
         } else {
-            game.setChoice(new TargetChoice(playerToDiscard, effectSource, this, value, new HashSet<>(availableCards)));
-            game.getLogger().debug("Player {} must choose {} card(s) to discard (available targets : {})",
-                    getLoggablePlayer(playerToDiscard), value, getLoggableCards(availableCards));
+            game.setChoice(new TargetChoice(playerToDiscard, card, this, value, new HashSet<>(availableCards)));
         }
     }
 
     @Override
     public void resolve(Game game, List<CardInstance> chosenTargets) {
-        String loggableEffectSource = getLoggableCard(effectSource);
-
         for (CardInstance card : chosenTargets) {
             Player cardOwner = card.getOwner();
 
@@ -67,8 +63,6 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
             }
 
             cardOwner.getDiscardPile().add(card);
-
-            game.getLogger().debug("{} discarded due to {} effect", getLoggableCard(card), loggableEffectSource);
         }
 
         HistoryService.logEffect(game, effect.getType(), effectSource, chosenTargets);

@@ -4,7 +4,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.Player;
 
@@ -15,10 +14,12 @@ public abstract class AbstractChoice<T> {
     @NonNull
     protected Player playerToChoose;
 
+    private String prompt;
+
     /**
      * @return the choice type
      */
-     public abstract ChoiceType getType();
+    public abstract ChoiceType getType();
 
     /**
      * Resolve the current choice
@@ -26,5 +27,5 @@ public abstract class AbstractChoice<T> {
      * @param choiceData the data required to resolve the choice
      * @param game       the related game
      */
-    public abstract void resolve(T choiceData, Game game) throws GameStateException, WebSocketException;
+    public abstract void resolve(T choiceData, Game game) throws GameStateException;
 }
