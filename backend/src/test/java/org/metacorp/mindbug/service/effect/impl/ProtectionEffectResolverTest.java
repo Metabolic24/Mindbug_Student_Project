@@ -10,14 +10,14 @@ import org.metacorp.mindbug.model.effect.impl.ProtectionEffect;
 import org.metacorp.mindbug.model.modifier.ProtectionModifier;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.utils.MindbugGameTest;
+import org.metacorp.mindbug.service.game.StartService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ProtectionEffectResolverTest extends MindbugGameTest {
+public class ProtectionEffectResolverTest {
 
     private Game game;
     private CardInstance effectSource;
@@ -30,7 +30,7 @@ public class ProtectionEffectResolverTest extends MindbugGameTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         effectSource = currentPlayer.getHand().getFirst();
 
@@ -40,7 +40,7 @@ public class ProtectionEffectResolverTest extends MindbugGameTest {
 
         effect = new ProtectionEffect();
         effect.setType(EffectType.PROTECTION);
-        effectResolver = new ProtectionEffectResolver(effect, effectSource);
+        effectResolver = new ProtectionEffectResolver(effect);
         timing = EffectTiming.ATTACK;
     }
 
@@ -49,7 +49,7 @@ public class ProtectionEffectResolverTest extends MindbugGameTest {
         effect.setSelf(true);
         effect.setAllies(false);
 
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, effectSource, timing);
 
         for (CardInstance card : currentPlayer.getBoard()) {
             if (card.equals(effectSource)) {
@@ -69,7 +69,7 @@ public class ProtectionEffectResolverTest extends MindbugGameTest {
         effect.setAllies(true);
         timing = EffectTiming.PASSIVE;
 
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, effectSource, timing);
 
         for (CardInstance card : currentPlayer.getBoard()) {
             if (!card.equals(effectSource)) {

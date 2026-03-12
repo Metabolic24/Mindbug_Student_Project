@@ -10,12 +10,12 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.EvolveEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.utils.MindbugGameTest;
+import org.metacorp.mindbug.service.game.StartService;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class EvolveEffectResolverTest extends MindbugGameTest {
+public class EvolveEffectResolverTest {
 
     private Game game;
     private CardInstance evolvingCard;
@@ -28,7 +28,7 @@ public class EvolveEffectResolverTest extends MindbugGameTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         evolvingCard = currentPlayer.getHand().getFirst();
 
@@ -39,7 +39,7 @@ public class EvolveEffectResolverTest extends MindbugGameTest {
         EvolveEffect effect = new EvolveEffect();
         effect.setType(EffectType.EVOLVE);
         effect.setId(evolutionCard.getCard().getId());
-        effectResolver = new EvolveEffectResolver(effect, evolvingCard);
+        effectResolver = new EvolveEffectResolver(effect);
         timing = EffectTiming.ACTION;
     }
 
@@ -47,7 +47,7 @@ public class EvolveEffectResolverTest extends MindbugGameTest {
     public void testBasic_firstEvolution() {
         currentPlayer.addCardToBoard(evolvingCard);
 
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, evolvingCard, timing);
 
         assertFalse(currentPlayer.getBoard().contains(evolvingCard));
         assertFalse(currentPlayer.getDiscardPile().contains(evolvingCard));
@@ -63,7 +63,7 @@ public class EvolveEffectResolverTest extends MindbugGameTest {
         evolutionCard.getKeywords().add(CardKeyword.TOUGH);
         evolutionCard.setStillTough(true);
 
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, evolvingCard, timing);
 
         assertFalse(currentPlayer.getBoard().contains(evolvingCard));
         assertFalse(currentPlayer.getDiscardPile().contains(evolvingCard));

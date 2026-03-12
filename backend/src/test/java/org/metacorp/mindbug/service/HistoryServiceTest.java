@@ -18,7 +18,7 @@ import org.metacorp.mindbug.model.history.HistoryCard;
 import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.utils.MindbugGameTest;
+import org.metacorp.mindbug.service.game.StartService;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -30,7 +30,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class HistoryServiceTest extends MindbugGameTest {
+public class HistoryServiceTest {
 
     private Game game;
     private CardInstance sourceCard;
@@ -39,10 +39,10 @@ public class HistoryServiceTest extends MindbugGameTest {
     @BeforeEach
     public void initGame() {
         PlayerService playerService = new PlayerService();
-        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         sourceCard = game.getCurrentPlayer().getHand().getFirst();
-        targets = Collections.singletonList(game.getOpponent().getHand().getFirst());
+        targets = Collections.singletonList(game.getOpponents().getFirst().getHand().getFirst());
     }
 
     @Test
@@ -116,7 +116,7 @@ public class HistoryServiceTest extends MindbugGameTest {
         effectsToApply.add(new EffectsToApply(Collections.singletonList(new GainEffect()), sourceCard, EffectTiming.DEFEATED));
         effectsToApply.add(new EffectsToApply(Collections.singletonList(new GainEffect()), targets.getFirst(), EffectTiming.DEFEATED));
 
-        game.setChoice(new SimultaneousEffectsChoice(effectsToApply, game.getCurrentPlayer()));
+        game.setChoice(new SimultaneousEffectsChoice(game.getCurrentPlayer(), effectsToApply));
 
         HistoryService.logChoice(game);
         assertEquals(2, game.getHistory().size());
@@ -143,8 +143,8 @@ public class HistoryServiceTest extends MindbugGameTest {
 
     @Test
     public void logChoice_hunter() {
-        sourceCard.setOwner(game.getOpponent());
-        game.setChoice(new HunterChoice(sourceCard, new HashSet<>(targets)));
+        sourceCard.setOwner(game.getOpponents().getFirst());
+        game.setChoice(new HunterChoice(game.getOpponents().getFirst(), sourceCard, new HashSet<>(targets)));
 
         HistoryService.logChoice(game);
         assertEquals(2, game.getHistory().size());
@@ -155,14 +155,14 @@ public class HistoryServiceTest extends MindbugGameTest {
         compareCard(sourceCard, historyEntry.getSource());
         compareCard(targets.getFirst(), historyEntry.getTargets().getFirst());
         assertNotNull(historyEntry.getData());
-        assertEquals(game.getOpponent().getUuid(), historyEntry.getData().get("playerToChoose"));
+        assertEquals(game.getOpponents().getFirst().getUuid(), historyEntry.getData().get("playerToChoose"));
         assertEquals(ChoiceType.HUNTER.name(), historyEntry.getData().get("type"));
     }
 
     @Test
     public void logChoice_frenzy() {
-        sourceCard.setOwner(game.getOpponent());
-        game.setChoice(new FrenzyAttackChoice(sourceCard));
+        sourceCard.setOwner(game.getOpponents().getFirst());
+        game.setChoice(new FrenzyAttackChoice(game.getOpponents().getFirst(), sourceCard));
 
         HistoryService.logChoice(game);
         assertEquals(2, game.getHistory().size());
@@ -173,13 +173,13 @@ public class HistoryServiceTest extends MindbugGameTest {
         compareCard(sourceCard, historyEntry.getSource());
         assertTrue(historyEntry.getTargets().isEmpty());
         assertNotNull(historyEntry.getData());
-        assertEquals(game.getOpponent().getUuid(), historyEntry.getData().get("playerToChoose"));
+        assertEquals(game.getOpponents().getFirst().getUuid(), historyEntry.getData().get("playerToChoose"));
         assertEquals(ChoiceType.FRENZY.name(), historyEntry.getData().get("type"));
     }
 
     @Test
     public void logChoice_boolean() {
-        game.setChoice(new BooleanChoice(game.getOpponent(), sourceCard, (_, _) -> {
+        game.setChoice(new BooleanChoice(game.getOpponents().getFirst(), sourceCard, (_, _) -> {
         }, targets.getFirst()));
 
         HistoryService.logChoice(game);
@@ -191,13 +191,13 @@ public class HistoryServiceTest extends MindbugGameTest {
         compareCard(sourceCard, historyEntry.getSource());
         compareCard(targets.getFirst(), historyEntry.getTargets().getFirst());
         assertNotNull(historyEntry.getData());
-        assertEquals(game.getOpponent().getUuid(), historyEntry.getData().get("playerToChoose"));
+        assertEquals(game.getOpponents().getFirst().getUuid(), historyEntry.getData().get("playerToChoose"));
         assertEquals(ChoiceType.BOOLEAN.name(), historyEntry.getData().get("type"));
     }
 
     @Test
     public void logChoice_target() {
-        game.setChoice(new TargetChoice(game.getOpponent(), sourceCard, (_, _) -> {
+        game.setChoice(new TargetChoice(game.getOpponents().getFirst(), sourceCard, (_, _) -> {
         }, 1, new HashSet<>(targets)));
 
         HistoryService.logChoice(game);
@@ -209,7 +209,7 @@ public class HistoryServiceTest extends MindbugGameTest {
         compareCard(sourceCard, historyEntry.getSource());
         compareCard(targets.getFirst(), historyEntry.getTargets().getFirst());
         assertNotNull(historyEntry.getData());
-        assertEquals(game.getOpponent().getUuid(), historyEntry.getData().get("playerToChoose"));
+        assertEquals(game.getOpponents().getFirst().getUuid(), historyEntry.getData().get("playerToChoose"));
         assertEquals(1, historyEntry.getData().get("targetsCount"));
         assertEquals(ChoiceType.TARGET.name(), historyEntry.getData().get("type"));
     }

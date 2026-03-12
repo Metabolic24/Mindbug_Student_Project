@@ -1,10 +1,8 @@
 package org.metacorp.mindbug.app;
 
 import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.utils.AiUtils;
@@ -19,23 +17,29 @@ import java.util.Random;
 public class AutoApp {
 
     private static final Random RND = new Random();
+    private static final String MODE_2V2 = "2v2";
 
-    static void main() {
-        PlayerService playerService = new PlayerService();
-        Game game = AppUtils.startGame(playerService);
-        start(game);
+    public static void main() {
+        main(new String[0]);
     }
 
-    /**
-     * Start the given game <br>
-     * Separated method to ease unit testing
-     * @param game the game to start
-     */
-    public static void start(Game game) {
+    public static void main(String[] args) {
+        PlayerService playerService = new PlayerService();
+        boolean is2v2 = false;
+        if (args != null && args.length > 0 && args[0] != null) {
+            switch (args[0].toLowerCase()) {
+                case MODE_2V2 -> is2v2 = true;
+                default -> System.out.printf("Mode inconnu '%s', démarrage en 1v1.%n", args[0]);
+            }
+        }
+        Game game = is2v2
+                ? AppUtils.start2v2Game(playerService, true)
+                : AppUtils.startGame(playerService, true);
+
         AppUtils.runAndCheckErrors(game, () -> {
-            do {
+            do {// play the turn of the current player 
                 resolveTurn(game);
-            } while (!game.isFinished());
+            } while (!game.isFinished());//repeat while the game is not finished
         });
     }
 
@@ -45,7 +49,7 @@ public class AutoApp {
      * @param game the current game
      * @throws GameStateException if the game reaches an inconsistant state
      */
-    private static void resolveTurn(Game game) throws GameStateException, WebSocketException {
+    private static void resolveTurn(Game game) throws GameStateException {
         Player currentPlayer = game.getCurrentPlayer();
         List<CardInstance> availableCards = currentPlayer.getBoard().stream().filter(CardInstance::isAbleToAttack).toList();
 
@@ -76,9 +80,9 @@ public class AutoApp {
      *
      * @param game the current game
      */
-    private static void resolveChoices(Game game) throws GameStateException, WebSocketException {
+    private static void resolveChoices(Game game) throws GameStateException {
         while (game.getChoice() != null && !game.isFinished()) {
-            AiUtils.resolveChoice(game, (AiPlayer) game.getChoice().getPlayerToChoose());
+            AiUtils.resolveChoice(game);
         }
     }
 }

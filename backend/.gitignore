@@ -2,6 +2,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+*.class
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
@@ -39,4 +40,3 @@ build/
 
 ### Specific to the App ###
 log/
-test-log/

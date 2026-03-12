@@ -1,7 +1,6 @@
 package org.metacorp.mindbug.service.game;
 
 import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -23,9 +22,8 @@ public class ActionService {
      * @param card the card whose action should be resolved
      * @param game the current game state
      * @throws GameStateException if game state appears to be inconsistent before processing
-     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
-    public static void resolveAction(CardInstance card, Game game) throws GameStateException, WebSocketException {
+    public static void resolveAction(CardInstance card, Game game) throws GameStateException {
         if (game.getPlayedCard() != null) {
             throw new GameStateException("a played card needs to be resolved before attacking",
                     Map.of("playedCard", game.getPlayedCard()));

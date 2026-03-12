@@ -1,7 +1,6 @@
 package org.metacorp.mindbug.app;
 
 import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 
 /**
  * Interface for Mindbug game engine
@@ -13,5 +12,5 @@ public interface GameEngine {
      *
      * @throws GameStateException if the game reaches an inconsistant state
      */
-    void run() throws GameStateException, WebSocketException;
+    void run() throws GameStateException;
 }

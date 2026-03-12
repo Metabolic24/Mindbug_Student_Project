@@ -1,3 +1,4 @@
+
 package org.metacorp.mindbug.service.effect.impl;
 
 import org.metacorp.mindbug.model.Game;
@@ -9,7 +10,8 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
-import org.metacorp.mindbug.utils.CardUtils;
+import org.metacorp.mindbug.service.game.CardService;
+import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,9 +20,6 @@ import java.util.List;
 import java.util.Set;
 
 import static org.metacorp.mindbug.service.game.CardService.defeatCard;
-import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
-import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
-import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 /**
  * Effect resolver for DestroyEffect
@@ -30,81 +29,120 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
     /**
      * Constructor
      *
-     * @param effect       the effect to be resolved
-     * @param effectSource the card which owns the effect
+     * @param effect the effect to be resolved
      */
-    public DestroyEffectResolver(DestroyEffect effect, CardInstance effectSource) {
-        super(effect, effectSource);
+    public DestroyEffectResolver(DestroyEffect effect) {
+        super(effect);
     }
 
     @Override
-    public void apply(Game game, EffectTiming timing) {
+    public void apply(Game game, CardInstance card, EffectTiming timing) {
         Integer value = effect.getValue();
         Integer min = effect.getMin();
         Integer max = effect.getMax();
         boolean selfAllowed = effect.isSelfAllowed();
-        boolean allies = effect.isAllies();
+        boolean alliesAffected = effect.isAllies();
 
-        Player sourceOwner = effectSource.getOwner();
-        Player opponent = sourceOwner.getOpponent(game.getPlayers());
+        Player currentPlayer = card.getOwner();
+       
+        List<CardInstance> opponentCards = new ArrayList<>();
+        for (Player opponents: currentPlayer.getOpponents(game.getPlayers())) {
+            opponentCards.addAll(opponents.getBoard());
+        }
 
-        if (effect.isLessAllies() && !(sourceOwner.getBoard().size() < opponent.getBoard().size())) {
+        if (effect.isLessAllies() && !(currentPlayer.getBoard().size() < opponentCards.size())) {
             return;
         }
-
         if (effect.isItself()) {
-            destroyCards(game, Collections.singletonList(effectSource));
+            destroyCards(game, Collections.singletonList(card));
         } else if (effect.isLowest()) {
-            Set<Player> affectedPlayers = selfAllowed ? new HashSet<>(game.getPlayers()) : Collections.singleton(opponent);
-            destroyCards(game, CardUtils.getLowestCards(affectedPlayers));
-        } else {
-            List<CardInstance> availableCards = new ArrayList<>();
+                Set<Player> affectedPlayers = new HashSet<>();
 
-            if (!allies) {
-                for (CardInstance currentCard : opponent.getBoard()) {
-                    if (min != null && currentCard.getPower() < min
-                            || max != null && currentCard.getPower() > max) {
+                // all opponents
+                affectedPlayers.addAll(currentPlayer.getOpponents(game.getPlayers()));
+
+                // A destroy effect can be self-inflicted.
+                if (selfAllowed) {
+                    affectedPlayers.add(currentPlayer);
+                    Player allyPlayer = currentPlayer.getAlly(game.getPlayers()) ;
+                    if (allyPlayer != null) {
+                        affectedPlayers.add(allyPlayer);
+                    }
+                    
+                }
+
+                destroyCards(game, CardService.getLowestCards(affectedPlayers));
+            } 
+            else {
+                List<CardInstance> availableCards = new ArrayList<>();
+
+            if (!alliesAffected) {
+                for (CardInstance currentCard : opponentCards) {
+                    if (min != null && currentCard.getPower() < min ||
+                            max != null && currentCard.getPower() > max) {
                         continue;
                     }
 
-                    availableCards.add(currentCard);
-                }
-            }
-
-            if (allies || selfAllowed) {
-                for (CardInstance currentCard : effectSource.getOwner().getBoard()) {
-                    if (min != null && currentCard.getPower() < min
-                            || max != null && currentCard.getPower() > max) {
-                        continue;
+                        availableCards.add(currentCard);
                     }
-
-                    availableCards.add(currentCard);
                 }
-            }
 
-            if (!availableCards.isEmpty()) {
-                if (availableCards.size() <= value || value < 0) {
-                    destroyCards(game, availableCards);
-                } else {
-                    game.setChoice(new TargetChoice(sourceOwner, effectSource, this, value, new HashSet<>(availableCards)));
-                    game.getLogger().debug("Player {} must choose {} card(s) to destroy (available targets : {})",
-                            getLoggablePlayer(sourceOwner), value, getLoggableCards(availableCards));
+                if (alliesAffected|| selfAllowed) {
+                    for (CardInstance currentCard : card.getOwner().getBoard()) {
+                        if (min != null && currentCard.getPower() < min
+                                || max != null && currentCard.getPower() > max) {
+                            continue;
+                        }
+
+                        availableCards.add(currentCard);
+                    }
+                    //if selfAllowed, target my allies
+                    Player my_allie = currentPlayer.getAlly(game.getPlayers()) ;
+                        if (my_allie!=null) {
+                            for (CardInstance currentCard : my_allie.getBoard()) {
+                                if (min != null && currentCard.getPower() < min ||
+                                        max != null && currentCard.getPower() > max) {
+                                    continue;
+                                }
+
+                                availableCards.add(currentCard);
+                            }
+                        }
+                    
                 }
+
+                if (!availableCards.isEmpty()) {
+                    if (availableCards.size() <= value || value < 0) {
+                        destroyCards(game, availableCards);
+                    } else {
+                        game.setChoice(new TargetChoice(currentPlayer, card, this, value, new HashSet<>(availableCards)));
+                    }
+                }
+                //if selfAllowed, target my allies
+                Player my_allie = currentPlayer.getAlly(game.getPlayers()) ;
+                    if (my_allie!=null) {
+                        for (CardInstance currentCard : my_allie.getBoard()) {
+                            if (min != null && currentCard.getPower() < min ||
+                                    max != null && currentCard.getPower() > max) {
+                                continue;
+                            }
+
+                            availableCards.add(currentCard);
+                        }
+                    }
+                
             }
-        }
     }
 
     private void destroyCards(Game game, List<CardInstance> cards) {
-        String loggableEffectSource = getLoggableCard(effectSource);
         for (CardInstance card : cards) {
-            game.getLogger().debug("{} effect destroys {}", loggableEffectSource, getLoggableCard(card));
             defeatCard(card, game);
         }
 
         HistoryService.logEffect(game, effect.getType(), effectSource, cards);
     }
 
-    @Override
+ 
     public void resolve(Game game, List<CardInstance> chosenTargets) {
         destroyCards(game, chosenTargets);
     }
