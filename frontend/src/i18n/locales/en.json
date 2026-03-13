@@ -241,7 +241,7 @@
     },
     "34": {
       "name": "Count Draculeech",
-      "description": "<b>Attaque</b>: You lose 1 life point. Defeat a creature"
+      "description": "<b>Attack</b>: You lose 1 life point. Defeat a creature"
     },
     "35": {
       "name": "Creep From The Deep",
@@ -434,6 +434,54 @@
     "82": {
       "name": "Oakenmaster",
       "description": "Other allied creatures have <b>+5</b> power."
+    }
+  },
+  "card_preview": {
+    "unknown_card": "Unknown card",
+    "card_number": "Card #{id}",
+    "sections": {
+      "power": "Power",
+      "evolution": "Evolution",
+      "keywords": "Keywords",
+      "activation": "Activation"
+    },
+    "power": {
+      "base": "Base"
+    },
+    "keywords": {
+      "none": "No keywords.",
+      "tough_used": "(TOUGH effect already used.)"
+    },
+    "activation": {
+      "none": "No activation listed."
+    },
+    "evolution": {
+      "from": "Evolves from {name}.",
+      "into": "Evolves into {name}."
+    },
+    "activation_names": {
+      "PLAY": "Play",
+      "ATTACK": "Attack",
+      "PASSIVE": "Passive",
+      "ACTION": "Action",
+      "DEFEATED": "Defeated",
+      "LIFE_LOST": "Life Lost"
+    },
+    "activation_labels": {
+      "PLAY": "This effect triggers when the card is played.",
+      "ATTACK": "This effect triggers when the card declares an attack.",
+      "PASSIVE": "This effect is always active while the card is in play.",
+      "ACTION": "This effect can be activated by its controller during their turn.",
+      "DEFEATED": "This effect triggers when the card is defeated.",
+      "LIFE_LOST": "This effect triggers when a player loses life."
+    },
+    "keyword_descriptions": {
+      "SNEAKY": "It can only be blocked by a card with SNEAKY.",
+      "POISONOUS": "It destroys any card it attacks or blocks.",
+      "FRENZY": "After dealing damage, it may attack again.",
+      "HUNTER": "It can choose a target to attack.",
+      "TOUGH": "The first time it would be destroyed, it survives.",
+      "default": "Special effect."
     }
   },
   "router": {

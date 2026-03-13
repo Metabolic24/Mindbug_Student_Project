@@ -13,6 +13,7 @@ interface Props {
   attackingCard: CardInterface
 }
 const props = defineProps<Props>()
+const emit = defineEmits(['card-preview'])
 
 // Computed value for the message
 const message = computed(() => {
@@ -79,6 +80,7 @@ const imgSrc = computed(() => {
       :attacking="false"
       :clickable="false"
       class="middle-card"
+      @preview="emit('card-preview', $event)"
     />
 
     <span>{{ message ? t(message) : "" }}</span>

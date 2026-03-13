@@ -18,8 +18,7 @@ interface Props {
 
 // Define props and emits
 const props = defineProps<Props>()
-const emit = defineEmits(['click'])
-
+const emit = defineEmits(['click', 'preview'])
 
 // to get the keyword Icons
 const keywordIcons: Record<string, string> = {
@@ -29,6 +28,15 @@ const keywordIcons: Record<string, string> = {
   SNEAKY: new URL('@/assets/cards/KeywordIcons/SNEAKY.png', import.meta.url).href,
   TOUGH: new URL('@/assets/cards/KeywordIcons/TOUGH.png', import.meta.url).href,
 }
+
+const cardName = computed(() => {
+  const key = `cards.${props.card.id}.name`
+  const translated = t(key)
+  if (translated !== key) {
+    return translated
+  }
+  return props.card.name ?? t("card_preview.unknown_card")
+})
 
 const displayKeywords = computed(() => {
   if (!props.card.keywords) return []
@@ -64,7 +72,7 @@ const cardClasses = computed(() => ({
   'selected': props.selected,
   'attacking': props.attacking,
   'clickable': props.clickable,
-  'TOUGH': props.context === 'board' && props.card.keywords?.includes('TOUGH') && props.card.stillTough
+  'TOUGH': (props.context === 'player-board' || props.context ==='opponent-board') && props.card.keywords?.includes('TOUGH') && props.card.stillTough
 }))
 
 // Determine if the power overlay should be shown on the opponent's hand
@@ -72,12 +80,17 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 </script>
 
 <template>
-  <div class="card-wrapper" :class="cardClasses" @click="clickable && emit('click', props.card)">
+  <div
+    class="card-wrapper"
+    :class="cardClasses"
+    @click="clickable && emit('click', card)"
+    @contextmenu.prevent.stop="props.context !== 'opponent-hand' && emit('preview', card)"
+  >
     <!-- Card image -->
     <img :src="getCardImage(card.id)" :alt="t(getCardAlt(card))" class="card-image" draggable="false" @contextmenu.prevent/>
 
     <div v-if="showOverlay" class="title-banner">
-      <div class="title-text">{{ props.card.name }}</div>
+      <div class="title-text">{{ cardName }}</div>
     </div>
     <div v-if="showOverlay && displayKeywords.length" class="keywords-row">
       <div v-for="keyword in displayKeywords" :key="keyword.key" class="keyword-badge">

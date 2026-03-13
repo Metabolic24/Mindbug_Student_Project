@@ -241,7 +241,7 @@
     },
     "34": {
       "name": "Comte Sangsula",
-      "description": "<b>Attack</b> : Perdez 1 PV. Détruisez une créature"
+      "description": "<b>Attaque</b> : Perdez 1 PV. Détruisez une créature"
     },
     "35": {
       "name": "Méduse squelettique",
@@ -434,6 +434,54 @@
     "82": {
       "name": "Maître Chêne",
       "description": "Les autres créatures alliées gagnent <b>+5</b> en puissance"
+    }
+  },
+  "card_preview": {
+    "unknown_card": "Carte inconnue",
+    "card_number": "Carte n°{id}",
+    "sections": {
+      "power": "Puissance",
+      "evolution": "Évolution",
+      "keywords": "Mots-clés",
+      "activation": "Activation"
+    },
+    "power": {
+      "base": "Base"
+    },
+    "keywords": {
+      "none": "Aucun mot-clé.",
+      "tough_used": "(Effet CORIACE déjà utilisé.)"
+    },
+    "activation": {
+      "none": "Aucune activation indiquée."
+    },
+    "evolution": {
+      "from": "Évolue depuis {name}.",
+      "into": "Évolue en {name}."
+    },
+    "activation_names": {
+      "PLAY": "Jouer",
+      "ATTACK": "Attaque",
+      "PASSIVE": "Passif",
+      "ACTION": "Action",
+      "DEFEATED": "Détruit",
+      "LIFE_LOST": "PV perdus"
+    },
+    "activation_labels": {
+      "PLAY": "Cet effet se déclenche quand la carte est jouée.",
+      "ATTACK": "Cet effet se déclenche quand la carte déclare une attaque.",
+      "PASSIVE": "Cet effet est actif tant que la carte est en jeu.",
+      "ACTION": "Cet effet peut être activé par son contrôleur pendant son tour.",
+      "DEFEATED": "Cet effet se déclenche quand la carte est détruite.",
+      "LIFE_LOST": "Cet effet se déclenche quand un joueur perd des PV."
+    },
+    "keyword_descriptions": {
+      "SNEAKY": "Ne peut être bloquée que par une carte avec FURTIF.",
+      "POISONOUS": "Détruit toute carte qu'elle attaque ou bloque.",
+      "FRENZY": "Après avoir infligé des dégâts, elle peut attaquer à nouveau.",
+      "HUNTER": "Peut choisir une cible à attaquer.",
+      "TOUGH": "La première fois qu'elle devrait être détruite, elle survit.",
+      "default": "Effet spécial."
     }
   },
   "router": {
