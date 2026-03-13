@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Board from "@/components/game/board/Board.vue";
+import BoardTeam from "@/components/game/board/BoardTeam.vue";
 import Hand from "@/components/game/Hand.vue";
 import PlayerDetails from "@/components/game/PlayerDetails.vue";
 import TeamDetails from "@/components/game/TeamDetails.vue";
@@ -39,7 +39,7 @@ const props = defineProps<Props>();
 
         <!-- BOARD (MILIEU) -->
         <div class="board-area">
-            board
+            <BoardTeam/>
         </div>
 
         <!-- BOTTOM ROW -->
@@ -72,14 +72,6 @@ const props = defineProps<Props>();
 
   background-image: url("../../assets/playmats/default.png");
   background-size: cover;
-}
-.leave-button {
-  width: 2vw;
-  height: 4vh;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  border-radius: 25px;
-  transition: background-color 0.3s, transform 0.2s;
 }
 
 /* ROWS */

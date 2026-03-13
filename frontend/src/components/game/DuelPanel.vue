@@ -22,14 +22,14 @@ const props = defineProps<Props>();
   <div class="container-fluid game">
     <div class="row top-row">
       <div class="col-2 player-container">
-        <player-details :name="props.gameState?.opponent?.name" 
-                        :life-points="props.gameState?.opponent?.lifePoints"
-                        :draw-pile-count="props.gameState?.opponent?.drawPileCount"
-                        :mindbug-count="props.gameState?.opponent?.mindbugCount">
+        <player-details :name="props.gameState?.opponents[0].name" 
+                        :life-points="props.gameState?.opponents[0].lifePoints"
+                        :draw-pile-count="props.gameState?.opponents[0].drawPileCount"
+                        :mindbug-count="props.gameState?.opponents[0].mindbugCount">
         </player-details>
       </div>
       <div class="col-8">
-        <hand :cards="props.gameState?.opponent?.hand" :opponent="true" :selected-card="props.selectedCard"></hand>
+        <hand :cards="props.gameState?.opponents[0].hand" :opponent="true" :selected-card="props.selectedCard"></hand>
       </div>
     </div>
 
