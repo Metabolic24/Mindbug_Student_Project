@@ -20,6 +20,7 @@ import {useRouter} from "vue-router";
 // Declare the interface for the data given by the parent component
 interface Props {
   gameId: string;
+  mode: string;
 }
 
 const props = defineProps<Props>()
@@ -249,46 +250,51 @@ async function onLeaveButtonClick() {
 </script>
 
 <template>
-  <div v-if="gameState" class="container-fluid game">
-    <div class="row top-row">
-      <div class="col-2 player-container">
-        <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
-                        :draw-pile-count="gameState?.opponent?.drawPileCount"
-                        :mindbug-count="gameState?.opponent?.mindbugCount">
-        </player-details>
+  <div v-if="gameState">
+    <div v-if="props.mode === 'duel'" class="container-fluid game">
+      <div class="row top-row">
+        <div class="col-2 player-container">
+          <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
+                          :draw-pile-count="gameState?.opponent?.drawPileCount"
+                          :mindbug-count="gameState?.opponent?.mindbugCount">
+          </player-details>
+        </div>
+        <div class="col-8">
+          <hand :cards="gameState?.opponent?.hand" :opponent=true :selected-card="selectedCard"></hand>
+        </div>
+        <div class="col-2 top-buttons">
+          <button type="button" class="leave-button" @click="onLeaveButtonClick()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+              <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"></path>
+              <path
+                  d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"></path>
+            </svg>
+          </button>
+        </div>
       </div>
-      <div class="col-8">
-        <hand :cards="gameState?.opponent?.hand" :opponent=true :selected-card="selectedCard"></hand>
-      </div>
-      <div class="col-2 top-buttons">
-        <button type="button" class="leave-button" @click="onLeaveButtonClick()">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
-            <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"></path>
-            <path
-                d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"></path>
-          </svg>
-        </button>
+
+      <board :game-state="gameState" :selected-card="selectedCard" :picked-card="pickedCard"
+            :attacking-card="attackingCard" @button-clicked="onActionButtonClick($event)"
+            @card-selected="onCardSelected($event, 'Board')">
+      </board>
+
+      <div class="row bottom-row">
+        <div class="col-2 player-container">
+          <player-details :name="gameState?.player?.name" :life-points="gameState?.player?.lifePoints"
+                          :draw-pile-count="gameState?.player?.drawPileCount"
+                          :mindbug-count="gameState?.player?.mindbugCount">
+          </player-details>
+        </div>
+        <div class="col-8">
+          <hand :cards="gameState?.player?.hand" :opponent=false :selected-card="selectedCard"
+                @card-selected="onCardSelected($event, 'Hand')"></hand>
+        </div>
+        <div class="col-2"></div>
       </div>
     </div>
 
-    <board :game-state="gameState" :selected-card="selectedCard" :picked-card="pickedCard"
-           :attacking-card="attackingCard" @button-clicked="onActionButtonClick($event)"
-           @card-selected="onCardSelected($event, 'Board')">
-    </board>
 
-    <div class="row bottom-row">
-      <div class="col-2 player-container">
-        <player-details :name="gameState?.player?.name" :life-points="gameState?.player?.lifePoints"
-                        :draw-pile-count="gameState?.player?.drawPileCount"
-                        :mindbug-count="gameState?.player?.mindbugCount">
-        </player-details>
-      </div>
-      <div class="col-8">
-        <hand :cards="gameState?.player?.hand" :opponent=false :selected-card="selectedCard"
-              @card-selected="onCardSelected($event, 'Hand')"></hand>
-      </div>
-      <div class="col-2"></div>
-    </div>
+    <div v-if="props.mode === 'team'" class="container-fluid game">Team</div>
   </div>
   
   <div v-else-if="error" class="error-page">

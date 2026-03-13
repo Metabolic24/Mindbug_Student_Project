@@ -22,7 +22,7 @@ const routes = [
         path: '/game',
         name: 'Game',
         component: () => import('@/components/game/Game.vue'),
-        props: route => ({gameId: route.query.gameId}),
+        props: route => ({gameId: route.query.gameId,mode: route.query.mode}),
     }
 ];
 
