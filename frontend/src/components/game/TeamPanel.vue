@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Board from "@/components/game/board/Board.vue";
+import BoardTeam from "@/components/game/board/BoardTeam.vue";
 import Hand from "@/components/game/Hand.vue";
 import PlayerDetails from "@/components/game/PlayerDetails.vue";
 import {Ref} from "vue";
@@ -20,7 +20,37 @@ const props = defineProps<Props>();
 
 <template>
     <div class="container-fluid game">
-        TEAM
+        <!-- TOP ROW -->
+        <div class="top-row">
+            <div class="discard top-left-discard">discard</div>
+            <div class="hand top-hand-left">hand</div>
+
+            <div class="team-details top-team">
+                Teamdétail
+            </div>
+            <div class="hand top-hand-right">hand</div>
+            <div class="discard top-right-discard">discard</div>
+        </div>
+
+        <!-- BOARD (MILIEU) -->
+        <div class="board-area">
+            <BoardTeam/>
+        </div>
+
+        <!-- BOTTOM ROW -->
+        <div class="bottom-row">
+
+            <div class="discard bottom-left-discard">discard</div>
+            <div class="hand bottom-hand-left">hand</div>
+
+            <div class="team-details bottom-team">
+                Teamdétail
+            </div>
+
+            <div class="hand bottom-hand-right">hand</div>
+            <div class="discard bottom-right-discard">discard</div>
+
+        </div>
     </div>
 </template>
 
@@ -28,20 +58,115 @@ const props = defineProps<Props>();
 .game {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  background-image: url("../../assets/playmats/default.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
   height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  background-image: url("../../assets/playmats/default.png");
+  background-size: cover;
 }
-.leave-button {
-  width: 2vw;
-  height: 4vh;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  border-radius: 25px;
-  transition: background-color 0.3s, transform 0.2s;
+
+/* ROWS */
+
+.top-row,
+.bottom-row {
+  position: relative;
+  height: 18vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+/* BOARD */
+
+.board-area {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HANDS */
+
+.hand {
+  flex: 1;
+  height: 100%;
+
+  margin: 0 10px;
+
+  border: 2px solid grey;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1;
+}
+
+/* TEAM DETAILS */
+
+.team-details {
+  position: absolute;
+
+  width: 100%;
+  height: 13vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid blue;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+.team-details * {
+  pointer-events: auto;
+}
+.top-team{
+    top: 0%;
+}
+.bottom-team{
+    bottom: 0%;
+}
+
+/* DISCARD */
+
+.discard {
+  position: absolute;
+
+  width: 8vw;
+  height: 11vw;
+
+  background: rgba(255,255,0,0.25);
+  border: 2px solid yellow;
+
+  z-index: 3;
+}
+
+.top-left-discard {
+  top: 50%;
+  transform: translateY(-40%);
+}
+
+.top-right-discard {
+  right: 0px;
+  top: 50%;
+  transform: translateY(-40%);
+}
+
+.bottom-left-discard {
+  top: 50%;
+  transform: translateY(-60%);
+}
+
+.bottom-right-discard {
+  right: 0px;
+  top: 50%;
+  transform: translateY(-60%);
 }
 </style>
