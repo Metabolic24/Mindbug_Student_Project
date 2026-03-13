@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // Declare the interface for the data given by the parent component
 import {computed} from "vue";
-import {getCardImage} from "@/shared/CardUtils";
 import Card from "../Card.vue";
 
 // Declare the interface for the data given by the parent component
@@ -12,6 +11,7 @@ interface Props {
   attackingCard: CardInterface
 }
 const props = defineProps<Props>()
+const emit = defineEmits(['card-preview'])
 
 // Computed value for the message
 const message = computed(() => {
@@ -81,6 +81,7 @@ const imgSrc = computed(() => {
       :attacking="false"
       :clickable="false"
       class="middle-card"
+      @preview="emit('card-preview', $event)"
     />
 
     <span>{{ message }}</span>

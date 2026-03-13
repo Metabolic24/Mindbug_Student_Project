@@ -48,6 +48,19 @@ public final class SetUtils {
         return fileCards.stream().map(Card::getId).collect(Collectors.toList());
     }
 
+    public static List<Card> getCardSetCards(String setName) {
+        List<Card> fileCards = loadCardsFromConfig(setName);
+        fileCards.forEach(card -> card.setSetName(setName));
+        return fileCards;
+    }
+
+    public static Card getCardById(String setName, int cardId) {
+        return getCardSetCards(setName).stream()
+                .filter(card -> card.getId() == cardId)
+                .findFirst()
+                .orElse(null);
+    }
+
     public static List<CardInstance> getCardsFromConfig(String setName) {
         List<Card> fileCards = loadCardsFromConfig(setName);
 
