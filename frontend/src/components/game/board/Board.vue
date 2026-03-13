@@ -94,7 +94,7 @@ function closeModal() {
         />
       </div>
     </div>
-    <div class="col-2">
+    <div class="col-2 board-buttons-col">
       <board-buttons :game-state="gameState" :picked-card="pickedCard" :attacking-card="attackingCard"
                      :selected-card="selectedCard" @button-clicked="emit('button-clicked', $event)"></board-buttons>
     </div>
@@ -114,10 +114,23 @@ function closeModal() {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .discards {
   justify-content: space-around;
+}
+
+.board-buttons-col {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: auto;
+  padding-right: 0;
+  padding-bottom: 0;
 }
 
 .cards {

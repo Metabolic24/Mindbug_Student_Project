@@ -88,6 +88,26 @@ const isChoiceModalVisible = computed(() => {
       game.choice?.playerToChoose === game.player.uuid
 })
 
+const hasDefenseDecision = computed(() => {
+  return !!(pickedCard.value || attackingCard.value);
+})
+
+const isPlayerActive = computed(() => {
+  const game: GameStateInterface = gameState.value;
+  if (!game) return false;
+  if (game.choice) return game.choice.playerToChoose === game.player.uuid;
+  if (hasDefenseDecision.value) return !game.playerTurn;
+  return game.playerTurn;
+})
+
+const isOpponentActive = computed(() => {
+  const game: GameStateInterface = gameState.value;
+  if (!game) return false;
+  if (game.choice) return game.choice.playerToChoose === game.opponent.uuid;
+  if (hasDefenseDecision.value) return game.playerTurn;
+  return !game.playerTurn;
+})
+
 onMounted(async () => {
   // Initializes the game WebSocket to update game state
   try {
@@ -266,7 +286,8 @@ async function leaveGame() {
       <div class="col-2 player-container">
         <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
                         :draw-pile-count="gameState?.opponent?.drawPileCount"
-                        :mindbug-count="gameState?.opponent?.mindbugCount">
+                        :mindbug-count="gameState?.opponent?.mindbugCount"
+                        :is-active="isOpponentActive">
         </player-details>
       </div>
       <div class="col-8">
@@ -305,7 +326,8 @@ async function leaveGame() {
       <div class="col-2 player-container">
         <player-details :name="gameState?.player?.name" :life-points="gameState?.player?.lifePoints"
                         :draw-pile-count="gameState?.player?.drawPileCount"
-                        :mindbug-count="gameState?.player?.mindbugCount">
+                        :mindbug-count="gameState?.player?.mindbugCount"
+                        :is-active="isPlayerActive">
         </player-details>
       </div>
       <div class="col-8">
