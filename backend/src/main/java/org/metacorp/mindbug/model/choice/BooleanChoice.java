@@ -34,7 +34,7 @@ public class BooleanChoice extends AbstractChoice<Boolean> {
     }
 
     @Override
-    public void resolve(Boolean choice, Game game) {
+    public void resolve(Boolean choice, Game game) throws WebSocketException, GameStateException {
         ChoiceUtils.resolveBooleanChoice(choice, this, game);
     }
 

@@ -5,7 +5,6 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
@@ -147,12 +146,14 @@ public class PlayCardService {
         // Add PLAY effects (if any) if player is allowed to trigger them
         EffectQueueService.addBoardEffectsToQueue(playedCard, EffectTiming.PLAY, game.getEffectQueue());
 
+        
         game.setAfterEffect(() -> {
-            // Reset the played card value
-            game.setPlayedCard(null);
-
-            // Start a new turn but only changes current player if card has not been mindbugged
-            GameStateService.newTurn(game, mindbugger != null);
-        });
+            try {
+                game.setPlayedCard(null);
+                GameStateService.newTurn(game, mindbugger != null);
+            } catch (GameStateException | WebSocketException e) {
+                throw new RuntimeException(e);
+            }
+});
     }
 }

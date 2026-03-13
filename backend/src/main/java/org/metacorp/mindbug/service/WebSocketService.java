@@ -55,15 +55,15 @@ public class WebSocketService {
      * @param eventType the event type
      * @param game      the current game
      */
-    public static void sendGameEvent(WsGameEventType eventType, Game game) {
+    public static void sendGameEvent(WsGameEventType eventType, Game game) throws WebSocketException {
         if (game.isWebSocketUp()) {
             try (GameWebSocketClient client = new GameWebSocketClient(GAME_WS_URI + game.getUuid())) {
                 WsGameEvent event = new WsGameEvent(eventType, GameStateMapper.fromGame(game));
                 client.sendMessage(new ObjectMapper().writeValueAsString(event));
             } catch (IOException | URISyntaxException | DeploymentException e) {
-                 String errorMessage = MessageFormat.format("Error while sending game event {0}", eventType.name());
+                String errorMessage = MessageFormat.format("Error while sending game event {0}", eventType.name());
                 throw new WebSocketException(errorMessage, e);
-                throw new RuntimeException(e);
+                
             }
         }
     }

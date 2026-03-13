@@ -4,7 +4,7 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 
 @FunctionalInterface
-public interface AfterEffectInterface {
+interface AfterEffectInterface {
 
     void run() throws GameStateException, WebSocketException;
 }

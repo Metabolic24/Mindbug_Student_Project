@@ -1,6 +1,6 @@
 package org.metacorp.mindbug.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 import org.metacorp.mindbug.mapper.HistoryMapper;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -17,16 +17,9 @@ import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
 import org.slf4j.Logger;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.FileAlreadyExistsException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Date;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -98,17 +91,26 @@ public class HistoryService {
             case BOOLEAN -> {
                 BooleanChoice choice = (BooleanChoice) game.getChoice();
                 sourceCard = choice.getSourceCard();
-                targets = Collections.singleton(choice.getCard());
+
+                String targetAsString = "";
+                if (choice.getCard() != null) {
+                    targets = Collections.singleton(choice.getCard());
+                    targetAsString = choice.getCard().getUuid().toString();
+                }
+
+                
                 data.put("playerToChoose", choice.getPlayerToChoose().getUuid());
-                 game.getLogger().info("New {} choice to be resolved by {} (target : {})", choiceType.name(),
+
+                game.getLogger().info("New {} choice to be resolved by {} (target : {})", choiceType.name(),
                         getLoggablePlayer(choice.getPlayerToChoose()), targetAsString);
             }
             case HUNTER -> {
-                HunterChoice choice = (HunterChoice) game.getChoice();
+               HunterChoice choice = (HunterChoice) game.getChoice();
                 sourceCard = choice.getAttackingCard();
                 targets = choice.getAvailableTargets();
                 data.put("playerToChoose", sourceCard.getOwner().getUuid());
-                ame.getLogger().info("New {} choice to be resolved by {} (attackingCard : {}, targets : {})", choiceType.name(),
+
+                game.getLogger().info("New {} choice to be resolved by {} (attackingCard : {}, targets : {})", choiceType.name(),
                         getLoggablePlayer(sourceCard.getOwner()), getLoggableCard(sourceCard), getLoggableCards(targets));
             }
             default -> {
@@ -143,27 +145,13 @@ public class HistoryService {
     }
 
     public static void saveHistory(Game game) {
-        log(game, HistoryKey.END, null, null, Map.of("winner", game.getWinner().getUuid()));
+        for ( Player player : game.getPlayers()) {
+              log(game, HistoryKey.END, null, null, Map.of("winner", player.getUuid()));
+              
+        }     
         game.getLogger().info("End of the game");
-        log(game, HistoryKey.END, null, null, Map.of("winner", game.getWinners().getFirst().getUuid()));
+     
 
-        String now = new SimpleDateFormat("yyyyMMdd'T'HHmmss").format(new Date());
-
-        try {
-            Path filePath = Path.of("./log/" + game.getUuid() + "_" + now + ".log");
-            Files.createDirectories(filePath.getParent());
-            File createdFile = Files.createFile(filePath).toFile();
-
-            try (FileWriter fileWriter = new FileWriter(createdFile)) {
-                ObjectMapper objectMapper = new ObjectMapper();
-                objectMapper.writerWithDefaultPrettyPrinter().writeValue(fileWriter, game.getHistory());
-            }
-        } catch (FileAlreadyExistsException e) {
-            // Ignore this error as it may not happen or it is not that important
-        } catch (IOException e) {
-            e.printStackTrace();
-            // TODO Manage errors
-        }
     }
 
     /**

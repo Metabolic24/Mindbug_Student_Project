@@ -65,7 +65,7 @@ public final class AppUtils {
         PlayerLightDTO player3 = playerService.createPlayer("Player3");
         PlayerLightDTO player4 = playerService.createPlayer("Player4");
 
-        Game game = StartService.newGame(new Player(player1), new Player(player2), new Player(player3), new Player(player4));
+        Game game = StartService.startGame(new Player(player1), new Player(player2), new Player(player3), new Player(player4));
 
         for (Player player : game.getPlayers()) {
             AppUtils.detailedSumUpPlayer(player);
@@ -94,7 +94,7 @@ public final class AppUtils {
      * @param scanner the scanner to be used to read standard input (only for manual mode)
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void play(Scanner scanner, Game game) throws GameStateException {
+    public static void play(Scanner scanner, Game game) throws GameStateException,WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
         List<CardInstance> hand = currentPlayer.getHand();
         if (hand.isEmpty()) {
@@ -161,18 +161,22 @@ public final class AppUtils {
      * @param scanner the scanner to be used to read standard input (only for manual mode)
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void resolveAttack(Scanner scanner, Game game) throws GameStateException {
-        Player attackedPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
+    public static void resolveAttack(Scanner scanner, Game game) throws GameStateException, WebSocketException {
+        List<Player> attackedPlayer = game.getAttackingCard().getOwner().getOpponents(game.getPlayers());
 
         List<CardInstance> availableCards = AiUtils.getBlockersList(game);
         if (availableCards.isEmpty()) {
-            System.out.printf("%s ne peut pas défendre\n", attackedPlayer.getName());
+            for (Player player : attackedPlayer) {
+                System.out.printf("%s ne peut pas défendre\n", player.getName());
+            }
+           
             AttackService.resolveAttack(null, game);
         } else {
             // Select a card and block with it
             CardInstance card = (scanner == null) ? AiUtils.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
             if (card != null) {
-                System.out.printf("%s défend avec la carte '%s'\n", attackedPlayer.getName(), card.getCard().getName());
+                
+                System.out.printf("%s défend avec la carte '%s'\n", card.getOwner().getName(), card.getCard().getName());
                 AttackService.resolveAttack(card, game);
             }
         }
@@ -229,10 +233,10 @@ public final class AppUtils {
      * @param game   the game to run
      * @param engine the game engine to use (manual/automatic)
      */
-    public static void runAndCheckErrors(Game game, GameEngine engine) {
+    public static void runAndCheckErrors(Game game, GameEngine engine) throws  GameStateException {
         try {
             engine.run();
-        }catch (GameStateException | WebSocketException e) {
+        }catch (GameStateException e) {
             System.err.println(e.getMessage());
             throw new RuntimeException(e);
         

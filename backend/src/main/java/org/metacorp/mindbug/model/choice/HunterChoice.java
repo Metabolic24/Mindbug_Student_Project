@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NonNull;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
@@ -30,7 +31,7 @@ public class HunterChoice extends AbstractChoice<UUID> {
     }
 
     @Override
-    public void resolve(UUID chosenTargetId, Game game) throws GameStateException {
+    public void resolve(UUID chosenTargetId, Game game) throws WebSocketException, GameStateException {
         ChoiceUtils.resolveHunterChoice(chosenTargetId, this, game);
     }
 

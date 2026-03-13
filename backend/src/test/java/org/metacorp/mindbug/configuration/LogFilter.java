@@ -1,4 +1,4 @@
-@@ -1,15 +0,0 @@
+
 package org.metacorp.mindbug.configuration;
 
 import ch.qos.logback.classic.spi.ILoggingEvent;

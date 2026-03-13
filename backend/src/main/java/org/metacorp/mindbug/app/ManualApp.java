@@ -25,11 +25,11 @@ public class ManualApp {
     private static final String AVAILABLE_ACTIONS = "Actions possibles : play, p, attack, a, sumup, s, details, d, stop, exit\n";
     private static final String MODE_2V2 = "2v2";
 
-    public static void main() {
+    public static void main() throws WebSocketException, GameStateException{
         main(new String[0]);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WebSocketException, GameStateException{
         PlayerService playerService = new PlayerService();
         boolean is2v2 = false;
         if (args != null && args.length > 0 && args[0] != null) {

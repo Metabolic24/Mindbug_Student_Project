@@ -97,9 +97,9 @@ public class BasicAiResolver extends RandomAiResolver {
     @Override
     public boolean shouldAttackAgain(Game game) {
         CardInstance attackingCard = game.getAttackingCard();
-        Player opponent = attackingCard.getOwner().getOpponent(game.getPlayers());
-
-        return CardUtils.noPowerHigher(opponent.getBoard(), attackingCard.getPower());
+        List<Player> opponent = game.getOpponents(game.getPlayers());
+        List<CardInstance> opponentBoard = opponent.stream().flatMap(player -> player.getBoard().stream()).toList();
+        return CardUtils.noPowerHigher(opponentBoard, attackingCard.getPower());
     }
 
     @Override
@@ -138,7 +138,8 @@ public class BasicAiResolver extends RandomAiResolver {
         if (!availableAttackers.isEmpty()) {
             // Attack with the highest card if possible
             CardInstance highestCard = CardUtils.getHighestCards(availableAttackers).getFirst();
-            Player opponent = highestCard.getOwner().getOpponent(game.getPlayers());
+            List<Player> opponents = highestCard.getOwner().getOpponents(game.getPlayers());
+
             if (CardUtils.noPowerHigher(opponent.getBoard(), highestCard.getPower())) {
                 return highestCard;
             }
@@ -181,8 +182,7 @@ public class BasicAiResolver extends RandomAiResolver {
             return null;
         }
 
-        Player opponent = game.getOpponent();
-
+        List<Player> opponent = game.getOpponents(game.getPlayers());
         List<CardInstance> sneakyCards = CardUtils.getKeywordCards(availableCards, CardKeyword.SNEAKY);
         if (!sneakyCards.isEmpty()) {
             List<CardInstance> sneakyHighestPowerCards = CardUtils.getHighestCards(sneakyCards);

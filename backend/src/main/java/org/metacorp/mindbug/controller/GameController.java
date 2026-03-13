@@ -76,7 +76,9 @@ public class GameController {
 
     @POST
     @Path("/surrender")
-    public Response surrender(SurrenderDTO body) {
+    public Response surrender(SurrenderDTO body) throws GameStateException, WebSocketException {
+         
+            
         if (body.getGameId() == null || body.getPlayerId() == null) {
             return Response.status(400).entity("Missing request data").build();
         }
@@ -155,10 +157,10 @@ public class GameController {
         } else if (game.getChoice() == null || game.getChoice().getType() != ChoiceType.BOOLEAN) {
             return Response.status(404).entity("No mindbug choice to resolve").build();
         }
-
+        Player mindbugger = null;
         if (body.getMindbuggerId() != null) {
             try {
-                Player mindbugger = game.getPlayers().stream()
+                mindbugger = game.getPlayers().stream()
                         .filter(player -> player.getUuid().equals(body.getMindbuggerId()))
                         .findFirst().orElseThrow();
                 if (!mindbugger.equals(game.getChoice().getPlayerToChoose())) {

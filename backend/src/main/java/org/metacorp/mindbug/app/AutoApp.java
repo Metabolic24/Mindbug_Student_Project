@@ -21,11 +21,11 @@ public class AutoApp {
     private static final Random RND = new Random();
     private static final String MODE_2V2 = "2v2";
 
-    public static void main() {
+    public static void main() throws WebSocketException,GameStateException {
         main(new String[0]);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WebSocketException,GameStateException {
         PlayerService playerService = new PlayerService();
         boolean is2v2 = false;
         if (args != null && args.length > 0 && args[0] != null) {
@@ -40,7 +40,14 @@ public class AutoApp {
 
         AppUtils.runAndCheckErrors(game, () -> {
             do {// play the turn of the current player 
-                resolveTurn(game);
+                try {resolveTurn(game);
+                    
+                } 
+                catch (GameStateException | WebSocketException e) {
+                    System.err.println("Erreur lors du traitement du tour : " + e.getMessage());
+                    e.printStackTrace();
+                }
+                
             } while (!game.isFinished());//repeat while the game is not finished
         });
     }
@@ -51,7 +58,7 @@ public class AutoApp {
      * @param game the current game
      * @throws GameStateException if the game reaches an inconsistant state
      */
-    private static void resolveTurn(Game game) throws GameStateException {
+    private static void resolveTurn(Game game) throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
         List<CardInstance> availableCards = currentPlayer.getBoard().stream().filter(CardInstance::isAbleToAttack).toList();
 
@@ -82,7 +89,7 @@ public class AutoApp {
      *
      * @param game the current game
      */
-    private static void resolveChoices(Game game) throws GameStateException {
+    private static void resolveChoices(Game game) throws GameStateException, WebSocketException {
         while (game.getChoice() != null && !game.isFinished()) {
             AiUtils.resolveChoice(game);
         }

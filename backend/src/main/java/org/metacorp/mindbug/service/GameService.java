@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service;
 
 import jakarta.inject.Inject;
 import org.jvnet.hk2.annotations.Service;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
@@ -27,7 +28,7 @@ public class GameService {
     /**
      * The map used to store active games
      */
-     private static final Logger LOGGER = LoggerFactory.getLogger(GameService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(GameService.class);
     private final Map<UUID, Game> games = new HashMap<>();
 
     @Inject
@@ -58,8 +59,10 @@ public class GameService {
         Player player1 = new Player(playerService.getPlayer(player1Id));
         Player player2 = player2Id == null ? new AiPlayer(playerService.getAiPlayer()) : new Player(playerService.getPlayer(player2Id));
 
-        Game game = StartService.newGame(player1, player2, setName);
+        Game game = StartService.startGame(player1, player2, setName);
         games.put(game.getUuid(), game);
+
+        LOGGER.debug("Game created : {}", game.getUuid());
 
         return game;
     }
@@ -83,7 +86,7 @@ public class GameService {
 
         // 2. Appel de la méthode StartService.newGame (version 4 joueurs)
         // C'est ici que l'User Story est remplie : StartService va lier les Team instances.
-        Game game = StartService.newGame(p1, p2, p3, p4, setName);
+        Game game = StartService.startGame(p1, p2, p3, p4, setName);
         
         // 3. Stockage de la partie en mémoire
         games.put(game.getUuid(), game);
@@ -117,7 +120,7 @@ public class GameService {
      * @param losingPlayerID the losing player ID
      * @param gameId         the current game ID
      */
-    public void endGame(UUID losingPlayerID, UUID gameId) {
+    public void endGame(UUID losingPlayerID, UUID gameId) throws WebSocketException{
         Game game = findById(gameId);
         if (game != null && !game.isFinished()) {
             
