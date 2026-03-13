@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import Board from "@/components/game/board/Board.vue";
-import Hand from "@/components/game/Hand.vue";
-import PlayerDetails from "@/components/game/PlayerDetails.vue";
-import {computed, onMounted, onUnmounted, Ref, ref} from "vue";
+import DuelPanel from "./DuelPanel.vue";
+import TeamPanel from "./TeamPanel.vue";
+import { computed, onMounted, onUnmounted, ref } from "vue";
+import type { Ref } from "vue";
 import {
   declareAttack,
   pickCard,
@@ -16,6 +16,7 @@ import {
 import ChoiceModal from "@/components/game/ChoiceModal.vue";
 import {Store, useStore} from "vuex";
 import {useRouter} from "vue-router";
+
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -251,50 +252,24 @@ async function onLeaveButtonClick() {
 
 <template>
   <div v-if="gameState">
-    <div v-if="props.mode === 'duel'" class="container-fluid game">
-      <div class="row top-row">
-        <div class="col-2 player-container">
-          <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
-                          :draw-pile-count="gameState?.opponent?.drawPileCount"
-                          :mindbug-count="gameState?.opponent?.mindbugCount">
-          </player-details>
-        </div>
-        <div class="col-8">
-          <hand :cards="gameState?.opponent?.hand" :opponent=true :selected-card="selectedCard"></hand>
-        </div>
-        <div class="col-2 top-buttons">
-          <button type="button" class="leave-button" @click="onLeaveButtonClick()">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
-              <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"></path>
-              <path
-                  d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <board :game-state="gameState" :selected-card="selectedCard" :picked-card="pickedCard"
-            :attacking-card="attackingCard" @button-clicked="onActionButtonClick($event)"
-            @card-selected="onCardSelected($event, 'Board')">
-      </board>
-
-      <div class="row bottom-row">
-        <div class="col-2 player-container">
-          <player-details :name="gameState?.player?.name" :life-points="gameState?.player?.lifePoints"
-                          :draw-pile-count="gameState?.player?.drawPileCount"
-                          :mindbug-count="gameState?.player?.mindbugCount">
-          </player-details>
-        </div>
-        <div class="col-8">
-          <hand :cards="gameState?.player?.hand" :opponent=false :selected-card="selectedCard"
-                @card-selected="onCardSelected($event, 'Hand')"></hand>
-        </div>
-        <div class="col-2"></div>
-      </div>
-    </div>
+    <DuelPanel v-if="props.mode === 'duel'"
+               :game-state="gameState"
+               :selected-card="selectedCard"
+               :picked-card="pickedCard"
+               :attacking-card="attackingCard"
+               :on-card-selected="onCardSelected"
+               :on-action-button-click="onActionButtonClick"
+               :on-leave-button-click="onLeaveButtonClick" />
 
 
-    <div v-if="props.mode === 'team'" class="container-fluid game">Team</div>
+    <TeamPanel v-if="props.mode === 'team'" 
+               :game-state="gameState"
+               :selected-card="selectedCard"
+               :picked-card="pickedCard"
+               :attacking-card="attackingCard"
+               :on-card-selected="onCardSelected"
+               :on-action-button-click="onActionButtonClick"
+               :on-leave-button-click="onLeaveButtonClick"/>
   </div>
   
   <div v-else-if="error" class="error-page">
@@ -323,76 +298,6 @@ async function onLeaveButtonClick() {
 </template>
 
 <style scoped>
-.game {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-
-  background-image: url("../../assets/playmats/default.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.top-row {
-  width: 100%;
-  height: 10vh;
-
-  display: flex;
-  flex-wrap: nowrap;
-
-  .player-container {
-    align-items: start;
-  }
-}
-
-.bottom-row {
-  width: 100%;
-  height: 20vh;
-
-  display: flex;
-  flex-wrap: nowrap;
-
-  .player-container {
-    align-items: end;
-  }
-}
-
-.player-container {
-  display: flex;
-}
-
-.top-buttons {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.leave-button {
-  width: 2vw;
-  height: 4vh;
-
-  background-color: rgba(255, 255, 255, 0.5);
-
-  border: none;
-  border-radius: 25px;
-  transition: background-color 0.3s, transform 0.2s;
-
-  svg {
-    min-width: 16px;
-    min-height: 16px;
-  }
-}
-
-.leave-button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  transform: scale(1.05);
-}
-
-.leave-button:active {
-  background-color: #1e6f93;
-  transform: scale(0.98);
-}
-
 /* Page d'erreur et de chargement plein écran */
 .error-page, .loading-page {
   height: 100vh;
