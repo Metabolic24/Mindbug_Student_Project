@@ -15,6 +15,9 @@ let offline: Ref<boolean> = ref(false)
 let levels: Ref<string[]> = ref([])
 let selectedLevel: Ref<string> = ref("")
 
+let mode: Ref<string | null> = ref(null)
+let step: Ref<number> = ref(1)
+
 // Retrieve the image corresponding to the given set
 function updateSelection(set: string) {
   const index = selectedSets.value.indexOf(set)
@@ -24,6 +27,21 @@ function updateSelection(set: string) {
   } else {
     selectedSets.value.splice(index, 1)
   }
+}
+
+function chooseMode(selectedMode: string) {
+  mode.value = selectedMode
+  // empêcher offline si 2v2
+  if (mode.value === "team") {
+    offline.value = false
+  }
+  step.value = 2
+}
+
+function goBack() {
+  step.value = 1
+  selectedSets.value = []
+  mode.value=""
 }
 
 function getSetClasses(set: string): Record<string, boolean> {
@@ -44,14 +62,16 @@ const emit = defineEmits(['button-clicked'])
 
 // Disable login button if nickname is too short
 const isButtonDisabled = computed(() => {
-  return selectedSets.value.length == 0 || (offline.value && !selectedLevel.value)
+  if (step.value === 1) return mode.value === null
+      return selectedSets.value.length == 0 || (offline.value && !selectedLevel.value)
 })
 
 function onButtonClicked() {
   emit('button-clicked', {
     sets: selectedSets.value,
     offline: offline.value,
-    level: selectedLevel.value
+    level: selectedLevel.value,
+    mode: mode.value
   } as GameSettingsInterface)
 }
 
@@ -61,21 +81,37 @@ function onButtonClicked() {
   <div class="modal-mask">
     <div class="modal-container">
       <div class="modal-header">
-        <h2 class="modal-title">{{ t("modal.game_settings.title")}}</h2>
+        <h5 class="modal-title">{{ t("modal.game_settings.title")}}<p v-if="mode"> {{ t("modal.game_settings.selected")}} <strong>{{ mode === "duel" ? "1v1 Duel" : "2v2 Team" }}</strong></p></h5>
       </div>
       <div class="modal-body">
-        <div id="cards-sets-container">
+        <!-- STEP 1 : choix du mode -->
+        <div v-if="step === 1" class="mode-container">
+          <button class="mode-button" @click="chooseMode('duel')">
+            1v1 Duel
+          </button>
+
+          <button class="mode-button" @click="chooseMode('team')">
+            2v2 Team
+          </button>
+        </div>
+
+        <!-- STEP 2 : choix des sets -->
+        <div v-if="step === 2" class="sets-container">
           <div :class="getSetClasses(set)" v-for="(set, index) in sets" :key="set" @click="updateSelection(set)">
             <img v-if="index < 2" :src="getSetImage(set)" :alt="t('card_sets.' + set)"/>
             <h2 v-if="index >= 2">{{ set }}</h2>
           </div>
         </div>
+
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" @click="onButtonClicked()" :disabled="isButtonDisabled">
+        <button v-if="step === 2" class="btn btn-secondary" @click="goBack()">
+          {{ t("modal.game_settings.Back") }}
+        </button>
+        <button v-if="step === 2" type="button" class="btn btn-primary" @click="onButtonClicked()" :disabled="isButtonDisabled">
           {{ t("modal.game_settings.button") }}
         </button>
-        <div id="offline_div">
+        <div v-if="mode === 'duel'" id="offline_div">
           <input type="checkbox" v-model="offline" id="offline_checkbox" />
           <label id="offline_label" for="offline_checkbox"> {{ t("modal.game_settings.play_offline") }}</label>
         </div>

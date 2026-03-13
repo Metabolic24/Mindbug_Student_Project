@@ -28,7 +28,7 @@ const routes = [
         path: '/game',
         name: i18n.global.t("router.game"),
         component: () => import('@/components/game/Game.vue'),
-        props: route => ({gameId: route.query.gameId}),
+        props: route => ({gameId: route.query.gameId,mode: route.query.mode}),
     }
 ];
 

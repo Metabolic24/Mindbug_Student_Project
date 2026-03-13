@@ -69,13 +69,16 @@
   "modal": {
     "game_settings": {
       "title": "Choisissez un ou plusieurs sets",
+      "selected":"Mode Choisie :",
       "button": "Chercher un adversaire",
       "play_offline": "Mode Solo",
       "level": {
         "default": "Niveau du bot",
         "RANDOM": "Aléatoire",
         "BASIC": "Facile"
-      }
+      },
+      "back": "Retour"
+
     },
     "login": {
       "title": "Choississez un pseudo",

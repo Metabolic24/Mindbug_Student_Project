@@ -69,13 +69,16 @@
   "modal": {
     "game_settings": {
       "title": "Choose one or more sets you want to play",
+      "selected":"Mode selected :",
       "button": "Search",
       "play_offline": "Play offline",
       "level": {
         "default": "AI Level",
         "RANDOM": "Random",
         "BASIC": "Basic"
-      }
+      },
+      "back": "Back"
+      
     },
     "login": {
       "title": "Choose a nickname",

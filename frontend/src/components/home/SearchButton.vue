@@ -29,6 +29,7 @@ let isModalVisible: Ref<boolean> = ref(false);
 async function searchGame(settings: GameSettingsInterface) {
   isModalVisible.value = false;
   searchDisabled.value = true;
+  console.log(settings.mode+"ici");
 
   if (settings.offline) {
     const gameId = await startOfflineGame(store.state.playerData?.uuid, settings.sets[0], settings.level)
@@ -38,10 +39,16 @@ async function searchGame(settings: GameSettingsInterface) {
   } else {
     try {
       // Connect to 'join' WebSocket so the server can detect that the player is looking for a game
-      wsConnection = new WebSocket("ws://localhost:8080/ws/join?playerId=" + store.state.playerData?.uuid + "&playerName=" + store.state.playerData?.name + "&sets=" + settings.sets.join(","));
+      wsConnection = new WebSocket(
+        "ws://localhost:8080/ws/join?"
+        + "playerId=" + store.state.playerData?.uuid
+        + "&playerName=" + store.state.playerData?.name
+        + "&sets=" + settings.sets.join(",")
+        + "&mode=" + settings.mode
+      );
       wsConnection.onmessage = (event: MessageEvent<string>) => {
         // Change route to 'Game' one as the server found a game
-        router.push({name: t('router.game'), query: {gameId: event.data}});
+        router.push({name: t('router.game'), query: {gameId: event.data, mode: settings.mode}});
 
         // Close the WS connection and enable the search button (even if we are no more in the 'Home' route)
         wsConnection.close()
