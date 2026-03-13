@@ -21,6 +21,7 @@ import {useRouter} from "vue-router";
 // Declare the interface for the data given by the parent component
 interface Props {
   gameId: string;
+  mode: string;
 }
 
 const props = defineProps<Props>()
@@ -261,18 +262,19 @@ async function leaveGame() {
 </script>
 
 <template>
-  <div v-if="gameState" class="container-fluid game">
-    <div class="row top-row">
-      <div class="col-2 player-container">
-        <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
-                        :draw-pile-count="gameState?.opponent?.drawPileCount"
-                        :mindbug-count="gameState?.opponent?.mindbugCount">
-        </player-details>
-      </div>
-      <div class="col-8">
-        <hand :cards="gameState?.opponent?.hand" :opponent=true :selected-card="selectedCard"></hand>
-      </div>
-      <div class="col-2 top-buttons">
+  <div v-if="gameState">
+    <div v-if="props.mode === 'duel'" class="container-fluid game">
+      <div class="row top-row">
+        <div class="col-2 player-container">
+          <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
+                          :draw-pile-count="gameState?.opponent?.drawPileCount"
+                          :mindbug-count="gameState?.opponent?.mindbugCount">
+          </player-details>
+        </div>
+        <div class="col-8">
+          <hand :cards="gameState?.opponent?.hand" :opponent=true :selected-card="selectedCard"></hand>
+        </div>
+        <div class="col-2 top-buttons">
         <button type="button" class="settings-button" @click="onSettingsButtonClick()">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 122.88 122.878" xml:space="preserve"
                fill="currentColor">
@@ -288,32 +290,37 @@ async function leaveGame() {
       </div>
     </div>
 
-    <div v-if="displaySettingsMenu" class="settings-menu-backdrop" @click="continueGame()">
-      <div class="settings-menu" @click.stop>
-        <h2>Settings</h2>
-        <button @click="continueGame()">Continue</button>
-        <button class="leave" @click="leaveGame()">Leave</button>
+      <div v-if="displaySettingsMenu" class="settings-menu-backdrop" @click="continueGame()">
+        <div class="settings-menu" @click.stop>
+          <h2>Settings</h2>
+          <button @click="continueGame()">Continue</button>
+          <button class="leave" @click="leaveGame()">Leave</button>
+        </div>
+      </div>
+
+      <board :game-state="gameState" :selected-card="selectedCard" :picked-card="pickedCard"
+            :attacking-card="attackingCard" @button-clicked="onActionButtonClick($event)"
+            @card-selected="onCardSelected($event, 'Board')">
+      </board>
+
+
+      <div class="row bottom-row">
+        <div class="col-2 player-container">
+          <player-details :name="gameState?.player?.name" :life-points="gameState?.player?.lifePoints"
+                          :draw-pile-count="gameState?.player?.drawPileCount"
+                          :mindbug-count="gameState?.player?.mindbugCount">
+          </player-details>
+        </div>
+        <div class="col-8">
+          <hand :cards="gameState?.player?.hand" :opponent=false :selected-card="selectedCard"
+                @card-selected="onCardSelected($event, 'Hand')"></hand>
+        </div>
+        <div class="col-2"></div>
       </div>
     </div>
 
-    <board :game-state="gameState" :selected-card="selectedCard" :picked-card="pickedCard"
-           :attacking-card="attackingCard" @button-clicked="onActionButtonClick($event)"
-           @card-selected="onCardSelected($event, 'Board')">
-    </board>
 
-    <div class="row bottom-row">
-      <div class="col-2 player-container">
-        <player-details :name="gameState?.player?.name" :life-points="gameState?.player?.lifePoints"
-                        :draw-pile-count="gameState?.player?.drawPileCount"
-                        :mindbug-count="gameState?.player?.mindbugCount">
-        </player-details>
-      </div>
-      <div class="col-8">
-        <hand :cards="gameState?.player?.hand" :opponent=false :selected-card="selectedCard"
-              @card-selected="onCardSelected($event, 'Hand')"></hand>
-      </div>
-      <div class="col-2"></div>
-    </div>
+    <div v-if="props.mode === 'team'" class="container-fluid game">Team</div>
   </div>
 
   <div v-else-if="error" class="error-page">

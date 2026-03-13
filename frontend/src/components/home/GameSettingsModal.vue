@@ -31,7 +31,17 @@ function updateSelection(set: string) {
 
 function chooseMode(selectedMode: string) {
   mode.value = selectedMode
+  // empêcher offline si 2v2
+  if (mode.value === "team") {
+    offline.value = false
+  }
   step.value = 2
+}
+
+function goBack() {
+  step.value = 1
+  selectedSets.value = []
+  mode.value=""
 }
 
 function getSetClasses(set: string): Record<string, boolean> {
@@ -69,7 +79,7 @@ function onButtonClicked() {
   <div class="modal-mask">
     <div class="modal-container">
       <div class="modal-header">
-        <h5 class="modal-title">Choose one or more sets you want to play</h5>
+        <h5 class="modal-title">Choose one or more sets you want to play <p v-if="mode"> Mode selected : <strong>{{ mode === "duel" ? "1v1 Duel" : "2v2 Team" }}</strong></p></h5>
       </div>
       <div class="modal-body">
 
@@ -93,11 +103,14 @@ function onButtonClicked() {
 
       </div>
       <div class="modal-footer">
+        <button v-if="step === 2" class="btn btn-secondary" @click="goBack()">
+          Back
+        </button>
         <button v-if="step === 2" type="button" class="btn btn-primary" @click="onButtonClicked()" :disabled="isButtonDisabled">
           Search
         </button>
-        <div id="offline_div">
-          <input type="checkbox" v-model="offline" id="offline_checkbox" />
+        <div v-if="mode === 'duel'" id="offline_div">
+          <input type="checkbox" v-model="offline" id="offline_checkbox"/>
           <label id="offline_label" for="offline_checkbox">Play Offline</label>
         </div>
       </div>

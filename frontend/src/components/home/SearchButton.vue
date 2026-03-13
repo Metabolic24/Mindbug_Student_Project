@@ -45,7 +45,7 @@ async function searchGame(settings: GameSettingsInterface) {
       );
       wsConnection.onmessage = (event: MessageEvent<string>) => {
         // Change route to 'Game' one as the server found a game
-        router.push({name: "Game", query: {gameId: event.data}});
+        router.push({name: "Game", query: {gameId: event.data, mode: settings.mode}});
 
         // Close the WS connection and enable the search button (even if we are no more in the 'Home' route)
         wsConnection.close()
