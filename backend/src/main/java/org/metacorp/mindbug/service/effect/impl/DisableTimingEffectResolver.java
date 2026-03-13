@@ -7,6 +7,7 @@ import org.metacorp.mindbug.model.effect.impl.DisableTimingEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
+import org.metacorp.mindbug.utils.AppUtils;
 
 import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
 import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
@@ -28,7 +29,8 @@ public class DisableTimingEffectResolver extends EffectResolver<DisableTimingEff
 
     @Override
     public void apply(Game game, EffectTiming timing) {
-        Player opponentPlayer = effectSource.getOwner().getOpponent(game.getPlayers());
+        //TODO Problème : On ne doit pas faire comme ça pour sélectionner un adversaire !
+        Player opponentPlayer = AppUtils.selectOpponent(game, card.getOwner());
         opponentPlayer.disableTiming(effect.getValue());
 
         game.getLogger().debug("{} effects disabled for player {} due to {} effect", effect.getValue(),

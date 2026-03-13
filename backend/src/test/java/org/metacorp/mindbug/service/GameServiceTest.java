@@ -5,10 +5,9 @@ import org.glassfish.hk2.utilities.ServiceLocatorUtilities;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.utils.MindbugGameTest;
+import org.metacorp.mindbug.service.game.StartService;
 
 import java.util.List;
 import java.util.UUID;
@@ -17,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-public class GameServiceTest extends MindbugGameTest {
+public class GameServiceTest {
 
     private Game game;
     private GameService gameService;
@@ -28,13 +27,13 @@ public class GameServiceTest extends MindbugGameTest {
 
         PlayerService playerService = locator.getService(PlayerService.class);
         gameService = locator.getService(GameService.class);
-        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
     }
 
     @Test
     public void createGame_nominal() throws UnknownPlayerException {
         List<Player> players = game.getPlayers();
-        game = gameService.createGame(players.get(0).getUuid(), players.get(1).getUuid());
+        game = gameService.createGame(players.getFirst().getUuid(), players.get(1).getUuid());
 
         assertNotNull(game);
         assertNotNull(game.getUuid());
@@ -43,7 +42,7 @@ public class GameServiceTest extends MindbugGameTest {
     @Test
     public void findById_nominal() throws UnknownPlayerException {
         List<Player> players = game.getPlayers();
-        game = gameService.createGame(players.get(0).getUuid(), players.get(1).getUuid());
+        game = gameService.createGame(players.getFirst().getUuid(), players.get(1).getUuid());
 
         assertEquals(game, gameService.findById(game.getUuid()));
     }
@@ -54,29 +53,29 @@ public class GameServiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void endGame_nominal() throws UnknownPlayerException, WebSocketException {
+    public void endGame_nominal() throws UnknownPlayerException {
         List<Player> players = game.getPlayers();
-        UUID loserId = players.get(0).getUuid();
+        UUID loserId = players.getFirst().getUuid();
         UUID winnerId = players.get(1).getUuid();
         game = gameService.createGame(loserId, winnerId);
 
         gameService.endGame(loserId, game.getUuid());
-        assertEquals(winnerId, game.getWinner().getUuid());
+        assertEquals(winnerId, game.getWinners().getFirst().getUuid());
     }
 
     @Test
-    public void endGame_badGame() throws WebSocketException {
+    public void endGame_badGame() {
         gameService.endGame(UUID.randomUUID(), UUID.randomUUID());
-        assertNull(game.getWinner());
+        assertNull(game.getWinners());
     }
 
     @Test
-    public void endGame_badPlayer() throws UnknownPlayerException, WebSocketException {
+    public void endGame_badPlayer() throws UnknownPlayerException {
         List<Player> players = game.getPlayers();
-        UUID loserId = players.get(0).getUuid();
+        UUID loserId = players.getFirst().getUuid();
         game = gameService.createGame(loserId, players.get(1).getUuid());
 
         gameService.endGame(UUID.randomUUID(), game.getUuid());
-        assertNull(game.getWinner());
+        assertNull(game.getWinners());
     }
 }

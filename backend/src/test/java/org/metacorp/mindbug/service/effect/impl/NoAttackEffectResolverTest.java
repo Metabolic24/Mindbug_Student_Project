@@ -10,14 +10,15 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.NoAttackEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.utils.MindbugGameTest;
+import org.metacorp.mindbug.service.game.StartService;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class NoAttackEffectResolverTest extends MindbugGameTest {
+public class NoAttackEffectResolverTest {
 
     private Game game;
+    private CardInstance randomCard;
     private Player opponentPlayer;
 
     private NoAttackEffect effect;
@@ -27,20 +28,20 @@ public class NoAttackEffectResolverTest extends MindbugGameTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
-        CardInstance randomCard = game.getCurrentPlayer().getHand().getFirst();
-        opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        randomCard = game.getCurrentPlayer().getHand().getFirst();
+        opponentPlayer = game.getOpponents().getFirst();
 
         effect = new NoAttackEffect();
         effect.setType(EffectType.NO_ATTACK);
-        effectResolver = new NoAttackEffectResolver(effect, randomCard);
+        effectResolver = new NoAttackEffectResolver(effect);
         timing = EffectTiming.PLAY;
     }
 
     @Test
     public void testWithLowestParameter_noEffect() {
         effect.setLowest(true);
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, randomCard, timing);
     }
 
     @Test
@@ -49,7 +50,7 @@ public class NoAttackEffectResolverTest extends MindbugGameTest {
         opponentPlayer.addCardToBoard(otherCard);
 
         effect.setLowest(true);
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, randomCard, timing);
 
         assertFalse(otherCard.isAbleToAttack());
     }
@@ -68,7 +69,7 @@ public class NoAttackEffectResolverTest extends MindbugGameTest {
         opponentPlayer.addCardToBoard(otherCard3);
 
         effect.setLowest(true);
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, randomCard, timing);
 
         assertFalse(otherCard.isAbleToAttack());
         assertFalse(otherCard2.isAbleToAttack());
@@ -93,7 +94,7 @@ public class NoAttackEffectResolverTest extends MindbugGameTest {
         opponentPlayer.addCardToBoard(otherCard4);
 
         effect.setLowest(true);
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(otherCard.isAbleToAttack());
         assertTrue(otherCard2.isAbleToAttack());
@@ -116,7 +117,7 @@ public class NoAttackEffectResolverTest extends MindbugGameTest {
         opponentPlayer.addCardToBoard(otherCard3);
 
         effect.setKeyword(CardKeyword.SNEAKY);
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, randomCard, timing);
 
         assertFalse(otherCard.isAbleToAttack());
         assertTrue(otherCard2.isAbleToAttack());
@@ -140,7 +141,7 @@ public class NoAttackEffectResolverTest extends MindbugGameTest {
 
         effect.setKeyword(CardKeyword.SNEAKY);
         effect.setLowest(true);
-        effectResolver.apply(game, timing);
+        effectResolver.apply(game, randomCard, timing);
 
         assertTrue(otherCard.isAbleToAttack());
         assertTrue(otherCard2.isAbleToAttack());

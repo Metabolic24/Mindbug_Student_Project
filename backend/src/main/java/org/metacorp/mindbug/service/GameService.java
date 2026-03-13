@@ -3,19 +3,15 @@ package org.metacorp.mindbug.service;
 import jakarta.inject.Inject;
 import org.jvnet.hk2.annotations.Service;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.StartService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 import java.util.UUID;
 
 /**
@@ -23,8 +19,6 @@ import java.util.UUID;
  */
 @Service
 public class GameService {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(GameService.class);
 
     /**
      * The map used to store active games
@@ -59,12 +53,35 @@ public class GameService {
         Player player1 = new Player(playerService.getPlayer(player1Id));
         Player player2 = player2Id == null ? new AiPlayer(playerService.getAiPlayer()) : new Player(playerService.getPlayer(player2Id));
 
-        Game game = new Game(player1, player2);
+        Game game = StartService.newGame(player1, player2, setName);
         games.put(game.getUuid(), game);
 
-        LOGGER.debug("Game created : {}", game.getUuid());
+        return game;
+    }
 
-        StartService.startGame(game, setName);
+    /**
+     * Crée une nouvelle partie en mode 2v2
+     * * @param p1Id ID du premier joueur (Équipe A)
+     * @param p2Id ID du deuxième joueur (Équipe B)
+     * @param p3Id ID du troisième joueur (Équipe A - coéquipier de p1)
+     * @param p4Id ID du quatrième joueur (Équipe B - coéquipier de p2)
+     * @param setName le set de cartes à utiliser
+     * @return la Game créée avec les PV partagés par équipe
+     * @throws UnknownPlayerException si l'un des joueurs est introuvable
+     */
+    public Game createGame(UUID p1Id, UUID p2Id, UUID p3Id, UUID p4Id, CardSetName setName) throws UnknownPlayerException {
+        // 1. Récupération des 4 joueurs depuis la base de données via le PlayerService
+        Player p1 = new Player(playerService.getPlayer(p1Id));
+        Player p2 = new Player(playerService.getPlayer(p2Id));
+        Player p3 = new Player(playerService.getPlayer(p3Id));
+        Player p4 = new Player(playerService.getPlayer(p4Id));
+
+        // 2. Appel de la méthode StartService.newGame (version 4 joueurs)
+        // C'est ici que l'User Story est remplie : StartService va lier les Team instances.
+        Game game = StartService.newGame(p1, p2, p3, p4, setName);
+        
+        // 3. Stockage de la partie en mémoire
+        games.put(game.getUuid(), game);
 
         return game;
     }
@@ -80,34 +97,20 @@ public class GameService {
     }
 
     /**
-     * Get a player by ID
-     *
-     * @param playerId the player ID
-     * @param game     the game where the player should be found
-     * @return the corresponding player in the given game if any, null otherwise
-     */
-    public Player findPlayerById(UUID playerId, Game game) {
-        return game.getPlayers().stream().filter(player -> player.getUuid().equals(playerId)).findFirst().orElseThrow();
-    }
-
-    /**
      * Ends a currently active game
      *
      * @param losingPlayerID the losing player ID
      * @param gameId         the current game ID
-     * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
-    public void endGame(UUID losingPlayerID, UUID gameId) throws WebSocketException {
+    public void endGame(UUID losingPlayerID, UUID gameId) {
         Game game = findById(gameId);
         if (game != null && !game.isFinished()) {
-            Optional<Player> losingPlayer = game.getPlayers().stream()
+            game.getPlayers().stream()
                     .filter(player -> player.getUuid().equals(losingPlayerID))
-                    .findFirst();
-            if (losingPlayer.isPresent()) {
-                GameStateService.endGame(losingPlayer.get(), game);
-            } else {
-                game.getLogger().warn("Unable to find losing player {} in game {}...", losingPlayerID, gameId);
-            }
+                    .findFirst().ifPresent(player -> GameStateService.endGame(player, game));
         }
+    }
+    public void setPlayerService(PlayerService playerService) {
+        this.playerService = playerService;
     }
 }

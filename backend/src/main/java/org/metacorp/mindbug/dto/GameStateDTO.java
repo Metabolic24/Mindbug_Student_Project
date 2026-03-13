@@ -8,6 +8,7 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.metacorp.mindbug.dto.choice.AbstractChoiceDTO;
 
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -17,16 +18,19 @@ import java.util.UUID;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"uuid", "winner", "player", "opponent", "card", "choice", "forcedAttack"})
+@JsonPropertyOrder({"uuid", "winners", "player", "ally", "opponent", "opponents", "card", "choice", "forcedAttack"})
 public class GameStateDTO {
     @NonNull
     private UUID uuid;
     @NonNull
     private PlayerDTO player;
+    private PlayerDTO ally;
     @NonNull
     private PlayerDTO opponent;
+    @NonNull
+    private List<PlayerDTO> opponents;
 
-    private UUID winner;
+    private List<UUID> winners;
 
     /**
      * The picked or attacking card if any
@@ -37,4 +41,3 @@ public class GameStateDTO {
 
     private boolean forcedAttack;
 }
-

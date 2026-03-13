@@ -3,14 +3,13 @@ package org.metacorp.mindbug.model.choice;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.utils.MindbugGameTest;
+import org.metacorp.mindbug.service.game.StartService;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -21,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class HunterChoiceTest extends MindbugGameTest {
+public class HunterChoiceTest {
 
     private Game game;
     private Player currentPlayer;
@@ -33,9 +32,9 @@ public class HunterChoiceTest extends MindbugGameTest {
     @BeforeEach
     public void initGame() {
         PlayerService playerService = new PlayerService();
-        game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
-        opponent = game.getOpponent();
+        opponent = game.getOpponents().getFirst();
 
         currentCard = currentPlayer.getHand().getFirst();
         currentCard.getCard().setKeywords(new HashSet<>(List.of(CardKeyword.HUNTER)));
@@ -60,8 +59,8 @@ public class HunterChoiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void testResolve_ignoreHunter() throws GameStateException, WebSocketException {
-        HunterChoice choice = new HunterChoice(currentCard, new HashSet<>(opponent.getBoard()));
+    public void testResolve_ignoreHunter() throws GameStateException {
+        HunterChoice choice = new HunterChoice(currentPlayer, currentCard, new HashSet<>(opponent.getBoard()));
         game.setChoice(choice);
 
         choice.resolve(null, game);
@@ -74,8 +73,8 @@ public class HunterChoiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void testResolve_nominal() throws GameStateException, WebSocketException {
-        HunterChoice choice = new HunterChoice(currentCard, new HashSet<>(opponent.getBoard()));
+    public void testResolve_nominal() throws GameStateException {
+        HunterChoice choice = new HunterChoice(currentPlayer, currentCard, new HashSet<>(opponent.getBoard()));
         game.setChoice(choice);
 
         choice.resolve(opponentCard.getUuid(), game);

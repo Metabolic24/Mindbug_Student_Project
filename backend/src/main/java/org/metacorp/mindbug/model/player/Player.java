@@ -11,6 +11,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 /**
  * Class that describes a player data
@@ -79,15 +80,13 @@ public class Player {
         discardPile.add(card);
     }
 
-    public Player getOpponent(List<Player> players) {
-        Player opponent = null;
-        for (Player player : players) {
-            if (player.getTeam() != team) {
-                opponent = player;
-            }
-        }
+    public List<Player> getOpponents(List<Player> players) {
+        // filter players to get opponents (players with different team)
+        return players.stream().filter(player -> !player.getTeam().equals(team)).collect(Collectors.toList());
+    }
 
-        return opponent;
+    public Player getAlly(List<Player> players) {
+        return players.stream().filter(player -> player.getTeam().equals(team) && !player.getUuid().equals(uuid)).findFirst().orElse(null);
     }
 
     public void refresh(boolean newTurn) {

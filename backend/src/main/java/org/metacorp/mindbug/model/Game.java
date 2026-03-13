@@ -10,6 +10,7 @@ import org.metacorp.mindbug.model.effect.AfterEffectInterface;
 import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.model.player.Team;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +31,7 @@ public class Game {
 
     private List<Player> players;
     private Player currentPlayer;
-    private Player winner;
+    private List<Player> winners;
 
     private List<CardInstance> cards;
     private List<CardInstance> bannedCards;
@@ -46,31 +47,85 @@ public class Game {
 
     private boolean forcedAttack;
     private boolean webSocketUp;
+    private final transient int gameMode;
 
     private List<HistoryEntry> history;
 
     /**
      * Empty constructor (WARNING: a game is not meant to be reused)
      */
-    public Game(Player player1, Player player2) {
+    public Game(List<Player> allPlayers) {
         uuid = UUID.randomUUID();
         logger = LoggerFactory.getLogger(uuid.toString());
 
-        winner = null;
+        winners = null;
         cards = new ArrayList<>();
         bannedCards = new ArrayList<>();
         evolutionCards = new ArrayList<>();
         effectQueue = new EffectQueue();
-        players = Arrays.asList(player1, player2);
         history = new ArrayList<>();
+
+        players = new ArrayList<>(allPlayers);
+        gameMode = resolveGameMode(allPlayers.size());
+
+        // if 4 players on the battlefield, we setup 2 teams
+        if (gameMode == 2) {
+            setupTeams(players);
+        }
+
     }
 
-    public Player getOpponent() {
-        return currentPlayer.getOpponent(players);
+    private int resolveGameMode(int playersCount) {
+        return switch (playersCount) {
+            case 2 -> 1;
+            case 4 -> 2;
+            default -> throw new IllegalStateException("Unsupported number of players: " + playersCount);
+        };
+    }
+
+    private void setupTeams(List<Player> players) {
+        Team team1 = new Team();
+        Team team2 = new Team();
+        
+        // Players 0 and 2 vs Players 1 and 3
+        players.getFirst().setTeam(team1);
+        players.get(2).setTeam(team1);
+        
+        players.get(1).setTeam(team2);
+        players.get(3).setTeam(team2);
+    }
+
+    /**
+     * Returns the game mode of the game
+     *  - return 1 : 1v1 game mode
+     *  - return 2 : 2v2 game mode
+     */
+    public int typeGameMode(){
+        return gameMode;
+    }
+
+    /**
+     * Switches the turn to the next player in circular order.
+     * In 2v2 mode, the {@code players} list must be ordered in an alternating pattern
+     * (Team A - Player 1, Team B - Player 1, Team A - Player 2, Team B - Player 2)
+     * to ensure the turn passes between allies and enemies correctly.
+     * @throws IndexOutOfBoundsException if the players list is empty
+     */
+    public void setNextPlayer() {
+        int nextPlayerIndex = (players.indexOf(currentPlayer) + 1) % players.size();
+        this.setCurrentPlayer(players.get(nextPlayerIndex));
+    }
+
+    public List<Player> getOpponents() {
+        return currentPlayer.getOpponents(players);
+    }
+
+    public Player getAlly(){
+        return currentPlayer.getAlly(players);
     }
 
     public boolean isFinished() {
-        return winner != null;
+        return winners != null;
     }
 
     public void runAfterEffect() throws GameStateException, WebSocketException {

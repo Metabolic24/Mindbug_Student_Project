@@ -14,8 +14,10 @@ import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.WebSocketService;
+import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.GameStateService;
+import org.metacorp.mindbug.service.game.PlayCardService;
 
 import java.util.List;
 import java.util.Optional;
@@ -111,12 +113,50 @@ public final class ChoiceUtils {
                 AttackService.resolveAttack(chosenTarget.get(), game);
             }
         } else {
-            Player opponent = choice.getAttackingCard().getOwner().getOpponent(game.getPlayers());
-            if (opponent.getBoard().isEmpty() || !opponent.canBlock(choice.getAttackingCard().hasKeyword(CardKeyword.SNEAKY))) {
+            List<Player> opponents = choice.getAttackingCard()
+                    .getOwner()
+                    .getOpponents(game.getPlayers());
+
+            boolean someoneCanBlock = opponents.stream()
+                    .anyMatch(opponent -> opponent.canBlock(choice.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)));
+
+            if (!someoneCanBlock) {
                 AttackService.resolveAttack(null, game);
             } else {
                 WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);
             }
         }
+    }
+
+    public static void askMindbugChoice(int index, List<Player> candidates, CardInstance card, Game game) {
+        if (index >= candidates.size()) {
+            try {
+                PlayCardService.playCard(game);
+            } catch (GameStateException e) {
+                throw new RuntimeException(e);
+            }
+            return;
+        }
+
+        Player current = candidates.get(index);
+
+        ResolvableEffect<Boolean> effect = (g, useMindbug) -> {
+            try {
+                if (useMindbug) {
+                    PlayCardService.playCard(current, g);
+                } else {
+                    askMindbugChoice(index + 1, candidates, card, g);
+                }
+            } catch (GameStateException e) {
+                throw new RuntimeException(e);
+            }
+        };
+
+        BooleanChoice mindbugChoice = new BooleanChoice(current, card, effect);
+        mindbugChoice.setPrompt(
+                current.getName() + " : voulez-vous utiliser un Mindbug pour voler cette carte ? (O/N)"
+        );
+
+        game.setChoice(mindbugChoice);
     }
 }

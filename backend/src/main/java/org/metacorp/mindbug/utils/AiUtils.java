@@ -91,7 +91,8 @@ public class AiUtils {
     }
 
     public static List<CardInstance> getBlockersList(Game game) {
-        Player attackedPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
+        Player attackedPlayer = game.getAttackingCard().getOwner().getOpponents(game.getPlayers()).getFirst();
+        //TODO : handle 2v2 case
 
         Stream<CardInstance> blockersStream = attackedPlayer.getBoard().stream().filter(CardInstance::isAbleToBlock);
         if (game.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)) {

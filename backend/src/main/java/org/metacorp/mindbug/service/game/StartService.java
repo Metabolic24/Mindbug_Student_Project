@@ -4,17 +4,16 @@ import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.model.player.Team;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
-import org.metacorp.mindbug.utils.SetUtils;
-import org.slf4j.Logger;
+import org.metacorp.mindbug.utils.CardUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
-
-import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
-import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
+import java.util.Set;
 
 /**
  * Utility service that starts a new game
@@ -33,49 +32,90 @@ public class StartService {
      * @param player2 second player
      * @return the created game
      */
-    public static Game startGame(Player player1, Player player2) {
-        return startGame(new Game(player1, player2), CardSetName.FIRST_CONTACT);
+    public static Game newGame(Player player1, Player player2) {
+        return newGame(player1, player2, CardSetName.FIRST_CONTACT);
+    }
+
+    /**
+     * Creates and start a new game for four players (using the default FIRST_CONTACT card set)
+     *
+     * @param player1 first player
+     * @param player2 second player
+     * @param player3 third player
+     * @param player4 fourth player
+     * @return the created game
+     */
+    public static Game newGame(Player player1, Player player2, Player player3, Player player4) {
+        return newGame(player1, player2, player3, player4, CardSetName.FIRST_CONTACT);
     }
 
     /**
      * Creates and start a new game for two players (using the given card set)
      *
-     * @param game the game to initialize
+     * @param player1 first player name
+     * @param player2 second player name
      * @param setName the card set name as CardSetName
      * @return the created game
      */
-    public static Game startGame(Game game, CardSetName setName) {
-        // Retrieve CardInstance from JSON configuration file and separate evolution cards from the other ones
-        List<CardInstance> cards = game.getCards();
-        SetUtils.getCardsFromConfig(setName.getKey()).forEach(cardInstance -> {
+    public static Game newGame(Player player1, Player player2, CardSetName setName) {
+        Game game = new Game(new ArrayList<>(List.of(player1, player2)));
+
+        return createAndInitGame(game, setName);
+    }
+
+    /**
+     * Create and start a new game for four players (2v2) (using the given card set)
+     * The players 1 & 3 are together against the players 2 & 4
+     *
+     * @param p1      first player
+     * @param p2      second player
+     * @param p3      third player
+     * @param p4      fourth player
+     * @param setName the card set name as CardSetName
+     * @return the created game
+     */
+    public static Game newGame(Player p1, Player p2, Player p3, Player p4, CardSetName setName) {
+        Game game = new Game(new ArrayList<>(List.of(p1, p2, p3, p4)));
+
+        return createAndInitGame(game, setName);
+    }
+
+    /**
+     * Internal method for factoring the common initialization
+     */
+    private static Game createAndInitGame(Game game, CardSetName setName) {
+        CardUtils.getCardsFromConfig(setName.getKey()).forEach(cardInstance -> {
             if (cardInstance.getCard().isEvolution()) {
                 game.getEvolutionCards().add(cardInstance);
             } else {
-                cards.add(cardInstance);
+                game.getCards().add(cardInstance);
             }
         });
 
-        Collections.shuffle(cards);
+        Collections.shuffle(game.getCards());
 
+        // Initialize of players and PVs
+        // We use a Set to avoid resetting the HP twice for the same team
+        Set<Team> initializedTeams = new HashSet<>();
+        
         for (Player player : game.getPlayers()) {
-            initDrawAndHand(player, cards);
-            player.getTeam().setLifePoints(3);
+            initDrawAndHand(player, game.getCards());
+            
+            // If the team has not yet been initialized, we set the HP to 3 (or more for 2v2)
+            if (!initializedTeams.contains(player.getTeam())) {
+                player.getTeam().setLifePoints(3); 
+                initializedTeams.add(player.getTeam());
+            }
         }
 
         game.setCurrentPlayer(getFirstPlayer(game));
-
-        // Join the WebSocket channel of the game
         WebSocketService.initGameChannel(game);
         HistoryService.logStart(game);
 
         return game;
     }
 
-    /**
-     * Fill the hand and draw pile of the given player
-     * @param player the player to be initialized
-     * @param cards the remaining cards of the played set
-     */
+    // Fill the hand and draw pile of the given player
     private static void initDrawAndHand(Player player, List<CardInstance> cards) {
         List<CardInstance> hand = player.getHand();
         List<CardInstance> drawPile = player.getDrawPile();
@@ -91,14 +131,9 @@ public class StartService {
         }
     }
 
-    /**
-     * Get the first player of the game (should only be used once per game)
-     * @param game the current game state
-     * @return the first Player
-     */
+    // Return the first player of the game (should only be used once per game)
     private static Player getFirstPlayer(Game game) {
-        Logger logger = game.getLogger();
-        logger.info("Calculating first player...");
+        System.out.println("Calcul du premier joueur :");
 
         List<Player> validPlayers = new ArrayList<>(game.getPlayers());
         while (validPlayers.size() != 1) {
@@ -108,7 +143,7 @@ public class StartService {
             for (Player player : validPlayers) {
                 // Get a random card from the remaining cards
                 CardInstance bannedCard = banCard(game);
-                logger.info("Banned card for {} : {} ({})", getLoggablePlayer(player), getLoggableCard(bannedCard), bannedCard.getPower());
+                System.out.printf("\t%s %s %d\n", player.getName(), bannedCard.getCard().getName(), bannedCard.getPower());
 
                 if (bannedCard.getPower() < higherPower) {
                     // Current player will not be the first one
@@ -125,17 +160,12 @@ public class StartService {
             validPlayers = nextPlayers;
         }
 
-        Player firstPlayer = validPlayers.getFirst();
-        logger.info("First player will be {}", getLoggablePlayer(firstPlayer));
+        System.out.printf(" -> %s sera le premier joueur\n", validPlayers.getFirst().getName());
 
-        return firstPlayer;
+        return validPlayers.getFirst();
     }
 
-    /**
-     * Randomly choose a card and exclude it from the current game
-     * @param game the current game state
-     * @return the banned card
-     */
+    // Randomly choose a card and exclude it from the current game
     private static CardInstance banCard(Game game) {
         CardInstance chosenCard = game.getCards().removeFirst();
         game.getBannedCards().add(chosenCard);

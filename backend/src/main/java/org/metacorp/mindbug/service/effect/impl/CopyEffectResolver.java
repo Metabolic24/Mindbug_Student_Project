@@ -39,12 +39,13 @@ public class CopyEffectResolver extends EffectResolver<CopyEffect> implements Re
     @Override
     public void apply(Game game, EffectTiming timing) {
         Player sourceOwner = effectSource.getOwner();
-        Player opponent = sourceOwner.getOpponent(game.getPlayers());
 
         List<CardInstance> availableCards = new ArrayList<>();
-        for (CardInstance card : opponent.getBoard()) {
-            if (!card.getEffects(effect.getTiming()).isEmpty()) {
-                availableCards.add(card);
+        for (Player opponent : sourceOwner.getOpponents(game.getPlayers())) {
+            for (CardInstance card : opponent.getBoard()) {
+                if (!card.getEffects(effect.getTiming()).isEmpty()) {
+                    availableCards.add(card);
+                }
             }
         }
 

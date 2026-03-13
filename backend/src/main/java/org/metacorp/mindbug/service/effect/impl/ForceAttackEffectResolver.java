@@ -1,7 +1,6 @@
 package org.metacorp.mindbug.service.effect.impl;
 
 import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.TargetChoice;
@@ -12,40 +11,41 @@ import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.AttackService;
+import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
-
-import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
-import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
-import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 /**
  * Effect resolver for ForceAttackEffect
  */
 public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect> implements ResolvableEffect<List<CardInstance>> {
 
+    private CardInstance effectSource;
+
     /**
      * Constructor
      *
-     * @param effect       the effect to be resolved
-     * @param effectSource the card which owns the effect
+     * @param effect the effect to be resolved
      */
-    public ForceAttackEffectResolver(ForceAttackEffect effect, CardInstance effectSource) {
-        super(effect, effectSource);
+    public ForceAttackEffectResolver(ForceAttackEffect effect) {
+        super(effect);
     }
 
     @Override
-    public void apply(Game game, EffectTiming timing) throws GameStateException, WebSocketException {
-        Player opponent = effectSource.getOwner().getOpponent(game.getPlayers());
+    public void apply(Game game, CardInstance effectSource, EffectTiming timing) {
+        this.effectSource = effectSource;
+
+      
+        Player opponent = AppUtils.selectOpponent(game, effectSource.getOwner());
 
         if (timing == EffectTiming.PASSIVE) {
             if (effect.getKeyword() != null) {
                 boolean forcedAttack = false;
-                for (CardInstance opponentCard : opponent.getBoard()) {
-                    if (!opponentCard.hasKeyword(effect.getKeyword())) {
-                        opponentCard.setAbleToAttack(false);
+                for (CardInstance card : opponent.getBoard()) {
+                    if (!card.hasKeyword(effect.getKeyword())) {
+                        card.setAbleToAttack(false);
                     } else {
                         forcedAttack = true;
                     }
@@ -68,25 +68,26 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
                     break;
                 default:
                     game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, 1, new HashSet<>(opponentBoard)));
-                    game.getLogger().debug("Player {} must choose a card that will be forced to attack (available targets : {})",
-                            getLoggablePlayer(effectSource.getOwner()), getLoggableCards(opponentBoard));
             }
         }
     }
 
     @Override
-    public void resolve(Game game, List<CardInstance> choiceResolver) throws GameStateException, WebSocketException {
+    public void resolve(Game game, List<CardInstance> choiceResolver) {
         resolve(game, choiceResolver.getFirst());
     }
 
-    private void resolve(Game game, CardInstance attackingCard) throws GameStateException, WebSocketException {
+    private void resolve(Game game, CardInstance attackingCard) {
         if (this.effect.isSingleTarget()) {
             game.setForcedTarget(effectSource);
         }
 
-        game.getLogger().debug("{} forced to attack", getLoggableCard(attackingCard));
-
-        AttackService.declareAttack(attackingCard, game);
+        try {
+            AttackService.declareAttack(attackingCard, game);
+        } catch (GameStateException e) {
+            // TODO Manage error
+            e.printStackTrace();
+        }
 
         HistoryService.logEffect(game, effect.getType(), effectSource, Collections.singleton(attackingCard));
     }

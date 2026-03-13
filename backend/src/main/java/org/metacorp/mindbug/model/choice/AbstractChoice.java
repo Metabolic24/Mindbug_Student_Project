@@ -15,10 +15,12 @@ public abstract class AbstractChoice<T> {
     @NonNull
     protected Player playerToChoose;
 
+    private String prompt;
+
     /**
      * @return the choice type
      */
-     public abstract ChoiceType getType();
+    public abstract ChoiceType getType();
 
     /**
      * Resolve the current choice

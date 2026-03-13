@@ -3,8 +3,6 @@ package org.metacorp.mindbug.model.choice;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NonNull;
-import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
@@ -15,16 +13,15 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
-@EqualsAndHashCode(callSuper = true)
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class TargetChoice extends AbstractChoice<List<UUID>> {
-
-    // The card which effect required this choice creation
     @NonNull
+    // The card which effect required this choice creation
     private CardInstance effectSource;
 
-    // The effect that should be resolved after the choice resolution
     @NonNull
+    // The effect that should be resolved after the choice resolution
     private ResolvableEffect<List<CardInstance>> effect;
 
     // How many card should the player choose, -1 means he must select all cards
@@ -37,8 +34,8 @@ public class TargetChoice extends AbstractChoice<List<UUID>> {
 
     private boolean optional;
 
-    public TargetChoice(@NonNull Player playerToChoose, @NonNull CardInstance effectSource, @NonNull ResolvableEffect<List<CardInstance>> effect,
-                        @NonNull Integer targetsCount, @NonNull Set<CardInstance> availableTargets) {
+    public TargetChoice(Player playerToChoose, CardInstance effectSource, ResolvableEffect<List<CardInstance>> effect,
+                        Integer targetsCount, Set<CardInstance> availableTargets) {
         this.playerToChoose = playerToChoose;
         this.effectSource = effectSource;
         this.effect = effect;
@@ -47,7 +44,7 @@ public class TargetChoice extends AbstractChoice<List<UUID>> {
     }
 
     @Override
-    public void resolve(List<UUID> chosenTargetIds, Game game) throws GameStateException, WebSocketException {
+    public void resolve(List<UUID> chosenTargetIds, Game game) {
         ChoiceUtils.resolveTargetChoice(chosenTargetIds, this, game);
     }
 

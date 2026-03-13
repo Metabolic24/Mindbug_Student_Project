@@ -39,7 +39,7 @@ public class CopyEffectResolverTest extends MindbugGameTest {
         PlayerService playerService = new PlayerService();
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponents().getFirst();
 
         timing = EffectTiming.PLAY;
 
