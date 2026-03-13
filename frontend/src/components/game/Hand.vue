@@ -10,7 +10,7 @@ interface Props {
 defineProps<Props>()
 
 // Declare events emitted by this component
-const emit = defineEmits(['card-selected'])
+const emit = defineEmits(['card-selected', 'card-preview'])
 
 </script>
 
@@ -24,6 +24,7 @@ const emit = defineEmits(['card-selected'])
       :selected="card.uuid === selectedCard?.uuid"
       :clickable="!opponent"
       @click="emit('card-selected', card)"
+      @preview="emit('card-preview', card)"
     />
   </div>
 </template>

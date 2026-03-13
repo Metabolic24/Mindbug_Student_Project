@@ -2,6 +2,7 @@
 import Board from "@/components/game/board/Board.vue";
 import Hand from "@/components/game/Hand.vue";
 import PlayerDetails from "@/components/game/PlayerDetails.vue";
+import CardPreviewModal from "@/components/game/CardPreviewModal.vue";
 import {computed, onMounted, onUnmounted, Ref, ref} from "vue";
 import {
   declareAttack,
@@ -54,6 +55,7 @@ const selectedCard: Ref<SelectedCardInterface> = ref(undefined);
 const pickedCard: Ref<CardInterface> = ref(undefined);
 // Reference for the currently attacking card
 const attackingCard: Ref<CardInterface> = ref(undefined);
+const previewCard: Ref<CardInterface> = ref(undefined);
 
 // Stores the WebSocket connection so it can be easily closed if necessary
 let wsConnection: WebSocket;
@@ -259,6 +261,15 @@ async function leaveGame() {
   displaySettingsMenu.value = false;
   await router.push({name: t("router.home")})
 }
+
+function onCardPreview(card: CardInterface): void {
+  previewCard.value = card
+}
+
+function closeCardPreview(): void {
+  previewCard.value = undefined
+}
+
 </script>
 
 <template>
@@ -271,7 +282,12 @@ async function leaveGame() {
         </player-details>
       </div>
       <div class="col-8">
-        <hand :cards="gameState?.opponent?.hand" :opponent=true :selected-card="selectedCard"></hand>
+        <hand
+          :cards="gameState?.opponent?.hand"
+          :opponent=true
+          :selected-card="selectedCard"
+          @card-preview="onCardPreview"
+        ></hand>
       </div>
       <div class="col-2 top-buttons">
         <button type="button" class="settings-button" @click="onSettingsButtonClick()"
@@ -292,7 +308,7 @@ async function leaveGame() {
 
     <div v-if="displaySettingsMenu" class="settings-menu-backdrop" @click="continueGame()">
       <div class="settings-menu" @click.stop>
-        <h2>{{ t('modal.game.settings.title') }}Settings</h2>
+        <h2>{{ t('modal.game.settings.title') }}</h2>
         <button @click="continueGame()">{{ t('modal.game.settings.continue') }}</button>
         <button class="leave" @click="leaveGame()">{{ t('modal.game.settings.leave') }}</button>
       </div>
@@ -300,7 +316,8 @@ async function leaveGame() {
 
     <board :game-state="gameState" :selected-card="selectedCard" :picked-card="pickedCard"
            :attacking-card="attackingCard" @button-clicked="onActionButtonClick($event)"
-           @card-selected="onCardSelected($event, 'Board')">
+           @card-selected="onCardSelected($event, 'Board')"
+           @card-preview="onCardPreview">
     </board>
 
     <div class="row bottom-row">
@@ -311,8 +328,13 @@ async function leaveGame() {
         </player-details>
       </div>
       <div class="col-8">
-        <hand :cards="gameState?.player?.hand" :opponent=false :selected-card="selectedCard"
-              @card-selected="onCardSelected($event, 'Hand')"></hand>
+        <hand
+          :cards="gameState?.player?.hand"
+          :opponent=false
+          :selected-card="selectedCard"
+          @card-selected="onCardSelected($event, 'Hand')"
+          @card-preview="onCardPreview"
+        ></hand>
       </div>
       <div class="col-2"></div>
     </div>
@@ -320,7 +342,7 @@ async function leaveGame() {
 
   <div v-else-if="error" class="error-page">
     <div class="error-container">
-      {{ t('game.error.not_found.label') }}
+      <div v-html="t('game.error.not_found.label')"></div>
       <button class="btn-back" @click="router.push({name: t('router.home')})">
         {{ t('game.error.not_found.button') }}
       </button>
@@ -340,6 +362,7 @@ async function leaveGame() {
   </div>
   <choice-modal v-if="isChoiceModalVisible" :choice="choiceModalData"
                 @button-clicked="onChoiceModalButtonClick($event)"></choice-modal>
+  <card-preview-modal v-if="previewCard" :card="previewCard" @close="closeCardPreview"></card-preview-modal>
 </template>
 
 <style scoped>
@@ -480,12 +503,6 @@ async function leaveGame() {
   text-align: center;
 }
 
-.error-container h1 {
-  font-size: 4rem;
-  color: #ff4757;
-  margin-bottom: 1rem;
-}
-
 .btn-back {
   margin-top: 2rem;
   padding: 10px 25px;
@@ -516,5 +533,13 @@ async function leaveGame() {
   to {
     transform: rotate(360deg);
   }
+}
+</style>
+
+<style>
+.error-container h1 {
+  font-size: 4rem;
+  color: #ff4757;
+  margin-bottom: 1rem;
 }
 </style>
