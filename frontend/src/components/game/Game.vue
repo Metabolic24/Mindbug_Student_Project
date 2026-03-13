@@ -11,7 +11,8 @@ import {
   resolveAttack,
   resolveBoolean,
   resolveMultipleTargetChoice,
-  resolveSingleTargetChoice, surrender
+  resolveSingleTargetChoice,
+  surrender
 } from "@/shared/RestService";
 import ChoiceModal from "@/components/game/ChoiceModal.vue";
 import {Store, useStore} from "vuex";
@@ -32,9 +33,12 @@ const store: Store<AppState> = useStore()
 // Reference for game error
 const error = ref(false);
 // References for the loading page
-let loadingTimer: number; 
+let loadingTimer: number;
 // After 10s of waiting, the user can go back to the main menu
-const showRetry = ref(false); 
+const showRetry = ref(false);
+
+// Reference for settings menu visibility
+const displaySettingsMenu: Ref<boolean> = ref(false);
 
 // Reference for game state
 const gameState: Ref<GameStateInterface> = ref(undefined);
@@ -50,6 +54,7 @@ const attackingCard: Ref<CardInterface> = ref(undefined);
 
 // Stores the WebSocket connection so it can be easily closed if necessary
 let wsConnection: WebSocket;
+
 
 // Computed value for choice modal data
 const choiceModalData = computed((): ChoiceModalData => {
@@ -236,16 +241,23 @@ async function onChoiceModalButtonClick(cards: CardInterface[]) {
   }
 }
 
-async function onLeaveButtonClick() {
-  const game = gameState.value
+function onSettingsButtonClick() {
+  displaySettingsMenu.value = true;
+}
 
+function continueGame() {
+  displaySettingsMenu.value = false;
+}
+
+async function leaveGame() {
+  const game = gameState.value
   if (!game?.winner) {
     await surrender(game?.uuid, game?.player.uuid)
   }
 
+  displaySettingsMenu.value = false;
   await router.push({name: "Home"})
 }
-
 </script>
 
 <template>
@@ -261,13 +273,26 @@ async function onLeaveButtonClick() {
         <hand :cards="gameState?.opponent?.hand" :opponent=true :selected-card="selectedCard"></hand>
       </div>
       <div class="col-2 top-buttons">
-        <button type="button" class="leave-button" @click="onLeaveButtonClick()">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
-            <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"></path>
-            <path
-                d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"></path>
+        <button type="button" class="settings-button" @click="onSettingsButtonClick()">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 122.88 122.878" xml:space="preserve"
+               fill="currentColor">
+            <g>
+              <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M101.589,14.7l8.818,8.819c2.321,2.321,2.321,6.118,0,8.439l-7.101,7.101 c1.959,3.658,3.454,7.601,4.405,11.752h9.199c3.283,0,5.969,2.686,5.969,5.968V69.25c0,3.283-2.686,5.969-5.969,5.969h-10.039 c-1.231,4.063-2.992,7.896-5.204,11.418l6.512,6.51c2.321,2.323,2.321,6.12,0,8.44l-8.818,8.819c-2.321,2.32-6.119,2.32-8.439,0 l-7.102-7.102c-3.657,1.96-7.601,3.456-11.753,4.406v9.199c0,3.282-2.685,5.968-5.968,5.968H53.629 c-3.283,0-5.969-2.686-5.969-5.968v-10.039c-4.063-1.232-7.896-2.993-11.417-5.205l-6.511,6.512c-2.323,2.321-6.12,2.321-8.441,0 l-8.818-8.818c-2.321-2.321-2.321-6.118,0-8.439l7.102-7.102c-1.96-3.657-3.456-7.6-4.405-11.751H5.968 C2.686,72.067,0,69.382,0,66.099V53.628c0-3.283,2.686-5.968,5.968-5.968h10.039c1.232-4.063,2.993-7.896,5.204-11.418l-6.511-6.51 c-2.321-2.322-2.321-6.12,0-8.44l8.819-8.819c2.321-2.321,6.118-2.321,8.439,0l7.101,7.101c3.658-1.96,7.601-3.456,11.753-4.406 V5.969C50.812,2.686,53.498,0,56.78,0h12.471c3.282,0,5.968,2.686,5.968,5.969v10.036c4.064,1.231,7.898,2.992,11.422,5.204 l6.507-6.509C95.471,12.379,99.268,12.379,101.589,14.7L101.589,14.7z M61.44,36.92c13.54,0,24.519,10.98,24.519,24.519 c0,13.538-10.979,24.519-24.519,24.519c-13.539,0-24.519-10.98-24.519-24.519C36.921,47.9,47.901,36.92,61.44,36.92L61.44,36.92z"
+              />
+            </g>
           </svg>
         </button>
+      </div>
+    </div>
+
+    <div v-if="displaySettingsMenu" class="settings-menu-backdrop" @click="continueGame()">
+      <div class="settings-menu" @click.stop>
+        <h2>Settings</h2>
+        <button @click="continueGame()">Continue</button>
+        <button class="leave" @click="leaveGame()">Leave</button>
       </div>
     </div>
 
@@ -290,7 +315,7 @@ async function onLeaveButtonClick() {
       <div class="col-2"></div>
     </div>
   </div>
-  
+
   <div v-else-if="error" class="error-page">
     <div class="error-container">
       <h1>Oops !</h1>
@@ -306,11 +331,11 @@ async function onLeaveButtonClick() {
     <p>Preparing the battlefield...</p>
 
     <div v-if="showRetry" class="retry-section">
-        <p class="small">But it’s taking longer than expected....</p>
-        <button class="btn-back" @click="router.push({name: 'Home'})">
-          Cancel the game and go back to the main menu
-        </button>
-      </div>
+      <p class="small">But it’s taking longer than expected....</p>
+      <button class="btn-back" @click="router.push({name: 'Home'})">
+        Cancel the game and go back to the main menu
+      </button>
+    </div>
   </div>
   <choice-modal v-if="isChoiceModalVisible" :choice="choiceModalData"
                 @button-clicked="onChoiceModalButtonClick($event)"></choice-modal>
@@ -361,7 +386,62 @@ async function onLeaveButtonClick() {
   justify-content: flex-end;
 }
 
-.leave-button {
+.settings-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.settings-menu {
+  background: rgba(15, 23, 42, 0.95);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    min-width: 160px;
+    padding: 0.5rem 1.5rem;
+    margin-top: 0.25rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #1e6f93;
+    color: white;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  button.leave {
+    background-color: #b91c1c;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+  }
+
+  button.leave:hover {
+    background-color: #dc2626;
+  }
+
+  button:active {
+    transform: translateY(0);
+  }
+}
+
+.settings-button {
   width: 2vw;
   height: 4vh;
 
@@ -377,12 +457,12 @@ async function onLeaveButtonClick() {
   }
 }
 
-.leave-button:hover {
+.settings-button:hover {
   background-color: rgba(255, 255, 255, 0.9);
   transform: scale(1.05);
 }
 
-.leave-button:active {
+.settings-button:active {
   background-color: #1e6f93;
   transform: scale(0.98);
 }
@@ -432,6 +512,8 @@ async function onLeaveButtonClick() {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>
