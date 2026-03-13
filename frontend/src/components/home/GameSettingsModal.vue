@@ -9,6 +9,9 @@ let selectedSets: Ref<string[]> = ref([])
 // Declare the variable that will retrieve offline checkbox value
 let offline: Ref<boolean> = ref(false)
 
+let mode: Ref<string | null> = ref(null)
+let step: Ref<number> = ref(1)
+
 // Retrieve the image corresponding to the given set
 function getSetImage(set: string) {
   const url = new URL("@/assets/sets/", import.meta.url)
@@ -24,6 +27,11 @@ function updateSelection(set: string) {
   } else {
     selectedSets.value.splice(index, 1)
   }
+}
+
+function chooseMode(selectedMode: string) {
+  mode.value = selectedMode
+  step.value = 2
 }
 
 function getSetClasses(set: string): Record<string, boolean> {
@@ -43,13 +51,15 @@ const emit = defineEmits(['button-clicked'])
 
 // Disable login button if nickname is too short
 const isButtonDisabled = computed(() => {
-  return selectedSets.value.length == 0
+  if (step.value === 1) return mode.value === null
+  return selectedSets.value.length === 0
 })
 
 function onButtonClicked() {
   emit('button-clicked', {
-    sets: selectedSets.value,
-    offline: offline.value
+  sets: selectedSets.value,
+  offline: offline.value,
+  mode: mode.value
   } as GameSettingsInterface)
 }
 
@@ -62,14 +72,28 @@ function onButtonClicked() {
         <h5 class="modal-title">Choose one or more sets you want to play</h5>
       </div>
       <div class="modal-body">
-        <div class="sets-container">
+
+        <!-- STEP 1 : choix du mode -->
+        <div v-if="step === 1" class="mode-container">
+          <button class="mode-button" @click="chooseMode('duel')">
+            1v1 Duel
+          </button>
+
+          <button class="mode-button" @click="chooseMode('team')">
+            2v2 Team
+          </button>
+        </div>
+
+        <!-- STEP 2 : choix des sets -->
+        <div v-if="step === 2" class="sets-container">
           <div :class="getSetClasses(set)" v-for="set in sets" :key="set">
             <img :src="getSetImage(set)" :alt="set" @click="updateSelection(set)"/>
           </div>
         </div>
+
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" @click="onButtonClicked()" :disabled="isButtonDisabled">
+        <button v-if="step === 2" type="button" class="btn btn-primary" @click="onButtonClicked()" :disabled="isButtonDisabled">
           Search
         </button>
         <div id="offline_div">
