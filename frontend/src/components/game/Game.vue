@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import Board from "@/components/game/board/Board.vue";
-import Hand from "@/components/game/Hand.vue";
-import PlayerDetails from "@/components/game/PlayerDetails.vue";
-import {computed, onMounted, onUnmounted, Ref, ref} from "vue";
+import DuelPanel from "./DuelPanel.vue";
+import TeamPanel from "./TeamPanel.vue";
+import { computed, onMounted, onUnmounted, ref } from "vue";
+import type { Ref } from "vue";
 import {
   declareAttack,
   pickCard,
@@ -17,6 +17,7 @@ import {
 import ChoiceModal from "@/components/game/ChoiceModal.vue";
 import {Store, useStore} from "vuex";
 import {useRouter} from "vue-router";
+
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -263,64 +264,45 @@ async function leaveGame() {
 
 <template>
   <div v-if="gameState">
-    <div v-if="props.mode === 'duel'" class="container-fluid game">
-      <div class="row top-row">
-        <div class="col-2 player-container">
-          <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
-                          :draw-pile-count="gameState?.opponent?.drawPileCount"
-                          :mindbug-count="gameState?.opponent?.mindbugCount">
-          </player-details>
-        </div>
-        <div class="col-8">
-          <hand :cards="gameState?.opponent?.hand" :opponent=true :selected-card="selectedCard"></hand>
-        </div>
-        <div class="col-2 top-buttons">
-        <button type="button" class="settings-button" @click="onSettingsButtonClick()">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 122.88 122.878" xml:space="preserve"
-               fill="currentColor">
-            <g>
-              <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M101.589,14.7l8.818,8.819c2.321,2.321,2.321,6.118,0,8.439l-7.101,7.101 c1.959,3.658,3.454,7.601,4.405,11.752h9.199c3.283,0,5.969,2.686,5.969,5.968V69.25c0,3.283-2.686,5.969-5.969,5.969h-10.039 c-1.231,4.063-2.992,7.896-5.204,11.418l6.512,6.51c2.321,2.323,2.321,6.12,0,8.44l-8.818,8.819c-2.321,2.32-6.119,2.32-8.439,0 l-7.102-7.102c-3.657,1.96-7.601,3.456-11.753,4.406v9.199c0,3.282-2.685,5.968-5.968,5.968H53.629 c-3.283,0-5.969-2.686-5.969-5.968v-10.039c-4.063-1.232-7.896-2.993-11.417-5.205l-6.511,6.512c-2.323,2.321-6.12,2.321-8.441,0 l-8.818-8.818c-2.321-2.321-2.321-6.118,0-8.439l7.102-7.102c-1.96-3.657-3.456-7.6-4.405-11.751H5.968 C2.686,72.067,0,69.382,0,66.099V53.628c0-3.283,2.686-5.968,5.968-5.968h10.039c1.232-4.063,2.993-7.896,5.204-11.418l-6.511-6.51 c-2.321-2.322-2.321-6.12,0-8.44l8.819-8.819c2.321-2.321,6.118-2.321,8.439,0l7.101,7.101c3.658-1.96,7.601-3.456,11.753-4.406 V5.969C50.812,2.686,53.498,0,56.78,0h12.471c3.282,0,5.968,2.686,5.968,5.969v10.036c4.064,1.231,7.898,2.992,11.422,5.204 l6.507-6.509C95.471,12.379,99.268,12.379,101.589,14.7L101.589,14.7z M61.44,36.92c13.54,0,24.519,10.98,24.519,24.519 c0,13.538-10.979,24.519-24.519,24.519c-13.539,0-24.519-10.98-24.519-24.519C36.921,47.9,47.901,36.92,61.44,36.92L61.44,36.92z"
-              />
-            </g>
-          </svg>
-        </button>
+    <button type="button" class="settings-button" @click="onSettingsButtonClick()">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 122.88 122.878" xml:space="preserve"
+            fill="currentColor">
+        <g>
+          <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M101.589,14.7l8.818,8.819c2.321,2.321,2.321,6.118,0,8.439l-7.101,7.101 c1.959,3.658,3.454,7.601,4.405,11.752h9.199c3.283,0,5.969,2.686,5.969,5.968V69.25c0,3.283-2.686,5.969-5.969,5.969h-10.039 c-1.231,4.063-2.992,7.896-5.204,11.418l6.512,6.51c2.321,2.323,2.321,6.12,0,8.44l-8.818,8.819c-2.321,2.32-6.119,2.32-8.439,0 l-7.102-7.102c-3.657,1.96-7.601,3.456-11.753,4.406v9.199c0,3.282-2.685,5.968-5.968,5.968H53.629 c-3.283,0-5.969-2.686-5.969-5.968v-10.039c-4.063-1.232-7.896-2.993-11.417-5.205l-6.511,6.512c-2.323,2.321-6.12,2.321-8.441,0 l-8.818-8.818c-2.321-2.321-2.321-6.118,0-8.439l7.102-7.102c-1.96-3.657-3.456-7.6-4.405-11.751H5.968 C2.686,72.067,0,69.382,0,66.099V53.628c0-3.283,2.686-5.968,5.968-5.968h10.039c1.232-4.063,2.993-7.896,5.204-11.418l-6.511-6.51 c-2.321-2.322-2.321-6.12,0-8.44l8.819-8.819c2.321-2.321,6.118-2.321,8.439,0l7.101,7.101c3.658-1.96,7.601-3.456,11.753-4.406 V5.969C50.812,2.686,53.498,0,56.78,0h12.471c3.282,0,5.968,2.686,5.968,5.969v10.036c4.064,1.231,7.898,2.992,11.422,5.204 l6.507-6.509C95.471,12.379,99.268,12.379,101.589,14.7L101.589,14.7z M61.44,36.92c13.54,0,24.519,10.98,24.519,24.519 c0,13.538-10.979,24.519-24.519,24.519c-13.539,0-24.519-10.98-24.519-24.519C36.921,47.9,47.901,36.92,61.44,36.92L61.44,36.92z"
+          />
+        </g>
+      </svg>
+    </button>
+
+    <div v-if="displaySettingsMenu" class="settings-menu-backdrop" @click="continueGame()">
+      <div class="settings-menu" @click.stop>
+        <h2>Settings</h2>
+        <button @click="continueGame()">Continue</button>
+        <button class="leave" @click="leaveGame()">Leave</button>
       </div>
     </div>
 
-      <div v-if="displaySettingsMenu" class="settings-menu-backdrop" @click="continueGame()">
-        <div class="settings-menu" @click.stop>
-          <h2>Settings</h2>
-          <button @click="continueGame()">Continue</button>
-          <button class="leave" @click="leaveGame()">Leave</button>
-        </div>
-      </div>
-
-      <board :game-state="gameState" :selected-card="selectedCard" :picked-card="pickedCard"
-            :attacking-card="attackingCard" @button-clicked="onActionButtonClick($event)"
-            @card-selected="onCardSelected($event, 'Board')">
-      </board>
+    <DuelPanel v-if="props.mode === 'duel'"
+               :game-state="gameState"
+               :selected-card="selectedCard"
+               :picked-card="pickedCard"
+               :attacking-card="attackingCard"
+               :on-card-selected="onCardSelected"
+               :on-action-button-click="onActionButtonClick"
+                />
 
 
-      <div class="row bottom-row">
-        <div class="col-2 player-container">
-          <player-details :name="gameState?.player?.name" :life-points="gameState?.player?.lifePoints"
-                          :draw-pile-count="gameState?.player?.drawPileCount"
-                          :mindbug-count="gameState?.player?.mindbugCount">
-          </player-details>
-        </div>
-        <div class="col-8">
-          <hand :cards="gameState?.player?.hand" :opponent=false :selected-card="selectedCard"
-                @card-selected="onCardSelected($event, 'Hand')"></hand>
-        </div>
-        <div class="col-2"></div>
-      </div>
-    </div>
-
-
-    <div v-if="props.mode === 'team'" class="container-fluid game">Team</div>
+    <TeamPanel v-if="props.mode === 'team'" 
+               :game-state="gameState"
+               :selected-card="selectedCard"
+               :picked-card="pickedCard"
+               :attacking-card="attackingCard"
+               :on-card-selected="onCardSelected"
+               :on-action-button-click="onActionButtonClick"
+               />
   </div>
 
   <div v-else-if="error" class="error-page">
@@ -349,50 +331,6 @@ async function leaveGame() {
 </template>
 
 <style scoped>
-.game {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-
-  background-image: url("../../assets/playmats/default.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.top-row {
-  width: 100%;
-  height: 10vh;
-
-  display: flex;
-  flex-wrap: nowrap;
-
-  .player-container {
-    align-items: start;
-  }
-}
-
-.bottom-row {
-  width: 100%;
-  height: 20vh;
-
-  display: flex;
-  flex-wrap: nowrap;
-
-  .player-container {
-    align-items: end;
-  }
-}
-
-.player-container {
-  display: flex;
-}
-
-.top-buttons {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .settings-menu-backdrop {
   position: fixed;
   inset: 0;
