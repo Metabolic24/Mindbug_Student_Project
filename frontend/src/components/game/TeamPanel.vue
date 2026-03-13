@@ -2,6 +2,7 @@
 import BoardTeam from "@/components/game/board/BoardTeam.vue";
 import Hand from "@/components/game/Hand.vue";
 import PlayerDetails from "@/components/game/PlayerDetails.vue";
+import TeamDetails from "@/components/game/TeamDetails.vue";
 import {Ref} from "vue";
 //import {CardInterface, SelectedCardInterface, GameStateInterface} from "@/components/game/Game.vue"; // ajuste selon tes types
 import {declareAttack, pickCard, playCard, resolveAction, resolveAttack, resolveBoolean, resolveMultipleTargetChoice, resolveSingleTargetChoice} from "@/shared/RestService";
@@ -16,6 +17,7 @@ interface Props {
 }
 
 const props = defineProps<Props>();
+const emit = defineEmits(['button-clicked']);
 </script>
 
 <template>
@@ -25,9 +27,19 @@ const props = defineProps<Props>();
             <div class="discard top-left-discard">discard</div>
             <div class="hand top-hand-left">hand</div>
 
-            <div class="team-details top-team">
-                Teamdétail
-            </div>
+            <TeamDetails
+              class="team-details top-team"
+              :teamLife="props.gameState.opponents[0].lifePoints"
+              :ally="props.gameState.opponents[0]"
+              :player="props.gameState.opponents[1]"
+              :isEnemy=true
+
+              :game-state="gameState"
+              :picked-card="pickedCard"
+              :attacking-card="attackingCard"
+              :selected-card="selectedCard" @button-clicked="emit('button-clicked', $event)"
+            />
+
             <div class="hand top-hand-right">hand</div>
             <div class="discard top-right-discard">discard</div>
         </div>
@@ -43,9 +55,19 @@ const props = defineProps<Props>();
             <div class="discard bottom-left-discard">discard</div>
             <div class="hand bottom-hand-left">hand</div>
 
-            <div class="team-details bottom-team">
-                Teamdétail
-            </div>
+            <TeamDetails
+              class="team-details bottom-team"
+              :teamLife="props.gameState.player.lifePoints"
+              :ally="props.gameState.ally"
+              :player="props.gameState.player"
+              :isEnemy=false
+
+              :game-state="gameState"
+              :picked-card="pickedCard"
+              :attacking-card="attackingCard"
+              :selected-card="selectedCard"
+              @button-clicked="props.onActionButtonClick"
+            />
 
             <div class="hand bottom-hand-right">hand</div>
             <div class="discard bottom-right-discard">discard</div>

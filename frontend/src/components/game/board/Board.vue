@@ -63,12 +63,11 @@ function closeModal() {
   <div class="row board">
     <div class="col-2 discards">
       <discard-pile :cards="gameState?.opponents[0].discard" @clicked="displayDiscardModal(true)"></discard-pile>
-      <discard-pile :cards="gameState?.player.discard" title-position="bottom"
-                    @clicked="displayDiscardModal(false)"></discard-pile>
+      <discard-pile :cards="gameState?.player.discard" @clicked="displayDiscardModal(false)"></discard-pile>
     </div>
     <div class="col-8">
       <div class="cards">
-        <card
+        <Card
           v-for="card in gameState?.opponents[0].board"
           :key="card.uuid"
           :card="card"
