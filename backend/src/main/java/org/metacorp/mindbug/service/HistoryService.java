@@ -15,6 +15,7 @@ import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
+import org.slf4j.Logger;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -29,6 +30,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 /**
  * Service to manage history
  */
@@ -72,11 +76,15 @@ public class HistoryService {
                 SimultaneousEffectsChoice choice = (SimultaneousEffectsChoice) game.getChoice();
                 targets = choice.getEffectsToSort().stream().map(EffectsToApply::getCard).toList();
                 data.put("playerToChoose", game.getCurrentPlayer().getUuid());
+                game.getLogger().info("New {} choice to be resolved by {} (sourceCards : {})", choiceType.name(),
+                        getLoggablePlayer(game.getCurrentPlayer()), getLoggableCards(targets));
             }
             case FRENZY -> {
                 FrenzyAttackChoice choice = (FrenzyAttackChoice) game.getChoice();
                 sourceCard = choice.getAttackingCard();
                 data.put("playerToChoose", sourceCard.getOwner().getUuid());
+                 game.getLogger().info("New {} choice to be resolved by {} (attackingCard : {})", choiceType.name(),
+                        getLoggablePlayer(sourceCard.getOwner()), getLoggableCard(sourceCard));
             }
             case TARGET -> {
                 TargetChoice choice = (TargetChoice) game.getChoice();
@@ -84,18 +92,24 @@ public class HistoryService {
                 targets = choice.getAvailableTargets();
                 data.put("playerToChoose", choice.getPlayerToChoose().getUuid());
                 data.put("targetsCount", choice.getTargetsCount());
+                game.getLogger().info("New {} choice to be resolved by {} (targets : {})", choiceType.name(),
+                        getLoggablePlayer(choice.getPlayerToChoose()), getLoggableCards(targets));
             }
             case BOOLEAN -> {
                 BooleanChoice choice = (BooleanChoice) game.getChoice();
                 sourceCard = choice.getSourceCard();
                 targets = Collections.singleton(choice.getCard());
                 data.put("playerToChoose", choice.getPlayerToChoose().getUuid());
+                 game.getLogger().info("New {} choice to be resolved by {} (target : {})", choiceType.name(),
+                        getLoggablePlayer(choice.getPlayerToChoose()), targetAsString);
             }
             case HUNTER -> {
                 HunterChoice choice = (HunterChoice) game.getChoice();
                 sourceCard = choice.getAttackingCard();
                 targets = choice.getAvailableTargets();
                 data.put("playerToChoose", sourceCard.getOwner().getUuid());
+                ame.getLogger().info("New {} choice to be resolved by {} (attackingCard : {}, targets : {})", choiceType.name(),
+                        getLoggablePlayer(sourceCard.getOwner()), getLoggableCard(sourceCard), getLoggableCards(targets));
             }
             default -> {
                 // Should never happen
@@ -107,15 +121,21 @@ public class HistoryService {
 
     public static void logEffect(Game game, EffectType type, CardInstance source, Collection<CardInstance> targets) {
         log(game, HistoryKey.EFFECT, source, targets, Map.of("type", type.name()));
+         game.getLogger().info("Resolving {} effect of {}", type.name(), getLoggableCard(source));
     }
 
     public static void logLifeUpdate(Game game, Player player) {
         log(game, HistoryKey.LIFE, null, null, Map.of("player", player.getUuid(), "life", player.getTeam().getLifePoints()));
+        game.getLogger().info("Life update for player {} : {} LP", getLoggablePlayer(player), player.getTeam().getLifePoints());
     }
 
     public static void logStart(Game game) {
+        Logger logger = game.getLogger();
+        logger.info("Game {} starting...", game.getUuid());
         Map<String, Object> data = new HashMap<>();
         for (Player player : game.getPlayers()) {
+             game.getLogger().info("Player {} hand : {}", getLoggablePlayer(player), getLoggableCards(player.getHand()));
+            game.getLogger().info("Player {} draw pile : {}", getLoggablePlayer(player), getLoggableCards(player.getDrawPile()));
             data.put(player.getUuid().toString(), HistoryMapper.toHistoryCards(player.getHand()));
         }
 
@@ -123,6 +143,8 @@ public class HistoryService {
     }
 
     public static void saveHistory(Game game) {
+        log(game, HistoryKey.END, null, null, Map.of("winner", game.getWinner().getUuid()));
+        game.getLogger().info("End of the game");
         log(game, HistoryKey.END, null, null, Map.of("winner", game.getWinners().getFirst().getUuid()));
 
         String now = new SimpleDateFormat("yyyyMMdd'T'HHmmss").format(new Date());

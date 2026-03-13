@@ -13,6 +13,9 @@ import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.websocket.WsGameEndpoint;
 import org.metacorp.mindbug.websocket.WsJoinEndpoint;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.net.URI;
 import java.util.UUID;
@@ -24,6 +27,7 @@ import java.util.UUID;
 public class RestApp {
     // Ports for REST and WS servers
     public static final Integer HTTP_PORT = 8080;
+    private static final Logger LOGGER = LoggerFactory.getLogger(RestApp.class);
 
     /**
      * Creates the Grizzly HTTP server that exposes the JAX-RS resources defined in this application.
@@ -75,6 +79,9 @@ public class RestApp {
             server = createHttpServer();
             server.start();
 
+            LOGGER.info("Jersey app started at http://localhost:{}/{}", HTTP_PORT, "game");
+            LOGGER.info("WebSocket app started at ws://localhost:{}/{}", HTTP_PORT, "ws");
+
             System.out.printf("Jersey app started at http://localhost:%d/%s\n", HTTP_PORT, "game");
             System.out.printf("WebSocket app started at ws://localhost:%d/%s\n", HTTP_PORT, "ws");
 
@@ -82,7 +89,9 @@ public class RestApp {
             System.in.read();
         } finally {
             if (server != null) {
+                LOGGER.info("Closing server...");
                 server.shutdownNow();
+                LOGGER.info("Server closed");
             }
         }
     }

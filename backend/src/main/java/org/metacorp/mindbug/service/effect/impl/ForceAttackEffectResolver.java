@@ -1,6 +1,7 @@
 package org.metacorp.mindbug.service.effect.impl;
 
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.TargetChoice;
@@ -17,6 +18,10 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
+
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 /**
  * Effect resolver for ForceAttackEffect
  */
@@ -29,8 +34,8 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
      *
      * @param effect the effect to be resolved
      */
-    public ForceAttackEffectResolver(ForceAttackEffect effect) {
-        super(effect);
+      public ForceAttackEffectResolver(ForceAttackEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
@@ -68,19 +73,24 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
                     break;
                 default:
                     game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, 1, new HashSet<>(opponentBoard)));
-            }
+                    game.getLogger().debug("Player {} must choose a card to attack with (available targets : {})",
+                            getLoggablePlayer(opponent), getLoggableCards(opponentBoard));
+                }
         }
     }
 
     @Override
-    public void resolve(Game game, List<CardInstance> choiceResolver) {
+    public void resolve(Game game, List<CardInstance> choiceResolver)  throws GameStateException, WebSocketException {
         resolve(game, choiceResolver.getFirst());
     }
 
-    private void resolve(Game game, CardInstance attackingCard) {
+    private void resolve(Game game, CardInstance attackingCard) throws GameStateException, WebSocketException {
         if (this.effect.isSingleTarget()) {
             game.setForcedTarget(effectSource);
         }
+        game.getLogger().debug("{} forced to attack", getLoggableCard(attackingCard));
+
+        AttackService.declareAttack(attackingCard, game);
 
         try {
             AttackService.declareAttack(attackingCard, game);

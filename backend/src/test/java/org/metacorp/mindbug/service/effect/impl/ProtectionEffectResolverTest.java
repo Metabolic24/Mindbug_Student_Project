@@ -10,6 +10,7 @@ import org.metacorp.mindbug.model.effect.impl.ProtectionEffect;
 import org.metacorp.mindbug.model.modifier.ProtectionModifier;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 import org.metacorp.mindbug.service.game.StartService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -17,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ProtectionEffectResolverTest {
+public class ProtectionEffectResolverTest extends MindbugGameTest {
 
     private Game game;
     private CardInstance effectSource;
@@ -30,7 +31,7 @@ public class ProtectionEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         effectSource = currentPlayer.getHand().getFirst();
 
@@ -40,7 +41,7 @@ public class ProtectionEffectResolverTest {
 
         effect = new ProtectionEffect();
         effect.setType(EffectType.PROTECTION);
-        effectResolver = new ProtectionEffectResolver(effect);
+        effectResolver = new ProtectionEffectResolver(effect, effectSource);
         timing = EffectTiming.ATTACK;
     }
 

@@ -18,6 +18,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
+
 /**
  * Effect resolver for CopyEffect
  */
@@ -28,8 +32,8 @@ public class CopyEffectResolver extends EffectResolver<CopyEffect> implements Re
      *
      * @param effect the effect to be resolved
      */
-    public CopyEffectResolver(CopyEffect effect) {
-        super(effect);
+    public CopyEffectResolver(CopyEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
@@ -59,12 +63,16 @@ public class CopyEffectResolver extends EffectResolver<CopyEffect> implements Re
                 resolve(game, availableCards);
             } else {
                 game.setChoice(new TargetChoice(sourceOwner, effectSource, this, 1, new HashSet<>(availableCards)));
+                 game.getLogger().debug("Player {} must choose an effect to copy (available targets : {})",
+                        getLoggablePlayer(sourceOwner), getLoggableCards(availableCards));
             }
         }
     }
 
     @Override
     public void resolve(Game game, List<CardInstance> choiceResult) {
+         CardInstance chosenCard = choiceResult.getFirst();
+        game.getLogger().debug("{} copies the {} effect of {}", getLoggableCard(effectSource), effect.getTiming(), getLoggableCard(chosenCard));
         List<Effect> effects = choiceResult.getFirst().getEffects(effect.getTiming());
 
         EffectQueue effectQueue = game.getEffectQueue();

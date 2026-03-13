@@ -2,14 +2,20 @@ package org.metacorp.mindbug.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.AbstractChoice;
+import org.metacorp.mindbug.model.effect.AfterEffectInterface;
 import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.player.Player;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.metacorp.mindbug.model.player.Team;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -21,6 +27,7 @@ import java.util.UUID;
 public class Game {
 
     private UUID uuid;
+    private Logger logger;
 
     private List<Player> players;
     private Player currentPlayer;
@@ -49,6 +56,7 @@ public class Game {
      */
     public Game(List<Player> allPlayers) {
         this.uuid = UUID.randomUUID();
+        this.logger = LoggerFactory.getLogger(uuid.toString());
         this.winners = null;
         this.cards = new ArrayList<>();
         this.bannedCards = new ArrayList<>();

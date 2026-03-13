@@ -20,10 +20,11 @@ public class ProtectionEffectResolver extends EffectResolver<ProtectionEffect> {
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public ProtectionEffectResolver(ProtectionEffect effect) {
-        super(effect);
+    public ProtectionEffectResolver(ProtectionEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
 
@@ -45,11 +46,14 @@ public class ProtectionEffectResolver extends EffectResolver<ProtectionEffect> {
     }
 
     private void addProtection(Game game, Collection<CardInstance> cards, EffectTiming timing) {
+        Logger logger = game.getLogger();
+        String loggableEffectSource = getLoggableCard(effectSource);
         for (CardInstance card : cards) {
             card.setProtection(true);
             if (timing == EffectTiming.ATTACK) {
                 card.getModifiers().add(new ProtectionModifier());
             }
+            logger.debug("{} cannot be defeated now due to {} effect", getLoggableCard(card), loggableEffectSource);
         }
 
         HistoryService.logEffect(game, effect.getType(), effectSource, cards);

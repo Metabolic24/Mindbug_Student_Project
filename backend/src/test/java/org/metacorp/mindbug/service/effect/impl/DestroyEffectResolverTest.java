@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class DestroyEffectResolverTest {
+public class DestroyEffectResolverTest extends MindbugGameTest {
 
     private Game game;
     private CardInstance randomCard;

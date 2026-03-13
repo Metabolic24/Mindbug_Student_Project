@@ -15,6 +15,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 /**
  * Effect resolver for DisableTimingEffect
  */
@@ -25,8 +28,8 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
      *
      * @param effect the effect to be resolved
      */
-    public DiscardEffectResolver(DiscardEffect effect) {
-        super(effect);
+    public DiscardEffectResolver(DiscardEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
@@ -48,11 +51,14 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
             resolve(game, new ArrayList<>(availableCards.subList(0, value)));
         } else {
             game.setChoice(new TargetChoice(playerToDiscard, card, this, value, new HashSet<>(availableCards)));
+            game.getLogger().debug("Player {} must choose {} card(s) to discard (available targets : {})",
+            getLoggablePlayer(playerToDiscard), value, getLoggableCards(availableCards));
         }
     }
 
     @Override
     public void resolve(Game game, List<CardInstance> chosenTargets) {
+        String loggableEffectSource = getLoggableCard(effectSource);
         for (CardInstance card : chosenTargets) {
             Player cardOwner = card.getOwner();
 
@@ -63,8 +69,9 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
             }
 
             cardOwner.getDiscardPile().add(card);
+             game.getLogger().debug("{} discarded due to {} effect", getLoggableCard(card), loggableEffectSource);
         }
-
+        
         HistoryService.logEffect(game, effect.getType(), effectSource, chosenTargets);
     }
 }

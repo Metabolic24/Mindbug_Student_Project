@@ -9,6 +9,9 @@ import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.GameMode;
 import org.metacorp.mindbug.utils.WsUtils;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,6 +23,7 @@ import static org.metacorp.mindbug.utils.WsUtils.GAME_MODE_KEY;
 @Getter
 public class JoinWebSocket extends DefaultWebSocket {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(JoinWebSocket.class);
     private String playerId;
     private String playerName;
     private List<CardSetName> sets;
@@ -48,6 +52,7 @@ public class JoinWebSocket extends DefaultWebSocket {
             this.sets = setNames.stream().map(CardSetName::fromKey).collect(Collectors.toList());
         }
 
+        LOGGER.info("Player {} ({}) joined waiting queue for sets {}", playerName, playerId, sets);
         String gameMode = WsUtils.getValueFromQueryParam(GAME_MODE_KEY, this.servletRequest.getQueryString());
         if(gameMode == null){
             throw new IllegalArgumentException("Missing required parameter 'mode'");

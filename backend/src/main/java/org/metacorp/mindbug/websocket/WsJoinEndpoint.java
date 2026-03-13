@@ -12,6 +12,9 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.GameMode;
 import org.metacorp.mindbug.service.GameService;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -23,6 +26,7 @@ import java.util.UUID;
 
 public class WsJoinEndpoint extends WebSocketApplication {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(WsJoinEndpoint.class);
     private final Map<GameMode, Map<CardSetName, Queue<JoinWebSocket>>> joinQueues = new HashMap<>();
 
     // TODO Create a map or a structure to store player responses and start the game when both players have confirmed
@@ -86,7 +90,7 @@ public class WsJoinEndpoint extends WebSocketApplication {
                                 socket.send(game.getUuid().toString());
                                 otherPlayersSession.forEach(player -> player.send(game.getUuid().toString()));
                             } catch (UnknownPlayerException e) {
-                                // TODO Manage errors
+                                LOGGER.warn("Unable to start a new game", e);
                             }
 
                             //TODO Maybe implement a timeout system

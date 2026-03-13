@@ -15,7 +15,7 @@ import org.metacorp.mindbug.service.game.StartService;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class EvolveEffectResolverTest {
+public class EvolveEffectResolverTest extends MindbugGameTest {
 
     private Game game;
     private CardInstance evolvingCard;

@@ -8,7 +8,8 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.utils.AppUtils;
-
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 /**
  * Effect resolver for DisableTimingEffect
  */
@@ -19,15 +20,16 @@ public class DisableTimingEffectResolver extends EffectResolver<DisableTimingEff
      *
      * @param effect the effect to be resolved
      */
-    public DisableTimingEffectResolver(DisableTimingEffect effect) {
-        super(effect);
+    public DisableTimingEffectResolver(DisableTimingEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
     public void apply(Game game, CardInstance card, EffectTiming timing) {
         Player opponent = AppUtils.chosenOpponent(game, card.getOwner());
         opponent.disableTiming(effect.getValue());
-
+        game.getLogger().debug("Player {} disables {} timing for player {} due to {} effect",
+                getLoggablePlayer(card.getOwner()), effect.getValue(), getLoggablePlayer(opponent), getLoggableCard(effectSource));
         HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }
 }

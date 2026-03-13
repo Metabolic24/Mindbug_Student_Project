@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class DiscardEffectResolverTest {
+public class DiscardEffectResolverTest extends MindbugGameTest {
 
     private Game game;
     private CardInstance randomCard;

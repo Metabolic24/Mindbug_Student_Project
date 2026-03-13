@@ -11,6 +11,7 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.NoBlockEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 import org.metacorp.mindbug.service.game.StartService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -19,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class NoBlockEffectResolverTest {
+public class NoBlockEffectResolverTest extends MindbugGameTest {
 
     private Game game;
     private CardInstance randomCard;
@@ -32,13 +33,13 @@ public class NoBlockEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         opponentPlayer = game.getOpponents().getFirst();
 
         effect = new NoBlockEffect();
         effect.setType(EffectType.NO_BLOCK);
-        effectResolver = new NoBlockEffectResolver(effect);
+        effectResolver = new NoBlockEffectResolver(effect, randomCard);
         timing = EffectTiming.PLAY;
     }
 

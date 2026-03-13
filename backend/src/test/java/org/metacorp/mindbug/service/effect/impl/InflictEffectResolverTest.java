@@ -9,11 +9,12 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 import org.metacorp.mindbug.service.game.StartService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class InflictEffectResolverTest {
+public class InflictEffectResolverTest extends MindbugGameTest {
 
     private Game game;
     private CardInstance randomCard;
@@ -27,14 +28,14 @@ public class InflictEffectResolverTest {
     @BeforeEach
     public void prepareGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         randomCard = currentPlayer.getHand().getFirst();
         opponentPlayer = game.getOpponents().getFirst();
 
         effect = new InflictEffect();
         effect.setType(EffectType.INFLICT);
-        effectResolver = new InflictEffectResolver(effect);
+        effectResolver = new InflictEffectResolver(effect, randomCard);
         timing = EffectTiming.PLAY;
     }
 

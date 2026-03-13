@@ -3,12 +3,13 @@ package org.metacorp.mindbug;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.app.AutoApp;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.io.IOException;
 
 import static org.metacorp.mindbug.utils.TestUtils.cleanHistoryDirectory;
 
-public class AutoAppTest {
+public class AutoAppTest extends MindbugGameTest{
 
     @AfterAll
     public static void tearDown() throws IOException {

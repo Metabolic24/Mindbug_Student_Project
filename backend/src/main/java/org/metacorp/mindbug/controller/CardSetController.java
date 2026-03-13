@@ -3,7 +3,10 @@ package org.metacorp.mindbug.controller;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
-import org.metacorp.mindbug.utils.CardUtils;
+
+
+import org.metacorp.mindbug.utils.SetUtils;
+
 
 import java.util.List;
 
@@ -20,7 +23,7 @@ public class CardSetController {
      */
     @GET
     public List<String> getAvailableSets() {
-        return CardUtils.getAvailableCardSets();
+        return SetUtils.getAvailableCardSets();
     }
 
     /**
@@ -32,6 +35,6 @@ public class CardSetController {
     @GET
     @Path("/{set}")
     public List<Integer> getCardsBySet(@PathParam(value = "set") String set) {
-        return CardUtils.getCardSetContent(set);
+        return SetUtils.getCardSetContent(set);
     }
 }

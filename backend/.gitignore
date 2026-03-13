@@ -40,3 +40,4 @@ build/
 
 ### Specific to the App ###
 log/
+test-log/

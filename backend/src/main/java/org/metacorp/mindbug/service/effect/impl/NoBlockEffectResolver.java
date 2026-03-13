@@ -11,6 +11,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.utils.CardUtils;
 import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.Collection;
@@ -19,6 +20,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 /**
  * Effect resolver for NoBlockEffect
@@ -30,10 +34,11 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
     /**
      * Constructor
      *
-     * @param effect the effect to be resolved
+     * @param effect       the effect to be resolved
+     * @param effectSource the card which owns the effect
      */
-    public NoBlockEffectResolver(NoBlockEffect effect) {
-        super(effect);
+    public NoBlockEffectResolver(NoBlockEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
@@ -70,6 +75,8 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
                 setAbleToBlock(game, availableCards);
             } else {
                 game.setChoice(new TargetChoice(card.getOwner(), card, this, value, new HashSet<>(opponent.getBoard())));
+                 game.getLogger().debug("Player {} must choose {} card(s) that will be unable to block (targets : {})",
+                    getLoggablePlayer(effectSource.getOwner()), value, getLoggableCards(opponent.getBoard()));
             }
         }
         

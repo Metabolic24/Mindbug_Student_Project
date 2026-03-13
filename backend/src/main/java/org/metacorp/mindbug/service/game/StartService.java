@@ -7,12 +7,17 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.model.player.Team;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
+import org.metacorp.mindbug.utils.SetUtils;
+import org.slf4j.Logger;
 import org.metacorp.mindbug.utils.CardUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 import java.util.Set;
 
 /**
@@ -32,8 +37,8 @@ public class StartService {
      * @param player2 second player
      * @return the created game
      */
-    public static Game newGame(Player player1, Player player2) {
-        return newGame(player1, player2, CardSetName.FIRST_CONTACT);
+    public static Game startGame(Player player1, Player player2) {
+        return startGame(player1, player2, CardSetName.FIRST_CONTACT);
     }
 
     /**
@@ -45,8 +50,8 @@ public class StartService {
      * @param player4 fourth player
      * @return the created game
      */
-    public static Game newGame(Player player1, Player player2, Player player3, Player player4) {
-        return newGame(player1, player2, player3, player4, CardSetName.FIRST_CONTACT);
+    public static Game startGame(Player player1, Player player2, Player player3, Player player4) {
+        return startGame(player1, player2, player3, player4, CardSetName.FIRST_CONTACT);
     }
 
     /**
@@ -57,7 +62,7 @@ public class StartService {
      * @param setName the card set name as CardSetName
      * @return the created game
      */
-    public static Game newGame(Player player1, Player player2, CardSetName setName) {
+    public static Game startGame(Player player1, Player player2, CardSetName setName) {
         Game game = new Game(new ArrayList<>(List.of(player1, player2)));
 
         return createAndInitGame(game, setName);
@@ -74,7 +79,7 @@ public class StartService {
      * @param setName the card set name as CardSetName
      * @return the created game
      */
-    public static Game newGame(Player p1, Player p2, Player p3, Player p4, CardSetName setName) {
+    public static Game startGame(Player p1, Player p2, Player p3, Player p4, CardSetName setName) {
         Game game = new Game(new ArrayList<>(List.of(p1, p2, p3, p4)));
 
         return createAndInitGame(game, setName);
@@ -133,6 +138,8 @@ public class StartService {
 
     // Return the first player of the game (should only be used once per game)
     private static Player getFirstPlayer(Game game) {
+        Logger logger = game.getLogger();
+        logger.info("Calculating first player...");
         System.out.println("Calcul du premier joueur :");
 
         List<Player> validPlayers = new ArrayList<>(game.getPlayers());
@@ -143,7 +150,7 @@ public class StartService {
             for (Player player : validPlayers) {
                 // Get a random card from the remaining cards
                 CardInstance bannedCard = banCard(game);
-                System.out.printf("\t%s %s %d\n", player.getName(), bannedCard.getCard().getName(), bannedCard.getPower());
+                logger.info("Banned card for {} : {} ({})", getLoggablePlayer(player), getLoggableCard(bannedCard), bannedCard.getPower());
 
                 if (bannedCard.getPower() < higherPower) {
                     // Current player will not be the first one
@@ -160,12 +167,17 @@ public class StartService {
             validPlayers = nextPlayers;
         }
 
-        System.out.printf(" -> %s sera le premier joueur\n", validPlayers.getFirst().getName());
+        Player firstPlayer = validPlayers.getFirst();
+        logger.info("First player will be {}", getLoggablePlayer(firstPlayer));
 
-        return validPlayers.getFirst();
+        return firstPlayer;
     }
 
-    // Randomly choose a card and exclude it from the current game
+   /**
+     * Randomly choose a card and exclude it from the current game
+     * @param game the current game state
+     * @return the banned card
+     */
     private static CardInstance banCard(Game game) {
         CardInstance chosenCard = game.getCards().removeFirst();
         game.getBannedCards().add(chosenCard);

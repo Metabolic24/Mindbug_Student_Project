@@ -9,10 +9,15 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.slf4j.Logger;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 public class BounceEffectResolver extends EffectResolver<BounceEffect> implements ResolvableEffect<List<CardInstance>> {
 
     /**
@@ -20,8 +25,8 @@ public class BounceEffectResolver extends EffectResolver<BounceEffect> implement
      *
      * @param effect the effect to be resolved
      */
-    public BounceEffectResolver(BounceEffect effect) {
-        super(effect);
+    public BounceEffectResolver(BounceEffect effect, CardInstance effectSource {
+        super(effect, effectSource);
     }
 
     @Override
@@ -30,25 +35,29 @@ public class BounceEffectResolver extends EffectResolver<BounceEffect> implement
 
         int value = effect.getValue();
         Player cardOwner = card.getOwner();
-        Set<CardInstance> opponentCards = new HashSet<>();
-        for (Player opponent : cardOwner.getOpponents(game.getPlayers())) {
-            opponentCards.addAll(opponent.getBoard());
-        }
-
+        Set<CardInstance> opponentCards = new HashSet<>(effectSource.getOwner().getOpponents(game.getPlayers()).getBoard());
+        
         if (!opponentCards.isEmpty()) {
             if (opponentCards.size() <= value || value < 0) {
                 bounceCards(game, opponentCards);
             } else {
                 game.setChoice(new TargetChoice(cardOwner, card, this, value, opponentCards));
+                game.getLogger().debug("Player {} must choose {} card(s) to bounce (available targets : {})",
+                        getLoggablePlayer(cardOwner), value, getLoggableCards(opponentCards));
             }
         }
     }
 
     private void bounceCards(Game game, Set<CardInstance> cards) {
+        Logger logger = game.getLogger();
+        String loggableEffectSource = getLoggableCard(effectSource);
         for (CardInstance card : cards) {
             Player cardOwner = card.getOwner();
             cardOwner.getBoard().remove(card);
             cardOwner.getHand().add(card);
+
+            logger.debug("Card {} bounced from the board to {} hand due to {} effect",
+                    getLoggableCard(card), getLoggablePlayer(cardOwner), loggableEffectSource);
         }
 
         HistoryService.logEffect(game, effect.getType(), effectSource, cards);

@@ -1,6 +1,8 @@
 package org.metacorp.mindbug.service.game;
 
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -16,14 +18,15 @@ import java.util.Comparator;
 import java.util.List;
 
 import static org.metacorp.mindbug.service.game.CardService.getPassiveEffects;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 public class GameStateService {
 
-    public static void refreshGameState(Game game) {
+    public static void refreshGameState(Game game) throws GameStateException, WebSocketException {
         refreshGameState(game, false);
     }
 
-    public static void refreshGameState(Game game, boolean newTurn) {
+    public static void refreshGameState(Game game, boolean newTurn) throws GameStateException, WebSocketException {
         List<EffectsToApply> passiveEffects = new ArrayList<>();
 
         for (Player player : game.getPlayers()) {
@@ -38,16 +41,16 @@ public class GameStateService {
 
         // Apply effects
         for (EffectsToApply effect : passiveEffects) {
-            EffectResolver<?> effectResolver = EffectResolver.getResolver(effect.getEffects().getFirst());
+            EffectResolver<?> effectResolver = EffectResolver.getResolver(effect.getEffects().getFirst(), effect.getCard());
             effectResolver.apply(game, effect.getCard(), effect.getTiming());
         }
     }
 
-    public static void newTurn(Game game) {
+    public static void newTurn(Game game) throws GameStateException, WebSocketException  {
         newTurn(game, false);
     }
-
-    public static void newTurn(Game game, boolean mindbug) {
+ 
+    public static void newTurn(Game game, boolean mindbug) throws GameStateException, WebSocketException { 
         if (!mindbug) {
             game.setNextPlayer();
         }
@@ -62,7 +65,7 @@ public class GameStateService {
         }
     }
 
-    public static void lifePointLost(Player player, Game game) {
+    public static void lifePointLost(Player player, Game game) throws WebSocketException {
         WebSocketService.sendGameEvent(WsGameEventType.LP_DOWN, game);
         HistoryService.logLifeUpdate(game, player);
 
@@ -80,7 +83,7 @@ public class GameStateService {
         }
     }
 
-    public static void endGame(Player loser, Game game) {
+    public static void endGame(Player loser, Game game) throws WebSocketException {
         if(game.typeGameMode() == 1){
             Player winner = loser.getOpponents(game.getPlayers()).getFirst();
             System.out.println("\n<<<<< GAME OVER >>>>>");

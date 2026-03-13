@@ -13,7 +13,7 @@ import org.metacorp.mindbug.service.game.StartService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DrawEffectResolverTest {
+public class DrawEffectResolverTest extends MindbugGameTest {
 
     private Game game;
     private CardInstance randomCard;

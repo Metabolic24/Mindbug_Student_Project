@@ -3,6 +3,7 @@ package org.metacorp.mindbug.model.choice;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -19,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class FrenzyChoiceTest {
+public class FrenzyChoiceTest extends MindbugGameTest{
     private Game game;
     private Player currentPlayer;
     private CardInstance currentCard;
@@ -27,7 +28,7 @@ public class FrenzyChoiceTest {
     @BeforeEach
     public void initGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         currentCard = currentPlayer.getHand().getFirst();
         currentCard.getCard().setKeywords(new HashSet<>(List.of(CardKeyword.FRENZY)));
@@ -40,7 +41,7 @@ public class FrenzyChoiceTest {
     }
 
     @Test
-    public void testResolve_trueWithEmptyBoard() throws GameStateException {
+    public void testResolve_trueWithEmptyBoard() throws GameStateException, WebSocketException  {
         Player opponent = game.getOpponents().getFirst();
 
         FrenzyAttackChoice choice = new FrenzyAttackChoice(currentPlayer, currentCard);
@@ -57,7 +58,7 @@ public class FrenzyChoiceTest {
     }
 
     @Test
-    public void testResolve_trueWithOpponentCreatures() throws GameStateException {
+    public void testResolve_trueWithOpponentCreatures() throws GameStateException, WebSocketException  {
         Player opponent = game.getOpponents().getFirst();;
         opponent.addCardToBoard(opponent.getHand().getFirst());
 
@@ -72,7 +73,7 @@ public class FrenzyChoiceTest {
     }
 
     @Test
-    public void testResolve_false() throws GameStateException {
+    public void testResolve_false() throws GameStateException, WebSocketException  {
         FrenzyAttackChoice choice = new FrenzyAttackChoice(currentPlayer, currentCard);
         game.setChoice(choice);
 

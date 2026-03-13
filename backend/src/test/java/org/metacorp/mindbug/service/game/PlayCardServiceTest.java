@@ -3,20 +3,27 @@ package org.metacorp.mindbug.service.game;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
+import org.metacorp.mindbug.model.effect.EffectType;
+import org.metacorp.mindbug.model.effect.impl.DisableTimingEffect;
+import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 
+import org.metacorp.mindbug.utils.MindbugGameTest;
+
+import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class PlayCardServiceTest {
+public class PlayCardServiceTest extends MindbugGameTest{
 
     private Game game;
     private Player currentPlayer;
@@ -25,13 +32,13 @@ public class PlayCardServiceTest {
     @BeforeEach
     public void initGame() {
         PlayerService playerService = new PlayerService();
-        game = StartService.newGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+        game = StartService.startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
         currentPlayer = game.getCurrentPlayer();
         opponent = game.getOpponents().getFirst();
     }
 
     @Test
-    public void testManagePlayedCard_nominal() {
+    public void testManagePlayedCard_nominal() throws WebSocketException, GameStateException {
         CardInstance card = currentPlayer.getHand().getFirst();
         game.setPlayedCard(card);
 
@@ -46,7 +53,7 @@ public class PlayCardServiceTest {
     }
 
     @Test
-    public void testManagePlayedCard_mindbug() {
+    public void testManagePlayedCard_mindbug() throws WebSocketException, GameStateException {
         CardInstance card = currentPlayer.getHand().getFirst();
         game.setPlayedCard(card);
 
@@ -64,7 +71,7 @@ public class PlayCardServiceTest {
     }
 
     @Test
-    public void testManagePlayedCard_playRestricted() {
+    public void testManagePlayedCard_playRestricted() throws WebSocketException {
         currentPlayer.disableTiming(EffectTiming.PLAY);
 
         CardInstance card = currentPlayer.getHand().getFirst();
@@ -81,7 +88,7 @@ public class PlayCardServiceTest {
     }
 
     @Test
-    public void testPickCard_nominal() throws GameStateException {
+    public void testPickCard_nominal() throws WebSocketException{
         CardInstance card = currentPlayer.getHand().getFirst();
 
         PlayCardService.pickCard(card, game);
@@ -94,7 +101,7 @@ public class PlayCardServiceTest {
     }
 
     @Test
-    public void testPickCard_playedCard() {
+    public void testPickCard_playedCard() throws WebSocketException{
         CardInstance card = currentPlayer.getHand().getFirst();
         game.setPlayedCard(card);
 
@@ -108,7 +115,7 @@ public class PlayCardServiceTest {
     }
 
     @Test
-    public void testPickCard_choice() {
+    public void testPickCard_choice() throws WebSocketException, GameStateException{
         CardInstance card = currentPlayer.getHand().getFirst();
         game.setChoice(new FrenzyAttackChoice(currentPlayer, card));
 
@@ -122,7 +129,7 @@ public class PlayCardServiceTest {
     }
 
     @Test
-    public void testPickCard_attackingCard() {
+    public void testPickCard_attackingCard() throws WebSocketException, GameStateException {
         CardInstance card = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(card);
         game.setAttackingCard(card);

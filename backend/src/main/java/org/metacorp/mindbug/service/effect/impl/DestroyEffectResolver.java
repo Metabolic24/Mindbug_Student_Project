@@ -10,6 +10,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.utils.CardUtils;
 import org.metacorp.mindbug.service.game.CardService;
 import org.metacorp.mindbug.utils.AppUtils;
 
@@ -20,6 +21,9 @@ import java.util.List;
 import java.util.Set;
 
 import static org.metacorp.mindbug.service.game.CardService.defeatCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 /**
  * Effect resolver for DestroyEffect
@@ -31,8 +35,8 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
      *
      * @param effect the effect to be resolved
      */
-    public DestroyEffectResolver(DestroyEffect effect) {
-        super(effect);
+   public DestroyEffectResolver(DestroyEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
@@ -116,6 +120,8 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
                         destroyCards(game, availableCards);
                     } else {
                         game.setChoice(new TargetChoice(currentPlayer, card, this, value, new HashSet<>(availableCards)));
+                         game.getLogger().debug("Player {} must choose {} card(s) to destroy (available targets : {})",
+                            getLoggablePlayer(sourceOwner), value, getLoggableCards(availableCards));
                     }
                 }
                 //if selfAllowed, target my allies
@@ -135,14 +141,16 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
     }
 
     private void destroyCards(Game game, List<CardInstance> cards) {
+        String loggableEffectSource = getLoggableCard(effectSource);
         for (CardInstance card : cards) {
+            game.getLogger().debug("{} effect destroys {}", loggableEffectSource, getLoggableCard(card));
             defeatCard(card, game);
         }
 
         HistoryService.logEffect(game, effect.getType(), effectSource, cards);
     }
 
- 
+    @Override
     public void resolve(Game game, List<CardInstance> chosenTargets) {
         destroyCards(game, chosenTargets);
     }

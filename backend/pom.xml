@@ -19,6 +19,7 @@
         <jersey.version>4.0.2</jersey.version>
         <slf4j.version>2.0.17</slf4j.version>
         <main.class>org.metacorp.mindbug.app.RestApp</main.class>
+        <log.folder>${project.basedir}/log</log.folder>
     </properties>
 
     <dependencyManagement>
@@ -125,6 +126,20 @@
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.5.27</version>
+        </dependency>
+
+        <!-- Test dependencies -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>6.0.2</version>
+            <scope>test</scope>
+          
+        </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -148,6 +163,15 @@
     </dependencies>
 
     <build>
+    <resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -208,6 +232,28 @@
                 <configuration>
                     <mainClass>${main.class}</mainClass>
                 </configuration>
+            </plugin>
+             <plugin>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-maven-plugin-jakarta</artifactId>
+                <version>2.2.43</version>
+                <configuration>
+                    <outputFileName>openapi</outputFileName>
+                    <outputPath>${project.build.directory}/openapi</outputPath>
+                    <outputFormat>YAML</outputFormat>
+                    <resourcePackages>
+                        <package>org.metacorp.mindbug.controller</package>
+                    </resourcePackages>
+                    <prettyPrint>true</prettyPrint>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>resolve</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

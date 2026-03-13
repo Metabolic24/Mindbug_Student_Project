@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.websocket.DeploymentException;
 import org.metacorp.mindbug.dto.ws.WsGameEvent;
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.mapper.GameStateMapper;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.player.Player;
@@ -11,6 +12,7 @@ import org.metacorp.mindbug.utils.WsUtils;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.text.MessageFormat;
 
 /**
  * Service to initialize and send event to a GameWebSocket
@@ -41,6 +43,7 @@ public class WebSocketService {
                 }
             }
         } catch (IOException | URISyntaxException | DeploymentException e) {
+            game.getLogger().warn("Unable to join WS : WS communication is disabled", e);
             System.out.println("Unable to join WS : WS communication is disabled");
             game.setWebSocketUp(false);
         }
@@ -58,7 +61,8 @@ public class WebSocketService {
                 WsGameEvent event = new WsGameEvent(eventType, GameStateMapper.fromGame(game));
                 client.sendMessage(new ObjectMapper().writeValueAsString(event));
             } catch (IOException | URISyntaxException | DeploymentException e) {
-                // TODO Manage errors
+                 String errorMessage = MessageFormat.format("Error while sending game event {0}", eventType.name());
+                throw new WebSocketException(errorMessage, e);
                 throw new RuntimeException(e);
             }
         }

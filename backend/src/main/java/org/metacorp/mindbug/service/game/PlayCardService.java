@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.game;
 
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
@@ -33,8 +34,9 @@ public class PlayCardService {
      * @param card the picked card
      * @param game the current game state
      * @throws GameStateException if game state appears to be inconsistent before processing
+     * @throws WebSocketException if an error occurs while sending updates through WebSocket
      */
-    public static void pickCard(CardInstance card, Game game) throws GameStateException {
+    public static void pickCard(CardInstance card, Game game) throws GameStateException, WebSocketException {
         if (game.getPlayedCard() != null) {
             throw new GameStateException("a card has already been picked", Map.of("playedCard", game.getPlayedCard()));
         } else if (game.getChoice() != null) {
@@ -79,8 +81,9 @@ public class PlayCardService {
      *
      * @param game the current game state
      * @throws GameStateException if game state appears to be inconsistent before processing
+     * @throws WebSocketException if an error occurs while sending updates through WebSocket
      */
-    public static void playCard(Game game) throws GameStateException {
+    public static void playCard(Game game) throws GameStateException, WebSocketException {
         playCard(null, game);
     }
 
@@ -91,7 +94,7 @@ public class PlayCardService {
      * @param game       the current game state
      * @throws GameStateException if game state appears to be inconsistent before processing
      */
-    public static void playCard(Player mindbugger, Game game) throws GameStateException {
+    public static void playCard(Player mindbugger, Game game) throws GameStateException, WebSocketException { 
         if (game.getPlayedCard() == null) {
             throw new GameStateException("no card has been picked");
         } else if (game.getChoice() != null) {
@@ -128,7 +131,7 @@ public class PlayCardService {
      * @param mindbugger the player that used a mindbug for this card (may be null)
      * @param game       the current game state
      */
-    protected static void managePlayedCard(Player mindbugger, Game game) {
+    protected static void managePlayedCard(Player mindbugger, Game game) throws GameStateException, WebSocketException {
         CardInstance playedCard = game.getPlayedCard();
 
         // Specific behavior if card has been mindbugged

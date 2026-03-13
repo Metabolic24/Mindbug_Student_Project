@@ -6,6 +6,7 @@ import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.effect.CostEffect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
+import org.metacorp.mindbug.model.effect.impl.CopyEffect;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 
@@ -21,8 +22,8 @@ public class CostEffectResolver extends EffectResolver<CostEffect> implements Re
      *
      * @param effect the effect to be resolved
      */
-    public CostEffectResolver(CostEffect effect) {
-        super(effect);
+     public CostEffectResolver(CostEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
@@ -31,7 +32,11 @@ public class CostEffectResolver extends EffectResolver<CostEffect> implements Re
         this.timing = timing;
 
         if (effect.isOptional()) {
+             game.getLogger().debug("Player {} must decide to resolve or not {} COST effect",
+                    getLoggablePlayer(effectSource.getOwner()), getLoggableCard(effectSource));
             game.setChoice(new BooleanChoice(sourceCard.getOwner(), sourceCard, this));
+            game.getLogger().debug("Player {} must choose an effect to copy (available targets : {})",
+                        getLoggablePlayer(sourceOwner), getLoggableCards(availableCards));
         } else {
             resolve(game);
         }
@@ -48,5 +53,6 @@ public class CostEffectResolver extends EffectResolver<CostEffect> implements Re
         EffectsToApply costEffectToApply = new EffectsToApply(effect.getCost(), effect.getEffects(), effectSource, timing);
         game.getEffectQueue().push(costEffectToApply);
         game.getEffectQueue().setResolvingEffect(true);
+        game.getLogger().debug("COST effect of {} is about to be resolved", getLoggableCard(effectSource));
     }
 }

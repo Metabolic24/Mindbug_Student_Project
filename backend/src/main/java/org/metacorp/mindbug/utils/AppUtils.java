@@ -4,8 +4,10 @@ import lombok.Setter;
 import org.metacorp.mindbug.app.GameEngine;
 import org.metacorp.mindbug.dto.player.PlayerLightDTO;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
@@ -44,7 +46,7 @@ public final class AppUtils {
 
         System.out.println("ID player 1 : "+ player1.getUuid() + " / ID player 2 : " + player2.getUuid());
 
-        Game game = StartService.newGame(new Player(player1), new Player(player2));
+        Game game = StartService.startGame(new AiPlayer(player1), new AiPlayer(player2));
 
         for (Player player : game.getPlayers()) {
             AppUtils.detailedSumUpPlayer(player);
@@ -81,7 +83,7 @@ public final class AppUtils {
      * @param game the current game
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void play(Game game) throws GameStateException {
+    public static void play(Game game) throws GameStateException, WebSocketException {
         play(null, game);
     }
 
@@ -114,7 +116,7 @@ public final class AppUtils {
      * @param game the current game
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void declareAttack(Game game) throws GameStateException {
+    public static void declareAttack(Game game)  throws GameStateException, WebSocketException {
         declareAttack(null, game);
     }
 
@@ -125,7 +127,7 @@ public final class AppUtils {
      * @param scanner the scanner to be used to read standard input (only for manual mode)
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void declareAttack(Scanner scanner, Game game) throws GameStateException {
+    public static void declareAttack(Scanner scanner, Game game) throws GameStateException,WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
 
         List<CardInstance> availableCards = currentPlayer.getBoard().stream().filter(CardInstance::isAbleToAttack).toList();
@@ -148,7 +150,7 @@ public final class AppUtils {
      * @param game the current game
      * @throws GameStateException if an error occurs during the game execution
      */
-    public static void resolveAttack(Game game) throws GameStateException {
+    public static void resolveAttack(Game game) throws GameStateException, WebSocketException {
         resolveAttack(null, game);
     }
 
@@ -160,35 +162,19 @@ public final class AppUtils {
      * @throws GameStateException if an error occurs during the game execution
      */
     public static void resolveAttack(Scanner scanner, Game game) throws GameStateException {
-        if (scanner == null && !isAuto) {
-            scanner = new Scanner(System.in);
-        }
-        boolean noBlockerDeclaredYet = true;
-        List<Player> opponentPlayers = game.getAttackingCard().getOwner().getOpponents(game.getPlayers());
-        for (Player opponentPlayer : opponentPlayers) {
-            if (noBlockerDeclaredYet) {
+        Player attackedPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
 
-                List<CardInstance> availableCards = AiUtils.getBlockersList(game);
-                if (availableCards.isEmpty()) {
-                    System.out.printf("%s ne peut pas défendre\n", opponentPlayer.getName());
-                    
-                } else {
-                    // Select a card and attack with it
-                    CardInstance card = (scanner == null) ? AiUtils.getRandomCard(availableCards) : getChosenCard(availableCards, scanner,true);
-                    if (card != null) {
-                        System.out.printf("%s défend avec la carte '%s'\n", opponentPlayer.getName(), card.getCard().getName());
-                        noBlockerDeclaredYet = false;
-                        AttackService.resolveAttack(card, game);
-                    }
-                    else {
-                        System.out.printf("%s chosen not block \n", opponentPlayer.getName());
-                    }
-                    
-                }
+        List<CardInstance> availableCards = AiUtils.getBlockersList(game);
+        if (availableCards.isEmpty()) {
+            System.out.printf("%s ne peut pas défendre\n", attackedPlayer.getName());
+            AttackService.resolveAttack(null, game);
+        } else {
+            // Select a card and block with it
+            CardInstance card = (scanner == null) ? AiUtils.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
+            if (card != null) {
+                System.out.printf("%s défend avec la carte '%s'\n", attackedPlayer.getName(), card.getCard().getName());
+                AttackService.resolveAttack(card, game);
             }
-        }
-        if (noBlockerDeclaredYet) {
-            AttackService.resolveAttack(null, game); // nobody blocked this turn
         }
     }
 
@@ -246,9 +232,10 @@ public final class AppUtils {
     public static void runAndCheckErrors(Game game, GameEngine engine) {
         try {
             engine.run();
-        } catch (GameStateException gst) {
-            System.err.println(gst.getMessage());
-            throw new RuntimeException(gst);
+        }catch (GameStateException | WebSocketException e) {
+            System.err.println(e.getMessage());
+            throw new RuntimeException(e);
+        
         } catch (Throwable t) {
             System.out.println("=================================");
             System.out.println("Une erreur s'est produite (cf contexte ci-dessous)");

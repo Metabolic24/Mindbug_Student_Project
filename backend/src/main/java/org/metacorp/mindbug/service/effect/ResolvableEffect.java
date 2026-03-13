@@ -1,5 +1,8 @@
 package org.metacorp.mindbug.service.effect;
 
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
+
 import org.metacorp.mindbug.model.Game;
 
 /**
@@ -14,5 +17,5 @@ public interface ResolvableEffect<T> {
      * @param game         the current game state
      * @param choiceResult the choice result
      */
-    void resolve(Game game, T choiceResult);
+    void resolve(Game game, T choiceResult) throws GameStateException, WebSocketException;;
 }

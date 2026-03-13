@@ -9,9 +9,13 @@ import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.StartService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
+
 import java.util.UUID;
 
 /**
@@ -23,6 +27,7 @@ public class GameService {
     /**
      * The map used to store active games
      */
+     private static final Logger LOGGER = LoggerFactory.getLogger(GameService.class);
     private final Map<UUID, Game> games = new HashMap<>();
 
     @Inject
@@ -95,6 +100,16 @@ public class GameService {
     public Game findById(UUID gameId) {
         return games.get(gameId);
     }
+     /**
+     * Get a player by ID
+     *
+     * @param playerId the player ID
+     * @param game     the game where the player should be found
+     * @return the corresponding player in the given game if any, null otherwise
+     */
+    public Player findPlayerById(UUID playerId, Game game) {
+        return game.getPlayers().stream().filter(player -> player.getUuid().equals(playerId)).findFirst().orElseThrow();
+    }
 
     /**
      * Ends a currently active game
@@ -105,10 +120,17 @@ public class GameService {
     public void endGame(UUID losingPlayerID, UUID gameId) {
         Game game = findById(gameId);
         if (game != null && !game.isFinished()) {
-            game.getPlayers().stream()
-                    .filter(player -> player.getUuid().equals(losingPlayerID))
-                    .findFirst().ifPresent(player -> GameStateService.endGame(player, game));
-        }
+            
+            Optional<Player> losingPlayer =  game.getPlayers().stream()
+                .filter(player -> player.getUuid().equals(losingPlayerID))
+                .findFirst();
+                if (losingPlayer.isPresent()) {
+                GameStateService.endGame(losingPlayer.get(), game);
+            } else {
+                game.getLogger().warn("Unable to find losing player {} in game {}...", losingPlayerID, gameId);
+            }
+        
+                }
     }
     public void setPlayerService(PlayerService playerService) {
         this.playerService = playerService;

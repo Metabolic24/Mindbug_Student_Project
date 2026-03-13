@@ -1,4 +1,6 @@
 package org.metacorp.mindbug.service.effect.impl;
+
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -8,6 +10,9 @@ import org.metacorp.mindbug.model.player.Team;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.game.GameStateService;
+
+import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 
 import java.util.HashSet;
 import java.util.List;
@@ -23,12 +28,12 @@ public class InflictEffectResolver extends EffectResolver<InflictEffect> {
      *
      * @param effect the effect to be resolved
      */
-    public InflictEffectResolver(InflictEffect effect) {
-        super(effect);
+    public InflictEffectResolver(InflictEffect effect, CardInstance effectSource) {
+        super(effect, effectSource);
     }
 
     @Override
-    public void apply(Game game, CardInstance card, EffectTiming timing) {
+    public void apply(Game game, CardInstance card, EffectTiming timing) throws WebSocketException{
         this.effectSource = card;
 
         boolean self = effect.isSelf();
@@ -58,7 +63,9 @@ public class InflictEffectResolver extends EffectResolver<InflictEffect> {
                 GameStateService.lifePointLost(affectedPlayer, game);
             }
         }
-
+        game.getLogger().debug("{} LP changed ({} -> {}) due to {} effect",
+                getLoggablePlayer(affectedPlayer), oldLifePoints, affectedTeam.getLifePoints(), getLoggableCard(effectSource));
+                
         HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }
 }

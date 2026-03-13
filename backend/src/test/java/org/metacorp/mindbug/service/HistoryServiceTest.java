@@ -18,6 +18,7 @@ import org.metacorp.mindbug.model.history.HistoryCard;
 import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 import org.metacorp.mindbug.service.game.StartService;
 
 import java.util.Collections;
@@ -30,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class HistoryServiceTest {
+public class HistoryServiceTest  extends MindbugGameTest  {
 
     private Game game;
     private CardInstance sourceCard;

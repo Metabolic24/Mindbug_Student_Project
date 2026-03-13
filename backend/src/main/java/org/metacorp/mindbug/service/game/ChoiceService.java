@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.game;
 
 import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.AbstractChoice;
@@ -25,7 +26,7 @@ public class ChoiceService {
      * @param <T>  the input data type
      * @throws GameStateException if an error occured during choice resolution
      */
-    public static <T> void resolveChoice(T data, Game game) throws GameStateException {
+    public static <T> void resolveChoice(T data, Game game) throws GameStateException, WebSocketException {
         AbstractChoice<?> choice = game.getChoice();
 
         if (choice == null) {

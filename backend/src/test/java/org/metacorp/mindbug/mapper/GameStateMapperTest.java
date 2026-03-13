@@ -10,6 +10,7 @@ import org.metacorp.mindbug.dto.PlayerDTO;
 import org.metacorp.mindbug.dto.choice.BooleanChoiceDTO;
 import org.metacorp.mindbug.dto.choice.TargetChoiceDTO;
 import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -22,6 +23,7 @@ import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.effect.impl.DiscardEffectResolver;
 import org.metacorp.mindbug.service.game.PlayCardService;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -34,7 +36,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class GameStateMapperTest {
+public class GameStateMapperTest extends MindbugGameTest {
 
     private GameService gameService;
     private Game game;
@@ -51,7 +53,7 @@ public class GameStateMapperTest {
     }
 
     @Test
-    public void fromGame_startedGame() {
+    public void fromGame_startedGame() throws GameStateException, WebSocketException {
         GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
 
         assertNotNull(gameStateDTO);
@@ -90,7 +92,7 @@ public class GameStateMapperTest {
     }
 
     @Test
-    public void fromGame_endedGame() {
+    public void fromGame_endedGame()  throws WebSocketException {
         gameService.endGame(game.getCurrentPlayer().getUuid(), game.getUuid());
 
         GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
