@@ -51,7 +51,7 @@ function displayDiscardModal(opponent: boolean) {
   isDiscardModalVisible.value = true;
   isOpponentDiscard.value = opponent;
   discardModalData.value = opponent ?
-      props.gameState?.opponent.discard :
+      props.gameState?.opponents[0].discard :
       props.gameState?.player.discard;
 }
 
@@ -64,13 +64,13 @@ function closeModal() {
 <template>
   <div class="row board">
     <div class="col-2 discards">
-      <discard-pile :cards="gameState?.opponent.discard" @clicked="displayDiscardModal(true)"></discard-pile>
+      <discard-pile :cards="gameState?.opponents[0].discard" @clicked="displayDiscardModal(true)"></discard-pile>
       <discard-pile :cards="gameState?.player.discard" @clicked="displayDiscardModal(false)"></discard-pile>
     </div>
     <div class="col-8">
       <div class="cards">
         <Card
-          v-for="card in gameState?.opponent.board"
+          v-for="card in gameState?.opponents[0].board"
           :key="card.uuid"
           :card="card"
           context="opponent-board"

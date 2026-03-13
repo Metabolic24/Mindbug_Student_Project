@@ -19,7 +19,8 @@ type WsMessageType =
 interface GameStateInterface {
     uuid: string;
     player: PlayerInterface
-    opponent: PlayerInterface
+    ally: PlayerInterface
+    opponents: Array<PlayerInterface>
     playerTurn?: boolean
     winner: string
     card: CardInterface

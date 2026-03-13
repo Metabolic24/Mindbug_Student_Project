@@ -156,7 +156,7 @@ onMounted(async () => {
       }
 
       gameState.value = message.state;
-      currentPlayer.value = gameState.value.playerTurn ? gameState.value.player.uuid : gameState.value.opponent.uuid;
+      currentPlayer.value = gameState.value.playerTurn ? gameState.value.player.uuid : gameState.value.opponents[0].uuid;
     } catch (e) {
       console.error("Failed to parse game state", e);
       error.value = true;

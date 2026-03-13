@@ -2,6 +2,7 @@
 import Board from "@/components/game/board/Board.vue";
 import Hand from "@/components/game/Hand.vue";
 import PlayerDetails from "@/components/game/PlayerDetails.vue";
+import TeamDetails from "@/components/game/TeamDetails.vue";
 import {Ref} from "vue";
 //import {CardInterface, SelectedCardInterface, GameStateInterface} from "@/components/game/Game.vue"; // ajuste selon tes types
 import {declareAttack, pickCard, playCard, resolveAction, resolveAttack, resolveBoolean, resolveMultipleTargetChoice, resolveSingleTargetChoice} from "@/shared/RestService";
@@ -26,9 +27,13 @@ const props = defineProps<Props>();
             <div class="discard top-left-discard">discard</div>
             <div class="hand top-hand-left">hand</div>
 
-            <div class="team-details top-team">
-                Teamdétail
-            </div>
+            <TeamDetails
+              class="team-details top-team"
+              :teamLife="props.gameState.opponents[0].lifePoints"
+              :ally="props.gameState.opponents[0]"
+              :player="props.gameState.opponents[1]"
+            />
+
             <div class="hand top-hand-right">hand</div>
             <div class="discard top-right-discard">discard</div>
         </div>
@@ -50,9 +55,12 @@ const props = defineProps<Props>();
             <div class="discard bottom-left-discard">discard</div>
             <div class="hand bottom-hand-left">hand</div>
 
-            <div class="team-details bottom-team">
-                Teamdétail
-            </div>
+            <TeamDetails
+              class="team-details bottom-team"
+              :teamLife="props.gameState.player.lifePoints"
+              :ally="props.gameState.player"
+              :player="props.gameState.ally"
+            />
 
             <div class="hand bottom-hand-right">hand</div>
             <div class="discard bottom-right-discard">discard</div>
