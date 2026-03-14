@@ -2,6 +2,7 @@
 import Board from "@/components/game/board/Board.vue";
 import Hand from "@/components/game/Hand.vue";
 import PlayerDetails from "@/components/game/PlayerDetails.vue";
+import CardPreviewModal from "@/components/game/CardPreviewModal.vue";
 import {computed, onMounted, onUnmounted, Ref, ref} from "vue";
 import {
   declareAttack,
@@ -51,6 +52,7 @@ const selectedCard: Ref<SelectedCardInterface> = ref(undefined);
 const pickedCard: Ref<CardInterface> = ref(undefined);
 // Reference for the currently attacking card
 const attackingCard: Ref<CardInterface> = ref(undefined);
+const previewCard: Ref<CardInterface> = ref(undefined);
 
 // Stores the WebSocket connection so it can be easily closed if necessary
 let wsConnection: WebSocket;
@@ -258,6 +260,15 @@ async function leaveGame() {
   displaySettingsMenu.value = false;
   await router.push({name: "Home"})
 }
+
+function onCardPreview(card: CardInterface): void {
+  previewCard.value = card
+}
+
+function closeCardPreview(): void {
+  previewCard.value = undefined
+}
+
 </script>
 
 <template>
@@ -270,7 +281,12 @@ async function leaveGame() {
         </player-details>
       </div>
       <div class="col-8">
-        <hand :cards="gameState?.opponent?.hand" :opponent=true :selected-card="selectedCard"></hand>
+        <hand
+          :cards="gameState?.opponent?.hand"
+          :opponent=true
+          :selected-card="selectedCard"
+          @card-preview="onCardPreview"
+        ></hand>
       </div>
       <div class="col-2 top-buttons">
         <button type="button" class="settings-button" @click="onSettingsButtonClick()">
@@ -298,7 +314,8 @@ async function leaveGame() {
 
     <board :game-state="gameState" :selected-card="selectedCard" :picked-card="pickedCard"
            :attacking-card="attackingCard" @button-clicked="onActionButtonClick($event)"
-           @card-selected="onCardSelected($event, 'Board')">
+           @card-selected="onCardSelected($event, 'Board')"
+           @card-preview="onCardPreview">
     </board>
 
     <div class="row bottom-row">
@@ -309,8 +326,13 @@ async function leaveGame() {
         </player-details>
       </div>
       <div class="col-8">
-        <hand :cards="gameState?.player?.hand" :opponent=false :selected-card="selectedCard"
-              @card-selected="onCardSelected($event, 'Hand')"></hand>
+        <hand
+          :cards="gameState?.player?.hand"
+          :opponent=false
+          :selected-card="selectedCard"
+          @card-selected="onCardSelected($event, 'Hand')"
+          @card-preview="onCardPreview"
+        ></hand>
       </div>
       <div class="col-2"></div>
     </div>
@@ -339,6 +361,7 @@ async function leaveGame() {
   </div>
   <choice-modal v-if="isChoiceModalVisible" :choice="choiceModalData"
                 @button-clicked="onChoiceModalButtonClick($event)"></choice-modal>
+  <card-preview-modal v-if="previewCard" :card="previewCard" @close="closeCardPreview"></card-preview-modal>
 </template>
 
 <style scoped>

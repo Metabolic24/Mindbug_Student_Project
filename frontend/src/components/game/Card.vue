@@ -15,17 +15,16 @@ interface Props {
 
 // Define props and emits
 const props = defineProps<Props>()
-const emit = defineEmits(['click'])
+const emit = defineEmits(['click', 'preview'])
 
-
-// to get the keyword Icons
-const keywordIcons: Record<string, string> = {
-  FRENZY: new URL('@/assets/cards/KeywordIcons/FRENZY.png', import.meta.url).href,
-  HUNTER: new URL('@/assets/cards/KeywordIcons/HUNTER.png', import.meta.url).href,
-  POISONOUS: new URL('@/assets/cards/KeywordIcons/POISONOUS.png', import.meta.url).href,
-  SNEAKY: new URL('@/assets/cards/KeywordIcons/SNEAKY.png', import.meta.url).href,
-  TOUGH: new URL('@/assets/cards/KeywordIcons/TOUGH.png', import.meta.url).href,
-}
+  // to get the keyword Icons
+  const keywordIcons: Record<string, string> = {
+    FRENZY: new URL('@/assets/cards/KeywordIcons/FRENZY.png', import.meta.url).href,
+    HUNTER: new URL('@/assets/cards/KeywordIcons/HUNTER.png', import.meta.url).href,
+    POISONOUS: new URL('@/assets/cards/KeywordIcons/POISONOUS.png', import.meta.url).href,
+    SNEAKY: new URL('@/assets/cards/KeywordIcons/SNEAKY.png', import.meta.url).href,
+    TOUGH: new URL('@/assets/cards/KeywordIcons/TOUGH.png', import.meta.url).href,
+  }
 
 const displayKeywords = computed(() => {
   if (!props.card.keywords) return []
@@ -61,7 +60,7 @@ const cardClasses = computed(() => ({
   'selected': props.selected,
   'attacking': props.attacking,
   'clickable': props.clickable,
-  'TOUGH': props.context === 'board' && props.card.keywords?.includes('TOUGH') && props.card.stillTough
+  'TOUGH': (props.context === 'player-board' || props.context ==='opponent-board') && props.card.keywords?.includes('TOUGH') && props.card.stillTough
 }))
 
 // Determine if the power overlay should be shown on the opponent's hand
@@ -69,7 +68,12 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 </script>
 
 <template>
-  <div class="card-wrapper" :class="cardClasses" @click="clickable && emit('click', props.card)">
+  <div
+    class="card-wrapper"
+    :class="cardClasses"
+    @click="clickable && emit('click', card)"
+    @contextmenu.prevent.stop="props.context !== 'opponent-hand' && emit('preview', card)"
+  >
     <!-- Card image -->
     <img :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image" draggable="false" @contextmenu.prevent/>
 

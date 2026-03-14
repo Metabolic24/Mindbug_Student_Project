@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Card from "@/components/game/Card.vue";
 import DiscardPile from "@/components/game/board/DiscardPile.vue";
-import {getCardAlt, getCardImage} from "@/shared/CardUtils";
 import {ref, Ref} from "vue";
 import DiscardModal from "@/components/game/board/DiscardModal.vue";
 import BoardButtons from "@/components/game/board/BoardButtons.vue";
@@ -19,7 +18,7 @@ interface Props {
 const props = defineProps<Props>()
 
 // Declare events emitted by this component
-const emit = defineEmits(['button-clicked', 'card-selected'])
+const emit = defineEmits(['button-clicked', 'card-selected', 'card-preview'])
 
 function onCardSelected(card: CardInterface): void {
   if ((props.gameState?.playerTurn && !props.attackingCard && card.ableToAttack) || // Attack case
@@ -34,6 +33,10 @@ function onOpponentCardSelected(card: CardInterface): void {
   if (props.gameState?.playerTurn && props.gameState?.choice?.type === "HUNTER") { // Hunter case
     emit('card-selected', card)
   }
+}
+
+function onCardPreview(card: CardInterface): void {
+  emit('card-preview', card)
 }
 
 function getCardClasses(card: CardInterface): Record<string, boolean> {
@@ -78,9 +81,15 @@ function closeModal() {
           :attacking="card.uuid === attackingCard?.uuid"
           :clickable="true"
           @click="onOpponentCardSelected"
+          @preview="onCardPreview"
         />
       </div>
-      <board-middle-area :game-state="gameState" :picked-card="pickedCard" :attacking-card="attackingCard"></board-middle-area>
+      <board-middle-area
+        :game-state="gameState"
+        :picked-card="pickedCard"
+        :attacking-card="attackingCard"
+        @card-preview="onCardPreview"
+      ></board-middle-area>
       <div class="cards">
         <Card
           v-for="card in gameState?.player.board"
@@ -91,6 +100,7 @@ function closeModal() {
           :attacking="card.uuid === attackingCard?.uuid"
           :clickable="true"
           @click="onCardSelected"
+          @preview="onCardPreview"
         />
       </div>
     </div>
