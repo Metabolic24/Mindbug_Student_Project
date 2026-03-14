@@ -63,7 +63,7 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
       </div>
       <div class="modal-body">
         <div class="cards-container">
-          <img v-for="card in choice?.cards" :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image"
+          <img v-for="card in choice?.cards" :src="getCardImage(card.id)" :alt="getCardAlt(card)" class="card-image"
                :class="getCardClasses(card)" @click="onCardSelected(card)" draggable="false" @contextmenu.prevent=""/>
         </div>
       </div>

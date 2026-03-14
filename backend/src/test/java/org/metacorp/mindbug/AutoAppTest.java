@@ -2,12 +2,13 @@ package org.metacorp.mindbug;
 
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.app.AutoApp;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
 public class AutoAppTest extends MindbugGameTest {
 
     @Test
-    public void testNominal() {
+    public void testNominal() throws CardSetException {
         for (int i = 0; i < 100; i++) {
             System.out.println("\n========================");
             System.out.println(" Début de la partie n°" + i);

@@ -21,13 +21,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CardTest {
     @Test
     public void testCardUnmarshalling() {
-        ObjectMapper objectMapper = new ObjectMapper();
-        TypeFactory typeFactory = objectMapper.getTypeFactory();
         try (InputStream is = Card.class.getClassLoader().getResourceAsStream("sets/first_contact.json")) {
             if (is == null) {
                 throw new FileNotFoundException("Resource not found");
             }
 
+            ObjectMapper objectMapper = new ObjectMapper();
+            TypeFactory typeFactory = objectMapper.getTypeFactory();
             List<Card> fileCards = objectMapper.readValue(is, typeFactory.constructCollectionType(List.class, Card.class));
             assertNotNull(fileCards);
             assertEquals(44, fileCards.size());

@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.game;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
@@ -12,7 +13,6 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.effect.impl.ReviveEffectResolver;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
@@ -30,9 +30,9 @@ public class ActionServiceTest extends MindbugGameTest {
     private CardInstance card;
 
     @BeforeEach
-    public void initGame() {
-        PlayerService playerService = new PlayerService();
+    public void initGame() throws CardSetException {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+
         currentPlayer = game.getCurrentPlayer();
         card = currentPlayer.getHand().getFirst();
     }

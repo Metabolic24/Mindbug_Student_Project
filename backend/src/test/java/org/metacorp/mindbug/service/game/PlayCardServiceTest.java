@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.game;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
@@ -12,9 +13,9 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.DisableTimingEffect;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +31,9 @@ public class PlayCardServiceTest extends MindbugGameTest {
     private Player opponent;
 
     @BeforeEach
-    public void initGame() {
-        PlayerService playerService = new PlayerService();
+    public void initGame() throws CardSetException {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+
         currentPlayer = game.getCurrentPlayer();
         opponent = currentPlayer.getOpponent(game.getPlayers());
     }
@@ -77,7 +78,7 @@ public class PlayCardServiceTest extends MindbugGameTest {
         effect.setType(EffectType.DISABLE_TIMING);
 
         CardInstance opponentCard = opponent.getHand().getFirst();
-        opponentCard.getCard().getEffects().put(EffectTiming.PASSIVE, List.of(effect));
+        opponentCard.getCard().getEffects().put(EffectTiming.PASSIVE, new ArrayList<>(List.of(effect)));
         opponent.addCardToBoard(opponentCard);
 
         currentPlayer.disableTiming(EffectTiming.PLAY);
@@ -87,7 +88,7 @@ public class PlayCardServiceTest extends MindbugGameTest {
         gainEffect.setType(EffectType.GAIN);
 
         CardInstance card = currentPlayer.getHand().getFirst();
-        card.getCard().getEffects().put(EffectTiming.PLAY, List.of(gainEffect));
+        card.getCard().getEffects().put(EffectTiming.PLAY, new ArrayList<>(List.of(gainEffect)));
         game.setPlayedCard(card);
 
         PlayCardService.managePlayedCard(currentPlayer, game);

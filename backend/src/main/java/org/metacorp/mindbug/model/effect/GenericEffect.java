@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.model.effect;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.Getter;
@@ -24,7 +25,7 @@ import org.metacorp.mindbug.model.effect.impl.ReviveEffect;
 import org.metacorp.mindbug.model.effect.impl.StealEffect;
 
 /**
- * Parent class for card effect
+ * Parent class for card effect (required as CostEffect should not contain CostEffect)
  */
 @Getter
 @Setter
@@ -51,11 +52,6 @@ import org.metacorp.mindbug.model.effect.impl.StealEffect;
 )
 public class GenericEffect extends Effect {
     /**
-     * The effect type
-     */
-    private EffectType type;
-
-    /**
      * Constructor
      */
     protected GenericEffect() {
@@ -68,6 +64,7 @@ public class GenericEffect extends Effect {
      *
      * @return the priority of the effect resolution (for passive effects only)
      */
+    @JsonIgnore
     public int getPriority() {
         // Default behavior (override it if necessary in the corresponding effect class)
         return Integer.MAX_VALUE;

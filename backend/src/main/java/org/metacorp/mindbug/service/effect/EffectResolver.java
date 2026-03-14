@@ -79,8 +79,8 @@ public abstract class EffectResolver<T extends Effect> {
     /**
      * Apply the current effect
      *
-     * @param game         the current game state
-     * @param timing       the triggered effect timing
+     * @param game   the current game state
+     * @param timing the triggered effect timing
      */
     public abstract void apply(Game game, EffectTiming timing) throws GameStateException, WebSocketException;
 

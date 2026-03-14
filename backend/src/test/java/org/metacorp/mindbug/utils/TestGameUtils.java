@@ -1,12 +1,14 @@
 package org.metacorp.mindbug.utils;
 
 import lombok.Getter;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
-import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.CardSetService;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.ChoiceService;
@@ -26,14 +28,13 @@ public class TestGameUtils {
     @Getter
     private static Player player2;
 
-    public static Game prepareCustomGame() {
-        PlayerService playerService = new PlayerService();
+    public static Game prepareCustomGame(PlayerService playerService, CardSetService cardSetService) throws CardSetException {
         player1 = new Player(playerService.createPlayer("player1"));
         player2 = new Player(playerService.createPlayer("player2"));
 
         game = new Game(player1, player2);
 
-        List<CardInstance> cards = SetUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey());
+        List<CardInstance> cards = cardSetService.getCardInstances(CardSetName.FIRST_CONTACT.getKey());
         Collections.shuffle(cards);
         game.setCards(cards);
 

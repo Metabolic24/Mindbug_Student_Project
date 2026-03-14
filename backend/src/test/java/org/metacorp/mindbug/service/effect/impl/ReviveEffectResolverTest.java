@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.effect.impl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
@@ -13,9 +14,9 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.effect.impl.ReviveEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -32,9 +33,9 @@ public class ReviveEffectResolverTest extends MindbugGameTest {
     private EffectTiming timing;
 
     @BeforeEach
-    public void prepareGame() {
-        PlayerService playerService = new PlayerService();
+    public void prepareGame() throws CardSetException {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+
         opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
         randomCard = opponentPlayer.getHand().removeFirst();
         opponentPlayer.getDiscardPile().add(randomCard);
@@ -42,7 +43,7 @@ public class ReviveEffectResolverTest extends MindbugGameTest {
         GainEffect gainEffect = new GainEffect();
         gainEffect.setValue(2);
         randomCard.getEffects(EffectTiming.PLAY).clear();
-        randomCard.getCard().getEffects().put(EffectTiming.PLAY, List.of(gainEffect));
+        randomCard.getCard().getEffects().put(EffectTiming.PLAY, new ArrayList<>(List.of(gainEffect)));
 
         ReviveEffect effect = new ReviveEffect();
         effect.setType(EffectType.REVIVE);

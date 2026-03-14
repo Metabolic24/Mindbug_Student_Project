@@ -15,6 +15,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.game.ActionService;
 import org.metacorp.mindbug.service.game.AttackService;
+import org.metacorp.mindbug.service.game.CardService;
 import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.service.game.PlayCardService;
 import org.slf4j.Logger;
@@ -25,8 +26,6 @@ import java.util.UUID;
 import java.util.stream.Stream;
 
 public class AiUtils {
-
-    private static final Random RND = new Random();
 
     public static void processGameEvent(UUID playerId, WsGameEvent gameEvent, GameService gameService) {
         Game game = gameService.findById(gameEvent.getState().getUuid());
@@ -81,24 +80,13 @@ public class AiUtils {
      * @throws GameStateException if an error occurs during the game execution
      */
     private static void resolveAttack(Game game, AiPlayer aiPlayer) throws GameStateException, WebSocketException {
-        List<CardInstance> availableCards = getBlockersList(game);
+        List<CardInstance> availableCards = CardService.getBlockersList(game);
         if (availableCards.isEmpty()) {
             AttackService.resolveAttack(null, game);
         } else {
             CardInstance blockingCard = aiPlayer.getResolver().chooseBlocker(availableCards, game);
             AttackService.resolveAttack(blockingCard, game);
         }
-    }
-
-    public static List<CardInstance> getBlockersList(Game game) {
-        Player attackedPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
-
-        Stream<CardInstance> blockersStream = attackedPlayer.getBoard().stream().filter(CardInstance::isAbleToBlock);
-        if (game.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)) {
-            blockersStream = blockersStream.filter((card) -> card.hasKeyword(CardKeyword.SNEAKY));
-        }
-
-        return blockersStream.toList();
     }
 
     /**
@@ -136,15 +124,5 @@ public class AiUtils {
                 }
             }
         }
-    }
-
-    /**
-     * Return a random card from the given list
-     *
-     * @param cards the card list
-     * @return a random card from the list
-     */
-    public static CardInstance getRandomCard(List<CardInstance> cards) {
-        return cards.get(RND.nextInt(cards.size()));
     }
 }

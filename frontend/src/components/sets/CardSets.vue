@@ -1,31 +1,10 @@
-<template>
-  <nav>
-    <router-link to="/">Home</router-link>
-  </nav>
-  <div id="sets">
-    <h1>Select a set of cards</h1>
-    <div class="sets-container">
-      <router-link v-for="set in sets" :key="set" :to="`/sets/${set}`">
-        <div class="set-card">
-          <img :src="getSetImage(set)" :alt="set"/>
-        </div>
-      </router-link>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 import {onMounted, ref, Ref} from "vue";
 import {getAvailableSets} from "@/shared/RestService";
+import {getSetImage} from "@/shared/CardUtils";
 
 // Declare a list that will contain all the names of the available sets
 let sets: Ref<string[]> = ref([])
-
-// Retrieve the image corresponding to the given set
-function getSetImage(set: string) {
-  const url = new URL("@/assets/sets/", import.meta.url)
-  return `${url}/${set}.png`
-}
 
 onMounted(async () => {
   // Get the list of available sets from the server
@@ -33,14 +12,38 @@ onMounted(async () => {
 })
 </script>
 
+<template>
+  <nav @contextmenu.prevent>
+    <router-link to="/">Home</router-link>
+  </nav>
+  <div id="cards-sets" @contextmenu.prevent>
+    <h1>Select a set of cards</h1>
+    <div id="cards-sets-container">
+      <router-link :to="`/createSet`">
+        <div class="cards-set">
+          <img :src="getSetImage('')" alt="Create a new set"/>
+        </div>
+      </router-link>
+      <router-link v-for="(set, index) in sets" :key="set" :to="`/sets/${set}?custom=${index >= 2}`">
+        <div class="cards-set">
+          <img v-if="index < 2" :src="getSetImage(set)" :alt="set"/>
+          <h2 v-if="index >= 2">{{set}}</h2>
+        </div>
+      </router-link>
+    </div>
+  </div>
+</template>
+
 <style scoped>
-#sets {
+#cards-sets {
   text-align: center;
+  height: 97%;
 }
 
-.sets-container {
+#cards-sets-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 15px;
 
   padding: 20px;
 
@@ -50,37 +53,35 @@ onMounted(async () => {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-
-  font-size: 24px;
-  color: #2c3e50;
-}
-
-.set-card {
+.cards-set {
   width: 180px;
   height: 225px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
 
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  h2 {
+    width: 100%;
+    overflow-wrap: break-word;
+  }
 }
 
-.set-card:hover {
+.cards-set:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.set-card img {
-  width: 100%;
-  height: 100%;
 }
 </style>
   

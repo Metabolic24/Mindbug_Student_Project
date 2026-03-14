@@ -2,6 +2,7 @@ package org.metacorp.mindbug;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
@@ -37,7 +38,7 @@ public class SpecificCaseTest extends MindbugGameTest {
     private Player player2;
 
     @BeforeEach
-    public void setup() {
+    public void setup() throws CardSetException {
         game = prepareCustomGame();
         player1 = TestGameUtils.getPlayer1();
         player2 = TestGameUtils.getPlayer2();

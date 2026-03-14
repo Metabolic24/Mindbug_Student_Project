@@ -1,4 +1,4 @@
-package org.metacorp.mindbug.model;
+package org.metacorp.mindbug.model.card;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 

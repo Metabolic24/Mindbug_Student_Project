@@ -2,17 +2,16 @@ package org.metacorp.mindbug.service.game;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
-import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
+import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.InflictEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.utils.SetUtils;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.ArrayList;
@@ -28,11 +27,11 @@ public class GameStateServiceTest extends MindbugGameTest {
 
     private Game game;
     private Player currentPlayer;
-    private final PlayerService playerService = new PlayerService();
 
     @BeforeEach
-    public void initGame() {
+    public void initGame() throws CardSetException {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+
         currentPlayer = game.getCurrentPlayer();
     }
 
@@ -66,7 +65,7 @@ public class GameStateServiceTest extends MindbugGameTest {
         boardCard.setAbleToAttack(false);
         boardCard.setAbleToBlock(false);
         boardCard.setKeywords(new HashSet<>());
-        boardCard.getCard().getEffects().put(EffectTiming.PASSIVE, new ArrayList<>());
+        boardCard.getCard().getEffects().remove(EffectTiming.PASSIVE);
 
         currentPlayer.addCardToBoard(boardCard);
 
@@ -94,13 +93,13 @@ public class GameStateServiceTest extends MindbugGameTest {
     }
 
     @Test
-    public void refreshGameState_multiplePassiveEffects() throws WebSocketException, GameStateException {
+    public void refreshGameState_multiplePassiveEffects() throws WebSocketException, GameStateException, CardSetException {
         // Create a new game manually, as we need to get some specific cards
         Player currentPlayer = new Player(playerService.createPlayer("player1"));
         Player opponent = new Player(playerService.createPlayer("player2"));
         game = new Game(currentPlayer, opponent);
         game.setCurrentPlayer(currentPlayer);
-        game.setCards(SetUtils.getCardsFromConfig(CardSetName.FIRST_CONTACT.getKey()));
+        game.setCards(cardSetService.getCardInstances(CardSetName.FIRST_CONTACT.getKey()));
 
         CardInstance card1 = findCard("FROBLIN INSTIGATOR");
         CardInstance card2 = findCard("SHARKY GRAB-DOG-MUMMYPUS");

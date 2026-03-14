@@ -25,7 +25,8 @@ public class HunterChoice extends AbstractChoice<UUID> {
 
     /**
      * Constructor
-     * @param attackingCard the attacking card
+     *
+     * @param attackingCard    the attacking card
      * @param availableTargets the list of available attack targets
      */
     public HunterChoice(@NonNull CardInstance attackingCard, @NonNull Set<CardInstance> availableTargets) {
