@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import {computed, onMounted, ref, watch} from "vue";
-import Card from "@/components/game/Card.vue";
-import {getCardTimings, getEvolutionTargetId, getEvolutionTiming, getKeywordDescriptions} from "@/shared/CardTextUtils";
+import {getCardAlt, getCardImage} from "@/shared/CardUtils";
+import {
+  getActivationLabel,
+  getCardActivations,
+  getEvolutionActivation,
+  getEvolutionTargetId,
+  getKeywordDescriptions
+} from "@/shared/CardTextUtils";
 import {getCardSetCards} from "@/shared/RestService";
 
 interface Props {
@@ -15,13 +21,79 @@ const setCards = ref<CardDetails[] | null>(null)
 const cardDetails = ref<CardDetails | null>(null)
 const loadingDetails = ref(false)
 
-const keywordSource = computed(() => cardDetails.value?.keywords ?? props.card?.keywords ?? [])
+const keywordSource = computed(() => props.card?.keywords ?? cardDetails.value?.keywords ?? [])
 const keywordDescriptions = computed(() => getKeywordDescriptions(keywordSource.value))
+const keywordIcons: Record<string, string> = {
+  FRENZY: new URL("@/assets/cards/KeywordIcons/FRENZY.png", import.meta.url).href,
+  HUNTER: new URL("@/assets/cards/KeywordIcons/HUNTER.png", import.meta.url).href,
+  POISONOUS: new URL("@/assets/cards/KeywordIcons/POISONOUS.png", import.meta.url).href,
+  SNEAKY: new URL("@/assets/cards/KeywordIcons/SNEAKY.png", import.meta.url).href,
+  TOUGH: new URL("@/assets/cards/KeywordIcons/TOUGH.png", import.meta.url).href,
+}
+const keywordItems = computed(() =>
+  keywordDescriptions.value.map((item) => ({
+    ...item,
+    icon: keywordIcons[item.keyword],
+    inactive: item.keyword === "TOUGH" && props.card?.stillTough === false
+  }))
+)
 
-const cardEffects = computed(() => getCardTimings(cardDetails.value?.effects))
+const descriptionSource = computed(() => props.card?.description ?? cardDetails.value?.description ?? "")
+const descriptionText = computed(() => {
+  const raw = descriptionSource.value ?? ""
+  return raw
+    .replace(/<br\s*\/?>/gi, " ")
+    .replace(/<[^>]*>/g, "")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+})
+const powerSource = computed(() => props.card?.power ?? cardDetails.value?.power ?? 0)
+const basePowerSource = computed(() => props.card?.basePower ?? cardDetails.value?.basePower ?? powerSource.value)
+
+const cardEffects = computed(() => getCardActivations(cardDetails.value?.effects))
+
+const activationFromDescription = computed(() => {
+  const description = descriptionText.value
+  if (!description) return null
+  const match = /^(Play|Attack|Passive|Action|Defeated|Life Lost)\s*(?:[:\-–—])?\s*(.+)$/i.exec(description)
+  if (!match) return null
+  const label = match[1].toUpperCase().replace(" ", "_")
+  return {
+    name: label,
+    activation: getActivationLabel(label),
+    description: match[2].trim(),
+  }
+})
+
+const activationData = computed(() => {
+  const items = cardEffects.value.map((effect) => ({
+    name: effect.name,
+    activation: effect.activation,
+    description: ""
+  }))
+  let descriptionAttached = false
+  if (activationFromDescription.value) {
+    const existingIndex = items.findIndex((item) => item.name === activationFromDescription.value?.name)
+    if (existingIndex !== -1) {
+      items[existingIndex].description = activationFromDescription.value.description
+    } else {
+      items.push(activationFromDescription.value)
+    }
+    descriptionAttached = true
+  } else if (descriptionText.value && items.length > 0) {
+    const passiveIndex = items.findIndex((item) => item.name === "PASSIVE")
+    const targetIndex = passiveIndex !== -1 ? passiveIndex : (items.length === 1 ? 0 : -1)
+    if (targetIndex !== -1) {
+      items[targetIndex].description = descriptionText.value
+      descriptionAttached = true
+    }
+  }
+  return { items, descriptionAttached }
+})
 
 const evolutionTargetId = computed(() => getEvolutionTargetId(cardDetails.value?.effects))
-const evolutionTiming = computed(() => getEvolutionTiming(cardDetails.value?.effects))
+const evolutionActivation = computed(() => getEvolutionActivation(cardDetails.value?.effects))
 const evolutionInfo = computed(() => {
   if (evolutionTargetId.value == null || !setCards.value) return null
   const target = setCards.value.find((c) => c.id === evolutionTargetId.value)
@@ -70,23 +142,29 @@ watch(() => `${props.card?.setName}-${props.card?.id}`, loadCardDetails)
         <button type="button" class="close-button" aria-label="Close" @click="emit('close')">
           <span aria-hidden="true">&times;</span>
         </button>
-        <Card
-          :card="card"
-          context="board"
-          :selected="false"
-          :attacking="false"
-          :clickable="false"
+        <img
+          :src="getCardImage(card)"
+          :alt="getCardAlt(card)"
           class="preview-card"
+          draggable="false"
         />
 
         <div class="preview-text">
           <h3 class="card-title">{{ card.name ?? "Unknown card" }}</h3>
+          <div v-if="!activationData.descriptionAttached && descriptionSource" class="card-description" v-html="descriptionSource"></div>
+          <div class="section">
+            <div class="section-title">Power</div>
+            <div class="muted">
+              {{ powerSource }}
+              <span v-if="basePowerSource !== powerSource"> (Base {{ basePowerSource }})</span>
+            </div>
+          </div>
           <div v-if="evolutionInfo || evolutionFrom" class="evolution">
             <div class="section-title">Evolution</div>
             <div v-if="evolutionFrom" class="muted">Evolves from {{ evolutionFrom }}.</div>
             <div v-if="evolutionInfo" class="muted">
               Evolves into {{ evolutionInfo.targetName }} when its EVOLVE effect resolves at:
-              {{ evolutionTiming ?? "its timing" }}.
+              {{ evolutionActivation ?? "its activation" }}.
             </div>
           </div>
 
@@ -94,20 +172,29 @@ watch(() => `${props.card?.setName}-${props.card?.id}`, loadCardDetails)
             <div class="section-title">Keywords</div>
             <div v-if="keywordDescriptions.length === 0" class="muted">No keywords.</div>
             <ul v-else class="list">
-              <li v-for="item in keywordDescriptions" :key="item.keyword">
-                <strong>{{ item.keyword }}</strong> — {{ item.description }}
+              <li v-for="item in keywordItems" :key="item.keyword">
+                <span class="keyword-row">
+                  <img v-if="item.icon" :src="item.icon" :alt="item.keyword" class="keyword-icon" />
+                  <strong :class="{ inactive: item.inactive }">{{ item.keyword }}</strong>
+                </span>
+                <span class="keyword-text" :class="{ inactive: item.inactive }">— {{ item.description }}</span>
+                <span v-if="item.inactive" class="keyword-status">(TOUGH effect already used.)</span>
               </li>
             </ul>
           </div>
 
           <div class="section">
-            <div class="section-title">Timing</div>
-            <div v-if="cardEffects.length === 0" class="muted">No timing listed.</div>
+            <div class="section-title">Activation</div>
+            <div v-if="activationData.items.length === 0" class="muted">No activation listed.</div>
             <ul v-else class="list">
-              <li v-for="(effect, effectIndex) in cardEffects" :key="effect.timing + '-' + effectIndex">
+              <li v-for="(effect, effectIndex) in activationData.items" :key="effect.activation + '-' + effectIndex">
                 <strong v-if="effect.name">{{ effect.name }}</strong>
                 <span v-if="effect.name"> — </span>
-                {{ effect.timing }}
+                {{ effect.activation }}
+                <template v-if="effect.description">
+                  <br />
+                  <span class="activation-description">• {{ effect.description }}</span>
+                </template>
               </li>
             </ul>
           </div>
@@ -121,7 +208,7 @@ watch(() => `${props.card?.setName}-${props.card?.id}`, loadCardDetails)
 .preview-container {
   position: relative;
   margin: 0;
-  width: min(92vw, 980px);
+
 
   display: flex;
   align-items: center;
@@ -130,6 +217,7 @@ watch(() => `${props.card?.setName}-${props.card?.id}`, loadCardDetails)
 
 .preview-content {
   position: relative;
+  width: min(92vw, 980px);
   display: grid;
   grid-template-columns: minmax(240px, 420px) minmax(260px, 1fr);
   gap: 24px;
@@ -139,25 +227,12 @@ watch(() => `${props.card?.setName}-${props.card?.id}`, loadCardDetails)
   border-radius: 16px;
 }
 
-:global(.preview-card.card-wrapper) {
-  width: min(38vw, 420px);
+:global(.preview-card) {
+  width: min(90vw, 420px);
   height: calc(min(38vw, 420px) * 1.5);
-  font-size: clamp(18px, 2vw, 24px);
   border-radius: 14px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
-}
-
-:global(.preview-card .card-image) {
-  height: 100%;
-}
-
-:global(.preview-card .power-overlay span) {
-  font-size: 3em;
-}
-
-:global(.preview-card .description-text) {
-  font-size: 0.9em;
-  line-height: 1.2;
+  object-fit: cover;
 }
 
 .preview-text {
@@ -173,8 +248,19 @@ watch(() => `${props.card?.setName}-${props.card?.id}`, loadCardDetails)
   margin-bottom: 12px;
 }
 
+.card-description {
+  color: #d8d8d8;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: -6px 0 12px;
+}
+
 .section {
   margin-top: 16px;
+}
+
+.evolution {
+  margin-top: 20px;
 }
 
 .section-title {
@@ -191,21 +277,58 @@ watch(() => `${props.card?.setName}-${props.card?.id}`, loadCardDetails)
   padding-left: 16px;
 }
 
+.list li {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.keyword-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  margin-right: 6px;
+}
+
+.keyword-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.keyword-text {
+  white-space: normal;
+}
+
+.inactive {
+  opacity: 0.55;
+}
+
+.keyword-status {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #a9a9a9;
+}
+
 .muted {
   color: #b0b0b0;
   font-size: 14px;
+}
+
+.activation-description {
+  color: #d8d8d8;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .effect-blocks {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-
-.effect-timing {
-  font-size: 12px;
-  color: #c5c5c5;
-  margin-bottom: 2px;
 }
 
 .effect-title,

@@ -60,7 +60,7 @@ const cardClasses = computed(() => ({
   'selected': props.selected,
   'attacking': props.attacking,
   'clickable': props.clickable,
-  'TOUGH': props.context === 'board' && props.card.keywords?.includes('TOUGH') && props.card.stillTough
+  'TOUGH': (props.context === 'player-board' || props.context ==='opponent-board') && props.card.keywords?.includes('TOUGH') && props.card.stillTough
 }))
 
 // Determine if the power overlay should be shown on the opponent's hand

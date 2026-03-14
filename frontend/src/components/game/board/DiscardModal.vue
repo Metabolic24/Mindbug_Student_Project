@@ -84,7 +84,7 @@ const title = computed(() => {
   position: relative;
   margin: 100px auto;
   padding: 10px 20px 20px;
-  max-width: 950px;
+  width: min(90vw, 1100px);
   max-height: 650px;
   background-color: #302931;
   border-radius: 12px;
@@ -222,4 +222,3 @@ const title = computed(() => {
   transform: translateX(-10px) rotateY(12deg) scale(0.9);
 }
 </style>
-
