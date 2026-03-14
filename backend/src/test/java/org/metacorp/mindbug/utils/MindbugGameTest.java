@@ -1,13 +1,20 @@
 package org.metacorp.mindbug.utils;
 
 import ch.qos.logback.classic.LoggerContext;
+import jakarta.inject.Inject;
+import org.glassfish.hk2.api.ServiceLocator;
+import org.glassfish.hk2.utilities.ServiceLocatorUtilities;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.RegisterExtension;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
-import org.metacorp.mindbug.model.CardSetName;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.CardSetService;
 import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.StartService;
@@ -29,6 +36,20 @@ public class MindbugGameTest {
     private static final List<UUID> gameIds = new ArrayList<>();
     private static UUID gameId;
 
+    protected static ServiceLocator locator;
+
+    @Inject
+    protected PlayerService playerService;
+
+    @Inject
+    protected StartService startService;
+
+    @Inject
+    protected GameService gameService;
+
+    @Inject
+    protected CardSetService cardSetService;
+
     @RegisterExtension
     private final AfterTestExecutionCallback afterTest = context -> {
         final Optional<Throwable> exception = context.getExecutionException();
@@ -37,34 +58,44 @@ public class MindbugGameTest {
         }
     };
 
-    protected Game startGame(Player player1, Player player2) {
-        Game game = StartService.startGame(player1, player2);
+    protected Game startGame(Player player1, Player player2) throws CardSetException {
+        Game game = startService.startGame(player1, player2);
         gameId = game.getUuid();
         return game;
     }
 
-    protected Game startGame(Player player1, Player player2, CardSetName cardSetName) {
-        Game game = StartService.startGame(new Game(player1, player2), cardSetName);
+    protected Game startGame(Player player1, Player player2, CardSetName cardSetName) throws CardSetException {
+        Game game = startService.startGame(new Game(player1, player2), cardSetName);
         gameId = game.getUuid();
         return game;
     }
 
-    protected Game prepareCustomGame() {
-        Game game = TestGameUtils.prepareCustomGame();
+    protected Game prepareCustomGame() throws CardSetException {
+        Game game = TestGameUtils.prepareCustomGame(playerService, cardSetService);
         gameId = game.getUuid();
         return game;
     }
 
-    protected Game createGame(GameService gameService, UUID player1, UUID player2) throws UnknownPlayerException {
+    protected Game createGame(UUID player1, UUID player2) throws UnknownPlayerException, CardSetException {
         Game game = gameService.createGame(player1, player2);
         gameId = game.getUuid();
         return game;
     }
 
-    protected Game getAppUtilsGame() {
-        Game game = AppUtils.startGame(new PlayerService());
+    protected Game getAppUtilsGame() throws CardSetException {
+        Game game = AppUtils.startGame(playerService, startService);
         gameId = game.getUuid();
         return game;
+    }
+
+    @BeforeAll
+    public static void initLocator() {
+        locator = ServiceLocatorUtilities.createAndPopulateServiceLocator();
+    }
+
+    @BeforeEach
+    public void injectServices() {
+        locator.inject(this);
     }
 
     @AfterAll

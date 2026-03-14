@@ -3,6 +3,7 @@ package org.metacorp.mindbug.utils;
 import lombok.Setter;
 import org.metacorp.mindbug.app.GameEngine;
 import org.metacorp.mindbug.dto.player.PlayerLightDTO;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
@@ -11,6 +12,7 @@ import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.AttackService;
+import org.metacorp.mindbug.service.game.CardService;
 import org.metacorp.mindbug.service.game.PlayCardService;
 import org.metacorp.mindbug.service.game.StartService;
 
@@ -30,11 +32,11 @@ public final class AppUtils {
      *
      * @return the created game
      */
-    public static Game startGame(PlayerService playerService) {
+    public static Game startGame(PlayerService playerService, StartService startService) throws CardSetException {
         PlayerLightDTO player1 = playerService.createPlayer("Player1");
         PlayerLightDTO player2 = playerService.createPlayer("Player2");
 
-        Game game = StartService.startGame(new AiPlayer(player1), new AiPlayer(player2));
+        Game game = startService.startGame(new AiPlayer(player1), new AiPlayer(player2));
 
         for (Player player : game.getPlayers()) {
             AppUtils.detailedSumUpPlayer(player);
@@ -72,7 +74,7 @@ public final class AppUtils {
         }
 
         // Select a card and play it
-        CardInstance card = (scanner == null) ? AiUtils.getRandomCard(hand) : getChosenCard(hand, scanner);
+        CardInstance card = (scanner == null) ? CardService.getRandomCard(hand) : getChosenCard(hand, scanner);
         if (card != null) {
             System.out.printf("%s joue la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
             PlayCardService.pickCard(card, game);
@@ -107,7 +109,7 @@ public final class AppUtils {
         }
 
         // Select a card and attack with it
-        CardInstance card = (scanner == null) ? AiUtils.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
+        CardInstance card = (scanner == null) ? CardService.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
         if (card != null) {
             System.out.printf("%s attaque avec la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
             AttackService.declareAttack(card, game);
@@ -134,13 +136,13 @@ public final class AppUtils {
     public static void resolveAttack(Scanner scanner, Game game) throws GameStateException, WebSocketException {
         Player attackedPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
 
-        List<CardInstance> availableCards = AiUtils.getBlockersList(game);
+        List<CardInstance> availableCards = CardService.getBlockersList(game);
         if (availableCards.isEmpty()) {
             System.out.printf("%s ne peut pas défendre\n", attackedPlayer.getName());
             AttackService.resolveAttack(null, game);
         } else {
             // Select a card and block with it
-            CardInstance card = (scanner == null) ? AiUtils.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
+            CardInstance card = (scanner == null) ? CardService.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
             if (card != null) {
                 System.out.printf("%s défend avec la carte '%s'\n", attackedPlayer.getName(), card.getCard().getName());
                 AttackService.resolveAttack(card, game);

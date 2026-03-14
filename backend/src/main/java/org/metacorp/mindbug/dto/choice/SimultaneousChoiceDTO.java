@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.metacorp.mindbug.dto.CardDTO;
+import org.metacorp.mindbug.dto.card.CardDTO;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 
 import java.util.Set;

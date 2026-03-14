@@ -4,8 +4,8 @@ import org.metacorp.mindbug.dto.ws.WsGameEventType;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
-import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.AbstractChoice;
+import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.service.WebSocketService;
 
 import java.util.HashMap;

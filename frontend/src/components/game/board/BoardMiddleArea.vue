@@ -1,8 +1,9 @@
 <script setup lang="ts">
-// Declare the interface for the data given by the parent component
 import {computed} from "vue";
-import {getCardImage} from "@/shared/CardUtils";
 import Card from "../Card.vue";
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -16,37 +17,34 @@ const props = defineProps<Props>()
 // Computed value for the message
 const message = computed(() => {
   if (props.gameState.winner) {
-    const gameOver = "Game Over : "
     if (props.gameState.winner === props.gameState.player.uuid) {
-      return gameOver + "You WIN !"
+      return 'game.middle_area.win'
     } else {
-      return gameOver + "You LOSE !"
+      return 'game.middle_area.lose'
     }
   } else if (props.gameState?.choice) {
     if (props.gameState.choice.playerToChoose === props.gameState.player.uuid) {
-      if (props.gameState.choice.type === "FRENZY") {
-        return "Do you want to attack again ?"
+      if (props.gameState.choice.type === "FRENZY" || props.gameState.choice.type === "HUNTER") {
+        return 'game.middle_area.choice.' + props.gameState.choice.type
       } else if (props.gameState.choice.type === "BOOLEAN") {
-        return props.gameState.choice.message
-      } else if (props.gameState.choice.type === "HUNTER") {
-        return "Select a target to hunt or continue attacking"
+        return 'game.middle_area.choice.' + props.gameState.choice.sourceCard.id
       }
     } else {
-      return "Waiting for opponent choice..."
+      return 'game.middle_area.choice.waiting'
     }
   } else if (props.gameState?.playerTurn) {
     if (props.pickedCard || props.attackingCard) {
-      return "Waiting for opponent..."
+      return 'game.middle_area.waiting'
     } else {
-      return "Play OR Attack"
+      return 'game.middle_area.player_turn'
     }
   } else {
     if (props.pickedCard) {
-      return "Do you want to use a MindBug ?"
+      return 'game.middle_area.choice.mindbug'
     } else if (props.attackingCard) {
-      return "Block OR Lose LP"
+      return 'game.middle_area.choice.attacked'
     } else {
-      return "Waiting for opponent..."
+      return 'game.middle_area.waiting'
     }
   }
 })
@@ -63,7 +61,7 @@ const isImageVisible = computed(() => {
 // Computed value for the image source URL
 const imgSrc = computed(() => {
   if (props.gameState?.choice) {
-    return props.gameState.choice.sourceCard
+    return props.gameState.choice.targetCard ? props.gameState.choice.targetCard : props.gameState.choice.sourceCard
   } else if (props.pickedCard) {
     return props.pickedCard
   }
@@ -73,7 +71,7 @@ const imgSrc = computed(() => {
 
 <template>
   <div class="middle-area">
-    <Card
+    <card
       v-if="isImageVisible"
       :card="imgSrc"
       context="board"
@@ -83,7 +81,7 @@ const imgSrc = computed(() => {
       class="middle-card"
     />
 
-    <span>{{ message }}</span>
+    <span>{{ message ? t(message) : "" }}</span>
   </div>
 </template>
 

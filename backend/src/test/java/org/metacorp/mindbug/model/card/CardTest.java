@@ -21,37 +21,37 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CardTest {
     @Test
     public void testCardUnmarshalling() {
-        ObjectMapper objectMapper = new ObjectMapper();
-        TypeFactory typeFactory = objectMapper.getTypeFactory();
         try (InputStream is = Card.class.getClassLoader().getResourceAsStream("sets/first_contact.json")) {
             if (is == null) {
                 throw new FileNotFoundException("Resource not found");
             }
 
+            ObjectMapper objectMapper = new ObjectMapper();
+            TypeFactory typeFactory = objectMapper.getTypeFactory();
             List<Card> fileCards = objectMapper.readValue(is, typeFactory.constructCollectionType(List.class, Card.class));
             assertNotNull(fileCards);
             assertEquals(44, fileCards.size());
 
-            Card firstCard = fileCards.getFirst();
-            assertNotNull(firstCard);
-            assertEquals("SPIDER OWL", firstCard.getName());
-            assertEquals(3, firstCard.getPower());
-            assertTrue(firstCard.getEffects().isEmpty());
-            assertNotNull(firstCard.getKeywords());
-            assertTrue(firstCard.getKeywords().contains(CardKeyword.SNEAKY));
-            assertTrue(firstCard.getKeywords().contains(CardKeyword.POISONOUS));
+            Card exampleCard = fileCards.stream().filter(card -> card.getId() == 27).findFirst().orElse(null);
+            assertNotNull(exampleCard);
+            assertEquals("SPIDER OWL", exampleCard.getName());
+            assertEquals(3, exampleCard.getPower());
+            assertTrue(exampleCard.getEffects().isEmpty());
+            assertNotNull(exampleCard.getKeywords());
+            assertTrue(exampleCard.getKeywords().contains(CardKeyword.SNEAKY));
+            assertTrue(exampleCard.getKeywords().contains(CardKeyword.POISONOUS));
 
-            Card tenthCard = fileCards.get(10);
-            assertNotNull(tenthCard);
-            assertEquals("URCHIN HURLER", tenthCard.getName());
-            assertEquals(5, tenthCard.getPower());
-            assertNotNull(tenthCard.getKeywords());
-            assertTrue(tenthCard.getKeywords().contains(CardKeyword.HUNTER));
-            assertEquals(1, tenthCard.getEffects().size());
-            assertTrue(tenthCard.getEffects().containsKey(EffectTiming.PASSIVE));
-            assertEquals(1, tenthCard.getEffects().get(EffectTiming.PASSIVE).size());
+            Card otherCard = fileCards.stream().filter(card -> card.getId() == 32).findFirst().orElse(null);
+            assertNotNull(otherCard);
+            assertEquals("URCHIN HURLER", otherCard.getName());
+            assertEquals(5, otherCard.getPower());
+            assertNotNull(otherCard.getKeywords());
+            assertTrue(otherCard.getKeywords().contains(CardKeyword.HUNTER));
+            assertEquals(1, otherCard.getEffects().size());
+            assertTrue(otherCard.getEffects().containsKey(EffectTiming.PASSIVE));
+            assertEquals(1, otherCard.getEffects().get(EffectTiming.PASSIVE).size());
 
-            PowerUpEffect effect = (PowerUpEffect) tenthCard.getEffects().get(EffectTiming.PASSIVE).getFirst();
+            PowerUpEffect effect = (PowerUpEffect) otherCard.getEffects().get(EffectTiming.PASSIVE).getFirst();
             assertNotNull(effect);
             assertEquals(EffectType.POWER_UP, effect.getType());
             assertEquals(2, effect.getValue());

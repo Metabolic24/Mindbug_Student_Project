@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import {getCardAlt, getCardImage} from "@/shared/CardUtils";
 import {computed, ref, Ref} from "vue";
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -17,8 +20,8 @@ const selectedCards: Ref<CardInterface[]> = ref([])
 // Computed value for modal title
 const title = computed(() => {
   return props.choice?.type === "TARGET" ?
-      `Choose ${props.choice.count} target(s) from these cards` :
-      "Choose the effect to trigger first"
+      t('modal.choice.target_title', {targets_count: props.choice.count}) :
+      t('modal.choice.simultaneous_title')
 })
 
 // Computed value to disable validation button
@@ -57,19 +60,19 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
     <div class="modal-container">
       <div class="modal-header">
         <h5 class="modal-title">{{ title }}</h5>
-        <button type="button" aria-label="Close" v-if="choice?.optional">
+        <button type="button" aria-label="Close" v-if="choice?.optional" :title="t('modal.game.choice.leave_tooltip')">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <div class="cards-container">
-          <img v-for="card in choice?.cards" :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image"
+          <img v-for="card in choice?.cards" :src="getCardImage(card.id)" :alt="t(getCardAlt(card))" class="card-image"
                :class="getCardClasses(card)" @click="onCardSelected(card)" draggable="false" @contextmenu.prevent=""/>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" @click="onButtonClick()" :disabled="isButtonDisabled">
-          Save choice
+          {{ t('modal.game.choice.save') }}
         </button>
       </div>
     </div>

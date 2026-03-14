@@ -40,7 +40,7 @@ public class EvolveEffectResolver extends EffectResolver<EvolveEffect> {
             evolutionCard.setOwner(currentPlayer);
 
             // Store the initial card in the evolved one so we can put it in the discard pile when destroyed
-            if (effectSource.getCard().isEvolution()) {
+            if (effectSource.getCard().getInitialCardId() != null) {
                 evolutionCard.setInitialCard(effectSource.getInitialCard());
             } else {
                 evolutionCard.setInitialCard(effectSource);

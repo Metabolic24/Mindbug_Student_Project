@@ -3,14 +3,16 @@ package org.metacorp.mindbug.service;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.dto.player.PlayerLightDTO;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
+import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class PlayerServiceTest {
-
-    private final PlayerService playerService = new PlayerService();
+public class PlayerServiceTest extends MindbugGameTest {
 
     @Test
     public void createPlayer_nominal() {

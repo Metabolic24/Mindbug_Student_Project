@@ -18,7 +18,7 @@ public abstract class AbstractChoice<T> {
     /**
      * @return the choice type
      */
-     public abstract ChoiceType getType();
+    public abstract ChoiceType getType();
 
     /**
      * Resolve the current choice

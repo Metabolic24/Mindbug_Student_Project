@@ -1,16 +1,20 @@
 // Get the image of the given card
-export function getCardImage(card: CardInterface): string {
+export function getCardImage(cardId: number): string {
     const url = new URL("@/assets/cards/", import.meta.url)
-
-    if (card.setName && card.id) {
-        return `${url}/${card.setName}/${card.id}.jpg`
-    }
-    else {
-        return `${url}/back.png`
-    }
+    return cardId ? `${url}/${cardId}.jpg` : `${url}/back.png`
 }
 
 // Get the alternative description of the given card
-export function getCardAlt(card: CardInterface): string {
-    return card.name ?? "back"
+export function getCardAlt(card: CardInterface, ): string {
+    return card.id ? 'cards.' + card.id + '.name' : 'cards.back_placeholder';
+}
+
+// Retrieve the image corresponding to the given set
+export function getSetImage(set: string) {
+    const url = new URL("@/assets/sets/", import.meta.url)
+    if (set) {
+        return `${url}/${set}.png`
+    } else {
+        return `${url}/create_new_set.png`
+    }
 }

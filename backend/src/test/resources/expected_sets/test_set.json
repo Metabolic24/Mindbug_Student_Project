@@ -1,0 +1,44 @@
+[ {
+  "id" : 1,
+  "name" : "AXOLOTL HEALER",
+  "power" : 4,
+  "keywords" : [ "POISONOUS" ],
+  "effects" : {
+    "PLAY" : [ {
+      "type" : "GAIN",
+      "value" : 2
+    } ]
+  }
+}, {
+  "id" : 13,
+  "name" : "GRAVE ROBBER",
+  "power" : 7,
+  "keywords" : [ "TOUGH" ],
+  "effects" : {
+    "PLAY" : [ {
+      "type" : "STEAL",
+      "value" : 1,
+      "source" : "DISCARD",
+      "mustPlay" : true
+    } ]
+  },
+  "unique": true
+}, {
+  "id" : 15,
+  "name" : "KANGASAURUS REX",
+  "power" : 7,
+  "effects" : {
+    "PLAY" : [ {
+      "type" : "DESTROY",
+      "value" : -1,
+      "max" : 4
+    } ]
+  },
+  "unique": true
+}, {
+  "id" : 18,
+  "name" : "LUCHATAUR",
+  "power" : 9,
+  "keywords" : [ "FRENZY" ],
+  "unique": true
+} ]

@@ -1,0 +1,451 @@
+{
+  "home": {
+    "title": "Welcome to Mindbug App",
+    "search_button": {
+      "searching": "Searching players...",
+      "play": "Play"
+    }
+  },
+  "game": {
+    "loading": "Preparing the battlefield...",
+    "error": {
+      "not_found": {
+        "label": "<h1>Oops!</h1><p>The game cannot be found or joined.</p>",
+        "button": "Main menu"
+      },
+      "loading_failure": {
+        "label": "But it’s taking longer than expected...",
+        "button": "Cancel the game and go back to the main menu"
+      }
+    },
+    "settings_tooltip": "Open Settings menu",
+    "player": {
+      "avatar_placeholder": "Avatar",
+      "mindbug_placeholder": "Mindbug",
+      "drawPile_placeholder": "Draw Pile",
+      "life_placeholder": "Life"
+    },
+    "discard_pile": "Discard pile",
+    "buttons": {
+      "play": "Play",
+      "attack": "Attack",
+      "hunt": "Hunt target",
+      "use_mindbug": "Use Mindbug",
+      "block": "Block",
+      "continue": "Continue",
+      "action": "Action",
+      "no_mindbug": "No Mindbug",
+      "lose_lp": "Lose LP"
+    },
+    "middle_area": {
+      "win": "Game Over : You WIN!",
+      "lose": "Game Over : You LOSE!",
+      "player_turn": "Play OR Attack OR Action",
+      "waiting": "Waiting for opponent...",
+      "choice": {
+        "FRENZY": "Do you want to attack again?",
+        "BOOLEAN": "TODO",
+        "HUNTER": "Select a target to hunt or continue attacking",
+        "waiting": "Waiting for opponent choice...",
+        "mindbug": "Do you want to use a MindBug?",
+        "attacked": "Block OR Lose LP",
+        "40": "Do you want to play the stolen card?",
+        "41": "Do you want to revive this card?"
+      }
+    }
+  },
+  "available_sets": {
+    "title": "Cards from set"
+  },
+  "card_sets": {
+    "title": "Select a set of cards",
+    "first_contact": "First Contact",
+    "beyond_evolution": "Beyond Evolution"
+  },
+  "create_set": {
+    "title": "Card set name: ",
+    "name_placeholder": "Choose a name for your custom card set",
+    "button": "Save"
+  },
+  "modal": {
+    "game_settings": {
+      "title": "Choose one or more sets you want to play",
+      "button": "Search",
+      "play_offline": "Play offline"
+    },
+    "login": {
+      "title": "Choose a nickname",
+      "name_placeholder": "nickname",
+      "button": "Start"
+    },
+    "game": {
+      "leave_tooltip": "Close",
+      "choice": {
+        "target_title": "Choose ${targets_count} target(s) from these cards",
+        "simultaneous_title": "Choose the effect to trigger first",
+        "save": "Save choice"
+      },
+      "discard": {
+        "carousel": "Carousel",
+        "grid": "Grid",
+        "self_title": "Your discard pile",
+        "opponent_title": "Opponent's discard pile"
+      },
+      "settings": {
+        "title": "Settings",
+        "continue": "Continue",
+        "leave": "Leave"
+      }
+    }
+  },
+  "cards": {
+    "back_placeholder": "card back",
+    "keywords": {
+      "FRENZY": "FRENZY",
+      "HUNTER": "HUNTER",
+      "TOUGH": "TOUGH",
+      "SNEAKY": "SNEAKY",
+      "POISONOUS": "POISONOUS"
+    },
+    "1": {
+      "name": "Axolotl Healer",
+      "description": "<b>Play</b>: Gain 2 life points"
+    },
+    "2": {
+      "name": "Bee bear",
+      "description": "Cannot be blocked by creatures with power 6 or less"
+    },
+    "3": {
+      "name": "Brain Fly",
+      "description": "<b>Play</b>: The opponent lose 1 life point"
+    },
+    "4": {
+      "name": "Chameleon Sniper",
+      "description": "<b>Attack</b>: Votre adversaire perd 1 PV"
+    },
+    "5": {
+      "name": "Compost Dragon",
+      "description": "<b>Play</b>: Play a card from your discard"
+    },
+    "6": {
+      "name": "Deathweaver",
+      "description": "Your opponent can not activate <b>Play</b> effects"
+    },
+    "7": {
+      "name": "Elephantopus",
+      "description": "The opponent cannot block with creatures with power 4 or less"
+    },
+    "8": {
+      "name": "Explosive Toad",
+      "description": "<b>Defeated</b>: Defeat a creature"
+    },
+    "9": {
+      "name": "Ferret Bomber",
+      "description": "<b>Play</b>: The opponent discards 2 cards"
+    },
+    "10": {
+      "name": "Giraffodile",
+      "description": "<b>Play</b>: Draw your entire discard pile"
+    },
+    "11": {
+      "name": "Goblin Werewolf",
+      "description": "Has <b>+6</b> power while it is your turn"
+    },
+    "12": {
+      "name": "Gorillion",
+      "description": "<q>Why did you take the bananas?</q>"
+    },
+    "13": {
+      "name": "Pilleur de tombes",
+      "description": "<b>Play</b>: Play a card from the opponent's discard pile"
+    },
+    "14": {
+      "name": "Harpy Mother",
+      "description": "<b>Defeated</b>: Take control of up to 2 creatures with power 5 or less"
+    },
+    "15": {
+      "name": "Kangasaurus Rex",
+      "description": "<b>Play</b>: Defeat all enemy creatures with power 4 or less"
+    },
+    "16": {
+      "name": "Killer Bee",
+      "description": "<b>Play</b>: The opponent loses a life point"
+    },
+    "17": {
+      "name": "Lone Yeti",
+      "description": "While this is your only allied creature, it has <b>+5</b> power and <b>FRENZY</b>"
+    },
+    "18": {
+      "name": "Luchataur",
+      "description": "<q>Want an encore?</q>"
+    },
+    "19": {
+      "name": "Mysterious Mermaid",
+      "description": "<b>Play</b>: Set your life points equal to the opponent's"
+    },
+    "20": {
+      "name": "Plated Scorpion",
+      "description": "<q>That sting sticks.</q>"
+    },
+    "21": {
+      "name": "Rhino Turtle",
+      "description": "<q>There are not enough shields to stop me!</q>"
+    },
+    "22": {
+      "name": "Shark dog",
+      "description": "<b>Attack</b>: Defeat an enemy creature with power 6 or more"
+    },
+    "23": {
+      "name": "Sharky Crab-Dog-Mummypus",
+      "description": "Has <b>HUNTER</b> while an enemy creature does. Repeat for <b>SNEAKY</b>, <b>FRENZY</b> and <b>POISONOUS</b>"
+    },
+    "24": {
+      "name": "Shield Bugs",
+      "description": "Other allied creatures have <b>+1</b> power"
+    },
+    "25": {
+      "name": "Snail Hydra",
+      "description": "<b>Attack</b>: If you control fewer creatures than the opponent, defeat a creature"
+    },
+    "26": {
+      "name": "Snail Thrower",
+      "description": "Other allied creatures with power 4 or less have <b>HUNTER</b> and <b>POISONOUS</b>"
+    },
+    "27": {
+      "name": "Spider owl",
+      "description": "<q>Hanging in there...</q>"
+    },
+    "28": {
+      "name": "Strange barrel",
+      "description": "<b>Defeated</b>: Steal 2 random cards from the opponent's hand"
+    },
+    "29": {
+      "name": "Tiger Squirrel",
+      "description": "<b>Play</b>: Defeat an enemy creature with power 7 or more"
+    },
+    "30": {
+      "name": "Turbo Bug",
+      "description": "<b>Attack</b>: The opponent loses all life points except one"
+    },
+    "31": {
+      "name": "Tusked Extorter",
+      "description": "<b>Attack</b>: The opponent discards a card"
+    },
+    "32": {
+      "name": "Urchin Hurler",
+      "description": "Other allied creatures have <b>+2</b> power while it is your turn"
+    },
+    "33": {
+      "name": "Bugserker",
+      "description": "Has <b>+8</b> power while you have 1 life point left"
+    },
+    "34": {
+      "name": "Count Draculeech",
+      "description": "<b>Attaque</b>: You lose 1 life point. Defeat a creature"
+    },
+    "35": {
+      "name": "Creep From The Deep",
+      "description": ""
+    },
+    "36": {
+      "name": "Ferret Pacifier",
+      "description": "The enemy creatures(s) with the highest power can't block."
+    },
+    "37": {
+      "name": "Froblin Instigator",
+      "description": "Has <b>+2</b> power for each other allied creature."
+    },
+    "38": {
+      "name": "Goreagle Alpha",
+      "description": "<b>Play</b>: You lose 1 life point"
+    },
+    "39": {
+      "name": "Hamster Lion",
+      "description": "The enemy creature(s) with the lowest power can't attack"
+    },
+    "40": {
+      "name": "Hungry Hungry Hamster",
+      "description": "<b>Play</b>: The opponent gives you a card from their hand. Play it or put it into your hand"
+    },
+    "41": {
+      "name": "Hyenix",
+      "description": "When you lose 1 or more life points while this is in your discard pile, you may play this"
+    },
+    "42": {
+      "name": "Majestic Manticore",
+      "description": "<b>Attack</b>: Defeat the creature(s) with the lowest power"
+    },
+    "43": {
+      "name": "The Lurker",
+      "description": "<b>Attack</b>: If you control more creatures than the opponent, this has <b>SNEAKY</b> this turn"
+    },
+    "44": {
+      "name": "Turf The Surfer",
+      "description": "<b>Attack</b>: Choose a creature. It cannot block this turn."
+    },
+    "45": {
+      "name": "Blastfish",
+      "description": "<b>Attack</b>: This cannot be defeated this turn."
+    },
+    "46": {
+      "name": "Bullet Train",
+      "description": "<b>Attack</b>: Defeat an enemy creature with power 3 or less."
+    },
+    "47": {
+      "name": "Cake Trickster",
+      "description": "<b>Action</b>: Choose an enemy creature. The opponent attacks with it if able."
+    },
+    "48": {
+      "name": "Captain Hippo",
+      "description": "During the opponent's turn, they must always attack this with a creature with <b>HUNTER</b> if able."
+    },
+    "49": {
+      "name": "Cheeky Chimpborg",
+      "description": "<b>Play</b>: The opponent discards a card for each creature they control."
+    },
+    "50": {
+      "name": "Cheery Chimpborg",
+      "description": "\nWhile there are 3 or more enemy creatures, this has <b>+5</b> power."
+    },
+    "51": {
+      "name": "Chuckling Chimpborg",
+      "description": "<b>Play</b>: The opponent loses 1 life for each Mindbug they have."
+    },
+    "52": {
+      "name": "Cloud Lady",
+      "description": "<b>Action</b>: Defeat an enemy creature with power 4 or less. Evolve to Typhoon Princess."
+    },
+    "53": {
+      "name": "Typhoon Princess",
+      "description": "<b>Action</b>: Defeat an enemy creature with power 6 or less. Evolve to Thunder Queen."
+    },
+    "54": {
+      "name": "Thunder Queen",
+      "description": "<b>Attack</b>: Defeat an enemy creature."
+    },
+    "55": {
+      "name": "Coach Panda",
+      "description": "While there is exactly 1 other allied creature, that creature has <b>+3</b> power and <b>FRENZY</b>."
+    },
+    "56": {
+      "name": "Curious Tadpole",
+      "description": "<b>Action</b>: Gain 1 life point. Evolve to Frog Prophet."
+    },
+    "57": {
+      "name": "Frog Prophet",
+      "description": "<b>Action</b>: Gain 1 life point. Evolve to World Eater."
+    },
+    "58": {
+      "name": "World Eater",
+      "description": "<b>Attack</b>: The opponent loses 1 life."
+    },
+    "59": {
+      "name": "Dr Orange U. Tan",
+      "description": "<b>Play</b>: You may lose 1 life point. If you do, return all enemy creatures to the opponent's hand."
+    },
+    "60": {
+      "name": "Dragon Inn",
+      "description": "<b>Action</b>: If you control fewer creatures than the opponent, they lose 1 life point."
+    },
+    "61": {
+      "name": "Earwig Assassin",
+      "description": "<b>Play</b>: You may discard a card. If you do, defeat a creature."
+    },
+    "62": {
+      "name": "Infernostrich",
+      "description": "<b>Action</b>: Defeat an enemy creature with power 7 or more."
+    },
+    "63": {
+      "name": "Kitsunsei",
+      "description": "Other allied creatures have <b>SNEAKY</b>."
+    },
+    "64": {
+      "name": "Mole Machine",
+      "description": "The opponent cannot block with creatures with power 7 or more."
+    },
+    "65": {
+      "name": "Octocopter",
+      "description": "<b>Action</b>: Defeat this. Take control of an enemy creature."
+    },
+    "66": {
+      "name": "Puffermech",
+      "description": "<b>Defeated</b>: Defeat all enemy creatures with power 8 or more."
+    },
+    "67": {
+      "name": "Lièvre radioactif",
+      "description": "<b>Play</b>: The opponent takes control of this. Defeated: Defeat all other allied creatures."
+    },
+    "68": {
+      "name": "Robopup",
+      "description": ""
+    },
+    "69": {
+      "name": "Sawn",
+      "description": "When this fights, the creature with the highest power is defeated instead of the lowest."
+    },
+    "70": {
+      "name": "Spiky Shinobi",
+      "description": "While you have no Mindbugs, this has <b>+5</b> power."
+    },
+    "71": {
+      "name": "Steelhorn",
+      "description": "<b>Defeated</b>: The opponent discards 3 cards."
+    },
+    "72": {
+      "name": "Sweet Fighter",
+      "description": "<b>Defeated</b>: Gain 2 life."
+    },
+    "73": {
+      "name": "The Experiment",
+      "description": "<b>Play</b>: The opponent takes control of this. Take control of an enemy creature."
+    },
+    "74": {
+      "name": "Turtle Toaster",
+      "description": "<b>Play</b>: Defeat up to 2 enemy creatures with power 4-6."
+    },
+    "75": {
+      "name": "Utility Bug",
+      "description": "<b>Play</b>: You may copy the <b>Play</b> effect of another creature."
+    },
+    "76": {
+      "name": "Waddling Recruit",
+      "description": "<b>Action</b>: The opponent discards a card. Evolve to Veteran Penguin."
+    },
+    "77": {
+      "name": "Veteran Penguin",
+      "description": "<b>Action</b>: The opponent discards a card. Evolve to Frosty Fortress"
+    },
+    "78": {
+      "name": "Frosty Fortress",
+      "description": "<b>Attack</b>: The opponent discards their hand and draw pile."
+    },
+    "79": {
+      "name": "Westside Monster",
+      "description": "Enemy creatures with <b>SNEAKY</b> cannot attack and/or block."
+    },
+    "80": {
+      "name": "Wildsprout",
+      "description": "<b>Action</b>: Play a card from your discard pile. Evolve to Bigroot."
+    },
+    "81": {
+      "name": "Bigroot",
+      "description": "<b>Action</b>: Play a card from your discard pile. Evolve to Oakenmaster"
+    },
+    "82": {
+      "name": "Oakenmaster",
+      "description": "Other allied creatures have <b>+5</b> power."
+    }
+  },
+  "router": {
+    "home": "Home",
+    "available_sets": "Available Sets",
+    "set_details": "Set details",
+    "create_set": "Create a new card set",
+    "game": "Game"
+  },
+  "misc": {
+    "card_not_found": "Card not found",
+    "yes": "Yes",
+    "no": "No"
+  }
+}

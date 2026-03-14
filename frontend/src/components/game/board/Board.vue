@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Card from "@/components/game/Card.vue";
 import DiscardPile from "@/components/game/board/DiscardPile.vue";
-import {getCardAlt, getCardImage} from "@/shared/CardUtils";
 import {ref, Ref} from "vue";
 import DiscardModal from "@/components/game/board/DiscardModal.vue";
 import BoardButtons from "@/components/game/board/BoardButtons.vue";
@@ -36,13 +35,6 @@ function onOpponentCardSelected(card: CardInterface): void {
   }
 }
 
-function getCardClasses(card: CardInterface): Record<string, boolean> {
-  return ({
-    'selected': card.uuid === props.selectedCard?.uuid,
-    'attacking': card.uuid === props.attackingCard?.uuid,
-  })
-}
-
 const discardModalData: Ref<CardInterface[]> = ref([]);
 const isDiscardModalVisible: Ref<boolean> = ref(false);
 const isOpponentDiscard: Ref<boolean> = ref(false);
@@ -69,7 +61,7 @@ function closeModal() {
     </div>
     <div class="col-8">
       <div class="cards">
-        <Card
+        <card
           v-for="card in gameState?.opponent.board"
           :key="card.uuid"
           :card="card"
@@ -82,7 +74,7 @@ function closeModal() {
       </div>
       <board-middle-area :game-state="gameState" :picked-card="pickedCard" :attacking-card="attackingCard"></board-middle-area>
       <div class="cards">
-        <Card
+        <card
           v-for="card in gameState?.player.board"
           :key="card.uuid"
           :card="card"

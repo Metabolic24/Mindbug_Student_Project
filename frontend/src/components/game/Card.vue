@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import {computed} from "vue";
 import {getCardAlt, getCardImage} from "@/shared/CardUtils";
+import {useI18n} from "vue-i18n";
+
+const {t} = useI18n();
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -32,7 +35,7 @@ const displayKeywords = computed(() => {
   return props.card.keywords
       .filter(keyword => keywordIcons[keyword])
       .map(keyword => ({
-        key: keyword,
+        key: t('cards.keywords.' + keyword),
         icon: keywordIcons[keyword]
       }))
 })
@@ -71,7 +74,7 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 <template>
   <div class="card-wrapper" :class="cardClasses" @click="clickable && emit('click', props.card)">
     <!-- Card image -->
-    <img :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image" draggable="false" @contextmenu.prevent/>
+    <img :src="getCardImage(card.id)" :alt="t(getCardAlt(card))" class="card-image" draggable="false" @contextmenu.prevent/>
 
     <div v-if="showOverlay" class="title-banner">
       <div class="title-text">{{ props.card.name }}</div>
@@ -85,15 +88,15 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 
     <!-- Description Box -->
     <div v-if="showOverlay" class="description-box">
-      <div class="description-text" v-html="props.card.description"></div>
+      <div class="description-text" v-html="t('cards.'+ props.card.id + '.description')"></div>
     </div>
 
     <!-- Overlay power -->
     <div v-if="showOverlay" class="power-overlay"
          :class="{ 'modified-power': isPowerModified && context !== 'discard-modal' && context !== 'discard-pile' }">
-      <Transition name="power-slide" mode="out-in">
+      <transition name="power-slide" mode="out-in">
         <span :key="displayPower">{{ displayPower }}</span>
-      </Transition>
+      </transition>
     </div>
   </div>
 </template>

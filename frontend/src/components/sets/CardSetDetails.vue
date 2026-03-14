@@ -1,23 +1,15 @@
-<template>
-  <nav>
-    <router-link to="/">Home</router-link>
-    <router-link to="/sets">Sets</router-link>
-  </nav>
-  <div id="card-set-details">
-    <h1>Cards from set: {{ formatSetName(set) }}</h1>
-    <div class="cards-container">
-      <img v-for="cardId in cards" :key="cardId" :src="getCardImage(cardId)" alt="Card not found" class="card-image"/>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 import {onMounted, ref, Ref} from "vue";
 import {getCardSetDetails} from "@/shared/RestService";
+import {getCardImage} from "@/shared/CardUtils";
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 // Declare the interface for the data given by the parent component
 interface Props {
-  set: String
+  set: String,
+  custom: boolean
 }
 const props = defineProps<Props>()
 
@@ -29,24 +21,31 @@ onMounted(async () => {
   cards.value = await getCardSetDetails(props.set)
 })
 
-// Get the card image from its ID
-function getCardImage(cardId: string) {
-  const url = new URL("@/assets/cards/", import.meta.url)
-  return `${url}/${props.set}/${cardId}.jpg`
-}
-
 // Format correctly the set name
-function formatSetName(setName: String) {
-  return setName.replace(/_/g, ' ');
+function getSetName() {
+  return props.custom ? props.set : t("card_sets." + props.set)
 }
 </script>
 
+<template>
+  <nav @contextmenu.prevent>
+    <router-link to="/">{{ t("router.home") }}</router-link>
+    <router-link to="/sets">{{ t("router.available_sets") }}</router-link>
+  </nav>
+  <div id="cards-set" @contextmenu.prevent>
+    <h1>{{ t("available_sets.title")}} <b>{{ getSetName() }}</b></h1>
+    <div id="cards-container">
+      <img v-for="cardId in cards" :key="cardId" :src="getCardImage(+cardId)" :alt="t('misc.card_not_found')" class="card-image" draggable="false">/>
+    </div>
+  </div>
+</template>
+
 <style scoped>
-#card-set-details {
+#cards-set {
   text-align: center;
 }
 
-.cards-container {
+#cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

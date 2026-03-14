@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.model.effect;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.Data;
@@ -48,6 +49,7 @@ import org.metacorp.mindbug.model.effect.impl.StealEffect;
         @JsonSubTypes.Type(value = ReviveEffect.class, name = ReviveEffect.TYPE),
         @JsonSubTypes.Type(value = StealEffect.class, name = StealEffect.TYPE)}
 )
+@JsonInclude(JsonInclude.Include.NON_DEFAULT)
 public class Effect {
     /**
      * The effect type

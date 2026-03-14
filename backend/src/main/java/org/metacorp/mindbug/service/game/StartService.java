@@ -1,17 +1,21 @@
 package org.metacorp.mindbug.service.game;
 
-import org.metacorp.mindbug.model.CardSetName;
+import jakarta.inject.Inject;
+import org.jvnet.hk2.annotations.Service;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.CardSetService;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
-import org.metacorp.mindbug.utils.SetUtils;
 import org.slf4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
 import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
@@ -19,12 +23,11 @@ import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 /**
  * Utility service that starts a new game
  */
+@Service
 public class StartService {
 
-    // Not to be used
-    private StartService() {
-        // Nothing to do
-    }
+    @Inject
+    private CardSetService cardSetService;
 
     /**
      * Creates and start a new game for two players (using the default FIRST_CONTACT card set)
@@ -33,22 +36,22 @@ public class StartService {
      * @param player2 second player
      * @return the created game
      */
-    public static Game startGame(Player player1, Player player2) {
+    public Game startGame(Player player1, Player player2) throws CardSetException {
         return startGame(new Game(player1, player2), CardSetName.FIRST_CONTACT);
     }
 
     /**
      * Creates and start a new game for two players (using the given card set)
      *
-     * @param game the game to initialize
+     * @param game    the game to initialize
      * @param setName the card set name as CardSetName
      * @return the created game
      */
-    public static Game startGame(Game game, CardSetName setName) {
+    public Game startGame(Game game, CardSetName setName) throws CardSetException {
         // Retrieve CardInstance from JSON configuration file and separate evolution cards from the other ones
         List<CardInstance> cards = game.getCards();
-        SetUtils.getCardsFromConfig(setName.getKey()).forEach(cardInstance -> {
-            if (cardInstance.getCard().isEvolution()) {
+        cardSetService.getCardInstances(setName.getKey()).forEach(cardInstance -> {
+            if (cardInstance.getCard().getInitialCardId() != null) {
                 game.getEvolutionCards().add(cardInstance);
             } else {
                 cards.add(cardInstance);
@@ -73,8 +76,9 @@ public class StartService {
 
     /**
      * Fill the hand and draw pile of the given player
+     *
      * @param player the player to be initialized
-     * @param cards the remaining cards of the played set
+     * @param cards  the remaining cards of the played set
      */
     private static void initDrawAndHand(Player player, List<CardInstance> cards) {
         List<CardInstance> hand = player.getHand();
@@ -93,6 +97,7 @@ public class StartService {
 
     /**
      * Get the first player of the game (should only be used once per game)
+     *
      * @param game the current game state
      * @return the first Player
      */
@@ -101,28 +106,34 @@ public class StartService {
         logger.info("Calculating first player...");
 
         List<Player> validPlayers = new ArrayList<>(game.getPlayers());
-        while (validPlayers.size() != 1) {
-            int higherPower = 0;
-            List<Player> nextPlayers = new ArrayList<>();
+        try {
+            while (validPlayers.size() != 1) {
+                int higherPower = 0;
+                List<Player> nextPlayers = new ArrayList<>();
 
-            for (Player player : validPlayers) {
-                // Get a random card from the remaining cards
-                CardInstance bannedCard = banCard(game);
-                logger.info("Banned card for {} : {} ({})", getLoggablePlayer(player), getLoggableCard(bannedCard), bannedCard.getPower());
 
-                if (bannedCard.getPower() < higherPower) {
-                    // Current player will not be the first one
-                    continue;
-                } else if (bannedCard.getPower() > higherPower) {
-                    // Update higherPower value and clean the next players set
-                    higherPower = bannedCard.getPower();
-                    nextPlayers.clear();
-                }
+                    for (Player player : validPlayers) {
+                        // Get a random card from the remaining cards
+                        CardInstance bannedCard = banCard(game);
+                        logger.info("Banned card for {} : {} ({})", getLoggablePlayer(player), getLoggableCard(bannedCard), bannedCard.getPower());
 
-                nextPlayers.add(player);
+                        if (bannedCard.getPower() < higherPower) {
+                            // Current player will not be the first one
+                            continue;
+                        } else if (bannedCard.getPower() > higherPower) {
+                            // Update higherPower value and clean the next players set
+                            higherPower = bannedCard.getPower();
+                            nextPlayers.clear();
+                        }
+
+                        nextPlayers.add(player);
+                    }
+
+                validPlayers = nextPlayers;
             }
-
-            validPlayers = nextPlayers;
+        } catch (NoSuchElementException e) {
+            // If there is no more remaining cards, just apply a random toss
+            logger.warn("No more remaining cards, choosing randomly first player...");
         }
 
         Player firstPlayer = validPlayers.getFirst();
@@ -133,6 +144,7 @@ public class StartService {
 
     /**
      * Randomly choose a card and exclude it from the current game
+     *
      * @param game the current game state
      * @return the banned card
      */

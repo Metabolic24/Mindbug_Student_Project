@@ -2,6 +2,7 @@ package org.metacorp.mindbug.service.game;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
@@ -11,9 +12,9 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -29,9 +30,9 @@ public class AttackServiceTest extends MindbugGameTest {
     private Player opponent;
 
     @BeforeEach
-    public void initGame() {
-        PlayerService playerService = new PlayerService();
+    public void initGame() throws CardSetException {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
+
         currentPlayer = game.getCurrentPlayer();
         opponent = currentPlayer.getOpponent(game.getPlayers());
     }
@@ -195,14 +196,14 @@ public class AttackServiceTest extends MindbugGameTest {
     @Test
     public void testProcessAttackResolution_samePowerBothHaveDefeatedEffect() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
-        attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new GainEffect()));
+        attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, new ArrayList<>(List.of(new GainEffect())));
         attackCard.setStillTough(false);
         currentPlayer.addCardToBoard(attackCard);
         game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower());
-        defendingCard.getCard().getEffects().put(EffectTiming.DEFEATED, List.of(new GainEffect()));
+        defendingCard.getCard().getEffects().put(EffectTiming.DEFEATED, new ArrayList<>(List.of(new GainEffect())));
         defendingCard.setStillTough(false);
         opponent.addCardToBoard(defendingCard);
 

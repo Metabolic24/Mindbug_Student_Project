@@ -1,4 +1,4 @@
-package org.metacorp.mindbug.dto;
+package org.metacorp.mindbug.dto.card;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
@@ -17,16 +17,13 @@ import java.util.UUID;
 @Setter
 @ToString
 @NoArgsConstructor
-@JsonPropertyOrder({"uuid", "ownerId", "id", "setName", "name", "power", "basePower", "description", "keywords", "hasAction", "stillTough", "ableToBlock", "ableToAttack", "ableToAttackTwice"})
+@JsonPropertyOrder({"uuid", "ownerId", "id", "power", "basePower", "keywords", "hasAction", "stillTough", "ableToBlock", "ableToAttack", "ableToAttackTwice"})
 public class CardDTO {
     private UUID uuid;
     private UUID ownerId;
     private int id;
-    private String setName;
-    private String name;
     private int power;
     private int basePower;
-    private String description;
     private Set<CardKeyword> keywords;
     private boolean hasAction;
     private boolean stillTough;

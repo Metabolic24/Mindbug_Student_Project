@@ -10,8 +10,7 @@
         "self": true
       }]
     },
-    "unique": true,
-    "description" : "<b>Attack</b>: This cannot be defeated this turn."
+    "unique": true
   },
   {
     "id": 46,
@@ -23,8 +22,7 @@
         "max": 3
       }]
     },
-    "unique": false,
-    "description" : "<b>Attack</b>: Defeat an enemy creature with power 3 or less."
+    "unique": false
   },
   {
     "id": 47,
@@ -36,8 +34,7 @@
         "type": "FORCE_ATTACK"
       }]
     },
-    "unique": false,
-    "description" : "<b>Action</b>: Choose an enemy creature. The opponent attacks with it if able."
+    "unique": false
   },
   {
     "id": 48,
@@ -51,8 +48,7 @@
         "singleTarget": true
       }]
     },
-    "unique": true,
-    "description" : "During the opponent's turn, they must always attack this with a creature with <b>HUNTER</b> if able."
+    "unique": true
   },
   {
     "id": 49,
@@ -65,8 +61,7 @@
         "eachEnemy": true
       }]
     },
-    "unique": true,
-    "description" : "<b>Play</b>: The opponent discards a card for each creature they control."
+    "unique": true
   },
   {
     "id": 50,
@@ -80,8 +75,7 @@
         "enemiesCount": 3
       }]
     },
-    "unique": true,
-    "description" : "While there are 3 or more enemy creatures, this has <b>+5</b> power."
+    "unique": true
   },
   {
     "id": 51,
@@ -94,8 +88,7 @@
         "mindbugCount": true
       }]
     },
-    "unique": true,
-    "description" : "<b>Play</b>: The opponent loses 1 life for each Mindbug they have."
+    "unique": true
   },
   {
     "id": 52,
@@ -111,8 +104,7 @@
         "id": 53
       }]
     },
-    "unique": true,
-    "description" : "<b>Action</b>: Defeat an enemy creature with power 4 or less. Evolve to Typhoon Princess."
+    "unique": true
   },
   {
     "id": 53,
@@ -129,8 +121,7 @@
       }]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Action</b>: Defeat an enemy creature with power 6 or less. Evolve to Thunder Queen."
+    "initialCardId": 52
   },
   {
     "id": 54,
@@ -143,8 +134,7 @@
       }]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Action</b>: Defeat an enemy creature."
+    "initialCardId": 52
   },
   {
     "id": 55,
@@ -166,8 +156,7 @@
         "alliesCount": 2
       }]
     },
-    "unique": false,
-    "description" : "While there is exactly 1 other allied creature, that creature has <b>+3</b> power and <b>FRENZY</b>."
+    "unique": false
   },
   {
     "id": 56,
@@ -184,8 +173,7 @@
         "id": 57
       }]
     },
-    "unique": true,
-    "description" : "<b>Action</b>: Gain 1 life. Evolve to Frog Prophet."
+    "unique": true
   },
   {
     "id": 57,
@@ -203,8 +191,7 @@
       }]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Action</b>: Gain 1 life. Evolve to World Eater."
+    "initialCardId": 56
   },
   {
     "id": 58,
@@ -218,8 +205,7 @@
       }]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Attack</b>: The opponent loses 1 life."
+    "initialCardId": 56
   },
   {
     "id": 59,
@@ -240,8 +226,7 @@
         "optional": true
       }]
     },
-    "unique": true,
-    "description" : "<b>Play</b>: You may loses 1 life. if you do, return all enemy creatures to the opponent's hand."
+    "unique": true
   },
   {
     "id": 60,
@@ -254,8 +239,7 @@
         "value": 1
       }]
     },
-    "unique": false,
-    "description" : "<b>Action</b>: If you control fewer creatures than the opponent, they lose 1 life."
+    "unique": false
   },
   {
     "id": 61,
@@ -277,8 +261,7 @@
         "optional": true
       }]
     },
-    "unique": false,
-    "description" : "<b>Play</b>: You may discard a card. If you do, defeat a creature."
+    "unique": false
   },
   {
     "id": 62,
@@ -291,8 +274,7 @@
         "min": 7
       }]
     },
-    "unique": false,
-    "description" : "<b>Action</b>: Defeat an enemy creature with power 7 or more."
+    "unique": false
   },
   {
     "id": 63,
@@ -306,8 +288,7 @@
         "self": false
       }]
     },
-    "unique": true,
-    "description" : "Other allied creatures have <b>SNEAKY</b>."
+    "unique": true
   },
   {
     "id": 64,
@@ -321,8 +302,7 @@
         "min": 7
       }]
     },
-    "unique": false,
-    "description" : "The opponent cannot block with creatures with power 7 or more."
+    "unique": false
   },
   {
     "id": 65,
@@ -341,8 +321,7 @@
           "mustPlay": true
       }]
     },
-    "unique": true,
-    "description" : "<b>Action</b>: Defeat this. Take control of an enemy creature."
+    "unique": true
   },
   {
     "id": 66,
@@ -356,8 +335,7 @@
         "min": 8
       }]
     },
-    "unique": false,
-    "description" : "<b>Defeated</b>: Defeat all enemy creatures with power 8 or more."
+    "unique": false
   },
   {
     "id": 67,
@@ -375,24 +353,21 @@
         "allies": true
       }]
     },
-    "unique": true,
-    "description" : "<b>Defeated</b>: The opponent takes control of this. <b>Defeated</b>: Defeat all other allied creatures."
+    "unique": true
   },
   {
     "id": 68,
     "name": "ROBOPUP",
     "power": 1,
     "keywords": ["SNEAKY", "TOUGH"],
-    "unique": false,
-    "description" : "“Ouaf ! Ouaf !”"
+    "unique": false
   },
   {
     "id": 69,
     "name": "SAWN",
     "power": 5,
     "keywords": ["TOUGH", "REVERSED"],
-    "unique": false,
-    "description" : "When this fights, the creature with the highest power id defeated instead of the lowest."
+    "unique": false
   },
   {
     "id": 70,
@@ -408,8 +383,7 @@
         }
       ]
     },
-    "unique": false,
-    "description" : "While you have no Mindbugs, this has <b>+5</b> power."
+    "unique": false
   },
   {
     "id": 71,
@@ -423,8 +397,7 @@
         }
       ]
     },
-    "unique": true,
-    "description" : "<b>Defeated</b>: The opponent discards 3 cards."
+    "unique": true
   },
   {
     "id": 72,
@@ -438,8 +411,7 @@
         }
       ]
     },
-    "unique": false,
-    "description" : "<b>Defeated</b>: Gain 2 life."
+    "unique": false
   },
   {
     "id": 73,
@@ -459,8 +431,7 @@
         }
       ]
     },
-    "unique": true,
-    "description" : "<b>Play</b>: The opponent takes control of this. Take control of an enemy creature."
+    "unique": true
   },
   {
     "id": 74,
@@ -477,8 +448,7 @@
         }
       ]
     },
-    "unique": false,
-    "description" : "<b>Pay</b>: Defeat up to 2 enemy creatures with power 4-6."
+    "unique": false
   },
   {
     "id": 75,
@@ -493,8 +463,7 @@
         }
       ]
     },
-    "unique": false,
-    "description" : "<b>Play</b>: You may copy the <b>PLAY</b> effect of another creature."
+    "unique": false
   },
   {
     "id": 76,
@@ -511,8 +480,7 @@
         }
       ]
     },
-    "unique": true,
-    "description" : "<b>Action</b>: The opponent discards a card. Evolve to Veteran Penguin."
+    "unique": true
   },
   {
     "id": 77,
@@ -531,8 +499,7 @@
       ]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Action</b>: The opponent discards a card. Evolve to Frosty Fortress."
+    "initialCardId": 76
   },
   {
     "id": 78,
@@ -553,8 +520,7 @@
       ]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Attack</b>: The opponent discards their hand and draw pile."
+    "initialCardId": 76
   },
   {
     "id": 79,
@@ -574,8 +540,7 @@
         }
       ]
     },
-    "unique": false,
-    "description" : "Enemy creatures with <b>SNEAKY</b> cannot attack and/or block."
+    "unique": false
   },
   {
     "id": 80,
@@ -594,8 +559,7 @@
         }
       ]
     },
-    "unique": true,
-    "description" : "<b>Action</b>: Play a card from your discrad pile. Evolve to Bigroot."
+    "unique": true
   },
   {
     "id": 81,
@@ -615,8 +579,7 @@
       ]
     },
     "unique": true,
-    "evolution": true,
-    "description" : "<b>Action</b>: Play a card from your discrad pile. Evolve to Oakenmaster."
+    "initialCardId": 80
   },
   {
     "id": 82,
@@ -633,7 +596,6 @@
       ]
     },
     "unique": true,
-    "evolution": true,
-    "description": "Other allied creatures have <b>+5</b> power."
+    "initialCardId": 80
   }
 ]

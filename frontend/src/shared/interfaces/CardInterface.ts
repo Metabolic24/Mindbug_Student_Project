@@ -1,15 +1,23 @@
-interface CardInterface {
+interface CommonCardInterface {
+    id: number
+    power: number
+    keywords?: string[]
+}
+
+interface LightCardInterface extends CommonCardInterface {
+    evolutionId?: number
+    parentId?: number
+    setName: string
+}
+
+interface CardInterface extends CommonCardInterface {
     uuid: string
     ownerId: string
-    id: number
-    setName: string
     hidden: boolean
 
     name?: string
-    power: number
     basePower: number
-    description: String 
-    keywords?: string[]
+
     stillTough: boolean
     ableToBlock: boolean
     ableToAttack: boolean
