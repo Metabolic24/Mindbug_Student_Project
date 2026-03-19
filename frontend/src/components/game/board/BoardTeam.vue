@@ -1,13 +1,14 @@
 <script setup lang="ts">
-    /*interface Props {
-        gameState: GameStateInterface;
-        selectedCard: SelectedCardInterface;
-        pickedCard: CardInterface;
-        attackingCard: CardInterface;
-        onCardSelected: (card: CardInterface, location: "Board" | "Hand") => void;
-        onActionButtonClick: (actionLabel: string) => void;
-    }
-    const props = defineProps<Props>();*/
+import Card from "@/components/game/Card.vue";
+
+interface Props {
+  gameState: GameStateInterface
+  selectedCard: SelectedCardInterface
+  attackingCard: CardInterface
+  onCardSelected: (card: CardInterface) => void
+}
+
+const props = defineProps<Props>()
 </script>
 
 <template>
@@ -16,19 +17,59 @@
   <!-- ZONES JOUEURS -->
 
   <div class="player-zone player-1">
-    Player 1 board
+    <Card
+        v-for="card in props.gameState.opponents[0].board"
+        :key="card.uuid"
+        :card="card"
+        context="opponent-board"
+        visibility="enemy"
+        :selected="card.uuid === props.selectedCard?.uuid"
+        :attacking="card.uuid === props.attackingCard?.uuid"
+        :clickable="true"
+        @click="props.onCardSelected(card)"
+      />
   </div>
 
   <div class="player-zone player-2">
-    Player 2 board
+    <Card
+        v-for="card in props.gameState.opponents[1].board"
+        :key="card.uuid"
+        :card="card"
+        context="opponent-board"
+        visibility="enemy"
+        :selected="card.uuid === props.selectedCard?.uuid"
+        :attacking="card.uuid === props.attackingCard?.uuid"
+        :clickable="true"
+        @click="props.onCardSelected(card)"
+      />
   </div>
 
   <div class="player-zone player-3">
-    Player 3 board
+    <Card
+        v-for="card in props.gameState.ally.board"
+        :key="card.uuid"
+        :card="card"
+        context="player-board"
+        visibility="ally"
+        :selected="card.uuid === props.selectedCard?.uuid"
+        :attacking="card.uuid === props.attackingCard?.uuid"
+        :clickable="true"
+        @click="props.onCardSelected(card)"
+      />
   </div>
 
   <div class="player-zone player-4">
-    Player 4 board
+    <Card
+        v-for="card in props.gameState.player.board"
+        :key="card.uuid"
+        :card="card"
+        context="player-board"
+        visibility="self"
+        :selected="card.uuid === props.selectedCard?.uuid"
+        :attacking="card.uuid === props.attackingCard?.uuid"
+        :clickable="true"
+        @click="props.onCardSelected(card)"
+      />
   </div>
 
   <!-- ROUE DU TOUR -->

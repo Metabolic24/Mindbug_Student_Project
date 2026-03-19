@@ -44,7 +44,12 @@ const props = defineProps<Props>();
 
         <!-- BOARD (MILIEU) -->
         <div class="board-area">
-            <BoardTeam/>
+            <BoardTeam
+              :game-state="props.gameState"
+              :selected-card="props.selectedCard"
+              :attacking-card="props.attackingCard"
+              :on-card-selected="(card) => props.onCardSelected(card, 'Board')"
+            />
         </div>
 
         <!-- BOTTOM ROW -->
