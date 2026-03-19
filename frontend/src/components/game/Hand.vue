@@ -4,7 +4,7 @@ import Card from "@/components/game/Card.vue";
 // Declare the interface for the data given by the parent component
 interface Props {
   cards: CardInterface[]
-  opponent: boolean
+  visibility: 'self' | 'ally' | 'enemy'
   selectedCard?: CardInterface
 }
 defineProps<Props>()
@@ -20,9 +20,10 @@ const emit = defineEmits(['card-selected', 'card-preview'])
       v-for="card in cards"
       :key="card.uuid"
       :card="card"
-      :context="opponent ? 'opponent-hand' : 'player-hand'"
+      :context="visibility === 'enemy' ? 'opponent-hand' : 'player-hand'"
+      :visibility="visibility"
       :selected="card.uuid === selectedCard?.uuid"
-      :clickable="!opponent"
+      :clickable="visibility === 'self'"
       @click="emit('card-selected', card)"
       @preview="emit('card-preview', card)"
     />

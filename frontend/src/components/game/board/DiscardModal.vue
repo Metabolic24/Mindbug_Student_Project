@@ -63,6 +63,7 @@ const title = computed(() => {
             :key="card.uuid"
             :card="card"
             context="discard-modal"
+            visibility="self"
             :clickable="false"
             @preview="emit('card-preview', $event)"
           />
@@ -76,6 +77,7 @@ const title = computed(() => {
                 <card
                   :card="card"
                   context="discard-modal"
+                  visibility="self"
                   :clickable="false"
                   @preview="emit('card-preview', $event)"
                 />

@@ -10,7 +10,8 @@ interface Props {
   card: CardInterface | LightCardInterface
 
   context: 'player-hand' | 'opponent-hand' | 'player-board' | 'opponent-board' | 'board' | 'discard-modal' | 'discard-pile' | 'choice-modal' | 'sets-details' | 'sets-creator'
-
+  visibility: 'self' | 'ally' | 'enemy'
+  
   selected?: boolean
   attacking?: boolean
   clickable?: boolean
@@ -77,7 +78,33 @@ const cardClasses = computed(() => ({
 }))
 
 // Determine if the power overlay should be shown on the opponent's hand
-const showOverlay = computed(() => props.context !== 'opponent-hand');
+const showOverlay = computed(() => {
+  const isHand =
+    props.context === 'player-hand' ||
+    props.context === 'opponent-hand'
+
+  if (!isHand) return true
+
+  return props.visibility === 'self'
+});
+
+// Determine if the card should be shown
+const isHidden = computed(() => {
+  const isHand =
+    props.context === 'player-hand' ||
+    props.context === 'opponent-hand'
+
+  if (!isHand) return false
+
+  return props.visibility !== 'self'
+})
+
+const cardImage = computed(() => {
+  if (isHidden.value) {
+    return new URL('@/assets/cards/back.png', import.meta.url).href
+  }
+  return getCardImage(props.card)
+})
 </script>
 
 <template>
