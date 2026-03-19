@@ -33,7 +33,7 @@ const lastCard = computed(() => {
 
     <div class="discard-container" :class="{ empty: !lastCard }" @click="onClick">
       <!-- Last card displayed -->
-      <Card v-if="lastCard" :card="lastCard" context="discard-pile" :clickable="false"/>
+      <Card v-if="lastCard" :card="lastCard" context="discard-pile" visibility="self" :clickable="false"/>
       <!-- Counter badge -->
       <div v-if="props.cards.length > 0" class="counter-badge">
         {{ props.cards.length }}

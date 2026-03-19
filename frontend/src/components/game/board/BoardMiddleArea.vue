@@ -77,6 +77,7 @@ const imgSrc = computed(() => {
       v-if="isImageVisible"
       :card="imgSrc"
       context="board"
+      visibility="enemy"
       :selected="false"
       :attacking="false"
       :clickable="false"
