@@ -17,6 +17,7 @@ interface Props {
 }
 
 const props = defineProps<Props>();
+const emit = defineEmits(['button-clicked']);
 </script>
 
 <template>
@@ -34,6 +35,11 @@ const props = defineProps<Props>();
               :ally="props.gameState.opponents[0]"
               :player="props.gameState.opponents[1]"
               :isEnemy=true
+
+              :game-state="gameState"
+              :picked-card="pickedCard"
+              :attacking-card="attackingCard"
+              :selected-card="selectedCard" @button-clicked="emit('button-clicked', $event)"
             />
 
             <div class="hand top-hand-right">
@@ -61,6 +67,12 @@ const props = defineProps<Props>();
               :ally="props.gameState.ally"
               :player="props.gameState.player"
               :isEnemy=false
+
+              :game-state="gameState"
+              :picked-card="pickedCard"
+              :attacking-card="attackingCard"
+              :selected-card="selectedCard"
+              @button-clicked="props.onActionButtonClick"
             />
 
             <div class="hand bottom-hand-right">

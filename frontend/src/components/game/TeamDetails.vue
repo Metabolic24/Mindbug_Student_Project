@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BoardButtons from "@/components/game/board/BoardButtons.vue"
 
 interface Player {
   name: string
@@ -11,9 +12,16 @@ interface Props {
   ally: Player
   player: Player
   isEnemy?: boolean
+
+  gameState: GameStateInterface
+  selectedCard: SelectedCardInterface
+  pickedCard: CardInterface
+  attackingCard: CardInterface
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
+
+const emit = defineEmits(['button-clicked']);
 
 function getAvatar(name: string = "default") {
   const url = new URL("@/assets/avatars/", import.meta.url)
@@ -24,7 +32,7 @@ function getAvatar(name: string = "default") {
 
 <template>
 
-<div class="teamWrapper" :class="{ enemy: isEnemy }">
+<div class="teamWrapper" :class="{ enemy: props.isEnemy }">
 
   <!-- 🔵 DEMI-CERCLE -->
   <div class="halfCircle">
@@ -83,6 +91,17 @@ function getAvatar(name: string = "default") {
     </div>
 
   </div>
+
+  <!-- 🔥 BUTTONS -->
+    <div v-if="!props.isEnemy" class="buttonsContainer">
+      <BoardButtons
+        :game-state="gameState"
+        :selected-card="selectedCard"
+        :picked-card="pickedCard"
+        :attacking-card="attackingCard"
+        @button-clicked="emit('button-clicked', $event)"
+      />
+    </div>
 
 </div>
 
@@ -235,5 +254,33 @@ function getAvatar(name: string = "default") {
 
 .mindbugs img{
   width:2vw;
+}
+
+.buttonsContainer{
+  position:absolute;
+
+  right:18%;  /* ajuste selon ton écran */
+  top:50%;
+  transform:translateY(-50%);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.buttonsContainer :deep(.buttons){
+  flex-direction: row;
+  gap:1vw;
+
+  width:auto;
+  height:auto;
+}
+
+.buttonsContainer :deep(button){
+  width: fit-content;
+  min-width: 5vw;
+
+  padding:0.5vw;
+  font-size:1.5vh;
 }
 </style>
