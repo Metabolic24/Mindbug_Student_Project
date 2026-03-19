@@ -33,6 +33,7 @@ const props = defineProps<Props>();
               :teamLife="props.gameState.opponents[0].lifePoints"
               :ally="props.gameState.opponents[0]"
               :player="props.gameState.opponents[1]"
+              :isEnemy=true
             />
 
             <div class="hand top-hand-right">
@@ -59,6 +60,7 @@ const props = defineProps<Props>();
               :teamLife="props.gameState.player.lifePoints"
               :ally="props.gameState.ally"
               :player="props.gameState.player"
+              :isEnemy=false
             />
 
             <div class="hand bottom-hand-right">
