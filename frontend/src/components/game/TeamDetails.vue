@@ -10,6 +10,7 @@ interface Props {
   teamLife: number
   ally: Player
   player: Player
+  isEnemy?: boolean
 }
 
 defineProps<Props>()
@@ -23,62 +24,62 @@ function getAvatar(name: string = "default") {
 
 <template>
 
-<div class="teamContainer">
+<div class="teamWrapper" :class="{ enemy: isEnemy }">
 
-  <!-- LEFT PLAYER -->
-  <div class="playerSide left">
+  <!-- 🔵 DEMI-CERCLE -->
+  <div class="halfCircle">
 
-    <div class="mindbugs">
-      <img
-        v-for="n in ally.mindbugCount"
-        :key="n"
-        src="@/assets/profil-in-game/mindbug.png"
-        class="mindbug"
-      />
+    <!-- ❤️ LIFE -->
+    <div class="life">
+      <img src="@/assets/profil-in-game/hearts-game.svg"/>
+      <span>{{ teamLife }}</span>
     </div>
 
-    <div class="drawPile">
-      <img src="@/assets/profil-in-game/cardback-pile.png" class="pile"/>
-      <span class="pileCount">{{ ally.drawPileCount }}</span>
-    </div>
+    <!-- 👤 CONTENU HORIZONTAL -->
+    <div class="innerRow">
 
-    <div class="playerProfile">
-      <img :src="getAvatar()" class="avatar"/>
-      <span class="name">{{ ally.name }}</span>
+      <!-- ALLY -->
+      <div class="playerBlock">
+        <img :src="getAvatar()" class="avatar"/>
+        <span>{{ ally.name }}</span>
+      </div>
+
+      <!-- PLAYER -->
+      <div class="playerBlock">
+        <img :src="getAvatar()" class="avatar"/>
+        <span>{{ player.name }}</span>
+      </div>
+
     </div>
 
   </div>
 
+  <!-- ⬅️ OUTSIDE LEFT -->
+  <div class="outside left">
 
-  <!-- TEAM LIFE -->
-  <div class="teamLife">
-
-    <img src="@/assets/profil-in-game/hearts-game.svg" class="heart"/>
-    <span class="lifeText">{{ teamLife }}</span>
-
-  </div>
-
-
-  <!-- RIGHT PLAYER -->
-  <div class="playerSide right">
-
-    <div class="playerProfile">
-      <img :src="getAvatar()" class="avatar"/>
-      <span class="name">{{ player.name }}</span>
+    <div class="mindbugs">
+      <img v-for="n in ally.mindbugCount" :key="n"
+           src="@/assets/profil-in-game/mindbug.png"/>
     </div>
 
     <div class="drawPile">
-      <img src="@/assets/profil-in-game/cardback-pile.png" class="pile"/>
-      <span class="pileCount">{{ player.drawPileCount }}</span>
+      <img src="@/assets/profil-in-game/cardback-pile.png"/>
+      <span>{{ ally.drawPileCount }}</span>
+    </div>
+
+  </div>
+
+  <!-- ➡️ OUTSIDE RIGHT -->
+  <div class="outside right">
+
+    <div class="drawPile">
+      <img src="@/assets/profil-in-game/cardback-pile.png"/>
+      <span>{{ player.drawPileCount }}</span>
     </div>
 
     <div class="mindbugs">
-      <img
-        v-for="n in player.mindbugCount"
-        :key="n"
-        src="@/assets/profil-in-game/mindbug.png"
-        class="mindbug"
-      />
+      <img v-for="n in player.mindbugCount" :key="n"
+           src="@/assets/profil-in-game/mindbug.png"/>
     </div>
 
   </div>
@@ -88,98 +89,151 @@ function getAvatar(name: string = "default") {
 </template>
 
 <style scoped>
+.teamWrapper{
+  position:relative;
+  width:100%;
+  height:100%;
+  background:rgba(200,200,200,0.95);
+}
 
-.teamContainer{
+/* 🔵 DEMI-CERCLE */
+.halfCircle{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+
+  width:17vw;
+  height:10vw;
+
+  background:rgba(200,200,200,0.95);
+  border:3px solid black;
+
+  border-radius:14vw 14vw 0 0; /* demi cercle */
+  
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+}
+
+/* ❤️ LIFE */
+.life{
+  position:absolute;
+  top:5%;
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:2vw;
+}
+
+.life img{
+  width:3.5vw;
+}
+
+.life span{
+  position:absolute;
+  color:white;
+  font-weight:bold;
+}
+
+/* 👥 ligne interne */
+.innerRow{
+  position:absolute;
+  bottom:25%;
+
   width:100%;
-}
 
-.playerSide{
   display:flex;
+  justify-content:space-around;
   align-items:center;
-  gap:10px;
 }
 
-/* avatars */
-
-.playerProfile{
+/* joueurs */
+.playerBlock{
   display:flex;
   flex-direction:column;
   align-items:center;
 }
 
 .avatar{
-  width:4vw;
-  height:4vw;
+  width:3.5vw;
+  height:3.5vw;
   border-radius:50%;
   border:2px solid black;
 }
 
-.name{
-  font-size:1.6vh;
+.playerBlock span{
+  font-size:1.4vh;
   font-weight:bold;
-  color: black;
   background:white;
-  padding:2px 6px;
-  border-radius:5px;
+  padding:2px 5px;
+  border-radius:4px;
+  color:black;
 }
 
-/* team life */
+/* 🔴 DEMI CERCLE INVERSÉ */
+.enemy .halfCircle{
+  border-radius:0 0 14vw 14vw; /* inversé */
+}
 
-.teamLife{
-  position:relative;
-  width:4vw;
-  height:4vw;
+/* ❤️ LIFE en bas */
+.enemy .life{
+  top:auto;
+  bottom:5%;
+}
+
+/* 👥 avatars remontés */
+.enemy .innerRow{
+  bottom:auto;
+  top:20%;
+}
+
+/* EXTÉRIEUR */
+.outside{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
   display:flex;
   align-items:center;
-  justify-content:center;
+  gap:8px;
 }
 
-.heart{
-  width:100%;
+.left{
+  left:32%;
 }
 
-.lifeText{
-  position:absolute;
-  font-size:2vh;
-  font-weight:bold;
-  color:white;
+.right{
+  right:32%;
 }
 
-/* draw pile */
-
+/* pile */
 .drawPile{
   position:relative;
 }
 
-.pile{
-  width:2.5vw;
+.drawPile img{
+  width:4vw;
 }
 
-.pileCount{
+.drawPile span{
   position:absolute;
   top:50%;
   left:60%;
   transform:translate(-50%,-50%);
-  font-size:1.5vh;
-  color:white;
+  font-size:1.3vh;
   background:black;
+  color:white;
   border-radius:50%;
   padding:2px 5px;
 }
 
 /* mindbugs */
-
 .mindbugs{
   display:flex;
   gap:3px;
 }
 
-.mindbug{
-  width:1.5vw;
+.mindbugs img{
+  width:2vw;
 }
-
 </style>
