@@ -66,10 +66,24 @@ const cardClasses = computed(() => ({
 }))
 
 // Determine if the power overlay should be shown on the opponent's hand
-const showOverlay = computed(() => props.visibility === 'self');
+const showOverlay = computed(() => {
+  const isHand =
+    props.context === 'player-hand' ||
+    props.context === 'opponent-hand'
+
+  if (!isHand) return true
+
+  return props.visibility === 'self'
+});
 
 // Determine if the card should be shown
 const isHidden = computed(() => {
+  const isHand =
+    props.context === 'player-hand' ||
+    props.context === 'opponent-hand'
+
+  if (!isHand) return false
+
   return props.visibility !== 'self'
 })
 

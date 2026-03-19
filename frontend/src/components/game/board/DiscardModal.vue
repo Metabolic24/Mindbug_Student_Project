@@ -56,7 +56,7 @@ const title = computed(() => {
 
         <!-- GRID -->
         <div v-if="viewMode === 'grid'" class="cards-container">
-          <Card v-for="card in props.cards" :key="card.uuid" :card="card" context="discard-modal" :clickable="false"/>
+          <Card v-for="card in props.cards" :key="card.uuid" :card="card" context="discard-modal" visibility="self" :clickable="false"/>
         </div>
 
         <!-- CAROUSEL -->
@@ -64,7 +64,7 @@ const title = computed(() => {
           <Carousel v-bind="carouselConfig">
             <Slide v-for="card in props.cards" :key="card.uuid">
               <div class="carousel-card">
-                <Card :card="card" context="discard-modal" :clickable="false"/>
+                <Card :card="card" context="discard-modal" visibility="self" :clickable="false"/>
               </div>
             </Slide>
 
