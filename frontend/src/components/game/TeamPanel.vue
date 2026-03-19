@@ -24,7 +24,9 @@ const props = defineProps<Props>();
         <!-- TOP ROW -->
         <div class="top-row">
             <div class="discard top-left-discard">discard</div>
-            <div class="hand top-hand-left">hand</div>
+            <div class="hand top-hand-left">
+              <hand :cards="props.gameState?.opponents[0].hand" visibility="enemy" :selected-card="props.selectedCard"></hand>
+            </div>
 
             <TeamDetails
               class="team-details top-team"
@@ -33,7 +35,9 @@ const props = defineProps<Props>();
               :player="props.gameState.opponents[1]"
             />
 
-            <div class="hand top-hand-right">hand</div>
+            <div class="hand top-hand-right">
+              <hand :cards="props.gameState?.opponents[1].hand" visibility="enemy" :selected-card="props.selectedCard"></hand>
+            </div>
             <div class="discard top-right-discard">discard</div>
         </div>
 
@@ -46,16 +50,21 @@ const props = defineProps<Props>();
         <div class="bottom-row">
 
             <div class="discard bottom-left-discard">discard</div>
-            <div class="hand bottom-hand-left">hand</div>
+            <div class="hand bottom-hand-left">
+              <hand :cards="props.gameState.ally.hand" visibility="ally" :selected-card="props.selectedCard"></hand>
+            </div>
 
             <TeamDetails
               class="team-details bottom-team"
               :teamLife="props.gameState.player.lifePoints"
-              :ally="props.gameState.player"
-              :player="props.gameState.ally"
+              :ally="props.gameState.ally"
+              :player="props.gameState.player"
             />
 
-            <div class="hand bottom-hand-right">hand</div>
+            <div class="hand bottom-hand-right">
+              <hand :cards="props.gameState?.player?.hand" visibility="self" :selected-card="props.selectedCard"
+              @card-selected="props.onCardSelected($event, 'Hand')"></hand>
+            </div>
             <div class="discard bottom-right-discard">discard</div>
 
         </div>
@@ -113,6 +122,10 @@ const props = defineProps<Props>();
   align-items: center;
 
   z-index: 1;
+}
+.bottom-hand-right,
+.bottom-hand-left{
+  transform: translateY(-40%);
 }
 
 /* TEAM DETAILS */

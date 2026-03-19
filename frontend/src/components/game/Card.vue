@@ -7,6 +7,7 @@ interface Props {
   card: CardInterface
 
   context: 'player-hand' | 'opponent-hand' | 'player-board' | 'opponent-board' | 'board' | 'discard-modal' | 'discard-pile'
+  visibility: 'self' | 'ally' | 'enemy'
 
   selected?: boolean
   attacking?: boolean
@@ -65,13 +66,25 @@ const cardClasses = computed(() => ({
 }))
 
 // Determine if the power overlay should be shown on the opponent's hand
-const showOverlay = computed(() => props.context !== 'opponent-hand');
+const showOverlay = computed(() => props.visibility === 'self');
+
+// Determine if the card should be shown
+const isHidden = computed(() => {
+  return props.visibility !== 'self'
+})
+
+const cardImage = computed(() => {
+  if (isHidden.value) {
+    return new URL('@/assets/cards/back.png', import.meta.url).href
+  }
+  return getCardImage(props.card)
+})
 </script>
 
 <template>
   <div class="card-wrapper" :class="cardClasses" @click="clickable && emit('click', props.card)">
     <!-- Card image -->
-    <img :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image" draggable="false" @contextmenu.prevent/>
+    <img :src="cardImage" :alt="getCardAlt(card)" class="card-image" draggable="false" @contextmenu.prevent/>
 
     <div v-if="showOverlay" class="title-banner">
       <div class="title-text">{{ props.card.name }}</div>

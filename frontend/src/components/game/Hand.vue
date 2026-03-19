@@ -5,7 +5,7 @@ import {getCardAlt, getCardImage} from "@/shared/CardUtils";
 // Declare the interface for the data given by the parent component
 interface Props {
   cards: CardInterface[]
-  opponent: boolean
+  visibility: 'self' | 'ally' | 'enemy'
   selectedCard?: CardInterface
 }
 const props = defineProps<Props>()
@@ -21,9 +21,10 @@ const emit = defineEmits(['card-selected'])
       v-for="card in cards"
       :key="card.uuid"
       :card="card"
-      :context="opponent ? 'opponent-hand' : 'player-hand'"
+      :context="visibility === 'enemy' ? 'opponent-hand' : 'player-hand'"
+      :visibility="visibility"
       :selected="card.uuid === selectedCard?.uuid"
-      :clickable="!opponent"
+      :clickable="visibility === 'self'"
       @click="emit('card-selected', card)"
     />
 

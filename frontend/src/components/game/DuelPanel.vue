@@ -29,7 +29,7 @@ const props = defineProps<Props>();
         </player-details>
       </div>
       <div class="col-8">
-        <hand :cards="props.gameState?.opponents[0].hand" :opponent="true" :selected-card="props.selectedCard"></hand>
+        <hand :cards="props.gameState?.opponents[0].hand" visibility="enemy" :selected-card="props.selectedCard"></hand>
       </div>
     </div>
 
@@ -50,7 +50,7 @@ const props = defineProps<Props>();
         </player-details>
       </div>
       <div class="col-8">
-        <hand :cards="props.gameState?.player?.hand" :opponent="false" :selected-card="props.selectedCard"
+        <hand :cards="props.gameState?.player?.hand" visibility="self" :selected-card="props.selectedCard"
               @card-selected="props.onCardSelected($event, 'Hand')"></hand>
       </div>
       <div class="col-2"></div>
