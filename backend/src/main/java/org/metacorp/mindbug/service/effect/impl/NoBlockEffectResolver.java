@@ -50,35 +50,32 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
         CardKeyword keyword = effect.getKeyword();
         boolean highest = effect.isHighest();
 
-        Player opponent = effectSource.getOwner().getOpponent(game.getPlayers());
         Set<CardInstance> availableCards;
+        for (Player opponent : effectSource.getOwner().getOpponents(game.getPlayers())) {
+            if (highest) {
+                availableCards = new HashSet<>(CardUtils.getHighestCards(opponent.getBoard()));
+            } else {
+                Stream<CardInstance> boardCards = opponent.getBoard().stream();
 
-        if (highest) {
-            availableCards = new HashSet<>(CardUtils.getHighestCards(opponent.getBoard()));
-        } else {
-            Stream<CardInstance> boardCards = opponent.getBoard().stream();
-
-            if (max != null) {
-                boardCards = boardCards.filter(cardInstance -> cardInstance.getPower() <= max);
+                if (max != null) {
+                    boardCards = boardCards.filter(cardInstance -> cardInstance.getPower() <= max);
+                }
+                if (min != null) {
+                    boardCards = boardCards.filter(cardInstance -> cardInstance.getPower() >= min);
+                }
+                if (keyword != null) {
+                    boardCards = boardCards.filter(cardInstance -> cardInstance.hasKeyword(keyword));
+                }
+                availableCards = boardCards.collect(Collectors.toSet());
             }
 
-            if (min != null) {
-                boardCards = boardCards.filter(cardInstance -> cardInstance.getPower() >= min);
+            if (availableCards.size() <= value || value < 0) {
+                setAbleToBlock(game, availableCards);
+            } else {
+                game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, value, new HashSet<>(opponent.getBoard())));
+                game.getLogger().debug("Player {} must choose {} card(s) that will be unable to block (targets : {})",
+                        getLoggablePlayer(effectSource.getOwner()), value, getLoggableCards(opponent.getBoard()));
             }
-
-            if (keyword != null) {
-                boardCards = boardCards.filter(cardInstance -> cardInstance.hasKeyword(keyword));
-            }
-
-            availableCards = boardCards.collect(Collectors.toSet());
-        }
-
-        if (availableCards.size() <= value || value < 0) {
-            setAbleToBlock(game, availableCards);
-        } else {
-            game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, value, new HashSet<>(opponent.getBoard())));
-            game.getLogger().debug("Player {} must choose {} card(s) that will be unable to block (targets : {})",
-                    getLoggablePlayer(effectSource.getOwner()), value, getLoggableCards(opponent.getBoard()));
         }
     }
 

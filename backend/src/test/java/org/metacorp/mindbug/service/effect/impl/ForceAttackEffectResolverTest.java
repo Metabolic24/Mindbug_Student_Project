@@ -38,7 +38,7 @@ public class ForceAttackEffectResolverTest extends MindbugGameTest {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         currentPlayer = game.getCurrentPlayer();
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponents().getFirst();
 
         randomCard = currentPlayer.getHand().getFirst();
         randomCard.setStillTough(false);

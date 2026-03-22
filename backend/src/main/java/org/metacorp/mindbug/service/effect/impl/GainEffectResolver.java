@@ -40,8 +40,8 @@ public class GainEffectResolver extends EffectResolver<GainEffect> {
         int oldLifePoints = team.getLifePoints();
 
         if (equal) {
-            Player opponent = cardOwner.getOpponent(game.getPlayers());
-            team.setLifePoints(opponent.getTeam().getLifePoints());
+            Player anyOpponent = cardOwner.getOpponents(game.getPlayers()).getFirst();
+            team.setLifePoints(anyOpponent.getTeam().getLifePoints());
 
             if (oldLifePoints > team.getLifePoints()) {
                 GameStateService.lifePointLost(cardOwner, game);

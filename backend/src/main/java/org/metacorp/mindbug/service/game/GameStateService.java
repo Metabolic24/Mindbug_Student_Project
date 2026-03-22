@@ -16,11 +16,12 @@ import org.metacorp.mindbug.service.effect.EffectResolver;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 import static org.metacorp.mindbug.service.game.CardService.getPassiveEffects;
-import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
+import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayers;
 
 public class GameStateService {
 
@@ -83,7 +84,7 @@ public class GameStateService {
      */
     public static void newTurn(Game game, boolean mindbug) throws GameStateException, WebSocketException {
         if (!mindbug) {
-            game.setCurrentPlayer(game.getOpponent());
+            game.setNextPlayer();
         }
 
         refreshGameState(game, true);
@@ -129,10 +130,13 @@ public class GameStateService {
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     public static void endGame(Player loser, Game game) throws WebSocketException {
-        Player winner = loser.getOpponent(game.getPlayers());
-        game.getLogger().info("Game over : {} wins ; {} loses.", getLoggablePlayer(winner), getLoggablePlayer(loser));
+        List<Player> winners = loser.getOpponents(game.getPlayers());
+        Player loserAlly = loser.getAlly(game.getPlayers());
+        List<Player> losers = loserAlly == null ? Collections.singletonList(loser) : List.of(loser, loserAlly);
 
-        game.setWinner(winner);
+        game.getLogger().info("Game over : {} wins ; {} loses.", getLoggablePlayers(winners), getLoggablePlayers(losers));
+
+        game.setWinners(winners);
 
         WebSocketService.sendGameEvent(WsGameEventType.FINISHED, game);
         HistoryService.saveHistory(game);

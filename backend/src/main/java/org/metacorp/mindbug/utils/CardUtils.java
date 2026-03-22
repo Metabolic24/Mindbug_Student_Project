@@ -1,5 +1,6 @@
 package org.metacorp.mindbug.utils;
 
+import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.player.Player;
@@ -177,5 +178,17 @@ public class CardUtils {
      */
     public static List<CardInstance> getKeywordCards(Collection<CardInstance> cards, CardKeyword keyword) {
         return cards.stream().filter(card -> card.hasKeyword(keyword)).collect(Collectors.toList());
+    }
+
+    /**
+     * @param player the related player
+     * @param game the current game state
+     * @return the list of cards on the board of the opponents of the given player
+     */
+    public static List<CardInstance> getOpponentCards(Player player, Game game) {
+        List<CardInstance> opponentCards = new ArrayList<>();
+        player.getOpponents(game.getPlayers()).forEach(opponent -> opponentCards.addAll(opponent.getBoard()));
+
+        return opponentCards;
     }
 }

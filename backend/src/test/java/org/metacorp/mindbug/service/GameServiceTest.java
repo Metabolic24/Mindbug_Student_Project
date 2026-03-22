@@ -46,7 +46,7 @@ public class GameServiceTest extends MindbugGameTest {
         assertNotNull(otherGame.getUuid());
 
         Player aiPlayer = otherGame.getCurrentPlayer().getUuid().equals(game.getCurrentPlayer().getUuid()) ?
-                otherGame.getOpponent() : otherGame.getCurrentPlayer();
+                otherGame.getOpponents().getFirst() : otherGame.getCurrentPlayer();
 
         assertEquals(aiPlayer.getUuid(), playerService.getAiPlayer().getUuid());
         assertEquals(aiPlayer.getName(), playerService.getAiPlayer().getName());
@@ -77,11 +77,11 @@ public class GameServiceTest extends MindbugGameTest {
     @Test
     public void endGame_nominal() throws WebSocketException {
         List<Player> players = game.getPlayers();
-        UUID loserId = players.get(0).getUuid();
+        UUID loserId = players.getFirst().getUuid();
         UUID winnerId = players.get(1).getUuid();
 
         gameService.endGame(loserId, game.getUuid());
-        assertEquals(winnerId, game.getWinner().getUuid());
+        assertEquals(winnerId, game.getWinners().getFirst().getUuid());
     }
 
     @Test
@@ -91,25 +91,25 @@ public class GameServiceTest extends MindbugGameTest {
         UUID winnerId = players.get(1).getUuid();
 
         gameService.endGame(loserId, game.getUuid());
-        assertEquals(winnerId, game.getWinner().getUuid());
+        assertEquals(winnerId, game.getWinners().getFirst().getUuid());
 
         gameService.endGame(loserId, game.getUuid());
-        assertEquals(winnerId, game.getWinner().getUuid());
+        assertEquals(winnerId, game.getWinners().getFirst().getUuid());
     }
 
     @Test
     public void endGame_badGame() throws WebSocketException {
         gameService.endGame(UUID.randomUUID(), UUID.randomUUID());
-        assertNull(game.getWinner());
+        assertNull(game.getWinners());
     }
 
     @Test
     public void endGame_badPlayer() throws UnknownPlayerException, WebSocketException, CardSetException {
         List<Player> players = game.getPlayers();
-        UUID loserId = players.get(0).getUuid();
+        UUID loserId = players.getFirst().getUuid();
         game = gameService.createGame(loserId, players.get(1).getUuid());
 
         gameService.endGame(UUID.randomUUID(), game.getUuid());
-        assertNull(game.getWinner());
+        assertNull(game.getWinners());
     }
 }

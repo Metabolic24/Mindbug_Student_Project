@@ -76,7 +76,7 @@ public class AiUtils {
      * @throws GameStateException if an error occurs during the game execution
      */
     private static void resolveAttack(Game game, AiPlayer aiPlayer) throws GameStateException, WebSocketException {
-        List<CardInstance> availableCards = CardService.getBlockersList(game);
+        List<CardInstance> availableCards = CardService.getBlockersList(game, aiPlayer);
         if (availableCards.isEmpty()) {
             AttackService.resolveAttack(null, game);
         } else {

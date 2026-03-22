@@ -70,7 +70,7 @@ public class WsGameEndpoint extends WebSocketApplication {
             if (!isAi) {
                 GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
                 WsPlayerGameEvent playerGameEvent = new WsPlayerGameEvent(WsGameEventType.STATE);
-                playerGameEvent.setState(new WsPlayerGameState(gameStateDTO, playerId.equals(gameStateDTO.getPlayer().getUuid())));
+                playerGameEvent.setState(new WsPlayerGameState(gameStateDTO, playerId));
                 try {
                     String gameStateData = new ObjectMapper().writeValueAsString(playerGameEvent);
                     logger.debug("Sending START game state to player {}", playerId);
@@ -130,11 +130,12 @@ public class WsGameEndpoint extends WebSocketApplication {
         UUID playerId = playerSocket.getPlayerId();
 
         return switch (gameEvent.getType()) {
-            case NEW_TURN, STATE -> gameEvent.getState().getPlayer().getUuid().equals(playerId);
-            case CARD_PICKED -> gameEvent.getState().getOpponent().getUuid().equals(playerId)
-                    && gameEvent.getState().getOpponent().getMindbugCount() > 0;
+            case NEW_TURN, STATE -> gameEvent.getState().getCurrentPlayerID().equals(playerId);
+            case CARD_PICKED -> !gameEvent.getState().getCurrentPlayerID().equals(playerId) &&
+                    gameEvent.getState().getPlayerById(playerId).getMindbugCount() > 0;
             case CHOICE -> gameEvent.getState().getChoice().getPlayerToChoose().equals(playerId);
-            case WAITING_ATTACK_RESOLUTION -> gameEvent.getState().getOpponent().getUuid().equals(playerId);
+            case WAITING_ATTACK_RESOLUTION ->
+                    !gameEvent.getState().getCurrentPlayerID().equals(playerId); //TODO To be changed for 2v2
             case FINISHED -> {
                 playerSocket.close();
                 yield false;
@@ -149,16 +150,8 @@ public class WsGameEndpoint extends WebSocketApplication {
         String eventData;
 
         UUID playerId = playerSocket.getPlayerId();
-        if (playerId.equals(gameState.getPlayer().getUuid())) {
-            playerGameEvent.setState(new WsPlayerGameState(gameState, true));
-            eventData = mapper.writeValueAsString(playerGameEvent);
-        } else if (playerId.equals(gameState.getOpponent().getUuid())) {
-            playerGameEvent.setState(new WsPlayerGameState(gameState, false));
-            eventData = mapper.writeValueAsString(playerGameEvent);
-        } else {
-            // Should not happen
-            eventData = "Unexpected data";
-        }
+        playerGameEvent.setState(new WsPlayerGameState(gameState, playerId));
+        eventData = mapper.writeValueAsString(playerGameEvent);
 
         playerSocket.send(eventData);
     }

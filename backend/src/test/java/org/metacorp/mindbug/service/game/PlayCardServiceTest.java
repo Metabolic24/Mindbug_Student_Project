@@ -35,7 +35,7 @@ public class PlayCardServiceTest extends MindbugGameTest {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         currentPlayer = game.getCurrentPlayer();
-        opponent = currentPlayer.getOpponent(game.getPlayers());
+        opponent = game.getOpponents().getFirst();
     }
 
     @Test

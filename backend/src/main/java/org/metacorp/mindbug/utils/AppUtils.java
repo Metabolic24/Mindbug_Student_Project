@@ -134,20 +134,26 @@ public final class AppUtils {
      * @throws GameStateException if an error occurs during the game execution
      */
     public static void resolveAttack(Scanner scanner, Game game) throws GameStateException, WebSocketException {
-        Player attackedPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
+        CardInstance blockingCard = null;
 
-        List<CardInstance> availableCards = CardService.getBlockersList(game);
-        if (availableCards.isEmpty()) {
-            System.out.printf("%s ne peut pas défendre\n", attackedPlayer.getName());
-            AttackService.resolveAttack(null, game);
-        } else {
-            // Select a card and block with it
-            CardInstance card = (scanner == null) ? CardService.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
-            if (card != null) {
-                System.out.printf("%s défend avec la carte '%s'\n", attackedPlayer.getName(), card.getCard().getName());
-                AttackService.resolveAttack(card, game);
+        List<Player> opponentPlayers = game.getAttackingCard().getOwner().getOpponents(game.getPlayers());
+        for (Player opponentPlayer : opponentPlayers) {
+            List<CardInstance> availableCards = CardService.getBlockersList(game, opponentPlayer);
+            if (availableCards.isEmpty()) {
+                System.out.printf("%s cannot block the attack\n", opponentPlayer.getName());
+            } else {
+                // Select a card and attack with it
+                blockingCard = (scanner == null) ? CardService.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
+                if (blockingCard != null) {
+                    System.out.printf("%s blocks with card '%s'\n", opponentPlayer.getName(), blockingCard.getCard().getName());
+                    break;
+                } else {
+                    System.out.printf("%s chose to not block \n", opponentPlayer.getName());
+                }
             }
         }
+
+        AttackService.resolveAttack(blockingCard, game);
     }
 
     /**

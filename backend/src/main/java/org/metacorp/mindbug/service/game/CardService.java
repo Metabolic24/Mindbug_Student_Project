@@ -68,12 +68,11 @@ public class CardService {
 
     /**
      * @param game the current game state
+     * @param defender the player that would like to block the attack
      * @return the list of cards that are able to block (may be empty)
      */
-    public static List<CardInstance> getBlockersList(Game game) {
-        Player attackedPlayer = game.getAttackingCard().getOwner().getOpponent(game.getPlayers());
-
-        Stream<CardInstance> blockersStream = attackedPlayer.getBoard().stream().filter(CardInstance::isAbleToBlock);
+    public static List<CardInstance> getBlockersList(Game game, Player defender) {
+        Stream<CardInstance> blockersStream = defender.getBoard().stream().filter(CardInstance::isAbleToBlock);
         if (game.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)) {
             blockersStream = blockersStream.filter((card) -> card.hasKeyword(CardKeyword.SNEAKY));
         }
