@@ -30,7 +30,7 @@ public class InflictEffectResolverTest extends MindbugGameTest {
 
         currentPlayer = game.getCurrentPlayer();
         CardInstance randomCard = currentPlayer.getHand().getFirst();
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponents().getFirst();
 
         effect = new InflictEffect();
         effect.setType(EffectType.INFLICT);

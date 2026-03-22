@@ -11,6 +11,7 @@ import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -40,22 +41,19 @@ public class KeywordUpEffectResolver extends EffectResolver<KeywordUpEffect> {
         Integer alliesCount = effect.getAlliesCount();
 
         Player cardOwner = effectSource.getOwner();
-        Player opponent = cardOwner.getOpponent(game.getPlayers());
+        List<Player> opponentPlayers = cardOwner.getOpponents(game.getPlayers());
+        int opponentBoardSize = opponentPlayers.stream().mapToInt(player -> player.getBoard().size()).sum();
 
         if ((alone && cardOwner.getBoard().size() != 1)
-                || (moreAllies && opponent.getBoard().size() >= cardOwner.getBoard().size())
+                || (moreAllies && opponentBoardSize >= cardOwner.getBoard().size())
                 || (alliesCount != null && cardOwner.getBoard().size() != alliesCount)) {
             return;
         }
 
         if (effect.isOpponentHas()) { //TODO Fix an issue when there is at least one card with "opponentHas" effect on each side (one may not have all the expected keywords)
-            boolean checkOpponent = false;
-            for (CardInstance opponentCard : opponent.getBoard()) {
-                if (opponentCard.getKeywords().contains(value)) {
-                    checkOpponent = true;
-                    break;
-                }
-            }
+            boolean checkOpponent = opponentPlayers.stream()
+                    .flatMap(player -> player.getBoard().stream())
+                    .anyMatch(opponentCard -> opponentCard.getKeywords().contains(value));
 
             if (!checkOpponent) {
                 return;

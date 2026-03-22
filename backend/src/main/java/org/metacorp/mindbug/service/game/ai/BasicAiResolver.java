@@ -8,7 +8,6 @@ import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.AiPlayer;
-import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.CardUtils;
 
 import java.util.ArrayList;
@@ -87,8 +86,8 @@ public class BasicAiResolver extends RandomAiResolver {
     @Override
     public CardInstance chooseHunterTarget(Game game) {
         CardInstance attackingCard = game.getAttackingCard();
-        Player opponent = attackingCard.getOwner().getOpponent(game.getPlayers());
-        List<CardInstance> lowerCards = CardUtils.getCardsWithLowerOrEqualPower(opponent.getBoard(), attackingCard.getPower());
+  
+        List<CardInstance> lowerCards = CardUtils.getCardsWithLowerOrEqualPower(CardUtils.getOpponentCards(attackingCard.getOwner(), game), attackingCard.getPower());
 
         // Do not use hunter if no lower cards
         return lowerCards.isEmpty() ? null : lowerCards.get(RND.nextInt(lowerCards.size()));
@@ -97,9 +96,9 @@ public class BasicAiResolver extends RandomAiResolver {
     @Override
     public boolean shouldAttackAgain(Game game) {
         CardInstance attackingCard = game.getAttackingCard();
-        Player opponent = attackingCard.getOwner().getOpponent(game.getPlayers());
+       
 
-        return CardUtils.noPowerHigher(opponent.getBoard(), attackingCard.getPower());
+        return CardUtils.noPowerHigher(CardUtils.getOpponentCards(attackingCard.getOwner(), game), attackingCard.getPower());
     }
 
     @Override
@@ -138,8 +137,8 @@ public class BasicAiResolver extends RandomAiResolver {
         if (!availableAttackers.isEmpty()) {
             // Attack with the highest card if possible
             CardInstance highestCard = CardUtils.getHighestCards(availableAttackers).getFirst();
-            Player opponent = highestCard.getOwner().getOpponent(game.getPlayers());
-            if (CardUtils.noPowerHigher(opponent.getBoard(), highestCard.getPower())) {
+           
+            if (CardUtils.noPowerHigher(CardUtils.getOpponentCards(highestCard.getOwner(), game), highestCard.getPower())) {
                 return highestCard;
             }
 
@@ -147,7 +146,7 @@ public class BasicAiResolver extends RandomAiResolver {
             List<CardInstance> sneakyCards = CardUtils.getKeywordCards(availableAttackers, CardKeyword.SNEAKY);
             if (!sneakyCards.isEmpty()) {
                 sneakyCards.sort(Comparator.comparingInt(CardInstance::getPower));
-                if (!CardUtils.anyKeywordWithHigherOrEqualPower(opponent.getBoard(), CardKeyword.SNEAKY, sneakyCards.getFirst().getPower())) {
+                if (!CardUtils.anyKeywordWithHigherOrEqualPower(CardUtils.getOpponentCards(sneakyCards.getFirst().getOwner(), game), CardKeyword.SNEAKY, sneakyCards.getFirst().getPower())) {
                     return sneakyCards.getFirst();
                 }
             }
@@ -180,13 +179,10 @@ public class BasicAiResolver extends RandomAiResolver {
         if (availableCards.isEmpty()) {
             return null;
         }
-
-        Player opponent = game.getOpponent();
-
         List<CardInstance> sneakyCards = CardUtils.getKeywordCards(availableCards, CardKeyword.SNEAKY);
         if (!sneakyCards.isEmpty()) {
             List<CardInstance> sneakyHighestPowerCards = CardUtils.getHighestCards(sneakyCards);
-            if (CardUtils.noKeywordWithHigherPower(opponent.getBoard(), CardKeyword.SNEAKY, sneakyHighestPowerCards.getFirst().getPower())) {
+            if (CardUtils.noKeywordWithHigherPower(CardUtils.getOpponentCards(sneakyCards.getFirst().getOwner(), game), CardKeyword.SNEAKY, sneakyHighestPowerCards.getFirst().getPower())) {
                 return sneakyHighestPowerCards.get(RND.nextInt(sneakyHighestPowerCards.size()));
             }
         }
@@ -194,12 +190,12 @@ public class BasicAiResolver extends RandomAiResolver {
         List<CardInstance> hunterCards = CardUtils.getKeywordCards(availableCards, CardKeyword.HUNTER);
         if (!hunterCards.isEmpty()) {
             List<CardInstance> hunterHighestPowerCards = CardUtils.getHighestCards(hunterCards);
-            if (CardUtils.anyPowerLower(opponent.getBoard(), hunterHighestPowerCards.getFirst().getPower())) {
+            if (CardUtils.anyPowerLower(CardUtils.getOpponentCards(hunterCards.getFirst().getOwner(), game), hunterHighestPowerCards.getFirst().getPower())) {
                 return hunterHighestPowerCards.get(RND.nextInt(hunterHighestPowerCards.size()));
             }
         }
 
-        int opponentHighestPower = CardUtils.getHighestPower(opponent.getBoard());
+        int opponentHighestPower = CardUtils.getHighestPower(CardUtils.getOpponentCards(availableCards.getFirst().getOwner(), game));
         List<CardInstance> higherCards = CardUtils.getCardsWithHigherOrEqualPower(availableCards, opponentHighestPower);
 
         if (!higherCards.isEmpty()) {

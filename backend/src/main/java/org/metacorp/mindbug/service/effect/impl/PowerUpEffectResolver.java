@@ -45,11 +45,14 @@ public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
         Integer alliesCount = effect.getAlliesCount();
 
         Player currentPlayer = effectSource.getOwner();
-        Player opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        int opponentBoardSize = currentPlayer.getOpponents(game.getPlayers())
+                .stream()
+                .mapToInt(opponent -> opponent.getBoard().size())
+                .sum();
         int powerToAdd = value;
 
         if ((lifePoints != null && currentPlayer.getTeam().getLifePoints() > lifePoints)
-                || (enemiesCount != null && opponentPlayer.getBoard().size() < enemiesCount)
+                || (enemiesCount != null && opponentBoardSize < enemiesCount)
                 || (alliesCount != null && currentPlayer.getBoard().size() != alliesCount)
                 || (alone && currentPlayer.getBoard().size() != 1)
                 || (noMindbug && currentPlayer.getMindBugs() != 0)

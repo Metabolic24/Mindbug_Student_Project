@@ -69,7 +69,7 @@ public class GameStateServiceTest extends MindbugGameTest {
 
         currentPlayer.addCardToBoard(boardCard);
 
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = currentPlayer.getOpponents(game.getPlayers()).getFirst();
         opponent.getDiscardPile().add(opponent.getHand().removeFirst());
         opponent.getDiscardPile().add(opponent.getHand().removeFirst());
         opponent.getDiscardPile().add(opponent.getDrawPile().removeFirst());

@@ -73,7 +73,7 @@ public class AttackService {
         game.setAfterEffect(() -> {
             try {
                 if (attackCardOwner.getBoard().contains(attackCard)) {
-                    Player defender = attackCardOwner.getOpponent(game.getPlayers());
+                    Player defender = attackCardOwner.getOpponents(game.getPlayers()).getFirst(); //TODO To be changed for 2v2
                     if (defender.getBoard().isEmpty()) {
                         resolveAttack(null, game);
                     } else if (game.getForcedTarget() != null) {
@@ -153,7 +153,7 @@ public class AttackService {
         HistoryService.log(game, HistoryKey.BLOCK, attackCard, defendCard == null ? null : Collections.singleton(defendCard));
 
         if (defendCard == null) {
-            Player defender = attackCard.getOwner().getOpponent(game.getPlayers());
+            Player defender = attackCard.getOwner().getOpponents(game.getPlayers()).getFirst(); //TODO To be changed for 2v2
             defender.getTeam().loseLifePoints(1);
             GameStateService.lifePointLost(defender, game);
         } else {

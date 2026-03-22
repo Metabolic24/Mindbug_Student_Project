@@ -50,13 +50,16 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
         StealSource source = effect.getSource();
 
         Player cardOwner = effectSource.getOwner();
-        Player opponent = cardOwner.getOpponent(game.getPlayers());
+        List<Player> opponents = cardOwner.getOpponents(game.getPlayers());
 
         List<CardInstance> availableCards = switch (source) {
-            case DISCARD -> opponent.getDiscardPile();
-            case HAND -> opponent.getHand();
+            case DISCARD ->
+                    opponents.stream().flatMap(opponent -> opponent.getDiscardPile().stream()).collect(Collectors.toList());
+            case HAND ->
+                    opponents.stream().flatMap(opponent -> opponent.getHand().stream()).collect(Collectors.toList());
             case SELF_DISCARD -> cardOwner.getDiscardPile();
-            case BOARD -> opponent.getBoard();
+            case BOARD ->
+                    opponents.stream().flatMap(opponent -> opponent.getBoard().stream()).collect(Collectors.toList());
         };
 
         if (min != null) {
@@ -81,7 +84,10 @@ public class StealEffectResolver extends EffectResolver<StealEffect> {
                 }
                 stealCards(stolenCards, game, cardOwner, effectSource);
             } else {
-                Player playerToChoose = (selection == null || selection == StealTargetSelection.SELF) ? cardOwner : opponent;
+                // TODO Cela parait bizarre de prendre le 1er adversaire : à clarifier
+                Player playerToChoose = (selection == null || selection == StealTargetSelection.SELF)
+                        ? cardOwner
+                        : opponents.getFirst();
 
                 TargetChoice choice = new TargetChoice(playerToChoose, effectSource, new TargetChoiceResolver(effect, cardOwner, effectSource),
                         value, new HashSet<>(availableCards));

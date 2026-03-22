@@ -19,10 +19,11 @@ type WsMessageType =
 interface GameStateInterface {
     uuid: string;
     player: PlayerInterface
-    opponent: PlayerInterface
-    playerTurn?: boolean
-    winner: string
-    card: CardInterface
-    choice: ChoiceInterface | TargetChoiceInterface | SimultaneousChoiceInterface
-    forcedAttack: boolean
+    ally: PlayerInterface
+    opponents: PlayerInterface[]
+    currentPlayerID: string
+    winners?: string[]
+    card?: CardInterface
+    choice?: ChoiceInterface | TargetChoiceInterface | SimultaneousChoiceInterface
+    forcedAttack?: boolean
 }
