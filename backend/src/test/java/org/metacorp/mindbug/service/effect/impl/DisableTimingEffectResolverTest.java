@@ -29,7 +29,7 @@ public class DisableTimingEffectResolverTest extends MindbugGameTest {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         CardInstance randomCard = game.getCurrentPlayer().getHand().getFirst();
-        opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponents().getFirst();
 
         effect = new DisableTimingEffect();
         effect.setType(EffectType.DISABLE_TIMING);

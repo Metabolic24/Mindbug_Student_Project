@@ -30,7 +30,7 @@ public class GainEffectResolverTest extends MindbugGameTest {
 
         CardInstance randomCard = game.getCurrentPlayer().getHand().getFirst();
         currentPlayer = game.getCurrentPlayer();
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponents().getFirst();
 
         effect = new GainEffect();
         effect.setType(EffectType.GAIN);

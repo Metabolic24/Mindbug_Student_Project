@@ -35,7 +35,7 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
 
     @Override
     public void apply(Game game, EffectTiming timing) {
-        Player opponent = effectSource.getOwner().getOpponent(game.getPlayers());
+        Player opponent = effectSource.getOwner().getOpponents(game.getPlayers()).getFirst(); // TODO A changer pour le 2v2 : il faut sélectionner un adversaire
 
         int value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue();
 

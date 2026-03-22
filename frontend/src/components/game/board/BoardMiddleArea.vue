@@ -17,8 +17,8 @@ const emit = defineEmits(['card-preview'])
 
 // Computed value for the message
 const message = computed(() => {
-  if (props.gameState.winner) {
-    if (props.gameState.winner === props.gameState.player.uuid) {
+  if (props.gameState.winners) {
+    if (props.gameState.winners.includes(props.gameState.player.uuid)) {
       return 'game.middle_area.win'
     } else {
       return 'game.middle_area.lose'
@@ -33,7 +33,7 @@ const message = computed(() => {
     } else {
       return 'game.middle_area.choice.waiting'
     }
-  } else if (props.gameState?.playerTurn) {
+  } else if (props.gameState?.currentPlayerID === props.gameState?.player.uuid) {
     if (props.pickedCard || props.attackingCard) {
       return 'game.middle_area.waiting'
     } else {
@@ -54,7 +54,7 @@ const isPlayerTurn = computed(() => props.gameState?.playerTurn)
 
 // Computed value that controls image visibility
 const isImageVisible = computed(() => {
-  return !props.gameState?.winner &&
+  return !props.gameState?.winners &&
       (props.pickedCard !== undefined ||
       props.gameState?.choice?.type === "BOOLEAN" ||
       props.gameState?.choice?.type === "FRENZY" ||

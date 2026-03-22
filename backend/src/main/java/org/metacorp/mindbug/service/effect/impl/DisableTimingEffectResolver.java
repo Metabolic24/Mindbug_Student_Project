@@ -28,11 +28,13 @@ public class DisableTimingEffectResolver extends EffectResolver<DisableTimingEff
 
     @Override
     public void apply(Game game, EffectTiming timing) {
-        Player opponentPlayer = effectSource.getOwner().getOpponent(game.getPlayers());
-        opponentPlayer.disableTiming(effect.getValue());
+        // Disable effects having the given timing for each opponent of the source card owner
+        for (Player opponentPlayer : effectSource.getOwner().getOpponents(game.getPlayers())) {
+            opponentPlayer.disableTiming(effect.getValue());
+            game.getLogger().debug("{} effects disabled for player {} due to {} effect", effect.getValue(),
+                    getLoggablePlayer(opponentPlayer), getLoggableCard(effectSource));
+        }
 
-        game.getLogger().debug("{} effects disabled for player {} due to {} effect", effect.getValue(),
-                getLoggablePlayer(opponentPlayer), getLoggableCard(effectSource));
         HistoryService.logEffect(game, effect.getType(), effectSource, null);
     }
 }

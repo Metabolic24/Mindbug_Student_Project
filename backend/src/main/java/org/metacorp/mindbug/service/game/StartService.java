@@ -62,7 +62,6 @@ public class StartService {
 
         for (Player player : game.getPlayers()) {
             initDrawAndHand(player, cards);
-            player.getTeam().setLifePoints(3);
         }
 
         game.setCurrentPlayer(getFirstPlayer(game));

@@ -30,7 +30,7 @@ public class PowerUpEffectResolverTest extends MindbugGameTest {
 
         randomCard = game.getCurrentPlayer().getHand().getFirst();
         currentPlayer = game.getCurrentPlayer();
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponents().getFirst();
 
         effect = new PowerUpEffect();
         effect.setType(EffectType.POWER_UP);
