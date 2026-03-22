@@ -21,7 +21,7 @@ const emit = defineEmits(['button-clicked'])
 const mainButtonData: ComputedRef<ButtonData> = computed(() => {
   const result: ButtonData = {
     label: "",
-    visible: !props.gameState?.winner, // should not be visible if game is already finished
+    visible: !props.gameState?.winners, // should not be visible if game is already finished
     disabled: false,
     event: undefined
   }
@@ -39,7 +39,7 @@ const mainButtonData: ComputedRef<ButtonData> = computed(() => {
     } else {
       result.visible = false
     }
-  } else if (props.gameState?.playerTurn) {
+  } else if (props.gameState?.currentPlayerID === props.gameState?.player.uuid) {
     if (props.selectedCard) {
       if (props.selectedCard?.location === "Hand") {
         result.label = 'game.buttons.play'
@@ -75,7 +75,7 @@ const mainButtonData: ComputedRef<ButtonData> = computed(() => {
 const secondButtonData: ComputedRef<ButtonData> = computed(() => {
   const result: ButtonData = {
     label: "",
-    visible: !props.gameState.winner, // should not be visible if game is already finished
+    visible: !props.gameState.winners, // should not be visible if game is already finished
     disabled: false,
     event: undefined
   }
@@ -92,7 +92,7 @@ const secondButtonData: ComputedRef<ButtonData> = computed(() => {
     } else {
       result.visible = false
     }
-  } else if (props.gameState?.playerTurn) {
+  } else if (props.gameState?.currentPlayerID === props.gameState?.player.uuid) {
     if (props.selectedCard?.location === "Board" && props.selectedCard?.hasAction) {
       result.label = "game.buttons.action"
       result.disabled = props.gameState.forcedAttack

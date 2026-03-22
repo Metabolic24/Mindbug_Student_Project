@@ -43,25 +43,33 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
         Integer min = effect.getMin();
         Integer max = effect.getMax();
         boolean selfAllowed = effect.isSelfAllowed();
-        boolean allies = effect.isAllies();
+        boolean alliesAffected = effect.isAllies();
 
         Player sourceOwner = effectSource.getOwner();
-        Player opponent = sourceOwner.getOpponent(game.getPlayers());
 
-        if (effect.isLessAllies() && !(sourceOwner.getBoard().size() < opponent.getBoard().size())) {
+        List<CardInstance> opponentCards = new ArrayList<>();
+        for (Player opponents : sourceOwner.getOpponents(game.getPlayers())) {
+            opponentCards.addAll(opponents.getBoard());
+        }
+
+        if (effect.isLessAllies() && !(sourceOwner.getBoard().size() < opponentCards.size())) {
             return;
         }
 
         if (effect.isItself()) {
             destroyCards(game, Collections.singletonList(effectSource));
         } else if (effect.isLowest()) {
-            Set<Player> affectedPlayers = selfAllowed ? new HashSet<>(game.getPlayers()) : Collections.singleton(opponent);
+            Set<Player> affectedPlayers = new HashSet<>(game.getPlayers());
+            if (!selfAllowed) {
+                affectedPlayers.remove(sourceOwner);
+            }
+
             destroyCards(game, CardUtils.getLowestCards(affectedPlayers));
         } else {
             List<CardInstance> availableCards = new ArrayList<>();
 
-            if (!allies) {
-                for (CardInstance currentCard : opponent.getBoard()) {
+            if (!alliesAffected) {
+                for (CardInstance currentCard : opponentCards) {
                     if (min != null && currentCard.getPower() < min
                             || max != null && currentCard.getPower() > max) {
                         continue;
@@ -71,14 +79,27 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
                 }
             }
 
-            if (allies || selfAllowed) {
-                for (CardInstance currentCard : effectSource.getOwner().getBoard()) {
+            if (alliesAffected || selfAllowed) {
+                for (CardInstance currentCard : sourceOwner.getBoard()) {
                     if (min != null && currentCard.getPower() < min
                             || max != null && currentCard.getPower() > max) {
                         continue;
                     }
 
                     availableCards.add(currentCard);
+                }
+
+                //if selfAllowed, target my allies
+                Player ally = sourceOwner.getAlly(game.getPlayers());
+                if (ally != null) {
+                    for (CardInstance currentCard : ally.getBoard()) {
+                        if (min != null && currentCard.getPower() < min ||
+                                max != null && currentCard.getPower() > max) {
+                            continue;
+                        }
+
+                        availableCards.add(currentCard);
+                    }
                 }
             }
 

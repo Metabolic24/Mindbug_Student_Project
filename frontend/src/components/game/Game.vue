@@ -88,7 +88,7 @@ const choiceModalData = computed((): ChoiceModalData => {
 // Computed value for choice modal visibility
 const isChoiceModalVisible = computed(() => {
   const game: GameStateInterface = gameState.value;
-  return game && !game.winner &&
+  return game && !game.winners &&
       (game.choice?.type === "TARGET" || game.choice?.type === "SIMULTANEOUS") &&
       game.choice?.playerToChoose === game.player.uuid
 })
@@ -183,7 +183,7 @@ onMounted(async () => {
       }
 
       gameState.value = message.state;
-      currentPlayer.value = gameState.value.playerTurn ? gameState.value.player.uuid : gameState.value.opponent.uuid;
+      currentPlayer.value = gameState.value.currentPlayerID;
     } catch (e) {
       console.error("Failed to parse game state", e);
       error.value = true;
@@ -202,7 +202,7 @@ onUnmounted(() => {
   }
 
   const game: GameStateInterface = gameState.value;
-  if (!game?.winner) {
+  if (!game?.winners) {
     surrender(game?.uuid, game?.player.uuid)
   }
 })
@@ -212,7 +212,7 @@ function onCardSelected(card: CardInterface, location: CardLocation): void {
   const game: GameStateInterface = gameState.value;
 
   if (location === "Board" || // No check required as board is able to manage it by itself
-      (location === "Hand" && game?.playerTurn && !pickedCard.value && !attackingCard.value && !game.choice)) { // Check that we are at the start of the player turn
+      (location === "Hand" && game?.currentPlayerID === game?.player.uuid && !pickedCard.value && !attackingCard.value && !game.choice)) { // Check that we are at the start of the player turn
     if (selectedCard.value?.uuid === card.uuid) {
       selectedCard.value = undefined;
     } else {
@@ -274,7 +274,7 @@ function continueGame() {
 
 async function leaveGame() {
   const game = gameState.value
-  if (!game?.winner) {
+  if (!game?.winners) {
     await surrender(game?.uuid, game?.player.uuid)
   }
 
@@ -296,15 +296,15 @@ function closeCardPreview(): void {
   <div v-if="gameState" class="container-fluid game">
     <div class="row top-row">
       <div class="col-2 player-container player-container--top">
-        <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
-                        :draw-pile-count="gameState?.opponent?.drawPileCount"
-                        :mindbug-count="gameState?.opponent?.mindbugCount"
+        <player-details :name="gameState?.opponents[0]?.name" :life-points="gameState?.opponents[0]?.lifePoints"
+                        :draw-pile-count="gameState?.opponents[0]?.drawPileCount"
+                        :mindbug-count="gameState?.opponents[0]?.mindbugCount"
                         :is-active="isOpponentActive">
         </player-details>
       </div>
       <div class="col-8">
         <hand
-          :cards="gameState?.opponent?.hand"
+          :cards="gameState?.opponents[0]?.hand"
           :opponent=true
           :selected-card="selectedCard"
           @card-preview="onCardPreview"

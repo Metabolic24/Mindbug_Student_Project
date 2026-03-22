@@ -35,7 +35,7 @@ public class HunterChoiceTest extends MindbugGameTest {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         currentPlayer = game.getCurrentPlayer();
-        opponent = game.getOpponent();
+        opponent = game.getOpponents().getFirst();
 
         currentCard = currentPlayer.getHand().getFirst();
         currentCard.getCard().setKeywords(new HashSet<>(List.of(CardKeyword.HUNTER)));

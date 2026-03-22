@@ -38,10 +38,6 @@ public class TestGameUtils {
         Collections.shuffle(cards);
         game.setCards(cards);
 
-        for (Player player : game.getPlayers()) {
-            player.getTeam().setLifePoints(3);
-        }
-
         game.setCurrentPlayer(player1);
 
         return game;

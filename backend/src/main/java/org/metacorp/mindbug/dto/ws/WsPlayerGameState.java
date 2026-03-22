@@ -6,8 +6,8 @@ import org.metacorp.mindbug.dto.PlayerDTO;
 import org.metacorp.mindbug.dto.card.CardDTO;
 import org.metacorp.mindbug.dto.choice.AbstractChoiceDTO;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 /**
@@ -18,36 +18,52 @@ public class WsPlayerGameState {
 
     private UUID uuid;
     private PlayerDTO player;
-    private PlayerDTO opponent;
-    private Boolean playerTurn;
-    private UUID winner;
+    private PlayerDTO ally;
+    private Set<PlayerDTO> opponents;
+
+    private UUID currentPlayerID;
+    private Set<UUID> winners;
 
     private CardDTO card;
     private AbstractChoiceDTO choice;
+    private boolean forcedAttack;
 
     /**
      * Constructor
      *
-     * @param gameState the GameStateDTO to
-     * @param isPlayer  is it a DTO for the current player or his/her opponent
+     * @param gameState the GameStateDTO to transform
+     * @param playerId  the player receiving this state
      */
-    public WsPlayerGameState(GameStateDTO gameState, boolean isPlayer) {
+    public WsPlayerGameState(GameStateDTO gameState, UUID playerId) {
         this.uuid = gameState.getUuid();
-        this.player = isPlayer ? gameState.getPlayer() : gameState.getOpponent();
-        this.opponent = isPlayer ? gameState.getOpponent() : gameState.getPlayer();
-        this.playerTurn = isPlayer;
-        this.winner = gameState.getWinner();
+        this.player = gameState.getPlayerById(playerId);
+
+        this.currentPlayerID = gameState.getCurrentPlayerID();
+        this.winners = gameState.getWinners();
+
         this.card = gameState.getCard();
         this.choice = gameState.getChoice();
+        this.forcedAttack = gameState.isForcedAttack();
 
-        List<CardDTO> opponentHand = new ArrayList<>(this.opponent.getHand().size());
-        for (CardDTO cardDTO : this.opponent.getHand()) {
-            CardDTO copy = new CardDTO();
-            copy.setUuid(cardDTO.getUuid());
-            opponentHand.add(copy);
+        this.opponents = new HashSet<>();
+        for (PlayerDTO candidate : gameState.getPlayers()) {
+            if (candidate.getTeamId().equals(this.player.getTeamId())) {
+                this.ally = withHiddenHand(candidate);
+            } else {
+                this.opponents.add(withHiddenHand(candidate));
+            }
         }
+    }
 
-        this.opponent = new PlayerDTO(this.opponent);
-        this.opponent.setHand(opponentHand);
+    private static PlayerDTO withHiddenHand(PlayerDTO player) {
+        PlayerDTO hiddenPlayer = new PlayerDTO(player);
+        hiddenPlayer.setHand(player.getHand().stream()
+                .map(cardDTO -> {
+                    CardDTO hiddenCard = new CardDTO();
+                    hiddenCard.setUuid(cardDTO.getUuid());
+                    return hiddenCard;
+                }).toList());
+
+        return hiddenPlayer;
     }
 }

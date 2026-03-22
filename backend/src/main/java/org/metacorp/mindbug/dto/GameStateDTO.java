@@ -9,25 +9,27 @@ import lombok.RequiredArgsConstructor;
 import org.metacorp.mindbug.dto.card.CardDTO;
 import org.metacorp.mindbug.dto.choice.AbstractChoiceDTO;
 
+import java.util.List;
+import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 /**
  * DTO for game state data
  */
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"uuid", "winner", "player", "opponent", "card", "choice", "forcedAttack"})
+@JsonPropertyOrder({"uuid", "players", "currentPlayerID", "winners", "card", "choice", "forcedAttack"})
 public class GameStateDTO {
     @NonNull
     private UUID uuid;
     @NonNull
-    private PlayerDTO player;
+    private Set<PlayerDTO> players;
     @NonNull
-    private PlayerDTO opponent;
+    private UUID currentPlayerID;
 
-    private UUID winner;
+    private Set<UUID> winners;
 
     /**
      * The picked or attacking card if any
@@ -37,5 +39,8 @@ public class GameStateDTO {
     private AbstractChoiceDTO choice; // This field may be null
 
     private boolean forcedAttack;
-}
 
+    public PlayerDTO getPlayerById(UUID playerId) {
+        return players.stream().filter(playerDTO -> playerDTO.getUuid().equals(playerId)).findFirst().orElse(null);
+    }
+}
