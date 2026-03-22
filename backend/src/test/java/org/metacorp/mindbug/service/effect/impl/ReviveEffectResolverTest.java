@@ -36,7 +36,7 @@ public class ReviveEffectResolverTest extends MindbugGameTest {
     public void prepareGame() throws CardSetException {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
-        opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponents().getFirst();
         randomCard = opponentPlayer.getHand().removeFirst();
         opponentPlayer.getDiscardPile().add(randomCard);
 

@@ -1,5 +1,6 @@
 interface PlayerInterface {
     uuid: string
+    teamId: string
     name: string
     lifePoints: number
     mindbugCount: number

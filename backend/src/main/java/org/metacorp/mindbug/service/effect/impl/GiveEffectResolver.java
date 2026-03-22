@@ -37,7 +37,7 @@ public class GiveEffectResolver extends EffectResolver<GiveEffect> {
     }
 
     private void giveCard(Game game, CardInstance cardToGive) {
-        Player opponent = cardToGive.getOwner().getOpponent(game.getPlayers());
+        Player opponent = cardToGive.getOwner().getOpponents(game.getPlayers()).getFirst(); //TODO A changer pour le 2v2 : il faut choisir un adversaire
 
         cardToGive.setOwner(opponent);
         game.getCurrentPlayer().getBoard().remove(cardToGive);

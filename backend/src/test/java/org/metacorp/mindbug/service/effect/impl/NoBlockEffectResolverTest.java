@@ -34,7 +34,7 @@ public class NoBlockEffectResolverTest extends MindbugGameTest {
         game = startGame(new Player(playerService.createPlayer("Player1")), new Player(playerService.createPlayer("Player2")));
 
         randomCard = game.getCurrentPlayer().getHand().getFirst();
-        opponentPlayer = game.getCurrentPlayer().getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponents().getFirst();
 
         effect = new NoBlockEffect();
         effect.setType(EffectType.NO_BLOCK);

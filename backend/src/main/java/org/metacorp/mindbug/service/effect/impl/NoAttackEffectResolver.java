@@ -11,6 +11,7 @@ import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.utils.CardUtils;
 import org.slf4j.Logger;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,8 +32,10 @@ public class NoAttackEffectResolver extends EffectResolver<NoAttackEffect> {
     @Override
     public void apply(Game game, EffectTiming timing) {
         CardKeyword keyword = effect.getKeyword();
-        Player opponent = effectSource.getOwner().getOpponent(game.getPlayers());
-        List<CardInstance> affectedCards = opponent.getBoard();
+        List<CardInstance> affectedCards = new ArrayList<>();
+        for (Player opponent : effectSource.getOwner().getOpponents(game.getPlayers())) {
+            affectedCards.addAll(opponent.getBoard());
+        }
 
         if (keyword != null) {
             affectedCards = affectedCards.stream().filter(cardInstance -> cardInstance.hasKeyword(keyword)).toList();

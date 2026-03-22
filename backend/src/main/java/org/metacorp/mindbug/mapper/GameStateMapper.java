@@ -21,16 +21,20 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
 
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class GameStateMapper {
 
     public static GameStateDTO fromGame(Game game) {
         Player currentPlayer = game.getCurrentPlayer();
+
         // Build the GameStateDTO
-        GameStateDTO gameStateDTO = new GameStateDTO(game.getUuid(),
-                fromPlayer(currentPlayer),
-                fromPlayer(game.getOpponent()));
+        GameStateDTO gameStateDTO = new GameStateDTO();
+        gameStateDTO.setUuid(game.getUuid());
+        gameStateDTO.setCurrentPlayerID(currentPlayer.getUuid());
+        gameStateDTO.setPlayers(fromPlayers(game.getPlayers()));
         gameStateDTO.setForcedAttack(game.isForcedAttack());
 
         // Update the card field if needed
@@ -44,12 +48,12 @@ public class GameStateMapper {
 
         // Update the choice field if needed
         if (game.getChoice() != null) {
-            gameStateDTO.setChoice(fromChoice(game.getChoice(), game.getCurrentPlayer()));
+            gameStateDTO.setChoice(fromChoice(game.getChoice(), currentPlayer));
         }
 
         // Update the winner field if needed
-        if (game.getWinner() != null) {
-            gameStateDTO.setWinner(game.getWinner().getUuid());
+        if (game.getWinners() != null) {
+            gameStateDTO.setWinners(game.getWinners().stream().map(Player::getUuid).collect(Collectors.toSet()));
         }
 
         return gameStateDTO;
@@ -58,6 +62,7 @@ public class GameStateMapper {
     private static PlayerDTO fromPlayer(Player player) {
         PlayerDTO result = new PlayerDTO();
         result.setUuid(player.getUuid());
+        result.setTeamId(player.getTeam().getUuid());
         result.setName(player.getName());
         result.setLifePoints(player.getTeam().getLifePoints());
         result.setMindbugCount(player.getMindBugs());
@@ -68,6 +73,10 @@ public class GameStateMapper {
         result.setDisabledTiming(player.getDisabledTiming());
 
         return result;
+    }
+
+    private static Set<PlayerDTO> fromPlayers(List<Player> players) {
+        return players.stream().map(GameStateMapper::fromPlayer).collect(Collectors.toSet());
     }
 
     private static CardDTO fromCard(CardInstance card) {

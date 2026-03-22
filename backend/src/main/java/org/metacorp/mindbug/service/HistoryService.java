@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
 import static org.metacorp.mindbug.utils.LogUtils.getLoggableCards;
@@ -125,7 +126,6 @@ public class HistoryService {
         }
 
         log(game, HistoryKey.CHOICE, sourceCard, targets, data);
-
     }
 
     /**
@@ -179,7 +179,7 @@ public class HistoryService {
      * @param game the current game state
      */
     public static void saveHistory(Game game) {
-        log(game, HistoryKey.END, null, null, Map.of("winner", game.getWinner().getUuid()));
+        log(game, HistoryKey.END, null, null, Map.of("winners", game.getWinners().stream().map(player -> player.getUuid().toString()).collect(Collectors.joining(","))));
         game.getLogger().info("End of the game");
     }
 

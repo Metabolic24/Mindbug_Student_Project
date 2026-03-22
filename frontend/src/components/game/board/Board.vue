@@ -21,8 +21,10 @@ const props = defineProps<Props>()
 const emit = defineEmits(['button-clicked', 'card-selected', 'card-preview'])
 
 function onCardSelected(card: CardInterface): void {
-  if ((props.gameState?.playerTurn && !props.attackingCard && card.ableToAttack) || // Attack case
-      (!props.gameState?.playerTurn && props.attackingCard && card.ableToBlock && // Block case
+  const isCurrentPlayerTurn = props.gameState?.currentPlayerID === props.gameState?.player.uuid
+
+  if ((isCurrentPlayerTurn && !props.attackingCard && card.ableToAttack) || // Attack case
+      (!isCurrentPlayerTurn && props.attackingCard && card.ableToBlock && // Block case
           (props.attackingCard.keywords.includes("SNEAKY") && card.keywords.includes("SNEAKY") ||
               !props.attackingCard.keywords.includes("SNEAKY")))) {
     emit('card-selected', card)
@@ -30,7 +32,7 @@ function onCardSelected(card: CardInterface): void {
 }
 
 function onOpponentCardSelected(card: CardInterface): void {
-  if (props.gameState?.playerTurn && props.gameState?.choice?.type === "HUNTER") { // Hunter case
+  if (props.gameState?.currentPlayerID === props.gameState?.player.uuid && props.gameState?.choice?.type === "HUNTER") { // Hunter case
     emit('card-selected', card)
   }
 }
@@ -54,7 +56,7 @@ function displayDiscardModal(opponent: boolean) {
   isDiscardModalVisible.value = true;
   isOpponentDiscard.value = opponent;
   discardModalData.value = opponent ?
-      props.gameState?.opponent.discard :
+      props.gameState?.opponents[0].discard :
       props.gameState?.player.discard;
 }
 
@@ -67,13 +69,13 @@ function closeModal() {
 <template>
   <div class="row board">
     <div class="col-2 discards">
-      <discard-pile :cards="gameState?.opponent.discard" @clicked="displayDiscardModal(true)"></discard-pile>
+      <discard-pile :cards="gameState?.opponents[0].discard" @clicked="displayDiscardModal(true)"></discard-pile>
       <discard-pile :cards="gameState?.player.discard" @clicked="displayDiscardModal(false)"></discard-pile>
     </div>
     <div class="col-8">
       <div class="cards">
         <card
-          v-for="card in gameState?.opponent.board"
+          v-for="card in gameState?.opponents[0].board"
           :key="card.uuid"
           :card="card"
           context="opponent-board"

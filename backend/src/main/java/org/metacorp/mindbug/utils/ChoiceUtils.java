@@ -111,8 +111,9 @@ public final class ChoiceUtils {
                 AttackService.resolveAttack(chosenTarget.get(), game);
             }
         } else {
-            Player opponent = choice.getAttackingCard().getOwner().getOpponent(game.getPlayers());
-            if (opponent.getBoard().isEmpty() || !opponent.canBlock(choice.getAttackingCard().hasKeyword(CardKeyword.SNEAKY))) {
+            List<Player> opponents = choice.getAttackingCard().getOwner().getOpponents(game.getPlayers());
+
+            if (opponents.stream().noneMatch(opponent -> opponent.canBlock(choice.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)))) {
                 AttackService.resolveAttack(null, game);
             } else {
                 WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);

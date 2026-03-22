@@ -38,7 +38,7 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
 
     @Override
     public void apply(Game game, EffectTiming timing) throws GameStateException, WebSocketException {
-        Player opponent = effectSource.getOwner().getOpponent(game.getPlayers());
+        Player opponent = effectSource.getOwner().getOpponents(game.getPlayers()).getFirst(); // TODO To be changed for 2v2 : il faut sélectionner un adversaire
 
         if (timing == EffectTiming.PASSIVE) {
             if (effect.getKeyword() != null) {

@@ -30,7 +30,7 @@ public class Game {
 
     private List<Player> players;
     private Player currentPlayer;
-    private Player winner;
+    private List<Player> winners;
 
     private List<CardInstance> cards;
     private List<CardInstance> bannedCards;
@@ -56,7 +56,7 @@ public class Game {
         uuid = UUID.randomUUID();
         logger = LoggerFactory.getLogger(uuid.toString());
 
-        winner = null;
+        winners = null;
         cards = new ArrayList<>();
         bannedCards = new ArrayList<>();
         evolutionCards = new ArrayList<>();
@@ -65,12 +65,27 @@ public class Game {
         history = new ArrayList<>();
     }
 
-    public Player getOpponent() {
-        return currentPlayer.getOpponent(players);
+    public List<Player> getOpponents() {
+        return currentPlayer.getOpponents(players);
+    }
+
+    public Player getAlly() {
+        return currentPlayer.getAlly(players);
     }
 
     public boolean isFinished() {
-        return winner != null;
+        return winners != null && !winners.isEmpty();
+    }
+
+    /**
+     * Switches the turn to the next player in circular order.
+     * In 2v2 mode, the {@code players} list must be ordered in an alternating pattern
+     * (Team A - Player 1, Team B - Player 1, Team A - Player 2, Team B - Player 2)
+     * to ensure the turn passes between allies and enemies correctly.
+     */
+    public void setNextPlayer() {
+        int nextPlayerIndex = (players.indexOf(currentPlayer) + 1) % players.size();
+        this.setCurrentPlayer(players.get(nextPlayerIndex));
     }
 
     public void runAfterEffect() throws GameStateException, WebSocketException {

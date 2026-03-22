@@ -51,7 +51,7 @@ public class PlayCardService {
         // Update game state
         game.setPlayedCard(card);
 
-        Player opponent = game.getOpponent();
+        Player opponent = game.getOpponents().getFirst(); //TODO To be changed for 2v2
         if (opponent.getMindBugs() == 0) {
             playCard(game);
         } else {

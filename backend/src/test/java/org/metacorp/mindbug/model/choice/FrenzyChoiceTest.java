@@ -43,7 +43,7 @@ public class FrenzyChoiceTest extends MindbugGameTest {
 
     @Test
     public void testResolve_trueWithEmptyBoard() throws GameStateException, WebSocketException {
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = game.getOpponents().getFirst();
 
         FrenzyAttackChoice choice = new FrenzyAttackChoice(currentCard);
         game.setChoice(choice);
@@ -60,7 +60,7 @@ public class FrenzyChoiceTest extends MindbugGameTest {
 
     @Test
     public void testResolve_trueWithOpponentCreatures() throws GameStateException, WebSocketException {
-        Player opponent = currentPlayer.getOpponent(game.getPlayers());
+        Player opponent = game.getOpponents().getFirst();;
         opponent.addCardToBoard(opponent.getHand().getFirst());
 
         FrenzyAttackChoice choice = new FrenzyAttackChoice(currentCard);
@@ -81,7 +81,7 @@ public class FrenzyChoiceTest extends MindbugGameTest {
         choice.resolve(false, game);
 
         assertNull(game.getChoice());
-        assertEquals(currentPlayer.getOpponent(game.getPlayers()), game.getCurrentPlayer());
+        assertEquals(currentPlayer.getOpponents(game.getPlayers()).getFirst(), game.getCurrentPlayer());
         assertTrue(currentCard.isAbleToAttackTwice());
     }
 }

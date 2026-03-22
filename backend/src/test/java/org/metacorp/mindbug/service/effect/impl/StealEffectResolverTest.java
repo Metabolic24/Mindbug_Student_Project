@@ -39,7 +39,7 @@ public class StealEffectResolverTest extends MindbugGameTest {
         randomCard.setStillTough(false);
         currentPlayer.addCardToBoard(randomCard);
 
-        opponentPlayer = currentPlayer.getOpponent(game.getPlayers());
+        opponentPlayer = game.getOpponents().getFirst();
 
         effect = new StealEffect();
         effect.setType(EffectType.STEAL);
