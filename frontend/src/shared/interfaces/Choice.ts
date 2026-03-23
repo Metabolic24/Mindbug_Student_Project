@@ -7,7 +7,7 @@ interface ChoiceInterface {
 
 type ChoiceType = "SIMULTANEOUS" | "FRENZY" | "BOOLEAN" | "TARGET" | "HUNTER";
 
-interface SimultaneousChoiceInterface extends ChoiceInterface {
+interface SimultaneousEffectsChoiceInterface extends ChoiceInterface {
     type: "SIMULTANEOUS"
     sourceCard: undefined
     availableEffects: CardInterface[]
