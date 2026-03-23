@@ -90,12 +90,15 @@ public class GameStateMapperTest extends MindbugGameTest {
         assertEquals(currentPlayer.getUuid(), gameStateDTO.getCurrentPlayerID());
         comparePlayers(game.getPlayers(), gameStateDTO.getPlayers());
 
-        assertNotNull(gameStateDTO.getCard());
-        compareCard(playedCard, gameStateDTO.getCard());
-
+        assertNull(gameStateDTO.getCard());
         assertNull(gameStateDTO.getWinners());
-        assertNull(gameStateDTO.getChoice());
+        assertNotNull(gameStateDTO.getChoice());
         assertFalse(gameStateDTO.isForcedAttack());
+
+        ChoiceDTO choiceDTO = assertInstanceOf(ChoiceDTO.class, gameStateDTO.getChoice());
+        assertEquals(ChoiceType.MINDBUG, choiceDTO.getType());
+        compareCard(playedCard, choiceDTO.getSourceCard());
+        assertEquals(game.getOpponents().getFirst().getUuid(), choiceDTO.getPlayerToChoose());
     }
 
     @Test
@@ -105,14 +108,18 @@ public class GameStateMapperTest extends MindbugGameTest {
         playedCard.getEffects(EffectTiming.PLAY).clear();
         playedCard.getEffects(EffectTiming.ATTACK).clear();
         playedCard.getEffects(EffectTiming.PASSIVE).clear();
+
         PlayCardService.pickCard(playedCard, game);
-        PlayCardService.playCard(game);
+        game.setChoice(null);
+        PlayCardService.playCard(playedCard, game);
 
         CardInstance opponentCard = game.getCurrentPlayer().getHand().getFirst();
         opponentCard.getEffects(EffectTiming.PLAY).clear();
         opponentCard.getEffects(EffectTiming.PASSIVE).clear();
+
         PlayCardService.pickCard(opponentCard, game);
-        PlayCardService.playCard(game);
+        game.setChoice(null);
+        PlayCardService.playCard(opponentCard, game);
 
         AttackService.declareAttack(playedCard, game);
 
@@ -203,14 +210,18 @@ public class GameStateMapperTest extends MindbugGameTest {
         playedCard.getEffects(EffectTiming.PLAY).clear();
         playedCard.getEffects(EffectTiming.ATTACK).clear();
         playedCard.getEffects(EffectTiming.PASSIVE).clear();
+
         PlayCardService.pickCard(playedCard, game);
-        PlayCardService.playCard(game);
+        game.setChoice(null);
+        PlayCardService.playCard(playedCard, game);
 
         CardInstance opponentCard = game.getCurrentPlayer().getHand().getFirst();
         opponentCard.getEffects(EffectTiming.PLAY).clear();
         opponentCard.getEffects(EffectTiming.PASSIVE).clear();
+
         PlayCardService.pickCard(opponentCard, game);
-        PlayCardService.playCard(game);
+        game.setChoice(null);
+        PlayCardService.playCard(opponentCard, game);
 
         AttackService.declareAttack(playedCard, game);
 
@@ -246,14 +257,16 @@ public class GameStateMapperTest extends MindbugGameTest {
         playedCard.getEffects(EffectTiming.ATTACK).clear();
         playedCard.getEffects(EffectTiming.PASSIVE).clear();
         PlayCardService.pickCard(playedCard, game);
-        PlayCardService.playCard(game);
+        game.setChoice(null);
+        PlayCardService.playCard(playedCard, game);
 
         CardInstance opponentCard = game.getCurrentPlayer().getHand().getFirst();
         opponentCard.getCard().getKeywords().clear();
         opponentCard.getEffects(EffectTiming.PLAY).clear();
         opponentCard.getEffects(EffectTiming.PASSIVE).clear();
         PlayCardService.pickCard(opponentCard, game);
-        PlayCardService.playCard(game);
+        game.setChoice(null);
+        PlayCardService.playCard(opponentCard, game);
 
         AttackService.declareAttack(playedCard, game);
 

@@ -26,10 +26,7 @@ public class ActionService {
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     public static void resolveAction(CardInstance card, Game game) throws GameStateException, WebSocketException {
-        if (game.getPlayedCard() != null) {
-            throw new GameStateException("a played card needs to be resolved before attacking",
-                    Map.of("playedCard", game.getPlayedCard()));
-        } else if (game.getChoice() != null) {
+        if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before picking a new card",
                     Map.of("choice", game.getChoice()));
         } else if (game.getAttackingCard() != null) {

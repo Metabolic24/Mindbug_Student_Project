@@ -131,9 +131,7 @@ public class WsGameEndpoint extends WebSocketApplication {
 
         return switch (gameEvent.getType()) {
             case NEW_TURN, STATE -> gameEvent.getState().getCurrentPlayerID().equals(playerId);
-            case CARD_PICKED -> !gameEvent.getState().getCurrentPlayerID().equals(playerId) &&
-                    gameEvent.getState().getPlayerById(playerId).getMindbugCount() > 0;
-            case CHOICE -> gameEvent.getState().getChoice().getPlayerToChoose().equals(playerId);
+            case CARD_PICKED, CHOICE -> gameEvent.getState().getChoice().getPlayerToChoose().equals(playerId);
             case WAITING_ATTACK_RESOLUTION ->
                     !gameEvent.getState().getCurrentPlayerID().equals(playerId); //TODO To be changed for 2v2
             case FINISHED -> {

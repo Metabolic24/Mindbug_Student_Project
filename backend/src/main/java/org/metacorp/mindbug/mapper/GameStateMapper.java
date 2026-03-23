@@ -15,6 +15,7 @@ import org.metacorp.mindbug.model.choice.AbstractChoice;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
+import org.metacorp.mindbug.model.choice.MindbugChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -38,11 +39,8 @@ public class GameStateMapper {
         gameStateDTO.setForcedAttack(game.isForcedAttack());
 
         // Update the card field if needed
-        CardInstance playedCard = game.getPlayedCard();
         CardInstance attackingCard = game.getAttackingCard();
-        if (playedCard != null) {
-            gameStateDTO.setCard(fromCard(playedCard));
-        } else if (attackingCard != null) {
+        if (attackingCard != null) {
             gameStateDTO.setCard(fromCard(attackingCard));
         }
 
@@ -127,6 +125,11 @@ public class GameStateMapper {
                 HunterChoice hunterChoice = (HunterChoice) choice;
                 result = new HunterChoiceDTO(hunterChoice.getAttackingCard().getOwner().getUuid(), fromCard(hunterChoice.getAttackingCard()),
                         hunterChoice.getAvailableTargets().stream().map(GameStateMapper::fromCard).collect(Collectors.toSet()));
+            }
+            case MINDBUG -> {
+                MindbugChoice mindbugChoice = (MindbugChoice) choice;
+                result = new ChoiceDTO(mindbugChoice.getType(), mindbugChoice.getPlayerToChoose().getUuid(),
+                        fromCard(mindbugChoice.getPlayedCard()));
             }
             default -> {
                 // Should never happen
