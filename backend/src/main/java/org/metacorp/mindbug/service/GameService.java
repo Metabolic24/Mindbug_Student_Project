@@ -14,7 +14,10 @@ import org.metacorp.mindbug.service.game.StartService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
@@ -47,23 +50,24 @@ public class GameService {
      * @throws UnknownPlayerException if at least one player could not be found in the database
      */
     public Game createGame(UUID player1Id, UUID player2Id) throws UnknownPlayerException, CardSetException {
-        return createGame(player1Id, player2Id, CardSetName.FIRST_CONTACT);
+        return createGame(Arrays.asList(player1Id, player2Id), CardSetName.FIRST_CONTACT);
     }
 
     /**
      * Create a new game
      *
-     * @param player1Id the first player ID
-     * @param player2Id the second player ID (null in case of an offline game)
+     * @param playerIds the player IDs
      * @param setName   the card set to be used for this game
      * @return the created Game
      * @throws UnknownPlayerException if at least one player could not be found in the database
      */
-    public Game createGame(UUID player1Id, UUID player2Id, CardSetName setName) throws UnknownPlayerException, CardSetException {
-        Player player1 = new Player(playerService.getPlayer(player1Id));
-        Player player2 = player2Id == null ? new AiPlayer(playerService.getAiPlayer()) : new Player(playerService.getPlayer(player2Id));
+    public Game createGame(List<UUID> playerIds, CardSetName setName) throws UnknownPlayerException, CardSetException {
+        List<Player> players = new ArrayList<>();
+        for (UUID playerId : playerIds) {
+            players.add(playerId == null ? new AiPlayer(playerService.getAiPlayer()) : new Player(playerService.getPlayer(playerId)));
+        }
 
-        Game game = new Game(player1, player2);
+        Game game = new Game(players);
         games.put(game.getUuid(), game);
 
         LOGGER.debug("Game created : {}", game.getUuid());

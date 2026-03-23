@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -59,13 +60,11 @@ public class MindbugGameTest {
     };
 
     protected Game startGame(Player player1, Player player2) throws CardSetException {
-        Game game = startService.startGame(player1, player2);
-        gameId = game.getUuid();
-        return game;
+        return startGame(player1, player2, CardSetName.FIRST_CONTACT);
     }
 
     protected Game startGame(Player player1, Player player2, CardSetName cardSetName) throws CardSetException {
-        Game game = startService.startGame(new Game(player1, player2), cardSetName);
+        Game game = startService.startGame(new Game(Arrays.asList(player1, player2)), cardSetName);
         gameId = game.getUuid();
         return game;
     }
@@ -83,7 +82,7 @@ public class MindbugGameTest {
     }
 
     protected Game getAppUtilsGame() throws CardSetException {
-        Game game = AppUtils.startGame(playerService, startService);
+        Game game = AppUtils.startGame(playerService, startService, true, false);
         gameId = game.getUuid();
         return game;
     }

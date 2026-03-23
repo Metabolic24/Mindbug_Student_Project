@@ -35,6 +35,7 @@ import org.metacorp.mindbug.service.game.PlayCardService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.UUID;
@@ -59,7 +60,7 @@ public class GameController {
         LOGGER.debug("Starting an offline game for player {}", startDTO.getPlayerId());
 
         try {
-            Game game = gameService.createGame(startDTO.getPlayerId(), null, startDTO.getCardSetName());
+            Game game = gameService.createGame(Arrays.asList(startDTO.getPlayerId(), null), startDTO.getCardSetName());
             return Response.ok(game.getUuid()).build();
         } catch (UnknownPlayerException e) {
             return Response.status(Response.Status.BAD_REQUEST).entity("Invalid player ID").build();
