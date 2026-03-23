@@ -78,7 +78,7 @@ const choiceModalData = computed((): ChoiceModalData => {
       return {
         type: "SIMULTANEOUS",
         count: 1,
-        cards: (game.choice as SimultaneousChoiceInterface).availableEffects,
+        cards: (game.choice as SimultaneousEffectsChoiceInterface).availableEffects,
         optional: false
       }
     }

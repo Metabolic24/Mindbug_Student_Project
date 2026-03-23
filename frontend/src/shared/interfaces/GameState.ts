@@ -24,6 +24,6 @@ interface GameStateInterface {
     currentPlayerID: string
     winners?: string[]
     card?: CardInterface
-    choice?: ChoiceInterface | TargetChoiceInterface | SimultaneousChoiceInterface
+    choice?: ChoiceInterface | TargetChoiceInterface | SimultaneousEffectsChoiceInterface
     forcedAttack?: boolean
 }

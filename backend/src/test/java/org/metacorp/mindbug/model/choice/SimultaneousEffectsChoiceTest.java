@@ -21,7 +21,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-public class SimultaneousChoiceTest extends MindbugGameTest {
+public class SimultaneousEffectsChoiceTest extends MindbugGameTest {
     private Game game;
     private Player currentPlayer;
     private Player opponent;
@@ -48,10 +48,10 @@ public class SimultaneousChoiceTest extends MindbugGameTest {
         defendingCard.getCard().getEffects().put(EffectTiming.DEFEATED, new ArrayList<>(List.of(defendEffect)));
         opponent.getDiscardPile().add(defendingCard);
 
-        SimultaneousEffectsChoice choice = new SimultaneousEffectsChoice(new HashSet<>(Arrays.asList(
+        SimultaneousEffectsChoice choice = new SimultaneousEffectsChoice(currentPlayer, new HashSet<>(Arrays.asList(
                 new EffectsToApply(Collections.singletonList(attackEffect), attackCard, timing),
                 new EffectsToApply(Collections.singletonList(defendEffect), defendingCard, timing)
-        )), game.getCurrentPlayer());
+        )));
         game.setChoice(choice);
 
         choice.resolve(attackCard.getUuid(), game);
@@ -59,7 +59,7 @@ public class SimultaneousChoiceTest extends MindbugGameTest {
         assertNull(game.getChoice());
         assertEquals(2, game.getEffectQueue().size());
 
-        assertEquals(attackCard, game.getEffectQueue().get(0).getCard());
+        assertEquals(attackCard, game.getEffectQueue().getFirst().getCard());
         assertEquals(defendingCard, game.getEffectQueue().get(1).getCard());
     }
 }
