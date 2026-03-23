@@ -18,6 +18,7 @@ import org.metacorp.mindbug.service.game.StartService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -25,10 +26,14 @@ import java.util.Scanner;
  */
 public final class AppUtils {
 
+    private static final Random RND = new Random();
+
     private static final String MODE_2V2 = "2v2";
 
     @Setter
     private static boolean verbose = false;
+
+    private static boolean isAuto = false;
 
     /**
      * Create a new game to be used by ManualApp or AutoApp ONLY
@@ -56,6 +61,8 @@ public final class AppUtils {
      * @return the created game
      */
     public static Game startGame(PlayerService playerService, StartService startService, boolean isAuto, boolean is2v2) throws CardSetException {
+        AppUtils.isAuto = isAuto;
+
         List<Player> players = new ArrayList<>(List.of(
                 new AiPlayer(playerService.createPlayer("Player1")),
                 new AiPlayer(playerService.createPlayer("Player2"))
@@ -68,7 +75,7 @@ public final class AppUtils {
 
         Game game = startService.startGame(new Game(players), CardSetName.FIRST_CONTACT);
 
-        for (Player player : game.getPlayers()) {
+        for (Player player : players) {
             AppUtils.detailedSumUpPlayer(player);
         }
 
@@ -260,5 +267,51 @@ public final class AppUtils {
             System.err.println("Choix de carte invalide");
             return null;
         }
+    }
+
+    //TODO Cette méthode ne peut pas fonctionner comme ça...
+
+    /**
+     * Return the chosen card from the given list
+     *
+     * @param game           the current game state
+     * @param playerToChoose the player who needs to select an opponent
+     * @return a random card from the list
+     */
+    public static Player selectOpponent(Game game, Player playerToChoose) {
+        List<Player> listOpponents = playerToChoose.getOpponents(game.getPlayers());
+        if (listOpponents.size() == 1) {
+            return listOpponents.getFirst();
+        }
+
+        int index = 1;
+        System.out.printf("\nPlease %s, choose an opponent to target : (only type the associated number)\n",
+                playerToChoose.getName());
+        for (Player opponent : listOpponents) {
+            System.out.printf("\t(%d) - %s\n", index, opponent.getName());
+            index++;
+        }
+
+        Player target;
+        if (isAuto) {
+            target = listOpponents.get(RND.nextInt(listOpponents.size()));
+        } else {
+            Scanner scanner = new Scanner(System.in);
+            while (true) {
+                try {
+                    int choiceNumber = Integer.parseInt(scanner.nextLine());
+                    if (1 <= choiceNumber && choiceNumber <= listOpponents.size()) {
+                        target = listOpponents.get(choiceNumber - 1);
+                        break;
+                    } else {
+                        System.err.println("Invalid number");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("You must type a valid number");
+                }
+            }
+        }
+        System.out.printf("\n%s chose to target %s\n", playerToChoose.getName(), target.getName());
+        return target;
     }
 }

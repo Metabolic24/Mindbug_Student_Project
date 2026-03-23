@@ -9,6 +9,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -35,11 +36,16 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
 
     @Override
     public void apply(Game game, EffectTiming timing) {
-        Player opponent = effectSource.getOwner().getOpponents(game.getPlayers()).getFirst(); // TODO A changer pour le 2v2 : il faut sélectionner un adversaire
+        Player playerToDiscard = effectSource.getOwner();
+        int value = effect.getValue();
 
-        int value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue();
+        if (!effect.isSelf()) {
+            //TODO On ne peut pas faire comme ça
+            Player opponent = AppUtils.selectOpponent(game, effectSource.getOwner());
+            playerToDiscard =  opponent;
+            value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue();
+        }
 
-        Player playerToDiscard = effect.isSelf() ? effectSource.getOwner() : opponent;
         List<CardInstance> availableCards = effect.isDrawPile() ? playerToDiscard.getDrawPile() : playerToDiscard.getHand();
 
         if (availableCards.size() <= value || value == -1) {
