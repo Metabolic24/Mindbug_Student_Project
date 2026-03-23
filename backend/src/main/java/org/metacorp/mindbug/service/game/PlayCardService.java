@@ -54,7 +54,7 @@ public class PlayCardService {
             game.setChoice(new MindbugChoice(card, availableMindbuggers));
 
             // Send update through WebSocket
-            WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game);
+            WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game); //TODO Est-ce que ça vaut toujours le coup d'envoyer un événement spécifique CARD_PICKED alors que c'est un choix ? (A réfléchir)
             HistoryService.log(game, HistoryKey.PICK, card);
         }
     }

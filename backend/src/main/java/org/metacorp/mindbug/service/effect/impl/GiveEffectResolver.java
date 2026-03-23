@@ -7,6 +7,7 @@ import org.metacorp.mindbug.model.effect.impl.GiveEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
+import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.Collections;
 
@@ -37,8 +38,8 @@ public class GiveEffectResolver extends EffectResolver<GiveEffect> {
     }
 
     private void giveCard(Game game, CardInstance cardToGive) {
-        Player opponent = cardToGive.getOwner().getOpponents(game.getPlayers()).getFirst(); //TODO A changer pour le 2v2 : il faut choisir un adversaire
-
+        //TODO Façon de faire à changer
+        Player opponent = AppUtils.selectOpponent(game, cardToGive.getOwner());
         cardToGive.setOwner(opponent);
         game.getCurrentPlayer().getBoard().remove(cardToGive);
         opponent.getBoard().add(cardToGive);
