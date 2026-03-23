@@ -108,7 +108,6 @@ public final class AppUtils {
         if (card != null) {
             System.out.printf("%s joue la carte '%s'\n", currentPlayer.getName(), card.getCard().getName());
             PlayCardService.pickCard(card, game);
-            PlayCardService.playCard(game);
         }
     }
 

@@ -38,8 +38,6 @@ public class Player {
         this.uuid = playerData.getUuid();
         this.name = playerData.getName();
 
-        // TODO Il faudrait changer le constructeur pour ne plus créer de Team ici pour le 2v2
-        this.team = new Team();
         hand = new ArrayList<>();
         board = new ArrayList<>();
         discardPile = new ArrayList<>();

@@ -66,12 +66,12 @@ public class GameServiceTest extends MindbugGameTest {
     @Test
     public void findPlayerById_nominal() {
         Player player = game.getCurrentPlayer();
-        assertEquals(player, gameService.findPlayerById(player.getUuid(), game));
+        assertEquals(player, GameService.findPlayerById(player.getUuid(), game));
     }
 
     @Test
     public void findPlayerById_badId() {
-        assertThrows(NoSuchElementException.class, () -> gameService.findPlayerById(UUID.randomUUID(), game));
+        assertThrows(NoSuchElementException.class, () -> GameService.findPlayerById(UUID.randomUUID(), game));
     }
 
     @Test
