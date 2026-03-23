@@ -27,12 +27,29 @@ public class TestGameUtils {
     private static Player player1;
     @Getter
     private static Player player2;
+    @Getter
+    private static Player player3;
+    @Getter
+    private static Player player4;
 
     public static Game prepareCustomGame(PlayerService playerService, CardSetService cardSetService) throws CardSetException {
         player1 = new Player(playerService.createPlayer("player1"));
         player2 = new Player(playerService.createPlayer("player2"));
 
-        game = new Game(player1, player2);
+        return prepareCustomGame(List.of(player1, player2), cardSetService);
+    }
+
+    public static Game prepareCustomGame2v2(PlayerService playerService, CardSetService cardSetService) throws CardSetException {
+        player1 = new Player(playerService.createPlayer("player1"));
+        player2 = new Player(playerService.createPlayer("player2"));
+        player3 = new Player(playerService.createPlayer("player3"));
+        player4 = new Player(playerService.createPlayer("player4"));
+
+        return prepareCustomGame(List.of(player1, player2, player3, player4), cardSetService);
+    }
+
+    private static Game prepareCustomGame(List<Player> players, CardSetService cardSetService) throws CardSetException {
+        game = new Game(players);
 
         List<CardInstance> cards = cardSetService.getCardInstances(CardSetName.FIRST_CONTACT.getKey());
         Collections.shuffle(cards);

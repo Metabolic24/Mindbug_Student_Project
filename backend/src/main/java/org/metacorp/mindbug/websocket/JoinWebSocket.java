@@ -5,6 +5,7 @@ import org.glassfish.grizzly.http.HttpRequestPacket;
 import org.glassfish.grizzly.websockets.DefaultWebSocket;
 import org.glassfish.grizzly.websockets.ProtocolHandler;
 import org.glassfish.grizzly.websockets.WebSocketListener;
+import org.metacorp.mindbug.model.GameMode;
 import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.utils.WsUtils;
 import org.slf4j.Logger;
@@ -13,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static org.metacorp.mindbug.utils.WsUtils.GAME_MODE_KEY;
 import static org.metacorp.mindbug.utils.WsUtils.PLAYER_ID_KEY;
 import static org.metacorp.mindbug.utils.WsUtils.PLAYER_NAME_KEY;
 import static org.metacorp.mindbug.utils.WsUtils.SETS_KEY;
@@ -25,6 +27,7 @@ public class JoinWebSocket extends DefaultWebSocket {
     private String playerId;
     private String playerName;
     private List<CardSetName> sets;
+    private GameMode mode;
 
     public JoinWebSocket(ProtocolHandler protocolHandler, HttpRequestPacket request, WebSocketListener... listeners) {
         super(protocolHandler, request, listeners);
@@ -49,7 +52,15 @@ public class JoinWebSocket extends DefaultWebSocket {
             this.sets = setNames.stream().map(CardSetName::fromKey).collect(Collectors.toList());
         }
 
-        LOGGER.info("Player {} ({}) joined waiting queue for sets {}", playerName, playerId, sets);
+        String gameMode = WsUtils.getValueFromQueryParam(GAME_MODE_KEY, this.servletRequest.getQueryString());
+        if (gameMode == null){
+            LOGGER.warn("Missing parameter mode : using default configuration (1v1)");
+            this.mode = GameMode.DUEL;
+        } else {
+            this.mode = GameMode.fromKey(gameMode);
+        }
+
+        LOGGER.info("Player {} ({}) joined waiting queue for sets {} in game mode {}", playerName, playerId, sets, mode.name());
 
         super.onConnect();
     }

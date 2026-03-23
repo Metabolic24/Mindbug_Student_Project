@@ -13,6 +13,7 @@ import org.metacorp.mindbug.service.WebSocketService;
 import org.slf4j.Logger;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -28,17 +29,6 @@ public class StartService {
 
     @Inject
     private CardSetService cardSetService;
-
-    /**
-     * Creates and start a new game for two players (using the default FIRST_CONTACT card set)
-     *
-     * @param player1 first player
-     * @param player2 second player
-     * @return the created game
-     */
-    public Game startGame(Player player1, Player player2) throws CardSetException {
-        return startGame(new Game(player1, player2), CardSetName.FIRST_CONTACT);
-    }
 
     /**
      * Creates and start a new game for two players (using the given card set)

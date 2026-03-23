@@ -15,6 +15,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
@@ -97,7 +98,7 @@ public class GameStateServiceTest extends MindbugGameTest {
         // Create a new game manually, as we need to get some specific cards
         Player currentPlayer = new Player(playerService.createPlayer("player1"));
         Player opponent = new Player(playerService.createPlayer("player2"));
-        game = new Game(currentPlayer, opponent);
+        game = new Game(Arrays.asList(currentPlayer, opponent));
         game.setCurrentPlayer(currentPlayer);
         game.setCards(cardSetService.getCardInstances(CardSetName.FIRST_CONTACT.getKey()));
 

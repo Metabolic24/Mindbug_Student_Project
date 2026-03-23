@@ -2,12 +2,12 @@ package org.metacorp.mindbug.utils;
 
 import lombok.Setter;
 import org.metacorp.mindbug.app.GameEngine;
-import org.metacorp.mindbug.dto.player.PlayerLightDTO;
 import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.PlayerService;
@@ -16,6 +16,7 @@ import org.metacorp.mindbug.service.game.CardService;
 import org.metacorp.mindbug.service.game.PlayCardService;
 import org.metacorp.mindbug.service.game.StartService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,19 +25,48 @@ import java.util.Scanner;
  */
 public final class AppUtils {
 
+    private static final String MODE_2V2 = "2v2";
+
     @Setter
     private static boolean verbose = false;
+
+    /**
+     * Create a new game to be used by ManualApp or AutoApp ONLY
+     *
+     * @param args   the main class arguments
+     * @param isAuto is it an automatic game or not
+     * @return the created game
+     * @throws CardSetException if an error occurs ....TODO
+     */
+    public static Game createGame(String[] args, boolean isAuto) throws CardSetException {
+        PlayerService playerService = new PlayerService();
+        StartService startService = new StartService();
+        boolean is2v2 = false;
+
+        if (args != null && args.length > 0) {
+            is2v2 = MODE_2V2.equalsIgnoreCase(args[0]);
+        }
+
+        return AppUtils.startGame(playerService, startService, isAuto, is2v2);
+    }
 
     /**
      * Start a new manual/auto game
      *
      * @return the created game
      */
-    public static Game startGame(PlayerService playerService, StartService startService) throws CardSetException {
-        PlayerLightDTO player1 = playerService.createPlayer("Player1");
-        PlayerLightDTO player2 = playerService.createPlayer("Player2");
+    public static Game startGame(PlayerService playerService, StartService startService, boolean isAuto, boolean is2v2) throws CardSetException {
+        List<Player> players = new ArrayList<>(List.of(
+                new AiPlayer(playerService.createPlayer("Player1")),
+                new AiPlayer(playerService.createPlayer("Player2"))
+        ));
 
-        Game game = startService.startGame(new AiPlayer(player1), new AiPlayer(player2));
+        if (is2v2) {
+            players.add(new AiPlayer(playerService.createPlayer("Player3")));
+            players.add(new AiPlayer(playerService.createPlayer("Player4")));
+        }
+
+        Game game = startService.startGame(new Game(players), CardSetName.FIRST_CONTACT);
 
         for (Player player : game.getPlayers()) {
             AppUtils.detailedSumUpPlayer(player);
@@ -143,7 +173,7 @@ public final class AppUtils {
                 System.out.printf("%s cannot block the attack\n", opponentPlayer.getName());
             } else {
                 // Select a card and attack with it
-                blockingCard = (scanner == null) ? CardService.getRandomCard(availableCards) : getChosenCard(availableCards, scanner);
+                blockingCard = (scanner == null) ? CardService.getRandomCard(availableCards) : getChosenCard(availableCards, scanner, true);
                 if (blockingCard != null) {
                     System.out.printf("%s blocks with card '%s'\n", opponentPlayer.getName(), blockingCard.getCard().getName());
                     break;
@@ -162,7 +192,7 @@ public final class AppUtils {
      * @param player the player to sum-up
      */
     public static void detailedSumUpPlayer(Player player) {
-        System.out.printf("\n%s : %d PV, %d Mindbug(s), %d carte(s) restante(s)\n", player.getName(),
+        System.out.printf("\n%s (%s) : %d PV, %d Mindbug(s), %d carte(s) restante(s)\n", player.getName(), player.getUuid(),
                 player.getTeam().getLifePoints(), player.getMindBugs(), player.getDrawPile().size());
         displayCards(player.getHand(), "Main");
         displayCards(player.getBoard(), "Terrain");
@@ -236,14 +266,37 @@ public final class AppUtils {
      * @return a random card from the list
      */
     private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner) {
+        return getChosenCard(cards, scanner, false);
+    }
+
+    /**
+     * Return the chosen card from the given list
+     *
+     * @param cards    the card list
+     * @param scanner  the scanner to be used to read standard input (only for manual mode)
+     * @param optional is it an optional choice
+     * @return a random card from the list
+     */
+    private static CardInstance getChosenCard(List<CardInstance> cards, Scanner scanner, boolean optional) {
         System.out.println("Please choose a card : (only type the number)");
+        if (optional) {
+            System.out.println("\t(0) - Do nothing"); // if you can pass the choice
+        }
+
         int index = 1;
         for (CardInstance card : cards) {
-            System.out.printf("(%d) - %s", index, card.getCard().getName());
+            System.out.printf("\t(%d) - %s\n", index, card.getCard().getName());
+            index++;
         }
 
         try {
-            return cards.get(Integer.parseInt(scanner.nextLine()));
+            int choiceNumber = Integer.parseInt(scanner.nextLine());
+            if (choiceNumber == 0 && optional) {
+                // Skip the choice only if optional
+                return null;
+            } else {
+                return cards.get(choiceNumber - 1);
+            }
         } catch (NumberFormatException | IndexOutOfBoundsException e) {
             System.err.println("Choix de carte invalide");
             return null;

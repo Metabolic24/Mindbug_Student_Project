@@ -9,11 +9,13 @@ import org.glassfish.grizzly.websockets.WebSocketListener;
 import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.GameMode;
 import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.service.GameService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -26,7 +28,7 @@ public class WsJoinEndpoint extends WebSocketApplication {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WsJoinEndpoint.class);
 
-    private final Map<CardSetName, Queue<JoinWebSocket>> joinQueues = new HashMap<>();
+    private final Map<GameMode, Map<CardSetName, Queue<JoinWebSocket>>> joinQueues = new HashMap<>();
 
     // TODO Create a map or a structure to store player responses and start the game when both players have confirmed
 
@@ -52,26 +54,29 @@ public class WsJoinEndpoint extends WebSocketApplication {
 
         JoinWebSocket socket = (JoinWebSocket) rawSocket;
 
+        GameMode gameMode = socket.getMode();
+        int requiredPlayersCount = gameMode.getRequiredPlayersCount();
+        joinQueues.computeIfAbsent(gameMode, _ -> new HashMap<>());
+
+        Map<CardSetName, Queue<JoinWebSocket>> modeQueues = joinQueues.get(gameMode);
+
         for (CardSetName set : socket.getSets()) {
             if (set != null) {
-                Queue<JoinWebSocket> setQueue = joinQueues.get(set);
+                Queue<JoinWebSocket> setQueue = modeQueues.get(set);
                 if (setQueue == null) {
-                    joinQueues.put(set, new LinkedList<>(Collections.singleton(socket)));
+                    modeQueues.put(set, new LinkedList<>(Collections.singleton(socket)));
                 } else {
-                    JoinWebSocket otherPlayerSession = setQueue.poll();
-
-                    if (otherPlayerSession != null) {
+                    if (setQueue.size() >= requiredPlayersCount - 1) {
                         String playerId = socket.getPlayerId();
-                        if (!playerId.equals(otherPlayerSession.getPlayerId())) {
-                            try {
-                                Game game = gameService.createGame(UUID.fromString(playerId), UUID.fromString(otherPlayerSession.getPlayerId()), set);
-                                socket.send(game.getUuid().toString());
-                                otherPlayerSession.send(game.getUuid().toString());
-                            } catch (UnknownPlayerException | CardSetException e) {
-                                LOGGER.warn("Unable to start a new game", e);
-                            }
 
-                            //TODO Maybe implement a timeout system
+                        List<JoinWebSocket> gameSockets = new ArrayList<>();
+                        for (int i = 1; i < requiredPlayersCount; i++) {
+                            gameSockets.add(setQueue.poll());
+                        }
+
+                        if (gameSockets.stream().noneMatch(otherPlayerSocket -> otherPlayerSocket == null || playerId.equals(otherPlayerSocket.getPlayerId()))) {
+                            gameSockets.add(socket);
+                            createGame(gameSockets, set);
                         }
                     } else {
                         setQueue.add(socket);
@@ -79,6 +84,24 @@ public class WsJoinEndpoint extends WebSocketApplication {
                 }
             }
         }
+    }
+
+    /**
+     * Create a new game
+     *
+     * @param sockets the player WebSockets
+     * @param set     the card set to use
+     */
+    private void createGame(List<JoinWebSocket> sockets, CardSetName set) {
+        try {
+            Game game = gameService.createGame(sockets.stream().map(socket -> UUID.fromString(socket.getPlayerId())).toList(), set);
+
+            sockets.forEach(player -> player.send(game.getUuid().toString()));
+        } catch (UnknownPlayerException | CardSetException e) {
+            LOGGER.warn("Unable to start a new game", e);
+        }
+
+        //TODO Maybe implement a timeout system
     }
 
     @Override
@@ -89,8 +112,9 @@ public class WsJoinEndpoint extends WebSocketApplication {
     @Override
     public void onClose(WebSocket rawSocket, DataFrame frame) {
         JoinWebSocket socket = (JoinWebSocket) rawSocket;
+        GameMode gameMode = socket.getMode();
 
-        for (Queue<JoinWebSocket> joinQueue : joinQueues.values()) {
+        for (Queue<JoinWebSocket> joinQueue : joinQueues.get(gameMode).values()) {
             List<JoinWebSocket> matchingSessions = joinQueue.stream()
                     .filter(currentSession -> socket.getPlayerId().equals(currentSession.getPlayerId()))
                     .toList();
