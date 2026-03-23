@@ -7,6 +7,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.choice.AbstractChoice;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
+import org.metacorp.mindbug.model.choice.MindbugChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
@@ -185,7 +186,7 @@ public class ManualApp {
                             ChoiceService.resolveChoice(null, game);
                         }
                     }
-                    case FRENZY, BOOLEAN -> {
+                    case FRENZY, BOOLEAN, MINDBUG -> {
                         System.out.printf("Résolution d'un choix booléen de type %s\n", choice.getType());
 
                         switch ((input.toLowerCase())) {
@@ -258,6 +259,8 @@ public class ManualApp {
                 };
                 System.out.println(message + "? (Y/N)");
             }
+            case MINDBUG ->
+                    System.out.printf("Do you want to mindbug card %s? (Y/N)\n", ((MindbugChoice) choice).getPlayedCard().getCard().getName());
             default -> {
                 // Should not happen
             }

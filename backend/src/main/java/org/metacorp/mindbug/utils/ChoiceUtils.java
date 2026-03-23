@@ -9,6 +9,7 @@ import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
+import org.metacorp.mindbug.model.choice.MindbugChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
@@ -16,6 +17,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.GameStateService;
+import org.metacorp.mindbug.service.game.PlayCardService;
 
 import java.util.List;
 import java.util.Optional;
@@ -36,6 +38,23 @@ public final class ChoiceUtils {
         } else {
             // Should not happen
             throw new GameStateException("No boolean choice to resolve");
+        }
+    }
+
+    public static void resolveMindbugChoice(Boolean choiceData, MindbugChoice choice, Game game) throws GameStateException, WebSocketException {
+        // First reset choice so it doesn't block next steps
+        game.setChoice(null);
+
+        if (choiceData != null && choiceData) {
+            PlayCardService.playCard(choice.getPlayedCard(), choice.getPlayerToChoose(), game);
+        } else {
+            List<Player> remainingPlayers = choice.getRemainingPlayers();
+            if (remainingPlayers.isEmpty()) {
+                PlayCardService.playCard(choice.getPlayedCard(), game);
+            } else {
+                game.setChoice(new MindbugChoice(choice.getPlayedCard(), choice.getRemainingPlayers()));
+                WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game);
+            }
         }
     }
 

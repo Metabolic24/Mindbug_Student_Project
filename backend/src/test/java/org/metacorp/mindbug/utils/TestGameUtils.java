@@ -81,7 +81,8 @@ public class TestGameUtils {
 
     public static void play(CardInstance pickedCard, Player mindbugger) throws GameStateException, WebSocketException {
         PlayCardService.pickCard(pickedCard, game);
-        PlayCardService.playCard(mindbugger, game);
+        game.setChoice(null);
+        PlayCardService.playCard(pickedCard, mindbugger, game);
     }
 
     public static void hand(Player player, CardInstance... cards) {

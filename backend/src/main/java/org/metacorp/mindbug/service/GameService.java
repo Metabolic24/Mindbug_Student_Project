@@ -94,7 +94,7 @@ public class GameService {
      * @param game     the game where the player should be found
      * @return the corresponding player in the given game if any, null otherwise
      */
-    public Player findPlayerById(UUID playerId, Game game) {
+    public static Player findPlayerById(UUID playerId, Game game) {
         return game.getPlayers().stream().filter(player -> player.getUuid().equals(playerId)).findFirst().orElseThrow();
     }
 

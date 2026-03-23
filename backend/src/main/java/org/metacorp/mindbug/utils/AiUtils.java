@@ -14,8 +14,8 @@ import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.game.ActionService;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.CardService;
-import org.metacorp.mindbug.service.game.PlayCardService;
 import org.metacorp.mindbug.service.game.ChoiceService;
+import org.metacorp.mindbug.service.game.PlayCardService;
 import org.slf4j.Logger;
 
 import java.util.List;
@@ -25,7 +25,7 @@ public class AiUtils {
 
     public static void processGameEvent(UUID playerId, WsGameEvent gameEvent, GameService gameService) {
         Game game = gameService.findById(gameEvent.getState().getUuid());
-        AiPlayer player = (AiPlayer) gameService.findPlayerById(playerId, game);
+        AiPlayer player = (AiPlayer) GameService.findPlayerById(playerId, game);
 
         try {
             switch (gameEvent.getType()) {
@@ -64,9 +64,17 @@ public class AiUtils {
         }
     }
 
+    /**
+     * Resolve mindbug choice
+     *
+     * @param game     the current game state
+     * @param aiPlayer the current AI player
+     * @throws GameStateException if an error occurs during the game execution
+     * @throws WebSocketException if an error occurs during WebSocket message sending
+     */
     private static void resolveMindbug(Game game, AiPlayer aiPlayer) throws GameStateException, WebSocketException {
         boolean shouldMindbug = aiPlayer.getResolver().shouldMindbug(game, aiPlayer);
-        PlayCardService.playCard(shouldMindbug ? aiPlayer : null, game);
+        ChoiceService.resolveChoice(shouldMindbug, game);
     }
 
     /**
@@ -115,6 +123,7 @@ public class AiUtils {
                 }
                 case FRENZY -> ChoiceService.resolveChoice(aiPlayer.getResolver().shouldAttackAgain(game), game);
                 case BOOLEAN -> ChoiceService.resolveChoice(aiPlayer.getResolver().resolveBooleanChoice(game), game);
+                case MINDBUG -> ChoiceService.resolveChoice(aiPlayer.getResolver().shouldMindbug(game, aiPlayer), game);
                 default -> {
                     // Should not happen
                 }
