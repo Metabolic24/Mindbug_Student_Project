@@ -45,6 +45,7 @@ public class Game {
 
     private boolean forcedAttack;
     private boolean webSocketUp;
+    private final transient int gameMode;
 
     private List<HistoryEntry> history;
 
@@ -66,6 +67,17 @@ public class Game {
         history = new ArrayList<>();
 
         setupTeams();
+
+        // TODO Remplacer par une enumeration si cette info est vraiment utile
+        gameMode = resolveGameMode(players.size());
+    }
+
+    private int resolveGameMode(int playersCount) {
+        return switch (playersCount) {
+            case 2 -> 1;
+            case 4 -> 2;
+            default -> throw new IllegalStateException("Unsupported number of players: " + playersCount);
+        };
     }
 
     /**
@@ -87,6 +99,15 @@ public class Game {
             Player player = players.get(i);
             player.setTeam(i % 2 == 0 ? team1 : team2);
         }
+    }
+
+    /**
+     * Returns the game mode of the game
+     *  - return 1 : 1v1 game mode
+     *  - return 2 : 2v2 game mode
+     */
+    public int typeGameMode(){
+        return gameMode;
     }
 
     public List<Player> getOpponents() {

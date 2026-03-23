@@ -12,6 +12,7 @@ import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.AttackService;
+import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -38,7 +39,8 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
 
     @Override
     public void apply(Game game, EffectTiming timing) throws GameStateException, WebSocketException {
-        Player opponent = effectSource.getOwner().getOpponents(game.getPlayers()).getFirst(); // TODO To be changed for 2v2 : il faut sélectionner un adversaire
+        //TODO Ce n'est pas la bonne manière
+        Player opponent = AppUtils.selectOpponent(game, effectSource.getOwner());
 
         if (timing == EffectTiming.PASSIVE) {
             if (effect.getKeyword() != null) {

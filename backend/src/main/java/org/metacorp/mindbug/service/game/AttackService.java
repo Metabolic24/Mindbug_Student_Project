@@ -26,7 +26,6 @@ import java.util.Map;
  * Utility service that updates game state when a player attacks
  */
 public class AttackService {
-
     /**
      * Method executed when a player declares an attack
      *
