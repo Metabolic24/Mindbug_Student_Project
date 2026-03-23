@@ -36,7 +36,6 @@ public class Game {
     private List<CardInstance> bannedCards;
     private List<CardInstance> evolutionCards;
 
-    private CardInstance playedCard;
     private CardInstance attackingCard;
     private CardInstance forcedTarget;
 
@@ -67,25 +66,24 @@ public class Game {
         setupTeams();
     }
 
+    /**
+     * Setup players' team
+     */
     private void setupTeams() {
+        int playersCount = players.size();
+        // Check that there is a valid players count
+        if (playersCount != 2 && playersCount != 4) {
+            throw new IllegalStateException("Unsupported number of players: " + playersCount);
+        }
+
+        // Initialize teams
         Team team1 = new Team();
         Team team2 = new Team();
 
-        switch (players.size()) {
-            // 1v1
-            case 2:
-                players.getFirst().setTeam(team1);
-                players.get(1).setTeam(team2);
-                break;
-            // 2v2
-            case 4:
-                players.getFirst().setTeam(team1);
-                players.get(1).setTeam(team2);
-                players.get(2).setTeam(team1);
-                players.get(3).setTeam(team2);
-                break;
-            default:
-                throw new IllegalStateException("Unsupported number of players: " + players.size());
+        // Update player team and next player
+        for (int i = 0; i < playersCount; i++) {
+            Player player = players.get(i);
+            player.setTeam(i % 2 == 0 ? team1 : team2);
         }
     }
 
@@ -130,7 +128,6 @@ public class Game {
                 + "currentPlayer=" + currentPlayer.getName()
                 + ", finished=" + isFinished()
                 + ", bannedCards=" + bannedCards
-                + ", playedCard=" + playedCard
                 + ", attackingCard=" + attackingCard
                 + ", effectQueue=" + effectQueue
                 + ", choice=" + choice

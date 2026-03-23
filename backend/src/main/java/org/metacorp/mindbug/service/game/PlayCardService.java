@@ -5,6 +5,7 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.MindbugChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.history.HistoryKey;
 import org.metacorp.mindbug.model.player.Player;
@@ -12,6 +13,8 @@ import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 
 import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -33,9 +36,7 @@ public class PlayCardService {
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     public static void pickCard(CardInstance card, Game game) throws GameStateException, WebSocketException {
-        if (game.getPlayedCard() != null) {
-            throw new GameStateException("a card has already been picked", Map.of("playedCard", game.getPlayedCard()));
-        } else if (game.getChoice() != null) {
+        if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before picking a new card",
                     Map.of("choice", game.getChoice()));
         } else if (game.getAttackingCard() != null) {
@@ -48,17 +49,39 @@ public class PlayCardService {
         currentPlayer.getHand().remove(card);
         currentPlayer.refillHand();
 
-        // Update game state
-        game.setPlayedCard(card);
+        List<Player> availableMindbuggers = getAvailableMindbuggers(game);
 
-        Player opponent = game.getOpponents().getFirst(); //TODO To be changed for 2v2
-        if (opponent.getMindBugs() == 0) {
-            playCard(game);
+        if (availableMindbuggers.isEmpty()) {
+            playCard(card, game);
         } else {
+            game.setChoice(new MindbugChoice(card, availableMindbuggers));
+
             // Send update through WebSocket
             WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game);
             HistoryService.log(game, HistoryKey.PICK, card);
         }
+    }
+
+    /**
+     * @param game the current game state
+     * @return the list of player that can mindbug a card played by the current player
+     */
+    private static List<Player> getAvailableMindbuggers(Game game) {
+        List<Player> availableMindbuggers = new ArrayList<>();
+        int currentPlayerIndex = game.getPlayers().indexOf(game.getCurrentPlayer());
+        int playersCount = game.getPlayers().size();
+        int currentIndex;
+
+        do {
+            currentIndex = (currentPlayerIndex + 1) % playersCount;
+            Player currentPlayer = game.getPlayers().get(currentIndex);
+
+            if (currentPlayer.getMindBugs() > 0) {
+                availableMindbuggers.add(currentPlayer);
+            }
+        } while (currentIndex != currentPlayerIndex);
+
+        return availableMindbuggers;
     }
 
     /**
@@ -68,8 +91,8 @@ public class PlayCardService {
      * @throws GameStateException if game state appears to be inconsistent before processing
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
-    public static void playCard(Game game) throws GameStateException, WebSocketException {
-        playCard(null, game);
+    public static void playCard(CardInstance playedCard, Game game) throws GameStateException, WebSocketException {
+        playCard(playedCard, null, game);
     }
 
     /**
@@ -80,10 +103,8 @@ public class PlayCardService {
      * @throws GameStateException if game state appears to be inconsistent before processing
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
-    public static void playCard(Player mindbugger, Game game) throws GameStateException, WebSocketException {
-        if (game.getPlayedCard() == null) {
-            throw new GameStateException("no card has been picked");
-        } else if (game.getChoice() != null) {
+    public static void playCard(CardInstance playedCard, Player mindbugger, Game game) throws GameStateException, WebSocketException {
+        if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before picking a new card",
                     Map.of("choice", game.getChoice()));
         } else if (game.getAttackingCard() != null) {
@@ -99,13 +120,13 @@ public class PlayCardService {
             }
         }
 
-        managePlayedCard(mindbugger, game);
+        managePlayedCard(playedCard, mindbugger, game);
 
         // Send update through WebSocket
         WebSocketService.sendGameEvent(WsGameEventType.CARD_PLAYED, game);
 
         HistoryKey historyKey = mindbugger != null ? HistoryKey.MINDBUG : HistoryKey.PLAY;
-        HistoryService.log(game, historyKey, game.getPlayedCard());
+        HistoryService.log(game, historyKey, playedCard);
 
         // Resolve the effect queue so PLAY effects will be resolved then afterEffect executed
         EffectQueueService.resolveEffectQueue(false, game);
@@ -119,9 +140,7 @@ public class PlayCardService {
      * @throws GameStateException if an error occurred while refreshing game state
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
-    protected static void managePlayedCard(Player mindbugger, Game game) throws GameStateException, WebSocketException {
-        CardInstance playedCard = game.getPlayedCard();
-
+    protected static void managePlayedCard(CardInstance playedCard, Player mindbugger, Game game) throws GameStateException, WebSocketException {
         // Specific behavior if card has been mindbugged
         if (mindbugger != null) {
             playedCard.setOwner(mindbugger);
@@ -136,9 +155,6 @@ public class PlayCardService {
         EffectQueueService.addBoardEffectsToQueue(playedCard, EffectTiming.PLAY, game.getEffectQueue());
 
         game.setAfterEffect(() -> {
-            // Reset the played card value
-            game.setPlayedCard(null);
-
             // Start a new turn but only changes current player if card has not been mindbugged
             GameStateService.newTurn(game, mindbugger != null);
         });
