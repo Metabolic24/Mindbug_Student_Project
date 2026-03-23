@@ -8,7 +8,7 @@ import org.metacorp.mindbug.dto.card.CardDTO;
 import org.metacorp.mindbug.dto.choice.BooleanChoiceDTO;
 import org.metacorp.mindbug.dto.choice.ChoiceDTO;
 import org.metacorp.mindbug.dto.choice.HunterChoiceDTO;
-import org.metacorp.mindbug.dto.choice.SimultaneousChoiceDTO;
+import org.metacorp.mindbug.dto.choice.SimultaneousEffectsChoiceDTO;
 import org.metacorp.mindbug.dto.choice.TargetChoiceDTO;
 import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
@@ -283,7 +283,7 @@ public class GameStateMapperTest extends MindbugGameTest {
         simultaneousEffects.add(new EffectsToApply(Collections.singletonList(new GainEffect()), firstCard, EffectTiming.DEFEATED));
         simultaneousEffects.add(new EffectsToApply(Collections.singletonList(new InflictEffect()), secondCard, EffectTiming.DEFEATED));
 
-        game.setChoice(new SimultaneousEffectsChoice(simultaneousEffects, currentPlayer));
+        game.setChoice(new SimultaneousEffectsChoice(currentPlayer, simultaneousEffects));
 
         GameStateDTO gameStateDTO = GameStateMapper.fromGame(game);
 
@@ -296,7 +296,7 @@ public class GameStateMapperTest extends MindbugGameTest {
         assertNull(gameStateDTO.getWinners());
         assertFalse(gameStateDTO.isForcedAttack());
 
-        SimultaneousChoiceDTO choiceDTO = assertInstanceOf(SimultaneousChoiceDTO.class, gameStateDTO.getChoice());
+        SimultaneousEffectsChoiceDTO choiceDTO = assertInstanceOf(SimultaneousEffectsChoiceDTO.class, gameStateDTO.getChoice());
         assertEquals(ChoiceType.SIMULTANEOUS, choiceDTO.getType());
         compareCards(Arrays.asList(firstCard, secondCard), new ArrayList<>(choiceDTO.getAvailableEffects()));
         assertEquals(currentPlayer.getUuid(), choiceDTO.getPlayerToChoose());
