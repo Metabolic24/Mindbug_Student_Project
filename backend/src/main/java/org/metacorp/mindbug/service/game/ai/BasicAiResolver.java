@@ -5,6 +5,7 @@ import org.metacorp.mindbug.model.ai.AiPlayerTurnAction;
 import org.metacorp.mindbug.model.ai.TurnActionType;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
+import org.metacorp.mindbug.model.choice.MindbugChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.AiPlayer;
@@ -19,7 +20,7 @@ public class BasicAiResolver extends RandomAiResolver {
 
     @Override
     public boolean shouldMindbug(Game game, AiPlayer player) {
-        CardInstance pickedCard = game.getPlayedCard();
+        CardInstance pickedCard = ((MindbugChoice) game.getChoice()).getPlayedCard();
 
         return hasPowerAdvantage(pickedCard, player)
                 || hasSneakyAdvantage(pickedCard, player)
@@ -86,7 +87,7 @@ public class BasicAiResolver extends RandomAiResolver {
     @Override
     public CardInstance chooseHunterTarget(Game game) {
         CardInstance attackingCard = game.getAttackingCard();
-  
+
         List<CardInstance> lowerCards = CardUtils.getCardsWithLowerOrEqualPower(CardUtils.getOpponentCards(attackingCard.getOwner(), game), attackingCard.getPower());
 
         // Do not use hunter if no lower cards
@@ -96,7 +97,7 @@ public class BasicAiResolver extends RandomAiResolver {
     @Override
     public boolean shouldAttackAgain(Game game) {
         CardInstance attackingCard = game.getAttackingCard();
-       
+
 
         return CardUtils.noPowerHigher(CardUtils.getOpponentCards(attackingCard.getOwner(), game), attackingCard.getPower());
     }
@@ -137,7 +138,7 @@ public class BasicAiResolver extends RandomAiResolver {
         if (!availableAttackers.isEmpty()) {
             // Attack with the highest card if possible
             CardInstance highestCard = CardUtils.getHighestCards(availableAttackers).getFirst();
-           
+
             if (CardUtils.noPowerHigher(CardUtils.getOpponentCards(highestCard.getOwner(), game), highestCard.getPower())) {
                 return highestCard;
             }

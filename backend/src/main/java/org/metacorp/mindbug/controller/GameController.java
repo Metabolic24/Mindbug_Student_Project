@@ -10,7 +10,6 @@ import jakarta.ws.rs.core.Response;
 import org.metacorp.mindbug.dto.rest.ActionDTO;
 import org.metacorp.mindbug.dto.rest.DeclareAttackDTO;
 import org.metacorp.mindbug.dto.rest.PickDTO;
-import org.metacorp.mindbug.dto.rest.PlayDTO;
 import org.metacorp.mindbug.dto.rest.ResolveAttackDTO;
 import org.metacorp.mindbug.dto.rest.StartOfflineDTO;
 import org.metacorp.mindbug.dto.rest.SurrenderDTO;
@@ -135,46 +134,6 @@ public class GameController {
         } catch (NoSuchElementException e) {
             return Response.status(Response.Status.BAD_REQUEST).entity("Card not found").build();
         }
-
-        return Response.ok().build();
-    }
-
-    /**
-     * Endpoint triggered after the opponent choice to mindbug or not the previously picked card
-     *
-     * @param body the request body
-     * @return the response to the REST request
-     * @throws GameStateException if an error occurs in game state
-     * @throws WebSocketException if an error occurred while sending game event through WebSocket
-     */
-    @POST
-    @Path("/play")
-    public Response play(PlayDTO body) throws GameStateException, WebSocketException {
-        if (body == null || body.getGameId() == null) {
-            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid request body").build();
-        }
-
-        Game game = gameService.findById(body.getGameId());
-        if (game == null) {
-            return Response.status(Response.Status.BAD_REQUEST).entity("Requested game not found").build();
-        }
-
-        Player mindbugger = null;
-        if (body.getMindbuggerId() != null) {
-            try {
-                mindbugger = game.getPlayers().stream()
-                        .filter(player -> player.getUuid().equals(body.getMindbuggerId()))
-                        .findFirst().orElseThrow();
-            } catch (NoSuchElementException e) {
-                return Response.status(Response.Status.BAD_REQUEST).entity("Player not found").build();
-            }
-
-            game.getLogger().debug("Card {} mindbugged by {}", getLoggableCard(game.getPlayedCard()), getLoggablePlayer(mindbugger));
-        } else {
-            game.getLogger().debug("Card {} added to {} board", getLoggableCard(game.getPlayedCard()), getLoggablePlayer(game.getCurrentPlayer()));
-        }
-
-        PlayCardService.playCard(mindbugger, game);
 
         return Response.ok().build();
     }
@@ -313,7 +272,7 @@ public class GameController {
         if (game == null) {
             return Response.status(Response.Status.NOT_FOUND).entity("Requested game not found").build();
         } else if (game.getChoice() == null || (game.getChoice().getType() != ChoiceType.BOOLEAN
-                && game.getChoice().getType() != ChoiceType.FRENZY)) {
+                && game.getChoice().getType() != ChoiceType.FRENZY && game.getChoice().getType() != ChoiceType.MINDBUG)) {
             return Response.status(Response.Status.NOT_FOUND).entity("No boolean choice to resolve").build();
         }
 

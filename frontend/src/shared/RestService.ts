@@ -51,10 +51,6 @@ export async function pickCard(gameId: string, cardId: string): Promise<void> {
     return manageRestCall(axios.post(gameBaseUrl + "/pick", {gameId, cardId}))
 }
 
-export async function playCard(gameId: string, mindbuggerId: string): Promise<void> {
-    return manageRestCall(axios.post(gameBaseUrl + "/play", {gameId, mindbuggerId}))
-}
-
 export async function declareAttack(gameId: string, attackingCardId: string): Promise<void> {
     return manageRestCall(axios.post(gameBaseUrl + "/attack", {gameId, attackingCardId}))
 }

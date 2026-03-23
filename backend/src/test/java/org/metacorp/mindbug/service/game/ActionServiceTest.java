@@ -8,6 +8,7 @@ import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
+import org.metacorp.mindbug.model.choice.MindbugChoice;
 import org.metacorp.mindbug.model.effect.Effect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectType;
@@ -17,6 +18,8 @@ import org.metacorp.mindbug.service.effect.impl.ReviveEffectResolver;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -59,7 +62,7 @@ public class ActionServiceTest extends MindbugGameTest {
 
     @Test
     public void testResolveAction_playedCard() {
-        game.setPlayedCard(card);
+        game.setChoice(new MindbugChoice(card, Collections.singletonList(game.getOpponents().getFirst())));
         assertThrows(GameStateException.class, () -> ActionService.resolveAction(card, game));
 
         assertEquals(currentPlayer, game.getCurrentPlayer());
