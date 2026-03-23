@@ -7,8 +7,6 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.PlayerService;
-import org.metacorp.mindbug.service.game.StartService;
 import org.metacorp.mindbug.utils.AiUtils;
 import org.metacorp.mindbug.utils.AppUtils;
 
@@ -22,11 +20,8 @@ public class AutoApp {
 
     private static final Random RND = new Random();
 
-    static void main() throws CardSetException {
-        PlayerService playerService = new PlayerService();
-        StartService startService = new StartService();
-        Game game = AppUtils.startGame(playerService, startService);
-        start(game);
+    static void main(String[] args) throws CardSetException {
+        start(AppUtils.createGame(args, true));
     }
 
     /**
