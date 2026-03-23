@@ -43,9 +43,6 @@ public class AttackService {
         } else if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before attacking",
                     Map.of("choice", game.getChoice()));
-        } else if (game.getPlayedCard() != null) {
-            throw new GameStateException("a played card needs to be resolved before attacking",
-                    Map.of("playedCard", game.getPlayedCard()));
         }
 
         processAttackDeclaration(attackCard, game);
@@ -129,8 +126,6 @@ public class AttackService {
             }
         } else if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before attacking", Map.of("choice", game.getChoice()));
-        } else if (game.getPlayedCard() != null) {
-            throw new GameStateException("a played card needs to be resolved before attacking", Map.of("playedCard", game.getPlayedCard()));
         }
 
         processAttackResolution(attackingCard, defendingCard, game);

@@ -7,7 +7,6 @@ import {computed, onMounted, onUnmounted, Ref, ref} from "vue";
 import {
   declareAttack,
   pickCard,
-  playCard,
   resolveAction,
   resolveAttack,
   resolveBoolean,
@@ -151,7 +150,7 @@ onMounted(async () => {
           break;
         case "CARD_PICKED": // Received when a player has picked a card
           selectedCard.value = undefined;
-          pickedCard.value = message.state.card;
+          pickedCard.value = message.state.choice?.sourceCard;
           attackingCard.value = undefined;
           break;
         case "CARD_PLAYED": // Received when a player has played a card
@@ -229,9 +228,9 @@ function onActionButtonClick(buttonEvent: BoardButtonsEvent) {
     case "PLAY":
       return pickCard(game.uuid, selectedCard.value.uuid);
     case "MINDBUG":
-      return playCard(game.uuid, game.player.uuid);
+      return resolveBoolean(game.uuid, true);
     case "NO_MINDBUG":
-      return playCard(game.uuid, undefined);
+      return resolveBoolean(game.uuid, false);
     case "ATTACK":
       return declareAttack(game.uuid, selectedCard.value.uuid);
     case "BLOCK":

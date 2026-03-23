@@ -29,6 +29,8 @@ const message = computed(() => {
         return 'game.middle_area.choice.' + props.gameState.choice.type
       } else if (props.gameState.choice.type === "BOOLEAN") {
         return 'game.middle_area.choice.' + props.gameState.choice.sourceCard.id
+      } else if (props.pickedCard) {
+        return 'game.middle_area.choice.mindbug'
       }
     } else {
       return 'game.middle_area.choice.waiting'
@@ -40,9 +42,7 @@ const message = computed(() => {
       return 'game.middle_area.player_turn'
     }
   } else {
-    if (props.pickedCard) {
-      return 'game.middle_area.choice.mindbug'
-    } else if (props.attackingCard) {
+    if (props.attackingCard) {
       return 'game.middle_area.choice.attacked'
     } else {
       return 'game.middle_area.waiting'
