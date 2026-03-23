@@ -10,12 +10,12 @@ import org.metacorp.mindbug.model.effect.AfterEffectInterface;
 import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.model.player.Team;
 import org.metacorp.mindbug.service.GameWebSocketClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -55,7 +55,7 @@ public class Game {
     /**
      * Empty constructor (WARNING: a game is not meant to be reused)
      */
-    public Game(Player player1, Player player2) {
+    public Game(List<Player> playersList) {
         uuid = UUID.randomUUID();
         logger = LoggerFactory.getLogger(uuid.toString());
 
@@ -64,8 +64,32 @@ public class Game {
         bannedCards = new ArrayList<>();
         evolutionCards = new ArrayList<>();
         effectQueue = new EffectQueue();
-        players = Arrays.asList(player1, player2);
+        players = new ArrayList<>(playersList);
         history = new ArrayList<>();
+
+        setupTeams();
+    }
+
+    private void setupTeams() {
+        Team team1 = new Team();
+        Team team2 = new Team();
+
+        switch (players.size()) {
+            // 1v1
+            case 2:
+                players.getFirst().setTeam(team1);
+                players.get(1).setTeam(team2);
+                break;
+            // 2v2
+            case 4:
+                players.getFirst().setTeam(team1);
+                players.get(1).setTeam(team2);
+                players.get(2).setTeam(team1);
+                players.get(3).setTeam(team2);
+                break;
+            default:
+                throw new IllegalStateException("Unsupported number of players: " + players.size());
+        }
     }
 
     public List<Player> getOpponents() {

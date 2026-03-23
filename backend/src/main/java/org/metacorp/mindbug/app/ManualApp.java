@@ -5,13 +5,12 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.choice.AbstractChoice;
+import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.ChoiceService;
-import org.metacorp.mindbug.service.game.StartService;
 import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.Arrays;
@@ -26,10 +25,8 @@ public class ManualApp {
 
     private static final String AVAILABLE_ACTIONS = "Actions possibles : play, p, attack, a, sumup, s, details, d, stop, exit\n";
 
-    static void main() throws CardSetException {
-        PlayerService playerService = new PlayerService();
-        StartService startService = new StartService();
-        Game game = AppUtils.startGame(playerService, startService);
+    static void main(String[] args) throws CardSetException {
+        Game game = AppUtils.createGame(args, false);
 
         System.out.println(AVAILABLE_ACTIONS);
 
@@ -231,13 +228,36 @@ public class ManualApp {
      */
     private static void printChoice(AbstractChoice<?> choice) {
         switch (choice.getType()) {
-            case SIMULTANEOUS ->
-                    System.out.println("Veuillez choisir l'effet à résoudre en premier : (only type the ID)");
-            case TARGET ->
-                    System.out.println("Veuillez choisir la/les cibles : (type the card(s) ID separated by 'space' character)");
-            case HUNTER -> System.out.println("Veuillez choisir la cible à chasser (si souhaité) : (only type the ID)");
-            case FRENZY -> System.out.println("Voulez-vous attaquer à nouveau? (O/N)");
-            case BOOLEAN -> System.out.println("Voulez-vous faire revenir Hyénix? (O/N)");
+            case SIMULTANEOUS -> System.out.println("Choose the effect to resolve first (only type the card ID) :");
+            case TARGET -> {
+                System.out.println("Choose the target(s) (type the card(s) ID separated by 'space' character) :");
+                ((TargetChoice) choice).getAvailableTargets().forEach(target ->
+                        System.out.println(
+                                "- " + target.getCard().getName()
+                                        + " (id: " + target.getUuid() + ")"
+                        )
+                );
+            }
+            case HUNTER -> {
+                System.out.println("Choose the target to hunt (OPTIONAL ; only type the card ID) : ");
+                ((HunterChoice) choice).getAvailableTargets().forEach(target ->
+                        System.out.println(
+                                "- " + target.getCard().getName()
+                                        + " (id: " + target.getUuid() + ")"
+                        )
+                );
+            }
+            case FRENZY -> System.out.println("Do you want to attack again? (Y/N)");
+            case BOOLEAN -> {
+                BooleanChoice booleanChoice = (BooleanChoice) choice;
+                String message = switch (booleanChoice.getSourceCard().getCard().getId()) {
+                    case 40 -> "Do you want to play the stolen card " + booleanChoice.getCard().getCard().getName();
+                    case 41 -> "Do you want to revive Hyenix";
+                    // Should not happen
+                    default -> "";
+                };
+                System.out.println(message + "? (Y/N)");
+            }
             default -> {
                 // Should not happen
             }

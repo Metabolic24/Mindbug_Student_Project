@@ -12,6 +12,7 @@ public final class WsUtils {
     public static final String PLAYER_NAME_KEY = "playerName";
     public static final String IS_AI_KEY = "isAi";
     public static final String SETS_KEY = "sets";
+    public static final String GAME_MODE_KEY = "mode";
 
     /**
      * Retrieve the param value from the WebSocket query
