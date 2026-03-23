@@ -19,7 +19,7 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @JsonPropertyOrder({"type", "playerToChoose", "sourceCard", "availableEffects"})
-public class SimultaneousChoiceDTO extends AbstractChoiceDTO {
+public class SimultaneousEffectsChoiceDTO extends AbstractChoiceDTO {
     private Set<CardDTO> availableEffects;
 
     /**
@@ -28,7 +28,7 @@ public class SimultaneousChoiceDTO extends AbstractChoiceDTO {
      * @param playerToChoose   the player to choose
      * @param availableEffects the set of all simultaneous effects
      */
-    public SimultaneousChoiceDTO(UUID playerToChoose, Set<CardDTO> availableEffects) {
+    public SimultaneousEffectsChoiceDTO(UUID playerToChoose, Set<CardDTO> availableEffects) {
         super(ChoiceType.SIMULTANEOUS, playerToChoose);
         this.availableEffects = availableEffects;
     }

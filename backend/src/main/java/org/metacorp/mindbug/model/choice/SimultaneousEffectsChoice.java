@@ -21,10 +21,10 @@ public class SimultaneousEffectsChoice extends AbstractChoice<UUID> {
     /**
      * Constructor
      *
-     * @param effectsToSort the simultaneous effects list
      * @param currentPlayer the current player
+     * @param effectsToSort the simultaneous effects list
      */
-    public SimultaneousEffectsChoice(@NonNull Set<EffectsToApply> effectsToSort, @NonNull Player currentPlayer) {
+    public SimultaneousEffectsChoice(@NonNull Player currentPlayer, @NonNull Set<EffectsToApply> effectsToSort) {
         this.playerToChoose = currentPlayer;
         this.effectsToSort = effectsToSort;
     }

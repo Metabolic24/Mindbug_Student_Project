@@ -7,7 +7,7 @@ import org.metacorp.mindbug.dto.choice.AbstractChoiceDTO;
 import org.metacorp.mindbug.dto.choice.BooleanChoiceDTO;
 import org.metacorp.mindbug.dto.choice.ChoiceDTO;
 import org.metacorp.mindbug.dto.choice.HunterChoiceDTO;
-import org.metacorp.mindbug.dto.choice.SimultaneousChoiceDTO;
+import org.metacorp.mindbug.dto.choice.SimultaneousEffectsChoiceDTO;
 import org.metacorp.mindbug.dto.choice.TargetChoiceDTO;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -101,7 +101,7 @@ public class GameStateMapper {
         switch (choice.getType()) {
             case SIMULTANEOUS -> {
                 SimultaneousEffectsChoice simultaneousChoice = (SimultaneousEffectsChoice) choice;
-                result = new SimultaneousChoiceDTO(currentPlayer.getUuid(), simultaneousChoice.getEffectsToSort().stream()
+                result = new SimultaneousEffectsChoiceDTO(currentPlayer.getUuid(), simultaneousChoice.getEffectsToSort().stream()
                         .map(GameStateMapper::fromEffects).collect(Collectors.toSet()));
             }
             case FRENZY -> {
