@@ -55,10 +55,6 @@ export async function declareAttack(gameId: string, attackingCardId: string): Pr
     return manageRestCall(axios.post(gameBaseUrl + "/attack", {gameId, attackingCardId}))
 }
 
-export async function resolveAttack(gameId: string, defendingPlayerId: string, defenseCardId: string): Promise<void> {
-    return manageRestCall(axios.put(gameBaseUrl + "/attack", {gameId, defendingPlayerId, defenseCardId}))
-}
-
 export async function resolveBoolean(gameId: string, ok: boolean): Promise<void> {
     return manageRestCall(axios.post(gameBaseUrl + "/choice/boolean", {gameId, ok}))
 }

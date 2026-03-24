@@ -3,14 +3,12 @@ package org.metacorp.mindbug.controller;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
-import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.core.Response;
 import org.metacorp.mindbug.dto.rest.ActionDTO;
 import org.metacorp.mindbug.dto.rest.DeclareAttackDTO;
 import org.metacorp.mindbug.dto.rest.PickDTO;
-import org.metacorp.mindbug.dto.rest.ResolveAttackDTO;
 import org.metacorp.mindbug.dto.rest.StartOfflineDTO;
 import org.metacorp.mindbug.dto.rest.SurrenderDTO;
 import org.metacorp.mindbug.dto.rest.choice.BooleanAnswerDTO;
@@ -209,51 +207,6 @@ public class GameController {
     }
 
     /**
-     * Endpoint triggered when the opponent chooses the target of the current player attack
-     *
-     * @param body the request body
-     * @return the response to the REST request
-     * @throws GameStateException if an error occurs in game state
-     * @throws WebSocketException if an error occurred while sending game event through WebSocket
-     */
-    @PUT
-    @Path("/attack")
-    public Response resolveAttack(ResolveAttackDTO body) throws GameStateException, WebSocketException {
-        if (body == null || body.getGameId() == null
-                || (body.getDefendingPlayerId() != null && body.getDefenseCardId() == null)
-                || (body.getDefendingPlayerId() == null && body.getDefenseCardId() != null)) {
-            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid request body").build();
-        }
-
-        Game game = gameService.findById(body.getGameId());
-        if (game == null) {
-            return Response.status(Response.Status.NOT_FOUND).entity("Requested game not found").build();
-        }
-
-        CardInstance defendingCard = null;
-        if (body.getDefendingPlayerId() != null && body.getDefenseCardId() != null) {
-            try {
-                Player opponentPlayer = game.getPlayers().stream()
-                        .filter(player -> player.getUuid().equals(body.getDefendingPlayerId()))
-                        .findFirst().orElseThrow();
-
-                defendingCard = opponentPlayer.getBoard().stream()
-                        .filter(cardInstance -> cardInstance.getUuid().equals(body.getDefenseCardId()))
-                        .findFirst().orElseThrow();
-
-                game.getLogger().debug("Player {} blocks {} with {}", getLoggablePlayer(opponentPlayer),
-                        getLoggableCard(game.getAttackingCard()), getLoggableCard(defendingCard));
-            } catch (NoSuchElementException e) {
-                return Response.status(Response.Status.BAD_REQUEST).entity("Card not found").build();
-            }
-        }
-
-        AttackService.resolveAttack(defendingCard, game);
-
-        return Response.ok().build();
-    }
-
-    /**
      * Endpoint triggered when a boolean choice is resolved
      *
      * @param body the request body
@@ -302,7 +255,7 @@ public class GameController {
         if (game == null) {
             return Response.status(Response.Status.NOT_FOUND).entity("Requested game not found").build();
         } else if (game.getChoice() == null || (game.getChoice().getType() != ChoiceType.SIMULTANEOUS
-                && game.getChoice().getType() != ChoiceType.HUNTER)) {
+                && game.getChoice().getType() != ChoiceType.HUNTER && game.getChoice().getType() != ChoiceType.BLOCK)) {
             return Response.status(Response.Status.NOT_FOUND).entity("No single target choice (SIMULTANEOUS or HUNTER) to resolve").build();
         } else if (game.getChoice().getType() == ChoiceType.SIMULTANEOUS && body.getCardId() == null) {
             return Response.status(Response.Status.BAD_REQUEST).entity("Invalid request body : missing cardId").build();

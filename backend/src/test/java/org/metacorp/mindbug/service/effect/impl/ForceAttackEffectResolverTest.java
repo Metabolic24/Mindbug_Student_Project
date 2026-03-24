@@ -8,6 +8,7 @@ import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
+import org.metacorp.mindbug.model.choice.BlockChoice;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -83,8 +84,9 @@ public class ForceAttackEffectResolverTest extends MindbugGameTest {
 
         assertNull(game.getForcedTarget());
         assertFalse(game.isForcedAttack());
-        assertEquals(selectedCard, game.getAttackingCard());
-        assertNull(game.getChoice());
+
+        BlockChoice blockChoice = assertInstanceOf(BlockChoice.class, game.getChoice());
+        assertEquals(selectedCard, blockChoice.getAttackingCard());
     }
 
     @Test
@@ -95,7 +97,6 @@ public class ForceAttackEffectResolverTest extends MindbugGameTest {
 
         assertNull(game.getForcedTarget());
         assertFalse(game.isForcedAttack());
-        assertNull(game.getAttackingCard());
         assertNull(game.getChoice());
     }
 
@@ -115,7 +116,6 @@ public class ForceAttackEffectResolverTest extends MindbugGameTest {
 
         assertNull(game.getForcedTarget());
         assertFalse(game.isForcedAttack());
-        assertNull(game.getAttackingCard());
         assertNull(game.getChoice());
         assertEquals(2, currentPlayer.getTeam().getLifePoints());
     }
@@ -130,7 +130,6 @@ public class ForceAttackEffectResolverTest extends MindbugGameTest {
 
         assertNull(game.getForcedTarget());
         assertFalse(game.isForcedAttack());
-        assertNull(game.getAttackingCard());
         assertNull(game.getChoice());
 
         for (CardInstance card : opponentPlayer.getBoard()) {
@@ -158,7 +157,6 @@ public class ForceAttackEffectResolverTest extends MindbugGameTest {
 
         assertNull(game.getForcedTarget());
         assertTrue(game.isForcedAttack());
-        assertNull(game.getAttackingCard());
         assertNull(game.getChoice());
 
         for (CardInstance card : opponentPlayer.getBoard()) {
@@ -187,7 +185,6 @@ public class ForceAttackEffectResolverTest extends MindbugGameTest {
 
         assertEquals(randomCard, game.getForcedTarget());
         assertTrue(game.isForcedAttack());
-        assertNull(game.getAttackingCard());
         assertNull(game.getChoice());
 
         for (CardInstance card : opponentPlayer.getBoard()) {
@@ -215,7 +212,6 @@ public class ForceAttackEffectResolverTest extends MindbugGameTest {
 
         assertNull(game.getForcedTarget());
         assertFalse(game.isForcedAttack());
-        assertNull(game.getAttackingCard());
         assertNull(game.getChoice());
 
         for (CardInstance card : opponentPlayer.getBoard()) {

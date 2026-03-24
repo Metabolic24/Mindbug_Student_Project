@@ -71,7 +71,6 @@ public class GameStateMapperTest extends MindbugGameTest {
         assertEquals(currentPlayer.getUuid(), gameStateDTO.getCurrentPlayerID());
         comparePlayers(game.getPlayers(), gameStateDTO.getPlayers());
 
-        assertNull(gameStateDTO.getCard());
         assertNull(gameStateDTO.getWinners());
         assertNull(gameStateDTO.getChoice());
         assertFalse(gameStateDTO.isForcedAttack());
@@ -90,7 +89,6 @@ public class GameStateMapperTest extends MindbugGameTest {
         assertEquals(currentPlayer.getUuid(), gameStateDTO.getCurrentPlayerID());
         comparePlayers(game.getPlayers(), gameStateDTO.getPlayers());
 
-        assertNull(gameStateDTO.getCard());
         assertNull(gameStateDTO.getWinners());
         assertNotNull(gameStateDTO.getChoice());
         assertFalse(gameStateDTO.isForcedAttack());
@@ -131,12 +129,13 @@ public class GameStateMapperTest extends MindbugGameTest {
         assertEquals(currentPlayer.getUuid(), gameStateDTO.getCurrentPlayerID());
         comparePlayers(game.getPlayers(), gameStateDTO.getPlayers());
 
-        assertNotNull(gameStateDTO.getCard());
-        compareCard(playedCard, gameStateDTO.getCard());
-
         assertNull(gameStateDTO.getWinners());
-        assertNull(gameStateDTO.getChoice());
         assertFalse(gameStateDTO.isForcedAttack());
+
+        ChoiceDTO choiceDTO = assertInstanceOf(ChoiceDTO.class, gameStateDTO.getChoice());
+        assertEquals(ChoiceType.BLOCK, choiceDTO.getType());
+        assertEquals(game.getOpponents().getFirst().getUuid(), choiceDTO.getPlayerToChoose());
+        compareCard(playedCard, choiceDTO.getSourceCard());
     }
 
     @Test
@@ -151,7 +150,6 @@ public class GameStateMapperTest extends MindbugGameTest {
         assertEquals(currentPlayer.getUuid(), gameStateDTO.getCurrentPlayerID());
         comparePlayers(game.getPlayers(), gameStateDTO.getPlayers());
 
-        assertNull(gameStateDTO.getCard());
         assertTrue(gameStateDTO.getWinners().contains(game.getOpponents().getFirst().getUuid()));
         assertNull(gameStateDTO.getChoice());
         assertFalse(gameStateDTO.isForcedAttack());
@@ -169,7 +167,6 @@ public class GameStateMapperTest extends MindbugGameTest {
         assertEquals(currentPlayer.getUuid(), gameStateDTO.getCurrentPlayerID());
         comparePlayers(game.getPlayers(), gameStateDTO.getPlayers());
 
-        assertNull(gameStateDTO.getCard());
         assertNull(gameStateDTO.getWinners());
         assertNull(gameStateDTO.getChoice());
         assertTrue(gameStateDTO.isForcedAttack());
@@ -188,7 +185,6 @@ public class GameStateMapperTest extends MindbugGameTest {
         assertEquals(currentPlayer.getUuid(), gameStateDTO.getCurrentPlayerID());
         comparePlayers(game.getPlayers(), gameStateDTO.getPlayers());
 
-        assertNull(gameStateDTO.getCard());
         assertNull(gameStateDTO.getWinners());
 
         TargetChoiceDTO choiceDTO = assertInstanceOf(TargetChoiceDTO.class, gameStateDTO.getChoice());
@@ -232,9 +228,6 @@ public class GameStateMapperTest extends MindbugGameTest {
 
         assertEquals(currentPlayer.getUuid(), gameStateDTO.getCurrentPlayerID());
         comparePlayers(game.getPlayers(), gameStateDTO.getPlayers());
-
-        assertNotNull(gameStateDTO.getCard());
-        compareCard(playedCard, gameStateDTO.getCard());
 
         assertNull(gameStateDTO.getWinners());
         assertFalse(gameStateDTO.isForcedAttack());

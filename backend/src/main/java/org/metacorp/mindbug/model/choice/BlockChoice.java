@@ -12,19 +12,17 @@ import org.metacorp.mindbug.utils.ChoiceUtils;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.UUID;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class HunterChoice extends AbstractChoice<UUID> {
+public class BlockChoice extends AbstractChoice<UUID> {
+
     @NonNull
-    // The card which is attacking
     private CardInstance attackingCard;
 
-    // All the available targets
     @NonNull
-    private Set<CardInstance> availableTargets;
+    private List<Player> remainingPlayers;
 
     @NonNull
     private Map<Player, List<CardInstance>> blockersMap;
@@ -32,23 +30,22 @@ public class HunterChoice extends AbstractChoice<UUID> {
     /**
      * Constructor
      *
-     * @param attackingCard    the attacking card
-     * @param availableTargets the list of available attack targets
+     * @param remainingPlayers the list of remaining players still able to choose
      */
-    public HunterChoice(@NonNull CardInstance attackingCard, @NonNull Set<CardInstance> availableTargets, @NonNull Map<Player, List<CardInstance>> blockersMap) {
+    public BlockChoice(@NonNull CardInstance attackingCard, @NonNull List<Player> remainingPlayers, @NonNull Map<Player, List<CardInstance>> blockersMap) {
         this.attackingCard = attackingCard;
-        this.playerToChoose = attackingCard.getOwner();
-        this.availableTargets = availableTargets;
+        this.playerToChoose = remainingPlayers.getFirst();
+        this.remainingPlayers = remainingPlayers.subList(1, remainingPlayers.size());
         this.blockersMap = blockersMap;
     }
 
     @Override
-    public void resolve(UUID chosenTargetId, Game game) throws GameStateException, WebSocketException {
-        ChoiceUtils.resolveHunterChoice(chosenTargetId, this, game);
+    public void resolve(UUID choice, Game game) throws GameStateException, WebSocketException {
+        ChoiceUtils.resolveBlockChoice(choice, this, game);
     }
 
     @Override
     public ChoiceType getType() {
-        return ChoiceType.HUNTER;
+        return ChoiceType.BLOCK;
     }
 }

@@ -8,7 +8,6 @@ import {
   declareAttack,
   pickCard,
   resolveAction,
-  resolveAttack,
   resolveBoolean,
   resolveMultipleTargetChoice,
   resolveSingleTargetChoice,
@@ -161,7 +160,7 @@ onMounted(async () => {
         case "ATTACK_DECLARED": // Received when a player declared an attack
           selectedCard.value = undefined;
           pickedCard.value = undefined;
-          attackingCard.value = message.state.card;
+          attackingCard.value = undefined;
           break;
         case "CHOICE": // Received when a choice needs to be solved
           if (message.state.choice?.type === "FRENZY") {
@@ -178,6 +177,7 @@ onMounted(async () => {
         case "CARD_DESTROYED": // Received when a card is destroyed
         case "EFFECT_RESOLVED": // Received when an effect is successfully resolved
         case "WAITING_ATTACK_RESOLUTION": // Received when waiting for attack resolution
+          attackingCard.value = message.state.choice?.sourceCard;
           break;
       }
 
@@ -234,11 +234,11 @@ function onActionButtonClick(buttonEvent: BoardButtonsEvent) {
     case "ATTACK":
       return declareAttack(game.uuid, selectedCard.value.uuid);
     case "BLOCK":
-      return resolveAttack(game.uuid, game.player.uuid, selectedCard.value.uuid);
+      return resolveSingleTargetChoice(game.uuid, selectedCard.value.uuid);
     case "ACTION":
       return resolveAction(game.uuid, selectedCard.value.uuid);
     case "LOSE_LP":
-      return resolveAttack(game.uuid, undefined, undefined);
+      return resolveSingleTargetChoice(game.uuid, undefined);
     case "HUNT":
       return resolveSingleTargetChoice(game.uuid, selectedCard.value.uuid)
     case "CONTINUE":

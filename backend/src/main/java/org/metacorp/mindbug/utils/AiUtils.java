@@ -7,17 +7,18 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.ai.AiPlayerTurnAction;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.AbstractChoice;
+import org.metacorp.mindbug.model.choice.BlockChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.service.GameService;
 import org.metacorp.mindbug.service.game.ActionService;
 import org.metacorp.mindbug.service.game.AttackService;
-import org.metacorp.mindbug.service.game.CardService;
 import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.service.game.PlayCardService;
 import org.slf4j.Logger;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -84,13 +85,9 @@ public class AiUtils {
      * @throws GameStateException if an error occurs during the game execution
      */
     private static void resolveAttack(Game game, AiPlayer aiPlayer) throws GameStateException, WebSocketException {
-        List<CardInstance> availableCards = CardService.getBlockersList(game, aiPlayer);
-        if (availableCards.isEmpty()) {
-            AttackService.resolveAttack(null, game);
-        } else {
-            CardInstance blockingCard = aiPlayer.getResolver().chooseBlocker(availableCards, game);
-            AttackService.resolveAttack(blockingCard, game);
-        }
+        List<CardInstance> availableBlockers = ((BlockChoice) game.getChoice()).getBlockersMap().get(aiPlayer);
+        CardInstance chosenBlocker = aiPlayer.getResolver().chooseBlocker(new ArrayList<>(availableBlockers), game);
+        ChoiceService.resolveChoice(chosenBlocker == null ? null : chosenBlocker.getUuid(), game);
     }
 
     /**
@@ -124,6 +121,7 @@ public class AiUtils {
                 case FRENZY -> ChoiceService.resolveChoice(aiPlayer.getResolver().shouldAttackAgain(game), game);
                 case BOOLEAN -> ChoiceService.resolveChoice(aiPlayer.getResolver().resolveBooleanChoice(game), game);
                 case MINDBUG -> ChoiceService.resolveChoice(aiPlayer.getResolver().shouldMindbug(game, aiPlayer), game);
+                case BLOCK -> resolveAttack(game, aiPlayer);
                 default -> {
                     // Should not happen
                 }

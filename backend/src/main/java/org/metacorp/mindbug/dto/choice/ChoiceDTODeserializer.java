@@ -35,7 +35,7 @@ public class ChoiceDTODeserializer extends StdDeserializer<AbstractChoiceDTO> {
         UUID playerToChoose = UUID.fromString(node.get("playerToChoose").asText());
 
         switch (choiceType) {
-            case MINDBUG, FRENZY -> {
+            case MINDBUG, FRENZY, BLOCK -> {
                 CardDTO sourceCard = mapper.treeToValue(node.get("sourceCard"), new TypeReference<>() {
                 });
                 return new ChoiceDTO(choiceType, playerToChoose, sourceCard);

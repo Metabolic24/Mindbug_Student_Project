@@ -146,46 +146,6 @@ public final class AppUtils {
     }
 
     /**
-     * Resolve an attack in an automatic game
-     *
-     * @param game the current game
-     * @throws GameStateException if an error occurs during the game execution
-     */
-    public static void resolveAttack(Game game) throws GameStateException, WebSocketException {
-        resolveAttack(null, game);
-    }
-
-    /**
-     * Resolve an attack in a manual/automatic game
-     *
-     * @param game    the current game
-     * @param scanner the scanner to be used to read standard input (only for manual mode)
-     * @throws GameStateException if an error occurs during the game execution
-     */
-    public static void resolveAttack(Scanner scanner, Game game) throws GameStateException, WebSocketException {
-        CardInstance blockingCard = null;
-
-        List<Player> opponentPlayers = game.getAttackingCard().getOwner().getOpponents(game.getPlayers());
-        for (Player opponentPlayer : opponentPlayers) {
-            List<CardInstance> availableCards = CardService.getBlockersList(game, opponentPlayer);
-            if (availableCards.isEmpty()) {
-                System.out.printf("%s cannot block the attack\n", opponentPlayer.getName());
-            } else {
-                // Select a card and attack with it
-                blockingCard = (scanner == null) ? CardService.getRandomCard(availableCards) : getChosenCard(availableCards, scanner, true);
-                if (blockingCard != null) {
-                    System.out.printf("%s blocks with card '%s'\n", opponentPlayer.getName(), blockingCard.getCard().getName());
-                    break;
-                } else {
-                    System.out.printf("%s chose to not block \n", opponentPlayer.getName());
-                }
-            }
-        }
-
-        AttackService.resolveAttack(blockingCard, game);
-    }
-
-    /**
      * Print a detailed sum-up for the given player
      *
      * @param player the player to sum-up
