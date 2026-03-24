@@ -10,7 +10,6 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.AiUtils;
 import org.metacorp.mindbug.utils.AppUtils;
 
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -46,24 +45,20 @@ public class AutoApp {
      */
     private static void resolveTurn(Game game) throws GameStateException, WebSocketException {
         Player currentPlayer = game.getCurrentPlayer();
-        List<CardInstance> availableCards = currentPlayer.getBoard().stream().filter(CardInstance::isAbleToAttack).toList();
 
-        boolean attack = currentPlayer.getHand().isEmpty() || (!availableCards.isEmpty() && RND.nextBoolean());
-        if (attack) {
+        // Here we consider that the current player can at least play or attack
+        boolean canPlay = !currentPlayer.getHand().isEmpty();
+        boolean canAttack = currentPlayer.getBoard().stream().anyMatch(CardInstance::isAbleToAttack);
+
+        if (canAttack && (!canPlay || RND.nextBoolean())) {
             // Declare attack
             AppUtils.declareAttack(game);
-            resolveChoices(game);
-
-            // Resolve attack or Frenzy case
-            while (game.getAttackingCard() != null && !game.isFinished()) {
-                AppUtils.resolveAttack(game);
-                resolveChoices(game);
-            }
         } else {
             // Play a card
             AppUtils.play(game);
-            resolveChoices(game);
         }
+
+        resolveChoices(game);
 
         if (!game.isFinished()) {
             AppUtils.nextTurn(game);
