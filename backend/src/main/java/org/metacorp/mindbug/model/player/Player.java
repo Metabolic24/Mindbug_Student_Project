@@ -109,6 +109,7 @@ public class Player {
     /**
      * Checks whether player can block with a creature
      *
+     * @param sneakyAttack is it a sneaky attack
      * @return true if he can block with a creature, false otherwise
      */
     public boolean canBlock(boolean sneakyAttack) {
@@ -119,6 +120,15 @@ public class Player {
         }
 
         return false;
+    }
+
+    /**
+     * @param sneakyAttack is it a sneaky attack
+     * @return the list of cards that currently can block an attack
+     */
+    public List<CardInstance> getAvailableBlockers(boolean sneakyAttack) {
+        return board.stream().filter(card -> card.isAbleToBlock()
+                && (!sneakyAttack || card.hasKeyword(CardKeyword.SNEAKY))).toList();
     }
 
     @Override

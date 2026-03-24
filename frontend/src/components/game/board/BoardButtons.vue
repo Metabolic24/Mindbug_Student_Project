@@ -40,7 +40,12 @@ const mainButtonData: ComputedRef<ButtonData> = computed(() => {
       result.label = 'game.buttons.use_mindbug'
       result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
       result.event = "MINDBUG"
-    } else {
+    } else if (props.gameState.choice.type === "BLOCK") { // Block case
+      result.label = 'game.buttons.block'
+      result.disabled = !(props.selectedCard && props.gameState.choice.sourceCard.ownerId !== props.gameState?.player.uuid)
+      result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
+      result.event = "BLOCK"
+    } else{
       result.visible = false
     }
   } else if (props.gameState?.currentPlayerID === props.gameState?.player.uuid) {
@@ -60,14 +65,7 @@ const mainButtonData: ComputedRef<ButtonData> = computed(() => {
       result.visible = false
     }
   } else {
-    if (props.attackingCard) { // Block case
-      result.label = 'game.buttons.block'
-      result.disabled = !(props.selectedCard && props.attackingCard.ownerId !== props.gameState?.player.uuid)
-      result.visible = props.attackingCard.ownerId !== props.gameState?.player.uuid;
-      result.event = "BLOCK"
-    } else {
-      result.visible = false
-    }
+    result.visible = false
   }
 
   return result
@@ -94,6 +92,10 @@ const secondButtonData: ComputedRef<ButtonData> = computed(() => {
       result.label = "game.buttons.no_mindbug"
       result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
       result.event = "NO_MINDBUG"
+    } else if (props.gameState.choice.type === "BLOCK") { // Block case
+      result.label = "game.buttons.lose_lp"
+      result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
+      result.event = "LOSE_LP"
     } else{
       result.visible = false
     }
@@ -105,9 +107,6 @@ const secondButtonData: ComputedRef<ButtonData> = computed(() => {
     } else {
       result.visible = false
     }
-  } else if (props.attackingCard) { // Block case
-    result.label = "game.buttons.lose_lp"
-    result.event = "LOSE_LP"
   } else {
     result.visible = false
   }

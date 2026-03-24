@@ -5,7 +5,7 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
-import org.metacorp.mindbug.model.card.CardKeyword;
+import org.metacorp.mindbug.model.choice.BlockChoice;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
@@ -54,6 +54,28 @@ public final class ChoiceUtils {
             } else {
                 game.setChoice(new MindbugChoice(choice.getPlayedCard(), choice.getRemainingPlayers()));
                 WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game);
+            }
+        }
+    }
+
+    public static void resolveBlockChoice(UUID choiceData, BlockChoice choice, Game game) throws GameStateException, WebSocketException {
+        // First reset choice so it doesn't block next steps
+        game.setChoice(null);
+
+        if (choiceData != null) {
+            List<CardInstance> playerBlockers = choice.getBlockersMap().get(choice.getPlayerToChoose());
+            CardInstance blocker = choice.getPlayerToChoose().getBoard().stream()
+                    .filter(card -> card.getUuid().equals(choiceData) && playerBlockers.contains(card))
+                    .findFirst().orElseThrow(() -> new GameStateException("Invalid choice data"));
+
+            AttackService.resolveAttack(choice.getAttackingCard(), blocker, game);
+        } else {
+            List<Player> remainingPlayers = choice.getRemainingPlayers();
+            if (remainingPlayers.isEmpty()) {
+                AttackService.resolveAttack(choice.getAttackingCard(), null, game);
+            } else {
+                game.setChoice(new BlockChoice(choice.getAttackingCard(), choice.getRemainingPlayers(), choice.getBlockersMap()));
+                WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);
             }
         }
     }
@@ -120,6 +142,8 @@ public final class ChoiceUtils {
         // First reset choice as attack resolution need to have no current choice
         game.setChoice(null);
 
+        CardInstance attackingCard = choice.getAttackingCard();
+
         if (chosenTargetId != null) {
             Optional<CardInstance> chosenTarget = choice.getAvailableTargets().stream()
                     .filter(target -> chosenTargetId.equals(target.getUuid()))
@@ -127,14 +151,13 @@ public final class ChoiceUtils {
             if (chosenTarget.isEmpty()) {
                 throw new GameStateException("Unable to resolve hunter choice due to invalid target");
             } else {
-                AttackService.resolveAttack(chosenTarget.get(), game);
+                AttackService.resolveAttack(attackingCard, chosenTarget.get(), game);
             }
         } else {
-            List<Player> opponents = choice.getAttackingCard().getOwner().getOpponents(game.getPlayers());
-
-            if (opponents.stream().noneMatch(opponent -> opponent.canBlock(choice.getAttackingCard().hasKeyword(CardKeyword.SNEAKY)))) {
-                AttackService.resolveAttack(null, game);
+            if (choice.getBlockersMap().isEmpty()) {
+                AttackService.resolveAttack(attackingCard, null, game);
             } else {
+                game.setChoice(new BlockChoice(attackingCard, AttackService.getAvailableBlockers(attackingCard.getOwner(), choice.getBlockersMap(), game), choice.getBlockersMap()));
                 WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);
             }
         }

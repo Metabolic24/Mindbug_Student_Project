@@ -7,6 +7,7 @@ import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardSetName;
+import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.CardSetService;
 import org.metacorp.mindbug.service.PlayerService;
@@ -70,8 +71,8 @@ public class TestGameUtils {
 
     public static void attack(CardInstance attackingCard, CardInstance defendingCard) throws GameStateException, WebSocketException {
         AttackService.declareAttack(attackingCard, game);
-        if (game.getAttackingCard() != null && game.getChoice() == null) {
-            AttackService.resolveAttack(defendingCard, game);
+        if (game.getChoice() != null && game.getChoice().getType() == ChoiceType.BLOCK && (defendingCard == null || game.getChoice().getPlayerToChoose().equals(defendingCard.getOwner()))) {
+            ChoiceService.resolveChoice(defendingCard == null ? null : defendingCard.getUuid(), game);
         }
     }
 
