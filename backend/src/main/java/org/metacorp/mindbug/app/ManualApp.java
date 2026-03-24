@@ -4,7 +4,9 @@ import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.AbstractChoice;
+import org.metacorp.mindbug.model.choice.BlockChoice;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.choice.MindbugChoice;
@@ -15,6 +17,7 @@ import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.utils.AppUtils;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 import java.util.stream.Stream;
@@ -65,12 +68,6 @@ public class ManualApp {
                 // Declare attack
                 AppUtils.declareAttack(scanner, game);
                 resolveChoices(scanner, game);
-
-                // Resolve attack or Frenzy case
-                while (game.getAttackingCard() != null && !game.isFinished()) {
-                    AppUtils.resolveAttack(scanner, game);
-                    resolveChoices(scanner, game);
-                }
 
                 turnResolved = true;
                 break;
@@ -201,6 +198,22 @@ public class ManualApp {
                             default -> throw new GameStateException("Choix invalide");
                         }
                     }
+                    case BLOCK -> {
+                        System.out.print("Resolving block choice :");
+                        try {
+                            int choiceNumber = Integer.parseInt(scanner.nextLine());
+                            if (choiceNumber == 0) {
+                                System.out.print("no block\n");
+                                ChoiceService.resolveChoice(null, game);
+                            } else {
+                                CardInstance chosenCard = ((BlockChoice) choice).getBlockersMap().get(choice.getPlayerToChoose()).get(choiceNumber - 1);
+                                System.out.printf("blocking with %s\n", chosenCard.getCard().getName());
+                                ChoiceService.resolveChoice(chosenCard.getUuid(), game);
+                            }
+                        } catch (NumberFormatException | IndexOutOfBoundsException e) {
+                            throw new GameStateException("Choix invalide");
+                        }
+                    }
                     default -> {
                         // Should not happen
                     }
@@ -261,6 +274,16 @@ public class ManualApp {
             }
             case MINDBUG ->
                     System.out.printf("Do you want to mindbug card %s? (Y/N)\n", ((MindbugChoice) choice).getPlayedCard().getCard().getName());
+            case BLOCK -> {
+                BlockChoice blockChoice = (BlockChoice) choice;
+                System.out.printf("Do you want to block the attack of %s(%d) ? (OPTIONAL ; only type the card ID)\n", blockChoice.getAttackingCard().getCard().getName(), blockChoice.getAttackingCard().getPower());
+                System.out.println("\t(0) - Do nothing"); // if you can pass the choice
+
+                List<CardInstance> availableBlockers = blockChoice.getBlockersMap().get(choice.getPlayerToChoose());
+                for (int i = 1; i <= availableBlockers.size(); i++) {
+                    System.out.printf("\t(%d) - %s\n", i, availableBlockers.get(i - 1).getCard().getName());
+                }
+            }
             default -> {
                 // Should not happen
             }

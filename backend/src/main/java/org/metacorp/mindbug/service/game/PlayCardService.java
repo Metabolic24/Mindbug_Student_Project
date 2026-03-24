@@ -39,9 +39,6 @@ public class PlayCardService {
         if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before picking a new card",
                     Map.of("choice", game.getChoice()));
-        } else if (game.getAttackingCard() != null) {
-            throw new GameStateException("an attack needs to be resolved before picking a new card",
-                    Map.of("attackingCard", game.getAttackingCard()));
         }
 
         // Update current player hand
@@ -68,18 +65,19 @@ public class PlayCardService {
      */
     private static List<Player> getAvailableMindbuggers(Game game) {
         List<Player> availableMindbuggers = new ArrayList<>();
-        int currentPlayerIndex = game.getPlayers().indexOf(game.getCurrentPlayer());
-        int playersCount = game.getPlayers().size();
-        int currentIndex;
+        List<Player> players = game.getPlayers();
+        int currentPlayerIndex = players.indexOf(game.getCurrentPlayer());
+        int playersCount = players.size();
+        int currentIndex = (currentPlayerIndex + 1) % playersCount;
 
-        do {
-            currentIndex = (currentPlayerIndex + 1) % playersCount;
-            Player currentPlayer = game.getPlayers().get(currentIndex);
-
+        while (currentIndex != currentPlayerIndex) {
+            Player currentPlayer = players.get(currentIndex);
             if (currentPlayer.getMindBugs() > 0) {
                 availableMindbuggers.add(currentPlayer);
             }
-        } while (currentIndex != currentPlayerIndex);
+
+            currentIndex = (currentIndex + 1) % playersCount;
+        }
 
         return availableMindbuggers;
     }
@@ -107,9 +105,6 @@ public class PlayCardService {
         if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before picking a new card",
                     Map.of("choice", game.getChoice()));
-        } else if (game.getAttackingCard() != null) {
-            throw new GameStateException("an attack needs to be resolved before picking a new card",
-                    Map.of("attackingCard", game.getAttackingCard()));
         } else if (mindbugger != null) {
             if (mindbugger.equals(game.getCurrentPlayer())) {
                 throw new GameStateException(MessageFormat.format("player {0} cannot mindbug its own card", mindbugger.getName()),

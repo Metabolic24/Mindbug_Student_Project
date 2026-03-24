@@ -7,10 +7,12 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.BlockChoice;
 import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.AttackService;
+import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 import org.metacorp.mindbug.utils.TestGameUtils;
 
@@ -18,6 +20,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -168,7 +171,8 @@ public class SpecificCaseTest extends MindbugGameTest {
         assertTrue(player1.getDiscardPile().contains(hungryHungryHamster));
         assertTrue(player1.getBoard().contains(hyenix));
 
-        assertEquals(majesticManticore, game.getAttackingCard());
+        BlockChoice blockChoice = assertInstanceOf(BlockChoice.class, game.getChoice());
+        assertEquals(majesticManticore, blockChoice.getAttackingCard());
     }
 
     // #26
@@ -197,7 +201,7 @@ public class SpecificCaseTest extends MindbugGameTest {
 
         choose(true);
 
-        AttackService.resolveAttack(null, game);
+        ChoiceService.resolveChoice(null, game);
 
         play(gorillion);
 
@@ -211,7 +215,7 @@ public class SpecificCaseTest extends MindbugGameTest {
 
         huntTarget(null);
 
-        assertNull(game.getAttackingCard());
+        assertNull(game.getChoice());
         assertEquals(game.getCurrentPlayer(), player2);
         assertEquals(1, player2.getTeam().getLifePoints());
     }
@@ -307,7 +311,7 @@ public class SpecificCaseTest extends MindbugGameTest {
 
         choose(true);
 
-        AttackService.resolveAttack(ferretPacifier, game);
+        ChoiceService.resolveChoice(ferretPacifier.getUuid(), game);
 
         play(compostDragon2);
 
@@ -355,7 +359,7 @@ public class SpecificCaseTest extends MindbugGameTest {
 
         attack(hyenix, null);
         choose(true);
-        AttackService.resolveAttack(null, game);
+        ChoiceService.resolveChoice(null, game);
 
         play(mermaid);
 
