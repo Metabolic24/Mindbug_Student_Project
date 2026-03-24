@@ -17,6 +17,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -37,8 +38,6 @@ public class FrenzyChoiceTest extends MindbugGameTest {
         currentCard.getEffects(EffectTiming.ATTACK).clear();
         currentCard.setAbleToAttackTwice(true);
         currentPlayer.addCardToBoard(currentCard);
-
-        game.setAttackingCard(null);
     }
 
     @Test
@@ -52,7 +51,6 @@ public class FrenzyChoiceTest extends MindbugGameTest {
 
         assertNull(game.getChoice());
         assertTrue(currentCard.isAbleToAttackTwice());
-        assertNull(game.getAttackingCard());
 
         assertEquals(game.getCurrentPlayer(), opponent);
         assertEquals(2, opponent.getTeam().getLifePoints());
@@ -68,9 +66,9 @@ public class FrenzyChoiceTest extends MindbugGameTest {
 
         choice.resolve(true, game);
 
-        assertNull(game.getChoice());
+        BlockChoice blockChoice = assertInstanceOf(BlockChoice.class, game.getChoice());
         assertFalse(currentCard.isAbleToAttackTwice());
-        assertEquals(currentCard, game.getAttackingCard());
+        assertEquals(currentCard, blockChoice.getAttackingCard());
     }
 
     @Test

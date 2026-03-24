@@ -71,7 +71,6 @@ public class AttackServiceTest extends MindbugGameTest {
     public void testProcessAttackResolution_noBlock() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(attackCard);
-        game.setAttackingCard(attackCard);
 
         AttackService.processAttackResolution(attackCard, null, game);
         assertEquals(2, opponent.getTeam().getLifePoints());
@@ -101,7 +100,6 @@ public class AttackServiceTest extends MindbugGameTest {
         assertNull(game.getAfterEffect());
         assertFalse(game.isForcedAttack());
         assertNull(game.getForcedTarget());
-        assertNull(game.getAttackingCard());
     }
 
 
@@ -109,7 +107,6 @@ public class AttackServiceTest extends MindbugGameTest {
     public void testProcessAttackResolution_lowerBlocker() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(attackCard);
-        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower() - 1);
@@ -132,7 +129,6 @@ public class AttackServiceTest extends MindbugGameTest {
         attackCard.setStillTough(false);
         attackCard.getKeywords().remove(CardKeyword.POISONOUS);
         currentPlayer.addCardToBoard(attackCard);
-        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower() + 1);
@@ -152,7 +148,6 @@ public class AttackServiceTest extends MindbugGameTest {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.setStillTough(false);
         currentPlayer.addCardToBoard(attackCard);
-        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower());
@@ -176,7 +171,6 @@ public class AttackServiceTest extends MindbugGameTest {
         attackCard.getCard().getEffects().remove(EffectTiming.DEFEATED);
         attackCard.setStillTough(false);
         currentPlayer.addCardToBoard(attackCard);
-        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower());
@@ -199,7 +193,6 @@ public class AttackServiceTest extends MindbugGameTest {
         attackCard.getCard().getEffects().put(EffectTiming.DEFEATED, new ArrayList<>(List.of(new GainEffect())));
         attackCard.setStillTough(false);
         currentPlayer.addCardToBoard(attackCard);
-        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower());
@@ -223,7 +216,6 @@ public class AttackServiceTest extends MindbugGameTest {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         attackCard.getKeywords().add(CardKeyword.REVERSED);
         currentPlayer.addCardToBoard(attackCard);
-        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.getKeywords().remove(CardKeyword.POISONOUS);
@@ -244,7 +236,6 @@ public class AttackServiceTest extends MindbugGameTest {
     public void testProcessAttackResolution_blockerReversed() throws WebSocketException, GameStateException {
         CardInstance attackCard = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(attackCard);
-        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower() + 1);
@@ -269,7 +260,6 @@ public class AttackServiceTest extends MindbugGameTest {
         attackCard.getKeywords().remove(CardKeyword.POISONOUS);
         attackCard.getKeywords().add(CardKeyword.REVERSED);
         currentPlayer.addCardToBoard(attackCard);
-        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower() - 1);
@@ -291,7 +281,6 @@ public class AttackServiceTest extends MindbugGameTest {
         attackCard.setStillTough(false);
         attackCard.getKeywords().remove(CardKeyword.POISONOUS);
         currentPlayer.addCardToBoard(attackCard);
-        game.setAttackingCard(attackCard);
 
         CardInstance defendingCard = opponent.getHand().getFirst();
         defendingCard.setPower(attackCard.getPower());

@@ -13,11 +13,14 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -55,13 +58,14 @@ public class HunterChoiceTest extends MindbugGameTest {
 
         opponentCard2 = opponent.getHand().getFirst();
         opponent.addCardToBoard(opponentCard2);
-
-        game.setAttackingCard(currentCard);
     }
 
     @Test
     public void testResolve_ignoreHunter() throws GameStateException, WebSocketException {
-        HunterChoice choice = new HunterChoice(currentCard, new HashSet<>(opponent.getBoard()));
+        Map<Player, List<CardInstance>> blockersMap = new HashMap<>();
+        blockersMap.put(opponent, Arrays.asList(opponentCard, opponentCard2));
+
+        HunterChoice choice = new HunterChoice(currentCard, new HashSet<>(opponent.getBoard()), blockersMap);
         game.setChoice(choice);
 
         choice.resolve(null, game);
@@ -69,13 +73,17 @@ public class HunterChoiceTest extends MindbugGameTest {
         assertTrue(currentPlayer.getBoard().contains(currentCard));
         assertTrue(opponent.getBoard().contains(opponentCard));
         assertTrue(opponent.getBoard().contains(opponentCard2));
-        assertNull(game.getChoice());
-        assertNotNull(game.getAttackingCard());
+
+        BlockChoice blockChoice = assertInstanceOf(BlockChoice.class, game.getChoice());
+        assertEquals(currentCard, blockChoice.getAttackingCard());
+        assertEquals(1, blockChoice.getBlockersMap().size());
+        assertTrue(blockChoice.getBlockersMap().get(opponent).contains(opponentCard));
+        assertTrue(blockChoice.getBlockersMap().get(opponent).contains(opponentCard2));
     }
 
     @Test
     public void testResolve_nominal() throws GameStateException, WebSocketException {
-        HunterChoice choice = new HunterChoice(currentCard, new HashSet<>(opponent.getBoard()));
+        HunterChoice choice = new HunterChoice(currentCard, new HashSet<>(opponent.getBoard()), new HashMap<>());
         game.setChoice(choice);
 
         choice.resolve(opponentCard.getUuid(), game);
@@ -84,7 +92,6 @@ public class HunterChoiceTest extends MindbugGameTest {
         assertTrue(opponent.getDiscardPile().contains(opponentCard));
         assertTrue(opponent.getBoard().contains(opponentCard2));
         assertNull(game.getChoice());
-        assertNull(game.getAttackingCard());
         assertEquals(game.getCurrentPlayer(), opponent);
     }
 }

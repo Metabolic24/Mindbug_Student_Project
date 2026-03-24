@@ -24,7 +24,6 @@ public class WsPlayerGameState {
     private UUID currentPlayerID;
     private Set<UUID> winners;
 
-    private CardDTO card;
     private AbstractChoiceDTO choice;
     private boolean forcedAttack;
 
@@ -41,7 +40,6 @@ public class WsPlayerGameState {
         this.currentPlayerID = gameState.getCurrentPlayerID();
         this.winners = gameState.getWinners();
 
-        this.card = gameState.getCard();
         this.choice = gameState.getChoice();
         this.forcedAttack = gameState.isForcedAttack();
 

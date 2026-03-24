@@ -22,6 +22,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -144,7 +145,7 @@ public class HistoryServiceTest extends MindbugGameTest {
     @Test
     public void logChoice_hunter() {
         sourceCard.setOwner(game.getOpponents().getFirst());
-        game.setChoice(new HunterChoice(sourceCard, new HashSet<>(targets)));
+        game.setChoice(new HunterChoice(sourceCard, new HashSet<>(targets), new HashMap<>()));
 
         HistoryService.logChoice(game);
         assertEquals(2, game.getHistory().size());

@@ -6,6 +6,7 @@ import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
+import org.metacorp.mindbug.model.choice.BlockChoice;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -14,8 +15,11 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -37,9 +41,6 @@ public class AttackService {
         } else if (!attackCard.isAbleToAttack()) {
             throw new GameStateException("attacking card should not be able to attack",
                     Map.of("attackCard", attackCard));
-        } else if (game.getAttackingCard() != null) {
-            throw new GameStateException("an attack needs to be resolved before attacking",
-                    Map.of("attackingCard", game.getAttackingCard()));
         } else if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before attacking",
                     Map.of("choice", game.getChoice()));
@@ -61,7 +62,6 @@ public class AttackService {
      * @param game       the game state
      */
     protected static void processAttackDeclaration(CardInstance attackCard, Game game) {
-        game.setAttackingCard(attackCard);
         final Player attackCardOwner = attackCard.getOwner();
 
         // Add ATTACK effects if the player is allowed to trigger it
@@ -70,22 +70,33 @@ public class AttackService {
         game.setAfterEffect(() -> {
             try {
                 if (attackCardOwner.getBoard().contains(attackCard)) {
-                    Player defender = attackCardOwner.getOpponents(game.getPlayers()).getFirst(); //TODO To be changed for 2v2
-                    if (defender.getBoard().isEmpty()) {
-                        resolveAttack(null, game);
-                    } else if (game.getForcedTarget() != null) {
-                        resolveAttack(game.getForcedTarget(), game);
-                    } else if (attackCard.hasKeyword(CardKeyword.HUNTER)) {
-                        game.setChoice(new HunterChoice(attackCard, new HashSet<>(defender.getBoard())));
-                        WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
-                    } else if (!defender.canBlock(attackCard.hasKeyword(CardKeyword.SNEAKY))) {
-                        resolveAttack(null, game);
+                    if (game.getForcedTarget() != null) {
+                        resolveAttack(attackCard, game.getForcedTarget(), game);
                     } else {
-                        WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);
+                        List<CardInstance> enemyCards = new ArrayList<>();
+                        Map<Player, List<CardInstance>> availableBlockersMap = new HashMap<>();
+                        boolean isSneakyAttack = attackCard.hasKeyword(CardKeyword.SNEAKY);
+
+                        for (Player defender : attackCardOwner.getOpponents(game.getPlayers())) {
+                            enemyCards.addAll(defender.getBoard());
+
+                            List<CardInstance> blockers = defender.getAvailableBlockers(isSneakyAttack);
+                            if (!blockers.isEmpty()) {
+                                availableBlockersMap.put(defender, blockers);
+                            }
+                        }
+
+                        if (attackCard.hasKeyword(CardKeyword.HUNTER) && !enemyCards.isEmpty()) {
+                            game.setChoice(new HunterChoice(attackCard, new HashSet<>(enemyCards), availableBlockersMap));
+                            WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+                        } else if (availableBlockersMap.isEmpty()) {
+                            resolveAttack(attackCard, null, game);
+                        } else {
+                            game.setChoice(new BlockChoice(attackCard, getAvailableBlockers(attackCardOwner, availableBlockersMap, game), availableBlockersMap));
+                            WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);
+                        }
                     }
                 } else {
-                    game.setAttackingCard(null);
-
                     GameStateService.newTurn(game);
                 }
             } catch (GameStateException | WebSocketException e) {
@@ -93,6 +104,29 @@ public class AttackService {
                 throw e;
             }
         });
+    }
+
+    /**
+     * @param game the current game state
+     * @return the list of player that can mindbug a card played by the current player
+     */
+    public static List<Player> getAvailableBlockers(Player attackingPlayer, Map<Player, List<CardInstance>> availableBlockersMap, Game game) {
+        List<Player> availableBlockers = new ArrayList<>();
+        List<Player> players = game.getPlayers();
+        int currentPlayerIndex = players.indexOf(attackingPlayer);
+        int playersCount = players.size();
+        int currentIndex = (currentPlayerIndex + 1) % playersCount;
+
+        while (currentIndex != currentPlayerIndex) {
+            Player currentPlayer = players.get(currentIndex);
+            if (availableBlockersMap.containsKey(currentPlayer)) {
+                availableBlockers.add(currentPlayer);
+            }
+
+            currentIndex = (currentIndex + 1) % playersCount;
+        }
+
+        return availableBlockers;
     }
 
     /**
@@ -105,8 +139,7 @@ public class AttackService {
      * @throws GameStateException if an error occurred while resolving the attack
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
-    public static void resolveAttack(CardInstance defendingCard, Game game) throws GameStateException, WebSocketException {
-        CardInstance attackingCard = game.getAttackingCard();
+    public static void resolveAttack(CardInstance attackingCard, CardInstance defendingCard, Game game) throws GameStateException, WebSocketException {
         if (attackingCard == null) {
             throw new GameStateException("no attacking card set in game state");
         } else if (defendingCard != null) {
@@ -119,7 +152,7 @@ public class AttackService {
             } else if (attackingCard.hasKeyword(CardKeyword.SNEAKY) && !defendingCard.hasKeyword(CardKeyword.SNEAKY)
                     && !attackingCard.hasKeyword(CardKeyword.HUNTER)) {
                 throw new GameStateException("defending card cannot defend a SNEAKY attack",
-                        Map.of("attackingCard", game.getAttackingCard(), "defendingCard", defendingCard));
+                        Map.of("attackingCard", attackingCard, "defendingCard", defendingCard));
             } else if (game.getForcedTarget() != null && !game.getForcedTarget().equals(defendingCard)) {
                 throw new GameStateException("invalid defending card : only one target allowed",
                         Map.of("defendingCard", defendingCard, "forcedTarget", game.getForcedTarget()));
@@ -148,7 +181,7 @@ public class AttackService {
         HistoryService.log(game, HistoryKey.BLOCK, attackCard, defendCard == null ? null : Collections.singleton(defendCard));
 
         if (defendCard == null) {
-            Player defender = attackCard.getOwner().getOpponents(game.getPlayers()).getFirst(); //TODO To be changed for 2v2
+            Player defender = attackCard.getOwner().getOpponents(game.getPlayers()).getFirst();
             defender.getTeam().loseLifePoints(1);
             GameStateService.lifePointLost(defender, game);
         } else {
@@ -175,19 +208,17 @@ public class AttackService {
             GameStateService.refreshGameState(game);
 
             game.setAfterEffect(() -> {
-                CardInstance attackingCard = game.getAttackingCard();
-                if (attackingCard.getOwner().getBoard().contains(attackingCard) && attackingCard.isAbleToAttackTwice()
-                        && attackingCard.isAbleToAttack()) {
-                    game.setChoice(new FrenzyAttackChoice(attackingCard));
+                if (attackCard.getOwner().getBoard().contains(attackCard) && attackCard.isAbleToAttackTwice()
+                        && attackCard.isAbleToAttack()) {
+                    game.setChoice(new FrenzyAttackChoice(attackCard));
 
                     WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
                     HistoryService.logChoice(game);
                 } else {
-                    attackingCard.setAbleToAttackTwice(attackingCard.hasKeyword(CardKeyword.FRENZY));
+                    attackCard.setAbleToAttackTwice(attackCard.hasKeyword(CardKeyword.FRENZY));
                     GameStateService.newTurn(game);
                 }
 
-                game.setAttackingCard(null);
                 game.setForcedTarget(null);
                 game.setForcedAttack(false);
             });
