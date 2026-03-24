@@ -5,6 +5,9 @@ import org.metacorp.mindbug.model.ai.AiPlayerTurnAction;
 import org.metacorp.mindbug.model.ai.TurnActionType;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
+import org.metacorp.mindbug.model.choice.BlockChoice;
+import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
+import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.choice.MindbugChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
@@ -61,7 +64,7 @@ public class BasicAiResolver extends RandomAiResolver {
 
     @Override
     public CardInstance chooseBlocker(List<CardInstance> availableBlockers, Game game) {
-        CardInstance attackingCard = game.getAttackingCard();
+        CardInstance attackingCard = ((BlockChoice) game.getChoice()).getAttackingCard();
         List<CardInstance> higherCards = CardUtils.getCardsWithHigherOrEqualPower(availableBlockers, attackingCard.getPower());
 
         // Never lose life points from an attack if possible
@@ -86,7 +89,7 @@ public class BasicAiResolver extends RandomAiResolver {
 
     @Override
     public CardInstance chooseHunterTarget(Game game) {
-        CardInstance attackingCard = game.getAttackingCard();
+        CardInstance attackingCard = ((HunterChoice) game.getChoice()).getAttackingCard();
 
         List<CardInstance> lowerCards = CardUtils.getCardsWithLowerOrEqualPower(CardUtils.getOpponentCards(attackingCard.getOwner(), game), attackingCard.getPower());
 
@@ -96,8 +99,7 @@ public class BasicAiResolver extends RandomAiResolver {
 
     @Override
     public boolean shouldAttackAgain(Game game) {
-        CardInstance attackingCard = game.getAttackingCard();
-
+        CardInstance attackingCard = ((FrenzyAttackChoice) game.getChoice()).getAttackingCard();
 
         return CardUtils.noPowerHigher(CardUtils.getOpponentCards(attackingCard.getOwner(), game), attackingCard.getPower());
     }

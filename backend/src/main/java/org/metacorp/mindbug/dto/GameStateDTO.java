@@ -31,11 +31,6 @@ public class GameStateDTO {
 
     private Set<UUID> winners;
 
-    /**
-     * The picked or attacking card if any
-     */
-    private CardDTO card; // This field may be null
-
     private AbstractChoiceDTO choice; // This field may be null
 
     private boolean forcedAttack;

@@ -7,6 +7,7 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.BlockChoice;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.MindbugChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -18,6 +19,7 @@ import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -152,7 +154,7 @@ public class PlayCardServiceTest extends MindbugGameTest {
     public void testPickCard_attackingCard() throws WebSocketException {
         CardInstance card = currentPlayer.getHand().getFirst();
         currentPlayer.addCardToBoard(card);
-        game.setAttackingCard(card);
+        game.setChoice(new BlockChoice(card, Collections.singletonList(currentPlayer), new HashMap<>()));
 
         CardInstance otherCard = currentPlayer.getHand().getFirst();
 
@@ -160,8 +162,8 @@ public class PlayCardServiceTest extends MindbugGameTest {
             PlayCardService.pickCard(otherCard, game);
             fail("An exception should have been thrown");
         } catch (GameStateException e) {
-            assertEquals("Inconsistent game state: an attack needs to be resolved before picking a new card", e.getMessage());
-            assertEquals(e.getAdditionalData().get("attackingCard"), card);
+            assertEquals("Inconsistent game state: a choice needs to be resolved before picking a new card", e.getMessage());
+            assertEquals(e.getAdditionalData().get("choice"), game.getChoice());
         }
     }
 }

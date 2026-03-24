@@ -12,6 +12,7 @@ import org.metacorp.mindbug.dto.choice.TargetChoiceDTO;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.AbstractChoice;
+import org.metacorp.mindbug.model.choice.BlockChoice;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
@@ -37,12 +38,6 @@ public class GameStateMapper {
         gameStateDTO.setCurrentPlayerID(currentPlayer.getUuid());
         gameStateDTO.setPlayers(fromPlayers(game.getPlayers()));
         gameStateDTO.setForcedAttack(game.isForcedAttack());
-
-        // Update the card field if needed
-        CardInstance attackingCard = game.getAttackingCard();
-        if (attackingCard != null) {
-            gameStateDTO.setCard(fromCard(attackingCard));
-        }
 
         // Update the choice field if needed
         if (game.getChoice() != null) {
@@ -130,6 +125,11 @@ public class GameStateMapper {
                 MindbugChoice mindbugChoice = (MindbugChoice) choice;
                 result = new ChoiceDTO(mindbugChoice.getType(), mindbugChoice.getPlayerToChoose().getUuid(),
                         fromCard(mindbugChoice.getPlayedCard()));
+            }
+            case BLOCK -> {
+                BlockChoice blockChoice = (BlockChoice) choice;
+                result = new ChoiceDTO(blockChoice.getType(), blockChoice.getPlayerToChoose().getUuid(),
+                        fromCard(blockChoice.getAttackingCard()));
             }
             default -> {
                 // Should never happen

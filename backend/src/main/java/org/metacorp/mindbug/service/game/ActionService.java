@@ -27,11 +27,8 @@ public class ActionService {
      */
     public static void resolveAction(CardInstance card, Game game) throws GameStateException, WebSocketException {
         if (game.getChoice() != null) {
-            throw new GameStateException("a choice needs to be resolved before picking a new card",
+            throw new GameStateException("a choice needs to be resolved before using a card action",
                     Map.of("choice", game.getChoice()));
-        } else if (game.getAttackingCard() != null) {
-            throw new GameStateException("an attack needs to be resolved before picking a new card",
-                    Map.of("attackingCard", game.getAttackingCard()));
         }
 
         if (card.getEffects(EffectTiming.ACTION).isEmpty()) {

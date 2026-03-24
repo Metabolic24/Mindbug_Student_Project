@@ -31,7 +31,7 @@ public class ChoiceService {
         AbstractChoice<?> choice = game.getChoice();
         if (choice == null) {
             throw new GameStateException("no choice to be resolved", Map.of("data", data));
-        } else if (data == null && choice.getType() != ChoiceType.HUNTER) {
+        } else if (data == null && choice.getType() != ChoiceType.HUNTER && choice.getType() != ChoiceType.BLOCK) {
             throw new GameStateException("invalid data for choice resolution", Map.of("choice", choice));
         }
 
