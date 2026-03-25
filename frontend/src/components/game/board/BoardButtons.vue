@@ -127,20 +127,17 @@ const secondButtonData: ComputedRef<ButtonData> = computed(() => {
 
 <style scoped>
 .buttons {
-  height: 100%;
-  width: 100%;
-
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   gap: 1vh;
 
   button {
     width: 15vw;
     padding: 1vw;
 
-    font-size: 5vh;
+    font-size: clamp(16px, 2.8vh, 40px);
     background-color: rgba(250, 250, 250, 0.8);
 
     border-radius: 10px;

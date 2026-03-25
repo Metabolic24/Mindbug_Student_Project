@@ -177,17 +177,19 @@ const activationFromDescription = computed(() => {
 
 const activationData = computed(() => {
   const items: { name?: string; activation: string; descriptionHtml: string }[] = []
+  const stripLeadingPunctuation = (value: string): string =>
+    value.replace(/^[\s:–—-]+/, "").trim()
   if (activationFromDescription.value) {
     items.push({
       name: getActivationName(activationFromDescription.value.name),
       activation: activationFromDescription.value.activation,
-      descriptionHtml: highlightKeywords(activationFromDescription.value.description)
+      descriptionHtml: highlightKeywords(stripLeadingPunctuation(activationFromDescription.value.description))
     })
   } else if (descriptionText.value && !isFlavorText.value) {
     items.push({
       name: getActivationName("PASSIVE"),
       activation: getActivationLabel("PASSIVE"),
-      descriptionHtml: highlightKeywords(descriptionText.value)
+      descriptionHtml: highlightKeywords(stripLeadingPunctuation(descriptionText.value))
     })
   }
   return { items, descriptionAttached: items.length > 0 }
@@ -307,8 +309,6 @@ watch(() => props.card?.id, loadCardDetails)
 <style scoped>
 .preview-container {
   position: relative;
-  margin: 0;
-
 
   display: flex;
   align-items: center;
@@ -465,17 +465,6 @@ watch(() => props.card?.id, loadCardDetails)
 
 .activation-description :deep(.keyword-highlight[data-key="TOUGH"])::before {
   background-image: url("@/assets/cards/KeywordIcons/TOUGH.png");
-}
-
-.effect-blocks {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.effect-title,
-.effect-description {
-  display: none;
 }
 
 .close-button {

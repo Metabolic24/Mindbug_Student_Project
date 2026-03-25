@@ -8,9 +8,12 @@ const { t } = useI18n();
 // Declare the interface for the data given by the parent component
 interface Props {
   cards: CardInterface[]
+  titlePosition?: 'top' | 'bottom'
 }
 
 const props = defineProps<Props>()
+
+const isTitleBottom = computed(() => props.titlePosition === 'bottom')
 
 // Declare events emitted by this component
 const emit = defineEmits(['clicked'])
@@ -30,7 +33,7 @@ const lastCard = computed(() => {
 </script>
 
 <template>
-  <div class="discard-wrapper">
+  <div class="discard-wrapper" :class="{ 'title-bottom': isTitleBottom }">
     <!-- Title above pile -->
     <div class="discard-title">{{ t('game.discard_pile') }}</div>
 
@@ -50,6 +53,11 @@ const lastCard = computed(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 6px;
+}
+
+.discard-wrapper.title-bottom {
+  flex-direction: column-reverse;
 }
 
 /* Title above the pile */
@@ -79,7 +87,6 @@ const lastCard = computed(() => {
 /* Empty state style */
 .discard-container.empty {
   border: 2px dashed rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.247);
 }
 
 /* Counter badge */
