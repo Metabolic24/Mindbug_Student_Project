@@ -68,7 +68,8 @@ function closeModal() {
   <div class="row board">
     <div class="col-2 discards">
       <discard-pile :cards="gameState?.opponent.discard" @clicked="displayDiscardModal(true)"></discard-pile>
-      <discard-pile :cards="gameState?.player.discard" @clicked="displayDiscardModal(false)"></discard-pile>
+      <discard-pile :cards="gameState?.player.discard" title-position="bottom"
+                    @clicked="displayDiscardModal(false)"></discard-pile>
     </div>
     <div class="col-8">
       <div class="cards">
@@ -104,7 +105,7 @@ function closeModal() {
         />
       </div>
     </div>
-    <div class="col-2">
+    <div class="col-2 board-buttons-col">
       <board-buttons :game-state="gameState" :picked-card="pickedCard" :attacking-card="attackingCard"
                      :selected-card="selectedCard" @button-clicked="emit('button-clicked', $event)"></board-buttons>
     </div>
@@ -116,7 +117,9 @@ function closeModal() {
 <style scoped>
 .board {
   width: 100%;
-  height: 70vh;
+  height: 100%;
+  min-height: 0;
+  position: relative;
 }
 
 .col-2 {
@@ -124,20 +127,54 @@ function closeModal() {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .discards {
-  justify-content: space-around;
+  position: absolute;
+  left: 16px;
+  top: 52%;
+  transform: translateY(-50%);
+  z-index: 3;
+  justify-content: center;
+  gap: 15vh;
+  padding: 0;
+}
+
+.board-buttons-col {
+  position: absolute;
+  right: 20px;
+  bottom: -210px;
+  z-index: 3;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 0;
+  padding-bottom: 0;
 }
 
 .cards {
   width: 100%;
-  height: 40%;
+  height: 35%;
 
   display: flex;
-  column-gap: 20px;
+  column-gap: 5px;
   align-items: center;
   justify-content: center;
+}
+
+.board .col-8 {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 </style>

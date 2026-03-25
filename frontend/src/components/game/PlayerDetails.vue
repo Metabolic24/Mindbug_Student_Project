@@ -9,6 +9,7 @@ interface Props {
   lifePoints: number
   mindbugCount: number
   drawPileCount: number
+  isActive?: boolean
 }
 
 defineProps<Props>()
@@ -25,7 +26,7 @@ function getAvatar(name: string = "default") {
   <div class="playerContainer">
     <div class="playerDetails">
       <div class="playerProfile">
-        <img class="playerAvatar" :src="getAvatar()" :alt="t('game.player.avatar_placeholder')" draggable="false">
+        <img class="playerAvatar" :class="{ 'playerAvatar--active': isActive }" :src="getAvatar()" :alt="t('game.player.avatar_placeholder')" draggable="false">
         <span class="playerName">{{ name }}</span>
       </div>
 
@@ -76,7 +77,7 @@ img {
 .playerContainer {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .playerDetails {
@@ -110,6 +111,21 @@ img {
   border-radius: 50%;
 }
 
+.playerAvatar--active {
+  border-color: #ffd34d;
+  box-shadow: 0 0 10px rgba(255, 211, 77, 0.9), 0 0 22px rgba(255, 211, 77, 0.6);
+  animation: avatarGlow 1.2s ease-in-out infinite;
+}
+
+@keyframes avatarGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255, 211, 77, 0.8), 0 0 18px rgba(255, 211, 77, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 14px rgba(255, 211, 77, 1), 0 0 28px rgba(255, 211, 77, 0.8);
+  }
+}
+
 .playerName {
   line-height: 2vh;
   font-size: 1.8vh;
@@ -120,12 +136,20 @@ img {
   margin-bottom: 0;
   overflow: hidden;
 
-  color: #000;
-  background-color: var(--color-background-soft);
+  color: #111;
+  background-color: rgba(255, 255, 255, 0.75);
   cursor: default;
 
-  border: 2px solid rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.6);
   border-radius: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .playerName {
+    color: #f3f4f6;
+    background-color: rgba(15, 23, 42, 0.7);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
 }
 
 .playerData {
@@ -216,28 +240,6 @@ img {
   color: white;
   font-size: 4vh;
   pointer-events: none;
-}
-
-.mbPoint {
-  color: black;
-}
-
-.drawPileCount {
-  display: flex;
-  align-items: center;
-
-  img {
-    width: 1vw;
-    height: 3vh;
-
-    margin-left: 0.3vw;
-  }
-
-  span {
-    margin-left: 0.35vw;
-
-    color: blue;
-  }
 }
 
 </style>

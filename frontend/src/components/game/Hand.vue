@@ -15,7 +15,7 @@ const emit = defineEmits(['card-selected', 'card-preview'])
 </script>
 
 <template>
-  <div class="hand">
+  <div class="hand" :class="{ 'hand--top': opponent, 'hand--bottom': !opponent }">
     <card
       v-for="card in cards"
       :key="card.uuid"
@@ -31,12 +31,22 @@ const emit = defineEmits(['card-selected', 'card-preview'])
 
 <style scoped>
 .hand {
-  height: 100%;
-  width: 100%;
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
 
   display: flex;
   justify-content: center;
   gap: 5px;
+}
+
+.hand--top {
+  transform: translateY(6px);
+}
+
+.hand--bottom {
+  transform: translateY(-6px);
 }
 
 .bottom-card {

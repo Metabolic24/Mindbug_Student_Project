@@ -123,8 +123,8 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 /* General card styling */
 .card-wrapper {
   position: relative;
-  width: 8vw;
-  height: 12vw;
+  width: 10vw;
+  height: 15vw;
 
   transition: transform 0.25s cubic-bezier(.2, .8, .2, 1),
   box-shadow 0.25s ease,
@@ -184,12 +184,6 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.card-wrapper.opponent-board,
-.card-wrapper.player-board {
-  transform: scale(1.1);
-  transform-origin: center top;
-}
-
 .card-wrapper.opponent-board:hover,
 .card-wrapper.player-board:hover {
   transform: scale(1.11);
@@ -199,16 +193,6 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 .card-wrapper.opponent-hand {
   transform: translateY(-50%);
   opacity: 0.95;
-}
-
-.card-wrapper.opponent-hand:hover {
-  transform: translateY(-50%) scale(1.1);
-  z-index: 5;
-}
-
-/* Hide power overlay for opponent's hand */
-.card-wrapper.opponent-hand.power-overlay {
-  display: none;
 }
 
 /* Selected and attacking card styling */
@@ -299,13 +283,6 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
   font-weight: bold;
 }
 
-/* Power change animation */
-.power-number {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-}
-
 .power-slide-leave-active,
 .power-slide-enter-active {
   transition: all 0.25s ease-out;
@@ -377,7 +354,7 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 }
 
 .description-text {
-  font-size: 0.65em;
+  font-size: 0.85em;
   line-height: 1.1;
   text-align: center;
 }

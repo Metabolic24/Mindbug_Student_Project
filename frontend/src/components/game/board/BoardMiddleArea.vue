@@ -50,6 +50,8 @@ const message = computed(() => {
   }
 })
 
+const isPlayerTurn = computed(() => props.gameState?.playerTurn)
+
 // Computed value that controls image visibility
 const isImageVisible = computed(() => {
   return !props.gameState?.winner &&
@@ -72,18 +74,34 @@ const imgSrc = computed(() => {
 
 <template>
   <div class="middle-area">
-    <card
-      v-if="isImageVisible"
-      :card="imgSrc"
-      context="board"
-      :selected="false"
-      :attacking="false"
-      :clickable="false"
-      class="middle-card"
-      @preview="emit('card-preview', $event)"
-    />
-
-    <span>{{ message ? t(message) : "" }}</span>
+    <span class="sr-only">{{ message ? t(message) : "" }}</span>
+    <div class="turn-indicator" :class="{ 'opponent-turn': !isPlayerTurn }" aria-live="polite">
+      <div class="turn-segment turn-segment--chevron" aria-hidden="true">
+        <svg class="turn-chevron" viewBox="0 0 20 20" focusable="false">
+          <path d="M4 7 L10 13 L16 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <div class="turn-segment turn-segment--label">
+        <span class="turn-label">{{ message ? t(message) : "" }}</span>
+      </div>
+      <div class="turn-segment turn-segment--chevron" aria-hidden="true">
+        <svg class="turn-chevron" viewBox="0 0 20 20" focusable="false">
+          <path d="M4 7 L10 13 L16 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+    <div class="turn-segment--card-slot" aria-hidden="true">
+     <card
+       v-if="isImageVisible"
+       :card="imgSrc"
+       context="board"
+       :selected="false"
+       :attacking="false"
+       :clickable="false"
+       class="middle-card"
+       @preview="emit('card-preview', $event)"
+      />
+    </div>
   </div>
 </template>
 
@@ -94,28 +112,100 @@ const imgSrc = computed(() => {
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
   }
 
-  span {
-    font-size: 4.5vh;
-    font-weight: bolder;
-    color: mediumvioletred;
+  .turn-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
 
-    background-color: rgba(197, 192, 192, 0.8);
+    width: clamp(320px, 70vw, 950px);
+    height: clamp(36px, 6vh, 56px);
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 2px solid #1d1d1d;
+    box-shadow: none !important;
+    outline: 0 !important;
+    filter: none !important;
+    overflow: visible;
     cursor: default;
+    padding: 0 8px;
 
-    padding: 5px 15px;
+  }
 
-    border-radius: 10px;
+  .turn-segment {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .turn-segment--chevron {
+    flex: 0 0 auto;
+    width: clamp(32px, 5vw, 55px);
+    background: transparent;
+  }
+
+  .turn-segment--label {
+    flex: 1 1 auto;
+    max-width: none;
+    padding: 0 24px;
+  }
+
+  .turn-segment--card-slot {
+    position: absolute;
+    right: -34px;
+    top: 48%;
+    transform: translateY(-50%);
+    overflow: visible;
+    min-width: calc(8.8vw + 16px);
+  }
+
+  .turn-segment--card-slot .middle-card {
+    width: calc(8vw * 1.52);
+    height: calc(12vw * 1.52);
+  }
+
+  .turn-label {
+    font-size: clamp(18px, 2.6vw, 32px);
+    font-weight: 700;
+    color: #1b1b1b;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+    flex: 1 1 auto;
+  }
+
+  .turn-chevron {
+    width: 34px;
+    height: 34px;
+    color: #1b1b1b;
+    display: block;
+    flex: 0 0 auto;
   }
 
   .middle-card {
-    width: 6vw;
-    height: 9vw;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 5vw;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
 </style>

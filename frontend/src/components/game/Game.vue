@@ -93,6 +93,26 @@ const isChoiceModalVisible = computed(() => {
       game.choice?.playerToChoose === game.player.uuid
 })
 
+const hasDefenseDecision = computed(() => {
+  return !!(pickedCard.value || attackingCard.value);
+})
+
+const isPlayerActive = computed(() => {
+  const game: GameStateInterface = gameState.value;
+  if (!game) return false;
+  if (game.choice) return game.choice.playerToChoose === game.player.uuid;
+  if (hasDefenseDecision.value) return !game.playerTurn;
+  return game.playerTurn;
+})
+
+const isOpponentActive = computed(() => {
+  const game: GameStateInterface = gameState.value;
+  if (!game) return false;
+  if (game.choice) return game.choice.playerToChoose === game.opponent.uuid;
+  if (hasDefenseDecision.value) return game.playerTurn;
+  return !game.playerTurn;
+})
+
 onMounted(async () => {
   // Initializes the game WebSocket to update game state
   try {
@@ -275,10 +295,11 @@ function closeCardPreview(): void {
 <template>
   <div v-if="gameState" class="container-fluid game">
     <div class="row top-row">
-      <div class="col-2 player-container">
+      <div class="col-2 player-container player-container--top">
         <player-details :name="gameState?.opponent?.name" :life-points="gameState?.opponent?.lifePoints"
                         :draw-pile-count="gameState?.opponent?.drawPileCount"
-                        :mindbug-count="gameState?.opponent?.mindbugCount">
+                        :mindbug-count="gameState?.opponent?.mindbugCount"
+                        :is-active="isOpponentActive">
         </player-details>
       </div>
       <div class="col-8">
@@ -314,17 +335,20 @@ function closeCardPreview(): void {
       </div>
     </div>
 
-    <board :game-state="gameState" :selected-card="selectedCard" :picked-card="pickedCard"
-           :attacking-card="attackingCard" @button-clicked="onActionButtonClick($event)"
-           @card-selected="onCardSelected($event, 'Board')"
-           @card-preview="onCardPreview">
-    </board>
+    <div class="board-wrapper">
+      <board :game-state="gameState" :selected-card="selectedCard" :picked-card="pickedCard"
+             :attacking-card="attackingCard" @button-clicked="onActionButtonClick($event)"
+             @card-selected="onCardSelected($event, 'Board')"
+             @card-preview="onCardPreview">
+      </board>
+    </div>
 
     <div class="row bottom-row">
-      <div class="col-2 player-container">
+      <div class="col-2 player-container player-container--bottom">
         <player-details :name="gameState?.player?.name" :life-points="gameState?.player?.lifePoints"
                         :draw-pile-count="gameState?.player?.drawPileCount"
-                        :mindbug-count="gameState?.player?.mindbugCount">
+                        :mindbug-count="gameState?.player?.mindbugCount"
+                        :is-active="isPlayerActive">
         </player-details>
       </div>
       <div class="col-8">
@@ -371,18 +395,30 @@ function closeCardPreview(): void {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+  height: 100vh;
+  position: relative;
 
   background-image: url("../../assets/playmats/default.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .top-row {
   width: 100%;
-  height: 10vh;
+  height: 14vh;
 
-  display: flex;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  column-gap: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 8px 0;
+  pointer-events: none;
+  z-index: 5;
 
   .player-container {
     align-items: start;
@@ -391,14 +427,61 @@ function closeCardPreview(): void {
 
 .bottom-row {
   width: 100%;
-  height: 20vh;
+  height: max(20vh, 12vw);
 
-  display: flex;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: end;
+  column-gap: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 8px 8px;
+  pointer-events: none;
+  z-index: 5;
 
   .player-container {
     align-items: end;
   }
+}
+
+.top-row .player-container,
+.top-row .top-buttons,
+.top-row .hand,
+.bottom-row .player-container,
+.bottom-row .hand {
+  pointer-events: auto;
+}
+
+.top-row > .col-2,
+.top-row > .col-8,
+.bottom-row > .col-2,
+.bottom-row > .col-8 {
+  width: auto;
+  max-width: none;
+}
+
+.top-row > .col-8,
+.bottom-row > .col-8 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.board-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  padding-top: 14vh;
+  padding-bottom: max(20vh, 12vw);
+  box-sizing: border-box;
 }
 
 .player-container {
@@ -406,8 +489,13 @@ function closeCardPreview(): void {
 }
 
 .top-buttons {
+  position: absolute;
+  top: 15px;
+  right: -10px;
   display: flex;
   justify-content: flex-end;
+  pointer-events: auto;
+  z-index: 6;
 }
 
 .settings-menu-backdrop {
@@ -466,8 +554,12 @@ function closeCardPreview(): void {
 }
 
 .settings-button {
-  width: 2vw;
-  height: 4vh;
+  width: 44px;
+  height: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   background-color: rgba(255, 255, 255, 0.5);
 
@@ -476,8 +568,8 @@ function closeCardPreview(): void {
   transition: background-color 0.3s, transform 0.2s;
 
   svg {
-    min-width: 16px;
-    min-height: 16px;
+    width: 20px;
+    height: 20px;
   }
 }
 
