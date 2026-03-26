@@ -4,7 +4,8 @@ import Card from "@/components/game/Card.vue";
 
 // Declare the interface for the data given by the parent component
 interface Props {
-  cards: CardInterface[]
+  cards: CardInterface[];
+  position?: "top" | "bottom"
 }
 
 const props = defineProps<Props>()
@@ -24,12 +25,17 @@ const lastCard = computed(() => {
       ? props.cards[props.cards.length - 1]
       : undefined
 })
+
+const titleClass = computed(() => ({
+  top: props.position === "top",
+  bottom: props.position === "bottom",
+}));
 </script>
 
 <template>
   <div class="discard-wrapper">
     <!-- Title above pile -->
-    <div class="discard-title">Discard Pile</div>
+    <div class="discard-title" :class="titleClass">Discard Pile</div>
 
     <div class="discard-container" :class="{ empty: !lastCard }" @click="onClick">
       <!-- Last card displayed -->
@@ -44,25 +50,38 @@ const lastCard = computed(() => {
 
 <style scoped>
 .discard-wrapper {
+  width: 100%;
+  height: 100%;
+
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 /* Title above the pile */
 .discard-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-weight: 700;
   font-size: 1.2rem;
   color: #1d1c1c;
+  white-space: nowrap;
+}
+
+.discard-title.top {
+  top: -25px;
+}
+
+.discard-title.bottom {
+  bottom: -25px;
 }
 
 /* Pile container */
 .discard-container {
   position: relative;
-  width: 8vw;
-  height: 11vw;
-  min-width: 60px;
-  min-height: 90px;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

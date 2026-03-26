@@ -3,9 +3,9 @@ import BoardTeam from "@/components/game/board/BoardTeam.vue";
 import Hand from "@/components/game/Hand.vue";
 import PlayerDetails from "@/components/game/PlayerDetails.vue";
 import TeamDetails from "@/components/game/TeamDetails.vue";
-import {Ref} from "vue";
-//import {CardInterface, SelectedCardInterface, GameStateInterface} from "@/components/game/Game.vue"; // ajuste selon tes types
-import {declareAttack, pickCard, playCard, resolveAction, resolveAttack, resolveBoolean, resolveMultipleTargetChoice, resolveSingleTargetChoice} from "@/shared/RestService";
+import { ref, Ref } from "vue";
+import DiscardModal from "@/components/game/board/DiscardModal.vue";
+import DiscardPile from "@/components/game/board/DiscardPile.vue";
 
 interface Props {
   gameState: GameStateInterface;
@@ -18,13 +18,31 @@ interface Props {
 
 const props = defineProps<Props>();
 const emit = defineEmits(['button-clicked']);
+
+const discardModalData: Ref<CardInterface[]> = ref([]);
+const isDiscardModalVisible: Ref<boolean> = ref(false);
+const discardType = ref<"enemy" | "ally" | "self">("self");
+const discardPlayerName = ref<string>("");
+
+function displayDiscardModal(cards: CardInterface[], type: "enemy" | "ally" | "self", playerName: string) {
+  discardModalData.value = cards;
+  discardType.value = type;
+  discardPlayerName.value = playerName;
+  isDiscardModalVisible.value = true;
+}
+
+function closeModal() {
+  isDiscardModalVisible.value = false;
+}
 </script>
 
 <template>
     <div class="container-fluid game">
         <!-- TOP ROW -->
         <div class="top-row">
-            <div class="discard top-left-discard">discard</div>
+            <div class="discard top-left-discard">
+              <discard-pile :cards="gameState?.opponents[0].discard" @clicked="displayDiscardModal(gameState?.opponents[0].discard, 'enemy',gameState.opponents[0].name)" position="bottom"/>
+            </div>
             <div class="hand top-hand-left">
               <hand :cards="props.gameState?.opponents[0].hand" visibility="enemy" :selected-card="props.selectedCard"></hand>
             </div>
@@ -45,7 +63,9 @@ const emit = defineEmits(['button-clicked']);
             <div class="hand top-hand-right">
               <hand :cards="props.gameState?.opponents[1].hand" visibility="enemy" :selected-card="props.selectedCard"></hand>
             </div>
-            <div class="discard top-right-discard">discard</div>
+            <div class="discard top-right-discard">
+              <discard-pile :cards="gameState?.opponents[1].discard" @clicked="displayDiscardModal(gameState?.opponents[1].discard, 'enemy',gameState.opponents[1].name)" position="bottom"/>
+            </div>
         </div>
 
         <!-- BOARD (MILIEU) -->
@@ -61,7 +81,9 @@ const emit = defineEmits(['button-clicked']);
         <!-- BOTTOM ROW -->
         <div class="bottom-row">
 
-            <div class="discard bottom-left-discard">discard</div>
+            <div class="discard bottom-left-discard">
+              <discard-pile :cards="gameState?.ally.discard" @clicked="displayDiscardModal(gameState?.ally.discard, 'ally', gameState.ally.name)" position="top"/>
+            </div>
             <div class="hand bottom-hand-left">
               <hand :cards="props.gameState.ally.hand" visibility="ally" :selected-card="props.selectedCard"></hand>
             </div>
@@ -84,10 +106,19 @@ const emit = defineEmits(['button-clicked']);
               <hand :cards="props.gameState?.player?.hand" visibility="self" :selected-card="props.selectedCard"
               @card-selected="props.onCardSelected($event, 'Hand')"></hand>
             </div>
-            <div class="discard bottom-right-discard">discard</div>
+            <div class="discard bottom-right-discard">
+              <discard-pile :cards="gameState?.player.discard" @clicked="displayDiscardModal(gameState?.player.discard, 'self', gameState.player.name)" position="top"/>
+            </div>
 
         </div>
     </div>
+    <discard-modal
+      v-if="isDiscardModalVisible"
+      :cards="discardModalData"
+      :type="discardType"
+      :playerName="discardPlayerName"
+      @closeModal="closeModal()"
+    />
 </template>
 
 <style scoped>
@@ -181,11 +212,12 @@ const emit = defineEmits(['button-clicked']);
 
   width: 8vw;
   height: 11vw;
-
-  background: rgba(255,255,0,0.25);
-  border: 2px solid yellow;
-
   z-index: 3;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .top-left-discard {

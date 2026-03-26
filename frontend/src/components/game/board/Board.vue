@@ -64,8 +64,8 @@ function closeModal() {
 <template>
   <div class="row board">
     <div class="col-2 discards">
-      <discard-pile :cards="gameState?.opponents[0].discard" @clicked="displayDiscardModal(true)"></discard-pile>
-      <discard-pile :cards="gameState?.player.discard" @clicked="displayDiscardModal(false)"></discard-pile>
+      <discard-pile :cards="gameState?.opponents[0].discard" @clicked="displayDiscardModal(true)" position="bottom"></discard-pile>
+      <discard-pile :cards="gameState?.player.discard" @clicked="displayDiscardModal(false)" position="top"></discard-pile>
     </div>
     <div class="col-8">
       <div class="cards">
