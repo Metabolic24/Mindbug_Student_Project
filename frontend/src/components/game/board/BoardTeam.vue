@@ -8,6 +8,23 @@ interface Props {
   onCardSelected: (card: CardInterface) => void
 }
 
+const emit = defineEmits(['button-clicked', 'card-selected'])
+
+function onCardSelected(card: CardInterface): void {
+  if ((props.gameState?.playerTurn && !props.attackingCard && card.ableToAttack) || // Attack case
+      (!props.gameState?.playerTurn && props.attackingCard && card.ableToBlock && // Block case
+          (props.attackingCard.keywords.includes("SNEAKY") && card.keywords.includes("SNEAKY") ||
+              !props.attackingCard.keywords.includes("SNEAKY")))) {
+    emit('card-selected', card)
+  }
+}
+
+function onOpponentCardSelected(card: CardInterface): void {
+  if (props.gameState?.playerTurn && props.gameState?.choice?.type === "HUNTER" && card.ownerId!=props.gameState?.ally.uuid) { // Hunter case
+    emit('card-selected', card)
+  }
+}
+
 const props = defineProps<Props>()
 </script>
 
@@ -26,7 +43,7 @@ const props = defineProps<Props>()
         :selected="card.uuid === props.selectedCard?.uuid"
         :attacking="card.uuid === props.attackingCard?.uuid"
         :clickable="true"
-        @click="props.onCardSelected(card)"
+        @click="onOpponentCardSelected"
       />
   </div>
 
@@ -40,7 +57,7 @@ const props = defineProps<Props>()
         :selected="card.uuid === props.selectedCard?.uuid"
         :attacking="card.uuid === props.attackingCard?.uuid"
         :clickable="true"
-        @click="props.onCardSelected(card)"
+        @click="onOpponentCardSelected"
       />
   </div>
 
@@ -54,7 +71,7 @@ const props = defineProps<Props>()
         :selected="card.uuid === props.selectedCard?.uuid"
         :attacking="card.uuid === props.attackingCard?.uuid"
         :clickable="true"
-        @click="props.onCardSelected(card)"
+        @click="onOpponentCardSelected"
       />
   </div>
 
@@ -68,7 +85,7 @@ const props = defineProps<Props>()
         :selected="card.uuid === props.selectedCard?.uuid"
         :attacking="card.uuid === props.attackingCard?.uuid"
         :clickable="true"
-        @click="props.onCardSelected(card)"
+        @click="onCardSelected"
       />
   </div>
 

@@ -57,7 +57,8 @@ function closeModal() {
               :game-state="gameState"
               :picked-card="pickedCard"
               :attacking-card="attackingCard"
-              :selected-card="selectedCard" @button-clicked="emit('button-clicked', $event)"
+              :selected-card="selectedCard" 
+              @button-clicked="props.onActionButtonClick($event)"
             />
 
             <div class="hand top-hand-right">
@@ -74,7 +75,7 @@ function closeModal() {
               :game-state="props.gameState"
               :selected-card="props.selectedCard"
               :attacking-card="props.attackingCard"
-              :on-card-selected="(card) => props.onCardSelected(card, 'Board')"
+              @card-selected="props.onCardSelected($event, 'Board')"
             />
         </div>
 
@@ -99,7 +100,7 @@ function closeModal() {
               :picked-card="pickedCard"
               :attacking-card="attackingCard"
               :selected-card="selectedCard"
-              @button-clicked="props.onActionButtonClick"
+              @button-clicked="props.onActionButtonClick($event)"
             />
 
             <div class="hand bottom-hand-right">
