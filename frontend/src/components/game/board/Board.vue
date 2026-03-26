@@ -43,14 +43,14 @@ function onCardPreview(card: CardInterface): void {
 
 const discardModalData: Ref<CardInterface[]> = ref([]);
 const isDiscardModalVisible: Ref<boolean> = ref(false);
-const isOpponentDiscard: Ref<boolean> = ref(false);
+const discardType = ref<"enemy" | "ally" | "self">("self");
+const discardPlayerName = ref<string>("");
 
-function displayDiscardModal(opponent: boolean) {
+function displayDiscardModal(cards: CardInterface[], type: "enemy" | "ally" | "self", playerName: string) {
+  discardModalData.value = cards;
+  discardType.value = type;
+  discardPlayerName.value = playerName;
   isDiscardModalVisible.value = true;
-  isOpponentDiscard.value = opponent;
-  discardModalData.value = opponent ?
-      props.gameState?.opponents[0].discard :
-      props.gameState?.player.discard;
 }
 
 // Triggered when the player wants to close the modal
@@ -62,8 +62,8 @@ function closeModal() {
 <template>
   <div class="row board">
     <div class="col-2 discards">
-      <discard-pile :cards="gameState?.opponents[0].discard" @clicked="displayDiscardModal(true)"></discard-pile>
-      <discard-pile :cards="gameState?.player.discard" @clicked="displayDiscardModal(false)"></discard-pile>
+      <discard-pile :cards="gameState?.opponents[0].discard" @clicked="displayDiscardModal(gameState?.opponents[0].discard, 'enemy' ,gameState.opponents[0].name)" position="bottom"></discard-pile>
+      <discard-pile :cards="gameState?.player.discard" @clicked="displayDiscardModal(gameState.player.discard, 'self' ,gameState.player.name)" position="top"></discard-pile>
     </div>
     <div class="col-8">
       <div class="cards">
@@ -106,13 +106,8 @@ function closeModal() {
                      :selected-card="selectedCard" @button-clicked="emit('button-clicked', $event)"></board-buttons>
     </div>
   </div>
-  <discard-modal
-    v-if="isDiscardModalVisible"
-    :cards="discardModalData"
-    :opponent="isOpponentDiscard"
-    @closeModal="closeModal()"
-    @card-preview="emit('card-preview', $event)"
-  ></discard-modal>
+  <discard-modal v-if="isDiscardModalVisible" :cards="discardModalData" :type="discardType" :playerName="discardPlayerName"
+                 @closeModal="closeModal()" @card-preview="emit('card-preview', $event)"></discard-modal>
 </template>
 
 <style scoped>

@@ -7,13 +7,12 @@ const { t } = useI18n();
 
 // Declare the interface for the data given by the parent component
 interface Props {
-  cards: CardInterface[]
-  titlePosition?: 'top' | 'bottom'
+  cards: CardInterface[];
+  position?: "top" | "bottom";
+  isTeam?: boolean
 }
 
 const props = defineProps<Props>()
-
-const isTitleBottom = computed(() => props.titlePosition === 'bottom')
 
 // Declare events emitted by this component
 const emit = defineEmits(['clicked'])
@@ -30,12 +29,17 @@ const lastCard = computed(() => {
       ? props.cards[props.cards.length - 1]
       : undefined
 })
+
+const titleClass = computed(() => ({
+  top: props.position === "top",
+  bottom: props.position === "bottom",
+}));
 </script>
 
 <template>
-  <div class="discard-wrapper" :class="{ 'title-bottom': isTitleBottom }">
+  <div class="discard-wrapper" :class="{ isTeam: props.isTeam }">
     <!-- Title above pile -->
-    <div class="discard-title">{{ t('game.discard_pile') }}</div>
+    <div class="discard-title" :class="titleClass">{{ t('game.discard_pile') }}</div>
 
     <div class="discard-container" :class="{ empty: !lastCard }" @click="onClick">
       <!-- Last card displayed -->
@@ -50,8 +54,12 @@ const lastCard = computed(() => {
 
 <style scoped>
 .discard-wrapper {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 6px;
 }
@@ -59,21 +67,62 @@ const lastCard = computed(() => {
 .discard-wrapper.title-bottom {
   flex-direction: column-reverse;
 }
+.discard-wrapper.isTeam {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  justify-content: center;
+}
 
 /* Title above the pile */
 .discard-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-weight: 700;
   font-size: 1.2rem;
   color: #1d1c1c;
+  white-space: nowrap;
+}
+
+.discard-title.top {
+  top: -80px;
+}
+
+.discard-title.bottom {
+  bottom: -80px;
+}
+
+.discard-wrapper.isTeam .discard-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1d1c1c;
+  white-space: nowrap;
+}
+
+.discard-wrapper.isTeam .discard-title.top {
+  top: -25px;
+}
+
+.discard-wrapper.isTeam .discard-title.bottom {
+  bottom: -25px;
 }
 
 /* Pile container */
 .discard-container {
   position: relative;
+<<<<<<< HEAD
   width: 10vw;
   height: 14vw;
   min-width: 60px;
   min-height: 90px;
+=======
+  width: 8vw;
+  height: 11vw;
+>>>>>>> 44e1e28 (Add discard on 2v2 + fix choice modal css)
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,6 +131,11 @@ const lastCard = computed(() => {
   border-radius: 10px;
   border: 2px solid rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.247);
+}
+
+.discard-wrapper.isTeam .discard-container {
+  width: 100%;
+  height: 100%;
 }
 
 /* Empty state style */

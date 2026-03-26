@@ -70,6 +70,7 @@ function onCardPreview(card: CardInterface): void {
               :key="card.uuid"
               :card="card"
               context="choice-modal"
+              visibility="self"
               :selected="selectedCards.includes(card)"
               :clickable="true"
               @click="onCardSelected"
@@ -115,7 +116,20 @@ function onCardPreview(card: CardInterface): void {
   background-color: #f4f7fb;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-height: 400px;
-  overflow-y: auto; 
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+.card-image {
+  position: relative;
+  margin: 15px;
+  height: 350px;
+
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-image.selected {
+  outline: 4px solid red;
 }
 </style>

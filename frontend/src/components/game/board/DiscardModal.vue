@@ -10,7 +10,8 @@ const { t } = useI18n();
 // Declare the interface for the data given by the parent component
 interface Props {
   cards: CardInterface[];
-  opponent: boolean;
+  playerName: string;
+  type: "enemy" | "ally" | "self";
 }
 
 const props = defineProps<Props>()
@@ -31,9 +32,17 @@ const carouselConfig = {
 
 // Computed value for the modal title
 const title = computed(() => {
-  const suffix = props.opponent ? 'opponent_title' : 'self_title'
-  return 'modal.game.discard.' + suffix
-})
+  switch (props.type) {
+    case "enemy":
+      return `Défausse de l'adversaire (${props.playerName})`;
+    case "ally":
+      return `Défausse de votre allié (${props.playerName})`;
+    case "self":
+      return `Votre défausse (${props.playerName})`;
+    default:
+      return `Défausse (${props.playerName})`;
+  }
+});
 </script>
 
 <template>
