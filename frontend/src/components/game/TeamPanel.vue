@@ -41,7 +41,7 @@ function closeModal() {
         <!-- TOP ROW -->
         <div class="top-row">
             <div class="discard top-left-discard">
-              <discard-pile :cards="gameState?.opponents[0].discard" @clicked="displayDiscardModal(gameState?.opponents[0].discard, 'enemy',gameState.opponents[0].name)" position="bottom"/>
+              <discard-pile :cards="gameState?.opponents[0].discard" @clicked="displayDiscardModal(gameState?.opponents[0].discard, 'enemy',gameState.opponents[0].name)" position="bottom" isTeam/>
             </div>
             <div class="hand top-hand-left">
               <hand :cards="props.gameState?.opponents[0].hand" visibility="enemy" :selected-card="props.selectedCard"></hand>
@@ -65,7 +65,7 @@ function closeModal() {
               <hand :cards="props.gameState?.opponents[1].hand" visibility="enemy" :selected-card="props.selectedCard"></hand>
             </div>
             <div class="discard top-right-discard">
-              <discard-pile :cards="gameState?.opponents[1].discard" @clicked="displayDiscardModal(gameState?.opponents[1].discard, 'enemy',gameState.opponents[1].name)" position="bottom"/>
+              <discard-pile :cards="gameState?.opponents[1].discard" @clicked="displayDiscardModal(gameState?.opponents[1].discard, 'enemy',gameState.opponents[1].name)" position="bottom" isTeam/>
             </div>
         </div>
 
@@ -83,7 +83,7 @@ function closeModal() {
         <div class="bottom-row">
 
             <div class="discard bottom-left-discard">
-              <discard-pile :cards="gameState?.ally.discard" @clicked="displayDiscardModal(gameState?.ally.discard, 'ally', gameState.ally.name)" position="top"/>
+              <discard-pile :cards="gameState?.ally.discard" @clicked="displayDiscardModal(gameState?.ally.discard, 'ally', gameState.ally.name)" position="top" isTeam/>
             </div>
             <div class="hand bottom-hand-left">
               <hand :cards="props.gameState.ally.hand" visibility="ally" :selected-card="props.selectedCard"></hand>
@@ -108,7 +108,7 @@ function closeModal() {
               @card-selected="props.onCardSelected($event, 'Hand')"></hand>
             </div>
             <div class="discard bottom-right-discard">
-              <discard-pile :cards="gameState?.player.discard" @clicked="displayDiscardModal(gameState?.player.discard, 'self', gameState.player.name)" position="top"/>
+              <discard-pile :cards="gameState?.player.discard" @clicked="displayDiscardModal(gameState?.player.discard, 'self', gameState.player.name)" position="top" isTeam/>
             </div>
 
         </div>

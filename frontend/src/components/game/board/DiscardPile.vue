@@ -5,7 +5,8 @@ import Card from "@/components/game/Card.vue";
 // Declare the interface for the data given by the parent component
 interface Props {
   cards: CardInterface[];
-  position?: "top" | "bottom"
+  position?: "top" | "bottom";
+  isTeam?: boolean
 }
 
 const props = defineProps<Props>()
@@ -33,7 +34,7 @@ const titleClass = computed(() => ({
 </script>
 
 <template>
-  <div class="discard-wrapper">
+  <div class="discard-wrapper" :class="{ isTeam: props.isTeam }">
     <!-- Title above pile -->
     <div class="discard-title" :class="titleClass">Discard Pile</div>
 
@@ -57,6 +58,12 @@ const titleClass = computed(() => ({
   justify-content: center;
   align-items: center;
 }
+.discard-wrapper.isTeam {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  justify-content: center;
+}
 
 /* Title above the pile */
 .discard-title {
@@ -77,6 +84,24 @@ const titleClass = computed(() => ({
   bottom: -25px;
 }
 
+.discard-wrapper.isTeam .discard-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1d1c1c;
+  white-space: nowrap;
+}
+
+.discard-wrapper.isTeam .discard-title.top {
+  top: -25px;
+}
+
+.discard-wrapper.isTeam .discard-title.bottom {
+  bottom: -25px;
+}
+
 /* Pile container */
 .discard-container {
   position: relative;
@@ -90,6 +115,11 @@ const titleClass = computed(() => ({
   border-radius: 10px;
   border: 2px solid rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.247);
+}
+
+.discard-wrapper.isTeam .discard-container {
+  width: 100%;
+  height: 100%;
 }
 
 /* Empty state style */
