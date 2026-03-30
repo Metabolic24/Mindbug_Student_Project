@@ -15,8 +15,8 @@
         <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <grizzly.version>4.0.2</grizzly.version>
-        <jersey.version>4.0.2</jersey.version>
+        <grizzly.version>5.0.0</grizzly.version>
+        <jersey.version>5.0.0-M1</jersey.version>
         <slf4j.version>2.0.17</slf4j.version>
 
         <main.class>org.metacorp.mindbug.app.RestApp</main.class>
