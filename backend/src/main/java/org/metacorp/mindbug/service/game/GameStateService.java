@@ -52,8 +52,8 @@ public class GameStateService {
         }
 
         // Sort effects by priority
-
         passiveEffects.sort(Comparator.comparingInt(effect -> ((GenericEffect) effect.getEffects().getFirst()).getPriority()));
+
         // Apply effects
         for (EffectsToApply effect : passiveEffects) {
             EffectResolver.getResolver(effect.getEffects().getFirst(), effect.getCard()).apply(game, effect.getTiming());

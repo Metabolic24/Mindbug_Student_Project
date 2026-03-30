@@ -48,7 +48,7 @@ public class Card {
         this.keywords = new HashSet<>(otherCard.keywords);
         this.effects = new HashMap<>(otherCard.effects);
         this.initialCardId = otherCard.initialCardId;
-
-        this.unique = true; // By default, we set it to true
+        this.setName = otherCard.setName;
+        this.unique = otherCard.unique;
     }
 }
