@@ -149,7 +149,11 @@ public class CardSetService {
         // Transform the List of Card into a List of CardInstance
         List<CardInstance> cardInstances = new ArrayList<>();
         for (Card card : setCards) {
-            cardInstances.add(new CardInstance(card));
+            // Duplicate the card to avoid unexpected behavior due to shared card objects
+            Card copyCard = new Card(card);
+            copyCard.setSetName(cardSetName);
+
+            cardInstances.add(new CardInstance(copyCard));
 
             if (!card.isUnique()) {
                 cardInstances.add(new CardInstance(card));
@@ -178,6 +182,7 @@ public class CardSetService {
                     // Copy the card for the current set and update the cards set map
                     card = new Card(card);
                     card.setSetName(cardSetName);
+                    card.setUnique(true); // Set unique to true by default (may be overridden later)
                     cardsSet.put(cardId, card);
                 }
             } else if (card.isUnique()) {
