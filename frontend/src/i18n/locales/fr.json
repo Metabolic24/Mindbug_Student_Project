@@ -81,7 +81,7 @@
     "game": {
       "leave_tooltip": "Fermer",
       "choice": {
-        "target_title": "Choisissez ${targets_count} cible(s) parmi ces cartes",
+        "target_title": "Choisissez {targets_count} cible(s) parmi ces cartes",
         "simultaneous_title": "Choisissez l'effet à résoudre en premier",
         "save": "Valider le choix"
       },

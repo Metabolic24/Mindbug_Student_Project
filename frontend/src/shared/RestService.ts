@@ -1,19 +1,19 @@
-import axios, {AxiosResponse} from "axios";
+import axios, {AxiosError, AxiosResponse} from "axios";
 
 const baseUrl = "http://localhost:5173/api";
 const cardSetBaseUrl = `${baseUrl}/sets`;
 const gameBaseUrl = `${baseUrl}/game`;
 const playerBaseUrl = `${baseUrl}/player`;
 
-// TODO Vérifier que la gestion des erreurs fonctionne comme attendu
+//TODO Improve error management (#192)
 async function manageRestCall<T>(responsePromise: Promise<AxiosResponse<T>>): Promise<T> {
-    const response: AxiosResponse<T> = await responsePromise;
-
-    if (response.status === 200) {
-        return response.data;
-    } else {
-        alert("Erreur REST");
-        console.error("HTTP error (" + response.status + ":" + response.statusText + ") : " + response.data)
+    try {
+        const response: AxiosResponse<T> = await responsePromise;
+        return response.data
+    } catch (error) {
+        if (error instanceof AxiosError) {
+            console.error("HTTP error (" + error.status + ":" + error.message + ") : " + error.response?.data)
+        }
     }
 }
 
