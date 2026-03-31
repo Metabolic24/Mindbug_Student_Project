@@ -1,7 +1,12 @@
 .styled-button {
-    padding: 12px 30px;
+    width: 25%;
 
-    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: xxx-large;
+    font-weight: bold;
     color: #fff;
     background-color: #3498db;
 

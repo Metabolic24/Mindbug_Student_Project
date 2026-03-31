@@ -35,13 +35,18 @@ async function onLogin(name: string) {
   height: 100%;
 
   h1 {
-    margin-bottom: 40px;
+    margin-bottom: 7%;
+    font-size: xxx-large;
   }
 }
 
 #home-buttons {
+  width: 100%;
+  height: 40%;
+
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 5%;
 }
+
 </style>
