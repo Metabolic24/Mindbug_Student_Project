@@ -163,8 +163,7 @@ public class HistoryService {
 
         Map<String, Object> data = new HashMap<>();
         for (Player player : game.getPlayers()) {
-            game.getLogger().info("Player {} hand : {}", getLoggablePlayer(player), getLoggableCards(player.getHand()));
-            game.getLogger().info("Player {} draw pile : {}", getLoggablePlayer(player), getLoggableCards(player.getDrawPile()));
+            game.getLogger().info("Player {} : \n\tHand : {}\n\tDraw pile : {}", getLoggablePlayer(player), getLoggableCards(player.getHand()), getLoggableCards(player.getDrawPile()));
 
             data.put(player.getUuid().toString(), HistoryMapper.toHistoryCards(player.getHand()));
             // TODO Store player draw pile in a dedicated structure instead of a generic map

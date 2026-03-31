@@ -28,7 +28,15 @@ public class RandomAiResolver implements AiResolver {
 
     @Override
     public CardInstance chooseBlocker(List<CardInstance> availableBlockers, Game game) {
-        int randomValue = RND.nextInt(availableBlockers.size() + 1);
+        int randomValue;
+        Player player = availableBlockers.getFirst().getOwner();
+
+        if (player.getTeam().getLifePoints() == 1) {
+            randomValue = RND.nextInt(availableBlockers.size());
+        } else {
+            randomValue = RND.nextInt(availableBlockers.size() + 1);
+        }
+
         return randomValue == availableBlockers.size() ? null : availableBlockers.get(randomValue);
     }
 
