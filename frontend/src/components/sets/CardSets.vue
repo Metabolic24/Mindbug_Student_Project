@@ -60,15 +60,13 @@ nav {
 #cards-sets-container {
   width: 97%;
   height: 50%;
+  padding: 1%;
 
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
 
-  padding: 20px;
-
   background-color: #f4f7fb;
-
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

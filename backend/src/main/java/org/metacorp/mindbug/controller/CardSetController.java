@@ -8,6 +8,7 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.core.Response;
 import org.metacorp.mindbug.dto.card.CardSetDTO;
+import org.metacorp.mindbug.dto.card.LightCardDTO;
 import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.service.CardSetService;
 import org.slf4j.Logger;
@@ -42,7 +43,7 @@ public class CardSetController {
      */
     @GET
     @Path("/{set}")
-    public List<Integer> getCardsBySet(@PathParam(value = "set") String set) {
+    public List<LightCardDTO> getCardsBySet(@PathParam(value = "set") String set) {
         return cardSetService.getCardSetContent(set);
     }
 

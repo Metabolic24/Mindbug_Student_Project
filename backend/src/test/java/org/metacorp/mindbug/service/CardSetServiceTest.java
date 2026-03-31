@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
+import org.metacorp.mindbug.dto.card.LightCardDTO;
 import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.model.card.Card;
 import org.metacorp.mindbug.model.card.CardInstance;
@@ -45,29 +46,29 @@ public class CardSetServiceTest {
 
     @Test
     public void getCardSetContent_firstContact() {
-        List<Integer> cardSetContent = cardSetService.getCardSetContent("first_contact");
+        List<LightCardDTO> cardSetContent = cardSetService.getCardSetContent("first_contact");
         assertNotNull(cardSetContent);
         assertEquals(44, cardSetContent.size());
 
         for (int cardId = 1; cardId <= cardSetContent.size(); cardId++) {
-            assertTrue(cardSetContent.contains(cardId));
+            assertEquals(cardId, cardSetContent.get(cardId - 1).getId());
         }
     }
 
     @Test
     public void getCardSetContent_beyondEvolution() {
-        List<Integer> cardSetContent = cardSetService.getCardSetContent("beyond_evolution");
+        List<LightCardDTO> cardSetContent = cardSetService.getCardSetContent("beyond_evolution");
         assertNotNull(cardSetContent);
         assertEquals(38, cardSetContent.size());
 
         for (int cardId = 45; cardId < 45 + cardSetContent.size(); cardId++) {
-            assertTrue(cardSetContent.contains(cardId));
+            assertEquals(cardId, cardSetContent.get(cardId - 45).getId());
         }
     }
 
     @Test
     public void getCardSetContent_badSetName() {
-        List<Integer> cardSetContent = cardSetService.getCardSetContent("bad_set_name");
+        List<LightCardDTO> cardSetContent = cardSetService.getCardSetContent("bad_set_name");
         assertNull(cardSetContent);
     }
 

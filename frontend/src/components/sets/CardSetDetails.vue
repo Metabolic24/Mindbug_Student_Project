@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import {onMounted, ref, Ref} from "vue";
 import {getCardSetDetails} from "@/shared/RestService";
-import {getCardImage} from "@/shared/CardUtils";
 import {useI18n} from "vue-i18n";
+import Card from "@/components/game/Card.vue";
+import CardPreviewModal from "@/components/game/CardPreviewModal.vue";
 
 const { t } = useI18n();
 
@@ -14,7 +15,10 @@ interface Props {
 const props = defineProps<Props>()
 
 // Array that will contain all the IDs of the current set cards
-let cards: Ref<string[]> = ref([])
+const cards: Ref<LightCardInterface[]> = ref([])
+
+// The card that should be displayed in the preview modal
+const previewCard: Ref<LightCardInterface> = ref(undefined);
 
 onMounted(async () => {
   // Get the list of card IDs from the server
@@ -24,6 +28,14 @@ onMounted(async () => {
 // Format correctly the set name
 function getSetName() {
   return props.custom ? props.set : t("card_sets." + props.set)
+}
+
+function onCardPreview(card: LightCardInterface): void {
+  previewCard.value = card
+}
+
+function closeCardPreview(): void {
+  previewCard.value = undefined
 }
 </script>
 
@@ -35,14 +47,33 @@ function getSetName() {
   <div id="cards-set" @contextmenu.prevent>
     <h1>{{ t("available_sets.title")}} <b>{{ getSetName() }}</b></h1>
     <div id="cards-container">
-      <img v-for="cardId in cards" :key="cardId" :src="getCardImage(+cardId)" :alt="t('misc.card_not_found')" class="card-image" draggable="false">/>
+      <card
+          v-for="card in cards"
+          :key="card.id"
+          :card="card"
+          context="sets-details"
+          :clickable="false"
+          @preview="onCardPreview"
+      />
     </div>
   </div>
+  <card-preview-modal v-if="previewCard" :card="previewCard" @close="closeCardPreview"></card-preview-modal>
 </template>
 
 <style scoped>
+nav {
+  position: absolute;
+}
+
 #cards-set {
+  padding-top: 3%;
+
   text-align: center;
+
+  h1 {
+    margin-bottom: 3%;
+    font-size: xxx-large;
+  }
 }
 
 #cards-container {
