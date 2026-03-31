@@ -9,10 +9,12 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.effect.GenericEffect;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.GameWebSocketClient;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -134,6 +136,18 @@ public class GameStateService {
 
         WebSocketService.sendGameEvent(WsGameEventType.FINISHED, game);
         HistoryService.saveHistory(game);
+
+        // Close the game WS connection
+        GameWebSocketClient wsClient = game.getWsClient();
+        if (wsClient != null && wsClient.isConnected()) {
+            try {
+                wsClient.close();
+            } catch (IOException e) {
+                game.getLogger().warn("Unexpected error while closing game WebSocket", e);
+            } finally {
+                game.setWsClient(null);
+            }
+        }
     }
 
     /**
