@@ -29,9 +29,9 @@ public class WebSocketService {
     public static void initGameChannel(Game game) {
         try {
             // Create a WebSocket so the game is initialized
-            try (GameWebSocketClient _ = new GameWebSocketClient(GAME_WS_URI + game.getUuid())) {
-                game.setWebSocketUp(true);
-            }
+            GameWebSocketClient client = new GameWebSocketClient(GAME_WS_URI + game.getUuid());
+            game.setWsClient(client);
+            game.setWebSocketUp(true);
 
             // Create a WebSocket for each AI player
             for (Player player : game.getPlayers()) {
@@ -56,12 +56,35 @@ public class WebSocketService {
      */
     public static void sendGameEvent(WsGameEventType eventType, Game game) throws WebSocketException {
         if (game.isWebSocketUp()) {
-            try (GameWebSocketClient client = new GameWebSocketClient(GAME_WS_URI + game.getUuid())) {
-                WsGameEvent event = new WsGameEvent(eventType, GameStateMapper.fromGame(game));
-                client.sendMessage(new ObjectMapper().writeValueAsString(event));
-            } catch (IOException | URISyntaxException | DeploymentException e) {
-                String errorMessage = MessageFormat.format("Error while sending game event {0}", eventType.name());
-                throw new WebSocketException(errorMessage, e);
+            boolean eventSent = false;
+            int retriesCount = 0;
+
+            while (!eventSent) {
+                try {
+                    GameWebSocketClient client = game.getWsClient();
+                    if (client == null || !client.isConnected()) {
+                        client = new GameWebSocketClient(GAME_WS_URI + game.getUuid());
+                        game.setWsClient(client);
+                    }
+
+                    WsGameEvent event = new WsGameEvent(eventType, GameStateMapper.fromGame(game));
+                    client.sendMessage(new ObjectMapper().writeValueAsString(event));
+                    eventSent = true;
+                } catch (IOException | URISyntaxException | DeploymentException e) {
+                    if (retriesCount == 3) {
+                        String errorMessage = MessageFormat.format("Error while sending game event {0}", eventType.name());
+                        throw new WebSocketException(errorMessage, e);
+                    } else {
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException ie) {
+                            game.getLogger().error("Unexpected error while waiting for WS event retry", ie);
+                        }
+
+                        retriesCount++;
+                        System.err.println("Retrying sending game event " + eventType.name() + " (" + retriesCount + "/3)");
+                    }
+                }
             }
         }
     }

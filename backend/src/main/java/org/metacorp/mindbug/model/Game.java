@@ -10,6 +10,7 @@ import org.metacorp.mindbug.model.effect.AfterEffectInterface;
 import org.metacorp.mindbug.model.effect.EffectQueue;
 import org.metacorp.mindbug.model.history.HistoryEntry;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.GameWebSocketClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,6 +49,8 @@ public class Game {
     private boolean webSocketUp;
 
     private List<HistoryEntry> history;
+
+    private GameWebSocketClient wsClient;
 
     /**
      * Empty constructor (WARNING: a game is not meant to be reused)

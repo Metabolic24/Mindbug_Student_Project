@@ -22,6 +22,10 @@ public class GameWebSocketClient implements Closeable {
         userSession = container.connectToServer(this, new URI(endpoint));
     }
 
+    public boolean isConnected() {
+        return userSession != null && userSession.isOpen();
+    }
+
     /**
      * Callback hook for Connection open events.
      *

@@ -170,23 +170,25 @@ public class WsGameEndpoint extends WebSocketApplication {
         UUID playerId = socket.getPlayerId();
 
         Game game = gameService.findById(gameId);
-        Logger logger = game.getLogger();
+        if (game != null) {
+            Logger logger = game.getLogger();
 
-        if (playerId != null) {
-            List<GameWebSocket> sessionSockets = sessions.get(gameId);
-            if (sessionSockets != null) {
-                if (!socket.isAI()) {
-                    sessionSockets.remove(socket);
-                    logger.info("Player {} left the game", playerId);
-                    try {
-                        gameService.endGame(playerId, gameId);
-                    } catch (WebSocketException e) {
-                        logger.warn("An error occurred while trying to end game", e);
+            if (playerId != null) {
+                List<GameWebSocket> sessionSockets = sessions.get(gameId);
+                if (sessionSockets != null) {
+                    if (!socket.isAI()) {
+                        sessionSockets.remove(socket);
+                        logger.info("Player {} left the game", playerId);
+                        try {
+                            gameService.endGame(playerId, gameId);
+                        } catch (WebSocketException e) {
+                            logger.warn("An error occurred while trying to end game", e);
+                        }
                     }
-                }
 
-                if (sessionSockets.isEmpty()) {
-                    sessions.remove(gameId);
+                    if (sessionSockets.isEmpty()) {
+                        sessions.remove(gameId);
+                    }
                 }
             }
         }
