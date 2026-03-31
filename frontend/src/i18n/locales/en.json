@@ -81,7 +81,7 @@
     "game": {
       "leave_tooltip": "Close",
       "choice": {
-        "target_title": "Choose ${targets_count} target(s) from these cards",
+        "target_title": "Choose {targets_count} target(s) from these cards",
         "simultaneous_title": "Choose the effect to trigger first",
         "save": "Save choice"
       },

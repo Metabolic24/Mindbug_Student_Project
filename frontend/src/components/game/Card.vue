@@ -9,7 +9,7 @@ const {t} = useI18n();
 interface Props {
   card: CardInterface
 
-  context: 'player-hand' | 'opponent-hand' | 'player-board' | 'opponent-board' | 'board' | 'discard-modal' | 'discard-pile'
+  context: 'player-hand' | 'opponent-hand' | 'player-board' | 'opponent-board' | 'board' | 'discard-modal' | 'discard-pile' | 'choice-modal'
 
   selected?: boolean
   attacking?: boolean
