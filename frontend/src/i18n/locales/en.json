@@ -44,7 +44,6 @@
       "waiting": "Waiting for opponent...",
       "choice": {
         "FRENZY": "Do you want to attack again?",
-        "BOOLEAN": "TODO",
         "HUNTER": "Select a target to hunt or continue attacking",
         "waiting": "Waiting for opponent choice...",
         "mindbug": "Do you want to use a MindBug?",

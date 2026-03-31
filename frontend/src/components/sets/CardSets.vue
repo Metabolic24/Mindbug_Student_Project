@@ -22,12 +22,12 @@ onMounted(async () => {
   <div id="cards-sets" @contextmenu.prevent>
     <h1>{{ t('card_sets.title') }}</h1>
     <div id="cards-sets-container">
-      <router-link :to="`/createSet`">
+      <router-link :to="`/createSet`" class="cards-set-link">
         <div class="cards-set">
-          <img :src="getSetImage('')" :alt="t('router.create_set')"/>
+          <img :src="getSetImage('')" :alt="t('router.create_set')" :title="t('router.create_set')"/>
         </div>
       </router-link>
-      <router-link v-for="(set, index) in sets" :key="set" :to="`/sets/${set}?custom=${index >= 2}`">
+      <router-link v-for="(set, index) in sets" :key="set" :to="`/sets/${set}?custom=${index >= 2}`" class="cards-set-link">
         <div class="cards-set">
           <img v-if="index < 2" :src="getSetImage(set)" :alt="t('card_sets.' + set)"/>
           <h2 v-if="index >= 2">{{set}}</h2>
@@ -38,12 +38,29 @@ onMounted(async () => {
 </template>
 
 <style scoped>
+nav {
+  position: absolute;
+}
+
 #cards-sets {
   text-align: center;
+  padding-top: 3%;
   height: 97%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin-bottom: 7%;
+    font-size: xxx-large;
+  }
 }
 
 #cards-sets-container {
+  width: 97%;
+  height: 50%;
+
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -56,9 +73,14 @@ onMounted(async () => {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.cards-set-link {
+  width: 16%;
+  height: 100%;
+}
+
 .cards-set {
-  width: 180px;
-  height: 225px;
+  width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;

@@ -27,7 +27,6 @@ let isModalVisible: Ref<boolean> = ref(false);
 
 // Triggered when search button is clicked
 async function searchGame(settings: GameSettingsInterface) {
-  console.log("searching game...");
   isModalVisible.value = false;
   searchDisabled.value = true;
 

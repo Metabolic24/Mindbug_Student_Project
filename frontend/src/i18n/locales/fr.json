@@ -29,7 +29,7 @@
     "buttons": {
       "play": "Jouer",
       "attack": "Attaquer",
-      "hunt": "Chasser une cible",
+      "hunt": "Chasser la cible",
       "use_mindbug": "Utiliser un Mindbug",
       "block": "Bloquer",
       "continue": "Continuer",
@@ -44,8 +44,7 @@
       "waiting": "En attente de l'adversaire...",
       "choice": {
         "FRENZY": "Voulez-vous attaquer à nouveau ?",
-        "BOOLEAN": "TODO",
-        "HUNTER": "Sélectionnez une cible à chasser ou continuez à attaquer",
+        "HUNTER": "Chasser OU Attaquer",
         "waiting": "En attente d'un choix de l'adversaire...",
         "mindbug": "Voulez-vous utiliser un Mindbug ?",
         "attacked": "Bloquer OU Encaisser l'attaque",
