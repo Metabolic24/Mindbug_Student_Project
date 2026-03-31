@@ -120,13 +120,16 @@ public class CardSetService {
      * @param cardSetName the card set name
      * @return the list of card IDs contained in the given set if it exists, null otherwise
      */
-    public List<Integer> getCardSetContent(String cardSetName) {
+    public List<LightCardDTO> getCardSetContent(String cardSetName) {
         List<Card> setCards = defaultCardSets.get(cardSetName);
         if (setCards == null) {
             setCards = customCardSets.get(cardSetName);
         }
 
-        return setCards == null ? null : setCards.stream().map(Card::getId).sorted(Comparator.naturalOrder()).collect(Collectors.toList());
+        return setCards == null ? null :
+                setCards.stream().map(CardMapper::fromCard)
+                .sorted(Comparator.comparing(LightCardDTO::getId))
+                .collect(Collectors.toList());
     }
 
     /**

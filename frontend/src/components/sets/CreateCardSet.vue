@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import {onMounted, ref, Ref} from "vue";
 import {createCardSet, getAllCards} from "@/shared/RestService";
-import {getCardImage} from "@/shared/CardUtils";
 import {useI18n} from "vue-i18n";
+import CardPreviewModal from "@/components/game/CardPreviewModal.vue";
+import Card from "@/components/game/Card.vue";
 
 const { t } = useI18n();
 
@@ -18,6 +19,9 @@ let rightSideCards: Ref<LightCardInterface[]> = ref([])
 // The card set name
 let cardSetName: Ref<string> = ref("")
 
+// The card that should be displayed in the preview modal
+const previewCard: Ref<LightCardInterface> = ref(undefined);
+
 onMounted(async () => {
   // Get the list of card DTOs from the server
   availableCards = await getAllCards()
@@ -26,6 +30,7 @@ onMounted(async () => {
   leftSideCards.value.push(...unevolvedCards)
 })
 
+// TODO A rediriger vers le clic molette
 function onCardClick(event: MouseEvent, card: LightCardInterface, cardsList: LightCardInterface[]) {
   event.preventDefault()
 
@@ -60,6 +65,14 @@ function cardDrop(event: DragEvent, sourceCards: LightCardInterface[], targetCar
 function isCreateButtonDisabled() {
   return !cardSetName.value || !rightSideCards.value || rightSideCards.value.length < 20
 }
+
+function onCardPreview(card: LightCardInterface): void {
+  previewCard.value = card
+}
+
+function closeCardPreview(): void {
+  previewCard.value = undefined
+}
 </script>
 
 <template>
@@ -77,28 +90,46 @@ function isCreateButtonDisabled() {
     <div id="card-selector">
       <div class="cards-container" @drop="cardDrop($event, rightSideCards, leftSideCards)"
            @dragover.prevent @dragenter.prevent>
-        <img v-for="availableCard in leftSideCards" :key="availableCard.id" :src="getCardImage(availableCard.id)"
-             :alt="t('misc.card_not_found')"
-             @contextmenu="onCardClick($event, availableCard, leftSideCards)"
-             draggable="true" @dragstart="cardDragged($event, availableCard)"/>
+        <card
+            v-for="availableCard in leftSideCards"
+            :key="availableCard.id"
+            :card="availableCard"
+            context="sets-creator"
+            :clickable="false"
+            @preview="onCardPreview"
+            draggable="true"
+            @dragstart="cardDragged($event, availableCard)"
+            @mousedown.middle="onCardClick($event, availableCard, leftSideCards)"
+        />
       </div>
       <div class="cards-container" @drop="cardDrop($event, leftSideCards, rightSideCards)"
            @dragover.prevent @dragenter.prevent>
-        <img v-for="chosenCard in rightSideCards" :key="chosenCard.id" :src="getCardImage(chosenCard.id)"
-             :alt="t('misc.card_not_found')"
-             @contextmenu="onCardClick($event, chosenCard, rightSideCards)"
-             draggable="true" @dragstart="cardDragged($event, chosenCard)"/>
+        <card
+            v-for="chosenCard in rightSideCards"
+            :key="chosenCard.id"
+            :card="chosenCard"
+            context="sets-creator"
+            :clickable="false"
+            @preview="onCardPreview"
+            draggable="true"
+            @dragstart="cardDragged($event, chosenCard)"
+            @mousedown.middle="onCardClick($event, chosenCard, rightSideCards)"
+        />
       </div>
     </div>
   </div>
+  <card-preview-modal v-if="previewCard" :card="previewCard" @close="closeCardPreview"></card-preview-modal>
 </template>
 
 <style scoped>
 nav {
   height: 3%;
+  position: absolute;
 }
 
 #card-set-creator {
+  padding-top: 3%;
+
   text-align: center;
   height: 97%;
 }

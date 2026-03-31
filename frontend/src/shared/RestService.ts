@@ -29,7 +29,7 @@ export async function getAvailableSets(): Promise<string[]> {
     return manageRestCall(axios.get(cardSetBaseUrl))
 }
 
-export async function getCardSetDetails(setName: String): Promise<string[]> {
+export async function getCardSetDetails(setName: String): Promise<LightCardInterface[]> {
     return manageRestCall(axios.get(`${cardSetBaseUrl}/${setName}`))
 }
 

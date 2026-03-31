@@ -5,7 +5,7 @@ export function getCardImage(cardId: number): string {
 }
 
 // Get the alternative description of the given card
-export function getCardAlt(card: CardInterface, ): string {
+export function getCardAlt(card: CommonCardInterface): string {
     return card.id ? 'cards.' + card.id + '.name' : 'cards.back_placeholder';
 }
 

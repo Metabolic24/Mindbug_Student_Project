@@ -15,7 +15,6 @@ interface CardInterface extends CommonCardInterface {
     ownerId: string
     hidden: boolean
 
-    name?: string
     basePower: number
 
     stillTough: boolean

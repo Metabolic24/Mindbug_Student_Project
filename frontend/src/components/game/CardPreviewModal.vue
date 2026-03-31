@@ -5,7 +5,7 @@ import {getAllCards} from "@/shared/RestService";
 import {useI18n} from "vue-i18n";
 
 interface Props {
-  card: CardInterface
+  card: CardInterface | LightCardInterface;
 }
 
 const props = defineProps<Props>()
@@ -31,12 +31,14 @@ const keywordItems = computed(() =>
     const label = t(labelKey)
     const descriptionKey = `card_preview.keyword_descriptions.${keyword}`
     const description = t(descriptionKey)
+    const stillTough = (props.card as CardInterface)?.stillTough
+
     return {
       keyword,
       label: label === labelKey ? keyword : label,
       description: description === descriptionKey ? t("card_preview.keyword_descriptions.default") : description,
       icon: keywordIcons[keyword],
-      inactive: keyword === "TOUGH" && props.card?.stillTough === false
+      inactive: keyword === "TOUGH" && !stillTough
     }
   })
 )
@@ -49,13 +51,12 @@ const descriptionSource = computed(() => {
   }
   return ""
 })
+
 const cardName = computed(() => {
   const key = `cards.${props.card?.id}.name`
   const translated = t(key)
-  if (translated !== key) {
-    return translated
-  }
-  return props.card?.name ?? t("card_preview.unknown_card")
+
+  return translated !== key ? translated : t("card_preview.unknown_card")
 })
 
 const descriptionText = computed(() => {
@@ -70,7 +71,7 @@ const descriptionText = computed(() => {
 const isFlavorText = computed(() => /<\s*q\b/i.test(descriptionSource.value))
 
 const powerSource = computed(() => props.card?.power ?? cardDetails.value?.power ?? 0)
-const basePowerSource = computed(() => props.card?.basePower ?? powerSource.value)
+const basePowerSource = computed(() => ((props.card as CardInterface)?.basePower) ?? powerSource.value)
 
 function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
@@ -161,7 +162,7 @@ const activationFromDescription = computed(() => {
     for (const token of tokens) {
       if (!token) continue
       // Match a leading activation token (case-insensitive), then capture the remaining effect text.
-      const match = new RegExp(`^${escapeRegExp(token)}\\s*(?:[:\\-–—])?\\s*(.+)$`, "i").exec(description)
+      const match = new RegExp(`^${escapeRegExp(token)}\s*[:\-–—]?\s*(.+)$`, "i").exec(description)
       if (match) {
         return {
           name: activation,

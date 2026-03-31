@@ -7,9 +7,9 @@ const {t} = useI18n();
 
 // Declare the interface for the data given by the parent component
 interface Props {
-  card: CardInterface
+  card: CardInterface | LightCardInterface
 
-  context: 'player-hand' | 'opponent-hand' | 'player-board' | 'opponent-board' | 'board' | 'discard-modal' | 'discard-pile' | 'choice-modal'
+  context: 'player-hand' | 'opponent-hand' | 'player-board' | 'opponent-board' | 'board' | 'discard-modal' | 'discard-pile' | 'choice-modal' | 'sets-details' | 'sets-creator'
 
   selected?: boolean
   attacking?: boolean
@@ -30,12 +30,10 @@ const keywordIcons: Record<string, string> = {
 }
 
 const cardName = computed(() => {
-  const key = `cards.${props.card.id}.name`
+  const key = `cards.${props.card?.id}.name`
   const translated = t(key)
-  if (translated !== key) {
-    return translated
-  }
-  return props.card.name ?? t("card_preview.unknown_card")
+
+  return translated !== key ? translated : t("card_preview.unknown_card")
 })
 
 const displayKeywords = computed(() => {
@@ -51,12 +49,13 @@ const displayKeywords = computed(() => {
 
 // To know if the power is modified
 const isPowerModified = computed(() => {
-  return props.card.power !== props.card.basePower
+  const basePower = (props.card as CardInterface)?.basePower
+  return basePower && props.card.power !== basePower
 })
 
 const displayPower = computed(() => {
   return ['discard-modal', 'discard-pile'].includes(props.context)
-      ? props.card.basePower
+      ? (props.card as CardInterface).basePower
       : props.card.power
 })
 
@@ -69,10 +68,12 @@ const cardClasses = computed(() => ({
   'opponent-board': props.context === 'opponent-board',
   'discard-modal': props.context === 'discard-modal',
   'discard-pile': props.context === 'discard-pile',
+  'sets-creator': props.context === 'sets-creator',
+  'sets-details': props.context === 'sets-details',
   'selected': props.selected,
   'attacking': props.attacking,
   'clickable': props.clickable,
-  'TOUGH': (props.context === 'player-board' || props.context ==='opponent-board') && props.card.keywords?.includes('TOUGH') && props.card.stillTough
+  'TOUGH': (props.context === 'player-board' || props.context ==='opponent-board') && props.card.keywords?.includes('TOUGH') && (props.card as CardInterface).stillTough
 }))
 
 // Determine if the power overlay should be shown on the opponent's hand
@@ -138,6 +139,41 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 .card-wrapper.discard-modal {
   width: 10vw;
   height: 14vw;
+}
+
+.card-wrapper.sets-details {
+  width: 15vw;
+  height: 20vw;
+
+  .description-text {
+    font-size: 1.1em;
+  }
+
+  .title-text {
+    font-size: 1.3em;
+    letter-spacing: 1px;
+  }
+
+  .power-overlay {
+    font-size: 1.6em;
+  }
+}
+
+.card-wrapper.sets-creator {
+  width: 10vw;
+  height: 14vw;
+
+  .description-text {
+    font-size: 0.9em;
+  }
+
+  .title-text {
+    font-size: 1.1em;
+  }
+
+  .power-overlay {
+    font-size: 1.6em;
+  }
 }
 
 .card-image {
