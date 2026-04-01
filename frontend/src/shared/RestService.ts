@@ -23,6 +23,10 @@ export async function getPlayerData(name: string): Promise<PlayerData> {
     return manageRestCall(axios.post(playerBaseUrl, {name}))
 }
 
+export async function getAvailableAiLevels(): Promise<string[]> {
+    return manageRestCall(axios.get(`${playerBaseUrl}/aiLevels`))
+}
+
 // Sets endpoints
 
 export async function getAvailableSets(): Promise<string[]> {
@@ -43,8 +47,8 @@ export async function getAllCards(): Promise<LightCardInterface[]> {
 
 // Game endpoints
 
-export async function startOfflineGame(playerId: string, cardSetName: string): Promise<string> {
-    return manageRestCall(axios.post(gameBaseUrl + "/startOffline", {playerId, cardSetName}))
+export async function startOfflineGame(playerId: string, cardSetName: string, aiLevel: string): Promise<string> {
+    return manageRestCall(axios.post(gameBaseUrl + "/startOffline", {playerId, cardSetName, aiLevel}))
 }
 
 export async function pickCard(gameId: string, cardId: string): Promise<void> {

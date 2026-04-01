@@ -12,6 +12,7 @@ import org.junit.jupiter.api.extension.RegisterExtension;
 import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.ai.AiLevel;
 import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.CardSetService;
@@ -86,7 +87,10 @@ public class MindbugGameTest {
     }
 
     protected Game createGame(UUID player1, UUID player2) throws UnknownPlayerException, CardSetException {
-        Game game = gameService.createGame(player1, player2);
+        Game game = player2 == null ?
+                gameService.createOfflineGame(player1, AiLevel.RANDOM, CardSetName.FIRST_CONTACT) :
+                gameService.createGame(player1, player2);
+
         gameId = game.getUuid();
         return game;
     }

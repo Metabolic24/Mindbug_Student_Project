@@ -6,6 +6,7 @@ import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.UnknownPlayerException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.ai.AiLevel;
 import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
@@ -17,9 +18,11 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 /**
@@ -48,9 +51,10 @@ public class GameService {
      * @param player2Id the second player ID
      * @return the created Game
      * @throws UnknownPlayerException if at least one player could not be found in the database
+     * @throws CardSetException if an error occurs while retrieving card set
      */
     public Game createGame(UUID player1Id, UUID player2Id) throws UnknownPlayerException, CardSetException {
-        return createGame(Arrays.asList(player1Id, player2Id), CardSetName.FIRST_CONTACT);
+        return createGame(new HashSet<>(Arrays.asList(player1Id, player2Id)), CardSetName.FIRST_CONTACT);
     }
 
     /**
@@ -60,13 +64,44 @@ public class GameService {
      * @param setName   the card set to be used for this game
      * @return the created Game
      * @throws UnknownPlayerException if at least one player could not be found in the database
+     * @throws CardSetException if an error occurs while retrieving card set
      */
-    public Game createGame(List<UUID> playerIds, CardSetName setName) throws UnknownPlayerException, CardSetException {
+    public Game createGame(Set<UUID> playerIds, CardSetName setName) throws UnknownPlayerException, CardSetException {
         List<Player> players = new ArrayList<>();
         for (UUID playerId : playerIds) {
-            players.add(playerId == null ? new AiPlayer(playerService.getAiPlayer()) : new Player(playerService.getPlayer(playerId)));
+            players.add(new Player(playerService.getPlayer(playerId)));
         }
 
+        return createGame(players, setName);
+    }
+
+    /**
+     * Create a new game
+     *
+     * @param player1Id the first player ID
+     * @param aiLevel the AI level
+     * @param setName   the card set to be used for this game
+     * @return the created Game
+     * @throws UnknownPlayerException if at least one player could not be found in the database
+     * @throws CardSetException if an error occurs while retrieving card set
+     */
+    public Game createOfflineGame(UUID player1Id, AiLevel aiLevel, CardSetName setName) throws UnknownPlayerException, CardSetException {
+        List<Player> players = new ArrayList<>();
+        players.add(new Player(playerService.getPlayer(player1Id)));
+        players.add(new AiPlayer(playerService.getAiPlayer(), aiLevel));
+
+        return createGame(players, setName);
+    }
+
+    /**
+     * Create a new game
+     *
+     * @param players the players list
+     * @param setName   the card set to be used for this game
+     * @return the created Game
+     * @throws CardSetException if an error occurs while retrieving card set
+     */
+    private Game createGame(List<Player> players, CardSetName setName) throws CardSetException {
         Game game = new Game(players);
         games.put(game.getUuid(), game);
 

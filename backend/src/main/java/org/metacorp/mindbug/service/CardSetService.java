@@ -126,10 +126,10 @@ public class CardSetService {
             setCards = customCardSets.get(cardSetName);
         }
 
-        return setCards == null ? null :
-                setCards.stream().map(CardMapper::fromCard)
-                .sorted(Comparator.comparing(LightCardDTO::getId))
-                .collect(Collectors.toList());
+        return setCards == null ? null
+                : setCards.stream().map(CardMapper::fromCard)
+                  .sorted(Comparator.comparing(LightCardDTO::getId))
+                  .collect(Collectors.toList());
     }
 
     /**

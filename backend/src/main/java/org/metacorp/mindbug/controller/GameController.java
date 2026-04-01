@@ -57,7 +57,7 @@ public class GameController {
         LOGGER.debug("Starting an offline game for player {}", startDTO.getPlayerId());
 
         try {
-            Game game = gameService.createGame(Arrays.asList(startDTO.getPlayerId(), null), startDTO.getCardSetName());
+            Game game = gameService.createOfflineGame(startDTO.getPlayerId(), startDTO.getAiLevel(), startDTO.getCardSetName());
             return Response.ok(game.getUuid()).build();
         } catch (UnknownPlayerException e) {
             return Response.status(Response.Status.BAD_REQUEST).entity("Invalid player ID").build();

@@ -1,6 +1,7 @@
 package org.metacorp.mindbug.dto.rest;
 
 import lombok.Data;
+import org.metacorp.mindbug.model.ai.AiLevel;
 import org.metacorp.mindbug.model.card.CardSetName;
 
 import java.util.UUID;
@@ -9,4 +10,5 @@ import java.util.UUID;
 public class StartOfflineDTO {
     private UUID playerId;
     private CardSetName cardSetName;
+    private AiLevel aiLevel;
 }

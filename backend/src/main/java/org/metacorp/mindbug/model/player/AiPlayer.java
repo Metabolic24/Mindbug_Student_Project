@@ -3,7 +3,9 @@ package org.metacorp.mindbug.model.player;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.metacorp.mindbug.dto.player.PlayerLightDTO;
+import org.metacorp.mindbug.model.ai.AiLevel;
 import org.metacorp.mindbug.service.game.ai.AiResolver;
+import org.metacorp.mindbug.service.game.ai.BasicAiResolver;
 import org.metacorp.mindbug.service.game.ai.RandomAiResolver;
 
 @EqualsAndHashCode(callSuper = true)
@@ -15,9 +17,12 @@ public class AiPlayer extends Player {
     /**
      * Constructor
      */
-    public AiPlayer(PlayerLightDTO playerDTO) {
+    public AiPlayer(PlayerLightDTO playerDTO, AiLevel aiLevel) {
         super(playerDTO);
-        resolver = new RandomAiResolver();
+        resolver = switch (aiLevel) {
+            case RANDOM ->  new RandomAiResolver();
+            case BASIC ->   new BasicAiResolver();
+        };
     }
 
     @Override

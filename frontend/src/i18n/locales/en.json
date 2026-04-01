@@ -70,7 +70,12 @@
     "game_settings": {
       "title": "Choose one or more sets you want to play",
       "button": "Search",
-      "play_offline": "Play offline"
+      "play_offline": "Play offline",
+      "level": {
+        "default": "AI Level",
+        "RANDOM": "Random",
+        "BASIC": "Basic"
+      }
     },
     "login": {
       "title": "Choose a nickname",

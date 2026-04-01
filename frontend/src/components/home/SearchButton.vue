@@ -31,7 +31,7 @@ async function searchGame(settings: GameSettingsInterface) {
   searchDisabled.value = true;
 
   if (settings.offline) {
-    const gameId = await startOfflineGame(store.state.playerData?.uuid, settings.sets[0])
+    const gameId = await startOfflineGame(store.state.playerData?.uuid, settings.sets[0], settings.level)
     // Change route to 'Game' one as the server created an offline game
     await router.push({name: t('router.game'), query: {gameId}});
     searchDisabled.value = false;
