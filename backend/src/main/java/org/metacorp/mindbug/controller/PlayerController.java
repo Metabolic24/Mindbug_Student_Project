@@ -1,10 +1,12 @@
 package org.metacorp.mindbug.controller;
 
 import jakarta.inject.Inject;
+import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Response;
 import org.metacorp.mindbug.dto.player.RegisterDTO;
+import org.metacorp.mindbug.model.ai.AiLevel;
 import org.metacorp.mindbug.service.PlayerService;
 
 /**
@@ -31,5 +33,11 @@ public class PlayerController {
         //TODO Ajouter éventuellement des contraintes/vérifications sur le nom du joueur
 
         return Response.ok(playerService.createPlayer(body.getName())).build();
+    }
+
+    @GET
+    @Path("/aiLevels")
+    public Response getAvailableAiLevels() {
+        return Response.ok(AiLevel.values()).build();
     }
 }

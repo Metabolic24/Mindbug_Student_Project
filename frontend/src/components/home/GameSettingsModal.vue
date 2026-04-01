@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {computed, onMounted, ref, Ref} from "vue";
-import {getAvailableSets} from "@/shared/RestService";
+import {getAvailableAiLevels, getAvailableSets} from "@/shared/RestService";
 import {getSetImage} from "@/shared/CardUtils";
 import {useI18n} from "vue-i18n";
 
@@ -12,6 +12,8 @@ let selectedSets: Ref<string[]> = ref([])
 
 // Declare the variable that will retrieve offline checkbox value
 let offline: Ref<boolean> = ref(false)
+let levels: Ref<string[]> = ref([])
+let selectedLevel: Ref<string> = ref("")
 
 // Retrieve the image corresponding to the given set
 function updateSelection(set: string) {
@@ -26,7 +28,7 @@ function updateSelection(set: string) {
 
 function getSetClasses(set: string): Record<string, boolean> {
   return ({
-    'set-card': true,
+    'cards-set': true,
     'selected': selectedSets.value.includes(set),
   })
 }
@@ -34,6 +36,7 @@ function getSetClasses(set: string): Record<string, boolean> {
 onMounted(async () => {
   // Get the list of available sets from the server
   sets.value = await getAvailableSets()
+  levels.value = await getAvailableAiLevels()
 })
 
 // Declare events emitted by this component
@@ -41,13 +44,14 @@ const emit = defineEmits(['button-clicked'])
 
 // Disable login button if nickname is too short
 const isButtonDisabled = computed(() => {
-  return selectedSets.value.length == 0
+  return selectedSets.value.length == 0 || (offline.value && !selectedLevel.value)
 })
 
 function onButtonClicked() {
   emit('button-clicked', {
     sets: selectedSets.value,
-    offline: offline.value
+    offline: offline.value,
+    level: selectedLevel.value
   } as GameSettingsInterface)
 }
 
@@ -57,10 +61,10 @@ function onButtonClicked() {
   <div class="modal-mask">
     <div class="modal-container">
       <div class="modal-header">
-        <h5 class="modal-title">{{ t("modal.game_settings.title")}}</h5>
+        <h2 class="modal-title">{{ t("modal.game_settings.title")}}</h2>
       </div>
       <div class="modal-body">
-        <div class="sets-container">
+        <div id="cards-sets-container">
           <div :class="getSetClasses(set)" v-for="(set, index) in sets" :key="set" @click="updateSelection(set)">
             <img v-if="index < 2" :src="getSetImage(set)" :alt="t('card_sets.' + set)"/>
             <h2 v-if="index >= 2">{{ set }}</h2>
@@ -75,6 +79,10 @@ function onButtonClicked() {
           <input type="checkbox" v-model="offline" id="offline_checkbox" />
           <label id="offline_label" for="offline_checkbox"> {{ t("modal.game_settings.play_offline") }}</label>
         </div>
+        <select v-if="offline" id="ai_level_selector" v-model="selectedLevel">
+          <option disabled value="">{{ t("modal.game_settings.level.default") }}</option>
+          <option v-for="level in levels" :key="level" :value="level">{{ t("modal.game_settings.level." + level) }}</option>
+        </select>
       </div>
     </div>
   </div>
@@ -83,9 +91,14 @@ function onButtonClicked() {
 <style scoped>
 .modal-container {
   width: 80%;
+  height: 60%;
 
-  margin: 150px auto;
-  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+
+  margin: 10% auto;
+  padding: 1% 2%;
 
   .modal-header {
     justify-content: center;
@@ -94,31 +107,41 @@ function onButtonClicked() {
   .modal-body {
     display: flex;
     justify-content: center;
-
-    padding: 10px 0;
+    align-items: center;
   }
 
   .modal-footer {
+    width: 100%;
+    height: 10%;
+
     display: flex;
     justify-content: center;
+
+    button {
+      width: 15%;
+      height: 100%;
+
+      font-size: x-large;
+    }
   }
 }
 
-.sets-container {
+#cards-sets-container {
+  height: 80%;
+  width: 100%;
+  padding: 1%;
+
   display: flex;
   flex-wrap: wrap;
-
-  padding: 20px;
-  gap: 20px;
+  gap: 15px;
 
   background-color: #f4f7fb;
-
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-  .set-card {
-    width: 180px;
-    height: 225px;
+  .cards-set {
+    width: 16%;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
@@ -143,22 +166,45 @@ function onButtonClicked() {
     }
   }
 
-  .set-card:hover {
+  .cards-set:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
 
-  .set-card.selected {
+  .cards-set.selected {
     border: 4px solid red;
   }
 }
 
+
 #offline_div {
-  margin-left: 15px;
+  height: 100%;
+  width: 10%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2%;
+
+  input {
+    width: 20%;
+    height: 40%;
+
+    margin-left: 5%;
+  }
 }
 
 #offline_label {
-  margin-left: 5px;
-  font-size: 18px;
+  width: 70%;
+  font-size: x-large;
+  margin-bottom: 2px;
+}
+
+#ai_level_selector {
+  margin-left: 2%;
+  width: 10%;
+  height: 50%;
+
+  font-size: large;
 }
 </style>

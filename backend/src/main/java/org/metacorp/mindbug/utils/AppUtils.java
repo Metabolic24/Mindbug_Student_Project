@@ -6,6 +6,7 @@ import org.metacorp.mindbug.exception.CardSetException;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.ai.AiLevel;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.model.player.AiPlayer;
@@ -59,13 +60,13 @@ public final class AppUtils {
      */
     public static Game startGame(PlayerService playerService, StartService startService, boolean isAuto, boolean is2v2) throws CardSetException {
         List<Player> players = new ArrayList<>(List.of(
-                new AiPlayer(playerService.createPlayer("Player1")),
-                new AiPlayer(playerService.createPlayer("Player2"))
+                new AiPlayer(playerService.createPlayer("Player1"), AiLevel.RANDOM),
+                new AiPlayer(playerService.createPlayer("Player2"), AiLevel.RANDOM)
         ));
 
         if (is2v2) {
-            players.add(new AiPlayer(playerService.createPlayer("Player3")));
-            players.add(new AiPlayer(playerService.createPlayer("Player4")));
+            players.add(new AiPlayer(playerService.createPlayer("Player3"), AiLevel.RANDOM));
+            players.add(new AiPlayer(playerService.createPlayer("Player4"), AiLevel.RANDOM));
         }
 
         Game game = startService.startGame(new Game(players), CardSetName.FIRST_CONTACT);

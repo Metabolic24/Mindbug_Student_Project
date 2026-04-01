@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class WsJoinEndpoint extends WebSocketApplication {
 
@@ -94,7 +95,7 @@ public class WsJoinEndpoint extends WebSocketApplication {
      */
     private void createGame(List<JoinWebSocket> sockets, CardSetName set) {
         try {
-            Game game = gameService.createGame(sockets.stream().map(socket -> UUID.fromString(socket.getPlayerId())).toList(), set);
+            Game game = gameService.createGame(sockets.stream().map(socket -> UUID.fromString(socket.getPlayerId())).collect(Collectors.toSet()), set);
 
             sockets.forEach(player -> player.send(game.getUuid().toString()));
         } catch (UnknownPlayerException | CardSetException e) {

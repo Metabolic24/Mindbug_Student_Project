@@ -70,7 +70,12 @@
     "game_settings": {
       "title": "Choisissez un ou plusieurs sets",
       "button": "Chercher un adversaire",
-      "play_offline": "Mode Solo"
+      "play_offline": "Mode Solo",
+      "level": {
+        "default": "Niveau du bot",
+        "RANDOM": "Aléatoire",
+        "BASIC": "Facile"
+      }
     },
     "login": {
       "title": "Choississez un pseudo",
