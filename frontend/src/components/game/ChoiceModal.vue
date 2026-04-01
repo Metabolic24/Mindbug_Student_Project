@@ -58,13 +58,13 @@ function onCardPreview(card: CardInterface): void {
   <div class="modal-mask">
     <div class="modal-container">
       <div>
-        <h5 class="modal-title">{{ title }}</h5>
+        <h5 class="choice-modal-title">{{ title }}</h5>
         <button type="button" aria-label="Close" v-if="choice?.optional" :title="t('modal.game.choice.leave_tooltip')">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div>
-        <div class="cards-container">
+        <div id="cards-container">
           <card
               v-for="card in choice?.cards"
               :key="card.uuid"
@@ -96,17 +96,19 @@ function onCardPreview(card: CardInterface): void {
   gap: 15px;
 }
 
-.modal-title {
+#choice-modal-title {
   text-align: center;
 }
 
-.cards-container {
+#cards-container {
   width: 100%;
   height: 100%;
   min-height: 13vw;
-  padding: 0 30px;
+  padding: 10px 20px;
 
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   gap: 15px;
 
