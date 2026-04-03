@@ -131,7 +131,7 @@ onMounted(async () => {
           break;
         case "CARD_PICKED": // Received when a player has picked a card
           selectedCard.value = undefined;
-          pickedCard.value = message.state.card;
+          pickedCard.value = message.state.choice?.sourceCard;
           attackingCard.value = undefined;
           break;
         case "CARD_PLAYED": // Received when a player has played a card

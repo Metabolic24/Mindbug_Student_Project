@@ -5,6 +5,7 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.MindbugChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.history.HistoryKey;
@@ -46,6 +47,8 @@ public class PlayCardService {
         Player currentPlayer = game.getCurrentPlayer();
         currentPlayer.getHand().remove(card);
         currentPlayer.refillHand();
+
+        game.setPlayedCard(card);
 
         List<Player> availableMindbuggers = getAvailableMindbuggers(game);
 
@@ -104,7 +107,7 @@ public class PlayCardService {
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     public static void playCard(CardInstance playedCard, Player mindbugger, Game game) throws GameStateException, WebSocketException {
-        if (game.getChoice() != null) {
+        if (game.getChoice() != null && !(game.getChoice().getType().equals(ChoiceType.MINDBUG))) {
             throw new GameStateException("a choice needs to be resolved before picking a new card",
                     Map.of("choice", game.getChoice()));
         } else if (mindbugger != null) {
@@ -127,6 +130,8 @@ public class PlayCardService {
 
         // Resolve the effect queue so PLAY effects will be resolved then afterEffect executed
         EffectQueueService.resolveEffectQueue(false, game);
+
+        game.setPlayedCard(null);
     }
 
     /**
