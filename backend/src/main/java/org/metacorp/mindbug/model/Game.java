@@ -36,6 +36,8 @@ public class Game {
     private List<CardInstance> bannedCards;
     private List<CardInstance> evolutionCards;
 
+    private CardInstance playedCard;
+
     private CardInstance forcedTarget;
 
     private final EffectQueue effectQueue;
@@ -148,6 +150,7 @@ public class Game {
                 + "currentPlayer=" + currentPlayer.getName()
                 + ", finished=" + isFinished()
                 + ", bannedCards=" + bannedCards
+                + ", playedCard=" + playedCard
                 + ", effectQueue=" + effectQueue
                 + ", choice=" + choice
                 + ", afterEffect=" + afterEffect

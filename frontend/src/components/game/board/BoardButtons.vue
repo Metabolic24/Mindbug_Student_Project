@@ -36,6 +36,10 @@ const mainButtonData: ComputedRef<ButtonData> = computed(() => {
       result.disabled = !props.selectedCard
       result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
       result.event = "HUNT"
+    } else if (props.gameState.choice.type === "MINDBUG") { // Mindbug case
+      result.label = 'game.buttons.use_mindbug'
+      result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
+      result.event = "MINDBUG"
     } else {
       result.visible = false
     }
@@ -56,10 +60,7 @@ const mainButtonData: ComputedRef<ButtonData> = computed(() => {
       result.visible = false
     }
   } else {
-    if (props.pickedCard) { // Mindbug case
-      result.label = 'game.buttons.use_mindbug'
-      result.event = "MINDBUG"
-    } else if (props.attackingCard) { // Block case
+    if (props.attackingCard) { // Block case
       result.label = 'game.buttons.block'
       result.disabled = !(props.selectedCard && props.attackingCard.ownerId !== props.gameState?.player.uuid)
       result.visible = props.attackingCard.ownerId !== props.gameState?.player.uuid;
@@ -89,7 +90,11 @@ const secondButtonData: ComputedRef<ButtonData> = computed(() => {
       result.label = 'game.buttons.continue'
       result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
       result.event = "CONTINUE"
-    } else {
+    } else if (props.gameState.choice.type === "MINDBUG") { // Mindbug case
+      result.label = "game.buttons.no_mindbug"
+      result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
+      result.event = "NO_MINDBUG"
+    } else{
       result.visible = false
     }
   } else if (props.gameState?.currentPlayerID === props.gameState?.player.uuid) {
@@ -100,9 +105,6 @@ const secondButtonData: ComputedRef<ButtonData> = computed(() => {
     } else {
       result.visible = false
     }
-  } else if (props.pickedCard) { // Mindbug case
-    result.label = "game.buttons.no_mindbug"
-    result.event = "NO_MINDBUG"
   } else if (props.attackingCard) { // Block case
     result.label = "game.buttons.lose_lp"
     result.event = "LOSE_LP"
