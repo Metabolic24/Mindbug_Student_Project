@@ -87,6 +87,8 @@ public class GameStateService {
             game.setNextPlayer();
         }
 
+        game.setChoice(null);
+
         refreshGameState(game, true);
 
         Player currentPlayer = game.getCurrentPlayer();
