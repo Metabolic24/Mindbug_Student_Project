@@ -92,10 +92,13 @@ const secondButtonData: ComputedRef<ButtonData> = computed(() => {
       result.label = "game.buttons.no_mindbug"
       result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
       result.event = "NO_MINDBUG"
+<<<<<<< HEAD
     } else if(props.gameState.choice.type === "BLOCK"){ // Block case
       result.label = "game.buttons.lose_lp"
       result.visible = props.gameState.choice.playerToChoose === props.gameState.player.uuid
       result.event = "LOSE_LP"
+=======
+>>>>>>> b0b3a64 (Resolve mindbug: front 1v1)
     } else{
       result.visible = false
     }
