@@ -16,7 +16,7 @@ interface Props {
 const props = defineProps<Props>()
 
 // Declare events emitted by this component
-const emit = defineEmits(['close-modal'])
+const emit = defineEmits(['close-modal', 'card-preview'])
 
 const viewMode = ref<'grid' | 'carousel'>('carousel')
 
@@ -58,7 +58,14 @@ const title = computed(() => {
 
         <!-- GRID -->
         <div v-if="viewMode === 'grid'" class="cards-container">
-          <card v-for="card in props.cards" :key="card.uuid" :card="card" context="discard-modal" :clickable="false"/>
+          <card
+            v-for="card in props.cards"
+            :key="card.uuid"
+            :card="card"
+            context="discard-modal"
+            :clickable="false"
+            @preview="emit('card-preview', $event)"
+          />
         </div>
 
         <!-- CAROUSEL -->
@@ -66,7 +73,12 @@ const title = computed(() => {
           <carousel v-bind="carouselConfig">
             <slide v-for="card in props.cards" :key="card.uuid">
               <div class="carousel-card">
-                <card :card="card" context="discard-modal" :clickable="false"/>
+                <card
+                  :card="card"
+                  context="discard-modal"
+                  :clickable="false"
+                  @preview="emit('card-preview', $event)"
+                />
               </div>
             </slide>
 

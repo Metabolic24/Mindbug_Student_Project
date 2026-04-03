@@ -185,7 +185,8 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 }
 
 .card-wrapper.opponent-board:hover,
-.card-wrapper.player-board:hover {
+.card-wrapper.player-board:hover,
+.card-wrapper.discard-modal:hover {
   transform: scale(1.11);
 }
 

@@ -70,8 +70,8 @@ const lastCard = computed(() => {
 /* Pile container */
 .discard-container {
   position: relative;
-  width: 8vw;
-  height: 11vw;
+  width: calc(7vw + 1vw);
+  height: calc(10vw + 1vw);
   min-width: 60px;
   min-height: 90px;
   display: flex;

@@ -442,7 +442,7 @@
       "power": "Puissance",
       "evolution": "Évolution",
       "keywords": "Mots-clés",
-      "activation": "Activation"
+      "activation": "Effet"
     },
     "power": {
       "base": "Base"
@@ -452,7 +452,7 @@
       "tough_used": "(Effet CORIACE déjà utilisé.)"
     },
     "activation": {
-      "none": "Aucune activation indiquée."
+      "none": "Aucun effet indiqué."
     },
     "evolution": {
       "from": "Évolue depuis {name}.",
@@ -492,7 +492,7 @@
   },
   "misc": {
     "card_not_found": "Card not found",
-    "yes": "Yes",
-    "no": "No"
+    "yes": "Oui",
+    "no": "Non"
   }
 }
