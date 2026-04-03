@@ -110,8 +110,13 @@ function closeModal() {
                      :selected-card="selectedCard" @button-clicked="emit('button-clicked', $event)"></board-buttons>
     </div>
   </div>
-  <discard-modal v-if="isDiscardModalVisible" :cards="discardModalData" :opponent="isOpponentDiscard"
-                 @closeModal="closeModal()"></discard-modal>
+  <discard-modal
+    v-if="isDiscardModalVisible"
+    :cards="discardModalData"
+    :opponent="isOpponentDiscard"
+    @closeModal="closeModal()"
+    @card-preview="emit('card-preview', $event)"
+  ></discard-modal>
 </template>
 
 <style scoped>
@@ -133,7 +138,7 @@ function closeModal() {
 .discards {
   position: absolute;
   left: 16px;
-  top: 52%;
+  top: 54%;
   transform: translateY(-50%);
   z-index: 3;
   justify-content: center;
