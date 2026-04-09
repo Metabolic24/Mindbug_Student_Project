@@ -165,6 +165,9 @@ onMounted(async () => {
             attackingCard.value = undefined;
             selectedCard.value = undefined;
           }
+          if (message.state.choice?.type === "BOOLEAN") {
+            pickedCard.value = message.state.card;
+          }
           break;
         case "FINISHED": // Received when the game is finished
           wsConnection.close()
