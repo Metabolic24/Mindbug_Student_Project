@@ -136,6 +136,7 @@ public class PlayCardService {
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     protected static void managePlayedCard(CardInstance playedCard, Player mindbugger, Game game) throws GameStateException, WebSocketException {
+        game.setChoice(null);
         // Specific behavior if card has been mindbugged
         if (mindbugger != null) {
             playedCard.setOwner(mindbugger);
