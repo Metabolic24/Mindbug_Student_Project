@@ -3,6 +3,7 @@ package org.metacorp.mindbug.service.effect;
 import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
+import org.metacorp.mindbug.model.effect.impl.GainEffect;
 import org.metacorp.mindbug.model.player.Player;
 
 import jakarta.validation.constraints.NotNull;
@@ -13,13 +14,15 @@ import jakarta.validation.constraints.NotNull;
  *
  * @param <T> the data that will be returned by the choice
  */
-public interface ResolvableEffect<T> {
+public interface ResolvableEffectWithTargetPlayer<T>  extends ResolvableEffect<T> {
     
+    
+
     /**
-     * Resolve the choice source effect using the choice result
+     * A Player have been chosen as target of the effect
      *
      * @param game         the current game state
-     * @param choiceResult the choice result
+     * @param p            the player associated with the choice
      */
-    void resolve(Game game, T choiceResult) throws GameStateException, WebSocketException;
+    void resolve(Game game,  Player p) throws GameStateException, WebSocketException;
 }

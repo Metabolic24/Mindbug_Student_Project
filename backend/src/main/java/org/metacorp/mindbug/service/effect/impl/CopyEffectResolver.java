@@ -79,7 +79,5 @@ public class CopyEffectResolver extends EffectResolver<CopyEffect> implements Re
 
         HistoryService.logEffect(game, effect.getType(), effectSource, choiceResult);
     }
-    @Override
-    public void resolve(Game game,Player targetPlayer) {
-    }
+    
 }
