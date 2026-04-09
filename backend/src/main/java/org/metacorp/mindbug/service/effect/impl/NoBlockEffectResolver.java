@@ -94,4 +94,8 @@ public class NoBlockEffectResolver extends EffectResolver<NoBlockEffect> impleme
 
         HistoryService.logEffect(game, effect.getType(), effectSource, cards);
     }
+
+    @Override
+    public void resolve(Game game,Player targetPlayer) {
+    }
 }
