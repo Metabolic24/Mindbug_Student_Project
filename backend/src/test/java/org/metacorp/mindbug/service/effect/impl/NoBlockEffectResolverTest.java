@@ -3,6 +3,8 @@ package org.metacorp.mindbug.service.effect.impl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.CardSetException;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
@@ -11,10 +13,14 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.NoBlockEffect;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.utils.ChoiceUtils;
 import org.metacorp.mindbug.utils.MindbugGameTest;
+
+import java.util.Collections;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -42,7 +48,27 @@ public class NoBlockEffectResolverTest extends MindbugGameTest {
         timing = EffectTiming.PLAY;
     }
 
-    //TODO Test choice resolution
+    @Test
+    public void testChoiceResolution() throws WebSocketException, GameStateException {
+        CardInstance firstCard = opponentPlayer.getHand().getFirst();
+        opponentPlayer.addCardToBoard(firstCard);
+
+        CardInstance secondCard = opponentPlayer.getHand().getFirst();
+        opponentPlayer.addCardToBoard(secondCard);
+
+        effect.setValue(1);
+        effectResolver.apply(game, timing);
+
+        TargetChoice choice = assertInstanceOf(TargetChoice.class, game.getChoice());
+
+        // 👉 On choisit UNE carte (ex: firstCard)
+        ChoiceUtils.resolveTargetChoice(Collections.singletonList(firstCard.getUuid()), choice, game);
+
+        // ✔️ Vérifications
+        assertFalse(firstCard.isAbleToBlock());
+        assertTrue(secondCard.isAbleToBlock());
+        assertNull(game.getChoice());
+    }
 
     @Test
     public void testBasic_lessThanBoardSize() {

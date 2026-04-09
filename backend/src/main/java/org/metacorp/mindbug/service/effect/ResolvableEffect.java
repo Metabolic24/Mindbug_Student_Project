@@ -10,6 +10,7 @@ import org.metacorp.mindbug.model.Game;
  * @param <T> the data that will be returned by the choice
  */
 public interface ResolvableEffect<T> {
+
     /**
      * Resolve the choice source effect using the choice result
      *
@@ -17,4 +18,11 @@ public interface ResolvableEffect<T> {
      * @param choiceResult the choice result
      */
     void resolve(Game game, T choiceResult) throws GameStateException, WebSocketException;
+
+    /**
+     * @return false as player selection is not required by default
+     */
+    default boolean maySelectPlayer() {
+        return false;
+    }
 }

@@ -10,11 +10,14 @@ import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.choice.MindbugChoice;
+import org.metacorp.mindbug.model.choice.PlayerChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.WebSocketService;
+import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.service.effect.ResolvableEffectWithTargetPlayer;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.PlayCardService;
@@ -133,7 +136,25 @@ public final class ChoiceUtils {
         }
 
         // Reset the choice only if the given choice list was valid and if no other choice appeared while resolving the current choice
-        if (game.getChoice().equals(choice)) {
+        if (choice.equals(game.getChoice())) {
+            game.setChoice(null);
+        }
+    }
+
+    public static void resolvePlayerChoice(Player chosenPlayer, PlayerChoice choice, Game game) throws GameStateException, WebSocketException {
+        if (chosenPlayer == null) {
+            throw new GameStateException("Unable to resolve player choice due to missing chosen player");
+        }
+
+        ResolvableEffect<?> resolvableEffect = choice.getEffect();
+        if (resolvableEffect.maySelectPlayer()) {
+            ((ResolvableEffectWithTargetPlayer<?>) resolvableEffect).selectPlayer(game, chosenPlayer);
+        } else {
+            ((ResolvableEffect<Player>) resolvableEffect).resolve(game, chosenPlayer);
+        }
+
+        // Reset the choice only if the given choice list was valid and if no other choice appeared while resolving the current choice
+        if (choice.equals(game.getChoice())) {
             game.setChoice(null);
         }
     }

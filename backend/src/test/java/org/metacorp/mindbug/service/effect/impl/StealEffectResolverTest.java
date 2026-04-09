@@ -3,8 +3,11 @@ package org.metacorp.mindbug.service.effect.impl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.CardSetException;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.StealEffect;
@@ -12,7 +15,7 @@ import org.metacorp.mindbug.model.effect.steal.StealSource;
 import org.metacorp.mindbug.model.effect.steal.StealTargetSelection;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.MindbugGameTest;
-
+import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -47,7 +50,39 @@ public class StealEffectResolverTest extends MindbugGameTest {
         timing = EffectTiming.PLAY;
     }
 
-    //TODO Test choice resolution
+    @Test
+    public void testChoiceResolution() throws GameStateException, WebSocketException {
+        effect.setValue(1);
+        effect.setSource(StealSource.BOARD);
+
+        // 2 cartes valides → création d’un choix
+        CardInstance c1 = opponentPlayer.getHand().getFirst();
+        c1.setPower(5);
+        opponentPlayer.addCardToBoard(c1);
+
+        CardInstance c2 = opponentPlayer.getHand().getFirst();
+        c2.setPower(6);
+        opponentPlayer.addCardToBoard(c2);
+
+        effectResolver.apply(game, timing);
+
+        assertNotNull(game.getChoice());
+
+        TargetChoice choice = (TargetChoice) game.getChoice();
+
+  
+        List<CardInstance> chosen = List.of(c1);
+
+   
+        choice.getEffect().resolve(game, chosen);
+
+
+        assertEquals(5, currentPlayer.getHand().size());
+        assertTrue(currentPlayer.getHand().contains(c1));
+
+        assertEquals(1, opponentPlayer.getBoard().size());
+        assertFalse(opponentPlayer.getBoard().contains(c1));
+    }
 
     @Test
     public void testMin_noTarget() {
