@@ -10,6 +10,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.CardSetService;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.CardService;
@@ -46,6 +47,7 @@ public final class AppUtils {
     public static Game createGame(String[] args, boolean isAuto) throws CardSetException {
         PlayerService playerService = new PlayerService();
         StartService startService = new StartService();
+        startService.cardSetService = new CardSetService();
         boolean is2v2 = false;
 
         if (args != null && args.length > 0) {
@@ -269,49 +271,5 @@ public final class AppUtils {
         }
     }
 
-    //TODO Cette méthode ne peut pas fonctionner comme ça...
-
-    /**
-     * Return the chosen card from the given list
-     *
-     * @param game           the current game state
-     * @param playerToChoose the player who needs to select an opponent
-     * @return a random card from the list
-     */
-    public static Player selectOpponent(Game game, Player playerToChoose) {
-        List<Player> listOpponents = playerToChoose.getOpponents(game.getPlayers());
-        if (listOpponents.size() == 1) {
-            return listOpponents.getFirst();
-        }
-
-        int index = 1;
-        System.out.printf("\nPlease %s, choose an opponent to target : (only type the associated number)\n",
-                playerToChoose.getName());
-        for (Player opponent : listOpponents) {
-            System.out.printf("\t(%d) - %s\n", index, opponent.getName());
-            index++;
-        }
-
-        Player target;
-        if (isAuto) {
-            target = listOpponents.get(RND.nextInt(listOpponents.size()));
-        } else {
-            Scanner scanner = new Scanner(System.in);
-            while (true) {
-                try {
-                    int choiceNumber = Integer.parseInt(scanner.nextLine());
-                    if (1 <= choiceNumber && choiceNumber <= listOpponents.size()) {
-                        target = listOpponents.get(choiceNumber - 1);
-                        break;
-                    } else {
-                        System.err.println("Invalid number");
-                    }
-                } catch (NumberFormatException e) {
-                    System.out.println("You must type a valid number");
-                }
-            }
-        }
-        System.out.printf("\n%s chose to target %s\n", playerToChoose.getName(), target.getName());
-        return target;
-    }
+    
 }

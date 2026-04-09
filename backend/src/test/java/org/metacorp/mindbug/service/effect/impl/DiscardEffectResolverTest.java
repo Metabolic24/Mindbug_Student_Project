@@ -3,16 +3,19 @@ package org.metacorp.mindbug.service.effect.impl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.CardSetException;
+import org.metacorp.mindbug.exception.GameStateException;
+import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.ChoiceType;
+import org.metacorp.mindbug.model.choice.PlayerChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.MindbugGameTest;
-
+import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
@@ -43,7 +46,47 @@ public class DiscardEffectResolverTest extends MindbugGameTest {
         timing = EffectTiming.PLAY;
     }
 
-    //TODO Test choice resolution
+    @Test
+    public void testChoiceResolution() throws GameStateException, WebSocketException {
+        // Setup : forcer un PlayerCardsChoice
+        effect.setSelf(true);
+        effect.setEachEnemy(false);
+        effect.setValue(2);
+
+        effectResolver.apply(game, timing);
+
+        // ✔️ 1er choix : choisir un joueur
+        PlayerChoice playerChoice = assertInstanceOf(PlayerChoice.class, game.getChoice());
+
+        List<Player> availableTargets = playerChoice.getAvailableTargets();
+
+       
+        Player chosenPlayer= availableTargets.getFirst();
+
+        playerChoice.getEffect().resolve(game, chosenPlayer);
+
+
+        TargetChoice targetChoice = assertInstanceOf(TargetChoice.class, game.getChoice());
+
+        List<CardInstance> cardsToDiscard = targetChoice.getAvailableTargets()
+                .stream()
+                .limit(2)
+                .toList();
+
+        targetChoice.getEffect().resolve(game, cardsToDiscard);
+
+
+        assertEquals(2, chosenPlayer.getDiscardPile().size());
+        assertEquals(3, chosenPlayer.getHand().size());
+
+        for (CardInstance card : cardsToDiscard) {
+            assertTrue(chosenPlayer.getDiscardPile().contains(card));
+            assertFalse(chosenPlayer.getHand().contains(card));
+        }
+
+        // ✔️ plus de choix en cours
+        assertNull(game.getChoice());
+    }
 
     @Test
     public void testBasic_opponentHandIs2() {

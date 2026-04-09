@@ -5,6 +5,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.ReviveEffect;
+import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
@@ -46,5 +47,9 @@ public class ReviveEffectResolver extends EffectResolver<ReviveEffect> implement
 
             HistoryService.logEffect(game, effect.getType(), effectSource, null);
         }
+    }
+
+    @Override
+    public void resolve(Game game,Player targetPlayer) {
     }
 }
