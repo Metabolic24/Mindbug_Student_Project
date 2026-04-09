@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Card from "@/components/game/Card.vue";
 import {ref, computed} from "vue";
-import {Carousel, Slide, Pagination, Navigation} from "vue3-carousel"
-import "vue3-carousel/carousel.css"
+import {Carousel, Slide, Pagination, Navigation} from "vue3-carousel";
+import "vue3-carousel/carousel.css";
 
 // Declare the interface for the data given by the parent component
 interface Props {

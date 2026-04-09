@@ -54,6 +54,7 @@ const titleClass = computed(() => ({
   width: 100%;
   height: 100%;
 
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,11 +78,11 @@ const titleClass = computed(() => ({
 }
 
 .discard-title.top {
-  top: -25px;
+  top: -80px;
 }
 
 .discard-title.bottom {
-  bottom: -25px;
+  bottom: -80px;
 }
 
 .discard-wrapper.isTeam .discard-title {
@@ -105,8 +106,8 @@ const titleClass = computed(() => ({
 /* Pile container */
 .discard-container {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 8vw;
+  height: 11vw;
   display: flex;
   align-items: center;
   justify-content: center;

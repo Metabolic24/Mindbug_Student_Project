@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {getCardAlt, getCardImage} from "@/shared/CardUtils";
 import {computed, ref, Ref} from "vue";
+import Card from "@/components/game/Card.vue";
 
 // Declare the interface for the data given by the parent component
 interface Props {
@@ -63,8 +64,16 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
       </div>
       <div class="modal-body">
         <div class="cards-container">
-          <img v-for="card in choice?.cards" :src="getCardImage(card)" :alt="getCardAlt(card)" class="card-image"
-               :class="getCardClasses(card)" @click="onCardSelected(card)" draggable="false" @contextmenu.prevent=""/>
+          <Card
+            v-for="card in choice?.cards"
+            :key="card.id"
+            :card="card"
+            context="discard-modal"
+            visibility="self"
+            :selected="selectedCards.includes(card)"
+            :clickable="true"
+            @click="onCardSelected(card)"
+          />
         </div>
       </div>
       <div class="modal-footer">
@@ -99,6 +108,8 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
   background-color: #f4f7fb;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 800px;
+  overflow-y: auto;
 }
 
 .card-image {
