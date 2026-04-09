@@ -10,6 +10,7 @@ import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardSetName;
 import org.metacorp.mindbug.model.player.AiPlayer;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.CardSetService;
 import org.metacorp.mindbug.service.PlayerService;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.CardService;
@@ -41,6 +42,7 @@ public final class AppUtils {
     public static Game createGame(String[] args, boolean isAuto) throws CardSetException {
         PlayerService playerService = new PlayerService();
         StartService startService = new StartService();
+        startService.setCardSetService(new CardSetService());
         boolean is2v2 = false;
 
         if (args != null && args.length > 0) {

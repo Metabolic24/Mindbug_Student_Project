@@ -12,6 +12,7 @@ import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.choice.MindbugChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
+import org.metacorp.mindbug.model.choice.PlayerChoice;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.game.ChoiceService;
 import org.metacorp.mindbug.utils.AppUtils;
@@ -30,6 +31,8 @@ public class ManualApp {
     private static final String AVAILABLE_ACTIONS = "Actions possibles : play, p, attack, a, sumup, s, details, d, stop, exit\n";
 
     static void main(String[] args) throws CardSetException {
+        System.out.println("PARAMETRES : " + Arrays.toString(args));
+      
         Game game = AppUtils.createGame(args, false);
 
         System.out.println(AVAILABLE_ACTIONS);
@@ -214,6 +217,28 @@ public class ManualApp {
                             throw new GameStateException("Choix invalide");
                         }
                     }
+                     case PLAYER -> {
+                        System.out.println("Résolution d'un choix de joueur");
+
+                        PlayerChoice targetChoice = (PlayerChoice) choice;
+                        int value = 0;
+                        
+                        try {
+                                value = Integer.parseInt(input)-1;
+                                System.out.println("value : " + value);
+                        } 
+                        catch (NumberFormatException e) {
+                                throw new GameStateException("Choix invalide");
+                        }
+
+                        if (value < 0 || value >= targetChoice.getAvailableTargets().size()) {
+                                throw new GameStateException("Choix invalide");
+                        }
+                       
+
+                        System.out.printf("Cible(s) choisie(s) : %s\n",targetChoice.getAvailableTargets().get(value).getName()); 
+                        ChoiceService.resolveChoice(targetChoice.getAvailableTargets().get(value), game);
+                    }
                     default -> {
                         // Should not happen
                     }
@@ -282,6 +307,15 @@ public class ManualApp {
                 List<CardInstance> availableBlockers = blockChoice.getBlockersMap().get(choice.getPlayerToChoose());
                 for (int i = 1; i <= availableBlockers.size(); i++) {
                     System.out.printf("\t(%d) - %s\n", i, availableBlockers.get(i - 1).getCard().getName());
+                }
+            }
+            case PLAYER -> {
+                System.out.println("Choose the player, type the player's number :");
+
+                int id = 1;
+                for (var target : ((PlayerChoice) choice).getAvailableTargets()) {
+                    System.out.println("        (" + id + ") - " + target.getName()); 
+                    id++;
                 }
             }
             default -> {
