@@ -96,7 +96,5 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
 
         HistoryService.logEffect(game, effect.getType(), effectSource, Collections.singleton(attackingCard));
     }
-    @Override
-    public void resolve(Game game,Player targetPlayer) {
-    }
+    
 }

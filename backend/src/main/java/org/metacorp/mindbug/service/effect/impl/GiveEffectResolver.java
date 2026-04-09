@@ -10,6 +10,7 @@ import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.utils.AppUtils;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.service.effect.ResolvableEffectWithTargetPlayer;
 
 import java.util.Collections;
 import java.util.List;
@@ -22,7 +23,7 @@ import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 /**
  * Effect resolver for GiveEffect
  */
-public class GiveEffectResolver extends EffectResolver<GiveEffect> implements ResolvableEffect<List<CardInstance>> {
+public class GiveEffectResolver extends EffectResolver<GiveEffect> implements ResolvableEffectWithTargetPlayer<List<CardInstance>> {
 
 
     /**
@@ -72,7 +73,6 @@ public class GiveEffectResolver extends EffectResolver<GiveEffect> implements Re
        EnnemyGiveCard ( game, targetPlayer);      
     }
     @Override
-    public void resolve(Game game,  List<CardInstance> chosenCards) {
-       
+    public void resolve(Game game,  List<CardInstance> chosenCards) {       
     }
 }

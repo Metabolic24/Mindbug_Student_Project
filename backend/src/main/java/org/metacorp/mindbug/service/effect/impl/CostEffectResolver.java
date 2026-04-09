@@ -56,8 +56,5 @@ public class CostEffectResolver extends EffectResolver<CostEffect> implements Re
         game.getEffectQueue().setResolvingEffect(true);
 
         game.getLogger().debug("COST effect of {} is about to be resolved", getLoggableCard(effectSource));
-    }
-    @Override
-    public void resolve(Game game,Player targetPlayer) {
-    }
+    }  
 }

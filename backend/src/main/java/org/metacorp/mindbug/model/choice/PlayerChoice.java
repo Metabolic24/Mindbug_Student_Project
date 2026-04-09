@@ -9,6 +9,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.service.effect.ResolvableEffectWithTargetPlayer;
 import org.metacorp.mindbug.utils.ChoiceUtils;
 
 import java.util.List;
@@ -24,7 +25,7 @@ public class PlayerChoice extends AbstractChoice<Player> {
 
     // The effect that should be resolved after the choice resolution
     @NonNull
-    private ResolvableEffect<List<CardInstance>> effect;
+    private ResolvableEffectWithTargetPlayer<List<CardInstance>> effect;
 
     // How many card should the player choose, -1 means he must select all cards
     @NonNull
@@ -39,7 +40,7 @@ public class PlayerChoice extends AbstractChoice<Player> {
 
     private boolean optional;
 
-    public PlayerChoice(@NonNull Player playerToChoose, @NonNull CardInstance effectSource, @NonNull ResolvableEffect<List<CardInstance>> effect,
+    public PlayerChoice(@NonNull Player playerToChoose, @NonNull CardInstance effectSource, @NonNull ResolvableEffectWithTargetPlayer<List<CardInstance>> effect,
                              @NonNull List<Player> availableTargets) {
         this.playerToChoose = playerToChoose;
         this.effectSource = effectSource;

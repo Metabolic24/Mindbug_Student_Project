@@ -35,7 +35,4 @@ public class TargetChoiceResolver extends StealEffectResolver implements Resolva
             throw new GameStateException("Unable to resolve target choice due to missing targets");
         }
     }
-    @Override    
-    public void resolve(Game game,Player targetPlayer) {
-    }
 }

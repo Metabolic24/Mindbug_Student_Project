@@ -49,7 +49,5 @@ public class ReviveEffectResolver extends EffectResolver<ReviveEffect> implement
         }
     }
 
-    @Override
-    public void resolve(Game game,Player targetPlayer) {
-    }
+    
 }
