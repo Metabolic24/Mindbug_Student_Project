@@ -47,6 +47,7 @@ public class GainEffectResolver extends EffectResolver<GainEffect> {
                 GameStateService.lifePointLost(cardOwner, game);
             }
         } else {
+            System.out.println("Gaining " + value + " life points for player " + cardOwner.getName());//TODO Remove this debug when gain effect will be fully tested
             team.gainLifePoints(value);
         }
 
