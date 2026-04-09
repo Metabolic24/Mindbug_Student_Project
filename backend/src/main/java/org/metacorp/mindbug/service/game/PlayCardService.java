@@ -143,6 +143,7 @@ public class PlayCardService {
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     protected static void managePlayedCard(CardInstance playedCard, Player mindbugger, Game game) throws GameStateException, WebSocketException {
+        game.setChoice(null);
         // Specific behavior if card has been mindbugged
         if (mindbugger != null) {
             playedCard.setOwner(mindbugger);
@@ -155,10 +156,12 @@ public class PlayCardService {
 
         // Add PLAY effects (if any) if player is allowed to trigger them
         EffectQueueService.addBoardEffectsToQueue(playedCard, EffectTiming.PLAY, game.getEffectQueue());
+        System.out.println("Card " + playedCard.getCard().getName() + " played by player " + playedCard.getOwner().getName() + " with mindbugger " + (mindbugger != null ? mindbugger.getName() : "none"));//TODO Remove this debug when play card will be fully tested
 
         game.setAfterEffect(() -> {
             // Start a new turn but only changes current player if card has not been mindbugged
             GameStateService.newTurn(game, mindbugger != null);
         });
+        System.out.println("After effect set for card " + playedCard.getCard().getName() + " played by player " + playedCard.getOwner().getName() + " with mindbugger " + (mindbugger != null ? mindbugger.getName() : "none"));//TODO Remove this debug when play card will be fully tested
     }
 }

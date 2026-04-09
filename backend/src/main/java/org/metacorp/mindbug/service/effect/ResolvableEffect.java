@@ -28,6 +28,6 @@ public interface ResolvableEffect<T> {
      *
      * @param game         the current game state
      * @param p            the player associated with the choice
-     
-    void resolve(Game game,  Player p) throws GameStateException, WebSocketException;*/
+     */
+    void resolve(Game game,  Player p) throws GameStateException, WebSocketException;
 }
