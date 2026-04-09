@@ -13,7 +13,6 @@ import org.metacorp.mindbug.service.WebSocketService;
 import org.slf4j.Logger;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -101,22 +100,22 @@ public class StartService {
                 List<Player> nextPlayers = new ArrayList<>();
 
 
-                    for (Player player : validPlayers) {
-                        // Get a random card from the remaining cards
-                        CardInstance bannedCard = banCard(game);
-                        logger.info("Banned card for {} : {} ({})", getLoggablePlayer(player), getLoggableCard(bannedCard), bannedCard.getPower());
+                for (Player player : validPlayers) {
+                    // Get a random card from the remaining cards
+                    CardInstance bannedCard = banCard(game);
+                    logger.info("Banned card for {} : {} ({})", getLoggablePlayer(player), getLoggableCard(bannedCard), bannedCard.getPower());
 
-                        if (bannedCard.getPower() < higherPower) {
-                            // Current player will not be the first one
-                            continue;
-                        } else if (bannedCard.getPower() > higherPower) {
-                            // Update higherPower value and clean the next players set
-                            higherPower = bannedCard.getPower();
-                            nextPlayers.clear();
-                        }
-
-                        nextPlayers.add(player);
+                    if (bannedCard.getPower() < higherPower) {
+                        // Current player will not be the first one
+                        continue;
+                    } else if (bannedCard.getPower() > higherPower) {
+                        // Update higherPower value and clean the next players set
+                        higherPower = bannedCard.getPower();
+                        nextPlayers.clear();
                     }
+
+                    nextPlayers.add(player);
+                }
 
                 validPlayers = nextPlayers;
             }
@@ -142,5 +141,14 @@ public class StartService {
         game.getBannedCards().add(chosenCard);
 
         return chosenCard;
+    }
+
+    /**
+     * WARNING : SHOULD ONLY BE USED in AppUtils as this field is meant to be automatically injected by HK2
+     *
+     * @param cardSetService the card set service
+     */
+    public void setCardSetService(CardSetService cardSetService) {
+        this.cardSetService = cardSetService;
     }
 }

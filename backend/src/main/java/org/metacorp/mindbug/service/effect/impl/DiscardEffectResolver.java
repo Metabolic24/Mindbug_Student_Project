@@ -2,13 +2,14 @@ package org.metacorp.mindbug.service.effect.impl;
 
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.PlayerChoice;
 import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
-import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.service.effect.ResolvableEffectWithTargetPlayer;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -21,7 +22,7 @@ import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 /**
  * Effect resolver for DisableTimingEffect
  */
-public class DiscardEffectResolver extends EffectResolver<DiscardEffect> implements ResolvableEffect<List<CardInstance>> {
+public class DiscardEffectResolver extends EffectResolver<DiscardEffect> implements ResolvableEffectWithTargetPlayer<List<CardInstance>> {
 
     /**
      * Constructor
@@ -35,21 +36,50 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
 
     @Override
     public void apply(Game game, EffectTiming timing) {
-        Player opponent = effectSource.getOwner().getOpponents(game.getPlayers()).getFirst(); // TODO A changer pour le 2v2 : il faut sélectionner un adversaire
+        if (effect.isSelf()) {
+            //Self discard
+            chooseCardsToDiscard(game, effectSource.getOwner());
+        } else {
+            // TODO You misunderstood what does "eachEnemy" attribute means whereas there is a Javadoc on it (this doesn't work anyway as choices are overwritten)
+            if (effect.isEachEnemy()) {
+                // Each enemy discard
+                for (Player opponent : game.getOpponents()) {
+                    chooseCardsToDiscard(game, opponent);
+                }
+            } else {
+                if (game.getOpponents().size() == 1) {
+                    // If there is only one opponent, we directly make him discard without asking the player to choose
+                    chooseCardsToDiscard(game, game.getOpponents().getFirst());
+                } else {
+                    //The player car target a player with no card in hand
+                    //TODO Here, the type is incompatible with the expected one
+                    game.setChoice(new PlayerChoice(effectSource.getOwner(), effectSource, this, game.getOpponents()));
+                    game.getLogger().debug("Player {} must choose an oppponnent to target ",
+                            getLoggablePlayer(effectSource.getOwner()));
+                }
+            }
+        }
+    }
 
-        int value = effect.isEachEnemy() ? opponent.getBoard().size() : effect.getValue();
+    @Override
+    public void selectPlayer(Game game, Player targetPlayer) {
+        if (targetPlayer != null) {
+            chooseCardsToDiscard(game, targetPlayer);
+        }
+    }
 
-        Player playerToDiscard = effect.isSelf() ? effectSource.getOwner() : opponent;
-        List<CardInstance> availableCards = effect.isDrawPile() ? playerToDiscard.getDrawPile() : playerToDiscard.getHand();
+    private void chooseCardsToDiscard(Game game, Player targetPlayer) {
+        int value = effect.getValue();
+        List<CardInstance> availableCards = effect.isDrawPile() ? targetPlayer.getDrawPile() : targetPlayer.getHand();
 
         if (availableCards.size() <= value || value == -1) {
             resolve(game, new ArrayList<>(availableCards));
         } else if (effect.isDrawPile()) {
             resolve(game, new ArrayList<>(availableCards.subList(0, value)));
         } else {
-            game.setChoice(new TargetChoice(playerToDiscard, effectSource, this, value, new HashSet<>(availableCards)));
+            game.setChoice(new TargetChoice(targetPlayer, effectSource, this, value, new HashSet<>(availableCards)));
             game.getLogger().debug("Player {} must choose {} card(s) to discard (available targets : {})",
-                    getLoggablePlayer(playerToDiscard), value, getLoggableCards(availableCards));
+                    getLoggablePlayer(targetPlayer), value, getLoggableCards(availableCards));
         }
     }
 

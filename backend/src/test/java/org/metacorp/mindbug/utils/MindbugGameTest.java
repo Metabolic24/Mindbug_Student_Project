@@ -69,6 +69,16 @@ public class MindbugGameTest {
         return game;
     }
 
+    protected Game startGame2v2(Player player1, Player player2,Player player3, Player player4) throws CardSetException {
+        return startGame2v2(player1, player2,player3, player4, CardSetName.FIRST_CONTACT);
+    }
+
+    protected Game startGame2v2(Player player1, Player player2,Player player3, Player player4, CardSetName cardSetName) throws CardSetException {
+        Game game = startService.startGame(new Game(Arrays.asList(player1, player2, player3, player4)), cardSetName);
+        gameId = game.getUuid();
+        return game;
+    }
+
     protected Game prepareCustomGame() throws CardSetException {
         Game game = TestGameUtils.prepareCustomGame(playerService, cardSetService);
         gameId = game.getUuid();

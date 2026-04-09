@@ -13,6 +13,7 @@ import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.AttackService;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -38,14 +39,17 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
 
     @Override
     public void apply(Game game, EffectTiming timing) throws GameStateException, WebSocketException {
-        Player opponent = effectSource.getOwner().getOpponents(game.getPlayers()).getFirst(); // TODO To be changed for 2v2 : il faut sélectionner un adversaire
+        List<CardInstance> availableCards = new ArrayList<>();
+        for (Player opponent : game.getOpponents()) {
+            availableCards.addAll(opponent.getBoard());
+        }
 
         if (timing == EffectTiming.PASSIVE) {
             if (effect.getKeyword() != null) {
                 boolean forcedAttack = false;
-                for (CardInstance opponentCard : opponent.getBoard()) {
-                    if (!opponentCard.hasKeyword(effect.getKeyword())) {
-                        opponentCard.setAbleToAttack(false);
+                for (CardInstance availableCard : availableCards) {
+                    if (!availableCard.hasKeyword(effect.getKeyword())) {
+                        availableCard.setAbleToAttack(false);
                     } else {
                         forcedAttack = true;
                     }
@@ -58,18 +62,17 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
                 }
             }
         } else {
-            List<CardInstance> opponentBoard = opponent.getBoard();
-            switch (opponentBoard.size()) {
+            switch (availableCards.size()) {
                 case 0:
                     // Nothing to do
                     break;
                 case 1:
-                    resolve(game, opponentBoard.getFirst());
+                    resolve(game, availableCards.getFirst());
                     break;
                 default:
-                    game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, 1, new HashSet<>(opponentBoard)));
+                    game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, 1, new HashSet<>(availableCards)));
                     game.getLogger().debug("Player {} must choose a card that will be forced to attack (available targets : {})",
-                            getLoggablePlayer(effectSource.getOwner()), getLoggableCards(opponentBoard));
+                            getLoggablePlayer(effectSource.getOwner()), getLoggableCards(availableCards));
             }
         }
     }

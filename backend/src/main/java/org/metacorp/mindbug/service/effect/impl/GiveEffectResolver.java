@@ -2,11 +2,13 @@ package org.metacorp.mindbug.service.effect.impl;
 
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.PlayerChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.impl.GiveEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
+import org.metacorp.mindbug.service.effect.ResolvableEffect;
 
 import java.util.Collections;
 
@@ -16,7 +18,7 @@ import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 /**
  * Effect resolver for GiveEffect
  */
-public class GiveEffectResolver extends EffectResolver<GiveEffect> {
+public class GiveEffectResolver extends EffectResolver<GiveEffect> implements ResolvableEffect<Player> {
 
     /**
      * Constructor
@@ -28,23 +30,32 @@ public class GiveEffectResolver extends EffectResolver<GiveEffect> {
         super(effect, effectSource);
     }
 
-
     @Override
     public void apply(Game game, EffectTiming timing) {
         if (effect.isItself()) {
-            giveCard(game, effectSource);
+            if (game.getOpponents().size() == 1) {
+                giveCard(game, game.getOpponents().getFirst());
+            } else {
+                //The player car target a player with no card in hand
+                game.setChoice(new PlayerChoice(effectSource.getOwner(), effectSource, this, game.getOpponents()));
+                game.getLogger().debug("Player {} must choose an oppponnent to target ",
+                        getLoggablePlayer(effectSource.getOwner()));
+            }
         }
     }
 
-    private void giveCard(Game game, CardInstance cardToGive) {
-        Player opponent = cardToGive.getOwner().getOpponents(game.getPlayers()).getFirst(); //TODO A changer pour le 2v2 : il faut choisir un adversaire
+    private void giveCard(Game game, Player targetPlayer) {
+        effectSource.setOwner(targetPlayer);
+        game.getCurrentPlayer().getBoard().remove(effectSource);
+        targetPlayer.getBoard().add(effectSource);
 
-        cardToGive.setOwner(opponent);
-        game.getCurrentPlayer().getBoard().remove(cardToGive);
-        opponent.getBoard().add(cardToGive);
+        game.getLogger().debug("{} card has been given to {} due to its effect", getLoggableCard(effectSource), getLoggablePlayer(targetPlayer));
 
-        game.getLogger().debug("{} card has been given to {} due to its effect", getLoggableCard(cardToGive), getLoggablePlayer(opponent));
+        HistoryService.logEffect(game, effect.getType(), effectSource, Collections.singleton(effectSource));
+    }
 
-        HistoryService.logEffect(game, effect.getType(), effectSource, Collections.singleton(cardToGive));
+    @Override
+    public void resolve(Game game, Player targetPlayer) {
+        giveCard(game, targetPlayer);
     }
 }
