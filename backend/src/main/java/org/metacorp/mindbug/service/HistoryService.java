@@ -124,7 +124,7 @@ public class HistoryService {
                 // Should never happen
             }
         }
-
+        System.out.println("Logging choice with data : " + data);//TODO Remove this debug when choice logging will be fully tested
         log(game, HistoryKey.CHOICE, sourceCard, targets, data);
     }
 

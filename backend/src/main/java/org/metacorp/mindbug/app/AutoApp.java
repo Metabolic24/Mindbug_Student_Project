@@ -44,6 +44,7 @@ public class AutoApp {
      * @throws GameStateException if the game reaches an inconsistant state
      */
     private static void resolveTurn(Game game) throws GameStateException, WebSocketException {
+        System.out.println("Resolving turn for player " + game.getCurrentPlayer().getName());//TODO Remove this debug when game turns will be fully tested
         Player currentPlayer = game.getCurrentPlayer();
 
         // Here we consider that the current player can at least play or attack
