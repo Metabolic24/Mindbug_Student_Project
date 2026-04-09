@@ -22,6 +22,7 @@ interface GameStateInterface {
     ally: PlayerInterface
     opponents: Array<PlayerInterface>
     playerTurn?: boolean
+    currentPlayerUuid?: string
     winner: string
     card: CardInterface
     choice: ChoiceInterface | TargetChoiceInterface | SimultaneousChoiceInterface

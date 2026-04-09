@@ -25,6 +25,7 @@ public class WsPlayerGameState {
     private List<PlayerDTO> opponents;
     private Boolean playerTurn;
     private List<UUID> winners;
+    private UUID currentPlayerUuid;
 
     private CardDTO card;
     private AbstractChoiceDTO choice;
@@ -41,6 +42,7 @@ public class WsPlayerGameState {
         this.winners = gameState.getWinners();
         this.card = gameState.getCard();
         this.choice = gameState.getChoice();
+        this.currentPlayerUuid = gameState.getPlayer().getUuid();
 
         Map<UUID, PlayerDTO> playerById = new LinkedHashMap<>();
         addIfNotNull(playerById, gameState.getPlayer());
