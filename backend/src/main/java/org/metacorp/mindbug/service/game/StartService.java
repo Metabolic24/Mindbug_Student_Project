@@ -28,7 +28,7 @@ import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 public class StartService {
 
     @Inject
-    private CardSetService cardSetService;
+    public CardSetService cardSetService;
 
     /**
      * Creates and start a new game for two players (using the given card set)

@@ -75,6 +75,7 @@ public class AiUtils {
      * @throws WebSocketException if an error occurs during WebSocket message sending
      */
     private static void resolveMindbug(Game game, AiPlayer aiPlayer) throws GameStateException, WebSocketException {
+        System.out.println("Resolving mindbug choice...");//TODO Remove this debug when mindbug choice will be fully tested
         boolean shouldMindbug = aiPlayer.getResolver().shouldMindbug(game, aiPlayer);
         ChoiceService.resolveChoice(shouldMindbug, game);
     }

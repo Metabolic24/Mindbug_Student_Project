@@ -129,4 +129,8 @@ public class DestroyEffectResolver extends EffectResolver<DestroyEffect> impleme
     public void resolve(Game game, List<CardInstance> chosenTargets) {
         destroyCards(game, chosenTargets);
     }
+
+    @Override
+    public void resolve(Game game,Player targetPlayer) {
+    }
 }
