@@ -10,7 +10,7 @@ import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
-
+import org.metacorp.mindbug.service.effect.ResolvableEffectWithTargetPlayer;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -23,7 +23,7 @@ import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 /**
  * Effect resolver for DisableTimingEffect
  */
-public class DiscardEffectResolver extends EffectResolver<DiscardEffect> implements ResolvableEffect<List<CardInstance>> {
+public class DiscardEffectResolver extends EffectResolver<DiscardEffect> implements ResolvableEffectWithTargetPlayer<List<CardInstance>> {
    
    
     /**

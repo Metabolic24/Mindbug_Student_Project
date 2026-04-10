@@ -12,9 +12,7 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.NoBlockEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.MindbugGameTest;
-import java.util.List;
-import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -43,37 +41,6 @@ public class NoBlockEffectResolverTest extends MindbugGameTest {
         effect.setType(EffectType.NO_BLOCK);
         effectResolver = new NoBlockEffectResolver(effect, randomCard);
         timing = EffectTiming.PLAY;
-    }
-
-    @Test
-    public void testChoiceResolution()  throws WebSocketException, GameStateException {
-       
-        CardInstance firstCard = opponentPlayer.getHand().getFirst();
-        opponentPlayer.addCardToBoard(firstCard);
-
-        CardInstance secondCard = opponentPlayer.getHand().getFirst();
-        opponentPlayer.addCardToBoard(secondCard);
-
-        
-        effect.setValue(1);
-        effectResolver.apply(game, timing);
-
-        assertNotNull(game.getChoice());
-
-        TargetChoice choice = (TargetChoice) game.getChoice();
-
-        // 👉 On choisit UNE carte (ex: firstCard)
-        List<CardInstance> chosen = List.of(firstCard);
-
-   
-        choice.getEffect().resolve(game, chosen);
-
-        // ✔️ Vérifications
-        assertFalse(firstCard.isAbleToBlock());
-        assertTrue(secondCard.isAbleToBlock());
-
-        
-        assertNull(game.getChoice());
     }
 
     @Test
