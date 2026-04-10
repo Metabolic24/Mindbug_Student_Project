@@ -179,6 +179,28 @@ function closeModal() {
   transform: translateY(-40%);
 }
 
+.bottom-hand-right :deep(.card-wrapper.bottom-card:hover) {
+  transform: translateY(-55%) scale(1.6);
+  z-index: 5;
+}
+
+.bottom-hand-right :deep(.card-wrapper.bottom-card.selected) {
+  transform: translateY(-57%) scale(1.7);
+  z-index: 10;
+}
+
+.bottom-hand-left :deep(.card-wrapper.bottom-card:hover),
+.bottom-hand-left :deep(.card-wrapper.bottom-card.selected) {
+  transform: translateY(30%) scale(1.1);
+  box-shadow: none;
+  z-index: 1;
+}
+
+.top-hand-left,
+.top-hand-right {
+  transform: translateY(65%);
+}
+
 /* TEAM DETAILS */
 
 .team-details {
