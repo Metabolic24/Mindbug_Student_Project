@@ -142,14 +142,7 @@ function closeModal() {
 }
 
 .board-buttons-col {
-  position: absolute;
-  right: 20px;
-  bottom: -210px;
   z-index: 3;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding-right: 0;
-  padding-bottom: 0;
 }
 
 .cards {
@@ -168,9 +161,9 @@ function closeModal() {
   width: 100%;
   position: absolute;
   left: 50%;
-  top: 52%;
+  top: 51%;
   transform: translate(-50%, -50%);
-  height: 80%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

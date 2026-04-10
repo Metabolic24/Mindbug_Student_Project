@@ -113,6 +113,7 @@ const imgSrc = computed(() => {
     justify-content: center;
     gap: 16px;
     position: relative;
+    z-index: 1000;
   }
 
   .turn-indicator {
