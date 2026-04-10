@@ -99,12 +99,6 @@ const isHidden = computed(() => {
   return props.visibility !== 'self'
 })
 
-const cardImage = computed(() => {
-  if (isHidden.value) {
-    return new URL('@/assets/cards/back.png', import.meta.url).href
-  }
-  return getCardImage(props.card)
-})
 </script>
 
 <template>
@@ -150,9 +144,8 @@ const cardImage = computed(() => {
 /* General card styling */
 .card-wrapper {
   position: relative;
-  width: 9.5vw;
-  height: 13.5vw;
-
+  width: 8vw;
+  height: 12vw;
   transition: transform 0.25s cubic-bezier(.2, .8, .2, 1),
   box-shadow 0.25s ease,
   border 0.2s ease;
@@ -204,7 +197,12 @@ const cardImage = computed(() => {
 .card-wrapper.opponent-board:hover,
 .card-wrapper.player-board:hover,
 .card-wrapper.discard-modal:hover {
-  transform: scale(1.07);
+  transform: scale(1.47);
+}
+
+.card-wrapper.discard-pile {
+  width: 100%;
+  height: 100%;
 }
 
 /* Opponent hand styling */

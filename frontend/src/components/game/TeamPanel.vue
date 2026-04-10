@@ -14,6 +14,11 @@ interface Props {
   attackingCard: CardInterface;
   onCardSelected: (card: CardInterface, location: "Board" | "Hand") => void;
   onActionButtonClick: (actionLabel: string) => void;
+  onCardPreview: (card: CardInterface) => void;
+
+  settingsTooltip: string;
+  
+  onSettingsButtonClick: () => void;
 }
 
 const props = defineProps<Props>();
@@ -59,6 +64,7 @@ function closeModal() {
               :attacking-card="attackingCard"
               :selected-card="selectedCard" 
               @button-clicked="props.onActionButtonClick($event)"
+              :on-settings-button-click="onSettingsButtonClick"
             />
 
             <div class="hand top-hand-right">
@@ -69,13 +75,14 @@ function closeModal() {
             </div>
         </div>
 
-        <!-- BOARD (MILIEU) -->
+        <!-- BOARD (MIDDLE) -->
         <div class="board-area">
             <BoardTeam
               :game-state="props.gameState"
               :selected-card="props.selectedCard"
               :attacking-card="props.attackingCard"
               @card-selected="props.onCardSelected($event, 'Board')"
+              @card-preview="props.onCardPreview($event)"
             />
         </div>
 
@@ -101,18 +108,20 @@ function closeModal() {
               :attacking-card="attackingCard"
               :selected-card="selectedCard"
               @button-clicked="props.onActionButtonClick($event)"
+              :on-settings-button-click="onSettingsButtonClick"
             />
 
             <div class="hand bottom-hand-right">
               <hand :cards="props.gameState?.player?.hand" visibility="self" :selected-card="props.selectedCard"
-              @card-selected="props.onCardSelected($event, 'Hand')"></hand>
+              @card-selected="props.onCardSelected($event, 'Hand')"
+              @card-preview="props.onCardPreview($event)"></hand>
             </div>
             <div class="discard bottom-right-discard">
               <discard-pile :cards="gameState?.player.discard" @clicked="displayDiscardModal(gameState?.player.discard, 'self', gameState.player.name)" position="top" isTeam/>
             </div>
-
         </div>
     </div>
+    
     <discard-modal
       v-if="isDiscardModalVisible"
       :cards="discardModalData"
@@ -166,8 +175,6 @@ function closeModal() {
 
   margin: 0 10px;
 
-  border: 2px solid grey;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,6 +184,28 @@ function closeModal() {
 .bottom-hand-right,
 .bottom-hand-left{
   transform: translateY(-40%);
+}
+
+.bottom-hand-right :deep(.card-wrapper.bottom-card:hover) {
+  transform: translateY(-55%) scale(1.6);
+  z-index: 5;
+}
+
+.bottom-hand-right :deep(.card-wrapper.bottom-card.selected) {
+  transform: translateY(-57%) scale(1.7);
+  z-index: 10;
+}
+
+.bottom-hand-left :deep(.card-wrapper.bottom-card:hover),
+.bottom-hand-left :deep(.card-wrapper.bottom-card.selected) {
+  transform: translateY(30%) scale(1.1);
+  box-shadow: none;
+  z-index: 1;
+}
+
+.top-hand-left,
+.top-hand-right {
+  transform: translateY(65%);
 }
 
 /* TEAM DETAILS */
@@ -190,7 +219,6 @@ function closeModal() {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid blue;
 
   z-index: 2;
 

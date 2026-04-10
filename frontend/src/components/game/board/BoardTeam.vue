@@ -14,19 +14,19 @@ interface Props {
   onCardSelected: (card: CardInterface) => void
 }
 
-const emit = defineEmits(['button-clicked', 'card-selected'])
+const emit = defineEmits(['button-clicked', 'card-selected', 'card-preview'])
 
 function onCardSelected(card: CardInterface): void {
-  if ((props.gameState?.playerTurn && !props.attackingCard && card.ableToAttack) || // Attack case
-      (!props.gameState?.playerTurn && props.attackingCard && card.ableToBlock && // Block case
-          (props.attackingCard.keywords.includes("SNEAKY") && card.keywords.includes("SNEAKY") ||
-              !props.attackingCard.keywords.includes("SNEAKY")))) {
+  if ((props.gameState?.currentPlayerID === props.gameState?.player.uuid && !props.attackingCard && card.ableToAttack) || // Attack case
+      (!(props.gameState?.currentPlayerID === props.gameState?.player.uuid) && card.ableToBlock && // Block case
+          (props.attackingCard.keywords?.includes("SNEAKY") && card.keywords?.includes("SNEAKY") ||
+              !props.attackingCard.keywords?.includes("SNEAKY")))) {
     emit('card-selected', card)
   }
 }
 
 function onOpponentCardSelected(card: CardInterface): void {
-  if (props.gameState?.playerTurn && props.gameState?.choice?.type === "HUNTER" && card.ownerId!=props.gameState?.ally.uuid) { // Hunter case
+  if (props.gameState?.currentPlayerID === props.gameState?.player.uuid && props.gameState?.choice?.type === "HUNTER" && card.ownerId!=props.gameState?.ally.uuid) { // Hunter case
     emit('card-selected', card)
   }
 }
@@ -37,7 +37,7 @@ const props = defineProps<Props>()
 <template>
     <div class="board-team">
 
-  <!-- ZONES JOUEURS -->
+  <!-- PLAYER'S ZONE -->
 
   <div class="player-zone player-1"
      :class="{ 'active-turn': activeKey === 'opp1' && !isChoice,
@@ -52,6 +52,7 @@ const props = defineProps<Props>()
         :attacking="card.uuid === props.attackingCard?.uuid"
         :clickable="true"
         @click="onOpponentCardSelected"
+        @preview="emit('card-preview', $event)"
       />
   </div>
 
@@ -68,6 +69,7 @@ const props = defineProps<Props>()
         :attacking="card.uuid === props.attackingCard?.uuid"
         :clickable="true"
         @click="onOpponentCardSelected"
+        @preview="emit('card-preview', $event)"
       />
   </div>
 
@@ -84,6 +86,7 @@ const props = defineProps<Props>()
         :attacking="card.uuid === props.attackingCard?.uuid"
         :clickable="true"
         @click="onOpponentCardSelected"
+        @preview="emit('card-preview', $event)"
       />
   </div>
 
@@ -100,10 +103,11 @@ const props = defineProps<Props>()
         :attacking="card.uuid === props.attackingCard?.uuid"
         :clickable="true"
         @click="onCardSelected"
+        @preview="emit('card-preview', $event)"
       />
   </div>
 
-  <!-- ROUE DU TOUR -->
+  <!-- WHEEL TURN -->
 
   <div class="turn-wheel">
     <TurnWheel ref="wheelRef" :game-state="props.gameState" />
@@ -128,7 +132,7 @@ const props = defineProps<Props>()
 
 }
 
-/* ZONES JOUEURS */
+/* PLAYER'S ZONE */
 
 .player-zone.active-turn {
   box-shadow: inset 0 0 40px rgba(255, 200, 50, 0.15),
@@ -156,7 +160,7 @@ const props = defineProps<Props>()
 .player-3 { grid-area: 2 / 1 }
 .player-4 { grid-area: 2 / 2 }
 
-/* ROUE DU TOUR */
+/* WHEEL TURN */
 
 .turn-wheel {
 

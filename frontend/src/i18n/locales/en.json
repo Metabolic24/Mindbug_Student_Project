@@ -41,11 +41,17 @@
       "win": "Game Over : You WIN!",
       "lose": "Game Over : You LOSE!",
       "player_turn": "Play OR Attack OR Action",
-      "waiting": "Waiting for opponent...",
+      "waiting": {
+        "text": "Waiting for {player}...",
+        "opponent_fallback": "Opponent"
+      },
       "choice": {
         "FRENZY": "Do you want to attack again?",
         "HUNTER": "Select a target to hunt or continue attacking",
-        "waiting": "Waiting for opponent choice...",
+        "waiting": {
+          "text": "Waiting for {player} choice...",
+          "user_fallback": "User"
+        },
         "mindbug": "Do you want to use a MindBug?",
         "attacked": "Block OR Lose LP",
         "40": "Do you want to play the stolen card?",
@@ -96,7 +102,8 @@
         "carousel": "Carousel",
         "grid": "Grid",
         "self_title": "Your discard pile",
-        "opponent_title": "Opponent's discard pile"
+        "title": "{player}'s discard pile",
+        "user_fallback": "User"
       },
       "settings": {
         "title": "Settings",

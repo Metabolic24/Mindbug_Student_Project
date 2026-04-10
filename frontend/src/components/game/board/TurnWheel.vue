@@ -28,7 +28,7 @@ const activeInfo = computed((): { key: string | null; isChoice: boolean } => {
   const g = props.gameState;
   if (!g) return { key: null, isChoice: false };
 
-  // Priorité 1 : un choix est en attente
+  // Priority 1 : a choice is waiting
   if (g.choice?.playerToChoose) {
     return {
       key: resolveKey(g.choice.playerToChoose),
@@ -36,15 +36,15 @@ const activeInfo = computed((): { key: string | null; isChoice: boolean } => {
     };
   }
 
-  // Priorité 2 : tour normal — on utilise currentPlayerUuid si dispo
-  if (g.currentPlayerUuid) {
+  // Priority 2 : normal turn — we use currentPlayerID if available
+  if (g.currentPlayerID) {
     return {
-      key: resolveKey(g.currentPlayerUuid),
+      key: resolveKey(g.currentPlayerID),
       isChoice: false,
     };
   }
 
-  // Fallback (sans le patch backend) : playerTurn = true → toi, false → opp1
+  // Fallback (without the backend's patch) : playerTurn = true → you, false → opp1
   return {
     key: g.playerTurn ? "player" : "opp1",
     isChoice: false,

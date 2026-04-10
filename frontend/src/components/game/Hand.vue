@@ -15,7 +15,7 @@ const emit = defineEmits(['card-selected', 'card-preview'])
 </script>
 
 <template>
-  <div class="hand" :class="{ 'hand--top': opponent, 'hand--bottom': !opponent }">
+  <div class="hand" :class="{ 'hand--top': visibility === 'enemy', 'hand--bottom': visibility !== 'enemy' }">
     <card
       v-for="card in cards"
       :key="card.uuid"

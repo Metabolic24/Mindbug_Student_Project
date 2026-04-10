@@ -128,14 +128,13 @@ const secondButtonData: ComputedRef<ButtonData> = computed(() => {
 
 <style scoped>
 .buttons {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 100;
+  height: 100%;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   gap: 1vh;
 
   button {

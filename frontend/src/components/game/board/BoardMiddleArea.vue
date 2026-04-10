@@ -15,40 +15,78 @@ interface Props {
 const props = defineProps<Props>()
 const emit = defineEmits(['card-preview'])
 
+function getWaitingPlayerName(playerId?: string) {
+  if (!playerId) {
+    return t("game.middle_area.waiting.opponent_fallback")
+  }
+
+  if (props.gameState.ally?.uuid === playerId) {
+    return props.gameState.ally.name
+  }
+
+  return props.gameState.opponents?.find(o => o.uuid === playerId)?.name
+    ?? t("game.middle_area.waiting.opponent_fallback")
+}
+
+function getChoicePlayerName(playerId?: string) {
+  if (!playerId) {
+    return t("game.middle_area.choice.waiting.user_fallback")
+  }
+
+  if (props.gameState.ally?.uuid === playerId) {
+    return props.gameState.ally.name
+  }
+
+  return props.gameState.opponents?.find(o => o.uuid === playerId)?.name
+    ?? t("game.middle_area.choice.waiting.user_fallback")
+}
+
 // Computed value for the message
 const message = computed(() => {
   if (props.gameState.winners) {
     if (props.gameState.winners.includes(props.gameState.player.uuid)) {
-      return 'game.middle_area.win'
+      return t('game.middle_area.win')
     } else {
-      return 'game.middle_area.lose'
+      return t('game.middle_area.lose')
     }
   } else if (props.gameState?.choice) {
     if (props.gameState.choice.playerToChoose === props.gameState.player.uuid) {
       if (props.gameState.choice.type === "FRENZY" || props.gameState.choice.type === "HUNTER") {
-        return 'game.middle_area.choice.' + props.gameState.choice.type
+        return t('game.middle_area.choice.' + props.gameState.choice.type)
       } else if (props.gameState.choice.type === "BOOLEAN") {
-        return 'game.middle_area.choice.' + props.gameState.choice.sourceCard.id
+        return t('game.middle_area.choice.' + props.gameState.choice.sourceCard.id)
       } else if (props.pickedCard) {
-        return 'game.middle_area.choice.mindbug'
+        return t('game.middle_area.choice.mindbug')
       } else if (props.attackingCard) {
-        return 'game.middle_area.choice.attacked'
+        return t('game.middle_area.choice.attacked')
       }
     } else {
-      return 'game.middle_area.choice.waiting'
+      return t('game.middle_area.choice.waiting.text', {
+        player: getChoicePlayerName(props.gameState.choice.playerToChoose)
+      })
     }
   } else if (props.gameState?.currentPlayerID === props.gameState?.player.uuid) {
     if (props.pickedCard || props.attackingCard) {
-      return 'game.middle_area.waiting'
+      return t('game.middle_area.waiting.text', {
+        player: getWaitingPlayerName()
+      })
     } else {
-      return 'game.middle_area.player_turn'
+      return t('game.middle_area.player_turn')
     }
   } else {
-    return 'game.middle_area.waiting'
+    return t('game.middle_area.waiting.text', {
+      player: getWaitingPlayerName(props.gameState?.currentPlayerID)
+    })
   }
 })
 
-const isPlayerTurn = computed(() => props.gameState?.currentPlayerID === props.gameState?.player.uuid)
+const isPlayerTurn = computed(() => {
+  if (props.gameState?.choice?.playerToChoose) {
+    return props.gameState.choice.playerToChoose === props.gameState.player.uuid
+  }
+
+  return props.gameState?.currentPlayerID === props.gameState?.player.uuid
+})
 
 // Computed value that controls image visibility
 const isImageVisible = computed(() => {
@@ -72,7 +110,7 @@ const imgSrc = computed(() => {
 
 <template>
   <div class="middle-area">
-    <span class="sr-only">{{ message ? t(message) : "" }}</span>
+    <span class="sr-only">{{ message || "" }}</span>
     <div class="turn-indicator" :class="{ 'opponent-turn': !isPlayerTurn }" aria-live="polite">
       <div class="turn-segment turn-segment--chevron" aria-hidden="true">
         <svg class="turn-chevron" viewBox="0 0 20 20" focusable="false">
@@ -80,7 +118,7 @@ const imgSrc = computed(() => {
         </svg>
       </div>
       <div class="turn-segment turn-segment--label">
-        <span class="turn-label">{{ message ? t(message) : "" }}</span>
+        <span class="turn-label">{{ message || "" }}</span>
       </div>
       <div class="turn-segment turn-segment--chevron" aria-hidden="true">
         <svg class="turn-chevron" viewBox="0 0 20 20" focusable="false">
@@ -182,6 +220,12 @@ const imgSrc = computed(() => {
     color: #1b1b1b;
     display: block;
     flex: 0 0 auto;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+  }
+
+  .turn-indicator.opponent-turn .turn-chevron {
+    transform: rotate(180deg);
   }
 
   .middle-card {

@@ -32,17 +32,14 @@ const carouselConfig = {
 
 // Computed value for the modal title
 const title = computed(() => {
-  switch (props.type) {
-    case "enemy":
-      return `Défausse de l'adversaire (${props.playerName})`;
-    case "ally":
-      return `Défausse de votre allié (${props.playerName})`;
-    case "self":
-      return `Votre défausse (${props.playerName})`;
-    default:
-      return `Défausse (${props.playerName})`;
+  if (props.type === "self") {
+    return t("modal.game.discard.self_title")
   }
-});
+
+  return t("modal.game.discard.title", {
+    player: props.playerName || t("modal.game.discard.user_fallback")
+  })
+})
 </script>
 
 <template>
@@ -51,7 +48,7 @@ const title = computed(() => {
 
       <!-- HEADER -->
       <div class="modal-header" @click.stop>
-        <h5 class="modal-title">{{ t(title) }}</h5>
+        <h5 class="modal-title">{{ title }}</h5>
         <button class="close-btn" type="button" @click="emit('close-modal')" :title="t('modal.game.leave_tooltip')">
           &times;
         </button>

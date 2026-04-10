@@ -10,7 +10,7 @@
     "loading": "Préparation du champ de bataille...",
     "error": {
       "not_found": {
-        "label": "<h1>Oops !</h1><p>La partie n'a pu être trouvée ou rejointe</p>",
+        "label": "<h1>Aïe !</h1><p>La partie n'a pu être trouvée ou rejointe</p>",
         "button": "Menu principal"
       },
       "loading_failure": {
@@ -41,11 +41,17 @@
       "win": "Victoire !",
       "lose": "Défaite...",
       "player_turn": "Jouer OU Attaquer OU Action",
-      "waiting": "En attente de l'adversaire...",
+      "waiting": {
+        "text": "En attente de {player}...",
+        "opponent_fallback": "Adversaire"
+      },
       "choice": {
         "FRENZY": "Voulez-vous attaquer à nouveau ?",
         "HUNTER": "Chasser OU Attaquer",
-        "waiting": "En attente d'un choix de l'adversaire...",
+        "waiting": {
+          "text": "En attente du choix de {player}...",
+          "user_fallback": "Utilisateur"
+        },
         "mindbug": "Voulez-vous utiliser un Mindbug ?",
         "attacked": "Bloquer OU Encaisser l'attaque",
         "40": "Voulez-vous jouer cette carte immédiatement ?",
@@ -96,7 +102,8 @@
         "carousel": "Carrousel",
         "grid": "Grille",
         "self_title": "Votre défausse",
-        "opponent_title": "Défausse adverse"
+        "title": "Défausse de {player}",
+        "user_fallback": "Utilisateur"
       },
       "settings": {
         "title": "Paramètres",

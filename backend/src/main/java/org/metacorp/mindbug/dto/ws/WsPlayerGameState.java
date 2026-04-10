@@ -45,9 +45,9 @@ public class WsPlayerGameState {
 
         this.opponents = new HashSet<>();
         for (PlayerDTO candidate : gameState.getPlayers()) {
-            if (candidate.getTeamId().equals(this.player.getTeamId())) {
+            if (candidate.getTeamId().equals(this.player.getTeamId()) && (!candidate.getUuid().equals(this.player.getUuid()))) {
                 this.ally = withHiddenHand(candidate);
-            } else {
+            } else if(!candidate.getTeamId().equals(this.player.getTeamId())) {
                 this.opponents.add(withHiddenHand(candidate));
             }
         }

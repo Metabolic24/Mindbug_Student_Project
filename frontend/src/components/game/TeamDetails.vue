@@ -2,6 +2,7 @@
 import BoardButtons from "@/components/game/board/BoardButtons.vue"
 import { computed } from "vue"
 import Card from "@/components/game/Card.vue";
+import { useI18n } from "vue-i18n";
 
 interface Player {
   name: string
@@ -19,9 +20,13 @@ interface Props {
   selectedCard: SelectedCardInterface
   pickedCard: CardInterface
   attackingCard: CardInterface
+  
+  onSettingsButtonClick: () => void;
 }
 
 const props = defineProps<Props>()
+const { t } = useI18n()
+const isCurrentPlayerTurn = computed(() => props.gameState?.currentPlayerID === props.gameState?.player.uuid)
 
 const emit = defineEmits(['button-clicked']);
 
@@ -30,34 +35,58 @@ function getAvatar(name: string = "default") {
   return `${url}/${name}.jpg`
 }
 
+function getWaitingPlayerName(playerId?: string) {
+  if (!playerId) {
+    return t("game.middle_area.waiting.opponent_fallback")
+  }
+
+  if (props.gameState.ally?.uuid === playerId) {
+    return props.gameState.ally.name
+  }
+
+  return props.gameState.opponents?.find(o => o.uuid === playerId)?.name
+    ?? t("game.middle_area.waiting.opponent_fallback")
+}
+
 const message = computed(() => {
-  if (props.gameState.winner) {
-    return props.gameState.winner === props.gameState.player.uuid
-      ? "Game Over : You WIN !"
-      : "Game Over : You LOSE !"
+  if (props.gameState.winners) {
+    return props.gameState.winners.includes(props.gameState.player.uuid)
+      ? t("game.middle_area.win")
+      : t("game.middle_area.lose")
   }
 
   if (props.gameState?.choice) {
     const choice = props.gameState.choice
     if (choice.playerToChoose === props.gameState.player.uuid) {
       switch (choice.type) {
-        case "FRENZY":  return "Attack again?"
-        case "BOOLEAN": return props.pickedCard ? "Use Mindbug?" : choice.message
-        case "HUNTER":  return "Choose a target"
+        case "FRENZY":
+          return t("game.middle_area.choice.FRENZY")
+        case "BOOLEAN":
+          if (props.pickedCard) {
+            return t("game.middle_area.choice.mindbug")
+          }
+
+          if ("sourceCard" in choice && choice.sourceCard?.id) {
+            return t(`game.middle_area.choice.${choice.sourceCard.id}`)
+          }
+
+          return t("game.middle_area.choice.mindbug")
+        case "HUNTER":
+          return t("game.middle_area.choice.HUNTER")
       }
     } else {
-      const chooser = props.gameState.ally?.uuid === choice.playerToChoose
-        ? props.gameState.ally.name
-        : props.gameState.opponents?.find(o => o.uuid === choice.playerToChoose)?.name
-          ?? "Opponent"
-      return `Waiting for ${chooser}...`
+      return t("game.middle_area.waiting.text", {
+        player: getWaitingPlayerName(choice.playerToChoose)
+      })
     }
   }
 
-  if (props.pickedCard) return "Use Mindbug?"
-  if (props.attackingCard) return "Block or Lose LP"
-  if (props.gameState?.playerTurn) return "Play or Attack"
-  return "Waiting opponent..."
+  if (props.pickedCard) return t("game.middle_area.choice.mindbug")
+  if (props.attackingCard) return t("game.middle_area.choice.attacked")
+  if (isCurrentPlayerTurn.value) return t("game.middle_area.player_turn")
+  return t("game.middle_area.waiting.text", {
+    player: getWaitingPlayerName(props.gameState?.currentPlayerID)
+  })
 })
 
 </script>
@@ -80,15 +109,29 @@ const message = computed(() => {
           :clickable="false"
         />
       </div>
+       
     </Transition>
 
+    <button v-if="props.isEnemy" type="button" class="settings-button" @click="props.onSettingsButtonClick()" :title="props.settingsTooltip">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 122.88 122.878" xml:space="preserve"
+                  fill="currentColor">
+                <g>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M101.589,14.7l8.818,8.819c2.321,2.321,2.321,6.118,0,8.439l-7.101,7.101 c1.959,3.658,3.454,7.601,4.405,11.752h9.199c3.283,0,5.969,2.686,5.969,5.968V69.25c0,3.283-2.686,5.969-5.969,5.969h-10.039 c-1.231,4.063-2.992,7.896-5.204,11.418l6.512,6.51c2.321,2.323,2.321,6.12,0,8.44l-8.818,8.819c-2.321,2.32-6.119,2.32-8.439,0 l-7.102-7.102c-3.657,1.96-7.601,3.456-11.753,4.406v9.199c0,3.282-2.685,5.968-5.968,5.968H53.629 c-3.283,0-5.969-2.686-5.969-5.968v-10.039c-4.063-1.232-7.896-2.993-11.417-5.205l-6.511,6.512c-2.323,2.321-6.12,2.321-8.441,0 l-8.818-8.818c-2.321-2.321-2.321-6.118,0-8.439l7.102-7.102c-1.96-3.657-3.456-7.6-4.405-11.751H5.968 C2.686,72.067,0,69.382,0,66.099V53.628c0-3.283,2.686-5.968,5.968-5.968h10.039c1.232-4.063,2.993-7.896,5.204-11.418l-6.511-6.51 c-2.321-2.322-2.321-6.12,0-8.44l8.819-8.819c2.321-2.321,6.118-2.321,8.439,0l7.101,7.101c3.658-1.96,7.601-3.456,11.753-4.406 V5.969C50.812,2.686,53.498,0,56.78,0h12.471c3.282,0,5.968,2.686,5.968,5.969v10.036c4.064,1.231,7.898,2.992,11.422,5.204 l6.507-6.509C95.471,12.379,99.268,12.379,101.589,14.7L101.589,14.7z M61.44,36.92c13.54,0,24.519,10.98,24.519,24.519 c0,13.538-10.979,24.519-24.519,24.519c-13.539,0-24.519-10.98-24.519-24.519C36.921,47.9,47.901,36.92,61.44,36.92L61.44,36.92z"
+                  />
+                </g>
+              </svg>
+      </button>
+   
     <!-- LIFE -->
     <div class="life">
       <img src="@/assets/profil-in-game/hearts-game.svg"/>
       <span>{{ teamLife }}</span>
     </div>
     
-    <!-- CONTENU HORIZONTAL -->
+    <!-- HORIZONTAL CONTENT -->
     <div class="innerRow">
 
       <!-- ALLY -->
@@ -106,6 +149,8 @@ const message = computed(() => {
     </div>
 
   </div>
+
+  
 
   <!-- OUTSIDE LEFT -->
   <div class="outside left">
@@ -165,7 +210,7 @@ const message = computed(() => {
   background:rgba(200,200,200,0.95);
 }
 
-/* DEMI-CERCLE */
+/* HALF CIRCLE */
 .halfCircle{
   position:absolute;
   left:50%;
@@ -178,7 +223,7 @@ const message = computed(() => {
   background:rgba(200,200,200,0.95);
   border:3px solid black;
 
-  border-radius:14vw 14vw 0 0; /* demi cercle */
+  border-radius:14vw 14vw 0 0;
   
   display:flex;
   flex-direction:column;
@@ -205,7 +250,6 @@ const message = computed(() => {
   font-weight:bold;
 }
 
-/* ligne interne */
 .innerRow{
   position:absolute;
   bottom:25%;
@@ -217,7 +261,6 @@ const message = computed(() => {
   align-items:center;
 }
 
-/* joueurs */
 .playerBlock{
   display:flex;
   flex-direction:column;
@@ -240,24 +283,24 @@ const message = computed(() => {
   color:black;
 }
 
-/* DEMI CERCLE INVERSÉ */
+/* INVERSED HALF CIRCLE OPPONENT */
 .enemy .halfCircle{
-  border-radius:0 0 14vw 14vw; /* inversé */
+  border-radius:0 0 14vw 14vw;
 }
 
-/* LIFE en bas */
+/* LIFE OPPONENT */
 .enemy .life{
   top:auto;
   bottom:5%;
 }
 
-/* avatars remontés */
+/* AVATARS OPPONENT */
 .enemy .innerRow{
   bottom:auto;
   top:20%;
 }
 
-/* EXTÉRIEUR */
+/* OUTSIDE */
 .outside{
   position:absolute;
   top:50%;
@@ -308,7 +351,7 @@ const message = computed(() => {
 
 .buttonsContainer {
   position: absolute;
-  right: 18%;
+  right: 15%;
   top: 50%;
   transform: translateY(-50%);
 
@@ -382,7 +425,7 @@ const message = computed(() => {
   height: 7.5vw;
 }
 
-/* Animation d'apparition */
+/* APPARITION'S ANIMATION */
 .card-pop-enter-active {
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -417,7 +460,7 @@ const message = computed(() => {
   height: 10vw;
 }
 
-/* Animation d'apparition */
+/* APPARITION'S ANIMATION */
 .card-pop-enter-active {
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -431,6 +474,43 @@ const message = computed(() => {
 .card-pop-leave-to {
   opacity: 0;
   transform: translateX(-50%) scale(0.8) translateY(-10px);
+}
+
+.settings-button {
+  width: 2.75vw;
+  height:  2.75vw;
+
+  position: fixed;
+  top: 2vw;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.settings-button svg {
+  width: 5em;
+  height: 5em;
+
+}
+
+.settings-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+  transform: translateX(-50%);
+}
+
+.settings-button:active {
+  background-color: #1e6f93;
+  transform: scale(0.98);
 }
 
 </style>

@@ -114,15 +114,8 @@ const titleClass = computed(() => ({
 /* Pile container */
 .discard-container {
   position: relative;
-<<<<<<< HEAD
-  width: 10vw;
-  height: 14vw;
-  min-width: 60px;
-  min-height: 90px;
-=======
   width: 8vw;
-  height: 11vw;
->>>>>>> 44e1e28 (Add discard on 2v2 + fix choice modal css)
+  height: 12vw;
   display: flex;
   align-items: center;
   justify-content: center;

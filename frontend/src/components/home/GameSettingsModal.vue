@@ -84,7 +84,7 @@ function onButtonClicked() {
         <h5 class="modal-title">{{ t("modal.game_settings.title")}}<p v-if="mode"> {{ t("modal.game_settings.selected")}} <strong>{{ mode === "duel" ? "1v1 Duel" : "2v2 Team" }}</strong></p></h5>
       </div>
       <div class="modal-body">
-        <!-- STEP 1 : choix du mode -->
+        <!-- STEP 1 : MODE CHOICE -->
         <div v-if="step === 1" class="mode-container">
           <button class="mode-button" @click="chooseMode('duel')">
             1v1 Duel
@@ -95,8 +95,8 @@ function onButtonClicked() {
           </button>
         </div>
 
-        <!-- STEP 2 : choix des sets -->
-        <div v-if="step === 2" class="sets-container">
+        <!-- STEP 2 : SETS CHOICE -->
+        <div v-if="step === 2" id="cards-sets-container">
           <div :class="getSetClasses(set)" v-for="(set, index) in sets" :key="set" @click="updateSelection(set)">
             <img v-if="index < 2" :src="getSetImage(set)" :alt="t('card_sets.' + set)"/>
             <h2 v-if="index >= 2">{{ set }}</h2>
@@ -106,7 +106,7 @@ function onButtonClicked() {
       </div>
       <div class="modal-footer">
         <button v-if="step === 2" class="btn btn-secondary" @click="goBack()">
-          {{ t("modal.game_settings.Back") }}
+          {{ t("modal.game_settings.back") }}
         </button>
         <button v-if="step === 2" type="button" class="btn btn-primary" @click="onButtonClicked()" :disabled="isButtonDisabled">
           {{ t("modal.game_settings.button") }}
