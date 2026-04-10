@@ -35,22 +35,15 @@ public class AttackService {
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     public static void declareAttack(CardInstance attackCard, Game game) throws GameStateException, WebSocketException {
-        
-        System.out.println("Declaring attack...");//TODO Remove this debug when attack declaration will be fully tested
-
         if (attackCard == null) {
-            System.out.println("No attacking card provided");//TODO Remove this debug when attack declaration will be fully tested
             throw new GameStateException("no attacking card");
         } else if (!attackCard.isAbleToAttack()) {
-            System.out.println("Attacking card is not able to attack");//TODO Remove this debug when attack declaration will be fully tested
             throw new GameStateException("attacking card should not be able to attack",
                     Map.of("attackCard", attackCard));
         } else if (game.getChoice() != null) {
-            System.err.println("a choice needs to be resolved before attacking : " + game.getChoice());//TODO Remove this debug when attack declaration will be fully tested
             throw new GameStateException("a choice needs to be resolved before attacking",
                     Map.of("choice", game.getChoice()));
         }
-        System.out.println("Processing attack declaration...");//TODO Remove this debug when attack declaration will be fully tested
         processAttackDeclaration(attackCard, game);
 
         // Send update through WebSocket
@@ -67,7 +60,6 @@ public class AttackService {
      * @param game       the game state
      */
     protected static void processAttackDeclaration(CardInstance attackCard, Game game) {
-        System.out.println("Processing attack declaration...");//TODO Remove this debug when attack declaration will be fully tested
         
         game.setAttackingCard(attackCard);
         final Player attackCardOwner = attackCard.getOwner();
@@ -100,7 +92,6 @@ public class AttackService {
                         } else if (availableBlockersMap.isEmpty()) {
                             resolveAttack(attackCard, null, game);
                         } else {
-                            System.out.println("Setting block choice...");//TODO Remove this debug when block choice will be fully tested
                             game.setChoice(new BlockChoice(attackCard, getAvailableBlockers(attackCardOwner, availableBlockersMap, game), availableBlockersMap));
                             WebSocketService.sendGameEvent(WsGameEventType.WAITING_ATTACK_RESOLUTION, game);
                         }
