@@ -232,12 +232,12 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 
 /* Card attacking direction */
 .card-wrapper.player-board.attacking {
-  transform: scale(1.11) translateY(-15px);
+  transform: translateY(-15px);
   z-index: 10;
 }
 
 .card-wrapper.opponent-board.attacking {
-  transform: scale(1.11) translateY(15px);
+  transform: translateY(15px);
   z-index: 10;
 }
 
