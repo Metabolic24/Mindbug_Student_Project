@@ -115,4 +115,17 @@ function onCardPreview(card: CardInterface): void {
   max-height: 400px;
   overflow-y: auto; 
 }
+
+.card-image {
+  position: relative;
+  margin: 15px;
+  height: 350px;
+
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-image.selected {
+  outline: 4px solid red;
+}
 </style>
