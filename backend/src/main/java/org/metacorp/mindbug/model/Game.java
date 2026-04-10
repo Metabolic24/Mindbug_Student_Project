@@ -37,6 +37,7 @@ public class Game {
     private List<CardInstance> evolutionCards;
 
     private CardInstance playedCard;
+    private CardInstance attackingCard;
 
     private CardInstance forcedTarget;
 
@@ -151,6 +152,7 @@ public class Game {
                 + ", finished=" + isFinished()
                 + ", bannedCards=" + bannedCards
                 + ", playedCard=" + playedCard
+                + ", attackingCard=" + attackingCard
                 + ", effectQueue=" + effectQueue
                 + ", choice=" + choice
                 + ", afterEffect=" + afterEffect

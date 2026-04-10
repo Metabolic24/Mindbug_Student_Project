@@ -68,7 +68,8 @@ public class AttackService {
      */
     protected static void processAttackDeclaration(CardInstance attackCard, Game game) {
         System.out.println("Processing attack declaration...");//TODO Remove this debug when attack declaration will be fully tested
-
+        
+        game.setAttackingCard(attackCard);
         final Player attackCardOwner = attackCard.getOwner();
 
         // Add ATTACK effects if the player is allowed to trigger it
@@ -165,7 +166,7 @@ public class AttackService {
                 throw new GameStateException("invalid defending card : only one target allowed",
                         Map.of("defendingCard", defendingCard, "forcedTarget", game.getForcedTarget()));
             }
-        } else if (game.getChoice() != null) {
+        } else if (game.getChoice() != null && !(game.getChoice() instanceof BlockChoice)) {
             throw new GameStateException("a choice needs to be resolved before attacking", Map.of("choice", game.getChoice()));
         }
 

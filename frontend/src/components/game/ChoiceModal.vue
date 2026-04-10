@@ -102,6 +102,8 @@ function getCardClasses(card: CardInterface): Record<string, boolean> {
   background-color: #f4f7fb;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  overflow-y: auto; 
 }
 
 .card-image {
