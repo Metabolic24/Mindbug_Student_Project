@@ -37,7 +37,6 @@ public class ChoiceService {
 
         try {
            
-            System.out.println("Choice resolved with data : " + data); //TODO Remove this debug when choice resolution will be fully tested
             ((AbstractChoice<T>) choice).resolve(data, game);
         } catch (ClassCastException e) {
             Map<String, Object> errorData = new HashMap<>(Map.of("choice", choice));
@@ -49,7 +48,6 @@ public class ChoiceService {
         }
 
         refreshGameState(game);
-        System.out.println("Choice resolved for game " + game.getUuid()); //TODO Remove this debug when choice resolution will be fully tested
         if (game.getChoice() == null) {
             EffectQueueService.resolveEffectQueue(choice.getType() == ChoiceType.SIMULTANEOUS, game);
         } else {

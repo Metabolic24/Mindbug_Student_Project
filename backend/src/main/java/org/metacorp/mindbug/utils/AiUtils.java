@@ -52,7 +52,6 @@ public class AiUtils {
      * @throws GameStateException if the game reaches an inconsistant state
      */
     private static void resolveTurn(Game game, AiPlayer currentPlayer) throws GameStateException, WebSocketException {
-        System.out.println("1 Resolving turn for player " + game.getCurrentPlayer().getName());//TODO Remove this debug when game turns will be fully tested
         List<CardInstance> attackCards = currentPlayer.getBoard().stream().filter(CardInstance::isAbleToAttack).toList();
         List<CardInstance> actionCards = currentPlayer.getBoard().stream().filter(card -> !card.getEffects(EffectTiming.ACTION).isEmpty()).toList();
 
@@ -76,7 +75,6 @@ public class AiUtils {
      * @throws WebSocketException if an error occurs during WebSocket message sending
      */
     private static void resolveMindbug(Game game, AiPlayer aiPlayer) throws GameStateException, WebSocketException {
-        System.out.println("Resolving mindbug choice...");//TODO Remove this debug when mindbug choice will be fully tested
         boolean shouldMindbug = aiPlayer.getResolver().shouldMindbug(game, aiPlayer);
         ChoiceService.resolveChoice(shouldMindbug, game);
     }
@@ -88,7 +86,6 @@ public class AiUtils {
      * @throws GameStateException if an error occurs during the game execution
      */
     private static void resolveAttack(Game game, AiPlayer aiPlayer) throws GameStateException, WebSocketException {
-        System.out.println("Resolving attack choice...");//TODO Remove this debug when attack choice will be fully tested
         BlockChoice blockChoice = (BlockChoice) game.getChoice();
 
         CardInstance blockingCard = aiPlayer.getResolver().chooseBlocker(blockChoice.getBlockersMap().get(aiPlayer), game);
