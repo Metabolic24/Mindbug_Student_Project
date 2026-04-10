@@ -57,6 +57,7 @@ public class GameStateMapper {
         result.setUuid(player.getUuid());
         result.setTeamId(player.getTeam().getUuid());
         result.setName(player.getName());
+        result.setAi(player.isAI());
         result.setLifePoints(player.getTeam().getLifePoints());
         result.setMindbugCount(player.getMindBugs());
         result.setDrawPileCount(player.getDrawPile().size());
