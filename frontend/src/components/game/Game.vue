@@ -99,16 +99,10 @@ const isPlayerActive = computed(() => {
   const game: GameStateInterface = gameState.value;
   if (!game) return false;
   if (game.choice) return game.choice.playerToChoose === game.player.uuid;
-  if (hasDefenseDecision.value) return !game.playerTurn;
-  return game.playerTurn;
-})
 
-const isOpponentActive = computed(() => {
-  const game: GameStateInterface = gameState.value;
-  if (!game) return false;
-  if (game.choice) return game.choice.playerToChoose === game.opponent.uuid;
-  if (hasDefenseDecision.value) return game.playerTurn;
-  return !game.playerTurn;
+  const isCurrentPlayerTurn = game.currentPlayerID === game.player.uuid
+  if (hasDefenseDecision.value) return !isCurrentPlayerTurn;
+  return isCurrentPlayerTurn;
 })
 
 onMounted(async () => {
@@ -298,7 +292,7 @@ function closeCardPreview(): void {
         <player-details :name="gameState?.opponents[0]?.name" :life-points="gameState?.opponents[0]?.lifePoints"
                         :draw-pile-count="gameState?.opponents[0]?.drawPileCount"
                         :mindbug-count="gameState?.opponents[0]?.mindbugCount"
-                        :is-active="isOpponentActive">
+                        :is-active="!isPlayerActive">
         </player-details>
       </div>
       <div class="col-8">
