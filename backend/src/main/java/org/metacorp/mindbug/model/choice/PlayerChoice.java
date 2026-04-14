@@ -8,7 +8,7 @@ import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.player.Player;
-import org.metacorp.mindbug.service.effect.ResolvableEffectWithTargetPlayer;
+import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.utils.ChoiceUtils;
 
 import java.util.List;
@@ -23,13 +23,13 @@ public class PlayerChoice extends AbstractChoice<Player> {
 
     // The effect that should be resolved after the choice resolution
     @NonNull
-    private ResolvableEffectWithTargetPlayer<List<CardInstance>> effect;
+    private ResolvableEffect<?> effect;
 
     // The list of available players
     @NonNull
     private List<Player> availableTargets;
 
-    public PlayerChoice(@NonNull Player playerToChoose, @NonNull CardInstance effectSource, @NonNull ResolvableEffectWithTargetPlayer<List<CardInstance>> effect,
+    public PlayerChoice(@NonNull Player playerToChoose, @NonNull CardInstance effectSource, @NonNull ResolvableEffect<?> effect,
                         @NonNull List<Player> availableTargets) {
         this.playerToChoose = playerToChoose;
         this.effectSource = effectSource;

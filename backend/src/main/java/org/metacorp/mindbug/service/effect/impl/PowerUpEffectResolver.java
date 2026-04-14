@@ -13,7 +13,6 @@ import org.slf4j.Logger;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.List;
 
 import static org.metacorp.mindbug.utils.LogUtils.getLoggableCard;
 
@@ -46,12 +45,14 @@ public class PowerUpEffectResolver extends EffectResolver<PowerUpEffect> {
         Integer alliesCount = effect.getAlliesCount();
 
         Player currentPlayer = effectSource.getOwner();
-        List<Player> opponentPlayers = currentPlayer.getOpponents(game.getPlayers());
-        List<CardInstance> opponentCards = opponentPlayers.stream().flatMap(opponent -> opponent.getBoard().stream()).toList();
+        int opponentBoardSize = currentPlayer.getOpponents(game.getPlayers())
+                .stream()
+                .mapToInt(opponent -> opponent.getBoard().size())
+                .sum();
         int powerToAdd = value;
 
         if ((lifePoints != null && currentPlayer.getTeam().getLifePoints() > lifePoints)
-                || (enemiesCount != null && opponentCards.size() < enemiesCount)
+                || (enemiesCount != null && opponentBoardSize < enemiesCount)
                 || (alliesCount != null && currentPlayer.getBoard().size() != alliesCount)
                 || (alone && currentPlayer.getBoard().size() != 1)
                 || (noMindbug && currentPlayer.getMindBugs() != 0)

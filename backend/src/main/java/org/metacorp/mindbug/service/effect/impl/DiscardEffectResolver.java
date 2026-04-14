@@ -61,7 +61,14 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
         }
     }
 
-    public void chooseCardsToDiscard(Game game, Player targetPlayer) {
+    @Override
+    public void selectPlayer(Game game, Player targetPlayer) {
+        if (targetPlayer != null) {
+            chooseCardsToDiscard(game, targetPlayer);
+        }
+    }
+
+    private void chooseCardsToDiscard(Game game, Player targetPlayer) {
         int value = effect.getValue();
         List<CardInstance> availableCards = effect.isDrawPile() ? targetPlayer.getDrawPile() : targetPlayer.getHand();
 
@@ -73,12 +80,6 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
             game.setChoice(new TargetChoice(targetPlayer, effectSource, this, value, new HashSet<>(availableCards)));
             game.getLogger().debug("Player {} must choose {} card(s) to discard (available targets : {})",
                     getLoggablePlayer(targetPlayer), value, getLoggableCards(availableCards));
-        }
-    }
-
-    public void resolve(Game game, Player targetPlayer) {
-        if (targetPlayer != null) {
-            chooseCardsToDiscard(game, targetPlayer);
         }
     }
 

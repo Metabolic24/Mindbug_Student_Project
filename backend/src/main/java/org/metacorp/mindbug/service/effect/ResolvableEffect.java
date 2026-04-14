@@ -18,4 +18,11 @@ public interface ResolvableEffect<T> {
      * @param choiceResult the choice result
      */
     void resolve(Game game, T choiceResult) throws GameStateException, WebSocketException;
+
+    /**
+     * @return false as player selection is not required by default
+     */
+    default boolean maySelectPlayer() {
+        return false;
+    }
 }

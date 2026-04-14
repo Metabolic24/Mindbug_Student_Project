@@ -8,7 +8,7 @@ import org.metacorp.mindbug.model.effect.impl.GiveEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
-import org.metacorp.mindbug.service.effect.ResolvableEffectWithTargetPlayer;
+import org.metacorp.mindbug.service.effect.ResolvableEffect;
 
 import java.util.Collections;
 
@@ -18,7 +18,7 @@ import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 /**
  * Effect resolver for GiveEffect
  */
-public class GiveEffectResolver extends EffectResolver<GiveEffect> implements ResolvableEffectWithTargetPlayer<List<CardInstance>> {
+public class GiveEffectResolver extends EffectResolver<GiveEffect> implements ResolvableEffect<Player> {
 
     /**
      * Constructor
@@ -37,7 +37,7 @@ public class GiveEffectResolver extends EffectResolver<GiveEffect> implements Re
                 giveCard(game, game.getOpponents().getFirst());
             } else {
                 //The player car target a player with no card in hand
-                game.setChoice(new PlayerChoice(effectSource.getOwner(), effectSource, null, game.getOpponents()));
+                game.setChoice(new PlayerChoice(effectSource.getOwner(), effectSource, this, game.getOpponents()));
                 game.getLogger().debug("Player {} must choose an oppponnent to target ",
                         getLoggablePlayer(effectSource.getOwner()));
             }

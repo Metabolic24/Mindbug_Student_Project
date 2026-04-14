@@ -16,6 +16,8 @@ import org.metacorp.mindbug.model.choice.TargetChoice;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.WebSocketService;
+import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.service.effect.ResolvableEffectWithTargetPlayer;
 import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.PlayCardService;
@@ -144,7 +146,12 @@ public final class ChoiceUtils {
             throw new GameStateException("Unable to resolve target choice due to missing targets");
         }
 
-        choice.getEffect().resolve(game, chosenPlayer);
+        ResolvableEffect<?> resolvableEffect = choice.getEffect();
+        if (resolvableEffect.maySelectPlayer()) {
+            ((ResolvableEffectWithTargetPlayer<?>) resolvableEffect).selectPlayer(game, chosenPlayer);
+        } else {
+            ((ResolvableEffect<Player>) resolvableEffect).resolve(game, chosenPlayer);
+        }
 
         // Reset the choice only if the given choice list was valid and if no other choice appeared while resolving the current choice
         if (choice.equals(game.getChoice())) {

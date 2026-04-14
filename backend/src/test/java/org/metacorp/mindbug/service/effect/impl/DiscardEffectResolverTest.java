@@ -3,8 +3,6 @@ package org.metacorp.mindbug.service.effect.impl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.metacorp.mindbug.exception.CardSetException;
-import org.metacorp.mindbug.exception.GameStateException;
-import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.choice.ChoiceType;
@@ -14,6 +12,7 @@ import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
 import org.metacorp.mindbug.model.player.Player;
+import org.metacorp.mindbug.service.effect.ResolvableEffectWithTargetPlayer;
 import org.metacorp.mindbug.utils.MindbugGameTest;
 
 import java.util.List;
@@ -50,19 +49,14 @@ public class DiscardEffectResolverTest extends MindbugGameTest {
 
     @Test
     public void testChoiceResolution_fourPlayers() throws Exception {
-
-
-
         Game game4 = startGame2v2(
-            new Player(playerService.createPlayer("P1")),
-            new Player(playerService.createPlayer("P2")),
-            new Player(playerService.createPlayer("P3")),
-            new Player(playerService.createPlayer("P4"))
+                new Player(playerService.createPlayer("P1")),
+                new Player(playerService.createPlayer("P2")),
+                new Player(playerService.createPlayer("P3")),
+                new Player(playerService.createPlayer("P4"))
         );
 
         Player currentPlayer = game4.getCurrentPlayer();
-
-
         CardInstance source = currentPlayer.getHand().getFirst();
 
         DiscardEffect effect = new DiscardEffect();
@@ -72,22 +66,15 @@ public class DiscardEffectResolverTest extends MindbugGameTest {
         effect.setValue(2);
 
         DiscardEffectResolver resolver = new DiscardEffectResolver(effect, source);
-
         resolver.apply(game4, EffectTiming.PLAY);
 
-
         PlayerChoice playerChoice = assertInstanceOf(PlayerChoice.class, game4.getChoice());
-
         assertEquals(2, playerChoice.getAvailableTargets().size());
 
         Player chosenPlayer = playerChoice.getAvailableTargets().getFirst();
-
-
-        playerChoice.getEffect().resolve(game4, chosenPlayer);
-
+        ((ResolvableEffectWithTargetPlayer<?>) playerChoice.getEffect()).selectPlayer(game4, chosenPlayer);
 
         TargetChoice targetChoice = assertInstanceOf(TargetChoice.class, game4.getChoice());
-
         assertEquals(2, targetChoice.getTargetsCount());
         assertEquals(chosenPlayer, targetChoice.getPlayerToChoose());
 
@@ -95,10 +82,7 @@ public class DiscardEffectResolverTest extends MindbugGameTest {
                 .stream()
                 .limit(2)
                 .toList();
-
-
         targetChoice.getEffect().resolve(game4, cardsToDiscard);
-
 
         assertEquals(2, chosenPlayer.getDiscardPile().size());
         assertEquals(3, chosenPlayer.getHand().size());
