@@ -8,7 +8,7 @@ import org.metacorp.mindbug.model.effect.impl.GiveEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.effect.EffectResolver;
-import org.metacorp.mindbug.service.effect.ResolvableEffect;
+import org.metacorp.mindbug.service.effect.ResolvableEffectWithTargetPlayer;
 
 import java.util.Collections;
 
@@ -18,7 +18,7 @@ import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
 /**
  * Effect resolver for GiveEffect
  */
-public class GiveEffectResolver extends EffectResolver<GiveEffect> implements ResolvableEffect<Player> {
+public class GiveEffectResolver extends EffectResolver<GiveEffect> implements ResolvableEffectWithTargetPlayer<List<CardInstance>> {
 
     /**
      * Constructor

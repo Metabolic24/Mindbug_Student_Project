@@ -3,7 +3,6 @@ package org.metacorp.mindbug.service.effect.impl.steal;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.effect.EffectTiming;
-import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 import org.metacorp.mindbug.service.game.EffectQueueService;
 import org.slf4j.Logger;

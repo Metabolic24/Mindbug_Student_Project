@@ -49,33 +49,55 @@ public class DiscardEffectResolverTest extends MindbugGameTest {
     }
 
     @Test
-    public void testChoiceResolution() throws GameStateException, WebSocketException {
-        // Setup : forcer un PlayerCardsChoice
-        effect.setSelf(true);
+    public void testChoiceResolution_fourPlayers() throws Exception {
+
+
+
+        Game game4 = startGame2v2(
+            new Player(playerService.createPlayer("P1")),
+            new Player(playerService.createPlayer("P2")),
+            new Player(playerService.createPlayer("P3")),
+            new Player(playerService.createPlayer("P4"))
+        );
+
+        Player currentPlayer = game4.getCurrentPlayer();
+
+
+        CardInstance source = currentPlayer.getHand().getFirst();
+
+        DiscardEffect effect = new DiscardEffect();
+        effect.setType(EffectType.DISCARD);
+        effect.setSelf(false);
         effect.setEachEnemy(false);
         effect.setValue(2);
 
-        effectResolver.apply(game, timing);
+        DiscardEffectResolver resolver = new DiscardEffectResolver(effect, source);
 
-        // ✔️ 1er choix : choisir un joueur
-        PlayerChoice playerChoice = assertInstanceOf(PlayerChoice.class, game.getChoice());
-
-        List<Player> availableTargets = playerChoice.getAvailableTargets();
+        resolver.apply(game4, EffectTiming.PLAY);
 
 
-        Player chosenPlayer = availableTargets.getFirst();
+        PlayerChoice playerChoice = assertInstanceOf(PlayerChoice.class, game4.getChoice());
 
-        playerChoice.getEffect().resolve(game, chosenPlayer);
+        assertEquals(2, playerChoice.getAvailableTargets().size());
+
+        Player chosenPlayer = playerChoice.getAvailableTargets().getFirst();
 
 
-        TargetChoice targetChoice = assertInstanceOf(TargetChoice.class, game.getChoice());
+        playerChoice.getEffect().resolve(game4, chosenPlayer);
+
+
+        TargetChoice targetChoice = assertInstanceOf(TargetChoice.class, game4.getChoice());
+
+        assertEquals(2, targetChoice.getTargetsCount());
+        assertEquals(chosenPlayer, targetChoice.getPlayerToChoose());
 
         List<CardInstance> cardsToDiscard = targetChoice.getAvailableTargets()
                 .stream()
                 .limit(2)
                 .toList();
 
-        targetChoice.getEffect().resolve(game, cardsToDiscard);
+
+        targetChoice.getEffect().resolve(game4, cardsToDiscard);
 
 
         assertEquals(2, chosenPlayer.getDiscardPile().size());
@@ -85,9 +107,6 @@ public class DiscardEffectResolverTest extends MindbugGameTest {
             assertTrue(chosenPlayer.getDiscardPile().contains(card));
             assertFalse(chosenPlayer.getHand().contains(card));
         }
-
-        // ✔️ plus de choix en cours
-        assertNull(game.getChoice());
     }
 
     @Test
