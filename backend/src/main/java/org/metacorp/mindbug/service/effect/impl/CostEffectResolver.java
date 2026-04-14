@@ -6,7 +6,6 @@ import org.metacorp.mindbug.model.choice.BooleanChoice;
 import org.metacorp.mindbug.model.effect.CostEffect;
 import org.metacorp.mindbug.model.effect.EffectTiming;
 import org.metacorp.mindbug.model.effect.EffectsToApply;
-import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.service.effect.EffectResolver;
 import org.metacorp.mindbug.service.effect.ResolvableEffect;
 
@@ -56,8 +55,5 @@ public class CostEffectResolver extends EffectResolver<CostEffect> implements Re
         game.getEffectQueue().setResolvingEffect(true);
 
         game.getLogger().debug("COST effect of {} is about to be resolved", getLoggableCard(effectSource));
-    }
-    @Override
-    public void resolve(Game game,Player targetPlayer) {
     }
 }

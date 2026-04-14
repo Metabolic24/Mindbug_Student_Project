@@ -43,8 +43,4 @@ public class StealBooleanChoiceResolver implements ResolvableEffect<Boolean> {
                     getLoggablePlayer(card.getOwner()), loggableEffectSource);
         }
     }
-    @Override    
-    public void resolve(Game game,Player targetPlayer) {
-    }
-    
 }

@@ -36,8 +36,6 @@ public class ChoiceService {
         }
 
         try {
-           
-            System.out.println("Choice resolved with data : " + data); //TODO Remove this debug when choice resolution will be fully tested
             ((AbstractChoice<T>) choice).resolve(data, game);
         } catch (ClassCastException e) {
             Map<String, Object> errorData = new HashMap<>(Map.of("choice", choice));

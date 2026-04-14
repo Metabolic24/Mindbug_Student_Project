@@ -71,7 +71,4 @@ public class BounceEffectResolver extends EffectResolver<BounceEffect> implement
     public void resolve(Game game, List<CardInstance> chosenTargets) {
         bounceCards(game, new HashSet<>(chosenTargets));
     }
-    @Override    
-    public void resolve(Game game,Player targetPlayer) {
-    }
 }

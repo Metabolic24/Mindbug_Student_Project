@@ -20,8 +20,6 @@ import org.metacorp.mindbug.service.game.AttackService;
 import org.metacorp.mindbug.service.game.GameStateService;
 import org.metacorp.mindbug.service.game.PlayCardService;
 
-
-
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -136,22 +134,20 @@ public final class ChoiceUtils {
         }
 
         // Reset the choice only if the given choice list was valid and if no other choice appeared while resolving the current choice
-        if (game.getChoice().equals(choice)) {
+        if (choice.equals(game.getChoice())) {
             game.setChoice(null);
         }
     }
-    public static void resolvePlayerChoice(Player chosenTargetIds, PlayerChoice choice, Game game) throws GameStateException, WebSocketException {
-        if (!choice.isOptional() && (chosenTargetIds == null )) {
+
+    public static void resolvePlayerChoice(Player chosenPlayer, PlayerChoice choice, Game game) throws GameStateException, WebSocketException {
+        if (chosenPlayer == null) {
             throw new GameStateException("Unable to resolve target choice due to missing targets");
         }
 
-       
-            
-        choice.getEffect().resolve(game, chosenTargetIds);
-         
+        choice.getEffect().resolve(game, chosenPlayer);
 
         // Reset the choice only if the given choice list was valid and if no other choice appeared while resolving the current choice
-        if (game.getChoice().equals(choice)) {
+        if (choice.equals(game.getChoice())) {
             game.setChoice(null);
         }
     }

@@ -39,18 +39,17 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
 
     @Override
     public void apply(Game game, EffectTiming timing) throws GameStateException, WebSocketException {
-       List<CardInstance> opponentsBoard = new ArrayList<>();
-            for (Player opponent : game.getOpponents()) {
-                opponentsBoard.addAll(opponent.getBoard());
-             
-            }
+        List<CardInstance> availableCards = new ArrayList<>();
+        for (Player opponent : game.getOpponents()) {
+            availableCards.addAll(opponent.getBoard());
+        }
 
         if (timing == EffectTiming.PASSIVE) {
             if (effect.getKeyword() != null) {
                 boolean forcedAttack = false;
-                for (CardInstance opponentCard : opponentsBoard) {
-                    if (!opponentCard.hasKeyword(effect.getKeyword())) {
-                        opponentCard.setAbleToAttack(false);
+                for (CardInstance availableCard : availableCards) {
+                    if (!availableCard.hasKeyword(effect.getKeyword())) {
+                        availableCard.setAbleToAttack(false);
                     } else {
                         forcedAttack = true;
                     }
@@ -63,19 +62,17 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
                 }
             }
         } else {
-            
-           
-            switch (opponentsBoard.size()) {
+            switch (availableCards.size()) {
                 case 0:
                     // Nothing to do
                     break;
                 case 1:
-                    resolve(game, opponentsBoard.getFirst());
+                    resolve(game, availableCards.getFirst());
                     break;
                 default:
-                    game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, 1, new HashSet<>(opponentsBoard)));
+                    game.setChoice(new TargetChoice(effectSource.getOwner(), effectSource, this, 1, new HashSet<>(availableCards)));
                     game.getLogger().debug("Player {} must choose a card that will be forced to attack (available targets : {})",
-                            getLoggablePlayer(effectSource.getOwner()), getLoggableCards(opponentsBoard));
+                            getLoggablePlayer(effectSource.getOwner()), getLoggableCards(availableCards));
             }
         }
     }
@@ -95,8 +92,5 @@ public class ForceAttackEffectResolver extends EffectResolver<ForceAttackEffect>
         AttackService.declareAttack(attackingCard, game);
 
         HistoryService.logEffect(game, effect.getType(), effectSource, Collections.singleton(attackingCard));
-    }
-    @Override
-    public void resolve(Game game,Player targetPlayer) {
     }
 }

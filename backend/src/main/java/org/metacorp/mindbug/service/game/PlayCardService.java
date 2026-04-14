@@ -36,7 +36,6 @@ public class PlayCardService {
      * @throws WebSocketException if an error occurred while sending game event through WebSocket
      */
     public static void pickCard(CardInstance card, Game game) throws GameStateException, WebSocketException {
-        System.out.println("22 Player " + game.getCurrentPlayer().getName() + " picked card " + card.getCard().getName()); //To be removed when WebSocket update will be implemented
         if (game.getChoice() != null) {
             throw new GameStateException("a choice needs to be resolved before picking a new card",
                     Map.of("choice", game.getChoice()));
@@ -55,9 +54,8 @@ public class PlayCardService {
             game.setChoice(new MindbugChoice(card, availableMindbuggers));
 
             // Send update through WebSocket
-            WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED  , game); //TODO Est-ce que ça vaut toujours le coup d'envoyer un événement spécifique CARD_PICKED alors que c'est un choix ? (A réfléchir)
+            WebSocketService.sendGameEvent(WsGameEventType.CARD_PICKED, game); //TODO Est-ce que ça vaut toujours le coup d'envoyer un événement spécifique CARD_PICKED alors que c'est un choix ? (A réfléchir)
             HistoryService.log(game, HistoryKey.PICK, card);
-            System.out.println("Player " + currentPlayer.getName() + " picked card " + card.getCard().getName() + " and can be mindbugged by " + availableMindbuggers.stream().map(Player::getName).toList());
         }
     }
 

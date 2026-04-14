@@ -47,7 +47,7 @@ public final class AppUtils {
     public static Game createGame(String[] args, boolean isAuto) throws CardSetException {
         PlayerService playerService = new PlayerService();
         StartService startService = new StartService();
-        startService.cardSetService = new CardSetService();
+        startService.setCardSetService(new CardSetService());
         boolean is2v2 = false;
 
         if (args != null && args.length > 0) {
@@ -271,5 +271,5 @@ public final class AppUtils {
         }
     }
 
-    
+
 }

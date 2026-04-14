@@ -13,7 +13,6 @@ import org.metacorp.mindbug.utils.ChoiceUtils;
 
 import java.util.List;
 
-
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class PlayerChoice extends AbstractChoice<Player> {
@@ -22,31 +21,19 @@ public class PlayerChoice extends AbstractChoice<Player> {
     @NonNull
     private CardInstance effectSource;
 
-    // The effect that should be resolved after the choice resolution
-    @NonNull
-    private ResolvableEffect<List<CardInstance>> effect;
-
-    // How many card should the player choose, -1 means he must select all cards
-    @NonNull
-    private Integer targetsCount;
-
-    
-
-    // we want to target all the cards of a player 
-    // so we have a list of list of card, each list of card is the list of cards of a player
+    // The list of available players
     @NonNull
     private List<Player> availableTargets;
 
-    private boolean optional;
+    // The effect that should be resolved after the choice resolution
+    private ResolvableEffect<Player> effect;
 
-    public PlayerChoice(@NonNull Player playerToChoose, @NonNull CardInstance effectSource, @NonNull ResolvableEffect<List<CardInstance>> effect,
-                             @NonNull List<Player> availableTargets) {
+    public PlayerChoice(@NonNull Player playerToChoose, @NonNull CardInstance effectSource, ResolvableEffect<Player> effect,
+                        @NonNull List<Player> availableTargets) {
         this.playerToChoose = playerToChoose;
         this.effectSource = effectSource;
         this.effect = effect;
         this.availableTargets = availableTargets;
-        this.targetsCount = 1; // the player must choose only one player, but we keep the targetsCount for the log 
-        
     }
 
     @Override

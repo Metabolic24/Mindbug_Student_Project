@@ -24,8 +24,7 @@ import static org.metacorp.mindbug.utils.LogUtils.getLoggablePlayer;
  * Effect resolver for DisableTimingEffect
  */
 public class DiscardEffectResolver extends EffectResolver<DiscardEffect> implements ResolvableEffect<List<CardInstance>> {
-   
-   
+
     /**
      * Constructor
      *
@@ -34,51 +33,36 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
      */
     public DiscardEffectResolver(DiscardEffect effect, CardInstance effectSource) {
         super(effect, effectSource);
-        
     }
 
     @Override
     public void apply(Game game, EffectTiming timing) {
-        
-        
         if (effect.isSelf()) {
-         
             //Self discard
-            choseCardTODiscard( game ,effectSource.getOwner());
-            
-        }
-        else {
+            chooseCardsToDiscard(game, effectSource.getOwner());
+        } else {
+            // TODO You misunderstood what does "eachEnemy" attribute means whereas there is a Javadoc on it (this doesn't work anyway as choices are overwritten)
             if (effect.isEachEnemy()) {
                 // Each enemy discard
                 for (Player opponent : game.getOpponents()) {
-                  
-                    choseCardTODiscard(game,opponent);
+                    chooseCardsToDiscard(game, opponent);
                 }
-                
-            }
-            else {
+            } else {
                 if (game.getOpponents().size() == 1) {
                     // If there is only one opponent, we directly make him discard without asking the player to choose
-                  
-                    choseCardTODiscard(game,game.getOpponents().getFirst());
-                    
-                }
-                else {
+                    chooseCardsToDiscard(game, game.getOpponents().getFirst());
+                } else {
                     //The player car target a player with no card in hand
-                    game.setChoice(new PlayerChoice( effectSource.getOwner(), effectSource, this,game.getOpponents()));
+                    //TODO Here, the type is incompatible with the expected one
+                    game.setChoice(new PlayerChoice(effectSource.getOwner(), effectSource, this, game.getOpponents()));
                     game.getLogger().debug("Player {} must choose an oppponnent to target ",
                             getLoggablePlayer(effectSource.getOwner()));
                 }
-             
-                
-        
             }
-            
         }
-
-        
     }
-    public void choseCardTODiscard(Game game, Player targetPlayer) {
+
+    public void chooseCardsToDiscard(Game game, Player targetPlayer) {
         int value = effect.getValue();
         List<CardInstance> availableCards = effect.isDrawPile() ? targetPlayer.getDrawPile() : targetPlayer.getHand();
 
@@ -93,21 +77,16 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
         }
     }
 
-    
-    public void resolve(Game game,  Player targetPlayer) {
-
-    
+    // TODO Currently this is never called
+    public void resolve(Game game, Player targetPlayer) {
         if (targetPlayer != null) {
-            choseCardTODiscard(game,targetPlayer);
+            chooseCardsToDiscard(game, targetPlayer);
         }
-    
-
-       
     }
+
     @Override
     public void resolve(Game game, List<CardInstance> chosenTargets) {
         String loggableEffectSource = getLoggableCard(effectSource);
-        
 
         for (CardInstance card : chosenTargets) {
             Player cardOwner = card.getOwner();
@@ -125,5 +104,4 @@ public class DiscardEffectResolver extends EffectResolver<DiscardEffect> impleme
 
         HistoryService.logEffect(game, effect.getType(), effectSource, chosenTargets);
     }
-    
 }

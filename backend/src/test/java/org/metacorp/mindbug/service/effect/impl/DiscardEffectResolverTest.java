@@ -15,7 +15,9 @@ import org.metacorp.mindbug.model.effect.EffectType;
 import org.metacorp.mindbug.model.effect.impl.DiscardEffect;
 import org.metacorp.mindbug.model.player.Player;
 import org.metacorp.mindbug.utils.MindbugGameTest;
+
 import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
@@ -60,8 +62,8 @@ public class DiscardEffectResolverTest extends MindbugGameTest {
 
         List<Player> availableTargets = playerChoice.getAvailableTargets();
 
-       
-        Player chosenPlayer= availableTargets.getFirst();
+
+        Player chosenPlayer = availableTargets.getFirst();
 
         playerChoice.getEffect().resolve(game, chosenPlayer);
 
