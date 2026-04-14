@@ -7,6 +7,7 @@ import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
 import org.metacorp.mindbug.model.card.CardKeyword;
 import org.metacorp.mindbug.model.choice.BlockChoice;
+import org.metacorp.mindbug.model.choice.ChoiceType;
 import org.metacorp.mindbug.model.choice.FrenzyAttackChoice;
 import org.metacorp.mindbug.model.choice.HunterChoice;
 import org.metacorp.mindbug.model.effect.EffectTiming;
@@ -61,7 +62,6 @@ public class AttackService {
      * @param game       the game state
      */
     protected static void processAttackDeclaration(CardInstance attackCard, Game game) {
-        game.setAttackingCard(attackCard);
         final Player attackCardOwner = attackCard.getOwner();
 
         // Add ATTACK effects if the player is allowed to trigger it
@@ -157,8 +157,8 @@ public class AttackService {
                 throw new GameStateException("invalid defending card : only one target allowed",
                         Map.of("defendingCard", defendingCard, "forcedTarget", game.getForcedTarget()));
             }
-        } else if (game.getChoice() != null && !(game.getChoice() instanceof BlockChoice)) {
-            throw new GameStateException("a choice needs to be resolved before attacking", Map.of("choice", game.getChoice()));
+        } else if (game.getChoice() != null && game.getChoice().getType() != ChoiceType.BLOCK) {
+            throw new GameStateException("a choice needs to be resolved before resolving the attack", Map.of("choice", game.getChoice()));
         }
 
         processAttackResolution(attackingCard, defendingCard, game);
