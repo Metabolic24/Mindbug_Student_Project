@@ -172,6 +172,51 @@ public class GameController {
     }
 
     /**
+     * Endpoint triggered when the opponent chooses the target of the current player attack
+     *
+     * @param body the request body
+     * @return the response to the REST request
+     * @throws GameStateException if an error occurs in game state
+     * @throws WebSocketException if an error occurred while sending game event through WebSocket
+     */
+    @PUT
+    @Path("/attack")
+    public Response resolveAttack(ResolveAttackDTO body) throws GameStateException, WebSocketException {
+        if (body == null || body.getGameId() == null
+                || (body.getDefendingPlayerId() != null && body.getDefenseCardId() == null)
+                || (body.getDefendingPlayerId() == null && body.getDefenseCardId() != null)) {
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid request body").build();
+        }
+
+        Game game = gameService.findById(body.getGameId());
+        if (game == null) {
+            return Response.status(Response.Status.NOT_FOUND).entity("Requested game not found").build();
+        }
+
+        CardInstance defendingCard = null;
+        if (body.getDefendingPlayerId() != null && body.getDefenseCardId() != null) {
+            try {
+                Player opponentPlayer = game.getPlayers().stream()
+                        .filter(player -> player.getUuid().equals(body.getDefendingPlayerId()))
+                        .findFirst().orElseThrow();
+
+                defendingCard = opponentPlayer.getBoard().stream()
+                        .filter(cardInstance -> cardInstance.getUuid().equals(body.getDefenseCardId()))
+                        .findFirst().orElseThrow();
+
+                game.getLogger().debug("Player {} blocks {} with {}", getLoggablePlayer(opponentPlayer),
+                        getLoggableCard(game.getAttackingCard()), getLoggableCard(defendingCard));
+            } catch (NoSuchElementException e) {
+                return Response.status(Response.Status.BAD_REQUEST).entity("Card not found").build();
+            }
+        }
+
+        AttackService.resolveAttack(game.getAttackingCard(), defendingCard, game);
+
+        return Response.ok().build();
+    }
+
+    /**
      * Endpoint triggered when the current player declares an attack with a card on his/her board
      *
      * @param body the request body

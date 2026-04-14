@@ -6,6 +6,7 @@ import org.metacorp.mindbug.exception.GameStateException;
 import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.card.CardInstance;
+import org.metacorp.mindbug.model.choice.BlockChoice;
 import org.metacorp.mindbug.model.choice.SimultaneousEffectsChoice;
 import org.metacorp.mindbug.model.effect.Effect;
 import org.metacorp.mindbug.model.effect.EffectLocation;
@@ -91,7 +92,7 @@ public class EffectQueueService {
         }
 
         // Check that there is no pending choice
-        if (game.getChoice() != null) {
+        if (game.getChoice() != null && !(game.getChoice() instanceof BlockChoice)) {
             throw new GameStateException("a choice needs to be resolved before resolving effect queue", Map.of("choice", game.getChoice()));
         }
 

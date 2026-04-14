@@ -162,7 +162,7 @@ onMounted(async () => {
         case "ATTACK_DECLARED": // Received when a player declared an attack
           selectedCard.value = undefined;
           pickedCard.value = undefined;
-          attackingCard.value = message.state.card;
+          attackingCard.value = undefined;
           break;
         case "CHOICE": // Received when a choice needs to be solved
           if (message.state.choice?.type === "FRENZY") {
@@ -179,6 +179,7 @@ onMounted(async () => {
         case "CARD_DESTROYED": // Received when a card is destroyed
         case "EFFECT_RESOLVED": // Received when an effect is successfully resolved
         case "WAITING_ATTACK_RESOLUTION": // Received when waiting for attack resolution
+          attackingCard.value = message.state.choice?.sourceCard;
           break;
       }
 
