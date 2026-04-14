@@ -16,8 +16,8 @@ interface SimultaneousEffectsChoiceInterface extends ChoiceInterface {
 interface TargetChoiceInterface extends ChoiceInterface {
     type: "TARGET" | "HUNTER"
     availableTargets: CardInterface[]
-    targetsCount: number
-    optional: boolean
+    targetsCount?: number
+    optional?: boolean
 }
 
 interface ChoiceModalData {

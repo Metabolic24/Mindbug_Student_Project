@@ -41,13 +41,6 @@ function onCardPreview(card: CardInterface): void {
   emit('card-preview', card)
 }
 
-function getCardClasses(card: CardInterface): Record<string, boolean> {
-  return ({
-    'selected': card.uuid === props.selectedCard?.uuid,
-    'attacking': card.uuid === props.attackingCard?.uuid,
-  })
-}
-
 const discardModalData: Ref<CardInterface[]> = ref([]);
 const isDiscardModalVisible: Ref<boolean> = ref(false);
 const isOpponentDiscard: Ref<boolean> = ref(false);
