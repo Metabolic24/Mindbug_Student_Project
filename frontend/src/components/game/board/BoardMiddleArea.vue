@@ -48,7 +48,7 @@ const message = computed(() => {
   }
 })
 
-const isPlayerTurn = computed(() => props.gameState?.playerTurn)
+const isPlayerTurn = computed(() => props.gameState?.currentPlayerID === props.gameState?.player.uuid)
 
 // Computed value that controls image visibility
 const isImageVisible = computed(() => {
