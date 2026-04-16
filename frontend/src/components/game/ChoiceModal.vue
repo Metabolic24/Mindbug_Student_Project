@@ -35,6 +35,7 @@ function onButtonClick() {
   if ((props.choice?.type === "SIMULTANEOUS" && selectedCards.value.length === 1) ||
       (props.choice?.type === "TARGET" && (props.choice?.optional || (!props.choice?.optional && selectedCards.value.length == props.choice?.count)))) {
     emit('button-clicked', selectedCards.value)
+    selectedCards.value = []
   }
 }
 
