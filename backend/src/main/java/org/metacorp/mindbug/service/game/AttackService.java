@@ -90,6 +90,7 @@ public class AttackService {
                         if (attackCard.hasKeyword(CardKeyword.HUNTER) && !enemyCards.isEmpty()) {
                             game.setChoice(new HunterChoice(attackCard, new HashSet<>(enemyCards), availableBlockersMap));
                             WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+                            HistoryService.logChoice(game);
                         } else if (availableBlockersMap.isEmpty()) {
                             resolveAttack(attackCard, null, game);
                         } else {

@@ -6,6 +6,7 @@ import org.metacorp.mindbug.exception.WebSocketException;
 import org.metacorp.mindbug.model.Game;
 import org.metacorp.mindbug.model.choice.AbstractChoice;
 import org.metacorp.mindbug.model.choice.ChoiceType;
+import org.metacorp.mindbug.service.HistoryService;
 import org.metacorp.mindbug.service.WebSocketService;
 
 import java.util.HashMap;
@@ -50,8 +51,9 @@ public class ChoiceService {
 
         if (game.getChoice() == null) {
             EffectQueueService.resolveEffectQueue(choice.getType() == ChoiceType.SIMULTANEOUS, game);
-        } else {
+        } else if (!game.getChoice().isEventSent()) {
             WebSocketService.sendGameEvent(WsGameEventType.CHOICE, game);
+            HistoryService.logChoice(game);
         }
     }
 

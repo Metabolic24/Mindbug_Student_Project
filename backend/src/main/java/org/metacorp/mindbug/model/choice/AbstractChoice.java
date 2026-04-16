@@ -15,6 +15,8 @@ public abstract class AbstractChoice<T> {
     @NonNull
     protected Player playerToChoose;
 
+    private boolean eventSent;
+
     /**
      * @return the choice type
      */

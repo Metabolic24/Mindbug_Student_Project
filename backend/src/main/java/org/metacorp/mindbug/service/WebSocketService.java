@@ -86,6 +86,10 @@ public class WebSocketService {
                     }
                 }
             }
+
+            if (eventType == WsGameEventType.CHOICE) {
+                game.getChoice().setEventSent(true);
+            }
         }
     }
 }
