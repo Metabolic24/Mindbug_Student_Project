@@ -133,9 +133,9 @@ function closeModal() {
 .discards {
   position: absolute;
   left: 16px;
-  top: 54%;
+  top: 36vh;
   transform: translateY(-50%);
-  z-index: 3;
+  z-index: 100;
   justify-content: center;
   gap: 15vh;
   padding: 0;
