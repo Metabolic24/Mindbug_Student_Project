@@ -137,7 +137,7 @@ function closeModal() {
   transform: translateY(-50%);
   z-index: 100;
   justify-content: center;
-  gap: 15vh;
+  gap: 4vh;
   padding: 0;
 }
 
@@ -147,7 +147,7 @@ function closeModal() {
 
 .cards {
   width: 100%;
-  height: 35%;
+  height: 30%;
 
   display: flex;
   column-gap: 5px;
@@ -160,10 +160,10 @@ function closeModal() {
   padding-right: 0;
   width: 100%;
   position: absolute;
-  left: 50%;
-  top: 51%;
+  left: 49.5vw;
+  top: 33vh;
   transform: translate(-50%, -50%);
-  height: 85%;
+  height: 95%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

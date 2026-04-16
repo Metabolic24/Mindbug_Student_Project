@@ -113,7 +113,7 @@ const imgSrc = computed(() => {
     justify-content: center;
     gap: 16px;
     position: relative;
-    z-index: 10;
+    z-index: 1000;
   }
 
   .turn-indicator {
@@ -141,6 +141,7 @@ const imgSrc = computed(() => {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10;
   }
 
   .turn-segment--chevron {
@@ -162,11 +163,6 @@ const imgSrc = computed(() => {
     transform: translateY(-50%);
     overflow: visible;
     min-width: calc(8.8vw + 16px);
-  }
-
-  .turn-segment--card-slot .middle-card {
-    width: calc(8vw * 1.52);
-    height: calc(12vw * 1.52);
   }
 
   .turn-label {
