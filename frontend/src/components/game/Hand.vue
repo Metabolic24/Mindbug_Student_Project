@@ -39,6 +39,11 @@ const emit = defineEmits(['card-selected', 'card-preview'])
   display: flex;
   justify-content: center;
   gap: 5px;
+  pointer-events: none;
+}
+
+.hand > * {
+  pointer-events: auto;
 }
 
 .hand--top {

@@ -84,7 +84,7 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
   <div
     class="card-wrapper"
     :class="cardClasses"
-    @click="clickable && emit('click', card)"
+    @click="props.clickable && emit('click', card)"
     @contextmenu.prevent.stop="props.context !== 'opponent-hand' && emit('preview', card)"
   >
     <!-- Card image -->
@@ -233,16 +233,26 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 /* Card attacking direction */
 .card-wrapper.player-board.attacking {
   transform: translateY(-15px);
-  z-index: 10;
+  z-index: 100;
 }
 
 .card-wrapper.opponent-board.attacking {
   transform: translateY(15px);
-  z-index: 10;
+  z-index: 100;
 }
 
 .card-wrapper.clickable {
   cursor: pointer;
+}
+
+.card-wrapper.clickable > * {
+  pointer-events: none;
+}
+
+.card-wrapper.player-board.clickable,
+.card-wrapper.opponent-board.clickable,
+.card-wrapper.board-card.clickable {
+  z-index: 100;
 }
 
 .card-wrapper.TOUGH {
