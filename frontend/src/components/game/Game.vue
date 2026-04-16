@@ -441,9 +441,8 @@ function closeCardPreview(): void {
 
 .top-row .player-container,
 .top-row .top-buttons,
-.top-row .hand,
 .bottom-row .player-container,
-.bottom-row .hand {
+.bottom-row .player-container {
   pointer-events: auto;
 }
 
@@ -463,6 +462,7 @@ function closeCardPreview(): void {
   width: 100%;
   display: flex;
   justify-content: center;
+  pointer-events: none;
 }
 
 .board-wrapper {
@@ -498,7 +498,7 @@ function closeCardPreview(): void {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .settings-menu {
