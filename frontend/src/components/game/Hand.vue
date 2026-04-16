@@ -47,11 +47,11 @@ const emit = defineEmits(['card-selected', 'card-preview'])
 }
 
 .hand--top {
-  transform: translateY(6px);
+  transform: translateY(-30px);
 }
 
 .hand--bottom {
-  transform: translateY(-6px);
+  transform: translateY(25px);
 }
 
 .bottom-card {

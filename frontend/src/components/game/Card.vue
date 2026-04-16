@@ -123,22 +123,12 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 /* General card styling */
 .card-wrapper {
   position: relative;
-  width: 10vw;
-  height: 15vw;
+  width: 9.5vw;
+  height: 13.5vw;
 
   transition: transform 0.25s cubic-bezier(.2, .8, .2, 1),
   box-shadow 0.25s ease,
   border 0.2s ease;
-}
-
-.card-wrapper.discard-pile {
-  width: 7vw;
-  height: 10vw;
-}
-
-.card-wrapper.discard-modal {
-  width: 10vw;
-  height: 14vw;
 }
 
 .card-wrapper.sets-details {
@@ -187,7 +177,7 @@ const showOverlay = computed(() => props.context !== 'opponent-hand');
 .card-wrapper.opponent-board:hover,
 .card-wrapper.player-board:hover,
 .card-wrapper.discard-modal:hover {
-  transform: scale(1.11);
+  transform: scale(1.07);
 }
 
 /* Opponent hand styling */
