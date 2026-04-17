@@ -45,6 +45,48 @@ const displaySettingsMenu: Ref<boolean> = ref(false);
 // Reference for game state
 const gameState: Ref<GameStateInterface> = ref(undefined);
 
+// Revenge (rematch) after game over — same WebSocket until both vote or someone leaves
+const revengeVoteCount = ref(0)
+const revengeOpponentLeft = ref(false)
+const revengeFeedback = ref("")
+
+// Computed values for end game modal
+const isGameFinished = computed(() => {
+  const game = gameState.value
+  return !!(game?.winners && game.winners.length > 0)
+})
+
+const winningPlayer = computed(() => {
+  const game = gameState.value
+  if (!game?.winners?.length) {
+    return undefined
+  }
+  const w = new Set(game.winners)
+  if (w.has(game.player.uuid)) {
+    return game.player
+  }
+  return game.opponents?.[0]
+})
+
+const losingPlayer = computed(() => {
+  const game = gameState.value
+  if (!game?.winners?.length) {
+    return undefined
+  }
+  const w = new Set(game.winners)
+  if (!w.has(game.player.uuid)) {
+    return game.player
+  }
+  return game.opponents?.[0]
+})
+
+const canOfferRevenge = computed(() => {
+  const game = gameState.value
+  return !!(game?.winners && game.winners.length > 0) && game.opponents?.[0]?.ai !== true
+})
+
+const revengeButtonLabel = computed(() => `Revenge (${revengeVoteCount.value}/2)`)
+
 // Reference that holds the current player ID
 const currentPlayer: Ref<string> = ref(undefined);
 // Reference for the currently selected card
@@ -123,7 +165,7 @@ onMounted(async () => {
     }
   }, 10000);
 
-  wsConnection.onmessage = (event: MessageEvent<string>) => {
+  wsConnection.onmessage = async (event: MessageEvent<string>) => {
     try {
       // if a game is found, cancel the timer to avoid any bug
       if (gameState.value) {
@@ -131,11 +173,27 @@ onMounted(async () => {
         showRetry.value = false;
       }
 
-      // Parse incoming data into a WsMessage
-      const message: WsMessage = JSON.parse(event.data)
+      const message = JSON.parse(event.data) as WsInboundMessage
+
+      if (message.type === "REVENGE_PROGRESS") {
+        revengeVoteCount.value = message.revengeVotes
+        revengeFeedback.value = ""
+        return
+      }
+      if (message.type === "REVENGE_BLOCKED") {
+        revengeOpponentLeft.value = true
+        revengeVoteCount.value = 0
+        return
+      }
+      if (message.type === "REVENGE_STARTED") {
+        await router.push({name: "Game", query: {gameId: message.newGameId}})
+        return
+      }
+
+      const gameMessage = message as WsMessage
 
       // Apply a specific process depending on the event type
-      switch (message.type) {
+      switch (gameMessage.type) {
         case "NEW_TURN": // Received when a new turn starts
           selectedCard.value = undefined;
           pickedCard.value = undefined;
@@ -143,7 +201,7 @@ onMounted(async () => {
           break;
         case "CARD_PICKED": // Received when a player has picked a card
           selectedCard.value = undefined;
-          pickedCard.value = message.state.choice?.sourceCard;
+          pickedCard.value = gameMessage.state.choice?.sourceCard;
           attackingCard.value = undefined;
           break;
         case "CARD_PLAYED": // Received when a player has played a card
@@ -157,13 +215,15 @@ onMounted(async () => {
           attackingCard.value = undefined;
           break;
         case "CHOICE": // Received when a choice needs to be solved
-          if (message.state.choice?.type === "FRENZY") {
+          if (gameMessage.state.choice?.type === "FRENZY") {
             attackingCard.value = undefined;
             selectedCard.value = undefined;
           }
           break;
-        case "FINISHED": // Received when the game is finished
-          wsConnection.close()
+        case "FINISHED": // Received when the game is finished — keep WebSocket open for revenge votes
+          revengeVoteCount.value = 0
+          revengeFeedback.value = ""
+          // Do not clear revengeOpponentLeft here: REVENGE_BLOCKED may race with FINISHED after a disconnect.
           break;
           //TODO Implement remaining cases
         case "STATE": // Received after joining the WebSocket
@@ -171,11 +231,11 @@ onMounted(async () => {
         case "CARD_DESTROYED": // Received when a card is destroyed
         case "EFFECT_RESOLVED": // Received when an effect is successfully resolved
         case "WAITING_ATTACK_RESOLUTION": // Received when waiting for attack resolution
-          attackingCard.value = message.state.choice?.sourceCard;
+          attackingCard.value = gameMessage.state.choice?.sourceCard;
           break;
       }
 
-      gameState.value = message.state;
+      gameState.value = gameMessage.state;
       currentPlayer.value = gameState.value.currentPlayerID;
     } catch (e) {
       console.error("Failed to parse game state", e);
@@ -275,12 +335,41 @@ async function leaveGame() {
   await router.push({name: t("router.home")})
 }
 
+async function onLeaveButtonClick() {
+  await leaveGame()
+}
+
 function onCardPreview(card: CardInterface): void {
   previewCard.value = card
 }
 
 function closeCardPreview(): void {
   previewCard.value = undefined
+}
+
+// Get avatar picture for end game modal
+function getAvatar(name?: string) {
+  const fileName = name ? `${name}.jpg` : "default.jpg"
+  return new URL(`../../assets/avatars/${fileName}`, import.meta.url).toString()
+}
+
+function onAvatarError(event: Event) {
+  const img = event.target as HTMLImageElement
+  const fallback = getAvatar()
+
+  if (img && img.src !== fallback) {
+    img.src = fallback
+  }
+}
+
+function onRevengeClick() {
+  if (revengeOpponentLeft.value) {
+    revengeFeedback.value = "Your opponent has left."
+    return
+  }
+  if (wsConnection?.readyState === WebSocket.OPEN) {
+    wsConnection.send(JSON.stringify({action: "REVENGE"}))
+  }
 }
 
 </script>
@@ -354,6 +443,63 @@ function closeCardPreview(): void {
         ></hand>
       </div>
       <div class="col-2"></div>
+    </div>
+
+    <div v-if="isGameFinished" class="endgame-backdrop">
+      <div class="endgame-modal">
+        <h2 class="endgame-title" :class="gameState.winners?.includes(gameState.player.uuid) ? 'text-victory' : 'text-defeat'">
+          {{ gameState.winners?.includes(gameState.player.uuid) ? 'Victory' : 'Defeat' }}
+        </h2>
+        <p class="endgame-subtitle">
+          {{ gameState.winners?.includes(gameState.player.uuid) ? 'You won the game!' : 'You lost the game.' }}
+        </p>
+
+        <div class="endgame-players">
+          <div class="endgame-player">
+            <img
+                class="endgame-avatar"
+                :src="getAvatar(winningPlayer?.name)"
+                @error="onAvatarError"
+                alt="Winner avatar"
+                draggable="false"
+            >
+            <div class="endgame-name">{{ winningPlayer?.name }}</div>
+            <div class="endgame-hp">{{ winningPlayer?.lifePoints }} HP</div>
+            <div class="endgame-role text-victory">Winner</div>
+          </div>
+          <div class="endgame-player">
+            <img
+                class="endgame-avatar"
+                :src="getAvatar(losingPlayer?.name)"
+                @error="onAvatarError"
+                alt="Loser avatar"
+                draggable="false"
+            >
+            <div class="endgame-name">{{ losingPlayer?.name }}</div>
+            <div class="endgame-hp">{{ losingPlayer?.lifePoints }} HP</div>
+            <div class="endgame-role text-defeat">Loser</div>
+          </div>
+        </div>
+
+        <div class="endgame-actions">
+          <button type="button" class="endgame-leave-btn" @click="onLeaveButtonClick()">
+            Leave game
+          </button>
+          <button
+              v-if="canOfferRevenge"
+              type="button"
+              class="endgame-revenge-btn"
+              :class="{
+                'revenge-muted': revengeOpponentLeft,
+                'revenge-active-count': revengeVoteCount > 0 && !revengeOpponentLeft
+              }"
+              @click="onRevengeClick"
+          >
+            {{ revengeButtonLabel }}
+          </button>
+        </div>
+        <p v-if="revengeFeedback" class="endgame-revenge-feedback">{{ revengeFeedback }}</p>
+      </div>
     </div>
   </div>
 
@@ -574,6 +720,149 @@ function closeCardPreview(): void {
 .settings-button:active {
   background-color: #1e6f93;
   transform: scale(0.98);
+}
+
+.endgame-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.endgame-modal {
+  background: rgba(15, 23, 42, 0.98);
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6);
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+  color: #f9fafb;
+}
+
+.endgame-title {
+  font-size: 2.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.endgame-subtitle {
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+}
+
+.endgame-players {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.endgame-player {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  min-width: 180px;
+}
+
+.endgame-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fbbf24;
+  margin-bottom: 0.5rem;
+}
+
+.endgame-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.endgame-hp {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.endgame-role {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
+.endgame-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.endgame-leave-btn {
+  padding: 0.6rem 2rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  background: #dc2626;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.endgame-leave-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.endgame-leave-btn:active {
+  transform: translateY(0);
+}
+
+.endgame-revenge-btn {
+  padding: 0.6rem 2rem;
+  border-radius: 999px;
+  border: 2px solid #fbbf24;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fef3c7;
+  background: rgba(251, 191, 36, 0.12);
+  transition: background 0.2s, transform 0.1s, box-shadow 0.25s;
+}
+
+.endgame-revenge-btn:hover:not(.revenge-muted) {
+  background: rgba(251, 191, 36, 0.22);
+  transform: translateY(-1px);
+}
+
+.endgame-revenge-btn.revenge-active-count:not(.revenge-muted) {
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.45);
+}
+
+.endgame-revenge-btn.revenge-muted {
+  opacity: 0.45;
+  cursor: not-allowed;
+  border-color: rgba(251, 191, 36, 0.35);
+}
+
+.endgame-revenge-feedback {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #fca5a5;
+}
+
+.text-victory {
+  color: #22c55e;
+}
+
+.text-defeat {
+  color: #ef4444;
 }
 
 /* Page d'erreur et de chargement plein écran */

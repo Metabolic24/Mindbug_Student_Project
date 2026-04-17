@@ -20,11 +20,12 @@ import java.util.UUID;
 @Setter
 @ToString
 @NoArgsConstructor
-@JsonPropertyOrder({"uuid", "name", "teamId", "lifePoints", "mindbugCount", "disabledTiming", "drawPileCount", "hand", "board", "discard"})
+@JsonPropertyOrder({"uuid", "name", "teamId", "ai", "lifePoints", "mindbugCount", "disabledTiming", "drawPileCount", "hand", "board", "discard"})
 public class PlayerDTO {
     private UUID uuid;
     private String name;
     private UUID teamId;
+    private boolean ai;
     private Integer lifePoints;
     private Integer mindbugCount;
     private Set<EffectTiming> disabledTiming;
@@ -43,6 +44,7 @@ public class PlayerDTO {
         this.uuid = clone.getUuid();
         this.name = clone.getName();
         this.teamId = clone.getTeamId();
+        this.ai = clone.isAi();
         this.lifePoints = clone.getLifePoints();
         this.mindbugCount = clone.getMindbugCount();
         this.disabledTiming = clone.getDisabledTiming();
